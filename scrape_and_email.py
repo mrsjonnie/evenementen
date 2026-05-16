@@ -1,209 +1,128 @@
+import json
+import os
+import re
+import smtplib
+from datetime import datetime
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
+from urllib.parse import quote_plus
+
 import requests
 from bs4 import BeautifulSoup
-import json
-import smtplib
-from email.mime.text import MIMEText
-from email.mime.multipart import MIMEMultipart
-from datetime import datetime, timedelta
-import os
 
-# --- Configuratie ---
-# Paden
-DATA_FILE = "events.json"
-EMAIL_TEMPLATE = "email_template.html"
-LOG_FILE = "scrape_log.txt"
+DATA_FILE = 'events.json'
+LOG_FILE = 'scrape_log.txt'
+SMTP_SERVER = os.getenv('SMTP_SERVER', 'smtp.gmail.com')
+SMTP_PORT = int(os.getenv('SMTP_PORT', '587'))
+SMTP_USER = os.getenv('SMTP_USER', '')
+SMTP_PASSWORD = os.getenv('SMTP_PASSWORD', '')
+EMAIL_FROM = os.getenv('EMAIL_FROM', '')
+EMAIL_TO = [x.strip() for x in os.getenv('EMAIL_TO', '').split(',') if x.strip()]
+INPUT_REGION = os.getenv('INPUT_REGION', 'Groningen').strip() or 'Groningen'
+INPUT_DATE = os.getenv('INPUT_DATE', '').strip()
+INPUT_RADIUS = os.getenv('INPUT_RADIUS', '140').strip() or '140'
+INPUT_CATEGORY = os.getenv('INPUT_CATEGORY', 'all').strip().lower() or 'all'
+INPUT_QUERY = os.getenv('INPUT_QUERY', '').strip().lower()
+BASE_HEADERS = {'User-Agent': 'Mozilla/5.0'}
+KNOWN_DISTANCES = {'groningen':{'groningen':0,'haren':10,'leek':22,'slochteren':18,'bourtange':58,'oude pekela':35,'bellingwolde':48,'eenrum':25,'lauwersoog':53,'beerta':42,'assen':32,'drachten':38},'assen':{'groningen':32,'haren':28,'leek':34,'slochteren':46,'bourtange':84,'oude pekela':64,'bellingwolde':76,'eenrum':56,'lauwersoog':84,'beerta':72,'assen':0,'drachten':36},'drachten':{'groningen':38,'haren':44,'leek':20,'slochteren':55,'bourtange':95,'oude pekela':72,'bellingwolde':86,'eenrum':49,'lauwersoog':61,'beerta':82,'assen':36,'drachten':0}}
+MONTHS = 'januari|februari|maart|april|mei|juni|juli|augustus|september|oktober|november|december'
+DATE_RE = re.compile(rf'^\d{{1,2}}(?:\s+t/m\s+\d{{1,2}})?\s+(?:{MONTHS})$', re.I)
+SCORE_RE = re.compile(r'^\d,\d$')
 
-# E-mail instellingen (pas aan!)
-SMTP_SERVER = "smtp.gmail.com"  # Voor Gmail. Gebruik "smtp.yourprovider.com" voor andere providers.
-SMTP_PORT = 587
-SMTP_USER = ""
-SMTP_PASSWORD = "xxxx xxjj xxxx xxxx"  # Gebruik een App Password voor Gmail!
-EMAIL_FROM = ""
-EMAIL_TO = ["", ""]  # Meerdere ontvangers mogelijk
-
-# Websites om te scrapen
-WEBSITES = {
-    "Uitzinnig": "https://www.uitzinnig.nl/groningen/dagje-uit.aspx",
-    "Kidsproof": "https://www.kidsproof.nl/groningen/uitjes/uitagenda/",
-    "Spot Groningen": "https://www.spotgroningen.nl/programma/",
-    "VERA Groningen": "https://www.vera-groningen.nl/programma/",
-    "Bioscoop Agenda": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html"
-}
-
-# --- Functies ---
 def log(message):
-    """Log berichten naar een bestand."""
-    with open(LOG_FILE, "a") as f:
+    with open(LOG_FILE, 'a', encoding='utf-8') as f:
         f.write(f"{datetime.now().strftime('%Y-%m-%d %H:%M:%S')} - {message}\n")
 
-def scrape_uitzinnig():
-    """Scrape evenementen van Uitzinnig.nl."""
+def get_distance(region, location):
+    region = (region or '').lower().strip()
+    location = (location or '').lower().strip()
+    if region in KNOWN_DISTANCES and location in KNOWN_DISTANCES[region]: return KNOWN_DISTANCES[region][location]
+    if region == location: return 0
+    return None
+
+def normalize_event(event):
+    title = event.get('title', '').strip()
+    location = event.get('location', '').strip()
+    return {'title': title,'type': event.get('type', 'evenement'),'date': event.get('date', ''),'time': event.get('time', ''),'location': location,'locationLink': event.get('locationLink', ''),'cost': event.get('cost', 'Zie website'),'description': event.get('description', ''),'image': event.get('image', f'https://picsum.photos/seed/{quote_plus(title or location)}/800/500'),'website': event.get('website', '#'),'source': event.get('source', 'Onbekend'),'isPermanent': event.get('isPermanent', False)}
+
+def scrape_uitzinnig(region='Groningen'):
     events = []
-    try:
-        url = WEBSITES["Uitzinnig"]
-        response = requests.get(url, timeout=10)
-        soup = BeautifulSoup(response.text, 'html.parser')
-
-        # Voorbeeld: Zoek naar evenementen in div's met klasse 'event'
-        # PAS DIT AAN AAN DE WERKELIJKE STRUCTUUR VAN DE WEBSITE!
-        event_divs = soup.find_all("div", class_="event")  # Vervang 'event' door de juiste klasse
-
-        for div in event_divs:
-            title = div.find("h2").text.strip() if div.find("h2") else "Onbekend"
-            date = div.find("span", class_="date").text.strip() if div.find("span", class_="date") else "Onbekend"
-            location = div.find("span", class_="location").text.strip() if div.find("span", class_="location") else "Onbekend"
-            description = div.find("p").text.strip() if div.find("p") else "Geen beschrijving"
-            link = div.find("a")["href"] if div.find("a") else "#"
-
-            events.append({
-                "title": title,
-                "date": date,
-                "location": location,
-                "description": description,
-                "website": link,
-                "source": "Uitzinnig"
-            })
-        log(f"Gevonden: {len(events)} evenementen op Uitzinnig.nl")
-    except Exception as e:
-        log(f"Fout bij scrapen Uitzinnig: {e}")
+    urls = [f'https://www.uitzinnig.nl/evenement/{quote_plus(region.lower())}.aspx','https://www.uitzinnig.nl/evenement/5/groningen.aspx']
+    for try_url in urls:
+        try:
+            response = requests.get(try_url, headers=BASE_HEADERS, timeout=20)
+            soup = BeautifulSoup(response.text, 'html.parser')
+            lines = [x.strip() for x in soup.stripped_strings if x.strip()]
+            for i, line in enumerate(lines):
+                if i + 3 < len(lines) and lines[i+1].startswith('Provincie Groningen,') and SCORE_RE.match(lines[i+2]) and DATE_RE.match(lines[i+3]):
+                    title = line
+                    location = lines[i+1].replace('Provincie Groningen,', '').strip()
+                    date = lines[i+3].strip()
+                    j = i + 4
+                    extra = ''
+                    if j < len(lines) and lines[j] == 'meerdere data': extra, j = ' (meerdere data)', j + 1
+                    description = lines[j].replace('.. »', '').strip() if j < len(lines) else ''
+                    if title.lower() in {'uitgelicht','toon info','bezoek website','populair','mei','juni','juli','maart / april','augustus en verder'}: continue
+                    item = normalize_event({'title': title,'type': 'evenement','date': date + extra,'location': location,'description': description,'website': try_url,'source': 'Uitzinnig'})
+                    if item['title'] and item['title'] not in [e['title'] for e in events]: events.append(item)
+            if events:
+                log(f'Gevonden: {len(events)} evenementen op {try_url}')
+                return events
+        except Exception as e:
+            log(f'Fout bij scrapen Uitzinnig ({try_url}): {e}')
     return events
 
-def scrape_kidsproof():
-    """Scrape evenementen van Kidsproof.nl."""
-    events = []
-    try:
-        url = WEBSITES["Kidsproof"]
-        response = requests.get(url, timeout=10)
-        soup = BeautifulSoup(response.text, 'html.parser')
+def manual_events():
+    return [normalize_event({'title':'Groninger Museum','type':'museum','date':'Hele jaar','location':'Groningen','description':'Moderne kunst en wisselende tentoonstellingen.','website':'https://www.groningermuseum.nl','source':'Manual','isPermanent':True}), normalize_event({'title':'Fort Bourtange','type':'historie','date':'Hele jaar','location':'Bourtange','description':'Historische vesting met demonstraties en musea.','website':'https://www.bourtange.nl','source':'Manual','isPermanent':True})]
 
-        # Voorbeeld: Zoek naar evenementen in li's
-        event_items = soup.find_all("li", class_="event-item")  # Vervang door juiste klasse
-
-        for item in event_items:
-            title = item.find("h3").text.strip() if item.find("h3") else "Onbekend"
-            date = item.find("span", class_="date").text.strip() if item.find("span", class_="date") else "Onbekend"
-            location = item.find("span", class_="location").text.strip() if item.find("span", class_="location") else "Onbekend"
-            description = item.find("p").text.strip() if item.find("p") else "Geen beschrijving"
-            link = item.find("a")["href"] if item.find("a") else "#"
-
-            events.append({
-                "title": title,
-                "date": date,
-                "location": location,
-                "description": description,
-                "website": link,
-                "source": "Kidsproof"
-            })
-        log(f"Gevonden: {len(events)} evenementen op Kidsproof.nl")
-    except Exception as e:
-        log(f"Fout bij scrapen Kidsproof: {e}")
-    return events
+def matches_filters(event):
+    hay = f"{event.get('title','')} {event.get('description','')} {event.get('location','')}".lower()
+    if INPUT_QUERY and INPUT_QUERY not in hay: return False
+    if INPUT_CATEGORY != 'all' and event.get('type', '').lower() != INPUT_CATEGORY: return False
+    if INPUT_DATE and INPUT_DATE not in str(event.get('date', '')): return False
+    try: radius = int(float(INPUT_RADIUS))
+    except Exception: radius = 140
+    dist = get_distance(INPUT_REGION, event.get('location', ''))
+    if INPUT_REGION and dist is not None and dist > radius: return False
+    if INPUT_REGION and dist is None and INPUT_REGION.lower() not in hay: return False
+    return True
 
 def save_events_to_json(events):
-    """Sla evenementen op in een JSON-bestand."""
-    try:
-        with open(DATA_FILE, "w", encoding="utf-8") as f:
-            json.dump(events, f, ensure_ascii=False, indent=4)
-        log(f"Opgeslagen: {len(events)} evenementen in {DATA_FILE}")
-    except Exception as e:
-        log(f"Fout bij opslaan JSON: {e}")
+    with open(DATA_FILE, 'w', encoding='utf-8') as f: json.dump(events, f, ensure_ascii=False, indent=2)
+    log(f'Opgeslagen: {len(events)} evenementen in {DATA_FILE}')
 
 def generate_email_html(events):
-    """Genereer HTML voor de e-mail."""
-    today = datetime.now().strftime("%A, %d %B %Y")
-    html = f"""
-    <!DOCTYPE html>
-    <html>
-    <head>
-        <style>
-            body {{ font-family: Arial, sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 0; }}
-            .header {{ background: #4CAF50; color: white; padding: 20px; text-align: center; }}
-            .event {{ border-left: 4px solid #4CAF50; padding: 15px; margin: 15px 0; background: #f9f9f9; }}
-            .event h3 {{ margin-top: 0; color: #4CAF50; }}
-            a {{ color: #4CAF50; text-decoration: none; }}
-        </style>
-    </head>
-    <body>
-        <div class="header">
-            <h1>🎉 Evenementen Rond Groningen – {today}</h1>
-            <p>Hier zijn de leukste activiteiten voor deze week:</p>
-        </div>
-    """
-
-    for event in events[:10]:  # Stuur max 10 evenementen in de e-mail
-        html += f"""
-        <div class="event">
-            <h3>{event['title']}</h3>
-            <p>📅 {event.get('date', 'Onbekend')} | 📍 {event.get('location', 'Onbekend')}</p>
-            <p>{event.get('description', 'Geen beschrijving')}</p>
-            <p><a href="{event.get('website', '#')}">🌐 Meer info</a></p>
-        </div>
-        """
-
-    html += """
-    </body>
-    </html>
-    """
-    return html
+    today = datetime.now().strftime('%A, %d %B %Y')
+    html = '<!DOCTYPE html><html><head><style>body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; } .header { background: #2563eb; color: white; padding: 20px; text-align: center; } .event { border-left: 4px solid #2563eb; padding: 15px; margin: 15px 0; background: #f9f9f9; }</style></head><body>'
+    html += f'<div class="header"><h1>Evenementen rond {INPUT_REGION} – {today}</h1></div>'
+    for event in events[:10]: html += f'<div class="event"><h3>{event['"'"'title'"'"']}</h3><p>📅 {event.get('"'"'date'"'"','"'"'Onbekend'"'"')} | 📍 {event.get('"'"'location'"'"','"'"'Onbekend'"'"')}</p><p>{event.get('"'"'description'"'"','"'"'Geen beschrijving'"'"')}</p><p><a href="{event.get('"'"'website'"'"','"'"'#'"'"')}">🌐 Meer info</a></p></div>'
+    return html + '</body></html>'
 
 def send_email(subject, html_content):
-    """Verstuur een e-mail met de evenementen."""
+    if not (SMTP_USER and SMTP_PASSWORD and EMAIL_FROM and EMAIL_TO):
+        log('E-mail overgeslagen: SMTP/EMAIL secrets niet volledig ingesteld')
+        return
     try:
-        msg = MIMEMultipart()
-        msg['From'] = EMAIL_FROM
-        msg['To'] = ", ".join(EMAIL_TO)
-        msg['Subject'] = subject
-
-        msg.attach(MIMEText(html_content, 'html'))
-
+        msg = MIMEMultipart(); msg['From'] = EMAIL_FROM; msg['To'] = ', '.join(EMAIL_TO); msg['Subject'] = subject; msg.attach(MIMEText(html_content, 'html'))
         with smtplib.SMTP(SMTP_SERVER, SMTP_PORT) as server:
-            server.starttls()
-            server.login(SMTP_USER, SMTP_PASSWORD)
-            server.send_message(msg)
-        log(f"E-mail verstuurd: {subject}")
+            server.starttls(); server.login(SMTP_USER, SMTP_PASSWORD); server.send_message(msg)
+        log(f'E-mail verstuurd: {subject}')
     except Exception as e:
-        log(f"Fout bij versturen e-mail: {e}")
+        log(f'Fout bij versturen e-mail: {e}')
 
 def main():
-    """Hoofd functie: scrape, sla op, en verstuur e-mail."""
-    log("=== Start scraping ===")
+    log('=== Start scraping ===')
+    log(f'Inputs: region={INPUT_REGION}, date={INPUT_DATE}, radius={INPUT_RADIUS}, category={INPUT_CATEGORY}, query={INPUT_QUERY}')
+    all_events = scrape_uitzinnig(INPUT_REGION) + manual_events()
+    unique, seen = [], set()
+    for event in all_events:
+        key = (event.get('title','').strip().lower(), event.get('location','').strip().lower(), event.get('date','').strip().lower())
+        if key not in seen: seen.add(key); unique.append(event)
+    filtered = [e for e in unique if matches_filters(e)]
+    save_events_to_json(filtered)
+    today = datetime.now().strftime('%A, %d %B %Y')
+    send_email(f'Evenementen rond {INPUT_REGION} – {today}', generate_email_html(filtered))
+    log('=== Scraping voltooid ===')
 
-    # Scrape evenementen
-    all_events = []
-    all_events.extend(scrape_uitzinnig())
-    all_events.extend(scrape_kidsproof())
-    # Voeg hier meer scrapers toe als nodig
-
-    # Voeg handmatige evenementen toe (voor permanente of specifieke evenementen)
-    manual_events = [
-        {
-            "title": "Groninger Museum",
-            "date": "Hele jaar",
-            "location": "Groningen",
-            "description": "Moderne kunst en wisselende tentoonstellingen.",
-            "website": "https://www.groningermuseum.nl",
-            "source": "Manual"
-        },
-        {
-            "title": "Fort Bourtange",
-            "date": "Hele jaar",
-            "location": "Bourtange",
-            "description": "Historische vesting met demonstraties en musea.",
-            "website": "https://www.bourtange.nl",
-            "source": "Manual"
-        }
-    ]
-    all_events.extend(manual_events)
-
-    # Sla op in JSON
-    save_events_to_json(all_events)
-
-    # Genereer en verstuur e-mail
-    today = datetime.now().strftime("%A, %d %B %Y")
-    email_html = generate_email_html(all_events)
-    send_email(f"Evenementen Rond Groningen – {today}", email_html)
-
-    log("=== Scraping voltooid ===")
-
-if __name__ == "__main__":
+if __name__ == '__main__':
     main()

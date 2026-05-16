@@ -18,184 +18,21 @@
 </style>
 </head>
 <body>
-<header class="header">
-  <div class="wrap">
-    <h1 id="pageTitle">Evenementen rond Groningen</h1>
-    <p id="pageSubtitle">Bekijk evenementen, tips en activiteiten in en rond Groningen.</p>
-  </div>
-</header>
-
-<main class="container">
-  <section class="toolbar">
-    <div class="filters">
-      <div class="field">
-        <label for="search">Zoeken</label>
-        <input id="search" placeholder="Zoek op titel, beschrijving of plaats" oninput="applyFilters()">
-      </div>
-      <div class="field">
-        <label for="region">Regio / startplaats</label>
-        <input id="region" value="Groningen" placeholder="Bijv. Groningen, Assen, Drachten" oninput="applyFilters()">
-      </div>
-      <div class="field">
-        <label for="radius">Straal in km</label>
-        <input id="radius" type="number" min="1" max="300" value="140" oninput="applyFilters()">
-      </div>
-      <div class="field">
-        <label for="typeFilter">Activiteit type</label>
-        <select id="typeFilter" onchange="applyFilters()">
-          <option value="all">Alle types</option>
-        </select>
-      </div>
-      <div class="field">
-        <label for="dateFilter">Datum</label>
-        <select id="dateFilter" onchange="applyFilters()">
-          <option value="all">Alle datums</option>
-        </select>
-      </div>
-      <div class="field">
-        <label for="price">Kosten</label>
-        <select id="price" onchange="applyFilters()">
-          <option value="all">Alle prijzen</option>
-          <option value="free">Gratis</option>
-          <option value="other">Overig / onbekend</option>
-        </select>
-      </div>
-      <button class="btn btn-primary" id="refreshBtn" onclick="refreshData()">Ververs</button>
-    </div>
-    <div class="notice" id="status">Klik op Ververs om events.json opnieuw op te halen.</div>
-  </section>
-
-  <div class="meta">
-    <strong id="count">0 evenementen</strong>
-    <span id="metaInfo">De pagina leest live uit <code>events.json</code>.</span>
-  </div>
-
-  <section class="grid" id="grid"></section>
-</main>
-
+<header class="header"><div class="wrap"><h1 id="pageTitle">Evenementen rond Groningen</h1><p id="pageSubtitle">Bekijk evenementen, tips en activiteiten in en rond Groningen.</p></div></header>
+<main class="container"><section class="toolbar"><div class="filters"><div class="field"><label for="search">Zoeken</label><input id="search" placeholder="Zoek op titel, beschrijving of plaats" oninput="applyFilters()"></div><div class="field"><label for="region">Regio / startplaats</label><input id="region" value="Groningen" placeholder="Bijv. Groningen, Assen, Drachten" oninput="applyFilters()"></div><div class="field"><label for="radius">Straal in km</label><input id="radius" type="number" min="1" max="300" value="140" oninput="applyFilters()"></div><div class="field"><label for="typeFilter">Activiteit type</label><select id="typeFilter" onchange="applyFilters()"><option value="all">Alle types</option></select></div><div class="field"><label for="dateFilter">Datum</label><input id="dateFilter" type="date"></div><div class="field"><label for="price">Kosten</label><select id="price" onchange="applyFilters()"><option value="all">Alle prijzen</option><option value="free">Gratis</option><option value="other">Overig / onbekend</option></select></div><button class="btn btn-primary" id="refreshBtn" onclick="triggerRemoteRefresh()">Ververs</button></div><div class="notice" id="status">Klik op Ververs om een nieuwe update te starten.</div></section><div class="meta"><strong id="count">0 evenementen</strong><span id="metaInfo">De pagina leest live uit <code>events.json</code>.</span></div><section class="grid" id="grid"></section></main>
 <script>
-let events = [];
-const knownDistances = {
-  'groningen': {'groningen':0,'haren':10,'leek':22,'slochteren':18,'bourtange':58,'oude pekela':35,'bellingwolde':48,'eenrum':25,'lauwersoog':53,'beerta':42,'assen':32,'drachten':38},
-  'assen': {'groningen':32,'haren':28,'leek':34,'slochteren':46,'bourtange':84,'oude pekela':64,'bellingwolde':76,'eenrum':56,'lauwersoog':84,'beerta':72,'assen':0,'drachten':36},
-  'drachten': {'groningen':38,'haren':44,'leek':20,'slochteren':55,'bourtange':95,'oude pekela':72,'bellingwolde':86,'eenrum':49,'lauwersoog':61,'beerta':82,'assen':36,'drachten':0}
-};
-
-function formatCityName(value) {
-  const text = (value || '').trim();
-  if (!text) return 'Groningen';
-  return text.charAt(0).toUpperCase() + text.slice(1);
-}
-
-function updatePageTitle() {
-  const city = formatCityName(document.getElementById('region').value);
-  document.getElementById('pageTitle').textContent = `Evenementen rond ${city}`;
-  document.getElementById('pageSubtitle').textContent = `Bekijk evenementen, tips en activiteiten in en rond ${city}.`;
-  document.title = `Evenementen rond ${city}`;
-}
-
-function fillFilters(items) {
-  const typeSelect = document.getElementById('typeFilter');
-  const dateSelect = document.getElementById('dateFilter');
-  const types = [...new Set(items.map(e => (e.type || '').trim()).filter(Boolean))].sort();
-  const dates = [...new Set(items.map(e => (e.date || '').trim()).filter(Boolean))].sort();
-  typeSelect.innerHTML = '<option value="all">Alle types</option>' + types.map(v => `<option value="${v.toLowerCase()}">${v}</option>`).join('');
-  dateSelect.innerHTML = '<option value="all">Alle datums</option>' + dates.map(v => `<option value="${v}">${v}</option>`).join('');
-}
-
-async function loadData() {
-  const res = await fetch('./events.json?_=' + Date.now(), { cache: 'no-store' });
-  if (!res.ok) throw new Error('events.json kon niet worden geladen');
-  events = await res.json();
-  fillFilters(events);
-  applyFilters();
-}
-
-function getDistance(region, location) {
-  region = (region || '').toLowerCase().trim();
-  location = (location || '').toLowerCase().trim();
-  if (knownDistances[region] && knownDistances[region][location] !== undefined) return knownDistances[region][location];
-  if (region === location) return 0;
-  return null;
-}
-
-function render(items) {
-  document.getElementById('count').textContent = `${items.length} evenementen`;
-  document.getElementById('grid').innerHTML = items.map(e => {
-    const region = document.getElementById('region').value;
-    const dist = getDistance(region, e.location);
-    const distText = dist === null ? 'Afstand onbekend' : `${dist} km`;
-    return `<article class="card">
-      <div class="image" style="background-image:url('${e.image || ''}')"></div>
-      <div class="content">
-        <div class="source">${e.source || 'Bron onbekend'}</div>
-        <h2 class="title">${e.title || ''}</h2>
-        <div class="meta-list">
-          <div>📅 ${e.date || 'Onbekend'} ${e.time || ''}</div>
-          <div>📍 ${e.location || 'Onbekend'}</div>
-          <div>🏷️ ${e.type || 'Onbekend'}</div>
-          <div>📏 ${distText}</div>
-          <div>💶 ${e.cost || 'Zie website'}</div>
-        </div>
-        <p class="desc">${e.description || ''}</p>
-        <div class="links">
-          <a class="btn btn-primary" href="${e.website || '#'}" target="_blank" rel="noopener noreferrer">Meer info</a>
-          ${e.locationLink ? `<a class="btn btn-secondary" href="${e.locationLink}" target="_blank" rel="noopener noreferrer">Route</a>` : ''}
-        </div>
-      </div>
-    </article>`;
-  }).join('');
-}
-
-function applyFilters() {
-  updatePageTitle();
-  const q = document.getElementById('search').value.toLowerCase();
-  const region = document.getElementById('region').value.toLowerCase().trim();
-  const radius = Number(document.getElementById('radius').value || 0);
-  const price = document.getElementById('price').value;
-  const type = document.getElementById('typeFilter').value;
-  const date = document.getElementById('dateFilter').value;
-
-  const filtered = events.filter(e => {
-    const hay = `${e.title || ''} ${e.description || ''} ${e.location || ''}`.toLowerCase();
-    if (q && !hay.includes(q)) return false;
-    if (type !== 'all' && (e.type || '').toLowerCase() !== type) return false;
-    if (date !== 'all' && (e.date || '') !== date) return false;
-
-    const free = (e.cost || '').toLowerCase().includes('gratis');
-    if (price === 'free' && !free) return false;
-    if (price === 'other' && free) return false;
-
-    const dist = getDistance(region, e.location);
-    if (region && radius > 0 && dist !== null && dist > radius) return false;
-    if (region && radius > 0 && dist === null && !hay.includes(region)) return false;
-    return true;
-  });
-
-  document.getElementById('metaInfo').textContent = `Resultaten voor ${formatCityName(region)} binnen ${radius} km.`;
-  render(filtered);
-}
-
-async function refreshData() {
-  const btn = document.getElementById('refreshBtn');
-  const status = document.getElementById('status');
-  btn.disabled = true;
-  btn.textContent = 'Bezig...';
-  status.textContent = 'Nieuwe data wordt opgehaald...';
-  try {
-    await loadData();
-    status.textContent = 'Data is ververst vanaf events.json.';
-  } catch (e) {
-    status.textContent = 'Verversen mislukt: ' + e.message;
-  }
-  btn.disabled = false;
-  btn.textContent = 'Ververs';
-}
-
-loadData().catch((e) => {
-  document.getElementById('status').textContent = 'Laden mislukt: ' + e.message;
-  document.getElementById('grid').innerHTML = '<div class="toolbar">Laden van events.json is mislukt.</div>';
-});
+let events=[];
+const WORKER_URL='https://YOUR-WORKER.your-subdomain.workers.dev';
+const knownDistances={'groningen':{'groningen':0,'haren':10,'leek':22,'slochteren':18,'bourtange':58,'oude pekela':35,'bellingwolde':48,'eenrum':25,'lauwersoog':53,'beerta':42,'assen':32,'drachten':38},'assen':{'groningen':32,'haren':28,'leek':34,'slochteren':46,'bourtange':84,'oude pekela':64,'bellingwolde':76,'eenrum':56,'lauwersoog':84,'beerta':72,'assen':0,'drachten':36},'drachten':{'groningen':38,'haren':44,'leek':20,'slochteren':55,'bourtange':95,'oude pekela':72,'bellingwolde':86,'eenrum':49,'lauwersoog':61,'beerta':82,'assen':36,'drachten':0}};
+function formatCityName(value){const text=(value||'').trim();if(!text)return'Groningen';return text.charAt(0).toUpperCase()+text.slice(1)}
+function updatePageTitle(){const city=formatCityName(document.getElementById('region').value);document.getElementById('pageTitle').textContent=`Evenementen rond ${city}`;document.getElementById('pageSubtitle').textContent=`Bekijk evenementen, tips en activiteiten in en rond ${city}.`;document.title=`Evenementen rond ${city}`}
+function fillFilters(items){const typeSelect=document.getElementById('typeFilter');const current=typeSelect.value||'all';const types=[...new Set(items.map(e=>(e.type||'').trim()).filter(Boolean))].sort();typeSelect.innerHTML='<option value="all">Alle types</option>'+types.map(v=>`<option value="${v.toLowerCase()}">${v}</option>`).join('');if([...typeSelect.options].some(o=>o.value===current))typeSelect.value=current;}
+async function loadData(){const res=await fetch('./events.json?_='+Date.now(),{cache:'no-store'});if(!res.ok)throw new Error('events.json kon niet worden geladen');events=await res.json();fillFilters(events);applyFilters();}
+function getDistance(region,location){region=(region||'').toLowerCase().trim();location=(location||'').toLowerCase().trim();if(knownDistances[region]&&knownDistances[region][location]!==undefined)return knownDistances[region][location];if(region===location)return 0;return null}
+function render(items){document.getElementById('count').textContent=`${items.length} evenementen`;document.getElementById('grid').innerHTML=items.map(e=>{const region=document.getElementById('region').value;const dist=getDistance(region,e.location);const distText=dist===null?'Afstand onbekend':`${dist} km`;return `<article class="card"><div class="image" style="background-image:url('${e.image||''}')"></div><div class="content"><div class="source">${e.source||'Bron onbekend'}</div><h2 class="title">${e.title||''}</h2><div class="meta-list"><div>📅 ${e.date||'Onbekend'} ${e.time||''}</div><div>📍 ${e.location||'Onbekend'}</div><div>🏷️ ${e.type||'Onbekend'}</div><div>📏 ${distText}</div><div>💶 ${e.cost||'Zie website'}</div></div><p class="desc">${e.description||''}</p><div class="links"><a class="btn btn-primary" href="${e.website||'#'}" target="_blank" rel="noopener noreferrer">Meer info</a>${e.locationLink?`<a class="btn btn-secondary" href="${e.locationLink}" target="_blank" rel="noopener noreferrer">Route</a>`:''}</div></div></article>`}).join('')}
+function applyFilters(){updatePageTitle();const q=document.getElementById('search').value.toLowerCase();const region=document.getElementById('region').value.toLowerCase().trim();const radius=Number(document.getElementById('radius').value||0);const price=document.getElementById('price').value;const type=document.getElementById('typeFilter').value;const date=document.getElementById('dateFilter').value;const filtered=events.filter(e=>{const hay=`${e.title||''} ${e.description||''} ${e.location||''}`.toLowerCase();if(q&&!hay.includes(q))return false;if(type!=='all'&&(e.type||'').toLowerCase()!==type)return false;if(date&&!String(e.date||'').includes(date))return false;const free=(e.cost||'').toLowerCase().includes('gratis');if(price==='free'&&!free)return false;if(price==='other'&&free)return false;const dist=getDistance(region,e.location);if(region&&radius>0&&dist!==null&&dist>radius)return false;if(region&&radius>0&&dist===null&&!hay.includes(region))return false;return true;});document.getElementById('metaInfo').textContent=`Resultaten voor ${formatCityName(region)} binnen ${radius} km.`;render(filtered)}
+async function triggerRemoteRefresh(){const btn=document.getElementById('refreshBtn');const status=document.getElementById('status');btn.disabled=true;btn.textContent='Bezig...';status.textContent='Update gestart...';const payload={region:document.getElementById('region').value,date:document.getElementById('dateFilter').value,radius:document.getElementById('radius').value,category:document.getElementById('typeFilter').value,query:document.getElementById('search').value};try{const res=await fetch(WORKER_URL,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});const data=await res.json();if(!res.ok)throw new Error(data.error||'Onbekende fout');status.textContent='Update gestart. Wacht ongeveer 1-2 minuten en klik dan nogmaals op Ververs om de nieuwe data te laden.';}catch(e){status.textContent='Starten mislukt: '+e.message;}btn.disabled=false;btn.textContent='Ververs';}
+loadData().catch((e)=>{document.getElementById('status').textContent='Laden mislukt: '+e.message;document.getElementById('grid').innerHTML='<div class="toolbar">Laden van events.json is mislukt.</div>';});
 </script>
 </body>
 </html>
