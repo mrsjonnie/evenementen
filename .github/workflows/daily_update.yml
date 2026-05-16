@@ -2,8 +2,29 @@ name: Dagelijkse update
 
 on:
   schedule:
-    - cron: '0 0 * * *' # Voert dagelijks om 00:00 UTC uit (02:00 in Nederland)
-  workflow_dispatch: # Handmatig uitvoeren via GitHub UI
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+    inputs:
+      region:
+        description: 'Regio of startplaats'
+        required: false
+        default: 'Groningen'
+      date:
+        description: 'Datum (YYYY-MM-DD)'
+        required: false
+        default: ''
+      radius:
+        description: 'Straal in km'
+        required: false
+        default: '140'
+      category:
+        description: 'Categorie'
+        required: false
+        default: 'all'
+      query:
+        description: 'Zoekopdracht'
+        required: false
+        default: ''
 
 jobs:
   update:
@@ -11,13 +32,32 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
-
-      - name: Voer update-script uit
-        run: 
-          # Voeg hier je update-commando's toe, bijvoorbeeld:
-          python scrape_and_email.py # Als je een Python-script hebt
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests beautifulsoup4
+      - name: Run scraper
+        env:
+          INPUT_REGION: ${{ inputs.region }}
+          INPUT_DATE: ${{ inputs.date }}
+          INPUT_RADIUS: ${{ inputs.radius }}
+          INPUT_CATEGORY: ${{ inputs.category }}
+          INPUT_QUERY: ${{ inputs.query }}
+          SMTP_SERVER: ${{ secrets.SMTP_SERVER }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+          EMAIL_FROM: ${{ secrets.EMAIL_FROM }}
+          EMAIL_TO: ${{ secrets.EMAIL_TO }}
+        run: python scrape_and_email.py
+      - name: Commit and push changes
+        run: |
           git config --global user.name "GitHub Actions"
           git config --global user.email "actions@github.com"
-          git add .
-          git commit -m "Dagelijkse update: $(date +'%Y-%m-%d')"
+          git add events.json scrape_log.txt || true
+          git diff --staged --quiet || git commit -m "Automatische update evenementen"
           git push
