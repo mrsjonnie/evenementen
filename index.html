@@ -18,19 +18,24 @@
       --shadow:0 10px 30px rgba(29,78,216,.12);
       --radius:20px;
     }
+
     *{box-sizing:border-box}
+
     body{
       margin:0;
       font-family:Inter,Segoe UI,Arial,sans-serif;
       background:linear-gradient(180deg,#eff5ff 0%,#f8fbff 100%);
       color:var(--text);
     }
+
     .header{
       padding:52px 20px 34px;
       background:linear-gradient(135deg,#0f2d6b 0%,#2563eb 100%);
       color:#fff;
     }
+
     .wrap{max-width:1180px;margin:0 auto}
+
     .header h1{margin:0;font-size:clamp(2.2rem,4vw,3.6rem)}
     .header p{margin:12px 0 0;color:#dce8ff;max-width:760px}
 
@@ -78,6 +83,7 @@
       flex-wrap:wrap;
       margin:18px 2px;
     }
+
     .meta strong{color:var(--primary-dark)}
     .meta span{color:var(--muted);font-size:14px}
 
@@ -95,6 +101,7 @@
       box-shadow:var(--shadow);
       transition:transform .18s ease,box-shadow .18s ease;
     }
+
     .card:hover{
       transform:translateY(-4px);
       box-shadow:0 16px 34px rgba(29,78,216,.18);
@@ -120,9 +127,18 @@
       margin-bottom:10px;
     }
 
-    .title{margin:0 0 8px;font-size:1.05rem;color:#0d2350}
+    .title{
+      margin:0 0 8px;
+      font-size:1.05rem;
+      color:#0d2350;
+    }
 
-    .meta-list{display:grid;gap:6px;font-size:13px;color:#29415f}
+    .meta-list{
+      display:grid;
+      gap:6px;
+      font-size:13px;
+      color:#29415f;
+    }
 
     .desc{
       color:var(--muted);
@@ -132,7 +148,11 @@
       margin:12px 0;
     }
 
-    .links{display:flex;gap:8px;flex-wrap:wrap}
+    .links{
+      display:flex;
+      gap:8px;
+      flex-wrap:wrap;
+    }
 
     .btn{
       display:inline-flex;
@@ -161,17 +181,17 @@
       display:none;
     }
 
-    .providers{
+    .providers, .sites{
       display:flex;
-      gap:12px;
+      gap:10px;
       flex-wrap:wrap;
-      padding-top:10px;
+      padding-top:12px;
       font-size:14px;
       color:var(--primary-dark);
       font-weight:700;
     }
 
-    .providers label{
+    .providers label, .sites label{
       display:flex;
       gap:6px;
       align-items:center;
@@ -183,13 +203,22 @@
       user-select:none;
     }
 
+    .sectionTitle{
+      margin-top:16px;
+      font-weight:900;
+      color:var(--primary-dark);
+      font-size:14px;
+    }
+
     @media (max-width:1200px){
       .filters{grid-template-columns:1fr 1fr 1fr}
       .grid{grid-template-columns:repeat(3,minmax(0,1fr))}
     }
+
     @media (max-width:900px){
       .grid{grid-template-columns:repeat(2,minmax(0,1fr))}
     }
+
     @media (max-width:760px){
       .filters{grid-template-columns:1fr}
       .header{padding-top:38px}
@@ -252,10 +281,25 @@
       <button class="btn btn-primary" id="refreshBtn" onclick="triggerRemoteRefresh()">Ververs</button>
     </div>
 
+    <div class="sectionTitle">AI bronnen</div>
     <div class="providers">
       <label><input type="checkbox" id="provPerplexity" checked> Perplexity</label>
       <label><input type="checkbox" id="provMistral" checked> Mistral</label>
       <label><input type="checkbox" id="provOpenAI"> OpenAI</label>
+    </div>
+
+    <div class="sectionTitle">Websites (domeinen)</div>
+    <div class="sites">
+      <label><input class="siteCheck" type="checkbox" value="vera-groningen.nl" checked> vera-groningen.nl</label>
+      <label><input class="siteCheck" type="checkbox" value="go-kids.nl" checked> go-kids.nl</label>
+      <label><input class="siteCheck" type="checkbox" value="kermis.nl" checked> kermis.nl</label>
+      <label><input class="siteCheck" type="checkbox" value="uitloper.nu" checked> uitloper.nu</label>
+
+      <label><input class="siteCheck" type="checkbox" value="visitgroningen.nl" checked> visitgroningen.nl</label>
+      <label><input class="siteCheck" type="checkbox" value="spotgroningen.nl" checked> spotgroningen.nl</label>
+      <label><input class="siteCheck" type="checkbox" value="simplon.nl" checked> simplon.nl</label>
+      <label><input class="siteCheck" type="checkbox" value="ticketmaster.nl"> ticketmaster.nl</label>
+      <label><input class="siteCheck" type="checkbox" value="eventbrite.nl"> eventbrite.nl</label>
     </div>
 
     <div class="notice" id="status"></div>
@@ -273,7 +317,7 @@
   let events = [];
 
   // PAS DIT AAN
-  const WORKER_URL = "https://evenementen-refresh.mrsjonnie.workers.dev";
+  const WORKER_URL = "https://evenementen-refresh.jouwnaam.workers.dev";
 
   function formatCityName(value){
     const text = (value || "").trim();
@@ -351,7 +395,6 @@
   function isWithinDateRange(eventDate, from, to){
     if(!eventDate) return true;
 
-    // Accept "YYYY-MM-DD"
     if(!eventDate.match(/^\d{4}-\d{2}-\d{2}$/)) return true;
 
     const d = new Date(eventDate);
@@ -369,8 +412,6 @@
     updatePageTitle();
 
     const q = document.getElementById("search").value.toLowerCase();
-    const region = document.getElementById("region").value.toLowerCase().trim();
-    const radius = Number(document.getElementById("radius").value || 0);
     const type = document.getElementById("typeFilter").value;
 
     const dateFrom = document.getElementById("dateFrom").value;
@@ -384,16 +425,11 @@
 
       if(dateFrom && dateTo && !isWithinDateRange(e.date, dateFrom, dateTo)) return false;
 
-      // simpele regio check (geen echte afstandsberekening)
-      if(region && radius > 0 && !hay.includes(region)) {
-        // laat onbekenden toe
-      }
-
       return true;
     });
 
     document.getElementById("metaInfo").textContent =
-      `Resultaten voor ${formatCityName(region)} van ${dateFrom} t/m ${dateTo} binnen ${radius} km.`;
+      `Resultaten van ${dateFrom} t/m ${dateTo}.`;
 
     render(filtered);
   }
@@ -402,7 +438,6 @@
     const today = new Date();
     const day = today.getDay(); // 0=zo 1=ma ... 5=vr 6=za
 
-    // we willen vrijdag
     const friday = new Date(today);
     const diffToFriday = (5 - day + 7) % 7;
     friday.setDate(today.getDate() + diffToFriday);
@@ -412,10 +447,7 @@
 
     const fmt = (d) => d.toISOString().slice(0, 10);
 
-    return {
-      from: fmt(friday),
-      to: fmt(sunday)
-    };
+    return { from: fmt(friday), to: fmt(sunday) };
   }
 
   async function triggerRemoteRefresh(){
@@ -427,6 +459,9 @@
     btn.textContent = "Bezig...";
     status.textContent = "Nieuwe events ophalen...";
 
+    const sites = [];
+    document.querySelectorAll(".siteCheck:checked").forEach(cb => sites.push(cb.value));
+
     const payload = {
       region: document.getElementById("region").value,
       radius: document.getElementById("radius").value,
@@ -435,6 +470,7 @@
       dateFrom: document.getElementById("dateFrom").value,
       dateTo: document.getElementById("dateTo").value,
       minResults: Number(document.getElementById("minResults").value || 20),
+      sites: sites,
       providers: {
         perplexity: document.getElementById("provPerplexity").checked,
         mistral: document.getElementById("provMistral").checked,
@@ -458,7 +494,7 @@
         status.textContent = "Nieuwe events laden...";
         await loadData();
         status.textContent = "Klaar! Nieuwe events zijn geladen.";
-      }, 8000);
+      }, 9000);
 
     } catch(e){
       status.textContent = "Starten mislukt: " + e.message;
@@ -468,7 +504,7 @@
     btn.textContent = "Ververs";
   }
 
-  // DEFAULTS: dit weekend
+  // defaults: dit weekend
   const weekend = getWeekendRange();
   document.getElementById("dateFrom").value = weekend.from;
   document.getElementById("dateTo").value = weekend.to;
