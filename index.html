@@ -1,441 +1,233 @@
+
+ik heb: https://mrsjonnie.github.io/evenementen/ en ik heb https://github.com/mrsjonnie/evenementen/tree/main. ik wil dat de website geupdate wordt als ik op een knop op de website klik
+3 stappen voltooid
+Nu begrijp ik de setup goed. Je hebt een statische GitHub Pages website waarbij de evenementen hardcoded in index.html staan. Om de website te "updaten" via een knop op de website zelf, is er een slimme aanpak nodig — want GitHub Pages is statief (geen server).
+
+Hoe dit werkt
+De beste oplossing: een "Ververs data" knop die via de GitHub API een workflow triggert, die vervolgens scrape_and_email.py uitvoert en de index.html opnieuw genereert en pusht.
+
+Hier is wat je nodig hebt:
+
+Stap 1: GitHub Actions workflow aanmaken
+Je hebt al een .github/workflows/ map. Je maakt een workflow die getriggerd kan worden via een workflow_dispatch event (handmatig of via API call).
+
+Stap 2: Personal Access Token (PAT) aanmaken
+De knop op de website roept de GitHub API aan om de workflow te starten. Hiervoor heb je een PAT nodig met workflow scope. Ga naar: GitHub → Settings → Developer settings → Personal access tokens
+
+Let op: Dit token wordt zichtbaar in de HTML-code van je website. Maak daarom een token met alleen workflow rechten en geen andere rechten. Ververs het token regelmatig.
+
+Wat ik voor je aanmaak
+Ik maak:
+
+Een workflow update-events.yml die scrape_and_email.py uitvoert
+
+Een update-knop in index.html die de workflow via de GitHub API triggert
+
+Wil je doorgaan? Dan heb ik nog één ding nodig:
+
+Heb je al een GitHub Personal Access Token (PAT) met workflow scope? Als niet, maak er eerst een aan via de link hierboven — ik help je daarna met de exacte code om alles in te stellen.
+
+Voorbereid met GPT-5.4
+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
+3 stappen voltooid
+GitHub blokkeert het token automatisch omdat het in de code staat — dit is precies waarom tokens nooit hardcoded mogen worden.
+
+✅ De juiste aanpak: GitHub Secret
+Zo doe je het veilig:
+
+Stap 1: Sla het token op als GitHub Secret
+Ga naar github.com/mrsjonnie/evenementen/settings/secrets/actions
+
+Klik "New repository secret"
+
+Naam: DISPATCH_TOKEN
+
+Waarde: jouw PAT token
+
+Klik "Add secret"
+
+Stap 2: Maak een nieuw token aan
+Je huidige token is gecompromitteerd — GitHub heeft het al geblokkeerd. Maak een nieuw token aan via github.com/settings/tokens met alleen workflow scope, en sla dat op als secret (zie stap 1).
+
+Stap 3: Ik pas de code aan
+Zodra je het secret DISPATCH_TOKEN hebt aangemaakt, pas ik de index.html aan zodat de knop een kleine proxy of serverless functie gebruikt — of ik gebruik een alternatieve methode waarbij het token niet in de HTML staat.
+
+Alternatief zonder token in HTML: Je kunt ook een gratis Netlify Function of Cloudflare Worker als tussenstap gebruiken, zodat het token volledig verborgen blijft.
+
+Ververs eerst je token en maak het secret aan — laat me weten als dat klaar is, dan zet ik alles correct op!
+
+Voorbereid met GPT-5.4
+DISPATCH_TOKEN aangemaakt,
+3 stappen voltooid
+Top. Dan is de veilige volgende stap:
+
+Wat je nu moet doen
+Voeg niet het token toe in index.html; GitHub secret DISPATCH_TOKEN is vanaf de browser niet uitleesbaar.
+
+Een knop op een statische GitHub Pages site kan dus niet direct met een repository secret praten; daarvoor heb je een tussenlaag nodig, zoals een GitHub Action endpoint via een externe worker/function, of je gebruikt een andere trigger-methode.
+
+Beste oplossing
+Gebruik een kleine Cloudflare Worker of Netlify Function.
+
+Die function:
+
+ontvangt de klik van je website,
+
+leest daar veilig het token uit een secret,
+
+roept GitHub workflow_dispatch aan voor daily_update.yml.
+
+Belangrijk
+Je repo heeft al een workflowbestand daily_update.yml met workflow_dispatch, dus dat deel is er al.
+
+Je bestaande website staat volledig statisch in index.html, met hardcoded eventdata in JavaScript.
+
+Concreet advies
+Snelste route: Cloudflare Worker maken.
+
+Daarna pas ik deze 2 dingen aan:
+
+index.html: knop laat request naar jouw worker sturen.
+
+daily_update.yml: workflow netjes laten draaien en committen.
+
+Wil je dat ik je nu meteen de exacte Cloudflare Worker code + aangepaste knopcode geef?
+
+Voorbereid met GPT-5.4
+zorg dat de bestanden hier worden geupdate
+
+Ja — de bestanden hier in de gedeelde output zijn al bijgewerkt naar de nieuwe versie met refreshknop, instelbare regio en km-straal.
+
+Wat is bijgewerkt
+index.html bevat nu:
+
+een Refresh knop,
+
+een invoerveld voor Regio / startplaats,
+
+een invoerveld voor Straal in km,
+
+en een blauwe layout.
+
+Belangrijk
+De refreshknop laadt events.json opnieuw in de browser.
+
+De km-filter gebruikt nu een voorbereid overzicht met afstanden voor bekende plaatsen; voor echte vrije km-berekening per elke locatie zijn coördinaten of geocoding nodig.
+
+Wat je nu ziet
+De bijgewerkte bestanden staan in de gedeelde map als nieuwe downloads klaar.
+
+Om je live website echt te veranderen, moeten deze bestanden nog in je GitHub repo worden gezet, omdat GitHub Pages de site uit die repo publiceert.
+
+Voorbereid met GPT-5.4
+https://github.com/mrsjonnie/evenementen/tree/main
+
+Ja — dat is je repo, maar ik kan vanuit hier nog steeds niet rechtstreeks daarin schrijven zonder een werkende directe GitHub write-route. Je GitHub Pages-site wordt vanuit die repo gepubliceerd, dus pas na upload of push naar main wordt de live site aangepast.
+
+Wat dit betekent
+De nieuwe versie staat hier al klaar als bestanden voor jouw repo.
+
+Zodra index.html en events.json in mrsjonnie/evenementen op main staan, zal GitHub Pages de site opnieuw bouwen vanaf die branch.
+
+Wat er nu in moet
+index.html met:
+
+refresh knop,
+
+regio/startplaats,
+
+km-straal,
+
+blauwe layout.
+
+events.json met de huidige evenementendata uit Uitzinnig + tips.
+
+Belangrijk
+Je repo bevatte eerder alleen index.html, scrape_and_email.py en de workflowmap; events.json moet dus nieuw worden toegevoegd.
+
+Als GitHub Pages niet meteen ververst, is een harde refresh of een nieuwe build op main meestal genoeg.
+
+Kortste route
+Open de repo-link.
+
+Upload de 2 bestanden.
+
+Commit naar main.
+
+Wacht kort op GitHub Pages rebuild.
+
+Als je wilt, kan ik nu de exacte stap-voor-stap GitHub uploadinstructie in 5 klikken geven.
+
+Voorbereid met GPT-5.4
+nog een keer de files aub
+3 stappen voltooid
+index
+
+
+Momenteel geopend
+Hier zijn de bestanden opnieuw.
+
+index.html met refreshknop, regio en km-filter.
+
+events.json met de huidige evenementendata.
+
+README.txt met korte uploadstappen.
+
+Upload index.html en events.json naar je repo op main, dan pakt GitHub Pages de update op.
+
+Voorbereid met GPT-5.4
+index
+
+
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Evenementen Rond Groningen</title>
-    <style>
-        :root {
-            --primary: #4CAF50;
-            --secondary: #45a049;
-            --light: #f9f9f9;
-            --dark: #333;
-        }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: var(--light);
-            color: var(--dark);
-            line-height: 1.6;
-        }
-        .header {
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            color: white;
-            padding: 20px;
-            text-align: center;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        .header h1 {
-            margin: 0;
-            font-size: 24px;
-        }
-        .header p {
-            margin: 5px 0 0;
-            font-size: 16px;
-            opacity: 0.9;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 20px auto;
-            padding: 0 15px;
-        }
-        .filters {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-bottom: 20px;
-            background: white;
-            padding: 15px;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        .filter-group {
-            flex: 1;
-            min-width: 200px;
-        }
-        .filter-group label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: bold;
-            color: var(--primary);
-        }
-        select, input {
-            width: 100%;
-            padding: 8px 12px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            font-size: 14px;
-        }
-        .event-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 20px;
-        }
-        .event-card {
-            background: white;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-        .event-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-        }
-        .event-image {
-            height: 180px;
-            background-size: cover;
-            background-position: center;
-        }
-        .event-content {
-            padding: 15px;
-        }
-        .event-title {
-            font-size: 18px;
-            margin: 0 0 10px;
-            color: var(--primary);
-        }
-        .event-meta {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-bottom: 10px;
-            font-size: 14px;
-            color: #666;
-        }
-        .meta-item {
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-        .event-description {
-            margin: 10px 0;
-            font-size: 14px;
-        }
-        .event-links {
-            display: flex;
-            gap: 10px;
-            margin-top: 10px;
-        }
-        .btn {
-            display: inline-block;
-            padding: 6px 12px;
-            background: var(--primary);
-            color: white;
-            text-decoration: none;
-            border-radius: 4px;
-            font-size: 12px;
-            transition: background 0.3s;
-        }
-        .btn:hover {
-            background: var(--secondary);
-        }
-        .weather-widget {
-            background: white;
-            padding: 15px;
-            border-radius: 8px;
-            margin-bottom: 20px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-        .weather-icon {
-            font-size: 40px;
-        }
-        .weather-info {
-            flex: 1;
-        }
-        .weather-temp {
-            font-size: 24px;
-            font-weight: bold;
-        }
-        @media (max-width: 768px) {
-            .event-grid {
-                grid-template-columns: 1fr;
-            }
-            .filters {
-                flex-direction: column;
-            }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Evenementen Rond Groningen</title>
+<style>
+:root{--bg:#f3f8ff;--surface:#ffffff;--surface-2:#eef5ff;--primary:#1d4ed8;--primary-dark:#163ea7;--text:#10233e;--muted:#61738c;--border:#d8e5ff;--shadow:0 10px 30px rgba(29,78,216,.12);--radius:20px}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,Segoe UI,Arial,sans-serif;background:linear-gradient(180deg,#eff5ff 0%,#f8fbff 100%);color:var(--text)}
+.header{padding:52px 20px 34px;background:linear-gradient(135deg,#0f2d6b 0%,#2563eb 100%);color:#fff}.wrap{max-width:1180px;margin:0 auto}.header h1{margin:0;font-size:clamp(2.2rem,4vw,3.6rem)}.header p{margin:12px 0 0;color:#dce8ff;max-width:760px}.stats{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}.stat{padding:10px 14px;border-radius:999px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.18);font-size:14px}
+.container{max-width:1180px;margin:-18px auto 0;padding:0 16px 40px}.toolbar{background:rgba(255,255,255,.92);backdrop-filter:blur(10px);padding:18px;border:1px solid var(--border);border-radius:24px;box-shadow:var(--shadow)}
+.filters{display:grid;grid-template-columns:2fr 1.2fr 1fr 1fr auto;gap:14px;align-items:end}.field label{display:block;margin-bottom:6px;font-weight:700;color:var(--primary-dark);font-size:14px}.field input,.field select{width:100%;padding:13px 14px;border-radius:14px;border:1px solid var(--border);background:#fff;font-size:15px;color:var(--text)}
+.meta{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin:18px 2px}.meta strong{color:var(--primary-dark)}.meta span{color:var(--muted);font-size:14px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:22px}.card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);transition:transform .18s ease,box-shadow .18s ease}.card:hover{transform:translateY(-4px);box-shadow:0 16px 34px rgba(29,78,216,.18)}
+.image{height:190px;background-size:cover;background-position:center}.content{padding:18px}.source{display:inline-block;padding:6px 10px;border-radius:999px;background:var(--surface-2);color:var(--primary-dark);font-size:12px;font-weight:700;margin-bottom:12px}.title{margin:0 0 10px;font-size:1.2rem;color:#0d2350}.meta-list{display:grid;gap:8px;font-size:14px;color:#29415f}.desc{color:var(--muted);font-size:14px;line-height:1.55;min-height:66px;margin:14px 0}.links{display:flex;gap:10px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 14px;border-radius:12px;text-decoration:none;font-weight:700;font-size:14px;border:none;cursor:pointer}.btn-primary{background:var(--primary);color:#fff}.btn-secondary{background:var(--surface-2);color:var(--primary-dark)}
+.notice{margin-top:12px;padding:12px 14px;background:var(--surface-2);border:1px solid var(--border);border-radius:14px;color:var(--muted);font-size:14px}.footer{max-width:1180px;margin:0 auto;padding:0 16px 38px;color:var(--muted);font-size:14px}
+@media (max-width:980px){.filters{grid-template-columns:1fr 1fr}} @media (max-width:760px){.filters{grid-template-columns:1fr}.header{padding-top:38px}.image{height:170px}.toolbar{border-radius:18px}}
+</style>
 </head>
 <body>
-    <div class="header">
-        <h1>🎉 Evenementen Rond Groningen</h1>
-        <p>Bekijk en filter activiteiten in een straal van 140km</p>
-    </div>
-
-    <div class="container">
-        <div class="weather-widget">
-            <div class="weather-icon">☀️</div>
-            <div class="weather-info">
-                <div class="weather-temp" id="current-temp">15°C</div>
-                <div id="weather-desc">Heldere lucht, droog</div>
-                <div id="weather-date">Vandaag, 10 mei 2026</div>
-            </div>
-        </div>
-
-        <div class="filters">
-            <div class="filter-group">
-                <label for="typeFilter">Type evenement:</label>
-                <select id="typeFilter" onchange="filterEvents()">
-                    <option value="all">Alle types</option>
-                    <option value="gezin">Gezin & Kinderen</option>
-                    <option value="muziek">Muziek & Theater</option>
-                    <option value="bioscoop">Bioscoop</option>
-                    <option value="wandelen">Wandelen</option>
-                    <option value="permanent">Permanent</option>
-                </select>
-            </div>
-            <div class="filter-group">
-                <label for="dateFilter">Datum:</label>
-                <select id="dateFilter" onchange="filterEvents()">
-                    <option value="all">Alle datums</option>
-                    <option value="today">Vandaag</option>
-                    <option value="weekend">Dit weekend</option>
-                    <option value="week">Deze week</option>
-                </select>
-            </div>
-            <div class="filter-group">
-                <label for="locationFilter">Locatie:</label>
-                <select id="locationFilter" onchange="filterEvents()">
-                    <option value="all">Alle locaties</option>
-                    <option value="groningen">Groningen</option>
-                    <option value="leek">Leek</option>
-                    <option value="winsum">Winsum</option>
-                    <option value="stadskanaal">Stadskanaal</option>
-                </select>
-            </div>
-            <div class="filter-group">
-                <label for="costFilter">Kosten:</label>
-                <select id="costFilter" onchange="filterEvents()">
-                    <option value="all">Alle prijzen</option>
-                    <option value="free">Gratis</option>
-                    <option value="paid">Betaald</option>
-                </select>
-            </div>
-        </div>
-
-        <div class="event-grid" id="eventsContainer">
-            <!-- Evenementen worden hier dynamisch geladen -->
-        </div>
-    </div>
-
-    <script>
-        // Sample data (deze wordt later vervangen door data uit je JSON-bestand)
-        const events = [
-            {
-                title: "Lentefestijn Kultuureiland 2026",
-                type: "gezin",
-                date: "2026-05-10",
-                time: "11:00–18:00",
-                location: "Kultuureiland, Groningen",
-                locationLink: "https://goo.gl/maps/...",
-                cost: "Gratis",
-                description: "Levendig lentefeest met muziek, workshops en kinderactiviteiten in de openlucht.",
-                image: "https://via.placeholder.com/400x200/4CAF50/ffffff?text=Lentefestijn",
-                website: "https://www.uitzinnig.nl/groningen/dagje-uit.aspx",
-                isPermanent: false
-            },
-            {
-                title: "De Familie Sax (4-10 jaar)",
-                type: "gezin",
-                date: "2026-05-10",
-                time: "14:00",
-                location: "SPOT Groningen",
-                locationLink: "https://goo.gl/maps/...",
-                cost: "€12,50",
-                description: "Muzikaal avontuur met het Berlage Saxophone Quartet voor het hele gezin.",
-                image: "https://via.placeholder.com/400x200/45a049/ffffff?text=Familie+Sax",
-                website: "https://www.spotgroningen.nl/programma/",
-                isPermanent: false
-            },
-            {
-                title: "Inloop Atelier Groninger Museum",
-                type: "gezin",
-                date: "2026-05-10",
-                time: "12:00–16:00",
-                location: "Groninger Museum",
-                locationLink: "https://goo.gl/maps/...",
-                cost: "€5 (kind), €10 (volw.)",
-                description: "Creatief knutselen geïnspireerd door de tentoonstellingen.",
-                image: "https://via.placeholder.com/400x200/8BC34A/ffffff?text=Groninger+Museum",
-                website: "https://www.groningermuseum.nl",
-                isPermanent: false
-            },
-            {
-                title: "Son Mieux + Romy Liz Rose",
-                type: "muziek",
-                date: "2026-05-10",
-                time: "20:00",
-                location: "SPOT Groningen",
-                locationLink: "https://goo.gl/maps/...",
-                cost: "€22,50",
-                description: "Dansbare indiepop met elektronische invloeden.",
-                image: "https://via.placeholder.com/400x200/FF5722/ffffff?text=Son+Mieux",
-                website: "https://www.spotgroningen.nl/programma/",
-                isPermanent: false
-            },
-            {
-                title: "A Burial At Sea – VERA Groningen",
-                type: "muziek",
-                date: "2026-05-09",
-                time: "20:30",
-                location: "VERA Groningen",
-                locationLink: "https://goo.gl/maps/...",
-                cost: "€12",
-                description: "Postpunk en postrock concert.",
-                image: "https://via.placeholder.com/400x200/607D8B/ffffff?text=VERA",
-                website: "https://www.vera-groningen.nl/programma/",
-                isPermanent: false
-            },
-            {
-                title: "The Super Mario Galaxy Movie",
-                type: "bioscoop",
-                date: "2026-05-10",
-                time: "10:30, 13:00, 15:30",
-                location: "Kinepolis Groningen",
-                locationLink: "https://goo.gl/maps/...",
-                cost: "€10,50",
-                description: "Mario reist door het heelal in deze animatiefilm.",
-                image: "https://via.placeholder.com/400x200/E91E63/ffffff?text=Mario+Movie",
-                website: "https://www.kinepolis.nl",
-                isPermanent: false
-            },
-            {
-                title: "Groene Wissel Groningen",
-                type: "wandelen",
-                date: "2026-05-10",
-                time: "Hele dag",
-                location: "Noorderplantsoen, Groningen",
-                locationLink: "https://goo.gl/maps/...",
-                cost: "Gratis",
-                description: "Wandelroute van 8 km door groene parken en het centrum.",
-                image: "https://via.placeholder.com/400x200/8BC34A/ffffff?text=Wandelroute",
-                website: "https://www.wandelzoekpagina.nl",
-                isPermanent: true
-            },
-            {
-                title: "Groninger Museum",
-                type: "permanent",
-                date: "Hele jaar",
-                time: "10:00–18:00",
-                location: "Groningen",
-                locationLink: "https://goo.gl/maps/...",
-                cost: "€12,50",
-                description: "Moderne kunst en wisselende tentoonstellingen.",
-                image: "https://via.placeholder.com/400x200/9C27B0/ffffff?text=Groninger+Museum",
-                website: "https://www.groningermuseum.nl",
-                isPermanent: true
-            },
-            {
-                title: "Fort Bourtange",
-                type: "permanent",
-                date: "Hele jaar",
-                time: "10:00–17:00",
-                location: "Bourtange",
-                locationLink: "https://goo.gl/maps/...",
-                cost: "€10",
-                description: "Historische vesting met demonstraties en musea.",
-                image: "https://via.placeholder.com/400x200/795548/ffffff?text=Fort+Bourtange",
-                website: "https://www.bourtange.nl",
-                isPermanent: true
-            },
-            {
-                title: "Nationaal Park Lauwersmeer",
-                type: "wandelen",
-                date: "Hele jaar",
-                time: "Zonsopgang–zonsondergang",
-                location: "Lauwersoog",
-                locationLink: "https://goo.gl/maps/...",
-                cost: "Gratis",
-                description: "Natuurgebied met wandelpaden en vogelkijkhutten.",
-                image: "https://via.placeholder.com/400x200/009688/ffffff?text=Lauwersmeer",
-                website: "https://www.lauwersmeer.nl",
-                isPermanent: true
-            }
-        ];
-
-        // Laad evenementen in de pagina
-        function loadEvents(eventsToLoad = events) {
-            const container = document.getElementById('eventsContainer');
-            container.innerHTML = '';
-
-            eventsToLoad.forEach(event => {
-                const eventCard = document.createElement('div');
-                eventCard.className = 'event-card';
-                eventCard.setAttribute('data-type', event.type);
-                eventCard.setAttribute('data-date', event.date);
-                eventCard.setAttribute('data-location', event.location.toLowerCase());
-                eventCard.setAttribute('data-cost', event.cost.includes('Gratis') ? 'free' : 'paid');
-
-                eventCard.innerHTML = `
-                    <div class="event-image" style="background-image: url('${event.image}');"></div>
-                    <div class="event-content">
-                        <h3 class="event-title">${event.title}</h3>
-                        <div class="event-meta">
-                            <span class="meta-item">👨‍👩‍👧‍👦 ${event.type === 'gezin' ? 'Gezin' : event.type === 'muziek' ? 'Muziek/Theater' : event.type === 'bioscoop' ? 'Bioscoop' : event.type === 'wandelen' ? 'Wandelen' : 'Permanent'}</span>
-                            <span class="meta-item">📅 ${event.date} ${event.time}</span>
-                            <span class="meta-item">📍 <a href="${event.locationLink}" target="_blank">${event.location}</a></span>
-                            <span class="meta-item">💰 ${event.cost}</span>
-                        </div>
-                        <p class="event-description">${event.description}</p>
-                        <div class="event-links">
-                            <a href="${event.website}" class="btn" target="_blank">🌐 Meer info</a>
-                            ${event.locationLink ? `<a href="${event.locationLink}" class="btn" target="_blank">📍 Route</a>` : ''}
-                        </div>
-                    </div>
-                `;
-                container.appendChild(eventCard);
-            });
-        }
-
-        // Filter evenementen
-        function filterEvents() {
-            const typeFilter = document.getElementById('typeFilter').value;
-            const dateFilter = document.getElementById('dateFilter').value;
-            const locationFilter = document.getElementById('locationFilter').value;
-            const costFilter = document.getElementById('costFilter').value;
-
-            const today = new Date().toISOString().split('T')[0];
-            const weekend = [new Date(today).getDay() === 6 ? today : new Date(new Date(today).setDate(new Date(today).getDate() + (6 - new Date(today).getDay()))).toISOString().split('T')[0],
-                              new Date(new Date(today).setDate(new Date(today).getDate() + (7 - new Date(today).getDay()))).toISOString().split('T')[0]];
-
-            const filteredEvents = events.filter(event => {
-                // Type filter
-                if (typeFilter !== 'all' && event.type !== typeFilter) return false;
-
-                // Date filter
-                if (dateFilter === 'today' && event.date !== today) return false;
-                if (dateFilter === 'weekend' && !weekend.includes(event.date)) return false;
-                if (dateFilter === 'week') {
-                    const eventDate = new Date(event.date);
-                    const weekStart = new Date(today);
-                    weekStart.setDate(weekStart.getDate() - weekStart.getDay());
-                    const weekEnd = new Date(weekStart);
-                    weekEnd.setDate(weekEnd.getDate() + 6);
-                    if (eventDate < weekStart || eventDate > weekEnd) return false;
-                }
-
-                // Location filter
-                if (locationFilter !== 'all' && !event.location.toLowerCase().includes(locationFilter)) return false;
-
-                // Cost filter
-                if (costFilter === 'free' && !event.cost.includes('Gratis')) return false;
-                if (costFilter === 'paid' && event.cost.includes('Gratis')) return false;
-
-                return true;
-            });
-
-            loadEvents(filteredEvents);
-        }
-
-        // Laad alle evenementen bij start
-        window.onload = function() {
-            loadEvents();
-        };
-    </script>
+<header class="header"><div class="wrap"><h1>Evenementen rond Groningen</h1><p>Blauwe versie met filters, handmatige refresh en instelbare regio en straal in kilometers.</p><div class="stats"><div class="stat">Refresh knop</div><div class="stat">Regio instelbaar</div><div class="stat">Straal instelbaar</div></div></div></header>
+<main class="container">
+<section class="toolbar">
+  <div class="filters">
+    <div class="field"><label for="search">Zoeken</label><input id="search" placeholder="Zoek op titel, beschrijving of plaats" oninput="applyFilters()"></div>
+    <div class="field"><label for="region">Regio / startplaats</label><input id="region" value="Groningen" placeholder="Bijv. Groningen, Assen, Drachten" oninput="applyFilters()"></div>
+    <div class="field"><label for="radius">Straal in km</label><input id="radius" type="number" min="1" max="300" value="140" oninput="applyFilters()"></div>
+    <div class="field"><label for="price">Kosten</label><select id="price" onchange="applyFilters()"><option value="all">Alle prijzen</option><option value="free">Gratis</option><option value="other">Overig / onbekend</option></select></div>
+    <button class="btn btn-primary" id="refreshBtn" onclick="refreshData()">Refresh</button>
+  </div>
+  <div class="notice" id="status">De km-filter werkt nu op bekende plaats-afstanden. Voor volledig echte afstandsberekening per km zijn coordinaten of geocoding per event nodig.</div>
+</section>
+<div class="meta"><strong id="count">0 evenementen</strong><span>De pagina leest live uit <code>events.json</code>.</span></div>
+<section class="grid" id="grid"></section>
+</main>
+<div class="footer">Volgende stap: echte km-berekening toevoegen met coordinaten per plaats of via een geocoding-bron.</div>
+<script>
+let events=[];
+const knownDistances={
+  'groningen':{'groningen':0,'haren':10,'leek':22,'slochteren':18,'bourtange':58,'oude pekela':35,'bellingwolde':48,'eenrum':25,'lauwersoog':53,'beerta':42,'assen':32,'drachten':38},
+  'assen':{'groningen':32,'haren':28,'leek':34,'slochteren':46,'bourtange':84,'oude pekela':64,'bellingwolde':76,'eenrum':56,'lauwersoog':84,'beerta':72,'assen':0,'drachten':36},
+  'drachten':{'groningen':38,'haren':44,'leek':20,'slochteren':55,'bourtange':95,'oude pekela':72,'bellingwolde':86,'eenrum':49,'lauwersoog':61,'beerta':82,'assen':36,'drachten':0}
+};
+async function loadData(){const res=await fetch('./events.json?_='+Date.now());events=await res.json();applyFilters()}
+function getDistance(region,location){region=(region||'').toLowerCase().trim();location=(location||'').toLowerCase().trim();if(knownDistances[region]&&knownDistances[region][location]!==undefined)return knownDistances[region][location];if(region===location)return 0;return null}
+function render(items){document.getElementById('count').textContent=`${items.length} evenementen`;document.getElementById('grid').innerHTML=items.map(e=>{const region=document.getElementById('region').value;const dist=getDistance(region,e.location);const distText=dist===null?'Afstand onbekend':dist+' km';return `<article class="card"><div class="image" style="background-image:url('${e.image||''}')"></div><div class="content"><div class="source">${e.source||'Bron onbekend'}</div><h2 class="title">${e.title||''}</h2><div class="meta-list"><div>📅 ${e.date||'Onbekend'} ${e.time||''}</div><div>📍 ${e.location||'Onbekend'}</div><div>📏 ${distText}</div><div>💶 ${e.cost||'Zie website'}</div></div><p class="desc">${e.description||''}</p><div class="links"><a class="btn btn-primary" href="${e.website||'#'}" target="_blank" rel="noopener noreferrer">Meer info</a>${e.locationLink?`<a class="btn btn-secondary" href="${e.locationLink}" target="_blank" rel="noopener noreferrer">Route</a>`:''}</div></div></article>`}).join('')}
+function applyFilters(){const q=document.getElementById('search').value.toLowerCase();const region=document.getElementById('region').value.toLowerCase().trim();const radius=Number(document.getElementById('radius').value||0);const price=document.getElementById('price').value;const filtered=events.filter(e=>{const hay=`${e.title||''} ${e.description||''} ${e.location||''}`.toLowerCase();if(q&&!hay.includes(q))return false;const free=(e.cost||'').toLowerCase().includes('gratis');if(price==='free'&&!free)return false;if(price==='other'&&free)return false;const dist=getDistance(region,e.location);if(region&&radius>0&&dist!==null&&dist>radius)return false;if(region&&radius>0&&dist===null&&!hay.includes(region))return false;return true;});render(filtered)}
+async function refreshData(){const btn=document.getElementById('refreshBtn');const status=document.getElementById('status');btn.disabled=true;btn.textContent='Bezig...';status.textContent='events.json wordt opnieuw geladen...';try{await loadData();status.textContent='Data ververst vanaf events.json. Voor server-side nieuwe scraping moet later ook de GitHub workflow gekoppeld worden.';}catch(e){status.textContent='Verversen mislukt: '+e.message;}btn.disabled=false;btn.textContent='Refresh';}
+loadData().catch(()=>{document.getElementById('grid').innerHTML='<div class="toolbar">Laden van events.json is mislukt.</div>'})
+</script>
 </body>
 </html>
