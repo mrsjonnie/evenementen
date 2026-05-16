@@ -1,0 +1,23 @@
+name: Dagelijkse update
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # Voert dagelijks om 00:00 UTC uit (02:00 in Nederland)
+  workflow_dispatch: # Handmatig uitvoeren via GitHub UI
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Voer update-script uit
+        run: |
+          # Voeg hier je update-commando's toe, bijvoorbeeld:
+          python update_script.py # Als je een Python-script hebt
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+          git add .
+          git commit -m "Dagelijkse update: $(date +'%Y-%m-%d')"
+          git push
