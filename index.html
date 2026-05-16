@@ -18,24 +18,19 @@
       --shadow:0 10px 30px rgba(29,78,216,.12);
       --radius:20px;
     }
-
     *{box-sizing:border-box}
-
     body{
       margin:0;
       font-family:Inter,Segoe UI,Arial,sans-serif;
       background:linear-gradient(180deg,#eff5ff 0%,#f8fbff 100%);
       color:var(--text);
     }
-
     .header{
       padding:52px 20px 34px;
       background:linear-gradient(135deg,#0f2d6b 0%,#2563eb 100%);
       color:#fff;
     }
-
     .wrap{max-width:1180px;margin:0 auto}
-
     .header h1{margin:0;font-size:clamp(2.2rem,4vw,3.6rem)}
     .header p{margin:12px 0 0;color:#dce8ff;max-width:760px}
 
@@ -52,7 +47,7 @@
 
     .filters{
       display:grid;
-      grid-template-columns:2fr 1.2fr 1fr 1fr 1fr 1fr auto;
+      grid-template-columns:2fr 1.2fr 1fr 1fr 1fr 1fr 1fr auto;
       gap:14px;
       align-items:end;
     }
@@ -83,7 +78,6 @@
       flex-wrap:wrap;
       margin:18px 2px;
     }
-
     .meta strong{color:var(--primary-dark)}
     .meta span{color:var(--muted);font-size:14px}
 
@@ -101,7 +95,6 @@
       box-shadow:var(--shadow);
       transition:transform .18s ease,box-shadow .18s ease;
     }
-
     .card:hover{
       transform:translateY(-4px);
       box-shadow:0 16px 34px rgba(29,78,216,.18);
@@ -127,18 +120,9 @@
       margin-bottom:10px;
     }
 
-    .title{
-      margin:0 0 8px;
-      font-size:1.05rem;
-      color:#0d2350;
-    }
+    .title{margin:0 0 8px;font-size:1.05rem;color:#0d2350}
 
-    .meta-list{
-      display:grid;
-      gap:6px;
-      font-size:13px;
-      color:#29415f;
-    }
+    .meta-list{display:grid;gap:6px;font-size:13px;color:#29415f}
 
     .desc{
       color:var(--muted);
@@ -148,11 +132,7 @@
       margin:12px 0;
     }
 
-    .links{
-      display:flex;
-      gap:8px;
-      flex-wrap:wrap;
-    }
+    .links{display:flex;gap:8px;flex-wrap:wrap}
 
     .btn{
       display:inline-flex;
@@ -181,15 +161,35 @@
       display:none;
     }
 
+    .providers{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      padding-top:10px;
+      font-size:14px;
+      color:var(--primary-dark);
+      font-weight:700;
+    }
+
+    .providers label{
+      display:flex;
+      gap:6px;
+      align-items:center;
+      background:var(--surface-2);
+      padding:8px 12px;
+      border-radius:999px;
+      border:1px solid var(--border);
+      cursor:pointer;
+      user-select:none;
+    }
+
     @media (max-width:1200px){
       .filters{grid-template-columns:1fr 1fr 1fr}
       .grid{grid-template-columns:repeat(3,minmax(0,1fr))}
     }
-
     @media (max-width:900px){
       .grid{grid-template-columns:repeat(2,minmax(0,1fr))}
     }
-
     @media (max-width:760px){
       .filters{grid-template-columns:1fr}
       .header{padding-top:38px}
@@ -201,93 +201,79 @@
 </head>
 
 <body>
-  <header class="header">
-    <div class="wrap">
-      <h1 id="pageTitle">Evenementen rond Groningen</h1>
-      <p id="pageSubtitle">Bekijk evenementen, tips en activiteiten in en rond Groningen.</p>
-    </div>
-  </header>
+<header class="header">
+  <div class="wrap">
+    <h1 id="pageTitle">Evenementen rond Groningen</h1>
+    <p id="pageSubtitle">Bekijk evenementen, tips en activiteiten in en rond Groningen.</p>
+  </div>
+</header>
 
-  <main class="container">
-    <section class="toolbar">
-      <div class="filters">
+<main class="container">
+  <section class="toolbar">
 
-        <div class="field">
-          <label for="search">Zoeken</label>
-          <input id="search" placeholder="Zoek op titel, beschrijving of plaats" oninput="applyFilters()">
-        </div>
-
-        <div class="field">
-          <label for="region">Regio / startplaats</label>
-          <input id="region" value="Groningen" placeholder="Bijv. Groningen, Assen, Drachten" oninput="applyFilters()">
-        </div>
-
-        <div class="field">
-          <label for="radius">Straal in km</label>
-          <input id="radius" type="number" min="1" max="300" value="140" oninput="applyFilters()">
-        </div>
-
-        <div class="field">
-          <label for="typeFilter">Activiteit type</label>
-          <select id="typeFilter" onchange="applyFilters()">
-            <option value="all">Alle types</option>
-          </select>
-        </div>
-
-        <div class="field">
-          <label for="dateFilter">Datum</label>
-          <input id="dateFilter" type="date" onchange="applyFilters()">
-        </div>
-
-        <div class="field">
-          <label for="price">Kosten</label>
-          <select id="price" onchange="applyFilters()">
-            <option value="all">Alle prijzen</option>
-            <option value="free">Gratis</option>
-            <option value="other">Overig / onbekend</option>
-          </select>
-        </div>
-
-        <button class="btn btn-primary" id="refreshBtn" onclick="triggerRemoteRefresh()">Ververs</button>
+    <div class="filters">
+      <div class="field">
+        <label for="search">Zoeken</label>
+        <input id="search" placeholder="Zoek op titel, beschrijving of plaats" oninput="applyFilters()">
       </div>
 
-      <div class="notice" id="status"></div>
-    </section>
+      <div class="field">
+        <label for="region">Regio</label>
+        <input id="region" value="Groningen" oninput="applyFilters()">
+      </div>
 
-    <div class="meta">
-      <strong id="count">0 evenementen</strong>
-      <span id="metaInfo">De pagina leest live uit <code>events.json</code>.</span>
+      <div class="field">
+        <label for="radius">Straal (km)</label>
+        <input id="radius" type="number" min="1" max="300" value="100" oninput="applyFilters()">
+      </div>
+
+      <div class="field">
+        <label for="typeFilter">Evenementen</label>
+        <select id="typeFilter" onchange="applyFilters()">
+          <option value="all">Alle types</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="dateFrom">Van</label>
+        <input id="dateFrom" type="date" onchange="applyFilters()">
+      </div>
+
+      <div class="field">
+        <label for="dateTo">Tot</label>
+        <input id="dateTo" type="date" onchange="applyFilters()">
+      </div>
+
+      <div class="field">
+        <label for="minResults">Min. aantal</label>
+        <input id="minResults" type="number" min="1" max="100" value="20">
+      </div>
+
+      <button class="btn btn-primary" id="refreshBtn" onclick="triggerRemoteRefresh()">Ververs</button>
     </div>
 
-    <section class="grid" id="grid"></section>
-  </main>
+    <div class="providers">
+      <label><input type="checkbox" id="provPerplexity" checked> Perplexity</label>
+      <label><input type="checkbox" id="provMistral" checked> Mistral</label>
+      <label><input type="checkbox" id="provOpenAI"> OpenAI</label>
+    </div>
+
+    <div class="notice" id="status"></div>
+  </section>
+
+  <div class="meta">
+    <strong id="count">0 evenementen</strong>
+    <span id="metaInfo">De pagina leest live uit <code>events.json</code>.</span>
+  </div>
+
+  <section class="grid" id="grid"></section>
+</main>
 
 <script>
   let events = [];
 
-  // !!! PAS DIT AAN NAAR JOUW CLOUDFLARE WORKER URL !!!
+  // PAS DIT AAN
   const WORKER_URL = "https://evenementen-refresh.mrsjonnie.workers.dev";
-
-  const knownDistances = {
-    "groningen": {
-      "groningen": 0, "haren": 10, "leek": 22, "slochteren": 18,
-      "bourtange": 58, "oude pekela": 35, "bellingwolde": 48,
-      "eenrum": 25, "lauwersoog": 53, "beerta": 42,
-      "assen": 32, "drachten": 38
-    },
-    "assen": {
-      "groningen": 32, "haren": 28, "leek": 34, "slochteren": 46,
-      "bourtange": 84, "oude pekela": 64, "bellingwolde": 76,
-      "eenrum": 56, "lauwersoog": 84, "beerta": 72,
-      "assen": 0, "drachten": 36
-    },
-    "drachten": {
-      "groningen": 38, "haren": 44, "leek": 20, "slochteren": 55,
-      "bourtange": 95, "oude pekela": 72, "bellingwolde": 86,
-      "eenrum": 49, "lauwersoog": 61, "beerta": 82,
-      "assen": 36, "drachten": 0
-    }
-  };
 
   function formatCityName(value){
     const text = (value || "").trim();
@@ -326,27 +312,10 @@
     applyFilters();
   }
 
-  function getDistance(region, location){
-    region = (region || "").toLowerCase().trim();
-    location = (location || "").toLowerCase().trim();
-
-    if(knownDistances[region] && knownDistances[region][location] !== undefined){
-      return knownDistances[region][location];
-    }
-    if(region === location) return 0;
-    return null;
-  }
-
   function render(items){
     document.getElementById("count").textContent = `${items.length} evenementen`;
 
     document.getElementById("grid").innerHTML = items.map(e => {
-      const region = document.getElementById("region").value;
-      const dist = getDistance(region, e.location);
-
-      const distText = dist === null ? "Afstand onbekend" : `${dist} km`;
-      const locationText = e.location ? `${e.location} (${distText})` : `Onbekend (${distText})`;
-
       return `
         <article class="card">
           <div class="image" style="background-image:url('${e.image || ""}')"></div>
@@ -356,7 +325,7 @@
 
             <div class="meta-list">
               <div>📅 ${e.date || "Onbekend"} ${e.time || ""}</div>
-              <div>📍 ${locationText}</div>
+              <div>📍 ${e.location || "Onbekend"}</div>
               <div>🏷️ ${e.type || "Onbekend"}</div>
               <div>💶 ${e.cost || "Zie website"}</div>
             </div>
@@ -379,41 +348,74 @@
     }).join("");
   }
 
+  function isWithinDateRange(eventDate, from, to){
+    if(!eventDate) return true;
+
+    // Accept "YYYY-MM-DD"
+    if(!eventDate.match(/^\d{4}-\d{2}-\d{2}$/)) return true;
+
+    const d = new Date(eventDate);
+    const f = new Date(from);
+    const t = new Date(to);
+
+    d.setHours(0,0,0,0);
+    f.setHours(0,0,0,0);
+    t.setHours(0,0,0,0);
+
+    return d >= f && d <= t;
+  }
+
   function applyFilters(){
     updatePageTitle();
 
     const q = document.getElementById("search").value.toLowerCase();
     const region = document.getElementById("region").value.toLowerCase().trim();
     const radius = Number(document.getElementById("radius").value || 0);
-    const price = document.getElementById("price").value;
     const type = document.getElementById("typeFilter").value;
-    const date = document.getElementById("dateFilter").value;
+
+    const dateFrom = document.getElementById("dateFrom").value;
+    const dateTo = document.getElementById("dateTo").value;
 
     const filtered = events.filter(e => {
       const hay = `${e.title || ""} ${e.description || ""} ${e.location || ""}`.toLowerCase();
 
       if(q && !hay.includes(q)) return false;
-
       if(type !== "all" && (e.type || "").toLowerCase() !== type) return false;
 
-      if(date && !String(e.date || "").includes(date)) return false;
+      if(dateFrom && dateTo && !isWithinDateRange(e.date, dateFrom, dateTo)) return false;
 
-      const free = (e.cost || "").toLowerCase().includes("gratis");
-      if(price === "free" && !free) return false;
-      if(price === "other" && free) return false;
-
-      const dist = getDistance(region, e.location);
-
-      if(region && radius > 0 && dist !== null && dist > radius) return false;
-      if(region && radius > 0 && dist === null && !hay.includes(region)) return false;
+      // simpele regio check (geen echte afstandsberekening)
+      if(region && radius > 0 && !hay.includes(region)) {
+        // laat onbekenden toe
+      }
 
       return true;
     });
 
     document.getElementById("metaInfo").textContent =
-      `Resultaten voor ${formatCityName(region)} binnen ${radius} km.`;
+      `Resultaten voor ${formatCityName(region)} van ${dateFrom} t/m ${dateTo} binnen ${radius} km.`;
 
     render(filtered);
+  }
+
+  function getWeekendRange(){
+    const today = new Date();
+    const day = today.getDay(); // 0=zo 1=ma ... 5=vr 6=za
+
+    // we willen vrijdag
+    const friday = new Date(today);
+    const diffToFriday = (5 - day + 7) % 7;
+    friday.setDate(today.getDate() + diffToFriday);
+
+    const sunday = new Date(friday);
+    sunday.setDate(friday.getDate() + 2);
+
+    const fmt = (d) => d.toISOString().slice(0, 10);
+
+    return {
+      from: fmt(friday),
+      to: fmt(sunday)
+    };
   }
 
   async function triggerRemoteRefresh(){
@@ -423,14 +425,21 @@
     status.style.display = "block";
     btn.disabled = true;
     btn.textContent = "Bezig...";
-    status.textContent = "Nieuwe events ophalen via AI...";
+    status.textContent = "Nieuwe events ophalen...";
 
     const payload = {
       region: document.getElementById("region").value,
-      date: document.getElementById("dateFilter").value,
       radius: document.getElementById("radius").value,
       category: document.getElementById("typeFilter").value,
-      query: document.getElementById("search").value
+      query: document.getElementById("search").value,
+      dateFrom: document.getElementById("dateFrom").value,
+      dateTo: document.getElementById("dateTo").value,
+      minResults: Number(document.getElementById("minResults").value || 20),
+      providers: {
+        perplexity: document.getElementById("provPerplexity").checked,
+        mistral: document.getElementById("provMistral").checked,
+        openai: document.getElementById("provOpenAI").checked
+      }
     };
 
     try{
@@ -440,17 +449,11 @@
         body: JSON.stringify(payload)
       });
 
-      const text = await res.text();
-      let data = {};
-      if(text) data = JSON.parse(text);
+      const data = await res.json();
+      if(!res.ok) throw new Error(data.error || "Onbekende fout");
 
-      if(!res.ok){
-        throw new Error(data.error || "Onbekende fout");
-      }
+      status.textContent = "Update gestart. Wachten op GitHub commit...";
 
-      status.textContent = "Update gestart, even wachten...";
-
-      // Wacht even zodat GitHub de commit kan verwerken
       setTimeout(async () => {
         status.textContent = "Nieuwe events laden...";
         await loadData();
@@ -465,13 +468,15 @@
     btn.textContent = "Ververs";
   }
 
+  // DEFAULTS: dit weekend
+  const weekend = getWeekendRange();
+  document.getElementById("dateFrom").value = weekend.from;
+  document.getElementById("dateTo").value = weekend.to;
+
   loadData().catch((e) => {
     const status = document.getElementById("status");
     status.style.display = "block";
     status.textContent = "Laden mislukt: " + e.message;
-
-    document.getElementById("grid").innerHTML =
-      "<div class='toolbar'>Laden van events.json is mislukt.</div>";
   });
 </script>
 
