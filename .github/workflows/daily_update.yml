@@ -13,9 +13,9 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Voer update-script uit
-        run: scrape_and_email.py
+        run: 
           # Voeg hier je update-commando's toe, bijvoorbeeld:
-          python update_script.py # Als je een Python-script hebt
+          python scrape_and_email.py # Als je een Python-script hebt
           git config --global user.name "GitHub Actions"
           git config --global user.email "actions@github.com"
           git add .
