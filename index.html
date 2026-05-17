@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Evenementen rond Groningen</title>
+  <title>Evenementen</title>
 
   <style>
     :root{
@@ -52,7 +52,7 @@
 
     .filters{
       display:grid;
-      grid-template-columns:2fr 1.2fr 1fr 1fr 1fr 1fr 1fr auto;
+      grid-template-columns:2fr 1fr 1fr 1fr 1fr 1fr 1fr auto;
       gap:14px;
       align-items:end;
     }
@@ -60,7 +60,7 @@
     .field label{
       display:block;
       margin-bottom:6px;
-      font-weight:700;
+      font-weight:800;
       color:var(--primary-dark);
       font-size:14px;
     }
@@ -123,7 +123,7 @@
       background:var(--surface-2);
       color:var(--primary-dark);
       font-size:12px;
-      font-weight:700;
+      font-weight:900;
       margin-bottom:10px;
     }
 
@@ -161,7 +161,7 @@
       padding:12px 14px;
       border-radius:12px;
       text-decoration:none;
-      font-weight:700;
+      font-weight:800;
       font-size:14px;
       border:none;
       cursor:pointer;
@@ -188,7 +188,7 @@
       padding-top:12px;
       font-size:14px;
       color:var(--primary-dark);
-      font-weight:700;
+      font-weight:900;
     }
 
     .providers label{
@@ -224,7 +224,7 @@
       border: 1px solid var(--border);
       background: white;
       cursor: pointer;
-      font-weight: 700;
+      font-weight: 900;
       color: var(--primary-dark);
     }
 
@@ -251,7 +251,7 @@
       padding: 8px 10px;
       border-radius: 10px;
       cursor: pointer;
-      font-weight: 700;
+      font-weight: 800;
       color: var(--primary-dark);
     }
 
@@ -272,7 +272,7 @@
       border:1px solid var(--border);
       background:var(--surface-2);
       cursor:pointer;
-      font-weight:800;
+      font-weight:900;
       color:var(--primary-dark);
       font-size:13px;
     }
@@ -310,7 +310,7 @@
     <div class="filters">
       <div class="field">
         <label for="search">Zoeken</label>
-        <input id="search" placeholder="Zoek op titel, beschrijving of plaats" oninput="applyFilters()">
+        <input id="search" placeholder="Omschrijving (optioneel)" oninput="applyFilters()">
       </div>
 
       <div class="field">
@@ -320,7 +320,7 @@
 
       <div class="field">
         <label for="radius">Straal (km)</label>
-        <input id="radius" type="number" min="1" max="300" value="100" oninput="applyFilters()">
+        <input id="radius" type="number" min="1" max="300" value="100">
       </div>
 
       <div class="field">
@@ -355,7 +355,7 @@
       <label><input type="checkbox" id="provOpenAI"> OpenAI</label>
     </div>
 
-    <div class="sectionTitle">Websites (via sites.json)</div>
+    <div class="sectionTitle">Websites (sites.json)</div>
 
     <div class="dropdown" id="sitesDropdown">
       <button class="dropdown-btn" onclick="toggleDropdown(event)">
@@ -377,7 +377,7 @@
 
   <div class="meta">
     <strong id="count">0 evenementen</strong>
-    <span id="metaInfo">De pagina leest live uit <code>events.json</code>.</span>
+    <span id="metaInfo">Resultaten worden geladen uit <code>events.json</code>.</span>
   </div>
 
   <section class="grid" id="grid"></section>
@@ -387,7 +387,7 @@
   let events = [];
   let availableSites = [];
 
-  // PAS DIT AAN
+  // 🔥 VUL HIER JOUW WORKER URL IN
   const WORKER_URL = "https://evenementen-refresh.mrsjonnie.workers.dev";
 
   function formatCityName(value){
@@ -423,6 +423,8 @@
     if(!res.ok) throw new Error("events.json kon niet worden geladen");
 
     events = await res.json();
+    if(!Array.isArray(events)) events = [];
+
     fillFilters(events);
     applyFilters();
   }
@@ -499,7 +501,7 @@
     });
 
     document.getElementById("metaInfo").textContent =
-      `Resultaten van ${dateFrom} t/m ${dateTo}.`;
+      `Periode: ${dateFrom} t/m ${dateTo}`;
 
     render(filtered);
   }
@@ -587,11 +589,14 @@
     const sites = [];
     document.querySelectorAll(".siteCheck:checked").forEach(cb => sites.push(cb.value));
 
+    let category = document.getElementById("typeFilter").value;
+    if(category === "all") category = "";
+
     const payload = {
-      region: document.getElementById("region").value,
+      region: document.getElementById("region").value.trim(),
       radius: document.getElementById("radius").value,
-      category: document.getElementById("typeFilter").value,
-      query: document.getElementById("search").value,
+      query: document.getElementById("search").value.trim(),
+      category: category,
       dateFrom: document.getElementById("dateFrom").value,
       dateTo: document.getElementById("dateTo").value,
       minResults: Number(document.getElementById("minResults").value || 20),
@@ -613,10 +618,10 @@
       const data = await res.json();
       if(!res.ok) throw new Error(data.error || "Onbekende fout");
 
-      status.textContent = "Update gestart. Wachten op GitHub commit...";
+      status.textContent = "Update gestart. GitHub wordt bijgewerkt...";
 
       setTimeout(async () => {
-        status.textContent = "Nieuwe events laden...";
+        status.textContent = "Nieuwe events.json laden...";
         await loadData();
         status.textContent = "Klaar! Nieuwe events zijn geladen.";
       }, 9000);
