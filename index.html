@@ -28,9 +28,8 @@
       color:var(--text);
     }
 
-    /* HEADER COMPACT */
     .header{
-      padding:22px 16px 18px;
+      padding:18px 14px 14px;
       color:#fff;
       position:relative;
       overflow:hidden;
@@ -53,7 +52,6 @@
       background-size:cover;
       background-position:center;
       z-index:-1;
-      transition:opacity .4s ease;
     }
 
     .header.sunny::after{
@@ -85,7 +83,7 @@
 
     .header h1{
       margin:0;
-      font-size:clamp(1.5rem,2.5vw,2.1rem);
+      font-size:clamp(1.4rem,2.4vw,2rem);
       line-height:1.1;
     }
 
@@ -93,23 +91,23 @@
       margin:6px 0 0;
       color:#dce8ff;
       max-width:760px;
-      font-size:14px;
-      font-weight:700;
+      font-size:13px;
+      font-weight:800;
     }
 
     .weatherBox{
       display:flex;
       flex-wrap:wrap;
-      gap:8px;
+      gap:7px;
       align-items:center;
       justify-content:flex-end;
-      margin-top:4px;
+      margin-top:2px;
     }
 
     .weatherBadge{
       background:rgba(255,255,255,0.16);
       border:1px solid rgba(255,255,255,0.35);
-      padding:7px 10px;
+      padding:6px 9px;
       border-radius:999px;
       font-size:12px;
       backdrop-filter: blur(10px);
@@ -120,7 +118,7 @@
 
     .container{
       max-width:1180px;
-      margin:14px auto 0;
+      margin:12px auto 0;
       padding:0 14px 40px;
     }
 
@@ -135,7 +133,7 @@
 
     .filters{
       display:grid;
-      grid-template-columns:2fr 1fr 1fr 1fr 1fr 1fr 1fr auto;
+      grid-template-columns:2fr 1fr 1fr 1fr 1fr 1fr auto;
       gap:12px;
       align-items:end;
     }
@@ -366,6 +364,7 @@
 
     .btn-primary{background:var(--primary);color:#fff}
     .btn-secondary{background:var(--surface-2);color:var(--primary-dark)}
+    .btn-danger{background:#b91c1c;color:#fff}
 
     .notice{
       margin-top:12px;
@@ -403,8 +402,8 @@
   <div class="wrap">
     <div class="headerTop">
       <div>
-        <h1 id="pageTitle">Evenementen rond Groningen</h1>
-        <p id="pageSubtitle">Dit weekend, leuke activiteiten en tips.</p>
+        <h1 id="pageTitle">Evenementen</h1>
+        <p id="pageSubtitle">Evenementen overzicht</p>
       </div>
 
       <div class="weatherBox" id="weatherBox" style="display:none;">
@@ -430,7 +429,7 @@
 
       <div class="field">
         <label for="region">Regio</label>
-        <input id="region" value="Groningen" oninput="applyFilters(); loadWeather();">
+        <input id="region" value="Groningen" oninput="applyFilters(); updateDateRange(); loadWeather();">
       </div>
 
       <div class="field">
@@ -446,18 +445,18 @@
       </div>
 
       <div class="field">
-        <label for="dateFrom">Van</label>
-        <input id="dateFrom" type="date" onchange="applyFilters(); loadWeather();">
+        <label for="dateSingle">Datum</label>
+        <input id="dateSingle" type="date" onchange="updateDateRange(); applyFilters(); loadWeather();">
       </div>
 
       <div class="field">
-        <label for="dateTo">Tot</label>
-        <input id="dateTo" type="date" onchange="applyFilters(); loadWeather();">
-      </div>
-
-      <div class="field">
-        <label for="minResults">Min. aantal</label>
-        <input id="minResults" type="number" min="1" max="100" value="20">
+        <label for="periodMode">Periode</label>
+        <select id="periodMode" onchange="updateDateRange(); applyFilters(); loadWeather();">
+          <option value="day">Alleen deze dag</option>
+          <option value="thisWeekend" selected>Dit weekend</option>
+          <option value="nextWeekend">Volgend weekend</option>
+          <option value="week">7 dagen</option>
+        </select>
       </div>
 
       <button class="btn btn-primary" id="refreshBtn" onclick="triggerRemoteRefresh()">Ververs</button>
@@ -484,6 +483,8 @@
           </div>
         </div>
       </div>
+
+      <button class="btn btn-danger" onclick="clearAllEvents()">Alles verwijderen</button>
     </div>
 
     <div class="notice" id="status"></div>
@@ -503,13 +504,71 @@
 
   const WORKER_URL = "https://evenementen-refresh.mrsjonnie.workers.dev";
 
-  function updateHeaderText(){
-    const region = document.getElementById("region").value.trim() || "Groningen";
-    const from = document.getElementById("dateFrom").value;
-    const to = document.getElementById("dateTo").value;
+  function formatDate(d){
+    return d.toISOString().slice(0,10);
+  }
 
+  function getWeekendRange(offsetWeeks = 0){
+    const today = new Date();
+    today.setHours(0,0,0,0);
+    today.setDate(today.getDate() + (offsetWeeks * 7));
+
+    const day = today.getDay();
+
+    const friday = new Date(today);
+    const diffToFriday = (5 - day + 7) % 7;
+    friday.setDate(today.getDate() + diffToFriday);
+
+    const sunday = new Date(friday);
+    sunday.setDate(friday.getDate() + 2);
+
+    return { from: formatDate(friday), to: formatDate(sunday) };
+  }
+
+  function updateDateRange(){
+    const mode = document.getElementById("periodMode").value;
+    const baseDate = document.getElementById("dateSingle").value;
+
+    if(mode === "thisWeekend"){
+      const r = getWeekendRange(0);
+      window.dateFrom = r.from;
+      window.dateTo = r.to;
+      return;
+    }
+
+    if(mode === "nextWeekend"){
+      const r = getWeekendRange(1);
+      window.dateFrom = r.from;
+      window.dateTo = r.to;
+      return;
+    }
+
+    if(!baseDate){
+      const r = getWeekendRange(0);
+      window.dateFrom = r.from;
+      window.dateTo = r.to;
+      return;
+    }
+
+    const d = new Date(baseDate + "T00:00:00");
+
+    if(mode === "day"){
+      window.dateFrom = baseDate;
+      window.dateTo = baseDate;
+    }
+
+    if(mode === "week"){
+      const to = new Date(d);
+      to.setDate(d.getDate() + 6);
+      window.dateFrom = baseDate;
+      window.dateTo = formatDate(to);
+    }
+  }
+
+  function updateHeaderText(){
+    const region = document.getElementById("region").value.trim() || "Onbekend";
     document.getElementById("pageTitle").textContent = `Evenementen rond ${region}`;
-    document.getElementById("pageSubtitle").textContent = `Periode: ${from} t/m ${to}`;
+    document.getElementById("pageSubtitle").textContent = `Periode: ${window.dateFrom} t/m ${window.dateTo}`;
     document.title = `Evenementen rond ${region}`;
   }
 
@@ -602,42 +661,21 @@
     const q = document.getElementById("search").value.toLowerCase();
     const type = document.getElementById("typeFilter").value;
 
-    const dateFrom = document.getElementById("dateFrom").value;
-    const dateTo = document.getElementById("dateTo").value;
-
     const filtered = events.filter(e => {
       const hay = `${e.title || ""} ${e.description || ""} ${e.location || ""}`.toLowerCase();
 
       if(q && !hay.includes(q)) return false;
       if(type !== "all" && (e.type || "").toLowerCase() !== type) return false;
 
-      if(dateFrom && dateTo && !isWithinDateRange(e.date, dateFrom, dateTo)) return false;
+      if(window.dateFrom && window.dateTo && !isWithinDateRange(e.date, window.dateFrom, window.dateTo)) return false;
 
       return true;
     });
 
     document.getElementById("metaInfo").textContent =
-      `Periode: ${dateFrom} t/m ${dateTo}`;
+      `Periode: ${window.dateFrom} t/m ${window.dateTo}`;
 
     render(filtered);
-  }
-
-  function getWeekendRange(offsetWeeks = 0){
-    const today = new Date();
-    today.setDate(today.getDate() + (offsetWeeks * 7));
-
-    const day = today.getDay();
-
-    const friday = new Date(today);
-    const diffToFriday = (5 - day + 7) % 7;
-    friday.setDate(today.getDate() + diffToFriday);
-
-    const sunday = new Date(friday);
-    sunday.setDate(friday.getDate() + 2);
-
-    const fmt = (d) => d.toISOString().slice(0, 10);
-
-    return { from: fmt(friday), to: fmt(sunday) };
   }
 
   async function loadSites(){
@@ -705,15 +743,11 @@
 
   async function loadWeather(){
     const region = document.getElementById("region").value.trim();
-    const dateFrom = document.getElementById("dateFrom").value;
-    const dateTo = document.getElementById("dateTo").value;
-
-    if(!region || !dateFrom || !dateTo) return;
+    if(!region || !window.dateFrom || !window.dateTo) return;
 
     try{
-      const url = `${WORKER_URL}/weather?region=${encodeURIComponent(region)}&from=${dateFrom}&to=${dateTo}`;
+      const url = `${WORKER_URL}/weather?region=${encodeURIComponent(region)}&from=${window.dateFrom}&to=${window.dateTo}`;
       const res = await fetch(url, { cache:"no-store" });
-
       if(!res.ok) return;
 
       const data = await res.json();
@@ -768,9 +802,9 @@
       radius: document.getElementById("radius").value,
       query: document.getElementById("search").value.trim(),
       category: category,
-      dateFrom: document.getElementById("dateFrom").value,
-      dateTo: document.getElementById("dateTo").value,
-      minResults: Number(document.getElementById("minResults").value || 20),
+      dateFrom: window.dateFrom,
+      dateTo: window.dateTo,
+      minResults: 20,
       sites: sites,
       providers: {
         perplexity: document.getElementById("provPerplexity").checked,
@@ -806,12 +840,46 @@
     btn.textContent = "Ververs";
   }
 
-  // Defaults = huidig weekend
-  const weekend = getWeekendRange(0);
-  document.getElementById("dateFrom").value = weekend.from;
-  document.getElementById("dateTo").value = weekend.to;
+  async function clearAllEvents(){
+    if(!confirm("Weet je zeker dat je ALLE events wilt verwijderen?")) return;
+
+    const status = document.getElementById("status");
+    status.style.display = "block";
+    status.textContent = "Events verwijderen...";
+
+    try{
+      const res = await fetch(WORKER_URL + "/clear", {
+        method: "POST",
+        headers: {"Content-Type":"application/json"},
+        body: JSON.stringify({})
+      });
+
+      const data = await res.json();
+      if(!res.ok) throw new Error(data.error || "Onbekende fout");
+
+      status.textContent = "Alle events zijn verwijderd. Even wachten op GitHub Pages...";
+
+      setTimeout(async () => {
+        await loadData();
+        status.textContent = "Events.json opnieuw geladen (leeg).";
+      }, 7000);
+
+    } catch(e){
+      status.textContent = "Verwijderen mislukt: " + e.message;
+    }
+  }
+
+  // defaults
+  const r = getWeekendRange(0);
+  window.dateFrom = r.from;
+  window.dateTo = r.to;
+
+  document.getElementById("dateSingle").value = r.from;
+  document.getElementById("periodMode").value = "thisWeekend";
 
   Promise.all([loadSites(), loadData()]).then(() => {
+    updateDateRange();
+    applyFilters();
     loadWeather();
   }).catch((e) => {
     const status = document.getElementById("status");
