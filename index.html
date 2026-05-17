@@ -30,14 +30,73 @@
 
     .header{
       padding:52px 20px 34px;
-      background:linear-gradient(135deg,#0f2d6b 0%,#2563eb 100%);
       color:#fff;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .header::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:linear-gradient(135deg,#0f2d6b 0%,#2563eb 100%);
+      z-index:-2;
+    }
+
+    .header::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      opacity:0.35;
+      background-size:cover;
+      background-position:center;
+      z-index:-1;
+      transition:opacity .4s ease;
+    }
+
+    .header.sunny::after{
+      background-image:url("https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1600&q=80");
+      opacity:0.45;
+    }
+
+    .header.cloudy::after{
+      background-image:url("https://images.unsplash.com/photo-1526679492918-6e1d6b7f3f9b?auto=format&fit=crop&w=1600&q=80");
+      opacity:0.45;
+    }
+
+    .header.rainy::after{
+      background-image:url("https://images.unsplash.com/photo-1501696461441-2f7f9c3d5f46?auto=format&fit=crop&w=1600&q=80");
+      opacity:0.55;
+    }
+
+    .header.snowy::after{
+      background-image:url("https://images.unsplash.com/photo-1547756536-cde3673fa2a5?auto=format&fit=crop&w=1600&q=80");
+      opacity:0.55;
     }
 
     .wrap{max-width:1180px;margin:0 auto}
 
     .header h1{margin:0;font-size:clamp(2.2rem,4vw,3.6rem)}
     .header p{margin:12px 0 0;color:#dce8ff;max-width:760px}
+
+    .weatherBox{
+      margin-top:14px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      align-items:center;
+      font-weight:900;
+      color:#ffffff;
+    }
+
+    .weatherBadge{
+      background:rgba(255,255,255,0.18);
+      border:1px solid rgba(255,255,255,0.35);
+      padding:8px 12px;
+      border-radius:999px;
+      font-size:14px;
+      backdrop-filter: blur(10px);
+    }
 
     .container{max-width:1180px;margin:-18px auto 0;padding:0 16px 40px}
 
@@ -60,7 +119,7 @@
     .field label{
       display:block;
       margin-bottom:6px;
-      font-weight:800;
+      font-weight:900;
       color:var(--primary-dark);
       font-size:14px;
     }
@@ -161,7 +220,7 @@
       padding:12px 14px;
       border-radius:12px;
       text-decoration:none;
-      font-weight:800;
+      font-weight:900;
       font-size:14px;
       border:none;
       cursor:pointer;
@@ -181,11 +240,18 @@
       display:none;
     }
 
+    .rowCompact{
+      display:flex;
+      flex-wrap:wrap;
+      align-items:center;
+      gap:12px;
+      padding-top:12px;
+    }
+
     .providers{
       display:flex;
       gap:10px;
       flex-wrap:wrap;
-      padding-top:12px;
       font-size:14px;
       color:var(--primary-dark);
       font-weight:900;
@@ -203,29 +269,23 @@
       user-select:none;
     }
 
-    .sectionTitle{
-      margin-top:16px;
-      font-weight:900;
-      color:var(--primary-dark);
-      font-size:14px;
-    }
-
-    /* dropdown multi-check */
     .dropdown {
       position: relative;
-      margin-top: 10px;
+      min-width: 320px;
+      flex: 1;
     }
 
     .dropdown-btn {
       width: 100%;
       text-align: left;
-      padding: 12px 14px;
-      border-radius: 14px;
+      padding: 10px 14px;
+      border-radius: 999px;
       border: 1px solid var(--border);
       background: white;
       cursor: pointer;
       font-weight: 900;
       color: var(--primary-dark);
+      font-size: 14px;
     }
 
     .dropdown-panel {
@@ -292,15 +352,22 @@
       .image{height:170px}
       .toolbar{border-radius:18px}
       .grid{grid-template-columns:1fr}
+      .dropdown{min-width:100%}
     }
   </style>
 </head>
 
 <body>
-<header class="header">
+<header class="header" id="pageHeader">
   <div class="wrap">
     <h1 id="pageTitle">Evenementen rond Groningen</h1>
     <p id="pageSubtitle">Bekijk evenementen, tips en activiteiten in en rond Groningen.</p>
+
+    <div class="weatherBox" id="weatherBox" style="display:none;">
+      <div class="weatherBadge" id="weatherText">🌤️ Weer: ...</div>
+      <div class="weatherBadge" id="weatherTemp">🌡️ ...</div>
+      <div class="weatherBadge" id="weatherRain">🌧️ ...</div>
+    </div>
   </div>
 </header>
 
@@ -332,12 +399,12 @@
 
       <div class="field">
         <label for="dateFrom">Van</label>
-        <input id="dateFrom" type="date" onchange="applyFilters()">
+        <input id="dateFrom" type="date" onchange="applyFilters(); loadWeather();">
       </div>
 
       <div class="field">
         <label for="dateTo">Tot</label>
-        <input id="dateTo" type="date" onchange="applyFilters()">
+        <input id="dateTo" type="date" onchange="applyFilters(); loadWeather();">
       </div>
 
       <div class="field">
@@ -348,26 +415,25 @@
       <button class="btn btn-primary" id="refreshBtn" onclick="triggerRemoteRefresh()">Ververs</button>
     </div>
 
-    <div class="sectionTitle">AI bronnen</div>
-    <div class="providers">
-      <label><input type="checkbox" id="provPerplexity" checked> Perplexity</label>
-      <label><input type="checkbox" id="provMistral" checked> Mistral</label>
-      <label><input type="checkbox" id="provOpenAI"> OpenAI</label>
-    </div>
+    <div class="rowCompact">
+      <div class="providers">
+        <label><input type="checkbox" id="provPerplexity" checked> Perplexity</label>
+        <label><input type="checkbox" id="provMistral" checked> Mistral</label>
+        <label><input type="checkbox" id="provOpenAI"> OpenAI</label>
+      </div>
 
-    <div class="sectionTitle">Websites (sites.json)</div>
+      <div class="dropdown" id="sitesDropdown">
+        <button class="dropdown-btn" onclick="toggleDropdown(event)">
+          Websites (<span id="siteCount">0</span>)
+        </button>
 
-    <div class="dropdown" id="sitesDropdown">
-      <button class="dropdown-btn" onclick="toggleDropdown(event)">
-        Kies websites (<span id="siteCount">0</span> geselecteerd)
-      </button>
+        <div class="dropdown-panel" id="dropdownPanel">
+          <div id="sitesList"></div>
 
-      <div class="dropdown-panel" id="dropdownPanel">
-        <div id="sitesList"></div>
-
-        <div class="dropdown-actions">
-          <button class="smallbtn" onclick="selectAllSites()">Alles</button>
-          <button class="smallbtn" onclick="selectNoneSites()">Geen</button>
+          <div class="dropdown-actions">
+            <button class="smallbtn" onclick="selectAllSites()">Alles</button>
+            <button class="smallbtn" onclick="selectNoneSites()">Geen</button>
+          </div>
         </div>
       </div>
     </div>
@@ -387,7 +453,6 @@
   let events = [];
   let availableSites = [];
 
-  // 🔥 VUL HIER JOUW WORKER URL IN
   const WORKER_URL = "https://evenementen-refresh.mrsjonnie.workers.dev";
 
   function formatCityName(value){
@@ -577,6 +642,68 @@
     }
   });
 
+  // ---- WEER ----
+  function weatherClassFromCode(code){
+    // Open-Meteo weathercode mapping (simpel)
+    if(code === 0) return "sunny";
+    if([1,2,3,45,48].includes(code)) return "cloudy";
+    if([51,53,55,56,57,61,63,65,66,67,80,81,82,95,96,99].includes(code)) return "rainy";
+    if([71,73,75,77,85,86].includes(code)) return "snowy";
+    return "cloudy";
+  }
+
+  function weatherTextFromCode(code){
+    if(code === 0) return "Zonnig";
+    if(code === 1) return "Meestal zonnig";
+    if(code === 2) return "Half bewolkt";
+    if(code === 3) return "Bewolkt";
+    if([45,48].includes(code)) return "Mist";
+    if([51,53,55].includes(code)) return "Motregen";
+    if([61,63,65].includes(code)) return "Regen";
+    if([71,73,75].includes(code)) return "Sneeuw";
+    if([80,81,82].includes(code)) return "Buien";
+    if([95,96,99].includes(code)) return "Onweer";
+    return "Onbekend";
+  }
+
+  async function loadWeather(){
+    const region = document.getElementById("region").value.trim();
+    const dateFrom = document.getElementById("dateFrom").value;
+    const dateTo = document.getElementById("dateTo").value;
+
+    if(!region || !dateFrom || !dateTo) return;
+
+    try{
+      const url = `${WORKER_URL}/weather?region=${encodeURIComponent(region)}&from=${dateFrom}&to=${dateTo}`;
+      const res = await fetch(url, { cache:"no-store" });
+
+      if(!res.ok) return;
+
+      const data = await res.json();
+      if(!data || !data.ok) return;
+
+      const weatherBox = document.getElementById("weatherBox");
+      weatherBox.style.display = "flex";
+
+      document.getElementById("weatherText").textContent =
+        `🌤️ ${data.summary}`;
+
+      document.getElementById("weatherTemp").textContent =
+        `🌡️ ${data.tempMin}°C - ${data.tempMax}°C`;
+
+      document.getElementById("weatherRain").textContent =
+        `🌧️ Regen kans: ${data.rainChance}%`;
+
+      const header = document.getElementById("pageHeader");
+      header.classList.remove("sunny","cloudy","rainy","snowy");
+      header.classList.add(weatherClassFromCode(data.weatherCode));
+
+    } catch(e){
+      // stil falen
+    }
+  }
+
+  // ---- REFRESH ----
   async function triggerRemoteRefresh(){
     const btn = document.getElementById("refreshBtn");
     const status = document.getElementById("status");
@@ -618,7 +745,7 @@
       const data = await res.json();
       if(!res.ok) throw new Error(data.error || "Onbekende fout");
 
-      status.textContent = "Update gestart. GitHub wordt bijgewerkt...";
+      status.textContent = `Update gestart (${data.scrapedCount} nieuwe gevonden). events.json wordt bijgewerkt...`;
 
       setTimeout(async () => {
         status.textContent = "Nieuwe events.json laden...";
@@ -639,7 +766,9 @@
   document.getElementById("dateFrom").value = weekend.from;
   document.getElementById("dateTo").value = weekend.to;
 
-  Promise.all([loadSites(), loadData()]).catch((e) => {
+  Promise.all([loadSites(), loadData()]).then(() => {
+    loadWeather();
+  }).catch((e) => {
     const status = document.getElementById("status");
     status.style.display = "block";
     status.textContent = "Laden mislukt: " + e.message;
