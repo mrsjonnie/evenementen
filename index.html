@@ -16,7 +16,7 @@
       --muted:#61738c;
       --border:#d8e5ff;
       --shadow:0 10px 30px rgba(29,78,216,.12);
-      --radius:20px;
+      --radius:18px;
     }
 
     *{box-sizing:border-box}
@@ -28,11 +28,13 @@
       color:var(--text);
     }
 
+    /* HEADER COMPACT */
     .header{
-      padding:52px 20px 34px;
+      padding:22px 16px 18px;
       color:#fff;
       position:relative;
       overflow:hidden;
+      border-bottom:1px solid rgba(255,255,255,0.15);
     }
 
     .header::before{
@@ -47,7 +49,7 @@
       content:"";
       position:absolute;
       inset:0;
-      opacity:0.35;
+      opacity:0.30;
       background-size:cover;
       background-position:center;
       z-index:-1;
@@ -56,82 +58,204 @@
 
     .header.sunny::after{
       background-image:url("https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1600&q=80");
-      opacity:0.45;
+      opacity:0.35;
     }
-
     .header.cloudy::after{
       background-image:url("https://images.unsplash.com/photo-1526679492918-6e1d6b7f3f9b?auto=format&fit=crop&w=1600&q=80");
-      opacity:0.45;
+      opacity:0.35;
     }
-
     .header.rainy::after{
       background-image:url("https://images.unsplash.com/photo-1501696461441-2f7f9c3d5f46?auto=format&fit=crop&w=1600&q=80");
-      opacity:0.55;
+      opacity:0.45;
     }
-
     .header.snowy::after{
       background-image:url("https://images.unsplash.com/photo-1547756536-cde3673fa2a5?auto=format&fit=crop&w=1600&q=80");
-      opacity:0.55;
+      opacity:0.45;
     }
 
     .wrap{max-width:1180px;margin:0 auto}
 
-    .header h1{margin:0;font-size:clamp(2.2rem,4vw,3.6rem)}
-    .header p{margin:12px 0 0;color:#dce8ff;max-width:760px}
+    .headerTop{
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+      gap:12px;
+      flex-wrap:wrap;
+    }
+
+    .header h1{
+      margin:0;
+      font-size:clamp(1.5rem,2.5vw,2.1rem);
+      line-height:1.1;
+    }
+
+    .header p{
+      margin:6px 0 0;
+      color:#dce8ff;
+      max-width:760px;
+      font-size:14px;
+      font-weight:700;
+    }
 
     .weatherBox{
-      margin-top:14px;
       display:flex;
       flex-wrap:wrap;
-      gap:10px;
+      gap:8px;
       align-items:center;
-      font-weight:900;
-      color:#ffffff;
+      justify-content:flex-end;
+      margin-top:4px;
     }
 
     .weatherBadge{
-      background:rgba(255,255,255,0.18);
+      background:rgba(255,255,255,0.16);
       border:1px solid rgba(255,255,255,0.35);
-      padding:8px 12px;
+      padding:7px 10px;
       border-radius:999px;
-      font-size:14px;
+      font-size:12px;
       backdrop-filter: blur(10px);
+      font-weight:900;
+      color:#fff;
+      white-space:nowrap;
     }
 
-    .container{max-width:1180px;margin:-18px auto 0;padding:0 16px 40px}
+    .container{
+      max-width:1180px;
+      margin:14px auto 0;
+      padding:0 14px 40px;
+    }
 
     .toolbar{
-      background:rgba(255,255,255,.94);
+      background:rgba(255,255,255,.95);
       backdrop-filter:blur(10px);
-      padding:18px;
+      padding:16px;
       border:1px solid var(--border);
-      border-radius:24px;
+      border-radius:20px;
       box-shadow:var(--shadow);
     }
 
     .filters{
       display:grid;
       grid-template-columns:2fr 1fr 1fr 1fr 1fr 1fr 1fr auto;
-      gap:14px;
+      gap:12px;
       align-items:end;
     }
 
     .field label{
       display:block;
-      margin-bottom:6px;
+      margin-bottom:5px;
       font-weight:900;
       color:var(--primary-dark);
-      font-size:14px;
+      font-size:13px;
     }
 
     .field input,.field select{
       width:100%;
-      padding:13px 14px;
+      padding:12px 12px;
       border-radius:14px;
       border:1px solid var(--border);
       background:#fff;
-      font-size:15px;
+      font-size:14px;
       color:var(--text);
+      font-weight:700;
+    }
+
+    .rowCompact{
+      display:flex;
+      flex-wrap:wrap;
+      align-items:center;
+      gap:10px;
+      padding-top:12px;
+    }
+
+    .providers{
+      display:flex;
+      gap:8px;
+      flex-wrap:wrap;
+      font-size:13px;
+      color:var(--primary-dark);
+      font-weight:900;
+    }
+
+    .providers label{
+      display:flex;
+      gap:6px;
+      align-items:center;
+      background:var(--surface-2);
+      padding:7px 10px;
+      border-radius:999px;
+      border:1px solid var(--border);
+      cursor:pointer;
+      user-select:none;
+    }
+
+    .dropdown {
+      position: relative;
+      min-width: 280px;
+      flex: 1;
+      max-width:420px;
+    }
+
+    .dropdown-btn {
+      width: 100%;
+      text-align: left;
+      padding: 9px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: white;
+      cursor: pointer;
+      font-weight: 900;
+      color: var(--primary-dark);
+      font-size: 13px;
+    }
+
+    .dropdown-panel {
+      display: none;
+      position: absolute;
+      z-index: 999;
+      top: 44px;
+      left: 0;
+      right: 0;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 10px;
+      max-height: 260px;
+      overflow-y: auto;
+      box-shadow: var(--shadow);
+    }
+
+    .dropdown-panel label {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 10px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-weight: 800;
+      color: var(--primary-dark);
+      font-size:13px;
+    }
+
+    .dropdown-panel label:hover {
+      background: var(--surface-2);
+    }
+
+    .dropdown-actions {
+      display:flex;
+      gap:8px;
+      padding-top:10px;
+      flex-wrap:wrap;
+    }
+
+    .smallbtn{
+      padding:7px 10px;
+      border-radius:12px;
+      border:1px solid var(--border);
+      background:var(--surface-2);
+      cursor:pointer;
+      font-weight:900;
+      color:var(--primary-dark);
+      font-size:12px;
     }
 
     .meta{
@@ -140,16 +264,16 @@
       align-items:center;
       gap:12px;
       flex-wrap:wrap;
-      margin:18px 2px;
+      margin:16px 2px;
     }
 
     .meta strong{color:var(--primary-dark)}
-    .meta span{color:var(--muted);font-size:14px}
+    .meta span{color:var(--muted);font-size:13px}
 
     .grid{
       display:grid;
       grid-template-columns:repeat(4,minmax(0,1fr));
-      gap:16px;
+      gap:14px;
     }
 
     .card{
@@ -167,13 +291,13 @@
     }
 
     .image{
-      height:160px;
+      height:150px;
       background-size:cover;
       background-position:center;
       background-color:#e9f0ff;
     }
 
-    .content{padding:16px}
+    .content{padding:14px}
 
     .source{
       display:inline-block;
@@ -186,9 +310,21 @@
       margin-bottom:10px;
     }
 
+    .period{
+      display:inline-block;
+      padding:6px 10px;
+      border-radius:999px;
+      background:#eaf2ff;
+      color:#0f2d6b;
+      font-size:12px;
+      font-weight:900;
+      margin-bottom:10px;
+      margin-left:6px;
+    }
+
     .title{
       margin:0 0 8px;
-      font-size:1.05rem;
+      font-size:1.02rem;
       color:#0d2350;
     }
 
@@ -197,14 +333,16 @@
       gap:6px;
       font-size:13px;
       color:#29415f;
+      font-weight:800;
     }
 
     .desc{
       color:var(--muted);
       font-size:13px;
       line-height:1.45;
-      min-height:56px;
+      min-height:52px;
       margin:12px 0;
+      font-weight:700;
     }
 
     .links{
@@ -217,11 +355,11 @@
       display:inline-flex;
       align-items:center;
       justify-content:center;
-      padding:12px 14px;
+      padding:11px 13px;
       border-radius:12px;
       text-decoration:none;
       font-weight:900;
-      font-size:14px;
+      font-size:13px;
       border:none;
       cursor:pointer;
     }
@@ -236,105 +374,9 @@
       border:1px solid var(--border);
       border-radius:14px;
       color:var(--muted);
-      font-size:14px;
-      display:none;
-    }
-
-    .rowCompact{
-      display:flex;
-      flex-wrap:wrap;
-      align-items:center;
-      gap:12px;
-      padding-top:12px;
-    }
-
-    .providers{
-      display:flex;
-      gap:10px;
-      flex-wrap:wrap;
-      font-size:14px;
-      color:var(--primary-dark);
-      font-weight:900;
-    }
-
-    .providers label{
-      display:flex;
-      gap:6px;
-      align-items:center;
-      background:var(--surface-2);
-      padding:8px 12px;
-      border-radius:999px;
-      border:1px solid var(--border);
-      cursor:pointer;
-      user-select:none;
-    }
-
-    .dropdown {
-      position: relative;
-      min-width: 320px;
-      flex: 1;
-    }
-
-    .dropdown-btn {
-      width: 100%;
-      text-align: left;
-      padding: 10px 14px;
-      border-radius: 999px;
-      border: 1px solid var(--border);
-      background: white;
-      cursor: pointer;
-      font-weight: 900;
-      color: var(--primary-dark);
-      font-size: 14px;
-    }
-
-    .dropdown-panel {
-      display: none;
-      position: absolute;
-      z-index: 999;
-      top: 48px;
-      left: 0;
-      right: 0;
-      background: white;
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 10px;
-      max-height: 260px;
-      overflow-y: auto;
-      box-shadow: var(--shadow);
-    }
-
-    .dropdown-panel label {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      padding: 8px 10px;
-      border-radius: 10px;
-      cursor: pointer;
-      font-weight: 800;
-      color: var(--primary-dark);
-    }
-
-    .dropdown-panel label:hover {
-      background: var(--surface-2);
-    }
-
-    .dropdown-actions {
-      display:flex;
-      gap:8px;
-      padding-top:10px;
-      flex-wrap:wrap;
-    }
-
-    .smallbtn{
-      padding:8px 10px;
-      border-radius:12px;
-      border:1px solid var(--border);
-      background:var(--surface-2);
-      cursor:pointer;
-      font-weight:900;
-      color:var(--primary-dark);
       font-size:13px;
+      display:none;
+      font-weight:800;
     }
 
     @media (max-width:1200px){
@@ -348,11 +390,10 @@
 
     @media (max-width:760px){
       .filters{grid-template-columns:1fr}
-      .header{padding-top:38px}
-      .image{height:170px}
-      .toolbar{border-radius:18px}
       .grid{grid-template-columns:1fr}
       .dropdown{min-width:100%}
+      .headerTop{flex-direction:column}
+      .weatherBox{justify-content:flex-start}
     }
   </style>
 </head>
@@ -360,13 +401,20 @@
 <body>
 <header class="header" id="pageHeader">
   <div class="wrap">
-    <h1 id="pageTitle">Evenementen rond Groningen</h1>
-    <p id="pageSubtitle">Bekijk evenementen, tips en activiteiten in en rond Groningen.</p>
+    <div class="headerTop">
+      <div>
+        <h1 id="pageTitle">Evenementen rond Groningen</h1>
+        <p id="pageSubtitle">Dit weekend, leuke activiteiten en tips.</p>
+      </div>
 
-    <div class="weatherBox" id="weatherBox" style="display:none;">
-      <div class="weatherBadge" id="weatherText">🌤️ Weer: ...</div>
-      <div class="weatherBadge" id="weatherTemp">🌡️ ...</div>
-      <div class="weatherBadge" id="weatherRain">🌧️ ...</div>
+      <div class="weatherBox" id="weatherBox" style="display:none;">
+        <div class="weatherBadge" id="weatherSummary">🌤️ ...</div>
+        <div class="weatherBadge" id="weatherTemp">🌡️ ...</div>
+        <div class="weatherBadge" id="weatherRainChance">🌧️ ...</div>
+        <div class="weatherBadge" id="weatherRainMM">💧 ...</div>
+        <div class="weatherBadge" id="weatherWind">💨 ...</div>
+        <div class="weatherBadge" id="weatherUV">☀️ UV ...</div>
+      </div>
     </div>
   </div>
 </header>
@@ -382,7 +430,7 @@
 
       <div class="field">
         <label for="region">Regio</label>
-        <input id="region" value="Groningen" oninput="applyFilters()">
+        <input id="region" value="Groningen" oninput="applyFilters(); loadWeather();">
       </div>
 
       <div class="field">
@@ -443,7 +491,7 @@
 
   <div class="meta">
     <strong id="count">0 evenementen</strong>
-    <span id="metaInfo">Resultaten worden geladen uit <code>events.json</code>.</span>
+    <span id="metaInfo">Resultaten worden geladen uit events.json</span>
   </div>
 
   <section class="grid" id="grid"></section>
@@ -455,20 +503,17 @@
 
   const WORKER_URL = "https://evenementen-refresh.mrsjonnie.workers.dev";
 
-  function formatCityName(value){
-    const text = (value || "").trim();
-    if(!text) return "Groningen";
-    return text.charAt(0).toUpperCase() + text.slice(1);
+  function updateHeaderText(){
+    const region = document.getElementById("region").value.trim() || "Groningen";
+    const from = document.getElementById("dateFrom").value;
+    const to = document.getElementById("dateTo").value;
+
+    document.getElementById("pageTitle").textContent = `Evenementen rond ${region}`;
+    document.getElementById("pageSubtitle").textContent = `Periode: ${from} t/m ${to}`;
+    document.title = `Evenementen rond ${region}`;
   }
 
-  function updatePageTitle(){
-    const city = formatCityName(document.getElementById("region").value);
-    document.getElementById("pageTitle").textContent = `Evenementen rond ${city}`;
-    document.getElementById("pageSubtitle").textContent = `Bekijk evenementen, tips en activiteiten in en rond ${city}.`;
-    document.title = `Evenementen rond ${city}`;
-  }
-
-  function fillFilters(items){
+  function fillTypes(items){
     const typeSelect = document.getElementById("typeFilter");
     const current = typeSelect.value || "all";
 
@@ -490,7 +535,7 @@
     events = await res.json();
     if(!Array.isArray(events)) events = [];
 
-    fillFilters(events);
+    fillTypes(events);
     applyFilters();
   }
 
@@ -498,11 +543,17 @@
     document.getElementById("count").textContent = `${items.length} evenementen`;
 
     document.getElementById("grid").innerHTML = items.map(e => {
+      const label = e.periodLabel || e.date || "";
+
       return `
         <article class="card">
           <div class="image" style="background-image:url('${e.image || ""}')"></div>
           <div class="content">
-            <div class="source">${e.source || "Bron onbekend"}</div>
+            <div>
+              <span class="source">${e.source || "Bron onbekend"}</span>
+              ${label ? `<span class="period">${label}</span>` : ""}
+            </div>
+
             <h2 class="title">${e.title || ""}</h2>
 
             <div class="meta-list">
@@ -546,7 +597,7 @@
   }
 
   function applyFilters(){
-    updatePageTitle();
+    updateHeaderText();
 
     const q = document.getElementById("search").value.toLowerCase();
     const type = document.getElementById("typeFilter").value;
@@ -571,8 +622,10 @@
     render(filtered);
   }
 
-  function getWeekendRange(){
+  function getWeekendRange(offsetWeeks = 0){
     const today = new Date();
+    today.setDate(today.getDate() + (offsetWeeks * 7));
+
     const day = today.getDay();
 
     const friday = new Date(today);
@@ -642,28 +695,12 @@
     }
   });
 
-  // ---- WEER ----
   function weatherClassFromCode(code){
-    // Open-Meteo weathercode mapping (simpel)
     if(code === 0) return "sunny";
     if([1,2,3,45,48].includes(code)) return "cloudy";
     if([51,53,55,56,57,61,63,65,66,67,80,81,82,95,96,99].includes(code)) return "rainy";
     if([71,73,75,77,85,86].includes(code)) return "snowy";
     return "cloudy";
-  }
-
-  function weatherTextFromCode(code){
-    if(code === 0) return "Zonnig";
-    if(code === 1) return "Meestal zonnig";
-    if(code === 2) return "Half bewolkt";
-    if(code === 3) return "Bewolkt";
-    if([45,48].includes(code)) return "Mist";
-    if([51,53,55].includes(code)) return "Motregen";
-    if([61,63,65].includes(code)) return "Regen";
-    if([71,73,75].includes(code)) return "Sneeuw";
-    if([80,81,82].includes(code)) return "Buien";
-    if([95,96,99].includes(code)) return "Onweer";
-    return "Onbekend";
   }
 
   async function loadWeather(){
@@ -682,17 +719,25 @@
       const data = await res.json();
       if(!data || !data.ok) return;
 
-      const weatherBox = document.getElementById("weatherBox");
-      weatherBox.style.display = "flex";
+      document.getElementById("weatherBox").style.display = "flex";
 
-      document.getElementById("weatherText").textContent =
-        `🌤️ ${data.summary}`;
+      document.getElementById("weatherSummary").textContent =
+        `🌤️ ${data.summary} (${data.days} dagen)`;
 
       document.getElementById("weatherTemp").textContent =
         `🌡️ ${data.tempMin}°C - ${data.tempMax}°C`;
 
-      document.getElementById("weatherRain").textContent =
+      document.getElementById("weatherRainChance").textContent =
         `🌧️ Regen kans: ${data.rainChance}%`;
+
+      document.getElementById("weatherRainMM").textContent =
+        `💧 Regen: ${data.rainTotalMM}mm`;
+
+      document.getElementById("weatherWind").textContent =
+        `💨 Wind max: ${data.windMax} km/u`;
+
+      document.getElementById("weatherUV").textContent =
+        `☀️ UV max: ${data.uvMax}`;
 
       const header = document.getElementById("pageHeader");
       header.classList.remove("sunny","cloudy","rainy","snowy");
@@ -703,7 +748,6 @@
     }
   }
 
-  // ---- REFRESH ----
   async function triggerRemoteRefresh(){
     const btn = document.getElementById("refreshBtn");
     const status = document.getElementById("status");
@@ -745,13 +789,14 @@
       const data = await res.json();
       if(!res.ok) throw new Error(data.error || "Onbekende fout");
 
-      status.textContent = `Update gestart (${data.scrapedCount} nieuwe gevonden). events.json wordt bijgewerkt...`;
+      status.textContent =
+        `Klaar! ${data.scrapedCount} nieuwe gevonden. Totaal opgeslagen: ${data.totalSaved}.`;
 
       setTimeout(async () => {
         status.textContent = "Nieuwe events.json laden...";
         await loadData();
-        status.textContent = "Klaar! Nieuwe events zijn geladen.";
-      }, 9000);
+        status.textContent = "Nieuwe events zijn geladen!";
+      }, 7000);
 
     } catch(e){
       status.textContent = "Starten mislukt: " + e.message;
@@ -761,8 +806,8 @@
     btn.textContent = "Ververs";
   }
 
-  // defaults: dit weekend
-  const weekend = getWeekendRange();
+  // Defaults = huidig weekend
+  const weekend = getWeekendRange(0);
   document.getElementById("dateFrom").value = weekend.from;
   document.getElementById("dateTo").value = weekend.to;
 
