@@ -181,7 +181,7 @@
       display:none;
     }
 
-    .providers, .sites{
+    .providers{
       display:flex;
       gap:10px;
       flex-wrap:wrap;
@@ -191,7 +191,7 @@
       font-weight:700;
     }
 
-    .providers label, .sites label{
+    .providers label{
       display:flex;
       gap:6px;
       align-items:center;
@@ -208,6 +208,73 @@
       font-weight:900;
       color:var(--primary-dark);
       font-size:14px;
+    }
+
+    /* dropdown multi-check */
+    .dropdown {
+      position: relative;
+      margin-top: 10px;
+    }
+
+    .dropdown-btn {
+      width: 100%;
+      text-align: left;
+      padding: 12px 14px;
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      background: white;
+      cursor: pointer;
+      font-weight: 700;
+      color: var(--primary-dark);
+    }
+
+    .dropdown-panel {
+      display: none;
+      position: absolute;
+      z-index: 999;
+      top: 48px;
+      left: 0;
+      right: 0;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 10px;
+      max-height: 260px;
+      overflow-y: auto;
+      box-shadow: var(--shadow);
+    }
+
+    .dropdown-panel label {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 10px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-weight: 700;
+      color: var(--primary-dark);
+    }
+
+    .dropdown-panel label:hover {
+      background: var(--surface-2);
+    }
+
+    .dropdown-actions {
+      display:flex;
+      gap:8px;
+      padding-top:10px;
+      flex-wrap:wrap;
+    }
+
+    .smallbtn{
+      padding:8px 10px;
+      border-radius:12px;
+      border:1px solid var(--border);
+      background:var(--surface-2);
+      cursor:pointer;
+      font-weight:800;
+      color:var(--primary-dark);
+      font-size:13px;
     }
 
     @media (max-width:1200px){
@@ -288,18 +355,21 @@
       <label><input type="checkbox" id="provOpenAI"> OpenAI</label>
     </div>
 
-    <div class="sectionTitle">Websites (domeinen)</div>
-    <div class="sites">
-      <label><input class="siteCheck" type="checkbox" value="vera-groningen.nl" checked> vera-groningen.nl</label>
-      <label><input class="siteCheck" type="checkbox" value="go-kids.nl" checked> go-kids.nl</label>
-      <label><input class="siteCheck" type="checkbox" value="kermis.nl" checked> kermis.nl</label>
-      <label><input class="siteCheck" type="checkbox" value="uitloper.nu" checked> uitloper.nu</label>
+    <div class="sectionTitle">Websites (via sites.json)</div>
 
-      <label><input class="siteCheck" type="checkbox" value="visitgroningen.nl" checked> visitgroningen.nl</label>
-      <label><input class="siteCheck" type="checkbox" value="spotgroningen.nl" checked> spotgroningen.nl</label>
-      <label><input class="siteCheck" type="checkbox" value="simplon.nl" checked> simplon.nl</label>
-      <label><input class="siteCheck" type="checkbox" value="ticketmaster.nl"> ticketmaster.nl</label>
-      <label><input class="siteCheck" type="checkbox" value="eventbrite.nl"> eventbrite.nl</label>
+    <div class="dropdown" id="sitesDropdown">
+      <button class="dropdown-btn" onclick="toggleDropdown(event)">
+        Kies websites (<span id="siteCount">0</span> geselecteerd)
+      </button>
+
+      <div class="dropdown-panel" id="dropdownPanel">
+        <div id="sitesList"></div>
+
+        <div class="dropdown-actions">
+          <button class="smallbtn" onclick="selectAllSites()">Alles</button>
+          <button class="smallbtn" onclick="selectNoneSites()">Geen</button>
+        </div>
+      </div>
     </div>
 
     <div class="notice" id="status"></div>
@@ -315,9 +385,10 @@
 
 <script>
   let events = [];
+  let availableSites = [];
 
   // PAS DIT AAN
-  const WORKER_URL = "https://evenementen-refresh.mrsjonnie.workers.dev";
+  const WORKER_URL = "https://evenementen-refresh.jouwnaam.workers.dev";
 
   function formatCityName(value){
     const text = (value || "").trim();
@@ -394,7 +465,6 @@
 
   function isWithinDateRange(eventDate, from, to){
     if(!eventDate) return true;
-
     if(!eventDate.match(/^\d{4}-\d{2}-\d{2}$/)) return true;
 
     const d = new Date(eventDate);
@@ -436,7 +506,7 @@
 
   function getWeekendRange(){
     const today = new Date();
-    const day = today.getDay(); // 0=zo 1=ma ... 5=vr 6=za
+    const day = today.getDay();
 
     const friday = new Date(today);
     const diffToFriday = (5 - day + 7) % 7;
@@ -449,6 +519,61 @@
 
     return { from: fmt(friday), to: fmt(sunday) };
   }
+
+  async function loadSites(){
+    const res = await fetch("./sites.json?_=" + Date.now(), { cache: "no-store" });
+    if(!res.ok) throw new Error("sites.json kon niet worden geladen");
+
+    availableSites = await res.json();
+    if(!Array.isArray(availableSites)) availableSites = [];
+
+    renderSitesDropdown();
+  }
+
+  function renderSitesDropdown(){
+    const container = document.getElementById("sitesList");
+
+    container.innerHTML = availableSites.map(site => {
+      return `
+        <label>
+          <input class="siteCheck" type="checkbox" value="${site}" checked onchange="updateSiteCount()">
+          ${site}
+        </label>
+      `;
+    }).join("");
+
+    updateSiteCount();
+  }
+
+  function updateSiteCount(){
+    const selected = document.querySelectorAll(".siteCheck:checked").length;
+    document.getElementById("siteCount").textContent = selected;
+  }
+
+  function toggleDropdown(e){
+    e.preventDefault();
+    const panel = document.getElementById("dropdownPanel");
+    panel.style.display = (panel.style.display === "block") ? "none" : "block";
+  }
+
+  function selectAllSites(){
+    document.querySelectorAll(".siteCheck").forEach(cb => cb.checked = true);
+    updateSiteCount();
+  }
+
+  function selectNoneSites(){
+    document.querySelectorAll(".siteCheck").forEach(cb => cb.checked = false);
+    updateSiteCount();
+  }
+
+  document.addEventListener("click", (e) => {
+    const dropdown = document.getElementById("sitesDropdown");
+    const panel = document.getElementById("dropdownPanel");
+
+    if(!dropdown.contains(e.target)){
+      panel.style.display = "none";
+    }
+  });
 
   async function triggerRemoteRefresh(){
     const btn = document.getElementById("refreshBtn");
@@ -509,7 +634,7 @@
   document.getElementById("dateFrom").value = weekend.from;
   document.getElementById("dateTo").value = weekend.to;
 
-  loadData().catch((e) => {
+  Promise.all([loadSites(), loadData()]).catch((e) => {
     const status = document.getElementById("status");
     status.style.display = "block";
     status.textContent = "Laden mislukt: " + e.message;
