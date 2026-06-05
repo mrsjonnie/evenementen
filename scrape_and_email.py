@@ -1,6 +1,7 @@
 import json
 import os
 import re
+import time
 from datetime import datetime
 from urllib.parse import quote_plus
 
@@ -20,30 +21,76 @@ MONTHS = 'januari|februari|maart|april|mei|juni|juli|augustus|september|oktober|
 DATE_RE = re.compile(rf'^\d{{1,2}}(?:\s+t/m\s+\d{{1,2}})?\s+(?:{MONTHS})$', re.I)
 SCORE_RE = re.compile(r'^\d,\d$')
 
-
 def log(message):
     with open(LOG_FILE, 'a', encoding='utf-8') as f:
         f.write(f"{datetime.now().strftime('%Y-%m-%d %H:%M:%S')} - {message}\n")
 
+def get_coordinates(location):
+    if not location:
+        return None, None
+
+    try:
+        url = f"https://nominatim.openstreetmap.org/search?format=json&q={quote_plus(location)}"
+        headers = {'User-Agent': 'Mozilla/5.0 (Evenementen Scraper)'}
+        response = requests.get(url, headers=headers, timeout=10)
+        response.raise_for_status()
+
+        data = response.json()
+        if data:
+            return float(data[0]['lat']), float(data[0]['lon'])
+    except Exception as e:
+        log(f"Fout bij geocoding voor {location}: {e}")
+
+    return None, None
 
 def normalize_event(event):
     title = event.get('title', '').strip()
     location = event.get('location', '').strip()
+
+    # Voeg coördinaten toe als ze niet bestaan
+    lat = event.get('lat')
+    lon = event.get('lon')
+    if lat is None or lon is None:
+        lat, lon = get_coordinates(location)
+        time.sleep(1)  # Rate limiting voor Nominatim
+        if lat is not None and lon is not None:
+            event['lat'] = lat
+            event['lon'] = lon
+
+    # Voeg locationLink toe
+    location_link = event.get('locationLink', '')
+    if not location_link and lat and lon:
+        location_link = f'https://www.google.com/maps?q={lat},{lon}'
+
+    # Voeg image toe
+    image = event.get('image', '')
+    if not image:
+        image = f'https://picsum.photos/seed/{quote_plus(title or location)}/800/500'
+
+    # Voeg periodLabel toe
+    date = event.get('date', '')
+    if date == 'Hele jaar':
+        period_label = 'Hele jaar'
+    else:
+        period_label = date
+
     return {
         'title': title,
         'type': event.get('type', 'evenement'),
-        'date': event.get('date', ''),
+        'date': date,
         'time': event.get('time', ''),
         'location': location,
-        'locationLink': event.get('locationLink', ''),
+        'lat': lat,
+        'lon': lon,
+        'locationLink': location_link,
         'cost': event.get('cost', 'Zie website'),
         'description': event.get('description', ''),
-        'image': event.get('image', f'https://picsum.photos/seed/{quote_plus(title or location)}/800/500'),
+        'image': image,
         'website': event.get('website', '#'),
         'source': event.get('source', 'Onbekend'),
+        'periodLabel': period_label,
         'isPermanent': event.get('isPermanent', False)
     }
-
 
 def scrape_uitzinnig(region='Groningen'):
     events = []
@@ -66,20 +113,32 @@ def scrape_uitzinnig(region='Groningen'):
                     date = lines[i+3].strip()
                     j = i + 4
                     extra = ''
+                    time = ""
 
                     if j < len(lines) and lines[j] == 'meerdere data':
                         extra = ' (meerdere data)'
                         j += 1
+
+                    # Zoek naar tijd
+                    k = i + 4
+                    while k < len(lines) and k < i + 10:
+                        if re.match(r'^\d{1,2}:\d{2}', lines[k]):
+                            time = lines[k].strip()
+                            break
+                        k += 1
 
                     description = lines[j].replace('.. »', '').strip() if j < len(lines) else ''
 
                     if title.lower() in {'uitgelicht', 'toon info', 'bezoek website', 'populair', 'mei', 'juni', 'juli', 'maart / april', 'augustus en verder'}:
                         continue
 
+                    log(f'Gevonden evenement: {title} in {location} op {date}')
+
                     item = normalize_event({
                         'title': title,
                         'type': 'evenement',
                         'date': date + extra,
+                        'time': time,
                         'location': location,
                         'description': description,
                         'website': try_url,
@@ -93,11 +152,14 @@ def scrape_uitzinnig(region='Groningen'):
                 log(f'Gevonden: {len(events)} evenementen op {try_url}')
                 return events
 
+        except requests.exceptions.RequestException as e:
+            log(f'Fout bij HTTP-verzoek voor {try_url}: {e}')
+            continue
         except Exception as e:
-            log(f'Fout bij scrapen Uitzinnig ({try_url}): {e}')
+            log(f'Onverwachte fout bij scrapen Uitzinnig ({try_url}): {e}')
+            continue
 
     return events
-
 
 def manual_events():
     return [
@@ -106,6 +168,8 @@ def manual_events():
             'type': 'museum',
             'date': 'Hele jaar',
             'location': 'Groningen',
+            'lat': 53.2193,
+            'lon': 6.5671,
             'description': 'Moderne kunst en wisselende tentoonstellingen.',
             'website': 'https://www.groningermuseum.nl',
             'source': 'Manual',
@@ -116,6 +180,8 @@ def manual_events():
             'type': 'historie',
             'date': 'Hele jaar',
             'location': 'Bourtange',
+            'lat': 53.0167,
+            'lon': 7.1833,
             'description': 'Historische vesting met demonstraties en musea.',
             'website': 'https://www.bourtange.nl',
             'source': 'Manual',
@@ -123,12 +189,10 @@ def manual_events():
         })
     ]
 
-
 def save_events_to_json(events):
     with open(DATA_FILE, 'w', encoding='utf-8') as f:
         json.dump(events, f, ensure_ascii=False, indent=2)
     log(f'Opgeslagen: {len(events)} evenementen in {DATA_FILE}')
-
 
 def main():
     log('=== Start scraping ===')
@@ -150,7 +214,6 @@ def main():
 
     save_events_to_json(unique)
     log('=== Scraping voltooid ===')
-
 
 if __name__ == '__main__':
     main()
