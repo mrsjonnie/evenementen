@@ -133,7 +133,7 @@
 
     .filters{
       display:grid;
-      grid-template-columns:2fr 1fr 1fr 1fr 1fr 1fr auto;
+      grid-template-columns:2fr 1fr 1fr 1fr 1fr 1fr auto auto;
       gap:12px;
       align-items:end;
     }
@@ -268,6 +268,19 @@
     .meta strong{color:var(--primary-dark)}
     .meta span{color:var(--muted);font-size:13px}
 
+    .pagination {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+      margin: 16px 0;
+    }
+
+    .pagination button:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
     .grid{
       display:grid;
       grid-template-columns:repeat(4,minmax(0,1fr));
@@ -379,7 +392,7 @@
     }
 
     @media (max-width:1200px){
-      .filters{grid-template-columns:1fr 1fr 1fr}
+      .filters{grid-template-columns:1fr 1fr 1fr 1fr}
       .grid{grid-template-columns:repeat(3,minmax(0,1fr))}
     }
 
@@ -388,11 +401,20 @@
     }
 
     @media (max-width:760px){
-      .filters{grid-template-columns:1fr}
+      .filters{grid-template-columns:1fr 1fr}
       .grid{grid-template-columns:1fr}
       .dropdown{min-width:100%}
       .headerTop{flex-direction:column}
       .weatherBox{justify-content:flex-start}
+    }
+
+    /* Kaart stijlen */
+    #map {
+      height: 400px;
+      width: 100%;
+      margin-top: 20px;
+      border-radius: 18px;
+      border: 1px solid var(--border);
     }
   </style>
 </head>
@@ -429,7 +451,7 @@
 
       <div class="field">
         <label for="region">Regio</label>
-        <input id="region" value="Groningen" oninput="applyFilters(); updateDateRange(); loadWeather();">
+        <input id="region" value="Groningen" oninput="applyFilters(); updateDateRange(); loadWeather()">
       </div>
 
       <div class="field">
@@ -446,20 +468,21 @@
 
       <div class="field">
         <label for="dateSingle">Datum</label>
-        <input id="dateSingle" type="date" onchange="updateDateRange(); applyFilters(); loadWeather();">
+        <input id="dateSingle" type="date" onchange="updateDateRange(); applyFilters(); loadWeather()">
       </div>
 
       <div class="field">
         <label for="periodMode">Periode</label>
-        <select id="periodMode" onchange="updateDateRange(); applyFilters(); loadWeather();">
+        <select id="periodMode" onchange="updateDateRange(); applyFilters(); loadWeather()">
           <option value="day">Alleen deze dag</option>
-          <option value="thisWeekend" selected>Dit weekend</option>
+          <option value="thisWeekend">Dit weekend</option>
           <option value="nextWeekend">Volgend weekend</option>
-          <option value="week">7 dagen</option>
+          <option value="week" selected>7 dagen</option>
         </select>
       </div>
 
       <button class="btn btn-primary" id="refreshBtn" onclick="triggerRemoteRefresh()">Ververs</button>
+      <button class="btn btn-secondary" id="resetBtn" onclick="resetFilters()">Reset Filters</button>
     </div>
 
     <div class="rowCompact">
@@ -495,12 +518,29 @@
     <span id="metaInfo">Resultaten worden geladen uit events.json</span>
   </div>
 
+  <div class="pagination">
+    <button class="btn btn-secondary" id="prevPage" onclick="prevPage()">Vorige</button>
+    <span id="pageInfo">Pagina 1 van 1</span>
+    <button class="btn btn-secondary" id="nextPage" onclick="nextPage()">Volgende</button>
+  </div>
+
   <section class="grid" id="grid"></section>
+
+  <!-- Kaart container -->
+  <div id="map"></div>
 </main>
+
+<!-- Leaflet JS -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
 <script>
   let events = [];
   let availableSites = [];
+  let currentPage = 1;
+  const eventsPerPage = 10;
+  let filteredEvents = [];
+  let map;
+  let markers = [];
 
   const WORKER_URL = "https://evenementen-refresh.mrsjonnie.workers.dev";
 
@@ -598,10 +638,12 @@
     applyFilters();
   }
 
-  function render(items){
-    document.getElementById("count").textContent = `${items.length} evenementen`;
+  function showPage(page) {
+    const startIndex = (page - 1) * eventsPerPage;
+    const endIndex = startIndex + eventsPerPage;
+    const eventsToShow = filteredEvents.slice(startIndex, endIndex);
 
-    document.getElementById("grid").innerHTML = items.map(e => {
+    document.getElementById("grid").innerHTML = eventsToShow.map(e => {
       const label = e.periodLabel || e.date || "";
 
       return `
@@ -638,6 +680,41 @@
         </article>
       `;
     }).join("");
+
+    // Voeg markers toe voor de huidige pagina
+    addMarkersToMap(eventsToShow);
+
+    updatePagination();
+  }
+
+  function updatePagination() {
+    const totalPages = Math.ceil(filteredEvents.length / eventsPerPage);
+    document.getElementById("pageInfo").textContent = `Pagina ${currentPage} van ${totalPages}`;
+    document.getElementById("prevPage").disabled = currentPage === 1;
+    document.getElementById("nextPage").disabled = currentPage === totalPages;
+  }
+
+  function prevPage() {
+    if (currentPage > 1) {
+      currentPage--;
+      showPage(currentPage);
+    }
+  }
+
+  function nextPage() {
+    const totalPages = Math.ceil(filteredEvents.length / eventsPerPage);
+    if (currentPage < totalPages) {
+      currentPage++;
+      showPage(currentPage);
+    }
+  }
+
+  function render(items) {
+    filteredEvents = items;
+    currentPage = 1;
+    showPage(currentPage);
+    document.getElementById("count").textContent = `${items.length} evenementen`;
+    document.getElementById("metaInfo").textContent = `Periode: ${window.dateFrom} t/m ${window.dateTo}`;
   }
 
   function isWithinDateRange(eventDate, from, to){
@@ -672,10 +749,64 @@
       return true;
     });
 
-    document.getElementById("metaInfo").textContent =
-      `Periode: ${window.dateFrom} t/m ${window.dateTo}`;
-
     render(filtered);
+  }
+
+  // Kaart functies
+  function initMap() {
+    if (map) return;
+
+    map = L.map('map').setView([53.219, 6.567], 10);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    }).addTo(map);
+  }
+
+  function addMarkersToMap(events) {
+    if (!map) initMap();
+
+    // Verwijder oude markers
+    markers.forEach(marker => map.removeLayer(marker));
+    markers = [];
+
+    events.forEach(event => {
+      if (event.lat && event.lon) {
+        const marker = L.marker([event.lat, event.lon]).addTo(map);
+        marker.bindPopup(`
+          <b>${event.title || "Onbekend"}</b><br>
+          ${event.location || "Locatie onbekend"}<br>
+          ${event.date || "Datum onbekend"}
+        `);
+        markers.push(marker);
+      }
+    });
+
+    // Pas de kaart aan aan de markers
+    if (markers.length > 0) {
+      const group = new L.featureGroup(markers);
+      map.fitBounds(group.getBounds().pad(0.5));
+    }
+  }
+
+  function resetFilters() {
+    document.getElementById("search").value = "";
+    document.getElementById("region").value = "Groningen";
+    document.getElementById("radius").value = "100";
+    document.getElementById("typeFilter").value = "all";
+    document.getElementById("dateSingle").value = window.dateFrom;
+    document.getElementById("periodMode").value = "week";
+
+    document.getElementById("provPerplexity").checked = true;
+    document.getElementById("provMistral").checked = true;
+    document.getElementById("provOpenAI").checked = false;
+
+    document.querySelectorAll(".siteCheck").forEach(cb => cb.checked = true);
+    updateSiteCount();
+
+    updateDateRange();
+    applyFilters();
+    loadWeather();
   }
 
   async function loadSites(){
@@ -869,18 +1000,19 @@
     }
   }
 
-  // defaults
+  // Initialiseer
   const r = getWeekendRange(0);
   window.dateFrom = r.from;
   window.dateTo = r.to;
 
   document.getElementById("dateSingle").value = r.from;
-  document.getElementById("periodMode").value = "thisWeekend";
+  document.getElementById("periodMode").value = "week";
 
   Promise.all([loadSites(), loadData()]).then(() => {
     updateDateRange();
     applyFilters();
     loadWeather();
+    initMap(); // Initialiseer de kaart
   }).catch((e) => {
     const status = document.getElementById("status");
     status.style.display = "block";
