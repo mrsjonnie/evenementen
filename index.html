@@ -1,1009 +1,957 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Evenementen</title>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Evenementen rond Groningen</title>
   <style>
-    :root{
-      --bg:#f3f8ff;
-      --surface:#ffffff;
-      --surface-2:#eef5ff;
-      --primary:#1d4ed8;
-      --primary-dark:#163ea7;
-      --text:#10233e;
-      --muted:#61738c;
-      --border:#d8e5ff;
-      --shadow:0 10px 30px rgba(29,78,216,.12);
-      --radius:18px;
+    :root {
+      --bg: #f6f7fb;
+      --surface: #ffffff;
+      --surface-soft: #eef4fb;
+      --ink: #142033;
+      --muted: #617084;
+      --line: #dce5ef;
+      --primary: #176b87;
+      --primary-dark: #0f4d64;
+      --accent: #d55f3f;
+      --good: #177a52;
+      --warn: #a55c12;
+      --danger: #b42318;
+      --shadow: 0 14px 34px rgba(20, 32, 51, .10);
+      --radius: 8px;
     }
 
-    *{box-sizing:border-box}
+    * { box-sizing: border-box; }
 
-    body{
-      margin:0;
-      font-family:Inter,Segoe UI,Arial,sans-serif;
-      background:linear-gradient(180deg,#eff5ff 0%,#f8fbff 100%);
-      color:var(--text);
-    }
-
-    .header{
-      padding:18px 14px 14px;
-      color:#fff;
-      position:relative;
-      overflow:hidden;
-      border-bottom:1px solid rgba(255,255,255,0.15);
+    body {
+      margin: 0;
+      font-family: Inter, "Segoe UI", Arial, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
     }
 
-    .header::before{
-      content:"";
-      position:absolute;
-      inset:0;
-      background:linear-gradient(135deg,#0f2d6b 0%,#2563eb 100%);
-      z-index:-2;
+    button,
+    input,
+    select {
+      font: inherit;
     }
 
-    .header::after{
-      content:"";
-      position:absolute;
-      inset:0;
-      opacity:0.30;
-      background-size:cover;
-      background-position:center;
-      z-index:-1;
+    button:focus-visible,
+    input:focus-visible,
+    select:focus-visible,
+    a:focus-visible {
+      outline: 3px solid rgba(23, 107, 135, .28);
+      outline-offset: 2px;
     }
 
-    .header.sunny::after{
-      background-image:url("https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1600&q=80");
-      opacity:0.35;
-    }
-    .header.cloudy::after{
-      background-image:url("https://images.unsplash.com/photo-1526679492918-6e1d6b7f3f9b?auto=format&fit=crop&w=1600&q=80");
-      opacity:0.35;
-    }
-    .header.rainy::after{
-      background-image:url("https://images.unsplash.com/photo-1501696461441-2f7f9c3d5f46?auto=format&fit=crop&w=1600&q=80");
-      opacity:0.45;
-    }
-    .header.snowy::after{
-      background-image:url("https://images.unsplash.com/photo-1547756536-cde3673fa2a5?auto=format&fit=crop&w=1600&q=80");
-      opacity:0.45;
+    .hero {
+      color: #fff;
+      background:
+        linear-gradient(90deg, rgba(12, 48, 64, .92), rgba(12, 48, 64, .58)),
+        url("https://images.unsplash.com/photo-1517457373958-b7bdd4587205?auto=format&fit=crop&w=1800&q=80") center/cover;
     }
 
-    .wrap{max-width:1180px;margin:0 auto}
-
-    .headerTop{
-      display:flex;
-      align-items:flex-start;
-      justify-content:space-between;
-      gap:12px;
-      flex-wrap:wrap;
+    .heroInner {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 24px 16px 22px;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 18px;
+      align-items: end;
     }
 
-    .header h1{
-      margin:0;
-      font-size:clamp(1.4rem,2.4vw,2rem);
-      line-height:1.1;
+    h1 {
+      margin: 0;
+      font-size: 2rem;
+      line-height: 1.1;
+      letter-spacing: 0;
     }
 
-    .header p{
-      margin:6px 0 0;
-      color:#dce8ff;
-      max-width:760px;
-      font-size:13px;
-      font-weight:800;
+    .subtitle {
+      margin: 8px 0 0;
+      max-width: 760px;
+      color: rgba(255, 255, 255, .84);
+      font-weight: 700;
+      line-height: 1.45;
     }
 
-    .weatherBox{
-      display:flex;
-      flex-wrap:wrap;
-      gap:7px;
-      align-items:center;
-      justify-content:flex-end;
-      margin-top:2px;
+    .weather {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 8px;
+      max-width: 560px;
     }
 
-    .weatherBadge{
-      background:rgba(255,255,255,0.16);
-      border:1px solid rgba(255,255,255,0.35);
-      padding:6px 9px;
-      border-radius:999px;
-      font-size:12px;
-      backdrop-filter: blur(10px);
-      font-weight:900;
-      color:#fff;
-      white-space:nowrap;
-    }
-
-    .container{
-      max-width:1180px;
-      margin:12px auto 0;
-      padding:0 14px 40px;
-    }
-
-    .toolbar{
-      background:rgba(255,255,255,.95);
-      backdrop-filter:blur(10px);
-      padding:16px;
-      border:1px solid var(--border);
-      border-radius:20px;
-      box-shadow:var(--shadow);
-    }
-
-    .filters{
-      display:grid;
-      grid-template-columns:2fr 1fr 1fr 1fr 1fr 1fr auto auto;
-      gap:12px;
-      align-items:end;
-    }
-
-    .field label{
-      display:block;
-      margin-bottom:5px;
-      font-weight:900;
-      color:var(--primary-dark);
-      font-size:13px;
-    }
-
-    .field input,.field select{
-      width:100%;
-      padding:12px 12px;
-      border-radius:14px;
-      border:1px solid var(--border);
-      background:#fff;
-      font-size:14px;
-      color:var(--text);
-      font-weight:700;
-    }
-
-    .rowCompact{
-      display:flex;
-      flex-wrap:wrap;
-      align-items:center;
-      gap:10px;
-      padding-top:12px;
-    }
-
-    .providers{
-      display:flex;
-      gap:8px;
-      flex-wrap:wrap;
-      font-size:13px;
-      color:var(--primary-dark);
-      font-weight:900;
-    }
-
-    .providers label{
-      display:flex;
-      gap:6px;
-      align-items:center;
-      background:var(--surface-2);
-      padding:7px 10px;
-      border-radius:999px;
-      border:1px solid var(--border);
-      cursor:pointer;
-      user-select:none;
-    }
-
-    .dropdown {
-      position: relative;
-      min-width: 280px;
-      flex: 1;
-      max-width:420px;
-    }
-
-    .dropdown-btn {
-      width: 100%;
-      text-align: left;
-      padding: 9px 12px;
+    .pill {
+      border: 1px solid rgba(255, 255, 255, .34);
+      background: rgba(255, 255, 255, .16);
+      color: #fff;
       border-radius: 999px;
-      border: 1px solid var(--border);
-      background: white;
-      cursor: pointer;
-      font-weight: 900;
-      color: var(--primary-dark);
-      font-size: 13px;
+      padding: 7px 10px;
+      font-size: .82rem;
+      font-weight: 800;
+      white-space: nowrap;
+      backdrop-filter: blur(8px);
     }
 
-    .dropdown-panel {
-      display: none;
+    main {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 16px 16px 44px;
+    }
+
+    .toolbar {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 14px;
+    }
+
+    .filters {
+      display: grid;
+      grid-template-columns: 1.7fr 1fr .8fr 1fr 1fr 1fr auto auto;
+      gap: 10px;
+      align-items: end;
+    }
+
+    .field label {
+      display: block;
+      margin: 0 0 5px;
+      color: var(--primary-dark);
+      font-weight: 900;
+      font-size: .82rem;
+    }
+
+    input,
+    select {
+      width: 100%;
+      height: 42px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #fff;
+      color: var(--ink);
+      padding: 0 11px;
+      font-weight: 700;
+    }
+
+    .btn {
+      min-height: 42px;
+      border: 0;
+      border-radius: var(--radius);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+      padding: 0 13px;
+      font-weight: 900;
+      text-decoration: none;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    .btnPrimary { background: var(--primary); color: #fff; }
+    .btnPrimary:hover { background: var(--primary-dark); }
+    .btnSecondary { background: var(--surface-soft); color: var(--primary-dark); }
+    .btnDanger { background: #fff1ee; color: var(--danger); border: 1px solid #f5c6bd; }
+    .btn[disabled] { opacity: .58; cursor: not-allowed; }
+
+    .secondRow {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      padding-top: 12px;
+    }
+
+    .checks {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .check {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 8px 10px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: var(--surface-soft);
+      color: var(--primary-dark);
+      font-size: .84rem;
+      font-weight: 900;
+      user-select: none;
+    }
+
+    .check input {
+      width: auto;
+      height: auto;
+      margin: 0;
+    }
+
+    .siteSelect {
+      position: relative;
+      min-width: 260px;
+      flex: 1;
+      max-width: 460px;
+    }
+
+    .siteButton {
+      width: 100%;
+      justify-content: space-between;
+    }
+
+    .sitePanel {
       position: absolute;
-      z-index: 999;
-      top: 44px;
+      z-index: 10;
+      top: 48px;
       left: 0;
       right: 0;
-      background: white;
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 10px;
-      max-height: 260px;
-      overflow-y: auto;
+      max-height: 280px;
+      overflow: auto;
+      display: none;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
       box-shadow: var(--shadow);
+      padding: 8px;
     }
 
-    .dropdown-panel label {
+    .siteSelect.open .sitePanel { display: block; }
+
+    .siteList {
+      display: grid;
+      gap: 3px;
+    }
+
+    .siteList label {
       display: flex;
-      align-items: center;
       gap: 8px;
-      padding: 7px 10px;
-      border-radius: 10px;
-      cursor: pointer;
+      align-items: center;
+      padding: 8px;
+      border-radius: var(--radius);
+      color: var(--ink);
+      font-size: .88rem;
       font-weight: 800;
+    }
+
+    .siteList label:hover { background: var(--surface-soft); }
+
+    .siteActions {
+      display: flex;
+      gap: 8px;
+      padding-top: 8px;
+      border-top: 1px solid var(--line);
+      margin-top: 8px;
+    }
+
+    .status {
+      display: none;
+      margin-top: 12px;
+      padding: 11px 12px;
+      border-radius: var(--radius);
+      border: 1px solid var(--line);
+      background: var(--surface-soft);
+      color: var(--muted);
+      font-weight: 800;
+      line-height: 1.4;
+    }
+
+    .status.show { display: block; }
+    .status.ok { color: var(--good); border-color: #b8ddcc; background: #edf8f3; }
+    .status.warn { color: var(--warn); border-color: #efd5aa; background: #fff8eb; }
+    .status.error { color: var(--danger); border-color: #efb9b1; background: #fff1ee; }
+
+    .summary {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: center;
+      flex-wrap: wrap;
+      margin: 18px 2px 12px;
+    }
+
+    .summary strong {
       color: var(--primary-dark);
-      font-size:13px;
+      font-size: 1.05rem;
     }
 
-    .dropdown-panel label:hover {
-      background: var(--surface-2);
+    .summary span {
+      color: var(--muted);
+      font-weight: 750;
     }
 
-    .dropdown-actions {
-      display:flex;
-      gap:8px;
-      padding-top:10px;
-      flex-wrap:wrap;
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
     }
 
-    .smallbtn{
-      padding:7px 10px;
-      border-radius:12px;
-      border:1px solid var(--border);
-      background:var(--surface-2);
-      cursor:pointer;
-      font-weight:900;
-      color:var(--primary-dark);
-      font-size:12px;
+    .card {
+      min-width: 0;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: 0 8px 24px rgba(20, 32, 51, .08);
+      display: flex;
+      flex-direction: column;
     }
 
-    .meta{
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      gap:12px;
-      flex-wrap:wrap;
-      margin:16px 2px;
+    .image {
+      height: 150px;
+      background: var(--surface-soft) center/cover;
+      position: relative;
     }
 
-    .meta strong{color:var(--primary-dark)}
-    .meta span{color:var(--muted);font-size:13px}
+    .image::after {
+      content: "";
+      position: absolute;
+      inset: auto 0 0;
+      height: 42px;
+      background: linear-gradient(transparent, rgba(0, 0, 0, .22));
+    }
+
+    .cardBody {
+      padding: 13px;
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      max-width: 100%;
+      border-radius: 999px;
+      padding: 5px 8px;
+      background: var(--surface-soft);
+      color: var(--primary-dark);
+      font-weight: 900;
+      font-size: .76rem;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .tagAccent {
+      background: #fff0ea;
+      color: var(--accent);
+    }
+
+    .title {
+      margin: 0;
+      color: #102033;
+      font-size: 1.05rem;
+      line-height: 1.25;
+    }
+
+    .details {
+      display: grid;
+      gap: 6px;
+      color: #33445b;
+      font-size: .9rem;
+      font-weight: 780;
+    }
+
+    .detail {
+      display: grid;
+      grid-template-columns: 22px minmax(0, 1fr);
+      gap: 6px;
+      align-items: start;
+    }
+
+    .detail span:last-child {
+      overflow-wrap: anywhere;
+    }
+
+    .desc {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.45;
+      font-size: .9rem;
+      font-weight: 650;
+    }
+
+    .cardActions {
+      margin-top: auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      padding-top: 2px;
+    }
+
+    .empty {
+      grid-column: 1 / -1;
+      padding: 28px;
+      background: var(--surface);
+      border: 1px dashed #b8c7d9;
+      border-radius: var(--radius);
+      text-align: center;
+      color: var(--muted);
+      font-weight: 800;
+      line-height: 1.5;
+    }
 
     .pagination {
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: 12px;
-      margin: 16px 0;
+      gap: 10px;
+      margin-top: 16px;
     }
 
-    .pagination button:disabled {
-      opacity: 0.5;
-      cursor: not-allowed;
+    .pageText {
+      min-width: 118px;
+      text-align: center;
+      color: var(--muted);
+      font-weight: 900;
     }
 
-    .grid{
-      display:grid;
-      grid-template-columns:repeat(4,minmax(0,1fr));
-      gap:14px;
+    @media (max-width: 1120px) {
+      .filters { grid-template-columns: repeat(4, minmax(0, 1fr)); }
     }
 
-    .card{
-      background:var(--surface);
-      border:1px solid var(--border);
-      border-radius:var(--radius);
-      overflow:hidden;
-      box-shadow:var(--shadow);
-      transition:transform .18s ease,box-shadow .18s ease;
+    @media (max-width: 900px) {
+      .heroInner { grid-template-columns: 1fr; }
+      .weather { justify-content: flex-start; }
+      .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     }
 
-    .card:hover{
-      transform:translateY(-4px);
-      box-shadow:0 16px 34px rgba(29,78,216,.18);
-    }
-
-    .image{
-      height:150px;
-      background-size:cover;
-      background-position:center;
-      background-color:#e9f0ff;
-    }
-
-    .content{padding:14px}
-
-    .source{
-      display:inline-block;
-      padding:6px 10px;
-      border-radius:999px;
-      background:var(--surface-2);
-      color:var(--primary-dark);
-      font-size:12px;
-      font-weight:900;
-      margin-bottom:10px;
-    }
-
-    .period{
-      display:inline-block;
-      padding:6px 10px;
-      border-radius:999px;
-      background:#eaf2ff;
-      color:#0f2d6b;
-      font-size:12px;
-      font-weight:900;
-      margin-bottom:10px;
-      margin-left:6px;
-    }
-
-    .title{
-      margin:0 0 8px;
-      font-size:1.02rem;
-      color:#0d2350;
-    }
-
-    .meta-list{
-      display:grid;
-      gap:6px;
-      font-size:13px;
-      color:#29415f;
-      font-weight:800;
-    }
-
-    .desc{
-      color:var(--muted);
-      font-size:13px;
-      line-height:1.45;
-      min-height:52px;
-      margin:12px 0;
-      font-weight:700;
-    }
-
-    .links{
-      display:flex;
-      gap:8px;
-      flex-wrap:wrap;
-    }
-
-    .btn{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      padding:11px 13px;
-      border-radius:12px;
-      text-decoration:none;
-      font-weight:900;
-      font-size:13px;
-      border:none;
-      cursor:pointer;
-    }
-
-    .btn-primary{background:var(--primary);color:#fff}
-    .btn-secondary{background:var(--surface-2);color:var(--primary-dark)}
-    .btn-danger{background:#b91c1c;color:#fff}
-
-    .notice{
-      margin-top:12px;
-      padding:12px 14px;
-      background:var(--surface-2);
-      border:1px solid var(--border);
-      border-radius:14px;
-      color:var(--muted);
-      font-size:13px;
-      display:none;
-      font-weight:800;
-    }
-
-    @media (max-width:1200px){
-      .filters{grid-template-columns:1fr 1fr 1fr 1fr}
-      .grid{grid-template-columns:repeat(3,minmax(0,1fr))}
-    }
-
-    @media (max-width:900px){
-      .grid{grid-template-columns:repeat(2,minmax(0,1fr))}
-    }
-
-    @media (max-width:760px){
-      .filters{grid-template-columns:1fr 1fr}
-      .grid{grid-template-columns:1fr}
-      .dropdown{min-width:100%}
-      .headerTop{flex-direction:column}
-      .weatherBox{justify-content:flex-start}
+    @media (max-width: 680px) {
+      .heroInner { padding-top: 20px; }
+      h1 { font-size: 1.55rem; }
+      .filters { grid-template-columns: 1fr; }
+      .grid { grid-template-columns: 1fr; }
+      .siteSelect { min-width: 100%; max-width: none; }
+      .btn { width: 100%; }
+      .checks { width: 100%; }
+      .check { flex: 1; justify-content: center; }
+      .pagination .btn { width: auto; }
     }
   </style>
 </head>
-
 <body>
-<header class="header" id="pageHeader">
-  <div class="wrap">
-    <div class="headerTop">
+  <header class="hero">
+    <div class="heroInner">
       <div>
-        <h1 id="pageTitle">Evenementen</h1>
-        <p id="pageSubtitle">Evenementen overzicht</p>
+        <h1 id="pageTitle">Evenementen rond Groningen</h1>
+        <p class="subtitle" id="pageSubtitle">Vind snel wat er te doen is, filter op datum en type, en ververs de lijst wanneer je nieuwe resultaten wilt ophalen.</p>
       </div>
-
-      <div class="weatherBox" id="weatherBox" style="display:none;">
-        <div class="weatherBadge" id="weatherSummary">🌤️ ...</div>
-        <div class="weatherBadge" id="weatherTemp">🌡️ ...</div>
-        <div class="weatherBadge" id="weatherRainChance">🌧️ ...</div>
-        <div class="weatherBadge" id="weatherRainMM">💧 ...</div>
-        <div class="weatherBadge" id="weatherWind">💨 ...</div>
-        <div class="weatherBadge" id="weatherUV">☀️ UV ...</div>
-      </div>
+      <div class="weather" id="weatherBox" aria-live="polite"></div>
     </div>
-  </div>
-</header>
+  </header>
 
-<main class="container">
-  <section class="toolbar">
+  <main>
+    <section class="toolbar" aria-label="Filters">
+      <div class="filters">
+        <div class="field">
+          <label for="search">Zoeken</label>
+          <input id="search" type="search" placeholder="Naam, plaats of omschrijving">
+        </div>
 
-    <div class="filters">
-      <div class="field">
-        <label for="search">Zoeken</label>
-        <input id="search" placeholder="Omschrijving (optioneel)" oninput="applyFilters()">
+        <div class="field">
+          <label for="region">Regio</label>
+          <input id="region" value="Groningen">
+        </div>
+
+        <div class="field">
+          <label for="radius">Straal</label>
+          <input id="radius" type="number" min="1" max="300" value="100" inputmode="numeric">
+        </div>
+
+        <div class="field">
+          <label for="typeFilter">Type</label>
+          <select id="typeFilter">
+            <option value="all">Alle types</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="dateSingle">Startdatum</label>
+          <input id="dateSingle" type="date">
+        </div>
+
+        <div class="field">
+          <label for="periodMode">Periode</label>
+          <select id="periodMode">
+            <option value="day">Alleen deze dag</option>
+            <option value="thisWeekend">Dit weekend</option>
+            <option value="nextWeekend">Volgend weekend</option>
+            <option value="week" selected>7 dagen</option>
+          </select>
+        </div>
+
+        <button class="btn btnPrimary" id="refreshBtn" type="button">Ververs</button>
+        <button class="btn btnSecondary" id="resetBtn" type="button">Reset</button>
       </div>
 
-      <div class="field">
-        <label for="region">Regio</label>
-        <input id="region" value="Groningen" oninput="applyFilters(); updateDateRange(); loadWeather()">
-      </div>
+      <div class="secondRow">
+        <div class="checks" aria-label="Aanbieders">
+          <label class="check"><input type="checkbox" id="provPerplexity" checked> Perplexity</label>
+          <label class="check"><input type="checkbox" id="provMistral" checked> Mistral</label>
+          <label class="check"><input type="checkbox" id="provOpenAI"> OpenAI</label>
+        </div>
 
-      <div class="field">
-        <label for="radius">Straal (km)</label>
-        <input id="radius" type="number" min="1" max="300" value="100">
-      </div>
-
-      <div class="field">
-        <label for="typeFilter">Evenementen</label>
-        <select id="typeFilter" onchange="applyFilters()">
-          <option value="all">Alle types</option>
-        </select>
-      </div>
-
-      <div class="field">
-        <label for="dateSingle">Datum</label>
-        <input id="dateSingle" type="date" onchange="updateDateRange(); applyFilters(); loadWeather()">
-      </div>
-
-      <div class="field">
-        <label for="periodMode">Periode</label>
-        <select id="periodMode" onchange="updateDateRange(); applyFilters(); loadWeather()">
-          <option value="day">Alleen deze dag</option>
-          <option value="thisWeekend">Dit weekend</option>
-          <option value="nextWeekend">Volgend weekend</option>
-          <option value="week" selected>7 dagen</option>
-        </select>
-      </div>
-
-      <button class="btn btn-primary" id="refreshBtn" onclick="triggerRemoteRefresh()">Ververs</button>
-      <button class="btn btn-secondary" id="resetBtn" onclick="resetFilters()">Reset Filters</button>
-    </div>
-
-    <div class="rowCompact">
-      <div class="providers">
-        <label><input type="checkbox" id="provPerplexity" checked> Perplexity</label>
-        <label><input type="checkbox" id="provMistral" checked> Mistral</label>
-        <label><input type="checkbox" id="provOpenAI"> OpenAI</label>
-      </div>
-
-      <div class="dropdown" id="sitesDropdown">
-        <button class="dropdown-btn" onclick="toggleDropdown(event)">
-          Websites (<span id="siteCount">0</span>)
-        </button>
-
-        <div class="dropdown-panel" id="dropdownPanel">
-          <div id="sitesList"></div>
-
-          <div class="dropdown-actions">
-            <button class="smallbtn" onclick="selectAllSites()">Alles</button>
-            <button class="smallbtn" onclick="selectNoneSites()">Geen</button>
+        <div class="siteSelect" id="siteSelect">
+          <button class="btn btnSecondary siteButton" id="siteButton" type="button" aria-expanded="false">
+            <span>Websites (<span id="siteCount">0</span>)</span>
+            <span aria-hidden="true">v</span>
+          </button>
+          <div class="sitePanel">
+            <div class="siteList" id="sitesList"></div>
+            <div class="siteActions">
+              <button class="btn btnSecondary" id="allSitesBtn" type="button">Alles</button>
+              <button class="btn btnSecondary" id="noSitesBtn" type="button">Geen</button>
+            </div>
           </div>
         </div>
+
+        <button class="btn btnDanger" id="clearBtn" type="button">Alles verwijderen</button>
       </div>
 
-      <button class="btn btn-danger" onclick="clearAllEvents()">Alles verwijderen</button>
+      <div class="status" id="status" aria-live="polite"></div>
+    </section>
+
+    <div class="summary">
+      <strong id="count">Evenementen laden...</strong>
+      <span id="metaInfo">Een moment geduld</span>
     </div>
 
-    <div class="notice" id="status"></div>
-  </section>
+    <section class="grid" id="grid" aria-live="polite"></section>
 
-  <div class="meta">
-    <strong id="count">0 evenementen</strong>
-    <span id="metaInfo">Resultaten worden geladen uit events.json</span>
-  </div>
+    <nav class="pagination" id="pagination" aria-label="Paginering">
+      <button class="btn btnSecondary" id="prevPage" type="button">Vorige</button>
+      <span class="pageText" id="pageInfo">Pagina 1 van 1</span>
+      <button class="btn btnSecondary" id="nextPage" type="button">Volgende</button>
+    </nav>
+  </main>
 
-  <div class="pagination">
-    <button class="btn btn-secondary" id="prevPage" onclick="prevPage()">Vorige</button>
-    <span id="pageInfo">Pagina 1 van 1</span>
-    <button class="btn btn-secondary" id="nextPage" onclick="nextPage()">Volgende</button>
-  </div>
+  <script>
+    const WORKER_URL = "https://evenementen-refresh.mrsjonnie.workers.dev";
+    const eventsPerPage = 9;
+    const fallbackEvents = [
+      {
+        title: "Groninger Museum",
+        type: "museum",
+        date: "Hele jaar",
+        location: "Groningen",
+        cost: "Zie website",
+        description: "Moderne kunst en wisselende tentoonstellingen.",
+        image: "https://picsum.photos/seed/Groninger+Museum/800/500",
+        website: "https://www.groningermuseum.nl",
+        source: "Manual",
+        periodLabel: "Hele jaar",
+        isPermanent: true
+      },
+      {
+        title: "Fort Bourtange",
+        type: "historie",
+        date: "Hele jaar",
+        location: "Bourtange",
+        cost: "Zie website",
+        description: "Historische vesting met demonstraties en musea.",
+        image: "https://picsum.photos/seed/Fort+Bourtange/800/500",
+        website: "https://www.bourtange.nl",
+        source: "Manual",
+        periodLabel: "Hele jaar",
+        isPermanent: true
+      }
+    ];
 
-  <section class="grid" id="grid"></section>
-</main>
+    let events = [];
+    let sites = [];
+    let filteredEvents = [];
+    let currentPage = 1;
+    let dateFrom = "";
+    let dateTo = "";
 
-<script>
-  let events = [];
-  let availableSites = [];
-  let currentPage = 1;
-  const eventsPerPage = 10;
-  let filteredEvents = [];
+    const $ = (id) => document.getElementById(id);
+    const controls = ["search", "region", "radius", "typeFilter", "dateSingle", "periodMode"];
 
-  const WORKER_URL = "https://evenementen-refresh.mrsjonnie.workers.dev";
-
-  function formatDate(d){
-    return d.toISOString().slice(0,10);
-  }
-
-  function getWeekendRange(offsetWeeks = 0){
-    const today = new Date();
-    today.setHours(0,0,0,0);
-    today.setDate(today.getDate() + (offsetWeeks * 7));
-
-    const day = today.getDay();
-
-    const friday = new Date(today);
-    const diffToFriday = (5 - day + 7) % 7;
-    friday.setDate(today.getDate() + diffToFriday);
-
-    const sunday = new Date(friday);
-    sunday.setDate(friday.getDate() + 2);
-
-    return { from: formatDate(friday), to: formatDate(sunday) };
-  }
-
-  function updateDateRange(){
-    const mode = document.getElementById("periodMode").value;
-    const baseDate = document.getElementById("dateSingle").value;
-
-    if(mode === "thisWeekend"){
-      const r = getWeekendRange(0);
-      window.dateFrom = r.from;
-      window.dateTo = r.to;
-      return;
+    function escapeHtml(value) {
+      return String(value ?? "").replace(/[&<>"']/g, (char) => ({
+        "&": "&amp;",
+        "<": "&lt;",
+        ">": "&gt;",
+        '"': "&quot;",
+        "'": "&#039;"
+      }[char]));
     }
 
-    if(mode === "nextWeekend"){
-      const r = getWeekendRange(1);
-      window.dateFrom = r.from;
-      window.dateTo = r.to;
-      return;
+    function safeUrl(value) {
+      try {
+        const url = new URL(value || "", window.location.href);
+        return ["http:", "https:", "mailto:"].includes(url.protocol) ? url.href : "";
+      } catch {
+        return "";
+      }
     }
 
-    if(!baseDate){
-      const r = getWeekendRange(0);
-      window.dateFrom = r.from;
-      window.dateTo = r.to;
-      return;
+    function formatDate(date) {
+      return date.toISOString().slice(0, 10);
     }
 
-    const d = new Date(baseDate + "T00:00:00");
-
-    if(mode === "day"){
-      window.dateFrom = baseDate;
-      window.dateTo = baseDate;
+    function prettyDate(value) {
+      if (!/^\d{4}-\d{2}-\d{2}$/.test(value || "")) return value || "Datum onbekend";
+      return new Intl.DateTimeFormat("nl-NL", {
+        weekday: "short",
+        day: "numeric",
+        month: "short"
+      }).format(new Date(value + "T00:00:00"));
     }
 
-    if(mode === "week"){
-      const to = new Date(d);
-      to.setDate(d.getDate() + 6);
-      window.dateFrom = baseDate;
-      window.dateTo = formatDate(to);
+    function getWeekendRange(offsetWeeks = 0) {
+      const today = new Date();
+      today.setHours(0, 0, 0, 0);
+      today.setDate(today.getDate() + offsetWeeks * 7);
+      const diffToFriday = (5 - today.getDay() + 7) % 7;
+      const friday = new Date(today);
+      friday.setDate(today.getDate() + diffToFriday);
+      const sunday = new Date(friday);
+      sunday.setDate(friday.getDate() + 2);
+      return { from: formatDate(friday), to: formatDate(sunday) };
     }
-  }
 
-  function updateHeaderText(){
-    const region = document.getElementById("region").value.trim() || "Onbekend";
-    document.getElementById("pageTitle").textContent = `Evenementen rond ${region}`;
-    document.getElementById("pageSubtitle").textContent = `Periode: ${window.dateFrom} t/m ${window.dateTo}`;
-    document.title = `Evenementen rond ${region}`;
-  }
+    function updateDateRange() {
+      const mode = $("periodMode").value;
+      const baseDate = $("dateSingle").value;
 
-  function fillTypes(items){
-    const typeSelect = document.getElementById("typeFilter");
-    const current = typeSelect.value || "all";
-
-    const types = [...new Set(items.map(e => (e.type || "").trim()).filter(Boolean))].sort();
-
-    typeSelect.innerHTML =
-      '<option value="all">Alle types</option>' +
-      types.map(v => `<option value="${v.toLowerCase()}">${v}</option>`).join("");
-
-    if([...typeSelect.options].some(o => o.value === current)){
-      typeSelect.value = current;
-    }
-  }
-
-  async function loadData(){
-    try {
-      const res = await fetch("./events.json?_=" + Date.now(), { cache: "no-store" });
-      if(!res.ok) throw new Error(`Fout bij laden events.json: ${res.status} ${res.statusText}`);
-
-      events = await res.json();
-      if(!Array.isArray(events)) {
-        console.error("events.json is geen array:", events);
-        events = [];
+      if (mode === "thisWeekend" || mode === "nextWeekend") {
+        const range = getWeekendRange(mode === "nextWeekend" ? 1 : 0);
+        dateFrom = range.from;
+        dateTo = range.to;
+        $("dateSingle").value = range.from;
+        return;
       }
 
-      fillTypes(events);
-      applyFilters();
-    } catch (e) {
-      console.error("Fout bij laden events.json:", e);
-      document.getElementById("status").style.display = "block";
-      document.getElementById("status").textContent = `Fout bij laden evenementen: ${e.message}`;
-      events = [];
-      render([]);
+      const start = baseDate || formatDate(new Date());
+      const startDate = new Date(start + "T00:00:00");
+      dateFrom = start;
+      dateTo = start;
+
+      if (mode === "week") {
+        const end = new Date(startDate);
+        end.setDate(startDate.getDate() + 6);
+        dateTo = formatDate(end);
+      }
     }
-  }
 
-  function showPage(page) {
-    const startIndex = (page - 1) * eventsPerPage;
-    const endIndex = startIndex + eventsPerPage;
-    const eventsToShow = filteredEvents.slice(startIndex, endIndex);
+    function showStatus(message, type = "") {
+      const status = $("status");
+      status.className = `status show ${type}`.trim();
+      status.textContent = message;
+    }
 
-    document.getElementById("grid").innerHTML = eventsToShow.map(e => {
-      const label = e.periodLabel || e.date || "";
+    function hideStatus() {
+      $("status").className = "status";
+      $("status").textContent = "";
+    }
+
+    function setBusy(button, busy, text) {
+      button.disabled = busy;
+      button.dataset.originalText ||= button.textContent;
+      button.textContent = busy ? text : button.dataset.originalText;
+    }
+
+    async function loadJson(path, fallback) {
+      try {
+        const response = await fetch(`${path}?_=${Date.now()}`, { cache: "no-store" });
+        if (!response.ok) throw new Error(`${path} kon niet worden geladen`);
+        const data = await response.json();
+        return Array.isArray(data) ? data : fallback;
+      } catch {
+        return fallback;
+      }
+    }
+
+    function fillTypes() {
+      const current = $("typeFilter").value || "all";
+      const types = [...new Set(events.map((event) => (event.type || "").trim()).filter(Boolean))]
+        .sort((a, b) => a.localeCompare(b, "nl"));
+
+      $("typeFilter").innerHTML = [
+        '<option value="all">Alle types</option>',
+        ...types.map((type) => `<option value="${escapeHtml(type.toLowerCase())}">${escapeHtml(type)}</option>`)
+      ].join("");
+
+      if ([...$("typeFilter").options].some((option) => option.value === current)) {
+        $("typeFilter").value = current;
+      }
+    }
+
+    function renderSites() {
+      $("sitesList").innerHTML = sites.map((site) => `
+        <label>
+          <input class="siteCheck" type="checkbox" value="${escapeHtml(site)}" checked>
+          <span>${escapeHtml(site)}</span>
+        </label>
+      `).join("");
+      updateSiteCount();
+    }
+
+    function updateSiteCount() {
+      $("siteCount").textContent = document.querySelectorAll(".siteCheck:checked").length;
+    }
+
+    function matchesDate(event) {
+      if (event.isPermanent) return true;
+      if (!/^\d{4}-\d{2}-\d{2}$/.test(event.date || "")) return true;
+
+      const day = new Date(event.date + "T00:00:00");
+      const from = new Date(dateFrom + "T00:00:00");
+      const to = new Date(dateTo + "T00:00:00");
+      return day >= from && day <= to;
+    }
+
+    function applyFilters() {
+      updateDateRange();
+
+      const query = $("search").value.trim().toLowerCase();
+      const type = $("typeFilter").value;
+      const region = $("region").value.trim();
+
+      $("pageTitle").textContent = `Evenementen rond ${region || "je regio"}`;
+      $("pageSubtitle").textContent = `${prettyDate(dateFrom)} t/m ${prettyDate(dateTo)} - straal ${$("radius").value || 100} km`;
+      document.title = `Evenementen rond ${region || "je regio"}`;
+
+      filteredEvents = events.filter((event) => {
+        const haystack = [
+          event.title,
+          event.description,
+          event.location,
+          event.type,
+          event.source
+        ].join(" ").toLowerCase();
+
+        if (query && !haystack.includes(query)) return false;
+        if (type !== "all" && (event.type || "").toLowerCase() !== type) return false;
+        return matchesDate(event);
+      }).sort((a, b) => {
+        if (a.isPermanent && !b.isPermanent) return 1;
+        if (!a.isPermanent && b.isPermanent) return -1;
+        return String(a.date || "").localeCompare(String(b.date || ""));
+      });
+
+      currentPage = 1;
+      render();
+    }
+
+    function render() {
+      $("count").textContent = `${filteredEvents.length} ${filteredEvents.length === 1 ? "evenement" : "evenementen"}`;
+      $("metaInfo").textContent = `Periode: ${dateFrom} t/m ${dateTo}`;
+
+      if (!filteredEvents.length) {
+        $("grid").innerHTML = '<div class="empty">Geen evenementen gevonden. Pas je filters aan of haal nieuwe resultaten op met Ververs.</div>';
+        $("pagination").style.display = "none";
+        return;
+      }
+
+      const pageCount = Math.max(1, Math.ceil(filteredEvents.length / eventsPerPage));
+      currentPage = Math.min(currentPage, pageCount);
+      const visible = filteredEvents.slice((currentPage - 1) * eventsPerPage, currentPage * eventsPerPage);
+
+      $("grid").innerHTML = visible.map(renderCard).join("");
+      $("pagination").style.display = pageCount > 1 ? "flex" : "none";
+      $("pageInfo").textContent = `Pagina ${currentPage} van ${pageCount}`;
+      $("prevPage").disabled = currentPage === 1;
+      $("nextPage").disabled = currentPage === pageCount;
+    }
+
+    function renderCard(event) {
+      const title = escapeHtml(event.title || "Naam onbekend");
+      const image = safeUrl(event.image) || "https://picsum.photos/seed/evenement/800/500";
+      const website = safeUrl(event.website);
+      const route = safeUrl(event.locationLink);
+      const dateLabel = event.periodLabel || prettyDate(event.date);
+
       return `
         <article class="card">
-          <div class="image" style="background-image:url('${e.image || ""}')"></div>
-          <div class="content">
-            <div>
-              <span class="source">${e.source || "Bron onbekend"}</span>
-              ${label ? `<span class="period">${label}</span>` : ""}
+          <div class="image" style="background-image: url('${escapeHtml(image)}')"></div>
+          <div class="cardBody">
+            <div class="badges">
+              <span class="tag">${escapeHtml(event.source || "Bron onbekend")}</span>
+              <span class="tag tagAccent">${escapeHtml(dateLabel)}</span>
             </div>
-
-            <h2 class="title">${e.title || ""}</h2>
-
-            <div class="meta-list">
-              <div>📅 ${e.date || "Onbekend"} ${e.time || ""}</div>
-              <div>📍 ${e.location || "Onbekend"}</div>
-              <div>🏷️ ${e.type || "Onbekend"}</div>
-              <div>💶 ${e.cost || "Zie website"}</div>
+            <h2 class="title">${title}</h2>
+            <div class="details">
+              <div class="detail"><span>Datum</span><span>${escapeHtml(prettyDate(event.date))}${event.time ? ` - ${escapeHtml(event.time)}` : ""}</span></div>
+              <div class="detail"><span>Plaats</span><span>${escapeHtml(event.location || "Locatie onbekend")}</span></div>
+              <div class="detail"><span>Type</span><span>${escapeHtml(event.type || "Type onbekend")}</span></div>
+              <div class="detail"><span>Prijs</span><span>${escapeHtml(event.cost || "Zie website")}</span></div>
             </div>
-
-            <p class="desc">${e.description || ""}</p>
-
-            <div class="links">
-              <a class="btn btn-primary" href="${e.website || "#"}" target="_blank" rel="noopener noreferrer">
-                Meer info
-              </a>
-              ${e.locationLink ? `
-                <a class="btn btn-secondary" href="${e.locationLink}" target="_blank" rel="noopener noreferrer">
-                  Route
-                </a>
-              ` : ""}
+            <p class="desc">${escapeHtml(event.description || "Geen omschrijving beschikbaar.")}</p>
+            <div class="cardActions">
+              ${website ? `<a class="btn btnPrimary" href="${escapeHtml(website)}" target="_blank" rel="noopener noreferrer">Meer info</a>` : ""}
+              ${route ? `<a class="btn btnSecondary" href="${escapeHtml(route)}" target="_blank" rel="noopener noreferrer">Route</a>` : ""}
             </div>
           </div>
         </article>
       `;
-    }).join("");
-
-    updatePagination();
-  }
-
-  function updatePagination() {
-    const totalPages = Math.ceil(filteredEvents.length / eventsPerPage);
-    document.getElementById("pageInfo").textContent = `Pagina ${currentPage} van ${Math.max(totalPages, 1)}`;
-    document.getElementById("prevPage").disabled = currentPage === 1;
-    document.getElementById("nextPage").disabled = currentPage === totalPages || totalPages === 0;
-  }
-
-  function prevPage() {
-    if (currentPage > 1) {
-      currentPage--;
-      showPage(currentPage);
     }
-  }
 
-  function nextPage() {
-    const totalPages = Math.ceil(filteredEvents.length / eventsPerPage);
-    if (currentPage < totalPages) {
-      currentPage++;
-      showPage(currentPage);
+    async function loadWeather() {
+      const region = $("region").value.trim();
+      if (!region || !dateFrom || !dateTo) return;
+
+      try {
+        const url = `${WORKER_URL}/weather?region=${encodeURIComponent(region)}&from=${dateFrom}&to=${dateTo}`;
+        const response = await fetch(url, { cache: "no-store" });
+        if (!response.ok) throw new Error("Weer niet beschikbaar");
+        const data = await response.json();
+        if (!data || !data.ok) throw new Error("Weer niet beschikbaar");
+
+        $("weatherBox").innerHTML = [
+          `${escapeHtml(data.summary)} (${escapeHtml(data.days)} dagen)`,
+          `${escapeHtml(data.tempMin)} graden - ${escapeHtml(data.tempMax)} graden`,
+          `Regen ${escapeHtml(data.rainChance)}%`,
+          `${escapeHtml(data.rainTotalMM)} mm`,
+          `Wind ${escapeHtml(data.windMax)} km/u`,
+          `UV ${escapeHtml(data.uvMax)}`
+        ].map((item) => `<span class="pill">${item}</span>`).join("");
+      } catch {
+        $("weatherBox").innerHTML = "";
+      }
     }
-  }
 
-  function render(items) {
-    filteredEvents = items;
-    currentPage = 1;
-    document.getElementById("count").textContent = `${items.length} evenementen`;
-    document.getElementById("metaInfo").textContent = `Periode: ${window.dateFrom} t/m ${window.dateTo}`;
-    showPage(currentPage);
-  }
+    async function refreshEvents() {
+      const button = $("refreshBtn");
+      setBusy(button, true, "Bezig...");
+      showStatus("Nieuwe evenementen ophalen...", "warn");
 
-  function isWithinDateRange(eventDate, from, to){
-    if(!eventDate) return true;
-    if(!eventDate.match(/^\d{4}-\d{2}-\d{2}$/)) return true;
+      const selectedSites = [...document.querySelectorAll(".siteCheck:checked")].map((check) => check.value);
+      const category = $("typeFilter").value === "all" ? "" : $("typeFilter").value;
+      const payload = {
+        region: $("region").value.trim(),
+        radius: $("radius").value,
+        query: $("search").value.trim(),
+        category,
+        dateFrom,
+        dateTo,
+        minResults: 20,
+        sites: selectedSites,
+        providers: {
+          perplexity: $("provPerplexity").checked,
+          mistral: $("provMistral").checked,
+          openai: $("provOpenAI").checked
+        }
+      };
 
-    const d = new Date(eventDate);
-    const f = new Date(from);
-    const t = new Date(to);
+      try {
+        const response = await fetch(WORKER_URL, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload)
+        });
+        const data = await response.json().catch(() => ({}));
+        if (!response.ok) throw new Error(data.error || "Verversen is mislukt");
 
-    d.setHours(0,0,0,0);
-    f.setHours(0,0,0,0);
-    t.setHours(0,0,0,0);
+        showStatus(`Klaar. ${data.scrapedCount || 0} nieuwe resultaten gevonden. De lijst wordt zo opnieuw geladen.`, "ok");
+        setTimeout(loadAll, 7000);
+      } catch (error) {
+        showStatus(`Starten mislukt: ${error.message}`, "error");
+      } finally {
+        setBusy(button, false);
+      }
+    }
 
-    return d >= f && d <= t;
-  }
+    async function clearAllEvents() {
+      if (!confirm("Weet je zeker dat je alle evenementen wilt verwijderen?")) return;
 
-  function applyFilters(){
-    updateHeaderText();
+      const button = $("clearBtn");
+      setBusy(button, true, "Verwijderen...");
+      showStatus("Evenementen verwijderen...", "warn");
 
-    const q = document.getElementById("search").value.toLowerCase();
-    const type = document.getElementById("typeFilter").value;
-    const region = document.getElementById("region").value.toLowerCase();
-    const radius = parseInt(document.getElementById("radius").value) || 100;
+      try {
+        const response = await fetch(`${WORKER_URL}/clear`, { method: "POST" });
+        const data = await response.json().catch(() => ({}));
+        if (!response.ok) throw new Error(data.error || "Verwijderen is mislukt");
 
-    const filtered = events.filter(e => {
-      const hay = `${e.title || ""} ${e.description || ""} ${e.location || ""}`.toLowerCase();
+        showStatus("Alle evenementen zijn verwijderd. De lijst wordt zo opnieuw geladen.", "ok");
+        setTimeout(loadAll, 7000);
+      } catch (error) {
+        showStatus(`Verwijderen mislukt: ${error.message}`, "error");
+      } finally {
+        setBusy(button, false);
+      }
+    }
 
-      // Zoekterm filter
-      if(q && !hay.includes(q)) return false;
+    function resetFilters() {
+      $("search").value = "";
+      $("region").value = "Groningen";
+      $("radius").value = "100";
+      $("periodMode").value = "week";
+      $("typeFilter").value = "all";
+      $("provPerplexity").checked = true;
+      $("provMistral").checked = true;
+      $("provOpenAI").checked = false;
+      document.querySelectorAll(".siteCheck").forEach((check) => { check.checked = true; });
+      updateSiteCount();
+      const today = formatDate(new Date());
+      $("dateSingle").value = today;
+      applyFilters();
+      loadWeather();
+      hideStatus();
+    }
 
-      // Type filter
-      if(type !== "all" && (e.type || "").toLowerCase() !== type) return false;
+    async function loadAll() {
+      updateDateRange();
+      [events, sites] = await Promise.all([
+        loadJson("./events.json", fallbackEvents),
+        loadJson("./sites.json", [])
+      ]);
 
-      // Datum filter
-      if(window.dateFrom && window.dateTo && !isWithinDateRange(e.date, window.dateFrom, window.dateTo)) return false;
+      fillTypes();
+      renderSites();
+      applyFilters();
+      loadWeather();
+    }
 
-      return true;
+    controls.forEach((id) => {
+      $(id).addEventListener("input", () => {
+        applyFilters();
+        if (id === "region" || id === "dateSingle" || id === "periodMode") loadWeather();
+      });
+      $(id).addEventListener("change", () => {
+        applyFilters();
+        if (id === "region" || id === "dateSingle" || id === "periodMode") loadWeather();
+      });
     });
 
-    render(filtered);
-  }
-
-  function resetFilters() {
-    // Reset alle filters naar standaardwaarden
-    document.getElementById("search").value = "";
-    document.getElementById("region").value = "Groningen";
-    document.getElementById("radius").value = "100";
-    document.getElementById("typeFilter").value = "all";
-    document.getElementById("dateSingle").value = window.dateFrom;
-
-    // Reset providers
-    document.getElementById("provPerplexity").checked = true;
-    document.getElementById("provMistral").checked = true;
-    document.getElementById("provOpenAI").checked = false;
-
-    // Reset sites
-    document.querySelectorAll(".siteCheck").forEach(cb => cb.checked = true);
-    updateSiteCount();
-
-    // Pas datumbereik aan
-    updateDateRange();
-
-    // Toon alle evenementen
-    applyFilters();
-    loadWeather();
-  }
-
-  async function loadSites(){
-    try {
-      const res = await fetch("./sites.json?_=" + Date.now(), { cache: "no-store" });
-      if(!res.ok) throw new Error("sites.json kon niet worden geladen");
-
-      availableSites = await res.json();
-      if(!Array.isArray(availableSites)) availableSites = [];
-
-      renderSitesDropdown();
-    } catch (e) {
-      console.error("Fout bij laden sites.json:", e);
-      availableSites = [];
-    }
-  }
-
-  function renderSitesDropdown(){
-    const container = document.getElementById("sitesList");
-    container.innerHTML = availableSites.map(site => {
-      return `
-        <label>
-          <input class="siteCheck" type="checkbox" value="${site}" checked onchange="updateSiteCount()">
-          ${site}
-        </label>
-      `;
-    }).join("");
-    updateSiteCount();
-  }
-
-  function updateSiteCount(){
-    const selected = document.querySelectorAll(".siteCheck:checked").length;
-    document.getElementById("siteCount").textContent = selected;
-  }
-
-  function toggleDropdown(e){
-    e.preventDefault();
-    const panel = document.getElementById("dropdownPanel");
-    panel.style.display = (panel.style.display === "block") ? "none" : "block";
-  }
-
-  function selectAllSites(){
-    document.querySelectorAll(".siteCheck").forEach(cb => cb.checked = true);
-    updateSiteCount();
-  }
-
-  function selectNoneSites(){
-    document.querySelectorAll(".siteCheck").forEach(cb => cb.checked = false);
-    updateSiteCount();
-  }
-
-  document.addEventListener("click", (e) => {
-    const dropdown = document.getElementById("sitesDropdown");
-    const panel = document.getElementById("dropdownPanel");
-
-    if(!dropdown.contains(e.target)){
-      panel.style.display = "none";
-    }
-  });
-
-  function weatherClassFromCode(code){
-    if(code === 0) return "sunny";
-    if([1,2,3,45,48].includes(code)) return "cloudy";
-    if([51,53,55,56,57,61,63,65,66,67,80,81,82,95,96,99].includes(code)) return "rainy";
-    if([71,73,75,77,85,86].includes(code)) return "snowy";
-    return "cloudy";
-  }
-
-  async function loadWeather(){
-    const region = document.getElementById("region").value.trim();
-    if(!region || !window.dateFrom || !window.dateTo) return;
-
-    try{
-      const url = `${WORKER_URL}/weather?region=${encodeURIComponent(region)}&from=${window.dateFrom}&to=${window.dateTo}`;
-      const res = await fetch(url, { cache:"no-store" });
-      if(!res.ok) {
-        console.error("Fout bij laden weerdata:", res.status);
-        return;
+    $("refreshBtn").addEventListener("click", refreshEvents);
+    $("resetBtn").addEventListener("click", resetFilters);
+    $("clearBtn").addEventListener("click", clearAllEvents);
+    $("prevPage").addEventListener("click", () => { currentPage -= 1; render(); window.scrollTo({ top: 0, behavior: "smooth" }); });
+    $("nextPage").addEventListener("click", () => { currentPage += 1; render(); window.scrollTo({ top: 0, behavior: "smooth" }); });
+    $("allSitesBtn").addEventListener("click", () => { document.querySelectorAll(".siteCheck").forEach((check) => { check.checked = true; }); updateSiteCount(); });
+    $("noSitesBtn").addEventListener("click", () => { document.querySelectorAll(".siteCheck").forEach((check) => { check.checked = false; }); updateSiteCount(); });
+    $("sitesList").addEventListener("change", updateSiteCount);
+    $("siteButton").addEventListener("click", () => {
+      const select = $("siteSelect");
+      const isOpen = select.classList.toggle("open");
+      $("siteButton").setAttribute("aria-expanded", String(isOpen));
+    });
+    document.addEventListener("click", (event) => {
+      if (!$("siteSelect").contains(event.target)) {
+        $("siteSelect").classList.remove("open");
+        $("siteButton").setAttribute("aria-expanded", "false");
       }
+    });
 
-      const data = await res.json();
-      if(!data || !data.ok) {
-        console.error("Ongeldige weerdata:", data);
-        return;
-      }
-
-      document.getElementById("weatherBox").style.display = "flex";
-
-      document.getElementById("weatherSummary").textContent =
-        `🌤️ ${data.summary} (${data.days} dagen)`;
-
-      document.getElementById("weatherTemp").textContent =
-        `🌡️ ${data.tempMin}°C - ${data.tempMax}°C`;
-
-      document.getElementById("weatherRainChance").textContent =
-        `🌧️ Regen kans: ${data.rainChance}%`;
-
-      document.getElementById("weatherRainMM").textContent =
-        `💧 Regen: ${data.rainTotalMM}mm`;
-
-      document.getElementById("weatherWind").textContent =
-        `💨 Wind max: ${data.windMax} km/u`;
-
-      document.getElementById("weatherUV").textContent =
-        `☀️ UV max: ${data.uvMax}`;
-
-      const header = document.getElementById("pageHeader");
-      header.classList.remove("sunny","cloudy","rainy","snowy");
-      header.classList.add(weatherClassFromCode(data.weatherCode));
-
-    } catch(e){
-      console.error("Fout bij laden weerdata:", e);
-    }
-  }
-
-  async function triggerRemoteRefresh(){
-    const btn = document.getElementById("refreshBtn");
-    const status = document.getElementById("status");
-
-    status.style.display = "block";
-    btn.disabled = true;
-    btn.textContent = "Bezig...";
-    status.textContent = "Nieuwe events ophalen...";
-
-    const sites = [];
-    document.querySelectorAll(".siteCheck:checked").forEach(cb => sites.push(cb.value));
-
-    let category = document.getElementById("typeFilter").value;
-    if(category === "all") category = "";
-
-    const payload = {
-      region: document.getElementById("region").value.trim(),
-      radius: document.getElementById("radius").value,
-      query: document.getElementById("search").value.trim(),
-      category: category,
-      dateFrom: window.dateFrom,
-      dateTo: window.dateTo,
-      minResults: 20,
-      sites: sites,
-      providers: {
-        perplexity: document.getElementById("provPerplexity").checked,
-        mistral: document.getElementById("provMistral").checked,
-        openai: document.getElementById("provOpenAI").checked
-      }
-    };
-
-    try{
-      const res = await fetch(WORKER_URL, {
-        method: "POST",
-        headers: {"Content-Type":"application/json"},
-        body: JSON.stringify(payload)
-      });
-
-      const data = await res.json();
-      if(!res.ok) throw new Error(data.error || "Onbekende fout");
-
-      status.textContent = `Klaar! ${data.scrapedCount || 0} nieuwe gevonden. Even wachten op GitHub Pages...`;
-
-      // Wacht 7 seconden en laad dan de nieuwe data
-      setTimeout(async () => {
-        status.textContent = "Nieuwe events.json laden...";
-        try {
-          await loadData();
-          status.textContent = "Nieuwe events zijn geladen!";
-          setTimeout(() => {
-            status.style.display = "none";
-          }, 3000);
-        } catch (e) {
-          status.textContent = `Fout bij laden nieuwe events: ${e.message}`;
-        }
-      }, 7000);
-
-    } catch(e){
-      status.textContent = "Starten mislukt: " + e.message;
-      btn.disabled = false;
-      btn.textContent = "Ververs";
-    }
-  }
-
-  async function clearAllEvents(){
-    if(!confirm("Weet je zeker dat je ALLE events wilt verwijderen?")) return;
-
-    const status = document.getElementById("status");
-    status.style.display = "block";
-    status.textContent = "Events verwijderen...";
-
-    try{
-      const res = await fetch(WORKER_URL + "/clear", {
-        method: "POST",
-        headers: {"Content-Type":"application/json"},
-        body: JSON.stringify({})
-      });
-
-      const data = await res.json();
-      if(!res.ok) throw new Error(data.error || "Onbekende fout");
-
-      status.textContent = "Alle events zijn verwijderd. Even wachten op GitHub Pages...";
-
-      setTimeout(async () => {
-        try {
-          await loadData();
-          status.textContent = "Events.json opnieuw geladen (leeg).";
-          setTimeout(() => {
-            status.style.display = "none";
-          }, 3000);
-        } catch (e) {
-          status.textContent = `Fout bij laden leeggeladen events: ${e.message}`;
-        }
-      }, 7000);
-
-    } catch(e){
-      status.textContent = "Verwijderen mislukt: " + e.message;
-    }
-  }
-
-  // Initialiseer
-  const r = getWeekendRange(0);
-  window.dateFrom = r.from;
-  window.dateTo = r.to;
-
-  document.getElementById("dateSingle").value = r.from;
-  document.getElementById("periodMode").value = "week";
-
-  Promise.all([loadSites(), loadData()]).then(() => {
-    updateDateRange();
-    applyFilters();
-    loadWeather();
-  }).catch((e) => {
-    const status = document.getElementById("status");
-    status.style.display = "block";
-    status.textContent = "Laden mislukt: " + e.message;
-  });
-</script>
-
+    const today = formatDate(new Date());
+    $("dateSingle").value = today;
+    loadAll();
+  </script>
 </body>
 </html>
