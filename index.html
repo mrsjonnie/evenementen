@@ -196,8 +196,16 @@
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
-      align-items: center;
+      align-items: flex-end;
       padding-top: 12px;
+    }
+
+    .sourcePickers {
+      display: grid;
+      grid-template-columns: minmax(220px, .72fr) minmax(320px, 1.28fr);
+      gap: 10px;
+      flex: 1;
+      min-width: 0;
     }
 
     .checks {
@@ -228,9 +236,7 @@
 
     .siteSelect {
       position: relative;
-      min-width: 320px;
-      flex: 1;
-      max-width: 560px;
+      min-width: 0;
     }
 
     .siteSelectLabel {
@@ -308,6 +314,19 @@
 
     .siteList span {
       overflow-wrap: anywhere;
+    }
+
+    .siteAdd {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 8px;
+      padding: 8px;
+      border-top: 1px solid var(--line);
+      background: #101925;
+    }
+
+    .siteAdd input {
+      min-width: 0;
     }
 
     .siteActions {
@@ -527,6 +546,7 @@
     @media (max-width: 900px) {
       .heroInner { grid-template-columns: 1fr; }
       .weather { justify-content: flex-start; }
+      .sourcePickers { grid-template-columns: 1fr; }
     }
 
     @media (max-width: 680px) {
@@ -535,6 +555,7 @@
       .filters { grid-template-columns: 1fr; }
       .grid { grid-template-columns: 1fr; }
       .siteSelect { min-width: 100%; max-width: none; }
+      .siteAdd { grid-template-columns: 1fr; }
       .btn { width: 100%; }
       .checks { width: 100%; }
       .check { flex: 1; justify-content: center; }
@@ -599,24 +620,40 @@
       </div>
 
       <div class="secondRow">
-        <div class="checks" aria-label="Aanbieders">
-          <label class="check"><input type="checkbox" id="provPerplexity"> Perplexity</label>
-          <label class="check"><input type="checkbox" id="provMistral"> Mistral</label>
-          <label class="check"><input type="checkbox" id="provOpenAI"> ChatGPT</label>
-        </div>
+        <div class="sourcePickers">
+          <div class="siteSelect" id="providerSelect">
+            <label class="siteSelectLabel" for="providerButton">AI-bronnen</label>
+            <button class="btn btnSecondary siteButton" id="providerButton" type="button" aria-expanded="false">
+              <span><span id="providerCount">0</span> geselecteerd</span>
+              <span aria-hidden="true">v</span>
+            </button>
+            <div class="sitePanel">
+              <div class="sitePanelHeader">AI-bronnen zijn optioneel. Zet ze alleen aan als je extra suggesties wilt.</div>
+              <div class="siteList" id="providerList">
+                <label><input class="providerCheck" type="checkbox" id="provPerplexity"> <span>Perplexity</span></label>
+                <label><input class="providerCheck" type="checkbox" id="provMistral"> <span>Mistral</span></label>
+                <label><input class="providerCheck" type="checkbox" id="provOpenAI"> <span>ChatGPT</span></label>
+              </div>
+            </div>
+          </div>
 
-        <div class="siteSelect" id="siteSelect">
-          <label class="siteSelectLabel" for="siteButton">Websites om te scannen</label>
-          <button class="btn btnSecondary siteButton" id="siteButton" type="button" aria-expanded="false">
-            <span><span id="siteCount">0</span> websites geselecteerd</span>
-            <span aria-hidden="true">v</span>
-          </button>
-          <div class="sitePanel">
-            <div class="sitePanelHeader">Kies welke websites worden meegenomen bij het ophalen van nieuwe evenementen.</div>
-            <div class="siteList" id="sitesList"></div>
-            <div class="siteActions">
-              <button class="btn btnSecondary" id="allSitesBtn" type="button">Alles</button>
-              <button class="btn btnSecondary" id="noSitesBtn" type="button">Geen</button>
+          <div class="siteSelect" id="siteSelect">
+            <label class="siteSelectLabel" for="siteButton">Websites om te scannen</label>
+            <button class="btn btnSecondary siteButton" id="siteButton" type="button" aria-expanded="false">
+              <span><span id="siteCount">0</span> websites geselecteerd</span>
+              <span aria-hidden="true">v</span>
+            </button>
+            <div class="sitePanel">
+              <div class="sitePanelHeader">Kies welke websites worden meegenomen bij het ophalen van nieuwe evenementen.</div>
+              <div class="siteList" id="sitesList"></div>
+              <div class="siteAdd">
+                <input id="newSiteInput" type="url" placeholder="https://voorbeeld.nl">
+                <button class="btn btnSecondary" id="addSiteBtn" type="button">Toevoegen</button>
+              </div>
+              <div class="siteActions">
+                <button class="btn btnSecondary" id="allSitesBtn" type="button">Alles</button>
+                <button class="btn btnSecondary" id="noSitesBtn" type="button">Geen</button>
+              </div>
             </div>
           </div>
         </div>
@@ -642,7 +679,7 @@
   </main>
 
   <script>
-    const APP_VERSION = "2026.06.07.5";
+    const APP_VERSION = "2026.06.07.6";
     const WORKER_URL = "https://evenementen-refresh.mrsjonnie.workers.dev";
     const eventsPerPage = 9;
     const typeImages = {
@@ -692,6 +729,7 @@
 
     let events = [];
     let sites = [];
+    let customSites = [];
     let filteredEvents = [];
     let currentPage = 1;
     let dateFrom = "";
@@ -733,6 +771,54 @@
       } catch {
         return "";
       }
+    }
+
+    const CUSTOM_SITES_KEY = "evenementenCustomSites";
+
+    function normalizeSiteInput(value) {
+      let raw = cleanText(value);
+      if (!raw) return "";
+      if (!/^[a-z][a-z0-9+.-]*:/i.test(raw) && /^[\w.-]+\.[a-z]{2,}/i.test(raw)) {
+        raw = `https://${raw}`;
+      }
+
+      try {
+        const url = new URL(raw);
+        if (!["http:", "https:"].includes(url.protocol) || !url.hostname.includes(".")) return "";
+        url.hash = "";
+        return url.href.replace(/\/$/, "");
+      } catch {
+        return "";
+      }
+    }
+
+    function loadCustomSites() {
+      try {
+        const stored = JSON.parse(localStorage.getItem(CUSTOM_SITES_KEY) || "[]");
+        return Array.isArray(stored) ? stored.map(normalizeSiteInput).filter(Boolean) : [];
+      } catch {
+        return [];
+      }
+    }
+
+    function saveCustomSites() {
+      try {
+        localStorage.setItem(CUSTOM_SITES_KEY, JSON.stringify(customSites));
+      } catch {}
+    }
+
+    function mergeSites(baseSites, extraSites = []) {
+      const seen = new Set();
+      const merged = [];
+      [...(baseSites || []), ...(extraSites || [])].forEach((site) => {
+        const normalized = normalizeSiteInput(site);
+        const key = normalized.toLowerCase();
+        if (normalized && !seen.has(key)) {
+          seen.add(key);
+          merged.push(normalized);
+        }
+      });
+      return merged;
     }
 
     function normalizeEventTitle(value) {
@@ -891,13 +977,19 @@
     function getWeekendRange(offsetWeeks = 0) {
       const today = new Date();
       today.setHours(0, 0, 0, 0);
-      today.setDate(today.getDate() + offsetWeeks * 7);
-      const diffToFriday = (5 - today.getDay() + 7) % 7;
-      const friday = new Date(today);
-      friday.setDate(today.getDate() + diffToFriday);
-      const sunday = new Date(friday);
-      sunday.setDate(friday.getDate() + 2);
-      return { from: formatDate(friday), to: formatDate(sunday) };
+      const day = today.getDay();
+      const saturday = new Date(today);
+
+      if (day === 0) {
+        saturday.setDate(today.getDate() - 1);
+      } else {
+        saturday.setDate(today.getDate() + ((6 - day + 7) % 7));
+      }
+
+      saturday.setDate(saturday.getDate() + offsetWeeks * 7);
+      const sunday = new Date(saturday);
+      sunday.setDate(saturday.getDate() + 1);
+      return { from: formatDate(saturday), to: formatDate(sunday) };
     }
 
     function updateDateRange() {
@@ -977,9 +1069,25 @@
       }
     }
 
-    async function waitForUpdatedEvents(previousSignature) {
+    function scrapedCountFromResponse(data) {
+      const values = [
+        data?.scrapedCount,
+        data?.newCount,
+        data?.addedCount,
+        data?.count,
+        Array.isArray(data?.events) ? data.events.length : undefined
+      ];
+      const value = values.map(Number).find((item) => Number.isFinite(item));
+      return Math.max(0, value || 0);
+    }
+
+    function foundText(count) {
+      return `${count} ${count === 1 ? "nieuw evenement" : "nieuwe evenementen"}`;
+    }
+
+    async function waitForUpdatedEvents(previousSignature, foundCount = 0) {
       for (let attempt = 1; attempt <= 18; attempt += 1) {
-        showStatus(`Nieuwe lijst wordt opgehaald bij GitHub Pages... poging ${attempt} van 18`, "warn");
+        showStatus(`${foundText(foundCount)} gevonden. Ik controleer of GitHub Pages de nieuwe lijst al toont: controle ${attempt} van 18.`, "warn");
         await delay(10000);
 
         try {
@@ -988,7 +1096,7 @@
             events = freshEvents;
             fillTypes();
             applyFilters();
-            showStatus("Nieuwe evenementen zijn geladen.", "ok");
+            showStatus(`${foundText(foundCount)} gevonden. De nieuwe lijst is geladen.`, "ok");
             setTimeout(hideStatus, 4000);
             return true;
           }
@@ -998,7 +1106,7 @@
       }
 
       await loadAll();
-      showStatus("De update is gestart, maar GitHub Pages geeft nog dezelfde data terug. Wacht even en klik eventueel nogmaals op Ververs.", "warn");
+      showStatus(`${foundText(foundCount)} gevonden. De update is gestart, maar GitHub Pages toont nog dezelfde lijst. Wacht even en klik eventueel nogmaals op Ververs.`, "warn");
       return false;
     }
 
@@ -1020,10 +1128,15 @@
       }
     }
 
-    function renderSites() {
+    function checkedSites() {
+      return new Set([...document.querySelectorAll(".siteCheck:checked")].map((check) => check.value));
+    }
+
+    function renderSites(selected = null) {
+      const selectedSites = selected || new Set(sites);
       $("sitesList").innerHTML = sites.map((site) => `
         <label>
-          <input class="siteCheck" type="checkbox" value="${escapeHtml(site)}" checked>
+          <input class="siteCheck" type="checkbox" value="${escapeHtml(site)}"${selectedSites.has(site) ? " checked" : ""}>
           <span>${escapeHtml(site)}</span>
         </label>
       `).join("");
@@ -1032,6 +1145,32 @@
 
     function updateSiteCount() {
       $("siteCount").textContent = document.querySelectorAll(".siteCheck:checked").length;
+    }
+
+    function updateProviderCount() {
+      $("providerCount").textContent = document.querySelectorAll(".providerCheck:checked").length;
+    }
+
+    function addCustomSite() {
+      const input = $("newSiteInput");
+      const normalized = normalizeSiteInput(input.value);
+      if (!normalized) {
+        showStatus("Vul een geldig websiteadres in, bijvoorbeeld https://voorbeeld.nl.", "error");
+        return;
+      }
+
+      const selected = checkedSites();
+      selected.add(normalized);
+      if (!customSites.some((site) => site.toLowerCase() === normalized.toLowerCase())) {
+        customSites.push(normalized);
+        saveCustomSites();
+      }
+
+      sites = mergeSites(sites, customSites);
+      renderSites(selected);
+      input.value = "";
+      showStatus(`${normalized} is toegevoegd aan de websites voor Ververs.`, "ok");
+      setTimeout(hideStatus, 3500);
     }
 
     function matchesDate(event) {
@@ -1183,6 +1322,7 @@
     async function refreshEvents() {
       const button = $("refreshBtn");
       const previousSignature = eventSignature(events);
+      let foundCount = 0;
       setBusy(button, true, "Bezig...");
       showStatus("Nieuwe evenementen ophalen...", "warn");
 
@@ -1212,9 +1352,11 @@
           body: JSON.stringify(payload)
         });
         let data = await response.json().catch(() => ({}));
+        foundCount = scrapedCountFromResponse(data);
 
         if (!response.ok && isOpenAIQuotaError(data.error || data.message) && payload.providers.openai) {
           $("provOpenAI").checked = false;
+          updateProviderCount();
           payload.providers.openai = false;
           payload.providers.chatgpt = false;
           showStatus("ChatGPT heeft geen API-quota meer. Ik probeer opnieuw zonder ChatGPT.", "warn");
@@ -1224,14 +1366,15 @@
             body: JSON.stringify(payload)
           });
           data = await response.json().catch(() => ({}));
+          foundCount = scrapedCountFromResponse(data);
         }
 
         if (!response.ok) throw new Error(data.error || data.message || "Verversen is mislukt");
 
-        showStatus(`Klaar. ${data.scrapedCount || 0} nieuwe resultaten gevonden. Ik wacht nu tot GitHub Pages de nieuwe lijst serveert.`, "ok");
-        await waitForUpdatedEvents(previousSignature);
+        showStatus(`Klaar. ${foundText(foundCount)} gevonden. Ik wacht nu tot GitHub Pages de nieuwe lijst toont.`, "ok");
+        await waitForUpdatedEvents(previousSignature, foundCount);
       } catch (error) {
-        showStatus(`Starten mislukt: ${error.message}`, "error");
+        showStatus(`${foundText(foundCount)} gevonden. Starten mislukt: ${error.message}`, "error");
       } finally {
         setBusy(button, false);
       }
@@ -1261,7 +1404,7 @@
     function resetFilters() {
       $("search").value = "";
       $("region").value = "Groningen";
-      $("radius").value = "100";
+      $("radius").value = "200";
       $("periodMode").value = "week";
       $("typeFilter").value = "all";
       $("provPerplexity").checked = false;
@@ -1269,8 +1412,8 @@
       $("provOpenAI").checked = false;
       document.querySelectorAll(".siteCheck").forEach((check) => { check.checked = true; });
       updateSiteCount();
-      const today = formatDate(new Date());
-      $("dateSingle").value = today;
+      updateProviderCount();
+      $("dateSingle").value = "2020-01-01";
       applyFilters();
       loadWeather();
       hideStatus();
@@ -1278,13 +1421,17 @@
 
     async function loadAll() {
       updateDateRange();
-      [events, sites] = await Promise.all([
+      customSites = loadCustomSites();
+      const loaded = await Promise.all([
         loadJson("./events.json", fallbackEvents),
         loadJson("./sites.json", [])
       ]);
+      events = loaded[0];
+      sites = mergeSites(loaded[1], customSites);
 
       fillTypes();
       renderSites();
+      updateProviderCount();
       applyFilters();
       loadWeather();
     }
@@ -1306,6 +1453,14 @@
     $("allSitesBtn").addEventListener("click", () => { document.querySelectorAll(".siteCheck").forEach((check) => { check.checked = true; }); updateSiteCount(); });
     $("noSitesBtn").addEventListener("click", () => { document.querySelectorAll(".siteCheck").forEach((check) => { check.checked = false; }); updateSiteCount(); });
     $("sitesList").addEventListener("change", updateSiteCount);
+    $("providerList").addEventListener("change", updateProviderCount);
+    $("addSiteBtn").addEventListener("click", addCustomSite);
+    $("newSiteInput").addEventListener("keydown", (event) => {
+      if (event.key === "Enter") {
+        event.preventDefault();
+        addCustomSite();
+      }
+    });
     document.addEventListener("click", (event) => {
       const button = event.target.closest(".weatherToggle");
       if (!button) return;
@@ -1334,16 +1489,24 @@
       `;
       panel.classList.add("open");
     });
-    $("siteButton").addEventListener("click", () => {
-      const select = $("siteSelect");
+    function toggleSelect(selectId, buttonId) {
+      const select = $(selectId);
       const isOpen = select.classList.toggle("open");
-      $("siteButton").setAttribute("aria-expanded", String(isOpen));
-    });
+      $(buttonId).setAttribute("aria-expanded", String(isOpen));
+    }
+
+    $("providerButton").addEventListener("click", () => toggleSelect("providerSelect", "providerButton"));
+    $("siteButton").addEventListener("click", () => toggleSelect("siteSelect", "siteButton"));
     document.addEventListener("click", (event) => {
-      if (!$("siteSelect").contains(event.target)) {
-        $("siteSelect").classList.remove("open");
-        $("siteButton").setAttribute("aria-expanded", "false");
-      }
+      [
+        ["providerSelect", "providerButton"],
+        ["siteSelect", "siteButton"]
+      ].forEach(([selectId, buttonId]) => {
+        if (!$(selectId).contains(event.target)) {
+          $(selectId).classList.remove("open");
+          $(buttonId).setAttribute("aria-expanded", "false");
+        }
+      });
     });
 
     const today = formatDate(new Date());
