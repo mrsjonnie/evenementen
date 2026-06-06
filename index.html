@@ -6,19 +6,19 @@
   <title>Evenementen rond Groningen</title>
   <style>
     :root {
-      --bg: #f6f7fb;
-      --surface: #ffffff;
-      --surface-soft: #eef4fb;
-      --ink: #142033;
-      --muted: #617084;
-      --line: #dce5ef;
-      --primary: #176b87;
-      --primary-dark: #0f4d64;
+      --bg: #0e141b;
+      --surface: #151f2b;
+      --surface-soft: #1d2a38;
+      --ink: #edf5ff;
+      --muted: #9db0c5;
+      --line: #2d4054;
+      --primary: #53b6d2;
+      --primary-dark: #8bd8ed;
       --accent: #d55f3f;
-      --good: #177a52;
-      --warn: #a55c12;
-      --danger: #b42318;
-      --shadow: 0 14px 34px rgba(20, 32, 51, .10);
+      --good: #72d6a1;
+      --warn: #f0bd62;
+      --danger: #ff8d80;
+      --shadow: 0 18px 38px rgba(0, 0, 0, .32);
       --radius: 8px;
     }
 
@@ -48,8 +48,8 @@
     .hero {
       color: #fff;
       background:
-        linear-gradient(90deg, rgba(12, 48, 64, .92), rgba(12, 48, 64, .58)),
-        url("https://images.unsplash.com/photo-1517457373958-b7bdd4587205?auto=format&fit=crop&w=1800&q=80") center/cover;
+        linear-gradient(90deg, rgba(7, 17, 27, .92), rgba(14, 29, 42, .54)),
+        url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1800&q=82") center/cover;
     }
 
     .heroInner {
@@ -107,7 +107,26 @@
       font-weight: 800;
       white-space: nowrap;
       backdrop-filter: blur(8px);
+      cursor: pointer;
     }
+
+    .weatherPanel {
+      display: none;
+      width: 100%;
+      margin-top: 8px;
+      border: 1px solid rgba(255, 255, 255, .26);
+      border-radius: var(--radius);
+      background: rgba(8, 18, 28, .78);
+      padding: 10px;
+      color: rgba(255, 255, 255, .9);
+      font-size: .86rem;
+      font-weight: 750;
+      line-height: 1.45;
+    }
+
+    .weatherPanel.open { display: block; }
+
+    .weatherPanel a { color: #bdefff; font-weight: 950; }
 
     main {
       max-width: 1180px;
@@ -144,11 +163,13 @@
       height: 42px;
       border: 1px solid var(--line);
       border-radius: var(--radius);
-      background: #fff;
+      background: #101925;
       color: var(--ink);
       padding: 0 11px;
       font-weight: 700;
     }
+
+    input::placeholder { color: #788da3; }
 
     .btn {
       min-height: 42px;
@@ -168,7 +189,7 @@
     .btnPrimary { background: var(--primary); color: #fff; }
     .btnPrimary:hover { background: var(--primary-dark); }
     .btnSecondary { background: var(--surface-soft); color: var(--primary-dark); }
-    .btnDanger { background: #fff1ee; color: var(--danger); border: 1px solid #f5c6bd; }
+    .btnDanger { background: #311b19; color: var(--danger); border: 1px solid #6b3a34; }
     .btn[disabled] { opacity: .58; cursor: not-allowed; }
 
     .secondRow {
@@ -224,7 +245,7 @@
       width: 100%;
       justify-content: space-between;
       border: 1px solid var(--line);
-      background: #fff;
+      background: var(--surface);
       color: var(--ink);
       font-weight: 850;
       padding-inline: 12px;
@@ -237,7 +258,7 @@
       left: 0;
       right: 0;
       display: none;
-      background: #fff;
+      background: var(--surface);
       border: 1px solid var(--line);
       border-radius: var(--radius);
       box-shadow: var(--shadow);
@@ -253,7 +274,7 @@
       font-size: .82rem;
       font-weight: 800;
       line-height: 1.35;
-      background: #f9fbfd;
+      background: #101925;
     }
 
     .siteList {
@@ -294,7 +315,7 @@
       gap: 8px;
       padding: 8px;
       border-top: 1px solid var(--line);
-      background: #f9fbfd;
+      background: #101925;
     }
 
     .status {
@@ -310,9 +331,9 @@
     }
 
     .status.show { display: block; }
-    .status.ok { color: var(--good); border-color: #b8ddcc; background: #edf8f3; }
-    .status.warn { color: var(--warn); border-color: #efd5aa; background: #fff8eb; }
-    .status.error { color: var(--danger); border-color: #efb9b1; background: #fff1ee; }
+    .status.ok { color: var(--good); border-color: #32634b; background: #12291e; }
+    .status.warn { color: var(--warn); border-color: #6f5223; background: #2a2112; }
+    .status.error { color: var(--danger); border-color: #733a33; background: #2c1817; }
 
     .summary {
       display: flex;
@@ -335,8 +356,12 @@
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 14px;
+    }
+
+    @media (min-width: 1180px) {
+      .grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
     }
 
     .card {
@@ -345,7 +370,7 @@
       border: 1px solid var(--line);
       border-radius: var(--radius);
       overflow: hidden;
-      box-shadow: 0 8px 24px rgba(20, 32, 51, .08);
+      box-shadow: 0 12px 28px rgba(0, 0, 0, .24);
       display: flex;
       flex-direction: column;
     }
@@ -413,13 +438,13 @@
     }
 
     .tagAccent {
-      background: #fff0ea;
+      background: #341d18;
       color: var(--accent);
     }
 
     .title {
       margin: 0;
-      color: #102033;
+      color: var(--ink);
       font-size: 1.05rem;
       line-height: 1.25;
     }
@@ -427,7 +452,7 @@
     .details {
       display: grid;
       gap: 6px;
-      color: #33445b;
+      color: #c9d6e6;
       font-size: .9rem;
       font-weight: 780;
     }
@@ -459,29 +484,20 @@
       padding-top: 2px;
     }
 
-    .mapPanel {
-      display: none;
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      overflow: hidden;
-      background: var(--surface-soft);
-      min-height: 320px;
-    }
-
-    .mapPanel.open { display: block; }
-
-    .mapPanel iframe {
-      display: block;
-      width: 100%;
-      height: 320px;
-      border: 0;
+    .routeInfo {
+      display: inline-flex;
+      align-items: center;
+      min-height: 42px;
+      color: var(--muted);
+      font-weight: 850;
+      font-size: .86rem;
     }
 
     .empty {
       grid-column: 1 / -1;
       padding: 28px;
       background: var(--surface);
-      border: 1px dashed #b8c7d9;
+      border: 1px dashed #3b5269;
       border-radius: var(--radius);
       text-align: center;
       color: var(--muted);
@@ -511,7 +527,6 @@
     @media (max-width: 900px) {
       .heroInner { grid-template-columns: 1fr; }
       .weather { justify-content: flex-start; }
-      .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     }
 
     @media (max-width: 680px) {
@@ -585,8 +600,8 @@
 
       <div class="secondRow">
         <div class="checks" aria-label="Aanbieders">
-          <label class="check"><input type="checkbox" id="provPerplexity" checked> Perplexity</label>
-          <label class="check"><input type="checkbox" id="provMistral" checked> Mistral</label>
+          <label class="check"><input type="checkbox" id="provPerplexity"> Perplexity</label>
+          <label class="check"><input type="checkbox" id="provMistral"> Mistral</label>
           <label class="check"><input type="checkbox" id="provOpenAI"> ChatGPT</label>
         </div>
 
@@ -627,7 +642,7 @@
   </main>
 
   <script>
-    const APP_VERSION = "2026.06.07.4";
+    const APP_VERSION = "2026.06.07.5";
     const WORKER_URL = "https://evenementen-refresh.mrsjonnie.workers.dev";
     const eventsPerPage = 9;
     const typeImages = {
@@ -639,6 +654,11 @@
       markt: "https://images.unsplash.com/photo-1488459716781-31db52582fe9?auto=format&fit=crop&w=900&q=80",
       festival: "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?auto=format&fit=crop&w=900&q=80",
       sport: "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=900&q=80",
+      culinair: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=900&q=80",
+      kinderen: "https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=900&q=80",
+      natuur: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=900&q=80",
+      workshop: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80",
+      lezing: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=900&q=80",
       default: "https://images.unsplash.com/photo-1517457373958-b7bdd4587205?auto=format&fit=crop&w=900&q=80"
     };
     const fallbackEvents = [
@@ -758,30 +778,101 @@
     }
 
     function typeImage(type, image) {
-      const explicit = safeUrl(image);
-      if (explicit) return explicit;
       const key = cleanText(type).toLowerCase();
-      return typeImages[key] || typeImages.default;
+      const explicit = safeUrl(image);
+      return typeImages[key] || explicit || typeImages.default;
     }
 
-    function mapUrl(event) {
+    const regionCoords = {
+      groningen: { lat: 53.2194, lon: 6.5665 },
+      assen: { lat: 52.9928, lon: 6.5642 },
+      drachten: { lat: 53.1125, lon: 6.0989 },
+      leeuwarden: { lat: 53.2012, lon: 5.7999 },
+      winschoten: { lat: 53.1442, lon: 7.0347 },
+      veendam: { lat: 53.1067, lon: 6.8792 },
+      appingedam: { lat: 53.3217, lon: 6.8583 }
+    };
+
+    const knownLocationCoords = {
+      "grote markt": { lat: 53.2189, lon: 6.5685 },
+      "forum groningen": { lat: 53.2186, lon: 6.5713 },
+      "groninger museum": { lat: 53.2124, lon: 6.5654 },
+      "martinikerk": { lat: 53.2191, lon: 6.5683 },
+      "oosterpoort": { lat: 53.2129, lon: 6.5741 },
+      "vera": { lat: 53.2164, lon: 6.5688 },
+      "noorderplantsoen": { lat: 53.2241, lon: 6.5574 },
+      "stadspark": { lat: 53.2078, lon: 6.5382 },
+      "prinsentuin": { lat: 53.2211, lon: 6.5688 },
+      "suikerterrein": { lat: 53.2105, lon: 6.5344 },
+      "dot groningen": { lat: 53.2253, lon: 6.5672 },
+      "grand theatre": { lat: 53.2183, lon: 6.5686 },
+      "martiniplaza": { lat: 53.1993, lon: 6.5540 },
+      "bourtange": { lat: 53.0066, lon: 7.1923 }
+    };
+
+    function normalizeRouteText(value) {
+      return cleanText(value)
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, " ")
+        .trim();
+    }
+
+    function regionCoord() {
+      const region = normalizeRouteText($("region")?.value || "Groningen");
+      if (regionCoords[region]) return regionCoords[region];
+      const match = Object.entries(regionCoords).find(([name]) => region.includes(name) || name.includes(region));
+      return match ? match[1] : regionCoords.groningen;
+    }
+
+    function eventCoords(event) {
       const lat = Number(event.lat);
       const lon = Number(event.lon);
-      if (Number.isFinite(lat) && Number.isFinite(lon)) {
-        return `https://www.google.com/maps?q=${lat},${lon}&output=embed`;
+      if (Number.isFinite(lat) && Number.isFinite(lon)) return { lat, lon };
+
+      const text = normalizeRouteText(`${event.title || ""} ${event.location || ""}`);
+      const known = Object.entries(knownLocationCoords).find(([name]) => text.includes(name));
+      if (known) return known[1];
+
+      const city = Object.entries(regionCoords).find(([name]) => text.includes(name));
+      return city ? city[1] : null;
+    }
+
+    function distanceKm(from, to) {
+      const earthKm = 6371;
+      const lat1 = from.lat * Math.PI / 180;
+      const lat2 = to.lat * Math.PI / 180;
+      const dLat = (to.lat - from.lat) * Math.PI / 180;
+      const dLon = (to.lon - from.lon) * Math.PI / 180;
+      const a = Math.sin(dLat / 2) ** 2 + Math.cos(lat1) * Math.cos(lat2) * Math.sin(dLon / 2) ** 2;
+      return earthKm * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+    }
+
+    function formatKm(km) {
+      const rounded = km < 10 ? km.toFixed(1) : String(Math.round(km));
+      return rounded.replace(".", ",");
+    }
+
+    function routeEstimate(event) {
+      const destination = eventCoords(event);
+      if (!destination) return "afstand onbekend";
+      const roadKm = Math.max(.2, distanceKm(regionCoord(), destination) * 1.25);
+      const speed = roadKm < 8 ? 28 : 55;
+      const minutes = Math.max(4, Math.round((roadKm / speed) * 60));
+      return `${formatKm(roadKm)} km - ca. ${minutes} min`;
+    }
+
+    function routeUrl(event) {
+      const destination = eventCoords(event);
+      if (destination) {
+        const origin = regionCoord();
+        return `https://www.google.com/maps/dir/?api=1&origin=${origin.lat},${origin.lon}&destination=${destination.lat},${destination.lon}`;
       }
 
       const link = safeUrl(event.locationLink);
-      if (link) {
-        try {
-          const url = new URL(link);
-          const q = url.searchParams.get("q") || url.searchParams.get("query");
-          if (q) return `https://www.google.com/maps?q=${encodeURIComponent(q)}&output=embed`;
-        } catch {}
-      }
+      if (link) return link;
 
       const location = cleanText(event.location);
-      return location ? `https://www.google.com/maps?q=${encodeURIComponent(location)}&output=embed` : "";
+      return location ? `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(location)}` : "";
     }
 
     function formatDate(date) {
@@ -1013,10 +1104,9 @@
       const type = cleanText(event.type || "Activiteit");
       const image = typeImage(type, event.image);
       const website = safeUrl(event.website, { website: true });
-      const route = mapUrl(event);
+      const route = routeUrl(event);
+      const routeInfo = route ? routeEstimate(event) : "";
       const dateLabel = event.periodLabel || prettyDate(event.date);
-      const mapId = `map-${Math.random().toString(36).slice(2)}`;
-      const routeLabel = `Route naar ${cleanText(event.location || "locatie")}`;
       const typeHeader = `
         <${website ? "a" : "div"} class="typeHeader ${website ? "typeHeaderLink" : ""}" style="background-image: url('${escapeHtml(image)}')"${website ? ` href="${escapeHtml(website)}" target="_blank" rel="noopener noreferrer"` : ""}>
           <span>${escapeHtml(type)}</span>
@@ -1044,12 +1134,17 @@
             <p class="desc">${escapeHtml(event.description || "Geen omschrijving beschikbaar.")}</p>
             <div class="cardActions">
               ${website ? `<a class="btn btnPrimary" href="${escapeHtml(website)}" target="_blank" rel="noopener noreferrer">Meer info</a>` : ""}
-              ${route ? `<button class="btn btnSecondary routeToggle" type="button" data-map="${mapId}" data-label="${escapeHtml(routeLabel)}">${escapeHtml(routeLabel)}</button>` : ""}
+              ${route ? `<a class="btn btnSecondary" href="${escapeHtml(route)}" target="_blank" rel="noopener noreferrer">Route</a>` : ""}
+              ${routeInfo ? `<span class="routeInfo">${escapeHtml(routeInfo)}</span>` : ""}
             </div>
-            ${route ? `<div class="mapPanel" id="${mapId}"><iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="${escapeHtml(route)}" title="Route naar ${title}"></iframe></div>` : ""}
           </div>
         </article>
       `;
+    }
+
+    function weatherTopicUrl(region, topic) {
+      const query = `${region} ${topic}`.trim();
+      return `https://www.weeronline.nl/zoekresultaten?keyword=${encodeURIComponent(query)}`;
     }
 
     async function loadWeather() {
@@ -1063,14 +1158,19 @@
         const data = await response.json();
         if (!data || !data.ok) throw new Error("Weer niet beschikbaar");
 
-        $("weatherBox").innerHTML = [
-          `${escapeHtml(data.summary)} (${escapeHtml(data.days)} dagen)`,
-          `${escapeHtml(data.tempMin)} graden - ${escapeHtml(data.tempMax)} graden`,
-          `Regen ${escapeHtml(data.rainChance)}%`,
-          `${escapeHtml(data.rainTotalMM)} mm`,
-          `Wind ${escapeHtml(data.windMax)} km/u`,
-          `UV ${escapeHtml(data.uvMax)}`
-        ].map((item) => `<span class="pill">${item}</span>`).join("");
+        const weatherItems = [
+          { label: `${data.summary} (${data.days} dagen)`, topic: "weersverwachting" },
+          { label: `${data.tempMin} graden - ${data.tempMax} graden`, topic: "temperatuur" },
+          { label: `Regen ${data.rainChance}%`, topic: "regenradar" },
+          { label: `${data.rainTotalMM} mm`, topic: "neerslag" },
+          { label: `Wind ${data.windMax} km/u`, topic: "wind" },
+          { label: `UV ${data.uvMax}`, topic: "zonkracht" }
+        ];
+
+        $("weatherBox").innerHTML = `
+          ${weatherItems.map((item) => `<button class="pill weatherToggle" type="button" data-topic="${escapeHtml(item.topic)}" data-label="${escapeHtml(item.label)}">${escapeHtml(item.label)}</button>`).join("")}
+          <div class="weatherPanel" id="weatherPanel"></div>
+        `;
       } catch {
         $("weatherBox").innerHTML = "";
       }
@@ -1164,8 +1264,8 @@
       $("radius").value = "100";
       $("periodMode").value = "week";
       $("typeFilter").value = "all";
-      $("provPerplexity").checked = true;
-      $("provMistral").checked = true;
+      $("provPerplexity").checked = false;
+      $("provMistral").checked = false;
       $("provOpenAI").checked = false;
       document.querySelectorAll(".siteCheck").forEach((check) => { check.checked = true; });
       updateSiteCount();
@@ -1207,12 +1307,32 @@
     $("noSitesBtn").addEventListener("click", () => { document.querySelectorAll(".siteCheck").forEach((check) => { check.checked = false; }); updateSiteCount(); });
     $("sitesList").addEventListener("change", updateSiteCount);
     document.addEventListener("click", (event) => {
-      const button = event.target.closest(".routeToggle");
+      const button = event.target.closest(".weatherToggle");
       if (!button) return;
-      const panel = document.getElementById(button.dataset.map);
+
+      const panel = $("weatherPanel");
       if (!panel) return;
-      panel.classList.toggle("open");
-      button.textContent = panel.classList.contains("open") ? "Sluit route" : (button.dataset.label || "Route");
+
+      const topic = cleanText(button.dataset.topic || button.textContent);
+      const label = cleanText(button.dataset.label || button.textContent);
+      const region = $("region").value.trim() || "Groningen";
+      const alreadyOpen = panel.classList.contains("open") && panel.dataset.topic === topic;
+      document.querySelectorAll(".weatherToggle").forEach((item) => item.setAttribute("aria-expanded", "false"));
+
+      if (alreadyOpen) {
+        panel.classList.remove("open");
+        panel.dataset.topic = "";
+        return;
+      }
+
+      const url = weatherTopicUrl(region, topic);
+      button.setAttribute("aria-expanded", "true");
+      panel.dataset.topic = topic;
+      panel.innerHTML = `
+        <span>${escapeHtml(label)} voor ${escapeHtml(region)}</span><br>
+        <a href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">Bekijk ${escapeHtml(topic)} op Weeronline</a>
+      `;
+      panel.classList.add("open");
     });
     $("siteButton").addEventListener("click", () => {
       const select = $("siteSelect");

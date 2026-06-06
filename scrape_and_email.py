@@ -3,7 +3,7 @@ import os
 import re
 import time
 from datetime import datetime, timezone
-from urllib.parse import quote_plus
+from urllib.parse import quote_plus, urljoin, urlparse
 
 import requests
 from bs4 import BeautifulSoup
@@ -15,6 +15,17 @@ BASE_HEADERS = {"User-Agent": "Mozilla/5.0"}
 MONTHS = "januari|februari|maart|april|mei|juni|juli|augustus|september|oktober|november|december"
 DATE_RE = re.compile(rf"^\d{{1,2}}(?:\s+t/m\s+\d{{1,2}})?\s+(?:{MONTHS})$", re.I)
 SCORE_RE = re.compile(r"^\d,\d$")
+BLOCKED_TITLES = {
+    "uitgelicht",
+    "toon info",
+    "bezoek website",
+    "populair",
+    "mei",
+    "juni",
+    "juli",
+    "maart / april",
+    "augustus en verder",
+}
 
 
 def log(message):
@@ -54,7 +65,7 @@ def event_key(event):
     date = clean_text(event.get("date"))
     location = normalize_location(event.get("location"))
     if len(title) > 8:
-      return f"{date}|{title}"
+        return f"{date}|{title}"
     return f"{date}|{title}|{location}"
 
 
@@ -75,10 +86,49 @@ def event_quality(event):
     return score
 
 
+def is_valid_web_url(value):
+    url = clean_text(value)
+    if not url or url == "#":
+        return True
+
+    try:
+        parsed = urlparse(url)
+        return parsed.scheme in {"http", "https"} and "." in parsed.netloc
+    except Exception:
+        return False
+
+
+def is_valid_event(event):
+    title = clean_text(event.get("title"))
+    title_norm = normalize_title(title)
+    date = clean_text(event.get("date"))
+    location = clean_text(event.get("location"))
+
+    if not title or len(title_norm) < 4:
+        return False
+    if title.lower() in BLOCKED_TITLES:
+        return False
+    if DATE_RE.match(title) or SCORE_RE.match(title):
+        return False
+    if not date:
+        return False
+    if not location or normalize_location(location) in {"provincie groningen", "groningen provincie"}:
+        return False
+    if not is_valid_web_url(event.get("website")):
+        return False
+
+    return True
+
+
 def dedupe_events(events):
     by_key = {}
     duplicates = 0
+    rejected = 0
     for event in events:
+        if not is_valid_event(event):
+            rejected += 1
+            continue
+
         key = event_key(event)
         current = by_key.get(key)
         if current is None:
@@ -89,6 +139,8 @@ def dedupe_events(events):
             by_key[key] = event
     if duplicates:
         log(f"Dubbele evenementen samengevoegd: {duplicates}")
+    if rejected:
+        log(f"Onbetrouwbare of onvolledige regels overgeslagen: {rejected}")
     return list(by_key.values())
 
 
@@ -170,6 +222,22 @@ def normalize_event(event):
     }
 
 
+def collect_title_links(soup, base_url):
+    links = {}
+    for anchor in soup.find_all("a", href=True):
+        title = clean_text(anchor.get_text(" ", strip=True))
+        key = normalize_title(title)
+        if len(key) < 8:
+            continue
+
+        href = clean_text(anchor.get("href"))
+        if not href or href.startswith(("javascript:", "mailto:", "#")):
+            continue
+
+        links.setdefault(key, urljoin(base_url, href))
+    return links
+
+
 def scrape_uitzinnig(region="Groningen"):
     events = []
     urls = [
@@ -182,6 +250,7 @@ def scrape_uitzinnig(region="Groningen"):
             response = requests.get(try_url, headers=BASE_HEADERS, timeout=20)
             response.raise_for_status()
             soup = BeautifulSoup(response.text, "html.parser")
+            title_links = collect_title_links(soup, try_url)
             lines = [x.strip() for x in soup.stripped_strings if x.strip()]
 
             for i, line in enumerate(lines):
@@ -209,18 +278,10 @@ def scrape_uitzinnig(region="Groningen"):
 
                     description = clean_text(lines[j].replace(".. \u00bb", "")) if j < len(lines) else ""
 
-                    if title.lower() in {
-                        "uitgelicht",
-                        "toon info",
-                        "bezoek website",
-                        "populair",
-                        "mei",
-                        "juni",
-                        "juli",
-                        "maart / april",
-                        "augustus en verder",
-                    }:
+                    if title.lower() in BLOCKED_TITLES:
                         continue
+
+                    website = title_links.get(normalize_title(title), try_url)
 
                     item = normalize_event(
                         {
@@ -230,7 +291,7 @@ def scrape_uitzinnig(region="Groningen"):
                             "time": event_time,
                             "location": location,
                             "description": description,
-                            "website": try_url,
+                            "website": website,
                             "source": "Uitzinnig",
                         }
                     )
@@ -321,6 +382,7 @@ def save_events_to_json(active_events, archive):
 def main():
     log("=== Start scraping ===")
     log(f"Input region={INPUT_REGION}")
+    log("AI-bronnen worden in deze automatische workflow niet gebruikt.")
 
     previous_active, previous_archive = load_existing_events()
     scraped = scrape_uitzinnig(INPUT_REGION)
