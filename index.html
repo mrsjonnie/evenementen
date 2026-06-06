@@ -85,6 +85,18 @@
       max-width: 560px;
     }
 
+    .versionBadge {
+      display: inline-flex;
+      margin-top: 10px;
+      border: 1px solid rgba(255, 255, 255, .32);
+      border-radius: 999px;
+      padding: 5px 9px;
+      color: rgba(255, 255, 255, .88);
+      background: rgba(255, 255, 255, .13);
+      font-size: .76rem;
+      font-weight: 900;
+    }
+
     .pill {
       border: 1px solid rgba(255, 255, 255, .34);
       background: rgba(255, 255, 255, .16);
@@ -195,58 +207,94 @@
 
     .siteSelect {
       position: relative;
-      min-width: 260px;
+      min-width: 320px;
       flex: 1;
-      max-width: 460px;
+      max-width: 560px;
+    }
+
+    .siteSelectLabel {
+      display: block;
+      margin: 0 0 5px;
+      color: var(--primary-dark);
+      font-weight: 900;
+      font-size: .82rem;
     }
 
     .siteButton {
       width: 100%;
       justify-content: space-between;
+      border: 1px solid var(--line);
+      background: #fff;
+      color: var(--ink);
+      font-weight: 850;
+      padding-inline: 12px;
     }
 
     .sitePanel {
       position: absolute;
       z-index: 10;
-      top: 48px;
+      top: 68px;
       left: 0;
       right: 0;
-      max-height: 280px;
-      overflow: auto;
       display: none;
       background: #fff;
       border: 1px solid var(--line);
       border-radius: var(--radius);
       box-shadow: var(--shadow);
-      padding: 8px;
+      overflow: hidden;
     }
 
     .siteSelect.open .sitePanel { display: block; }
 
+    .sitePanelHeader {
+      padding: 10px 12px;
+      border-bottom: 1px solid var(--line);
+      color: var(--muted);
+      font-size: .82rem;
+      font-weight: 800;
+      line-height: 1.35;
+      background: #f9fbfd;
+    }
+
     .siteList {
       display: grid;
-      gap: 3px;
+      gap: 4px;
+      max-height: 260px;
+      overflow: auto;
+      padding: 8px;
     }
 
     .siteList label {
-      display: flex;
-      gap: 8px;
-      align-items: center;
-      padding: 8px;
+      display: grid;
+      grid-template-columns: 18px minmax(0, 1fr);
+      gap: 9px;
+      align-items: start;
+      padding: 9px 10px;
       border-radius: var(--radius);
       color: var(--ink);
       font-size: .88rem;
       font-weight: 800;
+      line-height: 1.3;
     }
 
     .siteList label:hover { background: var(--surface-soft); }
 
+    .siteList input {
+      width: 16px;
+      height: 16px;
+      margin: 2px 0 0;
+    }
+
+    .siteList span {
+      overflow-wrap: anywhere;
+    }
+
     .siteActions {
       display: flex;
       gap: 8px;
-      padding-top: 8px;
+      padding: 8px;
       border-top: 1px solid var(--line);
-      margin-top: 8px;
+      background: #f9fbfd;
     }
 
     .status {
@@ -302,18 +350,36 @@
       flex-direction: column;
     }
 
-    .image {
-      height: 150px;
+    .typeHeader {
+      min-height: 74px;
       background: var(--surface-soft) center/cover;
       position: relative;
+      display: flex;
+      align-items: end;
+      padding: 10px 12px;
+      text-decoration: none;
     }
 
-    .image::after {
+    .typeHeader::after {
       content: "";
       position: absolute;
-      inset: auto 0 0;
-      height: 42px;
-      background: linear-gradient(transparent, rgba(0, 0, 0, .22));
+      inset: 0;
+      background: linear-gradient(90deg, rgba(16, 32, 51, .62), rgba(16, 32, 51, .10));
+    }
+
+    .typeHeader span {
+      position: relative;
+      z-index: 1;
+      color: #fff;
+      font-weight: 950;
+      font-size: .84rem;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+    }
+
+    .typeHeaderLink:hover span,
+    .sourceLink:hover {
+      text-decoration: underline;
     }
 
     .cardBody {
@@ -343,6 +409,7 @@
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
+      text-decoration: none;
     }
 
     .tagAccent {
@@ -390,6 +457,24 @@
       flex-wrap: wrap;
       gap: 8px;
       padding-top: 2px;
+    }
+
+    .mapPanel {
+      display: none;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: var(--surface-soft);
+      min-height: 220px;
+    }
+
+    .mapPanel.open { display: block; }
+
+    .mapPanel iframe {
+      display: block;
+      width: 100%;
+      height: 220px;
+      border: 0;
     }
 
     .empty {
@@ -448,6 +533,7 @@
       <div>
         <h1 id="pageTitle">Evenementen rond Groningen</h1>
         <p class="subtitle" id="pageSubtitle">Vind snel wat er te doen is, filter op datum en type, en ververs de lijst wanneer je nieuwe resultaten wilt ophalen.</p>
+        <span class="versionBadge" id="versionBadge">Versie wordt geladen</span>
       </div>
       <div class="weather" id="weatherBox" aria-live="polite"></div>
     </div>
@@ -505,11 +591,13 @@
         </div>
 
         <div class="siteSelect" id="siteSelect">
+          <label class="siteSelectLabel" for="siteButton">Websites om te scannen</label>
           <button class="btn btnSecondary siteButton" id="siteButton" type="button" aria-expanded="false">
-            <span>Websites (<span id="siteCount">0</span>)</span>
+            <span><span id="siteCount">0</span> websites geselecteerd</span>
             <span aria-hidden="true">v</span>
           </button>
           <div class="sitePanel">
+            <div class="sitePanelHeader">Kies welke websites worden meegenomen bij het ophalen van nieuwe evenementen.</div>
             <div class="siteList" id="sitesList"></div>
             <div class="siteActions">
               <button class="btn btnSecondary" id="allSitesBtn" type="button">Alles</button>
@@ -539,8 +627,20 @@
   </main>
 
   <script>
+    const APP_VERSION = "2026.06.07.3";
     const WORKER_URL = "https://evenementen-refresh.mrsjonnie.workers.dev";
     const eventsPerPage = 9;
+    const typeImages = {
+      film: "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=900&q=80",
+      museum: "https://images.unsplash.com/photo-1566127992631-137a642a90f4?auto=format&fit=crop&w=900&q=80",
+      historie: "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?auto=format&fit=crop&w=900&q=80",
+      muziek: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=900&q=80",
+      theater: "https://images.unsplash.com/photo-1503095396549-807759245b35?auto=format&fit=crop&w=900&q=80",
+      markt: "https://images.unsplash.com/photo-1488459716781-31db52582fe9?auto=format&fit=crop&w=900&q=80",
+      festival: "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?auto=format&fit=crop&w=900&q=80",
+      sport: "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=900&q=80",
+      default: "https://images.unsplash.com/photo-1517457373958-b7bdd4587205?auto=format&fit=crop&w=900&q=80"
+    };
     const fallbackEvents = [
       {
         title: "Groninger Museum",
@@ -580,8 +680,16 @@
     const $ = (id) => document.getElementById(id);
     const controls = ["search", "region", "radius", "typeFilter", "dateSingle", "periodMode"];
 
+    function cleanText(value) {
+      return String(value ?? "")
+        .replace(/\u00c3\u00a2\u00c2\u0082\u00c2\u00ac|\u00e2\u0082\u00ac|\u20ac/g, "EUR")
+        .replace(/\u00c2\u00b7|\u00b7/g, "-")
+        .replace(/\u00c2\u00b0C|\u00b0C/g, " graden")
+        .trim();
+    }
+
     function escapeHtml(value) {
-      return String(value ?? "").replace(/[&<>"']/g, (char) => ({
+      return cleanText(value).replace(/[&<>"']/g, (char) => ({
         "&": "&amp;",
         "<": "&lt;",
         ">": "&gt;",
@@ -590,13 +698,48 @@
       }[char]));
     }
 
-    function safeUrl(value) {
+    function safeUrl(value, options = {}) {
       try {
-        const url = new URL(value || "", window.location.href);
-        return ["http:", "https:", "mailto:"].includes(url.protocol) ? url.href : "";
+        let raw = cleanText(value);
+        if (!raw || raw === "#") return "";
+        if (!/^[a-z][a-z0-9+.-]*:/i.test(raw) && /^[\w.-]+\.[a-z]{2,}/i.test(raw)) {
+          raw = `https://${raw}`;
+        }
+        const url = new URL(raw, window.location.href);
+        const allowed = options.mail ? ["http:", "https:", "mailto:"] : ["http:", "https:"];
+        if (!allowed.includes(url.protocol)) return "";
+        if (options.website && (!url.hostname || !url.hostname.includes("."))) return "";
+        return url.href;
       } catch {
         return "";
       }
+    }
+
+    function typeImage(type, image) {
+      const explicit = safeUrl(image);
+      if (explicit) return explicit;
+      const key = cleanText(type).toLowerCase();
+      return typeImages[key] || typeImages.default;
+    }
+
+    function mapUrl(event) {
+      const lat = Number(event.lat);
+      const lon = Number(event.lon);
+      if (Number.isFinite(lat) && Number.isFinite(lon)) {
+        return `https://www.google.com/maps?q=${lat},${lon}&output=embed`;
+      }
+
+      const link = safeUrl(event.locationLink);
+      if (link) {
+        try {
+          const url = new URL(link);
+          const q = url.searchParams.get("q") || url.searchParams.get("query");
+          if (q) return `https://www.google.com/maps?q=${encodeURIComponent(q)}&output=embed`;
+        } catch {}
+      }
+
+      const location = cleanText(event.location);
+      return location ? `https://www.google.com/maps?q=${encodeURIComponent(location)}&output=embed` : "";
     }
 
     function formatDate(date) {
@@ -815,31 +958,42 @@
 
     function renderCard(event) {
       const title = escapeHtml(event.title || "Naam onbekend");
-      const image = safeUrl(event.image) || "https://picsum.photos/seed/evenement/800/500";
-      const website = safeUrl(event.website);
-      const route = safeUrl(event.locationLink);
+      const type = cleanText(event.type || "Activiteit");
+      const image = typeImage(type, event.image);
+      const website = safeUrl(event.website, { website: true });
+      const route = mapUrl(event);
       const dateLabel = event.periodLabel || prettyDate(event.date);
+      const mapId = `map-${Math.random().toString(36).slice(2)}`;
+      const typeHeader = `
+        <${website ? "a" : "div"} class="typeHeader ${website ? "typeHeaderLink" : ""}" style="background-image: url('${escapeHtml(image)}')"${website ? ` href="${escapeHtml(website)}" target="_blank" rel="noopener noreferrer"` : ""}>
+          <span>${escapeHtml(type)}</span>
+        </${website ? "a" : "div"}>
+      `;
+      const sourceTag = website
+        ? `<a class="tag sourceLink" href="${escapeHtml(website)}" target="_blank" rel="noopener noreferrer">${escapeHtml(event.source || "Bron onbekend")}</a>`
+        : `<span class="tag">${escapeHtml(event.source || "Bron onbekend")}</span>`;
 
       return `
         <article class="card">
-          <div class="image" style="background-image: url('${escapeHtml(image)}')"></div>
+          ${typeHeader}
           <div class="cardBody">
             <div class="badges">
-              <span class="tag">${escapeHtml(event.source || "Bron onbekend")}</span>
+              ${sourceTag}
               <span class="tag tagAccent">${escapeHtml(dateLabel)}</span>
             </div>
             <h2 class="title">${title}</h2>
             <div class="details">
               <div class="detail"><span>Datum</span><span>${escapeHtml(prettyDate(event.date))}${event.time ? ` - ${escapeHtml(event.time)}` : ""}</span></div>
               <div class="detail"><span>Plaats</span><span>${escapeHtml(event.location || "Locatie onbekend")}</span></div>
-              <div class="detail"><span>Type</span><span>${escapeHtml(event.type || "Type onbekend")}</span></div>
+              <div class="detail"><span>Type</span><span>${escapeHtml(type || "Type onbekend")}</span></div>
               <div class="detail"><span>Prijs</span><span>${escapeHtml(event.cost || "Zie website")}</span></div>
             </div>
             <p class="desc">${escapeHtml(event.description || "Geen omschrijving beschikbaar.")}</p>
             <div class="cardActions">
               ${website ? `<a class="btn btnPrimary" href="${escapeHtml(website)}" target="_blank" rel="noopener noreferrer">Meer info</a>` : ""}
-              ${route ? `<a class="btn btnSecondary" href="${escapeHtml(route)}" target="_blank" rel="noopener noreferrer">Route</a>` : ""}
+              ${route ? `<button class="btn btnSecondary routeToggle" type="button" data-map="${mapId}">Route</button>` : ""}
             </div>
+            ${route ? `<div class="mapPanel" id="${mapId}"><iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="${escapeHtml(route)}" title="Route naar ${title}"></iframe></div>` : ""}
           </div>
         </article>
       `;
@@ -983,6 +1137,14 @@
     $("allSitesBtn").addEventListener("click", () => { document.querySelectorAll(".siteCheck").forEach((check) => { check.checked = true; }); updateSiteCount(); });
     $("noSitesBtn").addEventListener("click", () => { document.querySelectorAll(".siteCheck").forEach((check) => { check.checked = false; }); updateSiteCount(); });
     $("sitesList").addEventListener("change", updateSiteCount);
+    document.addEventListener("click", (event) => {
+      const button = event.target.closest(".routeToggle");
+      if (!button) return;
+      const panel = document.getElementById(button.dataset.map);
+      if (!panel) return;
+      panel.classList.toggle("open");
+      button.textContent = panel.classList.contains("open") ? "Sluit route" : "Route";
+    });
     $("siteButton").addEventListener("click", () => {
       const select = $("siteSelect");
       const isOpen = select.classList.toggle("open");
@@ -997,6 +1159,7 @@
 
     const today = formatDate(new Date());
     $("dateSingle").value = today;
+    $("versionBadge").textContent = `Versie ${APP_VERSION}`;
     loadAll();
   </script>
 </body>
