@@ -367,8 +367,8 @@
 
     .detail {
       display: grid;
-      grid-template-columns: 22px minmax(0, 1fr);
-      gap: 6px;
+      grid-template-columns: 58px minmax(0, 1fr);
+      gap: 10px;
       align-items: start;
     }
 
@@ -501,7 +501,7 @@
         <div class="checks" aria-label="Aanbieders">
           <label class="check"><input type="checkbox" id="provPerplexity" checked> Perplexity</label>
           <label class="check"><input type="checkbox" id="provMistral" checked> Mistral</label>
-          <label class="check"><input type="checkbox" id="provOpenAI"> OpenAI</label>
+          <label class="check"><input type="checkbox" id="provOpenAI" checked> ChatGPT</label>
         </div>
 
         <div class="siteSelect" id="siteSelect">
@@ -665,6 +665,25 @@
       button.textContent = busy ? text : button.dataset.originalText;
     }
 
+    const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
+    function eventSignature(items) {
+      return JSON.stringify(items.map((event) => [
+        event.title || "",
+        event.date || "",
+        event.location || "",
+        event.website || ""
+      ]).slice(0, 250));
+    }
+
+    async function fetchEvents() {
+      const response = await fetch(`./events.json?_=${Date.now()}`, { cache: "no-store" });
+      if (!response.ok) throw new Error("events.json kon niet worden geladen");
+      const data = await response.json();
+      if (!Array.isArray(data)) throw new Error("events.json heeft geen geldige lijst");
+      return data;
+    }
+
     async function loadJson(path, fallback) {
       try {
         const response = await fetch(`${path}?_=${Date.now()}`, { cache: "no-store" });
@@ -674,6 +693,31 @@
       } catch {
         return fallback;
       }
+    }
+
+    async function waitForUpdatedEvents(previousSignature) {
+      for (let attempt = 1; attempt <= 18; attempt += 1) {
+        showStatus(`Nieuwe lijst wordt opgehaald bij GitHub Pages... poging ${attempt} van 18`, "warn");
+        await delay(10000);
+
+        try {
+          const freshEvents = await fetchEvents();
+          if (eventSignature(freshEvents) !== previousSignature) {
+            events = freshEvents;
+            fillTypes();
+            applyFilters();
+            showStatus("Nieuwe evenementen zijn geladen.", "ok");
+            setTimeout(hideStatus, 4000);
+            return true;
+          }
+        } catch (error) {
+          showStatus(`Nog aan het wachten op nieuwe data: ${error.message}`, "warn");
+        }
+      }
+
+      await loadAll();
+      showStatus("De update is gestart, maar GitHub Pages geeft nog dezelfde data terug. Wacht even en klik eventueel nogmaals op Ververs.", "warn");
+      return false;
     }
 
     function fillTypes() {
@@ -827,6 +871,7 @@
 
     async function refreshEvents() {
       const button = $("refreshBtn");
+      const previousSignature = eventSignature(events);
       setBusy(button, true, "Bezig...");
       showStatus("Nieuwe evenementen ophalen...", "warn");
 
@@ -844,7 +889,8 @@
         providers: {
           perplexity: $("provPerplexity").checked,
           mistral: $("provMistral").checked,
-          openai: $("provOpenAI").checked
+          openai: $("provOpenAI").checked,
+          chatgpt: $("provOpenAI").checked
         }
       };
 
@@ -857,8 +903,8 @@
         const data = await response.json().catch(() => ({}));
         if (!response.ok) throw new Error(data.error || "Verversen is mislukt");
 
-        showStatus(`Klaar. ${data.scrapedCount || 0} nieuwe resultaten gevonden. De lijst wordt zo opnieuw geladen.`, "ok");
-        setTimeout(loadAll, 7000);
+        showStatus(`Klaar. ${data.scrapedCount || 0} nieuwe resultaten gevonden. Ik wacht nu tot GitHub Pages de nieuwe lijst serveert.`, "ok");
+        await waitForUpdatedEvents(previousSignature);
       } catch (error) {
         showStatus(`Starten mislukt: ${error.message}`, "error");
       } finally {
@@ -895,7 +941,7 @@
       $("typeFilter").value = "all";
       $("provPerplexity").checked = true;
       $("provMistral").checked = true;
-      $("provOpenAI").checked = false;
+      $("provOpenAI").checked = true;
       document.querySelectorAll(".siteCheck").forEach((check) => { check.checked = true; });
       updateSiteCount();
       const today = formatDate(new Date());

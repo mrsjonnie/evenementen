@@ -3,7 +3,8 @@ name: Update evenementen
 on:
   workflow_dispatch:
   schedule:
-    - cron: '15 */6 * * *'
+    # Vrijdagochtend Nederlandse tijd: 08:00 zomertijd, 07:00 wintertijd.
+    - cron: '0 6 * * 5'
 
 permissions:
   contents: write
