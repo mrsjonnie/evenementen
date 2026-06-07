@@ -19,7 +19,7 @@ BASE_HEADERS = {"User-Agent": "Mozilla/5.0"}
 MAX_EVENTS_PER_SITE = 20
 SITE_TIME_LIMIT_SECONDS = 5
 SITE_RESULTS = []
-MONTHS = "januari|februari|maart|april|mei|juni|juli|augustus|september|oktober|november|december|january|february|march|may|june|july|august|october"
+MONTHS = "januari|februari|maart|april|mei|juni|juli|augustus|september|oktober|november|december|jan|feb|mrt|apr|jun|jul|aug|sep|sept|okt|nov|dec|january|february|march|may|june|july|august|october"
 DATE_RE = re.compile(rf"^\d{{1,2}}(?:\s+t/m\s+\d{{1,2}})?\s+(?:{MONTHS})$", re.I)
 DATE_IN_TEXT_RE = re.compile(rf"\b\d{{1,2}}(?:\s+t/m\s+\d{{1,2}})?\s+(?:{MONTHS})(?:\s+20\d{{2}})?\b", re.I)
 ISO_DATE_RE = re.compile(r"\b20\d{2}-\d{2}-\d{2}\b")
@@ -30,6 +30,7 @@ WEEKDAY_RE = re.compile(r"^(maandag|dinsdag|woensdag|donderdag|vrijdag|zaterdag|
 DATE_TITLE_RE = re.compile(rf"^(?:maandag|dinsdag|woensdag|donderdag|vrijdag|zaterdag|zondag|monday|tuesday|wednesday|thursday|friday|saturday|sunday)?\s*\d{{1,2}}(?:\s+t/m\s+\d{{1,2}})?\s+(?:{MONTHS})(?:\s+20\d{{2}})?$", re.I)
 PRICE_OR_ACTION_RE = re.compile(r"^(gratis|€\s*\d|eur\s*\d|tickets?|koop ticket|meer info|lees meer|uitverkocht|sold out|reeds gestart)", re.I)
 TITLE_NOISE_RE = re.compile(r"^(coming up|highlights|lees meer|koop ticket|sold out|support|friday show|ubbo x zienema|raw postpunk from|in 20\d{2},|this winter)", re.I)
+SPOT_LISTING_RE = re.compile(r"^(ma|di|wo|do|vr|za|zo)\s*(\d{1,2})\s*([a-z]{3,9})\b\s+(.+)$", re.I)
 BLOCKED_TITLES = {
     "uitgelicht",
     "toon info",
@@ -84,6 +85,18 @@ MONTH_NUMBERS = {
     "oktober": 10,
     "november": 11,
     "december": 12,
+    "jan": 1,
+    "feb": 2,
+    "mrt": 3,
+    "apr": 4,
+    "jun": 6,
+    "jul": 7,
+    "aug": 8,
+    "sep": 9,
+    "sept": 9,
+    "okt": 10,
+    "nov": 11,
+    "dec": 12,
     "january": 1,
     "february": 2,
     "march": 3,
@@ -717,6 +730,57 @@ def events_from_listing_text(soup, site_url):
     return events
 
 
+def spot_title_from_text(value):
+    title = clean_text(value)
+    title = re.sub(r"\b(laatste kaarten|uitverkocht|net bevestigd|bijna uitverkocht|extra show)\b.*$", "", title, flags=re.I).strip(" -|")
+    title = re.sub(r"\s{2,}", " ", title)
+    return title[:170].strip()
+
+
+def events_from_spot_listing(soup, site_url):
+    host = urlparse(site_url).netloc.lower()
+    if "spotgroningen.nl" not in host:
+        return []
+
+    events = []
+    for anchor in soup.find_all("a", href=True):
+        href = clean_text(anchor.get("href"))
+        absolute = urljoin(site_url, href).split("#", 1)[0]
+        parsed = urlparse(absolute)
+        if "spotgroningen.nl" not in parsed.netloc.lower() or "/programma/" not in parsed.path:
+            continue
+
+        text = clean_text(anchor.get_text(" ", strip=True))
+        match = SPOT_LISTING_RE.match(text)
+        if not match:
+            continue
+
+        date = normalize_date_value(f"{match.group(2)} {match.group(3)}")
+        title = spot_title_from_text(match.group(4))
+        if not title:
+            continue
+
+        item = normalize_event(
+            {
+                "title": title,
+                "type": "evenement",
+                "date": date,
+                "location": "SPOT Groningen",
+                "description": text[:260],
+                "website": absolute,
+                "cost": "Zie website",
+                "source": "www.spotgroningen.nl",
+                "periodLabel": date,
+            }
+        )
+        if is_valid_event(item):
+            events.append(item)
+        if len(events) >= MAX_EVENTS_PER_SITE:
+            break
+
+    return dedupe_events(events)
+
+
 def context_type(lines):
     for line in lines:
         if TIME_RE.search(line) or PRICE_OR_ACTION_RE.search(line):
@@ -952,6 +1016,7 @@ def scrape_structured_site(site_url):
             if len(events) >= MAX_EVENTS_PER_SITE:
                 break
 
+        events.extend(events_from_spot_listing(soup, page_url))
         events.extend(events_from_listing_text(soup, page_url))
         events.extend(events_from_contextual_lines(soup, page_url))
         link_candidates.extend(candidate_event_links(soup, page_url))

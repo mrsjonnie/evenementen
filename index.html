@@ -394,7 +394,7 @@
 
     .siteResultBadge {
       display: inline-flex;
-      margin-top: 4px;
+      margin-right: 6px;
       color: var(--muted);
       font-size: .76rem;
       font-weight: 900;
@@ -847,6 +847,7 @@
           <select id="periodMode">
             <option value="today">Vandaag</option>
             <option value="tomorrow">Morgen</option>
+            <option value="always">Altijd</option>
             <option value="thisWeekend">Dit weekend</option>
             <option value="nextWeekend">Volgend weekend</option>
             <option value="week" selected>7 dagen</option>
@@ -931,7 +932,7 @@
   </main>
 
   <script>
-    const APP_VERSION = "2026.06.07.22";
+    const APP_VERSION = "2026.06.07.23";
     const WORKER_URL = "https://evenementen-refresh.mrsjonnie.workers.dev";
     const PER_PAGE_KEY = "evenementenPerPage";
     let eventsPerPage = 9;
@@ -1437,6 +1438,12 @@
       const mode = $("periodMode").value;
       const baseDate = $("dateSingle").value;
 
+      if (mode === "always") {
+        dateFrom = "";
+        dateTo = "";
+        return;
+      }
+
       if (mode === "today" || mode === "tomorrow") {
         const day = new Date();
         day.setHours(0, 0, 0, 0);
@@ -1668,11 +1675,11 @@
           const newCount = Number(result?.newCount) || 0;
           const hasResult = count > 0;
           const badge = result
-            ? `<span class="siteResultBadge">${newCount > 0 ? `${newCount} nieuw` : `${count} gevonden`}${result.timedOut ? " - tijdslimiet" : ""}</span>`
+            ? `<span class="siteResultBadge">${newCount > 0 ? `(+${newCount})` : `(${count})`}${result.timedOut ? " tijdslimiet" : ""}</span>`
             : "";
           return `<label class="${hasResult ? "siteFound" : ""}">
           <input class="siteCheck" type="checkbox" value="${escapeHtml(site)}"${selectedSites.has(site) ? " checked" : ""}>
-          <span>${escapeHtml(site)}${badge}</span>
+          <span>${badge}${escapeHtml(site)}</span>
         </label>`;
         })()}
       `).join("");
@@ -1710,6 +1717,7 @@
     }
 
     function matchesDate(event) {
+      if ($("periodMode").value === "always") return true;
       if (event.isPermanent) return true;
       if (!/^\d{4}-\d{2}-\d{2}$/.test(event.date || "")) return true;
 
@@ -1717,6 +1725,11 @@
       const from = new Date(dateFrom + "T00:00:00");
       const to = new Date(dateTo + "T00:00:00");
       return day >= from && day <= to;
+    }
+
+    function periodSubtitle() {
+      if ($("periodMode").value === "always") return "Altijd";
+      return `${prettyDate(dateFrom)} t/m ${prettyDate(dateTo)}`;
     }
 
     function applyFilters() {
@@ -1730,7 +1743,7 @@
       const radiusKm = Number($("radius").value) || 0;
 
       $("pageTitle").textContent = `Evenementen rond ${region || "je regio"}`;
-      $("pageSubtitle").textContent = `${prettyDate(dateFrom)} t/m ${prettyDate(dateTo)} - straal ${$("radius").value || 100} km`;
+      $("pageSubtitle").textContent = `${periodSubtitle()} - straal ${$("radius").value || 100} km`;
       document.title = `Evenementen rond ${region || "je regio"}`;
 
       filteredEvents = dedupeEvents(events).filter((event) => {
@@ -1878,7 +1891,10 @@
 
     async function loadWeather() {
       const region = $("region").value.trim();
-      if (!region || !dateFrom || !dateTo) return;
+      if (!region || !dateFrom || !dateTo) {
+        $("weatherBox").innerHTML = "";
+        return;
+      }
 
       try {
         const url = `${WORKER_URL}/weather?region=${encodeURIComponent(region)}&from=${dateFrom}&to=${dateTo}`;
@@ -2033,7 +2049,7 @@
       $("search").value = "";
       $("region").value = "Groningen";
       $("radius").value = "200";
-      $("periodMode").value = "week";
+      $("periodMode").value = "always";
       $("typeFilter").value = "all";
       $("newOnlyFilter").checked = false;
       $("provPerplexity").checked = false;
