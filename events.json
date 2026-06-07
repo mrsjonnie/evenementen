@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-06-07T17:46:34+00:00",
+  "updatedAt": "2026-06-07T18:06:02+00:00",
   "events": [
     {
       "title": "The Rocky Horror Picture Show",
@@ -384,10 +384,10 @@
   "siteResults": [
     {
       "site": "https://www.vera-groningen.nl",
-      "count": 20,
+      "count": 6,
       "newCount": 0,
-      "durationSeconds": 39.35,
-      "timedOut": false
+      "durationSeconds": 19.97,
+      "timedOut": true
     }
   ]
 }
