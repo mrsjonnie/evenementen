@@ -493,11 +493,11 @@
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(363px, 1fr));
       gap: 14px;
     }
 
-    @media (min-width: 1460px) {
+    @media (min-width: 1590px) {
       .grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
     }
 
@@ -931,7 +931,7 @@
   </main>
 
   <script>
-    const APP_VERSION = "2026.06.07.19";
+    const APP_VERSION = "2026.06.07.20";
     const WORKER_URL = "https://evenementen-refresh.mrsjonnie.workers.dev";
     const PER_PAGE_KEY = "evenementenPerPage";
     let eventsPerPage = 9;
