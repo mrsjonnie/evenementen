@@ -1371,6 +1371,14 @@ def public_site_results():
     return result
 
 
+def event_from_selected_site(event, selected_hosts):
+    if not selected_hosts:
+        return True
+    host = site_host(clean_text(event.get("website")))
+    source = clean_text(event.get("source")).lower().replace("www.", "")
+    return host in selected_hosts or source in selected_hosts
+
+
 def save_events_to_json(active_events, archive):
     payload = {
         "schemaVersion": 2,
@@ -1393,9 +1401,19 @@ def main():
 
     previous_active, previous_archive = ([], []) if INPUT_CLEAR_ARCHIVE else load_existing_events()
     extra_sites = parse_input_sites()
-    scraped = scrape_uitzinnig(INPUT_REGION) + scrape_extra_sites(extra_sites)
-    keep_existing = [active_copy(event) for event in previous_active if not is_past_event(event)]
-    active = sort_events_for_request(dedupe_events(scraped + keep_existing + manual_events()))
+    if extra_sites:
+        log(f"Alleen geselecteerde websites worden gescand: {len(extra_sites)}")
+        scraped = scrape_extra_sites(extra_sites)
+    else:
+        scraped = scrape_uitzinnig(INPUT_REGION)
+    selected_hosts = {site_host(site) for site in extra_sites}
+    keep_existing = [
+        active_copy(event)
+        for event in previous_active
+        if not is_past_event(event) and event_from_selected_site(event, selected_hosts)
+    ]
+    fixed_events = [] if extra_sites else manual_events()
+    active = sort_events_for_request(dedupe_events(scraped + keep_existing + fixed_events))
     archive = archive_old_events(previous_active, previous_archive, active)
     previous_keys = {event_key(event) for event in previous_active}
     for result in SITE_RESULTS:

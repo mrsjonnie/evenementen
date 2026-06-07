@@ -94,6 +94,13 @@
 
     .titlePanel.open { display: block; }
 
+    .titlePanelContent {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+    }
+
     .subtitle {
       margin: 8px 0 0;
       max-width: 760px;
@@ -112,7 +119,6 @@
 
     .versionBadge {
       display: inline-flex;
-      margin-top: 10px;
       border: 1px solid rgba(255, 255, 255, .32);
       border-radius: 999px;
       padding: 5px 9px;
@@ -120,6 +126,37 @@
       background: rgba(255, 255, 255, .13);
       font-size: .76rem;
       font-weight: 900;
+    }
+
+    .scanSettings {
+      display: inline-flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      align-items: center;
+    }
+
+    .scanSetting {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      border: 1px solid rgba(255, 255, 255, .28);
+      border-radius: 999px;
+      padding: 4px 8px;
+      background: rgba(255, 255, 255, .1);
+      color: rgba(255, 255, 255, .88);
+      font-size: .75rem;
+      font-weight: 900;
+    }
+
+    .scanSetting input {
+      width: 48px;
+      border: 0;
+      border-radius: 999px;
+      padding: 3px 6px;
+      background: rgba(255, 255, 255, .95);
+      color: #102033;
+      font: inherit;
+      text-align: center;
     }
 
     .pill {
@@ -465,6 +502,49 @@
       flex: 1;
     }
 
+    .confirmOverlay {
+      position: fixed;
+      inset: 0;
+      z-index: 100;
+      display: none;
+      place-items: center;
+      padding: 18px;
+      background: rgba(0, 0, 0, .62);
+      backdrop-filter: blur(7px);
+    }
+
+    .confirmOverlay.open { display: grid; }
+
+    .confirmBox {
+      width: min(480px, 100%);
+      border: 1px solid rgba(255, 255, 255, .14);
+      border-radius: 8px;
+      background: #172232;
+      box-shadow: 0 24px 70px rgba(0, 0, 0, .46);
+      padding: 18px;
+      color: #f4f7fb;
+    }
+
+    .confirmBox h2 {
+      margin: 0 0 8px;
+      font-size: 1.1rem;
+      letter-spacing: 0;
+    }
+
+    .confirmBox p {
+      margin: 0;
+      color: rgba(244, 247, 251, .82);
+      line-height: 1.45;
+      font-weight: 700;
+    }
+
+    .confirmActions {
+      display: flex;
+      justify-content: flex-end;
+      gap: 8px;
+      margin-top: 16px;
+    }
+
     .summary {
       display: flex;
       justify-content: space-between;
@@ -790,6 +870,7 @@
       .check { flex: 1; justify-content: center; }
       .inlineTools { width: 100%; }
       .pagination .btn { width: auto; }
+      .confirmActions { flex-direction: column-reverse; }
     }
   </style>
 </head>
@@ -805,7 +886,13 @@
         </h1>
         <p class="subtitle" id="pageSubtitle">Vind snel wat er te doen is, filter op datum en type, en ververs de lijst wanneer je nieuwe resultaten wilt ophalen.</p>
         <div class="titlePanel" id="titlePanel">
-          <span class="versionBadge" id="versionBadge">Versie wordt geladen</span>
+          <div class="titlePanelContent">
+            <span class="versionBadge" id="versionBadge">Versie wordt geladen</span>
+            <div class="scanSettings" aria-label="Scaninstellingen">
+              <label class="scanSetting" for="maxEventsPerSite">Hits/site <input id="maxEventsPerSite" type="number" min="20" max="100" step="1" value="20" inputmode="numeric"></label>
+              <label class="scanSetting" for="siteTimeLimitSeconds">Sec/site <input id="siteTimeLimitSeconds" type="number" min="20" max="60" step="1" value="20" inputmode="numeric"></label>
+            </div>
+          </div>
         </div>
       </div>
       <div class="weather" id="weatherBox" aria-live="polite"></div>
@@ -884,7 +971,7 @@
               <span aria-hidden="true">v</span>
             </button>
             <div class="sitePanel">
-              <div class="sitePanelHeader">Kies welke websites worden meegenomen bij het ophalen van nieuwe evenementen.</div>
+              <div class="sitePanelHeader">Tijdelijk testmodus: alleen SPOT Groningen wordt gescand.</div>
               <div class="siteList" id="sitesList"></div>
               <div class="siteAdd">
                 <input id="newSiteInput" type="url" placeholder="https://voorbeeld.nl">
@@ -932,10 +1019,24 @@
     </nav>
   </main>
 
+  <div class="confirmOverlay" id="clearConfirm" role="dialog" aria-modal="true" aria-labelledby="clearConfirmTitle">
+    <div class="confirmBox">
+      <h2 id="clearConfirmTitle">Alles verwijderen?</h2>
+      <p>Weet je zeker dat je alle evenementen en het archief wilt verwijderen en daarna opnieuw wilt verversen?</p>
+      <div class="confirmActions">
+        <button class="btn btnSecondary" id="clearCancelBtn" type="button">Annuleren</button>
+        <button class="btn btnDanger" id="clearConfirmBtn" type="button">Verwijderen en verversen</button>
+      </div>
+    </div>
+  </div>
+
   <script>
-    const APP_VERSION = "2026.06.07.26";
-    const SCRAPE_MAX_EVENTS_PER_SITE = 20;
-    const SCRAPE_SITE_TIME_LIMIT_SECONDS = 20;
+    const APP_VERSION = "2026.06.07.27";
+    const DEFAULT_MAX_EVENTS_PER_SITE = 20;
+    const DEFAULT_SITE_TIME_LIMIT_SECONDS = 20;
+    const SCAN_SETTINGS_KEY = "eventScanSettingsV1";
+    const SPOT_ONLY_MODE = true;
+    const SPOT_ONLY_SITE = "https://www.spotgroningen.nl/programma/";
     const WORKER_URL = "https://evenementen-refresh.mrsjonnie.workers.dev";
     const PER_PAGE_KEY = "evenementenPerPage";
     let eventsPerPage = 9;
@@ -984,20 +1085,7 @@
       }
     ];
     const fallbackSites = [
-      "https://groningen.uitloper.nu/",
-      "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "https://forum.nl/nl/agenda",
-      "https://www.spotgroningen.nl/programma/",
-      "https://simplon.nl/",
-      "https://www.vera-groningen.nl/",
-      "https://www.martiniplaza.nl/nl/",
-      "https://www.groningermuseum.nl/en/now",
-      "https://www.kultuuragenda.nl/",
-      "https://www.noorderzon.nl/",
-      "https://www.concertgebouw.nl",
-      "https://www.hedon-zwolle.nl",
-      "https://www.paradiso.nl",
-      "https://www.vvvameland.nl/activiteiten-en-evenementen"
+      SPOT_ONLY_SITE
     ];
 
     let events = [];
@@ -1104,6 +1192,55 @@
       try {
         localStorage.setItem(key, JSON.stringify([...values]));
       } catch {}
+    }
+
+    function clampNumber(value, fallback, min, max) {
+      const number = Number(value);
+      if (!Number.isFinite(number)) return fallback;
+      return Math.max(min, Math.min(max, Math.round(number)));
+    }
+
+    function loadScanSettings() {
+      try {
+        const stored = JSON.parse(localStorage.getItem(SCAN_SETTINGS_KEY) || "{}");
+        return {
+          maxEventsPerSite: clampNumber(stored.maxEventsPerSite, DEFAULT_MAX_EVENTS_PER_SITE, 20, 100),
+          siteTimeLimitSeconds: clampNumber(stored.siteTimeLimitSeconds, DEFAULT_SITE_TIME_LIMIT_SECONDS, 20, 60)
+        };
+      } catch {
+        return {
+          maxEventsPerSite: DEFAULT_MAX_EVENTS_PER_SITE,
+          siteTimeLimitSeconds: DEFAULT_SITE_TIME_LIMIT_SECONDS
+        };
+      }
+    }
+
+    function saveScanSettings() {
+      const settings = currentScanSettings();
+      try {
+        localStorage.setItem(SCAN_SETTINGS_KEY, JSON.stringify(settings));
+      } catch {}
+      return settings;
+    }
+
+    function currentScanSettings() {
+      return {
+        maxEventsPerSite: clampNumber($("maxEventsPerSite")?.value, DEFAULT_MAX_EVENTS_PER_SITE, 20, 100),
+        siteTimeLimitSeconds: clampNumber($("siteTimeLimitSeconds")?.value, DEFAULT_SITE_TIME_LIMIT_SECONDS, 20, 60)
+      };
+    }
+
+    function applyScanSettings() {
+      const settings = loadScanSettings();
+      $("maxEventsPerSite").value = settings.maxEventsPerSite;
+      $("siteTimeLimitSeconds").value = settings.siteTimeLimitSeconds;
+    }
+
+    function selectedScanSites() {
+      if (SPOT_ONLY_MODE) return [SPOT_ONLY_SITE];
+      let selectedSites = [...document.querySelectorAll(".siteCheck:checked")].map((check) => check.value);
+      if (!selectedSites.length) selectedSites = sites.slice();
+      return selectedSites;
     }
 
     function mergeSites(baseSites, extraSites = []) {
@@ -1691,7 +1828,7 @@
             ? `<span class="siteResultBadge">${newCount > 0 ? `(+${newCount})` : `(${count})`}${result.timedOut ? " tijdslimiet" : ""}</span>`
             : "";
           return `<label class="${hasResult ? "siteFound" : ""}">
-          <input class="siteCheck" type="checkbox" value="${escapeHtml(site)}"${selectedSites.has(site) ? " checked" : ""}>
+          <input class="siteCheck" type="checkbox" value="${escapeHtml(site)}"${SPOT_ONLY_MODE || selectedSites.has(site) ? " checked" : ""}${SPOT_ONLY_MODE ? " disabled" : ""}>
           <span>${badge}${escapeHtml(site)}</span>
         </label>`;
         })()}
@@ -1708,6 +1845,12 @@
     }
 
     function addCustomSite() {
+      if (SPOT_ONLY_MODE) {
+        $("newSiteInput").value = "";
+        showStatus("Testmodus actief: voorlopig wordt alleen SPOT Groningen gescand.", "warn");
+        return;
+      }
+
       const input = $("newSiteInput");
       const normalized = normalizeSiteInput(input.value);
       if (!normalized) {
@@ -1872,23 +2015,45 @@
       `;
     }
 
-    function weatherTopicUrl(region, topic) {
-      const normalized = cleanText(topic).toLowerCase();
-      if (normalized.includes("wind")) {
-        return `https://www.weeronline.nl/zoekresultaten?keyword=${encodeURIComponent(`${region} wind`)}`;
-      }
-      if (normalized.includes("regen") || normalized.includes("neerslag") || normalized.includes("buien")) {
-        return "https://www.buienradar.nl/nederland/neerslag/buienradar";
-      }
-      const query = `${region} ${topic}`.trim();
-      return `https://www.weeronline.nl/zoekresultaten?keyword=${encodeURIComponent(query)}`;
+    const weeronlineLocations = {
+      groningen: { name: "Groningen", id: "4056536" },
+      assen: { name: "Assen", id: "4057114" },
+      drachten: { name: "Drachten", id: "4056923" },
+      leeuwarden: { name: "Leeuwarden", id: "4056855" },
+      zwolle: { name: "Zwolle", id: "4057438" }
+    };
+
+    function weeronlineLocation(region) {
+      const key = cleanText(region).toLowerCase()
+        .normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+        .replace(/[^a-z0-9]+/g, " ")
+        .trim();
+      return weeronlineLocations[key] || null;
     }
 
-    function weatherTopicSourceName(topic) {
+    function weeronlineSearch(region, topic) {
+      return `https://www.weeronline.nl/zoekresultaten?keyword=${encodeURIComponent(`${region} ${topic}`.trim())}`;
+    }
+
+    function weatherTopicUrl(region, topic) {
       const normalized = cleanText(topic).toLowerCase();
-      if (!normalized.includes("wind") && (normalized.includes("regen") || normalized.includes("neerslag") || normalized.includes("buien"))) {
-        return "Buienradar";
+      const location = weeronlineLocation(region);
+      if (!location) return weeronlineSearch(region, topic);
+
+      const base = `https://www.weeronline.nl/Europa/Nederland/${encodeURIComponent(location.name)}/${location.id}`;
+      if (normalized.includes("regen") || normalized.includes("neerslag") || normalized.includes("buien")) {
+        return `https://www.weeronline.nl/regenradar/${encodeURIComponent(location.name)}/${location.id}`;
       }
+      if (normalized.includes("zon") || normalized.includes("uv")) {
+        return `${base}/zon`;
+      }
+      if (normalized.includes("week") || normalized.includes("verwachting")) {
+        return `${base}/weersverwachting-14dagen`;
+      }
+      return base;
+    }
+
+    function weatherTopicSourceName() {
       return "Weeronline";
     }
 
@@ -1987,8 +2152,8 @@
       setBusy(button, true, "Bezig...");
       showStatus("Nieuwe evenementen ophalen...", "warn");
 
-      let selectedSites = [...document.querySelectorAll(".siteCheck:checked")].map((check) => check.value);
-      if (!selectedSites.length) selectedSites = sites.slice();
+      const scanSettings = saveScanSettings();
+      const selectedSites = selectedScanSites();
       const category = $("typeFilter").value === "all" ? "" : $("typeFilter").value;
       showStatus(`Nieuwe evenementen ophalen bij ${selectedSites.length} van ${sites.length || selectedSites.length} websites...`, "warn");
       const payload = {
@@ -1998,9 +2163,9 @@
         category,
         dateFrom,
         dateTo,
-        minResults: 20,
-        maxEventsPerSite: SCRAPE_MAX_EVENTS_PER_SITE,
-        siteTimeLimitSeconds: SCRAPE_SITE_TIME_LIMIT_SECONDS,
+        minResults: scanSettings.maxEventsPerSite,
+        maxEventsPerSite: scanSettings.maxEventsPerSite,
+        siteTimeLimitSeconds: scanSettings.siteTimeLimitSeconds,
         sites: selectedSites,
         providers: {
           perplexity: false,
@@ -2049,11 +2214,45 @@
       }
     }
 
+    function askClearConfirmation() {
+      const overlay = $("clearConfirm");
+      const confirmButton = $("clearConfirmBtn");
+      const cancelButton = $("clearCancelBtn");
+      if (!overlay || !confirmButton || !cancelButton) return Promise.resolve(false);
+
+      overlay.classList.add("open");
+      confirmButton.focus();
+
+      return new Promise((resolve) => {
+        const cleanup = (answer) => {
+          overlay.classList.remove("open");
+          confirmButton.removeEventListener("click", onConfirm);
+          cancelButton.removeEventListener("click", onCancel);
+          overlay.removeEventListener("click", onBackdrop);
+          document.removeEventListener("keydown", onKeyDown);
+          resolve(answer);
+        };
+        const onConfirm = () => cleanup(true);
+        const onCancel = () => cleanup(false);
+        const onBackdrop = (event) => {
+          if (event.target === overlay) cleanup(false);
+        };
+        const onKeyDown = (event) => {
+          if (event.key === "Escape") cleanup(false);
+        };
+        confirmButton.addEventListener("click", onConfirm);
+        cancelButton.addEventListener("click", onCancel);
+        overlay.addEventListener("click", onBackdrop);
+        document.addEventListener("keydown", onKeyDown);
+      });
+    }
+
     async function clearAllEvents() {
-      if (!confirm("Weet je zeker dat je alle evenementen en het archief wilt verwijderen en daarna opnieuw wilt verversen?")) return;
+      if (!await askClearConfirmation()) return;
 
       updateDateRange();
       const button = $("clearBtn");
+      const scanSettings = saveScanSettings();
       const previousSignature = eventSignature(events);
       const previousKeys = eventKeySet(events);
       refreshAbortRequested = false;
@@ -2073,11 +2272,10 @@
             category: $("typeFilter").value === "all" ? "" : $("typeFilter").value,
             dateFrom,
             dateTo,
-            maxEventsPerSite: SCRAPE_MAX_EVENTS_PER_SITE,
-            siteTimeLimitSeconds: SCRAPE_SITE_TIME_LIMIT_SECONDS,
-            sites: [...document.querySelectorAll(".siteCheck:checked")].map((check) => check.value).length
-              ? [...document.querySelectorAll(".siteCheck:checked")].map((check) => check.value)
-              : sites.slice(),
+            minResults: scanSettings.maxEventsPerSite,
+            maxEventsPerSite: scanSettings.maxEventsPerSite,
+            siteTimeLimitSeconds: scanSettings.siteTimeLimitSeconds,
+            sites: selectedScanSites(),
             providers: { perplexity: false, mistral: false, openai: false, chatgpt: false, serpapi: true }
           })
         });
@@ -2141,7 +2339,8 @@
       events = loaded[0].events;
       eventsUpdatedAt = loaded[0].updatedAt;
       latestSiteResults = loaded[0].siteResults || [];
-      sites = mergeSites(loaded[1], customSites);
+      sites = SPOT_ONLY_MODE ? [SPOT_ONLY_SITE] : mergeSites(loaded[1], customSites);
+      applyScanSettings();
       const currentKeys = eventKeySet(events);
       const detectedNew = knownKeys.size ? [...currentKeys].filter((key) => !knownKeys.has(key)) : [];
       newEventKeys = detectedNew.length ? new Set(detectedNew) : storedNewKeys;
@@ -2169,6 +2368,13 @@
     $("resetBtn").addEventListener("click", resetFilters);
     $("clearBtn").addEventListener("click", clearAllEvents);
     $("collapseBtn").addEventListener("click", toggleCardsCollapsed);
+    ["maxEventsPerSite", "siteTimeLimitSeconds"].forEach((id) => {
+      $(id).addEventListener("change", () => {
+        const settings = saveScanSettings();
+        $("maxEventsPerSite").value = settings.maxEventsPerSite;
+        $("siteTimeLimitSeconds").value = settings.siteTimeLimitSeconds;
+      });
+    });
     $("newOnlyToggle").addEventListener("click", () => {
       $("newOnlyFilter").checked = !$("newOnlyFilter").checked;
       $("newOnlyFilter").dispatchEvent(new Event("change", { bubbles: true }));
@@ -2192,7 +2398,10 @@
     $("prevPage").addEventListener("click", () => { currentPage -= 1; render(); window.scrollTo({ top: 0, behavior: "smooth" }); });
     $("nextPage").addEventListener("click", () => { currentPage += 1; render(); window.scrollTo({ top: 0, behavior: "smooth" }); });
     $("allSitesBtn").addEventListener("click", () => { document.querySelectorAll(".siteCheck").forEach((check) => { check.checked = true; }); updateSiteCount(); });
-    $("noSitesBtn").addEventListener("click", () => { document.querySelectorAll(".siteCheck").forEach((check) => { check.checked = false; }); updateSiteCount(); });
+    $("noSitesBtn").addEventListener("click", () => {
+      document.querySelectorAll(".siteCheck").forEach((check) => { check.checked = SPOT_ONLY_MODE; });
+      updateSiteCount();
+    });
     $("sitesList").addEventListener("change", updateSiteCount);
     $("providerList").addEventListener("change", updateProviderCount);
     $("addSiteBtn").addEventListener("click", addCustomSite);
