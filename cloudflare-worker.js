@@ -99,7 +99,7 @@ function serpSearchQuery(site, body = {}) {
 
 async function serpApiLinksForSite(env, site, body = {}) {
   const token = validateInput(env.SERPAPI_TOKEN || "", 500);
-  if (!token) return [];
+  if (!token) return { links: [], rawLog: [] };
   const requestedHits = Math.max(20, Math.min(100, Number(body.maxEventsPerSite || body.minResults) || 20));
 
   const params = new URLSearchParams({
@@ -111,20 +111,50 @@ async function serpApiLinksForSite(env, site, body = {}) {
   const response = await fetch(`https://serpapi.com/search.json?${params.toString()}`, {
     headers: { "Accept": "application/json" }
   });
-  if (!response.ok) return [];
+  if (!response.ok) {
+    return {
+      links: [],
+      rawLog: [{
+        source: "SerpAPI",
+        site,
+        title: "SerpAPI fout",
+        date: "",
+        url: "",
+        status: `status ${response.status}`,
+        rawText: validateInput(await response.text(), 300)
+      }]
+    };
+  }
 
   const data = await response.json().catch(() => ({}));
   const results = Array.isArray(data.organic_results) ? data.organic_results : [];
-  return results
-    .map((item) => validateInput(item.link || "", 300))
-    .filter((link) => link && sameHostUrl(link, site) && !badWords.test(link))
-    .slice(0, Math.min(requestedHits, 20));
+  const rawLog = results.slice(0, requestedHits).map((item, index) => {
+    const link = validateInput(item.link || "", 300);
+    const usable = link && sameHostUrl(link, site) && !badWords.test(link);
+    return {
+      source: "SerpAPI",
+      site,
+      title: validateInput(item.title || "", 160),
+      date: "",
+      url: link,
+      status: usable ? "bruikbare link" : "genegeerd",
+      rawText: validateInput(item.snippet || item.displayed_link || "", 300),
+      rank: index + 1
+    };
+  });
+  return {
+    links: rawLog
+      .filter((row) => row.status === "bruikbare link")
+      .map((row) => row.url)
+      .slice(0, Math.min(requestedHits, 20)),
+    rawLog
+  };
 }
 
 async function enrichBodyWithSerpApi(env, body = {}) {
   const selected = validSites(body.sites);
   if (!serpApiEnabled(env, body) || !selected.length) {
-    return { body, serpApiAddedCount: 0 };
+    return { body, serpApiAddedCount: 0, serpApiRawCount: 0 };
   }
 
   const priority = [...selected].sort((a, b) => {
@@ -134,16 +164,20 @@ async function enrichBodyWithSerpApi(env, body = {}) {
   }).slice(0, 4);
 
   const discovered = [];
+  const rawLog = [];
   for (const site of priority) {
     try {
-      discovered.push(...await serpApiLinksForSite(env, site, body));
+      const result = await serpApiLinksForSite(env, site, body);
+      discovered.push(...result.links);
+      rawLog.push(...result.rawLog);
     } catch {}
   }
 
   const merged = mergeSites(selected, discovered);
   return {
-    body: { ...body, sites: merged },
-    serpApiAddedCount: Math.max(0, merged.length - selected.length)
+    body: { ...body, sites: merged, serpApiLinks: discovered, serpApiRawLog: rawLog },
+    serpApiAddedCount: Math.max(0, merged.length - selected.length),
+    serpApiRawCount: rawLog.length
   };
 }
 
@@ -499,7 +533,8 @@ async function saveEventsToGithub(env, foundEvents, options = {}) {
     updatedAt: new Date().toISOString(),
     events: merged,
     archive,
-    siteResults: []
+    siteResults: [],
+    rawLog: []
   };
 
   const putResponse = await githubFetch(env, "/contents/events.json", {
@@ -531,7 +566,9 @@ function workflowInputs(body, overrides = {}) {
     maxEventsPerSite: validateInput(body.maxEventsPerSite || body.minResults || "20", 10),
     siteTimeLimitSeconds: validateInput(body.siteTimeLimitSeconds || "20", 10),
     sites: JSON.stringify(validSites(body.sites)),
-    providers: "{}",
+    providers: JSON.stringify(body.providers && typeof body.providers === "object" ? body.providers : {}),
+    serpApiLinks: JSON.stringify(validSites(body.serpApiLinks)),
+    serpApiRawLog: JSON.stringify(Array.isArray(body.serpApiRawLog) ? body.serpApiRawLog.slice(0, 120) : []),
     clearArchive: overrides.clearArchive ? "true" : "false"
   };
 }
@@ -611,12 +648,12 @@ async function startRefresh(env, body, overrides = {}) {
   const inputs = workflowInputs(refreshBody, overrides);
   const dispatch = await dispatchWorkflow(env, inputs);
   if (dispatch.ok) {
-    return { ok: true, method: "workflow_dispatch", workflowFile: dispatch.workflowFile, serpApiAddedCount: enriched.serpApiAddedCount };
+    return { ok: true, method: "workflow_dispatch", workflowFile: dispatch.workflowFile, serpApiAddedCount: enriched.serpApiAddedCount, serpApiRawCount: enriched.serpApiRawCount };
   }
 
   const fallback = await upsertRefreshRequest(env, refreshBody, overrides, dispatch);
   if (fallback.ok) {
-    return { ok: true, method: "refresh_request", dispatchFailure: dispatch, serpApiAddedCount: enriched.serpApiAddedCount };
+    return { ok: true, method: "refresh_request", dispatchFailure: dispatch, serpApiAddedCount: enriched.serpApiAddedCount, serpApiRawCount: enriched.serpApiRawCount };
   }
 
   return {
@@ -699,6 +736,7 @@ export default {
           method: result.method || null,
           workflowFile: result.workflowFile || null,
           serpApiAddedCount: result.serpApiAddedCount || 0,
+          serpApiRawCount: result.serpApiRawCount || 0,
           scrapedCount: 0,
           totalSaved: 0,
           refreshError: result.ok ? null : (result.error || result.details || "Onbekende fout")
@@ -731,6 +769,7 @@ export default {
         method: result.method,
         workflowFile: result.workflowFile || null,
         serpApiAddedCount: result.serpApiAddedCount || 0,
+        serpApiRawCount: result.serpApiRawCount || 0,
         scrapedCount: null,
         totalSaved: null
       }, 200);

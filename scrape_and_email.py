@@ -15,6 +15,8 @@ INPUT_SITES_RAW = os.getenv("INPUT_SITES", "[]").strip() or "[]"
 INPUT_DATE_FROM = os.getenv("INPUT_DATE_FROM", "").strip()
 INPUT_DATE_TO = os.getenv("INPUT_DATE_TO", "").strip()
 INPUT_CLEAR_ARCHIVE = os.getenv("INPUT_CLEAR_ARCHIVE", "").strip().lower() in {"1", "true", "yes", "ja"}
+INPUT_SERPAPI_LINKS_RAW = os.getenv("INPUT_SERPAPI_LINKS", "[]").strip() or "[]"
+INPUT_SERPAPI_RAW_LOG = os.getenv("INPUT_SERPAPI_RAW_LOG", "[]").strip() or "[]"
 BASE_HEADERS = {"User-Agent": "Mozilla/5.0"}
 
 
@@ -29,6 +31,7 @@ def env_int(name, default, minimum, maximum):
 MAX_EVENTS_PER_SITE = env_int("INPUT_MAX_EVENTS_PER_SITE", 20, 20, 100)
 SITE_TIME_LIMIT_SECONDS = env_int("INPUT_SITE_TIME_LIMIT_SECONDS", 20, 20, 60)
 SITE_RESULTS = []
+RAW_DATA_ROWS = []
 MONTHS = "januari|februari|maart|april|mei|juni|juli|augustus|september|oktober|november|december|jan|feb|mrt|apr|jun|jul|aug|sep|sept|okt|nov|dec|january|february|march|april|may|june|july|august|september|october|november|december"
 DATE_RE = re.compile(rf"^\d{{1,2}}(?:\s+t/m\s+\d{{1,2}})?\s+(?:{MONTHS})$", re.I)
 DATE_IN_TEXT_RE = re.compile(rf"\b\d{{1,2}}(?:\s+t/m\s+\d{{1,2}})?\s+(?:{MONTHS})(?:\s+20\d{{2}})?\b", re.I)
@@ -128,6 +131,30 @@ MONTH_NUMBERS = {
 def log(message):
     with open(LOG_FILE, "a", encoding="utf-8") as f:
         f.write(f"{datetime.now().strftime('%Y-%m-%d %H:%M:%S')} - {message}\n")
+
+
+def parse_json_list(raw):
+    try:
+        data = json.loads(raw)
+        return data if isinstance(data, list) else []
+    except Exception:
+        return []
+
+
+def add_raw_row(source, site, title="", date="", url="", status="", raw_text=""):
+    if len(RAW_DATA_ROWS) >= 350:
+        return
+    RAW_DATA_ROWS.append(
+        {
+            "source": clean_text(source)[:80],
+            "site": clean_text(site)[:180],
+            "title": clean_text(title)[:180],
+            "date": clean_text(date)[:40],
+            "url": clean_text(url)[:300],
+            "status": clean_text(status)[:80],
+            "rawText": clean_text(raw_text)[:360],
+        }
+    )
 
 
 def clean_text(value):
@@ -502,7 +529,7 @@ def normalize_event(event):
     date = normalize_date_value(event.get("date"))
     return {
         "title": title,
-        "type": clean_text(event.get("type")) or "evenement",
+        "type": format_event_title(clean_text(event.get("type")) or "evenement"),
         "date": date,
         "time": clean_text(event.get("time")),
         "location": location,
@@ -744,8 +771,7 @@ def event_from_detail_page(detail_url, fallback_title, deadline=None):
         if not description:
             description = text[:220]
         image = first_meta(soup, ["og:image", "twitter:image"])
-
-        return normalize_event(
+        item = normalize_event(
             {
                 "title": title,
                 "type": "evenement",
@@ -759,6 +785,8 @@ def event_from_detail_page(detail_url, fallback_title, deadline=None):
                 "periodLabel": date,
             }
         )
+        add_raw_row("Detailpagina", detail_url, item.get("title"), item.get("date"), detail_url, "event", text[:320])
+        return item
     except requests.exceptions.RequestException as exc:
         log(f"Detailpagina overgeslagen {detail_url}: {exc}")
     except Exception as exc:
@@ -834,11 +862,14 @@ def events_from_spot_listing(soup, site_url):
         text = clean_text(anchor.get_text(" ", strip=True))
         match = SPOT_LISTING_RE.match(text)
         if not match:
+            if text:
+                add_raw_row("Website", site_url, slug_title_from_url(absolute), "", absolute, "niet herkend", text)
             continue
 
         date = normalize_date_value(f"{match.group(2)} {match.group(3)}")
         title = spot_title_from_text(match.group(4), absolute)
         if not title:
+            add_raw_row("Website", site_url, "", date, absolute, "geen titel", text)
             continue
 
         item = normalize_event(
@@ -856,6 +887,9 @@ def events_from_spot_listing(soup, site_url):
         )
         if is_valid_event(item):
             events.append(item)
+            add_raw_row("Website", site_url, item.get("title"), item.get("date"), absolute, "event", text)
+        else:
+            add_raw_row("Website", site_url, title, date, absolute, "afgekeurd", text)
         if len(events) >= MAX_EVENTS_PER_SITE:
             break
 
@@ -1139,6 +1173,7 @@ def scrape_structured_site(site_url):
             log(f"Websitepagina overgeslagen {page_url}: {exc}")
             continue
 
+        add_raw_row("Website", site_url, page_title(soup), "", page_url, "pagina geladen", clean_text(soup.get_text(" ", strip=True))[:320])
         before = len(events)
         for script in soup.find_all("script", type=lambda value: value and "ld+json" in value):
             try:
@@ -1157,6 +1192,7 @@ def scrape_structured_site(site_url):
 
         host = site_host(page_url)
         if "spotgroningen.nl" in host:
+            link_candidates.extend(candidate_event_links(soup, page_url))
             source_events = events_from_spot_listing(soup, page_url)
             events.extend(source_events)
             if not source_events and is_detail_event_url(page_url):
@@ -1164,6 +1200,7 @@ def scrape_structured_site(site_url):
                 if item and is_valid_event(item):
                     events.append(item)
         elif "vera-groningen.nl" in host:
+            link_candidates.extend(candidate_event_links(soup, page_url))
             source_events = events_from_vera_listing(soup, page_url)
             events.extend(source_events)
             if not source_events and is_detail_event_url(page_url):
@@ -1386,6 +1423,7 @@ def save_events_to_json(active_events, archive):
         "events": active_events,
         "archive": archive,
         "siteResults": public_site_results(),
+        "rawLog": RAW_DATA_ROWS,
     }
     with open(DATA_FILE, "w", encoding="utf-8") as f:
         json.dump(payload, f, ensure_ascii=False, indent=2)
@@ -1401,6 +1439,21 @@ def main():
 
     previous_active, previous_archive = ([], []) if INPUT_CLEAR_ARCHIVE else load_existing_events()
     extra_sites = parse_input_sites()
+    serpapi_links = normalize_site_list(parse_json_list(INPUT_SERPAPI_LINKS_RAW))
+    for row in parse_json_list(INPUT_SERPAPI_RAW_LOG):
+        if isinstance(row, dict):
+            add_raw_row(
+                "SerpAPI",
+                row.get("site", ""),
+                row.get("title", ""),
+                row.get("date", ""),
+                row.get("url", ""),
+                row.get("status", ""),
+                row.get("rawText") or row.get("snippet", ""),
+            )
+    if serpapi_links:
+        log(f"SerpAPI detailpagina's toegevoegd: {len(serpapi_links)}")
+        extra_sites = normalize_site_list(extra_sites + serpapi_links)
     if extra_sites:
         log(f"Alleen geselecteerde websites worden gescand: {len(extra_sites)}")
         scraped = scrape_extra_sites(extra_sites)

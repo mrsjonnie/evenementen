@@ -101,6 +101,51 @@
       align-items: center;
     }
 
+    .rawLogPanel {
+      margin-top: 10px;
+      border: 1px solid rgba(255, 255, 255, .2);
+      border-radius: 8px;
+      background: rgba(8, 18, 28, .58);
+      overflow: hidden;
+    }
+
+    .rawLogPanel summary {
+      cursor: pointer;
+      padding: 9px 10px;
+      color: rgba(255, 255, 255, .9);
+      font-size: .8rem;
+      font-weight: 950;
+    }
+
+    .rawLogTableWrap {
+      overflow-x: auto;
+      border-top: 1px solid rgba(255, 255, 255, .14);
+    }
+
+    .rawLogTable {
+      width: 100%;
+      min-width: 760px;
+      border-collapse: collapse;
+      font-size: .75rem;
+      color: rgba(255, 255, 255, .86);
+    }
+
+    .rawLogTable th,
+    .rawLogTable td {
+      padding: 7px 8px;
+      border-bottom: 1px solid rgba(255, 255, 255, .1);
+      text-align: left;
+      vertical-align: top;
+    }
+
+    .rawLogTable th {
+      color: #d7f5ff;
+      background: rgba(255, 255, 255, .06);
+      white-space: nowrap;
+    }
+
+    .rawLogTable a { color: #bdefff; font-weight: 900; }
+
     .subtitle {
       margin: 8px 0 0;
       max-width: 760px;
@@ -117,6 +162,11 @@
       max-width: 560px;
     }
 
+    .weatherBreak {
+      flex-basis: 100%;
+      height: 0;
+    }
+
     .versionBadge {
       display: inline-flex;
       border: 1px solid rgba(255, 255, 255, .32);
@@ -131,28 +181,28 @@
     .scanSettings {
       display: inline-flex;
       flex-wrap: wrap;
-      gap: 7px;
+      gap: 5px;
       align-items: center;
     }
 
     .scanSetting {
       display: inline-flex;
       align-items: center;
-      gap: 5px;
+      gap: 4px;
       border: 1px solid rgba(255, 255, 255, .28);
       border-radius: 999px;
-      padding: 4px 8px;
+      padding: 3px 6px;
       background: rgba(255, 255, 255, .1);
       color: rgba(255, 255, 255, .88);
-      font-size: .75rem;
+      font-size: .72rem;
       font-weight: 900;
     }
 
     .scanSetting input {
-      width: 48px;
+      width: 34px;
       border: 0;
       border-radius: 999px;
-      padding: 3px 6px;
+      padding: 2px 4px;
       background: rgba(255, 255, 255, .95);
       color: #102033;
       font: inherit;
@@ -604,6 +654,11 @@
     .grid.cardsCollapsed .cardActions,
     .grid.cardsCollapsed .routePanel { display: none; }
 
+    .grid.cardsCollapsed .card.expanded .details { display: grid; }
+    .grid.cardsCollapsed .card.expanded .desc { display: block; }
+    .grid.cardsCollapsed .card.expanded .cardActions { display: flex; }
+    .grid.cardsCollapsed .card.expanded .routePanel.open { display: block; }
+
     .typeHeader {
       min-height: 74px;
       background: var(--surface-soft) center/cover;
@@ -682,6 +737,19 @@
       font-size: 1.05rem;
       line-height: 1.25;
     }
+
+    .titleButton {
+      width: 100%;
+      border: 0;
+      padding: 0;
+      background: transparent;
+      color: inherit;
+      font: inherit;
+      text-align: left;
+      cursor: pointer;
+    }
+
+    .titleButton:hover { color: var(--primary-dark); }
 
     .details {
       display: grid;
@@ -767,19 +835,22 @@
     }
 
     .radarTile {
-      width: 100%;
+      display: block;
+      width: min(100%, 420px);
       border: 1px solid rgba(255, 255, 255, .24);
       border-radius: var(--radius);
       overflow: hidden;
       background: rgba(8, 18, 28, .78);
       text-decoration: none;
+      margin-top: 10px;
     }
 
     .radarTile img {
       display: block;
       width: 100%;
-      max-height: 220px;
-      object-fit: cover;
+      aspect-ratio: 16 / 9;
+      object-fit: contain;
+      background: #0b1118;
     }
 
     .radarTile span {
@@ -893,6 +964,10 @@
               <label class="scanSetting" for="siteTimeLimitSeconds">Sec/site <input id="siteTimeLimitSeconds" type="number" min="20" max="60" step="1" value="20" inputmode="numeric"></label>
             </div>
           </div>
+          <details class="rawLogPanel" id="rawLogPanel">
+            <summary id="rawLogSummary">Ruwe verversdata</summary>
+            <div class="rawLogTableWrap" id="rawLogTableWrap"></div>
+          </details>
         </div>
       </div>
       <div class="weather" id="weatherBox" aria-live="polite"></div>
@@ -934,6 +1009,7 @@
           <select id="periodMode">
             <option value="today">Vandaag</option>
             <option value="tomorrow">Morgen</option>
+            <option value="specificDay">Specifieke dag</option>
             <option value="always">Altijd</option>
             <option value="thisWeekend">Dit weekend</option>
             <option value="nextWeekend">Volgend weekend</option>
@@ -954,12 +1030,12 @@
               <span aria-hidden="true">v</span>
             </button>
             <div class="sitePanel">
-              <div class="sitePanelHeader">AI-bronnen zijn uitgezet. SerpAPI mag alleen openbare links helpen vinden.</div>
+              <div class="sitePanelHeader">AI-bronnen blijven uit. SerpAPI kan openbare links zoeken en is aan/uit te zetten.</div>
               <div class="siteList" id="providerList">
                 <label><input class="providerCheck" type="checkbox" id="provPerplexity" disabled> <span>Perplexity uit</span></label>
                 <label><input class="providerCheck" type="checkbox" id="provMistral" disabled> <span>Mistral uit</span></label>
                 <label><input class="providerCheck" type="checkbox" id="provOpenAI" disabled> <span>ChatGPT uit</span></label>
-                <label><input class="providerCheck" type="checkbox" id="provSerpAPI" checked disabled> <span>SerpAPI</span></label>
+                <label><input class="providerCheck" type="checkbox" id="provSerpAPI" checked> <span>SerpAPI</span></label>
               </div>
             </div>
           </div>
@@ -988,7 +1064,7 @@
         <div class="inlineTools">
           <input type="checkbox" id="newOnlyFilter" hidden>
           <button class="btn btnSecondary filterToggle" id="newOnlyToggle" type="button" aria-pressed="false">Alleen nieuw <span id="newCountBadge">0</span></button>
-          <button class="btn btnSecondary" id="collapseBtn" type="button">Inklappen</button>
+          <button class="btn btnSecondary" id="collapseBtn" type="button">Uitklappen</button>
         </div>
         <button class="btn btnDanger" id="clearBtn" type="button">Alles verwijderen</button>
       </div>
@@ -1031,11 +1107,10 @@
   </div>
 
   <script>
-    const APP_VERSION = "2026.06.07.27";
+    const APP_VERSION = "2026.06.07.28";
     const DEFAULT_MAX_EVENTS_PER_SITE = 20;
     const DEFAULT_SITE_TIME_LIMIT_SECONDS = 20;
     const SCAN_SETTINGS_KEY = "eventScanSettingsV1";
-    const SPOT_ONLY_MODE = true;
     const SPOT_ONLY_SITE = "https://www.spotgroningen.nl/programma/";
     const WORKER_URL = "https://evenementen-refresh.mrsjonnie.workers.dev";
     const PER_PAGE_KEY = "evenementenPerPage";
@@ -1085,7 +1160,20 @@
       }
     ];
     const fallbackSites = [
-      SPOT_ONLY_SITE
+      "https://groningen.uitloper.nu/",
+      "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "https://forum.nl/nl/agenda",
+      SPOT_ONLY_SITE,
+      "https://simplon.nl/",
+      "https://www.vera-groningen.nl/",
+      "https://www.martiniplaza.nl/nl/",
+      "https://www.groningermuseum.nl/en/now",
+      "https://www.kultuuragenda.nl/",
+      "https://www.noorderzon.nl/",
+      "https://www.concertgebouw.nl",
+      "https://www.hedon-zwolle.nl",
+      "https://www.paradiso.nl",
+      "https://www.vvvameland.nl/activiteiten-en-evenementen"
     ];
 
     let events = [];
@@ -1093,7 +1181,7 @@
     let customSites = [];
     let filteredEvents = [];
     let newEventKeys = new Set();
-    let cardsCollapsed = false;
+    let cardsCollapsed = true;
     let refreshAbortRequested = false;
     let latestWeatherData = null;
     let currentPage = 1;
@@ -1101,6 +1189,11 @@
     let dateTo = "";
     let eventsUpdatedAt = "";
     let latestSiteResults = [];
+    let latestRawLog = [];
+    let expandedEventKeys = new Set();
+    let dynamicRegionCoord = null;
+    let dynamicRegionKey = "";
+    let regionLookupTimer = null;
 
     const $ = (id) => document.getElementById(id);
     const controls = ["search", "region", "radius", "typeFilter", "dateSingle", "periodMode", "newOnlyFilter"];
@@ -1237,10 +1330,34 @@
     }
 
     function selectedScanSites() {
-      if (SPOT_ONLY_MODE) return [SPOT_ONLY_SITE];
       let selectedSites = [...document.querySelectorAll(".siteCheck:checked")].map((check) => check.value);
       if (!selectedSites.length) selectedSites = sites.slice();
       return selectedSites;
+    }
+
+    function providerSettings() {
+      return {
+        perplexity: false,
+        mistral: false,
+        openai: false,
+        chatgpt: false,
+        serpapi: Boolean($("provSerpAPI")?.checked)
+      };
+    }
+
+    function addDays(dateValue, days) {
+      const date = new Date((dateValue || formatDate(new Date())) + "T00:00:00");
+      date.setDate(date.getDate() + days);
+      return formatDate(date);
+    }
+
+    function refreshDateWindow() {
+      const mode = $("periodMode")?.value || "week";
+      const start = mode === "always" ? formatDate(new Date()) : (dateFrom || $("dateSingle").value || formatDate(new Date()));
+      let end = dateTo || start;
+      const plus14 = addDays(start, 14);
+      if (!end || end < plus14) end = plus14;
+      return { from: start, to: end };
     }
 
     function mergeSites(baseSites, extraSites = []) {
@@ -1386,11 +1503,41 @@
         .trim();
     }
 
+    function currentRegionKey() {
+      return normalizeRouteText($("region")?.value || "Groningen");
+    }
+
     function regionCoord() {
-      const region = normalizeRouteText($("region")?.value || "Groningen");
+      const region = currentRegionKey();
       if (regionCoords[region]) return regionCoords[region];
+      if (dynamicRegionCoord && dynamicRegionKey === region) return dynamicRegionCoord;
       const match = Object.entries(regionCoords).find(([name]) => region.includes(name) || name.includes(region));
       return match ? match[1] : regionCoords.groningen;
+    }
+
+    async function resolveRegionCoord() {
+      const regionLabel = cleanText($("region")?.value || "");
+      const key = currentRegionKey();
+      if (!regionLabel || regionCoords[key] || dynamicRegionKey === key) return;
+      try {
+        const url = `https://nominatim.openstreetmap.org/search?format=json&limit=1&countrycodes=nl&q=${encodeURIComponent(regionLabel)}`;
+        const response = await fetch(url, { headers: { "Accept": "application/json" } });
+        if (!response.ok) return;
+        const data = await response.json();
+        const first = Array.isArray(data) ? data[0] : null;
+        const lat = Number(first?.lat);
+        const lon = Number(first?.lon);
+        if (Number.isFinite(lat) && Number.isFinite(lon)) {
+          dynamicRegionKey = key;
+          dynamicRegionCoord = { lat, lon };
+          applyFilters();
+        }
+      } catch {}
+    }
+
+    function scheduleRegionResolve() {
+      clearTimeout(regionLookupTimer);
+      regionLookupTimer = setTimeout(resolveRegionCoord, 450);
     }
 
     function eventCoords(event) {
@@ -1669,12 +1816,13 @@
     }
 
     function normalizeEventsPayload(data) {
-      if (Array.isArray(data)) return { events: dedupeEvents(data), updatedAt: "", siteResults: [] };
+      if (Array.isArray(data)) return { events: dedupeEvents(data), updatedAt: "", siteResults: [], rawLog: [] };
       if (data && Array.isArray(data.events)) {
         return {
           events: dedupeEvents(data.events),
           updatedAt: cleanText(data.updatedAt || ""),
-          siteResults: Array.isArray(data.siteResults) ? data.siteResults : []
+          siteResults: Array.isArray(data.siteResults) ? data.siteResults : [],
+          rawLog: Array.isArray(data.rawLog) ? data.rawLog : []
         };
       }
       throw new Error("events.json heeft geen geldige lijst");
@@ -1695,7 +1843,7 @@
       try {
         return await fetchEventsPayload();
       } catch {
-        return { events: fallback, updatedAt: "", siteResults: [] };
+        return { events: fallback, updatedAt: "", siteResults: [], rawLog: [] };
       }
     }
 
@@ -1732,6 +1880,14 @@
       return `${count} ${count === 1 ? "nieuw evenement" : "nieuwe evenementen"}`;
     }
 
+    function serpApiStatusText(data) {
+      const rawCount = Number(data?.serpApiRawCount) || 0;
+      const linkCount = Number(data?.serpApiAddedCount) || 0;
+      if (linkCount > 0) return ` SerpAPI vond ${linkCount} extra links (${rawCount} ruwe resultaten).`;
+      if (rawCount > 0) return ` SerpAPI gaf ${rawCount} ruwe resultaten, maar geen extra bruikbare link.`;
+      return "";
+    }
+
     async function waitForUpdatedEvents(previousSignature, previousKeys, foundCount = null, options = {}) {
       const previousUpdatedAt = eventsUpdatedAt;
       const requireEvents = Boolean(options.requireEvents);
@@ -1752,9 +1908,12 @@
             events = freshPayload.events;
             eventsUpdatedAt = freshPayload.updatedAt;
             latestSiteResults = freshPayload.siteResults || [];
+            latestRawLog = freshPayload.rawLog || [];
+            expandedEventKeys = new Set();
             const actualNewCount = rememberNewEvents(events, previousKeys);
             fillTypes();
             renderSites(checkedSites());
+            renderRawLog();
             applyFilters();
             showStatus(refreshLoadedMessage(actualNewCount), "ok");
             setTimeout(hideStatus, 4000);
@@ -1769,6 +1928,12 @@
       const prefix = Number.isFinite(foundCount) ? `${foundText(foundCount)} gevonden.` : foundText(foundCount) + ".";
       showStatus(`${prefix} De lijst is nog hetzelfde. Kies eventueel meer websites en probeer opnieuw.`, "warn");
       return false;
+    }
+
+    function displayType(value) {
+      const text = cleanText(value || "Activiteit");
+      if (!text) return "Activiteit";
+      return text.charAt(0).toUpperCase() + text.slice(1);
     }
 
     function fillTypes() {
@@ -1792,7 +1957,7 @@
         if (radiusKm > 0 && Number.isFinite(eventKm) && eventKm > radiusKm) return false;
         return true;
       });
-      const types = [...new Set(activeEvents.map((event) => (event.type || "").trim()).filter(Boolean))]
+      const types = [...new Set(activeEvents.map((event) => displayType(event.type || "").trim()).filter(Boolean))]
         .sort((a, b) => a.localeCompare(b, "nl"));
 
       $("typeFilter").innerHTML = [
@@ -1817,7 +1982,7 @@
     }
 
     function renderSites(selected = null) {
-      const selectedSites = selected || new Set(sites);
+      const selectedSites = selected || new Set([SPOT_ONLY_SITE]);
       $("sitesList").innerHTML = sites.map((site) => `
         ${(() => {
           const result = siteResultFor(site);
@@ -1828,12 +1993,58 @@
             ? `<span class="siteResultBadge">${newCount > 0 ? `(+${newCount})` : `(${count})`}${result.timedOut ? " tijdslimiet" : ""}</span>`
             : "";
           return `<label class="${hasResult ? "siteFound" : ""}">
-          <input class="siteCheck" type="checkbox" value="${escapeHtml(site)}"${SPOT_ONLY_MODE || selectedSites.has(site) ? " checked" : ""}${SPOT_ONLY_MODE ? " disabled" : ""}>
+          <input class="siteCheck" type="checkbox" value="${escapeHtml(site)}"${selectedSites.has(site) ? " checked" : ""}>
           <span>${badge}${escapeHtml(site)}</span>
         </label>`;
         })()}
       `).join("");
       updateSiteCount();
+    }
+
+    function renderRawLog() {
+      const showSerpApi = Boolean($("provSerpAPI")?.checked);
+      const rows = (latestRawLog || [])
+        .filter((row) => showSerpApi || cleanText(row.source).toLowerCase() !== "serpapi")
+        .slice(0, 160);
+      const summary = $("rawLogSummary");
+      const wrap = $("rawLogTableWrap");
+      if (!summary || !wrap) return;
+      summary.textContent = rows.length ? `Ruwe verversdata (${rows.length} regels)` : "Ruwe verversdata (nog leeg)";
+      if (!rows.length) {
+        wrap.innerHTML = '<div class="routePanelText">Nog geen ruwe verversdata beschikbaar. Ververs de lijst om dit te vullen.</div>';
+        return;
+      }
+
+      wrap.innerHTML = `
+        <table class="rawLogTable">
+          <thead>
+            <tr>
+              <th>Bron</th>
+              <th>Website</th>
+              <th>Titel</th>
+              <th>Datum</th>
+              <th>Status</th>
+              <th>Ruwe tekst / link</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${rows.map((row) => {
+              const url = safeUrl(row.url, { website: true });
+              const rawText = cleanText(row.rawText || row.snippet || row.url || "").slice(0, 220);
+              return `
+                <tr>
+                  <td>${escapeHtml(row.source || "Website")}</td>
+                  <td>${escapeHtml(row.site || "")}</td>
+                  <td>${escapeHtml(row.title || "")}</td>
+                  <td>${escapeHtml(row.date || "")}</td>
+                  <td>${escapeHtml(row.status || "")}</td>
+                  <td>${url ? `<a href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(rawText || url)}</a>` : escapeHtml(rawText)}</td>
+                </tr>
+              `;
+            }).join("")}
+          </tbody>
+        </table>
+      `;
     }
 
     function updateSiteCount() {
@@ -1845,12 +2056,6 @@
     }
 
     function addCustomSite() {
-      if (SPOT_ONLY_MODE) {
-        $("newSiteInput").value = "";
-        showStatus("Testmodus actief: voorlopig wordt alleen SPOT Groningen gescand.", "warn");
-        return;
-      }
-
       const input = $("newSiteInput");
       const normalized = normalizeSiteInput(input.value);
       if (!normalized) {
@@ -1885,6 +2090,7 @@
 
     function periodSubtitle() {
       if ($("periodMode").value === "always") return "Altijd";
+      if ($("periodMode").value === "specificDay") return `Specifieke dag: ${prettyDate(dateFrom)}`;
       return `${prettyDate(dateFrom)} t/m ${prettyDate(dateTo)}`;
     }
 
@@ -1912,7 +2118,7 @@
         ].join(" ").toLowerCase();
 
         if (query && !haystack.includes(query)) return false;
-        if (type !== "all" && (event.type || "").toLowerCase() !== type) return false;
+        if (type !== "all" && displayType(event.type || "").toLowerCase() !== type) return false;
         if (newOnly && !isNewEvent(event)) return false;
         const eventKm = eventDistanceKm(event);
         if (radiusKm > 0 && Number.isFinite(eventKm) && eventKm > radiusKm) return false;
@@ -1964,9 +2170,11 @@
 
     function renderCard(event) {
       const title = escapeHtml(event.title || "Naam onbekend");
-      const type = cleanText(event.type || "Activiteit");
+      const type = displayType(event.type || "Activiteit");
       const image = typeImage(type, event.image);
       const website = safeUrl(event.website, { website: true });
+      const cardKey = eventDedupeKey(event);
+      const expanded = expandedEventKeys.has(cardKey);
       const route = routeUrl(event);
       const routeDestinationText = routeDestination(event);
       const routeContext = routeContextLabel(event);
@@ -1988,7 +2196,7 @@
         : "";
 
       return `
-        <article class="card ${isNew ? "isNew" : ""}">
+        <article class="card ${isNew ? "isNew" : ""} ${expanded ? "expanded" : ""}">
           ${typeHeader}
           <div class="cardBody">
             <div class="badges">
@@ -1996,7 +2204,7 @@
               ${sourceTag}
               <span class="tag tagAccent">${escapeHtml(dateLabel)}</span>
             </div>
-            <h2 class="title">${title}</h2>
+            <h2 class="title"><button class="titleButton" type="button" data-event-key="${escapeHtml(cardKey)}" aria-expanded="${expanded ? "true" : "false"}">${title}</button></h2>
             <div class="details">
               <div class="detail"><span>Datum</span><span>${escapeHtml(prettyDate(event.date))}${event.time ? ` - ${escapeHtml(event.time)}` : ""}</span></div>
               <div class="detail"><span>Plaats</span><span>${locationUrl ? `<a href="${escapeHtml(locationUrl)}" target="_blank" rel="noopener noreferrer">${locationLabel}</a>` : locationLabel}</span></div>
@@ -2116,13 +2324,13 @@
         const weatherItems = [
           { label: `${data.summary} (${data.days} dagen)`, topic: "weersverwachting" },
           { label: `${data.tempMin} graden - ${data.tempMax} graden`, topic: "temperatuur" },
-          { label: `Regen ${data.rainChance}%`, topic: "regenradar" },
+          { label: `Regen ${data.rainChance}%`, topic: "regenradar", breakBefore: true },
           { label: `Wind ${data.windMax} km/u - ${data.rainTotalMM} mm regen`, topic: "wind neerslag" },
           { label: `UV ${data.uvMax}`, topic: "zonkracht" }
         ];
 
         $("weatherBox").innerHTML = `
-          ${weatherItems.map((item) => `<button class="pill weatherToggle" type="button" data-topic="${escapeHtml(item.topic)}" data-label="${escapeHtml(item.label)}">${escapeHtml(item.label)}</button>`).join("")}
+          ${weatherItems.map((item) => `${item.breakBefore ? '<span class="weatherBreak" aria-hidden="true"></span>' : ""}<button class="pill weatherToggle" type="button" data-topic="${escapeHtml(item.topic)}" data-label="${escapeHtml(item.label)}">${escapeHtml(item.label)}</button>`).join("")}
           <div class="weatherPanel" id="weatherPanel"></div>
         `;
       } catch {
@@ -2154,6 +2362,7 @@
 
       const scanSettings = saveScanSettings();
       const selectedSites = selectedScanSites();
+      const refreshWindow = refreshDateWindow();
       const category = $("typeFilter").value === "all" ? "" : $("typeFilter").value;
       showStatus(`Nieuwe evenementen ophalen bij ${selectedSites.length} van ${sites.length || selectedSites.length} websites...`, "warn");
       const payload = {
@@ -2161,19 +2370,13 @@
         radius: $("radius").value,
         query: $("search").value.trim(),
         category,
-        dateFrom,
-        dateTo,
+        dateFrom: refreshWindow.from,
+        dateTo: refreshWindow.to,
         minResults: scanSettings.maxEventsPerSite,
         maxEventsPerSite: scanSettings.maxEventsPerSite,
         siteTimeLimitSeconds: scanSettings.siteTimeLimitSeconds,
         sites: selectedSites,
-        providers: {
-          perplexity: false,
-          mistral: false,
-          openai: false,
-          chatgpt: false,
-          serpapi: true
-        }
+        providers: providerSettings()
       };
 
       try {
@@ -2203,7 +2406,7 @@
         if (!response.ok) throw new Error(workerErrorMessage(data, "Verversen is mislukt"));
 
         const prefix = Number.isFinite(foundCount) ? `${foundText(foundCount)} gevonden.` : foundText(foundCount) + ".";
-        const serpText = Number(data?.serpApiAddedCount) > 0 ? ` SerpAPI vond ${Number(data.serpApiAddedCount)} extra links.` : "";
+        const serpText = serpApiStatusText(data);
         showStatus(`Klaar. ${prefix}${serpText} Ik controleer de bijgewerkte lijst.`, "ok", { stop: true });
         await waitForUpdatedEvents(previousSignature, previousKeys, foundCount);
       } catch (error) {
@@ -2253,6 +2456,7 @@
       updateDateRange();
       const button = $("clearBtn");
       const scanSettings = saveScanSettings();
+      const refreshWindow = refreshDateWindow();
       const previousSignature = eventSignature(events);
       const previousKeys = eventKeySet(events);
       refreshAbortRequested = false;
@@ -2270,13 +2474,13 @@
             radius: $("radius").value,
             query: $("search").value.trim(),
             category: $("typeFilter").value === "all" ? "" : $("typeFilter").value,
-            dateFrom,
-            dateTo,
+            dateFrom: refreshWindow.from,
+            dateTo: refreshWindow.to,
             minResults: scanSettings.maxEventsPerSite,
             maxEventsPerSite: scanSettings.maxEventsPerSite,
             siteTimeLimitSeconds: scanSettings.siteTimeLimitSeconds,
             sites: selectedScanSites(),
-            providers: { perplexity: false, mistral: false, openai: false, chatgpt: false, serpapi: true }
+            providers: providerSettings()
           })
         });
         const data = await response.json().catch(() => ({}));
@@ -2288,11 +2492,13 @@
           events = [];
           eventsUpdatedAt = "";
           latestSiteResults = [];
+          latestRawLog = [];
           fillTypes();
           renderSites(checkedSites());
+          renderRawLog();
           applyFilters();
         }
-        const serpText = Number(data?.serpApiAddedCount) > 0 ? ` SerpAPI vond ${Number(data.serpApiAddedCount)} extra links.` : "";
+        const serpText = serpApiStatusText(data);
         showStatus(`Alles is verwijderd.${serpText} Ik controleer de opnieuw opgebouwde lijst.`, "ok");
         await waitForUpdatedEvents(previousSignature, previousKeys, scrapedCountFromResponse(data), { requireEvents: true });
       } catch (error) {
@@ -2312,6 +2518,7 @@
       $("provPerplexity").checked = false;
       $("provMistral").checked = false;
       $("provOpenAI").checked = false;
+      $("provSerpAPI").checked = true;
       document.querySelectorAll(".siteCheck").forEach((check) => { check.checked = true; });
       updateSiteCount();
       updateProviderCount();
@@ -2323,6 +2530,7 @@
 
     function toggleCardsCollapsed() {
       cardsCollapsed = !cardsCollapsed;
+      expandedEventKeys = new Set();
       $("collapseBtn").textContent = cardsCollapsed ? "Uitklappen" : "Inklappen";
       render();
     }
@@ -2339,7 +2547,9 @@
       events = loaded[0].events;
       eventsUpdatedAt = loaded[0].updatedAt;
       latestSiteResults = loaded[0].siteResults || [];
-      sites = SPOT_ONLY_MODE ? [SPOT_ONLY_SITE] : mergeSites(loaded[1], customSites);
+      latestRawLog = loaded[0].rawLog || [];
+      expandedEventKeys = new Set();
+      sites = mergeSites(loaded[1], customSites);
       applyScanSettings();
       const currentKeys = eventKeySet(events);
       const detectedNew = knownKeys.size ? [...currentKeys].filter((key) => !knownKeys.has(key)) : [];
@@ -2349,6 +2559,7 @@
 
       fillTypes();
       renderSites();
+      renderRawLog();
       updateProviderCount();
       applyFilters();
       loadWeather();
@@ -2357,9 +2568,11 @@
     controls.forEach((id) => {
       $(id).addEventListener("input", () => {
         applyFilters();
+        if (id === "region") scheduleRegionResolve();
       });
       $(id).addEventListener("change", () => {
         applyFilters();
+        if (id === "region") scheduleRegionResolve();
         if (["region", "dateSingle", "periodMode"].includes(id)) loadWeather();
       });
     });
@@ -2395,15 +2608,27 @@
       setBusy($("clearBtn"), false);
       showStatus("Controle gestopt. De update kan nog doorlopen; probeer straks opnieuw.", "warn");
     });
+    $("grid").addEventListener("click", (event) => {
+      const button = event.target.closest(".titleButton");
+      if (!button) return;
+      const key = button.dataset.eventKey || "";
+      if (!key) return;
+      if (expandedEventKeys.has(key)) {
+        expandedEventKeys.delete(key);
+      } else {
+        expandedEventKeys.add(key);
+      }
+      render();
+    });
     $("prevPage").addEventListener("click", () => { currentPage -= 1; render(); window.scrollTo({ top: 0, behavior: "smooth" }); });
     $("nextPage").addEventListener("click", () => { currentPage += 1; render(); window.scrollTo({ top: 0, behavior: "smooth" }); });
     $("allSitesBtn").addEventListener("click", () => { document.querySelectorAll(".siteCheck").forEach((check) => { check.checked = true; }); updateSiteCount(); });
-    $("noSitesBtn").addEventListener("click", () => {
-      document.querySelectorAll(".siteCheck").forEach((check) => { check.checked = SPOT_ONLY_MODE; });
-      updateSiteCount();
-    });
+    $("noSitesBtn").addEventListener("click", () => { document.querySelectorAll(".siteCheck").forEach((check) => { check.checked = false; }); updateSiteCount(); });
     $("sitesList").addEventListener("change", updateSiteCount);
-    $("providerList").addEventListener("change", updateProviderCount);
+    $("providerList").addEventListener("change", () => {
+      updateProviderCount();
+      renderRawLog();
+    });
     $("addSiteBtn").addEventListener("click", addCustomSite);
     $("newSiteInput").addEventListener("keydown", (event) => {
       if (event.key === "Enter") {

@@ -47,6 +47,14 @@ on:
         description: AI-bronnen als JSON
         required: false
         default: '{}'
+      serpApiLinks:
+        description: Door SerpAPI gevonden links als JSON-lijst
+        required: false
+        default: '[]'
+      serpApiRawLog:
+        description: Ruwe SerpAPI-resultaten als JSON-lijst
+        required: false
+        default: '[]'
       clearArchive:
         description: Leeg actieve data en archief voor het scrapen
         required: false
@@ -97,6 +105,8 @@ jobs:
               "siteTimeLimitSeconds": "20",
               "sites": "[]",
               "providers": "{}",
+              "serpApiLinks": "[]",
+              "serpApiRawLog": "[]",
               "clearArchive": "false",
           }
 
@@ -128,6 +138,8 @@ jobs:
               "siteTimeLimitSeconds": "INPUT_SITE_TIME_LIMIT_SECONDS",
               "sites": "INPUT_SITES",
               "providers": "INPUT_PROVIDERS",
+              "serpApiLinks": "INPUT_SERPAPI_LINKS",
+              "serpApiRawLog": "INPUT_SERPAPI_RAW_LOG",
               "clearArchive": "INPUT_CLEAR_ARCHIVE",
           }
 
