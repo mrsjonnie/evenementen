@@ -1,0 +1,18 @@
+{
+  "requestedAt": "2026-06-07T09:20:01.862Z",
+  "trigger": "refresh",
+  "dispatchFallback": {
+    "status": 422,
+    "details": "{\"message\":\"Workflow does not have 'workflow_dispatch' trigger\",\"documentation_url\":\"https://docs.github.com/rest/actions/workflows#create-a-workflow-dispatch-event\",\"status\":\"422\"}"
+  },
+  "region": "Groningen",
+  "radius": "100",
+  "category": "all",
+  "query": "",
+  "dateFrom": "2026-06-07",
+  "dateTo": "2026-06-12",
+  "minResults": "20",
+  "sites": "[\"https://www.vera-groningen.nl\"]",
+  "providers": "{}",
+  "clearArchive": "false"
+}
