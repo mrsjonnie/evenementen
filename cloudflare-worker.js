@@ -91,6 +91,7 @@ const commonPaths = [
   "/program",
   "/activiteiten",
   "/activiteiten/agenda",
+  "/activiteiten-en-evenementen",
   "/calendar",
   "/kalender",
   "/whats-on",
