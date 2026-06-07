@@ -2,6 +2,47 @@ name: Update evenementen
 
 on:
   workflow_dispatch:
+    inputs:
+      region:
+        description: Regio om te scannen
+        required: false
+        default: Groningen
+      radius:
+        description: Straal in km
+        required: false
+        default: '200'
+      category:
+        description: Type activiteit
+        required: false
+        default: all
+      query:
+        description: Zoekterm
+        required: false
+        default: ''
+      dateFrom:
+        description: Startdatum
+        required: false
+        default: ''
+      dateTo:
+        description: Einddatum
+        required: false
+        default: ''
+      minResults:
+        description: Minimum aantal resultaten
+        required: false
+        default: '20'
+      sites:
+        description: Extra websites als JSON-lijst
+        required: false
+        default: '[]'
+      providers:
+        description: AI-bronnen als JSON
+        required: false
+        default: '{}'
+      clearArchive:
+        description: Leeg actieve data en archief voor het scrapen
+        required: false
+        default: 'false'
   schedule:
     # Vrijdagochtend Nederlandse tijd: 08:00 zomertijd, 07:00 wintertijd.
     - cron: '0 6 * * 5'
@@ -29,7 +70,16 @@ jobs:
 
       - name: Run scraper
         env:
-          INPUT_REGION: Groningen
+          INPUT_REGION: ${{ github.event.inputs.region || 'Groningen' }}
+          INPUT_RADIUS: ${{ github.event.inputs.radius || '200' }}
+          INPUT_CATEGORY: ${{ github.event.inputs.category || 'all' }}
+          INPUT_QUERY: ${{ github.event.inputs.query || '' }}
+          INPUT_DATE_FROM: ${{ github.event.inputs.dateFrom || '' }}
+          INPUT_DATE_TO: ${{ github.event.inputs.dateTo || '' }}
+          INPUT_MIN_RESULTS: ${{ github.event.inputs.minResults || '20' }}
+          INPUT_SITES: ${{ github.event.inputs.sites || '[]' }}
+          INPUT_PROVIDERS: ${{ github.event.inputs.providers || '{}' }}
+          INPUT_CLEAR_ARCHIVE: ${{ github.event.inputs.clearArchive || 'false' }}
         run: python scrape_and_email.py
 
       - name: Commit updated files

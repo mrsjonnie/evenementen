@@ -53,7 +53,7 @@
     }
 
     .heroInner {
-      max-width: 1180px;
+      max-width: 1360px;
       margin: 0 auto;
       padding: 24px 16px 22px;
       display: grid;
@@ -129,7 +129,7 @@
     .weatherPanel a { color: #bdefff; font-weight: 950; }
 
     main {
-      max-width: 1180px;
+      max-width: 1360px;
       margin: 0 auto;
       padding: 16px 16px 44px;
     }
@@ -373,13 +373,20 @@
       font-weight: 750;
     }
 
+    .summaryControls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+    }
+
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 14px;
     }
 
-    @media (min-width: 1180px) {
+    @media (min-width: 1340px) {
       .grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
     }
 
@@ -393,6 +400,18 @@
       display: flex;
       flex-direction: column;
     }
+
+    .card.isNew {
+      border-color: rgba(114, 214, 161, .72);
+      box-shadow: 0 14px 32px rgba(48, 172, 112, .18);
+    }
+
+    .grid.cardsCollapsed .typeHeader { min-height: 48px; }
+    .grid.cardsCollapsed .cardBody { padding: 10px; gap: 7px; }
+    .grid.cardsCollapsed .details,
+    .grid.cardsCollapsed .desc,
+    .grid.cardsCollapsed .cardActions,
+    .grid.cardsCollapsed .routePanel { display: none; }
 
     .typeHeader {
       min-height: 74px;
@@ -461,6 +480,11 @@
       color: var(--accent);
     }
 
+    .tagNew {
+      background: #153923;
+      color: var(--good);
+    }
+
     .title {
       margin: 0;
       color: var(--ink);
@@ -487,6 +511,14 @@
       overflow-wrap: anywhere;
     }
 
+    .detail a {
+      color: var(--primary-dark);
+      font-weight: 900;
+      text-decoration: none;
+    }
+
+    .detail a:hover { text-decoration: underline; }
+
     .desc {
       margin: 0;
       color: var(--muted);
@@ -510,6 +542,61 @@
       color: var(--muted);
       font-weight: 850;
       font-size: .86rem;
+    }
+
+    .routePanel {
+      display: none;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #101925;
+      overflow: hidden;
+    }
+
+    .routePanel.open { display: block; }
+
+    .routePanelText {
+      padding: 10px 12px;
+      color: var(--muted);
+      font-size: .88rem;
+      font-weight: 800;
+      line-height: 1.45;
+    }
+
+    .routePanel iframe {
+      display: block;
+      width: 100%;
+      height: 260px;
+      border: 0;
+      background: #0b1118;
+    }
+
+    .routePanel a {
+      color: var(--primary-dark);
+      font-weight: 950;
+    }
+
+    .radarTile {
+      width: 100%;
+      border: 1px solid rgba(255, 255, 255, .24);
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: rgba(8, 18, 28, .78);
+      text-decoration: none;
+    }
+
+    .radarTile img {
+      display: block;
+      width: 100%;
+      max-height: 220px;
+      object-fit: cover;
+    }
+
+    .radarTile span {
+      display: block;
+      padding: 8px 10px;
+      color: rgba(255, 255, 255, .9);
+      font-size: .82rem;
+      font-weight: 900;
     }
 
     .empty {
@@ -608,7 +695,8 @@
         <div class="field">
           <label for="periodMode">Periode</label>
           <select id="periodMode">
-            <option value="day">Alleen deze dag</option>
+            <option value="today">Vandaag</option>
+            <option value="tomorrow">Morgen</option>
             <option value="thisWeekend">Dit weekend</option>
             <option value="nextWeekend">Volgend weekend</option>
             <option value="week" selected>7 dagen</option>
@@ -664,10 +752,14 @@
       <div class="status" id="status" aria-live="polite"></div>
     </section>
 
-    <div class="summary">
-      <strong id="count">Evenementen laden...</strong>
-      <span id="metaInfo">Een moment geduld</span>
-    </div>
+      <div class="summary">
+        <strong id="count">Evenementen laden...</strong>
+        <div class="summaryControls">
+          <label class="check"><input type="checkbox" id="newOnlyFilter"> Alleen nieuw <span id="newCountBadge">0</span></label>
+          <button class="btn btnSecondary" id="collapseBtn" type="button">Inklappen</button>
+          <span id="metaInfo">Een moment geduld</span>
+        </div>
+      </div>
 
     <section class="grid" id="grid" aria-live="polite"></section>
 
@@ -679,7 +771,7 @@
   </main>
 
   <script>
-    const APP_VERSION = "2026.06.07.6";
+    const APP_VERSION = "2026.06.07.7";
     const WORKER_URL = "https://evenementen-refresh.mrsjonnie.workers.dev";
     const eventsPerPage = 9;
     const typeImages = {
@@ -731,12 +823,14 @@
     let sites = [];
     let customSites = [];
     let filteredEvents = [];
+    let newEventKeys = new Set();
+    let cardsCollapsed = false;
     let currentPage = 1;
     let dateFrom = "";
     let dateTo = "";
 
     const $ = (id) => document.getElementById(id);
-    const controls = ["search", "region", "radius", "typeFilter", "dateSingle", "periodMode"];
+    const controls = ["search", "region", "radius", "typeFilter", "dateSingle", "periodMode", "newOnlyFilter"];
 
     function cleanText(value) {
       return String(value ?? "")
@@ -774,6 +868,8 @@
     }
 
     const CUSTOM_SITES_KEY = "evenementenCustomSites";
+    const NEW_EVENTS_KEY = "evenementenNewEventKeys";
+    const KNOWN_EVENTS_KEY = "evenementenKnownEventKeys";
 
     function normalizeSiteInput(value) {
       let raw = cleanText(value);
@@ -807,6 +903,21 @@
       } catch {}
     }
 
+    function loadStoredSet(key) {
+      try {
+        const stored = JSON.parse(localStorage.getItem(key) || "[]");
+        return new Set(Array.isArray(stored) ? stored.map(cleanText).filter(Boolean) : []);
+      } catch {
+        return new Set();
+      }
+    }
+
+    function saveStoredSet(key, values) {
+      try {
+        localStorage.setItem(key, JSON.stringify([...values]));
+      } catch {}
+    }
+
     function mergeSites(baseSites, extraSites = []) {
       const seen = new Set();
       const merged = [];
@@ -819,6 +930,29 @@
         }
       });
       return merged;
+    }
+
+    function eventKeySet(items) {
+      return new Set((items || []).map(eventDedupeKey));
+    }
+
+    function isNewEvent(event) {
+      return Boolean(event?.isNew || event?.new || newEventKeys.has(eventDedupeKey(event)));
+    }
+
+    function rememberNewEvents(items, previousKeys) {
+      const freshKeys = eventKeySet(items);
+      const found = [...freshKeys].filter((key) => !previousKeys.has(key));
+      newEventKeys = new Set(found);
+      saveStoredSet(NEW_EVENTS_KEY, newEventKeys);
+      saveStoredSet(KNOWN_EVENTS_KEY, freshKeys);
+      updateNewCount();
+      return found.length;
+    }
+
+    function updateNewCount() {
+      const count = events.filter(isNewEvent).length;
+      if ($("newCountBadge")) $("newCountBadge").textContent = count;
     }
 
     function normalizeEventTitle(value) {
@@ -950,15 +1084,109 @@
     function routeUrl(event) {
       const destination = eventCoords(event);
       if (destination) {
-        const origin = regionCoord();
-        return `https://www.google.com/maps/dir/?api=1&origin=${origin.lat},${origin.lon}&destination=${destination.lat},${destination.lon}`;
+        return `https://www.google.com/maps/dir/?api=1&destination=${destination.lat},${destination.lon}`;
       }
 
       const link = safeUrl(event.locationLink);
       if (link) return link;
 
       const location = cleanText(event.location);
-      return location ? `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(location)}` : "";
+      return location ? `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(location)}` : "";
+    }
+
+    function routeDestination(event) {
+      const coords = eventCoords(event);
+      if (coords) return `${coords.lat},${coords.lon}`;
+      return cleanText(event.location);
+    }
+
+    function routeEmbedUrl(origin, destination) {
+      return `https://www.google.com/maps?output=embed&saddr=${encodeURIComponent(origin)}&daddr=${encodeURIComponent(destination)}`;
+    }
+
+    function routeSearchEmbedUrl(destination) {
+      return `https://www.google.com/maps?q=${encodeURIComponent(destination)}&output=embed`;
+    }
+
+    function locationHomeUrl(event) {
+      const candidates = [
+        event.locationWebsite,
+        event.venueWebsite,
+        event.placeWebsite,
+        event.locationUrl,
+        event.website
+      ];
+      return candidates.map((url) => safeUrl(url, { website: true })).find(Boolean) || "";
+    }
+
+    function getBrowserLocation() {
+      return new Promise((resolve, reject) => {
+        if (!navigator.geolocation) {
+          reject(new Error("Locatie is niet beschikbaar in deze browser"));
+          return;
+        }
+
+        navigator.geolocation.getCurrentPosition(
+          (position) => resolve({
+            lat: position.coords.latitude,
+            lon: position.coords.longitude
+          }),
+          () => reject(new Error("Locatie is niet toegestaan")),
+          { enableHighAccuracy: true, timeout: 10000, maximumAge: 60000 }
+        );
+      });
+    }
+
+    function parseCoordText(value) {
+      const match = cleanText(value).match(/^(-?\d+(?:\.\d+)?),(-?\d+(?:\.\d+)?)$/);
+      if (!match) return null;
+      return { lat: Number(match[1]), lon: Number(match[2]) };
+    }
+
+    function renderRoutePanel(panel, html) {
+      panel.innerHTML = html;
+      panel.classList.add("open");
+    }
+
+    async function openRoutePanel(button, panel) {
+      const destination = cleanText(button.dataset.destination);
+      const routeUrlValue = safeUrl(button.dataset.routeUrl);
+      if (!destination) return;
+
+      renderRoutePanel(panel, '<div class="routePanelText">Huidige locatie ophalen...</div>');
+
+      try {
+        const origin = await getBrowserLocation();
+        const destinationCoords = parseCoordText(destination);
+        const distanceText = destinationCoords
+          ? routeEstimateFrom(origin, destinationCoords)
+          : "afstand onbekend";
+        const embedUrl = routeEmbedUrl(`${origin.lat},${origin.lon}`, destination);
+        const mapsUrl = `https://www.google.com/maps/dir/?api=1&origin=${origin.lat},${origin.lon}&destination=${encodeURIComponent(destination)}`;
+        renderRoutePanel(panel, `
+          <div class="routePanelText">
+            Route vanaf je huidige locatie: ${escapeHtml(distanceText)}.
+            <a href="${escapeHtml(mapsUrl)}" target="_blank" rel="noopener noreferrer">Open in Google Maps</a>
+          </div>
+          <iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="${escapeHtml(embedUrl)}" title="Routekaart"></iframe>
+        `);
+      } catch {
+        const embedUrl = routeSearchEmbedUrl(destination);
+        renderRoutePanel(panel, `
+          <div class="routePanelText">
+            Sta locatie toe om de route vanaf je huidige plek in de pagina te tonen.
+            <a href="${escapeHtml(routeUrlValue)}" target="_blank" rel="noopener noreferrer">Open route in Google Maps</a>
+          </div>
+          <iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="${escapeHtml(embedUrl)}" title="Routekaart"></iframe>
+        `);
+      }
+    }
+
+    function routeEstimateFrom(origin, destination) {
+      const roadKm = Math.max(.2, distanceKm(origin, destination) * 1.25);
+      const speed = roadKm < 8 ? 28 : 55;
+      const minutes = Math.max(4, Math.round((roadKm / speed) * 60));
+      return `${formatKm(roadKm)} km - ca. ${minutes} min`;
     }
 
     function formatDate(date) {
@@ -995,6 +1223,17 @@
     function updateDateRange() {
       const mode = $("periodMode").value;
       const baseDate = $("dateSingle").value;
+
+      if (mode === "today" || mode === "tomorrow") {
+        const day = new Date();
+        day.setHours(0, 0, 0, 0);
+        if (mode === "tomorrow") day.setDate(day.getDate() + 1);
+        const value = formatDate(day);
+        $("dateSingle").value = value;
+        dateFrom = value;
+        dateTo = value;
+        return;
+      }
 
       if (mode === "thisWeekend" || mode === "nextWeekend") {
         const range = getWeekendRange(mode === "nextWeekend" ? 1 : 0);
@@ -1085,7 +1324,7 @@
       return `${count} ${count === 1 ? "nieuw evenement" : "nieuwe evenementen"}`;
     }
 
-    async function waitForUpdatedEvents(previousSignature, foundCount = 0) {
+    async function waitForUpdatedEvents(previousSignature, previousKeys, foundCount = 0) {
       for (let attempt = 1; attempt <= 18; attempt += 1) {
         showStatus(`${foundText(foundCount)} gevonden. Ik controleer of GitHub Pages de nieuwe lijst al toont: controle ${attempt} van 18.`, "warn");
         await delay(10000);
@@ -1094,6 +1333,7 @@
           const freshEvents = await fetchEvents();
           if (eventSignature(freshEvents) !== previousSignature) {
             events = freshEvents;
+            rememberNewEvents(events, previousKeys);
             fillTypes();
             applyFilters();
             showStatus(`${foundText(foundCount)} gevonden. De nieuwe lijst is geladen.`, "ok");
@@ -1190,6 +1430,7 @@
       const query = $("search").value.trim().toLowerCase();
       const type = $("typeFilter").value;
       const region = $("region").value.trim();
+      const newOnly = $("newOnlyFilter").checked;
 
       $("pageTitle").textContent = `Evenementen rond ${region || "je regio"}`;
       $("pageSubtitle").textContent = `${prettyDate(dateFrom)} t/m ${prettyDate(dateTo)} - straal ${$("radius").value || 100} km`;
@@ -1206,6 +1447,7 @@
 
         if (query && !haystack.includes(query)) return false;
         if (type !== "all" && (event.type || "").toLowerCase() !== type) return false;
+        if (newOnly && !isNewEvent(event)) return false;
         return matchesDate(event);
       }).sort((a, b) => {
         if (a.isPermanent && !b.isPermanent) return 1;
@@ -1218,8 +1460,10 @@
     }
 
     function render() {
+      updateNewCount();
       $("count").textContent = `${filteredEvents.length} ${filteredEvents.length === 1 ? "evenement" : "evenementen"}`;
       $("metaInfo").textContent = `Periode: ${dateFrom} t/m ${dateTo}`;
+      $("grid").classList.toggle("cardsCollapsed", cardsCollapsed);
 
       if (!filteredEvents.length) {
         $("grid").innerHTML = '<div class="empty">Geen evenementen gevonden. Pas je filters aan of haal nieuwe resultaten op met Ververs.</div>';
@@ -1244,8 +1488,12 @@
       const image = typeImage(type, event.image);
       const website = safeUrl(event.website, { website: true });
       const route = routeUrl(event);
-      const routeInfo = route ? routeEstimate(event) : "";
+      const routeDestinationText = routeDestination(event);
+      const routeId = `route-${Math.random().toString(36).slice(2)}`;
+      const locationUrl = locationHomeUrl(event);
+      const locationLabel = escapeHtml(event.location || "Locatie onbekend");
       const dateLabel = event.periodLabel || prettyDate(event.date);
+      const isNew = isNewEvent(event);
       const typeHeader = `
         <${website ? "a" : "div"} class="typeHeader ${website ? "typeHeaderLink" : ""}" style="background-image: url('${escapeHtml(image)}')"${website ? ` href="${escapeHtml(website)}" target="_blank" rel="noopener noreferrer"` : ""}>
           <span>${escapeHtml(type)}</span>
@@ -1256,26 +1504,28 @@
         : `<span class="tag">${escapeHtml(event.source || "Bron onbekend")}</span>`;
 
       return `
-        <article class="card">
+        <article class="card ${isNew ? "isNew" : ""}">
           ${typeHeader}
           <div class="cardBody">
             <div class="badges">
+              ${isNew ? '<span class="tag tagNew">Nieuw</span>' : ""}
               ${sourceTag}
               <span class="tag tagAccent">${escapeHtml(dateLabel)}</span>
             </div>
             <h2 class="title">${title}</h2>
             <div class="details">
               <div class="detail"><span>Datum</span><span>${escapeHtml(prettyDate(event.date))}${event.time ? ` - ${escapeHtml(event.time)}` : ""}</span></div>
-              <div class="detail"><span>Plaats</span><span>${escapeHtml(event.location || "Locatie onbekend")}</span></div>
+              <div class="detail"><span>Plaats</span><span>${locationUrl ? `<a href="${escapeHtml(locationUrl)}" target="_blank" rel="noopener noreferrer">${locationLabel}</a>` : locationLabel}</span></div>
               <div class="detail"><span>Type</span><span>${escapeHtml(type || "Type onbekend")}</span></div>
               <div class="detail"><span>Prijs</span><span>${escapeHtml(event.cost || "Zie website")}</span></div>
             </div>
             <p class="desc">${escapeHtml(event.description || "Geen omschrijving beschikbaar.")}</p>
             <div class="cardActions">
               ${website ? `<a class="btn btnPrimary" href="${escapeHtml(website)}" target="_blank" rel="noopener noreferrer">Meer info</a>` : ""}
-              ${route ? `<a class="btn btnSecondary" href="${escapeHtml(route)}" target="_blank" rel="noopener noreferrer">Route</a>` : ""}
-              ${routeInfo ? `<span class="routeInfo">${escapeHtml(routeInfo)}</span>` : ""}
+              ${route ? `<button class="btn btnSecondary routeToggle" type="button" data-route="${escapeHtml(routeId)}" data-destination="${escapeHtml(routeDestinationText)}" data-route-url="${escapeHtml(route)}">Route</button>` : ""}
+              ${route ? '<span class="routeInfo">vanaf huidige locatie</span>' : ""}
             </div>
+            ${route ? `<div class="routePanel" id="${escapeHtml(routeId)}"></div>` : ""}
           </div>
         </article>
       `;
@@ -1305,10 +1555,17 @@
           { label: `Wind ${data.windMax} km/u`, topic: "wind" },
           { label: `UV ${data.uvMax}`, topic: "zonkracht" }
         ];
+        const radarBlock = $("periodMode").value === "week"
+          ? `<a class="radarTile" href="https://www.buienradar.nl/nederland/neerslag/buienradar" target="_blank" rel="noopener noreferrer">
+              <img src="https://api.buienradar.nl/image/1.0/RadarMapNL?width=540&height=320" alt="Buienradar neerslagkaart">
+              <span>Buienradar neerslagkaart</span>
+            </a>`
+          : "";
 
         $("weatherBox").innerHTML = `
           ${weatherItems.map((item) => `<button class="pill weatherToggle" type="button" data-topic="${escapeHtml(item.topic)}" data-label="${escapeHtml(item.label)}">${escapeHtml(item.label)}</button>`).join("")}
           <div class="weatherPanel" id="weatherPanel"></div>
+          ${radarBlock}
         `;
       } catch {
         $("weatherBox").innerHTML = "";
@@ -1322,6 +1579,7 @@
     async function refreshEvents() {
       const button = $("refreshBtn");
       const previousSignature = eventSignature(events);
+      const previousKeys = eventKeySet(events);
       let foundCount = 0;
       setBusy(button, true, "Bezig...");
       showStatus("Nieuwe evenementen ophalen...", "warn");
@@ -1372,7 +1630,7 @@
         if (!response.ok) throw new Error(data.error || data.message || "Verversen is mislukt");
 
         showStatus(`Klaar. ${foundText(foundCount)} gevonden. Ik wacht nu tot GitHub Pages de nieuwe lijst toont.`, "ok");
-        await waitForUpdatedEvents(previousSignature, foundCount);
+        await waitForUpdatedEvents(previousSignature, previousKeys, foundCount);
       } catch (error) {
         showStatus(`${foundText(foundCount)} gevonden. Starten mislukt: ${error.message}`, "error");
       } finally {
@@ -1381,19 +1639,27 @@
     }
 
     async function clearAllEvents() {
-      if (!confirm("Weet je zeker dat je alle evenementen wilt verwijderen?")) return;
+      if (!confirm("Weet je zeker dat je alle evenementen en het archief wilt verwijderen en daarna opnieuw wilt verversen?")) return;
 
       const button = $("clearBtn");
+      const previousSignature = eventSignature(events);
+      const previousKeys = eventKeySet(events);
       setBusy(button, true, "Verwijderen...");
-      showStatus("Evenementen verwijderen...", "warn");
+      showStatus("Evenementen en archief verwijderen...", "warn");
 
       try {
-        const response = await fetch(`${WORKER_URL}/clear`, { method: "POST" });
+        const response = await fetch(`${WORKER_URL}/clear`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ includeArchive: true, refreshAfterClear: true })
+        });
         const data = await response.json().catch(() => ({}));
         if (!response.ok) throw new Error(data.error || "Verwijderen is mislukt");
 
-        showStatus("Alle evenementen zijn verwijderd. De lijst wordt zo opnieuw geladen.", "ok");
-        setTimeout(loadAll, 7000);
+        newEventKeys = new Set();
+        saveStoredSet(NEW_EVENTS_KEY, newEventKeys);
+        showStatus("Alles is verwijderd. Ik wacht nu op de opnieuw opgebouwde lijst.", "ok");
+        await waitForUpdatedEvents(previousSignature, previousKeys, scrapedCountFromResponse(data));
       } catch (error) {
         showStatus(`Verwijderen mislukt: ${error.message}`, "error");
       } finally {
@@ -1419,15 +1685,28 @@
       hideStatus();
     }
 
+    function toggleCardsCollapsed() {
+      cardsCollapsed = !cardsCollapsed;
+      $("collapseBtn").textContent = cardsCollapsed ? "Uitklappen" : "Inklappen";
+      render();
+    }
+
     async function loadAll() {
       updateDateRange();
       customSites = loadCustomSites();
+      const knownKeys = loadStoredSet(KNOWN_EVENTS_KEY);
+      const storedNewKeys = loadStoredSet(NEW_EVENTS_KEY);
       const loaded = await Promise.all([
         loadJson("./events.json", fallbackEvents),
         loadJson("./sites.json", [])
       ]);
       events = loaded[0];
       sites = mergeSites(loaded[1], customSites);
+      const currentKeys = eventKeySet(events);
+      const detectedNew = knownKeys.size ? [...currentKeys].filter((key) => !knownKeys.has(key)) : [];
+      newEventKeys = detectedNew.length ? new Set(detectedNew) : storedNewKeys;
+      saveStoredSet(NEW_EVENTS_KEY, newEventKeys);
+      saveStoredSet(KNOWN_EVENTS_KEY, currentKeys);
 
       fillTypes();
       renderSites();
@@ -1442,12 +1721,14 @@
       });
       $(id).addEventListener("change", () => {
         applyFilters();
+        if (["region", "dateSingle", "periodMode"].includes(id)) loadWeather();
       });
     });
 
     $("refreshBtn").addEventListener("click", refreshEvents);
     $("resetBtn").addEventListener("click", resetFilters);
     $("clearBtn").addEventListener("click", clearAllEvents);
+    $("collapseBtn").addEventListener("click", toggleCardsCollapsed);
     $("prevPage").addEventListener("click", () => { currentPage -= 1; render(); window.scrollTo({ top: 0, behavior: "smooth" }); });
     $("nextPage").addEventListener("click", () => { currentPage += 1; render(); window.scrollTo({ top: 0, behavior: "smooth" }); });
     $("allSitesBtn").addEventListener("click", () => { document.querySelectorAll(".siteCheck").forEach((check) => { check.checked = true; }); updateSiteCount(); });
@@ -1460,6 +1741,30 @@
         event.preventDefault();
         addCustomSite();
       }
+    });
+    document.addEventListener("click", async (event) => {
+      const button = event.target.closest(".routeToggle");
+      if (!button) return;
+
+      const panel = document.getElementById(button.dataset.route);
+      if (!panel) return;
+
+      const isOpen = panel.classList.contains("open");
+      document.querySelectorAll(".routeToggle").forEach((item) => {
+        if (item !== button) item.textContent = "Route";
+      });
+      document.querySelectorAll(".routePanel.open").forEach((item) => {
+        if (item !== panel) item.classList.remove("open");
+      });
+
+      if (isOpen) {
+        panel.classList.remove("open");
+        button.textContent = "Route";
+        return;
+      }
+
+      button.textContent = "Sluit route";
+      await openRoutePanel(button, panel);
     });
     document.addEventListener("click", (event) => {
       const button = event.target.closest(".weatherToggle");

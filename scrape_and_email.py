@@ -11,6 +11,8 @@ from bs4 import BeautifulSoup
 DATA_FILE = "events.json"
 LOG_FILE = "scrape_log.txt"
 INPUT_REGION = os.getenv("INPUT_REGION", "Groningen").strip() or "Groningen"
+INPUT_SITES_RAW = os.getenv("INPUT_SITES", "[]").strip() or "[]"
+INPUT_CLEAR_ARCHIVE = os.getenv("INPUT_CLEAR_ARCHIVE", "").strip().lower() in {"1", "true", "yes", "ja"}
 BASE_HEADERS = {"User-Agent": "Mozilla/5.0"}
 MONTHS = "januari|februari|maart|april|mei|juni|juli|augustus|september|oktober|november|december"
 DATE_RE = re.compile(rf"^\d{{1,2}}(?:\s+t/m\s+\d{{1,2}})?\s+(?:{MONTHS})$", re.I)
@@ -118,6 +120,32 @@ def is_valid_event(event):
         return False
 
     return True
+
+
+def parse_input_sites():
+    try:
+        raw_sites = json.loads(INPUT_SITES_RAW)
+        if not isinstance(raw_sites, list):
+            raw_sites = []
+    except Exception:
+        raw_sites = [part.strip() for part in INPUT_SITES_RAW.split(",")]
+
+    sites = []
+    seen = set()
+    for site in raw_sites:
+        url = clean_text(site)
+        if not url:
+            continue
+        if not re.match(r"^[a-z][a-z0-9+.-]*:", url, re.I) and re.match(r"^[\w.-]+\.[a-z]{2,}", url, re.I):
+            url = f"https://{url}"
+        if not is_valid_web_url(url):
+            log(f"Extra website overgeslagen door ongeldig adres: {site}")
+            continue
+        key = url.lower().rstrip("/")
+        if key not in seen:
+            seen.add(key)
+            sites.append(url)
+    return sites[:30]
 
 
 def dedupe_events(events):
@@ -236,6 +264,150 @@ def collect_title_links(soup, base_url):
 
         links.setdefault(key, urljoin(base_url, href))
     return links
+
+
+def jsonld_nodes(data):
+    if isinstance(data, list):
+        for item in data:
+            yield from jsonld_nodes(item)
+        return
+
+    if not isinstance(data, dict):
+        return
+
+    yield data
+    graph = data.get("@graph")
+    if isinstance(graph, list):
+        for item in graph:
+            yield from jsonld_nodes(item)
+
+
+def node_type_includes(node, expected):
+    value = node.get("@type")
+    if isinstance(value, list):
+        return any(str(item).lower() == expected for item in value)
+    return str(value or "").lower() == expected
+
+
+def first_value(value):
+    if isinstance(value, list):
+        return first_value(value[0]) if value else ""
+    return value
+
+
+def extract_image(value):
+    image = first_value(value)
+    if isinstance(image, dict):
+        return clean_text(image.get("url") or image.get("contentUrl"))
+    return clean_text(image)
+
+
+def extract_location(value):
+    value = first_value(value)
+    if isinstance(value, str):
+        return clean_text(value)
+    if not isinstance(value, dict):
+        return ""
+
+    parts = [clean_text(value.get("name"))]
+    address = value.get("address")
+    if isinstance(address, str):
+        parts.append(clean_text(address))
+    elif isinstance(address, dict):
+        parts.extend(
+            clean_text(address.get(key))
+            for key in ["streetAddress", "addressLocality", "addressRegion"]
+        )
+
+    return ", ".join(part for part in parts if part)
+
+
+def extract_price(value):
+    offer = first_value(value)
+    if not isinstance(offer, dict):
+        return ""
+    price = clean_text(offer.get("price"))
+    currency = clean_text(offer.get("priceCurrency"))
+    if price and currency:
+        return f"{currency} {price}"
+    return price
+
+
+def split_start_date(value):
+    start = clean_text(value)
+    if not start:
+        return "", ""
+    if "T" not in start:
+        return start[:10], ""
+    date_part, time_part = start.split("T", 1)
+    return date_part[:10], time_part[:5]
+
+
+def event_from_jsonld(node, site_url):
+    if not node_type_includes(node, "event"):
+        return None
+
+    title = clean_text(node.get("name") or node.get("headline"))
+    date, event_time = split_start_date(node.get("startDate"))
+    location = extract_location(node.get("location"))
+    website = clean_text(node.get("url")) or site_url
+
+    return normalize_event(
+        {
+            "title": title,
+            "type": "evenement",
+            "date": date,
+            "time": event_time,
+            "location": location,
+            "description": clean_text(node.get("description")),
+            "image": extract_image(node.get("image")),
+            "website": urljoin(site_url, website),
+            "cost": extract_price(node.get("offers")) or "Zie website",
+            "source": urlparse(site_url).netloc or "Extra website",
+            "periodLabel": date,
+        }
+    )
+
+
+def scrape_structured_site(site_url):
+    events = []
+    try:
+        response = requests.get(site_url, headers=BASE_HEADERS, timeout=20)
+        response.raise_for_status()
+        soup = BeautifulSoup(response.text, "html.parser")
+
+        for script in soup.find_all("script", type=lambda value: value and "ld+json" in value):
+            try:
+                data = json.loads(script.string or script.get_text() or "{}")
+            except Exception:
+                continue
+
+            for node in jsonld_nodes(data):
+                item = event_from_jsonld(node, site_url)
+                if item and is_valid_event(item):
+                    events.append(item)
+                if len(events) >= 12:
+                    break
+            if len(events) >= 12:
+                break
+
+        if events:
+            log(f"Gevonden via gestructureerde data op {site_url}: {len(events)}")
+        else:
+            log(f"Geen gestructureerde evenementen gevonden op {site_url}")
+    except requests.exceptions.RequestException as exc:
+        log(f"Fout bij extra website {site_url}: {exc}")
+    except Exception as exc:
+        log(f"Onverwachte fout bij extra website {site_url}: {exc}")
+
+    return events
+
+
+def scrape_extra_sites(sites):
+    events = []
+    for site_url in sites:
+        events.extend(scrape_structured_site(site_url))
+    return dedupe_events(events)
 
 
 def scrape_uitzinnig(region="Groningen"):
@@ -383,9 +555,12 @@ def main():
     log("=== Start scraping ===")
     log(f"Input region={INPUT_REGION}")
     log("AI-bronnen worden in deze automatische workflow niet gebruikt.")
+    if INPUT_CLEAR_ARCHIVE:
+        log("Clear archive gevraagd: bestaande actieve lijst en archief worden genegeerd.")
 
-    previous_active, previous_archive = load_existing_events()
-    scraped = scrape_uitzinnig(INPUT_REGION)
+    previous_active, previous_archive = ([], []) if INPUT_CLEAR_ARCHIVE else load_existing_events()
+    extra_sites = parse_input_sites()
+    scraped = scrape_uitzinnig(INPUT_REGION) + scrape_extra_sites(extra_sites)
     active = dedupe_events(scraped + manual_events())
     archive = archive_old_events(previous_active, previous_archive, active)
 
