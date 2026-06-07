@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-06-07T15:59:43+00:00",
+  "updatedAt": "2026-06-07T16:15:54+00:00",
   "events": [
     {
       "title": "Monday  8 June The Rocky Horror Picture Show Zienema | Ticket: € 5,- | doors: 20:00 - 20:30 | start: 20:30 Sold out",
@@ -21,19 +21,36 @@
     },
     {
       "title": "The Rocky Horror Picture Show",
-      "type": "evenement",
+      "type": "Zienema",
       "date": "2026-06-08",
-      "time": "",
+      "time": "20:30",
       "location": "VERA Groningen",
       "lat": 53.2170549,
       "lon": 6.570087,
       "locationLink": "https://www.google.com/maps?q=53.2170549,6.570087",
-      "cost": "Zie website",
-      "description": "Monday  8 June The Rocky Horror Picture Show Zienema | Ticket: € 5,- | doors: 20:00 - 20:30 | start: 20:30",
+      "cost": "€ 5,-",
+      "description": "Monday  8 June The Rocky Horror Picture Show Zienema | Ticket: € 5,- | doors: 20:00 - 20:30 | start: 20:30 Sold out",
       "image": "https://picsum.photos/seed/The+Rocky+Horror+Picture+Show/800/500",
-      "website": "https://www.vera-groningen.nl",
+      "website": "https://www.vera-groningen.nl/?post_type=events&p=152721&lang=en",
       "source": "www.vera-groningen.nl",
-      "periodLabel": "8 June",
+      "periodLabel": "2026-06-08",
+      "isPermanent": false
+    },
+    {
+      "title": "The Rocky Horror Picture Show",
+      "type": "Zienema",
+      "date": "2026-06-09",
+      "time": "20:30",
+      "location": "VERA Groningen",
+      "lat": 53.2170549,
+      "lon": 6.570087,
+      "locationLink": "https://www.google.com/maps?q=53.2170549,6.570087",
+      "cost": "€ 5,-",
+      "description": "UBBO X ZIENEMA Tuesday  9 June The Rocky Horror Picture Show Zienema | Ticket: € 5,- | doors: 20:00 - 20:30 | start: 20:30 Sold out",
+      "image": "https://picsum.photos/seed/The+Rocky+Horror+Picture+Show/800/500",
+      "website": "https://www.vera-groningen.nl/?post_type=events&p=152412&lang=en",
+      "source": "www.vera-groningen.nl",
+      "periodLabel": "2026-06-09",
       "isPermanent": false
     },
     {
@@ -68,6 +85,23 @@
       "website": "https://www.vera-groningen.nl/?post_type=events&p=151834&lang=en",
       "source": "www.vera-groningen.nl",
       "periodLabel": "10 June",
+      "isPermanent": false
+    },
+    {
+      "title": "Orkesta Mendoza",
+      "type": "Mainstage",
+      "date": "2026-06-10",
+      "time": "21:00",
+      "location": "VERA Groningen",
+      "lat": 53.2170549,
+      "lon": 6.570087,
+      "locationLink": "https://www.google.com/maps?q=53.2170549,6.570087",
+      "cost": "€ 18,-",
+      "description": "CLUBKAARTSHOW Wednesday 10 June Orkesta Mendoza USA Mainstage | Ticket: € 18,- | doors: 20:00 - 21:30 | start: 21:00 Koop ticket",
+      "image": "https://picsum.photos/seed/Orkesta+Mendoza/800/500",
+      "website": "https://www.vera-groningen.nl/?post_type=events&p=151834&lang=en",
+      "source": "www.vera-groningen.nl",
+      "periodLabel": "2026-06-10",
       "isPermanent": false
     },
     {
@@ -286,6 +320,23 @@
       "cost": "Lees meer",
       "description": "Tramhaus support Raw postpunk from Rotterdam In 2023, they won the VERA Poll, and in 2026 they remain a firm crowd favourite. This winter, Lees meer",
       "image": "https://picsum.photos/seed/Tramhaus/800/500",
+      "website": "https://www.vera-groningen.nl/?post_type=events&p=152859&lang=en",
+      "source": "www.vera-groningen.nl",
+      "periodLabel": "2026-12-18",
+      "isPermanent": false
+    },
+    {
+      "title": "Tramhaus Support",
+      "type": "evenement",
+      "date": "2026-12-18",
+      "time": "",
+      "location": "VERA Groningen",
+      "lat": 53.2170549,
+      "lon": 6.570087,
+      "locationLink": "https://www.google.com/maps?q=53.2170549,6.570087",
+      "cost": "Zie website",
+      "description": "Friday 18 December Tramhaus support Koop ticket",
+      "image": "https://picsum.photos/seed/Tramhaus+Support/800/500",
       "website": "https://www.vera-groningen.nl/?post_type=events&p=152859&lang=en",
       "source": "www.vera-groningen.nl",
       "periodLabel": "2026-12-18",
@@ -1199,10 +1250,10 @@
   "siteResults": [
     {
       "site": "https://www.vera-groningen.nl",
-      "count": 20,
-      "newCount": 19,
-      "durationSeconds": 62.87,
-      "timedOut": false
+      "count": 6,
+      "newCount": 3,
+      "durationSeconds": 12.56,
+      "timedOut": true
     }
   ]
 }
