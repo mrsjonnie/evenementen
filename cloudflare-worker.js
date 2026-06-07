@@ -17,6 +17,21 @@ function json(data, status = 200, origin = "*") {
   });
 }
 
+function clean(value) {
+  return String(value || "")
+    .replace(/<script[\s\S]*?<\/script>/gi, " ")
+    .replace(/<style[\s\S]*?<\/style>/gi, " ")
+    .replace(/<[^>]+>/g, " ")
+    .replace(/&nbsp;|&#160;/g, " ")
+    .replace(/&amp;/g, "&")
+    .replace(/&quot;/g, "\"")
+    .replace(/&#39;|&apos;/g, "'")
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
 function validateInput(input, maxLength) {
   if (input === undefined || input === null) return "";
   return String(input).slice(0, maxLength).trim();
@@ -27,6 +42,7 @@ function validSites(value) {
 
   return value
     .map((site) => validateInput(site, 300))
+    .map((site) => (/^[a-z][a-z0-9+.-]*:/i.test(site) ? site : `https://${site}`))
     .filter((site) => {
       try {
         const url = new URL(site);
@@ -35,7 +51,337 @@ function validSites(value) {
         return false;
       }
     })
-    .slice(0, 30);
+    .slice(0, 20);
+}
+
+const monthMap = {
+  januari: 1,
+  februari: 2,
+  maart: 3,
+  april: 4,
+  mei: 5,
+  juni: 6,
+  juli: 7,
+  augustus: 8,
+  september: 9,
+  oktober: 10,
+  november: 11,
+  december: 12
+};
+
+const monthNames = Object.keys(monthMap).join("|");
+const eventWords = /(event|evenement|agenda|programma|concert|festival|theater|film|markt|workshop|lezing|expo|tentoonstelling|voorstelling|activiteit|tickets)/i;
+const badWords = /(contact|privacy|cookie|voorwaarden|login|account|nieuwsbrief|facebook|instagram|linkedin)/i;
+const commonPaths = ["/agenda", "/evenementen", "/events", "/event", "/programma", "/activiteiten", "/calendar", "/kalender", "/whats-on", "/wat-te-doen"];
+
+function normalizeDate(value) {
+  const text = clean(value);
+  const iso = text.match(/\b20\d{2}-\d{2}-\d{2}\b/);
+  if (iso) return iso[0];
+
+  const dutch = text.match(new RegExp(`\\b(\\d{1,2})(?:\\s+t/m\\s+\\d{1,2})?\\s+(${monthNames})(?:\\s+(20\\d{2}))?\\b`, "i"));
+  if (!dutch) return "";
+
+  const day = Number(dutch[1]);
+  const month = monthMap[dutch[2].toLowerCase()];
+  let year = Number(dutch[3] || new Date().getFullYear());
+  let date = new Date(Date.UTC(year, month - 1, day));
+  const today = new Date();
+  if (!dutch[3] && date < new Date(Date.UTC(today.getFullYear(), today.getMonth(), today.getDate()))) {
+    year += 1;
+    date = new Date(Date.UTC(year, month - 1, day));
+  }
+  if (Number.isNaN(date.getTime())) return "";
+  return date.toISOString().slice(0, 10);
+}
+
+function firstMatch(html, patterns) {
+  for (const pattern of patterns) {
+    const match = html.match(pattern);
+    if (match && match[1]) return clean(match[1]);
+  }
+  return "";
+}
+
+function meta(html, name) {
+  const escaped = name.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  return firstMatch(html, [
+    new RegExp(`<meta[^>]+property=["']${escaped}["'][^>]+content=["']([^"']+)["'][^>]*>`, "i"),
+    new RegExp(`<meta[^>]+name=["']${escaped}["'][^>]+content=["']([^"']+)["'][^>]*>`, "i"),
+    new RegExp(`<meta[^>]+content=["']([^"']+)["'][^>]+property=["']${escaped}["'][^>]*>`, "i"),
+    new RegExp(`<meta[^>]+content=["']([^"']+)["'][^>]+name=["']${escaped}["'][^>]*>`, "i")
+  ]);
+}
+
+function pageTitle(html) {
+  return firstMatch(html, [
+    /<h1[^>]*>([\s\S]*?)<\/h1>/i,
+    /<h2[^>]*>([\s\S]*?)<\/h2>/i,
+    /<title[^>]*>([\s\S]*?)<\/title>/i
+  ]);
+}
+
+function eventKey(event) {
+  return `${event.date || ""}|${(event.title || "").toLowerCase().replace(/[^a-z0-9]+/g, " ").trim()}`;
+}
+
+function validEvent(event) {
+  return Boolean(event.title && event.title.length > 3 && event.date && event.website && !badWords.test(event.title));
+}
+
+function dedupe(events) {
+  const map = new Map();
+  for (const event of events) {
+    if (!validEvent(event)) continue;
+    const key = eventKey(event);
+    const existing = map.get(key);
+    if (!existing || (event.description || "").length > (existing.description || "").length) {
+      map.set(key, event);
+    }
+  }
+  return [...map.values()];
+}
+
+async function fetchHtml(pageUrl) {
+  const response = await fetch(pageUrl, {
+    headers: {
+      "User-Agent": "Mozilla/5.0 (Evenementen Scraper)",
+      "Accept": "text/html,application/xhtml+xml"
+    }
+  });
+  if (!response.ok) throw new Error(`HTTP ${response.status}`);
+  const type = response.headers.get("content-type") || "";
+  if (type && !type.includes("html")) throw new Error(`Geen HTML: ${type}`);
+  return await response.text();
+}
+
+function seedUrls(site) {
+  const parsed = new URL(site);
+  const base = `${parsed.protocol}//${parsed.host}`;
+  return [...new Set([site.replace(/\/$/, ""), ...commonPaths.map((path) => `${base}${path}`)])];
+}
+
+function jsonldNodes(value) {
+  if (Array.isArray(value)) return value.flatMap(jsonldNodes);
+  if (!value || typeof value !== "object") return [];
+  const graph = Array.isArray(value["@graph"]) ? value["@graph"].flatMap(jsonldNodes) : [];
+  return [value, ...graph];
+}
+
+function eventFromJsonLd(node, pageUrl) {
+  const type = Array.isArray(node["@type"]) ? node["@type"].join(" ") : String(node["@type"] || "");
+  if (!/event/i.test(type)) return null;
+
+  const location = typeof node.location === "string"
+    ? node.location
+    : clean([node.location?.name, node.location?.address?.streetAddress, node.location?.address?.addressLocality].filter(Boolean).join(", "));
+  const offer = Array.isArray(node.offers) ? node.offers[0] : node.offers;
+  const image = Array.isArray(node.image) ? node.image[0] : node.image;
+  const imageUrl = typeof image === "object" ? image?.url : image;
+
+  return {
+    title: clean(node.name || node.headline),
+    type: "evenement",
+    date: normalizeDate(node.startDate),
+    time: clean(String(node.startDate || "").split("T")[1] || "").slice(0, 5),
+    location: clean(location) || new URL(pageUrl).hostname,
+    cost: offer?.price ? `${offer.priceCurrency || ""} ${offer.price}`.trim() : "Zie website",
+    description: clean(node.description).slice(0, 360),
+    image: imageUrl ? new URL(imageUrl, pageUrl).href : "",
+    website: node.url ? new URL(node.url, pageUrl).href : pageUrl,
+    source: new URL(pageUrl).hostname,
+    periodLabel: normalizeDate(node.startDate)
+  };
+}
+
+function jsonLdEvents(html, pageUrl) {
+  const events = [];
+  const scripts = html.matchAll(/<script[^>]+type=["'][^"']*ld\+json[^"']*["'][^>]*>([\s\S]*?)<\/script>/gi);
+  for (const script of scripts) {
+    try {
+      const data = JSON.parse(clean(script[1]).replace(/&quot;/g, "\""));
+      for (const node of jsonldNodes(data)) {
+        const event = eventFromJsonLd(node, pageUrl);
+        if (event) events.push(event);
+      }
+    } catch {}
+  }
+  return events;
+}
+
+function linksFromPage(html, pageUrl) {
+  const baseHost = new URL(pageUrl).host;
+  const links = [];
+  for (const match of html.matchAll(/<a[^>]+href=["']([^"']+)["'][^>]*>([\s\S]*?)<\/a>/gi)) {
+    const href = clean(match[1]);
+    const text = clean(match[2]);
+    if (!href || badWords.test(`${href} ${text}`)) continue;
+    let absolute;
+    try {
+      absolute = new URL(href, pageUrl);
+    } catch {
+      continue;
+    }
+    if (!["http:", "https:"].includes(absolute.protocol) || absolute.host !== baseHost) continue;
+    if (!eventWords.test(`${absolute.pathname} ${text}`) && !normalizeDate(`${absolute.pathname} ${text}`)) continue;
+    links.push({ title: text, url: absolute.href.split("#")[0] });
+  }
+  return links;
+}
+
+function eventFromPage(html, pageUrl, fallbackTitle = "") {
+  const title = (meta(html, "og:title") || pageTitle(html) || fallbackTitle).replace(/\s+[|-]\s+.*$/, "");
+  const date = normalizeDate(meta(html, "event:start_time") || html);
+  const description = meta(html, "og:description") || meta(html, "description") || clean(html).slice(0, 300);
+  const image = meta(html, "og:image") || meta(html, "twitter:image");
+  const location = meta(html, "event:location") || new URL(pageUrl).hostname;
+
+  return {
+    title: clean(title),
+    type: "evenement",
+    date,
+    time: "",
+    location: clean(location),
+    cost: "Zie website",
+    description: clean(description).slice(0, 360),
+    image: image ? new URL(image, pageUrl).href : "",
+    website: pageUrl,
+    source: new URL(pageUrl).hostname,
+    periodLabel: date
+  };
+}
+
+function eventsFromBlocks(html, pageUrl) {
+  const events = [];
+  const blocks = html.match(/<(article|li|section|div)[^>]*>[\s\S]{0,1800}?<\/\1>/gi) || [];
+  for (const block of blocks.slice(0, 260)) {
+    const date = normalizeDate(block);
+    if (!date) continue;
+    const linkMatch = block.match(/<a[^>]+href=["']([^"']+)["'][^>]*>([\s\S]*?)<\/a>/i);
+    const heading = firstMatch(block, [/<h[1-4][^>]*>([\s\S]*?)<\/h[1-4]>/i]);
+    const title = heading || (linkMatch ? clean(linkMatch[2]) : clean(block).slice(0, 90));
+    let website = pageUrl;
+    if (linkMatch) {
+      try {
+        website = new URL(clean(linkMatch[1]), pageUrl).href;
+      } catch {}
+    }
+    events.push({
+      title,
+      type: "evenement",
+      date,
+      time: "",
+      location: new URL(pageUrl).hostname,
+      cost: "Zie website",
+      description: clean(block).slice(0, 300),
+      image: "",
+      website,
+      source: new URL(pageUrl).hostname,
+      periodLabel: date
+    });
+  }
+  return events;
+}
+
+async function scrapeSite(site) {
+  const events = [];
+  const linkMap = new Map();
+  for (const pageUrl of seedUrls(site)) {
+    try {
+      const html = await fetchHtml(pageUrl);
+      jsonLdEvents(html, pageUrl).forEach((event) => events.push(event));
+      eventsFromBlocks(html, pageUrl).forEach((event) => events.push(event));
+      linksFromPage(html, pageUrl).forEach((link) => linkMap.set(link.url, link.title));
+    } catch {}
+    if (events.length >= 40) break;
+  }
+
+  for (const [url, title] of [...linkMap.entries()].slice(0, 40)) {
+    if (events.length >= 40) break;
+    try {
+      const html = await fetchHtml(url);
+      jsonLdEvents(html, url).forEach((event) => events.push(event));
+      events.push(eventFromPage(html, url, title));
+    } catch {}
+  }
+
+  return dedupe(events).slice(0, 40);
+}
+
+async function scrapeSites(sites) {
+  const events = [];
+  for (const site of sites) {
+    const found = await scrapeSite(site);
+    found.forEach((event) => events.push(event));
+  }
+  return dedupe(events);
+}
+
+function decodeBase64(content) {
+  const binary = atob(content.replace(/\n/g, ""));
+  const bytes = Uint8Array.from(binary, (char) => char.charCodeAt(0));
+  return new TextDecoder().decode(bytes);
+}
+
+function encodeBase64(text) {
+  const bytes = new TextEncoder().encode(text);
+  let binary = "";
+  bytes.forEach((byte) => {
+    binary += String.fromCharCode(byte);
+  });
+  return btoa(binary);
+}
+
+async function githubFetch(env, path, init = {}) {
+  return fetch(`https://api.github.com/repos/${env.GITHUB_OWNER}/${env.GITHUB_REPO}${path}`, {
+    ...init,
+    headers: {
+      "Authorization": `Bearer ${env.GITHUB_TOKEN}`,
+      "Accept": "application/vnd.github+json",
+      "Content-Type": "application/json",
+      "User-Agent": "evenementen-worker",
+      ...(init.headers || {})
+    }
+  });
+}
+
+async function saveEventsToGithub(env, foundEvents, options = {}) {
+  let existing = { events: [], archive: [] };
+  let sha = null;
+  const getResponse = await githubFetch(env, "/contents/events.json?ref=main");
+  if (getResponse.ok) {
+    const file = await getResponse.json();
+    sha = file.sha;
+    const decoded = JSON.parse(decodeBase64(file.content));
+    if (Array.isArray(decoded)) existing.events = decoded;
+    if (decoded && Array.isArray(decoded.events)) existing.events = decoded.events;
+    if (decoded && Array.isArray(decoded.archive)) existing.archive = decoded.archive;
+  }
+
+  const archive = options.clearArchive ? [] : existing.archive;
+  const merged = dedupe([...(foundEvents || []), ...(options.clearArchive ? [] : existing.events)]);
+  const payload = {
+    schemaVersion: 2,
+    updatedAt: new Date().toISOString(),
+    events: merged,
+    archive
+  };
+
+  const putResponse = await githubFetch(env, "/contents/events.json", {
+    method: "PUT",
+    body: JSON.stringify({
+      message: options.clearArchive ? "Clear and refresh events.json" : "Refresh events.json from websites",
+      content: encodeBase64(JSON.stringify(payload, null, 2)),
+      sha,
+      branch: "main"
+    })
+  });
+
+  if (!putResponse.ok) {
+    throw new Error(await putResponse.text());
+  }
+
+  return { saved: merged.length, added: foundEvents.length };
 }
 
 function workflowInputs(body, overrides = {}) {
@@ -48,22 +394,15 @@ function workflowInputs(body, overrides = {}) {
     dateTo: validateInput(body.dateTo || "", 40),
     minResults: validateInput(body.minResults || "20", 10),
     sites: JSON.stringify(validSites(body.sites)),
-    providers: JSON.stringify(body.providers || {}),
+    providers: "{}",
     clearArchive: overrides.clearArchive ? "true" : "false"
   };
 }
 
 async function dispatchWorkflow(env, inputs) {
   const workflowFile = env.GITHUB_WORKFLOW_FILE || "update-events.yml";
-  const ghUrl = `https://api.github.com/repos/${env.GITHUB_OWNER}/${env.GITHUB_REPO}/actions/workflows/${workflowFile}/dispatches`;
-  const ghResponse = await fetch(ghUrl, {
+  const ghResponse = await githubFetch(env, `/actions/workflows/${workflowFile}/dispatches`, {
     method: "POST",
-    headers: {
-      "Authorization": `Bearer ${env.GITHUB_TOKEN}`,
-      "Accept": "application/vnd.github+json",
-      "Content-Type": "application/json",
-      "User-Agent": "evenementen-worker"
-    },
     body: JSON.stringify({
       ref: "main",
       inputs
@@ -71,15 +410,26 @@ async function dispatchWorkflow(env, inputs) {
   });
 
   if (ghResponse.status !== 204) {
-    const errorText = await ghResponse.text();
     return {
       ok: false,
       status: ghResponse.status,
-      details: errorText
+      details: await ghResponse.text()
     };
   }
 
   return { ok: true };
+}
+
+function weatherDaily() {
+  return [
+    { tempMin: 14, tempMax: 21, rainMM: 0.4, icon: "01d" },
+    { tempMin: 13, tempMax: 20, rainMM: 1.2, icon: "04d" },
+    { tempMin: 15, tempMax: 22, rainMM: 0.0, icon: "01d" },
+    { tempMin: 16, tempMax: 23, rainMM: 2.6, icon: "10d" },
+    { tempMin: 14, tempMax: 19, rainMM: 3.1, icon: "10d" },
+    { tempMin: 13, tempMax: 18, rainMM: 0.8, icon: "04d" },
+    { tempMin: 15, tempMax: 21, rainMM: 0.2, icon: "01d" }
+  ];
 }
 
 export default {
@@ -92,42 +442,34 @@ export default {
     }
 
     if (path === "/weather" && request.method === "GET") {
-      try {
-        return json({
-          ok: true,
-          summary: "Zonnig met af en toe een wolk",
-          days: 3,
-          tempMin: 15,
-          tempMax: 22,
-          rainChance: 20,
-          rainTotalMM: 5,
-          windMax: 15,
-          uvMax: 6,
-          weatherCode: 0
-        }, 200);
-      } catch (e) {
-        return json({ error: "Fout bij ophalen weerdata", details: e.message }, 500);
-      }
+      const daily = weatherDaily();
+      return json({
+        ok: true,
+        summary: "Wisselend weer",
+        days: 7,
+        tempMin: Math.min(...daily.map((day) => day.tempMin)),
+        tempMax: Math.max(...daily.map((day) => day.tempMax)),
+        rainChance: 35,
+        rainTotalMM: daily.reduce((sum, day) => sum + day.rainMM, 0).toFixed(1),
+        windMax: 18,
+        uvMax: 5,
+        weatherCode: 0,
+        daily
+      }, 200);
     }
 
     if (path === "/clear" && request.method === "POST") {
       try {
         const body = await request.json().catch(() => ({}));
-        const inputs = workflowInputs(body || {}, { clearArchive: true });
-        const result = await dispatchWorkflow(env, inputs);
-        if (!result.ok) {
-          return json({
-            error: "GitHub dispatch voor wissen mislukt",
-            status: result.status,
-            details: result.details
-          }, 500);
-        }
-
+        const sites = validSites(body.sites);
+        const found = sites.length ? await scrapeSites(sites) : [];
+        await saveEventsToGithub(env, found, { clearArchive: true });
+        if (!found.length) await dispatchWorkflow(env, workflowInputs(body || {}, { clearArchive: true }));
         return json({
           ok: true,
           message: "Wissen en opnieuw verversen gestart",
-          scrapedCount: 0,
-          totalSaved: 0
+          scrapedCount: found.length,
+          totalSaved: found.length
         }, 200);
       } catch (e) {
         return json({ error: "Fout bij verwijderen", details: e.message }, 500);
@@ -140,8 +482,18 @@ export default {
 
     try {
       const body = await request.json();
-      if (!body) {
-        return json({ error: "Ongeldige JSON body" }, 400);
+      if (!body) return json({ error: "Ongeldige JSON body" }, 400);
+
+      const sites = validSites(body.sites);
+      const found = sites.length ? await scrapeSites(sites) : [];
+      if (found.length) {
+        const saved = await saveEventsToGithub(env, found);
+        return json({
+          ok: true,
+          message: "Websites direct gescrapet",
+          scrapedCount: found.length,
+          totalSaved: saved.saved
+        }, 200);
       }
 
       const result = await dispatchWorkflow(env, workflowInputs(body));
@@ -155,9 +507,9 @@ export default {
 
       return json({
         ok: true,
-        message: "Workflow gestart",
-        scrapedCount: 0,
-        totalSaved: 0
+        message: "Geen directe website-events gevonden; workflow gestart als vangnet",
+        scrapedCount: null,
+        totalSaved: null
       }, 200);
     } catch (e) {
       return json({

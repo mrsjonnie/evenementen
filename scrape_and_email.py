@@ -38,6 +38,33 @@ BAD_LINK_WORDS_RE = re.compile(
     r"\b(contact|privacy|cookie|voorwaarden|login|account|nieuwsbrief|facebook|instagram|linkedin|tickets?\s+verkopen)\b",
     re.I,
 )
+COMMON_EVENT_PATHS = [
+    "/agenda",
+    "/evenementen",
+    "/events",
+    "/event",
+    "/programma",
+    "/program",
+    "/activiteiten",
+    "/calendar",
+    "/kalender",
+    "/whats-on",
+    "/wat-te-doen",
+]
+MONTH_NUMBERS = {
+    "januari": 1,
+    "februari": 2,
+    "maart": 3,
+    "april": 4,
+    "mei": 5,
+    "juni": 6,
+    "juli": 7,
+    "augustus": 8,
+    "september": 9,
+    "oktober": 10,
+    "november": 11,
+    "december": 12,
+}
 
 
 def log(message):
@@ -55,6 +82,50 @@ def clean_text(value):
         .replace("\u00b7", "-")
         .strip()
     )
+
+
+def normalize_date_value(value):
+    text = clean_text(value)
+    if not text:
+        return ""
+
+    iso = ISO_DATE_RE.search(text)
+    if iso:
+        return iso.group(0)
+
+    match = re.search(
+        rf"\b(\d{{1,2}})(?:\s+t/m\s+\d{{1,2}})?\s+({MONTHS})(?:\s+(20\d{{2}}))?\b",
+        text,
+        re.I,
+    )
+    if not match:
+        return text
+
+    day = int(match.group(1))
+    month = MONTH_NUMBERS.get(match.group(2).lower())
+    year = int(match.group(3) or datetime.now().year)
+    if not month:
+        return text
+
+    try:
+        candidate = datetime(year, month, day)
+        today = datetime.now()
+        if not match.group(3) and candidate.date() < today.date():
+            candidate = datetime(year + 1, month, day)
+        return candidate.strftime("%Y-%m-%d")
+    except ValueError:
+        return text
+
+
+def should_geocode(location):
+    text = clean_text(location)
+    if not text:
+        return False
+    if re.match(r"^[\w.-]+\.[a-z]{2,}$", text, re.I):
+        return False
+    if len(text) > 120:
+        return False
+    return True
 
 
 def normalize_title(value):
@@ -228,7 +299,7 @@ def normalize_event(event):
     lat = event.get("lat")
     lon = event.get("lon")
 
-    if lat is None or lon is None:
+    if (lat is None or lon is None) and should_geocode(location):
         lat, lon = get_coordinates(location)
         time.sleep(1)
 
@@ -240,7 +311,7 @@ def normalize_event(event):
     if not image:
         image = f"https://picsum.photos/seed/{quote_plus(title or location)}/800/500"
 
-    date = clean_text(event.get("date"))
+    date = normalize_date_value(event.get("date"))
     return {
         "title": title,
         "type": clean_text(event.get("type")) or "evenement",
@@ -282,6 +353,31 @@ def first_meta(soup, names):
         if tag and clean_text(tag.get("content")):
             return clean_text(tag.get("content"))
     return ""
+
+
+def fetch_soup(page_url, timeout=18):
+    response = requests.get(page_url, headers=BASE_HEADERS, timeout=timeout)
+    response.raise_for_status()
+    content_type = response.headers.get("content-type", "")
+    if "text/html" not in content_type and "application/xhtml" not in content_type and content_type:
+        raise ValueError(f"Geen HTML: {content_type}")
+    return BeautifulSoup(response.text, "html.parser")
+
+
+def site_seed_urls(site_url):
+    parsed = urlparse(site_url)
+    base = f"{parsed.scheme}://{parsed.netloc}"
+    urls = [site_url.rstrip("/")]
+    urls.extend(f"{base}{path}" for path in COMMON_EVENT_PATHS)
+
+    seen = set()
+    result = []
+    for candidate in urls:
+        key = candidate.lower().rstrip("/")
+        if key not in seen:
+            seen.add(key)
+            result.append(candidate)
+    return result
 
 
 def page_title(soup):
@@ -535,11 +631,19 @@ def event_from_jsonld(node, site_url):
 
 def scrape_structured_site(site_url):
     events = []
-    try:
-        response = requests.get(site_url, headers=BASE_HEADERS, timeout=20)
-        response.raise_for_status()
-        soup = BeautifulSoup(response.text, "html.parser")
+    link_candidates = []
 
+    for page_url in site_seed_urls(site_url):
+        try:
+            soup = fetch_soup(page_url)
+        except requests.exceptions.RequestException as exc:
+            log(f"Websitepagina niet bereikbaar {page_url}: {exc}")
+            continue
+        except Exception as exc:
+            log(f"Websitepagina overgeslagen {page_url}: {exc}")
+            continue
+
+        before = len(events)
         for script in soup.find_all("script", type=lambda value: value and "ld+json" in value):
             try:
                 data = json.loads(script.string or script.get_text() or "{}")
@@ -550,31 +654,40 @@ def scrape_structured_site(site_url):
                 item = event_from_jsonld(node, site_url)
                 if item and is_valid_event(item):
                     events.append(item)
-                if len(events) >= 12:
+                if len(events) >= 40:
                     break
-            if len(events) >= 12:
+            if len(events) >= 40:
                 break
 
-        if len(events) < 5:
-            for title, detail_url in candidate_event_links(soup, site_url):
-                item = event_from_detail_page(detail_url, title)
-                if item and is_valid_event(item):
-                    events.append(item)
-                if len(events) >= 12:
-                    break
+        events.extend(events_from_listing_text(soup, page_url))
+        link_candidates.extend(candidate_event_links(soup, page_url))
 
-        if len(events) < 5:
-            events.extend(events_from_listing_text(soup, site_url))
+        added = len(events) - before
+        if added:
+            log(f"{added} kandidaat-evenementen gevonden op {page_url}")
+        if len(events) >= 40:
+            break
 
-        events = dedupe_events(events)
-        if events:
-            log(f"Gevonden op extra website {site_url}: {len(events)}")
-        else:
-            log(f"Geen betrouwbare evenementen gevonden op {site_url}")
-    except requests.exceptions.RequestException as exc:
-        log(f"Fout bij extra website {site_url}: {exc}")
-    except Exception as exc:
-        log(f"Onverwachte fout bij extra website {site_url}: {exc}")
+    seen_links = set()
+    unique_links = []
+    for title, detail_url in link_candidates:
+        key = detail_url.lower().rstrip("/")
+        if key not in seen_links:
+            seen_links.add(key)
+            unique_links.append((title, detail_url))
+
+    for title, detail_url in unique_links[:50]:
+        if len(events) >= 40:
+            break
+        item = event_from_detail_page(detail_url, title)
+        if item and is_valid_event(item):
+            events.append(item)
+
+    events = dedupe_events(events)[:40]
+    if events:
+        log(f"Gevonden op extra website {site_url}: {len(events)}")
+    else:
+        log(f"Geen betrouwbare evenementen gevonden op {site_url}")
 
     return events
 

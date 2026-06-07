@@ -161,10 +161,23 @@
 
     .weatherDay {
       display: grid;
-      grid-template-columns: minmax(92px, 1fr) auto;
+      grid-template-columns: 42px minmax(92px, 1fr) auto;
       gap: 10px;
       border-top: 1px solid rgba(255, 255, 255, .16);
       padding-top: 6px;
+      align-items: center;
+    }
+
+    .weatherDay img {
+      width: 38px;
+      height: 38px;
+      object-fit: contain;
+    }
+
+    .weatherRain {
+      color: #bdefff;
+      font-weight: 850;
+      font-size: .82rem;
     }
 
     main {
@@ -188,6 +201,8 @@
       align-items: end;
     }
 
+    .field { min-width: 0; }
+
     .field label {
       display: block;
       margin: 0 0 5px;
@@ -199,6 +214,7 @@
     input,
     select {
       width: 100%;
+      min-width: 0;
       height: 42px;
       border: 1px solid var(--line);
       border-radius: var(--radius);
@@ -206,6 +222,11 @@
       color: var(--ink);
       padding: 0 11px;
       font-weight: 700;
+    }
+
+    #dateSingle {
+      max-width: 100%;
+      min-width: 0;
     }
 
     input::placeholder { color: #788da3; }
@@ -434,11 +455,11 @@
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
       gap: 14px;
     }
 
-    @media (min-width: 1340px) {
+    @media (min-width: 1460px) {
       .grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
     }
 
@@ -708,6 +729,7 @@
       .heroInner { padding-top: 20px; }
       h1 { font-size: 1.55rem; }
       .filters { grid-template-columns: 1fr; }
+      #dateSingle { font-size: .95rem; padding-inline: 8px; }
       .grid { grid-template-columns: 1fr; }
       .siteSelect { min-width: 100%; max-width: none; }
       .siteAdd { grid-template-columns: 1fr; }
@@ -791,11 +813,11 @@
               <span aria-hidden="true">v</span>
             </button>
             <div class="sitePanel">
-              <div class="sitePanelHeader">AI-bronnen zijn optioneel. Zet ze alleen aan als je extra suggesties wilt.</div>
+              <div class="sitePanelHeader">AI-bronnen zijn uitgezet. De lijst wordt alleen uit websites opgebouwd.</div>
               <div class="siteList" id="providerList">
-                <label><input class="providerCheck" type="checkbox" id="provPerplexity"> <span>Perplexity</span></label>
-                <label><input class="providerCheck" type="checkbox" id="provMistral"> <span>Mistral</span></label>
-                <label><input class="providerCheck" type="checkbox" id="provOpenAI"> <span>ChatGPT</span></label>
+                <label><input class="providerCheck" type="checkbox" id="provPerplexity" disabled> <span>Perplexity uit</span></label>
+                <label><input class="providerCheck" type="checkbox" id="provMistral" disabled> <span>Mistral uit</span></label>
+                <label><input class="providerCheck" type="checkbox" id="provOpenAI" disabled> <span>ChatGPT uit</span></label>
               </div>
             </div>
           </div>
@@ -856,7 +878,7 @@
   </main>
 
   <script>
-    const APP_VERSION = "2026.06.07.9";
+    const APP_VERSION = "2026.06.07.10";
     const WORKER_URL = "https://evenementen-refresh.mrsjonnie.workers.dev";
     const PER_PAGE_KEY = "evenementenPerPage";
     let eventsPerPage = 9;
@@ -1651,7 +1673,6 @@
             <div class="cardActions">
               ${website ? `<a class="btn btnPrimary" href="${escapeHtml(website)}" target="_blank" rel="noopener noreferrer">Meer info</a>` : ""}
               ${route ? `<button class="btn btnSecondary routeToggle" type="button" data-route="${escapeHtml(routeId)}" data-destination="${escapeHtml(routeDestinationText)}" data-route-url="${escapeHtml(route)}">Route</button>` : ""}
-              ${route ? '<span class="routeInfo">vanaf huidige locatie</span>' : ""}
             </div>
             ${route ? `<div class="routePanel" id="${escapeHtml(routeId)}"></div>` : ""}
           </div>
@@ -1678,8 +1699,10 @@
       const start = new Date((dateFrom || formatDate(new Date())) + "T00:00:00");
       const minBase = Number(data?.tempMin);
       const maxBase = Number(data?.tempMax);
+      const rainBase = Number(data?.rainTotalMM);
       const min = Number.isFinite(minBase) ? minBase : 12;
       const max = Number.isFinite(maxBase) ? maxBase : 18;
+      const rainTotal = Number.isFinite(rainBase) ? rainBase : 0;
       const formatter = new Intl.DateTimeFormat("nl-NL", { weekday: "short", day: "numeric", month: "short" });
 
       const daily = Array.isArray(data?.daily) ? data.daily : [];
@@ -1689,7 +1712,15 @@
         const source = daily[index] || {};
         const dayMin = Number.isFinite(Number(source.tempMin)) ? Number(source.tempMin) : Math.round(min + ((index % 3) - 1));
         const dayMax = Number.isFinite(Number(source.tempMax)) ? Number(source.tempMax) : Math.max(dayMin + 2, Math.round(max + (((index + 1) % 3) - 1)));
-        rows.push(`<div class="weatherDay"><span>${escapeHtml(formatter.format(day))}</span><strong>${dayMin} - ${dayMax} graden</strong></div>`);
+        const rain = Number.isFinite(Number(source.rainMM)) ? Number(source.rainMM) : Math.max(0, Math.round((rainTotal / 7 + ((index % 2) ? .4 : -.2)) * 10) / 10);
+        const icon = rain > 2 ? "10d" : rain > .3 ? "04d" : "01d";
+        rows.push(`
+          <div class="weatherDay">
+            <img src="https://openweathermap.org/img/wn/${icon}@2x.png" alt="Weerbeeld">
+            <span>${escapeHtml(formatter.format(day))}<br><span class="weatherRain">${String(rain).replace(".", ",")} mm regen</span></span>
+            <strong>${dayMin} - ${dayMax} graden</strong>
+          </div>
+        `);
       }
 
       return `<div class="weatherDays">${rows.join("")}</div>`;
@@ -1751,10 +1782,10 @@
         minResults: 20,
         sites: selectedSites,
         providers: {
-          perplexity: $("provPerplexity").checked,
-          mistral: $("provMistral").checked,
-          openai: $("provOpenAI").checked,
-          chatgpt: $("provOpenAI").checked
+          perplexity: false,
+          mistral: false,
+          openai: false,
+          chatgpt: false
         }
       };
 
@@ -1809,7 +1840,18 @@
         const response = await fetch(`${WORKER_URL}/clear`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ includeArchive: true, refreshAfterClear: true })
+          body: JSON.stringify({
+            includeArchive: true,
+            refreshAfterClear: true,
+            region: $("region").value.trim(),
+            radius: $("radius").value,
+            query: $("search").value.trim(),
+            category: $("typeFilter").value === "all" ? "" : $("typeFilter").value,
+            dateFrom,
+            dateTo,
+            sites: [...document.querySelectorAll(".siteCheck:checked")].map((check) => check.value),
+            providers: { perplexity: false, mistral: false, openai: false, chatgpt: false }
+          })
         });
         const data = await response.json().catch(() => ({}));
         if (!response.ok) throw new Error(data.error || "Verwijderen is mislukt");
