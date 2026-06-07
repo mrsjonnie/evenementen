@@ -867,11 +867,12 @@
               <span aria-hidden="true">v</span>
             </button>
             <div class="sitePanel">
-              <div class="sitePanelHeader">AI-bronnen zijn uitgezet. De lijst wordt alleen uit websites opgebouwd.</div>
+              <div class="sitePanelHeader">AI-bronnen zijn uitgezet. SerpAPI mag alleen openbare links helpen vinden.</div>
               <div class="siteList" id="providerList">
                 <label><input class="providerCheck" type="checkbox" id="provPerplexity" disabled> <span>Perplexity uit</span></label>
                 <label><input class="providerCheck" type="checkbox" id="provMistral" disabled> <span>Mistral uit</span></label>
                 <label><input class="providerCheck" type="checkbox" id="provOpenAI" disabled> <span>ChatGPT uit</span></label>
+                <label><input class="providerCheck" type="checkbox" id="provSerpAPI" checked disabled> <span>SerpAPI via Cloudflare</span></label>
               </div>
             </div>
           </div>
@@ -932,7 +933,7 @@
   </main>
 
   <script>
-    const APP_VERSION = "2026.06.07.24";
+    const APP_VERSION = "2026.06.07.25";
     const WORKER_URL = "https://evenementen-refresh.mrsjonnie.workers.dev";
     const PER_PAGE_KEY = "evenementenPerPage";
     let eventsPerPage = 9;
@@ -1960,7 +1961,8 @@
           perplexity: false,
           mistral: false,
           openai: false,
-          chatgpt: false
+          chatgpt: false,
+          serpapi: true
         }
       };
 
@@ -1991,7 +1993,8 @@
         if (!response.ok) throw new Error(workerErrorMessage(data, "Verversen is mislukt"));
 
         const prefix = Number.isFinite(foundCount) ? `${foundText(foundCount)} gevonden.` : foundText(foundCount) + ".";
-        showStatus(`Klaar. ${prefix} Ik controleer de bijgewerkte lijst.`, "ok", { stop: true });
+        const serpText = Number(data?.serpApiAddedCount) > 0 ? ` SerpAPI vond ${Number(data.serpApiAddedCount)} extra links.` : "";
+        showStatus(`Klaar. ${prefix}${serpText} Ik controleer de bijgewerkte lijst.`, "ok", { stop: true });
         await waitForUpdatedEvents(previousSignature, previousKeys, foundCount);
       } catch (error) {
         const prefix = Number.isFinite(foundCount) ? `${foundText(foundCount)} gevonden.` : "";
@@ -2028,7 +2031,7 @@
             sites: [...document.querySelectorAll(".siteCheck:checked")].map((check) => check.value).length
               ? [...document.querySelectorAll(".siteCheck:checked")].map((check) => check.value)
               : sites.slice(),
-            providers: { perplexity: false, mistral: false, openai: false, chatgpt: false }
+            providers: { perplexity: false, mistral: false, openai: false, chatgpt: false, serpapi: true }
           })
         });
         const data = await response.json().catch(() => ({}));
@@ -2036,7 +2039,16 @@
 
         newEventKeys = new Set();
         saveStoredSet(NEW_EVENTS_KEY, newEventKeys);
-        showStatus("Alles is verwijderd. Ik controleer de opnieuw opgebouwde lijst.", "ok");
+        if (data?.cleared) {
+          events = [];
+          eventsUpdatedAt = "";
+          latestSiteResults = [];
+          fillTypes();
+          renderSites(checkedSites());
+          applyFilters();
+        }
+        const serpText = Number(data?.serpApiAddedCount) > 0 ? ` SerpAPI vond ${Number(data.serpApiAddedCount)} extra links.` : "";
+        showStatus(`Alles is verwijderd.${serpText} Ik controleer de opnieuw opgebouwde lijst.`, "ok");
         await waitForUpdatedEvents(previousSignature, previousKeys, scrapedCountFromResponse(data));
       } catch (error) {
         showStatus(`Verwijderen mislukt: ${error.message}`, "error");

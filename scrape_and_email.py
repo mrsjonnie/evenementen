@@ -251,6 +251,8 @@ def should_geocode(location):
 
 def normalize_title(value):
     text = clean_text(value).lower()
+    text = re.sub(rf"^(?:monday|tuesday|wednesday|thursday|friday|saturday|sunday|maandag|dinsdag|woensdag|donderdag|vrijdag|zaterdag|zondag)\s+\d{{1,2}}\s+(?:{MONTHS})\s+", "", text)
+    text = re.split(r"\b(mainstage|downstage|zienema|dansen)\b|\bticket\b|\bdoors\b|\bstart\b|\bsold out\b|\bkoop ticket\b", text, 1)[0]
     text = re.sub(r"\b20\d{2}\b", "", text)
     text = re.sub(r"^(concert|theater|film|bioscoop|markt|workshop|event|evenement):\s*", "", text)
     text = re.sub(r"[^a-z0-9]+", " ", text)
@@ -275,6 +277,7 @@ def event_key(event):
 
 def event_quality(event):
     score = 0
+    title = clean_text(event.get("title"))
     if event.get("website") and event.get("website") != "#":
         score += 12
     if event.get("image"):
@@ -287,6 +290,10 @@ def event_quality(event):
         score += 2
     if event.get("source") and event.get("source") not in {"Onbekend", "Manual"}:
         score += 1
+    if title and len(title) <= 90:
+        score += 3
+    if re.search(r"\b(ticket|doors|start|koop ticket|sold out)\b", title, re.I):
+        score -= 5
     return score
 
 
@@ -540,6 +547,17 @@ def slug_title_from_url(url):
     slug = re.sub(r"[-_]+", " ", slug)
     slug = re.sub(r"\b\d{1,2}\b", "", slug)
     return format_event_title(slug)
+
+
+def is_detail_event_url(page_url):
+    parsed = urlparse(page_url)
+    host = parsed.netloc.lower()
+    path = parsed.path.rstrip("/")
+    if "spotgroningen.nl" in host:
+        return path.startswith("/programma/") and path != "/programma"
+    if "vera-groningen.nl" in host:
+        return "post_type=events" in parsed.query or "/events/" in path
+    return False
 
 
 def link_for_title(title_links, title, fallback_url):
@@ -1124,9 +1142,19 @@ def scrape_structured_site(site_url):
 
         host = site_host(page_url)
         if "spotgroningen.nl" in host:
-            events.extend(events_from_spot_listing(soup, page_url))
+            source_events = events_from_spot_listing(soup, page_url)
+            events.extend(source_events)
+            if not source_events and is_detail_event_url(page_url):
+                item = event_from_detail_page(page_url, slug_title_from_url(page_url), deadline=deadline)
+                if item and is_valid_event(item):
+                    events.append(item)
         elif "vera-groningen.nl" in host:
-            events.extend(events_from_vera_listing(soup, page_url))
+            source_events = events_from_vera_listing(soup, page_url)
+            events.extend(source_events)
+            if not source_events and is_detail_event_url(page_url):
+                item = event_from_detail_page(page_url, slug_title_from_url(page_url), deadline=deadline)
+                if item and is_valid_event(item):
+                    events.append(item)
         else:
             events.extend(events_from_listing_text(soup, page_url))
             events.extend(events_from_contextual_lines(soup, page_url))

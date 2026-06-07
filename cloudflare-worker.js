@@ -59,6 +59,93 @@ function validSites(value) {
     .slice(0, 20);
 }
 
+function sameHostUrl(candidate, site) {
+  try {
+    const candidateUrl = new URL(candidate);
+    const siteUrl = new URL(site);
+    return candidateUrl.hostname.replace(/^www\./, "") === siteUrl.hostname.replace(/^www\./, "");
+  } catch {
+    return false;
+  }
+}
+
+function mergeSites(...groups) {
+  const seen = new Set();
+  const merged = [];
+  for (const group of groups) {
+    for (const site of validSites(group || [])) {
+      const key = site.toLowerCase().replace(/\/$/, "");
+      if (!seen.has(key)) {
+        seen.add(key);
+        merged.push(site);
+      }
+    }
+  }
+  return merged.slice(0, 20);
+}
+
+function serpApiEnabled(env, body = {}) {
+  const providers = body.providers && typeof body.providers === "object" ? body.providers : {};
+  return Boolean(env.SERPAPI_TOKEN) && providers.serpapi !== false;
+}
+
+function serpSearchQuery(site, body = {}) {
+  const url = new URL(site);
+  const region = validateInput(body.region || "Groningen", 80);
+  const dateHint = [body.dateFrom, body.dateTo].map((value) => validateInput(value || "", 20)).filter(Boolean).join(" ");
+  const pathHint = url.pathname && url.pathname !== "/" ? url.pathname.replace(/[/-]+/g, " ") : "agenda programma";
+  return `site:${url.hostname} ${pathHint} evenement ${region} ${dateHint}`.trim();
+}
+
+async function serpApiLinksForSite(env, site, body = {}) {
+  const token = validateInput(env.SERPAPI_TOKEN || "", 500);
+  if (!token) return [];
+
+  const params = new URLSearchParams({
+    engine: "google",
+    q: serpSearchQuery(site, body),
+    num: "10",
+    api_key: token
+  });
+  const response = await fetch(`https://serpapi.com/search.json?${params.toString()}`, {
+    headers: { "Accept": "application/json" }
+  });
+  if (!response.ok) return [];
+
+  const data = await response.json().catch(() => ({}));
+  const results = Array.isArray(data.organic_results) ? data.organic_results : [];
+  return results
+    .map((item) => validateInput(item.link || "", 300))
+    .filter((link) => link && sameHostUrl(link, site) && !badWords.test(link))
+    .slice(0, 6);
+}
+
+async function enrichBodyWithSerpApi(env, body = {}) {
+  const selected = validSites(body.sites);
+  if (!serpApiEnabled(env, body) || !selected.length) {
+    return { body, serpApiAddedCount: 0 };
+  }
+
+  const priority = [...selected].sort((a, b) => {
+    const aScore = /spotgroningen|vera-groningen|forum\.nl/i.test(a) ? 0 : 1;
+    const bScore = /spotgroningen|vera-groningen|forum\.nl/i.test(b) ? 0 : 1;
+    return aScore - bScore;
+  }).slice(0, 4);
+
+  const discovered = [];
+  for (const site of priority) {
+    try {
+      discovered.push(...await serpApiLinksForSite(env, site, body));
+    } catch {}
+  }
+
+  const merged = mergeSites(selected, discovered);
+  return {
+    body: { ...body, sites: merged },
+    serpApiAddedCount: Math.max(0, merged.length - selected.length)
+  };
+}
+
 const monthMap = {
   januari: 1,
   februari: 2,
@@ -515,15 +602,17 @@ async function upsertRefreshRequest(env, body, overrides = {}, dispatchFailure =
 }
 
 async function startRefresh(env, body, overrides = {}) {
-  const inputs = workflowInputs(body || {}, overrides);
+  const enriched = await enrichBodyWithSerpApi(env, body || {});
+  const refreshBody = enriched.body;
+  const inputs = workflowInputs(refreshBody, overrides);
   const dispatch = await dispatchWorkflow(env, inputs);
   if (dispatch.ok) {
-    return { ok: true, method: "workflow_dispatch", workflowFile: dispatch.workflowFile };
+    return { ok: true, method: "workflow_dispatch", workflowFile: dispatch.workflowFile, serpApiAddedCount: enriched.serpApiAddedCount };
   }
 
-  const fallback = await upsertRefreshRequest(env, body, overrides, dispatch);
+  const fallback = await upsertRefreshRequest(env, refreshBody, overrides, dispatch);
   if (fallback.ok) {
-    return { ok: true, method: "refresh_request", dispatchFailure: dispatch };
+    return { ok: true, method: "refresh_request", dispatchFailure: dispatch, serpApiAddedCount: enriched.serpApiAddedCount };
   }
 
   return {
@@ -559,6 +648,7 @@ export default {
         ok: true,
         worker: "evenementen-refresh",
         githubTokenConfigured: Boolean(env.GITHUB_TOKEN || env.GH_TOKEN || env.GITHUB_PAT),
+        serpApiConfigured: Boolean(env.SERPAPI_TOKEN),
         acceptedTokenNames: ["GITHUB_TOKEN", "GH_TOKEN", "GITHUB_PAT"],
         githubOwner: env.GITHUB_OWNER || "mrsjonnie",
         githubRepo: env.GITHUB_REPO || "evenementen",
@@ -587,21 +677,27 @@ export default {
     if (path === "/clear" && request.method === "POST") {
       try {
         const body = await request.json().catch(() => ({}));
-        const result = await startRefresh(env, body || {}, { clearArchive: true });
-        if (!result.ok) {
-          return json({
-            error: "GitHub verversverzoek mislukt",
-            status: result.status,
-            details: result.details
-          }, 500);
+        const clearResult = await saveEventsToGithub(env, [], { clearArchive: true });
+        let result = null;
+        try {
+          result = await startRefresh(env, body || {}, { clearArchive: true });
+        } catch (error) {
+          result = { ok: false, error: validateInput(error.message, 500) };
         }
         return json({
           ok: true,
-          message: "Wissen en opnieuw verversen is gestart via GitHub Actions",
-          method: result.method,
+          message: result.ok
+            ? "Alles is verwijderd en opnieuw verversen is gestart"
+            : "Alles is verwijderd, maar opnieuw verversen kon niet starten",
+          cleared: true,
+          clearResult,
+          refreshStarted: Boolean(result.ok),
+          method: result.method || null,
           workflowFile: result.workflowFile || null,
-          scrapedCount: null,
-          totalSaved: null
+          serpApiAddedCount: result.serpApiAddedCount || 0,
+          scrapedCount: 0,
+          totalSaved: 0,
+          refreshError: result.ok ? null : (result.error || result.details || "Onbekende fout")
         }, 200);
       } catch (e) {
         return json({ error: "Fout bij verwijderen", details: e.message }, 500);
@@ -630,6 +726,7 @@ export default {
         message: "Verversing gestart via GitHub Actions",
         method: result.method,
         workflowFile: result.workflowFile || null,
+        serpApiAddedCount: result.serpApiAddedCount || 0,
         scrapedCount: null,
         totalSaved: null
       }, 200);
