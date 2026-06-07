@@ -446,24 +446,31 @@ function workflowInputs(body, overrides = {}) {
 }
 
 async function dispatchWorkflow(env, inputs) {
-  const workflowFile = githubConfig(env).workflowFile;
-  const ghResponse = await githubFetch(env, `/actions/workflows/${workflowFile}/dispatches`, {
-    method: "POST",
-    body: JSON.stringify({
-      ref: "main",
-      inputs
-    })
-  });
+  const configuredWorkflow = githubConfig(env).workflowFile;
+  const workflowFiles = [...new Set([configuredWorkflow, "update-events.yml", "daily_update.yml"].filter(Boolean))];
+  const failures = [];
 
-  if (ghResponse.status !== 204) {
-    return {
-      ok: false,
-      status: ghResponse.status,
-      details: await ghResponse.text()
-    };
+  for (const workflowFile of workflowFiles) {
+    const ghResponse = await githubFetch(env, `/actions/workflows/${workflowFile}/dispatches`, {
+      method: "POST",
+      body: JSON.stringify({
+        ref: "main",
+        inputs
+      })
+    });
+
+    if (ghResponse.status === 204) {
+      return { ok: true, workflowFile };
+    }
+
+    failures.push(`${workflowFile}: status ${ghResponse.status} ${validateInput(await ghResponse.text(), 500)}`);
   }
 
-  return { ok: true };
+  return {
+    ok: false,
+    status: 500,
+    details: failures.join(" | ")
+  };
 }
 
 async function upsertRefreshRequest(env, body, overrides = {}, dispatchFailure = null) {
@@ -511,7 +518,7 @@ async function startRefresh(env, body, overrides = {}) {
   const inputs = workflowInputs(body || {}, overrides);
   const dispatch = await dispatchWorkflow(env, inputs);
   if (dispatch.ok) {
-    return { ok: true, method: "workflow_dispatch" };
+    return { ok: true, method: "workflow_dispatch", workflowFile: dispatch.workflowFile };
   }
 
   const fallback = await upsertRefreshRequest(env, body, overrides, dispatch);
@@ -554,7 +561,8 @@ export default {
         githubTokenConfigured: Boolean(env.GITHUB_TOKEN),
         githubOwner: env.GITHUB_OWNER || "mrsjonnie",
         githubRepo: env.GITHUB_REPO || "evenementen",
-        workflowFile: env.GITHUB_WORKFLOW_FILE || "update-events.yml"
+        configuredWorkflowFile: env.GITHUB_WORKFLOW_FILE || "update-events.yml",
+        fallbackWorkflowFiles: ["update-events.yml", "daily_update.yml"]
       }, 200);
     }
 
@@ -590,6 +598,7 @@ export default {
           ok: true,
           message: "Wissen en opnieuw verversen is gestart via GitHub Actions",
           method: result.method,
+          workflowFile: result.workflowFile || null,
           scrapedCount: null,
           totalSaved: null
         }, 200);
@@ -619,6 +628,7 @@ export default {
         ok: true,
         message: "Verversing gestart via GitHub Actions",
         method: result.method,
+        workflowFile: result.workflowFile || null,
         scrapedCount: null,
         totalSaved: null
       }, 200);
