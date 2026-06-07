@@ -772,3 +772,24 @@
 2026-06-07 19:03:43 - Dubbele evenementen samengevoegd: 20
 2026-06-07 19:03:43 - Opgeslagen: 20 actief, 2 gearchiveerd in events.json
 2026-06-07 19:03:43 - === Scraping voltooid ===
+2026-06-07 19:24:21 - === Start scraping ===
+2026-06-07 19:24:21 - Input region=Groningen
+2026-06-07 19:24:21 - AI-bronnen worden in deze automatische workflow niet gebruikt.
+2026-06-07 19:24:21 - Alleen geselecteerde websites worden gescand: 1
+2026-06-07 19:24:34 - 6 kandidaat-evenementen gevonden op https://www.vera-groningen.nl
+2026-06-07 19:24:35 - Websitepagina niet bereikbaar https://www.vera-groningen.nl/agenda: 404 Client Error: Not Found for url: https://www.vera-groningen.nl/agenda
+2026-06-07 19:24:36 - Websitepagina niet bereikbaar https://www.vera-groningen.nl/agenda/agenda-overzicht: 404 Client Error: Not Found for url: https://www.vera-groningen.nl/agenda/agenda-overzicht
+2026-06-07 19:24:36 - Websitepagina niet bereikbaar https://www.vera-groningen.nl/nl/agenda: 404 Client Error: Not Found for url: https://www.vera-groningen.nl/nl/agenda
+2026-06-07 19:24:37 - Websitepagina niet bereikbaar https://www.vera-groningen.nl/nl/agenda/agenda-overzicht: 404 Client Error: Not Found for url: https://www.vera-groningen.nl/nl/agenda/agenda-overzicht
+2026-06-07 19:24:38 - Websitepagina niet bereikbaar https://www.vera-groningen.nl/evenementen: 404 Client Error: Not Found for url: https://www.vera-groningen.nl/evenementen
+2026-06-07 19:24:38 - Websitepagina niet bereikbaar https://www.vera-groningen.nl/evenement: 404 Client Error: Not Found for url: https://www.vera-groningen.nl/evenement
+2026-06-07 19:24:39 - Websitepagina niet bereikbaar https://www.vera-groningen.nl/events: 404 Client Error: Not Found for url: https://www.vera-groningen.nl/events
+2026-06-07 19:24:39 - Websitepagina niet bereikbaar https://www.vera-groningen.nl/events/all: 404 Client Error: Not Found for url: https://www.vera-groningen.nl/events/all
+2026-06-07 19:24:40 - Websitepagina niet bereikbaar https://www.vera-groningen.nl/event: 404 Client Error: Not Found for url: https://www.vera-groningen.nl/event
+2026-06-07 19:25:01 - Dubbele evenementen samengevoegd: 1
+2026-06-07 19:25:01 - 19 kandidaat-evenementen gevonden op https://www.vera-groningen.nl/programma
+2026-06-07 19:25:01 - Dubbele evenementen samengevoegd: 5
+2026-06-07 19:25:01 - Gevonden op extra website https://www.vera-groningen.nl: 20
+2026-06-07 19:25:01 - Dubbele evenementen samengevoegd: 20
+2026-06-07 19:25:01 - Opgeslagen: 20 actief, 2 gearchiveerd in events.json
+2026-06-07 19:25:01 - === Scraping voltooid ===
