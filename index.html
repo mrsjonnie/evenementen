@@ -1036,12 +1036,12 @@
               <span aria-hidden="true">v</span>
             </button>
             <div class="sitePanel">
-              <div class="sitePanelHeader">AI-bronnen blijven uit. SerpAPI kan openbare links zoeken en is aan/uit te zetten.</div>
+              <div class="sitePanelHeader">AI-bronnen zijn tijdelijk uitgeschakeld. Er wordt alleen rechtstreeks vanaf websites gescand.</div>
               <div class="siteList" id="providerList">
                 <label><input class="providerCheck" type="checkbox" id="provPerplexity" disabled> <span>Perplexity uit</span></label>
                 <label><input class="providerCheck" type="checkbox" id="provMistral" disabled> <span>Mistral uit</span></label>
                 <label><input class="providerCheck" type="checkbox" id="provOpenAI" disabled> <span>ChatGPT uit</span></label>
-                <label><input class="providerCheck" type="checkbox" id="provSerpAPI" checked> <span>SerpAPI</span></label>
+                <label><input class="providerCheck" type="checkbox" id="provSerpAPI" disabled> <span>SerpAPI uit</span></label>
               </div>
             </div>
           </div>
@@ -1113,7 +1113,7 @@
   </div>
 
   <script>
-    const APP_VERSION = "2026.06.07.31";
+    const APP_VERSION = "2026.06.07.33";
     const DEFAULT_MAX_EVENTS_PER_SITE = 20;
     const DEFAULT_SITE_TIME_LIMIT_SECONDS = 20;
     const SCAN_SETTINGS_KEY = "eventScanSettingsV1";
@@ -1138,22 +1138,6 @@
       default: "https://images.unsplash.com/photo-1517457373958-b7bdd4587205?auto=format&fit=crop&w=900&q=80"
     };
     const fallbackEvents = [
-      {
-        title: "Patrick Watson",
-        type: "Muziek",
-        date: "2026-06-07",
-        time: "20:00",
-        location: "SPOT/De Oosterpoort, Groningen",
-        lat: 53.2142,
-        lon: 6.5759,
-        cost: "\u20ac 44,00",
-        description: "Filmische liedjes van innemende podiumpersoonlijkheid, met support van La Force.",
-        image: "https://picsum.photos/seed/Patrick+Watson+SPOT/800/500",
-        website: "https://www.spotgroningen.nl/programma/patrick-watson/",
-        source: "spotgroningen.nl",
-        discoverySource: "Geverifieerd",
-        periodLabel: "2026-06-07"
-      },
       {
         title: "Groninger Museum",
         type: "museum",
@@ -1203,6 +1187,7 @@
     let customSites = [];
     let filteredEvents = [];
     let newEventKeys = new Set();
+    let deletedEventKeys = new Set();
     let cardsCollapsed = true;
     let refreshAbortRequested = false;
     let latestWeatherData = null;
@@ -1262,6 +1247,7 @@
     const CUSTOM_SITES_KEY = "evenementenCustomSites";
     const NEW_EVENTS_KEY = "evenementenNewEventKeys";
     const KNOWN_EVENTS_KEY = "evenementenKnownEventKeys";
+    const DELETED_EVENTS_KEY = "evenementenDeletedEventKeys";
 
     function normalizeSiteInput(value) {
       let raw = cleanText(value);
@@ -1362,7 +1348,7 @@
         mistral: false,
         openai: false,
         chatgpt: false,
-        serpapi: Boolean($("provSerpAPI")?.checked)
+        serpapi: false
       };
     }
 
@@ -1397,6 +1383,11 @@
 
     function eventKeySet(items) {
       return new Set((items || []).map(eventDedupeKey));
+    }
+
+    function mergeVerifiedEvents(items) {
+      const merged = dedupeEvents(items || []);
+      return merged.filter((event) => !deletedEventKeys.has(eventDedupeKey(event)));
     }
 
     function isNewEvent(event) {
@@ -1902,10 +1893,6 @@
     }
 
     function serpApiStatusText(data) {
-      const rawCount = Number(data?.serpApiRawCount) || 0;
-      const linkCount = Number(data?.serpApiAddedCount) || 0;
-      if (linkCount > 0) return ` SerpAPI vond ${linkCount} extra links (${rawCount} ruwe resultaten).`;
-      if (rawCount > 0) return ` SerpAPI gaf ${rawCount} ruwe resultaten, maar geen extra bruikbare link.`;
       return "";
     }
 
@@ -1927,7 +1914,7 @@
           const hasFreshEvents = Array.isArray(freshPayload.events) && freshPayload.events.length > 0;
           const changed = (freshPayload.updatedAt && freshPayload.updatedAt !== previousUpdatedAt) || eventSignature(freshPayload.events) !== previousSignature;
           if (changed && (!requireEvents || hasFreshEvents)) {
-            events = freshPayload.events;
+            events = mergeVerifiedEvents(freshPayload.events);
             eventsUpdatedAt = freshPayload.updatedAt;
             latestSiteResults = freshPayload.siteResults || [];
             latestRawLog = freshPayload.rawLog || [];
@@ -2040,7 +2027,20 @@
 
     function siteResultFor(site) {
       const siteKey = normalizeSiteInput(site).toLowerCase();
-      return (latestSiteResults || []).find((result) => normalizeSiteInput(result.site).toLowerCase() === siteKey) || null;
+      const siteHost = hostFromUrl(site);
+      const matches = (latestSiteResults || []).filter((result) => {
+        const resultSite = normalizeSiteInput(result.site).toLowerCase();
+        const resultHost = hostFromUrl(result.site);
+        return resultSite === siteKey || (siteHost && resultHost && resultHost === siteHost);
+      });
+      if (!matches.length) return null;
+      return matches.reduce((summary, result) => ({
+        site,
+        count: summary.count + (Number(result.count) || 0),
+        newCount: summary.newCount + (Number(result.newCount) || 0),
+        durationSeconds: summary.durationSeconds + (Number(result.durationSeconds) || 0),
+        timedOut: summary.timedOut || Boolean(result.timedOut)
+      }), { site, count: 0, newCount: 0, durationSeconds: 0, timedOut: false });
     }
 
     function renderSites(selected = null) {
@@ -2064,7 +2064,7 @@
     }
 
     function renderRawLog() {
-      const showSerpApi = Boolean($("provSerpAPI")?.checked);
+      const showSerpApi = false;
       const rows = [...(liveLogRows || []), ...(latestRawLog || [])]
         .filter((row) => showSerpApi || cleanText(row.source).toLowerCase() !== "serpapi")
         .slice(0, 160);
@@ -2194,6 +2194,7 @@
       document.title = `Evenementen rond ${region || "je regio"}`;
 
       filteredEvents = dedupeEvents(events).filter((event) => {
+        if (deletedEventKeys.has(eventDedupeKey(event))) return false;
         const haystack = [
           event.title,
           event.description,
@@ -2622,7 +2623,7 @@
       $("provPerplexity").checked = false;
       $("provMistral").checked = false;
       $("provOpenAI").checked = false;
-      $("provSerpAPI").checked = true;
+      $("provSerpAPI").checked = false;
       document.querySelectorAll(".siteCheck").forEach((check) => { check.checked = check.value === SPOT_ONLY_SITE; });
       cardsCollapsed = true;
       expandedEventKeys = new Set();
@@ -2663,8 +2664,10 @@
         if (!response.ok) throw new Error(workerErrorMessage(data, "Verwijderen is mislukt"));
 
         events = events.filter((item) => eventDedupeKey(item) !== key);
+        deletedEventKeys.add(key);
         newEventKeys.delete(key);
         expandedEventKeys.delete(key);
+        saveStoredSet(DELETED_EVENTS_KEY, deletedEventKeys);
         saveStoredSet(NEW_EVENTS_KEY, newEventKeys);
         saveStoredSet(KNOWN_EVENTS_KEY, eventKeySet(events));
         applyFilters();
@@ -2681,11 +2684,12 @@
       customSites = loadCustomSites();
       const knownKeys = loadStoredSet(KNOWN_EVENTS_KEY);
       const storedNewKeys = loadStoredSet(NEW_EVENTS_KEY);
+      deletedEventKeys = loadStoredSet(DELETED_EVENTS_KEY);
       const loaded = await Promise.all([
         loadEventsWithMeta(fallbackEvents),
         loadJson("./sites.json", fallbackSites)
       ]);
-      events = loaded[0].events;
+      events = mergeVerifiedEvents(loaded[0].events);
       eventsUpdatedAt = loaded[0].updatedAt;
       latestSiteResults = loaded[0].siteResults || [];
       latestRawLog = loaded[0].rawLog || [];

@@ -85,8 +85,7 @@ function mergeSites(...groups) {
 }
 
 function serpApiEnabled(env, body = {}) {
-  const providers = body.providers && typeof body.providers === "object" ? body.providers : {};
-  return Boolean(env.SERPAPI_TOKEN) && providers.serpapi !== false;
+  return false;
 }
 
 function serpSearchQuery(site, body = {}) {
