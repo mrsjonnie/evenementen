@@ -365,7 +365,7 @@ function encodeBase64(text) {
 }
 
 function githubConfig(env) {
-  const token = validateInput(env.GITHUB_TOKEN || "", 300);
+  const token = validateInput(env.GITHUB_TOKEN || env.GH_TOKEN || env.GITHUB_PAT || "", 300);
   if (!token) {
     throw new Error("GITHUB_TOKEN ontbreekt in Cloudflare Variables and Secrets");
   }
@@ -558,7 +558,8 @@ export default {
       return json({
         ok: true,
         worker: "evenementen-refresh",
-        githubTokenConfigured: Boolean(env.GITHUB_TOKEN),
+        githubTokenConfigured: Boolean(env.GITHUB_TOKEN || env.GH_TOKEN || env.GITHUB_PAT),
+        acceptedTokenNames: ["GITHUB_TOKEN", "GH_TOKEN", "GITHUB_PAT"],
         githubOwner: env.GITHUB_OWNER || "mrsjonnie",
         githubRepo: env.GITHUB_REPO || "evenementen",
         configuredWorkflowFile: env.GITHUB_WORKFLOW_FILE || "update-events.yml",

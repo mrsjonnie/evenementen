@@ -19,7 +19,7 @@ BASE_HEADERS = {"User-Agent": "Mozilla/5.0"}
 MAX_EVENTS_PER_SITE = 20
 SITE_TIME_LIMIT_SECONDS = 5
 SITE_RESULTS = []
-MONTHS = "januari|februari|maart|april|mei|juni|juli|augustus|september|oktober|november|december|jan|feb|mrt|apr|jun|jul|aug|sep|sept|okt|nov|dec|january|february|march|may|june|july|august|october"
+MONTHS = "januari|februari|maart|april|mei|juni|juli|augustus|september|oktober|november|december|jan|feb|mrt|apr|jun|jul|aug|sep|sept|okt|nov|dec|january|february|march|april|may|june|july|august|september|october|november|december"
 DATE_RE = re.compile(rf"^\d{{1,2}}(?:\s+t/m\s+\d{{1,2}})?\s+(?:{MONTHS})$", re.I)
 DATE_IN_TEXT_RE = re.compile(rf"\b\d{{1,2}}(?:\s+t/m\s+\d{{1,2}})?\s+(?:{MONTHS})(?:\s+20\d{{2}})?\b", re.I)
 ISO_DATE_RE = re.compile(r"\b20\d{2}-\d{2}-\d{2}\b")
@@ -31,6 +31,9 @@ DATE_TITLE_RE = re.compile(rf"^(?:maandag|dinsdag|woensdag|donderdag|vrijdag|zat
 PRICE_OR_ACTION_RE = re.compile(r"^(gratis|€\s*\d|eur\s*\d|tickets?|koop ticket|meer info|lees meer|uitverkocht|sold out|reeds gestart)", re.I)
 TITLE_NOISE_RE = re.compile(r"^(coming up|highlights|lees meer|koop ticket|sold out|support|friday show|ubbo x zienema|raw postpunk from|in 20\d{2},|this winter)", re.I)
 SPOT_LISTING_RE = re.compile(r"^(ma|di|wo|do|vr|za|zo)\s*(\d{1,2})\s*([a-z]{3,9})\b\s+(.+)$", re.I)
+VERA_DATE_RE = re.compile(rf"\b(monday|tuesday|wednesday|thursday|friday|saturday|sunday)\s+\d{{1,2}}\s+(?:{MONTHS})\b", re.I)
+VERA_TYPE_RE = re.compile(r"\b(Mainstage|Downstage|Zienema|Dansen)\s*\|", re.I)
+COUNTRY_CODE_RE = re.compile(r"\b(CAN|NL|USA|BEL|GRN|INT|UK|DE|FR|IT|ES)\b")
 BLOCKED_TITLES = {
     "uitgelicht",
     "toon info",
@@ -104,7 +107,11 @@ MONTH_NUMBERS = {
     "june": 6,
     "july": 7,
     "august": 8,
+    "april": 4,
+    "september": 9,
     "october": 10,
+    "november": 11,
+    "december": 12,
 }
 
 
@@ -128,6 +135,30 @@ def clean_text(value):
     text = re.sub(r"\bEUR\b", "\u20ac", text, flags=re.I)
     text = re.sub(r"\u20ac\s*(?=\d)", "\u20ac ", text)
     return text.strip()
+
+
+def format_event_title(value):
+    title = clean_text(value)
+    title = re.sub(r"\s+", " ", title).strip(" -|")
+    title = COUNTRY_CODE_RE.sub("", title)
+    title = re.sub(r"\s{2,}", " ", title).strip(" -|")
+    if not title:
+        return ""
+
+    small_words = {"de", "het", "een", "en", "van", "voor", "met", "the", "and", "of", "in", "on", "to"}
+    words = []
+    for index, word in enumerate(title.split(" ")):
+        if not word:
+            continue
+        if re.search(r"[A-Z]{2,}|[-/]", word):
+            words.append(word)
+            continue
+        lower = word.lower()
+        if index > 0 and lower in small_words:
+            words.append(lower)
+        else:
+            words.append(word[:1].upper() + word[1:])
+    return " ".join(words)
 
 
 def normalize_date_value(value):
@@ -429,7 +460,7 @@ def get_coordinates(location):
 
 
 def normalize_event(event):
-    title = clean_text(event.get("title"))
+    title = format_event_title(event.get("title"))
     location = clean_text(event.get("location"))
     lat = event.get("lat")
     lon = event.get("lon")
@@ -496,6 +527,19 @@ def default_location_for_site(site_url):
         "concertgebouw.nl": "Het Concertgebouw Amsterdam",
     }
     return known.get(host, urlparse(site_url).netloc)
+
+
+def site_host(site_url):
+    return urlparse(site_url).netloc.lower().replace("www.", "")
+
+
+def slug_title_from_url(url):
+    path = urlparse(url).path.rstrip("/")
+    slug = path.rsplit("/", 1)[-1]
+    slug = re.sub(r"-\d+$", "", slug)
+    slug = re.sub(r"[-_]+", " ", slug)
+    slug = re.sub(r"\b\d{1,2}\b", "", slug)
+    return format_event_title(slug)
 
 
 def link_for_title(title_links, title, fallback_url):
@@ -730,11 +774,15 @@ def events_from_listing_text(soup, site_url):
     return events
 
 
-def spot_title_from_text(value):
+def spot_title_from_text(value, url=""):
+    slug_title = slug_title_from_url(url)
+    if len(normalize_title(slug_title)) >= 5:
+        return slug_title
+
     title = clean_text(value)
     title = re.sub(r"\b(laatste kaarten|uitverkocht|net bevestigd|bijna uitverkocht|extra show)\b.*$", "", title, flags=re.I).strip(" -|")
     title = re.sub(r"\s{2,}", " ", title)
-    return title[:170].strip()
+    return format_event_title(title[:170])
 
 
 def events_from_spot_listing(soup, site_url):
@@ -756,7 +804,7 @@ def events_from_spot_listing(soup, site_url):
             continue
 
         date = normalize_date_value(f"{match.group(2)} {match.group(3)}")
-        title = spot_title_from_text(match.group(4))
+        title = spot_title_from_text(match.group(4), absolute)
         if not title:
             continue
 
@@ -770,6 +818,64 @@ def events_from_spot_listing(soup, site_url):
                 "website": absolute,
                 "cost": "Zie website",
                 "source": "www.spotgroningen.nl",
+                "periodLabel": date,
+            }
+        )
+        if is_valid_event(item):
+            events.append(item)
+        if len(events) >= MAX_EVENTS_PER_SITE:
+            break
+
+    return dedupe_events(events)
+
+
+def vera_title_from_text(value):
+    title = clean_text(value)
+    type_match = VERA_TYPE_RE.search(title)
+    if type_match:
+        title = title[:type_match.start()]
+    title = re.split(r"\b(Koop ticket|Sold out|Gratis|Ticket:|doors:|start:)\b", title, 1, flags=re.I)[0]
+    title = title.strip(" -|")
+    return format_event_title(title[:180])
+
+
+def events_from_vera_listing(soup, site_url):
+    if "vera-groningen.nl" not in site_host(site_url):
+        return []
+
+    events = []
+    for anchor in soup.find_all("a", href=True):
+        href = clean_text(anchor.get("href"))
+        absolute = urljoin(site_url, href).split("#", 1)[0]
+        parsed = urlparse(absolute)
+        if "vera-groningen.nl" not in parsed.netloc.lower():
+            continue
+
+        text = clean_text(anchor.get_text(" ", strip=True))
+        date_match = VERA_DATE_RE.search(text)
+        if not date_match:
+            continue
+
+        date = normalize_date_value(date_match.group(0))
+        rest = text[date_match.end():].strip()
+        title = vera_title_from_text(rest)
+        if not title:
+            continue
+
+        type_match = VERA_TYPE_RE.search(rest)
+        cost_match = re.search(r"Ticket:\s*([^|]+)", rest, re.I)
+        start_match = re.search(r"start:\s*(\d{1,2}:\d{2})", rest, re.I)
+        item = normalize_event(
+            {
+                "title": title,
+                "type": clean_text(type_match.group(1)) if type_match else "evenement",
+                "date": date,
+                "time": start_match.group(1) if start_match else "",
+                "location": "VERA Groningen",
+                "description": text[:320],
+                "website": absolute,
+                "cost": clean_text(cost_match.group(1)) if cost_match else "Zie website",
+                "source": "www.vera-groningen.nl",
                 "periodLabel": date,
             }
         )
@@ -1016,10 +1122,15 @@ def scrape_structured_site(site_url):
             if len(events) >= MAX_EVENTS_PER_SITE:
                 break
 
-        events.extend(events_from_spot_listing(soup, page_url))
-        events.extend(events_from_listing_text(soup, page_url))
-        events.extend(events_from_contextual_lines(soup, page_url))
-        link_candidates.extend(candidate_event_links(soup, page_url))
+        host = site_host(page_url)
+        if "spotgroningen.nl" in host:
+            events.extend(events_from_spot_listing(soup, page_url))
+        elif "vera-groningen.nl" in host:
+            events.extend(events_from_vera_listing(soup, page_url))
+        else:
+            events.extend(events_from_listing_text(soup, page_url))
+            events.extend(events_from_contextual_lines(soup, page_url))
+            link_candidates.extend(candidate_event_links(soup, page_url))
 
         added = len(events) - before
         if added:
