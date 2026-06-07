@@ -36,6 +36,7 @@ MONTHS = "januari|februari|maart|april|mei|juni|juli|augustus|september|oktober|
 DATE_RE = re.compile(rf"^\d{{1,2}}(?:\s+t/m\s+\d{{1,2}})?\s+(?:{MONTHS})$", re.I)
 DATE_IN_TEXT_RE = re.compile(rf"\b\d{{1,2}}(?:\s+t/m\s+\d{{1,2}})?\s+(?:{MONTHS})(?:\s+20\d{{2}})?\b", re.I)
 ISO_DATE_RE = re.compile(r"\b20\d{2}-\d{2}-\d{2}\b")
+NUMERIC_DATE_RE = re.compile(r"\b(\d{1,2})[/-](\d{1,2})[/-](20\d{2})\b")
 SCORE_RE = re.compile(r"^\d,\d$")
 TIME_RE = re.compile(r"\b\d{1,2}:\d{2}\b")
 TIME_RANGE_RE = re.compile(r"^\d{1,2}:\d{2}(?:\s*[-–]\s*\d{1,2}:\d{2})?$")
@@ -582,6 +583,11 @@ def default_location_for_site(site_url):
         "hedon-zwolle.nl": "Hedon Zwolle",
         "paradiso.nl": "Paradiso Amsterdam",
         "concertgebouw.nl": "Het Concertgebouw Amsterdam",
+        "visitgroningen.nl": "Groningen",
+        "groningen.uitloper.nu": "Groningen",
+        "kultuuragenda.nl": "Nederland",
+        "noorderzon.nl": "Noorderplantsoen Groningen",
+        "vvvameland.nl": "Ameland",
     }
     return known.get(host, urlparse(site_url).netloc)
 
@@ -683,6 +689,13 @@ def first_date_in_text(text):
     match = ISO_DATE_RE.search(text)
     if match:
         return match.group(0)
+    match = NUMERIC_DATE_RE.search(text)
+    if match:
+        day, month, year = map(int, match.groups())
+        try:
+            return datetime(year, month, day).strftime("%Y-%m-%d")
+        except ValueError:
+            pass
     match = DATE_IN_TEXT_RE.search(text)
     return clean_text(match.group(0)) if match else ""
 
@@ -1240,7 +1253,7 @@ def event_from_jsonld(node, site_url):
 
     title = clean_text(node.get("name") or node.get("headline"))
     date, event_time = split_start_date(node.get("startDate"))
-    location = extract_location(node.get("location"))
+    location = extract_location(node.get("location")) or default_location_for_site(site_url)
     website = clean_text(node.get("url")) or site_url
 
     return normalize_event(

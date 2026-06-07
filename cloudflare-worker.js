@@ -161,7 +161,7 @@ async function enrichBodyWithSerpApi(env, body = {}) {
     const aScore = /spotgroningen|vera-groningen|forum\.nl/i.test(a) ? 0 : 1;
     const bScore = /spotgroningen|vera-groningen|forum\.nl/i.test(b) ? 0 : 1;
     return aScore - bScore;
-  }).slice(0, 4);
+  }).slice(0, 14);
 
   const discovered = [];
   const rawLog = [];
@@ -568,7 +568,7 @@ function workflowInputs(body, overrides = {}) {
     sites: JSON.stringify(validSites(body.sites)),
     providers: JSON.stringify(body.providers && typeof body.providers === "object" ? body.providers : {}),
     serpApiLinks: JSON.stringify(validSites(body.serpApiLinks)),
-    serpApiRawLog: JSON.stringify(Array.isArray(body.serpApiRawLog) ? body.serpApiRawLog.slice(0, 120) : []),
+    serpApiRawLog: JSON.stringify(Array.isArray(body.serpApiRawLog) ? body.serpApiRawLog.slice(0, 80) : []),
     clearArchive: overrides.clearArchive ? "true" : "false"
   };
 }

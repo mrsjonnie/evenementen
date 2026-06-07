@@ -193,18 +193,18 @@
       gap: 3px;
       border: 1px solid rgba(255, 255, 255, .28);
       border-radius: 999px;
-      min-height: 24px;
-      padding: 2px 6px;
+      min-height: 25px;
+      padding: 2px 7px;
       background: rgba(255, 255, 255, .1);
       color: rgba(255, 255, 255, .88);
-      font-size: .7rem;
+      font-size: .74rem;
       font-weight: 900;
       line-height: 1;
     }
 
     .scanSetting input {
-      width: 30px;
-      height: 18px;
+      width: 44px;
+      height: 20px;
       border: 0;
       border-radius: 999px;
       padding: 1px 3px;
@@ -1113,7 +1113,7 @@
   </div>
 
   <script>
-    const APP_VERSION = "2026.06.07.29";
+    const APP_VERSION = "2026.06.07.30";
     const DEFAULT_MAX_EVENTS_PER_SITE = 20;
     const DEFAULT_SITE_TIME_LIMIT_SECONDS = 20;
     const SCAN_SETTINGS_KEY = "eventScanSettingsV1";
@@ -1196,6 +1196,7 @@
     let eventsUpdatedAt = "";
     let latestSiteResults = [];
     let latestRawLog = [];
+    let liveLogRows = [];
     let expandedEventKeys = new Set();
     let dynamicRegionCoord = null;
     let dynamicRegionKey = "";
@@ -1898,6 +1899,7 @@
       for (let attempt = 1; attempt <= 18; attempt += 1) {
         const prefix = Number.isFinite(foundCount) ? `${foundText(foundCount)} gevonden.` : foundText(foundCount) + ".";
         showStatus(`${prefix} Lijst controleren (${attempt}/18).`, "warn", { stop: true });
+        addLiveLog("App", "events.json", `Controle ${attempt}/18`, "wachten", prefix);
         const shouldContinue = await waitUnlessStopped(10000);
         if (!shouldContinue) {
           showStatus("Controle gestopt. De update kan nog doorlopen; probeer later opnieuw.", "warn");
@@ -1913,6 +1915,7 @@
             eventsUpdatedAt = freshPayload.updatedAt;
             latestSiteResults = freshPayload.siteResults || [];
             latestRawLog = freshPayload.rawLog || [];
+            addLiveLog("App", "events.json", "Nieuwe lijst geladen", "klaar", `${freshPayload.events.length} events`);
             cardsCollapsed = true;
             expandedEventKeys = new Set();
             const actualNewCount = rememberNewEvents(events, previousKeys);
@@ -2046,7 +2049,7 @@
 
     function renderRawLog() {
       const showSerpApi = Boolean($("provSerpAPI")?.checked);
-      const rows = (latestRawLog || [])
+      const rows = [...(liveLogRows || []), ...(latestRawLog || [])]
         .filter((row) => showSerpApi || cleanText(row.source).toLowerCase() !== "serpapi")
         .slice(0, 160);
       const summary = $("rawLogSummary");
@@ -2088,6 +2091,28 @@
           </tbody>
         </table>
       `;
+    }
+
+    function addLiveLog(source, site, title, status, rawText = "", url = "") {
+      liveLogRows.unshift({
+        source,
+        site,
+        title,
+        date: new Date().toLocaleTimeString("nl-NL", { hour: "2-digit", minute: "2-digit", second: "2-digit" }),
+        url,
+        status,
+        rawText
+      });
+      liveLogRows = liveLogRows.slice(0, 60);
+      renderRawLog();
+    }
+
+    function resetLiveLog() {
+      liveLogRows = [];
+      latestRawLog = [];
+      renderRawLog();
+      const panel = $("rawLogPanel");
+      if (panel) panel.open = true;
     }
 
     function updateSiteCount() {
@@ -2413,6 +2438,8 @@
         setBusy(button, false);
         return;
       }
+      resetLiveLog();
+      addLiveLog("App", selectedSites.join(", "), "Verversing gestart", "start", `${scanSettings.maxEventsPerSite} events/site, ${scanSettings.siteTimeLimitSeconds} sec/site`);
       const refreshWindow = refreshDateWindow();
       const category = $("typeFilter").value === "all" ? "" : $("typeFilter").value;
       showStatus(`Nieuwe evenementen ophalen bij ${selectedSites.length} van ${sites.length || selectedSites.length} websites...`, "warn");
@@ -2438,6 +2465,7 @@
         });
         let data = await response.json().catch(() => ({}));
         foundCount = scrapedCountFromResponse(data);
+        addLiveLog("Worker", "Cloudflare", "Verversverzoek verstuurd", response.ok ? "gestart" : "fout", workerErrorMessage(data, response.ok ? "GitHub Actions gestart" : "Start mislukt"));
 
         if (!response.ok && isOpenAIQuotaError(data.error || data.message) && payload.providers.openai) {
           $("provOpenAI").checked = false;
@@ -2458,6 +2486,7 @@
 
         const prefix = Number.isFinite(foundCount) ? `${foundText(foundCount)} gevonden.` : foundText(foundCount) + ".";
         const serpText = serpApiStatusText(data);
+        if (serpText) addLiveLog("SerpAPI", selectedSites.join(", "), "Zoekresultaten", "ontvangen", serpText.trim());
         showStatus(`Klaar. ${prefix}${serpText} Ik controleer de bijgewerkte lijst.`, "ok", { stop: true });
         await waitForUpdatedEvents(previousSignature, previousKeys, foundCount);
       } catch (error) {
@@ -2513,6 +2542,8 @@
         showStatus("Vink minimaal een website aan om opnieuw te verversen.", "warn");
         return;
       }
+      resetLiveLog();
+      addLiveLog("App", selectedSites.join(", "), "Alles verwijderen", "start", "Archief wissen en opnieuw verversen");
       const previousSignature = eventSignature(events);
       const previousKeys = eventKeySet(events);
       refreshAbortRequested = false;
