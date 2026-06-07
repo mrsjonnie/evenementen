@@ -931,7 +931,7 @@
   </main>
 
   <script>
-    const APP_VERSION = "2026.06.07.20";
+    const APP_VERSION = "2026.06.07.21";
     const WORKER_URL = "https://evenementen-refresh.mrsjonnie.workers.dev";
     const PER_PAGE_KEY = "evenementenPerPage";
     let eventsPerPage = 9;
@@ -1902,6 +1902,7 @@
     }
 
     async function refreshEvents() {
+      updateDateRange();
       const button = $("refreshBtn");
       const previousSignature = eventSignature(events);
       const previousKeys = eventKeySet(events);
@@ -1958,7 +1959,7 @@
         if (!response.ok) throw new Error(workerErrorMessage(data, "Verversen is mislukt"));
 
         const prefix = Number.isFinite(foundCount) ? `${foundText(foundCount)} gevonden.` : foundText(foundCount) + ".";
-        showStatus(`Klaar. ${prefix} Ik wacht nu tot GitHub Pages de nieuwe lijst toont.`, "ok", { stop: true });
+        showStatus(`Klaar. ${prefix} Ik controleer de bijgewerkte lijst.`, "ok", { stop: true });
         await waitForUpdatedEvents(previousSignature, previousKeys, foundCount);
       } catch (error) {
         const prefix = Number.isFinite(foundCount) ? `${foundText(foundCount)} gevonden.` : "";
@@ -1971,6 +1972,7 @@
     async function clearAllEvents() {
       if (!confirm("Weet je zeker dat je alle evenementen en het archief wilt verwijderen en daarna opnieuw wilt verversen?")) return;
 
+      updateDateRange();
       const button = $("clearBtn");
       const previousSignature = eventSignature(events);
       const previousKeys = eventKeySet(events);
@@ -2002,7 +2004,7 @@
 
         newEventKeys = new Set();
         saveStoredSet(NEW_EVENTS_KEY, newEventKeys);
-        showStatus("Alles is verwijderd. Ik wacht nu op de opnieuw opgebouwde lijst.", "ok");
+        showStatus("Alles is verwijderd. Ik controleer de opnieuw opgebouwde lijst.", "ok");
         await waitForUpdatedEvents(previousSignature, previousKeys, scrapedCountFromResponse(data));
       } catch (error) {
         showStatus(`Verwijderen mislukt: ${error.message}`, "error");
@@ -2094,7 +2096,7 @@
       refreshAbortRequested = true;
       setBusy($("refreshBtn"), false);
       setBusy($("clearBtn"), false);
-      showStatus("Controle gestopt. De update kan op GitHub nog wel doorlopen.", "warn");
+      showStatus("Controle gestopt. De update kan nog doorlopen; probeer straks opnieuw.", "warn");
     });
     $("prevPage").addEventListener("click", () => { currentPage -= 1; render(); window.scrollTo({ top: 0, behavior: "smooth" }); });
     $("nextPage").addEventListener("click", () => { currentPage += 1; render(); window.scrollTo({ top: 0, behavior: "smooth" }); });

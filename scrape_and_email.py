@@ -2,7 +2,7 @@ import json
 import os
 import re
 import time
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from urllib.parse import quote_plus, urljoin, urlparse
 
 import requests
@@ -24,6 +24,10 @@ DATE_RE = re.compile(rf"^\d{{1,2}}(?:\s+t/m\s+\d{{1,2}})?\s+(?:{MONTHS})$", re.I
 DATE_IN_TEXT_RE = re.compile(rf"\b\d{{1,2}}(?:\s+t/m\s+\d{{1,2}})?\s+(?:{MONTHS})(?:\s+20\d{{2}})?\b", re.I)
 ISO_DATE_RE = re.compile(r"\b20\d{2}-\d{2}-\d{2}\b")
 SCORE_RE = re.compile(r"^\d,\d$")
+TIME_RE = re.compile(r"\b\d{1,2}:\d{2}\b")
+TIME_RANGE_RE = re.compile(r"^\d{1,2}:\d{2}(?:\s*[-–]\s*\d{1,2}:\d{2})?$")
+WEEKDAY_RE = re.compile(r"^(maandag|dinsdag|woensdag|donderdag|vrijdag|zaterdag|zondag)\b", re.I)
+PRICE_OR_ACTION_RE = re.compile(r"^(gratis|€\s*\d|eur\s*\d|tickets?|koop ticket|meer info|uitverkocht|reeds gestart)", re.I)
 BLOCKED_TITLES = {
     "uitgelicht",
     "toon info",
@@ -154,6 +158,21 @@ def event_in_requested_period(event):
     return True
 
 
+def today_iso():
+    return datetime.now().date().isoformat()
+
+
+def is_past_event(event):
+    date = event_date_sort_value(event)
+    return date != "9999-12-31" and date < today_iso()
+
+
+def active_copy(event):
+    copy = dict(event)
+    copy.pop("archivedAt", None)
+    return copy
+
+
 def sort_events_for_request(events):
     return sorted(
         events,
@@ -251,14 +270,22 @@ def is_valid_event(event):
     return True
 
 
-def parse_input_sites():
+def configured_sites_from_file():
     try:
-        raw_sites = json.loads(INPUT_SITES_RAW)
-        if not isinstance(raw_sites, list):
-            raw_sites = []
-    except Exception:
-        raw_sites = [part.strip() for part in INPUT_SITES_RAW.split(",")]
+        with open("sites.json", "r", encoding="utf-8") as f:
+            data = json.load(f)
+    except Exception as exc:
+        log(f"Kon sites.json niet lezen: {exc}")
+        return []
 
+    if not isinstance(data, list):
+        log("sites.json bevat geen lijst met websites.")
+        return []
+
+    return data
+
+
+def normalize_site_list(raw_sites):
     sites = []
     seen = set()
     for site in raw_sites:
@@ -275,6 +302,22 @@ def parse_input_sites():
             seen.add(key)
             sites.append(url)
     return sites[:30]
+
+
+def parse_input_sites():
+    try:
+        raw_sites = json.loads(INPUT_SITES_RAW)
+        if not isinstance(raw_sites, list):
+            raw_sites = []
+    except Exception:
+        raw_sites = [part.strip() for part in INPUT_SITES_RAW.split(",")]
+
+    sites = normalize_site_list(raw_sites)
+    if sites:
+        return sites
+
+    log("Geen losse websites meegegeven; ik gebruik alle websites uit sites.json.")
+    return normalize_site_list(configured_sites_from_file())
 
 
 def dedupe_events(events):
@@ -395,6 +438,32 @@ def collect_title_links(soup, base_url):
     return links
 
 
+def default_location_for_site(site_url):
+    host = urlparse(site_url).netloc.lower().replace("www.", "")
+    known = {
+        "forum.nl": "Forum Groningen",
+        "vera-groningen.nl": "VERA Groningen",
+        "spotgroningen.nl": "SPOT Groningen",
+        "simplon.nl": "Simplon Groningen",
+        "groningermuseum.nl": "Groninger Museum",
+        "martiniplaza.nl": "Martiniplaza Groningen",
+        "hedon-zwolle.nl": "Hedon Zwolle",
+        "paradiso.nl": "Paradiso Amsterdam",
+        "concertgebouw.nl": "Het Concertgebouw Amsterdam",
+    }
+    return known.get(host, urlparse(site_url).netloc)
+
+
+def link_for_title(title_links, title, fallback_url):
+    key = normalize_title(title)
+    if key in title_links:
+        return title_links[key]
+    for link_key, url in title_links.items():
+        if key and (key in link_key or link_key in key):
+            return url
+    return fallback_url
+
+
 def first_meta(soup, names):
     for name in names:
         tag = soup.find("meta", attrs={"property": name}) or soup.find("meta", attrs={"name": name})
@@ -460,6 +529,21 @@ def first_date_in_text(text):
         return match.group(0)
     match = DATE_IN_TEXT_RE.search(text)
     return clean_text(match.group(0)) if match else ""
+
+
+def date_from_section_label(text):
+    value = clean_text(text).lower()
+    today = datetime.now().date()
+    if value == "vandaag":
+        return today.isoformat()
+    if value == "morgen":
+        return (today + timedelta(days=1)).isoformat()
+
+    value = WEEKDAY_RE.sub("", value).strip(" ,:-")
+    date_text = first_date_in_text(value)
+    if date_text:
+        return normalize_date_value(date_text)
+    return ""
 
 
 def has_event_signal(text, href=""):
@@ -532,7 +616,7 @@ def event_from_detail_page(detail_url, fallback_title, deadline=None):
             address = soup.find(attrs={"itemprop": "address"})
             location = clean_text(address.get_text(" ", strip=True)) if address else ""
         if not location:
-            location = urlparse(detail_url).netloc
+            location = default_location_for_site(detail_url)
         description = first_meta(soup, ["og:description", "description", "twitter:description"])
         if not description:
             description = text[:220]
@@ -584,7 +668,7 @@ def events_from_listing_text(soup, site_url):
                 "title": title,
                 "type": "evenement",
                 "date": date,
-                "location": urlparse(site_url).netloc,
+                "location": default_location_for_site(site_url),
                 "description": text[:260],
                 "website": website,
                 "cost": "Zie website",
@@ -598,6 +682,96 @@ def events_from_listing_text(soup, site_url):
             break
 
     return events
+
+
+def context_type(lines):
+    for line in lines:
+        if TIME_RE.search(line) or PRICE_OR_ACTION_RE.search(line):
+            continue
+        if EVENT_WORDS_RE.search(line):
+            return clean_text(line)[:60]
+    return "evenement"
+
+
+def context_cost(lines):
+    for line in lines:
+        value = clean_text(line)
+        if PRICE_OR_ACTION_RE.search(value):
+            if re.search(r"(ticket|meer info|uitverkocht|reeds gestart)", value, re.I):
+                continue
+            return value.replace("EUR", "€").replace("eur", "€")
+    return "Zie website"
+
+
+def context_time(lines):
+    for line in lines:
+        match = TIME_RE.search(line)
+        if match:
+            return match.group(0)
+    return ""
+
+
+def is_context_noise(line):
+    value = clean_text(line)
+    lowered = value.lower()
+    if lowered in BLOCKED_TITLES:
+        return True
+    if lowered in {"filter", "datum", "soort", "locatie", "sluiten", "tickets", "meer info"}:
+        return True
+    if TIME_RANGE_RE.match(value) or PRICE_OR_ACTION_RE.search(value):
+        return True
+    if DATE_RE.match(value) or SCORE_RE.match(value):
+        return True
+    if len(normalize_title(value)) < 4:
+        return True
+    return False
+
+
+def events_from_contextual_lines(soup, site_url):
+    events = []
+    title_links = collect_title_links(soup, site_url)
+    lines = [clean_text(item) for item in soup.stripped_strings if clean_text(item)]
+    current_date = ""
+
+    for index, line in enumerate(lines):
+        section_date = date_from_section_label(line)
+        if section_date:
+            current_date = section_date
+            continue
+
+        if not current_date or is_context_noise(line):
+            continue
+
+        lookahead = lines[index + 1:index + 7]
+        has_context = any(
+            TIME_RE.search(item) or PRICE_OR_ACTION_RE.search(item) or EVENT_WORDS_RE.search(item)
+            for item in lookahead
+        )
+        if not has_context:
+            continue
+
+        title = clean_text(line)
+        website = link_for_title(title_links, title, site_url)
+        item = normalize_event(
+            {
+                "title": title,
+                "type": context_type(lookahead),
+                "date": current_date,
+                "time": context_time(lookahead),
+                "location": default_location_for_site(site_url),
+                "description": " ".join([title, *lookahead[:4]])[:260],
+                "website": website,
+                "cost": context_cost(lookahead),
+                "source": urlparse(site_url).netloc or "Extra website",
+                "periodLabel": current_date,
+            }
+        )
+        if is_valid_event(item):
+            events.append(item)
+        if len(events) >= 20:
+            break
+
+    return dedupe_events(events)
 
 
 def jsonld_nodes(data):
@@ -744,6 +918,7 @@ def scrape_structured_site(site_url):
                 break
 
         events.extend(events_from_listing_text(soup, page_url))
+        events.extend(events_from_contextual_lines(soup, page_url))
         link_candidates.extend(candidate_event_links(soup, page_url))
 
         added = len(events) - before
@@ -908,7 +1083,9 @@ def archive_old_events(previous_active, previous_archive, new_active):
     archived_by_key = {}
 
     for event in previous_archive:
-        archived_by_key[event_key(event)] = event
+        key = event_key(event)
+        if key not in active_keys:
+            archived_by_key[key] = event
 
     for event in previous_active:
         key = event_key(event)
@@ -963,7 +1140,8 @@ def main():
     previous_active, previous_archive = ([], []) if INPUT_CLEAR_ARCHIVE else load_existing_events()
     extra_sites = parse_input_sites()
     scraped = scrape_uitzinnig(INPUT_REGION) + scrape_extra_sites(extra_sites)
-    active = sort_events_for_request(dedupe_events(scraped + manual_events()))
+    keep_existing = [active_copy(event) for event in previous_active if not is_past_event(event)]
+    active = sort_events_for_request(dedupe_events(scraped + keep_existing + manual_events()))
     archive = archive_old_events(previous_active, previous_archive, active)
     previous_keys = {event_key(event) for event in previous_active}
     for result in SITE_RESULTS:
