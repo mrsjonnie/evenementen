@@ -22,7 +22,12 @@ function clean(value) {
     .replace(/<script[\s\S]*?<\/script>/gi, " ")
     .replace(/<style[\s\S]*?<\/style>/gi, " ")
     .replace(/<[^>]+>/g, " ")
+    .replace(/\u00c3\u00a2\u00c2\u0082\u00c2\u00ac|\u00e2\u0082\u00ac|\u20ac/g, "\u20ac")
+    .replace(/\bEUR\s*(?=\d)/gi, "\u20ac ")
+    .replace(/\bEUR\b/gi, "\u20ac")
+    .replace(/\u20ac\s*(?=\d)/g, "\u20ac ")
     .replace(/&nbsp;|&#160;/g, " ")
+    .replace(/&euro;|&#8364;/gi, "\u20ac")
     .replace(/&amp;/g, "&")
     .replace(/&quot;/g, "\"")
     .replace(/&#39;|&apos;/g, "'")
@@ -70,9 +75,29 @@ const monthMap = {
 };
 
 const monthNames = Object.keys(monthMap).join("|");
-const eventWords = /(event|evenement|agenda|programma|concert|festival|theater|film|markt|workshop|lezing|expo|tentoonstelling|voorstelling|activiteit|tickets)/i;
+const eventWords = /(event|evenement|agenda|programma|concert|festival|theater|film|bioscoop|markt|workshop|lezing|expo|expositie|tentoonstelling|voorstelling|activiteit|activiteiten|tickets|uitgaan|muziek|cabaret|dans|opera|museum|kermis|kinderen)/i;
 const badWords = /(contact|privacy|cookie|voorwaarden|login|account|nieuwsbrief|facebook|instagram|linkedin)/i;
-const commonPaths = ["/agenda", "/evenementen", "/events", "/event", "/programma", "/activiteiten", "/calendar", "/kalender", "/whats-on", "/wat-te-doen"];
+const commonPaths = [
+  "/agenda",
+  "/agenda/agenda-overzicht",
+  "/nl/agenda",
+  "/nl/agenda/agenda-overzicht",
+  "/evenementen",
+  "/evenement",
+  "/events",
+  "/events/all",
+  "/event",
+  "/programma",
+  "/program",
+  "/activiteiten",
+  "/activiteiten/agenda",
+  "/calendar",
+  "/kalender",
+  "/whats-on",
+  "/wat-te-doen",
+  "/nl/doen",
+  "/nl/doen/uitgaan"
+];
 
 function normalizeDate(value) {
   const text = clean(value);
@@ -211,6 +236,8 @@ function jsonLdEvents(html, pageUrl) {
 
 function linksFromPage(html, pageUrl) {
   const baseHost = new URL(pageUrl).host;
+  const pagePath = new URL(pageUrl).pathname.replace(/[-_/]+/g, " ");
+  const pageLooksLikeAgenda = eventWords.test(pagePath);
   const links = [];
   for (const match of html.matchAll(/<a[^>]+href=["']([^"']+)["'][^>]*>([\s\S]*?)<\/a>/gi)) {
     const href = clean(match[1]);
@@ -223,7 +250,11 @@ function linksFromPage(html, pageUrl) {
       continue;
     }
     if (!["http:", "https:"].includes(absolute.protocol) || absolute.host !== baseHost) continue;
-    if (!eventWords.test(`${absolute.pathname} ${text}`) && !normalizeDate(`${absolute.pathname} ${text}`)) continue;
+    const linkUrl = absolute.href.split("#")[0];
+    if (linkUrl.replace(/\/$/, "") === pageUrl.replace(/\/$/, "")) continue;
+    const signal = `${absolute.pathname.replace(/[-_/]+/g, " ")} ${text}`;
+    if (!pageLooksLikeAgenda && !eventWords.test(signal) && !normalizeDate(signal)) continue;
+    if (pageLooksLikeAgenda && !eventWords.test(signal) && clean(text).length < 4) continue;
     links.push({ title: text, url: absolute.href.split("#")[0] });
   }
   return links;

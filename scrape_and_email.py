@@ -31,7 +31,7 @@ BLOCKED_TITLES = {
     "augustus en verder",
 }
 EVENT_WORDS_RE = re.compile(
-    r"\b(event|evenement|agenda|programma|concert|festival|theater|film|markt|workshop|lezing|expo|tentoonstelling|voorstelling|activiteit)\b",
+    r"\b(event|evenement|agenda|programma|concert|festival|theater|film|bioscoop|markt|workshop|lezing|expo|expositie|tentoonstelling|voorstelling|activiteit|activiteiten|tickets|uitgaan|muziek|cabaret|dans|opera|museum|kermis|kinderen)\b",
     re.I,
 )
 BAD_LINK_WORDS_RE = re.compile(
@@ -40,16 +40,24 @@ BAD_LINK_WORDS_RE = re.compile(
 )
 COMMON_EVENT_PATHS = [
     "/agenda",
+    "/agenda/agenda-overzicht",
+    "/nl/agenda",
+    "/nl/agenda/agenda-overzicht",
     "/evenementen",
+    "/evenement",
     "/events",
+    "/events/all",
     "/event",
     "/programma",
     "/program",
     "/activiteiten",
+    "/activiteiten/agenda",
     "/calendar",
     "/kalender",
     "/whats-on",
     "/wat-te-doen",
+    "/nl/doen",
+    "/nl/doen/uitgaan",
 ]
 MONTH_NUMBERS = {
     "januari": 1,
@@ -73,15 +81,20 @@ def log(message):
 
 
 def clean_text(value):
-    return (
+    text = (
         str(value or "")
-        .replace("\u00c3\u00a2\u00c2\u0082\u00c2\u00ac", "EUR")
-        .replace("\u00e2\u0082\u00ac", "EUR")
-        .replace("\u20ac", "EUR")
+        .replace("\u00c3\u00a2\u00c2\u0082\u00c2\u00ac", "\u20ac")
+        .replace("\u00e2\u0082\u00ac", "\u20ac")
+        .replace("\u20ac", "\u20ac")
+        .replace("&euro;", "\u20ac")
+        .replace("&#8364;", "\u20ac")
         .replace("\u00c2\u00b7", "-")
         .replace("\u00b7", "-")
-        .strip()
     )
+    text = re.sub(r"\bEUR\s*(?=\d)", "\u20ac ", text, flags=re.I)
+    text = re.sub(r"\bEUR\b", "\u20ac", text, flags=re.I)
+    text = re.sub(r"\u20ac\s*(?=\d)", "\u20ac ", text)
+    return text.strip()
 
 
 def normalize_date_value(value):
@@ -415,6 +428,8 @@ def candidate_event_links(soup, site_url):
     candidates = []
     seen = set()
     base_host = urlparse(site_url).netloc.lower()
+    page_path = urlparse(site_url).path.replace("-", " ").replace("_", " ").replace("/", " ")
+    page_has_event_context = bool(EVENT_WORDS_RE.search(page_path))
 
     for anchor in soup.find_all("a", href=True):
         text = clean_text(anchor.get_text(" ", strip=True))
@@ -428,10 +443,15 @@ def candidate_event_links(soup, site_url):
             continue
         if parsed.netloc.lower() != base_host:
             continue
-        if not has_event_signal(text, absolute):
+        key = absolute.split("#", 1)[0]
+        if key.rstrip("/") == site_url.rstrip("/"):
+            continue
+        signal = f"{text} {parsed.path.replace('-', ' ').replace('_', ' ').replace('/', ' ')}"
+        if not page_has_event_context and not has_event_signal(signal, absolute):
+            continue
+        if page_has_event_context and not (has_event_signal(signal, absolute) or len(normalize_title(text)) >= 4):
             continue
 
-        key = absolute.split("#", 1)[0]
         if key in seen:
             continue
         seen.add(key)

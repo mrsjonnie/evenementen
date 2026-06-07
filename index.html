@@ -260,6 +260,17 @@
       padding-top: 12px;
     }
 
+    .inlineTools {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: flex-end;
+    }
+
+    .inlineTools .check {
+      min-height: 42px;
+    }
+
     .sourcePickers {
       display: grid;
       grid-template-columns: minmax(220px, .72fr) minmax(320px, 1.28fr);
@@ -719,6 +730,20 @@
       .filters { grid-template-columns: repeat(4, minmax(0, 1fr)); }
     }
 
+    @media (min-width: 960px) and (min-height: 740px) {
+      .hero {
+        position: sticky;
+        top: 0;
+        z-index: 40;
+      }
+
+      .toolbar {
+        position: sticky;
+        top: 126px;
+        z-index: 35;
+      }
+    }
+
     @media (max-width: 900px) {
       .heroInner { grid-template-columns: 1fr; }
       .weather { justify-content: flex-start; }
@@ -736,6 +761,7 @@
       .btn { width: 100%; }
       .checks { width: 100%; }
       .check { flex: 1; justify-content: center; }
+      .inlineTools { width: 100%; }
       .pagination .btn { width: auto; }
     }
   </style>
@@ -843,6 +869,10 @@
           </div>
         </div>
 
+        <div class="inlineTools">
+          <label class="check"><input type="checkbox" id="newOnlyFilter"> Alleen nieuw <span id="newCountBadge">0</span></label>
+          <button class="btn btnSecondary" id="collapseBtn" type="button">Inklappen</button>
+        </div>
         <button class="btn btnDanger" id="clearBtn" type="button">Alles verwijderen</button>
       </div>
 
@@ -851,11 +881,6 @@
 
       <div class="summary">
         <strong id="count">Evenementen laden...</strong>
-        <div class="summaryControls">
-          <label class="check"><input type="checkbox" id="newOnlyFilter"> Alleen nieuw <span id="newCountBadge">0</span></label>
-          <button class="btn btnSecondary" id="collapseBtn" type="button">Inklappen</button>
-          <span id="metaInfo">Een moment geduld</span>
-        </div>
       </div>
 
     <section class="grid" id="grid" aria-live="polite"></section>
@@ -878,7 +903,7 @@
   </main>
 
   <script>
-    const APP_VERSION = "2026.06.07.10";
+    const APP_VERSION = "2026.06.07.11";
     const WORKER_URL = "https://evenementen-refresh.mrsjonnie.workers.dev";
     const PER_PAGE_KEY = "evenementenPerPage";
     let eventsPerPage = 9;
@@ -926,6 +951,18 @@
         isPermanent: true
       }
     ];
+    const fallbackSites = [
+      "https://groningen.uitloper.nu/",
+      "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "https://forum.nl/nl/agenda",
+      "https://www.spotgroningen.nl/programma/",
+      "https://simplon.nl/",
+      "https://www.vera-groningen.nl/",
+      "https://www.martiniplaza.nl/nl/",
+      "https://www.groningermuseum.nl/en/now",
+      "https://www.kultuuragenda.nl/",
+      "https://www.noorderzon.nl/"
+    ];
 
     let events = [];
     let sites = [];
@@ -944,7 +981,10 @@
 
     function cleanText(value) {
       return String(value ?? "")
-        .replace(/\u00c3\u00a2\u00c2\u0082\u00c2\u00ac|\u00e2\u0082\u00ac|\u20ac/g, "EUR")
+        .replace(/\u00c3\u00a2\u00c2\u0082\u00c2\u00ac|\u00e2\u0082\u00ac|\u20ac/g, "€")
+        .replace(/\bEUR\s*(?=\d)/gi, "€ ")
+        .replace(/\bEUR\b/gi, "€")
+        .replace(/€\s*(?=\d)/g, "€ ")
         .replace(/\u00c2\u00b7|\u00b7/g, "-")
         .replace(/\u00c2\u00b0C|\u00b0C/g, " graden")
         .trim();
@@ -1182,13 +1222,25 @@
       return rounded.replace(".", ",");
     }
 
-    function routeEstimate(event) {
+    function eventDistanceKm(event) {
       const destination = eventCoords(event);
-      if (!destination) return "afstand onbekend";
-      const roadKm = Math.max(.2, distanceKm(regionCoord(), destination) * 1.25);
+      if (!destination) return null;
+      return Math.max(.2, distanceKm(regionCoord(), destination) * 1.25);
+    }
+
+    function routeEstimate(event) {
+      const roadKm = eventDistanceKm(event);
+      if (!Number.isFinite(roadKm)) return "afstand onbekend";
       const speed = roadKm < 8 ? 28 : 55;
       const minutes = Math.max(4, Math.round((roadKm / speed) * 60));
       return `${formatKm(roadKm)} km - ca. ${minutes} min`;
+    }
+
+    function routeContextLabel(event) {
+      const region = cleanText($("region")?.value || "Groningen") || "Groningen";
+      const roadKm = eventDistanceKm(event);
+      if (!Number.isFinite(roadKm)) return `vanaf ${region}`;
+      return `vanaf ${region}: ${routeEstimate(event)}`;
     }
 
     function routeUrl(event) {
@@ -1489,6 +1541,7 @@
       const current = $("typeFilter").value || "all";
       const query = ($("search")?.value || "").trim().toLowerCase();
       const newOnly = Boolean($("newOnlyFilter")?.checked);
+      const radiusKm = Number($("radius")?.value) || 0;
       const activeEvents = dedupeEvents(events).filter((event) => {
         const haystack = [
           event.title,
@@ -1501,6 +1554,8 @@
         if (!matchesDate(event)) return false;
         if (query && !haystack.includes(query)) return false;
         if (newOnly && !isNewEvent(event)) return false;
+        const eventKm = eventDistanceKm(event);
+        if (radiusKm > 0 && Number.isFinite(eventKm) && eventKm > radiusKm) return false;
         return true;
       });
       const types = [...new Set(activeEvents.map((event) => (event.type || "").trim()).filter(Boolean))]
@@ -1581,6 +1636,7 @@
       const type = $("typeFilter").value;
       const region = $("region").value.trim();
       const newOnly = $("newOnlyFilter").checked;
+      const radiusKm = Number($("radius").value) || 0;
 
       $("pageTitle").textContent = `Evenementen rond ${region || "je regio"}`;
       $("pageSubtitle").textContent = `${prettyDate(dateFrom)} t/m ${prettyDate(dateTo)} - straal ${$("radius").value || 100} km`;
@@ -1598,6 +1654,8 @@
         if (query && !haystack.includes(query)) return false;
         if (type !== "all" && (event.type || "").toLowerCase() !== type) return false;
         if (newOnly && !isNewEvent(event)) return false;
+        const eventKm = eventDistanceKm(event);
+        if (radiusKm > 0 && Number.isFinite(eventKm) && eventKm > radiusKm) return false;
         return matchesDate(event);
       }).sort((a, b) => {
         if (a.isPermanent && !b.isPermanent) return 1;
@@ -1612,7 +1670,6 @@
     function render() {
       updateNewCount();
       $("count").textContent = `${filteredEvents.length} ${filteredEvents.length === 1 ? "evenement" : "evenementen"}`;
-      $("metaInfo").textContent = `Periode: ${dateFrom} t/m ${dateTo}`;
       $("grid").classList.toggle("cardsCollapsed", cardsCollapsed);
 
       if (!filteredEvents.length) {
@@ -1639,6 +1696,7 @@
       const website = safeUrl(event.website, { website: true });
       const route = routeUrl(event);
       const routeDestinationText = routeDestination(event);
+      const routeContext = routeContextLabel(event);
       const routeId = `route-${Math.random().toString(36).slice(2)}`;
       const locationUrl = locationHomeUrl(event);
       const locationLabel = escapeHtml(event.location || "Locatie onbekend");
@@ -1673,6 +1731,7 @@
             <div class="cardActions">
               ${website ? `<a class="btn btnPrimary" href="${escapeHtml(website)}" target="_blank" rel="noopener noreferrer">Meer info</a>` : ""}
               ${route ? `<button class="btn btnSecondary routeToggle" type="button" data-route="${escapeHtml(routeId)}" data-destination="${escapeHtml(routeDestinationText)}" data-route-url="${escapeHtml(route)}">Route</button>` : ""}
+              ${route ? `<span class="routeInfo">${escapeHtml(routeContext)}</span>` : ""}
             </div>
             ${route ? `<div class="routePanel" id="${escapeHtml(routeId)}"></div>` : ""}
           </div>
@@ -1742,8 +1801,7 @@
           { label: `${data.summary} (${data.days} dagen)`, topic: "weersverwachting" },
           { label: `${data.tempMin} graden - ${data.tempMax} graden`, topic: "temperatuur" },
           { label: `Regen ${data.rainChance}%`, topic: "regenradar" },
-          { label: `${data.rainTotalMM} mm`, topic: "neerslag" },
-          { label: `Wind ${data.windMax} km/u`, topic: "wind" },
+          { label: `Wind ${data.windMax} km/u - ${data.rainTotalMM} mm regen`, topic: "wind neerslag" },
           { label: `UV ${data.uvMax}`, topic: "zonkracht" }
         ];
 
@@ -1898,7 +1956,7 @@
       const storedNewKeys = loadStoredSet(NEW_EVENTS_KEY);
       const loaded = await Promise.all([
         loadJson("./events.json", fallbackEvents),
-        loadJson("./sites.json", [])
+        loadJson("./sites.json", fallbackSites)
       ]);
       events = loaded[0];
       sites = mergeSites(loaded[1], customSites);
