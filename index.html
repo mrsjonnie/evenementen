@@ -903,7 +903,7 @@
   </main>
 
   <script>
-    const APP_VERSION = "2026.06.07.17";
+    const APP_VERSION = "2026.06.07.18";
     const WORKER_URL = "https://evenementen-refresh.mrsjonnie.workers.dev";
     const PER_PAGE_KEY = "evenementenPerPage";
     let eventsPerPage = 9;
@@ -979,6 +979,7 @@
     let currentPage = 1;
     let dateFrom = "";
     let dateTo = "";
+    let eventsUpdatedAt = "";
 
     const $ = (id) => document.getElementById(id);
     const controls = ["search", "region", "radius", "typeFilter", "dateSingle", "periodMode", "newOnlyFilter"];
@@ -1467,13 +1468,34 @@
       ]).slice(0, 250));
     }
 
-    async function fetchEvents() {
+    function normalizeEventsPayload(data) {
+      if (Array.isArray(data)) return { events: dedupeEvents(data), updatedAt: "" };
+      if (data && Array.isArray(data.events)) {
+        return {
+          events: dedupeEvents(data.events),
+          updatedAt: cleanText(data.updatedAt || "")
+        };
+      }
+      throw new Error("events.json heeft geen geldige lijst");
+    }
+
+    async function fetchEventsPayload() {
       const response = await fetch(`./events.json?_=${Date.now()}`, { cache: "no-store" });
       if (!response.ok) throw new Error("events.json kon niet worden geladen");
       const data = await response.json();
-      if (Array.isArray(data)) return dedupeEvents(data);
-      if (data && Array.isArray(data.events)) return dedupeEvents(data.events);
-      throw new Error("events.json heeft geen geldige lijst");
+      return normalizeEventsPayload(data);
+    }
+
+    async function fetchEvents() {
+      return (await fetchEventsPayload()).events;
+    }
+
+    async function loadEventsWithMeta(fallback) {
+      try {
+        return await fetchEventsPayload();
+      } catch {
+        return { events: fallback, updatedAt: "" };
+      }
     }
 
     async function loadJson(path, fallback) {
@@ -1510,6 +1532,7 @@
     }
 
     async function waitForUpdatedEvents(previousSignature, previousKeys, foundCount = null) {
+      const previousUpdatedAt = eventsUpdatedAt;
       for (let attempt = 1; attempt <= 18; attempt += 1) {
         const prefix = Number.isFinite(foundCount) ? `${foundText(foundCount)} gevonden.` : foundText(foundCount) + ".";
         showStatus(`${prefix} Ik controleer of GitHub Pages de nieuwe lijst al toont: controle ${attempt} van 18.`, "warn", { stop: true });
@@ -1520,13 +1543,14 @@
         }
 
         try {
-          const freshEvents = await fetchEvents();
-          if (eventSignature(freshEvents) !== previousSignature) {
-            events = freshEvents;
+          const freshPayload = await fetchEventsPayload();
+          if ((freshPayload.updatedAt && freshPayload.updatedAt !== previousUpdatedAt) || eventSignature(freshPayload.events) !== previousSignature) {
+            events = freshPayload.events;
+            eventsUpdatedAt = freshPayload.updatedAt;
             const actualNewCount = rememberNewEvents(events, previousKeys);
             fillTypes();
             applyFilters();
-            showStatus(`${foundText(actualNewCount)} gevonden. De nieuwe lijst is geladen.`, "ok");
+            showStatus(`${foundText(actualNewCount)} gevonden. De lijst is gecontroleerd en geladen.`, "ok");
             setTimeout(hideStatus, 4000);
             return true;
           }
@@ -1841,6 +1865,7 @@
 
       const selectedSites = [...document.querySelectorAll(".siteCheck:checked")].map((check) => check.value);
       const category = $("typeFilter").value === "all" ? "" : $("typeFilter").value;
+      showStatus(`Nieuwe evenementen ophalen bij ${selectedSites.length} van ${sites.length || selectedSites.length} websites...`, "warn");
       const payload = {
         region: $("region").value.trim(),
         radius: $("radius").value,
@@ -1966,10 +1991,11 @@
       const knownKeys = loadStoredSet(KNOWN_EVENTS_KEY);
       const storedNewKeys = loadStoredSet(NEW_EVENTS_KEY);
       const loaded = await Promise.all([
-        loadJson("./events.json", fallbackEvents),
+        loadEventsWithMeta(fallbackEvents),
         loadJson("./sites.json", fallbackSites)
       ]);
-      events = loaded[0];
+      events = loaded[0].events;
+      eventsUpdatedAt = loaded[0].updatedAt;
       sites = mergeSites(loaded[1], customSites);
       const currentKeys = eventKeySet(events);
       const detectedNew = knownKeys.size ? [...currentKeys].filter((key) => !knownKeys.has(key)) : [];

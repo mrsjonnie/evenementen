@@ -12,6 +12,8 @@ DATA_FILE = "events.json"
 LOG_FILE = "scrape_log.txt"
 INPUT_REGION = os.getenv("INPUT_REGION", "Groningen").strip() or "Groningen"
 INPUT_SITES_RAW = os.getenv("INPUT_SITES", "[]").strip() or "[]"
+INPUT_DATE_FROM = os.getenv("INPUT_DATE_FROM", "").strip()
+INPUT_DATE_TO = os.getenv("INPUT_DATE_TO", "").strip()
 INPUT_CLEAR_ARCHIVE = os.getenv("INPUT_CLEAR_ARCHIVE", "").strip().lower() in {"1", "true", "yes", "ja"}
 BASE_HEADERS = {"User-Agent": "Mozilla/5.0"}
 MONTHS = "januari|februari|maart|april|mei|juni|juli|augustus|september|oktober|november|december"
@@ -129,6 +131,35 @@ def normalize_date_value(value):
         return candidate.strftime("%Y-%m-%d")
     except ValueError:
         return text
+
+
+def event_date_sort_value(event):
+    date = clean_text(event.get("date"))
+    if not ISO_DATE_RE.fullmatch(date):
+        return "9999-12-31"
+    return date
+
+
+def event_in_requested_period(event):
+    date = event_date_sort_value(event)
+    if date == "9999-12-31":
+        return False
+    if INPUT_DATE_FROM and date < INPUT_DATE_FROM:
+        return False
+    if INPUT_DATE_TO and date > INPUT_DATE_TO:
+        return False
+    return True
+
+
+def sort_events_for_request(events):
+    return sorted(
+        events,
+        key=lambda event: (
+            0 if event_in_requested_period(event) else 1,
+            event_date_sort_value(event),
+            clean_text(event.get("title")).lower(),
+        ),
+    )
 
 
 def should_geocode(location):
@@ -704,7 +735,7 @@ def scrape_structured_site(site_url):
         if item and is_valid_event(item):
             events.append(item)
 
-    events = dedupe_events(events)[:40]
+    events = sort_events_for_request(dedupe_events(events))[:40]
     if events:
         log(f"Gevonden op extra website {site_url}: {len(events)}")
     else:
@@ -717,7 +748,7 @@ def scrape_extra_sites(sites):
     events = []
     for site_url in sites:
         events.extend(scrape_structured_site(site_url))
-    return dedupe_events(events)
+    return sort_events_for_request(dedupe_events(events))
 
 
 def scrape_uitzinnig(region="Groningen"):
@@ -871,7 +902,7 @@ def main():
     previous_active, previous_archive = ([], []) if INPUT_CLEAR_ARCHIVE else load_existing_events()
     extra_sites = parse_input_sites()
     scraped = scrape_uitzinnig(INPUT_REGION) + scrape_extra_sites(extra_sites)
-    active = dedupe_events(scraped + manual_events())
+    active = sort_events_for_request(dedupe_events(scraped + manual_events()))
     archive = archive_old_events(previous_active, previous_archive, active)
 
     save_events_to_json(active, archive)
