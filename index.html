@@ -931,7 +931,7 @@
   </main>
 
   <script>
-    const APP_VERSION = "2026.06.07.21";
+    const APP_VERSION = "2026.06.07.22";
     const WORKER_URL = "https://evenementen-refresh.mrsjonnie.workers.dev";
     const PER_PAGE_KEY = "evenementenPerPage";
     let eventsPerPage = 9;
@@ -1138,6 +1138,22 @@
       const count = events.filter(isNewEvent).length;
       if ($("newCountBadge")) $("newCountBadge").textContent = count;
       if ($("newOnlyToggle")) $("newOnlyToggle").setAttribute("aria-pressed", $("newOnlyFilter")?.checked ? "true" : "false");
+    }
+
+    function visibleNewCount() {
+      return filteredEvents.filter(isNewEvent).length;
+    }
+
+    function refreshLoadedMessage(totalNew) {
+      if (!Number.isFinite(totalNew)) return "De lijst is gecontroleerd en geladen.";
+      const visible = visibleNewCount();
+      if (totalNew > 0 && visible === 0) {
+        return `${foundText(totalNew)} gevonden, maar verborgen door huidige periode/filter.`;
+      }
+      if (visible > 0 && visible < totalNew) {
+        return `${foundText(totalNew)} gevonden, ${visible} zichtbaar met huidige filters.`;
+      }
+      return `${foundText(totalNew)} gevonden. De lijst is gecontroleerd en geladen.`;
     }
 
     function normalizeEventTitle(value) {
@@ -1583,7 +1599,7 @@
             fillTypes();
             renderSites(checkedSites());
             applyFilters();
-            showStatus(`${foundText(actualNewCount)} gevonden. De lijst is gecontroleerd en geladen.`, "ok");
+            showStatus(refreshLoadedMessage(actualNewCount), "ok");
             setTimeout(hideStatus, 4000);
             return true;
           }

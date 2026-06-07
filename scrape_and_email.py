@@ -19,15 +19,17 @@ BASE_HEADERS = {"User-Agent": "Mozilla/5.0"}
 MAX_EVENTS_PER_SITE = 20
 SITE_TIME_LIMIT_SECONDS = 5
 SITE_RESULTS = []
-MONTHS = "januari|februari|maart|april|mei|juni|juli|augustus|september|oktober|november|december"
+MONTHS = "januari|februari|maart|april|mei|juni|juli|augustus|september|oktober|november|december|january|february|march|may|june|july|august|october"
 DATE_RE = re.compile(rf"^\d{{1,2}}(?:\s+t/m\s+\d{{1,2}})?\s+(?:{MONTHS})$", re.I)
 DATE_IN_TEXT_RE = re.compile(rf"\b\d{{1,2}}(?:\s+t/m\s+\d{{1,2}})?\s+(?:{MONTHS})(?:\s+20\d{{2}})?\b", re.I)
 ISO_DATE_RE = re.compile(r"\b20\d{2}-\d{2}-\d{2}\b")
 SCORE_RE = re.compile(r"^\d,\d$")
 TIME_RE = re.compile(r"\b\d{1,2}:\d{2}\b")
 TIME_RANGE_RE = re.compile(r"^\d{1,2}:\d{2}(?:\s*[-–]\s*\d{1,2}:\d{2})?$")
-WEEKDAY_RE = re.compile(r"^(maandag|dinsdag|woensdag|donderdag|vrijdag|zaterdag|zondag)\b", re.I)
-PRICE_OR_ACTION_RE = re.compile(r"^(gratis|€\s*\d|eur\s*\d|tickets?|koop ticket|meer info|uitverkocht|reeds gestart)", re.I)
+WEEKDAY_RE = re.compile(r"^(maandag|dinsdag|woensdag|donderdag|vrijdag|zaterdag|zondag|monday|tuesday|wednesday|thursday|friday|saturday|sunday)\b", re.I)
+DATE_TITLE_RE = re.compile(rf"^(?:maandag|dinsdag|woensdag|donderdag|vrijdag|zaterdag|zondag|monday|tuesday|wednesday|thursday|friday|saturday|sunday)?\s*\d{{1,2}}(?:\s+t/m\s+\d{{1,2}})?\s+(?:{MONTHS})(?:\s+20\d{{2}})?$", re.I)
+PRICE_OR_ACTION_RE = re.compile(r"^(gratis|€\s*\d|eur\s*\d|tickets?|koop ticket|meer info|lees meer|uitverkocht|sold out|reeds gestart)", re.I)
+TITLE_NOISE_RE = re.compile(r"^(coming up|highlights|lees meer|koop ticket|sold out|support|friday show|ubbo x zienema|raw postpunk from|in 20\d{2},|this winter)", re.I)
 BLOCKED_TITLES = {
     "uitgelicht",
     "toon info",
@@ -82,6 +84,14 @@ MONTH_NUMBERS = {
     "oktober": 10,
     "november": 11,
     "december": 12,
+    "january": 1,
+    "february": 2,
+    "march": 3,
+    "may": 5,
+    "june": 6,
+    "july": 7,
+    "august": 8,
+    "october": 10,
 }
 
 
@@ -248,6 +258,19 @@ def is_valid_web_url(value):
         return False
 
 
+def event_date_conflicts(event):
+    date = clean_text(event.get("date"))
+    if not ISO_DATE_RE.fullmatch(date):
+        return False
+
+    haystack = clean_text(f"{event.get('title')} {event.get('description')}")
+    for match in DATE_IN_TEXT_RE.finditer(haystack):
+        explicit = normalize_date_value(match.group(0))
+        if ISO_DATE_RE.fullmatch(explicit) and explicit != date:
+            return True
+    return False
+
+
 def is_valid_event(event):
     title = clean_text(event.get("title"))
     title_norm = normalize_title(title)
@@ -258,9 +281,17 @@ def is_valid_event(event):
         return False
     if title.lower() in BLOCKED_TITLES:
         return False
+    if TITLE_NOISE_RE.search(title):
+        return False
     if DATE_RE.match(title) or SCORE_RE.match(title):
         return False
+    if DATE_TITLE_RE.match(title):
+        return False
+    if len(title) > 140 and re.search(r"\b(lees meer|koop ticket|sold out)\b", title, re.I):
+        return False
     if not date:
+        return False
+    if event_date_conflicts(event):
         return False
     if not location or normalize_location(location) in {"provincie groningen", "groningen provincie"}:
         return False
@@ -556,6 +587,8 @@ def is_bad_link(text, href):
         return True
     if BAD_LINK_WORDS_RE.search(f"{text} {href}"):
         return True
+    if TITLE_NOISE_RE.search(clean_text(text)) or DATE_TITLE_RE.match(clean_text(text)):
+        return True
     if len(normalize_title(text)) < 4:
         return True
     return False
@@ -716,11 +749,13 @@ def is_context_noise(line):
     lowered = value.lower()
     if lowered in BLOCKED_TITLES:
         return True
+    if TITLE_NOISE_RE.search(value):
+        return True
     if lowered in {"filter", "datum", "soort", "locatie", "sluiten", "tickets", "meer info"}:
         return True
     if TIME_RANGE_RE.match(value) or PRICE_OR_ACTION_RE.search(value):
         return True
-    if DATE_RE.match(value) or SCORE_RE.match(value):
+    if DATE_RE.match(value) or DATE_TITLE_RE.match(value) or SCORE_RE.match(value):
         return True
     if len(normalize_title(value)) < 4:
         return True
