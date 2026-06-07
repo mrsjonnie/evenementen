@@ -271,6 +271,12 @@
       min-height: 42px;
     }
 
+    .filterToggle[aria-pressed="true"] {
+      background: #153923;
+      color: var(--good);
+      border: 1px solid #32634b;
+    }
+
     .sourcePickers {
       display: grid;
       grid-template-columns: minmax(220px, .72fr) minmax(320px, 1.28fr);
@@ -376,6 +382,27 @@
     }
 
     .siteList label:hover { background: var(--surface-soft); }
+
+    .siteList label.siteFound {
+      border: 1px solid #32634b;
+      background: #12291e;
+    }
+
+    .siteList label.siteFound span {
+      color: var(--good);
+    }
+
+    .siteResultBadge {
+      display: inline-flex;
+      margin-top: 4px;
+      color: var(--muted);
+      font-size: .76rem;
+      font-weight: 900;
+    }
+
+    .siteFound .siteResultBadge {
+      color: var(--good);
+    }
 
     .siteList input {
       width: 16px;
@@ -870,7 +897,8 @@
         </div>
 
         <div class="inlineTools">
-          <label class="check"><input type="checkbox" id="newOnlyFilter"> Alleen nieuw <span id="newCountBadge">0</span></label>
+          <input type="checkbox" id="newOnlyFilter" hidden>
+          <button class="btn btnSecondary filterToggle" id="newOnlyToggle" type="button" aria-pressed="false">Alleen nieuw <span id="newCountBadge">0</span></button>
           <button class="btn btnSecondary" id="collapseBtn" type="button">Inklappen</button>
         </div>
         <button class="btn btnDanger" id="clearBtn" type="button">Alles verwijderen</button>
@@ -903,7 +931,7 @@
   </main>
 
   <script>
-    const APP_VERSION = "2026.06.07.18";
+    const APP_VERSION = "2026.06.07.19";
     const WORKER_URL = "https://evenementen-refresh.mrsjonnie.workers.dev";
     const PER_PAGE_KEY = "evenementenPerPage";
     let eventsPerPage = 9;
@@ -980,6 +1008,7 @@
     let dateFrom = "";
     let dateTo = "";
     let eventsUpdatedAt = "";
+    let latestSiteResults = [];
 
     const $ = (id) => document.getElementById(id);
     const controls = ["search", "region", "radius", "typeFilter", "dateSingle", "periodMode", "newOnlyFilter"];
@@ -1108,6 +1137,7 @@
     function updateNewCount() {
       const count = events.filter(isNewEvent).length;
       if ($("newCountBadge")) $("newCountBadge").textContent = count;
+      if ($("newOnlyToggle")) $("newOnlyToggle").setAttribute("aria-pressed", $("newOnlyFilter")?.checked ? "true" : "false");
     }
 
     function normalizeEventTitle(value) {
@@ -1469,11 +1499,12 @@
     }
 
     function normalizeEventsPayload(data) {
-      if (Array.isArray(data)) return { events: dedupeEvents(data), updatedAt: "" };
+      if (Array.isArray(data)) return { events: dedupeEvents(data), updatedAt: "", siteResults: [] };
       if (data && Array.isArray(data.events)) {
         return {
           events: dedupeEvents(data.events),
-          updatedAt: cleanText(data.updatedAt || "")
+          updatedAt: cleanText(data.updatedAt || ""),
+          siteResults: Array.isArray(data.siteResults) ? data.siteResults : []
         };
       }
       throw new Error("events.json heeft geen geldige lijst");
@@ -1494,7 +1525,7 @@
       try {
         return await fetchEventsPayload();
       } catch {
-        return { events: fallback, updatedAt: "" };
+        return { events: fallback, updatedAt: "", siteResults: [] };
       }
     }
 
@@ -1527,7 +1558,7 @@
     }
 
     function foundText(count) {
-      if (!Number.isFinite(count)) return "Het aantal nieuwe evenementen wordt bepaald zodra de lijst geladen is";
+      if (!Number.isFinite(count)) return "Resultaat volgt";
       return `${count} ${count === 1 ? "nieuw evenement" : "nieuwe evenementen"}`;
     }
 
@@ -1535,10 +1566,10 @@
       const previousUpdatedAt = eventsUpdatedAt;
       for (let attempt = 1; attempt <= 18; attempt += 1) {
         const prefix = Number.isFinite(foundCount) ? `${foundText(foundCount)} gevonden.` : foundText(foundCount) + ".";
-        showStatus(`${prefix} Ik controleer of GitHub Pages de nieuwe lijst al toont: controle ${attempt} van 18.`, "warn", { stop: true });
+        showStatus(`${prefix} Lijst controleren (${attempt}/18).`, "warn", { stop: true });
         const shouldContinue = await waitUnlessStopped(10000);
         if (!shouldContinue) {
-          showStatus("Controle gestopt. De update kan op GitHub nog wel doorlopen; klik later op Ververs of herlaad de pagina.", "warn");
+          showStatus("Controle gestopt. De update kan nog doorlopen; probeer later opnieuw.", "warn");
           return false;
         }
 
@@ -1547,8 +1578,10 @@
           if ((freshPayload.updatedAt && freshPayload.updatedAt !== previousUpdatedAt) || eventSignature(freshPayload.events) !== previousSignature) {
             events = freshPayload.events;
             eventsUpdatedAt = freshPayload.updatedAt;
+            latestSiteResults = freshPayload.siteResults || [];
             const actualNewCount = rememberNewEvents(events, previousKeys);
             fillTypes();
+            renderSites(checkedSites());
             applyFilters();
             showStatus(`${foundText(actualNewCount)} gevonden. De lijst is gecontroleerd en geladen.`, "ok");
             setTimeout(hideStatus, 4000);
@@ -1561,7 +1594,7 @@
 
       await loadAll();
       const prefix = Number.isFinite(foundCount) ? `${foundText(foundCount)} gevonden.` : foundText(foundCount) + ".";
-      showStatus(`${prefix} De update is gestart, maar GitHub Pages toont nog dezelfde lijst. Wacht even en klik eventueel nogmaals op Ververs.`, "warn");
+      showStatus(`${prefix} De lijst is nog hetzelfde. Kies eventueel meer websites en probeer opnieuw.`, "warn");
       return false;
     }
 
@@ -1605,13 +1638,27 @@
       return new Set([...document.querySelectorAll(".siteCheck:checked")].map((check) => check.value));
     }
 
+    function siteResultFor(site) {
+      const siteKey = normalizeSiteInput(site).toLowerCase();
+      return (latestSiteResults || []).find((result) => normalizeSiteInput(result.site).toLowerCase() === siteKey) || null;
+    }
+
     function renderSites(selected = null) {
       const selectedSites = selected || new Set(sites);
       $("sitesList").innerHTML = sites.map((site) => `
-        <label>
+        ${(() => {
+          const result = siteResultFor(site);
+          const count = Number(result?.count) || 0;
+          const newCount = Number(result?.newCount) || 0;
+          const hasResult = count > 0;
+          const badge = result
+            ? `<span class="siteResultBadge">${newCount > 0 ? `${newCount} nieuw` : `${count} gevonden`}${result.timedOut ? " - tijdslimiet" : ""}</span>`
+            : "";
+          return `<label class="${hasResult ? "siteFound" : ""}">
           <input class="siteCheck" type="checkbox" value="${escapeHtml(site)}"${selectedSites.has(site) ? " checked" : ""}>
-          <span>${escapeHtml(site)}</span>
-        </label>
+          <span>${escapeHtml(site)}${badge}</span>
+        </label>`;
+        })()}
       `).join("");
       updateSiteCount();
     }
@@ -1863,7 +1910,8 @@
       setBusy(button, true, "Bezig...");
       showStatus("Nieuwe evenementen ophalen...", "warn");
 
-      const selectedSites = [...document.querySelectorAll(".siteCheck:checked")].map((check) => check.value);
+      let selectedSites = [...document.querySelectorAll(".siteCheck:checked")].map((check) => check.value);
+      if (!selectedSites.length) selectedSites = sites.slice();
       const category = $("typeFilter").value === "all" ? "" : $("typeFilter").value;
       showStatus(`Nieuwe evenementen ophalen bij ${selectedSites.length} van ${sites.length || selectedSites.length} websites...`, "warn");
       const payload = {
@@ -1943,7 +1991,9 @@
             category: $("typeFilter").value === "all" ? "" : $("typeFilter").value,
             dateFrom,
             dateTo,
-            sites: [...document.querySelectorAll(".siteCheck:checked")].map((check) => check.value),
+            sites: [...document.querySelectorAll(".siteCheck:checked")].map((check) => check.value).length
+              ? [...document.querySelectorAll(".siteCheck:checked")].map((check) => check.value)
+              : sites.slice(),
             providers: { perplexity: false, mistral: false, openai: false, chatgpt: false }
           })
         });
@@ -1967,6 +2017,7 @@
       $("radius").value = "200";
       $("periodMode").value = "week";
       $("typeFilter").value = "all";
+      $("newOnlyFilter").checked = false;
       $("provPerplexity").checked = false;
       $("provMistral").checked = false;
       $("provOpenAI").checked = false;
@@ -1996,6 +2047,7 @@
       ]);
       events = loaded[0].events;
       eventsUpdatedAt = loaded[0].updatedAt;
+      latestSiteResults = loaded[0].siteResults || [];
       sites = mergeSites(loaded[1], customSites);
       const currentKeys = eventKeySet(events);
       const detectedNew = knownKeys.size ? [...currentKeys].filter((key) => !knownKeys.has(key)) : [];
@@ -2024,6 +2076,11 @@
     $("resetBtn").addEventListener("click", resetFilters);
     $("clearBtn").addEventListener("click", clearAllEvents);
     $("collapseBtn").addEventListener("click", toggleCardsCollapsed);
+    $("newOnlyToggle").addEventListener("click", () => {
+      $("newOnlyFilter").checked = !$("newOnlyFilter").checked;
+      $("newOnlyFilter").dispatchEvent(new Event("change", { bubbles: true }));
+      updateNewCount();
+    });
     $("perPageSelect").addEventListener("change", () => {
       eventsPerPage = Number($("perPageSelect").value) || 9;
       try {

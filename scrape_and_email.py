@@ -16,6 +16,9 @@ INPUT_DATE_FROM = os.getenv("INPUT_DATE_FROM", "").strip()
 INPUT_DATE_TO = os.getenv("INPUT_DATE_TO", "").strip()
 INPUT_CLEAR_ARCHIVE = os.getenv("INPUT_CLEAR_ARCHIVE", "").strip().lower() in {"1", "true", "yes", "ja"}
 BASE_HEADERS = {"User-Agent": "Mozilla/5.0"}
+MAX_EVENTS_PER_SITE = 20
+SITE_TIME_LIMIT_SECONDS = 5
+SITE_RESULTS = []
 MONTHS = "januari|februari|maart|april|mei|juni|juli|augustus|september|oktober|november|december"
 DATE_RE = re.compile(rf"^\d{{1,2}}(?:\s+t/m\s+\d{{1,2}})?\s+(?:{MONTHS})$", re.I)
 DATE_IN_TEXT_RE = re.compile(rf"\b\d{{1,2}}(?:\s+t/m\s+\d{{1,2}})?\s+(?:{MONTHS})(?:\s+20\d{{2}})?\b", re.I)
@@ -400,7 +403,25 @@ def first_meta(soup, names):
     return ""
 
 
-def fetch_soup(page_url, timeout=18):
+def seconds_left(deadline):
+    return max(0, deadline - time.monotonic())
+
+
+def enough_time_left(deadline):
+    return seconds_left(deadline) > 0.25
+
+
+def timeout_for(deadline, default_timeout):
+    if deadline is None:
+        return default_timeout
+    remaining = seconds_left(deadline)
+    if remaining <= 0.25:
+        raise TimeoutError("Tijdslimiet voor deze website bereikt")
+    return min(default_timeout, max(0.5, remaining))
+
+
+def fetch_soup(page_url, timeout=18, deadline=None):
+    timeout = timeout_for(deadline, timeout)
     response = requests.get(page_url, headers=BASE_HEADERS, timeout=timeout)
     response.raise_for_status()
     content_type = response.headers.get("content-type", "")
@@ -494,9 +515,10 @@ def candidate_event_links(soup, site_url):
     return candidates
 
 
-def event_from_detail_page(detail_url, fallback_title):
+def event_from_detail_page(detail_url, fallback_title, deadline=None):
     try:
-        response = requests.get(detail_url, headers=BASE_HEADERS, timeout=15)
+        timeout = timeout_for(deadline, 3)
+        response = requests.get(detail_url, headers=BASE_HEADERS, timeout=timeout)
         response.raise_for_status()
         soup = BeautifulSoup(response.text, "html.parser")
         text = clean_text(soup.get_text(" ", strip=True))
@@ -682,15 +704,25 @@ def event_from_jsonld(node, site_url):
 
 
 def scrape_structured_site(site_url):
+    started = time.monotonic()
+    deadline = started + SITE_TIME_LIMIT_SECONDS
     events = []
     link_candidates = []
+    timed_out = False
 
     for page_url in site_seed_urls(site_url):
+        if not enough_time_left(deadline):
+            timed_out = True
+            break
         try:
-            soup = fetch_soup(page_url)
+            soup = fetch_soup(page_url, timeout=2.5, deadline=deadline)
         except requests.exceptions.RequestException as exc:
             log(f"Websitepagina niet bereikbaar {page_url}: {exc}")
             continue
+        except TimeoutError as exc:
+            timed_out = True
+            log(f"Website overgeslagen door tijdslimiet {page_url}: {exc}")
+            break
         except Exception as exc:
             log(f"Websitepagina overgeslagen {page_url}: {exc}")
             continue
@@ -706,9 +738,9 @@ def scrape_structured_site(site_url):
                 item = event_from_jsonld(node, site_url)
                 if item and is_valid_event(item):
                     events.append(item)
-                if len(events) >= 40:
+                if len(events) >= MAX_EVENTS_PER_SITE:
                     break
-            if len(events) >= 40:
+            if len(events) >= MAX_EVENTS_PER_SITE:
                 break
 
         events.extend(events_from_listing_text(soup, page_url))
@@ -717,7 +749,7 @@ def scrape_structured_site(site_url):
         added = len(events) - before
         if added:
             log(f"{added} kandidaat-evenementen gevonden op {page_url}")
-        if len(events) >= 40:
+        if len(events) >= MAX_EVENTS_PER_SITE:
             break
 
     seen_links = set()
@@ -728,14 +760,27 @@ def scrape_structured_site(site_url):
             seen_links.add(key)
             unique_links.append((title, detail_url))
 
-    for title, detail_url in unique_links[:50]:
-        if len(events) >= 40:
+    for title, detail_url in unique_links[:24]:
+        if len(events) >= MAX_EVENTS_PER_SITE:
             break
-        item = event_from_detail_page(detail_url, title)
+        if not enough_time_left(deadline):
+            timed_out = True
+            break
+        item = event_from_detail_page(detail_url, title, deadline=deadline)
         if item and is_valid_event(item):
             events.append(item)
 
-    events = sort_events_for_request(dedupe_events(events))[:40]
+    events = sort_events_for_request(dedupe_events(events))[:MAX_EVENTS_PER_SITE]
+    SITE_RESULTS.append(
+        {
+            "site": site_url,
+            "count": len(events),
+            "newCount": 0,
+            "durationSeconds": round(time.monotonic() - started, 2),
+            "timedOut": timed_out,
+            "eventKeys": [event_key(event) for event in events],
+        }
+    )
     if events:
         log(f"Gevonden op extra website {site_url}: {len(events)}")
     else:
@@ -880,12 +925,28 @@ def archive_old_events(previous_active, previous_archive, new_active):
     return archive[:500]
 
 
+def public_site_results():
+    result = []
+    for item in SITE_RESULTS:
+        result.append(
+            {
+                "site": item.get("site"),
+                "count": item.get("count", 0),
+                "newCount": item.get("newCount", 0),
+                "durationSeconds": item.get("durationSeconds", 0),
+                "timedOut": item.get("timedOut", False),
+            }
+        )
+    return result
+
+
 def save_events_to_json(active_events, archive):
     payload = {
         "schemaVersion": 2,
         "updatedAt": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "events": active_events,
         "archive": archive,
+        "siteResults": public_site_results(),
     }
     with open(DATA_FILE, "w", encoding="utf-8") as f:
         json.dump(payload, f, ensure_ascii=False, indent=2)
@@ -904,6 +965,9 @@ def main():
     scraped = scrape_uitzinnig(INPUT_REGION) + scrape_extra_sites(extra_sites)
     active = sort_events_for_request(dedupe_events(scraped + manual_events()))
     archive = archive_old_events(previous_active, previous_archive, active)
+    previous_keys = {event_key(event) for event in previous_active}
+    for result in SITE_RESULTS:
+        result["newCount"] = sum(1 for key in result.get("eventKeys", []) if key not in previous_keys)
 
     save_events_to_json(active, archive)
     log("=== Scraping voltooid ===")
