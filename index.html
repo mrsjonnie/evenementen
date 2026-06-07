@@ -872,7 +872,7 @@
                 <label><input class="providerCheck" type="checkbox" id="provPerplexity" disabled> <span>Perplexity uit</span></label>
                 <label><input class="providerCheck" type="checkbox" id="provMistral" disabled> <span>Mistral uit</span></label>
                 <label><input class="providerCheck" type="checkbox" id="provOpenAI" disabled> <span>ChatGPT uit</span></label>
-                <label><input class="providerCheck" type="checkbox" id="provSerpAPI" checked disabled> <span>SerpAPI via Cloudflare</span></label>
+                <label><input class="providerCheck" type="checkbox" id="provSerpAPI" checked disabled> <span>SerpAPI</span></label>
               </div>
             </div>
           </div>
@@ -933,7 +933,9 @@
   </main>
 
   <script>
-    const APP_VERSION = "2026.06.07.25";
+    const APP_VERSION = "2026.06.07.26";
+    const SCRAPE_MAX_EVENTS_PER_SITE = 20;
+    const SCRAPE_SITE_TIME_LIMIT_SECONDS = 20;
     const WORKER_URL = "https://evenementen-refresh.mrsjonnie.workers.dev";
     const PER_PAGE_KEY = "evenementenPerPage";
     let eventsPerPage = 9;
@@ -963,7 +965,7 @@
         description: "Moderne kunst en wisselende tentoonstellingen.",
         image: "https://picsum.photos/seed/Groninger+Museum/800/500",
         website: "https://www.groningermuseum.nl",
-        source: "Manual",
+        source: "",
         periodLabel: "Hele jaar",
         isPermanent: true
       },
@@ -976,7 +978,7 @@
         description: "Historische vesting met demonstraties en musea.",
         image: "https://picsum.photos/seed/Fort+Bourtange/800/500",
         website: "https://www.bourtange.nl",
-        source: "Manual",
+        source: "",
         periodLabel: "Hele jaar",
         isPermanent: true
       }
@@ -1159,8 +1161,12 @@
     }
 
     function normalizeEventTitle(value) {
-      return cleanText(value)
-        .toLowerCase()
+      const months = "januari|februari|maart|april|mei|juni|juli|augustus|september|oktober|november|december|jan|feb|mrt|apr|jun|jul|aug|sep|sept|okt|nov|dec|january|february|march|april|may|june|july|august|september|october|november|december";
+      const weekdays = "monday|tuesday|wednesday|thursday|friday|saturday|sunday|maandag|dinsdag|woensdag|donderdag|vrijdag|zaterdag|zondag";
+      let text = cleanText(value).toLowerCase();
+      text = text.replace(new RegExp(`^(?:${weekdays})\\s+\\d{1,2}\\s+(?:${months})\\s+`, "i"), "");
+      text = text.split(/\b(mainstage|downstage|zienema|dansen)\b|\bticket\b|\bdoors\b|\bstart\b|\bsold out\b|\bkoop ticket\b/i)[0];
+      return text
         .replace(/\b20\d{2}\b/g, "")
         .replace(/^(concert|theater|film|bioscoop|markt|workshop|event|evenement):\s*/i, "")
         .replace(/[^a-z0-9]+/g, " ")
@@ -1179,12 +1185,15 @@
 
     function eventQuality(event) {
       let score = 0;
+      const title = cleanText(event.title || "");
       if (safeUrl(event.website, { website: true })) score += 12;
       if (safeUrl(event.image)) score += 4;
       if (event.description && cleanText(event.description).length > 60) score += 4;
       if (event.time) score += 2;
       if (event.lat && event.lon) score += 2;
       if (event.source && !/onbekend|manual/i.test(event.source)) score += 1;
+      if (title && title.length <= 90) score += 3;
+      if (/\b(ticket|doors|start|koop ticket|sold out)\b/i.test(title)) score -= 5;
       return score;
     }
 
@@ -1586,8 +1595,9 @@
       return `${count} ${count === 1 ? "nieuw evenement" : "nieuwe evenementen"}`;
     }
 
-    async function waitForUpdatedEvents(previousSignature, previousKeys, foundCount = null) {
+    async function waitForUpdatedEvents(previousSignature, previousKeys, foundCount = null, options = {}) {
       const previousUpdatedAt = eventsUpdatedAt;
+      const requireEvents = Boolean(options.requireEvents);
       for (let attempt = 1; attempt <= 18; attempt += 1) {
         const prefix = Number.isFinite(foundCount) ? `${foundText(foundCount)} gevonden.` : foundText(foundCount) + ".";
         showStatus(`${prefix} Lijst controleren (${attempt}/18).`, "warn", { stop: true });
@@ -1599,7 +1609,9 @@
 
         try {
           const freshPayload = await fetchEventsPayload();
-          if ((freshPayload.updatedAt && freshPayload.updatedAt !== previousUpdatedAt) || eventSignature(freshPayload.events) !== previousSignature) {
+          const hasFreshEvents = Array.isArray(freshPayload.events) && freshPayload.events.length > 0;
+          const changed = (freshPayload.updatedAt && freshPayload.updatedAt !== previousUpdatedAt) || eventSignature(freshPayload.events) !== previousSignature;
+          if (changed && (!requireEvents || hasFreshEvents)) {
             events = freshPayload.events;
             eventsUpdatedAt = freshPayload.updatedAt;
             latestSiteResults = freshPayload.siteResults || [];
@@ -1794,6 +1806,19 @@
       $("nextPage").disabled = currentPage === pageCount;
     }
 
+    function eventSourceLabel(event) {
+      const source = cleanText(event.source || "");
+      if (source && !/^(manual|onbekend|bron onbekend)$/i.test(source)) return source;
+
+      const website = safeUrl(event.website, { website: true });
+      if (!website) return "";
+      try {
+        return new URL(website).hostname.replace(/^www\./, "");
+      } catch {
+        return "";
+      }
+    }
+
     function renderCard(event) {
       const title = escapeHtml(event.title || "Naam onbekend");
       const type = cleanText(event.type || "Activiteit");
@@ -1812,9 +1837,12 @@
           <span>${escapeHtml(type)}</span>
         </${website ? "a" : "div"}>
       `;
-      const sourceTag = website
-        ? `<a class="tag sourceLink" href="${escapeHtml(website)}" target="_blank" rel="noopener noreferrer">${escapeHtml(event.source || "Bron onbekend")}</a>`
-        : `<span class="tag">${escapeHtml(event.source || "Bron onbekend")}</span>`;
+      const sourceLabel = eventSourceLabel(event);
+      const sourceTag = sourceLabel
+        ? (website
+          ? `<a class="tag sourceLink" href="${escapeHtml(website)}" target="_blank" rel="noopener noreferrer">${escapeHtml(sourceLabel)}</a>`
+          : `<span class="tag">${escapeHtml(sourceLabel)}</span>`)
+        : "";
 
       return `
         <article class="card ${isNew ? "isNew" : ""}">
@@ -1845,8 +1873,23 @@
     }
 
     function weatherTopicUrl(region, topic) {
+      const normalized = cleanText(topic).toLowerCase();
+      if (normalized.includes("wind")) {
+        return `https://www.weeronline.nl/zoekresultaten?keyword=${encodeURIComponent(`${region} wind`)}`;
+      }
+      if (normalized.includes("regen") || normalized.includes("neerslag") || normalized.includes("buien")) {
+        return "https://www.buienradar.nl/nederland/neerslag/buienradar";
+      }
       const query = `${region} ${topic}`.trim();
       return `https://www.weeronline.nl/zoekresultaten?keyword=${encodeURIComponent(query)}`;
+    }
+
+    function weatherTopicSourceName(topic) {
+      const normalized = cleanText(topic).toLowerCase();
+      if (!normalized.includes("wind") && (normalized.includes("regen") || normalized.includes("neerslag") || normalized.includes("buien"))) {
+        return "Buienradar";
+      }
+      return "Weeronline";
     }
 
     function radarBlockHtml() {
@@ -1956,6 +1999,8 @@
         dateFrom,
         dateTo,
         minResults: 20,
+        maxEventsPerSite: SCRAPE_MAX_EVENTS_PER_SITE,
+        siteTimeLimitSeconds: SCRAPE_SITE_TIME_LIMIT_SECONDS,
         sites: selectedSites,
         providers: {
           perplexity: false,
@@ -2028,6 +2073,8 @@
             category: $("typeFilter").value === "all" ? "" : $("typeFilter").value,
             dateFrom,
             dateTo,
+            maxEventsPerSite: SCRAPE_MAX_EVENTS_PER_SITE,
+            siteTimeLimitSeconds: SCRAPE_SITE_TIME_LIMIT_SECONDS,
             sites: [...document.querySelectorAll(".siteCheck:checked")].map((check) => check.value).length
               ? [...document.querySelectorAll(".siteCheck:checked")].map((check) => check.value)
               : sites.slice(),
@@ -2049,7 +2096,7 @@
         }
         const serpText = Number(data?.serpApiAddedCount) > 0 ? ` SerpAPI vond ${Number(data.serpApiAddedCount)} extra links.` : "";
         showStatus(`Alles is verwijderd.${serpText} Ik controleer de opnieuw opgebouwde lijst.`, "ok");
-        await waitForUpdatedEvents(previousSignature, previousKeys, scrapedCountFromResponse(data));
+        await waitForUpdatedEvents(previousSignature, previousKeys, scrapedCountFromResponse(data), { requireEvents: true });
       } catch (error) {
         showStatus(`Verwijderen mislukt: ${error.message}`, "error");
       } finally {
@@ -2199,6 +2246,7 @@
       }
 
       const url = weatherTopicUrl(region, topic);
+      const sourceName = weatherTopicSourceName(topic);
       const details = [
         topic === "temperatuur" ? weatherDayRows(latestWeatherData || {}) : "",
         topic === "weersverwachting" && $("periodMode").value === "week" ? radarBlockHtml() : ""
@@ -2207,7 +2255,7 @@
       panel.dataset.topic = topic;
       panel.innerHTML = `
         <span>${escapeHtml(label)} voor ${escapeHtml(region)}</span><br>
-        <a href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">Bekijk ${escapeHtml(topic)} op Weeronline</a>
+        <a href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">Bekijk ${escapeHtml(topic)} op ${escapeHtml(sourceName)}</a>
         ${details}
       `;
       panel.classList.add("open");

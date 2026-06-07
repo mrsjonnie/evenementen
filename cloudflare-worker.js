@@ -100,11 +100,12 @@ function serpSearchQuery(site, body = {}) {
 async function serpApiLinksForSite(env, site, body = {}) {
   const token = validateInput(env.SERPAPI_TOKEN || "", 500);
   if (!token) return [];
+  const requestedHits = Math.max(20, Math.min(100, Number(body.maxEventsPerSite || body.minResults) || 20));
 
   const params = new URLSearchParams({
     engine: "google",
     q: serpSearchQuery(site, body),
-    num: "10",
+    num: String(requestedHits),
     api_key: token
   });
   const response = await fetch(`https://serpapi.com/search.json?${params.toString()}`, {
@@ -117,7 +118,7 @@ async function serpApiLinksForSite(env, site, body = {}) {
   return results
     .map((item) => validateInput(item.link || "", 300))
     .filter((link) => link && sameHostUrl(link, site) && !badWords.test(link))
-    .slice(0, 6);
+    .slice(0, Math.min(requestedHits, 20));
 }
 
 async function enrichBodyWithSerpApi(env, body = {}) {
@@ -497,7 +498,8 @@ async function saveEventsToGithub(env, foundEvents, options = {}) {
     schemaVersion: 2,
     updatedAt: new Date().toISOString(),
     events: merged,
-    archive
+    archive,
+    siteResults: []
   };
 
   const putResponse = await githubFetch(env, "/contents/events.json", {
@@ -526,6 +528,8 @@ function workflowInputs(body, overrides = {}) {
     dateFrom: validateInput(body.dateFrom || "", 40),
     dateTo: validateInput(body.dateTo || "", 40),
     minResults: validateInput(body.minResults || "20", 10),
+    maxEventsPerSite: validateInput(body.maxEventsPerSite || body.minResults || "20", 10),
+    siteTimeLimitSeconds: validateInput(body.siteTimeLimitSeconds || "20", 10),
     sites: JSON.stringify(validSites(body.sites)),
     providers: "{}",
     clearArchive: overrides.clearArchive ? "true" : "false"

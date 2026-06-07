@@ -16,8 +16,18 @@ INPUT_DATE_FROM = os.getenv("INPUT_DATE_FROM", "").strip()
 INPUT_DATE_TO = os.getenv("INPUT_DATE_TO", "").strip()
 INPUT_CLEAR_ARCHIVE = os.getenv("INPUT_CLEAR_ARCHIVE", "").strip().lower() in {"1", "true", "yes", "ja"}
 BASE_HEADERS = {"User-Agent": "Mozilla/5.0"}
-MAX_EVENTS_PER_SITE = 20
-SITE_TIME_LIMIT_SECONDS = 5
+
+
+def env_int(name, default, minimum, maximum):
+    try:
+        value = int(str(os.getenv(name, default)).strip())
+    except (TypeError, ValueError):
+        value = default
+    return max(minimum, min(maximum, value))
+
+
+MAX_EVENTS_PER_SITE = env_int("INPUT_MAX_EVENTS_PER_SITE", 20, 20, 100)
+SITE_TIME_LIMIT_SECONDS = env_int("INPUT_SITE_TIME_LIMIT_SECONDS", 20, 20, 60)
 SITE_RESULTS = []
 MONTHS = "januari|februari|maart|april|mei|juni|juli|augustus|september|oktober|november|december|jan|feb|mrt|apr|jun|jul|aug|sep|sept|okt|nov|dec|january|february|march|april|may|june|july|august|september|october|november|december"
 DATE_RE = re.compile(rf"^\d{{1,2}}(?:\s+t/m\s+\d{{1,2}})?\s+(?:{MONTHS})$", re.I)
@@ -484,6 +494,11 @@ def normalize_event(event):
     if not image:
         image = f"https://picsum.photos/seed/{quote_plus(title or location)}/800/500"
 
+    website = clean_text(event.get("website")) or "#"
+    source = clean_text(event.get("source"))
+    if not source or source.lower() in {"manual", "onbekend", "bron onbekend"}:
+        source = urlparse(website).netloc.replace("www.", "") if is_valid_web_url(website) and website != "#" else ""
+
     date = normalize_date_value(event.get("date"))
     return {
         "title": title,
@@ -497,8 +512,8 @@ def normalize_event(event):
         "cost": clean_text(event.get("cost")) or "Zie website",
         "description": clean_text(event.get("description")),
         "image": image,
-        "website": clean_text(event.get("website")) or "#",
-        "source": clean_text(event.get("source")) or "Onbekend",
+        "website": website,
+        "source": source or "Onbekend",
         "periodLabel": clean_text(event.get("periodLabel")) or date,
         "isPermanent": bool(event.get("isPermanent", False)),
     }
@@ -1295,7 +1310,7 @@ def manual_events():
                 "lon": 6.5671,
                 "description": "Moderne kunst en wisselende tentoonstellingen.",
                 "website": "https://www.groningermuseum.nl",
-                "source": "Manual",
+                "source": "groningermuseum.nl",
                 "isPermanent": True,
             }
         ),
@@ -1309,7 +1324,7 @@ def manual_events():
                 "lon": 7.1833,
                 "description": "Historische vesting met demonstraties en musea.",
                 "website": "https://www.bourtange.nl",
-                "source": "Manual",
+                "source": "bourtange.nl",
                 "isPermanent": True,
             }
         ),

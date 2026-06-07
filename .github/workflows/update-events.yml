@@ -31,6 +31,14 @@ on:
         description: Minimum aantal resultaten
         required: false
         default: '20'
+      maxEventsPerSite:
+        description: Maximum aantal evenementen per website
+        required: false
+        default: '20'
+      siteTimeLimitSeconds:
+        description: Maximale zoektijd per website in seconden
+        required: false
+        default: '20'
       sites:
         description: Extra websites als JSON-lijst
         required: false
@@ -85,6 +93,8 @@ jobs:
               "dateFrom": "",
               "dateTo": "",
               "minResults": "20",
+              "maxEventsPerSite": "20",
+              "siteTimeLimitSeconds": "20",
               "sites": "[]",
               "providers": "{}",
               "clearArchive": "false",
@@ -114,6 +124,8 @@ jobs:
               "dateFrom": "INPUT_DATE_FROM",
               "dateTo": "INPUT_DATE_TO",
               "minResults": "INPUT_MIN_RESULTS",
+              "maxEventsPerSite": "INPUT_MAX_EVENTS_PER_SITE",
+              "siteTimeLimitSeconds": "INPUT_SITE_TIME_LIMIT_SECONDS",
               "sites": "INPUT_SITES",
               "providers": "INPUT_PROVIDERS",
               "clearArchive": "INPUT_CLEAR_ARCHIVE",
