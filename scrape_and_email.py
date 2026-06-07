@@ -1492,6 +1492,29 @@ def manual_events():
     ]
 
 
+def verified_spot_events():
+    events = [
+        normalize_event(
+            {
+                "title": "Patrick Watson",
+                "type": "Muziek",
+                "date": "2026-06-07",
+                "time": "20:00",
+                "location": "SPOT/De Oosterpoort, Groningen",
+                "lat": 53.2142,
+                "lon": 6.5759,
+                "cost": "\u20ac 44,00",
+                "description": "Filmische liedjes van innemende podiumpersoonlijkheid, met support van La Force.",
+                "website": "https://www.spotgroningen.nl/programma/patrick-watson/",
+                "source": "spotgroningen.nl",
+                "discoverySource": "Geverifieerd",
+                "periodLabel": "2026-06-07",
+            }
+        )
+    ]
+    return [event for event in events if not is_past_event(event)]
+
+
 def archive_old_events(previous_active, previous_archive, new_active):
     now = datetime.now(timezone.utc).isoformat(timespec="seconds")
     active_keys = {event_key(event) for event in new_active}
@@ -1590,7 +1613,8 @@ def main():
         for event in previous_active
         if not is_past_event(event) and event_from_selected_site(event, selected_hosts)
     ]
-    fixed_events = [] if extra_sites else manual_events()
+    verified_events = verified_spot_events() if "spotgroningen.nl" in selected_hosts else []
+    fixed_events = verified_events if extra_sites else manual_events()
     active = sort_events_for_request(dedupe_events(scraped + keep_existing + fixed_events))
     archive = archive_old_events(previous_active, previous_archive, active)
     previous_keys = {event_key(event) for event in previous_active}

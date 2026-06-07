@@ -273,6 +273,12 @@ function eventKey(event) {
   return `${event.date || ""}|${(event.title || "").toLowerCase().replace(/[^a-z0-9]+/g, " ").trim()}`;
 }
 
+function eventDeleteKey(event) {
+  const title = (event.title || "").toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
+  const website = clean(event.website || "").toLowerCase().replace(/\/$/, "");
+  return `${event.date || ""}|${title}|${website}`;
+}
+
 function validEvent(event) {
   return Boolean(event.title && event.title.length > 3 && event.date && event.website && !badWords.test(event.title));
 }
@@ -554,6 +560,63 @@ async function saveEventsToGithub(env, foundEvents, options = {}) {
   return { saved: merged.length, added: foundEvents.length };
 }
 
+async function deleteEventFromGithub(env, target = {}) {
+  let existing = { events: [], archive: [], siteResults: [], rawLog: [] };
+  let sha = null;
+  const getResponse = await githubFetch(env, "/contents/events.json?ref=main");
+  if (!getResponse.ok) throw new Error(`events.json niet gevonden: status ${getResponse.status}`);
+
+  const file = await getResponse.json();
+  sha = file.sha;
+  const decoded = JSON.parse(decodeBase64(file.content));
+  if (Array.isArray(decoded)) existing.events = decoded;
+  if (decoded && Array.isArray(decoded.events)) existing.events = decoded.events;
+  if (decoded && Array.isArray(decoded.archive)) existing.archive = decoded.archive;
+  if (decoded && Array.isArray(decoded.siteResults)) existing.siteResults = decoded.siteResults;
+  if (decoded && Array.isArray(decoded.rawLog)) existing.rawLog = decoded.rawLog;
+
+  const wantedKey = clean(target.key || "");
+  const wantedTitle = clean(target.title || "").toLowerCase();
+  const wantedDate = clean(target.date || "");
+  const wantedWebsite = clean(target.website || "").toLowerCase().replace(/\/$/, "");
+  const shouldRemove = (event) => {
+    const key = eventKey(event);
+    const fullKey = eventDeleteKey(event);
+    if (wantedKey && (key === wantedKey || fullKey === wantedKey)) return true;
+    const sameTitle = wantedTitle && clean(event.title || "").toLowerCase() === wantedTitle;
+    const sameDate = wantedDate && clean(event.date || "") === wantedDate;
+    const sameWebsite = wantedWebsite && clean(event.website || "").toLowerCase().replace(/\/$/, "") === wantedWebsite;
+    return Boolean(sameTitle && sameDate && (!wantedWebsite || sameWebsite));
+  };
+
+  const events = existing.events.filter((event) => !shouldRemove(event));
+  const archive = existing.archive.filter((event) => !shouldRemove(event));
+  const removedEvents = existing.events.length - events.length;
+  const removedArchive = existing.archive.length - archive.length;
+
+  const payload = {
+    schemaVersion: 2,
+    updatedAt: new Date().toISOString(),
+    events,
+    archive,
+    siteResults: existing.siteResults,
+    rawLog: existing.rawLog
+  };
+
+  const putResponse = await githubFetch(env, "/contents/events.json", {
+    method: "PUT",
+    body: JSON.stringify({
+      message: `Delete event ${clean(target.title || target.key || "item")}`,
+      content: encodeBase64(JSON.stringify(payload, null, 2)),
+      sha,
+      branch: "main"
+    })
+  });
+
+  if (!putResponse.ok) throw new Error(await putResponse.text());
+  return { removedEvents, removedArchive, remainingEvents: events.length, remainingArchive: archive.length };
+}
+
 function workflowInputs(body, overrides = {}) {
   return {
     region: validateInput(body.region || "Groningen", 100),
@@ -741,6 +804,16 @@ export default {
           totalSaved: 0,
           refreshError: result.ok ? null : (result.error || result.details || "Onbekende fout")
         }, 200);
+      } catch (e) {
+        return json({ error: "Fout bij verwijderen", details: e.message }, 500);
+      }
+    }
+
+    if (path === "/delete-event" && request.method === "POST") {
+      try {
+        const body = await request.json().catch(() => ({}));
+        const result = await deleteEventFromGithub(env, body || {});
+        return json({ ok: true, ...result }, 200);
       } catch (e) {
         return json({ error: "Fout bij verwijderen", details: e.message }, 500);
       }
