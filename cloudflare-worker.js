@@ -364,11 +364,25 @@ function encodeBase64(text) {
   return btoa(binary);
 }
 
+function githubConfig(env) {
+  const token = validateInput(env.GITHUB_TOKEN || "", 300);
+  if (!token) {
+    throw new Error("GITHUB_TOKEN ontbreekt in Cloudflare Variables and Secrets");
+  }
+  return {
+    owner: validateInput(env.GITHUB_OWNER || "mrsjonnie", 100),
+    repo: validateInput(env.GITHUB_REPO || "evenementen", 100),
+    workflowFile: validateInput(env.GITHUB_WORKFLOW_FILE || "update-events.yml", 100),
+    token
+  };
+}
+
 async function githubFetch(env, path, init = {}) {
-  return fetch(`https://api.github.com/repos/${env.GITHUB_OWNER}/${env.GITHUB_REPO}${path}`, {
+  const config = githubConfig(env);
+  return fetch(`https://api.github.com/repos/${config.owner}/${config.repo}${path}`, {
     ...init,
     headers: {
-      "Authorization": `Bearer ${env.GITHUB_TOKEN}`,
+      "Authorization": `Bearer ${config.token}`,
       "Accept": "application/vnd.github+json",
       "Content-Type": "application/json",
       "User-Agent": "evenementen-worker",
@@ -432,7 +446,7 @@ function workflowInputs(body, overrides = {}) {
 }
 
 async function dispatchWorkflow(env, inputs) {
-  const workflowFile = env.GITHUB_WORKFLOW_FILE || "update-events.yml";
+  const workflowFile = githubConfig(env).workflowFile;
   const ghResponse = await githubFetch(env, `/actions/workflows/${workflowFile}/dispatches`, {
     method: "POST",
     body: JSON.stringify({
@@ -471,6 +485,17 @@ export default {
 
     if (request.method === "OPTIONS") {
       return new Response(null, { headers: corsHeaders() });
+    }
+
+    if (path === "/health" && request.method === "GET") {
+      return json({
+        ok: true,
+        worker: "evenementen-refresh3",
+        githubTokenConfigured: Boolean(env.GITHUB_TOKEN),
+        githubOwner: env.GITHUB_OWNER || "mrsjonnie",
+        githubRepo: env.GITHUB_REPO || "evenementen",
+        workflowFile: env.GITHUB_WORKFLOW_FILE || "update-events.yml"
+      }, 200);
     }
 
     if (path === "/weather" && request.method === "GET") {

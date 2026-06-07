@@ -1,3 +1,8 @@
 name = "evenementen-refresh3"
 main = "cloudflare-worker.js"
 compatibility_date = "2025-01-01"
+
+[vars]
+GITHUB_OWNER = "mrsjonnie"
+GITHUB_REPO = "evenementen"
+GITHUB_WORKFLOW_FILE = "update-events.yml"
