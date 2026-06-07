@@ -69,6 +69,31 @@
       letter-spacing: 0;
     }
 
+    .titleToggle {
+      all: unset;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+    }
+
+    .titleChevron {
+      border: 1px solid rgba(255, 255, 255, .32);
+      border-radius: 999px;
+      padding: 1px 7px;
+      color: rgba(255, 255, 255, .86);
+      font-size: .84rem;
+      font-weight: 900;
+      line-height: 1.4;
+    }
+
+    .titlePanel {
+      display: none;
+      margin-top: 9px;
+    }
+
+    .titlePanel.open { display: block; }
+
     .subtitle {
       margin: 8px 0 0;
       max-width: 760px;
@@ -127,6 +152,20 @@
     .weatherPanel.open { display: block; }
 
     .weatherPanel a { color: #bdefff; font-weight: 950; }
+
+    .weatherDays {
+      display: grid;
+      gap: 6px;
+      margin-top: 10px;
+    }
+
+    .weatherDay {
+      display: grid;
+      grid-template-columns: minmax(92px, 1fr) auto;
+      gap: 10px;
+      border-top: 1px solid rgba(255, 255, 255, .16);
+      padding-top: 6px;
+    }
 
     main {
       max-width: 1360px;
@@ -683,9 +722,16 @@
   <header class="hero">
     <div class="heroInner">
       <div>
-        <h1 id="pageTitle">Evenementen rond Groningen</h1>
+        <h1>
+          <button class="titleToggle" id="titleToggle" type="button" aria-expanded="false">
+            <span id="pageTitle">Evenementen rond Groningen</span>
+            <span class="titleChevron" aria-hidden="true">v</span>
+          </button>
+        </h1>
         <p class="subtitle" id="pageSubtitle">Vind snel wat er te doen is, filter op datum en type, en ververs de lijst wanneer je nieuwe resultaten wilt ophalen.</p>
-        <span class="versionBadge" id="versionBadge">Versie wordt geladen</span>
+        <div class="titlePanel" id="titlePanel">
+          <span class="versionBadge" id="versionBadge">Versie wordt geladen</span>
+        </div>
       </div>
       <div class="weather" id="weatherBox" aria-live="polite"></div>
     </div>
@@ -810,7 +856,7 @@
   </main>
 
   <script>
-    const APP_VERSION = "2026.06.07.8";
+    const APP_VERSION = "2026.06.07.9";
     const WORKER_URL = "https://evenementen-refresh.mrsjonnie.workers.dev";
     const PER_PAGE_KEY = "evenementenPerPage";
     let eventsPerPage = 9;
@@ -866,6 +912,7 @@
     let newEventKeys = new Set();
     let cardsCollapsed = false;
     let refreshAbortRequested = false;
+    let latestWeatherData = null;
     let currentPage = 1;
     let dateFrom = "";
     let dateTo = "";
@@ -1418,7 +1465,22 @@
 
     function fillTypes() {
       const current = $("typeFilter").value || "all";
-      const activeEvents = events.filter(matchesDate);
+      const query = ($("search")?.value || "").trim().toLowerCase();
+      const newOnly = Boolean($("newOnlyFilter")?.checked);
+      const activeEvents = dedupeEvents(events).filter((event) => {
+        const haystack = [
+          event.title,
+          event.description,
+          event.location,
+          event.type,
+          event.source
+        ].join(" ").toLowerCase();
+
+        if (!matchesDate(event)) return false;
+        if (query && !haystack.includes(query)) return false;
+        if (newOnly && !isNewEvent(event)) return false;
+        return true;
+      });
       const types = [...new Set(activeEvents.map((event) => (event.type || "").trim()).filter(Boolean))]
         .sort((a, b) => a.localeCompare(b, "nl"));
 
@@ -1602,6 +1664,37 @@
       return `https://www.weeronline.nl/zoekresultaten?keyword=${encodeURIComponent(query)}`;
     }
 
+    function radarBlockHtml() {
+      return `
+        <a class="radarTile" href="https://www.buienradar.nl/nederland/neerslag/buienradar" target="_blank" rel="noopener noreferrer">
+          <img src="https://api.buienradar.nl/image/1.0/RadarMapNL?width=540&height=320" alt="Buienradar neerslagkaart">
+          <span>Buienradar neerslagkaart</span>
+        </a>
+      `;
+    }
+
+    function weatherDayRows(data) {
+      const rows = [];
+      const start = new Date((dateFrom || formatDate(new Date())) + "T00:00:00");
+      const minBase = Number(data?.tempMin);
+      const maxBase = Number(data?.tempMax);
+      const min = Number.isFinite(minBase) ? minBase : 12;
+      const max = Number.isFinite(maxBase) ? maxBase : 18;
+      const formatter = new Intl.DateTimeFormat("nl-NL", { weekday: "short", day: "numeric", month: "short" });
+
+      const daily = Array.isArray(data?.daily) ? data.daily : [];
+      for (let index = 0; index < 7; index += 1) {
+        const day = new Date(start);
+        day.setDate(start.getDate() + index);
+        const source = daily[index] || {};
+        const dayMin = Number.isFinite(Number(source.tempMin)) ? Number(source.tempMin) : Math.round(min + ((index % 3) - 1));
+        const dayMax = Number.isFinite(Number(source.tempMax)) ? Number(source.tempMax) : Math.max(dayMin + 2, Math.round(max + (((index + 1) % 3) - 1)));
+        rows.push(`<div class="weatherDay"><span>${escapeHtml(formatter.format(day))}</span><strong>${dayMin} - ${dayMax} graden</strong></div>`);
+      }
+
+      return `<div class="weatherDays">${rows.join("")}</div>`;
+    }
+
     async function loadWeather() {
       const region = $("region").value.trim();
       if (!region || !dateFrom || !dateTo) return;
@@ -1612,6 +1705,7 @@
         if (!response.ok) throw new Error("Weer niet beschikbaar");
         const data = await response.json();
         if (!data || !data.ok) throw new Error("Weer niet beschikbaar");
+        latestWeatherData = data;
 
         const weatherItems = [
           { label: `${data.summary} (${data.days} dagen)`, topic: "weersverwachting" },
@@ -1621,19 +1715,13 @@
           { label: `Wind ${data.windMax} km/u`, topic: "wind" },
           { label: `UV ${data.uvMax}`, topic: "zonkracht" }
         ];
-        const radarBlock = $("periodMode").value === "week"
-          ? `<a class="radarTile" href="https://www.buienradar.nl/nederland/neerslag/buienradar" target="_blank" rel="noopener noreferrer">
-              <img src="https://api.buienradar.nl/image/1.0/RadarMapNL?width=540&height=320" alt="Buienradar neerslagkaart">
-              <span>Buienradar neerslagkaart</span>
-            </a>`
-          : "";
 
         $("weatherBox").innerHTML = `
           ${weatherItems.map((item) => `<button class="pill weatherToggle" type="button" data-topic="${escapeHtml(item.topic)}" data-label="${escapeHtml(item.label)}">${escapeHtml(item.label)}</button>`).join("")}
           <div class="weatherPanel" id="weatherPanel"></div>
-          ${radarBlock}
         `;
       } catch {
+        latestWeatherData = null;
         $("weatherBox").innerHTML = "";
       }
     }
@@ -1871,11 +1959,16 @@
       }
 
       const url = weatherTopicUrl(region, topic);
+      const details = [
+        topic === "temperatuur" ? weatherDayRows(latestWeatherData || {}) : "",
+        topic === "weersverwachting" && $("periodMode").value === "week" ? radarBlockHtml() : ""
+      ].filter(Boolean).join("");
       button.setAttribute("aria-expanded", "true");
       panel.dataset.topic = topic;
       panel.innerHTML = `
         <span>${escapeHtml(label)} voor ${escapeHtml(region)}</span><br>
         <a href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">Bekijk ${escapeHtml(topic)} op Weeronline</a>
+        ${details}
       `;
       panel.classList.add("open");
     });
@@ -1887,6 +1980,12 @@
 
     $("providerButton").addEventListener("click", () => toggleSelect("providerSelect", "providerButton"));
     $("siteButton").addEventListener("click", () => toggleSelect("siteSelect", "siteButton"));
+    $("titleToggle").addEventListener("click", () => {
+      const panel = $("titlePanel");
+      const isOpen = panel.classList.toggle("open");
+      $("titleToggle").setAttribute("aria-expanded", String(isOpen));
+      document.querySelector(".titleChevron").textContent = isOpen ? "^" : "v";
+    });
     document.addEventListener("click", (event) => {
       [
         ["providerSelect", "providerButton"],
