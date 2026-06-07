@@ -493,15 +493,19 @@ export default {
     if (path === "/clear" && request.method === "POST") {
       try {
         const body = await request.json().catch(() => ({}));
-        const sites = validSites(body.sites);
-        const found = sites.length ? await scrapeSites(sites) : [];
-        await saveEventsToGithub(env, found, { clearArchive: true });
-        if (!found.length) await dispatchWorkflow(env, workflowInputs(body || {}, { clearArchive: true }));
+        const result = await dispatchWorkflow(env, workflowInputs(body || {}, { clearArchive: true }));
+        if (!result.ok) {
+          return json({
+            error: "GitHub dispatch mislukt",
+            status: result.status,
+            details: result.details
+          }, 500);
+        }
         return json({
           ok: true,
-          message: "Wissen en opnieuw verversen gestart",
-          scrapedCount: found.length,
-          totalSaved: found.length
+          message: "Wissen en opnieuw verversen is gestart via GitHub Actions",
+          scrapedCount: null,
+          totalSaved: null
         }, 200);
       } catch (e) {
         return json({ error: "Fout bij verwijderen", details: e.message }, 500);
@@ -516,18 +520,6 @@ export default {
       const body = await request.json();
       if (!body) return json({ error: "Ongeldige JSON body" }, 400);
 
-      const sites = validSites(body.sites);
-      const found = sites.length ? await scrapeSites(sites) : [];
-      if (found.length) {
-        const saved = await saveEventsToGithub(env, found);
-        return json({
-          ok: true,
-          message: "Websites direct gescrapet",
-          scrapedCount: found.length,
-          totalSaved: saved.saved
-        }, 200);
-      }
-
       const result = await dispatchWorkflow(env, workflowInputs(body));
       if (!result.ok) {
         return json({
@@ -539,7 +531,7 @@ export default {
 
       return json({
         ok: true,
-        message: "Geen directe website-events gevonden; workflow gestart als vangnet",
+        message: "Verversing gestart via GitHub Actions",
         scrapedCount: null,
         totalSaved: null
       }, 200);
