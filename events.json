@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-06-07T18:06:02+00:00",
+  "updatedAt": "2026-06-07T19:03:43+00:00",
   "events": [
     {
       "title": "The Rocky Horror Picture Show",
@@ -55,7 +55,7 @@
     },
     {
       "title": "VERA Kelderbar",
-      "type": "evenement",
+      "type": "Evenement",
       "date": "2026-06-10",
       "time": "",
       "location": "VERA Groningen",
@@ -89,7 +89,7 @@
     },
     {
       "title": "VERA Kelderbar",
-      "type": "evenement",
+      "type": "Evenement",
       "date": "2026-06-11",
       "time": "",
       "location": "VERA Groningen",
@@ -106,7 +106,7 @@
     },
     {
       "title": "Backstage Juice Bar Introduction New VERA Beer!",
-      "type": "evenement",
+      "type": "Evenement",
       "date": "2026-06-12",
       "time": "",
       "location": "VERA Groningen",
@@ -140,7 +140,7 @@
     },
     {
       "title": "VERA Kelderbar",
-      "type": "evenement",
+      "type": "Evenement",
       "date": "2026-06-13",
       "time": "",
       "location": "VERA Groningen",
@@ -208,7 +208,7 @@
     },
     {
       "title": "VERA Kelderbar",
-      "type": "evenement",
+      "type": "Evenement",
       "date": "2026-06-17",
       "time": "",
       "location": "VERA Groningen",
@@ -327,7 +327,7 @@
     },
     {
       "title": "Tramhaus Support",
-      "type": "evenement",
+      "type": "Evenement",
       "date": "2026-12-18",
       "time": "",
       "location": "VERA Groningen",
@@ -384,10 +384,30 @@
   "siteResults": [
     {
       "site": "https://www.vera-groningen.nl",
-      "count": 6,
+      "count": 20,
       "newCount": 0,
-      "durationSeconds": 19.97,
-      "timedOut": true
+      "durationSeconds": 39.46,
+      "timedOut": false
+    }
+  ],
+  "rawLog": [
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl",
+      "title": "Highlights",
+      "date": "",
+      "url": "https://www.vera-groningen.nl",
+      "status": "pagina geladen",
+      "rawText": "VERA Groningen NL EN Home Agenda Artdivision Photos News Info Webshop My Tickets Friday 18 December Tramhaus support Koop ticket Highlights Friday 16 October De Kift NL Nederlandse theater-punk fanfare Vanaf het najaar van 2026 tourt muziekgezelschap De Kift langs de landelijke podia met 'De eenzame', een... Lees meer"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl",
+      "title": "VERA Groningen - Programma",
+      "date": "",
+      "url": "https://www.vera-groningen.nl/programma",
+      "status": "pagina geladen",
+      "rawText": "VERA Groningen - Programma NL EN Home Agenda Artdivision Photos News Info Webshop My Tickets Monday  8 June The Rocky Horror Picture Show Sold out Alle Events Mainstage Dansen Downstage Extra Zienema Past 2 weeks Monday  8 June The Rocky Horror Picture Show Zienema | Ticket: € 5,- | doors: 20:00 - 20:30 | start: 20:30"
     }
   ]
 }
