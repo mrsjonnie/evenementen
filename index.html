@@ -169,43 +169,49 @@
 
     .versionBadge {
       display: inline-flex;
+      align-items: center;
       border: 1px solid rgba(255, 255, 255, .32);
       border-radius: 999px;
-      padding: 5px 9px;
+      min-height: 24px;
+      padding: 3px 8px;
       color: rgba(255, 255, 255, .88);
       background: rgba(255, 255, 255, .13);
-      font-size: .76rem;
+      font-size: .72rem;
       font-weight: 900;
     }
 
     .scanSettings {
       display: inline-flex;
       flex-wrap: wrap;
-      gap: 5px;
+      gap: 4px;
       align-items: center;
     }
 
     .scanSetting {
       display: inline-flex;
       align-items: center;
-      gap: 4px;
+      gap: 3px;
       border: 1px solid rgba(255, 255, 255, .28);
       border-radius: 999px;
-      padding: 3px 6px;
+      min-height: 24px;
+      padding: 2px 6px;
       background: rgba(255, 255, 255, .1);
       color: rgba(255, 255, 255, .88);
-      font-size: .72rem;
+      font-size: .7rem;
       font-weight: 900;
+      line-height: 1;
     }
 
     .scanSetting input {
-      width: 34px;
+      width: 30px;
+      height: 18px;
       border: 0;
       border-radius: 999px;
-      padding: 2px 4px;
+      padding: 1px 3px;
       background: rgba(255, 255, 255, .95);
       color: #102033;
       font: inherit;
+      line-height: 1;
       text-align: center;
     }
 
@@ -960,8 +966,8 @@
           <div class="titlePanelContent">
             <span class="versionBadge" id="versionBadge">Versie wordt geladen</span>
             <div class="scanSettings" aria-label="Scaninstellingen">
-              <label class="scanSetting" for="maxEventsPerSite">Hits/site <input id="maxEventsPerSite" type="number" min="20" max="100" step="1" value="20" inputmode="numeric"></label>
-              <label class="scanSetting" for="siteTimeLimitSeconds">Sec/site <input id="siteTimeLimitSeconds" type="number" min="20" max="60" step="1" value="20" inputmode="numeric"></label>
+              <label class="scanSetting" for="maxEventsPerSite">Events <input id="maxEventsPerSite" type="number" min="20" max="100" step="1" value="20" inputmode="numeric"></label>
+              <label class="scanSetting" for="siteTimeLimitSeconds">Sec <input id="siteTimeLimitSeconds" type="number" min="20" max="60" step="1" value="20" inputmode="numeric"></label>
             </div>
           </div>
           <details class="rawLogPanel" id="rawLogPanel">
@@ -1047,7 +1053,7 @@
               <span aria-hidden="true">v</span>
             </button>
             <div class="sitePanel">
-              <div class="sitePanelHeader">Tijdelijk testmodus: alleen SPOT Groningen wordt gescand.</div>
+              <div class="sitePanelHeader">Aangevinkte websites worden gescand en filteren ook wat je ziet. Standaard staat SPOT aan.</div>
               <div class="siteList" id="sitesList"></div>
               <div class="siteAdd">
                 <input id="newSiteInput" type="url" placeholder="https://voorbeeld.nl">
@@ -1107,7 +1113,7 @@
   </div>
 
   <script>
-    const APP_VERSION = "2026.06.07.28";
+    const APP_VERSION = "2026.06.07.29";
     const DEFAULT_MAX_EVENTS_PER_SITE = 20;
     const DEFAULT_SITE_TIME_LIMIT_SECONDS = 20;
     const SCAN_SETTINGS_KEY = "eventScanSettingsV1";
@@ -1330,9 +1336,7 @@
     }
 
     function selectedScanSites() {
-      let selectedSites = [...document.querySelectorAll(".siteCheck:checked")].map((check) => check.value);
-      if (!selectedSites.length) selectedSites = sites.slice();
-      return selectedSites;
+      return [...document.querySelectorAll(".siteCheck:checked")].map((check) => check.value);
     }
 
     function providerSettings() {
@@ -1909,6 +1913,7 @@
             eventsUpdatedAt = freshPayload.updatedAt;
             latestSiteResults = freshPayload.siteResults || [];
             latestRawLog = freshPayload.rawLog || [];
+            cardsCollapsed = true;
             expandedEventKeys = new Set();
             const actualNewCount = rememberNewEvents(events, previousKeys);
             fillTypes();
@@ -1941,6 +1946,7 @@
       const query = ($("search")?.value || "").trim().toLowerCase();
       const newOnly = Boolean($("newOnlyFilter")?.checked);
       const radiusKm = Number($("radius")?.value) || 0;
+      const siteHosts = selectedSiteHosts();
       const activeEvents = dedupeEvents(events).filter((event) => {
         const haystack = [
           event.title,
@@ -1950,6 +1956,8 @@
           event.source
         ].join(" ").toLowerCase();
 
+        if (!eventMatchesSelectedSites(event, siteHosts)) return false;
+        if (!eventMatchesProviderFilter(event)) return false;
         if (!matchesDate(event)) return false;
         if (query && !haystack.includes(query)) return false;
         if (newOnly && !isNewEvent(event)) return false;
@@ -1974,6 +1982,41 @@
 
     function checkedSites() {
       return new Set([...document.querySelectorAll(".siteCheck:checked")].map((check) => check.value));
+    }
+
+    function hostFromUrl(value) {
+      const url = safeUrl(value, { website: true });
+      if (!url) return "";
+      try {
+        return new URL(url).hostname.toLowerCase().replace(/^www\./, "");
+      } catch {
+        return "";
+      }
+    }
+
+    function selectedSiteHosts() {
+      return new Set([...checkedSites()].map(hostFromUrl).filter(Boolean));
+    }
+
+    function eventMatchesSelectedSites(event, selectedHosts = selectedSiteHosts()) {
+      if (!selectedHosts.size) return false;
+      const eventHosts = [
+        hostFromUrl(event.website),
+        hostFromUrl(event.locationLink),
+        cleanText(event.source || "").toLowerCase().replace(/^www\./, "")
+      ].filter(Boolean);
+      if (!eventHosts.length) return false;
+      return eventHosts.some((eventHost) =>
+        [...selectedHosts].some((selectedHost) =>
+          eventHost === selectedHost || eventHost.endsWith(`.${selectedHost}`) || selectedHost.endsWith(`.${eventHost}`)
+        )
+      );
+    }
+
+    function eventMatchesProviderFilter(event) {
+      const discovery = cleanText(event.discoverySource || "").toLowerCase();
+      if (discovery === "serpapi" && !$("provSerpAPI")?.checked) return false;
+      return true;
     }
 
     function siteResultFor(site) {
@@ -2103,6 +2146,7 @@
       const region = $("region").value.trim();
       const newOnly = $("newOnlyFilter").checked;
       const radiusKm = Number($("radius").value) || 0;
+      const siteHosts = selectedSiteHosts();
 
       $("pageTitle").textContent = `Evenementen rond ${region || "je regio"}`;
       $("pageSubtitle").textContent = `${periodSubtitle()} - straal ${$("radius").value || 100} km`;
@@ -2117,6 +2161,8 @@
           event.source
         ].join(" ").toLowerCase();
 
+        if (!eventMatchesSelectedSites(event, siteHosts)) return false;
+        if (!eventMatchesProviderFilter(event)) return false;
         if (query && !haystack.includes(query)) return false;
         if (type !== "all" && displayType(event.type || "").toLowerCase() !== type) return false;
         if (newOnly && !isNewEvent(event)) return false;
@@ -2362,6 +2408,11 @@
 
       const scanSettings = saveScanSettings();
       const selectedSites = selectedScanSites();
+      if (!selectedSites.length) {
+        showStatus("Vink minimaal een website aan om te verversen.", "warn");
+        setBusy(button, false);
+        return;
+      }
       const refreshWindow = refreshDateWindow();
       const category = $("typeFilter").value === "all" ? "" : $("typeFilter").value;
       showStatus(`Nieuwe evenementen ophalen bij ${selectedSites.length} van ${sites.length || selectedSites.length} websites...`, "warn");
@@ -2457,6 +2508,11 @@
       const button = $("clearBtn");
       const scanSettings = saveScanSettings();
       const refreshWindow = refreshDateWindow();
+      const selectedSites = selectedScanSites();
+      if (!selectedSites.length) {
+        showStatus("Vink minimaal een website aan om opnieuw te verversen.", "warn");
+        return;
+      }
       const previousSignature = eventSignature(events);
       const previousKeys = eventKeySet(events);
       refreshAbortRequested = false;
@@ -2479,7 +2535,7 @@
             minResults: scanSettings.maxEventsPerSite,
             maxEventsPerSite: scanSettings.maxEventsPerSite,
             siteTimeLimitSeconds: scanSettings.siteTimeLimitSeconds,
-            sites: selectedScanSites(),
+            sites: selectedSites,
             providers: providerSettings()
           })
         });
@@ -2519,7 +2575,10 @@
       $("provMistral").checked = false;
       $("provOpenAI").checked = false;
       $("provSerpAPI").checked = true;
-      document.querySelectorAll(".siteCheck").forEach((check) => { check.checked = true; });
+      document.querySelectorAll(".siteCheck").forEach((check) => { check.checked = check.value === SPOT_ONLY_SITE; });
+      cardsCollapsed = true;
+      expandedEventKeys = new Set();
+      $("collapseBtn").textContent = "Uitklappen";
       updateSiteCount();
       updateProviderCount();
       $("dateSingle").value = "2020-01-01";
@@ -2548,7 +2607,9 @@
       eventsUpdatedAt = loaded[0].updatedAt;
       latestSiteResults = loaded[0].siteResults || [];
       latestRawLog = loaded[0].rawLog || [];
+      cardsCollapsed = true;
       expandedEventKeys = new Set();
+      $("collapseBtn").textContent = "Uitklappen";
       sites = mergeSites(loaded[1], customSites);
       applyScanSettings();
       const currentKeys = eventKeySet(events);
@@ -2622,9 +2683,20 @@
     });
     $("prevPage").addEventListener("click", () => { currentPage -= 1; render(); window.scrollTo({ top: 0, behavior: "smooth" }); });
     $("nextPage").addEventListener("click", () => { currentPage += 1; render(); window.scrollTo({ top: 0, behavior: "smooth" }); });
-    $("allSitesBtn").addEventListener("click", () => { document.querySelectorAll(".siteCheck").forEach((check) => { check.checked = true; }); updateSiteCount(); });
-    $("noSitesBtn").addEventListener("click", () => { document.querySelectorAll(".siteCheck").forEach((check) => { check.checked = false; }); updateSiteCount(); });
-    $("sitesList").addEventListener("change", updateSiteCount);
+    $("allSitesBtn").addEventListener("click", () => {
+      document.querySelectorAll(".siteCheck").forEach((check) => { check.checked = true; });
+      updateSiteCount();
+      applyFilters();
+    });
+    $("noSitesBtn").addEventListener("click", () => {
+      document.querySelectorAll(".siteCheck").forEach((check) => { check.checked = false; });
+      updateSiteCount();
+      applyFilters();
+    });
+    $("sitesList").addEventListener("change", () => {
+      updateSiteCount();
+      applyFilters();
+    });
     $("providerList").addEventListener("change", () => {
       updateProviderCount();
       renderRawLog();

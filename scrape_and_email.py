@@ -44,6 +44,13 @@ DATE_TITLE_RE = re.compile(rf"^(?:maandag|dinsdag|woensdag|donderdag|vrijdag|zat
 PRICE_OR_ACTION_RE = re.compile(r"^(gratis|€\s*\d|eur\s*\d|tickets?|koop ticket|meer info|lees meer|uitverkocht|sold out|reeds gestart)", re.I)
 TITLE_NOISE_RE = re.compile(r"^(coming up|highlights|lees meer|koop ticket|sold out|support|friday show|ubbo x zienema|raw postpunk from|in 20\d{2},|this winter)", re.I)
 SPOT_LISTING_RE = re.compile(r"^(ma|di|wo|do|vr|za|zo)\s*(\d{1,2})\s*([a-z]{3,9})\b\s+(.+)$", re.I)
+SPOT_SPLIT_RE = re.compile(r"(?=(?:ma|di|wo|do|vr|za|zo)\s*\d{1,2}\s*(?:jan|feb|mrt|apr|mei|jun|jul|aug|sep|sept|okt|nov|dec)\b)", re.I)
+SPOT_TITLE_STOP_RE = re.compile(
+    r"\b(Filmische|Multigenre|Een\s+|De\s+|Het\s+|Powerhouse|Praktische|Muzikale|Fantasierijke|Zelfspot|"
+    r"Noorse|Ultieme|Twee\s+|Briljant|Goeroe|Sensationele|Wervelende|Spannend|Vrolijke|"
+    r"Laatste kaarten|Uitverkocht|Net bevestigd|Wereldklasse)\b",
+    re.I,
+)
 VERA_DATE_RE = re.compile(rf"\b(monday|tuesday|wednesday|thursday|friday|saturday|sunday)\s+\d{{1,2}}\s+(?:{MONTHS})\b", re.I)
 VERA_TYPE_RE = re.compile(r"\b(Mainstage|Downstage|Zienema|Dansen)\s*\|", re.I)
 COUNTRY_CODE_RE = re.compile(r"\b(CAN|NL|USA|BEL|GRN|INT|UK|DE|FR|IT|ES)\b")
@@ -541,6 +548,7 @@ def normalize_event(event):
         "image": image,
         "website": website,
         "source": source or "Onbekend",
+        "discoverySource": clean_text(event.get("discoverySource")),
         "periodLabel": clean_text(event.get("periodLabel")) or date,
         "isPermanent": bool(event.get("isPermanent", False)),
     }
@@ -795,6 +803,53 @@ def event_from_detail_page(detail_url, fallback_title, deadline=None):
     return None
 
 
+def title_from_serpapi_row(row):
+    title = clean_text(row.get("title", ""))
+    if "|" in title:
+        title = title.split("|", 1)[0]
+    title = re.sub(r"\s+-\s+Spot Groningen$", "", title, flags=re.I)
+    title = re.sub(r"\s+\|\s+Spot Groningen$", "", title, flags=re.I)
+    return format_event_title(title[:140])
+
+
+def events_from_serpapi_raw_log(raw_rows):
+    events = []
+    for row in raw_rows:
+        if not isinstance(row, dict):
+            continue
+        url = clean_text(row.get("url"))
+        if not is_valid_web_url(url) or is_bad_link(row.get("title", ""), url):
+            continue
+        text = clean_text(f"{row.get('title', '')} {row.get('rawText', '')} {row.get('snippet', '')}")
+        if "spotgroningen.nl" in urlparse(url).netloc.lower():
+            events.extend(spot_events_from_text(text, url, {}, "SerpAPI"))
+        date = normalize_date_value(first_date_in_text(text))
+        if not ISO_DATE_RE.fullmatch(date):
+            continue
+        title = title_from_serpapi_row(row) or slug_title_from_url(url)
+        if not title:
+            continue
+        host = urlparse(url).netloc.replace("www.", "")
+        item = normalize_event(
+            {
+                "title": title,
+                "type": "Evenement",
+                "date": date,
+                "location": default_location_for_site(url),
+                "description": clean_text(row.get("rawText") or row.get("snippet") or text)[:260],
+                "website": url,
+                "cost": "Zie website",
+                "source": host or "SerpAPI",
+                "discoverySource": "SerpAPI",
+                "periodLabel": date,
+            }
+        )
+        if is_valid_event(item):
+            events.append(item)
+            add_raw_row("SerpAPI", row.get("site", ""), item.get("title"), item.get("date"), url, "event uit zoekresultaat", text)
+    return dedupe_events(events)
+
+
 def events_from_listing_text(soup, site_url):
     events = []
     blocks = soup.find_all(["article", "li", "section", "div"], limit=600)
@@ -846,6 +901,58 @@ def spot_title_from_text(value, url=""):
     return format_event_title(title[:170])
 
 
+def spot_title_from_body(body, title_links=None):
+    text = clean_text(body)
+    normalized_body = normalize_title(text)
+    candidates = []
+    for link_title in (title_links or {}):
+        key = normalize_title(link_title)
+        if len(key) >= 5 and key in normalized_body[:180]:
+            candidates.append(link_title)
+    if candidates:
+        return format_event_title(max(candidates, key=len))
+
+    title = re.split(r"\+\s*support\b", text, 1, flags=re.I)[0]
+    stop = SPOT_TITLE_STOP_RE.search(title)
+    if stop:
+        title = title[:stop.start()]
+    title = re.sub(r"\b(laatste kaarten|uitverkocht|net bevestigd|bijna uitverkocht|extra show)\b.*$", "", title, flags=re.I)
+    return format_event_title(title[:95])
+
+
+def spot_events_from_text(text, site_url, title_links=None, source_label="Website"):
+    events = []
+    chunks = [chunk.strip() for chunk in SPOT_SPLIT_RE.split(clean_text(text)) if chunk.strip()]
+    for chunk in chunks:
+        match = SPOT_LISTING_RE.match(chunk)
+        if not match:
+            continue
+        date = normalize_date_value(f"{match.group(2)} {match.group(3)}")
+        title = spot_title_from_body(match.group(4), title_links)
+        if not title or normalize_title(title) in {"programma", "spot groningen"}:
+            add_raw_row(source_label, site_url, title, date, site_url, "geen titel", chunk)
+            continue
+        website = link_for_title(title_links or {}, title, site_url)
+        item = normalize_event(
+            {
+                "title": title,
+                "type": "Evenement",
+                "date": date,
+                "location": "SPOT Groningen",
+                "description": chunk[:260],
+                "website": website,
+                "cost": "Zie website",
+                "source": "spotgroningen.nl",
+                "discoverySource": "SerpAPI" if source_label == "SerpAPI" else "",
+                "periodLabel": date,
+            }
+        )
+        if is_valid_event(item):
+            events.append(item)
+            add_raw_row(source_label, site_url, item.get("title"), item.get("date"), website, "event uit tekst", chunk)
+    return dedupe_events(events)
+
+
 def events_from_spot_listing(soup, site_url):
     host = urlparse(site_url).netloc.lower()
     if "spotgroningen.nl" not in host:
@@ -892,6 +999,10 @@ def events_from_spot_listing(soup, site_url):
             add_raw_row("Website", site_url, title, date, absolute, "afgekeurd", text)
         if len(events) >= MAX_EVENTS_PER_SITE:
             break
+
+    if len(events) < MAX_EVENTS_PER_SITE:
+        title_links = collect_title_links(soup, site_url)
+        events.extend(spot_events_from_text(soup.get_text(" ", strip=True), site_url, title_links, "Website"))
 
     return dedupe_events(events)
 
@@ -1439,8 +1550,9 @@ def main():
 
     previous_active, previous_archive = ([], []) if INPUT_CLEAR_ARCHIVE else load_existing_events()
     extra_sites = parse_input_sites()
+    serpapi_raw_rows = parse_json_list(INPUT_SERPAPI_RAW_LOG)
     serpapi_links = normalize_site_list(parse_json_list(INPUT_SERPAPI_LINKS_RAW))
-    for row in parse_json_list(INPUT_SERPAPI_RAW_LOG):
+    for row in serpapi_raw_rows:
         if isinstance(row, dict):
             add_raw_row(
                 "SerpAPI",
@@ -1456,7 +1568,7 @@ def main():
         extra_sites = normalize_site_list(extra_sites + serpapi_links)
     if extra_sites:
         log(f"Alleen geselecteerde websites worden gescand: {len(extra_sites)}")
-        scraped = scrape_extra_sites(extra_sites)
+        scraped = scrape_extra_sites(extra_sites) + events_from_serpapi_raw_log(serpapi_raw_rows)
     else:
         scraped = scrape_uitzinnig(INPUT_REGION)
     selected_hosts = {site_host(site) for site in extra_sites}
