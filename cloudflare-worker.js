@@ -466,6 +466,66 @@ async function dispatchWorkflow(env, inputs) {
   return { ok: true };
 }
 
+async function upsertRefreshRequest(env, body, overrides = {}, dispatchFailure = null) {
+  const inputs = workflowInputs(body || {}, overrides);
+  const path = "/contents/refresh-request.json";
+  let sha = null;
+  const current = await githubFetch(env, `${path}?ref=main`);
+  if (current.ok) {
+    const file = await current.json();
+    sha = file.sha;
+  }
+
+  const request = {
+    requestedAt: new Date().toISOString(),
+    trigger: overrides.clearArchive ? "clear" : "refresh",
+    dispatchFallback: dispatchFailure ? {
+      status: dispatchFailure.status,
+      details: validateInput(dispatchFailure.details || "", 500)
+    } : null,
+    ...inputs
+  };
+
+  const response = await githubFetch(env, path, {
+    method: "PUT",
+    body: JSON.stringify({
+      message: overrides.clearArchive ? "Request clear and refresh events" : "Request events refresh",
+      content: encodeBase64(JSON.stringify(request, null, 2)),
+      sha,
+      branch: "main"
+    })
+  });
+
+  if (!response.ok) {
+    return {
+      ok: false,
+      status: response.status,
+      details: await response.text()
+    };
+  }
+
+  return { ok: true };
+}
+
+async function startRefresh(env, body, overrides = {}) {
+  const inputs = workflowInputs(body || {}, overrides);
+  const dispatch = await dispatchWorkflow(env, inputs);
+  if (dispatch.ok) {
+    return { ok: true, method: "workflow_dispatch" };
+  }
+
+  const fallback = await upsertRefreshRequest(env, body, overrides, dispatch);
+  if (fallback.ok) {
+    return { ok: true, method: "refresh_request", dispatchFailure: dispatch };
+  }
+
+  return {
+    ok: false,
+    status: fallback.status || dispatch.status,
+    details: `Workflow dispatch: ${dispatch.details || dispatch.status}. Refresh-request fallback: ${fallback.details || fallback.status}`
+  };
+}
+
 function weatherDaily() {
   return [
     { tempMin: 14, tempMax: 21, rainMM: 0.4, icon: "01d" },
@@ -490,7 +550,7 @@ export default {
     if (path === "/health" && request.method === "GET") {
       return json({
         ok: true,
-        worker: "evenementen-refresh3",
+        worker: "evenementen-refresh",
         githubTokenConfigured: Boolean(env.GITHUB_TOKEN),
         githubOwner: env.GITHUB_OWNER || "mrsjonnie",
         githubRepo: env.GITHUB_REPO || "evenementen",
@@ -518,10 +578,10 @@ export default {
     if (path === "/clear" && request.method === "POST") {
       try {
         const body = await request.json().catch(() => ({}));
-        const result = await dispatchWorkflow(env, workflowInputs(body || {}, { clearArchive: true }));
+        const result = await startRefresh(env, body || {}, { clearArchive: true });
         if (!result.ok) {
           return json({
-            error: "GitHub dispatch mislukt",
+            error: "GitHub verversverzoek mislukt",
             status: result.status,
             details: result.details
           }, 500);
@@ -529,6 +589,7 @@ export default {
         return json({
           ok: true,
           message: "Wissen en opnieuw verversen is gestart via GitHub Actions",
+          method: result.method,
           scrapedCount: null,
           totalSaved: null
         }, 200);
@@ -545,10 +606,10 @@ export default {
       const body = await request.json();
       if (!body) return json({ error: "Ongeldige JSON body" }, 400);
 
-      const result = await dispatchWorkflow(env, workflowInputs(body));
+      const result = await startRefresh(env, body);
       if (!result.ok) {
         return json({
-          error: "GitHub dispatch mislukt",
+          error: "GitHub verversverzoek mislukt",
           status: result.status,
           details: result.details
         }, 500);
@@ -557,6 +618,7 @@ export default {
       return json({
         ok: true,
         message: "Verversing gestart via GitHub Actions",
+        method: result.method,
         scrapedCount: null,
         totalSaved: null
       }, 200);

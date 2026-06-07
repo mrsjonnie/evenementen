@@ -43,6 +43,9 @@ on:
         description: Leeg actieve data en archief voor het scrapen
         required: false
         default: 'false'
+  push:
+    paths:
+      - refresh-request.json
   schedule:
     # Vrijdagochtend Nederlandse tijd: 08:00 zomertijd, 07:00 wintertijd.
     - cron: '0 6 * * 5'
@@ -68,18 +71,63 @@ jobs:
           python -m pip install --upgrade pip
           pip install requests beautifulsoup4
 
+      - name: Prepare scraper input
+        run: |
+          python - <<'PY'
+          import json
+          import os
+
+          defaults = {
+              "region": "Groningen",
+              "radius": "200",
+              "category": "all",
+              "query": "",
+              "dateFrom": "",
+              "dateTo": "",
+              "minResults": "20",
+              "sites": "[]",
+              "providers": "{}",
+              "clearArchive": "false",
+          }
+
+          event = {}
+          event_path = os.environ.get("GITHUB_EVENT_PATH")
+          if event_path and os.path.exists(event_path):
+              with open(event_path, encoding="utf-8") as handle:
+                  event = json.load(handle)
+
+          values = dict(defaults)
+          values.update(event.get("inputs") or {})
+
+          if os.path.exists("refresh-request.json"):
+              with open("refresh-request.json", encoding="utf-8") as handle:
+                  request = json.load(handle)
+              for key in defaults:
+                  if key in request:
+                      values[key] = request[key]
+
+          mapping = {
+              "region": "INPUT_REGION",
+              "radius": "INPUT_RADIUS",
+              "category": "INPUT_CATEGORY",
+              "query": "INPUT_QUERY",
+              "dateFrom": "INPUT_DATE_FROM",
+              "dateTo": "INPUT_DATE_TO",
+              "minResults": "INPUT_MIN_RESULTS",
+              "sites": "INPUT_SITES",
+              "providers": "INPUT_PROVIDERS",
+              "clearArchive": "INPUT_CLEAR_ARCHIVE",
+          }
+
+          with open(os.environ["GITHUB_ENV"], "a", encoding="utf-8") as env_file:
+              for key, env_name in mapping.items():
+                  value = values.get(key, defaults[key])
+                  if isinstance(value, (list, dict)):
+                      value = json.dumps(value)
+                  env_file.write(f"{env_name}={value}\n")
+          PY
+
       - name: Run scraper
-        env:
-          INPUT_REGION: ${{ github.event.inputs.region || 'Groningen' }}
-          INPUT_RADIUS: ${{ github.event.inputs.radius || '200' }}
-          INPUT_CATEGORY: ${{ github.event.inputs.category || 'all' }}
-          INPUT_QUERY: ${{ github.event.inputs.query || '' }}
-          INPUT_DATE_FROM: ${{ github.event.inputs.dateFrom || '' }}
-          INPUT_DATE_TO: ${{ github.event.inputs.dateTo || '' }}
-          INPUT_MIN_RESULTS: ${{ github.event.inputs.minResults || '20' }}
-          INPUT_SITES: ${{ github.event.inputs.sites || '[]' }}
-          INPUT_PROVIDERS: ${{ github.event.inputs.providers || '{}' }}
-          INPUT_CLEAR_ARCHIVE: ${{ github.event.inputs.clearArchive || 'false' }}
         run: python scrape_and_email.py
 
       - name: Commit updated files

@@ -903,8 +903,8 @@
   </main>
 
   <script>
-    const APP_VERSION = "2026.06.07.15";
-    const WORKER_URL = "https://evenementen-refresh3.mrsjonnie.workers.dev";
+    const APP_VERSION = "2026.06.07.16";
+    const WORKER_URL = "https://evenementen-refresh.mrsjonnie.workers.dev";
     const PER_PAGE_KEY = "evenementenPerPage";
     let eventsPerPage = 9;
     const typeImages = {
@@ -1823,6 +1823,13 @@
       return /openai|chatgpt|quota|billing|insufficient_quota/i.test(String(message || ""));
     }
 
+    function workerErrorMessage(data, fallback) {
+      const parts = [data?.error || data?.message || fallback || "Onbekende fout"];
+      if (data?.status) parts.push(`status ${data.status}`);
+      if (data?.details) parts.push(cleanText(data.details).slice(0, 320));
+      return parts.filter(Boolean).join(" - ");
+    }
+
     async function refreshEvents() {
       const button = $("refreshBtn");
       const previousSignature = eventSignature(events);
@@ -1875,7 +1882,7 @@
           foundCount = scrapedCountFromResponse(data);
         }
 
-        if (!response.ok) throw new Error(data.error || data.message || "Verversen is mislukt");
+        if (!response.ok) throw new Error(workerErrorMessage(data, "Verversen is mislukt"));
 
         const prefix = Number.isFinite(foundCount) ? `${foundText(foundCount)} gevonden.` : foundText(foundCount) + ".";
         showStatus(`Klaar. ${prefix} Ik wacht nu tot GitHub Pages de nieuwe lijst toont.`, "ok", { stop: true });
@@ -1916,7 +1923,7 @@
           })
         });
         const data = await response.json().catch(() => ({}));
-        if (!response.ok) throw new Error(data.error || "Verwijderen is mislukt");
+        if (!response.ok) throw new Error(workerErrorMessage(data, "Verwijderen is mislukt"));
 
         newEventKeys = new Set();
         saveStoredSet(NEW_EVENTS_KEY, newEventKeys);
