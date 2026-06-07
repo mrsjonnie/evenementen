@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-06-07T19:41:49+00:00",
+  "updatedAt": "2026-06-07T19:59:56.920Z",
   "events": [
     {
       "title": "The Rocky Horror Picture Show",
@@ -36,42 +36,6 @@
       "source": "forum.nl",
       "discoverySource": "",
       "periodLabel": "09 juni 2026",
-      "isPermanent": false
-    },
-    {
-      "title": "Eerstvolgende Di 9 Jun van 10:00 Tot 17:00",
-      "type": "Evenement",
-      "date": "2026-06-09",
-      "time": "",
-      "location": "Forum Groningen",
-      "lat": 53.2188997,
-      "lon": 6.5703447,
-      "locationLink": "https://www.google.com/maps?q=53.2188997,6.5703447",
-      "cost": "Zie website",
-      "description": "Eerstvolgende di 9 jun van 10:00 tot 17:00",
-      "image": "https://picsum.photos/seed/Eerstvolgende+Di+9+Jun+van+10%3A00+Tot+17%3A00/800/500",
-      "website": "https://forum.nl/nl/agenda/marilyn-expositie",
-      "source": "forum.nl",
-      "discoverySource": "",
-      "periodLabel": "9 jun",
-      "isPermanent": false
-    },
-    {
-      "title": "Facebook",
-      "type": "Wat Maakt Dat Sterren van Nu – Beyoncé, Kim Kardashian en Ri",
-      "date": "2026-06-09",
-      "time": "",
-      "location": "Forum Groningen",
-      "lat": 53.2188997,
-      "lon": 6.5703447,
-      "locationLink": "https://www.google.com/maps?q=53.2188997,6.5703447",
-      "cost": "Zie website",
-      "description": "Facebook Twitter WhatsApp Email Copy",
-      "image": "https://picsum.photos/seed/Facebook/800/500",
-      "website": "https://forum.nl/nl/agenda/marilyn-expositie",
-      "source": "forum.nl",
-      "discoverySource": "",
-      "periodLabel": "2026-06-09",
       "isPermanent": false
     },
     {
@@ -784,14 +748,14 @@
       "site": "https://www.vera-groningen.nl",
       "count": 20,
       "newCount": 0,
-      "durationSeconds": 40.71,
+      "durationSeconds": 40.49,
       "timedOut": false
     },
     {
       "site": "https://forum.nl/nl/agenda/marilyn-expositie",
       "count": 20,
       "newCount": 0,
-      "durationSeconds": 55.78,
+      "durationSeconds": 56.42,
       "timedOut": false
     }
   ],
