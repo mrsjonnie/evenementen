@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-06-07T17:20:01+00:00",
+  "updatedAt": "2026-06-07T17:36:17+00:00",
   "events": [
     {
       "title": "The Rocky Horror Picture Show",
@@ -341,7 +341,9 @@
       "source": "www.vera-groningen.nl",
       "periodLabel": "2026-12-18",
       "isPermanent": false
-    },
+    }
+  ],
+  "archive": [
     {
       "title": "Fort Bourtange",
       "type": "historie",
@@ -357,7 +359,8 @@
       "website": "https://www.bourtange.nl",
       "source": "bourtange.nl",
       "periodLabel": "Hele jaar",
-      "isPermanent": true
+      "isPermanent": true,
+      "archivedAt": "2026-06-07T17:36:17+00:00"
     },
     {
       "title": "Groninger Museum",
@@ -374,16 +377,16 @@
       "website": "https://www.groningermuseum.nl",
       "source": "groningermuseum.nl",
       "periodLabel": "Hele jaar",
-      "isPermanent": true
+      "isPermanent": true,
+      "archivedAt": "2026-06-07T17:36:17+00:00"
     }
   ],
-  "archive": [],
   "siteResults": [
     {
       "site": "https://www.vera-groningen.nl",
       "count": 20,
       "newCount": 0,
-      "durationSeconds": 41.01,
+      "durationSeconds": 39.02,
       "timedOut": false
     }
   ]
