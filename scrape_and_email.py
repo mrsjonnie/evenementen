@@ -16,6 +16,8 @@ INPUT_CLEAR_ARCHIVE = os.getenv("INPUT_CLEAR_ARCHIVE", "").strip().lower() in {"
 BASE_HEADERS = {"User-Agent": "Mozilla/5.0"}
 MONTHS = "januari|februari|maart|april|mei|juni|juli|augustus|september|oktober|november|december"
 DATE_RE = re.compile(rf"^\d{{1,2}}(?:\s+t/m\s+\d{{1,2}})?\s+(?:{MONTHS})$", re.I)
+DATE_IN_TEXT_RE = re.compile(rf"\b\d{{1,2}}(?:\s+t/m\s+\d{{1,2}})?\s+(?:{MONTHS})(?:\s+20\d{{2}})?\b", re.I)
+ISO_DATE_RE = re.compile(r"\b20\d{2}-\d{2}-\d{2}\b")
 SCORE_RE = re.compile(r"^\d,\d$")
 BLOCKED_TITLES = {
     "uitgelicht",
@@ -28,6 +30,14 @@ BLOCKED_TITLES = {
     "maart / april",
     "augustus en verder",
 }
+EVENT_WORDS_RE = re.compile(
+    r"\b(event|evenement|agenda|programma|concert|festival|theater|film|markt|workshop|lezing|expo|tentoonstelling|voorstelling|activiteit)\b",
+    re.I,
+)
+BAD_LINK_WORDS_RE = re.compile(
+    r"\b(contact|privacy|cookie|voorwaarden|login|account|nieuwsbrief|facebook|instagram|linkedin|tickets?\s+verkopen)\b",
+    re.I,
+)
 
 
 def log(message):
@@ -266,6 +276,160 @@ def collect_title_links(soup, base_url):
     return links
 
 
+def first_meta(soup, names):
+    for name in names:
+        tag = soup.find("meta", attrs={"property": name}) or soup.find("meta", attrs={"name": name})
+        if tag and clean_text(tag.get("content")):
+            return clean_text(tag.get("content"))
+    return ""
+
+
+def page_title(soup):
+    heading = soup.find(["h1", "h2"])
+    if heading:
+        return clean_text(heading.get_text(" ", strip=True))
+    title = soup.find("title")
+    return clean_text(title.get_text(" ", strip=True)) if title else ""
+
+
+def first_date_in_text(text):
+    match = ISO_DATE_RE.search(text)
+    if match:
+        return match.group(0)
+    match = DATE_IN_TEXT_RE.search(text)
+    return clean_text(match.group(0)) if match else ""
+
+
+def has_event_signal(text, href=""):
+    haystack = f"{text} {href}"
+    return bool(EVENT_WORDS_RE.search(haystack) or DATE_IN_TEXT_RE.search(haystack) or ISO_DATE_RE.search(haystack))
+
+
+def is_bad_link(text, href):
+    if not href or href.startswith(("javascript:", "mailto:", "tel:", "#")):
+        return True
+    if BAD_LINK_WORDS_RE.search(f"{text} {href}"):
+        return True
+    if len(normalize_title(text)) < 4:
+        return True
+    return False
+
+
+def candidate_event_links(soup, site_url):
+    candidates = []
+    seen = set()
+    base_host = urlparse(site_url).netloc.lower()
+
+    for anchor in soup.find_all("a", href=True):
+        text = clean_text(anchor.get_text(" ", strip=True))
+        href = clean_text(anchor.get("href"))
+        if is_bad_link(text, href):
+            continue
+
+        absolute = urljoin(site_url, href)
+        parsed = urlparse(absolute)
+        if parsed.scheme not in {"http", "https"}:
+            continue
+        if parsed.netloc.lower() != base_host:
+            continue
+        if not has_event_signal(text, absolute):
+            continue
+
+        key = absolute.split("#", 1)[0]
+        if key in seen:
+            continue
+        seen.add(key)
+        candidates.append((text, key))
+        if len(candidates) >= 24:
+            break
+
+    return candidates
+
+
+def event_from_detail_page(detail_url, fallback_title):
+    try:
+        response = requests.get(detail_url, headers=BASE_HEADERS, timeout=15)
+        response.raise_for_status()
+        soup = BeautifulSoup(response.text, "html.parser")
+        text = clean_text(soup.get_text(" ", strip=True))
+        title = first_meta(soup, ["og:title", "twitter:title"]) or page_title(soup) or fallback_title
+        title = re.sub(r"\s+[|-]\s+.*$", "", title).strip()
+        date = first_meta(soup, ["event:start_time", "article:published_time"])[:10]
+        if not date:
+            date = first_date_in_text(text)
+        location = first_meta(soup, ["event:location"])
+        if not location:
+            address = soup.find(attrs={"itemprop": "address"})
+            location = clean_text(address.get_text(" ", strip=True)) if address else ""
+        if not location:
+            location = urlparse(detail_url).netloc
+        description = first_meta(soup, ["og:description", "description", "twitter:description"])
+        if not description:
+            description = text[:220]
+        image = first_meta(soup, ["og:image", "twitter:image"])
+
+        return normalize_event(
+            {
+                "title": title,
+                "type": "evenement",
+                "date": date,
+                "location": location,
+                "description": description,
+                "image": urljoin(detail_url, image) if image else "",
+                "website": detail_url,
+                "cost": "Zie website",
+                "source": urlparse(detail_url).netloc or "Extra website",
+                "periodLabel": date,
+            }
+        )
+    except requests.exceptions.RequestException as exc:
+        log(f"Detailpagina overgeslagen {detail_url}: {exc}")
+    except Exception as exc:
+        log(f"Fout bij detailpagina {detail_url}: {exc}")
+
+    return None
+
+
+def events_from_listing_text(soup, site_url):
+    events = []
+    blocks = soup.find_all(["article", "li", "section", "div"], limit=600)
+
+    for block in blocks:
+        text = clean_text(block.get_text(" ", strip=True))
+        if len(text) < 25 or len(text) > 700:
+            continue
+        date = first_date_in_text(text)
+        if not date:
+            continue
+        link = block.find("a", href=True)
+        title = clean_text(link.get_text(" ", strip=True)) if link else ""
+        if not title:
+            heading = block.find(["h1", "h2", "h3", "h4"])
+            title = clean_text(heading.get_text(" ", strip=True)) if heading else text[:90]
+        if BAD_LINK_WORDS_RE.search(title) or len(normalize_title(title)) < 4:
+            continue
+        website = urljoin(site_url, link.get("href")) if link else site_url
+        item = normalize_event(
+            {
+                "title": title,
+                "type": "evenement",
+                "date": date,
+                "location": urlparse(site_url).netloc,
+                "description": text[:260],
+                "website": website,
+                "cost": "Zie website",
+                "source": urlparse(site_url).netloc or "Extra website",
+                "periodLabel": date,
+            }
+        )
+        if is_valid_event(item):
+            events.append(item)
+        if len(events) >= 12:
+            break
+
+    return events
+
+
 def jsonld_nodes(data):
     if isinstance(data, list):
         for item in data:
@@ -391,10 +555,22 @@ def scrape_structured_site(site_url):
             if len(events) >= 12:
                 break
 
+        if len(events) < 5:
+            for title, detail_url in candidate_event_links(soup, site_url):
+                item = event_from_detail_page(detail_url, title)
+                if item and is_valid_event(item):
+                    events.append(item)
+                if len(events) >= 12:
+                    break
+
+        if len(events) < 5:
+            events.extend(events_from_listing_text(soup, site_url))
+
+        events = dedupe_events(events)
         if events:
-            log(f"Gevonden via gestructureerde data op {site_url}: {len(events)}")
+            log(f"Gevonden op extra website {site_url}: {len(events)}")
         else:
-            log(f"Geen gestructureerde evenementen gevonden op {site_url}")
+            log(f"Geen betrouwbare evenementen gevonden op {site_url}")
     except requests.exceptions.RequestException as exc:
         log(f"Fout bij extra website {site_url}: {exc}")
     except Exception as exc:

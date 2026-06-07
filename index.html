@@ -354,6 +354,19 @@
     .status.warn { color: var(--warn); border-color: #6f5223; background: #2a2112; }
     .status.error { color: var(--danger); border-color: #733a33; background: #2c1817; }
 
+    .statusLine {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .statusLine span {
+      min-width: 0;
+      flex: 1;
+    }
+
     .summary {
       display: flex;
       justify-content: space-between;
@@ -617,6 +630,7 @@
       align-items: center;
       gap: 10px;
       margin-top: 16px;
+      flex-wrap: wrap;
     }
 
     .pageText {
@@ -624,6 +638,21 @@
       text-align: center;
       color: var(--muted);
       font-weight: 900;
+    }
+
+    .perPageControl {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--muted);
+      font-size: .86rem;
+      font-weight: 900;
+    }
+
+    .perPageControl select {
+      width: auto;
+      min-width: 76px;
+      height: 38px;
     }
 
     @media (max-width: 1120px) {
@@ -767,13 +796,24 @@
       <button class="btn btnSecondary" id="prevPage" type="button">Vorige</button>
       <span class="pageText" id="pageInfo">Pagina 1 van 1</span>
       <button class="btn btnSecondary" id="nextPage" type="button">Volgende</button>
+      <label class="perPageControl" for="perPageSelect">
+        Per pagina
+        <select id="perPageSelect">
+          <option value="6">6</option>
+          <option value="9">9</option>
+          <option value="12">12</option>
+          <option value="18">18</option>
+          <option value="24">24</option>
+        </select>
+      </label>
     </nav>
   </main>
 
   <script>
-    const APP_VERSION = "2026.06.07.7";
+    const APP_VERSION = "2026.06.07.8";
     const WORKER_URL = "https://evenementen-refresh.mrsjonnie.workers.dev";
-    const eventsPerPage = 9;
+    const PER_PAGE_KEY = "evenementenPerPage";
+    let eventsPerPage = 9;
     const typeImages = {
       film: "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=900&q=80",
       museum: "https://images.unsplash.com/photo-1566127992631-137a642a90f4?auto=format&fit=crop&w=900&q=80",
@@ -825,6 +865,7 @@
     let filteredEvents = [];
     let newEventKeys = new Set();
     let cardsCollapsed = false;
+    let refreshAbortRequested = false;
     let currentPage = 1;
     let dateFrom = "";
     let dateTo = "";
@@ -1255,10 +1296,19 @@
       }
     }
 
-    function showStatus(message, type = "") {
+    function showStatus(message, type = "", options = {}) {
       const status = $("status");
       status.className = `status show ${type}`.trim();
-      status.textContent = message;
+      if (options.stop) {
+        status.innerHTML = `
+          <div class="statusLine">
+            <span>${escapeHtml(message)}</span>
+            <button class="btn btnSecondary" id="stopRefreshBtn" type="button">Stop</button>
+          </div>
+        `;
+      } else {
+        status.textContent = message;
+      }
     }
 
     function hideStatus() {
@@ -1273,6 +1323,15 @@
     }
 
     const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
+    async function waitUnlessStopped(totalMs) {
+      const interval = 250;
+      for (let elapsed = 0; elapsed < totalMs; elapsed += interval) {
+        if (refreshAbortRequested) return false;
+        await delay(interval);
+      }
+      return !refreshAbortRequested;
+    }
 
     function eventSignature(items) {
       return JSON.stringify(items.map((event) => [
@@ -1316,37 +1375,44 @@
         data?.count,
         Array.isArray(data?.events) ? data.events.length : undefined
       ];
-      const value = values.map(Number).find((item) => Number.isFinite(item));
-      return Math.max(0, value || 0);
+      const value = values.map(Number).find((item) => Number.isFinite(item) && item > 0);
+      return Number.isFinite(value) ? Math.max(0, value) : null;
     }
 
     function foundText(count) {
+      if (!Number.isFinite(count)) return "Het aantal nieuwe evenementen wordt bepaald zodra de lijst geladen is";
       return `${count} ${count === 1 ? "nieuw evenement" : "nieuwe evenementen"}`;
     }
 
-    async function waitForUpdatedEvents(previousSignature, previousKeys, foundCount = 0) {
+    async function waitForUpdatedEvents(previousSignature, previousKeys, foundCount = null) {
       for (let attempt = 1; attempt <= 18; attempt += 1) {
-        showStatus(`${foundText(foundCount)} gevonden. Ik controleer of GitHub Pages de nieuwe lijst al toont: controle ${attempt} van 18.`, "warn");
-        await delay(10000);
+        const prefix = Number.isFinite(foundCount) ? `${foundText(foundCount)} gevonden.` : foundText(foundCount) + ".";
+        showStatus(`${prefix} Ik controleer of GitHub Pages de nieuwe lijst al toont: controle ${attempt} van 18.`, "warn", { stop: true });
+        const shouldContinue = await waitUnlessStopped(10000);
+        if (!shouldContinue) {
+          showStatus("Controle gestopt. De update kan op GitHub nog wel doorlopen; klik later op Ververs of herlaad de pagina.", "warn");
+          return false;
+        }
 
         try {
           const freshEvents = await fetchEvents();
           if (eventSignature(freshEvents) !== previousSignature) {
             events = freshEvents;
-            rememberNewEvents(events, previousKeys);
+            const actualNewCount = rememberNewEvents(events, previousKeys);
             fillTypes();
             applyFilters();
-            showStatus(`${foundText(foundCount)} gevonden. De nieuwe lijst is geladen.`, "ok");
+            showStatus(`${foundText(actualNewCount)} gevonden. De nieuwe lijst is geladen.`, "ok");
             setTimeout(hideStatus, 4000);
             return true;
           }
         } catch (error) {
-          showStatus(`Nog aan het wachten op nieuwe data: ${error.message}`, "warn");
+          showStatus(`Nog aan het wachten op nieuwe data: ${error.message}`, "warn", { stop: true });
         }
       }
 
       await loadAll();
-      showStatus(`${foundText(foundCount)} gevonden. De update is gestart, maar GitHub Pages toont nog dezelfde lijst. Wacht even en klik eventueel nogmaals op Ververs.`, "warn");
+      const prefix = Number.isFinite(foundCount) ? `${foundText(foundCount)} gevonden.` : foundText(foundCount) + ".";
+      showStatus(`${prefix} De update is gestart, maar GitHub Pages toont nog dezelfde lijst. Wacht even en klik eventueel nogmaals op Ververs.`, "warn");
       return false;
     }
 
@@ -1476,7 +1542,7 @@
       const visible = filteredEvents.slice((currentPage - 1) * eventsPerPage, currentPage * eventsPerPage);
 
       $("grid").innerHTML = visible.map(renderCard).join("");
-      $("pagination").style.display = pageCount > 1 ? "flex" : "none";
+      $("pagination").style.display = "flex";
       $("pageInfo").textContent = `Pagina ${currentPage} van ${pageCount}`;
       $("prevPage").disabled = currentPage === 1;
       $("nextPage").disabled = currentPage === pageCount;
@@ -1580,7 +1646,8 @@
       const button = $("refreshBtn");
       const previousSignature = eventSignature(events);
       const previousKeys = eventKeySet(events);
-      let foundCount = 0;
+      let foundCount = null;
+      refreshAbortRequested = false;
       setBusy(button, true, "Bezig...");
       showStatus("Nieuwe evenementen ophalen...", "warn");
 
@@ -1629,10 +1696,12 @@
 
         if (!response.ok) throw new Error(data.error || data.message || "Verversen is mislukt");
 
-        showStatus(`Klaar. ${foundText(foundCount)} gevonden. Ik wacht nu tot GitHub Pages de nieuwe lijst toont.`, "ok");
+        const prefix = Number.isFinite(foundCount) ? `${foundText(foundCount)} gevonden.` : foundText(foundCount) + ".";
+        showStatus(`Klaar. ${prefix} Ik wacht nu tot GitHub Pages de nieuwe lijst toont.`, "ok", { stop: true });
         await waitForUpdatedEvents(previousSignature, previousKeys, foundCount);
       } catch (error) {
-        showStatus(`${foundText(foundCount)} gevonden. Starten mislukt: ${error.message}`, "error");
+        const prefix = Number.isFinite(foundCount) ? `${foundText(foundCount)} gevonden.` : "";
+        showStatus(`${prefix} Starten mislukt: ${error.message}`.trim(), "error");
       } finally {
         setBusy(button, false);
       }
@@ -1644,6 +1713,7 @@
       const button = $("clearBtn");
       const previousSignature = eventSignature(events);
       const previousKeys = eventKeySet(events);
+      refreshAbortRequested = false;
       setBusy(button, true, "Verwijderen...");
       showStatus("Evenementen en archief verwijderen...", "warn");
 
@@ -1729,6 +1799,21 @@
     $("resetBtn").addEventListener("click", resetFilters);
     $("clearBtn").addEventListener("click", clearAllEvents);
     $("collapseBtn").addEventListener("click", toggleCardsCollapsed);
+    $("perPageSelect").addEventListener("change", () => {
+      eventsPerPage = Number($("perPageSelect").value) || 9;
+      try {
+        localStorage.setItem(PER_PAGE_KEY, String(eventsPerPage));
+      } catch {}
+      currentPage = 1;
+      render();
+    });
+    $("status").addEventListener("click", (event) => {
+      if (!event.target.closest("#stopRefreshBtn")) return;
+      refreshAbortRequested = true;
+      setBusy($("refreshBtn"), false);
+      setBusy($("clearBtn"), false);
+      showStatus("Controle gestopt. De update kan op GitHub nog wel doorlopen.", "warn");
+    });
     $("prevPage").addEventListener("click", () => { currentPage -= 1; render(); window.scrollTo({ top: 0, behavior: "smooth" }); });
     $("nextPage").addEventListener("click", () => { currentPage += 1; render(); window.scrollTo({ top: 0, behavior: "smooth" }); });
     $("allSitesBtn").addEventListener("click", () => { document.querySelectorAll(".siteCheck").forEach((check) => { check.checked = true; }); updateSiteCount(); });
@@ -1816,6 +1901,9 @@
 
     const today = formatDate(new Date());
     $("dateSingle").value = today;
+    eventsPerPage = Number(localStorage.getItem(PER_PAGE_KEY)) || 9;
+    if (![6, 9, 12, 18, 24].includes(eventsPerPage)) eventsPerPage = 9;
+    $("perPageSelect").value = String(eventsPerPage);
     $("versionBadge").textContent = `Versie ${APP_VERSION}`;
     loadAll();
   </script>
