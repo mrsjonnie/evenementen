@@ -291,25 +291,38 @@ async function chatGptEventsForSite(env, site, body = {}) {
     status: "zoeken",
     rawText: "Website wordt via ChatGPT/webzoeklaag op eventvelden gecontroleerd."
   }];
-  const response = await callWithTimeout("https://api.openai.com/v1/chat/completions", {
+  const requestBody = {
+    model: validateInput(env.CHATGPT_MODEL || "gpt-4o-mini-search-preview", 80),
+    messages: [
+      { role: "system", content: "Je bent een strenge evenementen-extractor. Geef alleen controleerbare events terug als JSON." },
+      { role: "user", content: aiPromptForSite(site, body, "ChatGPT") }
+    ],
+    web_search_options: { search_context_size: "medium" },
+    response_format: { type: "json_object" },
+    max_tokens: 1800
+  };
+  const openAiInit = (payload) => ({
     method: "POST",
     headers: {
       "Authorization": `Bearer ${token}`,
       "Content-Type": "application/json"
     },
-    body: JSON.stringify({
-      model: validateInput(env.CHATGPT_MODEL || "gpt-4o-mini-search-preview", 80),
-      messages: [
-        { role: "system", content: "Je bent een strenge evenementen-extractor. Geef alleen controleerbare events terug als JSON." },
-        { role: "user", content: aiPromptForSite(site, body, "ChatGPT") }
-      ],
-      response_format: { type: "json_object" },
-      max_tokens: 1800
-    })
-  }, 14000);
+    body: JSON.stringify(payload)
+  });
+  let response = await callWithTimeout("https://api.openai.com/v1/chat/completions", openAiInit(requestBody), 14000);
   if (!response.ok) {
-    rawLog.push({ source: "ChatGPT", site, title: "ChatGPT fout", date: "", url: site, status: `status ${response.status}`, rawText: validateInput(await response.text(), 400) });
-    return { events: [], rawLog };
+    const firstError = validateInput(await response.text(), 500);
+    if (response.status === 400 && /response_format|json|unsupported|web_search_options/i.test(firstError)) {
+      const retryBody = { ...requestBody };
+      delete retryBody.response_format;
+      if (/web_search_options/i.test(firstError)) delete retryBody.web_search_options;
+      rawLog.push({ source: "ChatGPT", site, title: "ChatGPT retry", date: "", url: site, status: "opnieuw", rawText: firstError });
+      response = await callWithTimeout("https://api.openai.com/v1/chat/completions", openAiInit(retryBody), 14000);
+    }
+    if (!response.ok) {
+      rawLog.push({ source: "ChatGPT", site, title: "ChatGPT fout", date: "", url: site, status: `status ${response.status}`, rawText: validateInput(await response.text(), 500) });
+      return { events: [], rawLog };
+    }
   }
   const data = await response.json().catch(() => ({}));
   const text = chatTextFromResponse(data);
