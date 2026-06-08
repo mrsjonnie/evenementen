@@ -119,18 +119,77 @@ function serpSearchQueries(site, body = {}) {
   return [...new Set(queries.map((query) => query.replace(/\s+/g, " ").trim()).filter(Boolean))].slice(0, 3);
 }
 
+function cleanSerpTitle(value, site) {
+  const host = (() => {
+    try {
+      return new URL(site).hostname.replace(/^www\./, "");
+    } catch {
+      return "";
+    }
+  })();
+  return clean(value)
+    .replace(new RegExp(`\\s+[-|]\\s+(${host}|SPOT Groningen|Forum|VERA Groningen|Paradiso|Hedon|Concertgebouw).*$`, "i"), "")
+    .replace(/\s+\|\s+.*$/, "")
+    .trim();
+}
+
+function serpApiEventCandidate(site, item = {}, queryIndex = 0, rank = 0, sourceType = "organic") {
+  const link = validateInput(item.link || item.url || item.event_location_map?.link || "", 500);
+  if (!link || !sameHostUrl(link, site) || badWords.test(link)) return null;
+  const snippet = clean(item.snippet || item.description || item.subtitle || item.date || item.address || "");
+  const title = cleanSerpTitle(item.title || item.name || "", site);
+  const extensions = Array.isArray(item.extensions) ? item.extensions.join(" ") : clean(item.extensions || "");
+  const dateText = clean(item.date || item.when || extensions || `${title} ${snippet}`);
+  const eventDate = normalizeDate(dateText) || normalizeDate(`${title} ${snippet}`);
+  if (!title || title.length < 3 || /^(agenda|programma|tickets?|contact)$/i.test(title)) return null;
+  return {
+    source: "SerpAPI",
+    discoverySource: "SerpAPI",
+    sourceType,
+    site,
+    title,
+    date: eventDate,
+    dateText,
+    location: clean(item.venue?.name || item.address || item.location || ""),
+    type: "",
+    description: snippet,
+    website: link,
+    url: link,
+    rank,
+    query: queryIndex + 1
+  };
+}
+
+function serpApiEventsFromData(site, data = {}, queryIndex = 0) {
+  const candidates = [];
+  const organic = Array.isArray(data.organic_results) ? data.organic_results : [];
+  organic.forEach((item, index) => {
+    const candidate = serpApiEventCandidate(site, item, queryIndex, index + 1, "organic");
+    if (candidate) candidates.push(candidate);
+  });
+
+  const eventResults = Array.isArray(data.events_results) ? data.events_results : [];
+  eventResults.forEach((item, index) => {
+    const candidate = serpApiEventCandidate(site, item, queryIndex, index + 1, "events");
+    if (candidate) candidates.push(candidate);
+  });
+  return candidates;
+}
+
 async function serpApiLinksForSite(env, site, body = {}) {
   const token = validateInput(env.SERPAPI_TOKEN || "", 500);
-  if (!token) return { links: [], rawLog: [] };
+  if (!token) return { links: [], rawLog: [], events: [] };
   const requestedHits = Math.max(20, Math.min(100, Number(body.maxEventsPerSite || body.minResults) || 20));
   const hitsPerQuery = Math.max(10, Math.min(50, requestedHits));
   const links = [];
   const rawLog = [];
+  const events = [];
   const seenLinks = new Set();
+  const seenEvents = new Set();
   const queries = serpSearchQueries(site, body);
 
-  for (const [queryIndex, query] of queries.entries()) {
-    rawLog.push({
+  const queryResults = await Promise.all(queries.map(async (query, queryIndex) => {
+    const queryLog = [{
       source: "SerpAPI",
       site,
       title: `Zoekopdracht ${queryIndex + 1}/${queries.length}`,
@@ -138,7 +197,7 @@ async function serpApiLinksForSite(env, site, body = {}) {
       url: "",
       status: "zoeken",
       rawText: query
-    });
+    }];
 
     const params = new URLSearchParams({
       engine: "google",
@@ -146,11 +205,31 @@ async function serpApiLinksForSite(env, site, body = {}) {
       num: String(hitsPerQuery),
       api_key: token
     });
-    const response = await fetch(`https://serpapi.com/search.json?${params.toString()}`, {
-      headers: { "Accept": "application/json" }
-    });
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), 5500);
+    let response = null;
+    try {
+      response = await fetch(`https://serpapi.com/search.json?${params.toString()}`, {
+        headers: { "Accept": "application/json" },
+        signal: controller.signal
+      });
+    } catch (error) {
+      queryLog.push({
+        source: "SerpAPI",
+        site,
+        title: "SerpAPI timeout/fout",
+        date: "",
+        url: "",
+        status: "fout",
+        rawText: validateInput(error.message || "timeout", 300)
+      });
+      clearTimeout(timer);
+      return { links: [], rawLog: queryLog, events: [] };
+    }
+    clearTimeout(timer);
+
     if (!response.ok) {
-      rawLog.push({
+      queryLog.push({
         source: "SerpAPI",
         site,
         title: "SerpAPI fout",
@@ -159,10 +238,12 @@ async function serpApiLinksForSite(env, site, body = {}) {
         status: `status ${response.status}`,
         rawText: validateInput(await response.text(), 300)
       });
-      continue;
+      return { links: [], rawLog: queryLog, events: [] };
     }
 
     const data = await response.json().catch(() => ({}));
+    const queryLinks = [];
+    const queryEvents = serpApiEventsFromData(site, data, queryIndex);
     const results = Array.isArray(data.organic_results) ? data.organic_results : [];
     results.forEach((item, index) => {
       const link = validateInput(item.link || "", 300);
@@ -170,29 +251,62 @@ async function serpApiLinksForSite(env, site, body = {}) {
       if (usable) {
         const key = link.toLowerCase().replace(/\/$/, "");
         if (!seenLinks.has(key)) {
-          seenLinks.add(key);
-          links.push(link);
+          queryLinks.push(link);
         }
       }
       if (index < 12) {
-        rawLog.push({
+        const candidate = serpApiEventCandidate(site, item, queryIndex, index + 1, "organic");
+        queryLog.push({
           source: "SerpAPI",
           site,
           title: validateInput(item.title || "", 160),
-          date: "",
+          date: candidate?.date || "",
           url: link,
-          status: usable ? "bruikbare link" : "genegeerd",
+          status: candidate?.date ? "event-kandidaat" : (usable ? "bruikbare link" : "genegeerd"),
           rawText: validateInput(item.snippet || item.displayed_link || "", 300),
           rank: index + 1,
           query: queryIndex + 1
         });
       }
     });
-  }
+    queryEvents.slice(0, 12).forEach((event) => {
+      queryLog.push({
+        source: "SerpAPI",
+        site,
+        title: event.title,
+        date: event.date || event.dateText || "",
+        url: event.url,
+        status: event.date ? "eventvelden gevonden" : "event zonder datum",
+        rawText: event.description || event.dateText || "",
+        rank: event.rank,
+        query: event.query
+      });
+    });
+    return { links: queryLinks, rawLog: queryLog, events: queryEvents };
+  }));
+
+  queryResults.forEach((result) => {
+    rawLog.push(...result.rawLog);
+    result.links.forEach((link) => {
+      const key = link.toLowerCase().replace(/\/$/, "");
+      if (!seenLinks.has(key)) {
+        seenLinks.add(key);
+        links.push(link);
+      }
+    });
+    result.events.forEach((event) => {
+      const key = `${event.date || ""}|${event.title.toLowerCase()}|${event.url.toLowerCase().replace(/\/$/, "")}`;
+      if (!seenEvents.has(key)) {
+        seenEvents.add(key);
+        events.push(event);
+      }
+    });
+  });
 
   return {
     links: links.slice(0, Math.min(requestedHits * 2, 60)),
-    rawLog
+    rawLog,
+    events: events.slice(0, requestedHits)
   };
 }
 
@@ -210,20 +324,33 @@ async function enrichBodyWithSerpApi(env, body = {}) {
 
   const discovered = [];
   const rawLog = [];
-  for (const site of priority) {
-    try {
-      const result = await serpApiLinksForSite(env, site, body);
-      discovered.push(...result.links);
-      rawLog.push(...result.rawLog);
-    } catch {}
-  }
+  const eventCandidates = [];
+  const siteResults = await Promise.all(priority.map((site) => serpApiLinksForSite(env, site, body).catch((error) => ({
+    links: [],
+    events: [],
+    rawLog: [{
+      source: "SerpAPI",
+      site,
+      title: "Site zoeklaag mislukt",
+      date: "",
+      url: site,
+      status: "fout",
+      rawText: validateInput(error.message || "", 300)
+    }]
+  }))));
+  siteResults.forEach((result) => {
+    discovered.push(...result.links);
+    rawLog.push(...result.rawLog);
+    eventCandidates.push(...result.events);
+  });
 
   const uniqueDiscovered = validSites(discovered, 200);
   return {
-    body: { ...body, sites: selected, serpApiLinks: uniqueDiscovered, serpApiRawLog: rawLog },
+    body: { ...body, sites: selected, serpApiLinks: uniqueDiscovered, serpApiRawLog: rawLog, serpApiEvents: eventCandidates },
     serpApiAddedCount: uniqueDiscovered.length,
     serpApiRawCount: rawLog.length,
-    serpApiRawLog: rawLog.slice(0, 260)
+    serpApiRawLog: rawLog.slice(0, 260),
+    serpApiEventsCount: eventCandidates.length
   };
 }
 
@@ -679,6 +806,7 @@ function workflowInputs(body, overrides = {}) {
     providers: JSON.stringify(body.providers && typeof body.providers === "object" ? body.providers : {}),
     serpApiLinks: JSON.stringify(validSites(body.serpApiLinks, 200)),
     serpApiRawLog: JSON.stringify(Array.isArray(body.serpApiRawLog) ? body.serpApiRawLog.slice(0, 220) : []),
+    serpApiEvents: JSON.stringify(Array.isArray(body.serpApiEvents) ? body.serpApiEvents.slice(0, 260) : []),
     clearArchive: overrides.clearArchive ? "true" : "false"
   };
 }
@@ -758,12 +886,12 @@ async function startRefresh(env, body, overrides = {}) {
   const inputs = workflowInputs(refreshBody, overrides);
   const dispatch = await dispatchWorkflow(env, inputs);
   if (dispatch.ok) {
-    return { ok: true, method: "workflow_dispatch", workflowFile: dispatch.workflowFile, serpApiAddedCount: enriched.serpApiAddedCount, serpApiRawCount: enriched.serpApiRawCount, serpApiRawLog: enriched.serpApiRawLog || [] };
+    return { ok: true, method: "workflow_dispatch", workflowFile: dispatch.workflowFile, serpApiAddedCount: enriched.serpApiAddedCount, serpApiRawCount: enriched.serpApiRawCount, serpApiRawLog: enriched.serpApiRawLog || [], serpApiEventsCount: enriched.serpApiEventsCount || 0 };
   }
 
   const fallback = await upsertRefreshRequest(env, refreshBody, overrides, dispatch);
   if (fallback.ok) {
-    return { ok: true, method: "refresh_request", dispatchFailure: dispatch, serpApiAddedCount: enriched.serpApiAddedCount, serpApiRawCount: enriched.serpApiRawCount, serpApiRawLog: enriched.serpApiRawLog || [] };
+    return { ok: true, method: "refresh_request", dispatchFailure: dispatch, serpApiAddedCount: enriched.serpApiAddedCount, serpApiRawCount: enriched.serpApiRawCount, serpApiRawLog: enriched.serpApiRawLog || [], serpApiEventsCount: enriched.serpApiEventsCount || 0 };
   }
 
   return {
@@ -848,6 +976,7 @@ export default {
           serpApiAddedCount: result.serpApiAddedCount || 0,
           serpApiRawCount: result.serpApiRawCount || 0,
           serpApiRawLog: result.serpApiRawLog || [],
+          serpApiEventsCount: result.serpApiEventsCount || 0,
           scrapedCount: 0,
           totalSaved: 0,
           refreshError: result.ok ? null : (result.error || result.details || "Onbekende fout")
@@ -892,6 +1021,7 @@ export default {
         serpApiAddedCount: result.serpApiAddedCount || 0,
         serpApiRawCount: result.serpApiRawCount || 0,
         serpApiRawLog: result.serpApiRawLog || [],
+        serpApiEventsCount: result.serpApiEventsCount || 0,
         scrapedCount: null,
         totalSaved: null
       }, 200);

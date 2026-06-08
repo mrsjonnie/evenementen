@@ -1038,12 +1038,12 @@
               <span aria-hidden="true">v</span>
             </button>
             <div class="sitePanel">
-              <div class="sitePanelHeader">SerpAPI zoekt extra links binnen de aangevinkte websites. De andere AI-bronnen blijven uit.</div>
+              <div class="sitePanelHeader">SerpAPI zoekt per aangevinkte website naar eventvelden en bruikbare bronlinks. De andere AI-bronnen blijven uit.</div>
               <div class="siteList" id="providerList">
                 <label><input class="providerCheck" type="checkbox" id="provPerplexity" disabled> <span>Perplexity uit</span></label>
                 <label><input class="providerCheck" type="checkbox" id="provMistral" disabled> <span>Mistral uit</span></label>
                 <label><input class="providerCheck" type="checkbox" id="provOpenAI" disabled> <span>ChatGPT uit</span></label>
-                <label><input class="providerCheck" type="checkbox" id="provSerpAPI" checked> <span>SerpAPI extra links</span></label>
+                <label><input class="providerCheck" type="checkbox" id="provSerpAPI" checked> <span>SerpAPI eventvelden</span></label>
               </div>
             </div>
           </div>
@@ -1112,7 +1112,7 @@
   </div>
 
   <script>
-    const APP_VERSION = "2026.06.08.16";
+    const APP_VERSION = "2026.06.08.17";
     const DEFAULT_MAX_EVENTS_PER_SITE = 20;
     const DEFAULT_SITE_TIME_LIMIT_SECONDS = 20;
     const SCAN_SETTINGS_KEY = "eventScanSettingsV1";
@@ -1914,6 +1914,7 @@
 
     function scrapedCountFromResponse(data) {
       const values = [
+        data?.serpApiEventsCount,
         data?.scrapedCount,
         data?.newCount,
         data?.addedCount,
@@ -1938,10 +1939,11 @@
     async function waitForUpdatedEvents(previousSignature, previousKeys, foundCount = null, options = {}) {
       const previousUpdatedAt = eventsUpdatedAt;
       const requireEvents = Boolean(options.requireEvents);
-      for (let attempt = 1; attempt <= 18; attempt += 1) {
+      const maxAttempts = Math.max(1, Math.min(18, Number(options.maxAttempts) || 18));
+      for (let attempt = 1; attempt <= maxAttempts; attempt += 1) {
         const prefix = Number.isFinite(foundCount) ? `${foundText(foundCount)} gevonden.` : foundText(foundCount) + ".";
-        showStatus(`${prefix} Lijst controleren (${attempt}/18).`, "warn", { stop: true });
-        addLiveLog("App", "events.json", `Controle ${attempt}/18`, "wachten", prefix);
+        showStatus(`${prefix} Lijst controleren (${attempt}/${maxAttempts}).`, "warn", { stop: true });
+        addLiveLog("App", "events.json", `Controle ${attempt}/${maxAttempts}`, "wachten", prefix);
         const shouldContinue = await waitUnlessStopped(10000);
         if (!shouldContinue) {
           showStatus("Controle gestopt. De update kan nog doorlopen; probeer later opnieuw.", "warn");
@@ -2521,7 +2523,7 @@
       resetLiveLog();
       addLiveLog("App", selectedSites.join(", "), "Verversing gestart", "start", `${scanSettings.maxEventsPerSite} events/site, ${scanSettings.siteTimeLimitSeconds} sec/site`);
       if ($("provSerpAPI").checked) {
-        addLiveLog("SerpAPI", selectedSites.join(", "), "Extra zoeklaag gestart", "zoeken", "SerpAPI zoekt per geselecteerde website naar agenda- en evenementenlinks.");
+        addLiveLog("SerpAPI", selectedSites.join(", "), "Extra zoeklaag gestart", "zoeken", "SerpAPI zoekt per geselecteerde website naar eventvelden en agenda-links.");
       } else {
         addLiveLog("SerpAPI", selectedSites.join(", "), "Extra zoeklaag", "uit", "SerpAPI staat uit; alleen de websites zelf worden gescand.");
       }
@@ -2563,8 +2565,8 @@
 
         if (!response.ok) throw new Error(workerErrorMessage(data, "Verversen is mislukt"));
         appendWorkerRawLog(data.serpApiRawLog);
-        if (Number(data.serpApiRawCount) || Number(data.serpApiAddedCount)) {
-          addLiveLog("SerpAPI", selectedSites.join(", "), "Zoekresultaten ontvangen", "klaar", `${Number(data.serpApiRawCount) || 0} ruwe zoekregels, ${Number(data.serpApiAddedCount) || 0} extra links doorgestuurd`);
+        if (Number(data.serpApiRawCount) || Number(data.serpApiAddedCount) || Number(data.serpApiEventsCount)) {
+          addLiveLog("SerpAPI", selectedSites.join(", "), "Zoekresultaten ontvangen", "klaar", `${Number(data.serpApiRawCount) || 0} ruwe zoekregels, ${Number(data.serpApiAddedCount) || 0} links, ${Number(data.serpApiEventsCount) || 0} event-kandidaten`);
         }
 
         const prefix = Number.isFinite(foundCount) ? `${foundText(foundCount)} gevonden.` : foundText(foundCount) + ".";
@@ -2629,7 +2631,7 @@
       const previousKeys = eventKeySet(events);
       refreshAbortRequested = false;
       setBusy(button, true, "Verwijderen...");
-      showStatus("Evenementen en archief verwijderen...", "warn");
+      showStatus("Evenementen en archief verwijderen en verversing starten...", "warn");
 
       try {
         const response = await fetch(`${WORKER_URL}/clear`, {
@@ -2654,8 +2656,8 @@
         const data = await response.json().catch(() => ({}));
         if (!response.ok) throw new Error(workerErrorMessage(data, "Verwijderen is mislukt"));
         appendWorkerRawLog(data.serpApiRawLog);
-        if (Number(data.serpApiRawCount) || Number(data.serpApiAddedCount)) {
-          addLiveLog("SerpAPI", selectedSites.join(", "), "Zoekresultaten ontvangen", "klaar", `${Number(data.serpApiRawCount) || 0} ruwe zoekregels, ${Number(data.serpApiAddedCount) || 0} extra links doorgestuurd`);
+        if (Number(data.serpApiRawCount) || Number(data.serpApiAddedCount) || Number(data.serpApiEventsCount)) {
+          addLiveLog("SerpAPI", selectedSites.join(", "), "Zoekresultaten ontvangen", "klaar", `${Number(data.serpApiRawCount) || 0} ruwe zoekregels, ${Number(data.serpApiAddedCount) || 0} links, ${Number(data.serpApiEventsCount) || 0} event-kandidaten`);
         }
 
         newEventKeys = new Set();
@@ -2673,8 +2675,10 @@
           renderRawLog();
           applyFilters();
         }
-        showStatus("Alles is verwijderd. Ik controleer of er nieuwe evenementen zijn gevonden.", "ok");
-        await waitForUpdatedEvents(previousSignature, previousKeys, scrapedCountFromResponse(data), { requireEvents: false, keepEmptyOnTimeout: true });
+        setBusy(button, false);
+        showStatus("Alles is verwijderd. Verversing is gestart; de logging blijft zichtbaar.", "ok", { stop: true });
+        waitForUpdatedEvents(previousSignature, previousKeys, scrapedCountFromResponse(data), { requireEvents: false, keepEmptyOnTimeout: true, maxAttempts: 6 })
+          .catch((error) => showStatus(`Controle op nieuwe data mislukt: ${error.message}`, "warn"));
       } catch (error) {
         showStatus(`Verwijderen mislukt: ${error.message}`, "error");
       } finally {

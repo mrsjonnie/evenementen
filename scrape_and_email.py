@@ -20,6 +20,7 @@ INPUT_DATE_TO = os.getenv("INPUT_DATE_TO", "").strip()
 INPUT_CLEAR_ARCHIVE = os.getenv("INPUT_CLEAR_ARCHIVE", "").strip().lower() in {"1", "true", "yes", "ja"}
 INPUT_SERPAPI_LINKS_RAW = os.getenv("INPUT_SERPAPI_LINKS", "[]").strip() or "[]"
 INPUT_SERPAPI_RAW_LOG = os.getenv("INPUT_SERPAPI_RAW_LOG", "[]").strip() or "[]"
+INPUT_SERPAPI_EVENTS_RAW = os.getenv("INPUT_SERPAPI_EVENTS", "[]").strip() or "[]"
 
 REQUEST_HEADERS = {
     "User-Agent": "Mozilla/5.0 (Evenementen Scraper; +https://github.com/mrsjonnie/evenementen)",
@@ -1044,6 +1045,39 @@ def serpapi_links_for_site(site_url):
     return unique_urls(candidates)
 
 
+def serpapi_events_for_site(site_url):
+    events = []
+    for item in parse_json_list(INPUT_SERPAPI_EVENTS_RAW):
+        if not isinstance(item, dict):
+            continue
+        item_site = item.get("site") or item.get("url") or item.get("website") or ""
+        item_url = item.get("url") or item.get("website") or ""
+        if not (same_host(item_site, site_url) or same_host(item_url, site_url)):
+            continue
+        date_blob = " ".join(clean_text(item.get(key)) for key in ("date", "dateText", "title", "description", "rawText") if item.get(key))
+        title = clean_title(item.get("title") or "")
+        description = compact(item.get("description") or item.get("rawText") or "", 420)
+        raw = {
+            "date": parse_date_text(date_blob),
+            "title": title,
+            "type": item.get("type") or classify_type(" ".join([title, description]), canonical_host(site_url)),
+            "location": item.get("location") or host_default_location(site_url),
+            "website": item_url,
+            "description": description,
+            "image": "",
+            "time": first_time(date_blob),
+            "cost": first_price(description),
+            "discoverySource": "SerpAPI",
+        }
+        event = normalize_event(raw, site_url)
+        if event:
+            events.append(event)
+            add_raw("SerpAPI", site_url, event["title"], event["date"], event["website"], "event direct uit SerpAPI", description or date_blob)
+        else:
+            add_raw("SerpAPI", site_url, title or "Event-kandidaat genegeerd", parse_date_text(date_blob), item_url, "onvolledig", description or date_blob)
+    return dedupe_events(events)
+
+
 def import_serpapi_raw_log():
     for row in parse_json_list(INPUT_SERPAPI_RAW_LOG):
         if not isinstance(row, dict):
@@ -1087,6 +1121,11 @@ def scrape_site(site_url, site_index=0, site_total=0):
 
     progress = f"site {site_index}/{site_total}" if site_index and site_total else "site"
     add_raw("Website", original_site, "Start", "", normalized_site, "start", f"{progress}: max {MAX_EVENTS_PER_SITE} events, max {SITE_TIME_LIMIT_SECONDS} seconden")
+
+    serpapi_events = serpapi_events_for_site(normalized_site)
+    if serpapi_events:
+        events.extend(serpapi_events)
+        add_raw("SerpAPI", original_site, "Eventvelden gebruikt", "", normalized_site, "ok", f"{len(serpapi_events)} event-kandidaten direct uit SerpAPI")
 
     for page_url in start_urls_for_site(normalized_site):
         if len(dedupe_events(events)) >= MAX_EVENTS_PER_SITE or time.monotonic() >= deadline:
