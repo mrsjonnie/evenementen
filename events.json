@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-06-08T16:56:11+00:00",
+  "updatedAt": "2026-06-08T17:07:53+00:00",
   "events": [
     {
       "date": "2026-06-01",
@@ -384,7 +384,7 @@
       "site": "https://www.vera-groningen.nl",
       "count": 25,
       "newCount": 0,
-      "durationSeconds": 0.3,
+      "durationSeconds": 0.32,
       "timedOut": false
     }
   ],
@@ -422,24 +422,6 @@
       "title": "Mistral resultaat",
       "date": "",
       "url": "https://www.spotgroningen.nl/programma/",
-      "status": "klaar",
-      "rawText": "0 event-kandidaten"
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.vera-groningen.nl/",
-      "title": "Mistral analyse",
-      "date": "",
-      "url": "https://www.vera-groningen.nl/",
-      "status": "zoeken",
-      "rawText": "Startpagina wordt opgehaald en door Mistral op eventvelden geanalyseerd."
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.vera-groningen.nl/",
-      "title": "Mistral resultaat",
-      "date": "",
-      "url": "https://www.vera-groningen.nl/",
       "status": "klaar",
       "rawText": "0 event-kandidaten"
     },
@@ -684,115 +666,7 @@
       "date": "",
       "url": "https://www.vvvameland.nl/activiteiten-en-evenementen",
       "status": "klaar",
-      "rawText": "12 event-kandidaten"
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.vvvameland.nl/activiteiten-en-evenementen",
-      "title": "Tennis op kunstgrasbaan in Hollum",
-      "date": "2026-06-08",
-      "url": "https://www.vvvameland.nl/activiteiten-en-evenementen",
-      "status": "eventvelden gevonden",
-      "rawText": "Tijdens je verblijf een balletje slaan op een kunstgrasbaan? Dat kan! Huur een tennisbaan af voor € 15 per uur."
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.vvvameland.nl/activiteiten-en-evenementen",
-      "title": "Blokarten duokart",
-      "date": "2026-06-08",
-      "url": "https://www.vvvameland.nl/activiteiten-en-evenementen",
-      "status": "eventvelden gevonden",
-      "rawText": "Speciaal voor kinderen onder de 11 jaar hebben we duozitters, zodat ze mee kunnen zeilen met een volwassene."
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.vvvameland.nl/activiteiten-en-evenementen",
-      "title": "Tennis op gravelbaan Nes",
-      "date": "2026-06-08",
-      "url": "https://www.vvvameland.nl/activiteiten-en-evenementen",
-      "status": "eventvelden gevonden",
-      "rawText": "Tijdens je verblijf een balletje slaan op een gravelbaan? Dat kan! Huur een tennisbaan af voor € 15,- per uur."
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.vvvameland.nl/activiteiten-en-evenementen",
-      "title": "Kids surfles, 8-12 jaar",
-      "date": "2026-06-08",
-      "url": "https://www.vvvameland.nl/activiteiten-en-evenementen",
-      "status": "eventvelden gevonden",
-      "rawText": "Ben jij onder de 12 jaar en wil je graag leren surfen? Dan is de 'Kids surfles' echt wat voor jou."
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.vvvameland.nl/activiteiten-en-evenementen",
-      "title": "Powerkiten",
-      "date": "2026-06-08",
-      "url": "https://www.vvvameland.nl/activiteiten-en-evenementen",
-      "status": "eventvelden gevonden",
-      "rawText": "Ervaar de kracht van de wind met een powerkite op Ameland. Ameland Adventure organiseert deze spectaculaire activiteit."
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.vvvameland.nl/activiteiten-en-evenementen",
-      "title": "Wijnproeverij 'Parel van Ameland'",
-      "date": "2026-06-08",
-      "url": "https://www.vvvameland.nl/activiteiten-en-evenementen",
-      "status": "eventvelden gevonden",
-      "rawText": "Van oester tot parel, Ontdek deze exclusieve Zuid-Italiaanse wijnen onder eigen label tijdens een sfeervolle proeverij."
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.vvvameland.nl/activiteiten-en-evenementen",
-      "title": "Bos, strand en vuurtorentocht",
-      "date": "2026-06-08",
-      "url": "https://www.vvvameland.nl/activiteiten-en-evenementen",
-      "status": "eventvelden gevonden",
-      "rawText": "Een enerverende en uitdagende excursie die via het bos en de duinen naar het strand voert."
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.vvvameland.nl/activiteiten-en-evenementen",
-      "title": "Strandrit met de Strandexpress",
-      "date": "2026-06-09",
-      "url": "https://www.vvvameland.nl/activiteiten-en-evenementen",
-      "status": "eventvelden gevonden",
-      "rawText": "Met een comfortabele strandbus over het strand naar natuurgebied “’t Oerd” en \"De Hôn\"."
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.vvvameland.nl/activiteiten-en-evenementen",
-      "title": "Eendenkooi excursie",
-      "date": "2026-06-09",
-      "url": "https://www.vvvameland.nl/activiteiten-en-evenementen",
-      "status": "eventvelden gevonden",
-      "rawText": "Ten oosten van Buren ligt de Kooiplaats. Deze plaats is vernoemd naar de Eendenkooi en het Kooihuis in dit gebied."
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.vvvameland.nl/activiteiten-en-evenementen",
-      "title": "Robbentocht met Ms Zeehond",
-      "date": "2026-06-09",
-      "url": "https://www.vvvameland.nl/activiteiten-en-evenementen",
-      "status": "eventvelden gevonden",
-      "rawText": "Varen in ons prachtige Waddengebied en zeehonden van dichtbij bekijken is een unieke belevenis voor het gehele gezin!"
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.vvvameland.nl/activiteiten-en-evenementen",
-      "title": "Boottocht naar de zeehonden & Sleepnetvissen",
-      "date": "2026-06-09",
-      "url": "https://www.vvvameland.nl/activiteiten-en-evenementen",
-      "status": "eventvelden gevonden",
-      "rawText": "We gaan eerst naar de zeehonden en dan gooien we het net uit op zee, en na een kwartiertje halen we ze weer op."
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.vvvameland.nl/activiteiten-en-evenementen",
-      "title": "Blokarten",
-      "date": "2026-06-10",
-      "url": "https://www.vvvameland.nl/activiteiten-en-evenementen",
-      "status": "eventvelden gevonden",
-      "rawText": "Scheuren over het strand van Ameland in een blokart! Ervaar de power van de wind in het zeil en cross met grote snelheid."
+      "rawText": "0 event-kandidaten"
     },
     {
       "source": "Website",
@@ -1827,7 +1701,7 @@
       "date": "",
       "url": "https://www.vera-groningen.nl",
       "status": "klaar",
-      "rawText": "site 1/1: 25 unieke events in 0.3 sec"
+      "rawText": "site 1/1: 25 unieke events in 0.32 sec"
     }
   ]
 }
