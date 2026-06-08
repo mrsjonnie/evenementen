@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-06-08T22:04:57+00:00",
+  "updatedAt": "2026-06-08T22:06:08+00:00",
   "events": [
     {
       "date": "2026-06-01",
@@ -400,28 +400,82 @@
       "site": "https://www.vera-groningen.nl",
       "count": 25,
       "newCount": 0,
-      "durationSeconds": 0.34,
+      "durationSeconds": 0.64,
       "timedOut": false
     }
   ],
   "rawLog": [
     {
       "source": "SerpAPI",
-      "site": "https://groningen.uitloper.nu/",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
       "title": "Mistral analyse",
       "date": "",
-      "url": "https://groningen.uitloper.nu/",
+      "url": "https://www.visitgroningen.nl/nl/doen/evenementen",
       "status": "zoeken",
       "rawText": "Startpagina wordt opgehaald en door Mistral op eventvelden geanalyseerd."
     },
     {
       "source": "SerpAPI",
-      "site": "https://groningen.uitloper.nu/",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
       "title": "Mistral resultaat",
       "date": "",
-      "url": "https://groningen.uitloper.nu/",
+      "url": "https://www.visitgroningen.nl/nl/doen/evenementen",
       "status": "klaar",
-      "rawText": "0 geverifieerde event-kandidaten, 0 afgewezen"
+      "rawText": "6 geverifieerde event-kandidaten, 0 afgewezen"
+    },
+    {
+      "source": "SerpAPI",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Docs: Mama'ku – Van Jakarta tot de Molukken",
+      "date": "2026-06-09",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan/830971978/docs-mama-ku-van-jakarta-tot-de-molukken",
+      "status": "eventvelden gevonden",
+      "rawText": "Documentaire over de culturele connecties tussen Jakarta en de Molukken."
+    },
+    {
+      "source": "SerpAPI",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "The Tasters",
+      "date": "2026-06-09",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan/4210401163/the-tasters",
+      "status": "eventvelden gevonden",
+      "rawText": "Filmvertoning met live muziek."
+    },
+    {
+      "source": "SerpAPI",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Guitari Baro",
+      "date": "2026-06-09",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan/1045711822/guitari-baro",
+      "status": "eventvelden gevonden",
+      "rawText": "Muziekoptreden met baro (traditionele muziek)."
+    },
+    {
+      "source": "SerpAPI",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Obsession",
+      "date": "2026-06-09",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan/2675769579/obsession",
+      "status": "eventvelden gevonden",
+      "rawText": "Filmvertoning."
+    },
+    {
+      "source": "SerpAPI",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Exit 8",
+      "date": "2026-06-09",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan/2896719817/the-exit-8",
+      "status": "eventvelden gevonden",
+      "rawText": "Filmvertoning."
+    },
+    {
+      "source": "SerpAPI",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Let's Get Lyrical met Cissy Joan - met Jaimy Hindriks, Willemijn van de Walle & Faisel Saro",
+      "date": "2026-06-09",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan/3011496871/let-s-get-lyrical-met-cissy-joan-met-jaimy-hindriks-willemijn-van-de-walle-faisel-saro",
+      "status": "eventvelden gevonden",
+      "rawText": "Theatervoorstelling met poëzie en muziek."
     },
     {
       "source": "Website",
@@ -1456,7 +1510,7 @@
       "date": "",
       "url": "https://www.vera-groningen.nl",
       "status": "klaar",
-      "rawText": "site 1/1: 25 unieke events in 0.34 sec"
+      "rawText": "site 1/1: 25 unieke events in 0.64 sec"
     }
   ]
 }

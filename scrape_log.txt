@@ -1,5 +1,11 @@
-SerpAPI	https://groningen.uitloper.nu/	zoeken	Mistral analyse		https://groningen.uitloper.nu/	Startpagina wordt opgehaald en door Mistral op eventvelden geanalyseerd.
-SerpAPI	https://groningen.uitloper.nu/	klaar	Mistral resultaat		https://groningen.uitloper.nu/	0 geverifieerde event-kandidaten, 0 afgewezen
+SerpAPI	https://www.visitgroningen.nl/nl/doen/evenementen	zoeken	Mistral analyse		https://www.visitgroningen.nl/nl/doen/evenementen	Startpagina wordt opgehaald en door Mistral op eventvelden geanalyseerd.
+SerpAPI	https://www.visitgroningen.nl/nl/doen/evenementen	klaar	Mistral resultaat		https://www.visitgroningen.nl/nl/doen/evenementen	6 geverifieerde event-kandidaten, 0 afgewezen
+SerpAPI	https://www.visitgroningen.nl/nl/doen/evenementen	eventvelden gevonden	Docs: Mama'ku – Van Jakarta tot de Molukken	2026-06-09	https://www.visitgroningen.nl/nl/doen/uitgaan/830971978/docs-mama-ku-van-jakarta-tot-de-molukken	Documentaire over de culturele connecties tussen Jakarta en de Molukken.
+SerpAPI	https://www.visitgroningen.nl/nl/doen/evenementen	eventvelden gevonden	The Tasters	2026-06-09	https://www.visitgroningen.nl/nl/doen/uitgaan/4210401163/the-tasters	Filmvertoning met live muziek.
+SerpAPI	https://www.visitgroningen.nl/nl/doen/evenementen	eventvelden gevonden	Guitari Baro	2026-06-09	https://www.visitgroningen.nl/nl/doen/uitgaan/1045711822/guitari-baro	Muziekoptreden met baro (traditionele muziek).
+SerpAPI	https://www.visitgroningen.nl/nl/doen/evenementen	eventvelden gevonden	Obsession	2026-06-09	https://www.visitgroningen.nl/nl/doen/uitgaan/2675769579/obsession	Filmvertoning.
+SerpAPI	https://www.visitgroningen.nl/nl/doen/evenementen	eventvelden gevonden	Exit 8	2026-06-09	https://www.visitgroningen.nl/nl/doen/uitgaan/2896719817/the-exit-8	Filmvertoning.
+SerpAPI	https://www.visitgroningen.nl/nl/doen/evenementen	eventvelden gevonden	Let's Get Lyrical met Cissy Joan - met Jaimy Hindriks, Willemijn van de Walle & Faisel Saro	2026-06-09	https://www.visitgroningen.nl/nl/doen/uitgaan/3011496871/let-s-get-lyrical-met-cissy-joan-met-jaimy-hindriks-willemijn-van-de-walle-faisel-saro	Theatervoorstelling met poëzie en muziek.
 Website	https://www.vera-groningen.nl	start	Start		https://www.vera-groningen.nl	site 1/1: max 25 events, max 20 seconden
 Website	https://www.vera-groningen.nl	ok	Pagina gelezen		https://www.vera-groningen.nl/	73362 tekens HTML
 Website	https://www.vera-groningen.nl	event uit link	Tramhaus	2026-12-18	https://www.vera-groningen.nl/?post_type=events&p=152859&lang=nl	Friday 18 December Tramhaus support Koop ticket
@@ -114,4 +120,4 @@ Website	https://www.vera-groningen.nl	detail-link gevonden	De Vier van Vera Elke
 Website	https://www.vera-groningen.nl	detail-link gevonden	Foto’s		https://www.vera-groningen.nl/photos/	Foto’s
 Website	https://www.vera-groningen.nl	detail-link gevonden	Live foto's Check hier de laatste live en backstage foto's van de VERA fotogroep of snuffel door het rijke archief.		https://www.vera-groningen.nl/photos/?category=all&lang=nl	Live foto's Check hier de laatste live en backstage foto's van de VERA fotogroep of snuffel door het rijke archief.
 Website	https://www.vera-groningen.nl	detail-link gevonden	Webshop		https://www.vera-groningen.nl/webshop/	Webshop
-Website	https://www.vera-groningen.nl	klaar	Klaar		https://www.vera-groningen.nl	site 1/1: 25 unieke events in 0.34 sec
+Website	https://www.vera-groningen.nl	klaar	Klaar		https://www.vera-groningen.nl	site 1/1: 25 unieke events in 0.64 sec
