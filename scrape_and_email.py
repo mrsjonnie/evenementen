@@ -15,8 +15,6 @@ INPUT_SITES_RAW = os.getenv("INPUT_SITES", "[]").strip() or "[]"
 INPUT_DATE_FROM = os.getenv("INPUT_DATE_FROM", "").strip()
 INPUT_DATE_TO = os.getenv("INPUT_DATE_TO", "").strip()
 INPUT_CLEAR_ARCHIVE = os.getenv("INPUT_CLEAR_ARCHIVE", "").strip().lower() in {"1", "true", "yes", "ja"}
-INPUT_SERPAPI_LINKS_RAW = os.getenv("INPUT_SERPAPI_LINKS", "[]").strip() or "[]"
-INPUT_SERPAPI_RAW_LOG = os.getenv("INPUT_SERPAPI_RAW_LOG", "[]").strip() or "[]"
 BASE_HEADERS = {"User-Agent": "Mozilla/5.0"}
 
 
@@ -234,14 +232,6 @@ MONTH_NUMBERS = {
 def log(message):
     with open(LOG_FILE, "a", encoding="utf-8") as f:
         f.write(f"{datetime.now().strftime('%Y-%m-%d %H:%M:%S')} - {message}\n")
-
-
-def parse_json_list(raw):
-    try:
-        data = json.loads(raw)
-        return data if isinstance(data, list) else []
-    except Exception:
-        return []
 
 
 def add_raw_row(source, site, title="", date="", url="", status="", raw_text=""):
@@ -986,52 +976,6 @@ def candidate_event_links(soup, site_url):
     return candidates
 
 
-def event_from_detail_page(detail_url, fallback_title, deadline=None):
-    try:
-        timeout = timeout_for(deadline, 3)
-        response = requests.get(detail_url, headers=BASE_HEADERS, timeout=timeout)
-        response.raise_for_status()
-        soup = BeautifulSoup(response.text, "html.parser")
-        text = clean_text(soup.get_text(" ", strip=True))
-        title = first_meta(soup, ["og:title", "twitter:title"]) or page_title(soup) or fallback_title
-        title = re.sub(r"\s+[|-]\s+.*$", "", title).strip()
-        date = first_meta(soup, ["event:start_time", "article:published_time"])[:10]
-        if not date:
-            date = first_date_in_text(text)
-        location = first_meta(soup, ["event:location"])
-        if not location:
-            address = soup.find(attrs={"itemprop": "address"})
-            location = clean_text(address.get_text(" ", strip=True)) if address else ""
-        if not location:
-            location = default_location_for_site(detail_url)
-        description = first_meta(soup, ["og:description", "description", "twitter:description"])
-        if not description:
-            description = text[:220]
-        image = first_meta(soup, ["og:image", "twitter:image"])
-        item = normalize_event(
-            {
-                "title": title,
-                "type": "evenement",
-                "date": date,
-                "location": location,
-                "description": description,
-                "image": urljoin(detail_url, image) if image else "",
-                "website": detail_url,
-                "cost": "Zie website",
-                "source": urlparse(detail_url).netloc or "Extra website",
-                "periodLabel": date,
-            }
-        )
-        add_raw_row("Detailpagina", detail_url, item.get("title"), item.get("date"), detail_url, "event", text[:320])
-        return item
-    except requests.exceptions.RequestException as exc:
-        log(f"Detailpagina overgeslagen {detail_url}: {exc}")
-    except Exception as exc:
-        log(f"Fout bij detailpagina {detail_url}: {exc}")
-
-    return None
-
-
 def detail_page_title(soup, fallback_title):
     title = first_meta(soup, ["og:title", "twitter:title"]) or page_title(soup) or fallback_title
     title = re.sub(r"\s+[|-]\s+.*$", "", title).strip()
@@ -1175,53 +1119,6 @@ def events_from_detail_page(detail_url, fallback_title, deadline=None):
         log(f"Fout bij detailpagina {detail_url}: {exc}")
 
     return []
-
-
-def title_from_serpapi_row(row):
-    title = clean_text(row.get("title", ""))
-    if "|" in title:
-        title = title.split("|", 1)[0]
-    title = re.sub(r"\s+-\s+Spot Groningen$", "", title, flags=re.I)
-    title = re.sub(r"\s+\|\s+Spot Groningen$", "", title, flags=re.I)
-    return format_event_title(title[:140])
-
-
-def events_from_serpapi_raw_log(raw_rows):
-    events = []
-    for row in raw_rows:
-        if not isinstance(row, dict):
-            continue
-        url = clean_text(row.get("url"))
-        if not is_valid_web_url(url) or is_bad_link(row.get("title", ""), url):
-            continue
-        text = clean_text(f"{row.get('title', '')} {row.get('rawText', '')} {row.get('snippet', '')}")
-        if "spotgroningen.nl" in urlparse(url).netloc.lower():
-            events.extend(spot_events_from_text(text, url, {}, "SerpAPI"))
-        date = normalize_date_value(first_date_in_text(text))
-        if not ISO_DATE_RE.fullmatch(date):
-            continue
-        title = title_from_serpapi_row(row) or slug_title_from_url(url)
-        if not title:
-            continue
-        host = urlparse(url).netloc.replace("www.", "")
-        item = normalize_event(
-            {
-                "title": title,
-                "type": "Evenement",
-                "date": date,
-                "location": default_location_for_site(url),
-                "description": clean_text(row.get("rawText") or row.get("snippet") or text)[:260],
-                "website": url,
-                "cost": "Zie website",
-                "source": host or "SerpAPI",
-                "discoverySource": "SerpAPI",
-                "periodLabel": date,
-            }
-        )
-        if is_valid_event(item):
-            events.append(item)
-            add_raw_row("SerpAPI", row.get("site", ""), item.get("title"), item.get("date"), url, "event uit zoekresultaat", text)
-    return dedupe_events(events)
 
 
 def events_from_listing_text(soup, site_url):
@@ -2349,14 +2246,6 @@ def clean_saved_event(event):
     item["type"] = format_event_title(event_type)
     item["discoverySource"] = clean_text(item.get("discoverySource")) or "Website"
     return item
-
-
-def event_from_selected_site(event, selected_hosts):
-    if not selected_hosts:
-        return True
-    host = site_host(clean_text(event.get("website")))
-    source = clean_text(event.get("source")).lower().replace("www.", "")
-    return host in selected_hosts or source in selected_hosts
 
 
 def save_events_to_json(active_events, archive):

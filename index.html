@@ -108,6 +108,8 @@
     }
 
     .rawLogPanel {
+      grid-column: 1 / -1;
+      width: 100%;
       margin-top: 10px;
       border: 1px solid rgba(255, 255, 255, .2);
       border-radius: 8px;
@@ -124,7 +126,8 @@
     }
 
     .rawLogTableWrap {
-      overflow-x: auto;
+      max-height: 300px;
+      overflow: auto;
       border-top: 1px solid rgba(255, 255, 255, .14);
     }
 
@@ -983,13 +986,13 @@
               <label class="scanSetting" for="siteTimeLimitSeconds">Sec <input id="siteTimeLimitSeconds" type="number" min="20" max="60" step="1" value="20" inputmode="numeric"></label>
             </div>
           </div>
-          <details class="rawLogPanel" id="rawLogPanel">
-            <summary id="rawLogSummary">Ruwe verversdata</summary>
-            <div class="rawLogTableWrap" id="rawLogTableWrap"></div>
-          </details>
         </div>
       </div>
       <div class="weather" id="weatherBox" aria-live="polite"></div>
+      <details class="rawLogPanel" id="rawLogPanel">
+        <summary id="rawLogSummary">Ruwe verversdata</summary>
+        <div class="rawLogTableWrap" id="rawLogTableWrap"></div>
+      </details>
     </div>
   </header>
 
@@ -1127,7 +1130,7 @@
   </div>
 
   <script>
-    const APP_VERSION = "2026.06.08.10";
+    const APP_VERSION = "2026.06.08.11";
     const DEFAULT_MAX_EVENTS_PER_SITE = 20;
     const DEFAULT_SITE_TIME_LIMIT_SECONDS = 20;
     const SCAN_SETTINGS_KEY = "eventScanSettingsV1";
@@ -1919,10 +1922,6 @@
       return normalizeEventsPayload(data);
     }
 
-    async function fetchEvents() {
-      return (await fetchEventsPayload()).events;
-    }
-
     async function loadEventsWithMeta(fallback) {
       try {
         return await fetchEventsPayload();
@@ -1962,10 +1961,6 @@
     function foundText(count) {
       if (!Number.isFinite(count)) return "Resultaat volgt";
       return `${count} ${count === 1 ? "nieuw evenement" : "nieuwe evenementen"}`;
-    }
-
-    function serpApiStatusText(data) {
-      return "";
     }
 
     async function waitForUpdatedEvents(previousSignature, previousKeys, foundCount = null, options = {}) {
@@ -2312,16 +2307,15 @@
 
       const savedCount = Number(filterStats.archive) || 0;
       const activeCount = Number(filterStats.active) || Math.max(0, (Number(filterStats.totalJson) || filterStats.loaded) - savedCount);
-      const filterParts = [
-        `website:${filterStats.afterSites}`,
-        `straal:${filterStats.afterRadius}`,
-        `periode:${filterStats.afterDate}`
-      ];
-      if (filterStats.afterDeleted !== filterStats.loaded) filterParts.unshift(`verwijderd:${filterStats.afterDeleted}`);
-      if (filterStats.afterProviders !== filterStats.afterSites) filterParts.splice(1, 0, `bron:${filterStats.afterProviders}`);
-      if (filterStats.afterQuery !== filterStats.afterProviders) filterParts.splice(-2, 0, `zoektekst:${filterStats.afterQuery}`);
-      if (filterStats.afterType !== filterStats.afterQuery) filterParts.splice(-2, 0, `type:${filterStats.afterType}`);
-      if (filterStats.afterNew !== filterStats.afterType) filterParts.splice(-2, 0, `nieuw:${filterStats.afterNew}`);
+      const filterParts = [];
+      if (filterStats.afterDeleted !== filterStats.loaded) filterParts.push(`verwijderd:${filterStats.afterDeleted}`);
+      filterParts.push(`website:${filterStats.afterSites}`);
+      if (filterStats.afterProviders !== filterStats.afterSites) filterParts.push(`bron:${filterStats.afterProviders}`);
+      if (filterStats.afterQuery !== filterStats.afterProviders) filterParts.push(`zoektekst:${filterStats.afterQuery}`);
+      if (filterStats.afterType !== filterStats.afterQuery) filterParts.push(`type:${filterStats.afterType}`);
+      if (filterStats.afterNew !== filterStats.afterType) filterParts.push(`nieuw:${filterStats.afterNew}`);
+      filterParts.push(`straal:${filterStats.afterRadius}`);
+      filterParts.push(`periode:${filterStats.afterDate}`);
 
       const eventsText = `totaal:${filterStats.loaded} (nieuw: ${activeCount}, bestaand: ${savedCount})`;
       target.textContent = `${eventsText} - na filters: ${filterParts.join(", ")}`;
@@ -2621,9 +2615,7 @@
         if (!response.ok) throw new Error(workerErrorMessage(data, "Verversen is mislukt"));
 
         const prefix = Number.isFinite(foundCount) ? `${foundText(foundCount)} gevonden.` : foundText(foundCount) + ".";
-        const serpText = serpApiStatusText(data);
-        if (serpText) addLiveLog("SerpAPI", selectedSites.join(", "), "Zoekresultaten", "ontvangen", serpText.trim());
-        showStatus(`Klaar. ${prefix}${serpText} Ik controleer de bijgewerkte lijst.`, "ok", { stop: true });
+        showStatus(`Klaar. ${prefix} Ik controleer de bijgewerkte lijst.`, "ok", { stop: true });
         await waitForUpdatedEvents(previousSignature, previousKeys, foundCount);
       } catch (error) {
         const prefix = Number.isFinite(foundCount) ? `${foundText(foundCount)} gevonden.` : "";
@@ -2724,8 +2716,7 @@
           renderRawLog();
           applyFilters();
         }
-        const serpText = serpApiStatusText(data);
-        showStatus(`Alles is verwijderd.${serpText} Ik controleer de opnieuw opgebouwde lijst.`, "ok");
+        showStatus("Alles is verwijderd. Ik controleer de opnieuw opgebouwde lijst.", "ok");
         await waitForUpdatedEvents(previousSignature, previousKeys, scrapedCountFromResponse(data), { requireEvents: true });
       } catch (error) {
         showStatus(`Verwijderen mislukt: ${error.message}`, "error");
