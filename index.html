@@ -330,16 +330,6 @@
 
     input::placeholder { color: #788da3; }
 
-    .radiusControls {
-      display: grid;
-      grid-template-columns: minmax(118px, 1fr) 78px;
-      gap: 6px;
-    }
-
-    .radiusControls.disabled input {
-      opacity: .55;
-    }
-
     .btn {
       min-height: 42px;
       border: 0;
@@ -1017,14 +1007,8 @@
         </div>
 
         <div class="field">
-          <label for="radiusMode">Straal</label>
-          <div class="radiusControls" id="radiusControls">
-            <select id="radiusMode">
-              <option value="none" selected>Geen filter</option>
-              <option value="custom">Max km</option>
-            </select>
-            <input id="radius" type="number" min="1" max="300" value="200" inputmode="numeric" aria-label="Straal in kilometers">
-          </div>
+          <label for="radius">Straal</label>
+          <input id="radius" type="number" min="0" max="300" value="0" inputmode="numeric" aria-label="Straal in kilometers, 0 is geen filter" title="0 = geen filter, hoger getal = filter in km">
         </div>
 
         <div class="field">
@@ -1121,11 +1105,11 @@
       <label class="perPageControl" for="perPageSelect">
         Per pagina
         <select id="perPageSelect">
-          <option value="6">6</option>
-          <option value="9">9</option>
           <option value="12">12</option>
           <option value="18">18</option>
           <option value="24">24</option>
+          <option value="48">48</option>
+          <option value="96">96</option>
         </select>
       </label>
     </nav>
@@ -1143,14 +1127,14 @@
   </div>
 
   <script>
-    const APP_VERSION = "2026.06.08.9";
+    const APP_VERSION = "2026.06.08.10";
     const DEFAULT_MAX_EVENTS_PER_SITE = 20;
     const DEFAULT_SITE_TIME_LIMIT_SECONDS = 20;
     const SCAN_SETTINGS_KEY = "eventScanSettingsV1";
     const SPOT_ONLY_SITE = "https://www.spotgroningen.nl/programma/";
     const WORKER_URL = "https://evenementen-refresh.mrsjonnie.workers.dev";
     const PER_PAGE_KEY = "evenementenPerPage";
-    let eventsPerPage = 9;
+    let eventsPerPage = 96;
     const typeImages = {
       film: "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=900&q=80",
       museum: "https://images.unsplash.com/photo-1566127992631-137a642a90f4?auto=format&fit=crop&w=900&q=80",
@@ -1238,7 +1222,7 @@
     let regionLookupTimer = null;
 
     const $ = (id) => document.getElementById(id);
-    const controls = ["search", "region", "radiusMode", "radius", "typeFilter", "dateSingle", "periodMode", "newOnlyFilter"];
+    const controls = ["search", "region", "radius", "typeFilter", "dateSingle", "periodMode", "newOnlyFilter"];
 
     function cleanText(value) {
       return String(value ?? "")
@@ -1400,29 +1384,17 @@
       return [...document.querySelectorAll(".siteCheck:checked")].map((check) => check.value);
     }
 
-    function radiusFilterEnabled() {
-      return $("radiusMode")?.value === "custom";
-    }
-
     function radiusFilterKm() {
-      if (!radiusFilterEnabled()) return 0;
-      return Number($("radius")?.value) || 0;
+      return Math.max(0, Number($("radius")?.value) || 0);
     }
 
     function radiusPayloadValue() {
-      return radiusFilterEnabled() ? String(Number($("radius")?.value) || 0) : "0";
+      return String(radiusFilterKm());
     }
 
     function radiusSubtitle() {
-      return radiusFilterEnabled() ? `straal ${$("radius").value || 200} km` : "geen straalfilter";
-    }
-
-    function updateRadiusControl() {
-      const enabled = radiusFilterEnabled();
-      const input = $("radius");
-      const wrap = $("radiusControls");
-      if (input) input.disabled = !enabled;
-      if (wrap) wrap.classList.toggle("disabled", !enabled);
+      const radiusKm = radiusFilterKm();
+      return radiusKm > 0 ? `straal ${radiusKm} km` : "straal 0 (geen filter)";
     }
 
     function providerSettings() {
@@ -2305,9 +2277,8 @@
         const eventKm = eventDistanceKm(event);
         return !(radiusKm > 0 && Number.isFinite(eventKm) && eventKm > radiusKm);
       };
-      let afterDate = afterNew.filter(matchesDate);
-      let afterRadiusOnly = afterNew.filter(matchesRadius);
-      let afterDateAndRadius = afterDate.filter(matchesRadius);
+      let afterRadius = afterNew.filter(matchesRadius);
+      let afterDate = afterRadius.filter(matchesDate);
 
       filterStats = {
         loaded: uniqueEvents.length,
@@ -2321,11 +2292,11 @@
         afterType: afterType.length,
         afterNew: afterNew.length,
         afterDate: afterDate.length,
-        afterRadius: afterRadiusOnly.length,
-        shown: afterDateAndRadius.length
+        afterRadius: afterRadius.length,
+        shown: afterDate.length
       };
 
-      filteredEvents = afterDateAndRadius.sort((a, b) => {
+      filteredEvents = afterDate.sort((a, b) => {
         if (a.isPermanent && !b.isPermanent) return 1;
         if (!a.isPermanent && b.isPermanent) return -1;
         return String(a.date || "").localeCompare(String(b.date || ""));
@@ -2343,8 +2314,8 @@
       const activeCount = Number(filterStats.active) || Math.max(0, (Number(filterStats.totalJson) || filterStats.loaded) - savedCount);
       const filterParts = [
         `website:${filterStats.afterSites}`,
-        `periode:${filterStats.afterDate}`,
-        `straal:${filterStats.afterRadius}`
+        `straal:${filterStats.afterRadius}`,
+        `periode:${filterStats.afterDate}`
       ];
       if (filterStats.afterDeleted !== filterStats.loaded) filterParts.unshift(`verwijderd:${filterStats.afterDeleted}`);
       if (filterStats.afterProviders !== filterStats.afterSites) filterParts.splice(1, 0, `bron:${filterStats.afterProviders}`);
@@ -2766,9 +2737,7 @@
     function resetFilters() {
       $("search").value = "";
       $("region").value = "Groningen";
-      $("radiusMode").value = "none";
-      $("radius").value = "200";
-      updateRadiusControl();
+      $("radius").value = "0";
       $("periodMode").value = "always";
       $("typeFilter").value = "all";
       $("newOnlyFilter").checked = false;
@@ -2878,12 +2847,10 @@
 
     controls.forEach((id) => {
       $(id).addEventListener("input", () => {
-        if (id === "radiusMode") updateRadiusControl();
         applyFilters();
         if (id === "region") scheduleRegionResolve();
       });
       $(id).addEventListener("change", () => {
-        if (id === "radiusMode") updateRadiusControl();
         applyFilters();
         if (id === "region") scheduleRegionResolve();
         if (["region", "dateSingle", "periodMode"].includes(id)) loadWeather();
@@ -2907,7 +2874,7 @@
       updateNewCount();
     });
     $("perPageSelect").addEventListener("change", () => {
-      eventsPerPage = Number($("perPageSelect").value) || 9;
+      eventsPerPage = Number($("perPageSelect").value) || 96;
       try {
         localStorage.setItem(PER_PAGE_KEY, String(eventsPerPage));
       } catch {}
@@ -3051,12 +3018,11 @@
 
     const today = formatDate(new Date());
     $("dateSingle").value = today;
-    eventsPerPage = Number(localStorage.getItem(PER_PAGE_KEY)) || 9;
-    if (![6, 9, 12, 18, 24].includes(eventsPerPage)) eventsPerPage = 9;
+    eventsPerPage = Number(localStorage.getItem(PER_PAGE_KEY)) || 96;
+    if (![12, 18, 24, 48, 96].includes(eventsPerPage)) eventsPerPage = 96;
     $("perPageSelect").value = String(eventsPerPage);
     $("versionBadge").textContent = `Versie ${APP_VERSION}`;
     applyVersionHeaderTheme();
-    updateRadiusControl();
     loadAll();
   </script>
 </body>

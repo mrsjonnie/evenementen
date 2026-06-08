@@ -10,7 +10,7 @@ on:
       radius:
         description: Straal in km
         required: false
-        default: '200'
+        default: '0'
       category:
         description: Type activiteit
         required: false
@@ -95,7 +95,7 @@ jobs:
 
           defaults = {
               "region": "Groningen",
-              "radius": "200",
+              "radius": "0",
               "category": "all",
               "query": "",
               "dateFrom": "",

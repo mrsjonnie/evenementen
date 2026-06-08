@@ -620,7 +620,7 @@ async function deleteEventFromGithub(env, target = {}) {
 function workflowInputs(body, overrides = {}) {
   return {
     region: validateInput(body.region || "Groningen", 100),
-    radius: validateInput(body.radius || "200", 10),
+    radius: validateInput(body.radius ?? "0", 10),
     category: validateInput(body.category || "all", 100),
     query: validateInput(body.query || "", 200),
     dateFrom: validateInput(body.dateFrom || "", 40),
