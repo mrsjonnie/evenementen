@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-06-07T20:33:00+00:00",
+  "updatedAt": "2026-06-08T07:10:41+00:00",
   "events": [
     {
       "title": "The Rocky Horror Picture Show",
@@ -14,7 +14,7 @@
       "cost": "€ 5,-",
       "description": "Monday  8 June The Rocky Horror Picture Show Zienema | Ticket: € 5,- | doors: 20:00 - 20:30 | start: 20:30 Sold out",
       "image": "https://picsum.photos/seed/The+Rocky+Horror+Picture+Show/800/500",
-      "website": "https://www.vera-groningen.nl/?post_type=events&p=152721&lang=en",
+      "website": "https://www.vera-groningen.nl/?post_type=events&p=152721&lang=nl",
       "source": "www.vera-groningen.nl",
       "discoverySource": "",
       "periodLabel": "2026-06-08",
@@ -32,7 +32,7 @@
       "cost": "€ 5,-",
       "description": "UBBO X ZIENEMA Tuesday  9 June The Rocky Horror Picture Show Zienema | Ticket: € 5,- | doors: 20:00 - 20:30 | start: 20:30 Sold out",
       "image": "https://picsum.photos/seed/The+Rocky+Horror+Picture+Show/800/500",
-      "website": "https://www.vera-groningen.nl/?post_type=events&p=152412&lang=en",
+      "website": "https://www.vera-groningen.nl/?post_type=events&p=152412&lang=nl",
       "source": "www.vera-groningen.nl",
       "discoverySource": "",
       "periodLabel": "2026-06-09",
@@ -50,7 +50,7 @@
       "cost": "€ 18",
       "description": "CLUBKAARTSHOW Wednesday 10 June Orkesta Mendoza USA Mainstage | Ticket: € 18,- | doors: 20:00 - 21:30 | start: 21:00 Koop ticket",
       "image": "https://picsum.photos/seed/CLUBKAARTSHOW/800/500",
-      "website": "https://www.vera-groningen.nl/?post_type=events&p=151834&lang=en",
+      "website": "https://www.vera-groningen.nl/?post_type=events&p=151834&lang=nl",
       "source": "vera-groningen.nl",
       "discoverySource": "",
       "periodLabel": "2026-06-10",
@@ -68,7 +68,7 @@
       "cost": "€ 18,-",
       "description": "CLUBKAARTSHOW Wednesday 10 June Orkesta Mendoza USA Mainstage | Ticket: € 18,- | doors: 20:00 - 21:30 | start: 21:00 Koop ticket",
       "image": "https://picsum.photos/seed/Orkesta+Mendoza/800/500",
-      "website": "https://www.vera-groningen.nl/?post_type=events&p=151834&lang=en",
+      "website": "https://www.vera-groningen.nl/?post_type=events&p=151834&lang=nl",
       "source": "www.vera-groningen.nl",
       "discoverySource": "",
       "periodLabel": "2026-06-10",
@@ -86,7 +86,7 @@
       "cost": "Zie website",
       "description": "Wednesday 10 June VERA Kelderbar",
       "image": "https://picsum.photos/seed/VERA+Kelderbar/800/500",
-      "website": "https://www.vera-groningen.nl/?post_type=events&p=152728&lang=en",
+      "website": "https://www.vera-groningen.nl/?post_type=events&p=152728&lang=nl",
       "source": "www.vera-groningen.nl",
       "discoverySource": "",
       "periodLabel": "2026-06-10",
@@ -122,7 +122,7 @@
       "cost": "Zie website",
       "description": "Thursday 11 June VERA Kelderbar",
       "image": "https://picsum.photos/seed/VERA+Kelderbar/800/500",
-      "website": "https://www.vera-groningen.nl/?post_type=events&p=152729&lang=en",
+      "website": "https://www.vera-groningen.nl/?post_type=events&p=152729&lang=nl",
       "source": "www.vera-groningen.nl",
       "discoverySource": "",
       "periodLabel": "2026-06-11",
@@ -372,9 +372,9 @@
       "lon": 6.570087,
       "locationLink": "https://www.google.com/maps?q=53.2170549,6.570087",
       "cost": "Zie website",
-      "description": "Friday 11 September mary in the junkyard UK support Angry weepy chaos rock trio mary in the junkyard is the London-based trio fronted by Clari Freeman-Taylor and regarded as one of... Lees meer Koop ticket",
+      "description": "Friday 11 September mary in the junkyard UK support Angry weepy chaos rock trio mary in the junkyard is het Londense trio rond Clari Freeman-Taylor en geldt als een van de... Lees meer Koop ticket",
       "image": "https://picsum.photos/seed/Mary+in+the+Junkyard/800/500",
-      "website": "https://www.vera-groningen.nl/?post_type=events&p=152960&lang=en",
+      "website": "https://www.vera-groningen.nl/?post_type=events&p=152960&lang=nl",
       "source": "vera-groningen.nl",
       "discoverySource": "",
       "periodLabel": "2026-09-11",
@@ -392,7 +392,7 @@
       "cost": "Zie website",
       "description": "Friday 16 October De Kift NL Nederlandse theater-punk fanfare Vanaf het najaar van 2026 tourt muziekgezelschap De Kift langs de landelijke podia met 'De eenzame', een... Lees meer Koop ticket",
       "image": "https://picsum.photos/seed/De+Kift/800/500",
-      "website": "https://www.vera-groningen.nl/?post_type=events&p=152075&lang=en",
+      "website": "https://www.vera-groningen.nl/?post_type=events&p=152075&lang=nl",
       "source": "vera-groningen.nl",
       "discoverySource": "",
       "periodLabel": "2026-10-16",
@@ -400,7 +400,7 @@
     },
     {
       "title": "SHOW",
-      "type": "Evenement",
+      "type": "Muziek",
       "date": "2026-12-18",
       "time": "",
       "location": "VERA Groningen",
@@ -408,9 +408,9 @@
       "lon": 6.570087,
       "locationLink": "https://www.google.com/maps?q=53.2170549,6.570087",
       "cost": "Zie website",
-      "description": "FRIDAY SHOW Friday 18 December Tramhaus support Raw postpunk from Rotterdam In 2023, they won the VERA Poll, and in 2026 they remain a firm crowd favourite. This winter, Lees meer Koop ticket",
+      "description": "FRIDAY SHOW Friday 18 December Tramhaus support Raw postpunk from Rotterdam In 2023 wonnen ze de VERA Poll, en ook in 2026 blijft deze band een vaste publieksfavoriet. Lees meer Koop ticket",
       "image": "https://picsum.photos/seed/SHOW/800/500",
-      "website": "https://www.vera-groningen.nl/?post_type=events&p=152859&lang=en",
+      "website": "https://www.vera-groningen.nl/?post_type=events&p=152859&lang=nl",
       "source": "vera-groningen.nl",
       "discoverySource": "",
       "periodLabel": "2026-12-18",
@@ -454,6 +454,24 @@
     },
     {
       "title": "SHOW",
+      "type": "Muziek",
+      "date": "2026-12-19",
+      "time": "",
+      "location": "VERA Groningen",
+      "lat": 53.2170549,
+      "lon": 6.570087,
+      "locationLink": "https://www.google.com/maps?q=53.2170549,6.570087",
+      "cost": "Zie website",
+      "description": "SATURDAY SHOW Saturday 19 December Tramhaus support Raw postpunk from Rotterdam In 2023 wonnen ze de VERA Poll, en ook in 2026 blijft deze band een vaste publieksfavoriet. Lees meer Koop ticket",
+      "image": "https://picsum.photos/seed/SHOW/800/500",
+      "website": "https://www.vera-groningen.nl/?post_type=events&p=152866&lang=nl",
+      "source": "vera-groningen.nl",
+      "discoverySource": "",
+      "periodLabel": "2026-12-19",
+      "isPermanent": false
+    },
+    {
+      "title": "Tramhaus",
       "type": "Evenement",
       "date": "2026-12-19",
       "time": "",
@@ -462,10 +480,28 @@
       "lon": 6.570087,
       "locationLink": "https://www.google.com/maps?q=53.2170549,6.570087",
       "cost": "Zie website",
-      "description": "SATURDAY SHOW Saturday 19 December Tramhaus support Raw postpunk from Rotterdam In 2023, they won the VERA Poll, and in 2026 they remain a firm crowd favourite. This winter,... Lees meer Koop ticket",
-      "image": "https://picsum.photos/seed/SHOW/800/500",
-      "website": "https://www.vera-groningen.nl/?post_type=events&p=152866&lang=en",
+      "description": "Saturday 19 December Tramhaus support Koop ticket",
+      "image": "https://picsum.photos/seed/Tramhaus/800/500",
+      "website": "https://www.vera-groningen.nl/?post_type=events&p=152866&lang=nl",
       "source": "vera-groningen.nl",
+      "discoverySource": "",
+      "periodLabel": "2026-12-19",
+      "isPermanent": false
+    },
+    {
+      "title": "Tramhaus Support",
+      "type": "Evenement",
+      "date": "2026-12-19",
+      "time": "",
+      "location": "VERA Groningen",
+      "lat": 53.2170549,
+      "lon": 6.570087,
+      "locationLink": "https://www.google.com/maps?q=53.2170549,6.570087",
+      "cost": "Zie website",
+      "description": "Saturday 19 December Tramhaus support Koop ticket",
+      "image": "https://picsum.photos/seed/Tramhaus+Support/800/500",
+      "website": "https://www.vera-groningen.nl/?post_type=events&p=152866&lang=nl",
+      "source": "www.vera-groningen.nl",
       "discoverySource": "",
       "periodLabel": "2026-12-19",
       "isPermanent": false
@@ -480,9 +516,9 @@
       "lon": 6.570087,
       "locationLink": "https://www.google.com/maps?q=53.2170549,6.570087",
       "cost": "Zie website",
-      "description": "Sunday  7 February NAFT BEL support Brass-infused techno house NAFT is an explosive tech house force from Belgium, fusing the power of brass with the pulse... Lees meer Koop ticket",
+      "description": "Sunday  7 February NAFT BEL support Brass-infused techno house NAFT is een explosieve techhouse-sensatie uit België die de kracht van koperblazers combineert met de pulserende beats... Lees meer Koop ticket",
       "image": "https://picsum.photos/seed/NAFT/800/500",
-      "website": "https://www.vera-groningen.nl/?post_type=events&p=152860&lang=en",
+      "website": "https://www.vera-groningen.nl/?post_type=events&p=152860&lang=nl",
       "source": "vera-groningen.nl",
       "discoverySource": "",
       "periodLabel": "2027-02-07",
@@ -892,8 +928,8 @@
     {
       "site": "https://www.vera-groningen.nl",
       "count": 13,
-      "newCount": 7,
-      "durationSeconds": 28.29,
+      "newCount": 2,
+      "durationSeconds": 31.42,
       "timedOut": true
     }
   ],
@@ -905,23 +941,23 @@
       "date": "",
       "url": "https://www.vera-groningen.nl",
       "status": "pagina geladen",
-      "rawText": "VERA Groningen NL EN Home Agenda Artdivision Photos News Info Webshop My Tickets Friday 18 December Tramhaus support Koop ticket Highlights Friday 16 October De Kift NL Nederlandse theater-punk fanfare Vanaf het najaar van 2026 tourt muziekgezelschap De Kift langs de landelijke podia met 'De eenzame', een... Lees meer"
+      "rawText": "VERA Groningen NL EN Home Programma Artdivision Foto’s Nieuws Info Webshop Mijn Tickets Saturday 19 December Tramhaus support Koop ticket Highlights Friday 16 October De Kift NL Nederlandse theater-punk fanfare Vanaf het najaar van 2026 tourt muziekgezelschap De Kift langs de landelijke podia met 'De eenzame', een... L"
     },
     {
       "source": "Website",
       "site": "https://www.vera-groningen.nl",
       "title": "Tramhaus",
-      "date": "2026-12-18",
-      "url": "https://www.vera-groningen.nl/?post_type=events&p=152859&lang=en",
+      "date": "2026-12-19",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=152866&lang=nl",
       "status": "event uit kaart",
-      "rawText": "Friday 18 December Tramhaus support Koop ticket"
+      "rawText": "Saturday 19 December Tramhaus support Koop ticket"
     },
     {
       "source": "Website",
       "site": "https://www.vera-groningen.nl",
       "title": "De Kift",
       "date": "2026-10-16",
-      "url": "https://www.vera-groningen.nl/?post_type=events&p=152075&lang=en",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=152075&lang=nl",
       "status": "event uit kaart",
       "rawText": "Friday 16 October De Kift NL Nederlandse theater-punk fanfare Vanaf het najaar van 2026 tourt muziekgezelschap De Kift langs de landelijke podia met 'De eenzame', een... Lees meer Koop ticket"
     },
@@ -929,17 +965,17 @@
       "source": "Website",
       "site": "https://www.vera-groningen.nl",
       "title": "SHOW",
-      "date": "2026-12-19",
-      "url": "https://www.vera-groningen.nl/?post_type=events&p=152866&lang=en",
+      "date": "2026-12-18",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=152859&lang=nl",
       "status": "event uit kaart",
-      "rawText": "SATURDAY SHOW Saturday 19 December Tramhaus support Raw postpunk from Rotterdam In 2023, they won the VERA Poll, and in 2026 they remain a firm crowd favourite. This winter,... Lees meer Koop ticket"
+      "rawText": "FRIDAY SHOW Friday 18 December Tramhaus support Raw postpunk from Rotterdam In 2023 wonnen ze de VERA Poll, en ook in 2026 blijft deze band een vaste publieksfavoriet. Lees meer Koop ticket"
     },
     {
       "source": "Website",
       "site": "https://www.vera-groningen.nl",
       "title": "The Rocky Horror Picture Show",
       "date": "2026-06-08",
-      "url": "https://www.vera-groningen.nl/?post_type=events&p=152721&lang=en",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=152721&lang=nl",
       "status": "event uit kaart",
       "rawText": "Monday  8 June The Rocky Horror Picture Show Zienema | Ticket: € 5,- | doors: 20:00 - 20:30 | start: 20:30 Sold out"
     },
@@ -948,7 +984,7 @@
       "site": "https://www.vera-groningen.nl",
       "title": "The Rocky Horror Picture Show",
       "date": "2026-06-09",
-      "url": "https://www.vera-groningen.nl/?post_type=events&p=152412&lang=en",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=152412&lang=nl",
       "status": "event uit kaart",
       "rawText": "UBBO X ZIENEMA Tuesday  9 June The Rocky Horror Picture Show Zienema | Ticket: € 5,- | doors: 20:00 - 20:30 | start: 20:30 Sold out"
     },
@@ -957,7 +993,7 @@
       "site": "https://www.vera-groningen.nl",
       "title": "VERA Kelderbar",
       "date": "2026-06-10",
-      "url": "https://www.vera-groningen.nl/?post_type=events&p=152728&lang=en",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=152728&lang=nl",
       "status": "event uit kaart",
       "rawText": "Wednesday 10 June VERA Kelderbar"
     },
@@ -966,7 +1002,7 @@
       "site": "https://www.vera-groningen.nl",
       "title": "CLUBKAARTSHOW",
       "date": "2026-06-10",
-      "url": "https://www.vera-groningen.nl/?post_type=events&p=151834&lang=en",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=151834&lang=nl",
       "status": "event uit kaart",
       "rawText": "CLUBKAARTSHOW Wednesday 10 June Orkesta Mendoza USA Mainstage | Ticket: € 18,- | doors: 20:00 - 21:30 | start: 21:00 Koop ticket"
     },
@@ -975,7 +1011,7 @@
       "site": "https://www.vera-groningen.nl",
       "title": "VERA Kelderbar",
       "date": "2026-06-11",
-      "url": "https://www.vera-groningen.nl/?post_type=events&p=152729&lang=en",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=152729&lang=nl",
       "status": "event uit kaart",
       "rawText": "Thursday 11 June VERA Kelderbar"
     },
@@ -984,7 +1020,7 @@
       "site": "https://www.vera-groningen.nl",
       "title": "The Rocky Horror Picture Show",
       "date": "2026-06-08",
-      "url": "https://www.vera-groningen.nl/?page_id=85630&lang=en",
+      "url": "https://www.vera-groningen.nl/?page_id=85630&lang=nl",
       "status": "afgekeurd",
       "rawText": "Coming up Monday  8 June The Rocky Horror Picture Show Zienema | Ticket: € 5,- | doors: 20:00 - 20:30 | start: 20:30 Sold out UBBO X ZIENEMA Tuesday  9 June The Rocky Horror Picture Show Zienema | Ticket: € 5,- | doors: 20:00 - 20:30 | start: 20:30 Sold out Wednesday 10 June VERA Kelderbar CLUBKAARTSHOW Wednesday 10 June Orkesta Mendoza USA Mainstage | Ticke"
     },
@@ -993,45 +1029,45 @@
       "site": "https://www.vera-groningen.nl",
       "title": "Mary in the Junkyard",
       "date": "2026-09-11",
-      "url": "https://www.vera-groningen.nl/?post_type=events&p=152960&lang=en",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=152960&lang=nl",
       "status": "event uit kaart",
-      "rawText": "Friday 11 September mary in the junkyard UK support Angry weepy chaos rock trio mary in the junkyard is the London-based trio fronted by Clari Freeman-Taylor and regarded as one of... Lees meer Koop ticket"
+      "rawText": "Friday 11 September mary in the junkyard UK support Angry weepy chaos rock trio mary in the junkyard is het Londense trio rond Clari Freeman-Taylor en geldt als een van de... Lees meer Koop ticket"
     },
     {
       "source": "Website",
       "site": "https://www.vera-groningen.nl",
       "title": "NAFT",
       "date": "2027-02-07",
-      "url": "https://www.vera-groningen.nl/?post_type=events&p=152860&lang=en",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=152860&lang=nl",
       "status": "event uit kaart",
-      "rawText": "Sunday  7 February NAFT BEL support Brass-infused techno house NAFT is an explosive tech house force from Belgium, fusing the power of brass with the pulse... Lees meer Koop ticket"
+      "rawText": "Sunday  7 February NAFT BEL support Brass-infused techno house NAFT is een explosieve techhouse-sensatie uit België die de kracht van koperblazers combineert met de pulserende beats... Lees meer Koop ticket"
     },
     {
       "source": "Website",
       "site": "https://www.vera-groningen.nl",
       "title": "SHOW",
       "date": "2026-12-18",
-      "url": "https://www.vera-groningen.nl/?post_type=events&p=152859&lang=en",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=152859&lang=nl",
       "status": "event uit kaart",
-      "rawText": "FRIDAY SHOW Friday 18 December Tramhaus support Raw postpunk from Rotterdam In 2023, they won the VERA Poll, and in 2026 they remain a firm crowd favourite. This winter, Lees meer Koop ticket"
+      "rawText": "FRIDAY SHOW Friday 18 December Tramhaus support Raw postpunk from Rotterdam In 2023 wonnen ze de VERA Poll, en ook in 2026 blijft deze band een vaste publieksfavoriet. Lees meer Koop ticket"
     },
     {
       "source": "Website",
       "site": "https://www.vera-groningen.nl",
       "title": "SHOW",
       "date": "2026-12-19",
-      "url": "https://www.vera-groningen.nl/?post_type=events&p=152866&lang=en",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=152866&lang=nl",
       "status": "event uit kaart",
-      "rawText": "SATURDAY SHOW Saturday 19 December Tramhaus support Raw postpunk from Rotterdam In 2023, they won the VERA Poll, and in 2026 they remain a firm crowd favourite. This winter,... Lees meer Koop ticket"
+      "rawText": "SATURDAY SHOW Saturday 19 December Tramhaus support Raw postpunk from Rotterdam In 2023 wonnen ze de VERA Poll, en ook in 2026 blijft deze band een vaste publieksfavoriet. Lees meer Koop ticket"
     },
     {
       "source": "Website",
       "site": "https://www.vera-groningen.nl",
       "title": "Confirmed Mainstage",
       "date": "2026-09-11",
-      "url": "https://www.vera-groningen.nl/?page_id=85630&lang=en",
+      "url": "https://www.vera-groningen.nl/?page_id=85630&lang=nl",
       "status": "afgekeurd",
-      "rawText": "Confirmed Mainstage Friday 11 September mary in the junkyard UK support Angry weepy chaos rock trio mary in the junkyard is the London-based trio fronted by Clari Freeman-Taylor and regarded as one of... Lees meer Koop ticket Sunday  7 February NAFT BEL support Brass-infused techno house NAFT is an explosive tech house force from Belgium, fusing the power of"
+      "rawText": "Confirmed Mainstage Friday 11 September mary in the junkyard UK support Angry weepy chaos rock trio mary in the junkyard is het Londense trio rond Clari Freeman-Taylor en geldt als een van de... Lees meer Koop ticket Sunday  7 February NAFT BEL support Brass-infused techno house NAFT is een explosieve techhouse-sensatie uit België die de kracht van koperblaz"
     }
   ]
 }
