@@ -1080,6 +1080,7 @@
 
       <div class="summary">
         <strong id="count">Evenementen laden...</strong>
+        <span id="filterBreakdown"></span>
       </div>
 
     <section class="grid" id="grid" aria-live="polite"></section>
@@ -1113,7 +1114,7 @@
   </div>
 
   <script>
-    const APP_VERSION = "2026.06.08.1";
+    const APP_VERSION = "2026.06.08.3";
     const DEFAULT_MAX_EVENTS_PER_SITE = 20;
     const DEFAULT_SITE_TIME_LIMIT_SECONDS = 20;
     const SCAN_SETTINGS_KEY = "eventScanSettingsV1";
@@ -1186,6 +1187,7 @@
     let sites = [];
     let customSites = [];
     let filteredEvents = [];
+    let filterStats = null;
     let newEventKeys = new Set();
     let deletedEventKeys = new Set();
     let cardsCollapsed = true;
@@ -1197,6 +1199,8 @@
     let eventsUpdatedAt = "";
     let latestSiteResults = [];
     let latestRawLog = [];
+    let eventsArchiveCount = 0;
+    let eventsJsonTotalCount = 0;
     let liveLogRows = [];
     let expandedEventKeys = new Set();
     let dynamicRegionCoord = null;
@@ -1828,13 +1832,17 @@
     }
 
     function normalizeEventsPayload(data) {
-      if (Array.isArray(data)) return { events: dedupeEvents(data), updatedAt: "", siteResults: [], rawLog: [] };
+      if (Array.isArray(data)) return { events: dedupeEvents(data), updatedAt: "", siteResults: [], rawLog: [], archiveCount: 0, totalCount: data.length };
       if (data && Array.isArray(data.events)) {
+        const archiveCount = Array.isArray(data.archive) ? data.archive.length : 0;
+        const activeCount = data.events.length;
         return {
           events: dedupeEvents(data.events),
           updatedAt: cleanText(data.updatedAt || ""),
           siteResults: Array.isArray(data.siteResults) ? data.siteResults : [],
-          rawLog: Array.isArray(data.rawLog) ? data.rawLog : []
+          rawLog: Array.isArray(data.rawLog) ? data.rawLog : [],
+          archiveCount,
+          totalCount: activeCount + archiveCount
         };
       }
       throw new Error("events.json heeft geen geldige lijst");
@@ -1855,7 +1863,7 @@
       try {
         return await fetchEventsPayload();
       } catch {
-        return { events: fallback, updatedAt: "", siteResults: [], rawLog: [] };
+        return { events: fallback, updatedAt: "", siteResults: [], rawLog: [], archiveCount: 0, totalCount: fallback.length };
       }
     }
 
@@ -1918,6 +1926,8 @@
             eventsUpdatedAt = freshPayload.updatedAt;
             latestSiteResults = freshPayload.siteResults || [];
             latestRawLog = freshPayload.rawLog || [];
+            eventsArchiveCount = Number(freshPayload.archiveCount) || 0;
+            eventsJsonTotalCount = Number(freshPayload.totalCount) || events.length + eventsArchiveCount;
             addLiveLog("App", "events.json", "Nieuwe lijst geladen", "klaar", `${freshPayload.events.length} events`);
             cardsCollapsed = true;
             expandedEventKeys = new Set();
@@ -2193,8 +2203,11 @@
       $("pageSubtitle").textContent = `${periodSubtitle()} - straal ${$("radius").value || 100} km`;
       document.title = `Evenementen rond ${region || "je regio"}`;
 
-      filteredEvents = dedupeEvents(events).filter((event) => {
-        if (deletedEventKeys.has(eventDedupeKey(event))) return false;
+      const uniqueEvents = dedupeEvents(events);
+      let afterDeleted = uniqueEvents.filter((event) => !deletedEventKeys.has(eventDedupeKey(event)));
+      let afterSites = afterDeleted.filter((event) => eventMatchesSelectedSites(event, siteHosts));
+      let afterProviders = afterSites.filter(eventMatchesProviderFilter);
+      let afterQuery = afterProviders.filter((event) => {
         const haystack = [
           event.title,
           event.description,
@@ -2202,16 +2215,32 @@
           event.type,
           event.source
         ].join(" ").toLowerCase();
-
-        if (!eventMatchesSelectedSites(event, siteHosts)) return false;
-        if (!eventMatchesProviderFilter(event)) return false;
-        if (query && !haystack.includes(query)) return false;
-        if (type !== "all" && displayType(event.type || "").toLowerCase() !== type) return false;
-        if (newOnly && !isNewEvent(event)) return false;
+        return !query || haystack.includes(query);
+      });
+      let afterType = afterQuery.filter((event) => type === "all" || displayType(event.type || "").toLowerCase() === type);
+      let afterNew = afterType.filter((event) => !newOnly || isNewEvent(event));
+      let afterRadius = afterNew.filter((event) => {
         const eventKm = eventDistanceKm(event);
         if (radiusKm > 0 && Number.isFinite(eventKm) && eventKm > radiusKm) return false;
-        return matchesDate(event);
-      }).sort((a, b) => {
+        return true;
+      });
+      let afterDate = afterRadius.filter(matchesDate);
+
+      filterStats = {
+        loaded: uniqueEvents.length,
+        archive: eventsArchiveCount,
+        totalJson: eventsJsonTotalCount || uniqueEvents.length + eventsArchiveCount,
+        afterDeleted: afterDeleted.length,
+        afterSites: afterSites.length,
+        afterProviders: afterProviders.length,
+        afterQuery: afterQuery.length,
+        afterType: afterType.length,
+        afterNew: afterNew.length,
+        afterRadius: afterRadius.length,
+        shown: afterDate.length
+      };
+
+      filteredEvents = afterDate.sort((a, b) => {
         if (a.isPermanent && !b.isPermanent) return 1;
         if (!a.isPermanent && b.isPermanent) return -1;
         return String(a.date || "").localeCompare(String(b.date || ""));
@@ -2221,12 +2250,32 @@
       render();
     }
 
+    function updateFilterBreakdown(pageCount = 1, visibleCount = 0) {
+      const target = $("filterBreakdown");
+      if (!target || !filterStats) return;
+
+      const archiveCount = Number(filterStats.archive) || 0;
+      const parts = [
+        `events.json: ${filterStats.loaded} actief${archiveCount ? ` + ${archiveCount} archief` : ""}`,
+        `na websitefilter ${filterStats.afterSites}`,
+        `na periode/straal ${filterStats.shown}`,
+        `deze pagina ${visibleCount}`
+      ];
+      if (filterStats.afterDeleted !== filterStats.loaded) parts.splice(1, 0, `na verwijderingen ${filterStats.afterDeleted}`);
+      if (filterStats.afterQuery !== filterStats.afterProviders) parts.splice(-2, 0, `na zoektekst ${filterStats.afterQuery}`);
+      if (filterStats.afterType !== filterStats.afterQuery) parts.splice(-2, 0, `na type ${filterStats.afterType}`);
+      if (filterStats.afterNew !== filterStats.afterType) parts.splice(-2, 0, `alleen nieuw ${filterStats.afterNew}`);
+
+      target.textContent = `${parts.join(" · ")}${pageCount > 1 ? ` · ${pageCount} pagina's` : ""}`;
+    }
+
     function render() {
       updateNewCount();
       $("count").textContent = `${filteredEvents.length} ${filteredEvents.length === 1 ? "evenement" : "evenementen"}`;
       $("grid").classList.toggle("cardsCollapsed", cardsCollapsed);
 
       if (!filteredEvents.length) {
+        updateFilterBreakdown(1, 0);
         $("grid").innerHTML = '<div class="empty">Geen evenementen gevonden. Pas je filters aan of haal nieuwe resultaten op met Ververs.</div>';
         $("pagination").style.display = "none";
         return;
@@ -2235,6 +2284,7 @@
       const pageCount = Math.max(1, Math.ceil(filteredEvents.length / eventsPerPage));
       currentPage = Math.min(currentPage, pageCount);
       const visible = filteredEvents.slice((currentPage - 1) * eventsPerPage, currentPage * eventsPerPage);
+      updateFilterBreakdown(pageCount, visible.length);
 
       $("grid").innerHTML = visible.map(renderCard).join("");
       $("pagination").style.display = "flex";
@@ -2598,6 +2648,8 @@
           eventsUpdatedAt = "";
           latestSiteResults = [];
           latestRawLog = [];
+          eventsArchiveCount = 0;
+          eventsJsonTotalCount = 0;
           fillTypes();
           renderSites(checkedSites());
           renderRawLog();
@@ -2693,6 +2745,8 @@
       eventsUpdatedAt = loaded[0].updatedAt;
       latestSiteResults = loaded[0].siteResults || [];
       latestRawLog = loaded[0].rawLog || [];
+      eventsArchiveCount = Number(loaded[0].archiveCount) || 0;
+      eventsJsonTotalCount = Number(loaded[0].totalCount) || events.length + eventsArchiveCount;
       cardsCollapsed = true;
       expandedEventKeys = new Set();
       $("collapseBtn").textContent = "Uitklappen";
