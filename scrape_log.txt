@@ -1,5 +1,5 @@
-SerpAPI	https://forum.nl/nl/agenda	zoeken	Mistral analyse		https://forum.nl/nl/agenda	Startpagina wordt opgehaald en door Mistral op eventvelden geanalyseerd.
-SerpAPI	https://forum.nl/nl/agenda	klaar	Mistral resultaat		https://forum.nl/nl/agenda	0 geverifieerde event-kandidaten, 0 afgewezen
+SerpAPI	https://www.spotgroningen.nl/programma/	zoeken	Mistral analyse		https://www.spotgroningen.nl/programma/	Startpagina wordt opgehaald en door Mistral op eventvelden geanalyseerd.
+SerpAPI	https://www.spotgroningen.nl/programma/	klaar	Mistral resultaat		https://www.spotgroningen.nl/programma/	0 geverifieerde event-kandidaten, 0 afgewezen
 Website	https://www.vera-groningen.nl	start	Start		https://www.vera-groningen.nl	site 1/1: max 25 events, max 20 seconden
 Website	https://www.vera-groningen.nl	ok	Pagina gelezen		https://www.vera-groningen.nl/	73362 tekens HTML
 Website	https://www.vera-groningen.nl	event uit link	Tramhaus	2026-12-18	https://www.vera-groningen.nl/?post_type=events&p=152859&lang=nl	Friday 18 December Tramhaus support Koop ticket
@@ -114,4 +114,4 @@ Website	https://www.vera-groningen.nl	detail-link gevonden	De Vier van Vera Elke
 Website	https://www.vera-groningen.nl	detail-link gevonden	Foto’s		https://www.vera-groningen.nl/photos/	Foto’s
 Website	https://www.vera-groningen.nl	detail-link gevonden	Live foto's Check hier de laatste live en backstage foto's van de VERA fotogroep of snuffel door het rijke archief.		https://www.vera-groningen.nl/photos/?category=all&lang=nl	Live foto's Check hier de laatste live en backstage foto's van de VERA fotogroep of snuffel door het rijke archief.
 Website	https://www.vera-groningen.nl	detail-link gevonden	Webshop		https://www.vera-groningen.nl/webshop/	Webshop
-Website	https://www.vera-groningen.nl	klaar	Klaar		https://www.vera-groningen.nl	site 1/1: 25 unieke events in 0.27 sec
+Website	https://www.vera-groningen.nl	klaar	Klaar		https://www.vera-groningen.nl	site 1/1: 25 unieke events in 0.34 sec

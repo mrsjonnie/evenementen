@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-06-08T22:07:17+00:00",
+  "updatedAt": "2026-06-08T22:07:42+00:00",
   "events": [
     {
       "date": "2026-06-01",
@@ -400,26 +400,26 @@
       "site": "https://www.vera-groningen.nl",
       "count": 25,
       "newCount": 0,
-      "durationSeconds": 0.27,
+      "durationSeconds": 0.34,
       "timedOut": false
     }
   ],
   "rawLog": [
     {
       "source": "SerpAPI",
-      "site": "https://forum.nl/nl/agenda",
+      "site": "https://www.spotgroningen.nl/programma/",
       "title": "Mistral analyse",
       "date": "",
-      "url": "https://forum.nl/nl/agenda",
+      "url": "https://www.spotgroningen.nl/programma/",
       "status": "zoeken",
       "rawText": "Startpagina wordt opgehaald en door Mistral op eventvelden geanalyseerd."
     },
     {
       "source": "SerpAPI",
-      "site": "https://forum.nl/nl/agenda",
+      "site": "https://www.spotgroningen.nl/programma/",
       "title": "Mistral resultaat",
       "date": "",
-      "url": "https://forum.nl/nl/agenda",
+      "url": "https://www.spotgroningen.nl/programma/",
       "status": "klaar",
       "rawText": "0 geverifieerde event-kandidaten, 0 afgewezen"
     },
@@ -1456,7 +1456,7 @@
       "date": "",
       "url": "https://www.vera-groningen.nl",
       "status": "klaar",
-      "rawText": "site 1/1: 25 unieke events in 0.27 sec"
+      "rawText": "site 1/1: 25 unieke events in 0.34 sec"
     }
   ]
 }
