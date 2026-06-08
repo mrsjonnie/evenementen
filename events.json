@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-06-08T08:59:15+00:00",
+  "updatedAt": "2026-06-08T13:21:38+00:00",
   "events": [
     {
       "title": "Orkesta Mendoza",
@@ -645,8 +645,8 @@
     {
       "site": "https://www.vera-groningen.nl",
       "count": 10,
-      "newCount": 9,
-      "durationSeconds": 30.41,
+      "newCount": 0,
+      "durationSeconds": 31.25,
       "timedOut": true
     }
   ],
@@ -685,25 +685,25 @@
       "date": "",
       "url": "https://www.vera-groningen.nl",
       "status": "pagina 1 geladen",
-      "rawText": "3922 tekens gelezen, nog 19.2 sec over. VERA Groningen NL EN Home Programma Artdivision Foto’s Nieuws Info Webshop Mijn Tickets Friday 16 October De Kift NL Koop ticket Highlights FRIDAY SHOW Friday 18 December Tramhaus support Raw postpunk from Rotterdam In 2"
+      "rawText": "3931 tekens gelezen, nog 19.8 sec over. VERA Groningen NL EN Home Programma Artdivision Foto’s Nieuws Info Webshop Mijn Tickets Friday 18 December Tramhaus support Koop ticket Highlights Friday 16 October De Kift NL Nederlandse theater-punk fanfare Vanaf het n"
     },
     {
       "source": "Website",
       "site": "https://www.vera-groningen.nl",
-      "title": "De Kift",
-      "date": "2026-10-16",
-      "url": "https://www.vera-groningen.nl/?post_type=events&p=152075&lang=nl",
-      "status": "geen mainstage/downstage",
-      "rawText": "Friday 16 October De Kift NL Koop ticket"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.vera-groningen.nl",
-      "title": "Tramhaus Support Raw Postpunk From Rotterdam in 2023 Wonnen Ze de VERA Poll, en Ook in 2026 Blijft Deze Band een Vaste Publieksfavoriet. Lees Meer",
+      "title": "Tramhaus Support",
       "date": "2026-12-18",
       "url": "https://www.vera-groningen.nl/?post_type=events&p=152859&lang=nl",
       "status": "geen mainstage/downstage",
-      "rawText": "FRIDAY SHOW Friday 18 December Tramhaus support Raw postpunk from Rotterdam In 2023 wonnen ze de VERA Poll, en ook in 2026 blijft deze band een vaste publieksfavoriet. Lees meer Koop ticket"
+      "rawText": "Friday 18 December Tramhaus support Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl",
+      "title": "De Kift Nederlandse theater-punk Fanfare Vanaf het Najaar van 2026 Tourt Muziekgezelschap de Kift Langs de Landelijke Podia met 'De Eenzame', Een... Lees Meer",
+      "date": "2026-10-16",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=152075&lang=nl",
+      "status": "geen mainstage/downstage",
+      "rawText": "Friday 16 October De Kift NL Nederlandse theater-punk fanfare Vanaf het najaar van 2026 tourt muziekgezelschap De Kift langs de landelijke podia met 'De eenzame', een... Lees meer Koop ticket"
     },
     {
       "source": "Website",
@@ -1036,7 +1036,7 @@
       "date": "",
       "url": "https://www.vera-groningen.nl",
       "status": "tijdslimiet",
-      "rawText": "3 pagina's geladen, 0 detailpagina's bekeken, duur 30.41s van max 20s"
+      "rawText": "3 pagina's geladen, 0 detailpagina's bekeken, duur 31.25s van max 20s"
     }
   ]
 }
