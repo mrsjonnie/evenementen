@@ -450,13 +450,6 @@
       min-width: 0;
     }
 
-    .siteEventTotal {
-      color: var(--muted);
-      font-size: .76rem;
-      font-weight: 900;
-      white-space: nowrap;
-    }
-
     .sitePanel {
       position: absolute;
       z-index: 10;
@@ -517,7 +510,7 @@
 
     .siteResultBadge {
       display: inline-flex;
-      margin-right: 6px;
+      margin-left: 6px;
       color: var(--muted);
       font-size: .76rem;
       font-weight: 900;
@@ -1085,7 +1078,7 @@
           <div class="siteSelect" id="siteSelect">
             <label class="siteSelectLabel" for="siteButton">Websites om te scannen</label>
             <button class="btn btnSecondary siteButton" id="siteButton" type="button" aria-expanded="false">
-              <span class="siteButtonMain"><span><span id="siteCount">0</span> websites geselecteerd</span><span class="siteEventTotal" id="siteEventTotal">0 events</span></span>
+              <span class="siteButtonMain"><span><span id="siteCount">0</span> websites geselecteerd</span></span>
               <span aria-hidden="true">v</span>
             </button>
             <div class="sitePanel">
@@ -1150,7 +1143,7 @@
   </div>
 
   <script>
-    const APP_VERSION = "2026.06.08.8";
+    const APP_VERSION = "2026.06.08.9";
     const DEFAULT_MAX_EVENTS_PER_SITE = 20;
     const DEFAULT_SITE_TIME_LIMIT_SECONDS = 20;
     const SCAN_SETTINGS_KEY = "eventScanSettingsV1";
@@ -2132,44 +2125,30 @@
       );
     }
 
+    function siteEventCountFor(site) {
+      const siteHost = hostFromUrl(site);
+      if (!siteHost) return 0;
+      return dedupeEvents(events).filter((event) =>
+        !deletedEventKeys.has(eventDedupeKey(event)) && eventMatchesSelectedSites(event, new Set([siteHost]))
+      ).length;
+    }
+
     function eventMatchesProviderFilter(event) {
       const discovery = cleanText(event.discoverySource || "").toLowerCase();
       if (discovery === "serpapi" && !$("provSerpAPI")?.checked) return false;
       return true;
     }
 
-    function siteResultFor(site) {
-      const siteKey = normalizeSiteInput(site).toLowerCase();
-      const siteHost = hostFromUrl(site);
-      const matches = (latestSiteResults || []).filter((result) => {
-        const resultSite = normalizeSiteInput(result.site).toLowerCase();
-        const resultHost = hostFromUrl(result.site);
-        return resultSite === siteKey || (siteHost && resultHost && resultHost === siteHost);
-      });
-      if (!matches.length) return null;
-      return matches.reduce((summary, result) => ({
-        site,
-        count: summary.count + (Number(result.count) || 0),
-        newCount: summary.newCount + (Number(result.newCount) || 0),
-        durationSeconds: summary.durationSeconds + (Number(result.durationSeconds) || 0),
-        timedOut: summary.timedOut || Boolean(result.timedOut)
-      }), { site, count: 0, newCount: 0, durationSeconds: 0, timedOut: false });
-    }
-
     function renderSites(selected = null) {
       const selectedSites = selected || new Set(sites);
       $("sitesList").innerHTML = sites.map((site) => `
         ${(() => {
-          const result = siteResultFor(site);
-          const count = Number(result?.count) || 0;
-          const newCount = Number(result?.newCount) || 0;
+          const count = siteEventCountFor(site);
           const hasResult = count > 0;
-          const badge = result
-            ? `<span class="siteResultBadge">${newCount > 0 ? `(+${newCount})` : `(${count})`}${result.timedOut ? " tijdslimiet" : ""}</span>`
-            : "";
+          const badge = hasResult ? `<span class="siteResultBadge">(+${count})</span>` : "";
           return `<label class="${hasResult ? "siteFound" : ""}">
           <input class="siteCheck" type="checkbox" value="${escapeHtml(site)}"${selectedSites.has(site) ? " checked" : ""}>
-          <span>${badge}${escapeHtml(site)}</span>
+          <span>${escapeHtml(site)}${badge}</span>
         </label>`;
         })()}
       `).join("");
@@ -2246,9 +2225,6 @@
 
     function updateSiteCount() {
       $("siteCount").textContent = document.querySelectorAll(".siteCheck:checked").length;
-      const total = Number(eventsJsonTotalCount) || events.length || 0;
-      const target = $("siteEventTotal");
-      if (target) target.textContent = `${total} ${total === 1 ? "event" : "events"} in events.json`;
     }
 
     function updateProviderCount() {
@@ -2376,7 +2352,7 @@
       if (filterStats.afterType !== filterStats.afterQuery) filterParts.splice(-2, 0, `type:${filterStats.afterType}`);
       if (filterStats.afterNew !== filterStats.afterType) filterParts.splice(-2, 0, `nieuw:${filterStats.afterNew}`);
 
-      const eventsText = `events.json: totaal:${filterStats.loaded}, nieuw:${activeCount}, bestaand:${savedCount}`;
+      const eventsText = `totaal:${filterStats.loaded} (nieuw: ${activeCount}, bestaand: ${savedCount})`;
       target.textContent = `${eventsText} - na filters: ${filterParts.join(", ")}`;
     }
 
@@ -2851,6 +2827,7 @@
         saveStoredSet(DELETED_EVENTS_KEY, deletedEventKeys);
         saveStoredSet(NEW_EVENTS_KEY, newEventKeys);
         saveStoredSet(KNOWN_EVENTS_KEY, eventKeySet(events));
+        renderSites(checkedSites());
         applyFilters();
         showStatus(`Verwijderd uit overzicht en archief: ${cleanText(event.title)}.`, "ok");
         addLiveLog("App", event.website || event.source || "", event.title, "verwijderd", `${data.removedEvents || 0} actief, ${data.removedArchive || 0} archief`);
