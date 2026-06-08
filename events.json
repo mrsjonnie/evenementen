@@ -1,7 +1,189 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-06-08T08:34:30+00:00",
+  "updatedAt": "2026-06-08T08:59:15+00:00",
   "events": [
+    {
+      "title": "Orkesta Mendoza",
+      "type": "Mainstage",
+      "date": "2026-06-10",
+      "time": "21:00",
+      "location": "VERA Groningen",
+      "lat": 53.2170549,
+      "lon": 6.570087,
+      "locationLink": "https://www.google.com/maps?q=53.2170549,6.570087",
+      "cost": "€ 18,-",
+      "description": "CLUBKAARTSHOW Wednesday 10 June Orkesta Mendoza USA Mainstage | Ticket: € 18,- | doors: 20:00 - 21:30 | start: 21:00 Koop ticket",
+      "image": "https://picsum.photos/seed/Orkesta+Mendoza/800/500",
+      "website": "https://www.vera-groningen.nl/?post_type=events&p=151834&lang=nl",
+      "source": "www.vera-groningen.nl",
+      "discoverySource": "Website",
+      "periodLabel": "2026-06-10",
+      "isPermanent": false
+    },
+    {
+      "title": "GHOSTWOMAN Brian Murphy",
+      "type": "Mainstage",
+      "date": "2026-06-11",
+      "time": "20:30",
+      "location": "VERA Groningen",
+      "lat": 53.2170549,
+      "lon": 6.570087,
+      "locationLink": "https://www.google.com/maps?q=53.2170549,6.570087",
+      "cost": "€ 20,-",
+      "description": "Thursday 11 June GHOSTWOMAN CAN Brian Murphy NL Mainstage | Ticket: € 20,- | doors: 20:00 - 22:00 | start: 20:30 Koop ticket",
+      "image": "https://picsum.photos/seed/GHOSTWOMAN+Brian+Murphy/800/500",
+      "website": "https://www.vera-groningen.nl/?post_type=events&p=145639&lang=nl",
+      "source": "www.vera-groningen.nl",
+      "discoverySource": "Website",
+      "periodLabel": "2026-06-11",
+      "isPermanent": false
+    },
+    {
+      "title": "First Timers NAKÛDE + Fred Sage + FEW Neighbors + Matteo Formis + de Pressie",
+      "type": "Mainstage",
+      "date": "2026-06-13",
+      "time": "20:30",
+      "location": "VERA Groningen",
+      "lat": 53.2170549,
+      "lon": 6.570087,
+      "locationLink": "https://www.google.com/maps?q=53.2170549,6.570087",
+      "cost": "€ 5,-",
+      "description": "Saturday 13 June First Timers NAKÛDE + Fred Sage + FEW Neighbors + Matteo Formis + De Pressie Mainstage | Ticket: € 5,- | doors: 20:00 - 22:30 | start: 20:30 Koop ticket",
+      "image": "https://picsum.photos/seed/First+Timers+NAK%C3%9BDE+%2B+Fred+Sage+%2B+FEW+Neighbors+%2B+Matteo+Formis+%2B+de+Pressie/800/500",
+      "website": "https://www.vera-groningen.nl/?post_type=events&p=152270&lang=nl",
+      "source": "www.vera-groningen.nl",
+      "discoverySource": "Website",
+      "periodLabel": "2026-06-13",
+      "isPermanent": false
+    },
+    {
+      "title": "Desolaas Wired to Ignore + ReClues",
+      "type": "Mainstage",
+      "date": "2026-06-14",
+      "time": "15:30",
+      "location": "VERA Groningen",
+      "lat": 53.2170549,
+      "lon": 6.570087,
+      "locationLink": "https://www.google.com/maps?q=53.2170549,6.570087",
+      "cost": "€ 10,-",
+      "description": "PLAATPRESENTATIE Sunday 14 June Desolaas GRN Wired to ignore NL + ReClues GRN Mainstage | Ticket: € 10,- | doors: 15:00 - 17:00 | start: 15:30 Koop ticket",
+      "image": "https://picsum.photos/seed/Desolaas+Wired+to+Ignore+%2B+ReClues/800/500",
+      "website": "https://www.vera-groningen.nl/?post_type=events&p=151989&lang=nl",
+      "source": "www.vera-groningen.nl",
+      "discoverySource": "Website",
+      "periodLabel": "2026-06-14",
+      "isPermanent": false
+    },
+    {
+      "title": "Death Lens Captain Kaiser BE",
+      "type": "Mainstage",
+      "date": "2026-06-17",
+      "time": "20:30",
+      "location": "VERA Groningen",
+      "lat": 53.2170549,
+      "lon": 6.570087,
+      "locationLink": "https://www.google.com/maps?q=53.2170549,6.570087",
+      "cost": "€ 14,-",
+      "description": "Wednesday 17 June Death Lens USA Captain Kaiser BE Mainstage | Ticket: € 14,- | doors: 20:00 - 22:00 | start: 20:30 Koop ticket",
+      "image": "https://picsum.photos/seed/Death+Lens+Captain+Kaiser+BE/800/500",
+      "website": "https://www.vera-groningen.nl/?post_type=events&p=150566&lang=nl",
+      "source": "www.vera-groningen.nl",
+      "discoverySource": "Website",
+      "periodLabel": "2026-06-17",
+      "isPermanent": false
+    },
+    {
+      "title": "Siyahkal + Grotto",
+      "type": "Downstage",
+      "date": "2026-06-18",
+      "time": "23:00",
+      "location": "VERA Groningen",
+      "lat": 53.2170549,
+      "lon": 6.570087,
+      "locationLink": "https://www.google.com/maps?q=53.2170549,6.570087",
+      "cost": "€ 7,50",
+      "description": "DOWNSTAGE EXTRA Thursday 18 June Siyahkal CAN + Grotto CAN Downstage | Ticket: € 7,50 | doors: 22:30 - 23:30 | start: 23:00 Koop ticket",
+      "image": "https://picsum.photos/seed/Siyahkal+%2B+Grotto/800/500",
+      "website": "https://www.vera-groningen.nl/?post_type=events&p=152120&lang=nl",
+      "source": "www.vera-groningen.nl",
+      "discoverySource": "Website",
+      "periodLabel": "2026-06-18",
+      "isPermanent": false
+    },
+    {
+      "title": "Wende ‘Het Experiment’",
+      "type": "Mainstage",
+      "date": "2026-06-18",
+      "time": "20:30",
+      "location": "VERA Groningen",
+      "lat": 53.2170549,
+      "lon": 6.570087,
+      "locationLink": "https://www.google.com/maps?q=53.2170549,6.570087",
+      "cost": "€ 25,-",
+      "description": "SOLD OUT Thursday 18 June Wende NL ‘Het Experiment’ Mainstage | Ticket: € 25,- | doors: 19:30 - 21:30 | start: 20:30 Sold out",
+      "image": "https://picsum.photos/seed/Wende+%E2%80%98Het+Experiment%E2%80%99/800/500",
+      "website": "https://www.vera-groningen.nl/?post_type=events&p=150208&lang=nl",
+      "source": "www.vera-groningen.nl",
+      "discoverySource": "Website",
+      "periodLabel": "2026-06-18",
+      "isPermanent": false
+    },
+    {
+      "title": "Wende ‘Het Experiment’",
+      "type": "Mainstage",
+      "date": "2026-06-19",
+      "time": "20:30",
+      "location": "VERA Groningen",
+      "lat": 53.2170549,
+      "lon": 6.570087,
+      "locationLink": "https://www.google.com/maps?q=53.2170549,6.570087",
+      "cost": "€ 25,-",
+      "description": "SOLD OUT Friday 19 June Wende ‘Het Experiment’ Mainstage | Ticket: € 25,- | doors: 19:30 - 21:30 | start: 20:30 Sold out",
+      "image": "https://picsum.photos/seed/Wende+%E2%80%98Het+Experiment%E2%80%99/800/500",
+      "website": "https://www.vera-groningen.nl/?post_type=events&p=150206&lang=nl",
+      "source": "www.vera-groningen.nl",
+      "discoverySource": "Website",
+      "periodLabel": "2026-06-19",
+      "isPermanent": false
+    },
+    {
+      "title": "Marbled Eye",
+      "type": "Mainstage",
+      "date": "2026-06-20",
+      "time": "21:00",
+      "location": "VERA Groningen",
+      "lat": 53.2170549,
+      "lon": 6.570087,
+      "locationLink": "https://www.google.com/maps?q=53.2170549,6.570087",
+      "cost": "€ 14,-",
+      "description": "Saturday 20 June Marbled Eye USA Mainstage | Ticket: € 14,- | doors: 20:00 - 22:00 | start: 21:00 Koop ticket",
+      "image": "https://picsum.photos/seed/Marbled+Eye/800/500",
+      "website": "https://www.vera-groningen.nl/?post_type=events&p=150848&lang=nl",
+      "source": "www.vera-groningen.nl",
+      "discoverySource": "Website",
+      "periodLabel": "2026-06-20",
+      "isPermanent": false
+    },
+    {
+      "title": "Nicht Rauchen Wir Lieben Dich",
+      "type": "Downstage",
+      "date": "2026-06-20",
+      "time": "23:00",
+      "location": "VERA Groningen",
+      "lat": 53.2170549,
+      "lon": 6.570087,
+      "locationLink": "https://www.google.com/maps?q=53.2170549,6.570087",
+      "cost": "€ 5,-",
+      "description": "Saturday 20 June Nicht Rauchen Wir Lieben Dich NL Downstage | Ticket: € 5,- | doors: 22:30 - 23:30 | start: 23:00 Koop ticket",
+      "image": "https://picsum.photos/seed/Nicht+Rauchen+Wir+Lieben+Dich/800/500",
+      "website": "https://www.vera-groningen.nl/?post_type=events&p=152972&lang=nl",
+      "source": "www.vera-groningen.nl",
+      "discoverySource": "Website",
+      "periodLabel": "2026-06-20",
+      "isPermanent": false
+    }
+  ],
+  "archive": [
     {
       "title": "In 2023 Wonnen Ze de VERA Poll, en Ook in 2026 Blijft Deze Band een Vaste Publieksfavoriet.",
       "type": "Evenement",
@@ -16,9 +198,10 @@
       "image": "https://picsum.photos/seed/In+2023+Wonnen+Ze+de+VERA+Poll%2C+en+Ook+in+2026+Blijft+Deze+Band+een+Vaste+Publieksfavoriet./800/500",
       "website": "https://www.vera-groningen.nl/?post_type=events&p=152859&lang=nl",
       "source": "vera-groningen.nl",
-      "discoverySource": "",
+      "discoverySource": "Website",
       "periodLabel": "2026-06-08",
-      "isPermanent": false
+      "isPermanent": false,
+      "archivedAt": "2026-06-08T08:59:15+00:00"
     },
     {
       "title": "The Rocky Horror Picture Show",
@@ -34,9 +217,10 @@
       "image": "https://picsum.photos/seed/The+Rocky+Horror+Picture+Show/800/500",
       "website": "https://www.vera-groningen.nl/?post_type=events&p=152721&lang=nl",
       "source": "www.vera-groningen.nl",
-      "discoverySource": "",
+      "discoverySource": "Website",
       "periodLabel": "2026-06-08",
-      "isPermanent": false
+      "isPermanent": false,
+      "archivedAt": "2026-06-08T08:59:15+00:00"
     },
     {
       "title": "Tramhaus",
@@ -52,9 +236,10 @@
       "image": "https://picsum.photos/seed/Tramhaus/800/500",
       "website": "https://www.vera-groningen.nl/?post_type=events&p=152859&lang=nl",
       "source": "vera-groningen.nl",
-      "discoverySource": "",
+      "discoverySource": "Website",
       "periodLabel": "2026-06-08",
-      "isPermanent": false
+      "isPermanent": false,
+      "archivedAt": "2026-06-08T08:59:15+00:00"
     },
     {
       "title": "The Rocky Horror Picture Show",
@@ -70,9 +255,10 @@
       "image": "https://picsum.photos/seed/The+Rocky+Horror+Picture+Show/800/500",
       "website": "https://www.vera-groningen.nl/?post_type=events&p=152412&lang=nl",
       "source": "www.vera-groningen.nl",
-      "discoverySource": "",
+      "discoverySource": "Website",
       "periodLabel": "2026-06-09",
-      "isPermanent": false
+      "isPermanent": false,
+      "archivedAt": "2026-06-08T08:59:15+00:00"
     },
     {
       "title": "CLUBKAARTSHOW",
@@ -88,27 +274,10 @@
       "image": "https://picsum.photos/seed/CLUBKAARTSHOW/800/500",
       "website": "https://www.vera-groningen.nl/?post_type=events&p=151834&lang=nl",
       "source": "vera-groningen.nl",
-      "discoverySource": "",
+      "discoverySource": "Website",
       "periodLabel": "2026-06-10",
-      "isPermanent": false
-    },
-    {
-      "title": "Orkesta Mendoza",
-      "type": "Mainstage",
-      "date": "2026-06-10",
-      "time": "21:00",
-      "location": "VERA Groningen",
-      "lat": 53.2170549,
-      "lon": 6.570087,
-      "locationLink": "https://www.google.com/maps?q=53.2170549,6.570087",
-      "cost": "€ 18,-",
-      "description": "CLUBKAARTSHOW Wednesday 10 June Orkesta Mendoza USA Mainstage | Ticket: € 18,- | doors: 20:00 - 21:30 | start: 21:00 Koop ticket",
-      "image": "https://picsum.photos/seed/Orkesta+Mendoza/800/500",
-      "website": "https://www.vera-groningen.nl/?post_type=events&p=151834&lang=nl",
-      "source": "www.vera-groningen.nl",
-      "discoverySource": "",
-      "periodLabel": "2026-06-10",
-      "isPermanent": false
+      "isPermanent": false,
+      "archivedAt": "2026-06-08T08:59:15+00:00"
     },
     {
       "title": "The Rocky Horror Picture Show",
@@ -124,9 +293,10 @@
       "image": "https://picsum.photos/seed/The+Rocky+Horror+Picture+Show/800/500",
       "website": "https://www.vera-groningen.nl/?post_type=events&p=152721&lang=nl",
       "source": "vera-groningen.nl",
-      "discoverySource": "",
+      "discoverySource": "Website",
       "periodLabel": "2026-06-10",
-      "isPermanent": false
+      "isPermanent": false,
+      "archivedAt": "2026-06-08T08:59:15+00:00"
     },
     {
       "title": "VERA Kelderbar",
@@ -142,9 +312,10 @@
       "image": "https://picsum.photos/seed/VERA+Kelderbar/800/500",
       "website": "https://www.vera-groningen.nl/?post_type=events&p=152728&lang=nl",
       "source": "www.vera-groningen.nl",
-      "discoverySource": "",
+      "discoverySource": "Website",
       "periodLabel": "2026-06-10",
-      "isPermanent": false
+      "isPermanent": false,
+      "archivedAt": "2026-06-08T08:59:15+00:00"
     },
     {
       "title": "Orkesta Mendoza",
@@ -160,9 +331,10 @@
       "image": "https://picsum.photos/seed/Orkesta+Mendoza/800/500",
       "website": "https://www.vera-groningen.nl/?post_type=events&p=151834&lang=nl",
       "source": "vera-groningen.nl",
-      "discoverySource": "",
+      "discoverySource": "Website",
       "periodLabel": "2026-06-11",
-      "isPermanent": false
+      "isPermanent": false,
+      "archivedAt": "2026-06-08T08:59:15+00:00"
     },
     {
       "title": "VERA Kelderbar",
@@ -178,9 +350,10 @@
       "image": "https://picsum.photos/seed/VERA+Kelderbar/800/500",
       "website": "https://www.vera-groningen.nl/?post_type=events&p=152729&lang=nl",
       "source": "www.vera-groningen.nl",
-      "discoverySource": "",
+      "discoverySource": "Website",
       "periodLabel": "2026-06-11",
-      "isPermanent": false
+      "isPermanent": false,
+      "archivedAt": "2026-06-08T08:59:15+00:00"
     },
     {
       "title": "Confirmed Mainstage",
@@ -196,9 +369,10 @@
       "image": "https://picsum.photos/seed/Confirmed+Mainstage/800/500",
       "website": "https://www.vera-groningen.nl",
       "source": "vera-groningen.nl",
-      "discoverySource": "",
+      "discoverySource": "Website",
       "periodLabel": "2026-09-11",
-      "isPermanent": false
+      "isPermanent": false,
+      "archivedAt": "2026-06-08T08:59:15+00:00"
     },
     {
       "title": "Mary in the Junkyard",
@@ -214,9 +388,10 @@
       "image": "https://picsum.photos/seed/Mary+in+the+Junkyard/800/500",
       "website": "https://www.vera-groningen.nl/?post_type=events&p=152960&lang=nl",
       "source": "vera-groningen.nl",
-      "discoverySource": "",
+      "discoverySource": "Website",
       "periodLabel": "2026-09-11",
-      "isPermanent": false
+      "isPermanent": false,
+      "archivedAt": "2026-06-08T08:59:15+00:00"
     },
     {
       "title": "Nieuwsbrief",
@@ -232,9 +407,10 @@
       "image": "https://picsum.photos/seed/Nieuwsbrief/800/500",
       "website": "https://www.vera-groningen.nl/nieuwsbrief/?lang=nl",
       "source": "vera-groningen.nl",
-      "discoverySource": "",
+      "discoverySource": "Website",
       "periodLabel": "2026-09-11",
-      "isPermanent": false
+      "isPermanent": false,
+      "archivedAt": "2026-06-08T08:59:15+00:00"
     },
     {
       "title": "Zin Om een Steentje Bij Te Dragen Aan Vera? Klik Hier voor Informatie Om Vrijwilliger of Stagiair Te Worden, of voor Andere Vacatures",
@@ -250,13 +426,14 @@
       "image": "https://picsum.photos/seed/Zin+Om+een+Steentje+Bij+Te+Dragen+Aan+Vera%3F+Klik+Hier+voor+Informatie+Om+Vrijwilliger+of+Stagiair+Te+Worden%2C+of+voor+Andere+Vacatures/800/500",
       "website": "https://www.vera-groningen.nl/info/vacatures/?lang=nl",
       "source": "vera-groningen.nl",
-      "discoverySource": "",
+      "discoverySource": "Website",
       "periodLabel": "2026-09-11",
-      "isPermanent": false
+      "isPermanent": false,
+      "archivedAt": "2026-06-08T08:59:15+00:00"
     },
     {
       "title": "Artdivision",
-      "type": "Mijn Tickets",
+      "type": "Evenement",
       "date": "2026-10-16",
       "time": "",
       "location": "VERA Groningen",
@@ -268,9 +445,10 @@
       "image": "https://picsum.photos/seed/Artdivision/800/500",
       "website": "https://www.vera-groningen.nl/art-division/",
       "source": "vera-groningen.nl",
-      "discoverySource": "",
+      "discoverySource": "Website",
       "periodLabel": "2026-10-16",
-      "isPermanent": false
+      "isPermanent": false,
+      "archivedAt": "2026-06-08T08:59:15+00:00"
     },
     {
       "title": "De Kift",
@@ -286,13 +464,14 @@
       "image": "https://picsum.photos/seed/De+Kift/800/500",
       "website": "https://www.vera-groningen.nl/?post_type=events&p=152075&lang=nl",
       "source": "www.vera-groningen.nl",
-      "discoverySource": "",
+      "discoverySource": "Website",
       "periodLabel": "2026-10-16",
-      "isPermanent": false
+      "isPermanent": false,
+      "archivedAt": "2026-06-08T08:59:15+00:00"
     },
     {
       "title": "Foto’s",
-      "type": "Mijn Tickets",
+      "type": "Evenement",
       "date": "2026-10-16",
       "time": "",
       "location": "VERA Groningen",
@@ -304,13 +483,14 @@
       "image": "https://picsum.photos/seed/Foto%E2%80%99s/800/500",
       "website": "https://www.vera-groningen.nl/photos/?category=all&lang=nl",
       "source": "vera-groningen.nl",
-      "discoverySource": "",
+      "discoverySource": "Website",
       "periodLabel": "2026-10-16",
-      "isPermanent": false
+      "isPermanent": false,
+      "archivedAt": "2026-06-08T08:59:15+00:00"
     },
     {
       "title": "Info",
-      "type": "Mijn Tickets",
+      "type": "Evenement",
       "date": "2026-10-16",
       "time": "",
       "location": "VERA Groningen",
@@ -322,9 +502,10 @@
       "image": "https://picsum.photos/seed/Info/800/500",
       "website": "https://www.vera-groningen.nl/news/50-jaar-vera-posters-1974-2024-220-paginas-posterhistorie?lang=nl",
       "source": "vera-groningen.nl",
-      "discoverySource": "",
+      "discoverySource": "Website",
       "periodLabel": "2026-10-16",
-      "isPermanent": false
+      "isPermanent": false,
+      "archivedAt": "2026-06-08T08:59:15+00:00"
     },
     {
       "title": "Mijn",
@@ -340,13 +521,14 @@
       "image": "https://picsum.photos/seed/Mijn/800/500",
       "website": "https://www.vera-groningen.nl/mijn-tickets/",
       "source": "vera-groningen.nl",
-      "discoverySource": "",
+      "discoverySource": "Website",
       "periodLabel": "2026-10-16",
-      "isPermanent": false
+      "isPermanent": false,
+      "archivedAt": "2026-06-08T08:59:15+00:00"
     },
     {
       "title": "Nieuws",
-      "type": "Mijn Tickets",
+      "type": "Evenement",
       "date": "2026-10-16",
       "time": "",
       "location": "VERA Groningen",
@@ -358,9 +540,10 @@
       "image": "https://picsum.photos/seed/Nieuws/800/500",
       "website": "https://www.vera-groningen.nl/nieuwsbrief/?lang=nl",
       "source": "vera-groningen.nl",
-      "discoverySource": "",
+      "discoverySource": "Website",
       "periodLabel": "2026-10-16",
-      "isPermanent": false
+      "isPermanent": false,
+      "archivedAt": "2026-06-08T08:59:15+00:00"
     },
     {
       "title": "Programma",
@@ -376,13 +559,14 @@
       "image": "https://picsum.photos/seed/Programma/800/500",
       "website": "https://www.vera-groningen.nl/programma/",
       "source": "vera-groningen.nl",
-      "discoverySource": "",
+      "discoverySource": "Website",
       "periodLabel": "2026-10-16",
-      "isPermanent": false
+      "isPermanent": false,
+      "archivedAt": "2026-06-08T08:59:15+00:00"
     },
     {
       "title": "Webshop",
-      "type": "Mijn Tickets",
+      "type": "Evenement",
       "date": "2026-10-16",
       "time": "",
       "location": "VERA Groningen",
@@ -394,9 +578,10 @@
       "image": "https://picsum.photos/seed/Webshop/800/500",
       "website": "https://www.vera-groningen.nl",
       "source": "vera-groningen.nl",
-      "discoverySource": "",
+      "discoverySource": "Website",
       "periodLabel": "2026-10-16",
-      "isPermanent": false
+      "isPermanent": false,
+      "archivedAt": "2026-06-08T08:59:15+00:00"
     },
     {
       "title": "Brass-infused Techno House",
@@ -412,9 +597,10 @@
       "image": "https://picsum.photos/seed/Brass-infused+Techno+House/800/500",
       "website": "https://www.vera-groningen.nl/?post_type=events&p=152860&lang=nl",
       "source": "vera-groningen.nl",
-      "discoverySource": "",
+      "discoverySource": "Website",
       "periodLabel": "2026-12-18",
-      "isPermanent": false
+      "isPermanent": false,
+      "archivedAt": "2026-06-08T08:59:15+00:00"
     },
     {
       "title": "De Kift",
@@ -430,9 +616,10 @@
       "image": "https://picsum.photos/seed/De+Kift/800/500",
       "website": "https://www.vera-groningen.nl/?post_type=events&p=152075&lang=nl",
       "source": "vera-groningen.nl",
-      "discoverySource": "",
+      "discoverySource": "Website",
       "periodLabel": "2026-12-18",
-      "isPermanent": false
+      "isPermanent": false,
+      "archivedAt": "2026-06-08T08:59:15+00:00"
     },
     {
       "title": "NAFT Is een Explosieve techhouse-sensatie Uit België Die de Kracht van Koperblazers Combineert met de Pulserende Beats...",
@@ -448,19 +635,19 @@
       "image": "https://picsum.photos/seed/NAFT+Is+een+Explosieve+techhouse-sensatie+Uit+Belgi%C3%AB+Die+de+Kracht+van+Koperblazers+Combineert+met+de+Pulserende+Beats.../800/500",
       "website": "https://www.vera-groningen.nl/?post_type=events&p=152860&lang=nl",
       "source": "vera-groningen.nl",
-      "discoverySource": "",
+      "discoverySource": "Website",
       "periodLabel": "2026-12-18",
-      "isPermanent": false
+      "isPermanent": false,
+      "archivedAt": "2026-06-08T08:59:15+00:00"
     }
   ],
-  "archive": [],
   "siteResults": [
     {
       "site": "https://www.vera-groningen.nl",
-      "count": 25,
-      "newCount": 0,
-      "durationSeconds": 54.44,
-      "timedOut": false
+      "count": 10,
+      "newCount": 9,
+      "durationSeconds": 30.41,
+      "timedOut": true
     }
   ],
   "rawLog": [
@@ -497,8 +684,8 @@
       "title": "Highlights",
       "date": "",
       "url": "https://www.vera-groningen.nl",
-      "status": "pagina geladen",
-      "rawText": "VERA Groningen NL EN Home Programma Artdivision Foto’s Nieuws Info Webshop Mijn Tickets Friday 16 October De Kift NL Koop ticket Highlights FRIDAY SHOW Friday 18 December Tramhaus support Raw postpunk from Rotterdam In 2023 wonnen ze de VERA Poll, en ook in 2026 blijft deze band een vaste publieksfavoriet. Lees meer Ko"
+      "status": "pagina 1 geladen",
+      "rawText": "3922 tekens gelezen, nog 19.2 sec over. VERA Groningen NL EN Home Programma Artdivision Foto’s Nieuws Info Webshop Mijn Tickets Friday 16 October De Kift NL Koop ticket Highlights FRIDAY SHOW Friday 18 December Tramhaus support Raw postpunk from Rotterdam In 2"
     },
     {
       "source": "Website",
@@ -506,25 +693,25 @@
       "title": "De Kift",
       "date": "2026-10-16",
       "url": "https://www.vera-groningen.nl/?post_type=events&p=152075&lang=nl",
-      "status": "event uit kaart",
+      "status": "geen mainstage/downstage",
       "rawText": "Friday 16 October De Kift NL Koop ticket"
     },
     {
       "source": "Website",
       "site": "https://www.vera-groningen.nl",
-      "title": "Tramhaus",
+      "title": "Tramhaus Support Raw Postpunk From Rotterdam in 2023 Wonnen Ze de VERA Poll, en Ook in 2026 Blijft Deze Band een Vaste Publieksfavoriet. Lees Meer",
       "date": "2026-12-18",
       "url": "https://www.vera-groningen.nl/?post_type=events&p=152859&lang=nl",
-      "status": "event uit kaart",
+      "status": "geen mainstage/downstage",
       "rawText": "FRIDAY SHOW Friday 18 December Tramhaus support Raw postpunk from Rotterdam In 2023 wonnen ze de VERA Poll, en ook in 2026 blijft deze band een vaste publieksfavoriet. Lees meer Koop ticket"
     },
     {
       "source": "Website",
       "site": "https://www.vera-groningen.nl",
-      "title": "Tramhaus",
+      "title": "Tramhaus Support Raw Postpunk From Rotterdam in 2023 Wonnen Ze de VERA Poll, en Ook in 2026 Blijft Deze Band een Vaste Publieksfavoriet. Lees Meer",
       "date": "2026-12-19",
       "url": "https://www.vera-groningen.nl/?post_type=events&p=152866&lang=nl",
-      "status": "event uit kaart",
+      "status": "geen mainstage/downstage",
       "rawText": "SATURDAY SHOW Saturday 19 December Tramhaus support Raw postpunk from Rotterdam In 2023 wonnen ze de VERA Poll, en ook in 2026 blijft deze band een vaste publieksfavoriet. Lees meer Koop ticket"
     },
     {
@@ -533,7 +720,7 @@
       "title": "The Rocky Horror Picture Show",
       "date": "2026-06-08",
       "url": "https://www.vera-groningen.nl/?post_type=events&p=152721&lang=nl",
-      "status": "event uit kaart",
+      "status": "geen mainstage/downstage",
       "rawText": "Monday  8 June The Rocky Horror Picture Show Zienema | Ticket: € 5,- | doors: 20:00 - 20:30 | start: 20:30 Sold out"
     },
     {
@@ -542,7 +729,7 @@
       "title": "The Rocky Horror Picture Show",
       "date": "2026-06-09",
       "url": "https://www.vera-groningen.nl/?post_type=events&p=152412&lang=nl",
-      "status": "event uit kaart",
+      "status": "geen mainstage/downstage",
       "rawText": "UBBO X ZIENEMA Tuesday  9 June The Rocky Horror Picture Show Zienema | Ticket: € 5,- | doors: 20:00 - 20:30 | start: 20:30 Sold out"
     },
     {
@@ -551,17 +738,8 @@
       "title": "VERA Kelderbar",
       "date": "2026-06-10",
       "url": "https://www.vera-groningen.nl/?post_type=events&p=152728&lang=nl",
-      "status": "event uit kaart",
+      "status": "geen mainstage/downstage",
       "rawText": "Wednesday 10 June VERA Kelderbar"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.vera-groningen.nl",
-      "title": "Orkesta Mendoza",
-      "date": "2026-06-10",
-      "url": "https://www.vera-groningen.nl/?post_type=events&p=151834&lang=nl",
-      "status": "event uit kaart",
-      "rawText": "CLUBKAARTSHOW Wednesday 10 June Orkesta Mendoza USA Mainstage | Ticket: € 18,- | doors: 20:00 - 21:30 | start: 21:00 Koop ticket"
     },
     {
       "source": "Website",
@@ -569,305 +747,296 @@
       "title": "VERA Kelderbar",
       "date": "2026-06-11",
       "url": "https://www.vera-groningen.nl/?post_type=events&p=152729&lang=nl",
-      "status": "event uit kaart",
+      "status": "geen mainstage/downstage",
       "rawText": "Thursday 11 June VERA Kelderbar"
     },
     {
       "source": "Website",
       "site": "https://www.vera-groningen.nl",
-      "title": "VERA Kelderbar",
-      "date": "2026-06-08",
-      "url": "https://www.vera-groningen.nl/?page_id=85630&lang=nl",
-      "status": "afgekeurd",
-      "rawText": "Coming up Monday  8 June The Rocky Horror Picture Show Zienema | Ticket: € 5,- | doors: 20:00 - 20:30 | start: 20:30 Sold out UBBO X ZIENEMA Tuesday  9 June The Rocky Horror Picture Show Zienema | Ticket: € 5,- | doors: 20:00 - 20:30 | start: 20:30 Sold out Wednesday 10 June VERA Kelderbar CLUBKAARTSHOW Wednesday 10 June Orkesta Mendoza USA Mainstage | Ticke"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.vera-groningen.nl",
-      "title": "Mary in the Junkyard",
+      "title": "Mary in the Junkyard Support Angry Weepy Chaos Rock Trio Mary in the Junkyard Is het Londense Trio Rond Clari Freeman-Taylor en Geldt Als een van De... Lees Meer",
       "date": "2026-09-11",
       "url": "https://www.vera-groningen.nl/?post_type=events&p=152960&lang=nl",
-      "status": "event uit kaart",
+      "status": "geen mainstage/downstage",
       "rawText": "Friday 11 September mary in the junkyard UK support Angry weepy chaos rock trio mary in the junkyard is het Londense trio rond Clari Freeman-Taylor en geldt als een van de... Lees meer Koop ticket"
     },
     {
       "source": "Website",
       "site": "https://www.vera-groningen.nl",
-      "title": "NAFT",
+      "title": "NAFT Support Brass-infused Techno House NAFT Is een Explosieve techhouse-sensatie Uit België Die de Kracht van Koperblazers Combineert met de Pulserende Beats... Lees Meer",
       "date": "2027-02-07",
       "url": "https://www.vera-groningen.nl/?post_type=events&p=152860&lang=nl",
-      "status": "event uit kaart",
+      "status": "geen mainstage/downstage",
       "rawText": "Sunday  7 February NAFT BEL support Brass-infused techno house NAFT is een explosieve techhouse-sensatie uit België die de kracht van koperblazers combineert met de pulserende beats... Lees meer Koop ticket"
     },
     {
       "source": "Website",
       "site": "https://www.vera-groningen.nl",
-      "title": "Tramhaus",
+      "title": "Tramhaus Support Raw Postpunk From Rotterdam in 2023 Wonnen Ze de VERA Poll, en Ook in 2026 Blijft Deze Band een Vaste Publieksfavoriet. Lees Meer",
       "date": "2026-12-18",
       "url": "https://www.vera-groningen.nl/?post_type=events&p=152859&lang=nl",
-      "status": "event uit kaart",
+      "status": "geen mainstage/downstage",
       "rawText": "FRIDAY SHOW Friday 18 December Tramhaus support Raw postpunk from Rotterdam In 2023 wonnen ze de VERA Poll, en ook in 2026 blijft deze band een vaste publieksfavoriet. Lees meer Koop ticket"
     },
     {
       "source": "Website",
       "site": "https://www.vera-groningen.nl",
-      "title": "Tramhaus",
+      "title": "Tramhaus Support Raw Postpunk From Rotterdam in 2023 Wonnen Ze de VERA Poll, en Ook in 2026 Blijft Deze Band een Vaste Publieksfavoriet. Lees Meer",
       "date": "2026-12-19",
       "url": "https://www.vera-groningen.nl/?post_type=events&p=152866&lang=nl",
-      "status": "event uit kaart",
+      "status": "geen mainstage/downstage",
       "rawText": "SATURDAY SHOW Saturday 19 December Tramhaus support Raw postpunk from Rotterdam In 2023 wonnen ze de VERA Poll, en ook in 2026 blijft deze band een vaste publieksfavoriet. Lees meer Koop ticket"
     },
     {
-      "source": "Website",
-      "site": "https://www.vera-groningen.nl",
-      "title": "Confirmed Mainstage",
-      "date": "2026-09-11",
-      "url": "https://www.vera-groningen.nl/?page_id=85630&lang=nl",
-      "status": "afgekeurd",
-      "rawText": "Confirmed Mainstage Friday 11 September mary in the junkyard UK support Angry weepy chaos rock trio mary in the junkyard is het Londense trio rond Clari Freeman-Taylor en geldt als een van de... Lees meer Koop ticket Sunday  7 February NAFT BEL support Brass-infused techno house NAFT is een explosieve techhouse-sensatie uit België die de kracht van koperblaz"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.vera-groningen.nl",
-      "title": "Programma",
-      "date": "2026-10-16",
-      "url": "https://www.vera-groningen.nl/programma/",
-      "status": "event uit titel-datumregels",
-      "rawText": "Programma Artdivision Foto’s Nieuws Info Webshop"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.vera-groningen.nl",
-      "title": "Artdivision",
-      "date": "2026-10-16",
-      "url": "https://www.vera-groningen.nl/art-division/",
-      "status": "event uit titel-datumregels",
-      "rawText": "Artdivision Foto’s Nieuws Info Webshop Mijn Tickets"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.vera-groningen.nl",
-      "title": "Foto’s",
-      "date": "2026-10-16",
-      "url": "https://www.vera-groningen.nl/photos/?category=all&lang=nl",
-      "status": "event uit titel-datumregels",
-      "rawText": "Foto’s Nieuws Info Webshop Mijn Tickets Friday 16 October"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.vera-groningen.nl",
-      "title": "Nieuws",
-      "date": "2026-10-16",
-      "url": "https://www.vera-groningen.nl/nieuwsbrief/?lang=nl",
-      "status": "event uit titel-datumregels",
-      "rawText": "Nieuws Info Webshop Mijn Tickets Friday 16 October De Kift"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.vera-groningen.nl",
-      "title": "Info",
-      "date": "2026-10-16",
-      "url": "https://www.vera-groningen.nl/news/50-jaar-vera-posters-1974-2024-220-paginas-posterhistorie?lang=nl",
-      "status": "event uit titel-datumregels",
-      "rawText": "Info Webshop Mijn Tickets Friday 16 October De Kift NL"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.vera-groningen.nl",
-      "title": "Webshop",
-      "date": "2026-10-16",
-      "url": "https://www.vera-groningen.nl",
-      "status": "event uit titel-datumregels",
-      "rawText": "Webshop Mijn Tickets Friday 16 October De Kift NL Koop ticket"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.vera-groningen.nl",
-      "title": "Mijn",
-      "date": "2026-10-16",
-      "url": "https://www.vera-groningen.nl/mijn-tickets/",
-      "status": "event uit titel-datumregels",
-      "rawText": "Mijn Tickets Friday 16 October De Kift NL Koop ticket Highlights"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.vera-groningen.nl",
-      "title": "De Kift",
-      "date": "2026-12-18",
-      "url": "https://www.vera-groningen.nl/?post_type=events&p=152075&lang=nl",
-      "status": "event uit titel-datumregels",
-      "rawText": "De Kift NL Koop ticket Highlights FRIDAY SHOW Friday 18 December"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.vera-groningen.nl",
-      "title": "Tramhaus",
-      "date": "2026-12-19",
-      "url": "https://www.vera-groningen.nl/?post_type=events&p=152859&lang=nl",
-      "status": "event uit titel-datumregels",
-      "rawText": "Tramhaus support Raw postpunk from Rotterdam In 2023 wonnen ze de VERA Poll, en ook in 2026 blijft deze band een vaste publieksfavoriet. Lees meer Koop ticket"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.vera-groningen.nl",
-      "title": "In 2023 Wonnen Ze de VERA Poll, en Ook in 2026 Blijft Deze Band een Vaste Publieksfavoriet.",
-      "date": "2026-12-19",
-      "url": "https://www.vera-groningen.nl/?post_type=events&p=152859&lang=nl",
-      "status": "event uit titel-datumregels",
-      "rawText": "In 2023 wonnen ze de VERA Poll, en ook in 2026 blijft deze band een vaste publieksfavoriet. Lees meer Koop ticket SATURDAY SHOW Saturday 19 December Tramhaus"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.vera-groningen.nl",
-      "title": "SHOW",
-      "date": "2026-12-19",
-      "url": "https://www.vera-groningen.nl/?post_type=events&p=152859&lang=nl",
-      "status": "event uit titel-datumregels",
-      "rawText": "SATURDAY SHOW Saturday 19 December Tramhaus support Raw postpunk from Rotterdam In 2023 wonnen ze de VERA Poll, en ook in 2026 blijft deze band een vaste publieksfavoriet."
-    },
-    {
-      "source": "Website",
-      "site": "https://www.vera-groningen.nl",
-      "title": "Tramhaus",
-      "date": "2026-06-08",
-      "url": "https://www.vera-groningen.nl/?post_type=events&p=152859&lang=nl",
-      "status": "event uit titel-datumregels",
-      "rawText": "Tramhaus support Raw postpunk from Rotterdam In 2023 wonnen ze de VERA Poll, en ook in 2026 blijft deze band een vaste publieksfavoriet. Lees meer Koop ticket"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.vera-groningen.nl",
-      "title": "In 2023 Wonnen Ze de VERA Poll, en Ook in 2026 Blijft Deze Band een Vaste Publieksfavoriet.",
-      "date": "2026-06-08",
-      "url": "https://www.vera-groningen.nl/?post_type=events&p=152859&lang=nl",
-      "status": "event uit titel-datumregels",
-      "rawText": "In 2023 wonnen ze de VERA Poll, en ook in 2026 blijft deze band een vaste publieksfavoriet. Lees meer Koop ticket Coming up Monday  8 June The Rocky Horror Picture Show"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.vera-groningen.nl",
-      "title": "The Rocky Horror Picture Show",
-      "date": "2026-06-09",
-      "url": "https://www.vera-groningen.nl/?post_type=events&p=152721&lang=nl",
-      "status": "event uit titel-datumregels",
-      "rawText": "The Rocky Horror Picture Show Zienema | Ticket: € 5,- | doors: 20:00 - 20:30 | start: 20:30 Sold out UBBO X ZIENEMA Tuesday  9 June The Rocky Horror Picture Show"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.vera-groningen.nl",
-      "title": "The Rocky Horror Picture Show",
-      "date": "2026-06-10",
-      "url": "https://www.vera-groningen.nl/?post_type=events&p=152721&lang=nl",
-      "status": "event uit titel-datumregels",
-      "rawText": "The Rocky Horror Picture Show Zienema | Ticket: € 5,- | doors: 20:00 - 20:30 | start: 20:30 Sold out Wednesday 10 June VERA Kelderbar CLUBKAARTSHOW"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.vera-groningen.nl",
-      "title": "CLUBKAARTSHOW",
-      "date": "2026-06-10",
-      "url": "https://www.vera-groningen.nl/?post_type=events&p=151834&lang=nl",
-      "status": "event uit titel-datumregels",
-      "rawText": "CLUBKAARTSHOW Wednesday 10 June Orkesta Mendoza USA Mainstage | Ticket: € 18,- | doors: 20:00 - 21:30 | start: 21:00 Koop ticket"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.vera-groningen.nl",
-      "title": "Orkesta Mendoza",
-      "date": "2026-06-11",
-      "url": "https://www.vera-groningen.nl/?post_type=events&p=151834&lang=nl",
-      "status": "event uit titel-datumregels",
-      "rawText": "Orkesta Mendoza USA Mainstage | Ticket: € 18,- | doors: 20:00 - 21:30 | start: 21:00 Koop ticket Thursday 11 June VERA Kelderbar"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.vera-groningen.nl",
-      "title": "Nieuwsbrief",
-      "date": "2026-09-11",
-      "url": "https://www.vera-groningen.nl/nieuwsbrief/?lang=nl",
-      "status": "event uit titel-datumregels",
-      "rawText": "Nieuwsbrief Schrijf je hier in voor het laatste concert-, dans- en filmnieuws! Werken bij Vera Zin om een steentje bij te dragen aan Vera? Klik hier voor informatie om vrijwilliger of stagiair te worden, of voor andere vacatures Confirmed Mainstage Friday 11 September"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.vera-groningen.nl",
-      "title": "Zin Om een Steentje Bij Te Dragen Aan Vera? Klik Hier voor Informatie Om Vrijwilliger of Stagiair Te Worden, of voor Andere Vacatures",
-      "date": "2026-09-11",
-      "url": "https://www.vera-groningen.nl/info/vacatures/?lang=nl",
-      "status": "event uit titel-datumregels",
-      "rawText": "Zin om een steentje bij te dragen aan Vera? Klik hier voor informatie om vrijwilliger of stagiair te worden, of voor andere vacatures Confirmed Mainstage Friday 11 September mary in the junkyard UK support"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.vera-groningen.nl",
-      "title": "Confirmed Mainstage",
-      "date": "2026-09-11",
-      "url": "https://www.vera-groningen.nl",
-      "status": "event uit titel-datumregels",
-      "rawText": "Confirmed Mainstage Friday 11 September mary in the junkyard UK support Angry weepy chaos rock trio"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.vera-groningen.nl",
-      "title": "Angry Weepy Chaos Rock Trio",
-      "date": "2027-02-07",
-      "url": "https://www.vera-groningen.nl/?post_type=events&p=152960&lang=nl",
-      "status": "event uit titel-datumregels",
-      "rawText": "Angry weepy chaos rock trio mary in the junkyard is het Londense trio rond Clari Freeman-Taylor en geldt als een van de... Lees meer Koop ticket Sunday  7 February NAFT"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.vera-groningen.nl",
-      "title": "Mary in the Junkyard Is het Londense Trio Rond Clari Freeman-Taylor en Geldt Als een van De...",
-      "date": "2027-02-07",
-      "url": "https://www.vera-groningen.nl/?post_type=events&p=152960&lang=nl",
-      "status": "event uit titel-datumregels",
-      "rawText": "mary in the junkyard is het Londense trio rond Clari Freeman-Taylor en geldt als een van de... Lees meer Koop ticket Sunday  7 February NAFT BEL"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.vera-groningen.nl",
-      "title": "Brass-infused Techno House",
-      "date": "2026-12-18",
-      "url": "https://www.vera-groningen.nl/?post_type=events&p=152860&lang=nl",
-      "status": "event uit titel-datumregels",
-      "rawText": "Brass-infused techno house NAFT is een explosieve techhouse-sensatie uit België die de kracht van koperblazers combineert met de pulserende beats... Lees meer Koop ticket FRIDAY SHOW Friday 18 December"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.vera-groningen.nl",
-      "title": "NAFT Is een Explosieve techhouse-sensatie Uit België Die de Kracht van Koperblazers Combineert met de Pulserende Beats...",
-      "date": "2026-12-18",
-      "url": "https://www.vera-groningen.nl/?post_type=events&p=152860&lang=nl",
-      "status": "event uit titel-datumregels",
-      "rawText": "NAFT is een explosieve techhouse-sensatie uit België die de kracht van koperblazers combineert met de pulserende beats... Lees meer Koop ticket FRIDAY SHOW Friday 18 December Tramhaus"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.vera-groningen.nl",
-      "title": "Tramhaus",
-      "date": "2026-12-19",
-      "url": "https://www.vera-groningen.nl/?post_type=events&p=152859&lang=nl",
-      "status": "event uit titel-datumregels",
-      "rawText": "Tramhaus support Raw postpunk from Rotterdam In 2023 wonnen ze de VERA Poll, en ook in 2026 blijft deze band een vaste publieksfavoriet. Lees meer Koop ticket"
-    },
-    {
       "source": "Scan",
       "site": "https://www.vera-groningen.nl",
-      "title": "40 kandidaten op pagina",
+      "title": "1 kandidaten op pagina",
       "date": "",
       "url": "https://www.vera-groningen.nl",
       "status": "kandidaten",
-      "rawText": "Totaal voor deze site nu 40"
+      "rawText": "Totaal voor deze site nu 1"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl",
+      "title": "VERA Groningen - Programma",
+      "date": "",
+      "url": "https://www.vera-groningen.nl/programma",
+      "status": "pagina 2 geladen",
+      "rawText": "2710 tekens gelezen, nog 10.9 sec over. VERA Groningen - Programma NL EN Home Programma Artdivision Foto’s Nieuws Info Webshop Mijn Tickets Monday  8 June The Rocky Horror Picture Show Sold out Alle Events Mainstage Dansen Downstage Extra Zienema Past 2 weeks"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/programma",
+      "title": "The Rocky Horror Picture Show",
+      "date": "2026-06-08",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=152721&lang=nl",
+      "status": "geen mainstage/downstage",
+      "rawText": "Monday  8 June The Rocky Horror Picture Show Sold out"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/programma",
+      "title": "The Rocky Horror Picture Show",
+      "date": "2026-06-08",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=152721&lang=nl",
+      "status": "geen mainstage/downstage",
+      "rawText": "Monday  8 June The Rocky Horror Picture Show Zienema | Ticket: € 5,- | doors: 20:00 - 20:30 | start: 20:30 Sold out"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/programma",
+      "title": "The Rocky Horror Picture Show",
+      "date": "2026-06-09",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=152412&lang=nl",
+      "status": "geen mainstage/downstage",
+      "rawText": "UBBO X ZIENEMA Tuesday  9 June The Rocky Horror Picture Show Zienema | Ticket: € 5,- | doors: 20:00 - 20:30 | start: 20:30 Sold out"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/programma",
+      "title": "VERA Kelderbar",
+      "date": "2026-06-10",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=152728&lang=nl",
+      "status": "geen mainstage/downstage",
+      "rawText": "Wednesday 10 June VERA Kelderbar"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/programma",
+      "title": "VERA Kelderbar",
+      "date": "2026-06-11",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=152729&lang=nl",
+      "status": "geen mainstage/downstage",
+      "rawText": "Thursday 11 June VERA Kelderbar"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/programma",
+      "title": "Backstage Juice Bar Introduction New VERA Beer!",
+      "date": "2026-06-12",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=152965&lang=nl",
+      "status": "geen mainstage/downstage",
+      "rawText": "Friday 12 June Backstage Juice Bar Introduction new VERA Beer!"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/programma",
+      "title": "VERA Kelderbar",
+      "date": "2026-06-13",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=152708&lang=nl",
+      "status": "geen mainstage/downstage",
+      "rawText": "Saturday 13 June VERA Kelderbar"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/programma",
+      "title": "Mijn Broer Q&A With the Director",
+      "date": "2026-06-16",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=152413&lang=nl",
+      "status": "geen mainstage/downstage",
+      "rawText": "Tuesday 16 June Mijn Broer Q&A with the director Zienema | Ticket: € 5,- | doors: 20:00 - 20:30 | start: 20:30 Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/programma",
+      "title": "VERA Kelderbar",
+      "date": "2026-06-17",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=152711&lang=nl",
+      "status": "geen mainstage/downstage",
+      "rawText": "Wednesday 17 June VERA Kelderbar"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/programma",
+      "title": "Queerclub VERA JHL // DJ Lorakel // DJ Nora B",
+      "date": "2026-06-19",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=152559&lang=nl",
+      "status": "geen mainstage/downstage",
+      "rawText": "PRIDE EDITION Friday 19 June Queerclub VERA JHL // DJ Lorakel // DJ Nora B Dansen | Ticket: € 5,- | doors: 23:00 - 03:00 | start: 23:00 Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/programma",
+      "title": "Flikkerdisco",
+      "date": "2026-06-20",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=152520&lang=nl",
+      "status": "geen mainstage/downstage",
+      "rawText": "PRIDE EDITION Saturday 20 June Flikkerdisco Dansen | Ticket: € 8,- | doors: 23:00 - 04:00 | start: 23:01 Koop ticket"
     },
     {
       "source": "Scan",
       "site": "https://www.vera-groningen.nl",
-      "title": "25 evenementen gevonden",
+      "title": "10 kandidaten op pagina",
+      "date": "",
+      "url": "https://www.vera-groningen.nl/programma",
+      "status": "kandidaten",
+      "rawText": "Totaal voor deze site nu 11"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl",
+      "title": "VERA Groningen - Programma",
+      "date": "",
+      "url": "https://www.vera-groningen.nl/program",
+      "status": "pagina 3 geladen",
+      "rawText": "2710 tekens gelezen, nog 0 sec over. VERA Groningen - Programma NL EN Home Programma Artdivision Foto’s Nieuws Info Webshop Mijn Tickets Monday  8 June The Rocky Horror Picture Show Sold out Alle Events Mainstage Dansen Downstage Extra Zienema Past 2 weeks"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/program",
+      "title": "The Rocky Horror Picture Show",
+      "date": "2026-06-08",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=152721&lang=nl",
+      "status": "geen mainstage/downstage",
+      "rawText": "Monday  8 June The Rocky Horror Picture Show Sold out"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/program",
+      "title": "The Rocky Horror Picture Show",
+      "date": "2026-06-08",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=152721&lang=nl",
+      "status": "geen mainstage/downstage",
+      "rawText": "Monday  8 June The Rocky Horror Picture Show Zienema | Ticket: € 5,- | doors: 20:00 - 20:30 | start: 20:30 Sold out"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/program",
+      "title": "The Rocky Horror Picture Show",
+      "date": "2026-06-09",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=152412&lang=nl",
+      "status": "geen mainstage/downstage",
+      "rawText": "UBBO X ZIENEMA Tuesday  9 June The Rocky Horror Picture Show Zienema | Ticket: € 5,- | doors: 20:00 - 20:30 | start: 20:30 Sold out"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/program",
+      "title": "VERA Kelderbar",
+      "date": "2026-06-10",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=152728&lang=nl",
+      "status": "geen mainstage/downstage",
+      "rawText": "Wednesday 10 June VERA Kelderbar"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/program",
+      "title": "VERA Kelderbar",
+      "date": "2026-06-11",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=152729&lang=nl",
+      "status": "geen mainstage/downstage",
+      "rawText": "Thursday 11 June VERA Kelderbar"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/program",
+      "title": "Backstage Juice Bar Introduction New VERA Beer!",
+      "date": "2026-06-12",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=152965&lang=nl",
+      "status": "geen mainstage/downstage",
+      "rawText": "Friday 12 June Backstage Juice Bar Introduction new VERA Beer!"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/program",
+      "title": "VERA Kelderbar",
+      "date": "2026-06-13",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=152708&lang=nl",
+      "status": "geen mainstage/downstage",
+      "rawText": "Saturday 13 June VERA Kelderbar"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/program",
+      "title": "Mijn Broer Q&A With the Director",
+      "date": "2026-06-16",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=152413&lang=nl",
+      "status": "geen mainstage/downstage",
+      "rawText": "Tuesday 16 June Mijn Broer Q&A with the director Zienema | Ticket: € 5,- | doors: 20:00 - 20:30 | start: 20:30 Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/program",
+      "title": "VERA Kelderbar",
+      "date": "2026-06-17",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=152711&lang=nl",
+      "status": "geen mainstage/downstage",
+      "rawText": "Wednesday 17 June VERA Kelderbar"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/program",
+      "title": "Queerclub VERA JHL // DJ Lorakel // DJ Nora B",
+      "date": "2026-06-19",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=152559&lang=nl",
+      "status": "geen mainstage/downstage",
+      "rawText": "PRIDE EDITION Friday 19 June Queerclub VERA JHL // DJ Lorakel // DJ Nora B Dansen | Ticket: € 5,- | doors: 23:00 - 03:00 | start: 23:00 Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/program",
+      "title": "Flikkerdisco",
+      "date": "2026-06-20",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=152520&lang=nl",
+      "status": "geen mainstage/downstage",
+      "rawText": "PRIDE EDITION Saturday 20 June Flikkerdisco Dansen | Ticket: € 8,- | doors: 23:00 - 04:00 | start: 23:01 Koop ticket"
+    },
+    {
+      "source": "Scan",
+      "site": "https://www.vera-groningen.nl",
+      "title": "10 kandidaten op pagina",
+      "date": "",
+      "url": "https://www.vera-groningen.nl/program",
+      "status": "kandidaten",
+      "rawText": "Totaal voor deze site nu 21"
+    },
+    {
+      "source": "Scan",
+      "site": "https://www.vera-groningen.nl",
+      "title": "10 evenementen gevonden",
       "date": "",
       "url": "https://www.vera-groningen.nl",
-      "status": "klaar",
-      "rawText": "1 pagina's geladen, 0 detailpagina's bekeken, duur 54.44s van max 20s"
+      "status": "tijdslimiet",
+      "rawText": "3 pagina's geladen, 0 detailpagina's bekeken, duur 30.41s van max 20s"
     }
   ]
 }
