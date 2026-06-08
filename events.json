@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-06-08T17:07:53+00:00",
+  "updatedAt": "2026-06-08T17:09:33+00:00",
   "events": [
     {
       "date": "2026-06-01",
@@ -384,49 +384,13 @@
       "site": "https://www.vera-groningen.nl",
       "count": 25,
       "newCount": 0,
-      "durationSeconds": 0.32,
+      "durationSeconds": 0.56,
       "timedOut": false
     }
   ],
   "rawLog": [
     {
       "source": "SerpAPI",
-      "site": "https://forum.nl/nl/agenda",
-      "title": "Mistral analyse",
-      "date": "",
-      "url": "https://forum.nl/nl/agenda",
-      "status": "zoeken",
-      "rawText": "Startpagina wordt opgehaald en door Mistral op eventvelden geanalyseerd."
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://forum.nl/nl/agenda",
-      "title": "Mistral resultaat",
-      "date": "",
-      "url": "https://forum.nl/nl/agenda",
-      "status": "klaar",
-      "rawText": "0 event-kandidaten"
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Mistral analyse",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/",
-      "status": "zoeken",
-      "rawText": "Startpagina wordt opgehaald en door Mistral op eventvelden geanalyseerd."
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Mistral resultaat",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/",
-      "status": "klaar",
-      "rawText": "0 event-kandidaten"
-    },
-    {
-      "source": "SerpAPI",
       "site": "https://groningen.uitloper.nu/",
       "title": "Mistral analyse",
       "date": "",
@@ -440,231 +404,6 @@
       "title": "Mistral resultaat",
       "date": "",
       "url": "https://groningen.uitloper.nu/",
-      "status": "klaar",
-      "rawText": "0 event-kandidaten"
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": "Mistral analyse",
-      "date": "",
-      "url": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "status": "zoeken",
-      "rawText": "Startpagina wordt opgehaald en door Mistral op eventvelden geanalyseerd."
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": "Mistral resultaat",
-      "date": "",
-      "url": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "status": "klaar",
-      "rawText": "5 event-kandidaten"
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": "Divine Comedy",
-      "date": "2026-06-08",
-      "url": "https://www.visitgroningen.nl/nl/doen/evenementen/divine-comedy",
-      "status": "eventvelden gevonden",
-      "rawText": "Filmvertoning."
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": "The Filmclub",
-      "date": "2026-06-08",
-      "url": "https://www.visitgroningen.nl/nl/doen/evenementen/the-filmclub",
-      "status": "eventvelden gevonden",
-      "rawText": "Filmvertoning."
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": "Treat Her Like a Lady",
-      "date": "2026-06-08",
-      "url": "https://www.visitgroningen.nl/nl/doen/evenementen/treat-her-like-a-lady",
-      "status": "eventvelden gevonden",
-      "rawText": "Filmvertoning."
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": "Classics: Top Gun - 40th Anniversary",
-      "date": "2026-06-08",
-      "url": "https://www.visitgroningen.nl/nl/doen/evenementen/classics-top-gun-40th-anniversary",
-      "status": "eventvelden gevonden",
-      "rawText": "Filmvertoning."
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": "Muzikale Herinneringen",
-      "date": "2026-06-08",
-      "url": "https://www.visitgroningen.nl/nl/doen/evenementen/muzikale-herinneringen",
-      "status": "eventvelden gevonden",
-      "rawText": "Muzikale herinneringen aan een tijdperk."
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://simplon.nl/",
-      "title": "Mistral analyse",
-      "date": "",
-      "url": "https://simplon.nl/",
-      "status": "zoeken",
-      "rawText": "Startpagina wordt opgehaald en door Mistral op eventvelden geanalyseerd."
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://simplon.nl/",
-      "title": "Mistral resultaat",
-      "date": "",
-      "url": "https://simplon.nl/",
-      "status": "klaar",
-      "rawText": "0 event-kandidaten"
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.martiniplaza.nl/nl/",
-      "title": "Mistral analyse",
-      "date": "",
-      "url": "https://www.martiniplaza.nl/nl/",
-      "status": "zoeken",
-      "rawText": "Startpagina wordt opgehaald en door Mistral op eventvelden geanalyseerd."
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.martiniplaza.nl/nl/",
-      "title": "Mistral resultaat",
-      "date": "",
-      "url": "https://www.martiniplaza.nl/nl/",
-      "status": "klaar",
-      "rawText": "0 event-kandidaten"
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.groningermuseum.nl/en/now",
-      "title": "Mistral analyse",
-      "date": "",
-      "url": "https://www.groningermuseum.nl/en/now",
-      "status": "zoeken",
-      "rawText": "Startpagina wordt opgehaald en door Mistral op eventvelden geanalyseerd."
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.groningermuseum.nl/en/now",
-      "title": "Mistral resultaat",
-      "date": "",
-      "url": "https://www.groningermuseum.nl/en/now",
-      "status": "klaar",
-      "rawText": "0 event-kandidaten"
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.kultuuragenda.nl/",
-      "title": "Mistral analyse",
-      "date": "",
-      "url": "https://www.kultuuragenda.nl/",
-      "status": "zoeken",
-      "rawText": "Startpagina wordt opgehaald en door Mistral op eventvelden geanalyseerd."
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.kultuuragenda.nl/",
-      "title": "Mistral resultaat",
-      "date": "",
-      "url": "https://www.kultuuragenda.nl/",
-      "status": "klaar",
-      "rawText": "0 event-kandidaten"
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.noorderzon.nl/",
-      "title": "Mistral analyse",
-      "date": "",
-      "url": "https://www.noorderzon.nl/",
-      "status": "zoeken",
-      "rawText": "Startpagina wordt opgehaald en door Mistral op eventvelden geanalyseerd."
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.noorderzon.nl/",
-      "title": "Mistral resultaat",
-      "date": "",
-      "url": "https://www.noorderzon.nl/",
-      "status": "klaar",
-      "rawText": "0 event-kandidaten"
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.concertgebouw.nl",
-      "title": "Mistral analyse",
-      "date": "",
-      "url": "https://www.concertgebouw.nl",
-      "status": "zoeken",
-      "rawText": "Startpagina wordt opgehaald en door Mistral op eventvelden geanalyseerd."
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.concertgebouw.nl",
-      "title": "Mistral resultaat",
-      "date": "",
-      "url": "https://www.concertgebouw.nl",
-      "status": "klaar",
-      "rawText": "0 event-kandidaten"
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.hedon-zwolle.nl",
-      "title": "Mistral analyse",
-      "date": "",
-      "url": "https://www.hedon-zwolle.nl",
-      "status": "zoeken",
-      "rawText": "Startpagina wordt opgehaald en door Mistral op eventvelden geanalyseerd."
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.hedon-zwolle.nl",
-      "title": "Mistral resultaat",
-      "date": "",
-      "url": "https://www.hedon-zwolle.nl",
-      "status": "klaar",
-      "rawText": "0 event-kandidaten"
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.paradiso.nl",
-      "title": "Mistral analyse",
-      "date": "",
-      "url": "https://www.paradiso.nl",
-      "status": "zoeken",
-      "rawText": "Startpagina wordt opgehaald en door Mistral op eventvelden geanalyseerd."
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.paradiso.nl",
-      "title": "Mistral resultaat",
-      "date": "",
-      "url": "https://www.paradiso.nl",
-      "status": "klaar",
-      "rawText": "0 event-kandidaten"
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.vvvameland.nl/activiteiten-en-evenementen",
-      "title": "Mistral analyse",
-      "date": "",
-      "url": "https://www.vvvameland.nl/activiteiten-en-evenementen",
-      "status": "zoeken",
-      "rawText": "Startpagina wordt opgehaald en door Mistral op eventvelden geanalyseerd."
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.vvvameland.nl/activiteiten-en-evenementen",
-      "title": "Mistral resultaat",
-      "date": "",
-      "url": "https://www.vvvameland.nl/activiteiten-en-evenementen",
       "status": "klaar",
       "rawText": "0 event-kandidaten"
     },
@@ -1701,7 +1440,7 @@
       "date": "",
       "url": "https://www.vera-groningen.nl",
       "status": "klaar",
-      "rawText": "site 1/1: 25 unieke events in 0.32 sec"
+      "rawText": "site 1/1: 25 unieke events in 0.56 sec"
     }
   ]
 }
