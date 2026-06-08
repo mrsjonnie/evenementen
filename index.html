@@ -523,19 +523,6 @@
       overflow-wrap: anywhere;
     }
 
-    .siteAdd {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) auto;
-      gap: 8px;
-      padding: 8px;
-      border-top: 1px solid var(--line);
-      background: #101925;
-    }
-
-    .siteAdd input {
-      min-width: 0;
-    }
-
     .siteActions {
       display: flex;
       gap: 8px;
@@ -957,7 +944,6 @@
       #dateSingle { font-size: .95rem; padding-inline: 8px; }
       .grid { grid-template-columns: 1fr; }
       .siteSelect { min-width: 100%; max-width: none; }
-      .siteAdd { grid-template-columns: 1fr; }
       .btn { width: 100%; }
       .checks { width: 100%; }
       .check { flex: 1; justify-content: center; }
@@ -1069,12 +1055,8 @@
               <span aria-hidden="true">v</span>
             </button>
             <div class="sitePanel">
-              <div class="sitePanelHeader">Aangevinkte websites worden gescand en filteren ook wat je ziet. Standaard staan alle sites aan.</div>
+              <div class="sitePanelHeader">Deze lijst komt uit sites.json. Aangevinkte websites worden gescand en filteren ook wat je ziet.</div>
               <div class="siteList" id="sitesList"></div>
-              <div class="siteAdd">
-                <input id="newSiteInput" type="url" placeholder="https://voorbeeld.nl">
-                <button class="btn btnSecondary" id="addSiteBtn" type="button">Toevoegen</button>
-              </div>
               <div class="siteActions">
                 <button class="btn btnSecondary" id="allSitesBtn" type="button">Alles</button>
                 <button class="btn btnSecondary" id="noSitesBtn" type="button">Geen</button>
@@ -1130,7 +1112,7 @@
   </div>
 
   <script>
-    const APP_VERSION = "2026.06.08.12";
+    const APP_VERSION = "2026.06.08.13";
     const DEFAULT_MAX_EVENTS_PER_SITE = 20;
     const DEFAULT_SITE_TIME_LIMIT_SECONDS = 20;
     const SCAN_SETTINGS_KEY = "eventScanSettingsV1";
@@ -1201,7 +1183,6 @@
 
     let events = [];
     let sites = [];
-    let customSites = [];
     let filteredEvents = [];
     let filterStats = null;
     let newEventKeys = new Set();
@@ -1289,7 +1270,6 @@
       }
     }
 
-    const CUSTOM_SITES_KEY = "evenementenCustomSites";
     const NEW_EVENTS_KEY = "evenementenNewEventKeys";
     const KNOWN_EVENTS_KEY = "evenementenKnownEventKeys";
     const DELETED_EVENTS_KEY = "evenementenDeletedEventKeys";
@@ -1309,21 +1289,6 @@
       } catch {
         return "";
       }
-    }
-
-    function loadCustomSites() {
-      try {
-        const stored = JSON.parse(localStorage.getItem(CUSTOM_SITES_KEY) || "[]");
-        return Array.isArray(stored) ? stored.map(normalizeSiteInput).filter(Boolean) : [];
-      } catch {
-        return [];
-      }
-    }
-
-    function saveCustomSites() {
-      try {
-        localStorage.setItem(CUSTOM_SITES_KEY, JSON.stringify(customSites));
-      } catch {}
     }
 
     function loadStoredSet(key) {
@@ -1425,10 +1390,10 @@
       return { from: start, to: end };
     }
 
-    function mergeSites(baseSites, extraSites = []) {
+    function mergeSites(baseSites) {
       const seen = new Set();
       const merged = [];
-      [...(baseSites || []), ...(extraSites || [])].forEach((site) => {
+      (baseSites || []).forEach((site) => {
         const normalized = normalizeSiteInput(site);
         const key = normalized.toLowerCase();
         if (normalized && !seen.has(key)) {
@@ -2198,28 +2163,6 @@
       $("providerCount").textContent = document.querySelectorAll(".providerCheck:checked").length;
     }
 
-    function addCustomSite() {
-      const input = $("newSiteInput");
-      const normalized = normalizeSiteInput(input.value);
-      if (!normalized) {
-        showStatus("Vul een geldig websiteadres in, bijvoorbeeld https://voorbeeld.nl.", "error");
-        return;
-      }
-
-      const selected = checkedSites();
-      selected.add(normalized);
-      if (!customSites.some((site) => site.toLowerCase() === normalized.toLowerCase())) {
-        customSites.push(normalized);
-        saveCustomSites();
-      }
-
-      sites = mergeSites(sites, customSites);
-      renderSites(selected);
-      input.value = "";
-      showStatus(`${normalized} is toegevoegd aan de websites voor Ververs.`, "ok");
-      setTimeout(hideStatus, 3500);
-    }
-
     function matchesDate(event) {
       if ($("periodMode").value === "always") return true;
       if (event.isPermanent) return true;
@@ -2790,7 +2733,6 @@
 
     async function loadAll() {
       updateDateRange();
-      customSites = loadCustomSites();
       const knownKeys = loadStoredSet(KNOWN_EVENTS_KEY);
       const storedNewKeys = loadStoredSet(NEW_EVENTS_KEY);
       deletedEventKeys = loadStoredSet(DELETED_EVENTS_KEY);
@@ -2811,7 +2753,7 @@
       cardsCollapsed = true;
       expandedEventKeys = new Set();
       $("collapseBtn").textContent = "Uitklappen";
-      sites = mergeSites(loaded[1], customSites);
+      sites = mergeSites(loaded[1]);
       applyScanSettings();
       const currentKeys = eventKeySet(events);
       const detectedNew = knownKeys.size ? [...currentKeys].filter((key) => !knownKeys.has(key)) : [];
@@ -2906,13 +2848,6 @@
     $("providerList").addEventListener("change", () => {
       updateProviderCount();
       renderRawLog();
-    });
-    $("addSiteBtn").addEventListener("click", addCustomSite);
-    $("newSiteInput").addEventListener("keydown", (event) => {
-      if (event.key === "Enter") {
-        event.preventDefault();
-        addCustomSite();
-      }
     });
     document.addEventListener("click", async (event) => {
       const button = event.target.closest(".routeToggle");
