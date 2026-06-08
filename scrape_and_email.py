@@ -742,6 +742,11 @@ def event_delete_key(event):
 
 def event_score(event):
     score = 0
+    discovery = clean_text(event.get("discoverySource") or "").lower()
+    if discovery == "website":
+        score += 100
+    elif discovery in {"mistral", "chatgpt", "openai", "serpapi"}:
+        score += 10
     if event.get("website"):
         score += 10
     if event.get("description") and len(event["description"]) > 80:
@@ -752,8 +757,6 @@ def event_score(event):
         score += 2
     if event.get("location"):
         score += 2
-    if event.get("discoverySource") == "Website":
-        score += 1
     return score
 
 
@@ -1056,7 +1059,7 @@ def serpapi_events_for_site(site_url):
         if not (same_host(item_site, site_url) or same_host(item_url, site_url)):
             continue
         source_name = clean_text(item.get("source") or item.get("discoverySource") or "SerpAPI")
-        date_blob = " ".join(clean_text(item.get(key)) for key in ("date", "dateText", "title", "description", "rawText") if item.get(key))
+        date_blob = " ".join(clean_text(item.get(key)) for key in ("date", "dateText", "time", "title", "description", "rawText") if item.get(key))
         title = clean_title(item.get("title") or "")
         description = compact(item.get("description") or item.get("rawText") or "", 420)
         raw = {
@@ -1067,7 +1070,7 @@ def serpapi_events_for_site(site_url):
             "website": item_url,
             "description": description,
             "image": "",
-            "time": first_time(date_blob),
+            "time": first_time(item.get("time") or date_blob),
             "cost": first_price(description),
             "discoverySource": source_name,
         }
@@ -1078,6 +1081,14 @@ def serpapi_events_for_site(site_url):
         else:
             add_raw(source_name, site_url, title or "Event-kandidaat genegeerd", parse_date_text(date_blob), item_url, "onvolledig", description or date_blob)
     return dedupe_events(events)
+
+
+def event_source_counts(events):
+    counts = {}
+    for event in events:
+        source = clean_text(event.get("discoverySource") or "AI")
+        counts[source] = counts.get(source, 0) + 1
+    return counts
 
 
 def import_serpapi_raw_log():
@@ -1127,7 +1138,8 @@ def scrape_site(site_url, site_index=0, site_total=0):
     serpapi_events = serpapi_events_for_site(normalized_site)
     if serpapi_events:
         events.extend(serpapi_events)
-        add_raw("SerpAPI", original_site, "Eventvelden gebruikt", "", normalized_site, "ok", f"{len(serpapi_events)} event-kandidaten direct uit SerpAPI")
+        for source_name, count in event_source_counts(serpapi_events).items():
+            add_raw(source_name, original_site, "Eventvelden gebruikt", "", normalized_site, "ok", f"{count} event-kandidaten direct uit {source_name}")
 
     for page_url in start_urls_for_site(normalized_site):
         if len(dedupe_events(events)) >= MAX_EVENTS_PER_SITE or time.monotonic() >= deadline:

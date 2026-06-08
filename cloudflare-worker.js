@@ -191,6 +191,16 @@ function aiPromptForSite(site, body = {}, source = "ChatGPT", pageText = "") {
   const to = validateInput(body.dateTo || "", 40);
   const region = validateInput(body.region || "Groningen", 80);
   const maxEvents = Math.max(20, Math.min(80, Number(body.maxEventsPerSite || body.minResults) || 20));
+  if (source === "Mistral") {
+    return [
+      `kun je een overzicht maken in de vorm van een tabel met alle gevonden activiteiten die je kan vinden op de site ${site}, ik wil weten: datum/tijdstip, type (bijvoorbeeld concert of theater), titel/artiest, korte omschrijving, locatie, web url.`,
+      `Regio/context: ${region}. Periode: ${from || "vandaag"} t/m ${to || "ongeveer 14 dagen later"}. Maximaal ${maxEvents} evenementen.`,
+      "Controleer per activiteit streng of de datum/tijd, titel/artiest, locatie en web url uit de meegegeven websitetekst blijken. Controleer ook dat de web url in de tekst of linklijst voorkomt en op hetzelfde domein staat. Laat een activiteit weg als de url, datum of titel niet te controleren is.",
+      "Antwoord niet als Markdown-tabel maar als JSON met deze vorm: {\"events\":[{\"date\":\"YYYY-MM-DD\",\"time\":\"HH:MM\",\"title\":\"...\",\"type\":\"Concert|Theater|Film|Festival|Expositie|Workshop|Lezing|Familie|Activiteit\",\"location\":\"...\",\"website\":\"https://...\",\"description\":\"...\"}]}",
+      "Geen fictieve of geschatte events. Geen algemene agenda-pagina als titel. Gebruik alleen de meegegeven websitetekst.",
+      pageText ? `Websitetekst en linklijst:\n${pageText.slice(0, 14000)}` : ""
+    ].filter(Boolean).join("\n\n");
+  }
   const evidenceRule = source === "Mistral"
     ? "Gebruik uitsluitend de meegegeven websitetekst. Als een datum, titel of URL niet uit die tekst blijkt, laat het event weg."
     : "Gebruik web search voor deze exacte website. Gebruik alleen events die je op een echte pagina van deze site kunt koppelen aan een bron-URL.";
@@ -253,7 +263,37 @@ function normalizeAiEvent(site, item = {}, source = "ChatGPT", rank = 0) {
   };
 }
 
-function aiEventsFromText(site, text, source = "ChatGPT") {
+function slugWords(value) {
+  return clean(value)
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/[^a-z0-9]+/g, " ")
+    .trim()
+    .split(/\s+/)
+    .filter((word) => word.length >= 3);
+}
+
+function mistralEvidenceOk(event, evidenceText = "") {
+  const evidence = clean(evidenceText).toLowerCase();
+  if (!evidence) return false;
+  let urlOk = false;
+  try {
+    const url = new URL(event.url || event.website || "");
+    const href = url.href.toLowerCase().replace(/\/$/, "");
+    const path = decodeURIComponent(url.pathname || "").toLowerCase().replace(/\/$/, "");
+    const pathWords = slugWords(path);
+    urlOk = evidence.includes(href) || (path.length > 3 && evidence.includes(path)) || pathWords.some((word) => evidence.includes(word));
+  } catch {
+    urlOk = false;
+  }
+  const titleWords = slugWords(event.title).slice(0, 4);
+  const titleOk = titleWords.length > 0 && titleWords.some((word) => evidence.includes(word));
+  const dateOk = !event.date || evidence.includes(event.date) || evidence.includes(dutchShortDate(event.date));
+  return Boolean(urlOk && titleOk && dateOk);
+}
+
+function aiEventsFromText(site, text, source = "ChatGPT", evidenceText = "") {
   const parsed = parseJsonObject(text);
   const events = Array.isArray(parsed.events) ? parsed.events : [];
   const normalized = [];
@@ -261,6 +301,7 @@ function aiEventsFromText(site, text, source = "ChatGPT") {
   events.forEach((item, index) => {
     const event = normalizeAiEvent(site, item, source, index + 1);
     if (!event) return;
+    if (source === "Mistral" && evidenceText !== null && !mistralEvidenceOk(event, evidenceText)) return;
     const key = `${event.date}|${event.title.toLowerCase()}|${event.url.toLowerCase().replace(/\/$/, "")}`;
     if (seen.has(key)) return;
     seen.add(key);
@@ -349,7 +390,20 @@ async function fetchSiteTextForAi(site) {
       }
     }, 4500);
     if (!response.ok) return "";
-    return clean(await response.text()).slice(0, 12000);
+    const html = await response.text();
+    const linkLines = [];
+    const seen = new Set();
+    const hrefRe = /href\s*=\s*["']([^"']+)["']/gi;
+    let match;
+    while ((match = hrefRe.exec(html)) && linkLines.length < 240) {
+      try {
+        const href = new URL(match[1], site).href.split("#")[0];
+        if (!sameHostUrl(href, site) || seen.has(href)) continue;
+        seen.add(href);
+        linkLines.push(href);
+      } catch {}
+    }
+    return `${clean(html).slice(0, 10000)}\n\nLinks:\n${linkLines.join("\n")}`.slice(0, 14000);
   } catch {
     return "";
   }
@@ -395,8 +449,9 @@ async function mistralEventsForSite(env, site, body = {}) {
   }
   const data = await response.json().catch(() => ({}));
   const text = chatTextFromResponse(data);
-  const events = aiEventsFromText(site, text, "Mistral");
-  rawLog.push({ source: "Mistral", site, title: "Mistral resultaat", date: "", url: site, status: "klaar", rawText: `${events.length} event-kandidaten` });
+  const unverified = aiEventsFromText(site, text, "Mistral", null);
+  const events = aiEventsFromText(site, text, "Mistral", pageText);
+  rawLog.push({ source: "Mistral", site, title: "Mistral resultaat", date: "", url: site, status: "klaar", rawText: `${events.length} geverifieerde event-kandidaten, ${Math.max(0, unverified.length - events.length)} afgewezen` });
   events.slice(0, 20).forEach((event) => rawLog.push({
     source: "Mistral",
     site,
@@ -1076,6 +1131,7 @@ function workflowInputs(body, overrides = {}) {
     serpApiLinks: JSON.stringify(validSites(body.serpApiLinks, 200)),
     serpApiRawLog: JSON.stringify(Array.isArray(body.serpApiRawLog) ? body.serpApiRawLog.slice(0, 220) : []),
     serpApiEvents: JSON.stringify(Array.isArray(body.serpApiEvents) ? body.serpApiEvents.slice(0, 260) : []),
+    aiEvents: JSON.stringify(Array.isArray(body.aiEvents) ? body.aiEvents.slice(0, 260) : []),
     clearArchive: overrides.clearArchive ? "true" : "false"
   };
 }
