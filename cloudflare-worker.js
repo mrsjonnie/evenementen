@@ -102,6 +102,16 @@ function serpApiEnabled(env, body = {}) {
   return Boolean(validateInput(env.SERPAPI_TOKEN || "", 500) && providers.serpapi === true);
 }
 
+function chatGptEnabled(env, body = {}) {
+  const providers = body.providers && typeof body.providers === "object" ? body.providers : {};
+  return Boolean(validateInput(env.CHATGPT_API_KEY || "", 500) && (providers.chatgpt === true || providers.openai === true));
+}
+
+function mistralEnabled(env, body = {}) {
+  const providers = body.providers && typeof body.providers === "object" ? body.providers : {};
+  return Boolean(validateInput(env.MISTRAL_API_KEY || "", 500) && providers.mistral === true);
+}
+
 function serpSearchQueries(site, body = {}) {
   const url = new URL(site);
   const region = validateInput(body.region || "Groningen", 80);
@@ -174,6 +184,216 @@ function serpApiEventsFromData(site, data = {}, queryIndex = 0) {
     if (candidate) candidates.push(candidate);
   });
   return candidates;
+}
+
+function aiPromptForSite(site, body = {}, source = "ChatGPT", pageText = "") {
+  const from = validateInput(body.dateFrom || "", 40);
+  const to = validateInput(body.dateTo || "", 40);
+  const region = validateInput(body.region || "Groningen", 80);
+  const maxEvents = Math.max(20, Math.min(80, Number(body.maxEventsPerSite || body.minResults) || 20));
+  const evidenceRule = source === "Mistral"
+    ? "Gebruik uitsluitend de meegegeven websitetekst. Als een datum, titel of URL niet uit die tekst blijkt, laat het event weg."
+    : "Gebruik web search voor deze exacte website. Gebruik alleen events die je op een echte pagina van deze site kunt koppelen aan een bron-URL.";
+  return [
+    `Zoek echte evenementen op deze website: ${site}`,
+    `Regio/context: ${region}. Periode: ${from || "vandaag"} t/m ${to || "ongeveer 14 dagen later"}.`,
+    `Maximaal ${maxEvents} evenementen.`,
+    evidenceRule,
+    "Geef alleen JSON terug met deze vorm: {\"events\":[{\"date\":\"YYYY-MM-DD\",\"title\":\"...\",\"type\":\"Concert|Theater|Film|Festival|Expositie|Workshop|Lezing|Familie|Activiteit\",\"location\":\"...\",\"website\":\"https://...\",\"description\":\"...\"}]}",
+    "Eisen: datum verplicht, titel verplicht, website verplicht, website moet op hetzelfde domein staan, geen algemene agenda-pagina als titel, geen fictieve of geschatte events.",
+    pageText ? `Websitetekst:\n${pageText.slice(0, 12000)}` : ""
+  ].filter(Boolean).join("\n\n");
+}
+
+function parseJsonObject(value) {
+  const text = clean(value);
+  if (!text) return {};
+  try {
+    return JSON.parse(text);
+  } catch {}
+  const match = text.match(/\{[\s\S]*\}/);
+  if (!match) return {};
+  try {
+    return JSON.parse(match[0]);
+  } catch {
+    return {};
+  }
+}
+
+function chatTextFromResponse(data = {}) {
+  if (typeof data.output_text === "string") return data.output_text;
+  const choiceText = data.choices?.[0]?.message?.content;
+  if (typeof choiceText === "string") return choiceText;
+  if (Array.isArray(choiceText)) return choiceText.map((part) => part.text || part.content || "").join(" ");
+  return "";
+}
+
+function normalizeAiEvent(site, item = {}, source = "ChatGPT", rank = 0) {
+  const website = validateInput(item.website || item.url || item.link || "", 500);
+  if (!website || !sameHostUrl(website, site) || badWords.test(website)) return null;
+  const title = cleanSerpTitle(item.title || item.name || "", site);
+  const description = clean(item.description || item.summary || item.snippet || "");
+  const dateText = clean(item.date || item.dateText || `${title} ${description}`);
+  const eventDate = normalizeDate(dateText);
+  if (!eventDate || !title || title.length < 3 || /^(agenda|programma|tickets?|contact)$/i.test(title)) return null;
+  return {
+    source,
+    discoverySource: source,
+    sourceType: "ai",
+    site,
+    title,
+    date: eventDate,
+    dateText,
+    location: clean(item.location || item.venue?.name || item.venue || ""),
+    type: clean(item.type || ""),
+    description,
+    website,
+    url: website,
+    rank
+  };
+}
+
+function aiEventsFromText(site, text, source = "ChatGPT") {
+  const parsed = parseJsonObject(text);
+  const events = Array.isArray(parsed.events) ? parsed.events : [];
+  const normalized = [];
+  const seen = new Set();
+  events.forEach((item, index) => {
+    const event = normalizeAiEvent(site, item, source, index + 1);
+    if (!event) return;
+    const key = `${event.date}|${event.title.toLowerCase()}|${event.url.toLowerCase().replace(/\/$/, "")}`;
+    if (seen.has(key)) return;
+    seen.add(key);
+    normalized.push(event);
+  });
+  return normalized;
+}
+
+async function callWithTimeout(url, init = {}, timeoutMs = 12000) {
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), timeoutMs);
+  try {
+    return await fetch(url, { ...init, signal: controller.signal });
+  } finally {
+    clearTimeout(timer);
+  }
+}
+
+async function chatGptEventsForSite(env, site, body = {}) {
+  const token = validateInput(env.CHATGPT_API_KEY || "", 500);
+  if (!token) return { events: [], rawLog: [] };
+  const rawLog = [{
+    source: "ChatGPT",
+    site,
+    title: "ChatGPT zoekopdracht",
+    date: "",
+    url: site,
+    status: "zoeken",
+    rawText: "Website wordt via ChatGPT/webzoeklaag op eventvelden gecontroleerd."
+  }];
+  const response = await callWithTimeout("https://api.openai.com/v1/chat/completions", {
+    method: "POST",
+    headers: {
+      "Authorization": `Bearer ${token}`,
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      model: validateInput(env.CHATGPT_MODEL || "gpt-4o-mini-search-preview", 80),
+      messages: [
+        { role: "system", content: "Je bent een strenge evenementen-extractor. Geef alleen controleerbare events terug als JSON." },
+        { role: "user", content: aiPromptForSite(site, body, "ChatGPT") }
+      ],
+      response_format: { type: "json_object" },
+      max_tokens: 1800
+    })
+  }, 14000);
+  if (!response.ok) {
+    rawLog.push({ source: "ChatGPT", site, title: "ChatGPT fout", date: "", url: site, status: `status ${response.status}`, rawText: validateInput(await response.text(), 400) });
+    return { events: [], rawLog };
+  }
+  const data = await response.json().catch(() => ({}));
+  const text = chatTextFromResponse(data);
+  const events = aiEventsFromText(site, text, "ChatGPT");
+  rawLog.push({ source: "ChatGPT", site, title: "ChatGPT resultaat", date: "", url: site, status: "klaar", rawText: `${events.length} event-kandidaten` });
+  events.slice(0, 20).forEach((event) => rawLog.push({
+    source: "ChatGPT",
+    site,
+    title: event.title,
+    date: event.date,
+    url: event.url,
+    status: "eventvelden gevonden",
+    rawText: event.description || event.dateText || ""
+  }));
+  return { events, rawLog };
+}
+
+async function fetchSiteTextForAi(site) {
+  try {
+    const response = await callWithTimeout(site, {
+      headers: {
+        "User-Agent": "Mozilla/5.0 (Evenementen AI Extractor)",
+        "Accept": "text/html,application/xhtml+xml,text/plain"
+      }
+    }, 4500);
+    if (!response.ok) return "";
+    return clean(await response.text()).slice(0, 12000);
+  } catch {
+    return "";
+  }
+}
+
+async function mistralEventsForSite(env, site, body = {}) {
+  const token = validateInput(env.MISTRAL_API_KEY || "", 500);
+  if (!token) return { events: [], rawLog: [] };
+  const rawLog = [{
+    source: "Mistral",
+    site,
+    title: "Mistral analyse",
+    date: "",
+    url: site,
+    status: "zoeken",
+    rawText: "Startpagina wordt opgehaald en door Mistral op eventvelden geanalyseerd."
+  }];
+  const pageText = await fetchSiteTextForAi(site);
+  if (!pageText) {
+    rawLog.push({ source: "Mistral", site, title: "Geen websitetekst", date: "", url: site, status: "geen data", rawText: "Mistral slaat deze site over om fantasie te voorkomen." });
+    return { events: [], rawLog };
+  }
+  const response = await callWithTimeout("https://api.mistral.ai/v1/chat/completions", {
+    method: "POST",
+    headers: {
+      "Authorization": `Bearer ${token}`,
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      model: validateInput(env.MISTRAL_MODEL || "mistral-small-latest", 80),
+      messages: [
+        { role: "system", content: "Je bent een strenge evenementen-extractor. Gebruik alleen de meegegeven tekst en geef JSON terug." },
+        { role: "user", content: aiPromptForSite(site, body, "Mistral", pageText) }
+      ],
+      response_format: { type: "json_object" },
+      temperature: 0,
+      max_tokens: 1800
+    })
+  }, 14000);
+  if (!response.ok) {
+    rawLog.push({ source: "Mistral", site, title: "Mistral fout", date: "", url: site, status: `status ${response.status}`, rawText: validateInput(await response.text(), 400) });
+    return { events: [], rawLog };
+  }
+  const data = await response.json().catch(() => ({}));
+  const text = chatTextFromResponse(data);
+  const events = aiEventsFromText(site, text, "Mistral");
+  rawLog.push({ source: "Mistral", site, title: "Mistral resultaat", date: "", url: site, status: "klaar", rawText: `${events.length} event-kandidaten` });
+  events.slice(0, 20).forEach((event) => rawLog.push({
+    source: "Mistral",
+    site,
+    title: event.title,
+    date: event.date,
+    url: event.url,
+    status: "eventvelden gevonden",
+    rawText: event.description || event.dateText || ""
+  }));
+  return { events, rawLog };
 }
 
 async function serpApiLinksForSite(env, site, body = {}) {
@@ -312,8 +532,8 @@ async function serpApiLinksForSite(env, site, body = {}) {
 
 async function enrichBodyWithSerpApi(env, body = {}) {
   const selected = validSites(body.sites);
-  if (!serpApiEnabled(env, body) || !selected.length) {
-    return { body, serpApiAddedCount: 0, serpApiRawCount: 0, serpApiRawLog: [] };
+  if (!selected.length) {
+    return { body, serpApiAddedCount: 0, serpApiRawCount: 0, serpApiRawLog: [], serpApiEventsCount: 0, aiEventsCount: 0, aiRawCount: 0, aiRawLog: [] };
   }
 
   const priority = [...selected].sort((a, b) => {
@@ -323,34 +543,70 @@ async function enrichBodyWithSerpApi(env, body = {}) {
   }).slice(0, 14);
 
   const discovered = [];
-  const rawLog = [];
-  const eventCandidates = [];
-  const siteResults = await Promise.all(priority.map((site) => serpApiLinksForSite(env, site, body).catch((error) => ({
-    links: [],
-    events: [],
-    rawLog: [{
-      source: "SerpAPI",
-      site,
-      title: "Site zoeklaag mislukt",
-      date: "",
-      url: site,
-      status: "fout",
-      rawText: validateInput(error.message || "", 300)
-    }]
-  }))));
-  siteResults.forEach((result) => {
-    discovered.push(...result.links);
-    rawLog.push(...result.rawLog);
-    eventCandidates.push(...result.events);
-  });
+  const serpRawLog = [];
+  const serpEventCandidates = [];
+  const aiRawLog = [];
+  const aiEventCandidates = [];
+
+  if (serpApiEnabled(env, body)) {
+    const siteResults = await Promise.all(priority.map((site) => serpApiLinksForSite(env, site, body).catch((error) => ({
+      links: [],
+      events: [],
+      rawLog: [{
+        source: "SerpAPI",
+        site,
+        title: "Site zoeklaag mislukt",
+        date: "",
+        url: site,
+        status: "fout",
+        rawText: validateInput(error.message || "", 300)
+      }]
+    }))));
+    siteResults.forEach((result) => {
+      discovered.push(...result.links);
+      serpRawLog.push(...result.rawLog);
+      serpEventCandidates.push(...result.events);
+    });
+  }
+
+  const aiJobs = [];
+  if (chatGptEnabled(env, body)) {
+    priority.forEach((site) => aiJobs.push(chatGptEventsForSite(env, site, body).catch((error) => ({
+      events: [],
+      rawLog: [{ source: "ChatGPT", site, title: "ChatGPT mislukt", date: "", url: site, status: "fout", rawText: validateInput(error.message || "", 300) }]
+    }))));
+  }
+  if (mistralEnabled(env, body)) {
+    priority.forEach((site) => aiJobs.push(mistralEventsForSite(env, site, body).catch((error) => ({
+      events: [],
+      rawLog: [{ source: "Mistral", site, title: "Mistral mislukt", date: "", url: site, status: "fout", rawText: validateInput(error.message || "", 300) }]
+    }))));
+  }
+  if (aiJobs.length) {
+    const aiResults = await Promise.all(aiJobs);
+    aiResults.forEach((result) => {
+      aiRawLog.push(...result.rawLog);
+      aiEventCandidates.push(...result.events);
+    });
+  }
 
   const uniqueDiscovered = validSites(discovered, 200);
   return {
-    body: { ...body, sites: selected, serpApiLinks: uniqueDiscovered, serpApiRawLog: rawLog, serpApiEvents: eventCandidates },
+    body: {
+      ...body,
+      sites: selected,
+      serpApiLinks: uniqueDiscovered,
+      serpApiRawLog: [...serpRawLog, ...aiRawLog],
+      serpApiEvents: serpEventCandidates,
+      aiEvents: aiEventCandidates
+    },
     serpApiAddedCount: uniqueDiscovered.length,
-    serpApiRawCount: rawLog.length,
-    serpApiRawLog: rawLog.slice(0, 260),
-    serpApiEventsCount: eventCandidates.length
+    serpApiRawCount: serpRawLog.length,
+    serpApiRawLog: serpRawLog.slice(0, 260),
+    serpApiEventsCount: serpEventCandidates.length,
+    aiRawCount: aiRawLog.length,
+    aiRawLog: aiRawLog.slice(0, 260),
+    aiEventsCount: aiEventCandidates.length
   };
 }
 
@@ -886,12 +1142,34 @@ async function startRefresh(env, body, overrides = {}) {
   const inputs = workflowInputs(refreshBody, overrides);
   const dispatch = await dispatchWorkflow(env, inputs);
   if (dispatch.ok) {
-    return { ok: true, method: "workflow_dispatch", workflowFile: dispatch.workflowFile, serpApiAddedCount: enriched.serpApiAddedCount, serpApiRawCount: enriched.serpApiRawCount, serpApiRawLog: enriched.serpApiRawLog || [], serpApiEventsCount: enriched.serpApiEventsCount || 0 };
+    return {
+      ok: true,
+      method: "workflow_dispatch",
+      workflowFile: dispatch.workflowFile,
+      serpApiAddedCount: enriched.serpApiAddedCount,
+      serpApiRawCount: enriched.serpApiRawCount,
+      serpApiRawLog: enriched.serpApiRawLog || [],
+      serpApiEventsCount: enriched.serpApiEventsCount || 0,
+      aiRawCount: enriched.aiRawCount || 0,
+      aiRawLog: enriched.aiRawLog || [],
+      aiEventsCount: enriched.aiEventsCount || 0
+    };
   }
 
   const fallback = await upsertRefreshRequest(env, refreshBody, overrides, dispatch);
   if (fallback.ok) {
-    return { ok: true, method: "refresh_request", dispatchFailure: dispatch, serpApiAddedCount: enriched.serpApiAddedCount, serpApiRawCount: enriched.serpApiRawCount, serpApiRawLog: enriched.serpApiRawLog || [], serpApiEventsCount: enriched.serpApiEventsCount || 0 };
+    return {
+      ok: true,
+      method: "refresh_request",
+      dispatchFailure: dispatch,
+      serpApiAddedCount: enriched.serpApiAddedCount,
+      serpApiRawCount: enriched.serpApiRawCount,
+      serpApiRawLog: enriched.serpApiRawLog || [],
+      serpApiEventsCount: enriched.serpApiEventsCount || 0,
+      aiRawCount: enriched.aiRawCount || 0,
+      aiRawLog: enriched.aiRawLog || [],
+      aiEventsCount: enriched.aiEventsCount || 0
+    };
   }
 
   return {
@@ -928,6 +1206,8 @@ export default {
         worker: "evenementen-refresh",
         githubTokenConfigured: Boolean(env.GITHUB_TOKEN || env.GH_TOKEN || env.GITHUB_PAT),
         serpApiConfigured: Boolean(env.SERPAPI_TOKEN),
+        chatGptConfigured: Boolean(env.CHATGPT_API_KEY),
+        mistralConfigured: Boolean(env.MISTRAL_API_KEY),
         acceptedTokenNames: ["GITHUB_TOKEN", "GH_TOKEN", "GITHUB_PAT"],
         githubOwner: env.GITHUB_OWNER || "mrsjonnie",
         githubRepo: env.GITHUB_REPO || "evenementen",
@@ -977,6 +1257,9 @@ export default {
           serpApiRawCount: result.serpApiRawCount || 0,
           serpApiRawLog: result.serpApiRawLog || [],
           serpApiEventsCount: result.serpApiEventsCount || 0,
+          aiRawCount: result.aiRawCount || 0,
+          aiRawLog: result.aiRawLog || [],
+          aiEventsCount: result.aiEventsCount || 0,
           scrapedCount: 0,
           totalSaved: 0,
           refreshError: result.ok ? null : (result.error || result.details || "Onbekende fout")
@@ -1022,6 +1305,9 @@ export default {
         serpApiRawCount: result.serpApiRawCount || 0,
         serpApiRawLog: result.serpApiRawLog || [],
         serpApiEventsCount: result.serpApiEventsCount || 0,
+        aiRawCount: result.aiRawCount || 0,
+        aiRawLog: result.aiRawLog || [],
+        aiEventsCount: result.aiEventsCount || 0,
         scrapedCount: null,
         totalSaved: null
       }, 200);

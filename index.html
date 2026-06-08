@@ -1038,12 +1038,12 @@
               <span aria-hidden="true">v</span>
             </button>
             <div class="sitePanel">
-              <div class="sitePanelHeader">SerpAPI zoekt per aangevinkte website naar eventvelden en bruikbare bronlinks. De andere AI-bronnen blijven uit.</div>
+              <div class="sitePanelHeader">ChatGPT zoekt per aangevinkte website naar echte eventvelden. Mistral en SerpAPI kunnen apart worden aangezet om te vergelijken.</div>
               <div class="siteList" id="providerList">
                 <label><input class="providerCheck" type="checkbox" id="provPerplexity" disabled> <span>Perplexity uit</span></label>
-                <label><input class="providerCheck" type="checkbox" id="provMistral" disabled> <span>Mistral uit</span></label>
-                <label><input class="providerCheck" type="checkbox" id="provOpenAI" disabled> <span>ChatGPT uit</span></label>
-                <label><input class="providerCheck" type="checkbox" id="provSerpAPI" checked> <span>SerpAPI eventvelden</span></label>
+                <label><input class="providerCheck" type="checkbox" id="provOpenAI" checked> <span>ChatGPT eventvelden</span></label>
+                <label><input class="providerCheck" type="checkbox" id="provMistral"> <span>Mistral eventvelden</span></label>
+                <label><input class="providerCheck" type="checkbox" id="provSerpAPI"> <span>SerpAPI eventvelden</span></label>
               </div>
             </div>
           </div>
@@ -1112,7 +1112,7 @@
   </div>
 
   <script>
-    const APP_VERSION = "2026.06.08.17";
+    const APP_VERSION = "2026.06.08.18";
     const DEFAULT_MAX_EVENTS_PER_SITE = 20;
     const DEFAULT_SITE_TIME_LIMIT_SECONDS = 20;
     const SCAN_SETTINGS_KEY = "eventScanSettingsV1";
@@ -1368,9 +1368,9 @@
     function providerSettings() {
       return {
         perplexity: false,
-        mistral: false,
-        openai: false,
-        chatgpt: false,
+        mistral: Boolean($("provMistral")?.checked),
+        openai: Boolean($("provOpenAI")?.checked),
+        chatgpt: Boolean($("provOpenAI")?.checked),
         serpapi: Boolean($("provSerpAPI")?.checked)
       };
     }
@@ -1914,6 +1914,7 @@
 
     function scrapedCountFromResponse(data) {
       const values = [
+        data?.aiEventsCount,
         data?.serpApiEventsCount,
         data?.scrapedCount,
         data?.newCount,
@@ -2091,6 +2092,8 @@
     function eventMatchesProviderFilter(event) {
       const discovery = cleanText(event.discoverySource || "").toLowerCase();
       if (discovery === "serpapi" && !$("provSerpAPI")?.checked) return false;
+      if ((discovery === "chatgpt" || discovery === "openai") && !$("provOpenAI")?.checked) return false;
+      if (discovery === "mistral" && !$("provMistral")?.checked) return false;
       return true;
     }
 
@@ -2112,8 +2115,16 @@
 
     function renderRawLog() {
       const showSerpApi = Boolean($("provSerpAPI")?.checked);
+      const showChatGpt = Boolean($("provOpenAI")?.checked);
+      const showMistral = Boolean($("provMistral")?.checked);
       const rows = [...(liveLogRows || []), ...(latestRawLog || [])]
-        .filter((row) => showSerpApi || cleanText(row.source).toLowerCase() !== "serpapi")
+        .filter((row) => {
+          const source = cleanText(row.source).toLowerCase();
+          if (source === "serpapi" && !showSerpApi) return false;
+          if ((source === "chatgpt" || source === "openai") && !showChatGpt) return false;
+          if (source === "mistral" && !showMistral) return false;
+          return true;
+        })
         .slice(0, 600);
       const summary = $("rawLogSummary");
       const wrap = $("rawLogTableWrap");
@@ -2527,6 +2538,12 @@
       } else {
         addLiveLog("SerpAPI", selectedSites.join(", "), "Extra zoeklaag", "uit", "SerpAPI staat uit; alleen de websites zelf worden gescand.");
       }
+      if ($("provOpenAI").checked) {
+        addLiveLog("ChatGPT", selectedSites.join(", "), "AI zoeklaag gestart", "zoeken", "ChatGPT zoekt per website naar eventvelden.");
+      }
+      if ($("provMistral").checked) {
+        addLiveLog("Mistral", selectedSites.join(", "), "AI analyse gestart", "zoeken", "Mistral analyseert zichtbare tekst van de website.");
+      }
       selectedSites.forEach((site, index) => {
         addLiveLog(
           "Scan",
@@ -2565,8 +2582,12 @@
 
         if (!response.ok) throw new Error(workerErrorMessage(data, "Verversen is mislukt"));
         appendWorkerRawLog(data.serpApiRawLog);
+        appendWorkerRawLog(data.aiRawLog);
         if (Number(data.serpApiRawCount) || Number(data.serpApiAddedCount) || Number(data.serpApiEventsCount)) {
           addLiveLog("SerpAPI", selectedSites.join(", "), "Zoekresultaten ontvangen", "klaar", `${Number(data.serpApiRawCount) || 0} ruwe zoekregels, ${Number(data.serpApiAddedCount) || 0} links, ${Number(data.serpApiEventsCount) || 0} event-kandidaten`);
+        }
+        if (Number(data.aiRawCount) || Number(data.aiEventsCount)) {
+          addLiveLog("AI", selectedSites.join(", "), "AI-resultaten ontvangen", "klaar", `${Number(data.aiRawCount) || 0} logregels, ${Number(data.aiEventsCount) || 0} event-kandidaten`);
         }
 
         const prefix = Number.isFinite(foundCount) ? `${foundText(foundCount)} gevonden.` : foundText(foundCount) + ".";
@@ -2656,8 +2677,12 @@
         const data = await response.json().catch(() => ({}));
         if (!response.ok) throw new Error(workerErrorMessage(data, "Verwijderen is mislukt"));
         appendWorkerRawLog(data.serpApiRawLog);
+        appendWorkerRawLog(data.aiRawLog);
         if (Number(data.serpApiRawCount) || Number(data.serpApiAddedCount) || Number(data.serpApiEventsCount)) {
           addLiveLog("SerpAPI", selectedSites.join(", "), "Zoekresultaten ontvangen", "klaar", `${Number(data.serpApiRawCount) || 0} ruwe zoekregels, ${Number(data.serpApiAddedCount) || 0} links, ${Number(data.serpApiEventsCount) || 0} event-kandidaten`);
+        }
+        if (Number(data.aiRawCount) || Number(data.aiEventsCount)) {
+          addLiveLog("AI", selectedSites.join(", "), "AI-resultaten ontvangen", "klaar", `${Number(data.aiRawCount) || 0} logregels, ${Number(data.aiEventsCount) || 0} event-kandidaten`);
         }
 
         newEventKeys = new Set();
@@ -2695,8 +2720,8 @@
       $("newOnlyFilter").checked = false;
       $("provPerplexity").checked = false;
       $("provMistral").checked = false;
-      $("provOpenAI").checked = false;
-      $("provSerpAPI").checked = true;
+      $("provOpenAI").checked = true;
+      $("provSerpAPI").checked = false;
       document.querySelectorAll(".siteCheck").forEach((check) => { check.checked = true; });
       cardsCollapsed = true;
       expandedEventKeys = new Set();

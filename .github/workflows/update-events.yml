@@ -59,6 +59,10 @@ on:
         description: Door SerpAPI gevonden event-kandidaten als JSON-lijst
         required: false
         default: '[]'
+      aiEvents:
+        description: Door ChatGPT of Mistral gevonden event-kandidaten als JSON-lijst
+        required: false
+        default: '[]'
       clearArchive:
         description: Leeg actieve data en archief voor het scrapen
         required: false
@@ -112,6 +116,7 @@ jobs:
               "serpApiLinks": "[]",
               "serpApiRawLog": "[]",
               "serpApiEvents": "[]",
+              "aiEvents": "[]",
               "clearArchive": "false",
           }
 
@@ -146,6 +151,7 @@ jobs:
               "serpApiLinks": "INPUT_SERPAPI_LINKS",
               "serpApiRawLog": "INPUT_SERPAPI_RAW_LOG",
               "serpApiEvents": "INPUT_SERPAPI_EVENTS",
+              "aiEvents": "INPUT_AI_EVENTS",
               "clearArchive": "INPUT_CLEAR_ARCHIVE",
           }
 

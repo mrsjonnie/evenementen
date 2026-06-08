@@ -21,6 +21,7 @@ INPUT_CLEAR_ARCHIVE = os.getenv("INPUT_CLEAR_ARCHIVE", "").strip().lower() in {"
 INPUT_SERPAPI_LINKS_RAW = os.getenv("INPUT_SERPAPI_LINKS", "[]").strip() or "[]"
 INPUT_SERPAPI_RAW_LOG = os.getenv("INPUT_SERPAPI_RAW_LOG", "[]").strip() or "[]"
 INPUT_SERPAPI_EVENTS_RAW = os.getenv("INPUT_SERPAPI_EVENTS", "[]").strip() or "[]"
+INPUT_AI_EVENTS_RAW = os.getenv("INPUT_AI_EVENTS", "[]").strip() or "[]"
 
 REQUEST_HEADERS = {
     "User-Agent": "Mozilla/5.0 (Evenementen Scraper; +https://github.com/mrsjonnie/evenementen)",
@@ -1047,13 +1048,14 @@ def serpapi_links_for_site(site_url):
 
 def serpapi_events_for_site(site_url):
     events = []
-    for item in parse_json_list(INPUT_SERPAPI_EVENTS_RAW):
+    for item in [*parse_json_list(INPUT_SERPAPI_EVENTS_RAW), *parse_json_list(INPUT_AI_EVENTS_RAW)]:
         if not isinstance(item, dict):
             continue
         item_site = item.get("site") or item.get("url") or item.get("website") or ""
         item_url = item.get("url") or item.get("website") or ""
         if not (same_host(item_site, site_url) or same_host(item_url, site_url)):
             continue
+        source_name = clean_text(item.get("source") or item.get("discoverySource") or "SerpAPI")
         date_blob = " ".join(clean_text(item.get(key)) for key in ("date", "dateText", "title", "description", "rawText") if item.get(key))
         title = clean_title(item.get("title") or "")
         description = compact(item.get("description") or item.get("rawText") or "", 420)
@@ -1067,14 +1069,14 @@ def serpapi_events_for_site(site_url):
             "image": "",
             "time": first_time(date_blob),
             "cost": first_price(description),
-            "discoverySource": "SerpAPI",
+            "discoverySource": source_name,
         }
         event = normalize_event(raw, site_url)
         if event:
             events.append(event)
-            add_raw("SerpAPI", site_url, event["title"], event["date"], event["website"], "event direct uit SerpAPI", description or date_blob)
+            add_raw(source_name, site_url, event["title"], event["date"], event["website"], f"event direct uit {source_name}", description or date_blob)
         else:
-            add_raw("SerpAPI", site_url, title or "Event-kandidaat genegeerd", parse_date_text(date_blob), item_url, "onvolledig", description or date_blob)
+            add_raw(source_name, site_url, title or "Event-kandidaat genegeerd", parse_date_text(date_blob), item_url, "onvolledig", description or date_blob)
     return dedupe_events(events)
 
 
