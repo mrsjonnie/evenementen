@@ -1112,7 +1112,7 @@
   </div>
 
   <script>
-    const APP_VERSION = "2026.06.08.15";
+    const APP_VERSION = "2026.06.08.16";
     const DEFAULT_MAX_EVENTS_PER_SITE = 20;
     const DEFAULT_SITE_TIME_LIMIT_SECONDS = 20;
     const SCAN_SETTINGS_KEY = "eventScanSettingsV1";
@@ -1929,6 +1929,12 @@
       return `${count} ${count === 1 ? "nieuw evenement" : "nieuwe evenementen"}`;
     }
 
+    function appendWorkerRawLog(rows) {
+      if (!Array.isArray(rows) || !rows.length) return;
+      latestRawLog = [...rows, ...(latestRawLog || [])].slice(0, 900);
+      renderRawLog();
+    }
+
     async function waitForUpdatedEvents(previousSignature, previousKeys, foundCount = null, options = {}) {
       const previousUpdatedAt = eventsUpdatedAt;
       const requireEvents = Boolean(options.requireEvents);
@@ -1972,6 +1978,20 @@
         } catch (error) {
           showStatus(`Nog aan het wachten op nieuwe data: ${error.message}`, "warn", { stop: true });
         }
+      }
+
+      if (options.keepEmptyOnTimeout) {
+        events = [];
+        latestSiteResults = [];
+        eventsActiveCount = 0;
+        eventsArchiveCount = 0;
+        eventsJsonTotalCount = 0;
+        fillTypes();
+        renderSites(checkedSites());
+        applyFilters();
+        const prefix = Number.isFinite(foundCount) ? `${foundText(foundCount)} gevonden.` : foundText(foundCount) + ".";
+        showStatus(`${prefix} De oude lijst blijft verborgen; de verversing kan nog doorlopen.`, "warn");
+        return false;
       }
 
       await loadAll();
@@ -2542,6 +2562,7 @@
         addLiveLog("Worker", "Cloudflare", "Verversverzoek verstuurd", response.ok ? "gestart" : "fout", workerErrorMessage(data, response.ok ? "GitHub Actions gestart" : "Start mislukt"));
 
         if (!response.ok) throw new Error(workerErrorMessage(data, "Verversen is mislukt"));
+        appendWorkerRawLog(data.serpApiRawLog);
         if (Number(data.serpApiRawCount) || Number(data.serpApiAddedCount)) {
           addLiveLog("SerpAPI", selectedSites.join(", "), "Zoekresultaten ontvangen", "klaar", `${Number(data.serpApiRawCount) || 0} ruwe zoekregels, ${Number(data.serpApiAddedCount) || 0} extra links doorgestuurd`);
         }
@@ -2632,6 +2653,7 @@
         });
         const data = await response.json().catch(() => ({}));
         if (!response.ok) throw new Error(workerErrorMessage(data, "Verwijderen is mislukt"));
+        appendWorkerRawLog(data.serpApiRawLog);
         if (Number(data.serpApiRawCount) || Number(data.serpApiAddedCount)) {
           addLiveLog("SerpAPI", selectedSites.join(", "), "Zoekresultaten ontvangen", "klaar", `${Number(data.serpApiRawCount) || 0} ruwe zoekregels, ${Number(data.serpApiAddedCount) || 0} extra links doorgestuurd`);
         }
@@ -2652,7 +2674,7 @@
           applyFilters();
         }
         showStatus("Alles is verwijderd. Ik controleer of er nieuwe evenementen zijn gevonden.", "ok");
-        await waitForUpdatedEvents(previousSignature, previousKeys, scrapedCountFromResponse(data), { requireEvents: false });
+        await waitForUpdatedEvents(previousSignature, previousKeys, scrapedCountFromResponse(data), { requireEvents: false, keepEmptyOnTimeout: true });
       } catch (error) {
         showStatus(`Verwijderen mislukt: ${error.message}`, "error");
       } finally {

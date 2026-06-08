@@ -73,6 +73,15 @@ function sameHostUrl(candidate, site) {
   }
 }
 
+function dutchShortDate(value) {
+  const months = ["jan", "feb", "mrt", "apr", "mei", "jun", "jul", "aug", "sep", "okt", "nov", "dec"];
+  const text = validateInput(value || "", 40);
+  const match = text.match(/^(20\d{2})-(\d{2})-(\d{2})$/);
+  if (!match) return "";
+  const month = months[Math.max(0, Math.min(11, Number(match[2]) - 1))];
+  return `${Number(match[3])} ${month}`;
+}
+
 function mergeSites(...groups) {
   const seen = new Set();
   const merged = [];
@@ -93,32 +102,55 @@ function serpApiEnabled(env, body = {}) {
   return Boolean(validateInput(env.SERPAPI_TOKEN || "", 500) && providers.serpapi === true);
 }
 
-function serpSearchQuery(site, body = {}) {
+function serpSearchQueries(site, body = {}) {
   const url = new URL(site);
   const region = validateInput(body.region || "Groningen", 80);
   const dateHint = [body.dateFrom, body.dateTo].map((value) => validateInput(value || "", 20)).filter(Boolean).join(" ");
   const pathHint = url.pathname && url.pathname !== "/" ? url.pathname.replace(/[/-]+/g, " ") : "agenda programma";
-  return `site:${url.hostname} ${pathHint} evenement ${region} ${dateHint}`.trim();
+  const hostPath = `${url.hostname}${url.pathname && url.pathname !== "/" ? url.pathname.replace(/\/$/, "") : ""}`;
+  const queries = [
+    `site:${hostPath} ${pathHint} agenda programma evenement concert ${region} ${dateHint}`,
+    `site:${url.hostname} "${region}" agenda programma evenement concert theater film ${dateHint}`
+  ];
+  if (/spotgroningen\.nl/i.test(url.hostname)) {
+    const shortDate = dutchShortDate(body.dateFrom);
+    queries.unshift(`site:${hostPath} ${shortDate ? `"${shortDate}"` : ""} agenda programma SPOT Groningen`);
+  }
+  return [...new Set(queries.map((query) => query.replace(/\s+/g, " ").trim()).filter(Boolean))].slice(0, 3);
 }
 
 async function serpApiLinksForSite(env, site, body = {}) {
   const token = validateInput(env.SERPAPI_TOKEN || "", 500);
   if (!token) return { links: [], rawLog: [] };
   const requestedHits = Math.max(20, Math.min(100, Number(body.maxEventsPerSite || body.minResults) || 20));
+  const hitsPerQuery = Math.max(10, Math.min(50, requestedHits));
+  const links = [];
+  const rawLog = [];
+  const seenLinks = new Set();
+  const queries = serpSearchQueries(site, body);
 
-  const params = new URLSearchParams({
-    engine: "google",
-    q: serpSearchQuery(site, body),
-    num: String(requestedHits),
-    api_key: token
-  });
-  const response = await fetch(`https://serpapi.com/search.json?${params.toString()}`, {
-    headers: { "Accept": "application/json" }
-  });
-  if (!response.ok) {
-    return {
-      links: [],
-      rawLog: [{
+  for (const [queryIndex, query] of queries.entries()) {
+    rawLog.push({
+      source: "SerpAPI",
+      site,
+      title: `Zoekopdracht ${queryIndex + 1}/${queries.length}`,
+      date: "",
+      url: "",
+      status: "zoeken",
+      rawText: query
+    });
+
+    const params = new URLSearchParams({
+      engine: "google",
+      q: query,
+      num: String(hitsPerQuery),
+      api_key: token
+    });
+    const response = await fetch(`https://serpapi.com/search.json?${params.toString()}`, {
+      headers: { "Accept": "application/json" }
+    });
+    if (!response.ok) {
+      rawLog.push({
         source: "SerpAPI",
         site,
         title: "SerpAPI fout",
@@ -126,31 +158,40 @@ async function serpApiLinksForSite(env, site, body = {}) {
         url: "",
         status: `status ${response.status}`,
         rawText: validateInput(await response.text(), 300)
-      }]
-    };
+      });
+      continue;
+    }
+
+    const data = await response.json().catch(() => ({}));
+    const results = Array.isArray(data.organic_results) ? data.organic_results : [];
+    results.forEach((item, index) => {
+      const link = validateInput(item.link || "", 300);
+      const usable = link && sameHostUrl(link, site) && !badWords.test(link);
+      if (usable) {
+        const key = link.toLowerCase().replace(/\/$/, "");
+        if (!seenLinks.has(key)) {
+          seenLinks.add(key);
+          links.push(link);
+        }
+      }
+      if (index < 12) {
+        rawLog.push({
+          source: "SerpAPI",
+          site,
+          title: validateInput(item.title || "", 160),
+          date: "",
+          url: link,
+          status: usable ? "bruikbare link" : "genegeerd",
+          rawText: validateInput(item.snippet || item.displayed_link || "", 300),
+          rank: index + 1,
+          query: queryIndex + 1
+        });
+      }
+    });
   }
 
-  const data = await response.json().catch(() => ({}));
-  const results = Array.isArray(data.organic_results) ? data.organic_results : [];
-  const rawLog = results.slice(0, requestedHits).map((item, index) => {
-    const link = validateInput(item.link || "", 300);
-    const usable = link && sameHostUrl(link, site) && !badWords.test(link);
-    return {
-      source: "SerpAPI",
-      site,
-      title: validateInput(item.title || "", 160),
-      date: "",
-      url: link,
-      status: usable ? "bruikbare link" : "genegeerd",
-      rawText: validateInput(item.snippet || item.displayed_link || "", 300),
-      rank: index + 1
-    };
-  });
   return {
-    links: rawLog
-      .filter((row) => row.status === "bruikbare link")
-      .map((row) => row.url)
-      .slice(0, Math.min(requestedHits, 20)),
+    links: links.slice(0, Math.min(requestedHits * 2, 60)),
     rawLog
   };
 }
@@ -158,7 +199,7 @@ async function serpApiLinksForSite(env, site, body = {}) {
 async function enrichBodyWithSerpApi(env, body = {}) {
   const selected = validSites(body.sites);
   if (!serpApiEnabled(env, body) || !selected.length) {
-    return { body, serpApiAddedCount: 0, serpApiRawCount: 0 };
+    return { body, serpApiAddedCount: 0, serpApiRawCount: 0, serpApiRawLog: [] };
   }
 
   const priority = [...selected].sort((a, b) => {
@@ -181,7 +222,8 @@ async function enrichBodyWithSerpApi(env, body = {}) {
   return {
     body: { ...body, sites: selected, serpApiLinks: uniqueDiscovered, serpApiRawLog: rawLog },
     serpApiAddedCount: uniqueDiscovered.length,
-    serpApiRawCount: rawLog.length
+    serpApiRawCount: rawLog.length,
+    serpApiRawLog: rawLog.slice(0, 260)
   };
 }
 
@@ -636,7 +678,7 @@ function workflowInputs(body, overrides = {}) {
     sites: JSON.stringify(validSites(body.sites)),
     providers: JSON.stringify(body.providers && typeof body.providers === "object" ? body.providers : {}),
     serpApiLinks: JSON.stringify(validSites(body.serpApiLinks, 200)),
-    serpApiRawLog: JSON.stringify(Array.isArray(body.serpApiRawLog) ? body.serpApiRawLog.slice(0, 160) : []),
+    serpApiRawLog: JSON.stringify(Array.isArray(body.serpApiRawLog) ? body.serpApiRawLog.slice(0, 220) : []),
     clearArchive: overrides.clearArchive ? "true" : "false"
   };
 }
@@ -716,12 +758,12 @@ async function startRefresh(env, body, overrides = {}) {
   const inputs = workflowInputs(refreshBody, overrides);
   const dispatch = await dispatchWorkflow(env, inputs);
   if (dispatch.ok) {
-    return { ok: true, method: "workflow_dispatch", workflowFile: dispatch.workflowFile, serpApiAddedCount: enriched.serpApiAddedCount, serpApiRawCount: enriched.serpApiRawCount };
+    return { ok: true, method: "workflow_dispatch", workflowFile: dispatch.workflowFile, serpApiAddedCount: enriched.serpApiAddedCount, serpApiRawCount: enriched.serpApiRawCount, serpApiRawLog: enriched.serpApiRawLog || [] };
   }
 
   const fallback = await upsertRefreshRequest(env, refreshBody, overrides, dispatch);
   if (fallback.ok) {
-    return { ok: true, method: "refresh_request", dispatchFailure: dispatch, serpApiAddedCount: enriched.serpApiAddedCount, serpApiRawCount: enriched.serpApiRawCount };
+    return { ok: true, method: "refresh_request", dispatchFailure: dispatch, serpApiAddedCount: enriched.serpApiAddedCount, serpApiRawCount: enriched.serpApiRawCount, serpApiRawLog: enriched.serpApiRawLog || [] };
   }
 
   return {
@@ -805,6 +847,7 @@ export default {
           workflowFile: result.workflowFile || null,
           serpApiAddedCount: result.serpApiAddedCount || 0,
           serpApiRawCount: result.serpApiRawCount || 0,
+          serpApiRawLog: result.serpApiRawLog || [],
           scrapedCount: 0,
           totalSaved: 0,
           refreshError: result.ok ? null : (result.error || result.details || "Onbekende fout")
@@ -848,6 +891,7 @@ export default {
         workflowFile: result.workflowFile || null,
         serpApiAddedCount: result.serpApiAddedCount || 0,
         serpApiRawCount: result.serpApiRawCount || 0,
+        serpApiRawLog: result.serpApiRawLog || [],
         scrapedCount: null,
         totalSaved: null
       }, 200);

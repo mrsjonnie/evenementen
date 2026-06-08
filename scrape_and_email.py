@@ -95,6 +95,7 @@ DUTCH_DATE_RE = re.compile(
 MONTH_FIRST_RE = re.compile(rf"\b({MONTH_PATTERN})\s+(\d{{1,2}})(?:,?\s+(20\d{{2}}))?\b", re.I)
 TIME_RE = re.compile(r"\b([01]?\d|2[0-3])[:.][0-5]\d(?:\s*[-/]\s*([01]?\d|2[0-3])[:.][0-5]\d)?\b")
 PRICE_RE = re.compile(r"\b(gratis|free|(?:eur|\u20ac|\?)\s*\d+(?:[,.]\d{1,2})?)\b", re.I)
+DATE_BLOCK_START_RE = re.compile(rf"(?=(?:{WEEKDAY_PATTERN})?\.?\s*\d{{1,2}}\s+(?:{MONTH_PATTERN})\b)", re.I)
 EVENT_WORDS_RE = re.compile(
     r"\b(event|evenement|agenda|programma|concert|festival|theater|film|bioscoop|markt|workshop|lezing|expo|expositie|tentoonstelling|voorstelling|activiteit|activiteiten|tickets|muziek|cabaret|dans|opera|museum|kermis|kids|familie|cursus|talk|spreekuur|programma)\b",
     re.I,
@@ -109,6 +110,10 @@ BAD_TITLE_RE = re.compile(
 )
 STATUS_WORDS_RE = re.compile(
     r"\b(laatste kaarten|uitverkocht|sold out|geannuleerd|cancelled|tickets?|koop ticket|meer info|lees meer|reeds gestart|net bevestigd|extra datum)\b",
+    re.I,
+)
+DESCRIPTION_START_RE = re.compile(
+    r"\b(Nieuw-Zeelandse|Praktische|Powerhouse|Instrumentele|Hedendaagse|Introspectieve|Troostrijk|Muzikale|Bekend|Kampioenschap|Grootste|Invloedrijke|Ierse|Pioniers|Verhalen|Monumentale|Indierockband|Winnaars|Sensationele|Britse|Rauwe|Reggaegigant|Wereldberoemd|Amerikaanse|Japanse|IJslandse|Gratis kijkje|Inspirerende|Slimme|Traditionele|Unieke|Messcherpe|Akoestisch|Absolute|Indrukwekkend|Virtuoos|Prachtige|Zangers)\b",
     re.I,
 )
 STAGE_WORDS_RE = re.compile(r"\b(mainstage|downstage|zienema|dansen|kelderbar|clubkaartshow)\b", re.I)
@@ -415,6 +420,9 @@ def title_from_dated_text(value):
         if match and len(tail[: match.start()].split()) >= 2:
             tail = tail[: match.start()]
             break
+    description_start = DESCRIPTION_START_RE.search(tail)
+    if description_start and len(tail[: description_start.start()].split()) >= 2:
+        tail = tail[: description_start.start()]
     if len(tail) > 95:
         words = tail.split()
         tail = " ".join(words[: min(7, len(words))])
@@ -676,6 +684,16 @@ def description_from_lines(lines, title):
     return compact(" ".join(parts), 320)
 
 
+def description_after_title(chunk, title):
+    text = strip_date_prefix(chunk)
+    title_text = clean_text(title)
+    if title_text and text.lower().startswith(title_text.lower()):
+        text = text[len(title_text) :]
+    text = STATUS_WORDS_RE.sub(" ", text)
+    text = re.sub(r"\s+", " ", text).strip(" -|")
+    return compact(text, 320)
+
+
 def normalize_event(raw, site_url):
     website = normalized_url(raw.get("website"), site_url)
     title = clean_title(raw.get("title") or "")
@@ -797,6 +815,35 @@ def extract_anchor_events(soup, page_url, site_url, discovery_source):
     return events
 
 
+def extract_inline_dated_events(soup, page_url, site_url, discovery_source):
+    text = clean_text(soup.get_text(" ", strip=True))
+    chunks = [clean_text(chunk) for chunk in DATE_BLOCK_START_RE.split(text) if clean_text(chunk)]
+    events = []
+    for chunk in chunks[:700]:
+        if not parse_date_text(chunk):
+            continue
+        title = title_from_dated_text(chunk)
+        if not title_is_usable(title):
+            continue
+        raw = {
+            "date": parse_date_text(chunk),
+            "title": title,
+            "type": classify_type(chunk, canonical_host(site_url)),
+            "location": host_default_location(site_url),
+            "website": page_url,
+            "description": description_after_title(chunk, title),
+            "image": "",
+            "time": first_time(chunk),
+            "cost": first_price(chunk),
+            "discoverySource": discovery_source,
+        }
+        event = normalize_event(raw, site_url)
+        if event:
+            events.append(event)
+            add_raw(discovery_source, site_url, event["title"], event["date"], event["website"], "event uit datumblok", chunk)
+    return events
+
+
 def extract_card_events(soup, page_url, site_url, discovery_source):
     events = []
     selector = (
@@ -894,14 +941,29 @@ def extract_line_events(soup, page_url, site_url, discovery_source):
 def parse_page_events(html, page_url, site_url, discovery_source):
     soup = BeautifulSoup(html, "html.parser")
     events = []
-    events.extend(parse_jsonld_events(soup, page_url, site_url, discovery_source))
-    events.extend(extract_anchor_events(soup, page_url, site_url, discovery_source))
-    events.extend(extract_card_events(soup, page_url, site_url, discovery_source))
+    jsonld_events = parse_jsonld_events(soup, page_url, site_url, discovery_source)
+    anchor_events = extract_anchor_events(soup, page_url, site_url, discovery_source)
+    inline_events = extract_inline_dated_events(soup, page_url, site_url, discovery_source)
+    card_events = extract_card_events(soup, page_url, site_url, discovery_source)
+    events.extend(jsonld_events)
+    events.extend(anchor_events)
+    events.extend(inline_events)
+    events.extend(card_events)
     detail = extract_detail_event(soup, page_url, site_url, discovery_source)
     if detail:
         events.append(detail)
         add_raw(discovery_source, site_url, detail["title"], detail["date"], detail["website"], "event uit detailpagina", soup.get_text(" ", strip=True)[:420])
-    events.extend(extract_line_events(soup, page_url, site_url, discovery_source))
+    line_events = extract_line_events(soup, page_url, site_url, discovery_source)
+    events.extend(line_events)
+    add_raw(
+        "Parser",
+        site_url,
+        "Pagina geteld",
+        "",
+        page_url,
+        "analyse",
+        f"jsonld:{len(jsonld_events)}, links:{len(anchor_events)}, datumblokken:{len(inline_events)}, kaarten:{len(card_events)}, regels:{len(line_events)}, detail:{1 if detail else 0}",
+    )
     return dedupe_events(events)
 
 
@@ -1013,7 +1075,7 @@ def fetch_html(session, url, deadline):
     return response.text, response.url
 
 
-def scrape_site(site_url):
+def scrape_site(site_url, site_index=0, site_total=0):
     original_site = clean_text(site_url)
     normalized_site = normalized_url(original_site)
     started = time.monotonic()
@@ -1023,7 +1085,8 @@ def scrape_site(site_url):
     detail_links = []
     timed_out = False
 
-    add_raw("Website", original_site, "Start", "", normalized_site, "start", f"max {MAX_EVENTS_PER_SITE} events, max {SITE_TIME_LIMIT_SECONDS} seconden")
+    progress = f"site {site_index}/{site_total}" if site_index and site_total else "site"
+    add_raw("Website", original_site, "Start", "", normalized_site, "start", f"{progress}: max {MAX_EVENTS_PER_SITE} events, max {SITE_TIME_LIMIT_SECONDS} seconden")
 
     for page_url in start_urls_for_site(normalized_site):
         if len(dedupe_events(events)) >= MAX_EVENTS_PER_SITE or time.monotonic() >= deadline:
@@ -1079,7 +1142,7 @@ def scrape_site(site_url):
             "timedOut": timed_out,
         }
     )
-    add_raw("Website", original_site, "Klaar", "", normalized_site, "klaar", f"{len(unique)} unieke events in {duration} sec")
+    add_raw("Website", original_site, "Klaar", "", normalized_site, "klaar", f"{progress}: {len(unique)} unieke events in {duration} sec")
     return unique
 
 
@@ -1176,9 +1239,10 @@ def main():
     previous_all_keys = {event_key(event) for event in previous_all}
 
     all_events = []
-    for site in sites:
+    total_sites = len(sites)
+    for index, site in enumerate(sites, start=1):
         try:
-            all_events.extend(scrape_site(site))
+            all_events.extend(scrape_site(site, index, total_sites))
         except Exception as exc:
             add_raw("Website", site, "Site mislukt", "", site, "fout", str(exc))
             SITE_RESULTS.append({"site": site, "count": 0, "newCount": 0, "durationSeconds": 0, "timedOut": False})
