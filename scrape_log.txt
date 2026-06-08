@@ -1154,3 +1154,25 @@
 2026-06-08 13:53:51 - Klaar website scan https://www.vera-groningen.nl: 10 events, 3 pagina's, 0 details, 27.51s, timedOut=True
 2026-06-08 13:53:51 - Opgeslagen: 10 opnieuw gevonden, 24 bewaard in events.json
 2026-06-08 13:53:51 - === Scraping voltooid ===
+2026-06-08 14:01:41 - === Start scraping ===
+2026-06-08 14:01:41 - Input region=Groningen
+2026-06-08 14:01:41 - Directe websites worden gescand; SerpAPI-resultaten worden als extra linkbron gebruikt als Cloudflare ze meestuurt.
+2026-06-08 14:01:41 - Alleen geselecteerde websites worden gescand: 1
+2026-06-08 14:01:41 - Start website scan https://www.vera-groningen.nl: max 20s, max 25 events
+2026-06-08 14:01:43 - 1 kandidaat-evenementen gevonden op https://www.vera-groningen.nl
+2026-06-08 14:01:44 - Websitepagina niet bereikbaar https://www.vera-groningen.nl/agenda: 404 Client Error: Not Found for url: https://www.vera-groningen.nl/agenda
+2026-06-08 14:01:44 - Websitepagina niet bereikbaar https://www.vera-groningen.nl/agenda/agenda-overzicht: 404 Client Error: Not Found for url: https://www.vera-groningen.nl/agenda/agenda-overzicht
+2026-06-08 14:01:45 - Websitepagina niet bereikbaar https://www.vera-groningen.nl/nl/agenda: 404 Client Error: Not Found for url: https://www.vera-groningen.nl/nl/agenda
+2026-06-08 14:01:45 - Websitepagina niet bereikbaar https://www.vera-groningen.nl/nl/agenda/agenda-overzicht: 404 Client Error: Not Found for url: https://www.vera-groningen.nl/nl/agenda/agenda-overzicht
+2026-06-08 14:01:46 - Websitepagina niet bereikbaar https://www.vera-groningen.nl/evenementen: 404 Client Error: Not Found for url: https://www.vera-groningen.nl/evenementen
+2026-06-08 14:01:46 - Websitepagina niet bereikbaar https://www.vera-groningen.nl/evenement: 404 Client Error: Not Found for url: https://www.vera-groningen.nl/evenement
+2026-06-08 14:01:47 - Websitepagina niet bereikbaar https://www.vera-groningen.nl/events: 404 Client Error: Not Found for url: https://www.vera-groningen.nl/events
+2026-06-08 14:01:47 - Websitepagina niet bereikbaar https://www.vera-groningen.nl/events/all: 404 Client Error: Not Found for url: https://www.vera-groningen.nl/events/all
+2026-06-08 14:01:47 - Websitepagina niet bereikbaar https://www.vera-groningen.nl/event: 404 Client Error: Not Found for url: https://www.vera-groningen.nl/event
+2026-06-08 14:01:58 - 10 kandidaat-evenementen gevonden op https://www.vera-groningen.nl/programma
+2026-06-08 14:02:08 - 10 kandidaat-evenementen gevonden op https://www.vera-groningen.nl/program
+2026-06-08 14:02:08 - Dubbele evenementen samengevoegd: 11
+2026-06-08 14:02:08 - Gevonden op extra website https://www.vera-groningen.nl: 10
+2026-06-08 14:02:08 - Klaar website scan https://www.vera-groningen.nl: 10 events, 3 pagina's, 0 details, 27.31s, timedOut=True
+2026-06-08 14:02:08 - Opgeslagen: 10 opnieuw gevonden, 24 bewaard in events.json
+2026-06-08 14:02:08 - === Scraping voltooid ===
