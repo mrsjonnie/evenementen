@@ -1114,7 +1114,7 @@
   </div>
 
   <script>
-    const APP_VERSION = "2026.06.08.3";
+    const APP_VERSION = "2026.06.08.4";
     const DEFAULT_MAX_EVENTS_PER_SITE = 20;
     const DEFAULT_SITE_TIME_LIMIT_SECONDS = 20;
     const SCAN_SETTINGS_KEY = "eventScanSettingsV1";
@@ -1200,6 +1200,7 @@
     let latestSiteResults = [];
     let latestRawLog = [];
     let eventsArchiveCount = 0;
+    let eventsActiveCount = 0;
     let eventsJsonTotalCount = 0;
     let liveLogRows = [];
     let expandedEventKeys = new Set();
@@ -1832,15 +1833,28 @@
     }
 
     function normalizeEventsPayload(data) {
-      if (Array.isArray(data)) return { events: dedupeEvents(data), updatedAt: "", siteResults: [], rawLog: [], archiveCount: 0, totalCount: data.length };
-      if (data && Array.isArray(data.events)) {
-        const archiveCount = Array.isArray(data.archive) ? data.archive.length : 0;
-        const activeCount = data.events.length;
+      if (Array.isArray(data)) {
         return {
-          events: dedupeEvents(data.events),
+          events: dedupeEvents(data),
+          updatedAt: "",
+          siteResults: [],
+          rawLog: [],
+          activeCount: data.length,
+          archiveCount: 0,
+          totalCount: data.length
+        };
+      }
+      if (data && Array.isArray(data.events)) {
+        const activeItems = data.events;
+        const savedItems = Array.isArray(data.archive) ? data.archive : [];
+        const archiveCount = savedItems.length;
+        const activeCount = activeItems.length;
+        return {
+          events: dedupeEvents([...activeItems, ...savedItems]),
           updatedAt: cleanText(data.updatedAt || ""),
           siteResults: Array.isArray(data.siteResults) ? data.siteResults : [],
           rawLog: Array.isArray(data.rawLog) ? data.rawLog : [],
+          activeCount,
           archiveCount,
           totalCount: activeCount + archiveCount
         };
@@ -1926,8 +1940,9 @@
             eventsUpdatedAt = freshPayload.updatedAt;
             latestSiteResults = freshPayload.siteResults || [];
             latestRawLog = freshPayload.rawLog || [];
+            eventsActiveCount = Number(freshPayload.activeCount) || freshPayload.events.length;
             eventsArchiveCount = Number(freshPayload.archiveCount) || 0;
-            eventsJsonTotalCount = Number(freshPayload.totalCount) || events.length + eventsArchiveCount;
+            eventsJsonTotalCount = Number(freshPayload.totalCount) || events.length;
             addLiveLog("App", "events.json", "Nieuwe lijst geladen", "klaar", `${freshPayload.events.length} events`);
             cardsCollapsed = true;
             expandedEventKeys = new Set();
@@ -2228,8 +2243,9 @@
 
       filterStats = {
         loaded: uniqueEvents.length,
+        active: eventsActiveCount,
         archive: eventsArchiveCount,
-        totalJson: eventsJsonTotalCount || uniqueEvents.length + eventsArchiveCount,
+        totalJson: eventsJsonTotalCount || uniqueEvents.length,
         afterDeleted: afterDeleted.length,
         afterSites: afterSites.length,
         afterProviders: afterProviders.length,
@@ -2254,9 +2270,10 @@
       const target = $("filterBreakdown");
       if (!target || !filterStats) return;
 
-      const archiveCount = Number(filterStats.archive) || 0;
+      const savedCount = Number(filterStats.archive) || 0;
+      const activeCount = Number(filterStats.active) || Math.max(0, (Number(filterStats.totalJson) || filterStats.loaded) - savedCount);
       const parts = [
-        `events.json: ${filterStats.loaded} actief${archiveCount ? ` + ${archiveCount} archief` : ""}`,
+        `events.json: ${filterStats.loaded} uniek geladen (${activeCount} opnieuw gevonden${savedCount ? ` + ${savedCount} bewaard` : ""})`,
         `na websitefilter ${filterStats.afterSites}`,
         `na periode/straal ${filterStats.shown}`,
         `deze pagina ${visibleCount}`
@@ -2266,7 +2283,7 @@
       if (filterStats.afterType !== filterStats.afterQuery) parts.splice(-2, 0, `na type ${filterStats.afterType}`);
       if (filterStats.afterNew !== filterStats.afterType) parts.splice(-2, 0, `alleen nieuw ${filterStats.afterNew}`);
 
-      target.textContent = `${parts.join(" · ")}${pageCount > 1 ? ` · ${pageCount} pagina's` : ""}`;
+      target.textContent = `${parts.join(" - ")}${pageCount > 1 ? ` - ${pageCount} pagina's` : ""}`;
     }
 
     function render() {
@@ -2648,6 +2665,7 @@
           eventsUpdatedAt = "";
           latestSiteResults = [];
           latestRawLog = [];
+          eventsActiveCount = 0;
           eventsArchiveCount = 0;
           eventsJsonTotalCount = 0;
           fillTypes();
@@ -2745,8 +2763,9 @@
       eventsUpdatedAt = loaded[0].updatedAt;
       latestSiteResults = loaded[0].siteResults || [];
       latestRawLog = loaded[0].rawLog || [];
+      eventsActiveCount = Number(loaded[0].activeCount) || loaded[0].events.length;
       eventsArchiveCount = Number(loaded[0].archiveCount) || 0;
-      eventsJsonTotalCount = Number(loaded[0].totalCount) || events.length + eventsArchiveCount;
+      eventsJsonTotalCount = Number(loaded[0].totalCount) || events.length;
       cardsCollapsed = true;
       expandedEventKeys = new Set();
       $("collapseBtn").textContent = "Uitklappen";

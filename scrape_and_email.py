@@ -2227,7 +2227,7 @@ def save_events_to_json(active_events, archive):
     }
     with open(DATA_FILE, "w", encoding="utf-8") as f:
         json.dump(payload, f, ensure_ascii=False, indent=2)
-    log(f"Opgeslagen: {len(active_events)} actief, {len(archive)} gearchiveerd in {DATA_FILE}")
+    log(f"Opgeslagen: {len(active_events)} opnieuw gevonden, {len(archive)} bewaard in {DATA_FILE}")
 
 
 def main():
@@ -2235,7 +2235,7 @@ def main():
     log(f"Input region={INPUT_REGION}")
     log("AI-bronnen worden in deze automatische workflow niet gebruikt.")
     if INPUT_CLEAR_ARCHIVE:
-        log("Clear archive gevraagd: bestaande actieve lijst en archief worden genegeerd.")
+        log("Alles verwijderen gevraagd: bestaande lijst en bewaarde events worden genegeerd.")
 
     previous_active, previous_archive = ([], []) if INPUT_CLEAR_ARCHIVE else load_existing_events()
     extra_sites = parse_input_sites()
@@ -2247,7 +2247,7 @@ def main():
     fixed_events = [] if extra_sites else manual_events()
     active = sort_events_for_request(dedupe_events(scraped + fixed_events))
     archive = archive_old_events(previous_active, previous_archive, active)
-    previous_keys = {event_key(event) for event in previous_active}
+    previous_keys = {event_key(event) for event in [*previous_active, *previous_archive]}
     for result in SITE_RESULTS:
         result["newCount"] = sum(1 for key in result.get("eventKeys", []) if key not in previous_keys)
 

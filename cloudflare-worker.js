@@ -531,8 +531,9 @@ async function saveEventsToGithub(env, foundEvents, options = {}) {
     if (decoded && Array.isArray(decoded.archive)) existing.archive = decoded.archive;
   }
 
-  const archive = options.clearArchive ? [] : existing.archive;
   const merged = dedupe([...(foundEvents || []), ...(options.clearArchive ? [] : existing.events)]);
+  const mergedKeys = new Set(merged.map(eventKey));
+  const archive = options.clearArchive ? [] : existing.archive.filter((event) => !mergedKeys.has(eventKey(event)));
   const payload = {
     schemaVersion: 2,
     updatedAt: new Date().toISOString(),
