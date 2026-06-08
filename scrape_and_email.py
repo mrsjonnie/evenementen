@@ -75,6 +75,63 @@ BLOCKED_TITLES = {
     "maart / april",
     "augustus en verder",
 }
+GENERIC_TYPE_TITLES = {
+    "concert",
+    "event",
+    "events",
+    "film",
+    "doc",
+    "talk",
+    "festival",
+    "sport",
+    "muziek",
+    "music",
+    "theater",
+    "cabaret",
+    "ballet",
+    "beurs event",
+    "performing arts",
+    "just confirmed",
+    "net bevestigd",
+    "tickets",
+    "info & bestellen",
+}
+GENERIC_TYPE_WORDS = {
+    "actie",
+    "alternative",
+    "ballet",
+    "cabaret",
+    "classic",
+    "comedy",
+    "concert",
+    "cursus",
+    "dance",
+    "doc",
+    "drama",
+    "event",
+    "expositie",
+    "familie",
+    "film",
+    "folk",
+    "historisch",
+    "horror",
+    "indie",
+    "kids",
+    "komedie",
+    "kostuumdrama",
+    "metal",
+    "misdaad",
+    "museum",
+    "muziek",
+    "pop",
+    "rock",
+    "special",
+    "sport",
+    "spreekuur",
+    "talk",
+    "theater",
+    "thriller",
+}
 EVENT_WORDS_RE = re.compile(
     r"\b(event|evenement|agenda|programma|concert|festival|theater|film|bioscoop|markt|workshop|lezing|expo|expositie|tentoonstelling|voorstelling|activiteit|activiteiten|tickets|uitgaan|muziek|cabaret|dans|opera|museum|kermis|kinderen)\b",
     re.I,
@@ -110,6 +167,7 @@ LOCATION_HINT_RE = re.compile(
     r"\b(in|bij|locatie|zaal|kamer|bibliotheek|forum|spot|vera|simplon|paradiso|concertgebouw|martiniplaza|hedon)\b",
     re.I,
 )
+TITLE_CLASS_RE = re.compile(r"\b(title|titel|name|naam|heading|headline|card-title|event-title|event__title|programma__title)\b", re.I)
 MONTH_NUMBERS = {
     "januari": 1,
     "februari": 2,
@@ -342,6 +400,7 @@ def normalize_title(value):
     text = clean_text(value).lower()
     text = re.sub(rf"^(?:monday|tuesday|wednesday|thursday|friday|saturday|sunday|maandag|dinsdag|woensdag|donderdag|vrijdag|zaterdag|zondag)\s+\d{{1,2}}\s+(?:{MONTHS})\s+", "", text)
     text = re.split(r"\b(mainstage|downstage|zienema|dansen)\b|\bticket\b|\bdoors\b|\bstart\b|\bsold out\b|\bkoop ticket\b", text, 1)[0]
+    text = re.sub(r"['’]", "", text)
     text = re.sub(r"\b20\d{2}\b", "", text)
     text = re.sub(r"^(concert|theater|film|bioscoop|markt|workshop|event|evenement):\s*", "", text)
     text = re.sub(r"[^a-z0-9]+", " ", text)
@@ -353,6 +412,14 @@ def normalize_location(value):
     text = re.sub(r"\b(start|startpunt|bij|diverse|locaties|locatie)\b", "", text)
     text = re.sub(r"[^a-z0-9]+", " ", text)
     return text.strip()
+
+
+def looks_like_type_line(value):
+    text = clean_text(value).lower()
+    if text in GENERIC_TYPE_TITLES:
+        return True
+    tokens = [token for token in re.split(r"[^a-z0-9]+", text) if token]
+    return bool(tokens and len(tokens) <= 5 and all(token in GENERIC_TYPE_WORDS for token in tokens))
 
 
 def event_key(event):
@@ -420,6 +487,8 @@ def is_valid_event(event):
     if not title or len(title_norm) < 4:
         return False
     if title.lower() in BLOCKED_TITLES:
+        return False
+    if looks_like_type_line(title):
         return False
     if TITLE_NOISE_RE.search(title):
         return False
@@ -1017,10 +1086,70 @@ def clean_listing_title(value):
     title = DATE_IN_TEXT_RE.sub(" ", title)
     title = SHORT_DOT_DATE_RE.sub(" ", title)
     title = NUMERIC_DATE_RE.sub(" ", title)
-    title = re.sub(r"^(ma|di|wo|do|vr|za|zo|mon|tue|wed|thu|fri|sat|sun|monday|tuesday|wednesday|thursday|friday|saturday|sunday)\.?,?\s+", "", title, flags=re.I)
+    title = re.sub(
+        r"^(ma|di|wo|do|vr|za|zo|mon|tue|wed|thu|fri|sat|sun|monday|tuesday|wednesday|thursday|friday|saturday|sunday)(?:\.|,|\s)+",
+        "",
+        title,
+        flags=re.I,
+    )
+    title = re.sub(r"^[\.\-–|:]+\s*", "", title)
     title = re.split(r"\b(tickets?|koop ticket|meer info|info & bestellen|lees meer|lees verder|uitverkocht|sold out)\b", title, 1, flags=re.I)[0]
     title = re.sub(r"\s+", " ", title).strip(" -|:")
     return format_event_title(title[:140])
+
+
+def class_value(node):
+    classes = node.get("class", []) if hasattr(node, "get") else []
+    if isinstance(classes, str):
+        return classes
+    return " ".join(str(item) for item in classes)
+
+
+def inline_font_size(node):
+    style = clean_text(node.get("style")) if hasattr(node, "get") else ""
+    match = re.search(r"font-size\s*:\s*([0-9.]+)\s*(px|rem|em)", style, re.I)
+    if not match:
+        return 0
+    size = float(match.group(1))
+    unit = match.group(2).lower()
+    if unit in {"rem", "em"}:
+        size *= 16
+    return size
+
+
+def title_node_score(node):
+    score = 0
+    name = getattr(node, "name", "") or ""
+    if re.fullmatch(r"h[1-6]", name):
+        score += 80 - (int(name[1]) * 5)
+    if TITLE_CLASS_RE.search(class_value(node)):
+        score += 30
+    size = inline_font_size(node)
+    if size >= 28:
+        score += 35
+    elif size >= 22:
+        score += 25
+    elif size >= 18:
+        score += 15
+    return score
+
+
+def title_candidates_from_block(block):
+    if not hasattr(block, "find_all"):
+        return []
+
+    candidates = []
+    for node in block.find_all(["h1", "h2", "h3", "h4", "h5", "strong", "span", "div", "p", "a"], limit=80):
+        score = title_node_score(node)
+        if score <= 0:
+            continue
+        text = clean_text(node.get_text(" ", strip=True))
+        if not text or len(text) > 220:
+            continue
+        candidates.append((score, text))
+
+    candidates.sort(key=lambda item: (item[0], -len(item[1])), reverse=True)
+    return [text for _, text in candidates[:8]]
 
 
 def title_from_listing_anchor(anchor, absolute, block):
@@ -1030,6 +1159,7 @@ def title_from_listing_anchor(anchor, absolute, block):
     image = anchor.find("img") if hasattr(anchor, "find") else None
     if image:
         candidates.extend([image.get("alt"), image.get("title")])
+    candidates.extend(title_candidates_from_block(block))
     if hasattr(block, "find_all"):
         for heading in block.find_all(["h1", "h2", "h3", "h4", "h5"], limit=4):
             candidates.append(heading.get_text(" ", strip=True))
@@ -1359,6 +1489,16 @@ def is_context_noise(line):
     lowered = value.lower()
     if lowered in BLOCKED_TITLES:
         return True
+    if lowered in GENERIC_TYPE_TITLES:
+        return True
+    if looks_like_type_line(value):
+        return True
+    if re.match(r"^(?:[^\w\s]|eur)?\s*\d+[,.]\d{2}$", lowered):
+        return True
+    if lowered.startswith("in ") and len(value) <= 40 and LOCATION_HINT_RE.search(value):
+        return True
+    if lowered.startswith("image:"):
+        return True
     if TITLE_NOISE_RE.search(value):
         return True
     if lowered in {"filter", "datum", "soort", "locatie", "sluiten", "tickets", "meer info"}:
@@ -1414,6 +1554,70 @@ def events_from_contextual_lines(soup, site_url):
         if is_valid_event(item):
             events.append(item)
             add_raw_row("Website", site_url, item.get("title"), item.get("date"), website, "event uit datumgroep", " ".join([title, *lookahead[:4]]))
+        if len(events) >= MAX_EVENTS_PER_SITE:
+            break
+
+    return dedupe_events(events)
+
+
+def location_from_nearby_lines(lines, site_url):
+    for line in lines:
+        value = clean_text(line)
+        if not value:
+            continue
+        if "," in value:
+            after_comma = clean_text(value.rsplit(",", 1)[-1])
+            if after_comma and not first_date_in_text(after_comma) and len(after_comma) <= 80:
+                return format_event_title(after_comma)
+        if re.match(r"^in\s+.{3,80}$", value, re.I):
+            return clean_text(re.sub(r"^in\s+", "", value, flags=re.I))
+        if LOCATION_HINT_RE.search(value) and len(value) <= 80 and not first_date_in_text(value):
+            return value
+    return default_location_for_site(site_url)
+
+
+def events_from_forward_date_lines(soup, site_url):
+    events = []
+    title_links = collect_title_links(soup, site_url)
+    lines = [clean_text(item) for item in soup.stripped_strings if clean_text(item)]
+
+    for index, line in enumerate(lines):
+        if is_context_noise(line):
+            continue
+        if first_date_in_text(line) or date_from_section_label(line):
+            continue
+
+        title = clean_listing_title(line)
+        if not title or len(normalize_title(title)) < 4:
+            continue
+
+        nearby = lines[index + 1:index + 8]
+        date = ""
+        for candidate in nearby:
+            date = normalize_date_value(first_date_in_text(candidate) or date_from_section_label(candidate))
+            if ISO_DATE_RE.fullmatch(date):
+                break
+        if not ISO_DATE_RE.fullmatch(date):
+            continue
+
+        context = nearby[:5]
+        item = normalize_event(
+            {
+                "title": title,
+                "type": context_type(context),
+                "date": date,
+                "time": context_time(context),
+                "location": location_from_nearby_lines(context, site_url),
+                "description": " ".join([title, *context])[:280],
+                "website": link_for_title(title_links, title, site_url),
+                "cost": context_cost(context),
+                "source": source_label_for_site(site_url),
+                "periodLabel": date,
+            }
+        )
+        if is_valid_event(item):
+            events.append(item)
+            add_raw_row("Website", site_url, item.get("title"), item.get("date"), item.get("website"), "event uit titel-datumregels", " ".join([line, *context]))
         if len(events) >= MAX_EVENTS_PER_SITE:
             break
 
@@ -1570,6 +1774,7 @@ def scrape_structured_site(site_url):
             source_events = events_from_spot_listing(soup, page_url)
             events.extend(source_events)
             events.extend(events_from_same_host_listing(soup, page_url))
+            events.extend(events_from_forward_date_lines(soup, page_url))
             if not source_events and is_detail_event_url(page_url):
                 item = event_from_detail_page(page_url, slug_title_from_url(page_url), deadline=deadline)
                 if item and is_valid_event(item):
@@ -1579,6 +1784,7 @@ def scrape_structured_site(site_url):
             source_events = events_from_vera_listing(soup, page_url)
             events.extend(source_events)
             events.extend(events_from_same_host_listing(soup, page_url))
+            events.extend(events_from_forward_date_lines(soup, page_url))
             if not source_events and is_detail_event_url(page_url):
                 item = event_from_detail_page(page_url, slug_title_from_url(page_url), deadline=deadline)
                 if item and is_valid_event(item):
@@ -1587,6 +1793,7 @@ def scrape_structured_site(site_url):
             events.extend(events_from_same_host_listing(soup, page_url))
             events.extend(events_from_listing_text(soup, page_url))
             events.extend(events_from_contextual_lines(soup, page_url))
+            events.extend(events_from_forward_date_lines(soup, page_url))
             link_candidates.extend(candidate_event_links(soup, page_url))
 
         added = len(events) - before
@@ -1821,14 +2028,8 @@ def main():
         scraped = scrape_extra_sites(extra_sites)
     else:
         scraped = scrape_uitzinnig(INPUT_REGION)
-    selected_hosts = {site_host(site) for site in extra_sites}
-    keep_existing = [
-        active_copy(event)
-        for event in previous_active
-        if not is_past_event(event) and event_from_selected_site(event, selected_hosts)
-    ]
     fixed_events = [] if extra_sites else manual_events()
-    active = sort_events_for_request(dedupe_events(scraped + keep_existing + fixed_events))
+    active = sort_events_for_request(dedupe_events(scraped + fixed_events))
     archive = archive_old_events(previous_active, previous_archive, active)
     previous_keys = {event_key(event) for event in previous_active}
     for result in SITE_RESULTS:

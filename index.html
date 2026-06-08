@@ -1053,7 +1053,7 @@
               <span aria-hidden="true">v</span>
             </button>
             <div class="sitePanel">
-              <div class="sitePanelHeader">Aangevinkte websites worden gescand en filteren ook wat je ziet. Standaard staat SPOT aan.</div>
+              <div class="sitePanelHeader">Aangevinkte websites worden gescand en filteren ook wat je ziet. Standaard staan alle sites aan.</div>
               <div class="siteList" id="sitesList"></div>
               <div class="siteAdd">
                 <input id="newSiteInput" type="url" placeholder="https://voorbeeld.nl">
@@ -1113,7 +1113,7 @@
   </div>
 
   <script>
-    const APP_VERSION = "2026.06.07.33";
+    const APP_VERSION = "2026.06.08.1";
     const DEFAULT_MAX_EVENTS_PER_SITE = 20;
     const DEFAULT_SITE_TIME_LIMIT_SECONDS = 20;
     const SCAN_SETTINGS_KEY = "eventScanSettingsV1";
@@ -2044,7 +2044,7 @@
     }
 
     function renderSites(selected = null) {
-      const selectedSites = selected || new Set([SPOT_ONLY_SITE]);
+      const selectedSites = selected || new Set(sites);
       $("sitesList").innerHTML = sites.map((site) => `
         ${(() => {
           const result = siteResultFor(site);
@@ -2624,7 +2624,7 @@
       $("provMistral").checked = false;
       $("provOpenAI").checked = false;
       $("provSerpAPI").checked = false;
-      document.querySelectorAll(".siteCheck").forEach((check) => { check.checked = check.value === SPOT_ONLY_SITE; });
+      document.querySelectorAll(".siteCheck").forEach((check) => { check.checked = true; });
       cardsCollapsed = true;
       expandedEventKeys = new Set();
       $("collapseBtn").textContent = "Uitklappen";
