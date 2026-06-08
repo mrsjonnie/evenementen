@@ -15,6 +15,8 @@ INPUT_SITES_RAW = os.getenv("INPUT_SITES", "[]").strip() or "[]"
 INPUT_DATE_FROM = os.getenv("INPUT_DATE_FROM", "").strip()
 INPUT_DATE_TO = os.getenv("INPUT_DATE_TO", "").strip()
 INPUT_CLEAR_ARCHIVE = os.getenv("INPUT_CLEAR_ARCHIVE", "").strip().lower() in {"1", "true", "yes", "ja"}
+INPUT_SERPAPI_LINKS_RAW = os.getenv("INPUT_SERPAPI_LINKS", "[]").strip() or "[]"
+INPUT_SERPAPI_RAW_LOG = os.getenv("INPUT_SERPAPI_RAW_LOG", "[]").strip() or "[]"
 BASE_HEADERS = {"User-Agent": "Mozilla/5.0"}
 
 
@@ -232,6 +234,14 @@ MONTH_NUMBERS = {
 def log(message):
     with open(LOG_FILE, "a", encoding="utf-8") as f:
         f.write(f"{datetime.now().strftime('%Y-%m-%d %H:%M:%S')} - {message}\n")
+
+
+def parse_json_list(raw):
+    try:
+        data = json.loads(raw)
+        return data if isinstance(data, list) else []
+    except Exception:
+        return []
 
 
 def add_raw_row(source, site, title="", date="", url="", status="", raw_text=""):
@@ -607,12 +617,13 @@ def parse_input_sites():
     except Exception:
         raw_sites = [part.strip() for part in INPUT_SITES_RAW.split(",")]
 
-    sites = normalize_site_list(raw_sites)
+    serpapi_sites = normalize_site_list(parse_json_list(INPUT_SERPAPI_LINKS_RAW))
+    sites = normalize_site_list([*raw_sites, *serpapi_sites])
     if sites:
         return sites
 
     log("Geen losse websites meegegeven; ik gebruik alle websites uit sites.json.")
-    return normalize_site_list(configured_sites_from_file())
+    return normalize_site_list([*configured_sites_from_file(), *serpapi_sites])
 
 
 def dedupe_events(events):
@@ -2233,6 +2244,25 @@ def public_site_results():
     return result
 
 
+def import_serpapi_raw_log():
+    rows = parse_json_list(INPUT_SERPAPI_RAW_LOG)
+    imported = 0
+    for row in rows[:300]:
+        if not isinstance(row, dict):
+            continue
+        add_raw_row(
+            "SerpAPI",
+            row.get("site", ""),
+            row.get("title", ""),
+            row.get("date", ""),
+            row.get("url", ""),
+            row.get("status", ""),
+            row.get("rawText") or row.get("snippet") or row.get("url", ""),
+        )
+        imported += 1
+    return imported
+
+
 def clean_saved_event(event):
     item = dict(event)
     website = clean_text(item.get("website")) or "#"
@@ -2269,7 +2299,7 @@ def save_events_to_json(active_events, archive):
 def main():
     log("=== Start scraping ===")
     log(f"Input region={INPUT_REGION}")
-    log("AI-bronnen worden in deze automatische workflow niet gebruikt.")
+    log("Directe websites worden gescand; SerpAPI-resultaten worden als extra linkbron gebruikt als Cloudflare ze meestuurt.")
     add_raw_row(
         "Scan",
         "workflow",
@@ -2277,8 +2307,12 @@ def main():
         "",
         "",
         "start",
-        f"AI uitgeschakeld; max {MAX_EVENTS_PER_SITE} evenementen/site; max {SITE_TIME_LIMIT_SECONDS} seconden/site",
+        f"Max {MAX_EVENTS_PER_SITE} evenementen/site; max {SITE_TIME_LIMIT_SECONDS} seconden/site",
     )
+    serpapi_imported = import_serpapi_raw_log()
+    if serpapi_imported:
+        log(f"SerpAPI raw log toegevoegd: {serpapi_imported} regels")
+        add_raw_row("SerpAPI", "workflow", f"{serpapi_imported} zoekresultaten ontvangen", "", "", "ontvangen", "Deze links worden als extra scan-ingang gebruikt.")
     if INPUT_CLEAR_ARCHIVE:
         log("Alles verwijderen gevraagd: bestaande lijst en bewaarde events worden genegeerd.")
 

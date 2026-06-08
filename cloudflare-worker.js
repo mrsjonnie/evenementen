@@ -85,7 +85,8 @@ function mergeSites(...groups) {
 }
 
 function serpApiEnabled(env, body = {}) {
-  return false;
+  const providers = body.providers && typeof body.providers === "object" ? body.providers : {};
+  return Boolean(validateInput(env.SERPAPI_TOKEN || "", 500) && providers.serpapi === true);
 }
 
 function serpSearchQuery(site, body = {}) {
@@ -172,10 +173,10 @@ async function enrichBodyWithSerpApi(env, body = {}) {
     } catch {}
   }
 
-  const merged = mergeSites(selected, discovered);
+  const uniqueDiscovered = mergeSites(discovered);
   return {
-    body: { ...body, sites: merged, serpApiLinks: discovered, serpApiRawLog: rawLog },
-    serpApiAddedCount: Math.max(0, merged.length - selected.length),
+    body: { ...body, sites: selected, serpApiLinks: uniqueDiscovered, serpApiRawLog: rawLog },
+    serpApiAddedCount: uniqueDiscovered.length,
     serpApiRawCount: rawLog.length
   };
 }

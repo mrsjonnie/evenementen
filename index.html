@@ -1046,18 +1046,18 @@
       <div class="secondRow">
         <div class="sourcePickers">
           <div class="siteSelect" id="providerSelect">
-            <label class="siteSelectLabel" for="providerButton">AI-bronnen</label>
+            <label class="siteSelectLabel" for="providerButton">Zoekbronnen</label>
             <button class="btn btnSecondary siteButton" id="providerButton" type="button" aria-expanded="false">
               <span><span id="providerCount">0</span> geselecteerd</span>
               <span aria-hidden="true">v</span>
             </button>
             <div class="sitePanel">
-              <div class="sitePanelHeader">AI-bronnen zijn tijdelijk uitgeschakeld. Er wordt alleen rechtstreeks vanaf websites gescand.</div>
+              <div class="sitePanelHeader">SerpAPI zoekt extra links binnen de aangevinkte websites. De andere AI-bronnen blijven uit.</div>
               <div class="siteList" id="providerList">
                 <label><input class="providerCheck" type="checkbox" id="provPerplexity" disabled> <span>Perplexity uit</span></label>
                 <label><input class="providerCheck" type="checkbox" id="provMistral" disabled> <span>Mistral uit</span></label>
                 <label><input class="providerCheck" type="checkbox" id="provOpenAI" disabled> <span>ChatGPT uit</span></label>
-                <label><input class="providerCheck" type="checkbox" id="provSerpAPI" disabled> <span>SerpAPI uit</span></label>
+                <label><input class="providerCheck" type="checkbox" id="provSerpAPI" checked> <span>SerpAPI extra links</span></label>
               </div>
             </div>
           </div>
@@ -1130,7 +1130,7 @@
   </div>
 
   <script>
-    const APP_VERSION = "2026.06.08.11";
+    const APP_VERSION = "2026.06.08.12";
     const DEFAULT_MAX_EVENTS_PER_SITE = 20;
     const DEFAULT_SITE_TIME_LIMIT_SECONDS = 20;
     const SCAN_SETTINGS_KEY = "eventScanSettingsV1";
@@ -1406,7 +1406,7 @@
         mistral: false,
         openai: false,
         chatgpt: false,
-        serpapi: false
+        serpapi: Boolean($("provSerpAPI")?.checked)
       };
     }
 
@@ -2123,14 +2123,14 @@
     }
 
     function renderRawLog() {
-      const showSerpApi = false;
+      const showSerpApi = Boolean($("provSerpAPI")?.checked);
       const rows = [...(liveLogRows || []), ...(latestRawLog || [])]
         .filter((row) => showSerpApi || cleanText(row.source).toLowerCase() !== "serpapi")
         .slice(0, 600);
       const summary = $("rawLogSummary");
       const wrap = $("rawLogTableWrap");
       if (!summary || !wrap) return;
-      summary.textContent = rows.length ? `Ruwe verversdata (${rows.length} regels)` : "Ruwe verversdata (nog leeg)";
+      summary.textContent = rows.length ? `Ruwe verversdata (${rows.length} regels, klik om te tonen/verbergen)` : "Ruwe verversdata (nog leeg)";
       if (!rows.length) {
         wrap.innerHTML = '<div class="routePanelText">Nog geen ruwe verversdata beschikbaar. Ververs de lijst om dit te vullen.</div>';
         return;
@@ -2530,10 +2530,6 @@
       }
     }
 
-    function isOpenAIQuotaError(message) {
-      return /openai|chatgpt|quota|billing|insufficient_quota/i.test(String(message || ""));
-    }
-
     function workerErrorMessage(data, fallback) {
       const parts = [data?.error || data?.message || fallback || "Onbekende fout"];
       if (data?.status) parts.push(`status ${data.status}`);
@@ -2560,7 +2556,11 @@
       }
       resetLiveLog();
       addLiveLog("App", selectedSites.join(", "), "Verversing gestart", "start", `${scanSettings.maxEventsPerSite} events/site, ${scanSettings.siteTimeLimitSeconds} sec/site`);
-      addLiveLog("AI", "AI-bronnen", "AI/SerpAPI", "uitgeschakeld", "Er wordt nu alleen rechtstreeks per website gescand; AI-resultaten worden niet meegestuurd of geanalyseerd.");
+      if ($("provSerpAPI").checked) {
+        addLiveLog("SerpAPI", selectedSites.join(", "), "Extra zoeklaag gestart", "zoeken", "SerpAPI zoekt per geselecteerde website naar agenda- en evenementenlinks.");
+      } else {
+        addLiveLog("SerpAPI", selectedSites.join(", "), "Extra zoeklaag", "uit", "SerpAPI staat uit; alleen de websites zelf worden gescand.");
+      }
       selectedSites.forEach((site, index) => {
         addLiveLog(
           "Scan",
@@ -2597,22 +2597,10 @@
         foundCount = scrapedCountFromResponse(data);
         addLiveLog("Worker", "Cloudflare", "Verversverzoek verstuurd", response.ok ? "gestart" : "fout", workerErrorMessage(data, response.ok ? "GitHub Actions gestart" : "Start mislukt"));
 
-        if (!response.ok && isOpenAIQuotaError(data.error || data.message) && payload.providers.openai) {
-          $("provOpenAI").checked = false;
-          updateProviderCount();
-          payload.providers.openai = false;
-          payload.providers.chatgpt = false;
-          showStatus("ChatGPT heeft geen API-quota meer. Ik probeer opnieuw zonder ChatGPT.", "warn");
-          response = await fetch(WORKER_URL, {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(payload)
-          });
-          data = await response.json().catch(() => ({}));
-          foundCount = scrapedCountFromResponse(data);
-        }
-
         if (!response.ok) throw new Error(workerErrorMessage(data, "Verversen is mislukt"));
+        if (Number(data.serpApiRawCount) || Number(data.serpApiAddedCount)) {
+          addLiveLog("SerpAPI", selectedSites.join(", "), "Zoekresultaten ontvangen", "klaar", `${Number(data.serpApiRawCount) || 0} ruwe zoekregels, ${Number(data.serpApiAddedCount) || 0} extra links doorgestuurd`);
+        }
 
         const prefix = Number.isFinite(foundCount) ? `${foundText(foundCount)} gevonden.` : foundText(foundCount) + ".";
         showStatus(`Klaar. ${prefix} Ik controleer de bijgewerkte lijst.`, "ok", { stop: true });
@@ -2700,6 +2688,9 @@
         });
         const data = await response.json().catch(() => ({}));
         if (!response.ok) throw new Error(workerErrorMessage(data, "Verwijderen is mislukt"));
+        if (Number(data.serpApiRawCount) || Number(data.serpApiAddedCount)) {
+          addLiveLog("SerpAPI", selectedSites.join(", "), "Zoekresultaten ontvangen", "klaar", `${Number(data.serpApiRawCount) || 0} ruwe zoekregels, ${Number(data.serpApiAddedCount) || 0} extra links doorgestuurd`);
+        }
 
         newEventKeys = new Set();
         saveStoredSet(NEW_EVENTS_KEY, newEventKeys);
@@ -2735,7 +2726,7 @@
       $("provPerplexity").checked = false;
       $("provMistral").checked = false;
       $("provOpenAI").checked = false;
-      $("provSerpAPI").checked = false;
+      $("provSerpAPI").checked = true;
       document.querySelectorAll(".siteCheck").forEach((check) => { check.checked = true; });
       cardsCollapsed = true;
       expandedEventKeys = new Set();

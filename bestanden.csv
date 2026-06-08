@@ -1,6 +1,0 @@
-bestand,doel
-index.html,website met API refresh knop
-cloudflare-worker.js,veilige trigger naar GitHub workflow
-daily_update.yml,workflow met inputs
-scrape_and_email.py,scraper die filters gebruikt
-README.txt,installatiestappen
