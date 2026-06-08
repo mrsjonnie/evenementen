@@ -590,7 +590,7 @@ def configured_sites_from_file():
     return data
 
 
-def normalize_site_list(raw_sites):
+def normalize_site_list(raw_sites, limit=30):
     sites = []
     seen = set()
     for site in raw_sites:
@@ -606,7 +606,7 @@ def normalize_site_list(raw_sites):
         if key not in seen:
             seen.add(key)
             sites.append(url)
-    return sites[:30]
+    return sites[:limit]
 
 
 def parse_input_sites():
@@ -617,13 +617,36 @@ def parse_input_sites():
     except Exception:
         raw_sites = [part.strip() for part in INPUT_SITES_RAW.split(",")]
 
-    serpapi_sites = normalize_site_list(parse_json_list(INPUT_SERPAPI_LINKS_RAW))
-    sites = normalize_site_list([*raw_sites, *serpapi_sites])
+    sites = normalize_site_list(raw_sites)
     if sites:
         return sites
 
     log("Geen losse websites meegegeven; ik gebruik alle websites uit sites.json.")
-    return normalize_site_list([*configured_sites_from_file(), *serpapi_sites])
+    return normalize_site_list(configured_sites_from_file())
+
+
+def serpapi_link_candidates_for_site(site_url):
+    site = site_host(site_url)
+    raw_rows = parse_json_list(INPUT_SERPAPI_RAW_LOG)
+    title_by_url = {}
+    for row in raw_rows:
+        if not isinstance(row, dict):
+            continue
+        url = clean_text(row.get("url")).lower().rstrip("/")
+        if url:
+            title_by_url[url] = clean_text(row.get("title"))
+
+    candidates = []
+    for link in normalize_site_list(parse_json_list(INPUT_SERPAPI_LINKS_RAW), limit=200):
+        parsed = urlparse(link)
+        if not hosts_match(parsed.netloc, site):
+            continue
+        title = title_by_url.get(link.lower().rstrip("/")) or slug_title_from_url(link)
+        candidates.append((title, link))
+
+    if candidates:
+        add_raw_row("SerpAPI", site_url, f"{len(candidates)} extra links voor deze site", "", site_url, "detail-links", "SerpAPI-links worden binnen deze sites.json-site als detailpagina gelezen.")
+    return candidates[: max(MAX_EVENTS_PER_SITE * 2, 20)]
 
 
 def dedupe_events(events):
@@ -872,7 +895,11 @@ def site_seed_urls(site_url):
     parsed = urlparse(site_url)
     base = f"{parsed.scheme}://{parsed.netloc}"
     urls = [site_url.rstrip("/")]
-    urls.extend(f"{base}{path}" for path in COMMON_EVENT_PATHS)
+    existing_path = parsed.path.rstrip("/")
+    extra_paths = COMMON_EVENT_PATHS
+    if existing_path and existing_path != "/":
+        extra_paths = COMMON_EVENT_PATHS[:8]
+    urls.extend(f"{base}{path}" for path in extra_paths)
 
     seen = set()
     result = []
@@ -1958,6 +1985,7 @@ def scrape_structured_site(site_url):
         f"Max {SITE_TIME_LIMIT_SECONDS} seconden, max {MAX_EVENTS_PER_SITE} evenementen",
     )
     log(f"Start website scan {site_url}: max {SITE_TIME_LIMIT_SECONDS}s, max {MAX_EVENTS_PER_SITE} events")
+    link_candidates.extend(serpapi_link_candidates_for_site(site_url))
 
     for page_url in site_seed_urls(site_url):
         if not enough_time_left(deadline):

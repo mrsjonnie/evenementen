@@ -1112,7 +1112,7 @@
   </div>
 
   <script>
-    const APP_VERSION = "2026.06.08.13";
+    const APP_VERSION = "2026.06.08.14";
     const DEFAULT_MAX_EVENTS_PER_SITE = 20;
     const DEFAULT_SITE_TIME_LIMIT_SECONDS = 20;
     const SCAN_SETTINGS_KEY = "eventScanSettingsV1";
@@ -2650,8 +2650,8 @@
           renderRawLog();
           applyFilters();
         }
-        showStatus("Alles is verwijderd. Ik controleer de opnieuw opgebouwde lijst.", "ok");
-        await waitForUpdatedEvents(previousSignature, previousKeys, scrapedCountFromResponse(data), { requireEvents: true });
+        showStatus("Alles is verwijderd. Ik controleer of er nieuwe evenementen zijn gevonden.", "ok");
+        await waitForUpdatedEvents(previousSignature, previousKeys, scrapedCountFromResponse(data), { requireEvents: false });
       } catch (error) {
         showStatus(`Verwijderen mislukt: ${error.message}`, "error");
       } finally {

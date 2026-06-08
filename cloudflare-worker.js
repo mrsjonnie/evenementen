@@ -42,21 +42,25 @@ function validateInput(input, maxLength) {
   return String(input).slice(0, maxLength).trim();
 }
 
-function validSites(value) {
+function validSites(value, limit = 20) {
   if (!Array.isArray(value)) return [];
 
-  return value
-    .map((site) => validateInput(site, 300))
-    .map((site) => (/^[a-z][a-z0-9+.-]*:/i.test(site) ? site : `https://${site}`))
-    .filter((site) => {
-      try {
-        const url = new URL(site);
-        return ["http:", "https:"].includes(url.protocol) && url.hostname.includes(".");
-      } catch {
-        return false;
-      }
-    })
-    .slice(0, 20);
+  const result = [];
+  const seen = new Set();
+  for (const item of value) {
+    const site = validateInput(item, 300);
+    const normalized = /^[a-z][a-z0-9+.-]*:/i.test(site) ? site : `https://${site}`;
+    try {
+      const url = new URL(normalized);
+      if (!["http:", "https:"].includes(url.protocol) || !url.hostname.includes(".")) continue;
+      const key = url.href.toLowerCase().replace(/\/$/, "");
+      if (seen.has(key)) continue;
+      seen.add(key);
+      result.push(url.href.replace(/\/$/, ""));
+      if (result.length >= limit) break;
+    } catch {}
+  }
+  return result;
 }
 
 function sameHostUrl(candidate, site) {
@@ -173,7 +177,7 @@ async function enrichBodyWithSerpApi(env, body = {}) {
     } catch {}
   }
 
-  const uniqueDiscovered = mergeSites(discovered);
+  const uniqueDiscovered = validSites(discovered, 200);
   return {
     body: { ...body, sites: selected, serpApiLinks: uniqueDiscovered, serpApiRawLog: rawLog },
     serpApiAddedCount: uniqueDiscovered.length,
@@ -631,8 +635,8 @@ function workflowInputs(body, overrides = {}) {
     siteTimeLimitSeconds: validateInput(body.siteTimeLimitSeconds || "20", 10),
     sites: JSON.stringify(validSites(body.sites)),
     providers: JSON.stringify(body.providers && typeof body.providers === "object" ? body.providers : {}),
-    serpApiLinks: JSON.stringify(validSites(body.serpApiLinks)),
-    serpApiRawLog: JSON.stringify(Array.isArray(body.serpApiRawLog) ? body.serpApiRawLog.slice(0, 80) : []),
+    serpApiLinks: JSON.stringify(validSites(body.serpApiLinks, 200)),
+    serpApiRawLog: JSON.stringify(Array.isArray(body.serpApiRawLog) ? body.serpApiRawLog.slice(0, 160) : []),
     clearArchive: overrides.clearArchive ? "true" : "false"
   };
 }
