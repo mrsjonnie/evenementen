@@ -1,23 +1,31 @@
+import html as html_lib
 import json
 import os
 import re
 import time
-from datetime import datetime, timedelta, timezone
-from urllib.parse import quote_plus, urljoin, urlparse
+from datetime import date, datetime, timedelta, timezone
+from urllib.parse import urljoin, urlparse, urldefrag
 
 import requests
 from bs4 import BeautifulSoup
 
 DATA_FILE = "events.json"
 LOG_FILE = "scrape_log.txt"
-INPUT_REGION = os.getenv("INPUT_REGION", "Groningen").strip() or "Groningen"
-INPUT_SITES_RAW = os.getenv("INPUT_SITES", "[]").strip() or "[]"
+SITES_FILE = "sites.json"
+
+INPUT_REGION = (os.getenv("INPUT_REGION", "Groningen").strip() or "Groningen")
+INPUT_SITES_RAW = (os.getenv("INPUT_SITES", "[]").strip() or "[]")
 INPUT_DATE_FROM = os.getenv("INPUT_DATE_FROM", "").strip()
 INPUT_DATE_TO = os.getenv("INPUT_DATE_TO", "").strip()
 INPUT_CLEAR_ARCHIVE = os.getenv("INPUT_CLEAR_ARCHIVE", "").strip().lower() in {"1", "true", "yes", "ja"}
 INPUT_SERPAPI_LINKS_RAW = os.getenv("INPUT_SERPAPI_LINKS", "[]").strip() or "[]"
 INPUT_SERPAPI_RAW_LOG = os.getenv("INPUT_SERPAPI_RAW_LOG", "[]").strip() or "[]"
-BASE_HEADERS = {"User-Agent": "Mozilla/5.0"}
+
+REQUEST_HEADERS = {
+    "User-Agent": "Mozilla/5.0 (Evenementen Scraper; +https://github.com/mrsjonnie/evenementen)",
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+    "Accept-Language": "nl-NL,nl;q=0.9,en;q=0.7",
+}
 
 
 def env_int(name, default, minimum, maximum):
@@ -30,167 +38,9 @@ def env_int(name, default, minimum, maximum):
 
 MAX_EVENTS_PER_SITE = env_int("INPUT_MAX_EVENTS_PER_SITE", 20, 20, 100)
 SITE_TIME_LIMIT_SECONDS = env_int("INPUT_SITE_TIME_LIMIT_SECONDS", 20, 20, 60)
-SITE_RESULTS = []
-RAW_DATA_ROWS = []
-MONTHS = "januari|februari|maart|april|mei|juni|juli|augustus|september|oktober|november|december|jan|feb|mrt|apr|jun|jul|aug|sep|sept|okt|nov|dec|january|february|march|april|may|june|july|august|september|october|november|december"
-DATE_RE = re.compile(rf"^\d{{1,2}}(?:\s+t/m\s+\d{{1,2}})?\s+(?:{MONTHS})$", re.I)
-DATE_IN_TEXT_RE = re.compile(rf"\b\d{{1,2}}(?:\s+t/m\s+\d{{1,2}})?\s+(?:{MONTHS})(?:\s+20\d{{2}})?\b", re.I)
-ISO_DATE_RE = re.compile(r"\b20\d{2}-\d{2}-\d{2}\b")
-NUMERIC_DATE_RE = re.compile(r"\b(\d{1,2})[/-](\d{1,2})[/-](20\d{2})\b")
-DATE_RANGE_SAME_MONTH_RE = re.compile(
-    rf"\b(\d{{1,2}})\s*(?:t/m|tot(?: en met)?|-|–)\s*(\d{{1,2}})\s+({MONTHS})(?:\s+(20\d{{2}}))?\b",
-    re.I,
-)
-DATE_RANGE_FULL_RE = re.compile(
-    rf"\b(\d{{1,2}})\s+({MONTHS})(?:\s+(20\d{{2}}))?\s*(?:t/m|tot(?: en met)?|-|–)\s*(\d{{1,2}})\s*(?:({MONTHS})(?:\s+(20\d{{2}}))?)?\b",
-    re.I,
-)
-SHORT_DOT_DATE_RE = re.compile(
-    r"\b(?:ma|di|wo|do|vr|za|zo|mon|tue|wed|thu|fri|sat|sun)?\.?\s*(\d{1,2})\.(\d{1,2})(?:\.(20\d{2}))?\b",
-    re.I,
-)
-MONTH_FIRST_DATE_RE = re.compile(
-    rf"\b(?:mon|tue|wed|thu|fri|sat|sun|monday|tuesday|wednesday|thursday|friday|saturday|sunday),?\s*"
-    rf"({MONTHS})\s+(\d{{1,2}}),?\s*(20\d{{2}})?\b|\b({MONTHS})\s+(\d{{1,2}}),?\s*(20\d{{2}})?\b",
-    re.I,
-)
-SCORE_RE = re.compile(r"^\d,\d$")
-TIME_RE = re.compile(r"\b\d{1,2}:\d{2}\b")
-TIME_RANGE_RE = re.compile(r"^\d{1,2}:\d{2}(?:\s*[-–]\s*\d{1,2}:\d{2})?$")
-WEEKDAY_RE = re.compile(r"^(maandag|dinsdag|woensdag|donderdag|vrijdag|zaterdag|zondag|monday|tuesday|wednesday|thursday|friday|saturday|sunday)\b", re.I)
-DATE_TITLE_RE = re.compile(rf"^(?:maandag|dinsdag|woensdag|donderdag|vrijdag|zaterdag|zondag|monday|tuesday|wednesday|thursday|friday|saturday|sunday)?\s*\d{{1,2}}(?:\s+t/m\s+\d{{1,2}})?\s+(?:{MONTHS})(?:\s+20\d{{2}})?$", re.I)
-PRICE_OR_ACTION_RE = re.compile(r"^(gratis|€\s*\d|eur\s*\d|tickets?|koop ticket|meer info|lees meer|uitverkocht|sold out|reeds gestart)", re.I)
-TITLE_NOISE_RE = re.compile(r"^(coming up|highlights|lees meer|koop ticket|sold out|support|friday show|ubbo x zienema|raw postpunk from|in 20\d{2},|this winter)", re.I)
-SPOT_LISTING_RE = re.compile(r"^(ma|di|wo|do|vr|za|zo)\s*(\d{1,2})\s*([a-z]{3,9})\b\s+(.+)$", re.I)
-SPOT_SPLIT_RE = re.compile(r"(?=(?:ma|di|wo|do|vr|za|zo)\s*\d{1,2}\s*(?:jan|feb|mrt|apr|mei|jun|jul|aug|sep|sept|okt|nov|dec)\b)", re.I)
-SPOT_TITLE_STOP_RE = re.compile(
-    r"\b(Filmische|Multigenre|Een\s+|De\s+|Het\s+|Powerhouse|Praktische|Muzikale|Fantasierijke|Zelfspot|"
-    r"Noorse|Ultieme|Twee\s+|Briljant|Goeroe|Sensationele|Wervelende|Spannend|Vrolijke|"
-    r"Laatste kaarten|Uitverkocht|Net bevestigd|Wereldklasse)\b",
-    re.I,
-)
-VERA_DATE_RE = re.compile(rf"\b(monday|tuesday|wednesday|thursday|friday|saturday|sunday)\s+\d{{1,2}}\s+(?:{MONTHS})\b", re.I)
-VERA_TYPE_RE = re.compile(r"\b(Mainstage|Downstage|Zienema|Dansen)\s*\|", re.I)
-COUNTRY_CODE_RE = re.compile(r"\b(CAN|NL|USA|BEL|GRN|INT|UK|DE|FR|IT|ES)\b")
-BLOCKED_TITLES = {
-    "uitgelicht",
-    "toon info",
-    "bezoek website",
-    "populair",
-    "mei",
-    "juni",
-    "juli",
-    "maart / april",
-    "augustus en verder",
-}
-GENERIC_TYPE_TITLES = {
-    "concert",
-    "event",
-    "events",
-    "film",
-    "doc",
-    "talk",
-    "festival",
-    "sport",
-    "muziek",
-    "music",
-    "theater",
-    "cabaret",
-    "ballet",
-    "beurs event",
-    "performing arts",
-    "just confirmed",
-    "net bevestigd",
-    "tickets",
-    "info & bestellen",
-}
-GENERIC_TYPE_WORDS = {
-    "actie",
-    "alternative",
-    "ballet",
-    "cabaret",
-    "classic",
-    "comedy",
-    "concert",
-    "cursus",
-    "dance",
-    "doc",
-    "drama",
-    "event",
-    "expositie",
-    "familie",
-    "film",
-    "folk",
-    "historisch",
-    "horror",
-    "indie",
-    "kids",
-    "komedie",
-    "kostuumdrama",
-    "musical",
-    "metal",
-    "misdaad",
-    "museum",
-    "muziek",
-    "pop",
-    "rock",
-    "special",
-    "sport",
-    "spreekuur",
-    "talk",
-    "theater",
-    "thriller",
-    "beurs",
-    "evenement",
-}
-TYPE_NOISE_TITLES = {
-    "mijn tickets",
-    "tickets",
-    "koop ticket",
-    "info & bestellen",
-    "lees meer",
-}
-EVENT_WORDS_RE = re.compile(
-    r"\b(event|evenement|agenda|programma|concert|festival|theater|film|bioscoop|markt|workshop|lezing|expo|expositie|tentoonstelling|voorstelling|activiteit|activiteiten|tickets|uitgaan|muziek|cabaret|dans|opera|museum|kermis|kinderen)\b",
-    re.I,
-)
-BAD_LINK_WORDS_RE = re.compile(
-    r"\b(contact|privacy|cookie|voorwaarden|login|account|nieuwsbrief|facebook|instagram|linkedin|tickets?\s+verkopen)\b",
-    re.I,
-)
-COMMON_EVENT_PATHS = [
-    "/agenda",
-    "/agenda/agenda-overzicht",
-    "/nl/agenda",
-    "/nl/agenda/agenda-overzicht",
-    "/evenementen",
-    "/evenement",
-    "/events",
-    "/events/all",
-    "/event",
-    "/programma",
-    "/program",
-    "/concerten-en-tickets",
-    "/en/concerts-and-tickets",
-    "/en/aankomende-concerten",
-    "/activiteiten",
-    "/activiteiten/agenda",
-    "/activiteiten-en-evenementen",
-    "/calendar",
-    "/kalender",
-    "/whats-on",
-    "/wat-te-doen",
-    "/nl/doen",
-    "/nl/doen/uitgaan",
-]
-EVENT_BLOCK_TAGS = {"article", "li", "section", "div", "a"}
-LOCATION_HINT_RE = re.compile(
-    r"\b(in|bij|locatie|zaal|kamer|bibliotheek|forum|spot|vera|simplon|paradiso|concertgebouw|martiniplaza|hedon)\b",
-    re.I,
-)
-LOCATION_LINE_RE = re.compile(r"\b(dakpatio|bibliotheek|zaal|oost|west|noord|zuid|nieuwe markt|trompsingel|stadspark)\b", re.I)
-PRICE_LINE_RE = re.compile(r"^(?:\u20ac|eur|\?)\s*\d+(?:[,.]\d{2})?", re.I)
-TITLE_CLASS_RE = re.compile(r"\b(title|titel|name|naam|heading|headline|card-title|event-title|event__title|programma__title)\b", re.I)
+MAX_RAW_ROWS = 1200
+TODAY = date.today()
+
 MONTH_NUMBERS = {
     "januari": 1,
     "februari": 2,
@@ -198,6 +48,7 @@ MONTH_NUMBERS = {
     "april": 4,
     "mei": 5,
     "juni": 6,
+    "july": 7,
     "juli": 7,
     "augustus": 8,
     "september": 9,
@@ -207,6 +58,7 @@ MONTH_NUMBERS = {
     "jan": 1,
     "feb": 2,
     "mrt": 3,
+    "mar": 3,
     "apr": 4,
     "jun": 6,
     "jul": 7,
@@ -214,6 +66,7 @@ MONTH_NUMBERS = {
     "sep": 9,
     "sept": 9,
     "okt": 10,
+    "oct": 10,
     "nov": 11,
     "dec": 12,
     "january": 1,
@@ -221,2146 +74,1125 @@ MONTH_NUMBERS = {
     "march": 3,
     "may": 5,
     "june": 6,
-    "july": 7,
     "august": 8,
-    "april": 4,
-    "september": 9,
     "october": 10,
-    "november": 11,
-    "december": 12,
 }
 
+MONTH_PATTERN = "|".join(sorted(map(re.escape, MONTH_NUMBERS), key=len, reverse=True))
+WEEKDAY_PATTERN = (
+    "maandag|dinsdag|woensdag|donderdag|vrijdag|zaterdag|zondag|"
+    "ma|di|wo|do|vr|za|zo|"
+    "monday|tuesday|wednesday|thursday|friday|saturday|sunday|"
+    "mon|tue|wed|thu|fri|sat|sun"
+)
 
-def log(message):
-    with open(LOG_FILE, "a", encoding="utf-8") as f:
-        f.write(f"{datetime.now().strftime('%Y-%m-%d %H:%M:%S')} - {message}\n")
+ISO_DATE_RE = re.compile(r"\b(20\d{2})-(\d{1,2})-(\d{1,2})\b")
+NUMERIC_DATE_RE = re.compile(r"\b(\d{1,2})[./-](\d{1,2})(?:[./-](20\d{2}))?\b")
+DUTCH_DATE_RE = re.compile(
+    rf"\b(?:{WEEKDAY_PATTERN})?\.?\s*(\d{{1,2}})(?:\s*(?:t/m|tot en met|-)\s*\d{{1,2}})?\s+({MONTH_PATTERN})(?:\s+(20\d{{2}}))?\b",
+    re.I,
+)
+MONTH_FIRST_RE = re.compile(rf"\b({MONTH_PATTERN})\s+(\d{{1,2}})(?:,?\s+(20\d{{2}}))?\b", re.I)
+TIME_RE = re.compile(r"\b([01]?\d|2[0-3])[:.][0-5]\d(?:\s*[-/]\s*([01]?\d|2[0-3])[:.][0-5]\d)?\b")
+PRICE_RE = re.compile(r"\b(gratis|free|(?:eur|\u20ac|\?)\s*\d+(?:[,.]\d{1,2})?)\b", re.I)
+EVENT_WORDS_RE = re.compile(
+    r"\b(event|evenement|agenda|programma|concert|festival|theater|film|bioscoop|markt|workshop|lezing|expo|expositie|tentoonstelling|voorstelling|activiteit|activiteiten|tickets|muziek|cabaret|dans|opera|museum|kermis|kids|familie|cursus|talk|spreekuur|programma)\b",
+    re.I,
+)
+BAD_URL_RE = re.compile(
+    r"\b(contact|privacy|cookie|cookies|voorwaarden|login|account|nieuwsbrief|vacature|werken-bij|pers|over-ons|disclaimer|facebook|instagram|linkedin|youtube|x\.com|twitter|winkelwagen|cart)\b",
+    re.I,
+)
+BAD_TITLE_RE = re.compile(
+    r"^(menu|home|agenda|programma|filter|datum|soort|locatie|sluiten|zoek|zoeken|tickets?|koop ticket|mijn tickets|meer info|lees meer|bekijk|bekijk volledige programma|toon info|favoriet|voeg toe|image|profiel|privacy|contact|nieuwsbrief)$",
+    re.I,
+)
+STATUS_WORDS_RE = re.compile(
+    r"\b(laatste kaarten|uitverkocht|sold out|geannuleerd|cancelled|tickets?|koop ticket|meer info|lees meer|reeds gestart|net bevestigd|extra datum)\b",
+    re.I,
+)
+STAGE_WORDS_RE = re.compile(r"\b(mainstage|downstage|zienema|dansen|kelderbar|clubkaartshow)\b", re.I)
+GENERIC_TITLE_WORDS = {
+    "activiteit",
+    "activiteiten",
+    "agenda",
+    "cabaret",
+    "concert",
+    "cursus",
+    "dans",
+    "doc",
+    "documentaire",
+    "drama",
+    "event",
+    "events",
+    "expositie",
+    "familie",
+    "feest",
+    "film",
+    "gratis",
+    "kids",
+    "komedie",
+    "locatie",
+    "markt",
+    "museum",
+    "muziek",
+    "programma",
+    "special",
+    "spreekuur",
+    "talk",
+    "theater",
+    "tickets",
+    "workshop",
+}
+
+RAW_DATA_ROWS = []
+SITE_RESULTS = []
+
+DEFAULT_LOCATIONS = {
+    "forum.nl": "Forum Groningen",
+    "spotgroningen.nl": "SPOT Groningen",
+    "vera-groningen.nl": "VERA Groningen",
+    "simplon.nl": "Simplon Groningen",
+    "martiniplaza.nl": "Martiniplaza Groningen",
+    "groningermuseum.nl": "Groninger Museum",
+    "visitgroningen.nl": "Groningen",
+    "groningen.uitloper.nu": "Groningen",
+    "kultuuragenda.nl": "Groningen",
+    "noorderzon.nl": "Noorderplantsoen Groningen",
+    "concertgebouw.nl": "Concertgebouw Amsterdam",
+    "hedon-zwolle.nl": "Hedon Zwolle",
+    "paradiso.nl": "Paradiso Amsterdam",
+    "vvvameland.nl": "Ameland",
+}
+
+COMMON_PATHS_FOR_ROOT_SITES = [
+    "/agenda",
+    "/nl/agenda",
+    "/programma",
+    "/program",
+    "/events",
+    "/evenementen",
+    "/activiteiten",
+    "/activiteiten-en-evenementen",
+    "/concerten-en-tickets",
+    "/en/concerts-and-tickets",
+]
 
 
-def parse_json_list(raw):
+def clean_text(value):
+    text = html_lib.unescape(str(value or ""))
+    text = (
+        text.replace("\u00c3\u00a2\u00c2\u0082\u00c2\u00ac", "\u20ac")
+        .replace("\u00e2\u0082\u00ac", "\u20ac")
+        .replace("\u00a0", " ")
+        .replace("\u200b", "")
+        .replace("\ufeff", "")
+    )
+    text = re.sub(r"\s+", " ", text).strip()
+    return text
+
+
+def compact(value, limit=300):
+    text = clean_text(value)
+    return text[:limit].rstrip()
+
+
+def split_lines(value):
+    if hasattr(value, "get_text"):
+        raw = value.get_text("\n", strip=True)
+    else:
+        raw = str(value or "")
+    lines = [clean_text(line) for line in re.split(r"[\r\n]+", raw)]
+    return [line for line in lines if line]
+
+
+def parse_json_list(value):
     try:
-        data = json.loads(raw)
-        return data if isinstance(data, list) else []
-    except Exception:
+        data = json.loads(value or "[]")
+    except json.JSONDecodeError:
         return []
+    return data if isinstance(data, list) else []
 
 
-def add_raw_row(source, site, title="", date="", url="", status="", raw_text=""):
-    if len(RAW_DATA_ROWS) >= 1200:
+def normalized_url(value, base=None):
+    raw = clean_text(value)
+    if not raw or raw == "#":
+        return ""
+    if not re.match(r"^[a-z][a-z0-9+.-]*:", raw, re.I) and re.match(r"^[\w.-]+\.[a-z]{2,}", raw, re.I):
+        raw = f"https://{raw}"
+    try:
+        target = urljoin(base or "", raw)
+        target, _ = urldefrag(target)
+        parsed = urlparse(target)
+        if parsed.scheme not in {"http", "https"} or "." not in parsed.netloc:
+            return ""
+        return parsed.geturl()
+    except Exception:
+        return ""
+
+
+def canonical_host(value):
+    url = normalized_url(value)
+    if not url:
+        return ""
+    return urlparse(url).hostname.lower().removeprefix("www.")
+
+
+def same_host(candidate, site_url):
+    return bool(canonical_host(candidate) and canonical_host(candidate) == canonical_host(site_url))
+
+
+def host_default_location(site_url):
+    host = canonical_host(site_url)
+    for known, location in DEFAULT_LOCATIONS.items():
+        if host == known or host.endswith(f".{known}") or known.endswith(host):
+            return location
+    return INPUT_REGION or "Groningen"
+
+
+def source_label(url):
+    host = canonical_host(url)
+    return host or "website"
+
+
+def add_raw(source, site, title, event_date="", url="", status="", raw_text=""):
+    if len(RAW_DATA_ROWS) >= MAX_RAW_ROWS:
         return
     RAW_DATA_ROWS.append(
         {
-            "source": clean_text(source)[:80],
-            "site": clean_text(site)[:180],
-            "title": clean_text(title)[:180],
-            "date": clean_text(date)[:40],
-            "url": clean_text(url)[:300],
-            "status": clean_text(status)[:80],
-            "rawText": clean_text(raw_text)[:360],
+            "source": clean_text(source or "Website"),
+            "site": clean_text(site),
+            "title": compact(title, 180),
+            "date": clean_text(event_date),
+            "url": normalized_url(url) or clean_text(url),
+            "status": compact(status, 80),
+            "rawText": compact(raw_text, 420),
         }
     )
 
 
-def clean_text(value):
-    text = (
-        str(value or "")
-        .replace("\u00c3\u00a2\u00c2\u0082\u00c2\u00ac", "\u20ac")
-        .replace("\u00e2\u0082\u00ac", "\u20ac")
-        .replace("\u20ac", "\u20ac")
-        .replace("&euro;", "\u20ac")
-        .replace("&#8364;", "\u20ac")
-        .replace("\u00c2\u00b7", "-")
-        .replace("\u00b7", "-")
-    )
-    text = re.sub(r"\bEUR\s*(?=\d)", "\u20ac ", text, flags=re.I)
-    text = re.sub(r"\bEUR\b", "\u20ac", text, flags=re.I)
-    text = re.sub(r"\u20ac\s*(?=\d)", "\u20ac ", text)
-    return text.strip()
-
-
-def format_event_title(value):
-    title = clean_text(value)
-    title = re.sub(r"\s+", " ", title).strip(" -|")
-    title = COUNTRY_CODE_RE.sub("", title)
-    title = re.sub(r"\s{2,}", " ", title).strip(" -|")
-    if not title:
-        return ""
-
-    small_words = {"de", "het", "een", "en", "van", "voor", "met", "the", "and", "of", "in", "on", "to"}
-    words = []
-    for index, word in enumerate(title.split(" ")):
-        if not word:
-            continue
-        if re.search(r"[A-Z]{2,}|[-/]", word):
-            words.append(word)
-            continue
-        lower = word.lower()
-        if index > 0 and lower in small_words:
-            words.append(lower)
-        else:
-            words.append(word[:1].upper() + word[1:])
-    return " ".join(words)
-
-
-def normalize_date_value(value):
-    text = clean_text(value)
-    if not text:
-        return ""
-
-    iso = ISO_DATE_RE.search(text)
-    if iso:
-        return iso.group(0)
-
-    range_match = DATE_RANGE_FULL_RE.search(text) or DATE_RANGE_SAME_MONTH_RE.search(text)
-    if range_match:
-        today = datetime.now().date()
-        if range_match.re is DATE_RANGE_FULL_RE:
-            start_day = int(range_match.group(1))
-            start_month = MONTH_NUMBERS.get(range_match.group(2).lower())
-            start_year = int(range_match.group(3) or datetime.now().year)
-            end_day = int(range_match.group(4))
-            end_month = MONTH_NUMBERS.get((range_match.group(5) or range_match.group(2)).lower())
-            end_year = int(range_match.group(6) or range_match.group(3) or start_year)
-        else:
-            start_day = int(range_match.group(1))
-            end_day = int(range_match.group(2))
-            start_month = end_month = MONTH_NUMBERS.get(range_match.group(3).lower())
-            start_year = end_year = int(range_match.group(4) or datetime.now().year)
-        try:
-            start_date = datetime(start_year, start_month, start_day).date()
-            end_date = datetime(end_year, end_month, end_day).date()
-            if end_date < start_date:
-                end_date = datetime(end_year + 1, end_month, end_day).date()
-            if today > end_date and not re.search(r"20\d{2}", text):
-                start_date = datetime(start_year + 1, start_month, start_day).date()
-                end_date = datetime(end_year + 1, end_month, end_day).date()
-            if start_date <= today <= end_date:
-                return today.isoformat()
-            return start_date.isoformat()
-        except (TypeError, ValueError):
-            return text
-
-    match = SHORT_DOT_DATE_RE.search(text)
+def parse_reference_date():
+    match = ISO_DATE_RE.search(INPUT_DATE_FROM)
     if match:
-        day = int(match.group(1))
-        month = int(match.group(2))
-        year = int(match.group(3) or datetime.now().year)
         try:
-            candidate = datetime(year, month, day)
-            today = datetime.now()
-            if not match.group(3) and candidate.date() < today.date():
-                candidate = datetime(year + 1, month, day)
-            return candidate.strftime("%Y-%m-%d")
+            return date(int(match.group(1)), int(match.group(2)), int(match.group(3)))
         except ValueError:
-            return text
+            pass
+    return TODAY
 
-    match = MONTH_FIRST_DATE_RE.search(text)
-    if match:
-        month_name = match.group(1) or match.group(4)
-        day_value = match.group(2) or match.group(5)
-        year_value = match.group(3) or match.group(6)
-        month = MONTH_NUMBERS.get(month_name.lower()) if month_name else None
-        if month and day_value:
+
+REFERENCE_DATE = parse_reference_date()
+
+
+def iso_from_parts(day_value, month_value, year_value=None):
+    try:
+        day = int(day_value)
+        month = int(month_value)
+        year = int(year_value) if year_value else REFERENCE_DATE.year
+        found = date(year, month, day)
+    except (TypeError, ValueError):
+        return ""
+
+    if not year_value:
+        lower_bound = REFERENCE_DATE - timedelta(days=14)
+        if found < lower_bound:
             try:
-                candidate = datetime(int(year_value or datetime.now().year), month, int(day_value))
-                today = datetime.now()
-                if not year_value and candidate.date() < today.date():
-                    candidate = datetime(candidate.year + 1, month, int(day_value))
-                return candidate.strftime("%Y-%m-%d")
+                found = date(year + 1, month, day)
             except ValueError:
-                return text
-
-    match = re.search(
-        rf"\b(\d{{1,2}})(?:\s+t/m\s+\d{{1,2}})?\s+({MONTHS})(?:\s+(20\d{{2}}))?\b",
-        text,
-        re.I,
-    )
-    if not match:
-        return text
-
-    day = int(match.group(1))
-    month = MONTH_NUMBERS.get(match.group(2).lower())
-    year = int(match.group(3) or datetime.now().year)
-    if not month:
-        return text
-
-    try:
-        candidate = datetime(year, month, day)
-        today = datetime.now()
-        if not match.group(3) and candidate.date() < today.date():
-            candidate = datetime(year + 1, month, day)
-        return candidate.strftime("%Y-%m-%d")
-    except ValueError:
-        return text
+                return ""
+    return found.isoformat()
 
 
-def event_date_sort_value(event):
-    date = clean_text(event.get("date"))
-    if not ISO_DATE_RE.fullmatch(date):
-        return "9999-12-31"
-    return date
-
-
-def event_in_requested_period(event):
-    date = event_date_sort_value(event)
-    if date == "9999-12-31":
-        return False
-    if INPUT_DATE_FROM and date < INPUT_DATE_FROM:
-        return False
-    if INPUT_DATE_TO and date > INPUT_DATE_TO:
-        return False
-    return True
-
-
-def today_iso():
-    return datetime.now().date().isoformat()
-
-
-def is_past_event(event):
-    date = event_date_sort_value(event)
-    return date != "9999-12-31" and date < today_iso()
-
-
-def active_copy(event):
-    copy = dict(event)
-    copy.pop("archivedAt", None)
-    return copy
-
-
-def sort_events_for_request(events):
-    return sorted(
-        events,
-        key=lambda event: (
-            0 if event_in_requested_period(event) else 1,
-            event_date_sort_value(event),
-            clean_text(event.get("title")).lower(),
-        ),
-    )
-
-
-def should_geocode(location):
-    text = clean_text(location)
-    if not text:
-        return False
-    if re.match(r"^[\w.-]+\.[a-z]{2,}$", text, re.I):
-        return False
-    if len(text) > 120:
-        return False
-    return True
-
-
-def normalize_title(value):
-    text = clean_text(value).lower()
-    text = re.sub(rf"^(?:monday|tuesday|wednesday|thursday|friday|saturday|sunday|maandag|dinsdag|woensdag|donderdag|vrijdag|zaterdag|zondag)\s+\d{{1,2}}\s+(?:{MONTHS})\s+", "", text)
-    text = re.split(r"\b(mainstage|downstage|zienema|dansen)\b|\bticket\b|\bdoors\b|\bstart\b|\bsold out\b|\bkoop ticket\b", text, 1)[0]
-    text = re.sub(r"['’]", "", text)
-    text = re.sub(r"\b20\d{2}\b", "", text)
-    text = re.sub(r"^(concert|theater|film|bioscoop|markt|workshop|event|evenement):\s*", "", text)
-    text = re.sub(r"[^a-z0-9]+", " ", text)
-    return text.strip()
-
-
-def normalize_location(value):
-    text = clean_text(value).lower()
-    text = re.sub(r"\b(start|startpunt|bij|diverse|locaties|locatie)\b", "", text)
-    text = re.sub(r"[^a-z0-9]+", " ", text)
-    return text.strip()
-
-
-def looks_like_type_line(value):
-    text = clean_text(value).lower()
-    if text in GENERIC_TYPE_TITLES:
-        return True
-    tokens = [token for token in re.split(r"[^a-z0-9]+", text) if token]
-    return bool(tokens and len(tokens) <= 5 and all(token in GENERIC_TYPE_WORDS for token in tokens))
-
-
-def looks_like_location_line(value):
+def parse_date_text(value, context_date=""):
     text = clean_text(value)
-    if len(text) > 90 or not text:
-        return False
-    lowered = text.lower()
-    if re.match(r"^\d+\s+(?:oost|west|noord|zuid)$", lowered):
-        return True
-    return bool(LOCATION_HINT_RE.search(text) or LOCATION_LINE_RE.search(text))
+    if context_date and not text:
+        return context_date
+
+    lower = text.lower()
+    if re.search(r"\bvandaag\b|\btoday\b", lower):
+        return TODAY.isoformat()
+    if re.search(r"\bmorgen\b|\btomorrow\b", lower):
+        return (TODAY + timedelta(days=1)).isoformat()
+    if re.search(r"\bovermorgen\b", lower):
+        return (TODAY + timedelta(days=2)).isoformat()
+
+    match = ISO_DATE_RE.search(text)
+    if match:
+        return iso_from_parts(match.group(3), match.group(2), match.group(1))
+
+    match = DUTCH_DATE_RE.search(text)
+    if match:
+        month = MONTH_NUMBERS.get(match.group(2).lower())
+        if month:
+            return iso_from_parts(match.group(1), month, match.group(3))
+
+    match = MONTH_FIRST_RE.search(text)
+    if match:
+        month = MONTH_NUMBERS.get(match.group(1).lower())
+        if month:
+            return iso_from_parts(match.group(2), month, match.group(3))
+
+    match = NUMERIC_DATE_RE.search(text)
+    if match:
+        first = int(match.group(1))
+        second = int(match.group(2))
+        if second <= 12:
+            return iso_from_parts(first, second, match.group(3))
+
+    return context_date or ""
 
 
-def event_key(event):
-    title = normalize_title(event.get("title"))
-    date = clean_text(event.get("date"))
-    location = normalize_location(event.get("location"))
-    if len(title) > 8:
-        return f"{date}|{title}"
-    return f"{date}|{title}|{location}"
+def strip_date_prefix(value):
+    text = clean_text(value)
+    text = re.sub(rf"^(?:{WEEKDAY_PATTERN})?\.?\s*\d{{1,2}}\s+({MONTH_PATTERN})(?:\s+20\d{{2}})?\s*", "", text, flags=re.I)
+    text = re.sub(r"^(vandaag|morgen|overmorgen|today|tomorrow)\s*", "", text, flags=re.I)
+    return clean_text(text)
 
 
-def event_quality(event):
-    score = 0
-    title = clean_text(event.get("title"))
-    if event.get("website") and event.get("website") != "#":
-        score += 12
-    if event.get("image"):
-        score += 4
-    if len(clean_text(event.get("description"))) > 60:
-        score += 4
-    if event.get("time"):
-        score += 2
-    if event.get("lat") and event.get("lon"):
-        score += 2
-    if event.get("source") and event.get("source") not in {"Onbekend", "Manual"}:
-        score += 1
-    if title and len(title) <= 90:
-        score += 3
-    if re.search(r"\b(ticket|doors|start|koop ticket|sold out)\b", title, re.I):
-        score -= 5
-    return score
+def clean_title(value):
+    title = clean_text(value)
+    title = re.sub(r"\s*\|\s*.*$", "", title)
+    title = re.sub(r"\s+-\s+(Forum|SPOT Groningen|VERA Groningen|Paradiso|Hedon|Concertgebouw).*$", "", title, flags=re.I)
+    title = STATUS_WORDS_RE.sub(" ", title)
+    title = re.sub(r"\s+", " ", title).strip(" -|")
+    title = re.sub(r"\b(CAN|USA|UK|GB|NL|BEL|DE|FR|IT|ES|INT)\b$", "", title).strip()
+    return title
 
 
-def is_valid_web_url(value):
-    url = clean_text(value)
-    if not url or url == "#":
-        return True
-
-    try:
-        parsed = urlparse(url)
-        return parsed.scheme in {"http", "https"} and "." in parsed.netloc
-    except Exception:
+def title_is_usable(title):
+    title = clean_title(title)
+    if title.lower() in GENERIC_TITLE_WORDS:
         return False
-
-
-def event_date_conflicts(event):
-    date = clean_text(event.get("date"))
-    if not ISO_DATE_RE.fullmatch(date):
+    if len(title) < 3 or len(title) > 140:
         return False
-
-    haystack = clean_text(f"{event.get('title')} {event.get('description')}")
-    for match in DATE_IN_TEXT_RE.finditer(haystack):
-        explicit = normalize_date_value(match.group(0))
-        if ISO_DATE_RE.fullmatch(explicit) and explicit != date:
-            return True
-    return False
-
-
-def is_valid_event(event):
-    title = clean_text(event.get("title"))
-    title_norm = normalize_title(title)
-    date = clean_text(event.get("date"))
-    location = clean_text(event.get("location"))
-    event_type = clean_text(event.get("type")).lower()
-
-    if not title or len(title_norm) < 4:
+    if BAD_TITLE_RE.match(title):
         return False
-    if title.lower() in BLOCKED_TITLES or title.lower() in TYPE_NOISE_TITLES:
+    if re.fullmatch(r"\d{1,2}[:.]\d{2}.*", title):
         return False
-    if looks_like_type_line(title):
+    if parse_date_text(title) and len(title.split()) <= 4:
         return False
-    if event_type in TYPE_NOISE_TITLES:
-        return False
-    if TITLE_NOISE_RE.search(title):
-        return False
-    if DATE_RE.match(title) or SCORE_RE.match(title):
-        return False
-    if DATE_TITLE_RE.match(title):
-        return False
-    if len(title) > 140 and re.search(r"\b(lees meer|koop ticket|sold out)\b", title, re.I):
-        return False
-    if not date:
-        return False
-    if event_date_conflicts(event):
-        return False
-    if not location or normalize_location(location) in {"provincie groningen", "groningen provincie"}:
-        return False
-    if not is_valid_web_url(event.get("website")):
-        return False
-
     return True
 
 
-def configured_sites_from_file():
-    try:
-        with open("sites.json", "r", encoding="utf-8") as f:
-            data = json.load(f)
-    except Exception as exc:
-        log(f"Kon sites.json niet lezen: {exc}")
-        return []
-
-    if not isinstance(data, list):
-        log("sites.json bevat geen lijst met websites.")
-        return []
-
-    return data
-
-
-def normalize_site_list(raw_sites, limit=30):
-    sites = []
-    seen = set()
-    for site in raw_sites:
-        url = clean_text(site)
-        if not url:
-            continue
-        if not re.match(r"^[a-z][a-z0-9+.-]*:", url, re.I) and re.match(r"^[\w.-]+\.[a-z]{2,}", url, re.I):
-            url = f"https://{url}"
-        if not is_valid_web_url(url):
-            log(f"Extra website overgeslagen door ongeldig adres: {site}")
-            continue
-        key = url.lower().rstrip("/")
-        if key not in seen:
-            seen.add(key)
-            sites.append(url)
-    return sites[:limit]
+TYPE_MARKERS = [
+    "Multigenre",
+    "Muziek",
+    "Theater",
+    "Dans",
+    "Film",
+    "Cabaret",
+    "Klassiek",
+    "Pop/rock",
+    "Roots/americana",
+    "Jazz",
+    "Blues",
+    "Hiphop",
+    "Opera",
+    "Familie",
+    "Circus",
+    "Kleinkunst",
+    "Stand-up",
+    "Talk",
+    "Workshop",
+    "Cursus",
+    "Expositie",
+    "Spreekuur",
+    "Doc",
+    "Kids",
+]
 
 
-def parse_input_sites():
-    try:
-        raw_sites = json.loads(INPUT_SITES_RAW)
-        if not isinstance(raw_sites, list):
-            raw_sites = []
-    except Exception:
-        raw_sites = [part.strip() for part in INPUT_SITES_RAW.split(",")]
-
-    sites = normalize_site_list(raw_sites)
-    if sites:
-        return sites
-
-    log("Geen losse websites meegegeven; ik gebruik alle websites uit sites.json.")
-    return normalize_site_list(configured_sites_from_file())
-
-
-def serpapi_link_candidates_for_site(site_url):
-    site = site_host(site_url)
-    raw_rows = parse_json_list(INPUT_SERPAPI_RAW_LOG)
-    title_by_url = {}
-    for row in raw_rows:
-        if not isinstance(row, dict):
-            continue
-        url = clean_text(row.get("url")).lower().rstrip("/")
-        if url:
-            title_by_url[url] = clean_text(row.get("title"))
-
-    candidates = []
-    for link in normalize_site_list(parse_json_list(INPUT_SERPAPI_LINKS_RAW), limit=200):
-        parsed = urlparse(link)
-        if not hosts_match(parsed.netloc, site):
-            continue
-        title = title_by_url.get(link.lower().rstrip("/")) or slug_title_from_url(link)
-        candidates.append((title, link))
-
-    if candidates:
-        add_raw_row("SerpAPI", site_url, f"{len(candidates)} extra links voor deze site", "", site_url, "detail-links", "SerpAPI-links worden binnen deze sites.json-site als detailpagina gelezen.")
-    return candidates[: max(MAX_EVENTS_PER_SITE * 2, 20)]
+def title_from_dated_text(value):
+    text = clean_text(value)
+    if not parse_date_text(text):
+        return ""
+    tail = strip_date_prefix(text)
+    tail = re.split(r"\b(Mainstage|Downstage|Zienema|Dansen|Ticket|doors|start|Koop ticket|Sold out)\b", tail, flags=re.I)[0]
+    tail = STATUS_WORDS_RE.split(tail)[0]
+    for marker in TYPE_MARKERS:
+        pattern = re.compile(rf"\s+{re.escape(marker)}\b", re.I)
+        match = pattern.search(tail)
+        if match and len(tail[: match.start()].split()) >= 2:
+            tail = tail[: match.start()]
+            break
+    if len(tail) > 95:
+        words = tail.split()
+        tail = " ".join(words[: min(7, len(words))])
+    return clean_title(tail)
 
 
-def dedupe_events(events):
-    by_key = {}
-    duplicates = 0
-    rejected = 0
-    for event in events:
-        if not is_valid_event(event):
-            rejected += 1
-            continue
-
-        key = event_key(event)
-        current = by_key.get(key)
-        if current is None:
-            by_key[key] = event
-            continue
-        duplicates += 1
-        if event_quality(event) > event_quality(current):
-            by_key[key] = event
-    if duplicates:
-        log(f"Dubbele evenementen samengevoegd: {duplicates}")
-    if rejected:
-        log(f"Onbetrouwbare of onvolledige regels overgeslagen: {rejected}")
-    return list(by_key.values())
-
-
-def load_existing_events():
-    if not os.path.exists(DATA_FILE):
-        return [], []
-
-    try:
-        with open(DATA_FILE, "r", encoding="utf-8") as f:
-            data = json.load(f)
-    except Exception as exc:
-        log(f"Kon bestaande events.json niet lezen: {exc}")
-        return [], []
-
-    if isinstance(data, list):
-        return data, []
-
-    if isinstance(data, dict):
-        active = data.get("events") if isinstance(data.get("events"), list) else []
-        archive = data.get("archive") if isinstance(data.get("archive"), list) else []
-        return active, archive
-
-    return [], []
+def classify_type(text, host=""):
+    lower = clean_text(text).lower()
+    if "zienema" in lower or re.search(r"\bfilm|bioscoop|movie|cinema\b", lower):
+        return "Film"
+    if re.search(r"\bdoc|documentaire\b", lower):
+        return "Documentaire"
+    if re.search(r"\bmainstage|downstage|concert|muziek|music|pop|rock|jazz|blues|metal|klassiek|opera|orkest|band\b", lower):
+        return "Concert"
+    if re.search(r"\btheater|toneel|cabaret|musical|kleinkunst|stand-up\b", lower):
+        return "Theater"
+    if re.search(r"\bfestival|fest\b", lower):
+        return "Festival"
+    if re.search(r"\bdans|dance|feest|club\b", lower):
+        return "Dans"
+    if re.search(r"\bexpo|expositie|tentoonstelling|museum\b", lower):
+        return "Expositie"
+    if re.search(r"\bworkshop|cursus|training\b", lower):
+        return "Workshop"
+    if re.search(r"\btalk|lezing|college\b", lower):
+        return "Lezing"
+    if re.search(r"\bkind|kids|familie|jeugd\b", lower):
+        return "Familie"
+    if re.search(r"\bspreekuur|inloop\b", lower):
+        return "Spreekuur"
+    if "groningermuseum.nl" in host:
+        return "Expositie"
+    return "Activiteit"
 
 
-def get_coordinates(location):
-    if not location:
-        return None, None
-
-    try:
-        url = f"https://nominatim.openstreetmap.org/search?format=json&q={quote_plus(location)}"
-        headers = {"User-Agent": "Mozilla/5.0 (Evenementen Scraper)"}
-        response = requests.get(url, headers=headers, timeout=10)
-        response.raise_for_status()
-        data = response.json()
-        if data:
-            return float(data[0]["lat"]), float(data[0]["lon"])
-    except Exception as exc:
-        log(f"Fout bij geocoding voor {location}: {exc}")
-
-    return None, None
+def first_time(value):
+    match = TIME_RE.search(clean_text(value))
+    return match.group(0).replace(".", ":") if match else ""
 
 
-def normalize_event(event):
-    title = format_event_title(event.get("title"))
-    location = clean_text(event.get("location"))
-    lat = event.get("lat")
-    lon = event.get("lon")
-
-    if (lat is None or lon is None) and should_geocode(location):
-        lat, lon = get_coordinates(location)
-        time.sleep(1)
-
-    location_link = clean_text(event.get("locationLink"))
-    if not location_link and lat and lon:
-        location_link = f"https://www.google.com/maps?q={lat},{lon}"
-
-    image = clean_text(event.get("image"))
-    if not image:
-        image = f"https://picsum.photos/seed/{quote_plus(title or location)}/800/500"
-
-    website = clean_text(event.get("website")) or "#"
-    source = clean_text(event.get("source"))
-    if not source or source.lower() in {"manual", "onbekend", "bron onbekend", "scan"}:
-        source = urlparse(website).netloc.replace("www.", "") if is_valid_web_url(website) and website != "#" else ""
-
-    date = normalize_date_value(event.get("date"))
-    event_type = clean_text(event.get("type")) or "evenement"
-    if event_type.lower() in TYPE_NOISE_TITLES:
-        event_type = "evenement"
-    discovery_source = clean_text(event.get("discoverySource"))
-    if not discovery_source:
-        discovery_source = "Website"
-    return {
-        "title": title,
-        "type": format_event_title(event_type),
-        "date": date,
-        "time": clean_text(event.get("time")),
-        "location": location,
-        "lat": lat,
-        "lon": lon,
-        "locationLink": location_link,
-        "cost": clean_text(event.get("cost")) or "Zie website",
-        "description": clean_text(event.get("description")),
-        "image": image,
-        "website": website,
-        "source": source or "Onbekend",
-        "discoverySource": discovery_source,
-        "periodLabel": clean_text(event.get("periodLabel")) or date,
-        "isPermanent": bool(event.get("isPermanent", False)),
-    }
+def first_price(value):
+    match = PRICE_RE.search(clean_text(value))
+    if not match:
+        return ""
+    price = clean_text(match.group(1)).replace("EUR", "\u20ac").replace("eur", "\u20ac").replace("?", "\u20ac")
+    price = re.sub(r"\u20ac\s*(?=\d)", "\u20ac ", price)
+    return price[:40]
 
 
-def collect_title_links(soup, base_url):
-    links = {}
-    for anchor in soup.find_all("a", href=True):
-        title = clean_text(anchor.get_text(" ", strip=True))
-        key = normalize_title(title)
-        if len(key) < 8:
-            continue
-
-        href = clean_text(anchor.get("href"))
-        if not href or href.startswith(("javascript:", "mailto:", "#")):
-            continue
-
-        links.setdefault(key, urljoin(base_url, href))
-    return links
-
-
-def default_location_for_site(site_url):
-    host = urlparse(site_url).netloc.lower().replace("www.", "")
-    known = {
-        "forum.nl": "Forum Groningen",
-        "vera-groningen.nl": "VERA Groningen",
-        "spotgroningen.nl": "SPOT Groningen",
-        "simplon.nl": "Simplon Groningen",
-        "groningermuseum.nl": "Groninger Museum",
-        "martiniplaza.nl": "Martiniplaza Groningen",
-        "hedon-zwolle.nl": "Hedon Zwolle",
-        "paradiso.nl": "Paradiso Amsterdam",
-        "concertgebouw.nl": "Het Concertgebouw Amsterdam",
-        "visitgroningen.nl": "Groningen",
-        "groningen.uitloper.nu": "Groningen",
-        "kultuuragenda.nl": "Nederland",
-        "noorderzon.nl": "Noorderplantsoen Groningen",
-        "vvvameland.nl": "Ameland",
-    }
-    return known.get(host, urlparse(site_url).netloc)
-
-
-def site_host(site_url):
-    return urlparse(site_url).netloc.lower().replace("www.", "")
-
-
-def hosts_match(left, right):
-    left_host = clean_text(left).lower().replace("www.", "")
-    right_host = clean_text(right).lower().replace("www.", "")
-    return bool(
-        left_host
-        and right_host
-        and (
-            left_host == right_host
-            or left_host.endswith(f".{right_host}")
-            or right_host.endswith(f".{left_host}")
-        )
-    )
-
-
-def source_label_for_site(site_url):
-    return site_host(site_url) or "Website"
-
-
-def slug_title_from_url(url):
-    path = urlparse(url).path.rstrip("/")
-    slug = path.rsplit("/", 1)[-1]
-    slug = re.sub(r"-\d+$", "", slug)
-    slug = re.sub(r"[-_]+", " ", slug)
-    slug = re.sub(r"\b\d{1,2}\b", "", slug)
-    return format_event_title(slug)
-
-
-def is_detail_event_url(page_url):
-    parsed = urlparse(page_url)
-    host = parsed.netloc.lower()
-    path = parsed.path.rstrip("/")
-    if "spotgroningen.nl" in host:
-        return path.startswith("/programma/") and path != "/programma"
-    if "vera-groningen.nl" in host:
-        return "post_type=events" in parsed.query or "/events/" in path
-    path_words = path.lower()
-    path_parts = [part for part in path_words.split("/") if part]
-    if len(path_parts) >= 2 and re.search(r"/(agenda|programma|events?|event|concert|voorstelling|activiteit|show|calendar)/", f"{path_words}/"):
-        return True
-    return False
-
-
-def link_for_title(title_links, title, fallback_url):
-    key = normalize_title(title)
-    if key in title_links:
-        return title_links[key]
-    for link_key, url in title_links.items():
-        if key and (key in link_key or link_key in key):
-            return url
-    return fallback_url
-
-
-def first_meta(soup, names):
+def meta_content(soup, *names):
     for name in names:
-        tag = soup.find("meta", attrs={"property": name}) or soup.find("meta", attrs={"name": name})
-        if tag and clean_text(tag.get("content")):
+        selector = f'meta[property="{name}"], meta[name="{name}"]'
+        tag = soup.select_one(selector)
+        if tag and tag.get("content"):
             return clean_text(tag.get("content"))
     return ""
 
 
-def seconds_left(deadline):
-    return max(0, deadline - time.monotonic())
+def first_image(soup, base_url=""):
+    for value in [
+        meta_content(soup, "og:image", "twitter:image"),
+        *(img.get("src") or img.get("data-src") or "" for img in soup.find_all("img", limit=6)),
+    ]:
+        url = normalized_url(value, base_url)
+        if url:
+            return url
+    return ""
 
 
-def enough_time_left(deadline):
-    return seconds_left(deadline) > 0.25
+def jsonld_nodes(value):
+    if isinstance(value, list):
+        for item in value:
+            yield from jsonld_nodes(item)
+    elif isinstance(value, dict):
+        yield value
+        for key in ("@graph", "graph", "itemListElement", "item", "mainEntity", "about", "workPerformed", "subEvent"):
+            if key in value:
+                yield from jsonld_nodes(value[key])
 
 
-def timeout_for(deadline, default_timeout):
-    if deadline is None:
-        return default_timeout
-    remaining = seconds_left(deadline)
-    if remaining <= 0.25:
-        raise TimeoutError("Tijdslimiet voor deze website bereikt")
-    return min(default_timeout, max(0.5, remaining))
+def jsonld_type_is_event(item):
+    value = item.get("@type") or item.get("type") or ""
+    if isinstance(value, list):
+        return any("event" == str(part).lower().split("/")[-1] for part in value)
+    return "event" == str(value).lower().split("/")[-1]
 
 
-def fetch_soup(page_url, timeout=18, deadline=None):
-    timeout = timeout_for(deadline, timeout)
-    response = requests.get(page_url, headers=BASE_HEADERS, timeout=timeout)
-    response.raise_for_status()
-    content_type = response.headers.get("content-type", "")
-    if "text/html" not in content_type and "application/xhtml" not in content_type and content_type:
-        raise ValueError(f"Geen HTML: {content_type}")
-    return BeautifulSoup(response.text, "html.parser")
+def value_text(value):
+    if isinstance(value, list):
+        return clean_text(" ".join(value_text(part) for part in value if part))
+    if isinstance(value, dict):
+        return clean_text(value.get("name") or value.get("text") or value.get("description") or "")
+    return clean_text(value)
 
 
-def site_seed_urls(site_url):
-    parsed = urlparse(site_url)
-    base = f"{parsed.scheme}://{parsed.netloc}"
-    urls = [site_url.rstrip("/")]
-    existing_path = parsed.path.rstrip("/")
-    extra_paths = COMMON_EVENT_PATHS
-    if existing_path and existing_path != "/":
-        extra_paths = COMMON_EVENT_PATHS[:8]
-    urls.extend(f"{base}{path}" for path in extra_paths)
+def location_from_jsonld(value, default_location):
+    if isinstance(value, list):
+        return next((location_from_jsonld(item, "") for item in value if location_from_jsonld(item, "")), default_location)
+    if isinstance(value, dict):
+        name = clean_text(value.get("name"))
+        address = value.get("address")
+        if isinstance(address, dict):
+            city = clean_text(address.get("addressLocality"))
+            street = clean_text(address.get("streetAddress"))
+            return clean_text(name or street or city or default_location)
+        return name or default_location
+    return clean_text(value) or default_location
 
-    seen = set()
-    result = []
-    for candidate in urls:
-        key = candidate.lower().rstrip("/")
-        if key not in seen:
-            seen.add(key)
-            result.append(candidate)
-    return result
+
+def image_from_jsonld(value, base_url):
+    if isinstance(value, list):
+        for item in value:
+            result = image_from_jsonld(item, base_url)
+            if result:
+                return result
+    if isinstance(value, dict):
+        return normalized_url(value.get("url") or value.get("contentUrl"), base_url)
+    return normalized_url(value, base_url)
+
+
+def event_from_jsonld(item, page_url, site_url, discovery_source):
+    default_location = host_default_location(site_url)
+    event_date = parse_date_text(item.get("startDate") or item.get("doorTime") or item.get("endDate") or "")
+    website = normalized_url(item.get("url") or item.get("@id") or page_url, page_url)
+    text_blob = " ".join(
+        value_text(item.get(key)) for key in ("name", "description", "genre", "keywords", "eventAttendanceMode") if item.get(key)
+    )
+    raw = {
+        "date": event_date,
+        "title": item.get("name") or "",
+        "type": classify_type(text_blob, canonical_host(site_url)),
+        "location": location_from_jsonld(item.get("location"), default_location),
+        "website": website,
+        "description": item.get("description") or "",
+        "image": image_from_jsonld(item.get("image"), page_url),
+        "time": first_time(str(item.get("startDate") or "")),
+        "cost": "",
+        "discoverySource": discovery_source,
+        "siteUrl": site_url,
+    }
+    offers = item.get("offers")
+    if isinstance(offers, list):
+        offers = offers[0] if offers else None
+    if isinstance(offers, dict):
+        price = offers.get("price")
+        currency = offers.get("priceCurrency") or ""
+        raw["cost"] = clean_text(f"{currency} {price}") if price is not None else ""
+    return normalize_event(raw, site_url)
+
+
+def parse_jsonld_events(soup, page_url, site_url, discovery_source):
+    events = []
+    for script in soup.find_all("script", attrs={"type": re.compile("ld\\+json", re.I)}):
+        text = script.string or script.get_text(" ", strip=True)
+        if not text:
+            continue
+        try:
+            data = json.loads(text)
+        except json.JSONDecodeError:
+            continue
+        for node in jsonld_nodes(data):
+            if jsonld_type_is_event(node):
+                event = event_from_jsonld(node, page_url, site_url, discovery_source)
+                if event:
+                    events.append(event)
+    return events
 
 
 def page_title(soup):
-    heading = soup.find(["h1", "h2"])
-    if heading:
-        return clean_text(heading.get_text(" ", strip=True))
-    title = soup.find("title")
-    return clean_text(title.get_text(" ", strip=True)) if title else ""
-
-
-def first_date_in_text(text):
-    match = ISO_DATE_RE.search(text)
-    if match:
-        return match.group(0)
-    match = NUMERIC_DATE_RE.search(text)
-    if match:
-        day, month, year = map(int, match.groups())
-        try:
-            return datetime(year, month, day).strftime("%Y-%m-%d")
-        except ValueError:
-            pass
-    match = SHORT_DOT_DATE_RE.search(text)
-    if match:
-        return clean_text(match.group(0))
-    match = MONTH_FIRST_DATE_RE.search(text)
-    if match:
-        return clean_text(match.group(0))
-    match = DATE_IN_TEXT_RE.search(text)
-    return clean_text(match.group(0)) if match else ""
-
-
-def date_from_section_label(text):
-    value = clean_text(text).lower()
-    today = datetime.now().date()
-    if value == "vandaag":
-        return today.isoformat()
-    if value == "morgen":
-        return (today + timedelta(days=1)).isoformat()
-
-    value = WEEKDAY_RE.sub("", value).strip(" ,:-")
-    date_text = first_date_in_text(value)
-    if date_text:
-        return normalize_date_value(date_text)
+    for selector in ("h1", "[itemprop='name']", "title"):
+        tag = soup.select_one(selector)
+        if tag:
+            title = clean_title(tag.get_text(" ", strip=True))
+            if title_is_usable(title):
+                return title
     return ""
 
 
-def starts_with_section_date(text):
-    return bool(date_from_section_label(text))
-
-
-def has_event_signal(text, href=""):
-    haystack = f"{text} {href}"
-    return bool(EVENT_WORDS_RE.search(haystack) or DATE_IN_TEXT_RE.search(haystack) or ISO_DATE_RE.search(haystack))
-
-
-def is_bad_link(text, href):
-    if not href or href.startswith(("javascript:", "mailto:", "tel:", "#")):
-        return True
-    if BAD_LINK_WORDS_RE.search(f"{text} {href}"):
-        return True
-    if TITLE_NOISE_RE.search(clean_text(text)) or DATE_TITLE_RE.match(clean_text(text)):
-        return True
-    if len(normalize_title(text)) < 4:
-        return True
-    return False
-
-
-def candidate_event_links(soup, site_url):
-    candidates = []
-    seen = set()
-    base_host = urlparse(site_url).netloc.lower()
-    page_path = urlparse(site_url).path.replace("-", " ").replace("_", " ").replace("/", " ")
-    page_has_event_context = bool(EVENT_WORDS_RE.search(page_path))
-
-    for anchor in soup.find_all("a", href=True):
-        text = clean_text(anchor.get_text(" ", strip=True))
-        href = clean_text(anchor.get("href"))
-        if is_bad_link(text, href):
-            continue
-
-        absolute = urljoin(site_url, href)
-        parsed = urlparse(absolute)
-        if parsed.scheme not in {"http", "https"}:
-            continue
-        if not hosts_match(parsed.netloc, base_host):
-            continue
-        key = absolute.split("#", 1)[0]
-        if key.rstrip("/") == site_url.rstrip("/"):
-            continue
-        signal = f"{text} {parsed.path.replace('-', ' ').replace('_', ' ').replace('/', ' ')}"
-        if not page_has_event_context and not has_event_signal(signal, absolute):
-            continue
-        if page_has_event_context and not (has_event_signal(signal, absolute) or len(normalize_title(text)) >= 4):
-            continue
-
-        if key in seen:
-            continue
-        seen.add(key)
-        candidates.append((text, key))
-        if len(candidates) >= 24:
-            break
-
-    return candidates
-
-
-def detail_page_title(soup, fallback_title):
-    title = first_meta(soup, ["og:title", "twitter:title"]) or page_title(soup) or fallback_title
-    title = re.sub(r"\s+[|-]\s+.*$", "", title).strip()
-    return format_event_title(title)
-
-
-def location_from_detail_chunk(lines, detail_url):
-    for line in lines:
-        value = clean_text(line)
-        if not value:
-            continue
-        lowered = value.lower()
-        if first_date_in_text(value) or TIME_RE.search(value) or PRICE_OR_ACTION_RE.search(value) or PRICE_LINE_RE.search(value):
-            continue
-        if len(value) > 90:
-            continue
-        if looks_like_location_line(value):
-            return value
-        if is_context_noise(value):
-            continue
-    return default_location_for_site(detail_url)
-
-
-def title_from_detail_chunk(lines, page_title_value):
-    for line in lines:
-        value = clean_listing_title(line)
-        lowered = value.lower()
-        if not value or len(normalize_title(value)) < 4:
-            continue
-        if is_context_noise(value) or looks_like_type_line(value):
-            continue
-        if looks_like_location_line(value):
-            continue
-        if normalize_title(value) == normalize_title(page_title_value):
-            return page_title_value
-        if page_title_value and normalize_title(value) not in normalize_title(page_title_value):
-            return f"{page_title_value} - {value}"
-        return value
-    return page_title_value
-
-
-def events_from_detail_agenda_lines(soup, detail_url, page_title_value):
-    events = []
-    lines = [clean_text(item) for item in soup.stripped_strings if clean_text(item)]
-
-    for index, line in enumerate(lines):
-        date = date_from_section_label(line)
-        if not ISO_DATE_RE.fullmatch(date):
-            continue
-
-        next_index = len(lines)
-        for probe in range(index + 1, min(len(lines), index + 18)):
-            if date_from_section_label(lines[probe]):
-                next_index = probe
-                break
-
-        chunk = lines[index + 1:next_index][:10]
-        if not chunk:
-            continue
-
-        title = title_from_detail_chunk(chunk, page_title_value)
-        if not title:
-            continue
-
-        location = location_from_detail_chunk(chunk, detail_url)
-        item = normalize_event(
-            {
-                "title": title,
-                "type": context_type(chunk),
-                "date": date,
-                "time": context_time(chunk),
-                "location": location,
-                "description": " ".join([page_title_value, *chunk])[:300],
-                "website": detail_url,
-                "cost": context_cost(chunk),
-                "source": source_label_for_site(detail_url),
-                "periodLabel": date,
-            }
-        )
-        if is_valid_event(item):
-            events.append(item)
-            add_raw_row("Detailpagina", detail_url, item.get("title"), item.get("date"), detail_url, "event uit detail-agenda", " ".join([line, *chunk]))
-        if len(events) >= MAX_EVENTS_PER_SITE:
-            break
-
-    return dedupe_events(events)
-
-
-def events_from_detail_page(detail_url, fallback_title, deadline=None):
-    try:
-        timeout = timeout_for(deadline, 3)
-        response = requests.get(detail_url, headers=BASE_HEADERS, timeout=timeout)
-        response.raise_for_status()
-        soup = BeautifulSoup(response.text, "html.parser")
-        text = clean_text(soup.get_text(" ", strip=True))
-        title = detail_page_title(soup, fallback_title)
-
-        events = []
-        for script in soup.find_all("script", type=lambda value: value and "ld+json" in value):
-            try:
-                data = json.loads(script.string or script.get_text() or "{}")
-            except Exception:
-                continue
-            for node in jsonld_nodes(data):
-                item = event_from_jsonld(node, detail_url)
-                if item and is_valid_event(item):
-                    events.append(item)
-
-        events.extend(events_from_detail_agenda_lines(soup, detail_url, title))
-        if events:
-            return sort_events_for_request(dedupe_events(events))[:MAX_EVENTS_PER_SITE]
-
-        date = first_meta(soup, ["event:start_time", "article:published_time"])[:10] or first_date_in_text(text)
-        location = first_meta(soup, ["event:location"])
-        if not location:
-            address = soup.find(attrs={"itemprop": "address"})
-            location = clean_text(address.get_text(" ", strip=True)) if address else ""
-        if not location:
-            location = default_location_for_site(detail_url)
-        description = first_meta(soup, ["og:description", "description", "twitter:description"]) or text[:220]
-        image = first_meta(soup, ["og:image", "twitter:image"])
-        item = normalize_event(
-            {
-                "title": title,
-                "type": "evenement",
-                "date": date,
-                "location": location,
-                "description": description,
-                "image": urljoin(detail_url, image) if image else "",
-                "website": detail_url,
-                "cost": "Zie website",
-                "source": source_label_for_site(detail_url),
-                "periodLabel": date,
-            }
-        )
-        add_raw_row("Detailpagina", detail_url, item.get("title"), item.get("date"), detail_url, "event", text[:320])
-        return [item] if is_valid_event(item) else []
-    except requests.exceptions.RequestException as exc:
-        log(f"Detailpagina overgeslagen {detail_url}: {exc}")
-    except Exception as exc:
-        log(f"Fout bij detailpagina {detail_url}: {exc}")
-
-    return []
-
-
-def events_from_listing_text(soup, site_url):
-    events = []
-    blocks = soup.find_all(["article", "li", "section", "div"], limit=600)
-
-    for block in blocks:
-        text = clean_text(block.get_text(" ", strip=True))
-        if len(text) < 25 or len(text) > 700:
-            continue
-        date = first_date_in_text(text)
-        if not date:
-            continue
-        link = block.find("a", href=True)
-        title = clean_text(link.get_text(" ", strip=True)) if link else ""
-        if not title:
-            heading = block.find(["h1", "h2", "h3", "h4"])
-            title = clean_text(heading.get_text(" ", strip=True)) if heading else text[:90]
-        if BAD_LINK_WORDS_RE.search(title) or len(normalize_title(title)) < 4:
-            continue
-        website = urljoin(site_url, link.get("href")) if link else site_url
-        item = normalize_event(
-            {
-                "title": title,
-                "type": "evenement",
-                "date": date,
-                "location": default_location_for_site(site_url),
-                "description": text[:260],
-                "website": website,
-                "cost": "Zie website",
-                "source": urlparse(site_url).netloc or "Extra website",
-                "periodLabel": date,
-            }
-        )
-        if is_valid_event(item):
-            events.append(item)
-        if len(events) >= 12:
-            break
-
-    return events
-
-
-def listing_block_for_anchor(anchor):
-    best_node = anchor
-    best_text = clean_text(anchor.get_text(" ", strip=True))
-
-    for node in [anchor, *list(anchor.parents)[:7]]:
-        if getattr(node, "name", "") not in EVENT_BLOCK_TAGS:
-            continue
-        text = clean_text(node.get_text(" ", strip=True))
-        if not text:
-            continue
-        if 12 <= len(text) <= 900 and first_date_in_text(text):
-            return node, text
-        if 12 <= len(text) <= 900 and TIME_RE.search(text) and len(text) > len(best_text):
-            best_node = node
-            best_text = text
-
-    return best_node, best_text
-
-
-def block_image_url(block, site_url):
-    image = block.find("img") if hasattr(block, "find") else None
-    if not image:
-        return ""
-    for attr in ("src", "data-src", "data-lazy-src", "data-original"):
-        value = clean_text(image.get(attr))
-        if value:
-            return urljoin(site_url, value)
-    source = image.find("source") if hasattr(image, "find") else None
-    value = clean_text(source.get("srcset")) if source else ""
-    if value:
-        return urljoin(site_url, value.split(",", 1)[0].split(" ", 1)[0])
+def node_title(node):
+    for selector in (
+        "[itemprop='name']",
+        "[class*='title']",
+        "[class*='titel']",
+        "[class*='name']",
+        "h1",
+        "h2",
+        "h3",
+        "h4",
+        "h5",
+        "h6",
+    ):
+        tag = node.select_one(selector) if hasattr(node, "select_one") else None
+        if tag:
+            title = clean_title(tag.get("content") or tag.get_text(" ", strip=True))
+            if title_is_usable(title):
+                return title
+    title = clean_title(node.get("aria-label") or node.get("title") or "")
+    if title_is_usable(title):
+        return title
+    dated = title_from_dated_text(node.get_text(" ", strip=True) if hasattr(node, "get_text") else "")
+    if title_is_usable(dated):
+        return dated
+    for line in split_lines(node):
+        candidate = clean_title(strip_date_prefix(line))
+        if title_is_usable(candidate) and not PRICE_RE.search(candidate) and not TIME_RE.fullmatch(candidate):
+            return candidate
     return ""
 
 
-def clean_listing_title(value):
-    title = clean_text(value)
-    title = re.sub(r"^image:\s*", "", title, flags=re.I)
-    title = VERA_DATE_RE.sub(" ", title)
-    title = MONTH_FIRST_DATE_RE.sub(" ", title)
-    title = DATE_IN_TEXT_RE.sub(" ", title)
-    title = SHORT_DOT_DATE_RE.sub(" ", title)
-    title = NUMERIC_DATE_RE.sub(" ", title)
-    title = re.sub(
-        r"^(ma|di|wo|do|vr|za|zo|mon|tue|wed|thu|fri|sat|sun|monday|tuesday|wednesday|thursday|friday|saturday|sunday)(?:\.|,|\s)+",
-        "",
-        title,
-        flags=re.I,
-    )
-    title = re.sub(r"^[\.\-–|:]+\s*", "", title)
-    title = re.split(r"\b(tickets?|koop ticket|meer info|info & bestellen|lees meer|lees verder|uitverkocht|sold out)\b", title, 1, flags=re.I)[0]
-    title = re.sub(r"\s+", " ", title).strip(" -|:")
-    return format_event_title(title[:140])
+def best_link_for_node(node, page_url, site_url):
+    links = []
+    if getattr(node, "name", "") == "a" and node.get("href"):
+        links.append(node)
+    if hasattr(node, "find_all"):
+        links.extend(node.find_all("a", href=True))
+    for anchor in links:
+        url = normalized_url(anchor.get("href"), page_url)
+        if url and same_host(url, site_url) and not BAD_URL_RE.search(url):
+            return url
+    return normalized_url(page_url)
 
 
-def class_value(node):
-    classes = node.get("class", []) if hasattr(node, "get") else []
-    if isinstance(classes, str):
-        return classes
-    return " ".join(str(item) for item in classes)
+def line_after_date_location(line):
+    text = clean_text(line)
+    if "," in text:
+        after = clean_text(text.split(",", 1)[1])
+        if after and len(after) < 80 and not PRICE_RE.search(after):
+            return after
+    return ""
 
 
-def inline_font_size(node):
-    style = clean_text(node.get("style")) if hasattr(node, "get") else ""
-    match = re.search(r"font-size\s*:\s*([0-9.]+)\s*(px|rem|em)", style, re.I)
-    if not match:
-        return 0
-    size = float(match.group(1))
-    unit = match.group(2).lower()
-    if unit in {"rem", "em"}:
-        size *= 16
-    return size
+def location_from_lines(lines, default_location):
+    for line in lines:
+        if re.search(r"\b(locatie|zaal|kamer|bibliotheek|forum groningen|oosterpoort|stadsschouwburg|vera|simplon|hedon|paradiso|martiniplaza|concertgebouw|ameland)\b", line, re.I):
+            cleaned = clean_text(re.sub(r"^(locatie|zaal)\s*:?\s*", "", line, flags=re.I))
+            if len(cleaned) <= 90 and not BAD_TITLE_RE.match(cleaned):
+                return cleaned
+    for line in lines:
+        possible = line_after_date_location(line)
+        if possible:
+            return possible
+    return default_location
 
 
-def title_node_score(node):
+def description_from_lines(lines, title):
+    parts = []
+    title_norm = clean_text(title).lower()
+    for line in lines:
+        lower = line.lower()
+        if lower == title_norm or parse_date_text(line) or BAD_TITLE_RE.match(line):
+            continue
+        if PRICE_RE.search(line) or TIME_RE.fullmatch(line):
+            continue
+        if len(line) < 18:
+            continue
+        parts.append(line)
+        if len(" ".join(parts)) > 260:
+            break
+    return compact(" ".join(parts), 320)
+
+
+def normalize_event(raw, site_url):
+    website = normalized_url(raw.get("website"), site_url)
+    title = clean_title(raw.get("title") or "")
+    event_date = parse_date_text(raw.get("date") or raw.get("dateText") or "")
+    if not event_date and raw.get("contextDate"):
+        event_date = parse_date_text("", raw.get("contextDate"))
+    if not title_is_usable(title) or not event_date or not website:
+        return None
+
+    location = clean_text(raw.get("location") or "") or host_default_location(site_url)
+    event_type = classify_type(" ".join([raw.get("type", ""), title, raw.get("description", ""), location]), canonical_host(site_url))
+    discovery_source = clean_text(raw.get("discoverySource") or "Website")
+    description = compact(raw.get("description") or "", 420)
+    image = normalized_url(raw.get("image") or "", website)
+    cost = first_price(raw.get("cost") or raw.get("description") or "")
+    time_value = first_time(raw.get("time") or raw.get("date") or raw.get("description") or "")
+
+    return {
+        "date": event_date,
+        "time": time_value,
+        "title": title,
+        "type": event_type[:1].upper() + event_type[1:],
+        "location": location,
+        "locationLink": "",
+        "website": website,
+        "source": source_label(website),
+        "discoverySource": discovery_source,
+        "description": description or f"Meer informatie staat op {source_label(website)}.",
+        "cost": cost,
+        "image": image,
+    }
+
+
+def event_key(event):
+    title = clean_text(event.get("title", "")).lower()
+    title = re.sub(r"[^a-z0-9]+", " ", title).strip()
+    return f"{event.get('date', '')}|{title}"
+
+
+def event_delete_key(event):
+    website = normalized_url(event.get("website", "")).lower().rstrip("/")
+    return f"{event_key(event)}|{website}"
+
+
+def event_score(event):
     score = 0
-    name = getattr(node, "name", "") or ""
-    if re.fullmatch(r"h[1-6]", name):
-        score += 80 - (int(name[1]) * 5)
-    if TITLE_CLASS_RE.search(class_value(node)):
-        score += 30
-    size = inline_font_size(node)
-    if size >= 28:
-        score += 35
-    elif size >= 22:
-        score += 25
-    elif size >= 18:
-        score += 15
+    if event.get("website"):
+        score += 10
+    if event.get("description") and len(event["description"]) > 80:
+        score += 4
+    if event.get("image"):
+        score += 3
+    if event.get("time"):
+        score += 2
+    if event.get("location"):
+        score += 2
+    if event.get("discoverySource") == "Website":
+        score += 1
     return score
 
 
-def title_candidates_from_block(block):
-    if not hasattr(block, "find_all"):
-        return []
-
-    candidates = []
-    for node in block.find_all(["h1", "h2", "h3", "h4", "h5", "strong", "span", "div", "p", "a"], limit=80):
-        score = title_node_score(node)
-        if score <= 0:
+def dedupe_events(events):
+    by_key = {}
+    for event in events:
+        if not event:
             continue
-        text = clean_text(node.get_text(" ", strip=True))
-        if not text or len(text) > 220:
-            continue
-        candidates.append((score, text))
-
-    candidates.sort(key=lambda item: (item[0], -len(item[1])), reverse=True)
-    return [text for _, text in candidates[:8]]
+        key = event_key(event)
+        current = by_key.get(key)
+        if not current or event_score(event) > event_score(current):
+            by_key[key] = event
+    return sorted(by_key.values(), key=lambda item: (item.get("date", "9999-99-99"), item.get("title", "")))
 
 
-def title_from_listing_anchor(anchor, absolute, block):
-    candidates = []
-    for attr in ("aria-label", "title"):
-        candidates.append(anchor.get(attr))
-    image = anchor.find("img") if hasattr(anchor, "find") else None
-    if image:
-        candidates.extend([image.get("alt"), image.get("title")])
-    candidates.extend(title_candidates_from_block(block))
-    if hasattr(block, "find_all"):
-        for heading in block.find_all(["h1", "h2", "h3", "h4", "h5"], limit=4):
-            candidates.append(heading.get_text(" ", strip=True))
-    candidates.append(anchor.get_text(" ", strip=True))
-
-    slug_title = slug_title_from_url(absolute)
-    cleaned = []
-    for candidate in candidates:
-        title = clean_listing_title(candidate)
-        if title and len(normalize_title(title)) >= 4 and not TITLE_NOISE_RE.search(title) and not DATE_TITLE_RE.match(title):
-            cleaned.append(title)
-
-    for title in cleaned:
-        if len(title) <= 110:
-            return title
-    if slug_title and len(normalize_title(slug_title)) >= 4:
-        return slug_title
-    return cleaned[0] if cleaned else ""
+def extract_detail_event(soup, page_url, site_url, discovery_source):
+    title = page_title(soup) or meta_content(soup, "og:title", "twitter:title")
+    description = meta_content(soup, "description", "og:description", "twitter:description")
+    text = soup.get_text(" ", strip=True)
+    raw = {
+        "date": meta_content(soup, "event:start_time", "article:published_time") or parse_date_text(text),
+        "title": title,
+        "type": classify_type(text, canonical_host(site_url)),
+        "location": location_from_lines(split_lines(soup)[:120], host_default_location(site_url)),
+        "website": page_url,
+        "description": description or description_from_lines(split_lines(soup)[:80], title),
+        "image": first_image(soup, page_url),
+        "time": first_time(text),
+        "cost": first_price(text),
+        "discoverySource": discovery_source,
+    }
+    return normalize_event(raw, site_url)
 
 
-def type_from_block_text(text):
-    value = clean_text(text).lower()
-    mapping = [
-        (r"\b(film|doc|bioscoop)\b", "Film"),
-        (r"\b(concert|muziek|pop|rock|jazz|klassiek|opera|band|dj)\b", "Muziek"),
-        (r"\b(theater|voorstelling|cabaret|musical|dans|ballet)\b", "Theater"),
-        (r"\b(festival|feest)\b", "Festival"),
-        (r"\b(workshop|cursus|spreekuur|lezing|talk)\b", "Workshop"),
-        (r"\b(expositie|expo|tentoonstelling|museum)\b", "Museum"),
-        (r"\b(kids|familie|kinderen|kinderfilm)\b", "Kinderen"),
-        (r"\b(sport|rugby|volleybal|tennis|voetbal)\b", "Sport"),
-        (r"\b(markt|braderie|kermis)\b", "Markt"),
-    ]
-    for pattern, label in mapping:
-        if re.search(pattern, value, re.I):
-            return label
-    return "Evenement"
-
-
-def cost_from_block_text(text):
-    value = clean_text(text)
-    if re.search(r"\bgratis\b", value, re.I):
-        return "Gratis"
-    match = re.search(r"(?:\u20ac|eur|\?)\s*\d+(?:[,.]\d{2})?", value, re.I)
-    if match:
-        return clean_text(match.group(0))
-    return "Zie website"
-
-
-def location_from_block_text(block, site_url, title):
-    lines = []
-    if hasattr(block, "stripped_strings"):
-        lines = [clean_text(line) for line in block.stripped_strings if clean_text(line)]
-    title_key = normalize_title(title)
-    for line in lines[:18]:
-        value = clean_text(line)
-        lowered = value.lower()
-        if not value or normalize_title(value) == title_key:
-            continue
-        if DATE_TITLE_RE.match(value) or DATE_RE.match(value) or TIME_RE.search(value) or PRICE_OR_ACTION_RE.search(value):
-            continue
-        if len(value) > 80:
-            continue
-        if looks_like_location_line(value):
-            return value
-    return default_location_for_site(site_url)
-
-
-def events_from_same_host_listing(soup, site_url):
-    events = []
-    base_host = site_host(site_url)
-
-    for anchor in soup.find_all("a", href=True):
-        href = clean_text(anchor.get("href"))
-        if not href or href.startswith(("javascript:", "mailto:", "tel:", "#")):
-            continue
-
-        absolute = urljoin(site_url, href).split("#", 1)[0]
-        parsed = urlparse(absolute)
-        if parsed.scheme not in {"http", "https"} or not hosts_match(parsed.netloc, base_host):
-            continue
-        if BAD_LINK_WORDS_RE.search(f"{anchor.get_text(' ', strip=True)} {href}"):
-            continue
-
-        block, block_text = listing_block_for_anchor(anchor)
-        date = normalize_date_value(first_date_in_text(block_text))
-        if not ISO_DATE_RE.fullmatch(date):
-            continue
-
-        title = title_from_listing_anchor(anchor, absolute, block)
-        if not title:
-            add_raw_row("Website", site_url, "", date, absolute, "geen titel", block_text)
-            continue
-
-        location = location_from_block_text(block, site_url, title)
-        item = normalize_event(
-            {
-                "title": title,
-                "type": type_from_block_text(block_text),
-                "date": date,
-                "time": context_time([block_text]),
-                "location": location,
-                "description": block_text[:280],
-                "image": block_image_url(block, site_url),
-                "website": absolute,
-                "cost": cost_from_block_text(block_text),
-                "source": source_label_for_site(site_url),
-                "periodLabel": date,
-            }
-        )
-        if is_valid_event(item):
-            events.append(item)
-            add_raw_row("Website", site_url, item.get("title"), item.get("date"), absolute, "event uit kaart", block_text)
-        else:
-            add_raw_row("Website", site_url, title, date, absolute, "afgekeurd", block_text)
-
-        if len(events) >= MAX_EVENTS_PER_SITE:
-            break
-
-    return dedupe_events(events)
-
-
-def spot_title_from_text(value, url=""):
-    slug_title = slug_title_from_url(url)
-    if len(normalize_title(slug_title)) >= 5:
-        return slug_title
-
-    title = clean_text(value)
-    title = re.sub(r"\b(laatste kaarten|uitverkocht|net bevestigd|bijna uitverkocht|extra show)\b.*$", "", title, flags=re.I).strip(" -|")
-    title = re.sub(r"\s{2,}", " ", title)
-    return format_event_title(title[:170])
-
-
-def spot_title_from_body(body, title_links=None):
-    text = clean_text(body)
-    normalized_body = normalize_title(text)
-    candidates = []
-    for link_title in (title_links or {}):
-        key = normalize_title(link_title)
-        if len(key) >= 5 and key in normalized_body[:180]:
-            candidates.append(link_title)
-    if candidates:
-        return format_event_title(max(candidates, key=len))
-
-    title = re.split(r"\+\s*support\b", text, 1, flags=re.I)[0]
-    stop = SPOT_TITLE_STOP_RE.search(title)
-    if stop:
-        title = title[:stop.start()]
-    title = re.sub(r"\b(laatste kaarten|uitverkocht|net bevestigd|bijna uitverkocht|extra show)\b.*$", "", title, flags=re.I)
-    return format_event_title(title[:95])
-
-
-def spot_events_from_text(text, site_url, title_links=None, source_label="Website"):
-    events = []
-    chunks = [chunk.strip() for chunk in SPOT_SPLIT_RE.split(clean_text(text)) if chunk.strip()]
-    for chunk in chunks:
-        match = SPOT_LISTING_RE.match(chunk)
-        if not match:
-            continue
-        date = normalize_date_value(f"{match.group(2)} {match.group(3)}")
-        title = spot_title_from_body(match.group(4), title_links)
-        if not title or normalize_title(title) in {"programma", "spot groningen"}:
-            add_raw_row(source_label, site_url, title, date, site_url, "geen titel", chunk)
-            continue
-        website = link_for_title(title_links or {}, title, site_url)
-        item = normalize_event(
-            {
-                "title": title,
-                "type": "Evenement",
-                "date": date,
-                "location": "SPOT Groningen",
-                "description": chunk[:260],
-                "website": website,
-                "cost": "Zie website",
-                "source": "spotgroningen.nl",
-                "discoverySource": "SerpAPI" if source_label == "SerpAPI" else "",
-                "periodLabel": date,
-            }
-        )
-        if is_valid_event(item):
-            events.append(item)
-            add_raw_row(source_label, site_url, item.get("title"), item.get("date"), website, "event uit tekst", chunk)
-    return dedupe_events(events)
-
-
-def events_from_spot_listing(soup, site_url):
-    host = urlparse(site_url).netloc.lower()
-    if "spotgroningen.nl" not in host:
-        return []
-
-    events = []
-    for anchor in soup.find_all("a", href=True):
-        href = clean_text(anchor.get("href"))
-        absolute = urljoin(site_url, href).split("#", 1)[0]
-        parsed = urlparse(absolute)
-        if "spotgroningen.nl" not in parsed.netloc.lower() or "/programma/" not in parsed.path:
-            continue
-
-        text = clean_text(anchor.get_text(" ", strip=True))
-        match = SPOT_LISTING_RE.match(text)
-        if not match:
-            if text:
-                add_raw_row("Website", site_url, slug_title_from_url(absolute), "", absolute, "niet herkend", text)
-            continue
-
-        date = normalize_date_value(f"{match.group(2)} {match.group(3)}")
-        title = spot_title_from_text(match.group(4), absolute)
-        if not title:
-            add_raw_row("Website", site_url, "", date, absolute, "geen titel", text)
-            continue
-
-        item = normalize_event(
-            {
-                "title": title,
-                "type": "evenement",
-                "date": date,
-                "location": "SPOT Groningen",
-                "description": text[:260],
-                "website": absolute,
-                "cost": "Zie website",
-                "source": "www.spotgroningen.nl",
-                "periodLabel": date,
-            }
-        )
-        if is_valid_event(item):
-            events.append(item)
-            add_raw_row("Website", site_url, item.get("title"), item.get("date"), absolute, "event", text)
-        else:
-            add_raw_row("Website", site_url, title, date, absolute, "afgekeurd", text)
-        if len(events) >= MAX_EVENTS_PER_SITE:
-            break
-
-    if len(events) < MAX_EVENTS_PER_SITE:
-        title_links = collect_title_links(soup, site_url)
-        events.extend(spot_events_from_text(soup.get_text(" ", strip=True), site_url, title_links, "Website"))
-
-    return dedupe_events(events)
-
-
-def uitloper_location_for_anchor(anchor, site_url):
-    headings = []
-    for heading in anchor.find_all_previous(["h2", "h3"], limit=8):
-        value = clean_text(heading.get_text(" ", strip=True))
-        if value:
-            headings.append(value)
-
-    for value in headings:
-        lowered = value.lower()
-        if lowered in {"regio", "quizzen", "literair & forum"}:
-            continue
-        if re.search(r"\d", value):
-            continue
-        if len(value) <= 80:
-            return value
-    return default_location_for_site(site_url)
-
-
-def events_from_uitloper_listing(soup, site_url):
-    if "uitloper.nu" not in site_host(site_url):
-        return []
-
-    event_date = INPUT_DATE_FROM or today_iso()
+def extract_anchor_events(soup, page_url, site_url, discovery_source):
     events = []
     for anchor in soup.find_all("a", href=True):
         text = clean_text(anchor.get_text(" ", strip=True))
-        if not text or BAD_LINK_WORDS_RE.search(text):
+        if len(text) < 8 or not parse_date_text(text):
             continue
-        time_match = re.search(r"\b\d{1,2}:\d{2}\s*uur\b|\b\d{1,2}:\d{2}\b", text, re.I)
-        if not time_match:
+        url = normalized_url(anchor.get("href"), page_url)
+        if not url or not same_host(url, site_url) or BAD_URL_RE.search(url):
             continue
-
-        title = clean_listing_title(text[:time_match.start()])
-        if not title:
-            add_raw_row("Website", site_url, "", event_date, urljoin(site_url, anchor.get("href")), "geen titel", text)
-            continue
-
-        absolute = urljoin(site_url, clean_text(anchor.get("href"))).split("#", 1)[0]
-        item = normalize_event(
-            {
-                "title": title,
-                "type": type_from_block_text(text),
-                "date": event_date,
-                "time": time_match.group(0).replace(" uur", ""),
-                "location": uitloper_location_for_anchor(anchor, site_url),
-                "description": text[:280],
-                "website": absolute,
-                "cost": "Zie website",
-                "source": source_label_for_site(site_url),
-                "periodLabel": event_date,
-            }
-        )
-        if is_valid_event(item):
-            events.append(item)
-            add_raw_row("Website", site_url, item.get("title"), item.get("date"), absolute, "uitloper event", text)
-        else:
-            add_raw_row("Website", site_url, title, event_date, absolute, "afgekeurd", text)
-        if len(events) >= MAX_EVENTS_PER_SITE:
-            break
-
-    return dedupe_events(events)
-
-
-def vera_title_from_text(value):
-    title = clean_text(value)
-    type_match = VERA_TYPE_RE.search(title)
-    if type_match:
-        title = title[:type_match.start()]
-    title = re.split(r"\b(Koop ticket|Sold out|Gratis|Ticket:|doors:|start:)\b", title, 1, flags=re.I)[0]
-    title = title.strip(" -|")
-    return format_event_title(title[:180])
-
-
-def events_from_vera_listing(soup, site_url):
-    if "vera-groningen.nl" not in site_host(site_url):
-        return []
-
-    events = []
-    for anchor in soup.find_all("a", href=True):
-        href = clean_text(anchor.get("href"))
-        absolute = urljoin(site_url, href).split("#", 1)[0]
-        parsed = urlparse(absolute)
-        if "vera-groningen.nl" not in parsed.netloc.lower():
-            continue
-
-        text = clean_text(anchor.get_text(" ", strip=True))
-        date_match = VERA_DATE_RE.search(text)
-        if not date_match:
-            continue
-
-        date = normalize_date_value(date_match.group(0))
-        rest = text[date_match.end():].strip()
-        title = vera_title_from_text(rest)
-        if not title:
-            continue
-
-        type_match = VERA_TYPE_RE.search(rest)
-        if not type_match or clean_text(type_match.group(1)).lower() not in {"mainstage", "downstage"}:
-            add_raw_row("Website", site_url, title, date, absolute, "geen mainstage/downstage", text)
-            continue
-        cost_match = re.search(r"Ticket:\s*([^|]+)", rest, re.I)
-        start_match = re.search(r"start:\s*(\d{1,2}:\d{2})", rest, re.I)
-        item = normalize_event(
-            {
-                "title": title,
-                "type": clean_text(type_match.group(1)),
-                "date": date,
-                "time": start_match.group(1) if start_match else "",
-                "location": "VERA Groningen",
-                "description": text[:320],
-                "website": absolute,
-                "cost": clean_text(cost_match.group(1)) if cost_match else "Zie website",
-                "source": "www.vera-groningen.nl",
-                "periodLabel": date,
-            }
-        )
-        if is_valid_event(item):
-            events.append(item)
-        if len(events) >= MAX_EVENTS_PER_SITE:
-            break
-
-    return dedupe_events(events)
-
-
-def context_type(lines):
-    for line in lines:
-        if TIME_RE.search(line) or PRICE_OR_ACTION_RE.search(line):
-            continue
-        if EVENT_WORDS_RE.search(line):
-            return clean_text(line)[:60]
-    return "evenement"
-
-
-def context_cost(lines):
-    for line in lines:
-        value = clean_text(line)
-        if PRICE_LINE_RE.search(value):
-            return clean_text(re.sub(r"^\?\s*(?=\d)", "\u20ac ", value))
-        if PRICE_OR_ACTION_RE.search(value):
-            if re.search(r"(ticket|meer info|uitverkocht|reeds gestart)", value, re.I):
-                continue
-            return value.replace("EUR", "€").replace("eur", "€")
-    return "Zie website"
-
-
-def context_time(lines):
-    for line in lines:
-        match = TIME_RE.search(line)
-        if match:
-            return match.group(0)
-    return ""
-
-
-def title_from_context_line(line):
-    value = clean_text(line)
-    value = re.split(
-        r"\b\d{1,2}:\d{2}\b|(?:v\.a\.|from)\s*(?:\u20ac|eur|\?)|\bmet onder andere\b|\bincluding\b|\binformatie\b|\btickets?\b",
-        value,
-        1,
-        flags=re.I,
-    )[0]
-    return clean_listing_title(value)
-
-
-def is_context_noise(line):
-    value = clean_text(line)
-    lowered = value.lower()
-    if lowered in BLOCKED_TITLES:
-        return True
-    if lowered in GENERIC_TYPE_TITLES:
-        return True
-    if looks_like_type_line(value):
-        return True
-    if PRICE_LINE_RE.match(value) or re.match(r"^(?:[^\w\s]|eur)?\s*\d+[,.]\d{2}$", lowered):
-        return True
-    if re.match(r"^\d+\s+(?:oost|west|noord|zuid)$", lowered):
-        return True
-    if looks_like_location_line(value):
-        return True
-    if lowered.startswith("image:"):
-        return True
-    if TITLE_NOISE_RE.search(value):
-        return True
-    if lowered in {"filter", "datum", "soort", "locatie", "sluiten", "tickets", "meer info"}:
-        return True
-    if TIME_RANGE_RE.match(value) or PRICE_OR_ACTION_RE.search(value) or PRICE_LINE_RE.search(value):
-        return True
-    if DATE_RE.match(value) or DATE_TITLE_RE.match(value) or SCORE_RE.match(value):
-        return True
-    if len(normalize_title(value)) < 4:
-        return True
-    return False
-
-
-def events_from_contextual_lines(soup, site_url):
-    events = []
-    title_links = collect_title_links(soup, site_url)
-    lines = [clean_text(item) for item in soup.stripped_strings if clean_text(item)]
-    current_date = ""
-
-    for index, line in enumerate(lines):
-        section_date = date_from_section_label(line)
-        if section_date:
-            current_date = section_date
-            continue
-
-        if not current_date or is_context_noise(line):
-            continue
-
-        lookahead = lines[index + 1:index + 7]
-        context = [line, *lookahead[:5]]
-        has_context = any(
-            TIME_RE.search(item) or PRICE_OR_ACTION_RE.search(item) or EVENT_WORDS_RE.search(item)
-            for item in lookahead
-        ) or TIME_RE.search(line) or PRICE_LINE_RE.search(line) or EVENT_WORDS_RE.search(line)
-        if not has_context:
-            continue
-
-        title = title_from_context_line(line)
-        if not title:
-            continue
-        website = link_for_title(title_links, title, site_url)
-        item = normalize_event(
-            {
-                "title": title,
-                "type": context_type(context),
-                "date": current_date,
-                "time": context_time(context),
-                "location": default_location_for_site(site_url),
-                "description": " ".join([title, *lookahead[:4]])[:260],
-                "website": website,
-                "cost": context_cost(context),
-                "source": urlparse(site_url).netloc or "Extra website",
-                "periodLabel": current_date,
-            }
-        )
-        if is_valid_event(item):
-            events.append(item)
-            add_raw_row("Website", site_url, item.get("title"), item.get("date"), website, "event uit datumgroep", " ".join([title, *lookahead[:4]]))
-        if len(events) >= MAX_EVENTS_PER_SITE:
-            break
-
-    return dedupe_events(events)
-
-
-def location_from_nearby_lines(lines, site_url):
-    for line in lines:
-        value = clean_text(line)
-        if not value:
-            continue
-        if "," in value:
-            after_comma = clean_text(value.rsplit(",", 1)[-1])
-            if after_comma and not first_date_in_text(after_comma) and len(after_comma) <= 80:
-                return format_event_title(after_comma)
-        if re.match(r"^in\s+.{3,80}$", value, re.I):
-            return clean_text(re.sub(r"^in\s+", "", value, flags=re.I))
-        if LOCATION_HINT_RE.search(value) and len(value) <= 80 and not first_date_in_text(value):
-            return value
-    return default_location_for_site(site_url)
-
-
-def events_from_forward_date_lines(soup, site_url):
-    events = []
-    title_links = collect_title_links(soup, site_url)
-    lines = [clean_text(item) for item in soup.stripped_strings if clean_text(item)]
-
-    for index, line in enumerate(lines):
-        if is_context_noise(line):
-            continue
-        if first_date_in_text(line) or date_from_section_label(line):
-            continue
-
-        title = clean_listing_title(line)
-        if not title or len(normalize_title(title)) < 4:
-            continue
-
-        nearby = lines[index + 1:index + 8]
-        date = ""
-        for candidate in nearby:
-            date = normalize_date_value(first_date_in_text(candidate) or date_from_section_label(candidate))
-            if ISO_DATE_RE.fullmatch(date):
-                break
-        if not ISO_DATE_RE.fullmatch(date):
-            continue
-
-        context = nearby[:5]
-        item = normalize_event(
-            {
-                "title": title,
-                "type": context_type(context),
-                "date": date,
-                "time": context_time(context),
-                "location": location_from_nearby_lines(context, site_url),
-                "description": " ".join([title, *context])[:280],
-                "website": link_for_title(title_links, title, site_url),
-                "cost": context_cost(context),
-                "source": source_label_for_site(site_url),
-                "periodLabel": date,
-            }
-        )
-        if is_valid_event(item):
-            events.append(item)
-            add_raw_row("Website", site_url, item.get("title"), item.get("date"), item.get("website"), "event uit titel-datumregels", " ".join([line, *context]))
-        if len(events) >= MAX_EVENTS_PER_SITE:
-            break
-
-    return dedupe_events(events)
-
-
-def jsonld_nodes(data):
-    if isinstance(data, list):
-        for item in data:
-            yield from jsonld_nodes(item)
-        return
-
-    if not isinstance(data, dict):
-        return
-
-    yield data
-    graph = data.get("@graph")
-    if isinstance(graph, list):
-        for item in graph:
-            yield from jsonld_nodes(item)
-
-
-def node_type_includes(node, expected):
-    value = node.get("@type")
-    if isinstance(value, list):
-        return any(str(item).lower() == expected for item in value)
-    return str(value or "").lower() == expected
-
-
-def first_value(value):
-    if isinstance(value, list):
-        return first_value(value[0]) if value else ""
-    return value
-
-
-def extract_image(value):
-    image = first_value(value)
-    if isinstance(image, dict):
-        return clean_text(image.get("url") or image.get("contentUrl"))
-    return clean_text(image)
-
-
-def extract_location(value):
-    value = first_value(value)
-    if isinstance(value, str):
-        return clean_text(value)
-    if not isinstance(value, dict):
-        return ""
-
-    parts = [clean_text(value.get("name"))]
-    address = value.get("address")
-    if isinstance(address, str):
-        parts.append(clean_text(address))
-    elif isinstance(address, dict):
-        parts.extend(
-            clean_text(address.get(key))
-            for key in ["streetAddress", "addressLocality", "addressRegion"]
-        )
-
-    return ", ".join(part for part in parts if part)
-
-
-def extract_price(value):
-    offer = first_value(value)
-    if not isinstance(offer, dict):
-        return ""
-    price = clean_text(offer.get("price"))
-    currency = clean_text(offer.get("priceCurrency"))
-    if price and currency:
-        return f"{currency} {price}"
-    return price
-
-
-def split_start_date(value):
-    start = clean_text(value)
-    if not start:
-        return "", ""
-    if "T" not in start:
-        return start[:10], ""
-    date_part, time_part = start.split("T", 1)
-    return date_part[:10], time_part[:5]
-
-
-def event_from_jsonld(node, site_url):
-    if not node_type_includes(node, "event"):
-        return None
-
-    title = clean_text(node.get("name") or node.get("headline"))
-    date, event_time = split_start_date(node.get("startDate"))
-    location = extract_location(node.get("location")) or default_location_for_site(site_url)
-    website = clean_text(node.get("url")) or site_url
-
-    return normalize_event(
-        {
+        title = node_title(anchor) or title_from_dated_text(text)
+        raw = {
+            "date": parse_date_text(text),
             "title": title,
-            "type": "evenement",
-            "date": date,
-            "time": event_time,
-            "location": location,
-            "description": clean_text(node.get("description")),
-            "image": extract_image(node.get("image")),
-            "website": urljoin(site_url, website),
-            "cost": extract_price(node.get("offers")) or "Zie website",
-            "source": urlparse(site_url).netloc or "Extra website",
-            "periodLabel": date,
+            "type": classify_type(text, canonical_host(site_url)),
+            "location": location_from_lines(split_lines(anchor), host_default_location(site_url)),
+            "website": url,
+            "description": description_from_lines(split_lines(anchor), title),
+            "image": "",
+            "time": first_time(text),
+            "cost": first_price(text),
+            "discoverySource": discovery_source,
         }
-    )
+        event = normalize_event(raw, site_url)
+        if event:
+            events.append(event)
+            add_raw(discovery_source, site_url, event["title"], event["date"], event["website"], "event uit link", text)
+    return events
 
 
-def scrape_structured_site(site_url):
-    started = time.monotonic()
-    deadline = started + SITE_TIME_LIMIT_SECONDS
+def extract_card_events(soup, page_url, site_url, discovery_source):
     events = []
-    link_candidates = []
-    timed_out = False
-    pages_loaded = 0
-    detail_pages_checked = 0
-
-    add_raw_row(
-        "Scan",
-        site_url,
-        "Website scan gestart",
-        "",
-        site_url,
-        "start",
-        f"Max {SITE_TIME_LIMIT_SECONDS} seconden, max {MAX_EVENTS_PER_SITE} evenementen",
+    selector = (
+        "article, li, "
+        "[class*='event'], [class*='agenda'], [class*='program'], [class*='programma'], "
+        "[class*='card'], [class*='item'], [class*='teaser'], [class*='tile']"
     )
-    log(f"Start website scan {site_url}: max {SITE_TIME_LIMIT_SECONDS}s, max {MAX_EVENTS_PER_SITE} events")
-    link_candidates.extend(serpapi_link_candidates_for_site(site_url))
-
-    for page_url in site_seed_urls(site_url):
-        if not enough_time_left(deadline):
-            timed_out = True
-            break
-        try:
-            soup = fetch_soup(page_url, timeout=2.5, deadline=deadline)
-        except requests.exceptions.RequestException as exc:
-            log(f"Websitepagina niet bereikbaar {page_url}: {exc}")
+    for node in soup.select(selector)[:450]:
+        text = clean_text(node.get_text(" ", strip=True))
+        if len(text) < 20 or len(text) > 2200:
             continue
-        except TimeoutError as exc:
-            timed_out = True
-            log(f"Website overgeslagen door tijdslimiet {page_url}: {exc}")
-            break
-        except Exception as exc:
-            log(f"Websitepagina overgeslagen {page_url}: {exc}")
+        event_date = parse_date_text(text)
+        if not event_date:
             continue
+        title = node_title(node) or title_from_dated_text(text)
+        if not title_is_usable(title):
+            continue
+        link = best_link_for_node(node, page_url, site_url)
+        lines = split_lines(node)
+        raw = {
+            "date": event_date,
+            "title": title,
+            "type": classify_type(text, canonical_host(site_url)),
+            "location": location_from_lines(lines, host_default_location(site_url)),
+            "website": link,
+            "description": description_from_lines(lines, title),
+            "image": first_image(node, page_url),
+            "time": first_time(text),
+            "cost": first_price(text),
+            "discoverySource": discovery_source,
+        }
+        event = normalize_event(raw, site_url)
+        if event:
+            events.append(event)
+            add_raw(discovery_source, site_url, event["title"], event["date"], event["website"], "event uit kaart", text)
+    return events
 
-        pages_loaded += 1
-        page_text = clean_text(soup.get_text(" ", strip=True))
-        add_raw_row(
-            "Website",
-            site_url,
-            page_title(soup),
-            "",
-            page_url,
-            f"pagina {pages_loaded} geladen",
-            f"{len(page_text)} tekens gelezen, nog {round(seconds_left(deadline), 1)} sec over. {page_text[:220]}",
-        )
-        before = len(events)
-        for script in soup.find_all("script", type=lambda value: value and "ld+json" in value):
-            try:
-                data = json.loads(script.string or script.get_text() or "{}")
-            except Exception:
+
+def extract_line_events(soup, page_url, site_url, discovery_source):
+    lines = split_lines(soup)
+    events = []
+    current_date = ""
+    for index, line in enumerate(lines[:900]):
+        parsed = parse_date_text(line)
+        if parsed and (len(line.split()) <= 6 or re.match(r"^(vandaag|morgen|overmorgen|maandag|dinsdag|woensdag|donderdag|vrijdag|zaterdag|zondag)", line, re.I)):
+            current_date = parsed
+        if parsed:
+            title = title_from_dated_text(line)
+            if not title_is_usable(title):
+                title = clean_title(lines[index - 1]) if index > 0 else ""
+            if not title_is_usable(title) and index + 1 < len(lines):
+                title = clean_title(lines[index + 1])
+            if not title_is_usable(title):
                 continue
-
-            for node in jsonld_nodes(data):
-                item = event_from_jsonld(node, site_url)
-                if item and is_valid_event(item):
-                    events.append(item)
-                if len(events) >= MAX_EVENTS_PER_SITE:
-                    break
-            if len(events) >= MAX_EVENTS_PER_SITE:
-                break
-
-        host = site_host(page_url)
-        if "spotgroningen.nl" in host:
-            link_candidates.extend(candidate_event_links(soup, page_url))
-            source_events = events_from_spot_listing(soup, page_url)
-            events.extend(source_events)
-            events.extend(events_from_same_host_listing(soup, page_url))
-            events.extend(events_from_forward_date_lines(soup, page_url))
-            if not source_events and is_detail_event_url(page_url):
-                events.extend(events_from_detail_page(page_url, slug_title_from_url(page_url), deadline=deadline))
-        elif "uitloper.nu" in host:
-            source_events = events_from_uitloper_listing(soup, page_url)
-            events.extend(source_events)
-            if not source_events:
-                events.extend(events_from_same_host_listing(soup, page_url))
-                events.extend(events_from_contextual_lines(soup, page_url))
-                events.extend(events_from_forward_date_lines(soup, page_url))
-            link_candidates.extend(candidate_event_links(soup, page_url))
-        elif "vera-groningen.nl" in host:
-            link_candidates.extend(candidate_event_links(soup, page_url))
-            source_events = events_from_vera_listing(soup, page_url)
-            events.extend(source_events)
-            if not source_events and is_detail_event_url(page_url):
-                events.extend(events_from_detail_page(page_url, slug_title_from_url(page_url), deadline=deadline))
-        else:
-            events.extend(events_from_same_host_listing(soup, page_url))
-            events.extend(events_from_listing_text(soup, page_url))
-            events.extend(events_from_contextual_lines(soup, page_url))
-            events.extend(events_from_forward_date_lines(soup, page_url))
-            link_candidates.extend(candidate_event_links(soup, page_url))
-
-        added = len(events) - before
-        if added:
-            log(f"{added} kandidaat-evenementen gevonden op {page_url}")
-            add_raw_row("Scan", site_url, f"{added} kandidaten op pagina", "", page_url, "kandidaten", f"Totaal voor deze site nu {len(events)}")
-        else:
-            add_raw_row("Scan", site_url, "Geen kandidaten op pagina", "", page_url, "geen kandidaten", "Pagina is gelezen, maar leverde geen betrouwbare activiteit op")
-        if len(events) >= MAX_EVENTS_PER_SITE:
-            break
-
-    seen_links = set()
-    unique_links = []
-    for title, detail_url in link_candidates:
-        key = detail_url.lower().rstrip("/")
-        if key not in seen_links:
-            seen_links.add(key)
-            unique_links.append((title, detail_url))
-
-    for title, detail_url in unique_links[:MAX_EVENTS_PER_SITE]:
-        if len(events) >= MAX_EVENTS_PER_SITE:
-            break
-        if not enough_time_left(deadline):
-            timed_out = True
-            break
-        detail_pages_checked += 1
-        add_raw_row("Detailpagina", site_url, title, "", detail_url, "detail lezen", f"Detailpagina {detail_pages_checked}, resterend {round(seconds_left(deadline), 1)} sec")
-        events.extend(events_from_detail_page(detail_url, title, deadline=deadline))
-
-    events = sort_events_for_request(dedupe_events(events))[:MAX_EVENTS_PER_SITE]
-    SITE_RESULTS.append(
-        {
-            "site": site_url,
-            "count": len(events),
-            "newCount": 0,
-            "durationSeconds": round(time.monotonic() - started, 2),
-            "timedOut": timed_out,
-            "eventKeys": [event_key(event) for event in events],
-        }
-    )
-    if events:
-        log(f"Gevonden op extra website {site_url}: {len(events)}")
-    else:
-        log(f"Geen betrouwbare evenementen gevonden op {site_url}")
-
-    duration = round(time.monotonic() - started, 2)
-    add_raw_row(
-        "Scan",
-        site_url,
-        f"{len(events)} evenementen gevonden",
-        "",
-        site_url,
-        "tijdslimiet" if timed_out else "klaar",
-        f"{pages_loaded} pagina's geladen, {detail_pages_checked} detailpagina's bekeken, duur {duration}s van max {SITE_TIME_LIMIT_SECONDS}s",
-    )
-    log(f"Klaar website scan {site_url}: {len(events)} events, {pages_loaded} pagina's, {detail_pages_checked} details, {duration}s, timedOut={timed_out}")
-
+            window = lines[max(0, index - 1) : min(len(lines), index + 5)]
+            raw = {
+                "date": parsed,
+                "title": title,
+                "type": classify_type(" ".join(window), canonical_host(site_url)),
+                "location": location_from_lines(window, host_default_location(site_url)),
+                "website": page_url,
+                "description": description_from_lines(window, title),
+                "image": "",
+                "time": first_time(" ".join(window)),
+                "cost": first_price(" ".join(window)),
+                "discoverySource": discovery_source,
+            }
+            event = normalize_event(raw, site_url)
+            if event:
+                events.append(event)
+                add_raw(discovery_source, site_url, event["title"], event["date"], event["website"], "event uit tekstregel", " | ".join(window))
+        elif current_date and title_is_usable(line):
+            next_window = lines[index : min(len(lines), index + 5)]
+            if not any(TIME_RE.search(part) or PRICE_RE.search(part) or EVENT_WORDS_RE.search(part) for part in next_window):
+                continue
+            raw = {
+                "date": current_date,
+                "title": line,
+                "type": classify_type(" ".join(next_window), canonical_host(site_url)),
+                "location": location_from_lines(next_window, host_default_location(site_url)),
+                "website": page_url,
+                "description": description_from_lines(next_window, line),
+                "image": "",
+                "time": first_time(" ".join(next_window)),
+                "cost": first_price(" ".join(next_window)),
+                "discoverySource": discovery_source,
+            }
+            event = normalize_event(raw, site_url)
+            if event:
+                events.append(event)
+                add_raw(discovery_source, site_url, event["title"], event["date"], event["website"], "event uit dagblok", " | ".join(next_window))
     return events
 
 
-def scrape_extra_sites(sites):
+def parse_page_events(html, page_url, site_url, discovery_source):
+    soup = BeautifulSoup(html, "html.parser")
     events = []
-    for site_url in sites:
-        events.extend(scrape_structured_site(site_url))
-    return sort_events_for_request(dedupe_events(events))
+    events.extend(parse_jsonld_events(soup, page_url, site_url, discovery_source))
+    events.extend(extract_anchor_events(soup, page_url, site_url, discovery_source))
+    events.extend(extract_card_events(soup, page_url, site_url, discovery_source))
+    detail = extract_detail_event(soup, page_url, site_url, discovery_source)
+    if detail:
+        events.append(detail)
+        add_raw(discovery_source, site_url, detail["title"], detail["date"], detail["website"], "event uit detailpagina", soup.get_text(" ", strip=True)[:420])
+    events.extend(extract_line_events(soup, page_url, site_url, discovery_source))
+    return dedupe_events(events)
 
 
-def scrape_uitzinnig(region="Groningen"):
-    events = []
-    urls = [
-        f"https://www.uitzinnig.nl/evenement/{quote_plus(region.lower())}.aspx",
-        "https://www.uitzinnig.nl/evenement/5/groningen.aspx",
-    ]
-
-    for try_url in urls:
-        try:
-            response = requests.get(try_url, headers=BASE_HEADERS, timeout=20)
-            response.raise_for_status()
-            soup = BeautifulSoup(response.text, "html.parser")
-            title_links = collect_title_links(soup, try_url)
-            lines = [x.strip() for x in soup.stripped_strings if x.strip()]
-
-            for i, line in enumerate(lines):
-                if (
-                    i + 3 < len(lines)
-                    and lines[i + 1].startswith("Provincie Groningen,")
-                    and SCORE_RE.match(lines[i + 2])
-                    and DATE_RE.match(lines[i + 3])
-                ):
-                    title = clean_text(line)
-                    location = clean_text(lines[i + 1].replace("Provincie Groningen,", ""))
-                    date = clean_text(lines[i + 3])
-                    j = i + 4
-                    extra = ""
-                    event_time = ""
-
-                    if j < len(lines) and lines[j] == "meerdere data":
-                        extra = " (meerdere data)"
-                        j += 1
-
-                    for k in range(i + 4, min(len(lines), i + 10)):
-                        if re.match(r"^\d{1,2}:\d{2}", lines[k]):
-                            event_time = clean_text(lines[k])
-                            break
-
-                    description = clean_text(lines[j].replace(".. \u00bb", "")) if j < len(lines) else ""
-
-                    if title.lower() in BLOCKED_TITLES:
-                        continue
-
-                    website = title_links.get(normalize_title(title), try_url)
-
-                    item = normalize_event(
-                        {
-                            "title": title,
-                            "type": "evenement",
-                            "date": date + extra,
-                            "time": event_time,
-                            "location": location,
-                            "description": description,
-                            "website": website,
-                            "source": "Uitzinnig",
-                        }
-                    )
-
-                    if item["title"]:
-                        events.append(item)
-
-            if events:
-                log(f"Gevonden: {len(events)} evenementen op {try_url}")
-                return dedupe_events(events)
-
-        except requests.exceptions.RequestException as exc:
-            log(f"Fout bij HTTP-verzoek voor {try_url}: {exc}")
-        except Exception as exc:
-            log(f"Onverwachte fout bij scrapen Uitzinnig ({try_url}): {exc}")
-
-    return events
+def link_score(anchor, url, text):
+    score = 0
+    combined = f"{url} {text}"
+    if parse_date_text(text):
+        score += 12
+    if EVENT_WORDS_RE.search(combined):
+        score += 8
+    if re.search(r"/(event|events|programma|agenda|concert|voorstelling|film|activiteit|tickets?)/", url, re.I):
+        score += 6
+    if title_is_usable(text):
+        score += 2
+    if BAD_URL_RE.search(combined):
+        score -= 50
+    if len(text) > 220:
+        score -= 4
+    return score
 
 
-def manual_events():
-    return [
-        normalize_event(
-            {
-                "title": "Groninger Museum",
-                "type": "museum",
-                "date": "Hele jaar",
-                "location": "Groningen",
-                "lat": 53.2193,
-                "lon": 6.5671,
-                "description": "Moderne kunst en wisselende tentoonstellingen.",
-                "website": "https://www.groningermuseum.nl",
-                "source": "groningermuseum.nl",
-                "isPermanent": True,
-            }
-        ),
-        normalize_event(
-            {
-                "title": "Fort Bourtange",
-                "type": "historie",
-                "date": "Hele jaar",
-                "location": "Bourtange",
-                "lat": 53.0167,
-                "lon": 7.1833,
-                "description": "Historische vesting met demonstraties en musea.",
-                "website": "https://www.bourtange.nl",
-                "source": "bourtange.nl",
-                "isPermanent": True,
-            }
-        ),
-    ]
-
-
-def archive_old_events(previous_active, previous_archive, new_active):
-    now = datetime.now(timezone.utc).isoformat(timespec="seconds")
-    active_keys = {event_key(event) for event in new_active}
-    archived_by_key = {}
-
-    for event in previous_archive:
-        key = event_key(event)
-        if key not in active_keys:
-            archived_by_key[key] = event
-
-    for event in previous_active:
-        key = event_key(event)
-        if key not in active_keys and key not in archived_by_key:
-            archived = dict(event)
-            archived["archivedAt"] = now
-            archived_by_key[key] = archived
-
-    archive = sorted(
-        archived_by_key.values(),
-        key=lambda item: clean_text(item.get("archivedAt")) or clean_text(item.get("date")),
-        reverse=True,
-    )
-    return archive[:500]
-
-
-def public_site_results():
+def collect_event_links(html, page_url, site_url):
+    soup = BeautifulSoup(html, "html.parser")
+    scored = []
+    for anchor in soup.find_all("a", href=True):
+        url = normalized_url(anchor.get("href"), page_url)
+        if not url or not same_host(url, site_url):
+            continue
+        text = clean_text(anchor.get_text(" ", strip=True) or anchor.get("title") or anchor.get("aria-label"))
+        score = link_score(anchor, url, text)
+        if score > 0:
+            scored.append((score, url, text))
+    scored.sort(key=lambda item: (-item[0], item[1]))
     result = []
-    for item in SITE_RESULTS:
-        result.append(
-            {
-                "site": item.get("site"),
-                "count": item.get("count", 0),
-                "newCount": item.get("newCount", 0),
-                "durationSeconds": item.get("durationSeconds", 0),
-                "timedOut": item.get("timedOut", False),
-            }
-        )
+    seen = set()
+    for _, url, text in scored:
+        key = url.lower().rstrip("/")
+        if key in seen:
+            continue
+        seen.add(key)
+        result.append(url)
+        add_raw("Website", site_url, text or "link", "", url, "detail-link gevonden", text)
+        if len(result) >= max(80, MAX_EVENTS_PER_SITE * 4):
+            break
     return result
 
 
+def start_urls_for_site(site_url):
+    exact = normalized_url(site_url)
+    if not exact:
+        return []
+    parsed = urlparse(exact)
+    urls = [exact]
+    if parsed.path in {"", "/"}:
+        base = f"{parsed.scheme}://{parsed.netloc}"
+        urls.extend(urljoin(base, path) for path in COMMON_PATHS_FOR_ROOT_SITES)
+    return unique_urls(urls)
+
+
+def unique_urls(urls):
+    result = []
+    seen = set()
+    for url in urls:
+        normalized = normalized_url(url)
+        key = normalized.lower().rstrip("/")
+        if normalized and key not in seen:
+            seen.add(key)
+            result.append(normalized)
+    return result
+
+
+def serpapi_links_for_site(site_url):
+    candidates = []
+    for item in parse_json_list(INPUT_SERPAPI_LINKS_RAW):
+        url = normalized_url(item)
+        if url and same_host(url, site_url):
+            candidates.append(url)
+    return unique_urls(candidates)
+
+
 def import_serpapi_raw_log():
-    rows = parse_json_list(INPUT_SERPAPI_RAW_LOG)
-    imported = 0
-    for row in rows[:300]:
+    for row in parse_json_list(INPUT_SERPAPI_RAW_LOG):
         if not isinstance(row, dict):
             continue
-        add_raw_row(
+        add_raw(
             "SerpAPI",
-            row.get("site", ""),
-            row.get("title", ""),
-            row.get("date", ""),
-            row.get("url", ""),
-            row.get("status", ""),
-            row.get("rawText") or row.get("snippet") or row.get("url", ""),
+            row.get("site") or "",
+            row.get("title") or "",
+            row.get("date") or "",
+            row.get("url") or row.get("link") or "",
+            row.get("status") or "zoekresultaat",
+            row.get("rawText") or row.get("snippet") or "",
         )
-        imported += 1
-    return imported
 
 
-def clean_saved_event(event):
-    item = dict(event)
-    website = clean_text(item.get("website")) or "#"
-    source = clean_text(item.get("source"))
-    if not source or source.lower() in {"manual", "onbekend", "bron onbekend", "scan"}:
-        source = urlparse(website).netloc.replace("www.", "") if is_valid_web_url(website) and website != "#" else ""
-    event_type = clean_text(item.get("type")) or "evenement"
-    if event_type.lower() in TYPE_NOISE_TITLES:
-        event_type = "evenement"
-    item["source"] = source or "Onbekend"
-    item["type"] = format_event_title(event_type)
-    item["discoverySource"] = clean_text(item.get("discoverySource")) or "Website"
-    return item
+def remaining_timeout(deadline):
+    return max(1.0, min(7.0, deadline - time.monotonic()))
 
 
-def save_events_to_json(active_events, archive):
-    active_events = [clean_saved_event(event) for event in active_events]
-    active_events = [event for event in active_events if is_valid_event(event)]
-    archive = [clean_saved_event(event) for event in archive]
-    archive = [event for event in archive if is_valid_event(event)]
+def fetch_html(session, url, deadline):
+    if time.monotonic() >= deadline:
+        raise TimeoutError("tijdslimiet bereikt")
+    response = session.get(url, headers=REQUEST_HEADERS, timeout=remaining_timeout(deadline), allow_redirects=True)
+    if response.status_code >= 400:
+        raise requests.HTTPError(f"HTTP {response.status_code}")
+    content_type = response.headers.get("content-type", "")
+    if content_type and "html" not in content_type and "xml" not in content_type and "text" not in content_type:
+        raise ValueError(f"geen HTML ({content_type})")
+    return response.text, response.url
+
+
+def scrape_site(site_url):
+    original_site = clean_text(site_url)
+    normalized_site = normalized_url(original_site)
+    started = time.monotonic()
+    deadline = started + SITE_TIME_LIMIT_SECONDS
+    session = requests.Session()
+    events = []
+    detail_links = []
+    timed_out = False
+
+    add_raw("Website", original_site, "Start", "", normalized_site, "start", f"max {MAX_EVENTS_PER_SITE} events, max {SITE_TIME_LIMIT_SECONDS} seconden")
+
+    for page_url in start_urls_for_site(normalized_site):
+        if len(dedupe_events(events)) >= MAX_EVENTS_PER_SITE or time.monotonic() >= deadline:
+            timed_out = time.monotonic() >= deadline
+            break
+        try:
+            html, final_url = fetch_html(session, page_url, deadline)
+            add_raw("Website", original_site, "Pagina gelezen", "", final_url, "ok", f"{len(html)} tekens HTML")
+        except Exception as exc:
+            add_raw("Website", original_site, "Pagina mislukt", "", page_url, "fout", str(exc))
+            continue
+
+        page_events = parse_page_events(html, final_url, normalized_site, "Website")
+        events.extend(page_events)
+        add_raw("Website", original_site, "Pagina geanalyseerd", "", final_url, "ok", f"{len(page_events)} events op deze pagina")
+        detail_links.extend(collect_event_links(html, final_url, normalized_site))
+
+    serp_links = serpapi_links_for_site(normalized_site)
+    for link in serp_links:
+        add_raw("SerpAPI", original_site, "Detail-link", "", link, "ingepland", "SerpAPI-link wordt alleen als detailpagina gecontroleerd")
+
+    detail_queue = unique_urls(detail_links + serp_links)
+    visited = set()
+    for detail_url in detail_queue:
+        if len(dedupe_events(events)) >= MAX_EVENTS_PER_SITE:
+            break
+        if time.monotonic() >= deadline:
+            timed_out = True
+            break
+        key = detail_url.lower().rstrip("/")
+        if key in visited:
+            continue
+        visited.add(key)
+        discovery_source = "SerpAPI" if detail_url in serp_links else "Website"
+        try:
+            html, final_url = fetch_html(session, detail_url, deadline)
+            detail_events = parse_page_events(html, final_url, normalized_site, discovery_source)
+            before = len(dedupe_events(events))
+            events.extend(detail_events)
+            after = len(dedupe_events(events))
+            add_raw(discovery_source, original_site, "Detailpagina geanalyseerd", "", final_url, "ok", f"{max(0, after - before)} extra events")
+        except Exception as exc:
+            add_raw(discovery_source, original_site, "Detailpagina mislukt", "", detail_url, "fout", str(exc))
+
+    unique = dedupe_events(events)[:MAX_EVENTS_PER_SITE]
+    duration = round(time.monotonic() - started, 2)
+    SITE_RESULTS.append(
+        {
+            "site": original_site,
+            "count": len(unique),
+            "newCount": 0,
+            "durationSeconds": duration,
+            "timedOut": timed_out,
+        }
+    )
+    add_raw("Website", original_site, "Klaar", "", normalized_site, "klaar", f"{len(unique)} unieke events in {duration} sec")
+    return unique
+
+
+def valid_site_list(values):
+    result = []
+    seen = set()
+    for item in values:
+        original = clean_text(item)
+        normalized = normalized_url(original)
+        key = normalized.lower().rstrip("/")
+        if original and normalized and key not in seen:
+            seen.add(key)
+            result.append(original)
+    return result
+
+
+def input_sites():
+    selected = valid_site_list(parse_json_list(INPUT_SITES_RAW))
+    if selected:
+        return selected
+    try:
+        with open(SITES_FILE, "r", encoding="utf-8") as handle:
+            configured = json.load(handle)
+    except (OSError, json.JSONDecodeError):
+        configured = []
+    return valid_site_list(configured)
+
+
+def load_previous_payload():
+    if not os.path.exists(DATA_FILE) or INPUT_CLEAR_ARCHIVE:
+        return {"events": [], "archive": []}
+    try:
+        with open(DATA_FILE, "r", encoding="utf-8") as handle:
+            data = json.load(handle)
+    except (OSError, json.JSONDecodeError):
+        return {"events": [], "archive": []}
+    if isinstance(data, list):
+        return {"events": data, "archive": []}
+    if isinstance(data, dict):
+        return {
+            "events": data.get("events") if isinstance(data.get("events"), list) else [],
+            "archive": data.get("archive") if isinstance(data.get("archive"), list) else [],
+        }
+    return {"events": [], "archive": []}
+
+
+def write_log():
+    lines = [
+        f"{row.get('source','')}\t{row.get('site','')}\t{row.get('status','')}\t{row.get('title','')}\t{row.get('date','')}\t{row.get('url','')}\t{row.get('rawText','')}"
+        for row in RAW_DATA_ROWS
+    ]
+    with open(LOG_FILE, "w", encoding="utf-8", newline="\n") as handle:
+        handle.write("\n".join(lines) + ("\n" if lines else ""))
+
+
+def save_payload(events, archive, previous_all_keys):
+    active_keys = {event_key(event) for event in events}
+    for event in events:
+        event["isNew"] = event_key(event) not in previous_all_keys
+
+    site_new_counts = {}
+    for event in events:
+        if event_key(event) in previous_all_keys:
+            continue
+        host = canonical_host(event.get("website", ""))
+        site_new_counts[host] = site_new_counts.get(host, 0) + 1
+
+    for result in SITE_RESULTS:
+        result["newCount"] = site_new_counts.get(canonical_host(result.get("site", "")), 0)
+
     payload = {
         "schemaVersion": 2,
         "updatedAt": datetime.now(timezone.utc).isoformat(timespec="seconds"),
-        "events": active_events,
+        "events": events,
         "archive": archive,
-        "siteResults": public_site_results(),
-        "rawLog": RAW_DATA_ROWS,
+        "siteResults": SITE_RESULTS,
+        "rawLog": RAW_DATA_ROWS[:MAX_RAW_ROWS],
     }
-    with open(DATA_FILE, "w", encoding="utf-8") as f:
-        json.dump(payload, f, ensure_ascii=False, indent=2)
-    log(f"Opgeslagen: {len(active_events)} opnieuw gevonden, {len(archive)} bewaard in {DATA_FILE}")
+    with open(DATA_FILE, "w", encoding="utf-8", newline="\n") as handle:
+        json.dump(payload, handle, ensure_ascii=False, indent=2)
+        handle.write("\n")
+    write_log()
+    print(f"events:{len(events)} archive:{len(archive)} new:{sum(1 for event in events if event.get('isNew'))}")
+    return active_keys
 
 
 def main():
-    log("=== Start scraping ===")
-    log(f"Input region={INPUT_REGION}")
-    log("Directe websites worden gescand; SerpAPI-resultaten worden als extra linkbron gebruikt als Cloudflare ze meestuurt.")
-    add_raw_row(
-        "Scan",
-        "workflow",
-        "Verversing gestart",
-        "",
-        "",
-        "start",
-        f"Max {MAX_EVENTS_PER_SITE} evenementen/site; max {SITE_TIME_LIMIT_SECONDS} seconden/site",
-    )
-    serpapi_imported = import_serpapi_raw_log()
-    if serpapi_imported:
-        log(f"SerpAPI raw log toegevoegd: {serpapi_imported} regels")
-        add_raw_row("SerpAPI", "workflow", f"{serpapi_imported} zoekresultaten ontvangen", "", "", "ontvangen", "Deze links worden als extra scan-ingang gebruikt.")
+    import_serpapi_raw_log()
+    sites = input_sites()
+    previous = load_previous_payload()
+    previous_active = dedupe_events(previous.get("events", []))
+    previous_archive = dedupe_events(previous.get("archive", []))
+    previous_all = dedupe_events(previous_active + previous_archive)
+    previous_all_keys = {event_key(event) for event in previous_all}
+
+    all_events = []
+    for site in sites:
+        try:
+            all_events.extend(scrape_site(site))
+        except Exception as exc:
+            add_raw("Website", site, "Site mislukt", "", site, "fout", str(exc))
+            SITE_RESULTS.append({"site": site, "count": 0, "newCount": 0, "durationSeconds": 0, "timedOut": False})
+
+    active_events = dedupe_events(all_events)
+    active_keys = {event_key(event) for event in active_events}
+
     if INPUT_CLEAR_ARCHIVE:
-        log("Alles verwijderen gevraagd: bestaande lijst en bewaarde events worden genegeerd.")
-
-    previous_active, previous_archive = ([], []) if INPUT_CLEAR_ARCHIVE else load_existing_events()
-    extra_sites = parse_input_sites()
-    add_raw_row("Scan", "workflow", f"{len(extra_sites)} websites geselecteerd", "", "", "sites", ", ".join(extra_sites[:20]))
-    if extra_sites:
-        log(f"Alleen geselecteerde websites worden gescand: {len(extra_sites)}")
-        scraped = scrape_extra_sites(extra_sites)
+        archive = []
     else:
-        scraped = scrape_uitzinnig(INPUT_REGION)
-    fixed_events = [] if extra_sites else manual_events()
-    active = sort_events_for_request(dedupe_events(scraped + fixed_events))
-    archive = archive_old_events(previous_active, previous_archive, active)
-    previous_keys = {event_key(event) for event in [*previous_active, *previous_archive]}
-    for result in SITE_RESULTS:
-        result["newCount"] = sum(1 for key in result.get("eventKeys", []) if key not in previous_keys)
+        preserved = [event for event in previous_all if event_key(event) not in active_keys]
+        archive = dedupe_events(preserved)[:1000]
 
-    save_events_to_json(active, archive)
-    log("=== Scraping voltooid ===")
+    save_payload(active_events, archive, previous_all_keys)
 
 
 if __name__ == "__main__":

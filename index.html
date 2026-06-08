@@ -1112,7 +1112,7 @@
   </div>
 
   <script>
-    const APP_VERSION = "2026.06.08.14";
+    const APP_VERSION = "2026.06.08.15";
     const DEFAULT_MAX_EVENTS_PER_SITE = 20;
     const DEFAULT_SITE_TIME_LIMIT_SECONDS = 20;
     const SCAN_SETTINGS_KEY = "eventScanSettingsV1";
@@ -1285,7 +1285,7 @@
         const url = new URL(raw);
         if (!["http:", "https:"].includes(url.protocol) || !url.hostname.includes(".")) return "";
         url.hash = "";
-        return url.href.replace(/\/$/, "");
+        return url.href;
       } catch {
         return "";
       }
@@ -1394,11 +1394,12 @@
       const seen = new Set();
       const merged = [];
       (baseSites || []).forEach((site) => {
-        const normalized = normalizeSiteInput(site);
-        const key = normalized.toLowerCase();
-        if (normalized && !seen.has(key)) {
+        const original = cleanText(site);
+        const normalized = normalizeSiteInput(original);
+        const key = normalized.toLowerCase().replace(/\/$/, "");
+        if (original && normalized && !seen.has(key)) {
           seen.add(key);
-          merged.push(normalized);
+          merged.push(original);
         }
       });
       return merged;

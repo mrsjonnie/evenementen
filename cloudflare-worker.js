@@ -56,7 +56,7 @@ function validSites(value, limit = 20) {
       const key = url.href.toLowerCase().replace(/\/$/, "");
       if (seen.has(key)) continue;
       seen.add(key);
-      result.push(url.href.replace(/\/$/, ""));
+      result.push(/^[a-z][a-z0-9+.-]*:/i.test(site) ? site.split("#")[0] : url.href);
       if (result.length >= limit) break;
     } catch {}
   }
