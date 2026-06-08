@@ -238,7 +238,7 @@ def parse_json_list(raw):
 
 
 def add_raw_row(source, site, title="", date="", url="", status="", raw_text=""):
-    if len(RAW_DATA_ROWS) >= 350:
+    if len(RAW_DATA_ROWS) >= 1200:
         return
     RAW_DATA_ROWS.append(
         {
@@ -1955,6 +1955,19 @@ def scrape_structured_site(site_url):
     events = []
     link_candidates = []
     timed_out = False
+    pages_loaded = 0
+    detail_pages_checked = 0
+
+    add_raw_row(
+        "Scan",
+        site_url,
+        "Website scan gestart",
+        "",
+        site_url,
+        "start",
+        f"Max {SITE_TIME_LIMIT_SECONDS} seconden, max {MAX_EVENTS_PER_SITE} evenementen",
+    )
+    log(f"Start website scan {site_url}: max {SITE_TIME_LIMIT_SECONDS}s, max {MAX_EVENTS_PER_SITE} events")
 
     for page_url in site_seed_urls(site_url):
         if not enough_time_left(deadline):
@@ -1973,6 +1986,7 @@ def scrape_structured_site(site_url):
             log(f"Websitepagina overgeslagen {page_url}: {exc}")
             continue
 
+        pages_loaded += 1
         add_raw_row("Website", site_url, page_title(soup), "", page_url, "pagina geladen", clean_text(soup.get_text(" ", strip=True))[:320])
         before = len(events)
         for script in soup.find_all("script", type=lambda value: value and "ld+json" in value):
@@ -2017,6 +2031,9 @@ def scrape_structured_site(site_url):
         added = len(events) - before
         if added:
             log(f"{added} kandidaat-evenementen gevonden op {page_url}")
+            add_raw_row("Scan", site_url, f"{added} kandidaten op pagina", "", page_url, "kandidaten", f"Totaal voor deze site nu {len(events)}")
+        else:
+            add_raw_row("Scan", site_url, "Geen kandidaten op pagina", "", page_url, "geen kandidaten", "Pagina is gelezen, maar leverde geen betrouwbare activiteit op")
         if len(events) >= MAX_EVENTS_PER_SITE:
             break
 
@@ -2034,6 +2051,8 @@ def scrape_structured_site(site_url):
         if not enough_time_left(deadline):
             timed_out = True
             break
+        detail_pages_checked += 1
+        add_raw_row("Detailpagina", site_url, title, "", detail_url, "detail lezen", f"Detailpagina {detail_pages_checked}, resterend {round(seconds_left(deadline), 1)} sec")
         events.extend(events_from_detail_page(detail_url, title, deadline=deadline))
 
     events = sort_events_for_request(dedupe_events(events))[:MAX_EVENTS_PER_SITE]
@@ -2051,6 +2070,18 @@ def scrape_structured_site(site_url):
         log(f"Gevonden op extra website {site_url}: {len(events)}")
     else:
         log(f"Geen betrouwbare evenementen gevonden op {site_url}")
+
+    duration = round(time.monotonic() - started, 2)
+    add_raw_row(
+        "Scan",
+        site_url,
+        f"{len(events)} evenementen gevonden",
+        "",
+        site_url,
+        "tijdslimiet" if timed_out else "klaar",
+        f"{pages_loaded} pagina's geladen, {detail_pages_checked} detailpagina's bekeken, duur {duration}s van max {SITE_TIME_LIMIT_SECONDS}s",
+    )
+    log(f"Klaar website scan {site_url}: {len(events)} events, {pages_loaded} pagina's, {detail_pages_checked} details, {duration}s, timedOut={timed_out}")
 
     return events
 
@@ -2234,11 +2265,21 @@ def main():
     log("=== Start scraping ===")
     log(f"Input region={INPUT_REGION}")
     log("AI-bronnen worden in deze automatische workflow niet gebruikt.")
+    add_raw_row(
+        "Scan",
+        "workflow",
+        "Verversing gestart",
+        "",
+        "",
+        "start",
+        f"AI uitgeschakeld; max {MAX_EVENTS_PER_SITE} evenementen/site; max {SITE_TIME_LIMIT_SECONDS} seconden/site",
+    )
     if INPUT_CLEAR_ARCHIVE:
         log("Alles verwijderen gevraagd: bestaande lijst en bewaarde events worden genegeerd.")
 
     previous_active, previous_archive = ([], []) if INPUT_CLEAR_ARCHIVE else load_existing_events()
     extra_sites = parse_input_sites()
+    add_raw_row("Scan", "workflow", f"{len(extra_sites)} websites geselecteerd", "", "", "sites", ", ".join(extra_sites[:20]))
     if extra_sites:
         log(f"Alleen geselecteerde websites worden gescand: {len(extra_sites)}")
         scraped = scrape_extra_sites(extra_sites)
