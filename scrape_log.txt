@@ -1,31 +1,5 @@
-SerpAPI	https://forum.nl/nl/agenda	zoeken	Mistral analyse		https://forum.nl/nl/agenda	Startpagina wordt opgehaald en door Mistral op eventvelden geanalyseerd.
-SerpAPI	https://forum.nl/nl/agenda	status 429	Mistral fout		https://forum.nl/nl/agenda	{"object":"error","message":"Rate limit exceeded","type":"rate_limited","param":null,"code":"1300","raw_status_code":429}
-SerpAPI	https://www.spotgroningen.nl/programma/	zoeken	Mistral analyse		https://www.spotgroningen.nl/programma/	Startpagina wordt opgehaald en door Mistral op eventvelden geanalyseerd.
-SerpAPI	https://www.spotgroningen.nl/programma/	status 429	Mistral fout		https://www.spotgroningen.nl/programma/	{"object":"error","message":"Rate limit exceeded","type":"rate_limited","param":null,"code":"1300","raw_status_code":429}
-SerpAPI	https://www.vera-groningen.nl/	zoeken	Mistral analyse		https://www.vera-groningen.nl/	Startpagina wordt opgehaald en door Mistral op eventvelden geanalyseerd.
-SerpAPI	https://www.vera-groningen.nl/	status 429	Mistral fout		https://www.vera-groningen.nl/	{"object":"error","message":"Rate limit exceeded","type":"rate_limited","param":null,"code":"1300","raw_status_code":429}
 SerpAPI	https://groningen.uitloper.nu/	zoeken	Mistral analyse		https://groningen.uitloper.nu/	Startpagina wordt opgehaald en door Mistral op eventvelden geanalyseerd.
-SerpAPI	https://groningen.uitloper.nu/	status 429	Mistral fout		https://groningen.uitloper.nu/	{"object":"error","message":"Rate limit exceeded","type":"rate_limited","param":null,"code":"1300","raw_status_code":429}
-SerpAPI	https://www.visitgroningen.nl/nl/doen/evenementen	zoeken	Mistral analyse		https://www.visitgroningen.nl/nl/doen/evenementen	Startpagina wordt opgehaald en door Mistral op eventvelden geanalyseerd.
-SerpAPI	https://www.visitgroningen.nl/nl/doen/evenementen	status 429	Mistral fout		https://www.visitgroningen.nl/nl/doen/evenementen	{"object":"error","message":"Rate limit exceeded","type":"rate_limited","param":null,"code":"1300","raw_status_code":429}
-SerpAPI	https://simplon.nl/	zoeken	Mistral analyse		https://simplon.nl/	Startpagina wordt opgehaald en door Mistral op eventvelden geanalyseerd.
-SerpAPI	https://simplon.nl/	status 429	Mistral fout		https://simplon.nl/	{"object":"error","message":"Rate limit exceeded","type":"rate_limited","param":null,"code":"1300","raw_status_code":429}
-SerpAPI	https://www.martiniplaza.nl/nl/	zoeken	Mistral analyse		https://www.martiniplaza.nl/nl/	Startpagina wordt opgehaald en door Mistral op eventvelden geanalyseerd.
-SerpAPI	https://www.martiniplaza.nl/nl/	status 429	Mistral fout		https://www.martiniplaza.nl/nl/	{"object":"error","message":"Rate limit exceeded","type":"rate_limited","param":null,"code":"1300","raw_status_code":429}
-SerpAPI	https://www.groningermuseum.nl/en/now	zoeken	Mistral analyse		https://www.groningermuseum.nl/en/now	Startpagina wordt opgehaald en door Mistral op eventvelden geanalyseerd.
-SerpAPI	https://www.groningermuseum.nl/en/now	status 429	Mistral fout		https://www.groningermuseum.nl/en/now	{"object":"error","message":"Rate limit exceeded","type":"rate_limited","param":null,"code":"1300","raw_status_code":429}
-SerpAPI	https://www.kultuuragenda.nl/	zoeken	Mistral analyse		https://www.kultuuragenda.nl/	Startpagina wordt opgehaald en door Mistral op eventvelden geanalyseerd.
-SerpAPI	https://www.kultuuragenda.nl/	status 429	Mistral fout		https://www.kultuuragenda.nl/	{"object":"error","message":"Rate limit exceeded","type":"rate_limited","param":null,"code":"1300","raw_status_code":429}
-SerpAPI	https://www.noorderzon.nl/	zoeken	Mistral analyse		https://www.noorderzon.nl/	Startpagina wordt opgehaald en door Mistral op eventvelden geanalyseerd.
-SerpAPI	https://www.noorderzon.nl/	status 429	Mistral fout		https://www.noorderzon.nl/	{"object":"error","message":"Rate limit exceeded","type":"rate_limited","param":null,"code":"1300","raw_status_code":429}
-SerpAPI	https://www.concertgebouw.nl	zoeken	Mistral analyse		https://www.concertgebouw.nl	Startpagina wordt opgehaald en door Mistral op eventvelden geanalyseerd.
-SerpAPI	https://www.concertgebouw.nl	status 429	Mistral fout		https://www.concertgebouw.nl	{"object":"error","message":"Rate limit exceeded","type":"rate_limited","param":null,"code":"1300","raw_status_code":429}
-SerpAPI	https://www.hedon-zwolle.nl	zoeken	Mistral analyse		https://www.hedon-zwolle.nl	Startpagina wordt opgehaald en door Mistral op eventvelden geanalyseerd.
-SerpAPI	https://www.hedon-zwolle.nl	klaar	Mistral resultaat		https://www.hedon-zwolle.nl	0 geverifieerde event-kandidaten, 0 afgewezen
-SerpAPI	https://www.paradiso.nl	zoeken	Mistral analyse		https://www.paradiso.nl	Startpagina wordt opgehaald en door Mistral op eventvelden geanalyseerd.
-SerpAPI	https://www.paradiso.nl	status 429	Mistral fout		https://www.paradiso.nl	{"object":"error","message":"Rate limit exceeded","type":"rate_limited","param":null,"code":"1300","raw_status_code":429}
-SerpAPI	https://www.vvvameland.nl/activiteiten-en-evenementen	zoeken	Mistral analyse		https://www.vvvameland.nl/activiteiten-en-evenementen	Startpagina wordt opgehaald en door Mistral op eventvelden geanalyseerd.
-SerpAPI	https://www.vvvameland.nl/activiteiten-en-evenementen	status 429	Mistral fout		https://www.vvvameland.nl/activiteiten-en-evenementen	{"object":"error","message":"Rate limit exceeded","type":"rate_limited","param":null,"code":"1300","raw_status_code":429}
+SerpAPI	https://groningen.uitloper.nu/	klaar	Mistral resultaat		https://groningen.uitloper.nu/	0 geverifieerde event-kandidaten, 0 afgewezen
 Website	https://www.vera-groningen.nl	start	Start		https://www.vera-groningen.nl	site 1/1: max 25 events, max 20 seconden
 Website	https://www.vera-groningen.nl	ok	Pagina gelezen		https://www.vera-groningen.nl/	73362 tekens HTML
 Website	https://www.vera-groningen.nl	event uit link	Tramhaus	2026-12-18	https://www.vera-groningen.nl/?post_type=events&p=152859&lang=nl	Friday 18 December Tramhaus support Koop ticket
@@ -140,4 +114,4 @@ Website	https://www.vera-groningen.nl	detail-link gevonden	De Vier van Vera Elke
 Website	https://www.vera-groningen.nl	detail-link gevonden	Foto’s		https://www.vera-groningen.nl/photos/	Foto’s
 Website	https://www.vera-groningen.nl	detail-link gevonden	Live foto's Check hier de laatste live en backstage foto's van de VERA fotogroep of snuffel door het rijke archief.		https://www.vera-groningen.nl/photos/?category=all&lang=nl	Live foto's Check hier de laatste live en backstage foto's van de VERA fotogroep of snuffel door het rijke archief.
 Website	https://www.vera-groningen.nl	detail-link gevonden	Webshop		https://www.vera-groningen.nl/webshop/	Webshop
-Website	https://www.vera-groningen.nl	klaar	Klaar		https://www.vera-groningen.nl	site 1/1: 25 unieke events in 0.52 sec
+Website	https://www.vera-groningen.nl	klaar	Klaar		https://www.vera-groningen.nl	site 1/1: 25 unieke events in 0.34 sec
