@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-06-08T07:44:15+00:00",
+  "updatedAt": "2026-06-08T07:56:22+00:00",
   "events": [
     {
       "title": "In 2023 Wonnen Ze de VERA Poll, en Ook in 2026 Blijft Deze Band een Vaste Publieksfavoriet.",
@@ -132,16 +132,16 @@
       "title": "VERA Kelderbar",
       "type": "Evenement",
       "date": "2026-06-10",
-      "time": "20:00",
-      "location": "Doors: 20:00 - 21:30 | Start: 21:00",
-      "lat": null,
-      "lon": null,
-      "locationLink": "",
+      "time": "",
+      "location": "VERA Groningen",
+      "lat": 53.2170549,
+      "lon": 6.570087,
+      "locationLink": "https://www.google.com/maps?q=53.2170549,6.570087",
       "cost": "Zie website",
-      "description": "VERA Kelderbar CLUBKAARTSHOW Wednesday 10 June Orkesta Mendoza USA Mainstage | Ticket: € 18,- | doors: 20:00 - 21:30 | start: 21:00",
+      "description": "Wednesday 10 June VERA Kelderbar",
       "image": "https://picsum.photos/seed/VERA+Kelderbar/800/500",
       "website": "https://www.vera-groningen.nl/?post_type=events&p=152728&lang=nl",
-      "source": "vera-groningen.nl",
+      "source": "www.vera-groningen.nl",
       "discoverySource": "",
       "periodLabel": "2026-06-10",
       "isPermanent": false
@@ -183,6 +183,24 @@
       "isPermanent": false
     },
     {
+      "title": "Confirmed Mainstage",
+      "type": "Evenement",
+      "date": "2026-09-11",
+      "time": "",
+      "location": "mary in the junkyard",
+      "lat": null,
+      "lon": null,
+      "locationLink": "",
+      "cost": "Zie website",
+      "description": "Confirmed Mainstage Friday 11 September mary in the junkyard UK support Angry weepy chaos rock trio",
+      "image": "https://picsum.photos/seed/Confirmed+Mainstage/800/500",
+      "website": "https://www.vera-groningen.nl",
+      "source": "vera-groningen.nl",
+      "discoverySource": "",
+      "periodLabel": "2026-09-11",
+      "isPermanent": false
+    },
+    {
       "title": "Mary in the Junkyard",
       "type": "Muziek",
       "date": "2026-09-11",
@@ -219,18 +237,18 @@
       "isPermanent": false
     },
     {
-      "title": "VERA Clubkaart 2026",
-      "type": "Schrijf Je Hier in voor het Laatste concert-, dans- en Filmn",
+      "title": "Zin Om een Steentje Bij Te Dragen Aan Vera? Klik Hier voor Informatie Om Vrijwilliger of Stagiair Te Worden, of voor Andere Vacatures",
+      "type": "Evenement",
       "date": "2026-09-11",
       "time": "",
-      "location": "Koop de Clubkaart 2026!",
+      "location": "mary in the junkyard",
       "lat": null,
       "lon": null,
       "locationLink": "",
       "cost": "Zie website",
-      "description": "VERA Clubkaart 2026 Support VERA, koop de Clubkaart 2026! Nieuwsbrief Schrijf je hier in voor het laatste concert-, dans- en filmnieuws! Werken bij Vera Zin om een steentje bij te dragen aan Vera? Klik hier voor informatie om vrijwilliger of stagiair te worden, of voor andere vac",
-      "image": "https://picsum.photos/seed/VERA+Clubkaart+2026/800/500",
-      "website": "https://www.vera-groningen.nl/info/vera-clubkaart/?lang=nl",
+      "description": "Zin Om een Steentje Bij Te Dragen Aan Vera? Klik Hier voor Informatie Om Vrijwilliger of Stagiair Te Worden, of voor Andere Vacatures Confirmed Mainstage Friday 11 September mary in the junkyard UK support",
+      "image": "https://picsum.photos/seed/Zin+Om+een+Steentje+Bij+Te+Dragen+Aan+Vera%3F+Klik+Hier+voor+Informatie+Om+Vrijwilliger+of+Stagiair+Te+Worden%2C+of+voor+Andere+Vacatures/800/500",
+      "website": "https://www.vera-groningen.nl/info/vacatures/?lang=nl",
       "source": "vera-groningen.nl",
       "discoverySource": "",
       "periodLabel": "2026-09-11",
@@ -343,6 +361,27 @@
       "discoverySource": "",
       "periodLabel": "2026-10-16",
       "isPermanent": false
+    }
+  ],
+  "archive": [
+    {
+      "title": "VERA Clubkaart 2026",
+      "type": "Schrijf Je Hier in voor het Laatste concert-, dans- en Filmn",
+      "date": "2026-09-11",
+      "time": "",
+      "location": "Koop de Clubkaart 2026!",
+      "lat": null,
+      "lon": null,
+      "locationLink": "",
+      "cost": "Zie website",
+      "description": "VERA Clubkaart 2026 Support VERA, koop de Clubkaart 2026! Nieuwsbrief Schrijf je hier in voor het laatste concert-, dans- en filmnieuws! Werken bij Vera Zin om een steentje bij te dragen aan Vera? Klik hier voor informatie om vrijwilliger of stagiair te worden, of voor andere vac",
+      "image": "https://picsum.photos/seed/VERA+Clubkaart+2026/800/500",
+      "website": "https://www.vera-groningen.nl/info/vera-clubkaart/?lang=nl",
+      "source": "vera-groningen.nl",
+      "discoverySource": "",
+      "periodLabel": "2026-09-11",
+      "isPermanent": false,
+      "archivedAt": "2026-06-08T07:56:22+00:00"
     },
     {
       "title": "Programma",
@@ -360,10 +399,9 @@
       "source": "vera-groningen.nl",
       "discoverySource": "",
       "periodLabel": "2026-10-16",
-      "isPermanent": false
-    }
-  ],
-  "archive": [
+      "isPermanent": false,
+      "archivedAt": "2026-06-08T07:56:22+00:00"
+    },
     {
       "title": "Tramhaus",
       "type": "Evenement",
@@ -1298,8 +1336,8 @@
     {
       "site": "https://www.vera-groningen.nl",
       "count": 20,
-      "newCount": 8,
-      "durationSeconds": 51.28,
+      "newCount": 2,
+      "durationSeconds": 50.4,
       "timedOut": false
     }
   ],
@@ -1577,15 +1615,6 @@
     {
       "source": "Website",
       "site": "https://www.vera-groningen.nl",
-      "title": "VERA Kelderbar",
-      "date": "2026-06-10",
-      "url": "https://www.vera-groningen.nl/?post_type=events&p=152728&lang=nl",
-      "status": "event uit titel-datumregels",
-      "rawText": "VERA Kelderbar CLUBKAARTSHOW Wednesday 10 June Orkesta Mendoza USA Mainstage | Ticket: € 18,- | doors: 20:00 - 21:30 | start: 21:00"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.vera-groningen.nl",
       "title": "CLUBKAARTSHOW",
       "date": "2026-06-10",
       "url": "https://www.vera-groningen.nl/?post_type=events&p=151834&lang=nl",
@@ -1604,20 +1633,29 @@
     {
       "source": "Website",
       "site": "https://www.vera-groningen.nl",
-      "title": "VERA Clubkaart 2026",
-      "date": "2026-09-11",
-      "url": "https://www.vera-groningen.nl/info/vera-clubkaart/?lang=nl",
-      "status": "event uit titel-datumregels",
-      "rawText": "VERA Clubkaart 2026 Support VERA, koop de Clubkaart 2026! Nieuwsbrief Schrijf je hier in voor het laatste concert-, dans- en filmnieuws! Werken bij Vera Zin om een steentje bij te dragen aan Vera? Klik hier voor informatie om vrijwilliger of stagiair te worden, of voor andere vacatures"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.vera-groningen.nl",
       "title": "Nieuwsbrief",
       "date": "2026-09-11",
       "url": "https://www.vera-groningen.nl/nieuwsbrief/?lang=nl",
       "status": "event uit titel-datumregels",
       "rawText": "Nieuwsbrief Schrijf je hier in voor het laatste concert-, dans- en filmnieuws! Werken bij Vera Zin om een steentje bij te dragen aan Vera? Klik hier voor informatie om vrijwilliger of stagiair te worden, of voor andere vacatures Confirmed Mainstage Friday 11 September"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl",
+      "title": "Zin Om een Steentje Bij Te Dragen Aan Vera? Klik Hier voor Informatie Om Vrijwilliger of Stagiair Te Worden, of voor Andere Vacatures",
+      "date": "2026-09-11",
+      "url": "https://www.vera-groningen.nl/info/vacatures/?lang=nl",
+      "status": "event uit titel-datumregels",
+      "rawText": "Zin om een steentje bij te dragen aan Vera? Klik hier voor informatie om vrijwilliger of stagiair te worden, of voor andere vacatures Confirmed Mainstage Friday 11 September mary in the junkyard UK support"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl",
+      "title": "Confirmed Mainstage",
+      "date": "2026-09-11",
+      "url": "https://www.vera-groningen.nl",
+      "status": "event uit titel-datumregels",
+      "rawText": "Confirmed Mainstage Friday 11 September mary in the junkyard UK support Angry weepy chaos rock trio"
     }
   ]
 }
