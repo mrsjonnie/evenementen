@@ -72,7 +72,7 @@ on:
       - refresh-request.json
   schedule:
     # Vrijdagochtend Nederlandse tijd: 08:00 zomertijd, 07:00 wintertijd.
-    - cron: '0 6 * * 5'
+    # - cron: '0 6 * * 5'
 
 permissions:
   contents: write
