@@ -981,7 +981,8 @@ def extract_line_events(soup, page_url, site_url, discovery_source):
 
 def extract_vera_programme_events(html, page_url, site_url, discovery_source):
     """Parse VERA's programme listing as dated event cards, including links to ticket/event details."""
-    if "vera-groningen.nl" not in canonical_host(site_url) or "/programma" not in urlparse(page_url).path.lower():
+    page_path = urlparse(page_url).path.lower().rstrip("/") or "/"
+    if "vera-groningen.nl" not in canonical_host(site_url) or page_path not in {"/programma", "/"}:
         return []
 
     soup = BeautifulSoup(html, "html.parser")
@@ -1038,7 +1039,7 @@ def extract_vera_programme_events(html, page_url, site_url, discovery_source):
             add_raw(discovery_source, site_url, event["title"], event["date"], event["website"], "VERA agenda-item", text)
 
     if events:
-        add_raw("Parser", site_url, "VERA-programmapagina", "", page_url, "gespecialiseerde parser", f"{len(events)} VERA-agenda-items uit eventlinks")
+        add_raw("Parser", site_url, "VERA-agendapagina", "", page_url, "gespecialiseerde parser", f"{len(events)} VERA-agenda-items uit eventlinks")
     return dedupe_events(events)
 
 
@@ -1286,14 +1287,13 @@ def start_urls_for_site(site_url):
     parsed = urlparse(exact)
     host = canonical_host(exact)
     if "vera-groningen.nl" in host:
-        # VERA's programme is paginated. The first page has a limited number of events,
-        # so fetch the next pages too when a larger per-site limit (e.g. 30) is requested.
-        # The date filter below still removes past events from every page.
+        # The programme listing shows only the next ~20 events. The homepage also
+        # exposes separately confirmed events further ahead; read both without
+        # crawling news articles, which can contain historical dates.
         base = f"{parsed.scheme}://{parsed.netloc}"
         return [
             urljoin(base, "/programma/?category=all&history=0&lang=nl"),
-            urljoin(base, "/programma/page/2/?category=all&history=0&lang=nl"),
-            urljoin(base, "/programma/page/3/?category=all&history=0&lang=nl"),
+            urljoin(base, "/?lang=nl"),
         ]
     if host == "groningen.uitloper.nu":
         # Uitloper shows one selected date per page. Start on the requested date and
