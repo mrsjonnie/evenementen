@@ -1107,10 +1107,11 @@
             <option value="tomorrow">Morgen</option>
             <option value="specificDay">Specifieke dag</option>
             <option value="always">Altijd</option>
+            <option value="alwaysFromToday">Altijd vanaf vandaag</option>
             <option value="thisWeekend">Dit weekend</option>
             <option value="nextWeekend">Volgend weekend</option>
-            <option value="threeDays" selected>Vandaag + 2 dagen</option>
-            <option value="week">7 dagen</option>
+            <option value="threeDays" selected>Startdatum +2 dagen</option>
+            <option value="week">Startdatum +7 dagen</option>
           </select>
         </div>
 
@@ -1701,12 +1702,22 @@
       return location || "Locatie onbekend";
     }
 
+    function isUsablePhysicalLocation(event) {
+      const location = cleanText(event?.location || "");
+      if (!location) return false;
+      const key = normalizeRouteText(location);
+      if (/^(locatie onbekend|onbekend|unknown|n a|online|thuis|op locatie|nader te bepalen|tba|-)$/i.test(key)) return false;
+      if (/^(locatie onbekend|onbekend|unknown|n\/?a|online|thuis|nader te bepalen|tba|-)$/i.test(location)) return false;
+      return true;
+    }
+
     function eventCoords(event) {
+      if (!isUsablePhysicalLocation(event)) return null;
       const lat = Number(event.lat);
       const lon = Number(event.lon);
       if (Number.isFinite(lat) && Number.isFinite(lon)) return { lat, lon };
 
-      const text = normalizeRouteText(`${event.title || ""} ${eventLocationLabel(event)}`);
+      const text = normalizeRouteText(eventLocationLabel(event));
       const known = Object.entries(knownLocationCoords).find(([name]) => text.includes(name));
       if (known) return known[1];
 
@@ -1761,6 +1772,7 @@
         return `https://www.google.com/maps/dir/?api=1&destination=${destination.lat},${destination.lon}`;
       }
 
+      if (!isUsablePhysicalLocation(event)) return "";
       const link = safeUrl(event.locationLink);
       if (link) return link;
 
@@ -1907,6 +1919,13 @@
       if (mode === "always") {
         dateFrom = "";
         dateTo = "";
+        return;
+      }
+
+      if (mode === "alwaysFromToday") {
+        const today = formatDate(new Date());
+        dateFrom = today;
+        dateTo = "9999-12-31";
         return;
       }
 
@@ -2340,9 +2359,11 @@
     }
 
     function matchesDate(event) {
-      if ($("periodMode").value === "always") return true;
+      const mode = $("periodMode").value;
+      if (mode === "always") return true;
       if (event.isPermanent) return true;
       if (!/^\d{4}-\d{2}-\d{2}$/.test(event.date || "")) return true;
+      if (mode === "alwaysFromToday") return event.date >= formatDate(new Date());
 
       const day = new Date(event.date + "T00:00:00");
       const from = new Date(dateFrom + "T00:00:00");
@@ -2351,8 +2372,12 @@
     }
 
     function periodSubtitle() {
-      if ($("periodMode").value === "always") return "Altijd";
-      if ($("periodMode").value === "always") return "Altijd";
+      const mode = $("periodMode").value;
+      if (mode === "always") return "Altijd";
+      if (mode === "alwaysFromToday") return "Altijd vanaf vandaag";
+      if (mode === "specificDay") return `Specifieke dag: ${prettyDate(dateFrom)}`;
+      if (mode === "threeDays") return `Startdatum +2 dagen (vanaf ${prettyDate(dateFrom)})`;
+      if (mode === "week") return `Startdatum +7 dagen (vanaf ${prettyDate(dateFrom)})`;
       return `Van ${prettyDate(dateFrom)} tot ${prettyDate(dateTo || dateFrom)}`;
     }
 
@@ -2542,7 +2567,7 @@
       const routeDestinationText = routeDestination(event);
       const routeContext = routeContextLabel(event);
       const routeId = `route-${Math.random().toString(36).slice(2)}`;
-      const locationUrl = locationHomeUrl(event);
+      const locationUrl = isUsablePhysicalLocation(event) ? routeUrl(event) : "";
       const locationLabel = escapeHtml(eventLocationLabel(event));
       const dateLabel = event.periodLabel || prettyDate(event.date);
       const isNew = isNewEvent(event);
@@ -3043,10 +3068,12 @@
 
     controls.forEach((id) => {
       $(id).addEventListener("input", () => {
+        if (id === "dateSingle" && $("dateSingle").value) $("periodMode").value = "specificDay";
         applyFilters();
         if (id === "region") scheduleRegionResolve();
       });
       $(id).addEventListener("change", () => {
+        if (id === "dateSingle" && $("dateSingle").value) $("periodMode").value = "specificDay";
         applyFilters();
         if (id === "region") scheduleRegionResolve();
         if (["region", "dateSingle", "periodMode"].includes(id)) loadWeather();
