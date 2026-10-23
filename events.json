@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-23T13:24:07+00:00",
+  "updatedAt": "2026-10-23T13:24:32+00:00",
   "events": [
     {
       "date": "2026-10-23",
@@ -19,15 +19,15 @@
     },
     {
       "date": "2026-10-23",
-      "time": "",
+      "time": "21:00",
       "title": "T.H.O.P. 15 Taxi Lotta GER / AUT De Kloe BEL Tekno Hunks in Raveyard",
-      "type": "Activiteit",
+      "type": "Concert",
       "location": "VERA Groningen",
       "locationLink": "",
       "website": "https://www.vera-groningen.nl/?post_type=events&p=153671&lang=nl",
       "source": "vera-groningen.nl",
       "discoverySource": "Website",
-      "description": "Friday 23 October T.H.O.P. 15 Taxi Lotta GER / AUT De Kloe BEL Tekno Hunks in Raveyard NL Koop ticket",
+      "description": "THE LAST EDITION Friday 23 October T.H.O.P. 15 Taxi Lotta GER / AUT De Kloe BEL Tekno Hunks in Raveyard NL Mainstage | Ticket: €10,- | doors: 20:30 - 23:00 | start: 21:00 Koop ticket",
       "cost": "",
       "image": "https://www.vera-groningen.nl/wp/../vera/assets/img/logo-black.svg",
       "isNew": false
@@ -798,6 +798,21 @@
       "isNew": false
     },
     {
+      "date": "2026-12-18",
+      "time": "",
+      "title": "Tramhaus support Raw postpunk from Rotterdam In 2023 wonnen ze de VERA Poll, en ook in 2026 blijft deze band een vaste publieksfavoriet.",
+      "type": "Concert",
+      "location": "VERA Groningen",
+      "locationLink": "",
+      "website": "https://www.vera-groningen.nl/?post_type=events&p=152859&lang=nl",
+      "source": "vera-groningen.nl",
+      "discoverySource": "Website",
+      "description": "FRIDAY SHOW Friday 18 December Tramhaus support Raw postpunk from Rotterdam In 2023 wonnen ze de VERA Poll, en ook in 2026 blijft deze band een vaste publieksfavoriet. Lees meer Koop ticket",
+      "cost": "",
+      "image": "https://www.vera-groningen.nl/wp/../vera/assets/img/logo-black.svg",
+      "isNew": true
+    },
+    {
       "date": "2027-01-08",
       "time": "",
       "title": "Eva van Manen Support: Luka",
@@ -946,6 +961,21 @@
       "cost": "",
       "image": "https://simplon.nl/wp-content/uploads/2026/05/skints-louder-than-war.jpg",
       "isNew": false
+    },
+    {
+      "date": "2027-03-03",
+      "time": "",
+      "title": "BODEGA USA support",
+      "type": "Activiteit",
+      "location": "VERA Groningen",
+      "locationLink": "",
+      "website": "https://www.vera-groningen.nl/?post_type=events&p=154770&lang=nl",
+      "source": "vera-groningen.nl",
+      "discoverySource": "Website",
+      "description": "Wednesday 3 March BODEGA USA support Koop ticket",
+      "cost": "",
+      "image": "https://www.vera-groningen.nl/wp/../vera/assets/img/logo-black.svg",
+      "isNew": true
     },
     {
       "date": "2027-03-05",
@@ -1115,6 +1145,21 @@
     {
       "date": "2027-05-14",
       "time": "",
+      "title": "Codeine USA support Early slowcore pioneers Weinig bands laten traagheid zo krachtig klinken als Codeine. Voor de vijfde keer staat...",
+      "type": "Activiteit",
+      "location": "VERA Groningen",
+      "locationLink": "",
+      "website": "https://www.vera-groningen.nl/?post_type=events&p=155052&lang=nl",
+      "source": "vera-groningen.nl",
+      "discoverySource": "Website",
+      "description": "Friday 14 May Codeine USA support Early slowcore pioneers Weinig bands laten traagheid zo krachtig klinken als Codeine. Voor de vijfde keer staat... Lees meer Koop ticket",
+      "cost": "",
+      "image": "https://www.vera-groningen.nl/wp/../vera/assets/img/logo-black.svg",
+      "isNew": true
+    },
+    {
+      "date": "2027-05-14",
+      "time": "",
       "title": "Nienke Leone Eerlijke en catchy popliedjes",
       "type": "Concert",
       "location": "Simplon Groningen",
@@ -1147,9 +1192,9 @@
   "siteResults": [
     {
       "site": "https://www.vera-groningen.nl/",
-      "count": 20,
-      "newCount": 0,
-      "durationSeconds": 3.25,
+      "count": 23,
+      "newCount": 3,
+      "durationSeconds": 2.26,
       "timedOut": false
     }
   ],
@@ -1355,7 +1400,7 @@
     {
       "source": "Parser",
       "site": "https://www.vera-groningen.nl/",
-      "title": "VERA-programmapagina",
+      "title": "VERA-agendapagina",
       "date": "",
       "url": "https://www.vera-groningen.nl/programma/?category=all&history=0&lang=nl",
       "status": "gespecialiseerde parser",
@@ -1375,9 +1420,27 @@
       "site": "https://www.vera-groningen.nl/",
       "title": "Pagina gelezen",
       "date": "",
-      "url": "https://www.vera-groningen.nl/programma/page/2/?category=all&history=0&lang=nl",
+      "url": "https://www.vera-groningen.nl/?lang=nl",
       "status": "ok",
-      "rawText": "74742 tekens HTML"
+      "rawText": "76005 tekens HTML"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "BODEGA USA support",
+      "date": "2027-03-03",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=154770&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Wednesday 3 March BODEGA USA support Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Tramhaus support Raw postpunk from Rotterdam In 2023 wonnen ze de VERA Poll, en ook in 2026 blijft deze band een vaste publieksfavoriet.",
+      "date": "2026-12-18",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=152859&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "FRIDAY SHOW Friday 18 December Tramhaus support Raw postpunk from Rotterdam In 2023 wonnen ze de VERA Poll, en ook in 2026 blijft deze band een vaste publieksfavoriet. Lees meer Koop ticket"
     },
     {
       "source": "Website",
@@ -1386,7 +1449,7 @@
       "date": "2026-10-23",
       "url": "https://www.vera-groningen.nl/?post_type=events&p=153671&lang=nl",
       "status": "VERA agenda-item",
-      "rawText": "Friday 23 October T.H.O.P. 15 Taxi Lotta GER / AUT De Kloe BEL Tekno Hunks in Raveyard NL Koop ticket"
+      "rawText": "THE LAST EDITION Friday 23 October T.H.O.P. 15 Taxi Lotta GER / AUT De Kloe BEL Tekno Hunks in Raveyard NL Mainstage | Ticket: €10,- | doors: 20:30 - 23:00 | start: 21:00 Koop ticket"
     },
     {
       "source": "Website",
@@ -1427,362 +1490,29 @@
     {
       "source": "Website",
       "site": "https://www.vera-groningen.nl/",
-      "title": "Ulrika Spacek UK Mood Bored",
-      "date": "2026-10-29",
-      "url": "https://www.vera-groningen.nl/?post_type=events&p=150560&lang=nl",
+      "title": "Codeine USA support Early slowcore pioneers Weinig bands laten traagheid zo krachtig klinken als Codeine. Voor de vijfde keer staat...",
+      "date": "2027-05-14",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=155052&lang=nl",
       "status": "VERA agenda-item",
-      "rawText": "CLUBKAARTSHOW Thursday 29 October Ulrika Spacek UK Mood Bored NL Mainstage | Ticket: €16,- | doors: 20:00 - 22:00 | start: 20:30 Koop ticket"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.vera-groningen.nl/",
-      "title": "Kruidkoek & Joost Oomen NL Mesofauna GRN",
-      "date": "2026-10-30",
-      "url": "https://www.vera-groningen.nl/?post_type=events&p=151519&lang=nl",
-      "status": "VERA agenda-item",
-      "rawText": "Friday 30 October Kruidkoek & Joost Oomen NL Mesofauna GRN Mainstage | Ticket: €18,- | doors: 19:30 - 21:00 | start: 20:00 Koop ticket"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.vera-groningen.nl/",
-      "title": "WAVEGRAVE Elysium Graaf Griezel // Fladdermus // DJ Stefan",
-      "date": "2026-10-30",
-      "url": "https://www.vera-groningen.nl/?post_type=events&p=154134&lang=nl",
-      "status": "VERA agenda-item",
-      "rawText": "Friday 30 October WAVEGRAVE Elysium Graaf Griezel // Fladdermus // DJ Stefan Dansen | Ticket: €5,- | doors: 22:00 - 03:00 | start: 22:00 Sold out"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.vera-groningen.nl/",
-      "title": "Los Pirañas COL",
-      "date": "2026-10-31",
-      "url": "https://www.vera-groningen.nl/?post_type=events&p=152556&lang=nl",
-      "status": "VERA agenda-item",
-      "rawText": "Saturday 31 October Los Pirañas COL Mainstage | Ticket: €13,- | doors: 21:00 - 22:00 | start: 21:30 Koop ticket"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.vera-groningen.nl/",
-      "title": "The Etters NL Human Toys",
-      "date": "2026-10-31",
-      "url": "https://www.vera-groningen.nl/?post_type=events&p=154548&lang=nl",
-      "status": "VERA agenda-item",
-      "rawText": "Saturday 31 October The Etters NL Human Toys FR Downstage | Ticket: €5,- | doors: 22:30 - 23:30 | start: 23:00 Koop ticket"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.vera-groningen.nl/",
-      "title": "Push It Pushin Wood Soundsystem All Night Long",
-      "date": "2026-10-31",
-      "url": "https://www.vera-groningen.nl/?post_type=events&p=154197&lang=nl",
-      "status": "VERA agenda-item",
-      "rawText": "Saturday 31 October Push It Pushin Wood Soundsystem All Night Long Dansen | Ticket: €5,- | doors: 23:00 - 04:00 | start: 23:01 Koop ticket"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.vera-groningen.nl/",
-      "title": "Angine De Poitrine CAN Gros Mené",
-      "date": "2026-11-01",
-      "url": "https://www.vera-groningen.nl/?post_type=events&p=151279&lang=nl",
-      "status": "VERA agenda-item",
-      "rawText": "SOLD OUT Sunday 1 November Angine De Poitrine CAN Gros Mené CAN Mainstage | Ticket: €24,- | doors: 19:30 - 22:00 | start: 20:30 Sold out"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.vera-groningen.nl/",
-      "title": "Pavements",
-      "date": "2026-11-03",
-      "url": "https://www.vera-groningen.nl/?post_type=events&p=154871&lang=nl",
-      "status": "VERA agenda-item",
-      "rawText": "Tuesday 3 November Pavements Zienema | Ticket: €6,- | doors: 20:00 - 20:30 | start: 20:30 Koop ticket"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.vera-groningen.nl/",
-      "title": "Hippotraktor BEL OLTAS",
-      "date": "2026-11-04",
-      "url": "https://www.vera-groningen.nl/?post_type=events&p=152263&lang=nl",
-      "status": "VERA agenda-item",
-      "rawText": "Wednesday 4 November Hippotraktor BEL OLTAS NL Mainstage | Ticket: €17,- | doors: 20:00 - 22:00 | start: 20:30 Koop ticket"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.vera-groningen.nl/",
-      "title": "Pyrex USA Traumatizer",
-      "date": "2026-11-05",
-      "url": "https://www.vera-groningen.nl/?post_type=events&p=154976&lang=nl",
-      "status": "VERA agenda-item",
-      "rawText": "RAT RACE X DOWNSTAGE EXTRA Thursday 5 November Pyrex USA Traumatizer NL Downstage | Ticket: €7,50 | doors: 21:00 - 22:00 | start: 21:30 Koop ticket"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.vera-groningen.nl/",
-      "title": "Temples UK PAUW",
-      "date": "2026-11-06",
-      "url": "https://www.vera-groningen.nl/?post_type=events&p=151534&lang=nl",
-      "status": "VERA agenda-item",
-      "rawText": "Friday 6 November Temples UK PAUW NL Mainstage | Ticket: €24,- | doors: 19:30 - 22:00 | start: 20:30 Koop ticket"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.vera-groningen.nl/",
-      "title": "The Homesick NL Rhizocorp",
-      "date": "2026-11-07",
-      "url": "https://www.vera-groningen.nl/?post_type=events&p=153264&lang=nl",
-      "status": "VERA agenda-item",
-      "rawText": "Saturday 7 November The Homesick NL Rhizocorp UK Mainstage | Ticket: €14,- | doors: 20:00 - 22:00 | start: 20:30 Koop ticket"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.vera-groningen.nl/",
-      "title": "Nagusame GRN",
-      "date": "2026-11-07",
-      "url": "https://www.vera-groningen.nl/?post_type=events&p=154867&lang=nl",
-      "status": "VERA agenda-item",
-      "rawText": "Saturday 7 November Nagusame GRN Downstage | Ticket: €5,- | doors: 22:30 - 23:30 | start: 23:00 Koop ticket"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.vera-groningen.nl/",
-      "title": "Club VERA Line-up TBA",
-      "date": "2026-11-07",
-      "url": "https://www.vera-groningen.nl/?post_type=events&p=155064&lang=nl",
-      "status": "VERA agenda-item",
-      "rawText": "Saturday 7 November Club VERA Line-up TBA Dansen | Ticket: €5,- | doors: 23:00 - 03:00 | start: 23:01 Koop ticket"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.vera-groningen.nl/",
-      "title": "Mystery cult film",
-      "date": "2026-11-10",
-      "url": "https://www.vera-groningen.nl/?post_type=events&p=154880&lang=nl",
-      "status": "VERA agenda-item",
-      "rawText": "Tuesday 10 November Mystery cult film Zienema | Ticket: €6,- | doors: 20:00 - 20:30 | start: 20:30 Koop ticket"
+      "rawText": "Friday 14 May Codeine USA support Early slowcore pioneers Weinig bands laten traagheid zo krachtig klinken als Codeine. Voor de vijfde keer staat... Lees meer Koop ticket"
     },
     {
       "source": "Parser",
       "site": "https://www.vera-groningen.nl/",
-      "title": "VERA-programmapagina",
+      "title": "VERA-agendapagina",
       "date": "",
-      "url": "https://www.vera-groningen.nl/programma/page/2/?category=all&history=0&lang=nl",
+      "url": "https://www.vera-groningen.nl/?lang=nl",
       "status": "gespecialiseerde parser",
-      "rawText": "20 VERA-agenda-items uit eventlinks"
+      "rawText": "8 VERA-agenda-items uit eventlinks"
     },
     {
       "source": "Website",
       "site": "https://www.vera-groningen.nl/",
       "title": "Pagina geanalyseerd",
       "date": "",
-      "url": "https://www.vera-groningen.nl/programma/page/2/?category=all&history=0&lang=nl",
+      "url": "https://www.vera-groningen.nl/?lang=nl",
       "status": "ok",
-      "rawText": "20 events/aanbiedingen op deze pagina"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.vera-groningen.nl/",
-      "title": "Pagina gelezen",
-      "date": "",
-      "url": "https://www.vera-groningen.nl/programma/page/3/?category=all&history=0&lang=nl",
-      "status": "ok",
-      "rawText": "74742 tekens HTML"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.vera-groningen.nl/",
-      "title": "T.H.O.P. 15 Taxi Lotta GER / AUT De Kloe BEL Tekno Hunks in Raveyard",
-      "date": "2026-10-23",
-      "url": "https://www.vera-groningen.nl/?post_type=events&p=153671&lang=nl",
-      "status": "VERA agenda-item",
-      "rawText": "Friday 23 October T.H.O.P. 15 Taxi Lotta GER / AUT De Kloe BEL Tekno Hunks in Raveyard NL Koop ticket"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.vera-groningen.nl/",
-      "title": "Velocity Made Good NL Keenan Mundane x Sorza",
-      "date": "2026-10-24",
-      "url": "https://www.vera-groningen.nl/?post_type=events&p=151200&lang=nl",
-      "status": "VERA agenda-item",
-      "rawText": "ZEEVONK RECORDS PRESENTEERT Saturday 24 October Velocity Made Good NL Keenan Mundane x Sorza NL Mainstage | Ticket: €10,- | doors: 21:00 - 23:00 | start: 21:30 Koop ticket"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.vera-groningen.nl/",
-      "title": "Caron",
-      "date": "2026-10-24",
-      "url": "https://www.vera-groningen.nl/?post_type=events&p=154647&lang=nl",
-      "status": "VERA agenda-item",
-      "rawText": "VELOCITY MADE GOOD AFTERSHOW Saturday 24 October Caron NL Downstage | Ticket: €5,- | doors: 22:30 - 23:30 | start: 23:00 Koop ticket"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.vera-groningen.nl/",
-      "title": "VERA's Grunneger Zundag StAD // Steernvanger // Olaf Vos",
-      "date": "2026-10-25",
-      "url": "https://www.vera-groningen.nl/?post_type=events&p=154330&lang=nl",
-      "status": "VERA agenda-item",
-      "rawText": "Sunday 25 October VERA's Grunneger Zundag StAD // Steernvanger // Olaf Vos Mainstage | Ticket: €10,- | doors: 15:00 - 16:30 | start: 15:30 Koop ticket"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.vera-groningen.nl/",
-      "title": "The Fly",
-      "date": "2026-10-27",
-      "url": "https://www.vera-groningen.nl/?post_type=events&p=154391&lang=nl",
-      "status": "VERA agenda-item",
-      "rawText": "ZIENEMA ♥ HALLOWEEN Tuesday 27 October The Fly Zienema | Ticket: €6,66 | doors: 20:00 - 20:30 | start: 20:30 Sold out"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.vera-groningen.nl/",
-      "title": "Ulrika Spacek UK Mood Bored",
-      "date": "2026-10-29",
-      "url": "https://www.vera-groningen.nl/?post_type=events&p=150560&lang=nl",
-      "status": "VERA agenda-item",
-      "rawText": "CLUBKAARTSHOW Thursday 29 October Ulrika Spacek UK Mood Bored NL Mainstage | Ticket: €16,- | doors: 20:00 - 22:00 | start: 20:30 Koop ticket"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.vera-groningen.nl/",
-      "title": "Kruidkoek & Joost Oomen NL Mesofauna GRN",
-      "date": "2026-10-30",
-      "url": "https://www.vera-groningen.nl/?post_type=events&p=151519&lang=nl",
-      "status": "VERA agenda-item",
-      "rawText": "Friday 30 October Kruidkoek & Joost Oomen NL Mesofauna GRN Mainstage | Ticket: €18,- | doors: 19:30 - 21:00 | start: 20:00 Koop ticket"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.vera-groningen.nl/",
-      "title": "WAVEGRAVE Elysium Graaf Griezel // Fladdermus // DJ Stefan",
-      "date": "2026-10-30",
-      "url": "https://www.vera-groningen.nl/?post_type=events&p=154134&lang=nl",
-      "status": "VERA agenda-item",
-      "rawText": "Friday 30 October WAVEGRAVE Elysium Graaf Griezel // Fladdermus // DJ Stefan Dansen | Ticket: €5,- | doors: 22:00 - 03:00 | start: 22:00 Sold out"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.vera-groningen.nl/",
-      "title": "Los Pirañas COL",
-      "date": "2026-10-31",
-      "url": "https://www.vera-groningen.nl/?post_type=events&p=152556&lang=nl",
-      "status": "VERA agenda-item",
-      "rawText": "Saturday 31 October Los Pirañas COL Mainstage | Ticket: €13,- | doors: 21:00 - 22:00 | start: 21:30 Koop ticket"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.vera-groningen.nl/",
-      "title": "The Etters NL Human Toys",
-      "date": "2026-10-31",
-      "url": "https://www.vera-groningen.nl/?post_type=events&p=154548&lang=nl",
-      "status": "VERA agenda-item",
-      "rawText": "Saturday 31 October The Etters NL Human Toys FR Downstage | Ticket: €5,- | doors: 22:30 - 23:30 | start: 23:00 Koop ticket"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.vera-groningen.nl/",
-      "title": "Push It Pushin Wood Soundsystem All Night Long",
-      "date": "2026-10-31",
-      "url": "https://www.vera-groningen.nl/?post_type=events&p=154197&lang=nl",
-      "status": "VERA agenda-item",
-      "rawText": "Saturday 31 October Push It Pushin Wood Soundsystem All Night Long Dansen | Ticket: €5,- | doors: 23:00 - 04:00 | start: 23:01 Koop ticket"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.vera-groningen.nl/",
-      "title": "Angine De Poitrine CAN Gros Mené",
-      "date": "2026-11-01",
-      "url": "https://www.vera-groningen.nl/?post_type=events&p=151279&lang=nl",
-      "status": "VERA agenda-item",
-      "rawText": "SOLD OUT Sunday 1 November Angine De Poitrine CAN Gros Mené CAN Mainstage | Ticket: €24,- | doors: 19:30 - 22:00 | start: 20:30 Sold out"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.vera-groningen.nl/",
-      "title": "Pavements",
-      "date": "2026-11-03",
-      "url": "https://www.vera-groningen.nl/?post_type=events&p=154871&lang=nl",
-      "status": "VERA agenda-item",
-      "rawText": "Tuesday 3 November Pavements Zienema | Ticket: €6,- | doors: 20:00 - 20:30 | start: 20:30 Koop ticket"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.vera-groningen.nl/",
-      "title": "Hippotraktor BEL OLTAS",
-      "date": "2026-11-04",
-      "url": "https://www.vera-groningen.nl/?post_type=events&p=152263&lang=nl",
-      "status": "VERA agenda-item",
-      "rawText": "Wednesday 4 November Hippotraktor BEL OLTAS NL Mainstage | Ticket: €17,- | doors: 20:00 - 22:00 | start: 20:30 Koop ticket"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.vera-groningen.nl/",
-      "title": "Pyrex USA Traumatizer",
-      "date": "2026-11-05",
-      "url": "https://www.vera-groningen.nl/?post_type=events&p=154976&lang=nl",
-      "status": "VERA agenda-item",
-      "rawText": "RAT RACE X DOWNSTAGE EXTRA Thursday 5 November Pyrex USA Traumatizer NL Downstage | Ticket: €7,50 | doors: 21:00 - 22:00 | start: 21:30 Koop ticket"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.vera-groningen.nl/",
-      "title": "Temples UK PAUW",
-      "date": "2026-11-06",
-      "url": "https://www.vera-groningen.nl/?post_type=events&p=151534&lang=nl",
-      "status": "VERA agenda-item",
-      "rawText": "Friday 6 November Temples UK PAUW NL Mainstage | Ticket: €24,- | doors: 19:30 - 22:00 | start: 20:30 Koop ticket"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.vera-groningen.nl/",
-      "title": "The Homesick NL Rhizocorp",
-      "date": "2026-11-07",
-      "url": "https://www.vera-groningen.nl/?post_type=events&p=153264&lang=nl",
-      "status": "VERA agenda-item",
-      "rawText": "Saturday 7 November The Homesick NL Rhizocorp UK Mainstage | Ticket: €14,- | doors: 20:00 - 22:00 | start: 20:30 Koop ticket"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.vera-groningen.nl/",
-      "title": "Nagusame GRN",
-      "date": "2026-11-07",
-      "url": "https://www.vera-groningen.nl/?post_type=events&p=154867&lang=nl",
-      "status": "VERA agenda-item",
-      "rawText": "Saturday 7 November Nagusame GRN Downstage | Ticket: €5,- | doors: 22:30 - 23:30 | start: 23:00 Koop ticket"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.vera-groningen.nl/",
-      "title": "Club VERA Line-up TBA",
-      "date": "2026-11-07",
-      "url": "https://www.vera-groningen.nl/?post_type=events&p=155064&lang=nl",
-      "status": "VERA agenda-item",
-      "rawText": "Saturday 7 November Club VERA Line-up TBA Dansen | Ticket: €5,- | doors: 23:00 - 03:00 | start: 23:01 Koop ticket"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.vera-groningen.nl/",
-      "title": "Mystery cult film",
-      "date": "2026-11-10",
-      "url": "https://www.vera-groningen.nl/?post_type=events&p=154880&lang=nl",
-      "status": "VERA agenda-item",
-      "rawText": "Tuesday 10 November Mystery cult film Zienema | Ticket: €6,- | doors: 20:00 - 20:30 | start: 20:30 Koop ticket"
-    },
-    {
-      "source": "Parser",
-      "site": "https://www.vera-groningen.nl/",
-      "title": "VERA-programmapagina",
-      "date": "",
-      "url": "https://www.vera-groningen.nl/programma/page/3/?category=all&history=0&lang=nl",
-      "status": "gespecialiseerde parser",
-      "rawText": "20 VERA-agenda-items uit eventlinks"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.vera-groningen.nl/",
-      "title": "Pagina geanalyseerd",
-      "date": "",
-      "url": "https://www.vera-groningen.nl/programma/page/3/?category=all&history=0&lang=nl",
-      "status": "ok",
-      "rawText": "20 events/aanbiedingen op deze pagina"
+      "rawText": "8 events/aanbiedingen op deze pagina"
     },
     {
       "source": "Website",
@@ -1791,7 +1521,7 @@
       "date": "",
       "url": "https://www.vera-groningen.nl/",
       "status": "klaar",
-      "rawText": "site 1/1: 20 unieke events in 3.25 sec"
+      "rawText": "site 1/1: 23 unieke events in 2.26 sec"
     }
   ]
 }
