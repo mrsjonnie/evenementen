@@ -1,9 +1,11 @@
 {
   "runId": "2026-10-23T14:37:37+00:00",
   "startedAt": "2026-10-23T14:37:37+00:00",
-  "completedCount": 0,
+  "completedCount": 1,
   "totalSites": 1,
-  "completedSites": [],
+  "completedSites": [
+    "https://www.socialdeal.nl/dichtbij/groningen/"
+  ],
   "events": [
     {
       "date": "2026-10-23",
@@ -356,7 +358,15 @@
       "image": "https://images.socialdeal.nl/img/image-placeholder.jpg"
     }
   ],
-  "siteResults": [],
+  "siteResults": [
+    {
+      "site": "https://www.socialdeal.nl/dichtbij/groningen/",
+      "count": 25,
+      "newCount": 0,
+      "durationSeconds": 46.67,
+      "timedOut": false
+    }
+  ],
   "rawLog": [
     {
       "source": "Website",
@@ -627,10 +637,83 @@
       "url": "https://www.socialdeal.nl/dichtbij/groningen/",
       "status": "ok",
       "rawText": "25 events/aanbiedingen op deze pagina"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.socialdeal.nl/dichtbij/groningen/",
+      "title": "Pagina mislukt",
+      "date": "",
+      "url": "https://www.socialdeal.nl/ontdek/groningen/",
+      "status": "fout",
+      "rawText": "HTTPSConnectionPool(host='www.socialdeal.nl', port=443): Read timed out."
+    },
+    {
+      "source": "Website",
+      "site": "https://www.socialdeal.nl/dichtbij/groningen/",
+      "title": "Pagina mislukt",
+      "date": "",
+      "url": "https://www.socialdeal.nl/deals/groningen/",
+      "status": "fout",
+      "rawText": "HTTPSConnectionPool(host='www.socialdeal.nl', port=443): Read timed out. (read timeout=7.0)"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://www.socialdeal.nl/dichtbij/groningen/",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://www.socialdeal.nl/feed",
+      "status": "fout",
+      "rawText": "HTTPSConnectionPool(host='www.socialdeal.nl', port=443): Read timed out. (read timeout=7.0)"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://www.socialdeal.nl/dichtbij/groningen/",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://www.socialdeal.nl/rss",
+      "status": "fout",
+      "rawText": "HTTPSConnectionPool(host='www.socialdeal.nl', port=443): Read timed out. (read timeout=7.0)"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://www.socialdeal.nl/dichtbij/groningen/",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://www.socialdeal.nl/rss.xml",
+      "status": "fout",
+      "rawText": "HTTP 404"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://www.socialdeal.nl/dichtbij/groningen/",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://www.socialdeal.nl/feed.xml",
+      "status": "fout",
+      "rawText": "HTTP 404"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://www.socialdeal.nl/dichtbij/groningen/",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://www.socialdeal.nl/events/feed/",
+      "status": "fout",
+      "rawText": "HTTP 404"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.socialdeal.nl/dichtbij/groningen/",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://www.socialdeal.nl/dichtbij/groningen/",
+      "status": "klaar",
+      "rawText": "site 1/1: 25 unieke events in 46.67 sec"
     }
   ],
-  "status": "running",
+  "status": "finishing",
   "lastCompletedSite": "https://www.socialdeal.nl/dichtbij/groningen/",
   "lastSiteEventCount": 25,
-  "lastUpdatedAt": "2026-10-23T14:37:42+00:00"
+  "lastUpdatedAt": "2026-10-23T14:37:42+00:00",
+  "lastCompletedAt": "2026-10-23T14:38:24+00:00"
 }
