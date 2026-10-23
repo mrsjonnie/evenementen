@@ -670,6 +670,18 @@
     }
 
     .grid.cardsCollapsed .typeHeader { min-height: 48px; }
+
+    .eventTypeHeader {
+      grid-column: 1 / -1;
+      min-height: 58px;
+      margin-top: 8px;
+      border-radius: var(--radius);
+      border: 1px solid var(--line);
+      overflow: hidden;
+    }
+
+    .eventTypeHeader:first-child { margin-top: 0; }
+    .eventTypeHeader span { font-size: .95rem; }
     .grid.cardsCollapsed .cardBody { padding: 10px; gap: 7px; }
     .grid.cardsCollapsed .details,
     .grid.cardsCollapsed .desc,
@@ -1195,7 +1207,7 @@
   </div>
 
   <script>
-    const APP_VERSION = "2026.10.23.2";
+    const APP_VERSION = "2026.10.23.3";
     const DEFAULT_MAX_EVENTS_PER_SITE = 60;
     const DEFAULT_SITE_TIME_LIMIT_SECONDS = 45;
     const SCAN_SETTINGS_KEY = "eventScanSettingsV2";
@@ -2419,7 +2431,19 @@
       const visible = filteredEvents.slice((currentPage - 1) * eventsPerPage, currentPage * eventsPerPage);
       updateFilterBreakdown(pageCount, visible.length);
 
-      $("grid").innerHTML = visible.map(renderCard).join("");
+      let previousTypeKey = "";
+      const renderedItems = [];
+      for (const event of visible) {
+        const type = displayType(event.type || "Activiteit");
+        const typeKey = type.normalize("NFD").replace(/[\\u0300-\\u036f]/g, "").toLocaleLowerCase("nl");
+        if (typeKey !== previousTypeKey) {
+          const headerImage = typeImage(type, event.image);
+          renderedItems.push(`<div class="typeHeader eventTypeHeader" role="heading" aria-level="2" style="background-image: url('${escapeHtml(headerImage)}')"><span>${escapeHtml(type)}</span></div>`);
+          previousTypeKey = typeKey;
+        }
+        renderedItems.push(renderCard(event));
+      }
+      $("grid").innerHTML = renderedItems.join("");
       $("pagination").style.display = "flex";
       $("pageInfo").textContent = `Pagina ${currentPage} van ${pageCount}`;
       $("prevPage").disabled = currentPage === 1;
@@ -2454,11 +2478,6 @@
       const locationLabel = escapeHtml(event.location || "Locatie onbekend");
       const dateLabel = event.periodLabel || prettyDate(event.date);
       const isNew = isNewEvent(event);
-      const typeHeader = `
-        <${website ? "a" : "div"} class="typeHeader ${website ? "typeHeaderLink" : ""}" style="background-image: url('${escapeHtml(image)}')"${website ? ` href="${escapeHtml(website)}" target="_blank" rel="noopener noreferrer"` : ""}>
-          <span>${escapeHtml(type)}</span>
-        </${website ? "a" : "div"}>
-      `;
       const sourceLabel = eventSourceLabel(event);
       const sourceTag = sourceLabel
         ? (website
@@ -2468,7 +2487,6 @@
 
       return `
         <article class="card ${isNew ? "isNew" : ""} ${expanded ? "expanded" : ""}">
-          ${typeHeader}
           <div class="cardBody">
             <div class="badges">
               ${isNew ? '<span class="tag tagNew">Nieuw</span>' : ""}
