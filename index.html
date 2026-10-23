@@ -3258,6 +3258,12 @@
       });
     });
 
+    $("apiInfoButton").addEventListener("click", () => {
+      const popover = $("apiInfoPopover");
+      const open = popover.hidden;
+      popover.hidden = !open;
+      $("apiInfoButton").setAttribute("aria-expanded", String(open));
+    });
     $("filterSidebarToggle").addEventListener("click", () => {
       const open = document.querySelector(".hero").classList.toggle("filtersOpen");
       $("filterSidebarToggle").setAttribute("aria-expanded", String(open));
