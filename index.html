@@ -1054,8 +1054,8 @@
             <span class="versionBadge" id="versionBadge">Versie wordt geladen</span>
             <div class="status" id="status" aria-live="polite"></div>
             <div class="scanSettings" aria-label="Scaninstellingen">
-              <label class="scanSetting" for="maxEventsPerSite">Events <input id="maxEventsPerSite" type="number" min="20" max="100" step="1" value="20" inputmode="numeric"> <small>zoeken per geselecteerde website</small></label>
-              <label class="scanSetting" for="siteTimeLimitSeconds">Sec <input id="siteTimeLimitSeconds" type="number" min="20" max="60" step="1" value="20" inputmode="numeric"> <small>zoeken per geselecteerde website</small></label>
+              <label class="scanSetting" for="maxEventsPerSite">Events <input id="maxEventsPerSite" type="number" min="1" max="100" step="1" value="20" inputmode="numeric"> <small>zoeken per geselecteerde website</small></label>
+              <label class="scanSetting" for="siteTimeLimitSeconds">Sec <input id="siteTimeLimitSeconds" type="number" min="3" max="60" step="1" value="20" inputmode="numeric"> <small>zoeken per geselecteerde website</small></label>
             </div>
           </div>
           <details class="rawLogPanel" id="rawLogPanel">
@@ -1428,8 +1428,8 @@
       try {
         const stored = JSON.parse(localStorage.getItem(SCAN_SETTINGS_KEY) || "{}");
         return {
-          maxEventsPerSite: clampNumber(stored.maxEventsPerSite, DEFAULT_MAX_EVENTS_PER_SITE, 20, 100),
-          siteTimeLimitSeconds: clampNumber(stored.siteTimeLimitSeconds, DEFAULT_SITE_TIME_LIMIT_SECONDS, 20, 60)
+          maxEventsPerSite: clampNumber(stored.maxEventsPerSite, DEFAULT_MAX_EVENTS_PER_SITE, 1, 100),
+          siteTimeLimitSeconds: clampNumber(stored.siteTimeLimitSeconds, DEFAULT_SITE_TIME_LIMIT_SECONDS, 3, 60)
         };
       } catch {
         return {
@@ -1449,8 +1449,8 @@
 
     function currentScanSettings() {
       return {
-        maxEventsPerSite: clampNumber($("maxEventsPerSite")?.value, DEFAULT_MAX_EVENTS_PER_SITE, 20, 100),
-        siteTimeLimitSeconds: clampNumber($("siteTimeLimitSeconds")?.value, DEFAULT_SITE_TIME_LIMIT_SECONDS, 20, 60)
+        maxEventsPerSite: clampNumber($("maxEventsPerSite")?.value, DEFAULT_MAX_EVENTS_PER_SITE, 1, 100),
+        siteTimeLimitSeconds: clampNumber($("siteTimeLimitSeconds")?.value, DEFAULT_SITE_TIME_LIMIT_SECONDS, 3, 60)
       };
     }
 
@@ -2191,8 +2191,9 @@
         if (radiusKm > 0 && eventKm > radiusKm) return false;
         return true;
       });
-      const types = [...new Set([...activeEvents.map((event) => displayType(event.type || "").trim()).filter(Boolean), "Aanbiedingen"])]
+      const types = [...new Set([...activeEvents.map((event) => displayType(event.type || "").trim()).filter((type) => type && type !== "Aanbiedingen"), "Aanbiedingen"])]
         .sort((a, b) => a.localeCompare(b, "nl"));
+      types.push(types.splice(types.indexOf("Aanbiedingen"), 1)[0]);
 
       $("typeFilter").innerHTML = [
         '<option value="all">Alle types</option>',
@@ -2781,7 +2782,8 @@
         maxEventsPerSite: scanSettings.maxEventsPerSite,
         siteTimeLimitSeconds: scanSettings.siteTimeLimitSeconds,
         sites: selectedSites,
-        providers: providerSettings()
+        providers: providerSettings(),
+        selectedProviders: Object.entries(providerSettings()).filter(([, enabled]) => enabled).map(([name]) => name)
       };
 
       try {
@@ -2805,7 +2807,7 @@
         }
 
         const prefix = Number.isFinite(foundCount) ? `${foundText(foundCount)} gevonden.` : foundText(foundCount) + ".";
-        showStatus(`Klaar. ${prefix} Ik controleer de bijgewerkte lijst.`, "ok", { stop: true });
+        showStatus(`Verversverzoek geaccepteerd. ${prefix} Ik controleer of de scraper events.json echt heeft bijgewerkt.`, "warn", { stop: true });
         await waitForUpdatedEvents(previousSignature, previousKeys, foundCount);
       } catch (error) {
         const prefix = Number.isFinite(foundCount) ? `${foundText(foundCount)} gevonden.` : "";
@@ -3022,21 +3024,7 @@
         loadJson("./sites.json", fallbackSites)
       ]);
       events = mergeVerifiedEvents(loaded[0].events);
-      const today = formatDate(new Date());
-      const walkingOverview = {
-        title: "Wandelen in en rond Groningen",
-        type: "Wandelen",
-        date: today,
-        periodLabel: "Iedere dag",
-        isPermanent: true,
-        location: "Groningen",
-        cost: "Gratis",
-        description: "Wandel wanneer het jou uitkomt. Bekijk wandelroutes en ideeën voor een wandeling in de provincie Groningen.",
-        website: "https://www.visitgroningen.nl/nl/doen/wandelen",
-        source: "Wandeloverzicht",
-        discoverySource: "Website"
-      };
-      events = dedupeEvents([...events, walkingOverview]);
+
       eventsUpdatedAt = loaded[0].updatedAt;
       latestSiteResults = loaded[0].siteResults || [];
       latestRawLog = loaded[0].rawLog || [];
@@ -3080,6 +3068,16 @@
       });
     });
 
+    ["maxEventsPerSite", "siteTimeLimitSeconds"].forEach((id) => {
+      $(id).addEventListener("input", () => {
+        const settings = currentScanSettings();
+        try { localStorage.setItem(SCAN_SETTINGS_KEY, JSON.stringify(settings)); } catch {}
+      });
+      $(id).addEventListener("change", () => {
+        saveScanSettings();
+        showStatus(`Scaninstellingen bewaard: ${currentScanSettings().maxEventsPerSite} events en ${currentScanSettings().siteTimeLimitSeconds} sec per website.`, "ok");
+      });
+    });
     $("applyFiltersBtn").addEventListener("click", applyFilters);
     $("refreshBtn").addEventListener("click", refreshEvents);
     $("resetBtn").addEventListener("click", resetFilters);
