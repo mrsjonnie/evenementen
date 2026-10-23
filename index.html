@@ -1803,6 +1803,7 @@
     }
 
     function eventLocationLabel(event) {
+      if (/vera-groningen\.nl/i.test(event?.website || "")) return "VERA Groningen";
       const location = cleanText(event.location || "");
       const unknown = !location || /^(locatie onbekend|onbekend|unknown|n\/?a|-)$/i.test(location);
       const host = hostFromUrl(event.website || "").replace(/^www\./i, "").toLowerCase();
@@ -1995,7 +1996,8 @@
       return new Intl.DateTimeFormat("nl-NL", {
         weekday: "short",
         day: "numeric",
-        month: "short"
+        month: "short",
+        year: "numeric"
       }).format(new Date(value + "T00:00:00"));
     }
 
@@ -2738,7 +2740,7 @@
       const routeId = `route-${Math.random().toString(36).slice(2)}`;
       const locationUrl = isUsablePhysicalLocation(event) ? routeUrl(event) : "";
       const locationLabel = escapeHtml(eventLocationLabel(event));
-      const dateLabel = event.periodLabel || prettyDate(event.date);
+      const dateLabel = event.periodLabel ? (event.periodLabel + " · " + String(event.date || "").slice(0, 4)) : prettyDate(event.date);
       const isNew = isNewEvent(event);
       const typeHeader = `
         <${website ? "a" : "div"} class="typeHeader ${website ? "typeHeaderLink" : ""}" style="background-image: url('${escapeHtml(image)}')"${website ? ` href="${escapeHtml(website)}" target="_blank" rel="noopener noreferrer"` : ""}>
