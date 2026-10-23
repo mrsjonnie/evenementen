@@ -1,6 +1,6 @@
 {
-  "runId": "2026-10-23T13:54:14+00:00",
-  "startedAt": "2026-10-23T13:54:14+00:00",
+  "runId": "2026-10-23T13:56:32+00:00",
+  "startedAt": "2026-10-23T13:56:32+00:00",
   "completedCount": 1,
   "totalSites": 1,
   "completedSites": [
@@ -125,7 +125,7 @@
       "description": "Vanwege een update is ons bibliotheeksysteem tijdelijk niet beschikbaar. Excuses voor het ongemak. Filmseries & specials Hulp- en spreekuren Bibliotheekvestigingen Haal meer uit je abonnement Studie- en werkplekken Wifi, internet en printen Verhuur & zakelijk Vacatures & vrijwilligers",
       "cost": "gratis",
       "image": "https://static.forum.nl/cache/leren-programmeren-7.24853/leren-programmeren-7-s1920x1080.jpg",
-      "isNew": true
+      "isNew": false
     },
     {
       "date": "2026-10-23",
@@ -290,7 +290,7 @@
       "description": "Vanwege een update is ons bibliotheeksysteem tijdelijk niet beschikbaar. Excuses voor het ongemak. Filmseries & specials Hulp- en spreekuren Bibliotheekvestigingen Haal meer uit je abonnement Studie- en werkplekken Wifi, internet en printen Verhuur & zakelijk Vacatures & vrijwilligers",
       "cost": "",
       "image": "https://static.forum.nl/cache/de-gaulle-liberte.27941/de-gaulle-liberte-s1920x1080.jpg",
-      "isNew": true
+      "isNew": false
     },
     {
       "date": "2026-10-24",
@@ -305,7 +305,7 @@
       "description": "Echte vriendschap is het waard om voor te vechten.",
       "cost": "",
       "image": "https://static.forum.nl/cache/het-vergeten-eiland-9.27975/het-vergeten-eiland-9-s1920x1080.jpg",
-      "isNew": true
+      "isNew": false
     },
     {
       "date": "2026-10-24",
@@ -320,7 +320,7 @@
       "description": "Vanwege een update is ons bibliotheeksysteem tijdelijk niet beschikbaar. Excuses voor het ongemak. Filmseries & specials Hulp- en spreekuren Bibliotheekvestigingen Haal meer uit je abonnement Studie- en werkplekken Wifi, internet en printen Verhuur & zakelijk Vacatures & vrijwilligers",
       "cost": "",
       "image": "https://static.forum.nl/cache/introductiecursus-nederlandse-gebarentaal.24901/introductiecursus-nederlandse-gebarentaal-s1920x1080.png",
-      "isNew": true
+      "isNew": false
     },
     {
       "date": "2026-10-24",
@@ -335,7 +335,7 @@
       "description": "Shaun het Schaap is vanaf 7 oktober terug in de bioscoop voor een nieuw, beestachtig leuk familieavontuur! Shaun het Schaap: Het Beest van de Boerderij is de derde bioscoopfilm van Shaun the Sheep. De eerste twee films ontvingen Oscar en BAFTA nomina...",
       "cost": "",
       "image": "https://static.forum.nl/cache/shaun-het-schaap-het-beest-van-de-boerderij-6.27886/shaun-het-schaap-het-beest-van-de-boerderij-6-s1920x1080.jpg",
-      "isNew": true
+      "isNew": false
     },
     {
       "date": "2026-10-24",
@@ -350,7 +350,7 @@
       "description": "Vanwege een update is ons bibliotheeksysteem tijdelijk niet beschikbaar. Excuses voor het ongemak. Filmseries & specials Hulp- en spreekuren Bibliotheekvestigingen Haal meer uit je abonnement Studie- en werkplekken Wifi, internet en printen Verhuur & zakelijk Vacatures & vrijwilligers",
       "cost": "Gratis",
       "image": "https://static.forum.nl/cache/walk-in-smartlab.4805/walk-in-smartlab-s1920x1080.jpg",
-      "isNew": true
+      "isNew": false
     },
     {
       "date": "2026-10-24",
@@ -365,7 +365,7 @@
       "description": "Vanwege een update is ons bibliotheeksysteem tijdelijk niet beschikbaar. Excuses voor het ongemak. Filmseries & specials Hulp- en spreekuren Bibliotheekvestigingen Haal meer uit je abonnement Studie- en werkplekken Wifi, internet en printen Verhuur & zakelijk Vacatures & vrijwilligers",
       "cost": "gratis",
       "image": "https://static.forum.nl/cache/werkplaats-sunnemeerten.28358/werkplaats-sunnemeerten-s1920x1080.jpg",
-      "isNew": true
+      "isNew": false
     },
     {
       "date": "2026-10-24",
@@ -380,7 +380,7 @@
       "description": "Vanwege een update is ons bibliotheeksysteem tijdelijk niet beschikbaar. Excuses voor het ongemak. Filmseries & specials Hulp- en spreekuren Bibliotheekvestigingen Haal meer uit je abonnement Studie- en werkplekken Wifi, internet en printen Verhuur & zakelijk Vacatures & vrijwilligers",
       "cost": "",
       "image": "https://static.forum.nl/cache/yellow-letters.28044/yellow-letters-s1920x1080.jpg",
-      "isNew": true
+      "isNew": false
     },
     {
       "date": "2026-10-24",
@@ -395,15 +395,15 @@
       "description": "Vanwege een update is ons bibliotheeksysteem tijdelijk niet beschikbaar. Excuses voor het ongemak. Filmseries & specials Hulp- en spreekuren Bibliotheekvestigingen Haal meer uit je abonnement Studie- en werkplekken Wifi, internet en printen Verhuur & zakelijk Vacatures & vrijwilligers",
       "cost": "",
       "image": "https://static.forum.nl/cache/youri.27954/youri-s1920x1080.jpg",
-      "isNew": true
+      "isNew": false
     }
   ],
   "siteResults": [
     {
       "site": "https://forum.nl/nl/agenda",
       "count": 26,
-      "newCount": 9,
-      "durationSeconds": 14.65,
+      "newCount": 0,
+      "durationSeconds": 13.54,
       "timedOut": false
     }
   ],
@@ -433,7 +433,7 @@
       "date": "",
       "url": "https://forum.nl/nl/agenda",
       "status": "ok",
-      "rawText": "173907 tekens HTML"
+      "rawText": "173882 tekens HTML"
     },
     {
       "source": "Parser",
@@ -1711,13 +1711,13 @@
       "date": "",
       "url": "https://forum.nl/nl/agenda",
       "status": "klaar",
-      "rawText": "site 1/1: 26 unieke events in 14.65 sec"
+      "rawText": "site 1/1: 26 unieke events in 13.54 sec"
     }
   ],
   "status": "completed",
   "lastCompletedSite": "https://forum.nl/nl/agenda",
   "lastSiteEventCount": 26,
-  "lastUpdatedAt": "2026-10-23T13:54:17+00:00",
-  "lastCompletedAt": "2026-10-23T13:54:30+00:00",
-  "finishedAt": "2026-10-23T13:54:31+00:00"
+  "lastUpdatedAt": "2026-10-23T13:56:34+00:00",
+  "lastCompletedAt": "2026-10-23T13:56:47+00:00",
+  "finishedAt": "2026-10-23T13:56:47+00:00"
 }
