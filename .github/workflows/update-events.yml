@@ -175,7 +175,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           # Keep raw scraper logs out of the public GitHub Pages repository.
-          git add events.json
+          git add events.json deals.json
           git diff --cached --quiet || git commit -m "Auto update events.json"
           # Rebase generated data on top of concurrent website/UI edits before pushing.
           git pull --rebase origin main
