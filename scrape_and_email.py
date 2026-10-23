@@ -1349,9 +1349,15 @@ def scrape_deal_sources(selected_sites=None):
             soup = BeautifulSoup(response.text, "html.parser")
             for anchor in soup.select("a[href]"):
                 href = urljoin(response.url, anchor.get("href", "")).split("#")[0]
-                title = clean_text(anchor.get_text(" ", strip=True))
+                title = clean_text(
+                    anchor.get_text(" ", strip=True)
+                    or anchor.get("title", "")
+                    or anchor.get("aria-label", "")
+                    or (anchor.find("img").get("alt", "") if anchor.find("img") else "")
+                    or (anchor.find(["h1", "h2", "h3", "h4"]).get_text(" ", strip=True) if anchor.find(["h1", "h2", "h3", "h4"]) else "")
+                )
                 path = urlparse(href).path.lower().rstrip("/")
-                if len(title) < 8 or len(title) > 150 or noise.match(title):
+                if len(title) < 8 or len(title) > 150 or noise.match(title) or re.match(r"^https?://", title, re.I):
                     continue
                 if href.rstrip("/") in {url.rstrip("/"), response.url.rstrip("/")}:
                     continue
@@ -1362,6 +1368,8 @@ def scrape_deal_sources(selected_sites=None):
                     continue
                 if source == "Social Deal":
                     # Alleen individuele deal/productpagina's, geen stads-, categorie- of reviewpagina's.
+                    if "/tag/" in path or "/category/" in path or "/locaties/" in path:
+                        continue
                     if not re.search(r"/(?:deal|deals|aanbieding|voucher|product)(?:/|[-_])", path):
                         continue
                     if re.search(r"/(?:groningen|drenthe|friesland|overijssel|gelderland|limburg|noord-holland|zuid-holland)$", path):
