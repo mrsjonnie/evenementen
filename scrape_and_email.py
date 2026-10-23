@@ -1004,7 +1004,7 @@ def extract_vera_programme_events(html, page_url, site_url, discovery_source):
         date_text = date_match.group(0)
         event_date = parse_date_text(date_text)
         tail = text[date_match.end():].strip(" -|:")
-        tail = re.split(r"\b(?:Mainstage|Downstage|Zienema|Dansen|Kelderbar|Ticket:|doors:|start:)\b", tail, maxsplit=1, flags=re.I)[0]
+        tail = re.split(r"\b(?:Mainstage|Downstage|Zienema|Dansen|Kelderbar|Ticket:|doors:|start:|support|Raw postpunk|Raw Irish folk|Early slowcore pioneers|Snarky and energetic|In\s+20\d{2}|Weinig bands)\b", tail, maxsplit=1, flags=re.I)[0]
         tail = STATUS_WORDS_RE.sub(" ", tail)
         title = clean_title(tail)
         if not event_date or not title_is_usable(title) or len(title) < 3:
