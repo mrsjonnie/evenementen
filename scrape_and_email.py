@@ -172,6 +172,7 @@ DEFAULT_LOCATIONS = {
     "concertgebouw.nl": "Concertgebouw Amsterdam",
     "hedon.nl": "Hedon Zwolle",
     "hedon-zwolle.nl": "Hedon Zwolle",
+    "zwolsetheaters.nl": "Hedon Zwolle",
     "paradiso.nl": "Paradiso Amsterdam",
     "vvvameland.nl": "Ameland",
 }
@@ -276,6 +277,8 @@ def detect_scraper_type(site_url):
         return "compacte-agenda-kaarten"
     if host == "forum.nl":
         return "universeel-eventkaarten"
+    if host == "zwolsetheaters.nl":
+        return "programma-kaarten"
     if host in {"socialdeal.nl", "groupon.nl", "ibood.com"}:
         return "aanbiedingen"
     return "universeel-jsonld-links-kaarten"
@@ -755,7 +758,7 @@ def normalize_event(raw, site_url):
         location = "Amsterdam"
     elif "concertgebouw.nl" in canonical_host(site_url) and location_unknown:
         location = "Concertgebouw Amsterdam"
-    elif canonical_host(site_url).endswith("hedon.nl") and location_unknown:
+    elif (canonical_host(site_url).endswith("hedon.nl") or canonical_host(site_url).endswith("zwolsetheaters.nl")) and location_unknown:
         location = "Hedon Zwolle"
     elif "vera-groningen.nl" in canonical_host(site_url):
         # Always show the venue's standard location, even if page metadata names a room/stage.
