@@ -2897,7 +2897,7 @@
         const health = await response.json();
         const keys = { mistral: "mistralConfigured", openai: "chatGptConfigured", perplexity: "perplexityConfigured", serpapi: "serpApiConfigured" };
         Object.keys(keys).forEach((key) => {
-          if (selected[key] && !health[keys[key]]) messages.push(\`\${names[key]} werkt niet: API-sleutel ontbreekt in Cloudflare.\`);
+          if (selected[key] && health[keys[key]] === false) messages.push(\`\${names[key]} werkt niet: API-sleutel ontbreekt in Cloudflare.\`);
         });
       } catch {
         if (Object.values(selected).some(Boolean)) messages.push("API-status niet bereikbaar; geselecteerde AI-/zoekbronnen zijn niet gecontroleerd.");
