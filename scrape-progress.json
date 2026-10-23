@@ -1,37 +1,95 @@
 {
   "runId": "2026-10-23T13:36:14+00:00",
   "startedAt": "2026-10-23T13:36:14+00:00",
-  "completedCount": 0,
+  "completedCount": 1,
   "totalSites": 1,
-  "completedSites": [],
+  "completedSites": [
+    "https://www.martiniplaza.nl/nl/agenda"
+  ],
   "events": [
     {
-      "date": "2026-10-24",
+      "date": "2026-10-23",
+      "time": "20:00",
+      "title": "Jethro Tull",
+      "type": "Concert",
+      "location": "Werken bij Martiniplaza",
+      "locationLink": "",
+      "website": "https://www.martiniplaza.nl/nl/agenda/jethro-tull",
+      "source": "martiniplaza.nl",
+      "discoverySource": "Website",
+      "description": "Theaterarrangementen Catering & foodbook Reserveer nu je tickets Ian Anderson en Jethro Tull behoren tot de meest succesvolle en invloedrijke progressieve rockacts ter wereld. Sinds de oprichting eind jaren zestig heeft de band een onmiskenbare stempel gedrukt op de internationale rockscene.",
+      "cost": "",
+      "image": "https://static.martiniplaza.nl/cache/jethro-tull.16241/jethro-tull-s1920x1080.jpg"
+    },
+    {
+      "date": "2026-10-23",
+      "time": "20:00",
+      "title": "Titanique",
+      "type": "Film",
+      "location": "Werken bij Martiniplaza",
+      "locationLink": "",
+      "website": "https://www.martiniplaza.nl/nl/agenda/titanique",
+      "source": "martiniplaza.nl",
+      "discoverySource": "Website",
+      "description": "Theaterarrangementen Catering & foodbook Reserveer nu je tickets De internationale hitsensatie ‘Titanique’ meert aan in Nederland! Een over de top musical waarin de iconische film Titanic een hilarische remix krijgt. Met niemand minder dan Céline Dion ‘herself’ aan het roer! Verwacht knetterende humor, megahits die je",
+      "cost": "",
+      "image": "https://static.martiniplaza.nl/cache/titanique.17320/titanique-s1920x1080.png"
+    },
+    {
+      "date": "2026-10-23",
       "time": "",
+      "title": "Zakelijk",
+      "type": "Concert",
+      "location": "Zakelijk | Martiniplaza",
+      "locationLink": "",
+      "website": "https://www.martiniplaza.nl/nl/zakelijk",
+      "source": "martiniplaza.nl",
+      "discoverySource": "Website",
+      "description": "Zakelijk | Martiniplaza Evenement organiseren in Groningen? Martiniplaza is dé locatie voor congressen, beurzen, evenementen en topsport. Krijg een voorstel op maat voor jouw event Welkom bij Martiniplaza Martiniplaza in Groningen is de grootste en meest gastvrije evenementenlocatie van Noord-Nederland voor congressen,",
+      "cost": "",
+      "image": "https://px.ads.linkedin.com/collect/?pid=2848026&fmt=gif"
+    },
+    {
+      "date": "2026-10-24",
+      "time": "20:00",
       "title": "Fred van Leer - Ik weet het eigenlijk niet",
       "type": "Theater",
-      "location": "Martiniplaza Groningen",
+      "location": "Werken bij Martiniplaza",
       "locationLink": "",
       "website": "https://www.martiniplaza.nl/nl/agenda/fred-van-leer",
       "source": "martiniplaza.nl",
       "discoverySource": "Website",
-      "description": "Show / Entertainment",
+      "description": "Theaterarrangementen Catering & foodbook Reserveer nu je tickets In theaterseizoen 2025/2026 waren alle voorstellingen van ‘Ik weet het eigenlijk niet’ volledig uitverkocht. Mede daarom en voornamelijk omdat hij er zin in heeft, is Fred in seizoen 2026/2027 terug met zijn theatershow ‘Ik weet het eigenlijk niet’.",
       "cost": "",
-      "image": ""
+      "image": "https://static.martiniplaza.nl/cache/fred-van-leer-ik-weet-het-eigenlijk-niet.17309/fred-van-leer-ik-weet-het-eigenlijk-niet-s1920x1080.png"
     },
     {
       "date": "2026-10-24",
-      "time": "",
+      "time": "20:30",
       "title": "Guus Meeuwis",
       "type": "Concert",
-      "location": "Martiniplaza Groningen",
+      "location": "Blijf op de hoogte van alles wat Martiniplaza te bieden heeft. Via onze",
       "locationLink": "",
       "website": "https://www.martiniplaza.nl/nl/agenda/guus-meeuwis",
       "source": "martiniplaza.nl",
       "discoverySource": "Website",
-      "description": "Meer informatie staat op martiniplaza.nl.",
+      "description": "Theaterarrangementen Catering & foodbook Reserveer nu je tickets Van onverwachte hit naar de Nederlandse top Zijn verhaal begint in 1994 als hij uit het niets op #1 in de hitlijsten opduikt met een liedje dat hij in eerste instantie voor zichzelf had willen houden. Per ongeluk in het artiestenvak gerold, maar 32 jaar e",
       "cost": "",
-      "image": ""
+      "image": "https://static.martiniplaza.nl/cache/guus-meeuwis.17367/guus-meeuwis-s1920x1080.png"
+    },
+    {
+      "date": "2026-10-27",
+      "time": "19:30",
+      "title": "Donar Groningen - CSO Voluntari",
+      "type": "Concert",
+      "location": "Binnen Martiniplaza is het uitsluitend mogelijk om met pinpas (cashless) te betalen.",
+      "locationLink": "",
+      "website": "https://www.martiniplaza.nl/nl/agenda/donar-groningen-cso-voluntari-2026",
+      "source": "martiniplaza.nl",
+      "discoverySource": "Website",
+      "description": "Theaterarrangementen Catering & foodbook Reserveer nu je tickets Donar Groningen – CSO Voluntari 2026 Een ‘avondje Donar' is al jaren een begrip in basketbalminnend Nederland! De meervoudig landskampioen wordt iedere wedstrijd in Martiniplaza gesteund door duizenden enthousiaste fans.",
+      "cost": "",
+      "image": "https://static.martiniplaza.nl/cache/donar-groningen-cso-voluntari-2026.16187/donar-groningen-cso-voluntari-2026-s1920x1080.jpg"
     },
     {
       "date": "2026-10-27",
@@ -62,60 +120,88 @@
       "image": ""
     },
     {
-      "date": "2026-10-28",
+      "date": "2026-10-27",
       "time": "",
+      "title": "Martiniplaza",
+      "type": "Concert",
+      "location": "Martiniplaza",
+      "locationLink": "",
+      "website": "https://www.martiniplaza.nl/",
+      "source": "martiniplaza.nl",
+      "discoverySource": "Website",
+      "description": "De leukste evenementen in Groningen beleef je in Martiniplaza: cabaret, theater, dans en show. Bestel je tickets voor een bijzondere avond direct online!",
+      "cost": "",
+      "image": "https://static.martiniplaza.nl/cache/home.9315/home-s1920x1080.jpg"
+    },
+    {
+      "date": "2026-10-28",
+      "time": "20:00",
       "title": "Rob Lamberti - A Celebration of GEORGE MICHAEL",
       "type": "Concert",
-      "location": "Martiniplaza Groningen",
+      "location": "Werken bij Martiniplaza",
       "locationLink": "",
       "website": "https://www.martiniplaza.nl/nl/agenda/rob-lamberti",
       "source": "martiniplaza.nl",
       "discoverySource": "Website",
-      "description": "Meer informatie staat op martiniplaza.nl.",
+      "description": "Theaterarrangementen Catering & foodbook Reserveer nu je tickets Na uitverkochte shows in Nederland en België en een eigen concert in AFAS Live Amsterdam keert Rob Lamberti met live band terug naar de theaters en concertzalen. Hij speelt klassiekers van Wham! en de grootste solohits van George Michael, waaronder",
       "cost": "",
-      "image": ""
+      "image": "https://static.martiniplaza.nl/cache/rob-lamberti-a-celebration-of-george-michael.17310/rob-lamberti-a-celebration-of-george-michael-s1920x1080.png"
     },
     {
       "date": "2026-10-30",
-      "time": "",
+      "time": "20:00",
       "title": "Francis van Broekhuizen - Tosca",
       "type": "Concert",
-      "location": "Martiniplaza Groningen",
+      "location": "Werken bij Martiniplaza",
       "locationLink": "",
       "website": "https://www.martiniplaza.nl/nl/agenda/francis-van-broekhuizen",
       "source": "martiniplaza.nl",
       "discoverySource": "Website",
-      "description": "Meer informatie staat op martiniplaza.nl.",
+      "description": "Theaterarrangementen Catering & foodbook Reserveer nu je tickets De Ukraine Chamber Opera Puccini’s presenteert het meesterwerk met Francis van Broekhuizen in de titelrol. Nederlands bekendste sopraan brengt haar geliefde Tosca tot leven met vocale kracht, dramatische intensiteit en charisma. Francis van Broekhuizen st",
       "cost": "",
-      "image": ""
+      "image": "https://static.martiniplaza.nl/cache/francis-van-broekhuizen-tosca.16911/francis-van-broekhuizen-tosca-s1920x1080-v1.jpg"
     },
     {
       "date": "2026-10-31",
-      "time": "",
+      "time": "20:00",
       "title": "The Dire Straits Experience - “The Long Highway 2026 Tour”",
       "type": "Concert",
-      "location": "Martiniplaza Groningen",
+      "location": "Blijf op de hoogte van alles wat Martiniplaza te bieden heeft. Via onze",
       "locationLink": "",
       "website": "https://www.martiniplaza.nl/nl/agenda/the-dire-straits-experience",
       "source": "martiniplaza.nl",
       "discoverySource": "Website",
-      "description": "Meer informatie staat op martiniplaza.nl.",
+      "description": "Theaterarrangementen Catering & foodbook Reserveer nu je tickets The Dire Straits Experience toert over de hele wereld en wordt door liefhebbers van Dire Straits gezien als dé beste tributeband die de muziek van deze legendarische Engelse popformatie speelt, featuring Chris White (saxofoon) en Terrence Reis (gitaar). D",
       "cost": "",
-      "image": ""
+      "image": "https://static.martiniplaza.nl/cache/the-dire-straits-experience-the-long-highway-2026-.15845/the-dire-straits-experience-the-long-highway-2026--s1920x1080.jpg"
     },
     {
       "date": "2026-11-01",
-      "time": "",
+      "time": "15:00",
       "title": "Juf Braaksel - De Musical",
       "type": "Concert",
-      "location": "Martiniplaza Groningen",
+      "location": "Werken bij Martiniplaza",
       "locationLink": "",
       "website": "https://www.martiniplaza.nl/nl/agenda/juf-braaksel",
       "source": "martiniplaza.nl",
       "discoverySource": "Website",
-      "description": "Meer informatie staat op martiniplaza.nl.",
+      "description": "Theaterarrangementen Catering & foodbook Reserveer nu je tickets Op het eerste gezicht is het een gewone school… Maar niets is wat het lijkt. Een spannend schoolavontuur met Juf Braaksel! Wanneer Lotte, Thijs, Lukas en Milou uit groep 7 ontdekken dat er iets niet klopt met het strenge schoolhoofd Juf Braaksel, besluite",
       "cost": "",
-      "image": ""
+      "image": "https://static.martiniplaza.nl/cache/juf-braaksel-de-musical.17081/juf-braaksel-de-musical-s1920x1080-v1.png"
+    },
+    {
+      "date": "2026-11-03",
+      "time": "12:00 - 21:30",
+      "title": "De Promotiedagen",
+      "type": "Film",
+      "location": "Blijf op de hoogte van alles wat Martiniplaza te bieden heeft. Via onze",
+      "locationLink": "",
+      "website": "https://www.martiniplaza.nl/nl/agenda/promotiedagen-2026",
+      "source": "martiniplaza.nl",
+      "discoverySource": "Website",
+      "description": "Hét #1 zakelijk event van Noord-Nederland!De Promotiedagen is het #1 zakelijk event van Noord-Nederland. Al 39 jaar zijn wij hét event waar het noordelijke bedrijfsleven elkaar ontmoet, elkaar inspireert en zakendoet. We brengen ondernemers samen, ma...",
+      "cost": "",
+      "image": "https://static.martiniplaza.nl/cache/promotiedagen-2026.17542/promotiedagen-2026-s1920x1080.jpg"
     },
     {
       "date": "2026-11-03",
@@ -147,17 +233,17 @@
     },
     {
       "date": "2026-11-05",
-      "time": "",
+      "time": "20:00",
       "title": "TAFKAL: SERIEUS GRAPPIG ( )",
-      "type": "Theater",
-      "location": "Martiniplaza Groningen",
+      "type": "Concert",
+      "location": "Werken bij Martiniplaza",
       "locationLink": "",
       "website": "https://www.martiniplaza.nl/nl/agenda/tafkal-serieus-grappig-uitverkocht",
       "source": "martiniplaza.nl",
       "discoverySource": "Website",
-      "description": "TAFKAL: SERIEUS GRAPPIG (UITVERKOCHT)",
+      "description": "TAFKAL: SERIEUS GRAPPIG (UITVERKOCHT) Theaterarrangementen Catering & foodbook Reserveer nu je tickets TAFKAL: SERIEUS GRAPPIG (UITVERKOCHT) Na 21 jaar zou je zeggen dat The Artists Formerly Knows as Lama's eindelijk volwassen zijn geworden, maar dat lijkt nog een lange weg. Er wordt echter wel hard aan gewerkt. In 202",
       "cost": "",
-      "image": ""
+      "image": "https://static.martiniplaza.nl/cache/tafkal-serieus-grappig-uitverkocht.17302/tafkal-serieus-grappig-uitverkocht-s1920x1080.png"
     },
     {
       "date": "2026-11-06",
@@ -174,6 +260,48 @@
       "image": ""
     },
     {
+      "date": "2026-11-11",
+      "time": "20:00",
+      "title": "TAFKAL - MOST WANTED (2027)",
+      "type": "Film",
+      "location": "een filmmaker",
+      "locationLink": "",
+      "website": "https://www.martiniplaza.nl/nl/agenda/tafkal-most-wanted",
+      "source": "martiniplaza.nl",
+      "discoverySource": "Website",
+      "description": "Theaterarrangementen Catering & foodbook Reserveer nu je tickets De uitverkochte tour van 2026 moet nog beginnen, maar de mannen van Tafkal kondigen alvast aan ook in 2027 op tournee te gaan! Volgend jaar zijn The Artists Formerly Known As Lama's ook weer te zien in Groningen, bij Martiniplaza met de nieuwe show MOST W",
+      "cost": "",
+      "image": "https://static.martiniplaza.nl/cache/tafkal-most-wanted-2027.17012/tafkal-most-wanted-2027-s1920x1080.png"
+    },
+    {
+      "date": "2026-11-12",
+      "time": "20:00",
+      "title": "CATS - Het Meesterwerk",
+      "type": "Concert",
+      "location": "20",
+      "locationLink": "",
+      "website": "https://www.martiniplaza.nl/nl/agenda/cats-het-meesterwerk",
+      "source": "martiniplaza.nl",
+      "discoverySource": "Website",
+      "description": "Theaterarrangementen Catering & foodbook Reserveer nu je tickets Als de avond valt en het museum zijn deuren sluit, ontwaakt een verborgen wereld. De katten komen tevoorschijn voor het jaarlijkse Jellicle Bal: dé nacht waarop alle katten samenkomen voor een magisch en eeuwenoud ritueel. Stap binnen in een verrassend ni",
+      "cost": "",
+      "image": "https://static.martiniplaza.nl/cache/cats-het-meesterwerk.16313/cats-het-meesterwerk-s1920x1080.jpg"
+    },
+    {
+      "date": "2026-11-19",
+      "time": "",
+      "title": "Magazine",
+      "type": "Concert",
+      "location": "Magazine | Martiniplaza",
+      "locationLink": "",
+      "website": "https://www.martiniplaza.nl/nl/magazine",
+      "source": "martiniplaza.nl",
+      "discoverySource": "Website",
+      "description": "Magazine | Martiniplaza Theaterarrangementen Catering & foodbook Nieuws uit Martiniplaza Finale Groninger Ondernemingsprijs Nederlandstalig muziekfeest Hollandse Toppers in Martiniplaza met onder andere Jan Smit, Marco Schuitmaker, John West, Vinzzent en Jeffrey Heesen.",
+      "cost": "Free",
+      "image": "https://px.ads.linkedin.com/collect/?pid=2848026&fmt=gif"
+    },
+    {
       "date": "2026-12-10",
       "time": "",
       "title": "Event Holiday on Ice 10 dec.",
@@ -186,6 +314,20 @@
       "description": "Internationaal Indoor Concours Hippique Groningen 2027 TAFKAL - MOST WANTED (2027)",
       "cost": "",
       "image": ""
+    },
+    {
+      "date": "2026-12-10",
+      "time": "19:30",
+      "title": "Holiday on Ice",
+      "type": "Film",
+      "location": "Werken bij Martiniplaza",
+      "locationLink": "",
+      "website": "https://www.martiniplaza.nl/nl/agenda/holiday-on-ice",
+      "source": "martiniplaza.nl",
+      "discoverySource": "Website",
+      "description": "Theaterarrangementen Catering & foodbook Reserveer nu je tickets Met CINEMA OF DREAMS presenteert Holiday on Ice een nieuwe ijsshow waarin film en live-entertainment samenkomen. Het verhaal speelt zich af in een oud filmtheater dat nieuw leven wordt ingeblazen door drie vrienden die samen besluiten films te maken. Hun",
+      "cost": "",
+      "image": "https://static.martiniplaza.nl/cache/holiday-on-ice.15988/holiday-on-ice-s1920x1080.jpg"
     },
     {
       "date": "2026-12-10",
@@ -228,9 +370,73 @@
       "description": "Internationaal Indoor Concours Hippique Groningen 2027 TAFKAL - MOST WANTED (2027)",
       "cost": "",
       "image": ""
+    },
+    {
+      "date": "2026-12-21",
+      "time": "10:00",
+      "title": "Internationaal Indoor Concours Hippique Groningen 2027",
+      "type": "Theater",
+      "location": "Werken bij Martiniplaza",
+      "locationLink": "",
+      "website": "https://www.martiniplaza.nl/nl/agenda/internationaal-indoor-concours-hippique-groningen-2027",
+      "source": "martiniplaza.nl",
+      "discoverySource": "Website",
+      "description": "Theaterarrangementen Catering & foodbook Reserveer nu je tickets Het evenement brengt nationale en internationale topdressuur en springsport naar Groningen. Het is een unieke kans om niet alleen ervaren ruiters en amazones, maar ook aanstormend jong talent en de beste jonge paarden van dichtbij in actie te zien. Daarna",
+      "cost": "",
+      "image": "https://static.martiniplaza.nl/cache/internationaal-indoor-concours-hippique-groningen-.11525/internationaal-indoor-concours-hippique-groningen--s1920x1080.jpg"
+    },
+    {
+      "date": "2026-12-25",
+      "time": "15:00",
+      "title": "Hans Klok - The Illusionists",
+      "type": "Concert",
+      "location": "Werken bij Martiniplaza",
+      "locationLink": "",
+      "website": "https://www.martiniplaza.nl/nl/agenda/hans-klok-the-illusionists",
+      "source": "martiniplaza.nl",
+      "discoverySource": "Website",
+      "description": "Theaterarrangementen Catering & foodbook Reserveer nu je tickets Na uitverkochte zalen in onder meer New York, Las Vegas en Londen komt eindelijk naar Nederland. Een internationale productie van Cirque du Soleil Entertainment Group - met Hans Klok als centrale kracht in deze exclusieve editie.",
+      "cost": "",
+      "image": "https://static.martiniplaza.nl/cache/hans-klok-the-illusionists.16925/hans-klok-the-illusionists-s1920x1080-v1.jpg"
+    },
+    {
+      "date": "2027-04-10",
+      "time": "20:00",
+      "title": "Ilse DeLange",
+      "type": "Concert",
+      "location": "Werken bij Martiniplaza",
+      "locationLink": "",
+      "website": "https://www.martiniplaza.nl/nl/agenda/ilse-delange",
+      "source": "martiniplaza.nl",
+      "discoverySource": "Website",
+      "description": "Theaterarrangementen Catering & foodbook Reserveer nu je tickets Een avond lang genieten met Ilse DeLange Tijdens deze concerten neemt Ilse het publiek mee langs hoogtepunten uit haar indrukwekkende carrière, aangevuld met nieuw repertoire en persoonlijke verhalen. Fans kunnen zich opmaken voor een concert zoals men da",
+      "cost": "",
+      "image": "https://static.martiniplaza.nl/cache/ilse-delange.17077/ilse-delange-s1920x1080.png"
+    },
+    {
+      "date": "2027-04-14",
+      "time": "20:00",
+      "title": "The Bodyguard - de Musical 2027",
+      "type": "Concert",
+      "location": "Werken bij Martiniplaza",
+      "locationLink": "",
+      "website": "https://www.martiniplaza.nl/nl/agenda/the-bodyguard-de-musical-2027",
+      "source": "martiniplaza.nl",
+      "discoverySource": "Website",
+      "description": "Theaterarrangementen Catering & foodbook Reserveer nu je tickets De tijdloze muziek van Whitney Houston vormt het kloppend hart van deze show. Geniet van wereldhits als I Wanna Dance with Somebody, Greatest Love of All en natuurlijk I Will Always Love You. Tussen liefde en gevaar",
+      "cost": "",
+      "image": "https://static.martiniplaza.nl/cache/the-bodyguard-de-musical-2027.16488/the-bodyguard-de-musical-2027-s1920x1080.jpg"
     }
   ],
-  "siteResults": [],
+  "siteResults": [
+    {
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "count": 30,
+      "newCount": 0,
+      "durationSeconds": 18.33,
+      "timedOut": false
+    }
+  ],
   "rawLog": [
     {
       "source": "Website",
@@ -798,10 +1004,812 @@
       "url": "https://www.martiniplaza.nl/",
       "status": "ok",
       "rawText": "9 events/aanbiedingen op deze pagina"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "link",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/cats-het-meesterwerk",
+      "status": "detail-link gevonden",
+      "rawText": ""
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Donar Groningen – CSO Voluntari 2026",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/donar-groningen-cso-voluntari-2026",
+      "status": "detail-link gevonden",
+      "rawText": "Donar Groningen – CSO Voluntari 2026"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "link",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/francis-van-broekhuizen",
+      "status": "detail-link gevonden",
+      "rawText": ""
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Fred van Leer - Ik weet het eigenlijk niet",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/fred-van-leer",
+      "status": "detail-link gevonden",
+      "rawText": "Fred van Leer - Ik weet het eigenlijk niet"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Guus Meeuwis",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/guus-meeuwis",
+      "status": "detail-link gevonden",
+      "rawText": "Guus Meeuwis"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "link",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/hans-klok-the-illusionists",
+      "status": "detail-link gevonden",
+      "rawText": ""
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Event Holiday on Ice 10 dec.",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/holiday-on-ice",
+      "status": "detail-link gevonden",
+      "rawText": "Event Holiday on Ice 10 dec."
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Muziek Ilse DeLange 10 apr.",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/ilse-delange",
+      "status": "detail-link gevonden",
+      "rawText": "Muziek Ilse DeLange 10 apr."
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Sport Internationaal Indoor Concours Hippique Groningen 2027 21 dec.",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/internationaal-indoor-concours-hippique-groningen-2027",
+      "status": "detail-link gevonden",
+      "rawText": "Sport Internationaal Indoor Concours Hippique Groningen 2027 21 dec."
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "link",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/jethro-tull",
+      "status": "detail-link gevonden",
+      "rawText": ""
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Rob Lamberti - A Celebration of GEORGE MICHAEL",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/rob-lamberti",
+      "status": "detail-link gevonden",
+      "rawText": "Rob Lamberti - A Celebration of GEORGE MICHAEL"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Theater TAFKAL - MOST WANTED (2027) 11 nov.",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/tafkal-most-wanted",
+      "status": "detail-link gevonden",
+      "rawText": "Theater TAFKAL - MOST WANTED (2027) 11 nov."
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "link",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/titanique",
+      "status": "detail-link gevonden",
+      "rawText": ""
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Bekijk 22-10-2026 Finale Groninger Ondernemingsprijs Finale Groninger Ondernemingsprijs op 19 november in Martiniplaza",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/magazine/finale-groninger-ondernemingsprijs",
+      "status": "detail-link gevonden",
+      "rawText": "Bekijk 22-10-2026 Finale Groninger Ondernemingsprijs Finale Groninger Ondernemingsprijs op 19 november in Martiniplaza"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Bekijk 21-10-2026 Hollandse Toppers Nederlandstalig muziekfeest Hollandse Toppers in Martiniplaza met onder andere Jan Smit, Marco Schuitmaker, John West, Vinzzent en Jeffrey Heese",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/magazine/hollandse-toppers",
+      "status": "detail-link gevonden",
+      "rawText": "Bekijk 21-10-2026 Hollandse Toppers Nederlandstalig muziekfeest Hollandse Toppers in Martiniplaza met onder andere Jan Smit, Marco Schuitmaker, John West, Vinzzent en Jeffrey Heesen."
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Bekijk volledige agenda",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda",
+      "status": "detail-link gevonden",
+      "rawText": "Bekijk volledige agenda"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Jouw evenement",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/zakelijk/jouw-evenement",
+      "status": "detail-link gevonden",
+      "rawText": "Jouw evenement"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Meer nieuws",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/magazine",
+      "status": "detail-link gevonden",
+      "rawText": "Meer nieuws"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Eten en Drinken",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/eten-en-drinken",
+      "status": "detail-link gevonden",
+      "rawText": "Eten en Drinken"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Catering & foodbook",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/eten-en-drinken/catering-foodbook",
+      "status": "detail-link gevonden",
+      "rawText": "Catering & foodbook"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Drinks & snacks",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/eten-en-drinken/drinks-snacks",
+      "status": "detail-link gevonden",
+      "rawText": "Drinks & snacks"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Brasserie Loeks",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/eten-en-drinken/loeks",
+      "status": "detail-link gevonden",
+      "rawText": "Brasserie Loeks"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Lunchkaart",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/eten-en-drinken/lunchkaart",
+      "status": "detail-link gevonden",
+      "rawText": "Lunchkaart"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Menukaart",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/eten-en-drinken/menukaart",
+      "status": "detail-link gevonden",
+      "rawText": "Menukaart"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Reserveren",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/eten-en-drinken/reserveren",
+      "status": "detail-link gevonden",
+      "rawText": "Reserveren"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Theaterarrangementen",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/eten-en-drinken/theaterarrangementen",
+      "status": "detail-link gevonden",
+      "rawText": "Theaterarrangementen"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Link naar favorieten",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/favorieten",
+      "status": "detail-link gevonden",
+      "rawText": "Link naar favorieten"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Je bezoek",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/je-bezoek",
+      "status": "detail-link gevonden",
+      "rawText": "Je bezoek"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Bereikbaarheid",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/je-bezoek/bereikbaarheid",
+      "status": "detail-link gevonden",
+      "rawText": "Bereikbaarheid"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Eten en drinken",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/je-bezoek/eten-en-drinken",
+      "status": "detail-link gevonden",
+      "rawText": "Eten en drinken"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Exposities",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/je-bezoek/exposities",
+      "status": "detail-link gevonden",
+      "rawText": "Exposities"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Kaartverkoop",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/je-bezoek/kaartverkoop",
+      "status": "detail-link gevonden",
+      "rawText": "Kaartverkoop"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Theaterbezoek",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/je-bezoek/theaterbezoek",
+      "status": "detail-link gevonden",
+      "rawText": "Theaterbezoek"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Privacyverklaring",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/legal/privacyverklaring",
+      "status": "detail-link gevonden",
+      "rawText": "Privacyverklaring"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Bekijk de mogelijkheden",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/overnachten-in-hartje-groningen",
+      "status": "detail-link gevonden",
+      "rawText": "Bekijk de mogelijkheden"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Zakelijk",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/zakelijk",
+      "status": "detail-link gevonden",
+      "rawText": "Zakelijk"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Onze diensten",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/zakelijk/onze-diensten",
+      "status": "detail-link gevonden",
+      "rawText": "Onze diensten"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Onze zalen",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/zakelijk/onze-zalen",
+      "status": "detail-link gevonden",
+      "rawText": "Onze zalen"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/feed",
+      "status": "fout",
+      "rawText": "HTTP 404"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/rss",
+      "status": "fout",
+      "rawText": "HTTP 404"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/rss.xml",
+      "status": "fout",
+      "rawText": "HTTP 404"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/feed.xml",
+      "status": "fout",
+      "rawText": "HTTP 404"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/events/feed/",
+      "status": "fout",
+      "rawText": "HTTP 404"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/cats-het-meesterwerk",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/donar-groningen-cso-voluntari-2026",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/francis-van-broekhuizen",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/fred-van-leer",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/guus-meeuwis",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/jethro-tull",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/juf-braaksel",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/promotiedagen-2026",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/rob-lamberti",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/tafkal-serieus-grappig-uitverkocht",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/the-bodyguard-de-musical-2027",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/the-dire-straits-experience",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/titanique",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/zakelijk/jouw-evenement",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/eten-en-drinken",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/eten-en-drinken/catering-foodbook",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/eten-en-drinken/drinks-snacks",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/eten-en-drinken/loeks",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/eten-en-drinken/lunchkaart",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/eten-en-drinken/menukaart",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/eten-en-drinken/reserveren",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/eten-en-drinken/theaterarrangementen",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/favorieten",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/je-bezoek",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/je-bezoek/bereikbaarheid",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/je-bezoek/eten-en-drinken",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/je-bezoek/exposities",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/je-bezoek/kaartverkoop",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/je-bezoek/theaterbezoek",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/legal/privacyverklaring",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/zakelijk",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/zakelijk/onze-diensten",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/zakelijk/onze-zalen",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/hans-klok-the-illusionists",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/holiday-on-ice",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/ilse-delange",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/internationaal-indoor-concours-hippique-groningen-2027",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/tafkal-most-wanted",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/magazine/finale-groninger-ondernemingsprijs",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/magazine/hollandse-toppers",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/magazine",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/overnachten-in-hartje-groningen",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Filter",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Datumfilter toegepast",
+      "date": "2026-10-23",
+      "url": "https://www.martiniplaza.nl/nl/agenda",
+      "status": "ok",
+      "rawText": "32 gevonden; 30 binnen 2026-10-23 t/m onbeperkt"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda",
+      "status": "klaar",
+      "rawText": "site 1/1: 30 unieke events in 18.33 sec"
     }
   ],
-  "status": "running",
+  "status": "finishing",
   "lastCompletedSite": "https://www.martiniplaza.nl/nl/agenda",
-  "lastSiteEventCount": 16,
-  "lastUpdatedAt": "2026-10-23T13:36:20+00:00"
+  "lastSiteEventCount": 30,
+  "lastUpdatedAt": "2026-10-23T13:36:20+00:00",
+  "lastCompletedAt": "2026-10-23T13:36:34+00:00"
 }
