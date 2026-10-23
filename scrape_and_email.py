@@ -1141,9 +1141,9 @@ def extract_uitloper_events(html, page_url, site_url, discovery_source):
 
 
 def extract_venue_agenda_events(html, page_url, site_url, discovery_source):
-    """Extract dated event cards from MartiniPlaza and SPOT programme listings."""
+    """Extract dated event cards from supported venue programme listings."""
     host = canonical_host(site_url)
-    if host not in {"martiniplaza.nl", "spotgroningen.nl", "simplon.nl"}:
+    if host not in {"martiniplaza.nl", "spotgroningen.nl", "simplon.nl", "zwolsetheaters.nl"}:
         return []
 
     soup = BeautifulSoup(html, "html.parser")
@@ -1152,6 +1152,8 @@ def extract_venue_agenda_events(html, page_url, site_url, discovery_source):
     for anchor in soup.find_all("a", href=True):
         url = normalized_url(anchor.get("href"), page_url)
         if not url or not same_host(url, site_url) or BAD_URL_RE.search(url):
+            continue
+        if host == "zwolsetheaters.nl" and not re.fullmatch(r"/(?:programma/[^/]+|voorstelling/[^/]+|event/[^/]+)/?", urlparse(url).path, re.I):
             continue
         if host == "martiniplaza.nl" and not re.fullmatch(r"/nl/agenda/[^/]+/?", urlparse(url).path, re.I):
             # Only a single detail slug below /nl/agenda is an event. Never emit the
@@ -1692,8 +1694,10 @@ def scrape_site(site_url, site_index=0, site_total=0, progress_callback=None):
             # detail URLs, then parse each detail page.
             page_events = []
             add_raw("Parser", original_site, "Forum detailstrategie", "", final_url, "strategie", "Overzicht overslaan; alleen /nl/agenda/<event> detailpagina's verwerken")
-        elif canonical_host(normalized_site) == "simplon.nl":
+        elif canonical_host(normalized_site) in {"simplon.nl", "zwolsetheaters.nl"}:
             page_events = extract_venue_agenda_events(html, final_url, normalized_site, "Website")
+            if not page_events and canonical_host(normalized_site) == "zwolsetheaters.nl":
+                page_events = parse_page_events(html, final_url, normalized_site, "Website")
         else:
             page_events = parse_page_events(html, final_url, normalized_site, "Website")
         page_events = dedupe_events(page_events)
