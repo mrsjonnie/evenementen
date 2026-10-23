@@ -1219,7 +1219,7 @@
   </div>
 
   <script>
-    const APP_VERSION = "2026.06.08.19";
+    const APP_VERSION = "2026.10.23.01";
     const DEFAULT_MAX_EVENTS_PER_SITE = 20;
     const DEFAULT_SITE_TIME_LIMIT_SECONDS = 20;
     const SCAN_SETTINGS_KEY = "eventScanSettingsV1";
@@ -2496,7 +2496,7 @@
       filteredEvents.forEach((event) => { const type = displayType(event.type || "Activiteit"); if (!allGroups.has(type)) allGroups.set(type, []); allGroups.get(type).push(event); });
       const visibleKeys = new Set(items.map(eventDedupeKey));
       const entries = [...allGroups.entries()].sort(([a],[b]) => {
-        const rank = (value) => /concert/i.test(value) ? 0 : /theater|theatre/i.test(value) ? 1 : 2;
+        const rank = (value) => /^aanbiedingen$/i.test(value) ? 99 : /concert/i.test(value) ? 0 : /theater|theatre/i.test(value) ? 1 : 2;
         const ar = rank(a), br = rank(b);
         return ar === br ? a.localeCompare(b, "nl") : ar - br;
       });
