@@ -1897,7 +1897,11 @@
       dateFrom = start;
       dateTo = start;
 
-      if (mode === "week") {
+      if (mode === "threeDays") {
+        const end = new Date(startDate);
+        end.setDate(startDate.getDate() + 2);
+        dateTo = formatDate(end);
+      } else if (mode === "week") {
         const end = new Date(startDate);
         end.setDate(startDate.getDate() + 6);
         dateTo = formatDate(end);
@@ -2132,7 +2136,7 @@
         if (radiusKm > 0 && Number.isFinite(eventKm) && eventKm > radiusKm) return false;
         return true;
       });
-      const types = [...new Set(activeEvents.map((event) => displayType(event.type || "").trim()).filter(Boolean))]
+      const types = [...new Set([...activeEvents.map((event) => displayType(event.type || "").trim()).filter(Boolean), "Aanbiedingen"])]
         .sort((a, b) => a.localeCompare(b, "nl"));
 
       $("typeFilter").innerHTML = [
