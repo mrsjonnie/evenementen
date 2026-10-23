@@ -3003,7 +3003,7 @@
         showStatus(`${prefix} Starten mislukt: ${message}.${networkHint}`.trim(), "error");
       } finally {
         activeScanSites = new Set();
-        renderSites();
+        renderSites(new Set(selectedSites));
         setBusy(button, false);
       }
     }
