@@ -1110,8 +1110,8 @@
             <span class="versionBadge" id="versionBadge">Versie wordt geladen</span>
             <div class="status" id="status" aria-live="polite"></div>
             <div class="scanSettings" aria-label="Scaninstellingen">
-              <label class="scanSetting" for="maxEventsPerSite">Events <input id="maxEventsPerSite" type="number" min="1" max="100" step="1" value="20" inputmode="numeric"> <small>zoeken per geselecteerde website</small></label>
-              <label class="scanSetting" for="siteTimeLimitSeconds">Sec <input id="siteTimeLimitSeconds" type="number" min="3" max="60" step="1" value="20" inputmode="numeric"> <small>zoeken per geselecteerde website</small></label>
+              <label class="scanSetting" for="maxEventsPerSite">Max. resultaten <input id="maxEventsPerSite" type="number" min="1" max="100" step="1" value="20" inputmode="numeric" title="Maximum aantal resultaten per geselecteerde website"> <small>per website</small></label>
+              <label class="scanSetting" for="siteTimeLimitSeconds">Max. sec. <input id="siteTimeLimitSeconds" type="number" min="3" max="60" step="1" value="20" inputmode="numeric" title="Maximum zoektijd per geselecteerde website in seconden"> <small>per website</small></label>
             </div>
           </div>
           <details class="rawLogPanel" id="rawLogPanel">
@@ -3040,7 +3040,8 @@
       const category = $("typeFilter").value === "all" ? "" : $("typeFilter").value;
       let previousProgress = null;
       try { previousProgress = await fetchScrapeProgress(); } catch {}
-      showStatus(`Scrape voorbereiden: ${selectedSites.length} websites geselecteerd. De scraper verwerkt ze één voor één; de voortgang verschijnt per afgeronde website.`, "warn");
+      const totalWaitSeconds = scanSettings.siteTimeLimitSeconds * selectedSites.length;
+      showStatus(`Scrape voorbereiden: ${selectedSites.length} websites geselecteerd. Per website maximaal ${scanSettings.maxEventsPerSite} resultaten en ${scanSettings.siteTimeLimitSeconds} seconden. De totale controlelimiet is ${totalWaitSeconds} seconden (${Math.round(totalWaitSeconds / 60 * 10) / 10} min); voortgang wordt iedere seconde gecontroleerd.`, "warn");
       const payload = {
         region: $("region").value.trim(),
         radius: radiusPayloadValue(),
@@ -3081,7 +3082,6 @@
         const rateLimited = workerRows.some((row) => /429|rate.?limit|rate_limited/i.test(JSON.stringify(row)));
         const rateLimitNote = rateLimited ? " Een AI-/zoekbron meldt HTTP 429 (rate limit); die bron heeft tijdelijk te veel verzoeken ontvangen." : "";
         showStatus(`Verversverzoek geaccepteerd. ${prefix}${rateLimitNote} Ik controleer of events.json echt wordt bijgewerkt.`, "warn", { stop: true });
-        const totalWaitSeconds = scanSettings.siteTimeLimitSeconds * selectedSites.length;
         await waitForUpdatedEvents(previousSignature, previousKeys, foundCount, { intervalMs: 1000, maxAttempts: totalWaitSeconds, previousProgressRunId: previousProgress?.runId || "", lastProgressCount: 0, lastProgressSignature: "" });
       } catch (error) {
         const prefix = Number.isFinite(foundCount) ? `${foundText(foundCount)} gevonden.` : "";
