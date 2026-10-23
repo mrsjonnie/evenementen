@@ -2966,7 +2966,8 @@
     $("prevPage").addEventListener("click", () => { currentPage -= 1; render(); window.scrollTo({ top: 0, behavior: "smooth" }); });
     $("nextPage").addEventListener("click", () => { currentPage += 1; render(); window.scrollTo({ top: 0, behavior: "smooth" }); });
     $("allSitesBtn").addEventListener("click", () => {
-      document.querySelectorAll(".siteCheck").forEach((check) => { check.checked = true; });
+      document.querySelectorAll(".siteCheck, .aiSourceCheck").forEach((check) => { check.checked = true; });
+      document.querySelectorAll(".aiSourceCheck").forEach((check) => { const target = $(check.dataset.provider); if (target) target.checked = true; });
       updateSiteCount();
       applyFilters();
     });
