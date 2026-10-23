@@ -1163,7 +1163,7 @@ def extract_venue_agenda_events(html, page_url, site_url, discovery_source):
         url = normalized_url(anchor.get("href"), page_url)
         if not url or not same_host(url, site_url) or BAD_URL_RE.search(url):
             continue
-        if host == "zwolsetheaters.nl" and not re.fullmatch(r"/(?:programma/[^/]+|voorstellingen?/[^/]+|events?/[^/]+|agenda/[^/]+)/?", urlparse(url).path, re.I):
+        if host == "zwolsetheaters.nl" and not re.fullmatch(r"/(?:programma/.+|voorstellingen?/[^/]+|events?/[^/]+|agenda/[^/]+)/?", urlparse(url).path, re.I):
             continue
         if host == "martiniplaza.nl" and not re.fullmatch(r"/nl/agenda/[^/]+/?", urlparse(url).path, re.I):
             # Only a single detail slug below /nl/agenda is an event. Never emit the
@@ -1398,7 +1398,7 @@ def start_urls_for_site(site_url):
     if host == "groupon.nl":
         base = f"{parsed.scheme}://{parsed.netloc}"
         return unique_urls([
-            urljoin(base, "/"), urljoin(base, "/deal/"),
+            urljoin(base, "/"), urljoin(base, "/kortingsbonnen"), urljoin(base, "/deal/"),
             urljoin(base, "/best-deals/"), urljoin(base, "/local/"),
         ])
     if host == "simplon.nl":
@@ -1754,7 +1754,7 @@ def extract_groupon_offers(html, page_url, site_url):
             if not href or canonical_host(href) != "groupon.nl" or BAD_URL_RE.search(href):
                 continue
             text = clean_text(card.get_text(" ", strip=True))
-            if len(text) < 20 or len(text) > 1600 or not re.search(r"(?:€\\s*\\d|\\d+[,.]\\d{2}\\s*€)", text):
+            if len(text) < 20 or len(text) > 1600 or not re.search(r"(?:€\s*\d|\d+[,.]\d{2}\s*€)", text):
                 continue
             title_node = card.select_one("h1, h2, h3, h4, [class*='title'], [class*='name']")
             title = clean_title(title_node.get_text(" ", strip=True) if title_node else anchor.get_text(" ", strip=True))
@@ -2018,12 +2018,14 @@ def scrape_site(site_url, site_index=0, site_total=0, progress_callback=None):
             add_raw("Parser", original_site, "Visit Groningen detailstrategie", "", final_url, "strategie",
                     "Overzicht overslaan; alleen detail-URL's met /evenementen/<slug> verwerken")
         elif canonical_host(normalized_site) == "zwolsetheaters.nl":
-            # Alternative to the old card parser: structured Event JSON-LD,
-            # semantic links and detail-page crawling. Do not infer event records
-            # from large visual-card ancestors on the overview page.
-            page_events = parse_page_events(html, final_url, normalized_site, "Website")
-            add_raw("Parser", original_site, "Zwolse alternatieve parser", "", final_url, "strategie",
-                    "JSON-LD + semantische links + detailpagina's; oude kaartparser overgeslagen")
+            # Zwolse's listing uses nested /programma/<season>/<slug> detail URLs
+            # and date text in the surrounding card, not reliable Event JSON-LD.
+            # Parse the listing cards directly, then crawl discovered detail pages.
+            page_events = extract_venue_agenda_events(html, final_url, normalized_site, "Website")
+            if not page_events:
+                page_events = parse_page_events(html, final_url, normalized_site, "Website")
+            add_raw("Parser", original_site, "Zwolse programma-parser", "", final_url, "strategie",
+                    "Programma-kaarten met datums + geneste detail-URL's; JSON-LD/generieke parser als fallback")
         elif canonical_host(normalized_site) == "simplon.nl":
             page_events = extract_venue_agenda_events(html, final_url, normalized_site, "Website")
         else:
