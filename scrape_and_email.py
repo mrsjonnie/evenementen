@@ -707,7 +707,7 @@ def normalize_event(raw, site_url):
     if not title_is_usable(title) or not event_date or not website:
         return None
 
-    location = clean_text(raw.get("location") or "") or host_default_location(site_url)
+    location = "Amsterdam" if canonical_host(site_url).endswith("paradiso.nl") else (clean_text(raw.get("location") or "") or host_default_location(site_url))
     event_type = classify_type(" ".join([raw.get("type", ""), title, raw.get("description", ""), location]), canonical_host(site_url))
     discovery_source = clean_text(raw.get("discoverySource") or "Website")
     description = compact(raw.get("description") or "", 420)
