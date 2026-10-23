@@ -965,6 +965,40 @@
       .pagination .btn { width: auto; }
       .confirmActions { flex-direction: column-reverse; }
     }
+    
+    /* Compacte filterzijbalk in de normale pagina-indeling; geen overlay. */
+    [hidden] { display: none !important; }
+    .pageLayout { display: grid; grid-template-columns: minmax(0, 1fr); gap: 12px; align-items: start; }
+    .pageLayout.sidebarOpen { grid-template-columns: 248px minmax(0, 1fr); }
+    .contentArea { min-width: 0; }
+    .filterSidebarToggle { min-height: 34px; padding: 0 11px; }
+    .filterSidebar {
+      width: 248px;
+      min-width: 0;
+      padding: 10px;
+      position: sticky;
+      top: 12px;
+      z-index: 1;
+      max-height: calc(100vh - 24px);
+      overflow-y: auto;
+    }
+    .filterSidebar .filters { grid-template-columns: minmax(0, 1fr); gap: 7px; }
+    .filterSidebar .field label, .filterSidebar .siteSelectLabel { margin-bottom: 3px; font-size: .74rem; }
+    .filterSidebar input, .filterSidebar select { height: 34px; padding: 0 8px; font-size: .82rem; }
+    .filterSidebar .btn { min-height: 34px; padding: 0 9px; font-size: .78rem; }
+    .filterSidebar .secondRow { flex-direction: column; align-items: stretch; gap: 7px; padding-top: 8px; }
+    .filterSidebar .sourcePickers { display: grid; grid-template-columns: minmax(0, 1fr); gap: 8px; width: 100%; }
+    .filterSidebar .inlineTools { display: grid; grid-template-columns: minmax(0, 1fr); gap: 6px; width: 100%; }
+    .filterSidebar .inlineTools > *, .filterSidebar #clearBtn { width: 100%; }
+    .filterSidebar .sitePanel { position: static; top: auto; left: auto; right: auto; margin-top: 5px; box-shadow: none; }
+    .filterSidebar .sitePanelHeader { padding: 7px 8px; font-size: .72rem; }
+    .filterSidebar .siteList { max-height: 180px; padding: 6px; }
+    .filterSidebar .siteList label { padding: 6px; font-size: .76rem; }
+    .filterSidebar .rawLogPanel { margin-top: 8px; }
+    @media (max-width: 900px) {
+      .pageLayout.sidebarOpen { grid-template-columns: minmax(0, 1fr); }
+      .filterSidebar { width: auto; max-height: none; position: static; }
+    }
   </style>
 </head>
 <body>
@@ -986,21 +1020,23 @@
               <label class="scanSetting" for="siteTimeLimitSeconds">Sec <input id="siteTimeLimitSeconds" type="number" min="20" max="60" step="1" value="20" inputmode="numeric"></label>
             </div>
           </div>
+          <details class="rawLogPanel" id="rawLogPanel">
+            <summary id="rawLogSummary">Ruwe verversdata</summary>
+            <div class="rawLogTableWrap" id="rawLogTableWrap"></div>
+          </details>
         </div>
       </div>
       <div class="heroSide">
         <div class="weather" id="weatherBox" aria-live="polite"></div>
         <div class="status" id="status" aria-live="polite"></div>
+        <button class="btn btnSecondary filterSidebarToggle" id="filterSidebarToggle" type="button" aria-controls="filterSidebar" aria-expanded="false">Filters tonen</button>
       </div>
-      <details class="rawLogPanel" id="rawLogPanel">
-        <summary id="rawLogSummary">Ruwe verversdata</summary>
-        <div class="rawLogTableWrap" id="rawLogTableWrap"></div>
-      </details>
     </div>
   </header>
 
   <main>
-    <section class="toolbar" aria-label="Filters">
+    <div class="pageLayout" id="pageLayout">
+    <aside class="toolbar filterSidebar" id="filterSidebar" aria-label="Filters" hidden>
       <div class="filters">
         <div class="field">
           <label for="search">Zoeken</label>
@@ -1090,8 +1126,9 @@
         <button class="btn btnDanger" id="clearBtn" type="button">Alles verwijderen</button>
       </div>
 
-    </section>
+    </aside>
 
+    <div class="contentArea">
       <div class="summary">
         <strong id="count">Evenementen laden...</strong>
         <span id="filterBreakdown"></span>
@@ -1114,6 +1151,8 @@
         </select>
       </label>
     </nav>
+    </div>
+    </div>
   </main>
 
   <div class="confirmOverlay" id="clearConfirm" role="dialog" aria-modal="true" aria-labelledby="clearConfirmTitle">
@@ -2983,6 +3022,15 @@
 
     $("providerButton").addEventListener("click", () => toggleSelect("providerSelect", "providerButton"));
     $("siteButton").addEventListener("click", () => toggleSelect("siteSelect", "siteButton"));
+    $("filterSidebarToggle").addEventListener("click", () => {
+      const sidebar = $("filterSidebar");
+      const layout = $("pageLayout");
+      const isOpen = sidebar.hidden;
+      sidebar.hidden = !isOpen;
+      layout.classList.toggle("sidebarOpen", isOpen);
+      $("filterSidebarToggle").setAttribute("aria-expanded", String(isOpen));
+      $("filterSidebarToggle").textContent = isOpen ? "Filters verbergen" : "Filters tonen";
+    });
     $("titleToggle").addEventListener("click", () => {
       const panel = $("titlePanel");
       const isOpen = panel.classList.toggle("open");
