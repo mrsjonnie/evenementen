@@ -531,7 +531,16 @@
     .siteList span {
       overflow-wrap: anywhere;
     }
-    .customSiteAdder { display:none; padding:10px; border-top:1px solid var(--line); background:#101925; }\n    .customSiteAdder.open { display:block; }
+    .customSiteAdder { display:none; grid-column:1 / -1; width:100%; box-sizing:border-box; margin:0; padding:10px; border:1px solid var(--line); border-radius:10px; background:var(--surface); }
+    .customSiteAdder.open { display:block; }
+    .sidebarButtonRows { display:grid; grid-column:1 / -1; gap:8px; margin-top:10px; min-width:0; }
+    .sidebarPrimaryButtons, .sidebarDataButtons { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px; min-width:0; }
+    .sidebarButtonRows .btn { width:100%; min-width:0; min-height:40px; padding:7px 9px; line-height:1.2; white-space:normal; }
+    #toggleCustomSiteBtn { background:#7c3aed; border-color:#6d28d9; color:#fff; font-weight:850; }
+    #toggleCustomSiteBtn:hover { background:#6d28d9; border-color:#5b21b6; }
+    #deleteDataBtn { background:#c92a2a; border-color:#b42323; color:#fff; font-weight:900; }
+    #deleteDataBtn:hover { background:#a61e1e; border-color:#8f1b1b; }
+    @media (max-width:360px) { .sidebarPrimaryButtons, .sidebarDataButtons { grid-template-columns:minmax(0,1fr); } }
     .customSiteRow { display:grid; grid-template-columns:minmax(0,1fr) auto; gap:6px; align-items:center; }
     .customSiteRow input { height:38px; font-size:.82rem; }
     .customSiteRow .btn { min-height:38px; padding:0 10px; }
@@ -1194,13 +1203,14 @@
         <div class="inlineTools">
           <input type="checkbox" id="newOnlyFilter" hidden>
           <button class="btn btnSecondary filterToggle" id="newOnlyToggle" type="button" aria-pressed="false" hidden>Alleen nieuw <span id="newCountBadge">0</span></button>
-          <button class="btn btnSecondary" id="toggleCustomSiteBtn" type="button" aria-expanded="false">Toevoegen</button>
+          <button class="btn btnSecondary" id="toggleCustomSiteBtn" type="button" aria-expanded="false">Toevoegen URL</button>
           <button class="btn btnSecondary" id="clearBtn" type="button">Ververs data</button>
         </div>
       </div>
       <div class="sidebarActionButtons">
-        <button class="btn btnSecondary" id="refreshBtn" type="button">Ververs data</button>
-        <button class="btn btnSecondary" id="resetBtn" type="button">Alleen nieuw</button>
+        <button class="btn btnSecondary" id="refreshBtn" type="button" hidden>Ververs data</button>
+        <button class="btn btnSecondary" id="resetBtn" type="button">Reset filter</button>
+        <button class="btn btnDanger" id="deleteDataBtn" type="button">Verwijderen data</button>
       </div>
 
     </aside>
@@ -3012,7 +3022,7 @@
       if (!await askClearConfirmation()) return;
 
       updateDateRange();
-      const button = $("clearBtn");
+      const button = $("deleteDataBtn");
       const scanSettings = saveScanSettings();
       const refreshWindow = refreshDateWindow();
       const selectedSites = selectedScanSites();
@@ -3247,11 +3257,8 @@
     });
     $("refreshBtn").addEventListener("click", refreshEvents);
     $("clearBtn").addEventListener("click", refreshEvents);
-    $("resetBtn").addEventListener("click", () => {
-      $("newOnlyFilter").checked = !$("newOnlyFilter").checked;
-      $("newOnlyFilter").dispatchEvent(new Event("change", { bubbles: true }));
-      updateNewCount();
-    });
+    $("resetBtn").addEventListener("click", resetFilters);
+    $("deleteDataBtn").addEventListener("click", clearAllEvents);
     $("collapseBtn").addEventListener("click", toggleCardsCollapsed);
     $("mapSearchBtn").addEventListener("click", () => {
       const region = cleanText($("region").value || "Groningen");
@@ -3434,17 +3441,30 @@
       $("filterSidebarToggle").textContent = isOpen ? "Filters verbergen" : "Filters tonen";
     }
     $("filterSidebarToggle").addEventListener("click", () => setSidebarOpen($("filterSidebar").hidden));
-    // Bronnen staan direct onder Periode; verversen, resetten en verwijderen blijven bij elkaar.
+    // Ordeneer de acties in twee vaste rijen en plaats het URL-invoerveld direct onder de knop.
     const filterGrid = document.querySelector(".filters");
     filterGrid.appendChild($("siteSelect"));
     const customSiteAdder = $("customSiteAdder");
     const sidebarActions = document.querySelector(".sidebarActionButtons");
-    if (customSiteAdder && sidebarActions) sidebarActions.insertAdjacentElement("afterend", customSiteAdder);
+    const inlineTools = $("toggleCustomSiteBtn").parentElement;
+    const buttonRows = document.createElement("div");
+    buttonRows.className = "sidebarButtonRows";
+    const primaryButtons = document.createElement("div");
+    primaryButtons.className = "sidebarPrimaryButtons";
+    const dataButtons = document.createElement("div");
+    dataButtons.className = "sidebarDataButtons";
+    primaryButtons.append($("toggleCustomSiteBtn"), $("resetBtn"));
+    dataButtons.append($("clearBtn"), $("deleteDataBtn"));
+    filterGrid.insertAdjacentElement("afterend", buttonRows);
+    buttonRows.append(primaryButtons);
+    if (customSiteAdder) buttonRows.append(customSiteAdder);
+    buttonRows.append(dataButtons);
+    inlineTools.hidden = true;
+    if (sidebarActions) sidebarActions.hidden = true;
     $("siteSelect").style.gridColumn = "1 / -1";
     $("siteSelect").style.marginTop = "2px";
-    if (customSiteAdder) customSiteAdder.style.gridColumn = "1 / -1";
+    $("toggleCustomSiteBtn").textContent = "Toevoegen URL";
     $("clearBtn").textContent = "Ververs data";
-    $("clearBtn").style.width = "auto";
     const savedSidebarWidth = Number(localStorage.getItem("eventsSidebarWidth"));
     const initialSidebarWidth = Number.isFinite(savedSidebarWidth) && savedSidebarWidth >= 220 && savedSidebarWidth <= 520 ? savedSidebarWidth : 248;
     $("pageLayout").style.setProperty("--sidebar-width", initialSidebarWidth + "px");
