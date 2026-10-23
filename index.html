@@ -972,6 +972,7 @@
     .pageLayout.sidebarOpen { grid-template-columns: 248px minmax(0, 1fr); }
     .contentArea { min-width: 0; }
     .filterSidebarToggle { min-height: 34px; padding: 0 11px; align-self:flex-start; }
+    #providerSelect { display:none!important; }
     .eventGroup { grid-column:1 / -1; min-width:0; }
     .eventGroupHeader { display:flex; width:100%; margin:8px 0 10px; padding:10px 12px; border:1px solid var(--line); border-left:4px solid var(--primary); border-radius:var(--radius); background:var(--surface-soft); color:var(--ink); text-align:left; font-weight:950; cursor:pointer; }
     .eventGroupHeader small { margin-left:auto; color:var(--muted); }
@@ -1476,10 +1477,12 @@
     }
 
     function mergeVerifiedEvents(items) {
-      const merged = dedupeEvents(items || []);
+      const merged = dedupeEvents(items || []).map((event) => {
+        const host = hostFromUrl(event.website);
+        return /(^|\.)(socialdeal\.nl|groupon\.nl|ibood\.com)$/.test(host) ? { ...event, type: "Aanbiedingen" } : event;
+      });
       return merged.filter((event) => !deletedEventKeys.has(eventDedupeKey(event)));
     }
-
     function isNewEvent(event) {
       return Boolean(event?.isNew || event?.new || newEventKeys.has(eventDedupeKey(event)));
     }
