@@ -186,6 +186,8 @@
       height: 0;
     }
 
+    .versionStatusRow { display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin-top:7px; min-height:25px; }
+    .versionStatusRow .status { max-width:min(720px, 100%); }
     .versionBadge {
       display: inline-flex;
       align-items: center;
@@ -1109,10 +1111,9 @@
           </button>
         </h1>
         <p class="subtitle" id="pageSubtitle">Vind snel wat er te doen is, filter op datum en type, en ververs de lijst wanneer je nieuwe resultaten wilt ophalen.</p>
+        <div class="versionStatusRow"><span class="versionBadge" id="versionBadge">Versie wordt geladen</span><div class="status" id="status" aria-live="polite"></div></div>
         <div class="titlePanel" id="titlePanel">
           <div class="titlePanelContent">
-            <span class="versionBadge" id="versionBadge">Versie wordt geladen</span>
-            <div class="status" id="status" aria-live="polite"></div>
             <div class="scanSettings" aria-label="Scaninstellingen">
               <label class="scanSetting" for="maxEventsPerSite">Events <input id="maxEventsPerSite" type="number" min="20" max="100" step="1" value="60" inputmode="numeric"></label>
               <label class="scanSetting" for="siteTimeLimitSeconds">Sec <input id="siteTimeLimitSeconds" type="number" min="20" max="60" step="1" value="45" inputmode="numeric"></label>
@@ -1273,7 +1274,7 @@
   </div>
 
   <script>
-    const APP_VERSION = "2026.10.23.7";
+    const APP_VERSION = "2026.10.23.8";
     const DEFAULT_MAX_EVENTS_PER_SITE = 60;
     const DEFAULT_SITE_TIME_LIMIT_SECONDS = 45;
     const SCAN_SETTINGS_KEY = "eventScanSettingsV2";
