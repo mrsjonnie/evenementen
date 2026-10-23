@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-23T13:25:18+00:00",
+  "updatedAt": "2026-10-23T13:26:36+00:00",
   "events": [
     {
       "date": "2026-10-23",
@@ -801,16 +801,16 @@
       "date": "2026-12-18",
       "time": "",
       "title": "Tramhaus",
-      "type": "Concert",
+      "type": "Activiteit",
       "location": "VERA Groningen",
       "locationLink": "",
       "website": "https://www.vera-groningen.nl/?post_type=events&p=152859&lang=nl",
       "source": "vera-groningen.nl",
       "discoverySource": "Website",
-      "description": "FRIDAY SHOW Friday 18 December Tramhaus support Raw postpunk from Rotterdam In 2023 wonnen ze de VERA Poll, en ook in 2026 blijft deze band een vaste publieksfavoriet. Lees meer Koop ticket",
+      "description": "Friday 18 December Tramhaus support Koop ticket",
       "cost": "",
       "image": "https://www.vera-groningen.nl/wp/../vera/assets/img/logo-black.svg",
-      "isNew": true
+      "isNew": false
     },
     {
       "date": "2027-01-08",
@@ -921,16 +921,16 @@
       "date": "2027-02-15",
       "time": "",
       "title": "Madra Salach IRL",
-      "type": "Activiteit",
+      "type": "Concert",
       "location": "VERA Groningen",
       "locationLink": "",
       "website": "https://www.vera-groningen.nl/?post_type=events&p=154849&lang=nl",
       "source": "vera-groningen.nl",
       "discoverySource": "Website",
-      "description": "Monday 15 February Madra Salach IRL support Koop ticket",
+      "description": "Monday 15 February Madra Salach IRL support Raw Irish folk Madra Salach (Iers voor ‘vuile hond’) is een zeskoppige band uit Dublin die traditionele Ierse folk meesleurt... Lees meer Koop ticket",
       "cost": "",
       "image": "https://www.vera-groningen.nl/wp/../vera/assets/img/logo-black.svg",
-      "isNew": true
+      "isNew": false
     },
     {
       "date": "2027-02-17",
@@ -990,7 +990,7 @@
       "description": "Wednesday 3 March BODEGA USA support Snarky and energetic artrock De New Yorkse artrockband BODEGA werd in 2016 gevormd uit de resten van het... Lees meer Koop ticket",
       "cost": "",
       "image": "https://www.vera-groningen.nl/wp/../vera/assets/img/logo-black.svg",
-      "isNew": true
+      "isNew": false
     },
     {
       "date": "2027-03-05",
@@ -1095,7 +1095,7 @@
       "description": "Saturday 10 April Black Marble USA support Gloomy synthpop and hooky cold wave Black Marble is het project van Chris Stewart, waarin cold wave, minimal synth, postpunk... Lees meer Koop ticket",
       "cost": "",
       "image": "https://www.vera-groningen.nl/wp/../vera/assets/img/logo-black.svg",
-      "isNew": true
+      "isNew": false
     },
     {
       "date": "2027-04-10",
@@ -1185,7 +1185,7 @@
       "description": "Friday 14 May Codeine USA support Early slowcore pioneers Weinig bands laten traagheid zo krachtig klinken als Codeine. Voor de vijfde keer staat... Lees meer Koop ticket",
       "cost": "",
       "image": "https://www.vera-groningen.nl/wp/../vera/assets/img/logo-black.svg",
-      "isNew": true
+      "isNew": false
     },
     {
       "date": "2027-05-14",
@@ -1223,8 +1223,8 @@
     {
       "site": "https://www.vera-groningen.nl/",
       "count": 25,
-      "newCount": 5,
-      "durationSeconds": 1.99,
+      "newCount": 0,
+      "durationSeconds": 2.28,
       "timedOut": false
     }
   ],
@@ -1452,16 +1452,7 @@
       "date": "",
       "url": "https://www.vera-groningen.nl/?lang=nl",
       "status": "ok",
-      "rawText": "75985 tekens HTML"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.vera-groningen.nl/",
-      "title": "Madra Salach IRL",
-      "date": "2027-02-15",
-      "url": "https://www.vera-groningen.nl/?post_type=events&p=154849&lang=nl",
-      "status": "VERA agenda-item",
-      "rawText": "Monday 15 February Madra Salach IRL support Koop ticket"
+      "rawText": "75850 tekens HTML"
     },
     {
       "source": "Website",
@@ -1470,7 +1461,7 @@
       "date": "2026-12-18",
       "url": "https://www.vera-groningen.nl/?post_type=events&p=152859&lang=nl",
       "status": "VERA agenda-item",
-      "rawText": "FRIDAY SHOW Friday 18 December Tramhaus support Raw postpunk from Rotterdam In 2023 wonnen ze de VERA Poll, en ook in 2026 blijft deze band een vaste publieksfavoriet. Lees meer Koop ticket"
+      "rawText": "Friday 18 December Tramhaus support Koop ticket"
     },
     {
       "source": "Website",
@@ -1480,6 +1471,15 @@
       "url": "https://www.vera-groningen.nl/?post_type=events&p=154770&lang=nl",
       "status": "VERA agenda-item",
       "rawText": "Wednesday 3 March BODEGA USA support Snarky and energetic artrock De New Yorkse artrockband BODEGA werd in 2016 gevormd uit de resten van het... Lees meer Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Madra Salach IRL",
+      "date": "2027-02-15",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=154849&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Monday 15 February Madra Salach IRL support Raw Irish folk Madra Salach (Iers voor ‘vuile hond’) is een zeskoppige band uit Dublin die traditionele Ierse folk meesleurt... Lees meer Koop ticket"
     },
     {
       "source": "Website",
@@ -1569,7 +1569,7 @@
       "date": "",
       "url": "https://www.vera-groningen.nl/",
       "status": "klaar",
-      "rawText": "site 1/1: 25 unieke events in 1.99 sec"
+      "rawText": "site 1/1: 25 unieke events in 2.28 sec"
     }
   ]
 }
