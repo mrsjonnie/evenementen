@@ -504,15 +504,16 @@
 
     .siteList label {
       display: grid;
-      grid-template-columns: 12px minmax(0, 1fr);
-      gap: 2px;
+      grid-template-columns: 14px minmax(0, 1fr);
+      column-gap: 7px;
+      row-gap: 0;
       align-items: center;
       padding: 0 2px;
       border-radius: var(--radius);
       color: var(--ink);
-      font-size: .72rem;
+      font-size: .70rem;
       font-weight: 650;
-      line-height: .95;
+      line-height: .90;
     }
 
     .siteList label:hover { background: var(--surface-soft); }
@@ -557,7 +558,7 @@
     .customSiteAdder { display:none; grid-column:1 / -1; width:100%; box-sizing:border-box; margin:0; padding:10px; border:1px solid var(--line); border-radius:10px; background:var(--surface); }
     .customSiteAdder.open { display:block; }
     .sidebarButtonRows { display:grid; grid-column:1 / -1; gap:8px; margin-top:10px; min-width:0; }
-    .sidebarPrimaryButtons, .sidebarDataButtons { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px; min-width:0; }
+    .sidebarPrimaryButtons, .sidebarDataButtons { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:8px; min-width:0; }
     .sidebarButtonRows .btn { width:100%; min-width:0; min-height:40px; padding:7px 9px; line-height:1.2; white-space:normal; }
     #toggleCustomSiteBtn { background: var(--surface-soft); border: 1px solid var(--line); color: var(--primary-dark); font-weight: 850; }
     #toggleCustomSiteBtn:hover { background: var(--surface); border-color: var(--primary); }
@@ -1226,7 +1227,7 @@
 
         <div class="inlineTools">
           <input type="checkbox" id="newOnlyFilter" hidden>
-          <button class="btn btnSecondary filterToggle" id="newOnlyToggle" type="button" aria-pressed="false" hidden>Alleen nieuw <span id="newCountBadge">0</span></button>
+          <button class="btn btnSecondary filterToggle" id="newOnlyToggle" type="button" aria-pressed="false">Nieuw <span id="newCountBadge">0</span></button>
           <button class="btn btnSecondary" id="toggleCustomSiteBtn" type="button" aria-expanded="false">Toevoegen URL</button>
           <button class="btn btnSecondary" id="clearBtn" type="button">Ververs data</button>
         </div>
@@ -1284,7 +1285,7 @@
   </div>
 
   <script>
-    const APP_VERSION = "2026.10.23.18";
+    const APP_VERSION = "2026.10.23.19";
     const DEFAULT_MAX_EVENTS_PER_SITE = 20;
     const DEFAULT_SITE_TIME_LIMIT_SECONDS = 20;
     const SCAN_SETTINGS_KEY = "eventScanSettingsV1";
@@ -1350,7 +1351,7 @@
       "https://www.kultuuragenda.nl/",
       "https://www.noorderzon.nl/",
       "https://www.concertgebouw.nl",
-      "https://www.hedon-zwolle.nl",
+      "https://www.zwolsetheaters.nl/programma",
       "https://www.paradiso.nl",
       "https://www.vvvameland.nl/activiteiten-en-evenementen",
       "https://www.socialdeal.nl/",
@@ -2799,7 +2800,7 @@
         "simplon.nl":"poppodium en clubnachten in Groningen",
         "paradiso.nl":"concerten en culturele programma’s in Amsterdam",
         "concertgebouw.nl":"klassieke muziek en concerten in Amsterdam",
-        "hedon-zwolle.nl":"concerten en evenementen in Zwolle",
+        "zwolsetheaters.nl":"concerten en evenementen in Zwolle",
         "martiniplaza.nl":"concerten, theater en grote evenementen in Groningen",
         "groningermuseum.nl":"tentoonstellingen en museumactiviteiten",
         "visitgroningen.nl":"uitjes en evenementen in Groningen",
@@ -3563,7 +3564,7 @@
     primaryButtons.className = "sidebarPrimaryButtons";
     const dataButtons = document.createElement("div");
     dataButtons.className = "sidebarDataButtons";
-    primaryButtons.append($("toggleCustomSiteBtn"), $("resetBtn"));
+    primaryButtons.append($("toggleCustomSiteBtn"), $("resetBtn"), $("newOnlyToggle"));
     dataButtons.append($("clearBtn"), $("deleteDataBtn"));
     filterGrid.insertAdjacentElement("afterend", buttonRows);
     buttonRows.append(primaryButtons);
