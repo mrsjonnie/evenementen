@@ -1157,7 +1157,7 @@ def extract_venue_agenda_events(html, page_url, site_url, discovery_source):
                     numeric_date = re.search(numeric_pattern, candidate_text, re.I)
                     if numeric_date:
                         candidate_date = iso_from_parts(numeric_date.group(1), numeric_date.group(2), numeric_date.group(3))
-            if candidate_date:
+            if candidate_date and len(candidate_text) <= 1800:
                 card, card_text, event_date = parent, candidate_text, candidate_date
                 break
 
@@ -1294,7 +1294,10 @@ def start_urls_for_site(site_url):
             urls.append(f"{exact.rstrip('/')}?date={timestamp}")
         return urls
     if host == "martiniplaza.nl":
-        return [urljoin(exact, "/nl/agenda")]
+        # The agenda and homepage both expose upcoming events; the homepage is a
+        # fallback when the agenda cards are rendered differently or omitted.
+        base = f"{parsed.scheme}://{parsed.netloc}"
+        return [urljoin(base, "/nl/agenda"), urljoin(base, "/nl/")]
     if host == "spotgroningen.nl":
         return [urljoin(exact, "/programma")]
     if host == "simplon.nl":
