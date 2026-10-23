@@ -1326,13 +1326,18 @@ DEAL_SITES = [
 ]
 
 
-def scrape_deal_sources():
-    """Haal een kleine, aparte selectie actuele kortingsaanbiedingen op."""
+def scrape_deal_sources(selected_sites=None):
+    """Haal actuele aanbiedingen op van de geselecteerde kortingsbronnen."""
     offers = []
     seen = set()
+    selected_hosts = {(urlparse(site).hostname or "").lower().removeprefix("www.") for site in (selected_sites or [])}
+    selected_deals = [
+        (source, url) for source, url in DEAL_SITES
+        if selected_sites is None or (urlparse(url).hostname or "").lower().removeprefix("www.") in selected_hosts
+    ]
     price_re = re.compile(r"(?:€\s?\d[\d.,]*|\d[\d.,]*\s?€)")
     noise = re.compile(r"^(meer informatie|bekijk|inloggen|registreren|alle deals|home|menu|voorwaarden|privacy)$", re.I)
-    for source, url in DEAL_SITES:
+    for source, url in selected_deals:
         try:
             response = requests.get(url, headers=REQUEST_HEADERS, timeout=14)
             response.raise_for_status()
@@ -1384,9 +1389,8 @@ def is_deal_source(site):
 
 
 def input_sites():
-    selected = valid_site_list(parse_json_list(INPUT_SITES_RAW))
-    if selected:
-        return selected
+    if "INPUT_SITES_RAW" in os.environ:
+        return valid_site_list(parse_json_list(INPUT_SITES_RAW))
     try:
         with open(SITES_FILE, "r", encoding="utf-8") as handle:
             configured = json.load(handle)
@@ -1461,7 +1465,7 @@ def main():
     previous_all = dedupe_events(previous_active + previous_archive)
     previous_all_keys = {event_key(event) for event in previous_all}
 
-    scrape_deal_sources()
+    scrape_deal_sources(sites)
     event_sites = [site for site in sites if not is_deal_source(site)]
     all_events = []
     total_sites = len(event_sites)
