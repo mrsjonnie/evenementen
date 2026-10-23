@@ -2818,46 +2818,9 @@
     async function loadRainChart() {
       const target = $("rainChart");
       if (!target) return;
-      const coords = regionCoord();
-      target.innerHTML = "<span>Regen komende 2 uur laden…</span>";
-      try {
-        const params = new URLSearchParams({
-          latitude: String(coords.lat), longitude: String(coords.lon),
-          minutely_15: "precipitation", forecast_minutely_15: "8",
-          hourly: "precipitation", forecast_hours: "3", timezone: "Europe/Amsterdam"
-        });
-        let response = await fetch(`https://api.open-meteo.com/v1/forecast?${params.toString()}`, { cache: "no-store" });
-        if (!response.ok) {
-          params.delete("minutely_15");
-          params.delete("forecast_minutely_15");
-          response = await fetch(`https://api.open-meteo.com/v1/forecast?${params.toString()}`, { cache: "no-store" });
-        }
-        if (!response.ok) throw new Error("Regenverwachting niet beschikbaar");
-        const data = await response.json();
-        let times = data?.minutely_15?.time || [];
-        let values = data?.minutely_15?.precipitation || [];
-        if (!times.length || !values.length) { times = data?.hourly?.time || []; values = data?.hourly?.precipitation || []; }
-        const now = Date.now();
-        const points = times.map((time, index) => ({ time: new Date(time), value: Math.max(0, Number(values[index]) || 0) }))
-          .filter((point) => Number.isFinite(point.time.getTime()) && point.time.getTime() >= now - 60_000 && point.time.getTime() <= now + 2 * 60 * 60 * 1000).slice(0, 8);
-        if (!points.length) throw new Error("Geen neerslaggegevens");
-        const max = Math.max(.2, ...points.map((point) => point.value));
-        const step = 484 / points.length;
-        const bars = points.map((point, index) => {
-          const height = Math.max(2, point.value / max * 42);
-          const x = 8 + index * step;
-          const width = Math.max(4, Math.min(28, step * .56));
-          const time = point.time.toLocaleTimeString("nl-NL", { hour: "2-digit", minute: "2-digit" });
-          const mm = point.value.toLocaleString("nl-NL", { maximumFractionDigits: 1 });
-          return `<rect x="${x.toFixed(1)}" y="${(49-height).toFixed(1)}" width="${width.toFixed(1)}" height="${height.toFixed(1)}" rx="3" fill="${point.value > .2 ? "#53b6d2" : "#71869a"}"><title>${time}: ${mm} mm</title></rect>`;
-        }).join("");
-        const first = points[0].time.toLocaleTimeString("nl-NL", { hour: "2-digit", minute: "2-digit" });
-        const last = points[points.length - 1].time.toLocaleTimeString("nl-NL", { hour: "2-digit", minute: "2-digit" });
-        const total = points.reduce((sum, point) => sum + point.value, 0);
-        target.innerHTML = `<div class="rainChartTitle"><span>Regen komende 2 uur</span><span>${total.toLocaleString("nl-NL",{maximumFractionDigits:1})} mm</span></div><svg viewBox="0 0 500 54" role="img" aria-label="Neerslag van ${first} tot ${last}">${bars}<line x1="4" y1="50" x2="496" y2="50" stroke="rgba(255,255,255,.28)" stroke-width="1"/></svg><div class="rainChartLabels"><span>${first}</span><span>${last}</span></div>`;
-      } catch { target.innerHTML = '<span>Regenverwachting tijdelijk niet beschikbaar.</span>'; }
+      const url = "https://www.weeronline.nl/regenradar/Groningen/4056536";
+      target.innerHTML = `<div class="rainChartTitle"><span>Regenradar Groningen</span><a href="${url}" target="_blank" rel="noopener noreferrer">Weeronline ↗</a></div><iframe src="${url}" title="Regenradar Groningen van Weeronline" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>`;
     }
-
     async function loadWeather() {
       const region = $("region").value.trim();
       if (!region || !dateFrom || !dateTo) {
