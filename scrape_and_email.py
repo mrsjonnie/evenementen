@@ -433,6 +433,8 @@ def title_from_dated_text(value):
 
 def classify_type(text, host=""):
     lower = clean_text(text).lower()
+    if any(domain in (host + " " + lower) for domain in ("socialdeal.nl", "groupon.nl", "ibood.com")):
+        return "Aanbiedingen"
     if "zienema" in lower or re.search(r"\bfilm|bioscoop|movie|cinema\b", lower):
         return "Film"
     if re.search(r"\bdoc|documentaire\b", lower):
