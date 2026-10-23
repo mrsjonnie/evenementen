@@ -3,6 +3,8 @@ import json
 import os
 import re
 import time
+import xml.etree.ElementTree as ET
+from email.utils import parsedate_to_datetime
 from datetime import date, datetime, timedelta, timezone
 from urllib.parse import urljoin, urlparse, urldefrag
 
@@ -1276,6 +1278,80 @@ def extract_ibood_offers(html, page_url, site_url):
     return offers
 
 
+def discover_feed_urls(html, page_url, site_url):
+    """Vind openbare RSS/Atom-feeds op de geselecteerde website."""
+    soup = BeautifulSoup(html, "html.parser")
+    candidates = []
+    for link in soup.find_all("link", href=True):
+        rel = " ".join(link.get("rel", [])).lower()
+        content_type = str(link.get("type", "")).lower()
+        if "alternate" in rel and ("rss" in content_type or "atom" in content_type or "xml" in content_type):
+            candidates.append(urljoin(page_url, link["href"]))
+    base = f"{urlparse(site_url).scheme}://{urlparse(site_url).netloc}"
+    candidates.extend(urljoin(base, path) for path in ("/feed", "/feed/", "/rss", "/rss.xml", "/feed.xml", "/events/feed/"))
+    result = []
+    seen = set()
+    for candidate in candidates:
+        url = normalized_url(candidate)
+        if not url or not same_host(url, site_url) or url.lower() in seen:
+            continue
+        seen.add(url.lower())
+        result.append(url)
+    return result[:8]
+
+
+def parse_feed_events(feed_text, feed_url, site_url):
+    """Lees eenvoudige RSS/Atom-feeds zonder externe API of betaalde dienst."""
+    try:
+        root = ET.fromstring(feed_text)
+    except ET.ParseError:
+        return []
+    events = []
+    for node in root.iter():
+        tag = node.tag.rsplit("}", 1)[-1].lower()
+        if tag not in {"item", "entry"}:
+            continue
+        fields = {}
+        for child in list(node):
+            key = child.tag.rsplit("}", 1)[-1].lower()
+            value = "".join(child.itertext()).strip()
+            if key == "link" and not value:
+                value = child.attrib.get("href", "")
+            if value and key not in fields:
+                fields[key] = value
+        title = clean_text(fields.get("title", ""))
+        link = normalized_url(fields.get("link", ""), feed_url)
+        if not link:
+            for child in list(node):
+                if child.tag.rsplit("}", 1)[-1].lower() == "link" and child.attrib.get("href"):
+                    link = normalized_url(child.attrib["href"], feed_url)
+                    if link:
+                        break
+        if not link or not same_host(link, site_url) or not title:
+            continue
+        combined = f"{title} {link}"
+        if not EVENT_WORDS_RE.search(combined) and not parse_date_text(title):
+            continue
+        raw_date = fields.get("startdate") or fields.get("pubdate") or fields.get("published") or fields.get("updated") or fields.get("date") or ""
+        try:
+            parsed = parsedate_to_datetime(raw_date)
+            raw_date = parsed.date().isoformat()
+        except (TypeError, ValueError, OverflowError):
+            pass
+        description = clean_text(fields.get("description") or fields.get("summary") or fields.get("content", ""))
+        event = normalize_event({
+            "title": title,
+            "date": raw_date or title,
+            "website": link,
+            "description": description,
+            "location": "",
+            "discoverySource": "RSS/Atom"
+        }, site_url)
+        if event:
+            events.append(event)
+    return dedupe_events(events)
+
+
 def scrape_site(site_url, site_index=0, site_total=0):
     original_site = clean_text(site_url)
     normalized_site = normalized_url(original_site)
@@ -1284,6 +1360,7 @@ def scrape_site(site_url, site_index=0, site_total=0):
     session = requests.Session()
     events = []
     detail_links = []
+    feed_urls = []
     timed_out = False
 
     progress = f"site {site_index}/{site_total}" if site_index and site_total else "site"
@@ -1307,6 +1384,7 @@ def scrape_site(site_url, site_index=0, site_total=0):
             continue
 
         page_events = parse_page_events(html, final_url, normalized_site, "Website")
+        feed_urls.extend(discover_feed_urls(html, final_url, normalized_site))
         if "visitgroningen.nl" in canonical_host(normalized_site) and "/wandelen" in urlparse(final_url).path.lower():
             page_events.extend(extract_visitgroningen_walks(html, final_url, normalized_site))
         if "ibood.com" in canonical_host(normalized_site):
@@ -1317,6 +1395,22 @@ def scrape_site(site_url, site_index=0, site_total=0):
         events.extend(page_events)
         add_raw("Website", original_site, "Pagina geanalyseerd", "", final_url, "ok", f"{len(page_events)} events/aanbiedingen op deze pagina")
         detail_links.extend(collect_event_links(html, final_url, normalized_site))
+
+    # Verwerk gevonden openbare feeds rechtstreeks; dit vereist geen API-key of AI.
+    for feed_url in unique_urls(feed_urls):
+        if time.monotonic() >= deadline or len(dedupe_events(events)) >= MAX_EVENTS_PER_SITE:
+            break
+        try:
+            feed_response = session.get(feed_url, headers=REQUEST_HEADERS, timeout=remaining_timeout(deadline), allow_redirects=True)
+            if feed_response.status_code >= 400:
+                add_raw("RSS/Atom", original_site, "Feed mislukt", "", feed_url, "fout", f"HTTP {feed_response.status_code}")
+                continue
+            feed_events = parse_feed_events(feed_response.text, feed_response.url, normalized_site)
+            events.extend(feed_events)
+            add_raw("RSS/Atom", original_site, "Feed geanalyseerd", "", feed_response.url, "ok", f"{len(feed_events)} events uit openbare feed")
+            detail_links.extend(event.get("website", "") for event in feed_events)
+        except Exception as exc:
+            add_raw("RSS/Atom", original_site, "Feed mislukt", "", feed_url, "fout", str(exc))
 
     serp_links = serpapi_links_for_site(normalized_site)
     for link in serp_links:
