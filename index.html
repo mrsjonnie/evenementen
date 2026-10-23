@@ -1251,6 +1251,7 @@
     const DEFAULT_SITE_TIME_LIMIT_SECONDS = 20;
     const SCAN_SETTINGS_KEY = "eventScanSettingsV1";
     const CUSTOM_SITES_KEY = "evenementenCustomSitesV1";
+    const SOURCE_SELECTION_KEY = "evenementenSourceSelectionV1";
     const SPOT_ONLY_SITE = "https://www.spotgroningen.nl/programma/";
     const WORKER_URL = "https://evenementen-refresh.mrsjonnie.workers.dev";
     const PER_PAGE_KEY = "evenementenPerPage";
@@ -1459,6 +1460,23 @@
       const custom = mergeSites(values);
       try { localStorage.setItem(CUSTOM_SITES_KEY, JSON.stringify(custom)); } catch {}
       return custom;
+    }
+
+    function loadSourceSelection() {
+      try {
+        const stored = JSON.parse(localStorage.getItem(SOURCE_SELECTION_KEY) || "null");
+        return stored && typeof stored === "object" ? stored : null;
+      } catch { return null; }
+    }
+
+    function saveSourceSelection() {
+      const selectedSites = [...document.querySelectorAll(".siteCheck:checked")].map((check) => check.value);
+      const providers = {
+        mistral: Boolean($("provMistral")?.checked),
+        openai: Boolean($("provOpenAI")?.checked),
+        serpapi: Boolean($("provSerpAPI")?.checked)
+      };
+      try { localStorage.setItem(SOURCE_SELECTION_KEY, JSON.stringify({ selectedSites, providers })); } catch {}
     }
 
     function setCustomSiteStatus(message, kind = "warn") {
@@ -3171,6 +3189,12 @@
       collapseAllGroups();
       sites = mergeSites([...loaded[1], ...loadCustomSites()]);
       applyScanSettings();
+      const savedSources = loadSourceSelection();
+      if (savedSources) {
+        $("provMistral").checked = Boolean(savedSources.providers?.mistral);
+        $("provOpenAI").checked = Boolean(savedSources.providers?.openai);
+        $("provSerpAPI").checked = Boolean(savedSources.providers?.serpapi);
+      }
       const currentKeys = eventKeySet(events);
       const detectedNew = knownKeys.size ? [...currentKeys].filter((key) => !knownKeys.has(key)) : [];
       newEventKeys = detectedNew.length ? new Set(detectedNew) : storedNewKeys;
@@ -3178,7 +3202,10 @@
       saveStoredSet(KNOWN_EVENTS_KEY, currentKeys);
 
       fillTypes();
-      renderSites();
+      const selectedFromStorage = savedSources && Array.isArray(savedSources.selectedSites)
+        ? new Set(savedSources.selectedSites.filter((site) => sites.includes(site)))
+        : new Set(sites);
+      renderSites(selectedFromStorage);
       renderRawLog();
       updateProviderCount();
       applyFilters();
