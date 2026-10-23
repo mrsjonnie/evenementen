@@ -1054,6 +1054,7 @@
           <button class="btn btnSecondary filterSidebarToggle" id="filterSidebarToggle" type="button" aria-controls="filterSidebar" aria-expanded="false">Filters tonen</button>
           <button class="btn btnSecondary" id="collapseBtn" type="button">Details uitklappen</button>
           <button class="btn btnSecondary" id="collapseTypesBtn" type="button">Types inklappen</button>
+          <button class="btn btnSecondary" id="collapseLocationsBtn" type="button">Locaties inklappen</button>
         </div>
         <div class="titlePanel" id="titlePanel">
           <div class="titlePanelContent">
@@ -1195,6 +1196,7 @@
           <option value="24">24</option>
           <option value="48">48</option>
           <option value="96">96</option>
+          <option value="500">500</option>
         </select>
       </label>
     </nav>
@@ -1844,7 +1846,11 @@
     }
 
     function formatDate(date) {
-      return date.toISOString().slice(0, 10);
+      // Lokale kalenderdatum voor Nederland; voorkom UTC-datumverschuiving.
+      const year = date.getFullYear();
+      const month = String(date.getMonth() + 1).padStart(2, "0");
+      const day = String(date.getDate()).padStart(2, "0");
+      return `${year}-${month}-${day}`;
     }
 
     function prettyDate(value) {
@@ -2326,10 +2332,8 @@
 
     function periodSubtitle() {
       if ($("periodMode").value === "always") return "Altijd";
-      if ($("periodMode").value === "specificDay") return `Specifieke dag: ${prettyDate(dateFrom)}`;
-      if ($("periodMode").value === "threeDays") return "Vandaag + 2 dagen";
-      if ($("periodMode").value === "week") return "7 dagen";
-      return `${prettyDate(dateFrom)} t/m ${prettyDate(dateTo)}`;
+      if ($("periodMode").value === "always") return "Altijd";
+      return `Van ${prettyDate(dateFrom)} tot ${prettyDate(dateTo || dateFrom)}`;
     }
 
     function applyFilters() {
@@ -2599,7 +2603,7 @@
     function radarBlockHtml() {
       return `
         <a class="radarTile" href="https://www.buienradar.nl/nederland/neerslag/buienradar" target="_blank" rel="noopener noreferrer">
-          <img src="https://api.buienradar.nl/image/1.0/RadarMapNL?width=540&height=320" alt="Buienradar neerslagkaart">
+          <img src="https://image.buienradar.nl/2.0/image/single/RadarMapRainNL?height=512&width=768" alt="Buienradar neerslagkaart">
           <span>Buienradar neerslagkaart</span>
         </a>
       `;
@@ -2968,7 +2972,7 @@
       eventsJsonTotalCount = Number.isFinite(loadedTotalCount) ? loadedTotalCount : events.length;
       cardsCollapsed = true;
       expandedEventKeys = new Set();
-      $("collapseBtn").textContent = "Uitklappen";
+      $("collapseBtn").textContent = "Details uitklappen";
       sites = mergeSites(loaded[1]);
       applyScanSettings();
       const currentKeys = eventKeySet(events);
@@ -3062,6 +3066,13 @@
     });
     $("collapseBtn").addEventListener("click", toggleCardsCollapsed);
     $("collapseTypesBtn").addEventListener("click", () => { const types = [...new Set(filteredEvents.map((event) => displayType(event.type || "Activiteit")))]; const allCollapsed = types.length && types.every((type) => collapsedEventTypes.has(type)); collapsedEventTypes = allCollapsed ? new Set() : new Set(types); render(); $("collapseTypesBtn").textContent = allCollapsed ? "Types inklappen" : "Types uitklappen"; });
+    $("collapseLocationsBtn").addEventListener("click", () => {
+      const keys = [...new Set(filteredEvents.map((event) => displayType(event.type || "Activiteit") + "::" + (eventSourceLabel(event) || "Bron onbekend")))];
+      const allCollapsed = keys.length > 0 && keys.every((key) => collapsedSourceGroups.has(key));
+      collapsedSourceGroups = allCollapsed ? new Set() : new Set(keys);
+      render();
+      $("collapseLocationsBtn").textContent = allCollapsed ? "Locaties inklappen" : "Locaties uitklappen";
+    });
     $("prevPage").addEventListener("click", () => { currentPage -= 1; render(); window.scrollTo({ top: 0, behavior: "smooth" }); });
     $("nextPage").addEventListener("click", () => { currentPage += 1; render(); window.scrollTo({ top: 0, behavior: "smooth" }); });
     $("allSitesBtn").addEventListener("click", () => {
@@ -3223,8 +3234,8 @@
     $("periodMode").value = "threeDays";
     dateFrom = today;
     dateTo = addDays(today, 2);
-    eventsPerPage = Number(localStorage.getItem(PER_PAGE_KEY)) || 96;
-    if (![12, 18, 24, 48, 96].includes(eventsPerPage)) eventsPerPage = 96;
+    eventsPerPage = Number(localStorage.getItem(PER_PAGE_KEY)) || 500;
+    if (![12, 18, 24, 48, 96, 500].includes(eventsPerPage)) eventsPerPage = 500;
     $("perPageSelect").value = String(eventsPerPage);
     $("versionBadge").textContent = `Versie ${APP_VERSION}`;
     applyVersionHeaderTheme();
