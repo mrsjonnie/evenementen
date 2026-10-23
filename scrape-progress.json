@@ -1,24 +1,12 @@
 {
   "runId": "2026-10-23T14:39:18+00:00",
   "startedAt": "2026-10-23T14:39:18+00:00",
-  "completedCount": 0,
+  "completedCount": 1,
   "totalSites": 1,
-  "completedSites": [],
+  "completedSites": [
+    "https://www.socialdeal.nl/dichtbij/groningen/"
+  ],
   "events": [
-    {
-      "date": "2026-03-01",
-      "time": "",
-      "title": "Overnachting voor 2 + ontbijt + late check out + toegang wellness in hartje Antwerpen",
-      "type": "Aanbiedingen",
-      "location": "Locatie niet vermeld",
-      "locationLink": "",
-      "website": "https://www.socialdeal.nl/deals/groningen/van-der-valk-park-lane-antwerpen/voor-2-personen-geniet-van-een-heerlijke-overnachting-incl-ontbijt-late-check-out-toegang-tot-de-wellness-en-welkomstdrankje-bij-van-der-valk-park-lane-antwerpen-gelegen-aan-het-stadspark-jan-2026-antwerpen-groningen/",
-      "source": "socialdeal.nl",
-      "discoverySource": "Website",
-      "description": "59% hexagon hotel Van der Valk Park Lane Antwerpen 9.9 star 9.9 • 123 Antwerpen Regulier €282 €115 Toeristenbelasting: €3,39 (vanaf 1 maart 2026: €3,58)",
-      "cost": "",
-      "image": "https://media.socialdeal.nl/img/image-placeholder.jpg"
-    },
     {
       "date": "2026-10-23",
       "time": "",
@@ -12942,7 +12930,15 @@
       "image": "https://media.socialdeal.nl/img/image-placeholder.jpg"
     }
   ],
-  "siteResults": [],
+  "siteResults": [
+    {
+      "site": "https://www.socialdeal.nl/dichtbij/groningen/",
+      "count": 923,
+      "newCount": 0,
+      "durationSeconds": 11.47,
+      "timedOut": false
+    }
+  ],
   "rawLog": [
     {
       "source": "Website",
@@ -21610,10 +21606,29 @@
       "url": "https://www.socialdeal.nl/ontdek/groningen/",
       "status": "ok",
       "rawText": "923 events/aanbiedingen op deze pagina"
+    },
+    {
+      "source": "Filter",
+      "site": "https://www.socialdeal.nl/dichtbij/groningen/",
+      "title": "Datumfilter toegepast",
+      "date": "2026-10-23",
+      "url": "https://www.socialdeal.nl/dichtbij/groningen/",
+      "status": "ok",
+      "rawText": "924 gevonden; 923 binnen 2026-10-23 t/m onbeperkt"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.socialdeal.nl/dichtbij/groningen/",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://www.socialdeal.nl/dichtbij/groningen/",
+      "status": "klaar",
+      "rawText": "site 1/1: 923 unieke events in 11.47 sec"
     }
   ],
-  "status": "running",
+  "status": "finishing",
   "lastCompletedSite": "https://www.socialdeal.nl/dichtbij/groningen/",
-  "lastSiteEventCount": 924,
-  "lastUpdatedAt": "2026-10-23T14:39:29+00:00"
+  "lastSiteEventCount": 923,
+  "lastUpdatedAt": "2026-10-23T14:39:29+00:00",
+  "lastCompletedAt": "2026-10-23T14:39:31+00:00"
 }
