@@ -2458,8 +2458,8 @@
           const key = type + "::" + source;
           const sourceCollapsed = collapsedSourceGroups.has(key);
           const sourceEvents = allSourceEvents.filter(event => visibleKeys.has(eventDedupeKey(event)));
-          const sourceCards = sourceEvents.length ? sourceEvents.map(renderCard).join("") : \`<p class="nextPageHint">Meer \${escapeHtml(source)}-evenementen staan op een andere pagina (\${allSourceEvents.length} totaal).</p>\`;
-          return \`<section class="sourceGroup \${sourceCollapsed ? "collapsed" : ""}"><button class="sourceGroupHeader" type="button" data-source-toggle="\${escapeHtml(key)}" aria-expanded="\${!sourceCollapsed}"><span>\${escapeHtml(source)}</span><small>\${allSourceEvents.length} evenementen</small></button><div class="eventGroupCards">\${sourceCards}</div></section>\`;
+          const sourceCards = sourceEvents.length ? sourceEvents.map(renderCard).join("") : `<p class="nextPageHint">Meer ${escapeHtml(source)}-evenementen staan op een andere pagina (${allSourceEvents.length} totaal).</p>`;
+          return `<section class="sourceGroup ${sourceCollapsed ? "collapsed" : ""}"><button class="sourceGroupHeader" type="button" data-source-toggle="${escapeHtml(key)}" aria-expanded="${!sourceCollapsed}"><span>${escapeHtml(source)}</span><small>${allSourceEvents.length} evenementen</small></button><div class="eventGroupCards">${sourceCards}</div></section>`;
         }).join("");
         const cards = sourceHtml || `<p class="nextPageHint">Meer resultaten van dit type staan op een andere pagina (${allForType.length} totaal).</p>`;
         return `<section class="eventGroup ${collapsed ? "collapsed" : ""}"><button class="eventGroupHeader" type="button" data-type-toggle="${escapeHtml(type)}" aria-expanded="${!collapsed}"><span>${escapeHtml(type)}</span><small>${allForType.length} resultaten</small></button><div class="eventGroupCards">${cards}</div></section>`;
