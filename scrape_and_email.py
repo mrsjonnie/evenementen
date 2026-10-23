@@ -1354,7 +1354,7 @@ def start_urls_for_site(site_url):
     if host == "spotgroningen.nl":
         return [urljoin(exact, "/programma")]
     if host == "socialdeal.nl":
-        return [urljoin(f"{parsed.scheme}://{parsed.netloc}", "/deals/groningen/")]
+        return [urljoin(f"{parsed.scheme}://{parsed.netloc}", "/dichtbij/groningen/")]
     if host == "simplon.nl":
         return [urljoin(exact, "/programma/")]
     urls = [exact]
@@ -1524,7 +1524,7 @@ def extract_visitgroningen_walks(html, page_url, site_url):
 
 
 def extract_socialdeal_offers(html, page_url, site_url):
-    """Lees zichtbare Social Deal-aanbiedingen inclusief plaats en beschrijving."""
+    """Lees echte Social Deal-kaarten; sla navigatie, blog en categoriepagina's over."""
     if "socialdeal.nl" not in canonical_host(site_url):
         return []
     soup = BeautifulSoup(html, "html.parser")
@@ -1537,34 +1537,42 @@ def extract_socialdeal_offers(html, page_url, site_url):
         r"Rotterdam|Den Haag|Zwolle|Leeuwarden|Online|Bij jou thuis)\b",
         re.I,
     )
+    excluded_path = re.compile(r"^/(?:blog|inloggen|account|restaurants|hotels|dichtbij|ontdek|theme|categorie|bedrijf/social-deal-giftcard)(?:/|$)", re.I)
     for anchor in soup.find_all("a", href=True):
         href = normalized_url(anchor.get("href"), page_url)
-        path = urlparse(href).path.lower()
-        if not href or "socialdeal.nl" not in canonical_host(href):
+        parsed_path = urlparse(href).path
+        if not href or canonical_host(href) != canonical_host(site_url) or excluded_path.search(parsed_path):
             continue
-        if path.rstrip("/") in {"/", "/deals", "/deals/groningen"} or "/deals/" in path:
+        if parsed_path.rstrip("/") in {"/", "/deals", "/deals/groningen", "/ontdek/groningen", "/dichtbij/groningen"}:
             continue
-        if len([part for part in path.split("/") if part]) < 2:
-            continue
-        title = clean_title(anchor.get_text(" ", strip=True) or node_title(anchor))
-        if not title_is_usable(title) or title.lower() in {"bekijk deal", "meer informatie", "lees meer"}:
-            continue
-        node = anchor
-        for _ in range(4):
-            parent = getattr(node, "parent", None)
+        # Select only anchors inside a real offer card with sales and price data.
+        ancestors = [anchor]
+        parent = anchor.parent
+        for _ in range(5):
             if not parent or not hasattr(parent, "get_text"):
                 break
-            text_blob = clean_text(parent.get_text(" ", strip=True))
-            if len(text_blob) >= 45:
-                node = parent
-                if parent.name in {"article", "li"} or any(
-                    token in " ".join(parent.get("class", [])).lower()
-                    for token in ("deal", "card", "offer", "product", "tile")
-                ):
-                    break
-        card_text = clean_text(node.get_text(" ", strip=True))
-        if len(card_text) < len(title) + 8:
-            card_text = clean_text(anchor.get_text(" ", strip=True))
+            ancestors.append(parent)
+            parent = parent.parent
+        card = None
+        for candidate in ancestors[1:]:
+            candidate_text = clean_text(candidate.get_text(" ", strip=True))
+            if (
+                len(candidate_text) >= 35
+                and len(candidate_text) <= 1200
+                and re.search(r"\bVerkocht\s*:", candidate_text, re.I)
+                and re.search(r"€\s*[\d.,]+", candidate_text)
+            ):
+                card = candidate
+                break
+        if card is None:
+            continue
+        card_text = clean_text(card.get_text(" ", strip=True))
+        title_node = card.select_one("h1, h2, h3, h4, [class*='deal-title'], [class*='title'], [class*='name']")
+        title = clean_title(title_node.get_text(" ", strip=True) if title_node else anchor.get_text(" ", strip=True))
+        if not title_is_usable(title):
+            title = clean_title(node_title(card))
+        if not title_is_usable(title) or title.lower() in {"bekijk deal", "meer informatie", "lees meer", "favorieten"}:
+            continue
         key = href.lower().split("?")[0].rstrip("/")
         if key in seen:
             continue
@@ -1579,14 +1587,13 @@ def extract_socialdeal_offers(html, page_url, site_url):
         if not location:
             location = "Locatie niet vermeld"
         description = card_text
-        if title:
-            description = re.sub(re.escape(title), " ", description, count=1, flags=re.I)
+        description = re.sub(re.escape(title), " ", description, count=1, flags=re.I)
         description = re.sub(r"\b(?:verkocht|sold out)\s*:?\s*[\d.,]*", " ", description, flags=re.I)
         description = compact(description, 420)
         if not description:
             description = f"Social Deal-aanbieding: {title}. Bekijk de dealpagina voor voorwaarden en beschikbaarheid."
         date_text = parse_date_text(card_text) or TODAY.isoformat()
-        image_node = anchor.select_one("img[src], img[data-src]")
+        image_node = card.select_one("img[src], img[data-src]")
         raw = {
             "date": date_text,
             "title": title,
@@ -1606,6 +1613,7 @@ def extract_socialdeal_offers(html, page_url, site_url):
         if len(offers) >= MAX_EVENTS_PER_SITE:
             break
     return dedupe_events(offers)
+
 
 def extract_ibood_offers(html, page_url, site_url):
     """Haal productaanbiedingen van iBOOD op als doorlopende aanbiedingen."""
