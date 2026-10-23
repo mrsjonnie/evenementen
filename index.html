@@ -3163,7 +3163,6 @@
       layout.classList.toggle("sidebarOpen", isOpen);
       $("filterSidebarToggle").setAttribute("aria-expanded", String(isOpen));
       $("filterSidebarToggle").textContent = isOpen ? "Filters verbergen" : "Filters tonen";
-      localStorage.setItem("eventsSidebarOpen", isOpen ? "1" : "0");
     }
     $("filterSidebarToggle").addEventListener("click", () => setSidebarOpen($("filterSidebar").hidden));
     const savedSidebarWidth = Number(localStorage.getItem("eventsSidebarWidth"));
@@ -3218,7 +3217,7 @@
     });
 
     const today = formatDate(new Date());
-    setSidebarOpen(localStorage.getItem("eventsSidebarOpen") !== "0");
+    setSidebarOpen(true);
     $("dateSingle").value = today;
     $("periodMode").value = "threeDays";
     dateFrom = today;
