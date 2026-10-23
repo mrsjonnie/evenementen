@@ -4,8 +4,322 @@
   "completedCount": 0,
   "totalSites": 4,
   "completedSites": [],
-  "events": [],
+  "events": [
+    {
+      "date": "2027-03-01",
+      "time": "",
+      "title": "Appartementen",
+      "type": "Activiteit",
+      "location": "Ameland",
+      "locationLink": "",
+      "website": "https://www.vvvameland.nl/overnachten/appartementen",
+      "source": "vvvameland.nl",
+      "discoverySource": "Website",
+      "description": "Overzicht Appartementen Appartementen Buren 6 personen of meer Appartementen Nes 6 personen of meer Appartementen Ballum Appartementen Hollum 6 personen of meer",
+      "cost": "",
+      "image": ""
+    },
+    {
+      "date": "2027-03-01",
+      "time": "",
+      "title": "Overzicht Appartementen Appartementen Buren 1-3 personen Appartementen",
+      "type": "Activiteit",
+      "location": "Ameland",
+      "locationLink": "",
+      "website": "https://www.vvvameland.nl/overnachten/appartementen",
+      "source": "vvvameland.nl",
+      "discoverySource": "Website",
+      "description": "Overzicht Appartementen Appartementen Buren 6 personen of meer Appartementen Nes 6 personen of meer Appartementen Ballum Appartementen Hollum 6 personen of meer",
+      "cost": "",
+      "image": ""
+    },
+    {
+      "date": "2027-04-01",
+      "time": "",
+      "title": "Last-minutes",
+      "type": "Activiteit",
+      "location": "Ameland",
+      "locationLink": "",
+      "website": "https://www.vvvameland.nl/overnachten",
+      "source": "vvvameland.nl",
+      "discoverySource": "Website",
+      "description": "Overzicht Overnachten Overzicht Vakantiehuizen Vakantiehuizen Duingebied tussen Nes en Buren Vakantiehuizen Nes 7 of meer pers. Vakantiehuizen Ballum 7 of meer personen Vakantiehuizen Hollum 7 of meer personen Vakantiehuizen Buren 7 of meer personen Overzicht Appartementen",
+      "cost": "",
+      "image": ""
+    },
+    {
+      "date": "2027-04-01",
+      "time": "",
+      "title": "Overnachten",
+      "type": "Activiteit",
+      "location": "Ameland",
+      "locationLink": "",
+      "website": "https://www.vvvameland.nl/overnachten",
+      "source": "vvvameland.nl",
+      "discoverySource": "Website",
+      "description": "Overzicht Overnachten Overzicht Vakantiehuizen Vakantiehuizen Duingebied tussen Nes en Buren Vakantiehuizen Nes 7 of meer pers. Vakantiehuizen Ballum 7 of meer personen Vakantiehuizen Hollum 7 of meer personen Vakantiehuizen Buren 7 of meer personen Overzicht Appartementen",
+      "cost": "",
+      "image": ""
+    },
+    {
+      "date": "2027-04-01",
+      "time": "",
+      "title": "Vakantiehuizen",
+      "type": "Activiteit",
+      "location": "Ameland",
+      "locationLink": "",
+      "website": "https://www.vvvameland.nl/overnachten/vakantiehuizen",
+      "source": "vvvameland.nl",
+      "discoverySource": "Website",
+      "description": "Overzicht Vakantiehuizen Vakantiehuizen Duingebied tussen Nes en Buren Vakantiehuizen Nes 7 of meer pers. Vakantiehuizen Ballum 7 of meer personen Vakantiehuizen Hollum 7 of meer personen Vakantiehuizen Buren 7 of meer personen",
+      "cost": "",
+      "image": ""
+    },
+    {
+      "date": "2027-04-01",
+      "time": "",
+      "title": "Vakantiehuizen Duingebied tussen Nes en Buren",
+      "type": "Activiteit",
+      "location": "Ameland",
+      "locationLink": "",
+      "website": "https://www.vvvameland.nl/overnachten/vakantiehuizen",
+      "source": "vvvameland.nl",
+      "discoverySource": "Website",
+      "description": "Overzicht Vakantiehuizen Vakantiehuizen Nes 7 of meer pers. Vakantiehuizen Ballum 7 of meer personen Vakantiehuizen Hollum 7 of meer personen Vakantiehuizen Buren 7 of meer personen",
+      "cost": "",
+      "image": ""
+    }
+  ],
   "siteResults": [],
-  "rawLog": [],
-  "status": "running"
+  "rawLog": [
+    {
+      "source": "Website",
+      "site": "https://www.vvvameland.nl/activiteiten-en-evenementen",
+      "title": "Start",
+      "date": "",
+      "url": "https://www.vvvameland.nl/activiteiten-en-evenementen",
+      "status": "start",
+      "rawText": "site 1/4: max 20 events, max 60 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.vvvameland.nl/activiteiten-en-evenementen",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://www.vvvameland.nl/activiteiten-en-evenementen",
+      "status": "strategie",
+      "rawText": "universeel-jsonld-links-kaarten"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vvvameland.nl/activiteiten-en-evenementen",
+      "title": "Pagina gelezen",
+      "date": "",
+      "url": "https://www.vvvameland.nl/activiteiten-en-evenementen",
+      "status": "ok",
+      "rawText": "1379471 tekens HTML"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vvvameland.nl/activiteiten-en-evenementen",
+      "title": "Overnachten",
+      "date": "2027-04-01",
+      "url": "https://www.vvvameland.nl/overnachten",
+      "status": "agenda-kaart",
+      "rawText": "Overnachten Overzicht Overnachten Last-minutes Arrangementen Vakantiehuizen Overzicht Vakantiehuizen Vakantiehuizen Duingebied tussen Nes en Buren Vakantiehuizen Nes 1-4 personen Vakantiehuizen Nes 5-6 personen Vakantiehuizen Nes 7 of meer pers. Vakantiehuizen Ballum 1-4 personen Vakantiehuizen Ballum 5-6 personen Vakantiehuizen Ballum 7 of meer personen Vakantiehuizen Hollum 1-4 personen Vakantiehuizen Hollum 5-6 pe"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vvvameland.nl/activiteiten-en-evenementen",
+      "title": "Last-minutes",
+      "date": "2027-04-01",
+      "url": "https://www.vvvameland.nl/overnachten",
+      "status": "agenda-kaart",
+      "rawText": "Overzicht Overnachten Last-minutes Arrangementen Vakantiehuizen Overzicht Vakantiehuizen Vakantiehuizen Duingebied tussen Nes en Buren Vakantiehuizen Nes 1-4 personen Vakantiehuizen Nes 5-6 personen Vakantiehuizen Nes 7 of meer pers. Vakantiehuizen Ballum 1-4 personen Vakantiehuizen Ballum 5-6 personen Vakantiehuizen Ballum 7 of meer personen Vakantiehuizen Hollum 1-4 personen Vakantiehuizen Hollum 5-6 personen Vakan"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vvvameland.nl/activiteiten-en-evenementen",
+      "title": "Last-minutes",
+      "date": "2027-04-01",
+      "url": "https://www.vvvameland.nl/overnachten/lastminutes",
+      "status": "agenda-kaart",
+      "rawText": "Overzicht Overnachten Last-minutes Arrangementen Vakantiehuizen Overzicht Vakantiehuizen Vakantiehuizen Duingebied tussen Nes en Buren Vakantiehuizen Nes 1-4 personen Vakantiehuizen Nes 5-6 personen Vakantiehuizen Nes 7 of meer pers. Vakantiehuizen Ballum 1-4 personen Vakantiehuizen Ballum 5-6 personen Vakantiehuizen Ballum 7 of meer personen Vakantiehuizen Hollum 1-4 personen Vakantiehuizen Hollum 5-6 personen Vakan"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vvvameland.nl/activiteiten-en-evenementen",
+      "title": "Last-minutes",
+      "date": "2027-04-01",
+      "url": "https://www.vvvameland.nl/overnachten/arrangementen",
+      "status": "agenda-kaart",
+      "rawText": "Overzicht Overnachten Last-minutes Arrangementen Vakantiehuizen Overzicht Vakantiehuizen Vakantiehuizen Duingebied tussen Nes en Buren Vakantiehuizen Nes 1-4 personen Vakantiehuizen Nes 5-6 personen Vakantiehuizen Nes 7 of meer pers. Vakantiehuizen Ballum 1-4 personen Vakantiehuizen Ballum 5-6 personen Vakantiehuizen Ballum 7 of meer personen Vakantiehuizen Hollum 1-4 personen Vakantiehuizen Hollum 5-6 personen Vakan"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vvvameland.nl/activiteiten-en-evenementen",
+      "title": "Vakantiehuizen",
+      "date": "2027-04-01",
+      "url": "https://www.vvvameland.nl/overnachten/vakantiehuizen",
+      "status": "agenda-kaart",
+      "rawText": "Vakantiehuizen Overzicht Vakantiehuizen Vakantiehuizen Duingebied tussen Nes en Buren Vakantiehuizen Nes 1-4 personen Vakantiehuizen Nes 5-6 personen Vakantiehuizen Nes 7 of meer pers. Vakantiehuizen Ballum 1-4 personen Vakantiehuizen Ballum 5-6 personen Vakantiehuizen Ballum 7 of meer personen Vakantiehuizen Hollum 1-4 personen Vakantiehuizen Hollum 5-6 personen Vakantiehuizen Hollum 7 of meer personen Vakantiehuize"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vvvameland.nl/activiteiten-en-evenementen",
+      "title": "Vakantiehuizen Duingebied tussen Nes en Buren",
+      "date": "2027-04-01",
+      "url": "https://www.vvvameland.nl/overnachten/vakantiehuizen",
+      "status": "agenda-kaart",
+      "rawText": "Overzicht Vakantiehuizen Vakantiehuizen Duingebied tussen Nes en Buren Vakantiehuizen Nes 1-4 personen Vakantiehuizen Nes 5-6 personen Vakantiehuizen Nes 7 of meer pers. Vakantiehuizen Ballum 1-4 personen Vakantiehuizen Ballum 5-6 personen Vakantiehuizen Ballum 7 of meer personen Vakantiehuizen Hollum 1-4 personen Vakantiehuizen Hollum 5-6 personen Vakantiehuizen Hollum 7 of meer personen Vakantiehuizen Buren 1-6 per"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vvvameland.nl/activiteiten-en-evenementen",
+      "title": "Vakantiehuizen Duingebied tussen Nes en Buren",
+      "date": "2027-04-01",
+      "url": "https://www.vvvameland.nl/overnachten/vakantiehuizen/vakantiehuizen-duingebied-nes-buren",
+      "status": "agenda-kaart",
+      "rawText": "Overzicht Vakantiehuizen Vakantiehuizen Duingebied tussen Nes en Buren Vakantiehuizen Nes 1-4 personen Vakantiehuizen Nes 5-6 personen Vakantiehuizen Nes 7 of meer pers. Vakantiehuizen Ballum 1-4 personen Vakantiehuizen Ballum 5-6 personen Vakantiehuizen Ballum 7 of meer personen Vakantiehuizen Hollum 1-4 personen Vakantiehuizen Hollum 5-6 personen Vakantiehuizen Hollum 7 of meer personen Vakantiehuizen Buren 1-6 per"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vvvameland.nl/activiteiten-en-evenementen",
+      "title": "Vakantiehuizen Duingebied tussen Nes en Buren",
+      "date": "2027-04-01",
+      "url": "https://www.vvvameland.nl/overnachten/vakantiehuizen/nes-7-of-meer",
+      "status": "agenda-kaart",
+      "rawText": "Overzicht Vakantiehuizen Vakantiehuizen Duingebied tussen Nes en Buren Vakantiehuizen Nes 1-4 personen Vakantiehuizen Nes 5-6 personen Vakantiehuizen Nes 7 of meer pers. Vakantiehuizen Ballum 1-4 personen Vakantiehuizen Ballum 5-6 personen Vakantiehuizen Ballum 7 of meer personen Vakantiehuizen Hollum 1-4 personen Vakantiehuizen Hollum 5-6 personen Vakantiehuizen Hollum 7 of meer personen Vakantiehuizen Buren 1-6 per"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vvvameland.nl/activiteiten-en-evenementen",
+      "title": "Vakantiehuizen Duingebied tussen Nes en Buren",
+      "date": "2027-04-01",
+      "url": "https://www.vvvameland.nl/overnachten/vakantiehuizen/ballum-7-of-meer",
+      "status": "agenda-kaart",
+      "rawText": "Overzicht Vakantiehuizen Vakantiehuizen Duingebied tussen Nes en Buren Vakantiehuizen Nes 1-4 personen Vakantiehuizen Nes 5-6 personen Vakantiehuizen Nes 7 of meer pers. Vakantiehuizen Ballum 1-4 personen Vakantiehuizen Ballum 5-6 personen Vakantiehuizen Ballum 7 of meer personen Vakantiehuizen Hollum 1-4 personen Vakantiehuizen Hollum 5-6 personen Vakantiehuizen Hollum 7 of meer personen Vakantiehuizen Buren 1-6 per"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vvvameland.nl/activiteiten-en-evenementen",
+      "title": "Vakantiehuizen Duingebied tussen Nes en Buren",
+      "date": "2027-04-01",
+      "url": "https://www.vvvameland.nl/overnachten/vakantiehuizen/hollum7-of-meer",
+      "status": "agenda-kaart",
+      "rawText": "Overzicht Vakantiehuizen Vakantiehuizen Duingebied tussen Nes en Buren Vakantiehuizen Nes 1-4 personen Vakantiehuizen Nes 5-6 personen Vakantiehuizen Nes 7 of meer pers. Vakantiehuizen Ballum 1-4 personen Vakantiehuizen Ballum 5-6 personen Vakantiehuizen Ballum 7 of meer personen Vakantiehuizen Hollum 1-4 personen Vakantiehuizen Hollum 5-6 personen Vakantiehuizen Hollum 7 of meer personen Vakantiehuizen Buren 1-6 per"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vvvameland.nl/activiteiten-en-evenementen",
+      "title": "Vakantiehuizen Duingebied tussen Nes en Buren",
+      "date": "2027-04-01",
+      "url": "https://www.vvvameland.nl/overnachten/vakantiehuizen/buren7-of-meer",
+      "status": "agenda-kaart",
+      "rawText": "Overzicht Vakantiehuizen Vakantiehuizen Duingebied tussen Nes en Buren Vakantiehuizen Nes 1-4 personen Vakantiehuizen Nes 5-6 personen Vakantiehuizen Nes 7 of meer pers. Vakantiehuizen Ballum 1-4 personen Vakantiehuizen Ballum 5-6 personen Vakantiehuizen Ballum 7 of meer personen Vakantiehuizen Hollum 1-4 personen Vakantiehuizen Hollum 5-6 personen Vakantiehuizen Hollum 7 of meer personen Vakantiehuizen Buren 1-6 per"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vvvameland.nl/activiteiten-en-evenementen",
+      "title": "Appartementen",
+      "date": "2027-03-01",
+      "url": "https://www.vvvameland.nl/overnachten/appartementen",
+      "status": "agenda-kaart",
+      "rawText": "Appartementen Overzicht Appartementen Appartementen Buren 1-3 personen Appartementen Buren 4-5 personen Appartementen Buren 6 personen of meer Appartementen Nes 1-3 personen Appartementen Nes 4-5 personen Appartementen Nes 6 personen of meer Appartementen Ballum Appartementen Hollum 1-3 personen Appartementen Hollum 4-5 personen Appartementen Hollum 6 personen of meer"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vvvameland.nl/activiteiten-en-evenementen",
+      "title": "Overzicht Appartementen Appartementen Buren 1-3 personen Appartementen",
+      "date": "2027-03-01",
+      "url": "https://www.vvvameland.nl/overnachten/appartementen",
+      "status": "agenda-kaart",
+      "rawText": "Overzicht Appartementen Appartementen Buren 1-3 personen Appartementen Buren 4-5 personen Appartementen Buren 6 personen of meer Appartementen Nes 1-3 personen Appartementen Nes 4-5 personen Appartementen Nes 6 personen of meer Appartementen Ballum Appartementen Hollum 1-3 personen Appartementen Hollum 4-5 personen Appartementen Hollum 6 personen of meer"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vvvameland.nl/activiteiten-en-evenementen",
+      "title": "Overzicht Appartementen Appartementen Buren 1-3 personen Appartementen",
+      "date": "2027-03-01",
+      "url": "https://www.vvvameland.nl/overnachten/appartementen/appartementen-buren-6personen-of-meer",
+      "status": "agenda-kaart",
+      "rawText": "Overzicht Appartementen Appartementen Buren 1-3 personen Appartementen Buren 4-5 personen Appartementen Buren 6 personen of meer Appartementen Nes 1-3 personen Appartementen Nes 4-5 personen Appartementen Nes 6 personen of meer Appartementen Ballum Appartementen Hollum 1-3 personen Appartementen Hollum 4-5 personen Appartementen Hollum 6 personen of meer"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vvvameland.nl/activiteiten-en-evenementen",
+      "title": "Overzicht Appartementen Appartementen Buren 1-3 personen Appartementen",
+      "date": "2027-03-01",
+      "url": "https://www.vvvameland.nl/overnachten/appartementen/appartementen-nes-6personen-of-meer",
+      "status": "agenda-kaart",
+      "rawText": "Overzicht Appartementen Appartementen Buren 1-3 personen Appartementen Buren 4-5 personen Appartementen Buren 6 personen of meer Appartementen Nes 1-3 personen Appartementen Nes 4-5 personen Appartementen Nes 6 personen of meer Appartementen Ballum Appartementen Hollum 1-3 personen Appartementen Hollum 4-5 personen Appartementen Hollum 6 personen of meer"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vvvameland.nl/activiteiten-en-evenementen",
+      "title": "Overzicht Appartementen Appartementen Buren 1-3 personen Appartementen",
+      "date": "2027-03-01",
+      "url": "https://www.vvvameland.nl/overnachten/appartementen/appartementen-ballum",
+      "status": "agenda-kaart",
+      "rawText": "Overzicht Appartementen Appartementen Buren 1-3 personen Appartementen Buren 4-5 personen Appartementen Buren 6 personen of meer Appartementen Nes 1-3 personen Appartementen Nes 4-5 personen Appartementen Nes 6 personen of meer Appartementen Ballum Appartementen Hollum 1-3 personen Appartementen Hollum 4-5 personen Appartementen Hollum 6 personen of meer"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vvvameland.nl/activiteiten-en-evenementen",
+      "title": "Overzicht Appartementen Appartementen Buren 1-3 personen Appartementen",
+      "date": "2027-03-01",
+      "url": "https://www.vvvameland.nl/overnachten/appartementen/appartementen-hollum-6personen-of-meer",
+      "status": "agenda-kaart",
+      "rawText": "Overzicht Appartementen Appartementen Buren 1-3 personen Appartementen Buren 4-5 personen Appartementen Buren 6 personen of meer Appartementen Nes 1-3 personen Appartementen Nes 4-5 personen Appartementen Nes 6 personen of meer Appartementen Ballum Appartementen Hollum 1-3 personen Appartementen Hollum 4-5 personen Appartementen Hollum 6 personen of meer"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vvvameland.nl/activiteiten-en-evenementen",
+      "title": "Last-minutes",
+      "date": "2027-04-01",
+      "url": "https://www.vvvameland.nl/overnachten/stacaravans",
+      "status": "agenda-kaart",
+      "rawText": "Overzicht Overnachten Last-minutes Arrangementen Vakantiehuizen Overzicht Vakantiehuizen Vakantiehuizen Duingebied tussen Nes en Buren Vakantiehuizen Nes 1-4 personen Vakantiehuizen Nes 5-6 personen Vakantiehuizen Nes 7 of meer pers. Vakantiehuizen Ballum 1-4 personen Vakantiehuizen Ballum 5-6 personen Vakantiehuizen Ballum 7 of meer personen Vakantiehuizen Hollum 1-4 personen Vakantiehuizen Hollum 5-6 personen Vakan"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vvvameland.nl/activiteiten-en-evenementen",
+      "title": "Last-minutes",
+      "date": "2027-04-01",
+      "url": "https://www.vvvameland.nl/overnachten/stacaravans/caravans-hollum",
+      "status": "agenda-kaart",
+      "rawText": "Overzicht Overnachten Last-minutes Arrangementen Vakantiehuizen Overzicht Vakantiehuizen Vakantiehuizen Duingebied tussen Nes en Buren Vakantiehuizen Nes 1-4 personen Vakantiehuizen Nes 5-6 personen Vakantiehuizen Nes 7 of meer pers. Vakantiehuizen Ballum 1-4 personen Vakantiehuizen Ballum 5-6 personen Vakantiehuizen Ballum 7 of meer personen Vakantiehuizen Hollum 1-4 personen Vakantiehuizen Hollum 5-6 personen Vakan"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vvvameland.nl/activiteiten-en-evenementen",
+      "title": "Last-minutes",
+      "date": "2027-04-01",
+      "url": "https://www.vvvameland.nl/overnachten/stacaravans/caravans-ballum",
+      "status": "agenda-kaart",
+      "rawText": "Overzicht Overnachten Last-minutes Arrangementen Vakantiehuizen Overzicht Vakantiehuizen Vakantiehuizen Duingebied tussen Nes en Buren Vakantiehuizen Nes 1-4 personen Vakantiehuizen Nes 5-6 personen Vakantiehuizen Nes 7 of meer pers. Vakantiehuizen Ballum 1-4 personen Vakantiehuizen Ballum 5-6 personen Vakantiehuizen Ballum 7 of meer personen Vakantiehuizen Hollum 1-4 personen Vakantiehuizen Hollum 5-6 personen Vakan"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.vvvameland.nl/activiteiten-en-evenementen",
+      "title": "Agenda-kaarten geteld",
+      "date": "",
+      "url": "https://www.vvvameland.nl/activiteiten-en-evenementen",
+      "status": "gespecialiseerde parser",
+      "rawText": "20 resultaten"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vvvameland.nl/activiteiten-en-evenementen",
+      "title": "Pagina geanalyseerd",
+      "date": "",
+      "url": "https://www.vvvameland.nl/activiteiten-en-evenementen",
+      "status": "ok",
+      "rawText": "6 events/aanbiedingen op deze pagina"
+    }
+  ],
+  "status": "running",
+  "lastCompletedSite": "https://www.vvvameland.nl/activiteiten-en-evenementen",
+  "lastSiteEventCount": 6,
+  "lastUpdatedAt": "2026-10-23T15:13:12+00:00"
 }
