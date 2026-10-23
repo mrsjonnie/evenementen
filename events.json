@@ -1,7 +1,22 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-23T12:51:07+00:00",
+  "updatedAt": "2026-10-23T12:51:54+00:00",
   "events": [
+    {
+      "date": "2026-10-23",
+      "time": "",
+      "title": "IDA Support: Janet Livv",
+      "type": "Concert",
+      "location": "Simplon Groningen",
+      "locationLink": "",
+      "website": "https://simplon.nl/events/ida-2026/",
+      "source": "simplon.nl",
+      "discoverySource": "Website",
+      "description": "Support: Janet Livv | Neder-hyper-pop",
+      "cost": "",
+      "image": "https://simplon.nl/wp-content/uploads/2026/05/Ida-shoot-by-lisa-hussaarts-66-1-1600x900.jpg",
+      "isNew": true
+    },
     {
       "date": "2026-10-23",
       "time": "",
@@ -16,21 +31,6 @@
       "cost": "",
       "image": "https://www.vera-groningen.nl/wp/../vera/assets/img/logo-black.svg",
       "isNew": false
-    },
-    {
-      "date": "2026-10-23",
-      "time": "23:10",
-      "title": "vr 23.10 IDA Support: Janet Livv",
-      "type": "Concert",
-      "location": "Simplon Groningen",
-      "locationLink": "",
-      "website": "https://simplon.nl/events/ida-2026/",
-      "source": "simplon.nl",
-      "discoverySource": "Website",
-      "description": "Support: Janet Livv | Neder-hyper-pop",
-      "cost": "",
-      "image": "https://simplon.nl/wp-content/uploads/2026/05/Ida-shoot-by-lisa-hussaarts-66-1-1600x900.jpg",
-      "isNew": true
     },
     {
       "date": "2026-10-24",
@@ -49,6 +49,21 @@
     },
     {
       "date": "2026-10-24",
+      "time": "",
+      "title": "Lola Cedès Donzige elektronische pop",
+      "type": "Concert",
+      "location": "Simplon Groningen",
+      "locationLink": "",
+      "website": "https://simplon.nl/events/lola-cedes-2026/",
+      "source": "simplon.nl",
+      "discoverySource": "Website",
+      "description": "Donzige elektronische pop",
+      "cost": "",
+      "image": "https://simplon.nl/wp-content/uploads/2026/05/Lola-Cedes_HighRes_20-1600x900.jpg",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-24",
       "time": "21:30",
       "title": "Velocity Made Good NL Keenan Mundane x Sorza",
       "type": "Concert",
@@ -61,21 +76,6 @@
       "cost": "",
       "image": "https://www.vera-groningen.nl/wp/../vera/assets/img/logo-black.svg",
       "isNew": false
-    },
-    {
-      "date": "2026-10-24",
-      "time": "",
-      "title": "za 24.10 Lola Cedès Donzige elektronische pop",
-      "type": "Concert",
-      "location": "Simplon Groningen",
-      "locationLink": "",
-      "website": "https://simplon.nl/events/lola-cedes-2026/",
-      "source": "simplon.nl",
-      "discoverySource": "Website",
-      "description": "Donzige elektronische pop",
-      "cost": "",
-      "image": "https://simplon.nl/wp-content/uploads/2026/05/Lola-Cedes_HighRes_20-1600x900.jpg",
-      "isNew": true
     },
     {
       "date": "2026-10-25",
@@ -109,6 +109,21 @@
     },
     {
       "date": "2026-10-29",
+      "time": "",
+      "title": "Godfried + Nina Bailey Warme indie en pop",
+      "type": "Concert",
+      "location": "Simplon Groningen",
+      "locationLink": "",
+      "website": "https://simplon.nl/events/godfried-nina-bailey/",
+      "source": "simplon.nl",
+      "discoverySource": "Website",
+      "description": "Godfried + Nina Bailey Warme indie en pop",
+      "cost": "",
+      "image": "https://simplon.nl/wp-content/uploads/2026/09/IMG_2748-1600x900.jpg",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-29",
       "time": "20:30",
       "title": "Ulrika Spacek UK Mood Bored",
       "type": "Concert",
@@ -123,18 +138,18 @@
       "isNew": false
     },
     {
-      "date": "2026-10-29",
+      "date": "2026-10-30",
       "time": "",
-      "title": "do 29.10 Godfried + Nina Bailey Warme indie en pop",
+      "title": "Chicco Gezellige hedendaagse Nederlandse volk",
       "type": "Concert",
       "location": "Simplon Groningen",
       "locationLink": "",
-      "website": "https://simplon.nl/events/godfried-nina-bailey/",
+      "website": "https://simplon.nl/events/chicco/",
       "source": "simplon.nl",
       "discoverySource": "Website",
-      "description": "Godfried + Nina Bailey Warme indie en pop",
+      "description": "Gezellige hedendaagse Nederlandse volk",
       "cost": "",
-      "image": "https://simplon.nl/wp-content/uploads/2026/09/IMG_2748-1600x900.jpg",
+      "image": "https://simplon.nl/wp-content/uploads/2026/02/MKF_013-scaled-e1771420653954-1600x900.jpg",
       "isNew": true
     },
     {
@@ -168,21 +183,6 @@
       "isNew": false
     },
     {
-      "date": "2026-10-30",
-      "time": "",
-      "title": "vr 30.10 Chicco Gezellige hedendaagse Nederlandse volk",
-      "type": "Concert",
-      "location": "Simplon Groningen",
-      "locationLink": "",
-      "website": "https://simplon.nl/events/chicco/",
-      "source": "simplon.nl",
-      "discoverySource": "Website",
-      "description": "Gezellige hedendaagse Nederlandse volk",
-      "cost": "",
-      "image": "https://simplon.nl/wp-content/uploads/2026/02/MKF_013-scaled-e1771420653954-1600x900.jpg",
-      "isNew": true
-    },
-    {
       "date": "2026-10-31",
       "time": "21:30",
       "title": "Los Pirañas COL",
@@ -196,6 +196,21 @@
       "cost": "",
       "image": "https://www.vera-groningen.nl/wp/../vera/assets/img/logo-black.svg",
       "isNew": false
+    },
+    {
+      "date": "2026-10-31",
+      "time": "",
+      "title": "Lostboyshawty Support: Lil Timmie",
+      "type": "Concert",
+      "location": "Simplon Groningen",
+      "locationLink": "",
+      "website": "https://simplon.nl/events/lostboyshawty-2026/",
+      "source": "simplon.nl",
+      "discoverySource": "Website",
+      "description": "Support: Lil Timmie | Opvallende hiphop, trap en R&B",
+      "cost": "",
+      "image": "https://simplon.nl/wp-content/uploads/2026/09/Youngboy-1600x900.png",
+      "isNew": true
     },
     {
       "date": "2026-10-31",
@@ -226,21 +241,6 @@
       "cost": "",
       "image": "https://www.vera-groningen.nl/wp/../vera/assets/img/logo-black.svg",
       "isNew": false
-    },
-    {
-      "date": "2026-10-31",
-      "time": "",
-      "title": "za 31.10 Lostboyshawty Support: Lil Timmie",
-      "type": "Concert",
-      "location": "Simplon Groningen",
-      "locationLink": "",
-      "website": "https://simplon.nl/events/lostboyshawty-2026/",
-      "source": "simplon.nl",
-      "discoverySource": "Website",
-      "description": "Support: Lil Timmie | Opvallende hiphop, trap en R&B",
-      "cost": "",
-      "image": "https://simplon.nl/wp-content/uploads/2026/09/Youngboy-1600x900.png",
-      "isNew": true
     },
     {
       "date": "2026-11-01",
@@ -289,6 +289,21 @@
     },
     {
       "date": "2026-11-05",
+      "time": "",
+      "title": "Modern Figure + Nakûde Alternative rock & postpunk",
+      "type": "Concert",
+      "location": "Simplon Groningen",
+      "locationLink": "",
+      "website": "https://simplon.nl/events/modern-figure-nakude/",
+      "source": "simplon.nl",
+      "discoverySource": "Website",
+      "description": "Modern Figure + Nakûde Alternative rock & postpunk",
+      "cost": "",
+      "image": "https://simplon.nl/wp-content/uploads/2026/10/Kopie-van-Modern-Figure-main-press-pic-by-Jules-van-Eijs-1600x900.jpg",
+      "isNew": true
+    },
+    {
+      "date": "2026-11-05",
       "time": "21:30",
       "title": "Pyrex USA Traumatizer",
       "type": "Concert",
@@ -303,18 +318,18 @@
       "isNew": false
     },
     {
-      "date": "2026-11-05",
-      "time": "5:11",
-      "title": "do 5.11 Modern Figure + Nakûde Alternative rock & postpunk",
+      "date": "2026-11-06",
+      "time": "",
+      "title": "Queen's Pleasure Energetic indierock",
       "type": "Concert",
       "location": "Simplon Groningen",
       "locationLink": "",
-      "website": "https://simplon.nl/events/modern-figure-nakude/",
+      "website": "https://simplon.nl/events/queens-pleasure-2026/",
       "source": "simplon.nl",
       "discoverySource": "Website",
-      "description": "Modern Figure + Nakûde Alternative rock & postpunk",
+      "description": "Energetic indierock",
       "cost": "",
-      "image": "https://simplon.nl/wp-content/uploads/2026/10/Kopie-van-Modern-Figure-main-press-pic-by-Jules-van-Eijs-1600x900.jpg",
+      "image": "https://simplon.nl/wp-content/uploads/2026/06/queeens-scaledee-1600x900.png",
       "isNew": true
     },
     {
@@ -333,21 +348,6 @@
       "isNew": false
     },
     {
-      "date": "2026-11-06",
-      "time": "6:11",
-      "title": "vr 6.11 Queen's Pleasure Energetic indierock",
-      "type": "Concert",
-      "location": "Simplon Groningen",
-      "locationLink": "",
-      "website": "https://simplon.nl/events/queens-pleasure-2026/",
-      "source": "simplon.nl",
-      "discoverySource": "Website",
-      "description": "Energetic indierock",
-      "cost": "",
-      "image": "https://simplon.nl/wp-content/uploads/2026/06/queeens-scaledee-1600x900.png",
-      "isNew": true
-    },
-    {
       "date": "2026-11-07",
       "time": "23:01",
       "title": "Club VERA Line-up TBA",
@@ -361,6 +361,21 @@
       "cost": "",
       "image": "https://www.vera-groningen.nl/wp/../vera/assets/img/logo-black.svg",
       "isNew": false
+    },
+    {
+      "date": "2026-11-07",
+      "time": "",
+      "title": "Good Times Avond vol 80, 90 en 00s throwbacks en gezelligheid",
+      "type": "Dans",
+      "location": "Simplon Groningen",
+      "locationLink": "",
+      "website": "https://simplon.nl/events/good-times-november-2026/",
+      "source": "simplon.nl",
+      "discoverySource": "Website",
+      "description": "Avond vol 80, 90 en 00s throwbacks en gezelligheid",
+      "cost": "",
+      "image": "https://simplon.nl/wp-content/uploads/2026/09/gtheaderrr-1363x900.png",
+      "isNew": true
     },
     {
       "date": "2026-11-07",
@@ -394,7 +409,7 @@
     },
     {
       "date": "2026-11-07",
-      "time": "7:11",
+      "time": "",
       "title": "dance",
       "type": "Dans",
       "location": "Simplon Groningen",
@@ -405,22 +420,7 @@
       "description": "Avond vol 80, 90 en 00s throwbacks en gezelligheid",
       "cost": "",
       "image": "https://simplon.nl/wp-content/uploads/2026/09/gtheaderrr-1363x900.png",
-      "isNew": true
-    },
-    {
-      "date": "2026-11-07",
-      "time": "7:11",
-      "title": "za 7.11 Good Times Avond vol 80, 90 en 00s throwbacks en gezelligheid",
-      "type": "Dans",
-      "location": "Simplon Groningen",
-      "locationLink": "",
-      "website": "https://simplon.nl/events/good-times-november-2026/",
-      "source": "simplon.nl",
-      "discoverySource": "Website",
-      "description": "Avond vol 80, 90 en 00s throwbacks en gezelligheid",
-      "cost": "",
-      "image": "https://simplon.nl/wp-content/uploads/2026/09/gtheaderrr-1363x900.png",
-      "isNew": true
+      "isNew": false
     },
     {
       "date": "2026-11-10",
@@ -439,8 +439,8 @@
     },
     {
       "date": "2026-11-12",
-      "time": "12:11",
-      "title": "do 12.11 Piter + Rupit Warme singer-songwriter pop",
+      "time": "",
+      "title": "Piter + Rupit Warme singer-songwriter pop",
       "type": "Concert",
       "location": "Simplon Groningen",
       "locationLink": "",
@@ -454,8 +454,8 @@
     },
     {
       "date": "2026-11-13",
-      "time": "13:11",
-      "title": "vr 13.11 NO CIGAR Smooth indierock on psychedelics",
+      "time": "",
+      "title": "NO CIGAR Smooth indierock on psychedelics",
       "type": "Concert",
       "location": "Simplon Groningen",
       "locationLink": "",
@@ -469,8 +469,8 @@
     },
     {
       "date": "2026-11-13",
-      "time": "13:11",
-      "title": "vr 13.11 Rijck Disruptieve hiphop met contrast",
+      "time": "",
+      "title": "Rijck Disruptieve hiphop met contrast",
       "type": "Concert",
       "location": "Simplon Groningen",
       "locationLink": "",
@@ -484,8 +484,8 @@
     },
     {
       "date": "2026-11-14",
-      "time": "14:11",
-      "title": "dance",
+      "time": "",
+      "title": "Bassface SMG // Teej // Yannons // aotp",
       "type": "Dans",
       "location": "Simplon Groningen",
       "locationLink": "",
@@ -499,23 +499,8 @@
     },
     {
       "date": "2026-11-14",
-      "time": "14:11",
-      "title": "za 14.11 Bassface SMG // Teej // Yannons // aotp",
-      "type": "Dans",
-      "location": "Simplon Groningen",
-      "locationLink": "",
-      "website": "https://simplon.nl/events/bassface-november-2026/",
-      "source": "simplon.nl",
-      "discoverySource": "Website",
-      "description": "SMG // Teej // Yannons // aotp",
-      "cost": "",
-      "image": "https://simplon.nl/wp-content/uploads/2026/10/Insta-story-achtergrond-november-1080x900.png",
-      "isNew": true
-    },
-    {
-      "date": "2026-11-14",
-      "time": "14:11",
-      "title": "za 14.11 Big Sleep Support: Stardog",
+      "time": "",
+      "title": "Big Sleep Support: Stardog",
       "type": "Concert",
       "location": "Simplon Groningen",
       "locationLink": "",
@@ -528,9 +513,24 @@
       "isNew": true
     },
     {
+      "date": "2026-11-14",
+      "time": "",
+      "title": "dance",
+      "type": "Dans",
+      "location": "Simplon Groningen",
+      "locationLink": "",
+      "website": "https://simplon.nl/events/bassface-november-2026/",
+      "source": "simplon.nl",
+      "discoverySource": "Website",
+      "description": "SMG // Teej // Yannons // aotp",
+      "cost": "",
+      "image": "https://simplon.nl/wp-content/uploads/2026/10/Insta-story-achtergrond-november-1080x900.png",
+      "isNew": false
+    },
+    {
       "date": "2026-11-18",
-      "time": "18:11",
-      "title": "wo 18.11 Iskander Moon Folkpop with classical finesse",
+      "time": "",
+      "title": "Iskander Moon Folkpop with classical finesse",
       "type": "Concert",
       "location": "Simplon Groningen",
       "locationLink": "",
@@ -544,8 +544,8 @@
     },
     {
       "date": "2026-11-20",
-      "time": "20:11",
-      "title": "vr 20.11 Desire Support: Johnny Jewel + Mothermary",
+      "time": "",
+      "title": "Desire Support: Johnny Jewel + Mothermary",
       "type": "Concert",
       "location": "Simplon Groningen",
       "locationLink": "",
@@ -559,8 +559,8 @@
     },
     {
       "date": "2026-11-21",
-      "time": "21:11",
-      "title": "dance",
+      "time": "",
+      "title": "TechNorth Doctor Juicy // Faris Hababa // Fran LF // Julan (Live)",
       "type": "Documentaire",
       "location": "Simplon Groningen",
       "locationLink": "",
@@ -574,8 +574,8 @@
     },
     {
       "date": "2026-11-21",
-      "time": "21:11",
-      "title": "za 21.11 TechNorth Doctor Juicy // Faris Hababa // Fran LF // Julan (Live)",
+      "time": "",
+      "title": "dance",
       "type": "Documentaire",
       "location": "Simplon Groningen",
       "locationLink": "",
@@ -585,19 +585,19 @@
       "description": "Doctor Juicy // Faris Hababa // Fran LF // Julan (Live)",
       "cost": "",
       "image": "https://simplon.nl/wp-content/uploads/2026/10/techhh-1600x900.png",
-      "isNew": true
+      "isNew": false
     },
     {
       "date": "2026-11-26",
       "time": "",
-      "title": "do 26.11 Mail for Sil + Brighid",
+      "title": "Mail for Sil + Brighid",
       "type": "Activiteit",
       "location": "Simplon Groningen",
       "locationLink": "",
       "website": "https://simplon.nl/events/up-mail-for-sil-brighid/",
       "source": "simplon.nl",
       "discoverySource": "Website",
-      "description": "Mail for Sil + Brighid",
+      "description": "Meer informatie staat op simplon.nl.",
       "cost": "",
       "image": "https://simplon.nl/wp-content/uploads/2026/10/IMG_1288-1600x900.jpg",
       "isNew": true
@@ -605,7 +605,7 @@
     {
       "date": "2026-11-27",
       "time": "",
-      "title": "vr 27.11 NO BARRIER XL Edition",
+      "title": "NO BARRIER XL Edition",
       "type": "Concert",
       "location": "Simplon Groningen",
       "locationLink": "",
@@ -620,7 +620,7 @@
     {
       "date": "2026-11-27",
       "time": "",
-      "title": "vr 27.11 Wrest Heartfelt Edinburgh indie rock",
+      "title": "Wrest Heartfelt Edinburgh indie rock",
       "type": "Concert",
       "location": "Simplon Groningen",
       "locationLink": "",
@@ -635,7 +635,7 @@
     {
       "date": "2026-11-28",
       "time": "",
-      "title": "dance",
+      "title": "2016 special Roodkopje",
       "type": "Dans",
       "location": "Simplon Groningen",
       "locationLink": "",
@@ -650,7 +650,7 @@
     {
       "date": "2026-11-28",
       "time": "",
-      "title": "za 28.11 2016 special Roodkopje",
+      "title": "dance",
       "type": "Dans",
       "location": "Simplon Groningen",
       "locationLink": "",
@@ -660,12 +660,12 @@
       "description": "Meer informatie staat op simplon.nl.",
       "cost": "",
       "image": "https://simplon.nl/wp-content/uploads/2026/10/HeaderRK-1600x900.png",
-      "isNew": true
+      "isNew": false
     },
     {
       "date": "2026-12-02",
-      "time": "2:12",
-      "title": "wo 2.12 Sondre Lerche Catchy experimental pop",
+      "time": "",
+      "title": "Sondre Lerche Catchy experimental pop",
       "type": "Concert",
       "location": "Simplon Groningen",
       "locationLink": "",
@@ -679,8 +679,8 @@
     },
     {
       "date": "2026-12-04",
-      "time": "4:12",
-      "title": "vr 4.12 Call It Off Support: Biddy Early",
+      "time": "",
+      "title": "Call It Off Support: Biddy Early",
       "type": "Concert",
       "location": "Simplon Groningen",
       "locationLink": "",
@@ -694,8 +694,8 @@
     },
     {
       "date": "2026-12-04",
-      "time": "4:12",
-      "title": "vr 4.12 ZWARTEWATER Spijkerharde Zwolse rap",
+      "time": "",
+      "title": "ZWARTEWATER Spijkerharde Zwolse rap",
       "type": "Concert",
       "location": "Simplon Groningen",
       "locationLink": "",
@@ -709,8 +709,8 @@
     },
     {
       "date": "2026-12-05",
-      "time": "5:12",
-      "title": "za 5.12 Lézard A discopunk diorama",
+      "time": "",
+      "title": "Lézard A discopunk diorama",
       "type": "Concert",
       "location": "Simplon Groningen",
       "locationLink": "",
@@ -724,8 +724,8 @@
     },
     {
       "date": "2026-12-09",
-      "time": "9:12",
-      "title": "wo 9.12 Comedytunes Comedynight Jasper van der Veen // Jacob Adriani // Tim Alpherts // Meeuw Roovers",
+      "time": "",
+      "title": "Comedytunes Comedynight Jasper van der Veen // Jacob Adriani // Tim Alpherts // Meeuw Roovers",
       "type": "Concert",
       "location": "Simplon Groningen",
       "locationLink": "",
@@ -739,8 +739,8 @@
     },
     {
       "date": "2026-12-10",
-      "time": "10:12",
-      "title": "do 10.12 Ciao Lucifer Reality-escaping, uplifting indiepop",
+      "time": "",
+      "title": "Ciao Lucifer Reality-escaping, uplifting indiepop",
       "type": "Concert",
       "location": "Simplon Groningen",
       "locationLink": "",
@@ -754,8 +754,8 @@
     },
     {
       "date": "2026-12-11",
-      "time": "11:12",
-      "title": "vr 11.12 10 jaar Kerst met Stippenlift Dé remedie tegen je winterdepressie",
+      "time": "",
+      "title": "10 jaar Kerst met Stippenlift Dé remedie tegen je winterdepressie",
       "type": "Concert",
       "location": "Simplon Groningen",
       "locationLink": "",
@@ -769,8 +769,8 @@
     },
     {
       "date": "2026-12-16",
-      "time": "16:12",
-      "title": "wo 16.12 stay away from dante! Een wereld vol verhalen, genres en verrassingen",
+      "time": "",
+      "title": "stay away from dante! Een wereld vol verhalen, genres en verrassingen",
       "type": "Concert",
       "location": "Simplon Groningen",
       "locationLink": "",
@@ -784,8 +784,8 @@
     },
     {
       "date": "2026-12-18",
-      "time": "18:12",
-      "title": "vr 18.12 Tim Akkerman & The Ivy League Intimate singer-songwriter pop",
+      "time": "",
+      "title": "Tim Akkerman & The Ivy League Intimate singer-songwriter pop",
       "type": "Concert",
       "location": "Simplon Groningen",
       "locationLink": "",
@@ -800,7 +800,7 @@
     {
       "date": "2027-01-08",
       "time": "",
-      "title": "vr 8.1 Eva van Manen Support: Luka",
+      "title": "Eva van Manen Support: Luka",
       "type": "Concert",
       "location": "Simplon Groningen",
       "locationLink": "",
@@ -814,143 +814,8 @@
     },
     {
       "date": "2027-01-09",
-      "time": "20:00",
-      "title": "Aanstekelijke hyperpop meets club muziek",
-      "type": "Concert",
-      "location": "Simplon Groningen",
-      "locationLink": "",
-      "website": "https://simplon.nl/events/alice-olsthoorn/",
-      "source": "simplon.nl",
-      "discoverySource": "Website",
-      "description": "Alice Olsthoorn maakt een aanstekelijke mix van hyperpop en clubmuziek. Na een verpletterend optreden bij Noorderslag heeft Alice shows mogen geven op o.a. Down The Rabbit Hole, Wildeburg en Best Kept Secret. Alice is de toonaangevende naam als het aankomt op het gloednieuwe genre hyperpop in de Nederlandse scene. Haar",
-      "cost": "",
-      "image": "",
-      "isNew": true
-    },
-    {
-      "date": "2027-01-09",
-      "time": "20:00",
-      "title": "Alice Olsthoorn",
-      "type": "Concert",
-      "location": "Over Simplon",
-      "locationLink": "",
-      "website": "https://simplon.nl/events/alice-olsthoorn/",
-      "source": "simplon.nl",
-      "discoverySource": "Website",
-      "description": "Algemene voorwaarden View site in English Aanstekelijke hyperpop meets club muziek Alice Olsthoorn maakt een aanstekelijke mix van hyperpop en clubmuziek. Na een verpletterend optreden bij Noorderslag heeft Alice shows mogen geven op o.a. Down The Rabbit Hole, Wildeburg en Best Kept Secret. Alice is de toonaangevende n",
-      "cost": "",
-      "image": "https://simplon.nl/wp-content/uploads/2026/08/Alice_Nov2025_39-scaled-e1787059407567-1600x900.jpg",
-      "isNew": true
-    },
-    {
-      "date": "2027-01-09",
-      "time": "20:00",
-      "title": "Alice Olsthoorn - Simplon Programma Mijn",
-      "type": "Concert",
-      "location": "Simplon Groningen",
-      "locationLink": "",
-      "website": "https://simplon.nl/events/alice-olsthoorn/",
-      "source": "simplon.nl",
-      "discoverySource": "Website",
-      "description": "Zoeken EN / NL Menu Programma Contact Over Simplon Werken bij Fotogalerij Toegankelijkheid Huisregels Algemene voorwaarden Privacy statement View site in English Alice Olsthoorn Aanstekelijke hyperpop meets club muziek za 9.1 €17 20:00 Alice Olsthoorn maakt een aanstekelijke mix van hyperpop en clubmuziek. Na een verpl",
-      "cost": "",
-      "image": "",
-      "isNew": true
-    },
-    {
-      "date": "2027-01-09",
       "time": "",
-      "title": "Bezoekersinfo",
-      "type": "Activiteit",
-      "location": "Simplon Groningen",
-      "locationLink": "",
-      "website": "https://simplon.nl/events/alice-olsthoorn/",
-      "source": "simplon.nl",
-      "discoverySource": "Website",
-      "description": "Meer informatie staat op simplon.nl.",
-      "cost": "",
-      "image": "",
-      "isNew": true
-    },
-    {
-      "date": "2027-01-09",
-      "time": "",
-      "title": "Blackbird",
-      "type": "Activiteit",
-      "location": "Simplon Groningen",
-      "locationLink": "",
-      "website": "https://simplon.nl/events/alice-olsthoorn/",
-      "source": "simplon.nl",
-      "discoverySource": "Website",
-      "description": "Meer informatie staat op simplon.nl.",
-      "cost": "",
-      "image": "",
-      "isNew": true
-    },
-    {
-      "date": "2027-01-09",
-      "time": "",
-      "title": "Nienke Leone",
-      "type": "Activiteit",
-      "location": "Simplon Groningen",
-      "locationLink": "",
-      "website": "https://simplon.nl/events/alice-olsthoorn/",
-      "source": "simplon.nl",
-      "discoverySource": "Website",
-      "description": "Meer informatie staat op simplon.nl.",
-      "cost": "",
-      "image": "",
-      "isNew": true
-    },
-    {
-      "date": "2027-01-09",
-      "time": "20:00",
-      "title": "Open",
-      "type": "Activiteit",
-      "location": "Simplon Groningen",
-      "locationLink": "",
-      "website": "https://simplon.nl/events/alice-olsthoorn/",
-      "source": "simplon.nl",
-      "discoverySource": "Website",
-      "description": "Meer informatie staat op simplon.nl.",
-      "cost": "",
-      "image": "",
-      "isNew": true
-    },
-    {
-      "date": "2027-01-09",
-      "time": "20:45",
-      "title": "Start",
-      "type": "Activiteit",
-      "location": "Simplon Groningen",
-      "locationLink": "",
-      "website": "https://simplon.nl/events/alice-olsthoorn/",
-      "source": "simplon.nl",
-      "discoverySource": "Website",
-      "description": "Meer informatie staat op simplon.nl.",
-      "cost": "",
-      "image": "",
-      "isNew": true
-    },
-    {
-      "date": "2027-01-09",
-      "time": "",
-      "title": "Yong Yello",
-      "type": "Activiteit",
-      "location": "Simplon Groningen",
-      "locationLink": "",
-      "website": "https://simplon.nl/events/alice-olsthoorn/",
-      "source": "simplon.nl",
-      "discoverySource": "Website",
-      "description": "Meer informatie staat op simplon.nl.",
-      "cost": "",
-      "image": "",
-      "isNew": true
-    },
-    {
-      "date": "2027-01-09",
-      "time": "",
-      "title": "za 9.1 Alice Olsthoorn Aanstekelijke hyperpop meets club muziek",
+      "title": "Alice Olsthoorn Aanstekelijke hyperpop meets club muziek",
       "type": "Concert",
       "location": "Simplon Groningen",
       "locationLink": "",
@@ -963,24 +828,9 @@
       "isNew": true
     },
     {
-      "date": "2027-01-09",
-      "time": "20:00",
-      "title": "€17",
-      "type": "Concert",
-      "location": "Simplon Groningen",
-      "locationLink": "",
-      "website": "https://simplon.nl/events/alice-olsthoorn/",
-      "source": "simplon.nl",
-      "discoverySource": "Website",
-      "description": "Alice Olsthoorn maakt een aanstekelijke mix van hyperpop en clubmuziek. Na een verpletterend optreden bij Noorderslag heeft Alice shows mogen geven op o.a. Down The Rabbit Hole, Wildeburg en Best Kept Secret. Alice is de toonaangevende naam als het aankomt op het gloednieuwe genre hyperpop in de Nederlandse scene. Haar",
-      "cost": "",
-      "image": "",
-      "isNew": true
-    },
-    {
       "date": "2027-01-22",
       "time": "",
-      "title": "vr 22.1 Klezmagic Energetic Balkan and Klezmer",
+      "title": "Klezmagic Energetic Balkan and Klezmer",
       "type": "Concert",
       "location": "Simplon Groningen",
       "locationLink": "",
@@ -995,7 +845,7 @@
     {
       "date": "2027-02-05",
       "time": "",
-      "title": "vr 5.2 Starfish Sun soaked mix of reggae pop and surf rock",
+      "title": "Starfish Sun soaked mix of reggae pop and surf rock",
       "type": "Concert",
       "location": "Simplon Groningen",
       "locationLink": "",
@@ -1010,7 +860,7 @@
     {
       "date": "2027-02-12",
       "time": "",
-      "title": "vr 12.2 Yong Yello Soulvolle en meeslepende Vlaamse hiphop",
+      "title": "Yong Yello Soulvolle en meeslepende Vlaamse hiphop",
       "type": "Concert",
       "location": "Simplon Groningen",
       "locationLink": "",
@@ -1020,6 +870,21 @@
       "description": "Soulvolle en meeslepende Vlaamse hiphop",
       "cost": "",
       "image": "https://simplon.nl/wp-content/uploads/2026/08/Lars-De-Nijs-Breda-1-scaled-e1787650672249-1600x900.jpg",
+      "isNew": true
+    },
+    {
+      "date": "2027-02-13",
+      "time": "",
+      "title": "VISION NOISIA + more tba",
+      "type": "Dans",
+      "location": "Simplon Groningen",
+      "locationLink": "",
+      "website": "https://simplon.nl/events/vision-februari-2027/",
+      "source": "simplon.nl",
+      "discoverySource": "Website",
+      "description": "Meer informatie staat op simplon.nl.",
+      "cost": "",
+      "image": "https://simplon.nl/wp-content/uploads/2026/10/A_Noisia-2026_pictureby_Farhad-Khodadadzade-1600x900.jpg",
       "isNew": true
     },
     {
@@ -1035,27 +900,12 @@
       "description": "Meer informatie staat op simplon.nl.",
       "cost": "",
       "image": "https://simplon.nl/wp-content/uploads/2026/10/A_Noisia-2026_pictureby_Farhad-Khodadadzade-1600x900.jpg",
-      "isNew": true
-    },
-    {
-      "date": "2027-02-13",
-      "time": "",
-      "title": "za 13.2 VISION NOISIA + more tba",
-      "type": "Dans",
-      "location": "Simplon Groningen",
-      "locationLink": "",
-      "website": "https://simplon.nl/events/vision-februari-2027/",
-      "source": "simplon.nl",
-      "discoverySource": "Website",
-      "description": "Meer informatie staat op simplon.nl.",
-      "cost": "",
-      "image": "https://simplon.nl/wp-content/uploads/2026/10/A_Noisia-2026_pictureby_Farhad-Khodadadzade-1600x900.jpg",
-      "isNew": true
+      "isNew": false
     },
     {
       "date": "2027-02-17",
       "time": "",
-      "title": "wo 17.2 Comedytunes Comedynight Tim Kroezen // Gerrie Smits // Wilko Terwijn // Jacob Spoelstra",
+      "title": "Comedytunes Comedynight Tim Kroezen // Gerrie Smits // Wilko Terwijn // Jacob Spoelstra",
       "type": "Concert",
       "location": "Simplon Groningen",
       "locationLink": "",
@@ -1070,7 +920,7 @@
     {
       "date": "2027-02-26",
       "time": "",
-      "title": "vr 26.2 Oh Voyage Anatolian psych dance",
+      "title": "Oh Voyage Anatolian psych",
       "type": "Concert",
       "location": "Simplon Groningen",
       "locationLink": "",
@@ -1085,7 +935,7 @@
     {
       "date": "2027-02-26",
       "time": "",
-      "title": "vr 26.2 The Skints East-London Reggae",
+      "title": "The Skints East-London Reggae",
       "type": "Concert",
       "location": "Simplon Groningen",
       "locationLink": "",
@@ -1100,7 +950,7 @@
     {
       "date": "2027-03-05",
       "time": "",
-      "title": "vr 5.3 Kans Warme, emotionele r&b en hiphop",
+      "title": "Kans Warme, emotionele r&b en hiphop",
       "type": "Concert",
       "location": "Simplon Groningen",
       "locationLink": "",
@@ -1115,7 +965,7 @@
     {
       "date": "2027-03-06",
       "time": "",
-      "title": "za 6.3 TAPE TOY Hyperactive grungepop and punky shoegaze",
+      "title": "TAPE TOY Hyperactive grungepop and punky shoegaze",
       "type": "Concert",
       "location": "Simplon Groningen",
       "locationLink": "",
@@ -1130,7 +980,7 @@
     {
       "date": "2027-03-12",
       "time": "",
-      "title": "vr 12.3 Dominic Donner Dark pop and melancholic electronica",
+      "title": "Dominic Donner Dark pop and melancholic electronica",
       "type": "Concert",
       "location": "Simplon Groningen",
       "locationLink": "",
@@ -1145,7 +995,7 @@
     {
       "date": "2027-03-19",
       "time": "",
-      "title": "vr 19.3 Politie Warnsveld Compromisloze skapunk",
+      "title": "Politie Warnsveld Compromisloze skapunk",
       "type": "Concert",
       "location": "Simplon Groningen",
       "locationLink": "",
@@ -1160,7 +1010,7 @@
     {
       "date": "2027-03-20",
       "time": "",
-      "title": "za 20.3 McScallyfest Minifestival en EP-release vol feestelijke folkpunk",
+      "title": "McScallyfest Minifestival en EP-release vol feestelijke folkpunk",
       "type": "Concert",
       "location": "Simplon Groningen",
       "locationLink": "",
@@ -1175,7 +1025,7 @@
     {
       "date": "2027-04-02",
       "time": "",
-      "title": "vr 2.4 FIEP Infectious, energetic indierock",
+      "title": "FIEP Infectious, energetic indierock",
       "type": "Concert",
       "location": "Simplon Groningen",
       "locationLink": "",
@@ -1190,7 +1040,7 @@
     {
       "date": "2027-04-10",
       "time": "",
-      "title": "za 10.4 Sven Cilliers Intimate singer-songwriter pop",
+      "title": "Sven Cilliers Intimate singer-songwriter pop",
       "type": "Concert",
       "location": "Simplon Groningen",
       "locationLink": "",
@@ -1201,15 +1051,105 @@
       "cost": "",
       "image": "https://simplon.nl/wp-content/uploads/2026/10/0V7A0072-scaled-e1733318004573-1600x900.jpg",
       "isNew": true
+    },
+    {
+      "date": "2027-04-10",
+      "time": "",
+      "title": "ÃO Mesmerising mix of Portuguese artpop and alternative Latin",
+      "type": "Concert",
+      "location": "Simplon Groningen",
+      "locationLink": "",
+      "website": "https://simplon.nl/events/ao/",
+      "source": "simplon.nl",
+      "discoverySource": "Website",
+      "description": "Mesmerising mix of Portuguese artpop and alternative Latin",
+      "cost": "",
+      "image": "https://simplon.nl/wp-content/uploads/2026/09/AO_R0003013_RECHTHOEK-1080x900.jpg",
+      "isNew": true
+    },
+    {
+      "date": "2027-04-14",
+      "time": "",
+      "title": "Comedytunes Comedynight Ronald Smink // Joran Welling // Hermes Ahmadi // Jasper Nieuwenhuis",
+      "type": "Concert",
+      "location": "Simplon Groningen",
+      "locationLink": "",
+      "website": "https://simplon.nl/events/comedy-tunes-14-4/",
+      "source": "simplon.nl",
+      "discoverySource": "Website",
+      "description": "Comedytunes Comedynight Ronald Smink // Joran Welling // Hermes Ahmadi // Jasper Nieuwenhuis",
+      "cost": "",
+      "image": "https://simplon.nl/wp-content/uploads/2026/06/1280x800_APR2027_v01.jpg",
+      "isNew": true
+    },
+    {
+      "date": "2027-04-24",
+      "time": "",
+      "title": "Blackbird Melodious vintage pop",
+      "type": "Concert",
+      "location": "Simplon Groningen",
+      "locationLink": "",
+      "website": "https://simplon.nl/events/blackbird-2027/",
+      "source": "simplon.nl",
+      "discoverySource": "Website",
+      "description": "Melodious vintage pop",
+      "cost": "",
+      "image": "https://simplon.nl/wp-content/uploads/2026/08/image002-1600x900.jpg",
+      "isNew": true
+    },
+    {
+      "date": "2027-04-30",
+      "time": "",
+      "title": "Josua Peter Dynamic indie folk and pop",
+      "type": "Concert",
+      "location": "Simplon Groningen",
+      "locationLink": "",
+      "website": "https://simplon.nl/events/josua-peter-2027/",
+      "source": "simplon.nl",
+      "discoverySource": "Website",
+      "description": "Dynamic indie folk and pop",
+      "cost": "",
+      "image": "https://simplon.nl/wp-content/uploads/2026/09/JOSUA-PETER-tour-2027-1600x900.jpeg",
+      "isNew": true
+    },
+    {
+      "date": "2027-05-14",
+      "time": "",
+      "title": "Nienke Leone Eerlijke en catchy popliedjes",
+      "type": "Concert",
+      "location": "Simplon Groningen",
+      "locationLink": "",
+      "website": "https://simplon.nl/events/nienke-leone/",
+      "source": "simplon.nl",
+      "discoverySource": "Website",
+      "description": "Eerlijke en catchy popliedjes",
+      "cost": "",
+      "image": "https://simplon.nl/wp-content/uploads/2026/09/persfoto-3-nienke-leone-rubydijt-1600x900.jpg",
+      "isNew": true
+    },
+    {
+      "date": "2027-05-28",
+      "time": "",
+      "title": "Mood Bored Catchy and raw shoegaze mixed with catchy poppy hooks",
+      "type": "Concert",
+      "location": "Simplon Groningen",
+      "locationLink": "",
+      "website": "https://simplon.nl/events/mood-bored-2027/",
+      "source": "simplon.nl",
+      "discoverySource": "Website",
+      "description": "Catchy and raw shoegaze mixed with catchy poppy hooks",
+      "cost": "",
+      "image": "https://simplon.nl/wp-content/uploads/2026/09/DSC02464-4-1600x900.jpg",
+      "isNew": true
     }
   ],
   "archive": [],
   "siteResults": [
     {
       "site": "https://simplon.nl/",
-      "count": 60,
-      "newCount": 60,
-      "durationSeconds": 5.8,
+      "count": 56,
+      "newCount": 51,
+      "durationSeconds": 5.67,
       "timedOut": false
     }
   ],
@@ -1235,7 +1175,7 @@
     {
       "source": "Website",
       "site": "https://simplon.nl/",
-      "title": "vr 23.10 IDA Support: Janet Livv",
+      "title": "IDA Support: Janet Livv",
       "date": "2026-10-23",
       "url": "https://simplon.nl/events/ida-2026/",
       "status": "venue-agenda kaart",
@@ -1244,7 +1184,7 @@
     {
       "source": "Website",
       "site": "https://simplon.nl/",
-      "title": "za 24.10 Lola Cedès Donzige elektronische pop",
+      "title": "Lola Cedès Donzige elektronische pop",
       "date": "2026-10-24",
       "url": "https://simplon.nl/events/lola-cedes-2026/",
       "status": "venue-agenda kaart",
@@ -1253,7 +1193,7 @@
     {
       "source": "Website",
       "site": "https://simplon.nl/",
-      "title": "do 29.10 Godfried + Nina Bailey Warme indie en pop",
+      "title": "Godfried + Nina Bailey Warme indie en pop",
       "date": "2026-10-29",
       "url": "https://simplon.nl/events/godfried-nina-bailey/",
       "status": "venue-agenda kaart",
@@ -1262,7 +1202,7 @@
     {
       "source": "Website",
       "site": "https://simplon.nl/",
-      "title": "vr 30.10 Chicco Gezellige hedendaagse Nederlandse volk",
+      "title": "Chicco Gezellige hedendaagse Nederlandse volk",
       "date": "2026-10-30",
       "url": "https://simplon.nl/events/chicco/",
       "status": "venue-agenda kaart",
@@ -1271,7 +1211,7 @@
     {
       "source": "Website",
       "site": "https://simplon.nl/",
-      "title": "za 31.10 Lostboyshawty Support: Lil Timmie",
+      "title": "Lostboyshawty Support: Lil Timmie",
       "date": "2026-10-31",
       "url": "https://simplon.nl/events/lostboyshawty-2026/",
       "status": "venue-agenda kaart",
@@ -1280,7 +1220,7 @@
     {
       "source": "Website",
       "site": "https://simplon.nl/",
-      "title": "do 5.11 Modern Figure + Nakûde Alternative rock & postpunk",
+      "title": "Modern Figure + Nakûde Alternative rock & postpunk",
       "date": "2026-11-05",
       "url": "https://simplon.nl/events/modern-figure-nakude/",
       "status": "venue-agenda kaart",
@@ -1289,7 +1229,7 @@
     {
       "source": "Website",
       "site": "https://simplon.nl/",
-      "title": "vr 6.11 Queen's Pleasure Energetic indierock",
+      "title": "Queen's Pleasure Energetic indierock",
       "date": "2026-11-06",
       "url": "https://simplon.nl/events/queens-pleasure-2026/",
       "status": "venue-agenda kaart",
@@ -1298,7 +1238,7 @@
     {
       "source": "Website",
       "site": "https://simplon.nl/",
-      "title": "za 7.11 Good Times Avond vol 80, 90 en 00s throwbacks en gezelligheid",
+      "title": "Good Times Avond vol 80, 90 en 00s throwbacks en gezelligheid",
       "date": "2026-11-07",
       "url": "https://simplon.nl/events/good-times-november-2026/",
       "status": "venue-agenda kaart",
@@ -1316,7 +1256,7 @@
     {
       "source": "Website",
       "site": "https://simplon.nl/",
-      "title": "do 12.11 Piter + Rupit Warme singer-songwriter pop",
+      "title": "Piter + Rupit Warme singer-songwriter pop",
       "date": "2026-11-12",
       "url": "https://simplon.nl/events/up-piter-rupit/",
       "status": "venue-agenda kaart",
@@ -1325,7 +1265,7 @@
     {
       "source": "Website",
       "site": "https://simplon.nl/",
-      "title": "vr 13.11 Rijck Disruptieve hiphop met contrast",
+      "title": "Rijck Disruptieve hiphop met contrast",
       "date": "2026-11-13",
       "url": "https://simplon.nl/events/rijck-2026/",
       "status": "venue-agenda kaart",
@@ -1334,7 +1274,7 @@
     {
       "source": "Website",
       "site": "https://simplon.nl/",
-      "title": "vr 13.11 NO CIGAR Smooth indierock on psychedelics",
+      "title": "NO CIGAR Smooth indierock on psychedelics",
       "date": "2026-11-13",
       "url": "https://simplon.nl/events/no-cigar-2026/",
       "status": "venue-agenda kaart",
@@ -1343,7 +1283,7 @@
     {
       "source": "Website",
       "site": "https://simplon.nl/",
-      "title": "za 14.11 Bassface SMG // Teej // Yannons // aotp",
+      "title": "Bassface SMG // Teej // Yannons // aotp",
       "date": "2026-11-14",
       "url": "https://simplon.nl/events/bassface-november-2026/",
       "status": "venue-agenda kaart",
@@ -1361,7 +1301,7 @@
     {
       "source": "Website",
       "site": "https://simplon.nl/",
-      "title": "za 14.11 Big Sleep Support: Stardog",
+      "title": "Big Sleep Support: Stardog",
       "date": "2026-11-14",
       "url": "https://simplon.nl/events/big-sleep-2026/",
       "status": "venue-agenda kaart",
@@ -1370,7 +1310,7 @@
     {
       "source": "Website",
       "site": "https://simplon.nl/",
-      "title": "wo 18.11 Iskander Moon Folkpop with classical finesse",
+      "title": "Iskander Moon Folkpop with classical finesse",
       "date": "2026-11-18",
       "url": "https://simplon.nl/events/iskander-moon-2026/",
       "status": "venue-agenda kaart",
@@ -1379,7 +1319,7 @@
     {
       "source": "Website",
       "site": "https://simplon.nl/",
-      "title": "vr 20.11 Desire Support: Johnny Jewel + Mothermary",
+      "title": "Desire Support: Johnny Jewel + Mothermary",
       "date": "2026-11-20",
       "url": "https://simplon.nl/events/desire-x-johnny-jewel/",
       "status": "venue-agenda kaart",
@@ -1388,7 +1328,7 @@
     {
       "source": "Website",
       "site": "https://simplon.nl/",
-      "title": "za 21.11 TechNorth Doctor Juicy // Faris Hababa // Fran LF // Julan (Live)",
+      "title": "TechNorth Doctor Juicy // Faris Hababa // Fran LF // Julan (Live)",
       "date": "2026-11-21",
       "url": "https://simplon.nl/events/technorth-november-2026/",
       "status": "venue-agenda kaart",
@@ -1406,7 +1346,7 @@
     {
       "source": "Website",
       "site": "https://simplon.nl/",
-      "title": "do 26.11 Mail for Sil + Brighid",
+      "title": "Mail for Sil + Brighid",
       "date": "2026-11-26",
       "url": "https://simplon.nl/events/up-mail-for-sil-brighid/",
       "status": "venue-agenda kaart",
@@ -1415,7 +1355,7 @@
     {
       "source": "Website",
       "site": "https://simplon.nl/",
-      "title": "vr 27.11 NO BARRIER XL Edition",
+      "title": "NO BARRIER XL Edition",
       "date": "2026-11-27",
       "url": "https://simplon.nl/events/no-barrier-november-2026/",
       "status": "venue-agenda kaart",
@@ -1424,7 +1364,7 @@
     {
       "source": "Website",
       "site": "https://simplon.nl/",
-      "title": "vr 27.11 Wrest Heartfelt Edinburgh indie rock",
+      "title": "Wrest Heartfelt Edinburgh indie rock",
       "date": "2026-11-27",
       "url": "https://simplon.nl/events/wrest/",
       "status": "venue-agenda kaart",
@@ -1433,7 +1373,7 @@
     {
       "source": "Website",
       "site": "https://simplon.nl/",
-      "title": "za 28.11 2016 special Roodkopje",
+      "title": "2016 special Roodkopje",
       "date": "2026-11-28",
       "url": "https://simplon.nl/events/roodkopje-november-2026/",
       "status": "venue-agenda kaart",
@@ -1451,7 +1391,7 @@
     {
       "source": "Website",
       "site": "https://simplon.nl/",
-      "title": "wo 2.12 Sondre Lerche Catchy experimental pop",
+      "title": "Sondre Lerche Catchy experimental pop",
       "date": "2026-12-02",
       "url": "https://simplon.nl/events/sondre-lechre/",
       "status": "venue-agenda kaart",
@@ -1460,7 +1400,7 @@
     {
       "source": "Website",
       "site": "https://simplon.nl/",
-      "title": "vr 4.12 Call It Off Support: Biddy Early",
+      "title": "Call It Off Support: Biddy Early",
       "date": "2026-12-04",
       "url": "https://simplon.nl/events/call-it-off-taylor-swift-tribute/",
       "status": "venue-agenda kaart",
@@ -1469,7 +1409,7 @@
     {
       "source": "Website",
       "site": "https://simplon.nl/",
-      "title": "vr 4.12 ZWARTEWATER Spijkerharde Zwolse rap",
+      "title": "ZWARTEWATER Spijkerharde Zwolse rap",
       "date": "2026-12-04",
       "url": "https://simplon.nl/events/zwartewater-2026/",
       "status": "venue-agenda kaart",
@@ -1478,7 +1418,7 @@
     {
       "source": "Website",
       "site": "https://simplon.nl/",
-      "title": "za 5.12 Lézard A discopunk diorama",
+      "title": "Lézard A discopunk diorama",
       "date": "2026-12-05",
       "url": "https://simplon.nl/events/lezard-2026/",
       "status": "venue-agenda kaart",
@@ -1487,7 +1427,7 @@
     {
       "source": "Website",
       "site": "https://simplon.nl/",
-      "title": "wo 9.12 Comedytunes Comedynight Jasper van der Veen // Jacob Adriani // Tim Alpherts // Meeuw Roovers",
+      "title": "Comedytunes Comedynight Jasper van der Veen // Jacob Adriani // Tim Alpherts // Meeuw Roovers",
       "date": "2026-12-09",
       "url": "https://simplon.nl/events/comedy-tunes-9-12/",
       "status": "venue-agenda kaart",
@@ -1496,7 +1436,7 @@
     {
       "source": "Website",
       "site": "https://simplon.nl/",
-      "title": "do 10.12 Ciao Lucifer Reality-escaping, uplifting indiepop",
+      "title": "Ciao Lucifer Reality-escaping, uplifting indiepop",
       "date": "2026-12-10",
       "url": "https://simplon.nl/events/ciao-lucifer-2026/",
       "status": "venue-agenda kaart",
@@ -1505,7 +1445,7 @@
     {
       "source": "Website",
       "site": "https://simplon.nl/",
-      "title": "vr 11.12 10 jaar Kerst met Stippenlift Dé remedie tegen je winterdepressie",
+      "title": "10 jaar Kerst met Stippenlift Dé remedie tegen je winterdepressie",
       "date": "2026-12-11",
       "url": "https://simplon.nl/events/stippenlift-2026/",
       "status": "venue-agenda kaart",
@@ -1514,7 +1454,7 @@
     {
       "source": "Website",
       "site": "https://simplon.nl/",
-      "title": "wo 16.12 stay away from dante! Een wereld vol verhalen, genres en verrassingen",
+      "title": "stay away from dante! Een wereld vol verhalen, genres en verrassingen",
       "date": "2026-12-16",
       "url": "https://simplon.nl/events/stay-away-from-dante/",
       "status": "venue-agenda kaart",
@@ -1523,7 +1463,7 @@
     {
       "source": "Website",
       "site": "https://simplon.nl/",
-      "title": "vr 18.12 Tim Akkerman & The Ivy League Intimate singer-songwriter pop",
+      "title": "Tim Akkerman & The Ivy League Intimate singer-songwriter pop",
       "date": "2026-12-18",
       "url": "https://simplon.nl/events/tim-akkerman-the-ivy-league-2026/",
       "status": "venue-agenda kaart",
@@ -1532,7 +1472,7 @@
     {
       "source": "Website",
       "site": "https://simplon.nl/",
-      "title": "vr 8.1 Eva van Manen Support: Luka",
+      "title": "Eva van Manen Support: Luka",
       "date": "2027-01-08",
       "url": "https://simplon.nl/events/eva-van-manen-2027/",
       "status": "venue-agenda kaart",
@@ -1541,7 +1481,7 @@
     {
       "source": "Website",
       "site": "https://simplon.nl/",
-      "title": "za 9.1 Alice Olsthoorn Aanstekelijke hyperpop meets club muziek",
+      "title": "Alice Olsthoorn Aanstekelijke hyperpop meets club muziek",
       "date": "2027-01-09",
       "url": "https://simplon.nl/events/alice-olsthoorn/",
       "status": "venue-agenda kaart",
@@ -1550,7 +1490,7 @@
     {
       "source": "Website",
       "site": "https://simplon.nl/",
-      "title": "vr 22.1 Klezmagic Energetic Balkan and Klezmer",
+      "title": "Klezmagic Energetic Balkan and Klezmer",
       "date": "2027-01-22",
       "url": "https://simplon.nl/events/klezmagic/",
       "status": "venue-agenda kaart",
@@ -1559,7 +1499,7 @@
     {
       "source": "Website",
       "site": "https://simplon.nl/",
-      "title": "vr 5.2 Starfish Sun soaked mix of reggae pop and surf rock",
+      "title": "Starfish Sun soaked mix of reggae pop and surf rock",
       "date": "2027-02-05",
       "url": "https://simplon.nl/events/starfish-3/",
       "status": "venue-agenda kaart",
@@ -1568,7 +1508,7 @@
     {
       "source": "Website",
       "site": "https://simplon.nl/",
-      "title": "vr 12.2 Yong Yello Soulvolle en meeslepende Vlaamse hiphop",
+      "title": "Yong Yello Soulvolle en meeslepende Vlaamse hiphop",
       "date": "2027-02-12",
       "url": "https://simplon.nl/events/yong-yello/",
       "status": "venue-agenda kaart",
@@ -1577,7 +1517,7 @@
     {
       "source": "Website",
       "site": "https://simplon.nl/",
-      "title": "za 13.2 VISION NOISIA + more tba",
+      "title": "VISION NOISIA + more tba",
       "date": "2027-02-13",
       "url": "https://simplon.nl/events/vision-februari-2027/",
       "status": "venue-agenda kaart",
@@ -1595,7 +1535,7 @@
     {
       "source": "Website",
       "site": "https://simplon.nl/",
-      "title": "wo 17.2 Comedytunes Comedynight Tim Kroezen // Gerrie Smits // Wilko Terwijn // Jacob Spoelstra",
+      "title": "Comedytunes Comedynight Tim Kroezen // Gerrie Smits // Wilko Terwijn // Jacob Spoelstra",
       "date": "2027-02-17",
       "url": "https://simplon.nl/events/comedy-tunes-17-2/",
       "status": "venue-agenda kaart",
@@ -1604,7 +1544,7 @@
     {
       "source": "Website",
       "site": "https://simplon.nl/",
-      "title": "vr 26.2 The Skints East-London Reggae",
+      "title": "The Skints East-London Reggae",
       "date": "2027-02-26",
       "url": "https://simplon.nl/events/the-skints-2026/",
       "status": "venue-agenda kaart",
@@ -1613,7 +1553,7 @@
     {
       "source": "Website",
       "site": "https://simplon.nl/",
-      "title": "vr 26.2 Oh Voyage Anatolian psych dance",
+      "title": "Oh Voyage Anatolian psych",
       "date": "2027-02-26",
       "url": "https://simplon.nl/events/oh-voyage-2026/",
       "status": "venue-agenda kaart",
@@ -1622,7 +1562,7 @@
     {
       "source": "Website",
       "site": "https://simplon.nl/",
-      "title": "vr 5.3 Kans Warme, emotionele r&b en hiphop",
+      "title": "Kans Warme, emotionele r&b en hiphop",
       "date": "2027-03-05",
       "url": "https://simplon.nl/events/kans/",
       "status": "venue-agenda kaart",
@@ -1631,7 +1571,7 @@
     {
       "source": "Website",
       "site": "https://simplon.nl/",
-      "title": "za 6.3 TAPE TOY Hyperactive grungepop and punky shoegaze",
+      "title": "TAPE TOY Hyperactive grungepop and punky shoegaze",
       "date": "2027-03-06",
       "url": "https://simplon.nl/events/tape-toy-2027/",
       "status": "venue-agenda kaart",
@@ -1640,7 +1580,7 @@
     {
       "source": "Website",
       "site": "https://simplon.nl/",
-      "title": "vr 12.3 Dominic Donner Dark pop and melancholic electronica",
+      "title": "Dominic Donner Dark pop and melancholic electronica",
       "date": "2027-03-12",
       "url": "https://simplon.nl/events/dominic-donner/",
       "status": "venue-agenda kaart",
@@ -1649,7 +1589,7 @@
     {
       "source": "Website",
       "site": "https://simplon.nl/",
-      "title": "vr 19.3 Politie Warnsveld Compromisloze skapunk",
+      "title": "Politie Warnsveld Compromisloze skapunk",
       "date": "2027-03-19",
       "url": "https://simplon.nl/events/politie-warnsveld-2027/",
       "status": "venue-agenda kaart",
@@ -1658,7 +1598,7 @@
     {
       "source": "Website",
       "site": "https://simplon.nl/",
-      "title": "za 20.3 McScallyfest Minifestival en EP-release vol feestelijke folkpunk",
+      "title": "McScallyfest Minifestival en EP-release vol feestelijke folkpunk",
       "date": "2027-03-20",
       "url": "https://simplon.nl/events/mcscallyfest-2027/",
       "status": "venue-agenda kaart",
@@ -1667,7 +1607,7 @@
     {
       "source": "Website",
       "site": "https://simplon.nl/",
-      "title": "vr 2.4 FIEP Infectious, energetic indierock",
+      "title": "FIEP Infectious, energetic indierock",
       "date": "2027-04-02",
       "url": "https://simplon.nl/events/fiep/",
       "status": "venue-agenda kaart",
@@ -1676,7 +1616,7 @@
     {
       "source": "Website",
       "site": "https://simplon.nl/",
-      "title": "za 10.4 ÃO Mesmerising mix of Portuguese artpop and alternative Latin",
+      "title": "ÃO Mesmerising mix of Portuguese artpop and alternative Latin",
       "date": "2027-04-10",
       "url": "https://simplon.nl/events/ao/",
       "status": "venue-agenda kaart",
@@ -1685,7 +1625,7 @@
     {
       "source": "Website",
       "site": "https://simplon.nl/",
-      "title": "za 10.4 Sven Cilliers Intimate singer-songwriter pop",
+      "title": "Sven Cilliers Intimate singer-songwriter pop",
       "date": "2027-04-10",
       "url": "https://simplon.nl/events/sven-cilliers-2027/",
       "status": "venue-agenda kaart",
@@ -1694,7 +1634,7 @@
     {
       "source": "Website",
       "site": "https://simplon.nl/",
-      "title": "wo 14.4 Comedytunes Comedynight Ronald Smink // Joran Welling // Hermes Ahmadi // Jasper Nieuwenhuis",
+      "title": "Comedytunes Comedynight Ronald Smink // Joran Welling // Hermes Ahmadi // Jasper Nieuwenhuis",
       "date": "2027-04-14",
       "url": "https://simplon.nl/events/comedy-tunes-14-4/",
       "status": "venue-agenda kaart",
@@ -1703,7 +1643,7 @@
     {
       "source": "Website",
       "site": "https://simplon.nl/",
-      "title": "za 24.4 Blackbird Melodious vintage pop",
+      "title": "Blackbird Melodious vintage pop",
       "date": "2027-04-24",
       "url": "https://simplon.nl/events/blackbird-2027/",
       "status": "venue-agenda kaart",
@@ -1712,7 +1652,7 @@
     {
       "source": "Website",
       "site": "https://simplon.nl/",
-      "title": "vr 30.4 Josua Peter Dynamic indie folk and pop",
+      "title": "Josua Peter Dynamic indie folk and pop",
       "date": "2027-04-30",
       "url": "https://simplon.nl/events/josua-peter-2027/",
       "status": "venue-agenda kaart",
@@ -1721,7 +1661,7 @@
     {
       "source": "Website",
       "site": "https://simplon.nl/",
-      "title": "vr 14.5 Nienke Leone Eerlijke en catchy popliedjes",
+      "title": "Nienke Leone Eerlijke en catchy popliedjes",
       "date": "2027-05-14",
       "url": "https://simplon.nl/events/nienke-leone/",
       "status": "venue-agenda kaart",
@@ -1730,7 +1670,7 @@
     {
       "source": "Website",
       "site": "https://simplon.nl/",
-      "title": "vr 28.5 Mood Bored Catchy and raw shoegaze mixed with catchy poppy hooks",
+      "title": "Mood Bored Catchy and raw shoegaze mixed with catchy poppy hooks",
       "date": "2027-05-28",
       "url": "https://simplon.nl/events/mood-bored-2027/",
       "status": "venue-agenda kaart",
@@ -1753,546 +1693,6 @@
       "url": "https://simplon.nl/programma/",
       "status": "ok",
       "rawText": "56 events/aanbiedingen op deze pagina"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "za 9.1 Alice Olsthoorn Aanstekelijke hyperpop meets club muziek",
-      "date": "",
-      "url": "https://simplon.nl/events/alice-olsthoorn/",
-      "status": "detail-link gevonden",
-      "rawText": "za 9.1 Alice Olsthoorn Aanstekelijke hyperpop meets club muziek"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "za 10.4 ÃO Mesmerising mix of Portuguese artpop and alternative Latin",
-      "date": "",
-      "url": "https://simplon.nl/events/ao/",
-      "status": "detail-link gevonden",
-      "rawText": "za 10.4 ÃO Mesmerising mix of Portuguese artpop and alternative Latin"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "za 14.11 Bassface SMG // Teej // Yannons // aotp",
-      "date": "",
-      "url": "https://simplon.nl/events/bassface-november-2026/",
-      "status": "detail-link gevonden",
-      "rawText": "za 14.11 Bassface SMG // Teej // Yannons // aotp"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "za 14.11 Big Sleep Support: Stardog | dynamic Irish indierock",
-      "date": "",
-      "url": "https://simplon.nl/events/big-sleep-2026/",
-      "status": "detail-link gevonden",
-      "rawText": "za 14.11 Big Sleep Support: Stardog | dynamic Irish indierock"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "za 24.4 Blackbird Melodious vintage pop",
-      "date": "",
-      "url": "https://simplon.nl/events/blackbird-2027/",
-      "status": "detail-link gevonden",
-      "rawText": "za 24.4 Blackbird Melodious vintage pop"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "vr 4.12 Call It Off Support: Biddy Early | Taylor Swift Tribute",
-      "date": "",
-      "url": "https://simplon.nl/events/call-it-off-taylor-swift-tribute/",
-      "status": "detail-link gevonden",
-      "rawText": "vr 4.12 Call It Off Support: Biddy Early | Taylor Swift Tribute"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "vr 30.10 Chicco Gezellige hedendaagse Nederlandse volk",
-      "date": "",
-      "url": "https://simplon.nl/events/chicco/",
-      "status": "detail-link gevonden",
-      "rawText": "vr 30.10 Chicco Gezellige hedendaagse Nederlandse volk"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "do 10.12 Ciao Lucifer Reality-escaping, uplifting indiepop",
-      "date": "",
-      "url": "https://simplon.nl/events/ciao-lucifer-2026/",
-      "status": "detail-link gevonden",
-      "rawText": "do 10.12 Ciao Lucifer Reality-escaping, uplifting indiepop"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "wo 14.4 Comedytunes Comedynight Ronald Smink // Joran Welling // Hermes Ahmadi // Jasper Nieuwenhuis",
-      "date": "",
-      "url": "https://simplon.nl/events/comedy-tunes-14-4/",
-      "status": "detail-link gevonden",
-      "rawText": "wo 14.4 Comedytunes Comedynight Ronald Smink // Joran Welling // Hermes Ahmadi // Jasper Nieuwenhuis"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "wo 17.2 Comedytunes Comedynight Tim Kroezen // Gerrie Smits // Wilko Terwijn // Jacob Spoelstra",
-      "date": "",
-      "url": "https://simplon.nl/events/comedy-tunes-17-2/",
-      "status": "detail-link gevonden",
-      "rawText": "wo 17.2 Comedytunes Comedynight Tim Kroezen // Gerrie Smits // Wilko Terwijn // Jacob Spoelstra"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "wo 9.12 Comedytunes Comedynight Jasper van der Veen // Jacob Adriani // Tim Alpherts // Meeuw Roovers",
-      "date": "",
-      "url": "https://simplon.nl/events/comedy-tunes-9-12/",
-      "status": "detail-link gevonden",
-      "rawText": "wo 9.12 Comedytunes Comedynight Jasper van der Veen // Jacob Adriani // Tim Alpherts // Meeuw Roovers"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "vr 20.11 Desire Support: Johnny Jewel + Mothermary | An audiovisual disco noir experience",
-      "date": "",
-      "url": "https://simplon.nl/events/desire-x-johnny-jewel/",
-      "status": "detail-link gevonden",
-      "rawText": "vr 20.11 Desire Support: Johnny Jewel + Mothermary | An audiovisual disco noir experience"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "vr 12.3 Dominic Donner Dark pop and melancholic electronica",
-      "date": "",
-      "url": "https://simplon.nl/events/dominic-donner/",
-      "status": "detail-link gevonden",
-      "rawText": "vr 12.3 Dominic Donner Dark pop and melancholic electronica"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "vr 8.1 Eva van Manen Support: Luka | Een poëtische adempauze",
-      "date": "",
-      "url": "https://simplon.nl/events/eva-van-manen-2027/",
-      "status": "detail-link gevonden",
-      "rawText": "vr 8.1 Eva van Manen Support: Luka | Een poëtische adempauze"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "vr 2.4 FIEP Infectious, energetic indierock",
-      "date": "",
-      "url": "https://simplon.nl/events/fiep/",
-      "status": "detail-link gevonden",
-      "rawText": "vr 2.4 FIEP Infectious, energetic indierock"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "do 29.10 Godfried + Nina Bailey Warme indie en pop",
-      "date": "",
-      "url": "https://simplon.nl/events/godfried-nina-bailey/",
-      "status": "detail-link gevonden",
-      "rawText": "do 29.10 Godfried + Nina Bailey Warme indie en pop"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "za 7.11 Good Times Avond vol 80, 90 en 00s throwbacks en gezelligheid",
-      "date": "",
-      "url": "https://simplon.nl/events/good-times-november-2026/",
-      "status": "detail-link gevonden",
-      "rawText": "za 7.11 Good Times Avond vol 80, 90 en 00s throwbacks en gezelligheid"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "vr 23.10 IDA Support: Janet Livv | Neder-hyper-pop",
-      "date": "",
-      "url": "https://simplon.nl/events/ida-2026/",
-      "status": "detail-link gevonden",
-      "rawText": "vr 23.10 IDA Support: Janet Livv | Neder-hyper-pop"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "wo 18.11 Iskander Moon Folkpop with classical finesse",
-      "date": "",
-      "url": "https://simplon.nl/events/iskander-moon-2026/",
-      "status": "detail-link gevonden",
-      "rawText": "wo 18.11 Iskander Moon Folkpop with classical finesse"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "vr 30.4 Josua Peter Dynamic indie folk and pop",
-      "date": "",
-      "url": "https://simplon.nl/events/josua-peter-2027/",
-      "status": "detail-link gevonden",
-      "rawText": "vr 30.4 Josua Peter Dynamic indie folk and pop"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "vr 5.3 Kans Warme, emotionele r&b en hiphop",
-      "date": "",
-      "url": "https://simplon.nl/events/kans/",
-      "status": "detail-link gevonden",
-      "rawText": "vr 5.3 Kans Warme, emotionele r&b en hiphop"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "vr 22.1 Klezmagic Energetic Balkan and Klezmer",
-      "date": "",
-      "url": "https://simplon.nl/events/klezmagic/",
-      "status": "detail-link gevonden",
-      "rawText": "vr 22.1 Klezmagic Energetic Balkan and Klezmer"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "za 5.12 Lézard A discopunk diorama",
-      "date": "",
-      "url": "https://simplon.nl/events/lezard-2026/",
-      "status": "detail-link gevonden",
-      "rawText": "za 5.12 Lézard A discopunk diorama"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "za 24.10 Lola Cedès Donzige elektronische pop",
-      "date": "",
-      "url": "https://simplon.nl/events/lola-cedes-2026/",
-      "status": "detail-link gevonden",
-      "rawText": "za 24.10 Lola Cedès Donzige elektronische pop"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "za 31.10 Lostboyshawty Support: Lil Timmie | Opvallende hiphop, trap en R&B",
-      "date": "",
-      "url": "https://simplon.nl/events/lostboyshawty-2026/",
-      "status": "detail-link gevonden",
-      "rawText": "za 31.10 Lostboyshawty Support: Lil Timmie | Opvallende hiphop, trap en R&B"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "za 20.3 McScallyfest Minifestival en EP-release vol feestelijke folkpunk",
-      "date": "",
-      "url": "https://simplon.nl/events/mcscallyfest-2027/",
-      "status": "detail-link gevonden",
-      "rawText": "za 20.3 McScallyfest Minifestival en EP-release vol feestelijke folkpunk"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "do 5.11 Modern Figure + Nakûde Alternative rock & postpunk",
-      "date": "",
-      "url": "https://simplon.nl/events/modern-figure-nakude/",
-      "status": "detail-link gevonden",
-      "rawText": "do 5.11 Modern Figure + Nakûde Alternative rock & postpunk"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "vr 28.5 Mood Bored Catchy and raw shoegaze mixed with catchy poppy hooks",
-      "date": "",
-      "url": "https://simplon.nl/events/mood-bored-2027/",
-      "status": "detail-link gevonden",
-      "rawText": "vr 28.5 Mood Bored Catchy and raw shoegaze mixed with catchy poppy hooks"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "vr 14.5 Nienke Leone Eerlijke en catchy popliedjes",
-      "date": "",
-      "url": "https://simplon.nl/events/nienke-leone/",
-      "status": "detail-link gevonden",
-      "rawText": "vr 14.5 Nienke Leone Eerlijke en catchy popliedjes"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "vr 27.11 NO BARRIER XL Edition | Punk, Emo, Rock & Metalcore Party",
-      "date": "",
-      "url": "https://simplon.nl/events/no-barrier-november-2026/",
-      "status": "detail-link gevonden",
-      "rawText": "vr 27.11 NO BARRIER XL Edition | Punk, Emo, Rock & Metalcore Party"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "vr 13.11 NO CIGAR Smooth indierock on psychedelics",
-      "date": "",
-      "url": "https://simplon.nl/events/no-cigar-2026/",
-      "status": "detail-link gevonden",
-      "rawText": "vr 13.11 NO CIGAR Smooth indierock on psychedelics"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "vr 26.2 Oh Voyage Anatolian psych dance",
-      "date": "",
-      "url": "https://simplon.nl/events/oh-voyage-2026/",
-      "status": "detail-link gevonden",
-      "rawText": "vr 26.2 Oh Voyage Anatolian psych dance"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "vr 19.3 Politie Warnsveld Compromisloze skapunk",
-      "date": "",
-      "url": "https://simplon.nl/events/politie-warnsveld-2027/",
-      "status": "detail-link gevonden",
-      "rawText": "vr 19.3 Politie Warnsveld Compromisloze skapunk"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "vr 6.11 Queen's Pleasure Energetic indierock",
-      "date": "",
-      "url": "https://simplon.nl/events/queens-pleasure-2026/",
-      "status": "detail-link gevonden",
-      "rawText": "vr 6.11 Queen's Pleasure Energetic indierock"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "vr 13.11 Rijck Disruptieve hiphop met contrast",
-      "date": "",
-      "url": "https://simplon.nl/events/rijck-2026/",
-      "status": "detail-link gevonden",
-      "rawText": "vr 13.11 Rijck Disruptieve hiphop met contrast"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "za 28.11 2016 special Roodkopje",
-      "date": "",
-      "url": "https://simplon.nl/events/roodkopje-november-2026/",
-      "status": "detail-link gevonden",
-      "rawText": "za 28.11 2016 special Roodkopje"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "wo 2.12 Sondre Lerche Catchy experimental pop",
-      "date": "",
-      "url": "https://simplon.nl/events/sondre-lechre/",
-      "status": "detail-link gevonden",
-      "rawText": "wo 2.12 Sondre Lerche Catchy experimental pop"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "vr 5.2 Starfish Sun soaked mix of reggae pop and surf rock",
-      "date": "",
-      "url": "https://simplon.nl/events/starfish-3/",
-      "status": "detail-link gevonden",
-      "rawText": "vr 5.2 Starfish Sun soaked mix of reggae pop and surf rock"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "wo 16.12 stay away from dante! Een wereld vol verhalen, genres en verrassingen",
-      "date": "",
-      "url": "https://simplon.nl/events/stay-away-from-dante/",
-      "status": "detail-link gevonden",
-      "rawText": "wo 16.12 stay away from dante! Een wereld vol verhalen, genres en verrassingen"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "vr 11.12 10 jaar Kerst met Stippenlift Dé remedie tegen je winterdepressie",
-      "date": "",
-      "url": "https://simplon.nl/events/stippenlift-2026/",
-      "status": "detail-link gevonden",
-      "rawText": "vr 11.12 10 jaar Kerst met Stippenlift Dé remedie tegen je winterdepressie"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "za 10.4 Sven Cilliers Intimate singer-songwriter pop",
-      "date": "",
-      "url": "https://simplon.nl/events/sven-cilliers-2027/",
-      "status": "detail-link gevonden",
-      "rawText": "za 10.4 Sven Cilliers Intimate singer-songwriter pop"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "za 6.3 TAPE TOY Hyperactive grungepop and punky shoegaze",
-      "date": "",
-      "url": "https://simplon.nl/events/tape-toy-2027/",
-      "status": "detail-link gevonden",
-      "rawText": "za 6.3 TAPE TOY Hyperactive grungepop and punky shoegaze"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "za 21.11 TechNorth Doctor Juicy // Faris Hababa // Fran LF // Julan (Live)",
-      "date": "",
-      "url": "https://simplon.nl/events/technorth-november-2026/",
-      "status": "detail-link gevonden",
-      "rawText": "za 21.11 TechNorth Doctor Juicy // Faris Hababa // Fran LF // Julan (Live)"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "vr 26.2 The Skints East-London Reggae",
-      "date": "",
-      "url": "https://simplon.nl/events/the-skints-2026/",
-      "status": "detail-link gevonden",
-      "rawText": "vr 26.2 The Skints East-London Reggae"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "vr 18.12 Tim Akkerman & The Ivy League Intimate singer-songwriter pop",
-      "date": "",
-      "url": "https://simplon.nl/events/tim-akkerman-the-ivy-league-2026/",
-      "status": "detail-link gevonden",
-      "rawText": "vr 18.12 Tim Akkerman & The Ivy League Intimate singer-songwriter pop"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "do 26.11 Mail for Sil + Brighid",
-      "date": "",
-      "url": "https://simplon.nl/events/up-mail-for-sil-brighid/",
-      "status": "detail-link gevonden",
-      "rawText": "do 26.11 Mail for Sil + Brighid"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "do 12.11 Piter + Rupit Warme singer-songwriter pop",
-      "date": "",
-      "url": "https://simplon.nl/events/up-piter-rupit/",
-      "status": "detail-link gevonden",
-      "rawText": "do 12.11 Piter + Rupit Warme singer-songwriter pop"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "za 13.2 VISION NOISIA + more tba",
-      "date": "",
-      "url": "https://simplon.nl/events/vision-februari-2027/",
-      "status": "detail-link gevonden",
-      "rawText": "za 13.2 VISION NOISIA + more tba"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "vr 27.11 Wrest Heartfelt Edinburgh indie rock",
-      "date": "",
-      "url": "https://simplon.nl/events/wrest/",
-      "status": "detail-link gevonden",
-      "rawText": "vr 27.11 Wrest Heartfelt Edinburgh indie rock"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "vr 12.2 Yong Yello Soulvolle en meeslepende Vlaamse hiphop",
-      "date": "",
-      "url": "https://simplon.nl/events/yong-yello/",
-      "status": "detail-link gevonden",
-      "rawText": "vr 12.2 Yong Yello Soulvolle en meeslepende Vlaamse hiphop"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "vr 4.12 ZWARTEWATER Spijkerharde Zwolse rap",
-      "date": "",
-      "url": "https://simplon.nl/events/zwartewater-2026/",
-      "status": "detail-link gevonden",
-      "rawText": "vr 4.12 ZWARTEWATER Spijkerharde Zwolse rap"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "Programma",
-      "date": "",
-      "url": "https://simplon.nl/programma/",
-      "status": "detail-link gevonden",
-      "rawText": "Programma"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "Mijn tickets",
-      "date": "",
-      "url": "https://simplon.nl/mijn-tickets/",
-      "status": "detail-link gevonden",
-      "rawText": "Mijn tickets"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "Tickets",
-      "date": "",
-      "url": "https://simplon.nl/over-simplon/faq/",
-      "status": "detail-link gevonden",
-      "rawText": "Tickets"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "View site in English",
-      "date": "",
-      "url": "https://simplon.nl/en/programme/",
-      "status": "detail-link gevonden",
-      "rawText": "View site in English"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "Fotogalerij",
-      "date": "",
-      "url": "https://simplon.nl/fotogalerij/",
-      "status": "detail-link gevonden",
-      "rawText": "Fotogalerij"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "Geschiedenis",
-      "date": "",
-      "url": "https://simplon.nl/geschiedenis/",
-      "status": "detail-link gevonden",
-      "rawText": "Geschiedenis"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "Over Simplon",
-      "date": "",
-      "url": "https://simplon.nl/over-simplon/",
-      "status": "detail-link gevonden",
-      "rawText": "Over Simplon"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "Huisregels",
-      "date": "",
-      "url": "https://simplon.nl/over-simplon/huisregels/",
-      "status": "detail-link gevonden",
-      "rawText": "Huisregels"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "Toegankelijkheid",
-      "date": "",
-      "url": "https://simplon.nl/over-simplon/toegankelijkheid/",
-      "status": "detail-link gevonden",
-      "rawText": "Toegankelijkheid"
     },
     {
       "source": "RSS/Atom",
@@ -2351,128 +1751,11 @@
     {
       "source": "Website",
       "site": "https://simplon.nl/",
-      "title": "Alice Olsthoorn - Simplon Programma Mijn",
-      "date": "2027-01-09",
-      "url": "https://simplon.nl/events/alice-olsthoorn/",
-      "status": "event uit datumblok",
-      "rawText": "Alice Olsthoorn - Simplon Programma Mijn tickets Zoeken EN / NL Menu Programma Tickets Contact Over Simplon Werken bij Fotogalerij Toegankelijkheid Huisregels Algemene voorwaarden Privacy statement View site in English Alice Olsthoorn Aanstekelijke hyperpop meets club muziek za 9.1 TICKETS €17 20:00 Alice Olsthoorn maakt een aanstekelijke mix van hyperpop en clubmuziek. Na een verpletterend optreden bij Noorderslag h"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "Alice Olsthoorn",
-      "date": "2027-01-09",
-      "url": "https://simplon.nl/events/alice-olsthoorn/",
-      "status": "event uit kaart",
-      "rawText": "Programma Mijn tickets Zoeken EN / NL Menu Programma Tickets Contact Over Simplon Werken bij Fotogalerij Toegankelijkheid Huisregels Algemene voorwaarden Privacy statement View site in English Alice Olsthoorn Aanstekelijke hyperpop meets club muziek za 9.1 TICKETS €17 20:00 Alice Olsthoorn maakt een aanstekelijke mix van hyperpop en clubmuziek. Na een verpletterend optreden bij Noorderslag heeft Alice shows mogen gev"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "Alice Olsthoorn",
-      "date": "2027-01-09",
-      "url": "https://simplon.nl/events/alice-olsthoorn/",
-      "status": "event uit detailpagina",
-      "rawText": "Alice Olsthoorn - Simplon Programma Mijn tickets Zoeken EN / NL Menu Programma Tickets Contact Over Simplon Werken bij Fotogalerij Toegankelijkheid Huisregels Algemene voorwaarden Privacy statement View site in English Alice Olsthoorn Aanstekelijke hyperpop meets club muziek za 9.1 TICKETS €17 20:00 Alice Olsthoorn maakt een aanstekelijke mix van hyperpop en clubmuziek. Na een verpletterend optreden bij Noorderslag h"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "Aanstekelijke hyperpop meets club muziek",
-      "date": "2027-01-09",
-      "url": "https://simplon.nl/events/alice-olsthoorn/",
-      "status": "event uit tekstregel",
-      "rawText": "Aanstekelijke hyperpop meets club muziek | za 9.1 | TICKETS €17 | 20:00 | Alice Olsthoorn maakt een aanstekelijke mix van hyperpop en clubmuziek. Na een verpletterend optreden bij Noorderslag heeft Alice shows mogen geven op o.a. Down The Rabbit Hole, Wildeburg en Best Kept Secret. Alice is de toonaangevende naam als het aankomt op het gloednieuwe genre hyperpop in de Nederlandse scene. Haar geschiedenis ligt in de A"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "€17",
-      "date": "2027-01-09",
-      "url": "https://simplon.nl/events/alice-olsthoorn/",
-      "status": "event uit dagblok",
-      "rawText": "TICKETS €17 | 20:00 | Alice Olsthoorn maakt een aanstekelijke mix van hyperpop en clubmuziek. Na een verpletterend optreden bij Noorderslag heeft Alice shows mogen geven op o.a. Down The Rabbit Hole, Wildeburg en Best Kept Secret. Alice is de toonaangevende naam als het aankomt op het gloednieuwe genre hyperpop in de Nederlandse scene. Haar geschiedenis ligt in de Amsterdamse rave scene waar ze haar liefde en kennis"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "Open",
-      "date": "2027-01-09",
-      "url": "https://simplon.nl/events/alice-olsthoorn/",
-      "status": "event uit dagblok",
-      "rawText": "Open | 20:00 | Start | 20:45 | Locatie"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "Start",
-      "date": "2027-01-09",
-      "url": "https://simplon.nl/events/alice-olsthoorn/",
-      "status": "event uit dagblok",
-      "rawText": "Start | 20:45 | Locatie | Bovenzaal | Genre"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "Nienke Leone",
-      "date": "2027-01-09",
-      "url": "https://simplon.nl/events/alice-olsthoorn/",
-      "status": "event uit dagblok",
-      "rawText": "Nienke Leone | Yong Yello | Blackbird | Bezoekersinfo | Tickets"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "Yong Yello",
-      "date": "2027-01-09",
-      "url": "https://simplon.nl/events/alice-olsthoorn/",
-      "status": "event uit dagblok",
-      "rawText": "Yong Yello | Blackbird | Bezoekersinfo | Tickets | Huisregels"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "Blackbird",
-      "date": "2027-01-09",
-      "url": "https://simplon.nl/events/alice-olsthoorn/",
-      "status": "event uit dagblok",
-      "rawText": "Blackbird | Bezoekersinfo | Tickets | Huisregels | Toegankelijkheid"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "Bezoekersinfo",
-      "date": "2027-01-09",
-      "url": "https://simplon.nl/events/alice-olsthoorn/",
-      "status": "event uit dagblok",
-      "rawText": "Bezoekersinfo | Tickets | Huisregels | Toegankelijkheid | Contact"
-    },
-    {
-      "source": "Parser",
-      "site": "https://simplon.nl/",
-      "title": "Pagina geteld",
-      "date": "",
-      "url": "https://simplon.nl/events/alice-olsthoorn/",
-      "status": "analyse",
-      "rawText": "jsonld:0, links:0, datumblokken:1, kaarten:1, regels:8, detail:1"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "Detailpagina geanalyseerd",
-      "date": "",
-      "url": "https://simplon.nl/events/alice-olsthoorn/",
-      "status": "ok",
-      "rawText": "10 extra events"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
       "title": "Klaar",
       "date": "",
       "url": "https://simplon.nl/",
       "status": "klaar",
-      "rawText": "site 1/1: 60 unieke events in 5.8 sec"
+      "rawText": "site 1/1: 56 unieke events in 5.67 sec"
     }
   ]
 }
