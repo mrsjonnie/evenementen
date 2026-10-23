@@ -83,6 +83,26 @@
     }
 
     .titleChevron { display:none !important; }
+
+    .titleBusyIndicator {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 19px;
+      height: 19px;
+      flex: 0 0 19px;
+      color: var(--primary);
+    }
+    .titleBusyIndicator[hidden] { display: none !important; }
+    .titleBusySpinner {
+      width: 15px;
+      height: 15px;
+      border: 2px solid currentColor;
+      border-right-color: transparent;
+      border-radius: 50%;
+      animation: titleBusySpin .75s linear infinite;
+    }
+    @keyframes titleBusySpin { to { transform: rotate(360deg); } }
     .titleToggle[aria-expanded="true"] .titleChevron { transform:rotate(180deg); }
 
     .titlePanel {
@@ -1078,6 +1098,7 @@
         <h1>
           <button class="titleToggle" id="titleToggle" type="button" aria-expanded="false">
             <span id="pageTitle">Evenementen rond Groningen</span>
+            <span id="titleBusyIndicator" class="titleBusyIndicator" role="status" aria-label="Zoeken naar nieuwe data" title="Zoeken naar nieuwe data" hidden><span class="titleBusySpinner" aria-hidden="true"></span></span>
             <span class="titleChevron" aria-hidden="true">v</span>
           </button>
         </h1>
@@ -2440,6 +2461,8 @@
     }
 
     function renderSites(selected = null) {
+      const titleBusyIndicator = $("titleBusyIndicator");
+      if (titleBusyIndicator) titleBusyIndicator.hidden = activeScanSites.size === 0;
       const selectedSites = selected || new Set(sites);
       const siteRows = sites.map((site) => {
         const count = siteEventCountFor(site);
