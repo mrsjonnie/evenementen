@@ -1156,7 +1156,7 @@
               <div class="sitePanelHeader">Mistral zoekt per aangevinkte website naar echte eventvelden. ChatGPT en SerpAPI kunnen apart worden aangezet om te vergelijken.</div>
               <div class="siteList" id="providerList">
                 <label><input class="providerCheck" type="checkbox" id="provPerplexity" disabled> <span>Perplexity uit</span></label>
-                <label><input class="providerCheck" type="checkbox" id="provMistral" checked> <span>Mistral eventvelden</span></label>
+                <label><input class="providerCheck" type="checkbox" id="provMistral"> <span>Mistral eventvelden</span></label>
                 <label><input class="providerCheck" type="checkbox" id="provOpenAI"> <span>ChatGPT eventvelden</span></label>
                 <label><input class="providerCheck" type="checkbox" id="provSerpAPI"> <span>SerpAPI eventvelden</span></label>
               </div>
@@ -1244,7 +1244,7 @@
   </div>
 
   <script>
-    const APP_VERSION = "2026.10.23.04";
+    const APP_VERSION = "2026.10.23.05";
     const DEFAULT_MAX_EVENTS_PER_SITE = 20;
     const DEFAULT_SITE_TIME_LIMIT_SECONDS = 20;
     const SCAN_SETTINGS_KEY = "eventScanSettingsV1";
@@ -3021,7 +3021,7 @@
       $("typeFilter").value = "all";
       $("newOnlyFilter").checked = false;
       $("provPerplexity").checked = false;
-      $("provMistral").checked = true;
+      $("provMistral").checked = false;
       $("provOpenAI").checked = false;
       $("provSerpAPI").checked = false;
       document.querySelectorAll(".siteCheck, .aiSourceCheck").forEach((check) => { check.checked = true; });
