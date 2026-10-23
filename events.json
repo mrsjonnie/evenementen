@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-23T13:56:47+00:00",
+  "updatedAt": "2026-10-23T14:07:08+00:00",
   "events": [
     {
       "date": "2026-10-23",
@@ -270,21 +270,6 @@
       "description": "Vanwege een update is ons bibliotheeksysteem tijdelijk niet beschikbaar. Excuses voor het ongemak. Filmseries & specials Hulp- en spreekuren Bibliotheekvestigingen Haal meer uit je abonnement Studie- en werkplekken Wifi, internet en printen Verhuur & zakelijk Vacatures & vrijwilligers",
       "cost": "",
       "image": "https://static.forum.nl/cache/the-beloved.27946/the-beloved-s1920x1080.jpg",
-      "isNew": false
-    },
-    {
-      "date": "2026-10-23",
-      "time": "16:00",
-      "title": "The Incomer",
-      "type": "Film",
-      "location": "Bibliotheek",
-      "locationLink": "",
-      "website": "https://forum.nl/nl/agenda/film/the-incomer?date=23-10-2026",
-      "source": "forum.nl",
-      "discoverySource": "Website",
-      "description": "Vanwege een update is ons bibliotheeksysteem tijdelijk niet beschikbaar. Excuses voor het ongemak. Filmseries & specials Hulp- en spreekuren Bibliotheekvestigingen Haal meer uit je abonnement Studie- en werkplekken Wifi, internet en printen Verhuur & zakelijk Vacatures & vrijwilligers",
-      "cost": "",
-      "image": "https://static.forum.nl/cache/the-incomer.27755/the-incomer-s1920x1080.jpg",
       "isNew": false
     },
     {
@@ -2392,9 +2377,9 @@
   "siteResults": [
     {
       "site": "https://forum.nl/nl/agenda",
-      "count": 26,
+      "count": 25,
       "newCount": 0,
-      "durationSeconds": 13.54,
+      "durationSeconds": 12.04,
       "timedOut": false
     }
   ],
@@ -2424,7 +2409,7 @@
       "date": "",
       "url": "https://forum.nl/nl/agenda",
       "status": "ok",
-      "rawText": "173882 tekens HTML"
+      "rawText": "174308 tekens HTML"
     },
     {
       "source": "Parser",
@@ -2711,15 +2696,6 @@
       "title": "link",
       "date": "",
       "url": "https://forum.nl/nl/agenda/film/the-beloved?date=24-10-2026",
-      "status": "detail-link gevonden",
-      "rawText": ""
-    },
-    {
-      "source": "Website",
-      "site": "https://forum.nl/nl/agenda",
-      "title": "link",
-      "date": "",
-      "url": "https://forum.nl/nl/agenda/film/the-incomer?date=23-10-2026",
       "status": "detail-link gevonden",
       "rawText": ""
     },
@@ -3538,15 +3514,6 @@
       "site": "https://forum.nl/nl/agenda",
       "title": "Detailpagina geanalyseerd",
       "date": "",
-      "url": "https://forum.nl/nl/agenda/film/the-incomer?date=23-10-2026",
-      "status": "ok",
-      "rawText": "1 extra events"
-    },
-    {
-      "source": "Website",
-      "site": "https://forum.nl/nl/agenda",
-      "title": "Detailpagina geanalyseerd",
-      "date": "",
       "url": "https://forum.nl/nl/agenda/film/the-social-reckoning?date=23-10-2026",
       "status": "ok",
       "rawText": "1 extra events"
@@ -3702,7 +3669,7 @@
       "date": "",
       "url": "https://forum.nl/nl/agenda",
       "status": "klaar",
-      "rawText": "site 1/1: 26 unieke events in 13.54 sec"
+      "rawText": "site 1/1: 25 unieke events in 12.04 sec"
     }
   ]
 }

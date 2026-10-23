@@ -1,6 +1,6 @@
 Website	https://forum.nl/nl/agenda	start	Start		https://forum.nl/nl/agenda	site 1/1: max 40 events, max 60 seconden
 Parser	https://forum.nl/nl/agenda	strategie	Scrapertype vastgesteld		https://forum.nl/nl/agenda	universeel-eventkaarten
-Website	https://forum.nl/nl/agenda	ok	Pagina gelezen		https://forum.nl/nl/agenda	173882 tekens HTML
+Website	https://forum.nl/nl/agenda	ok	Pagina gelezen		https://forum.nl/nl/agenda	174308 tekens HTML
 Parser	https://forum.nl/nl/agenda	strategie	Forum detailstrategie		https://forum.nl/nl/agenda	Overzicht overslaan; alleen /nl/agenda/<event> detailpagina's verwerken
 Website	https://forum.nl/nl/agenda	ok	Pagina geanalyseerd		https://forum.nl/nl/agenda	0 events/aanbiedingen op deze pagina
 Website	https://forum.nl/nl/agenda	detail-link gevonden	Marilyn		https://forum.nl/agenda/marilyn-expositie	Marilyn
@@ -33,7 +33,6 @@ Website	https://forum.nl/nl/agenda	detail-link gevonden	link		https://forum.nl/n
 Website	https://forum.nl/nl/agenda	detail-link gevonden	link		https://forum.nl/nl/agenda/film/sense-and-sensibility?date=24-10-2026	
 Website	https://forum.nl/nl/agenda	detail-link gevonden	link		https://forum.nl/nl/agenda/film/the-beloved?date=23-10-2026	
 Website	https://forum.nl/nl/agenda	detail-link gevonden	link		https://forum.nl/nl/agenda/film/the-beloved?date=24-10-2026	
-Website	https://forum.nl/nl/agenda	detail-link gevonden	link		https://forum.nl/nl/agenda/film/the-incomer?date=23-10-2026	
 Website	https://forum.nl/nl/agenda	detail-link gevonden	link		https://forum.nl/nl/agenda/film/the-social-reckoning?date=23-10-2026	
 Website	https://forum.nl/nl/agenda	detail-link gevonden	link		https://forum.nl/nl/agenda/film/the-social-reckoning?date=24-10-2026	
 Website	https://forum.nl/nl/agenda	detail-link gevonden	link		https://forum.nl/nl/agenda/film/wicker?date=23-10-2026	
@@ -124,7 +123,6 @@ Website	https://forum.nl/nl/agenda	ok	Detailpagina geanalyseerd		https://forum.n
 Website	https://forum.nl/nl/agenda	ok	Detailpagina geanalyseerd		https://forum.nl/nl/agenda/film/sense-and-sensibility?date=24-10-2026	0 extra events
 Website	https://forum.nl/nl/agenda	ok	Detailpagina geanalyseerd		https://forum.nl/nl/agenda/film/the-beloved?date=23-10-2026	1 extra events
 Website	https://forum.nl/nl/agenda	ok	Detailpagina geanalyseerd		https://forum.nl/nl/agenda/film/the-beloved?date=24-10-2026	0 extra events
-Website	https://forum.nl/nl/agenda	ok	Detailpagina geanalyseerd		https://forum.nl/nl/agenda/film/the-incomer?date=23-10-2026	1 extra events
 Website	https://forum.nl/nl/agenda	ok	Detailpagina geanalyseerd		https://forum.nl/nl/agenda/film/the-social-reckoning?date=23-10-2026	1 extra events
 Website	https://forum.nl/nl/agenda	ok	Detailpagina geanalyseerd		https://forum.nl/nl/agenda/film/the-social-reckoning?date=24-10-2026	0 extra events
 Website	https://forum.nl/nl/agenda	ok	Detailpagina geanalyseerd		https://forum.nl/nl/agenda/film/wicker?date=23-10-2026	1 extra events
@@ -142,4 +140,4 @@ Website	https://forum.nl/nl/agenda	ok	Detailpagina geanalyseerd		https://forum.n
 Website	https://forum.nl/nl/agenda	ok	Detailpagina geanalyseerd		https://forum.nl/nl/agenda/storyworld?date=24-10-2026	0 extra events
 Website	https://forum.nl/nl/agenda	ok	Detailpagina geanalyseerd		https://forum.nl/nl/agenda/walk-in-smartlab?date=24-10-2026	1 extra events
 Website	https://forum.nl/nl/agenda	ok	Detailpagina geanalyseerd		https://forum.nl/nl/agenda/werkplaats-sunnemeerten?date=24-10-2026	1 extra events
-Website	https://forum.nl/nl/agenda	klaar	Klaar		https://forum.nl/nl/agenda	site 1/1: 26 unieke events in 13.54 sec
+Website	https://forum.nl/nl/agenda	klaar	Klaar		https://forum.nl/nl/agenda	site 1/1: 25 unieke events in 12.04 sec
