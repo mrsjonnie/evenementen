@@ -1130,6 +1130,10 @@ def extract_venue_agenda_events(html, page_url, site_url, discovery_source):
         if not url or not same_host(url, site_url) or BAD_URL_RE.search(url):
             continue
         title = clean_title(anchor.get_text(" ", strip=True) or anchor.get("aria-label") or anchor.get("title") or "")
+        if host == "simplon.nl":
+            # Simplon cards start with compact dates such as "vr 23.10"; these are not part of the title.
+            title = re.sub(r"^(?:" + WEEKDAY_PATTERN + r")\.?\s*\d{1,2}\.\d{1,2}(?:\.20\d{2})?\s*", "", title, flags=re.I)
+            title = re.sub(r"\s+(?:concert|dance|up)\s*$", "", title, flags=re.I)
         if not title_is_usable(title) or len(title) < 3:
             continue
 
@@ -1160,6 +1164,9 @@ def extract_venue_agenda_events(html, page_url, site_url, discovery_source):
         if not event_date or len(card_text) > 1800:
             continue
         description = description_from_lines(split_lines(card), title)
+        time_text = card_text
+        if host == "simplon.nl":
+            time_text = re.sub(r"\b(?:" + WEEKDAY_PATTERN + r")\.?\s*\d{1,2}\.\d{1,2}(?:\.20\d{2})?\b", " ", time_text, flags=re.I)
         raw = {
             "date": event_date,
             "title": title,
@@ -1168,7 +1175,7 @@ def extract_venue_agenda_events(html, page_url, site_url, discovery_source):
             "website": url,
             "description": description,
             "image": first_image(card, page_url),
-            "time": first_time(card_text),
+            "time": first_time(time_text),
             "cost": first_price(card_text),
             "discoverySource": discovery_source,
         }
@@ -1632,7 +1639,7 @@ def scrape_site(site_url, site_index=0, site_total=0):
         add_raw("Website", original_site, "Pagina geanalyseerd", "", final_url, "ok", f"{len(page_events)} events/aanbiedingen op deze pagina")
         # VERA's programme parser already returns one clean record per event card.
         # Crawling every linked detail page with generic heuristics creates false events.
-        if "vera-groningen.nl" not in canonical_host(normalized_site) and canonical_host(normalized_site) != "groningen.uitloper.nu":
+        if canonical_host(normalized_site) not in {"vera-groningen.nl", "groningen.uitloper.nu", "simplon.nl"}:
             detail_links.extend(collect_event_links(html, final_url, normalized_site))
 
     # Verwerk gevonden openbare feeds rechtstreeks; dit vereist geen API-key of AI.
