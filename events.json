@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-23T11:19:27+00:00",
+  "updatedAt": "2026-10-23T11:27:56+00:00",
   "events": [],
   "archive": [],
   "siteResults": [
@@ -8,7 +8,7 @@
       "site": "https://www.ibood.com/nl/",
       "count": 0,
       "newCount": 0,
-      "durationSeconds": 0.29,
+      "durationSeconds": 0.33,
       "timedOut": false
     }
   ],
@@ -56,7 +56,7 @@
       "date": "",
       "url": "https://www.ibood.com/nl/",
       "status": "klaar",
-      "rawText": "site 1/1: 0 unieke events in 0.29 sec"
+      "rawText": "site 1/1: 0 unieke events in 0.33 sec"
     }
   ]
 }
