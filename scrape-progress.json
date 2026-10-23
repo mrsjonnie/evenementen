@@ -6670,11 +6670,119 @@
       "url": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
       "status": "klaar",
       "rawText": "site 1/2: 40 unieke events in 3.25 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Start",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/programma",
+      "status": "start",
+      "rawText": "site 2/2: max 40 events, max 60 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/programma",
+      "status": "strategie",
+      "rawText": "programma-kaarten"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Pagina gelezen",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/programma",
+      "status": "ok",
+      "rawText": "58175 tekens HTML"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Zwolse scripts",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/programma",
+      "status": "diagnose",
+      "rawText": "type= src= len=371 | type= src=/assets/js/chunk-vendors.main.js?v=L8F5KdDUVX9i4ON4PXhCti3ujgqHICgBWsZxug4CPgA len=0 | type= src=/assets/js/main.js?v=WgecduYVPp8i_9Rxhb1fyYhHd0tzmUbPgKM0R-XTk5A len=0 | type= src=/assets/js/helpers.js?v=HGrKdvmUXqEJb8FtU8ZsLaz1xOk0Jx-uSg48D1iyr6I len=0 | type=text/javascript src= len=373 | type= src=/scripts/contact-component.js?v=T0YxD1bwBCz0x5Tr6e1QJY0SeZgMP867CLiLKjc7BUI len=0 | typ"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Zwolse links",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/programma",
+      "status": "diagnose",
+      "rawText": ""
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Zwolse JSON",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/programma",
+      "status": "diagnose",
+      "rawText": ""
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Zwolse JS chunk-vendors.main.js",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/assets/js/chunk-vendors.main.js?v=L8F5KdDUVX9i4ON4PXhCti3ujgqHICgBWsZxug4CPgA",
+      "status": "diagnose",
+      "rawText": "eturn or}});const s={[1]:\"TEXT\",[2]:\"CLASS\",[4]:\"STYLE\",[8]:\"PROPS\",[16]:\"FULL_PROPS\",[32]:\"HYDRATE_EVENTS\",[64]:\"STABLE_FRAGMENT\",[128]:\"KEYED_FRAGMENT\",[256]:\"UNKEYED_FRAGMENT\",[512]:\"NEED_PATCH\",[1024]:\"DYNAMIC_SLOTS\",[2048]:\"DEV_ROOT_FRAGMENT | }}new Set;new Map;let Un,qn=[],Kn=!1;function Zn(e,t){var n,r;if(Un=e,Un)Un.enabled=!0,qn.forEach(({event:e,args:t})=>Un.emit(e,...t)),qn=[];else if(\"undefined\"!==typeof w"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Zwolse JS main.js",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/assets/js/main.js?v=WgecduYVPp8i_9Rxhb1fyYhHd0tzmUbPgKM0R-XTk5A",
+      "status": "diagnose",
+      "rawText": "g\":5334,\"./base_earth-filled.svg\":9748,\"./base_edit-filter.svg\":8652,\"./base_email.svg\":495,\"./base_event-schedule.svg\":9599,\"./base_event.svg\":543,\"./base_events.svg\":4174,\"./base_export.svg\":1199,\"./base_face-dissatisfied.svg\":3731,\"./base_fac | g\":5334,\"./base_earth-filled.svg\":9748,\"./base_edit-filter.svg\":8652,\"./base_email.svg\":495,\"./base_event-schedule.svg\":9599,\"./base_event.svg\":543,\"./base_events.svg\":4174"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Zwolse JS helpers.js",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/assets/js/helpers.js?v=HGrKdvmUXqEJb8FtU8ZsLaz1xOk0Jx-uSg48D1iyr6I",
+      "status": "diagnose",
+      "rawText": "window.on = function (eventName, selector, callback) { | eventName = eventName == \"hover\" ? \"mouseenter\" : eventName; | window.addEventListener(\"load\", function () { | element.addEventListener(eventName, callback); | element.addEventListener(eventName, callback);"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Agenda geanalyseerd",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/programma",
+      "status": "gespecialiseerde parser",
+      "rawText": "0 agenda-items gevonden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Pagina geteld",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/programma",
+      "status": "analyse",
+      "rawText": "jsonld:0, links:0, datumblokken:0, kaarten:0, regels:0, detail:0"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Pagina geanalyseerd",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/programma",
+      "status": "ok",
+      "rawText": "0 events/aanbiedingen op deze pagina"
     }
   ],
   "status": "running",
-  "lastCompletedSite": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
-  "lastSiteEventCount": 40,
-  "lastUpdatedAt": "2026-10-23T14:31:51+00:00",
+  "lastCompletedSite": "https://www.zwolsetheaters.nl/programma",
+  "lastSiteEventCount": 0,
+  "lastUpdatedAt": "2026-10-23T14:32:00+00:00",
   "lastCompletedAt": "2026-10-23T14:31:53+00:00"
 }
