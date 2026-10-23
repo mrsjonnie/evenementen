@@ -978,6 +978,69 @@ def extract_line_events(soup, page_url, site_url, discovery_source):
     return events
 
 
+def extract_vera_programme_events(html, page_url, site_url, discovery_source):
+    """Parse VERA's programme listing as dated event cards, including links to ticket/event details."""
+    if "vera-groningen.nl" not in canonical_host(site_url) or "/programma" not in urlparse(page_url).path.lower():
+        return []
+
+    soup = BeautifulSoup(html, "html.parser")
+    events = []
+    seen = set()
+    for anchor in soup.find_all("a", href=True):
+        text = clean_text(anchor.get_text(" ", strip=True) or anchor.get("aria-label") or anchor.get("title"))
+        if not text or not parse_date_text(text):
+            continue
+
+        # The page's event links include weekday + day + month, then title and venue/ticket metadata.
+        date_match = re.search(
+            rf"(?:{WEEKDAY_PATTERN})\.?\s+\d{{1,2}}\s+(?:{MONTH_PATTERN})(?:\s+20\d{{2}})?",
+            text,
+            re.I,
+        )
+        if not date_match:
+            continue
+        date_text = date_match.group(0)
+        event_date = parse_date_text(date_text)
+        tail = text[date_match.end():].strip(" -|:")
+        tail = re.split(r"\b(?:Mainstage|Downstage|Zienema|Dansen|Kelderbar|Ticket:|doors:|start:)\b", tail, maxsplit=1, flags=re.I)[0]
+        tail = STATUS_WORDS_RE.sub(" ", tail)
+        title = clean_title(tail)
+        if not event_date or not title_is_usable(title) or len(title) < 3:
+            continue
+
+        href = normalized_url(anchor.get("href"), page_url)
+        if not href or BAD_URL_RE.search(href):
+            continue
+        key = (event_date, re.sub(r"[^a-z0-9]+", " ", title.lower()).strip())
+        if key in seen:
+            continue
+        seen.add(key)
+
+        lower_text = text.lower()
+        start_pos = lower_text.find("start:")
+        time_value = first_time(text[start_pos:]) if start_pos >= 0 else first_time(text)
+        raw = {
+            "date": event_date,
+            "title": title,
+            "type": classify_type(text, canonical_host(site_url)),
+            "location": "VERA Groningen",
+            "website": href,
+            "description": compact(text, 420),
+            "image": first_image(soup, page_url),
+            "time": time_value,
+            "cost": first_price(text),
+            "discoverySource": discovery_source,
+        }
+        event = normalize_event(raw, site_url)
+        if event:
+            events.append(event)
+            add_raw(discovery_source, site_url, event["title"], event["date"], event["website"], "VERA agenda-item", text)
+
+    if events:
+        add_raw("Parser", site_url, "VERA-programmapagina", "", page_url, "gespecialiseerde parser", f"{len(events)} VERA-agenda-items uit eventlinks")
+    return dedupe_events(events)
+
+
 def parse_page_events(html, page_url, site_url, discovery_source):
     soup = BeautifulSoup(html, "html.parser")
     events = []
@@ -1385,6 +1448,9 @@ def scrape_site(site_url, site_index=0, site_total=0):
             continue
 
         page_events = parse_page_events(html, final_url, normalized_site, "Website")
+        # VERA's programme page uses dated event links rather than consistent Event JSON-LD.
+        page_events.extend(extract_vera_programme_events(html, final_url, normalized_site, "Website"))
+        page_events = dedupe_events(page_events)
         feed_urls.extend(discover_feed_urls(html, final_url, normalized_site))
         if "visitgroningen.nl" in canonical_host(normalized_site) and "/wandelen" in urlparse(final_url).path.lower():
             page_events.extend(extract_visitgroningen_walks(html, final_url, normalized_site))
