@@ -2175,7 +2175,7 @@
         const result = (latestSiteResults || []).find((item) => hostFromUrl(item.site || "") === host);
         const rows = [...(latestRawLog || []), ...(liveLogRows || [])].filter((row) => hostFromUrl(row.site || row.url || "") === host);
         const errors = rows.filter((row) => /fout|mislukt|timeout|geen data|status 4|status 5/i.test(`${row.status || ""} ${row.title || ""}`));
-        const hasProblem = Boolean(result && (result.timedOut || Number(result.count || 0) === 0)) || errors.length > 0;
+        const hasProblem = count === 0 || Boolean(result && (result.timedOut || Number(result.count || 0) === 0)) || errors.length > 0;
         const diagnostic = errors.length ? errors.slice(0,3).map((row) => `${row.title || "Melding"} — ${row.status || ""}: ${row.rawText || ""}`).join(" | ") : result?.timedOut ? "De scan liep tegen de tijdslimiet aan." : "Er zijn geen evenementen opgehaald. De site kan dynamische inhoud gebruiken of scraping blokkeren. Bekijk de ruwe verversdata voor details.";
         return `<label class="${count > 0 ? "siteFound" : ""}"><input class="siteCheck" type="checkbox" value="${escapeHtml(site)}"${selectedSites.has(site) ? " checked" : ""}><span class="sourceInfoWrap"><span>${escapeHtml(site)}${badge}</span>${hasProblem ? `<button class="sourceInfo" type="button" aria-label="Scrape-informatie voor ${escapeHtml(site)}" aria-expanded="false" data-info-site="${escapeHtml(site)}">i</button>` : ""}</span>${hasProblem ? `<span class="sourceInfoPopup" data-info-popup="${escapeHtml(site)}" hidden>${escapeHtml(diagnostic)}</span>` : ""}</label>`;
       }).join("");
@@ -2803,7 +2803,7 @@
       document.querySelectorAll(".aiSourceCheck").forEach((check) => { const target = $(check.dataset.provider); if (target) target.checked = true; });
       cardsCollapsed = true;
       expandedEventKeys = new Set();
-      $("collapseBtn").textContent = "Uitklappen";
+      $("collapseBtn").textContent = "Details uitklappen";
       updateSiteCount();
       updateProviderCount();
       $("dateSingle").value = "2020-01-01";
