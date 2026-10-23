@@ -1031,7 +1031,11 @@
     .filterSidebar .secondRow { flex-direction: column; align-items: stretch; gap: 7px; padding-top: 8px; }
     .filterSidebar .sourcePickers { display: grid; grid-template-columns: minmax(0, 1fr); gap: 8px; width: 100%; }
     .filterSidebar .inlineTools { display: grid; grid-template-columns: minmax(0, 1fr); gap: 6px; width: 100%; }
-    .filterSidebar .inlineTools > *, .filterSidebar #clearBtn { width: 100%; }
+    .filterSidebar .inlineTools > * { width: 100%; }
+    .sidebarViewButtons, .sidebarActionButtons { display:flex; flex-wrap:wrap; gap:5px; min-width:0; }
+    .sidebarViewButtons .btn, .sidebarActionButtons .btn { min-height:32px; padding:0 7px; font-size:.72rem; flex:1 1 auto; }
+    .sidebarActionButtons { grid-column:1 / -1; }
+    .sidebarViewButtons { grid-column:1 / -1; }
     .filterSidebar .sitePanel { position: static; top: auto; left: auto; right: auto; margin-top: 5px; box-shadow: none; }
     .filterSidebar .sitePanelHeader { padding: 7px 8px; font-size: .72rem; }
     .filterSidebar .siteList { max-height: 180px; padding: 6px; }
@@ -1057,9 +1061,6 @@
         <p class="subtitle" id="pageSubtitle">Vind snel wat er te doen is, filter op datum en type, en ververs de lijst wanneer je nieuwe resultaten wilt ophalen.</p>
         <div class="headerActions" aria-label="Weergavebediening">
           <button class="btn btnSecondary filterSidebarToggle" id="filterSidebarToggle" type="button" aria-controls="filterSidebar" aria-expanded="false">Filters tonen</button>
-          <button class="btn btnSecondary" id="collapseBtn" type="button">Details uitklappen</button>
-          <button class="btn btnSecondary" id="collapseTypesBtn" type="button">Types inklappen</button>
-          <button class="btn btnSecondary" id="collapseLocationsBtn" type="button">Locaties inklappen</button>
         </div>
         <div class="titlePanel" id="titlePanel">
           <div class="titlePanelContent">
@@ -1126,9 +1127,17 @@
           </select>
         </div>
 
+        <div class="sidebarViewButtons" aria-label="Weergave">
+          <button class="btn btnSecondary" id="collapseBtn" type="button">Details uitklappen</button>
+          <button class="btn btnSecondary" id="collapseLocationsBtn" type="button">Locaties uitklappen</button>
+          <button class="btn btnSecondary" id="collapseTypesBtn" type="button">Types uitklappen</button>
+        </div>
         <button class="btn btnPrimary" id="applyFiltersBtn" type="button">Filter toepassen</button>
-        <button class="btn btnSecondary" id="refreshBtn" type="button">Ververs data</button>
-        <button class="btn btnSecondary" id="resetBtn" type="button">Reset</button>
+        <div class="sidebarActionButtons">
+          <button class="btn btnSecondary" id="refreshBtn" type="button">Ververs data</button>
+          <button class="btn btnSecondary" id="resetBtn" type="button">Reset</button>
+          <button class="btn btnDanger" id="clearBtn" type="button">Verwijderen</button>
+        </div>
       </div>
 
       <div class="secondRow">
@@ -1172,7 +1181,7 @@
           <button class="btn btnSecondary filterToggle" id="newOnlyToggle" type="button" aria-pressed="false">Alleen nieuw <span id="newCountBadge">0</span></button>
           
         </div>
-        <button class="btn btnDanger" id="clearBtn" type="button">Alles verwijderen</button>
+
       </div>
 
     </aside>
@@ -1732,6 +1741,12 @@
       return Math.max(.2, distanceKm(regionCoord(), destination) * 1.25);
     }
 
+    function eventRadiusKm(event) {
+      const knownDistance = eventDistanceKm(event);
+      // Zonder bruikbare locatie behandelen we de activiteit als lokaal: 1 km vanaf de gekozen regio.
+      return Number.isFinite(knownDistance) ? knownDistance : 1;
+    }
+
     function routeEstimate(event) {
       const roadKm = eventDistanceKm(event);
       if (!Number.isFinite(roadKm)) return "afstand onbekend";
@@ -2159,8 +2174,8 @@
         if (!matchesDate(event)) return false;
         if (query && !haystack.includes(query)) return false;
         if (newOnly && !isNewEvent(event)) return false;
-        const eventKm = eventDistanceKm(event);
-        if (radiusKm > 0 && Number.isFinite(eventKm) && eventKm > radiusKm) return false;
+        const eventKm = eventRadiusKm(event);
+        if (radiusKm > 0 && eventKm > radiusKm) return false;
         return true;
       });
       const types = [...new Set([...activeEvents.map((event) => displayType(event.type || "").trim()).filter(Boolean), "Aanbiedingen"])]
@@ -2379,9 +2394,8 @@
       let afterNew = afterType.filter((event) => !newOnly || isNewEvent(event));
       const matchesRadius = (event) => {
         if (!(radiusKm > 0)) return true;
-        const eventKm = eventDistanceKm(event);
-        // Als de plaats niet te bepalen is, niet stilzwijgend buiten de straal tonen.
-        return Number.isFinite(eventKm) && eventKm <= radiusKm;
+        const eventKm = eventRadiusKm(event);
+        return eventKm <= radiusKm;
       };
       let afterRadius = afterNew.filter(matchesRadius);
       let afterDate = afterRadius.filter(matchesDate);
@@ -2475,7 +2489,8 @@
           const key = type + "::" + source;
           const sourceCollapsed = collapsedSourceGroups.has(key);
           const sourceEvents = allSourceEvents.filter(event => visibleKeys.has(eventDedupeKey(event)));
-          const sourceCards = sourceEvents.length ? renderLocationGroups(sourceEvents, type, source) : `<p class="nextPageHint">Meer ${escapeHtml(source)}-evenementen staan op een andere pagina (${allSourceEvents.length} totaal).</p>`;
+          const isUitloper = /groningen\.uitloper\.nu/i.test(source) || sourceEvents.some(event => /groningen\.uitloper\.nu/i.test(event.website || ""));
+          const sourceCards = sourceEvents.length ? (isUitloper ? sourceEvents.map(renderCard).join("") : renderLocationGroups(sourceEvents, type, source)) : `<p class="nextPageHint">Meer ${escapeHtml(source)}-evenementen staan op een andere pagina (${allSourceEvents.length} totaal).</p>`;
           return `<section class="sourceGroup ${sourceCollapsed ? "collapsed" : ""}"><button class="sourceGroupHeader" type="button" data-source-toggle="${escapeHtml(key)}" aria-expanded="${!sourceCollapsed}"><span>${escapeHtml(source)}</span><small>${allSourceEvents.length} evenementen</small></button><div class="eventGroupCards">${sourceCards}</div></section>`;
         }).join("");
         const cards = sourceHtml || `<p class="nextPageHint">Meer resultaten van dit type staan op een andere pagina (${allForType.length} totaal).</p>`;
@@ -2917,12 +2932,29 @@
       cardsCollapsed = true;
       expandedEventKeys = new Set();
       $("collapseBtn").textContent = "Details uitklappen";
+      collapseAllGroups();
       updateSiteCount();
       updateProviderCount();
-      $("dateSingle").value = "2020-01-01";
+      $("dateSingle").value = formatDate(new Date());
       applyFilters();
       loadWeather();
       hideStatus();
+    }
+
+    function collapseAllGroups() {
+      const allEvents = dedupeEvents(events);
+      collapsedEventTypes = new Set(allEvents.map(event => displayType(event.type || "Activiteit")));
+      collapsedSourceGroups = new Set();
+      collapsedLocationGroups = new Set();
+      allEvents.forEach(event => {
+        const type = displayType(event.type || "Activiteit");
+        const source = eventSourceLabel(event) || "Bron onbekend";
+        const location = cleanText(event.location || "Locatie onbekend");
+        collapsedSourceGroups.add(type + "::" + source);
+        collapsedLocationGroups.add(type + "::" + source + "::" + location);
+      });
+      if ($("collapseTypesBtn")) $("collapseTypesBtn").textContent = "Types uitklappen";
+      if ($("collapseLocationsBtn")) $("collapseLocationsBtn").textContent = "Locaties uitklappen";
     }
 
     function toggleCardsCollapsed() {
@@ -2984,6 +3016,21 @@
         loadJson("./sites.json", fallbackSites)
       ]);
       events = mergeVerifiedEvents(loaded[0].events);
+      const today = formatDate(new Date());
+      const walkingOverview = {
+        title: "Wandelen in en rond Groningen",
+        type: "Wandelen",
+        date: today,
+        periodLabel: "Iedere dag",
+        isPermanent: true,
+        location: "Groningen",
+        cost: "Gratis",
+        description: "Wandel wanneer het jou uitkomt. Bekijk wandelroutes en ideeën voor een wandeling in de provincie Groningen.",
+        website: "https://www.visitgroningen.nl/nl/doen/wandelen",
+        source: "Wandeloverzicht",
+        discoverySource: "Website"
+      };
+      events = dedupeEvents([...events, walkingOverview]);
       eventsUpdatedAt = loaded[0].updatedAt;
       latestSiteResults = loaded[0].siteResults || [];
       latestRawLog = loaded[0].rawLog || [];
@@ -2996,6 +3043,7 @@
       cardsCollapsed = true;
       expandedEventKeys = new Set();
       $("collapseBtn").textContent = "Details uitklappen";
+      collapseAllGroups();
       sites = mergeSites(loaded[1]);
       applyScanSettings();
       const currentKeys = eventKeySet(events);
@@ -3091,13 +3139,13 @@
       render();
     });
     $("collapseBtn").addEventListener("click", toggleCardsCollapsed);
-    $("collapseTypesBtn").addEventListener("click", () => { const types = [...new Set(filteredEvents.map((event) => displayType(event.type || "Activiteit")))]; const allCollapsed = types.length && types.every((type) => collapsedEventTypes.has(type)); collapsedEventTypes = allCollapsed ? new Set() : new Set(types); render(); $("collapseTypesBtn").textContent = allCollapsed ? "Types inklappen" : "Types uitklappen"; });
+    $("collapseTypesBtn").addEventListener("click", () => { const types = [...new Set(filteredEvents.map((event) => displayType(event.type || "Activiteit")))]; const allCollapsed = types.length && types.every((type) => collapsedEventTypes.has(type)); collapsedEventTypes = allCollapsed ? new Set() : new Set(types); render(); $("collapseTypesBtn").textContent = allCollapsed ? "Types uitklappen" : "Types inklappen"; });
     $("collapseLocationsBtn").addEventListener("click", () => {
       const keys = [...new Set(filteredEvents.map((event) => displayType(event.type || "Activiteit") + "::" + (eventSourceLabel(event) || "Bron onbekend") + "::" + cleanText(event.location || "Locatie onbekend")))];
       const allCollapsed = keys.length > 0 && keys.every((key) => collapsedLocationGroups.has(key));
       collapsedLocationGroups = allCollapsed ? new Set() : new Set(keys);
       render();
-      $("collapseLocationsBtn").textContent = allCollapsed ? "Locaties inklappen" : "Locaties uitklappen";
+      $("collapseLocationsBtn").textContent = allCollapsed ? "Locaties uitklappen" : "Locaties inklappen";
     });
     $("prevPage").addEventListener("click", () => { currentPage -= 1; render(); window.scrollTo({ top: 0, behavior: "smooth" }); });
     $("nextPage").addEventListener("click", () => { currentPage += 1; render(); window.scrollTo({ top: 0, behavior: "smooth" }); });
@@ -3203,6 +3251,13 @@
       $("filterSidebarToggle").textContent = isOpen ? "Filters verbergen" : "Filters tonen";
     }
     $("filterSidebarToggle").addEventListener("click", () => setSidebarOpen($("filterSidebar").hidden));
+    // Bronnen staan direct onder Periode; verversen, resetten en verwijderen blijven bij elkaar.
+    const filterGrid = document.querySelector(".filters");
+    filterGrid.insertBefore($("siteSelect"), $("applyFiltersBtn"));
+    $("siteSelect").style.gridColumn = "1 / -1";
+    $("siteSelect").style.marginTop = "2px";
+    $("clearBtn").textContent = "Verwijderen";
+    $("clearBtn").style.width = "auto";
     const savedSidebarWidth = Number(localStorage.getItem("eventsSidebarWidth"));
     const initialSidebarWidth = Number.isFinite(savedSidebarWidth) && savedSidebarWidth >= 220 && savedSidebarWidth <= 520 ? savedSidebarWidth : 248;
     $("pageLayout").style.setProperty("--sidebar-width", initialSidebarWidth + "px");
