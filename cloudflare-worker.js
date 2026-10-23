@@ -112,6 +112,11 @@ function mistralEnabled(env, body = {}) {
   return Boolean(validateInput(env.MISTRAL_API_KEY || "", 500) && providers.mistral === true);
 }
 
+function perplexityEnabled(env, body = {}) {
+  const providers = body.providers && typeof body.providers === "object" ? body.providers : {};
+  return Boolean(validateInput(env.PERPLEXITY_API_KEY || "", 500) && providers.perplexity === true);
+}
+
 function serpSearchQueries(site, body = {}) {
   const url = new URL(site);
   const region = validateInput(body.region || "Groningen", 80);
@@ -378,6 +383,46 @@ async function chatGptEventsForSite(env, site, body = {}) {
     status: "eventvelden gevonden",
     rawText: event.description || event.dateText || ""
   }));
+  return { events, rawLog };
+}
+
+async function perplexityEventsForSite(env, site, body = {}) {
+  const token = validateInput(env.PERPLEXITY_API_KEY || "", 500);
+  if (!token) return { events: [], rawLog: [] };
+  const rawLog = [{
+    source: "Perplexity",
+    site,
+    title: "Perplexity webzoekopdracht",
+    date: "",
+    url: site,
+    status: "zoeken",
+    rawText: "Perplexity zoekt aanvullende, controleerbare evenementen op deze website."
+  }];
+  const response = await callWithTimeout("https://api.perplexity.ai/chat/completions", {
+    method: "POST",
+    headers: {
+      "Authorization": `Bearer ${token}`,
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      model: validateInput(env.PERPLEXITY_MODEL || "sonar", 80),
+      messages: [
+        { role: "system", content: "Je bent een strenge evenementen-extractor. Gebruik webzoekresultaten om echte, aankomende evenementen te verifiëren. Geef uitsluitend JSON terug met een events-array; verzin geen titels, datums of links." },
+        { role: "user", content: aiPromptForSite(site, body, "Perplexity") }
+      ],
+      response_format: { type: "json_object" },
+      temperature: 0,
+      max_tokens: 1800
+    })
+  }, 16000);
+  if (!response.ok) {
+    rawLog.push({ source: "Perplexity", site, title: "Perplexity fout", date: "", url: site, status: `status ${response.status}`, rawText: validateInput(await response.text(), 400) });
+    return { events: [], rawLog };
+  }
+  const data = await response.json().catch(() => ({}));
+  const text = chatTextFromResponse(data);
+  const events = aiEventsFromText(site, text, "Perplexity");
+  rawLog.push({ source: "Perplexity", site, title: "Perplexity resultaat", date: "", url: site, status: "klaar", rawText: `${events.length} event-kandidaten` });
   return { events, rawLog };
 }
 
@@ -648,6 +693,12 @@ async function enrichBodyWithSerpApi(env, body = {}) {
     priority.forEach((site) => aiJobs.push(mistralEventsForSite(env, site, body).catch((error) => ({
       events: [],
       rawLog: [{ source: "Mistral", site, title: "Mistral mislukt", date: "", url: site, status: "fout", rawText: validateInput(error.message || "", 300) }]
+    }))));
+  }
+  if (perplexityEnabled(env, body)) {
+    priority.forEach((site) => aiJobs.push(perplexityEventsForSite(env, site, body).catch((error) => ({
+      events: [],
+      rawLog: [{ source: "Perplexity", site, title: "Perplexity mislukt", date: "", url: site, status: "fout", rawText: validateInput(error.message || "", 300) }]
     }))));
   }
   if (aiJobs.length) {
