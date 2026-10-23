@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-23T06:31:30+00:00",
+  "updatedAt": "2026-10-23T06:56:48+00:00",
   "events": [
     {
       "date": "2026-10-23",
@@ -21,7 +21,7 @@
       "date": "2026-10-23",
       "time": "",
       "title": "A Tribute to George Michael",
-      "type": "Theater",
+      "type": "Concert",
       "location": "Veendam",
       "locationLink": "",
       "website": "https://www.visitgroningen.nl/nl/doen/uitgaan/316296584/a-tribute-to-george-michael-1",
@@ -231,7 +231,7 @@
       "date": "2026-10-23",
       "time": "",
       "title": "Dag van het Hunebed",
-      "type": "Workshop",
+      "type": "Wandelen",
       "location": "Afstand tot mijn locatie",
       "locationLink": "",
       "website": "https://www.drenthe.nl/evenementen-activiteiten/dag-van-het-hunebed",
@@ -396,7 +396,7 @@
       "date": "2026-10-23",
       "time": "17:30 - 19:20",
       "title": "Downtown",
-      "type": "Concert",
+      "type": "Activiteit",
       "location": "Groningen",
       "locationLink": "",
       "website": "https://www.kultuuragenda.nl/agenda/2904168278/downtown",
@@ -531,7 +531,7 @@
       "date": "2026-10-23",
       "time": "",
       "title": "Fietsen & Wandelen Fietsen Wandelen Routes Bekijk",
-      "type": "Concert",
+      "type": "Wandelen",
       "location": "Groningen",
       "locationLink": "",
       "website": "https://www.drenthe.nl/evenementen-activiteiten",
@@ -876,7 +876,7 @@
       "date": "2026-10-23",
       "time": "",
       "title": "Ontdek de actieve evenementen",
-      "type": "Dans",
+      "type": "Wandelen",
       "location": "Ameland",
       "locationLink": "",
       "website": "https://www.visitwadden.nl/nl/bezoeken/agenda/actief",
@@ -1005,7 +1005,7 @@
       "description": "Voeg toe als favoriet Voeg toe als favoriet",
       "cost": "",
       "image": "https://assets.plaece.nl/thumb/twTR3bZ1T39cz_OnaTcSWw6n1fmlB9BsX0YTAjLRPLA/resizing_type:fit/width:500/height:0/gravity:sm/enlarge:0/aHR0cHM6Ly9hc3NldHMucGxhZWNlLm5sL29kcC1ncm9uaW5nZW4vaW1hZ2UvOGVlYTY1ZjM3NTJjNTRjZjEzNWRjMTg2YmVhNjViNTFjNDdkNjhkMl8wMWExNjYwMS1kZTZlLTcyODktODNmOS05NmRkMjVlNTY2NDAuanBn.jpg",
-      "isNew": true
+      "isNew": false
     },
     {
       "date": "2026-10-23",
@@ -1266,7 +1266,7 @@
       "date": "2026-10-23",
       "time": "",
       "title": "Uit- en thuistips in Groningen",
-      "type": "Concert",
+      "type": "Wandelen",
       "location": "Groningen",
       "locationLink": "",
       "website": "https://www.visitgroningen.nl/nl/doen/uitgaan",
@@ -1611,7 +1611,7 @@
       "date": "2026-10-24",
       "time": "",
       "title": "Bekijk alle evenementen & activiteiten",
-      "type": "Activiteit",
+      "type": "Wandelen",
       "location": "Groningen",
       "locationLink": "",
       "website": "https://www.drenthe.nl/evenementen-activiteiten/dag-van-het-hunebed",
@@ -2025,7 +2025,7 @@
       "description": "die samen de support van de avond verzorgen, sloegen in 2024 de handen ineen als twee eclectische producers met een gedeelde missie: een vernieuwende impuls geven aan de underground dance-scene met een gedurfde, genre-overschrijdende live-ervaring. Hun performance is een dynamische mix van left-field UK Bass muziek en",
       "cost": "",
       "image": "",
-      "isNew": true
+      "isNew": false
     },
     {
       "date": "2026-10-24",
@@ -2340,7 +2340,7 @@
       "description": "die samen de support van de avond verzorgen, sloegen in 2024 de handen ineen als twee eclectische producers met een gedeelde missie: een vernieuwende impuls geven aan de underground dance-scene met een gedurfde, genre-overschrijdende live-ervaring. Hun performance is een dynamische mix van left-field UK Bass muziek en",
       "cost": "",
       "image": "",
-      "isNew": true
+      "isNew": false
     },
     {
       "date": "2026-10-24",
@@ -2361,7 +2361,7 @@
       "date": "2026-10-24",
       "time": "",
       "title": "Stad en provincie",
-      "type": "Expositie",
+      "type": "Wandelen",
       "location": "Een kamer vinden",
       "locationLink": "",
       "website": "https://www.groningen.nl/wonen/leven-in-groningen/stad-en-provincie",
@@ -2481,7 +2481,7 @@
       "date": "2026-10-24",
       "time": "",
       "title": "Wandeling over It Noarderleech door het donker",
-      "type": "Activiteit",
+      "type": "Wandelen",
       "location": "Groningen",
       "locationLink": "",
       "website": "https://www.visitwadden.nl/nl/evenementen/937541761/wandeling-over-it-noarderleech-door-het-donker-1",
@@ -2796,7 +2796,7 @@
       "date": "2026-10-25",
       "time": "",
       "title": "Harlinger Bokkentocht",
-      "type": "Activiteit",
+      "type": "Wandelen",
       "location": "Groningen",
       "locationLink": "",
       "website": "https://www.visitwadden.nl/nl/evenementen/2917536039/bokkentocht",
@@ -3375,7 +3375,7 @@
       "description": "Evenement aanmelden Een concert, voorstelling, workshop, netwerkbijeenkomst of tentoonstelling, elke culturele activiteit kan worden toegevoegd! Organiseer jij één van deze activiteiten of doe je er aan mee? Meld jouw activiteit aan . Jouw activiteit wordt dan zichtbaar in de KultuurAgenda. De KultuurAgenda is dé cultu",
       "cost": "",
       "image": "",
-      "isNew": true
+      "isNew": false
     },
     {
       "date": "2026-10-26",
@@ -3720,7 +3720,7 @@
       "description": "SPOT / De Oosterpoort",
       "cost": "",
       "image": "https://www.uitgroningen.com/wp-content/uploads/2026/08/sfeer-muziek-768x576.jpg",
-      "isNew": true
+      "isNew": false
     },
     {
       "date": "2026-10-27",
@@ -3900,7 +3900,7 @@
       "description": "Dagtripjes zonder auto Lunchen in de stad TOERISTISCHE INFORMATIE",
       "cost": "",
       "image": "",
-      "isNew": true
+      "isNew": false
     },
     {
       "date": "2026-10-28",
@@ -3915,7 +3915,7 @@
       "description": "Theater, muziek en musea Een week in Stad en Ommeland",
       "cost": "",
       "image": "",
-      "isNew": true
+      "isNew": false
     },
     {
       "date": "2026-10-28",
@@ -3930,7 +3930,7 @@
       "description": "Evenement aanmelden",
       "cost": "",
       "image": "",
-      "isNew": true
+      "isNew": false
     },
     {
       "date": "2026-10-28",
@@ -3960,7 +3960,7 @@
       "description": "Toegankelijkheidsverklaring Evenement aanmelden",
       "cost": "",
       "image": "",
-      "isNew": true
+      "isNew": false
     },
     {
       "date": "2026-10-28",
@@ -3975,7 +3975,7 @@
       "description": "Lunchen in de stad TOERISTISCHE INFORMATIE",
       "cost": "",
       "image": "",
-      "isNew": true
+      "isNew": false
     },
     {
       "date": "2026-10-28",
@@ -3990,13 +3990,13 @@
       "description": "24 uur in Groningen stad Dagtripjes zonder auto Lunchen in de stad",
       "cost": "",
       "image": "",
-      "isNew": true
+      "isNew": false
     },
     {
       "date": "2026-10-28",
       "time": "",
       "title": "Eten en drinken",
-      "type": "Concert",
+      "type": "Restaurants",
       "location": "muziek en musea",
       "locationLink": "",
       "website": "https://www.visitgroningen.nl/nl/doen/cultuur",
@@ -4005,7 +4005,7 @@
       "description": "Bijzonder overnachten Theater, muziek en musea",
       "cost": "",
       "image": "",
-      "isNew": true
+      "isNew": false
     },
     {
       "date": "2026-10-28",
@@ -4035,7 +4035,7 @@
       "description": "Meer informatie staat op visitgroningen.nl.",
       "cost": "",
       "image": "",
-      "isNew": true
+      "isNew": false
     },
     {
       "date": "2026-10-28",
@@ -4110,7 +4110,7 @@
       "description": "TOERISTISCHE INFORMATIE",
       "cost": "",
       "image": "",
-      "isNew": true
+      "isNew": false
     },
     {
       "date": "2026-10-28",
@@ -4140,7 +4140,7 @@
       "description": "Theater, muziek en musea Een week in Stad en Ommeland 24 uur in Groningen stad",
       "cost": "",
       "image": "",
-      "isNew": true
+      "isNew": false
     },
     {
       "date": "2026-10-28",
@@ -4155,7 +4155,7 @@
       "description": "TOERISTISCHE INFORMATIE",
       "cost": "",
       "image": "",
-      "isNew": true
+      "isNew": false
     },
     {
       "date": "2026-10-28",
@@ -4185,7 +4185,7 @@
       "description": "Meer informatie staat op visitgroningen.nl.",
       "cost": "",
       "image": "",
-      "isNew": true
+      "isNew": false
     },
     {
       "date": "2026-10-28",
@@ -4230,7 +4230,7 @@
       "description": "Voeg toe als favoriet Voeg toe als favoriet",
       "cost": "",
       "image": "https://assets.plaece.nl/thumb/-wUfRWqD6ulFum1jDJj90xOSDJB2SQkDv6iap3-WA_c/resizing_type:fit/width:500/height:0/gravity:sm/enlarge:0/aHR0cHM6Ly9hc3NldHMucGxhZWNlLm5sL29kcC1ncm9uaW5nZW4vaW1hZ2UvZjFmZjRkZTk3MGIyMTBhNDE5ZWFiNDFhYjMyZWEzZTM0OTY2MjYwOF8wMWExNjVmMC04YzQxLTdiODctYTA3MC1kYzUwZDM1MjQ1N2QuanBn.jpg",
-      "isNew": true
+      "isNew": false
     },
     {
       "date": "2026-10-28",
@@ -4245,7 +4245,7 @@
       "description": "Sense and Sensibility Sense and Sensibility Voeg toe als favoriet Voeg toe als favoriet",
       "cost": "",
       "image": "https://assets.plaece.nl/thumb/-wUfRWqD6ulFum1jDJj90xOSDJB2SQkDv6iap3-WA_c/resizing_type:fit/width:500/height:0/gravity:sm/enlarge:0/aHR0cHM6Ly9hc3NldHMucGxhZWNlLm5sL29kcC1ncm9uaW5nZW4vaW1hZ2UvZjFmZjRkZTk3MGIyMTBhNDE5ZWFiNDFhYjMyZWEzZTM0OTY2MjYwOF8wMWExNjVmMC04YzQxLTdiODctYTA3MC1kYzUwZDM1MjQ1N2QuanBn.jpg",
-      "isNew": true
+      "isNew": false
     },
     {
       "date": "2026-10-28",
@@ -4275,7 +4275,7 @@
       "description": "Meer informatie staat op visitgroningen.nl.",
       "cost": "",
       "image": "",
-      "isNew": true
+      "isNew": false
     },
     {
       "date": "2026-10-28",
@@ -4290,7 +4290,7 @@
       "description": "Een week in Stad en Ommeland 24 uur in Groningen stad Dagtripjes zonder auto",
       "cost": "",
       "image": "",
-      "isNew": true
+      "isNew": false
     },
     {
       "date": "2026-10-28",
@@ -4305,7 +4305,7 @@
       "description": "Evenement aanmelden",
       "cost": "",
       "image": "",
-      "isNew": true
+      "isNew": false
     },
     {
       "date": "2026-10-28",
@@ -4320,7 +4320,7 @@
       "description": "Bijzonder overnachten Theater, muziek en musea",
       "cost": "",
       "image": "",
-      "isNew": true
+      "isNew": false
     },
     {
       "date": "2026-10-28",
@@ -4335,7 +4335,7 @@
       "description": "Evenement aanmelden Een concert, voorstelling, workshop, netwerkbijeenkomst of tentoonstelling, elke culturele activiteit kan worden toegevoegd! Organiseer jij één van deze activiteiten of doe je er aan mee? Meld jouw activiteit aan . Jouw activiteit wordt dan zichtbaar in de KultuurAgenda. De KultuurAgenda is dé cultu",
       "cost": "",
       "image": "",
-      "isNew": true
+      "isNew": false
     },
     {
       "date": "2026-10-28",
@@ -5721,7 +5721,7 @@
       "date": "2026-11-02",
       "time": "",
       "title": "Ontdek Delfzijl op een leuke, spannende en",
-      "type": "Activiteit",
+      "type": "Wandelen",
       "location": "Groningen",
       "locationLink": "",
       "website": "https://www.visitwadden.nl/nl/bezoeken/agenda/actief",
@@ -5796,7 +5796,7 @@
       "date": "2026-11-02",
       "time": "",
       "title": "Speurwandeling Delfzijl",
-      "type": "Activiteit",
+      "type": "Wandelen",
       "location": "Groningen",
       "locationLink": "",
       "website": "https://www.visitwadden.nl/nl/evenementen/3700574611/speurwandeling-delfzijl-1",
@@ -6006,7 +6006,7 @@
       "date": "2026-11-04",
       "time": "",
       "title": "Proeven, ontdekken en netwerken tijdens Waddenfestival",
-      "type": "Festival",
+      "type": "Wandelen",
       "location": "Je locatie of evenement vermelden",
       "locationLink": "",
       "website": "https://www.visitwadden.nl/nl/verhalen/bundel/proeven-ontdekken-en-netwerken-tijdens-waddenfestival",
@@ -6294,10 +6294,10 @@
       "type": "Concert",
       "location": "VERA Groningen",
       "locationLink": "",
-      "website": "https://www.vera-groningen.nl/programma/",
+      "website": "https://www.vera-groningen.nl/programma/?category=dansen&lang=nl",
       "source": "vera-groningen.nl",
       "discoverySource": "Website",
-      "description": "Dansen | : €5,- | doors: 23:00 - 03:00 | start: 23:01 VERA / CLUB FOR THE INTERNATIONAL POP UNDERGROUND Oosterstraat 44 9711 NV Groningen The Netherlands +31 (0)50 313 46 81 contact Opening hours: Check the event Downstage café: Check the open hours here Newsletter: Want to get updates about upcoming events? Sign up he",
+      "description": "Dansen | : €5,- | doors: 23:00 - 03:00 | start: 23:01 VERA / CLUB FOR THE INTERNATIONAL POP UNDERGROUND Oosterstraat 44 9711 NV Groningen Nederland 050 313 46 81 contact Openingstijden: Zie het event Kelderbar: Check de openingstijden hier Nieuwsbrief: Op de hoogte blijven van de nieuwste bevestigingen? Schrijf je hier",
       "cost": "",
       "image": "",
       "isNew": false
@@ -6406,6 +6406,21 @@
       "cost": "",
       "image": "",
       "isNew": false
+    },
+    {
+      "date": "2026-11-10",
+      "time": "20:00 - 20:30",
+      "title": "Mystery cult film",
+      "type": "Film",
+      "location": "- | doors: 20:00 - 20:30 | start: 20:30",
+      "locationLink": "",
+      "website": "https://www.vera-groningen.nl/?post_type=events&p=154880&lang=en",
+      "source": "vera-groningen.nl",
+      "discoverySource": "Website",
+      "description": "Zienema | Ticket: €6,- | doors: 20:00 - 20:30 | start: 20:30",
+      "cost": "",
+      "image": "",
+      "isNew": true
     },
     {
       "date": "2026-11-11",
@@ -6936,7 +6951,7 @@
       "date": "2026-12-03",
       "time": "",
       "title": "verandert de stad in een magisch winterwonderland, waar kunst, licht en cultuur samenkomen.Dit",
-      "type": "Activiteit",
+      "type": "Wandelen",
       "location": "Groningen",
       "locationLink": "",
       "website": "https://www.visitwadden.nl/nl/verhalen/bundel/winteractiviteiten-in-het-waddengebied",
@@ -7020,7 +7035,7 @@
       "description": "Highlights",
       "cost": "",
       "image": "",
-      "isNew": true
+      "isNew": false
     },
     {
       "date": "2026-12-09",
@@ -7386,7 +7401,7 @@
       "date": "2026-12-13",
       "time": "",
       "title": "Bekijk een voorproefje!",
-      "type": "Activiteit",
+      "type": "Restaurants",
       "location": "maar nog niet geboekt voor onze brasserie? Reserveer dan je tafel via",
       "locationLink": "",
       "website": "https://www.martiniplaza.nl/nl/agenda/holiday-on-ice",
@@ -7401,7 +7416,7 @@
       "date": "2026-12-13",
       "time": "",
       "title": "Bestel",
-      "type": "Activiteit",
+      "type": "Restaurants",
       "location": "Martiniplaza Groningen",
       "locationLink": "",
       "website": "https://www.martiniplaza.nl/nl/agenda/holiday-on-ice",
@@ -7461,7 +7476,7 @@
       "date": "2026-12-13",
       "time": "",
       "title": "Een complete avond uit",
-      "type": "Activiteit",
+      "type": "Restaurants",
       "location": "maar nog niet geboekt voor onze brasserie? Reserveer dan je tafel via",
       "locationLink": "",
       "website": "https://www.martiniplaza.nl/nl/agenda/holiday-on-ice",
@@ -7641,7 +7656,7 @@
       "date": "2026-12-13",
       "time": "",
       "title": "Toon alle datums",
-      "type": "Activiteit",
+      "type": "Restaurants",
       "location": "Martiniplaza Groningen",
       "locationLink": "",
       "website": "https://www.martiniplaza.nl/nl/agenda/holiday-on-ice",
@@ -7815,7 +7830,7 @@
       "description": "Meer informatie staat op vera-groningen.nl.",
       "cost": "",
       "image": "",
-      "isNew": true
+      "isNew": false
     },
     {
       "date": "2026-12-21",
@@ -7836,7 +7851,7 @@
       "date": "2026-12-23",
       "time": "",
       "title": "in Leeuwarden! Van 15 tot 23 december",
-      "type": "Activiteit",
+      "type": "Wandelen",
       "location": "Groningen",
       "locationLink": "",
       "website": "https://www.visitwadden.nl/nl/verhalen/bundel/winteractiviteiten-in-het-waddengebied",
@@ -8166,7 +8181,7 @@
       "date": "2027-01-05",
       "time": "",
       "title": "Tips voor de kerstvakantie",
-      "type": "Expositie",
+      "type": "Wandelen",
       "location": "Je locatie of evenement vermelden",
       "locationLink": "",
       "website": "https://www.visitwadden.nl/nl/verhalen/bundel/winteractiviteiten-in-het-waddengebied",
@@ -8445,7 +8460,7 @@
       "description": "Snarky and energetic artrock De New Yorkse artrockband BODEGA werd in 2016 gevormd uit de resten van het...",
       "cost": "",
       "image": "",
-      "isNew": true
+      "isNew": false
     },
     {
       "date": "2027-03-03",
@@ -8460,7 +8475,7 @@
       "description": "Snarky and energetic artrock De New Yorkse artrockband BODEGA werd in 2016 gevormd uit de resten van het... Madra Salach (Iers voor ‘vuile hond’) is een zeskoppige band uit Dublin die traditionele Ierse folk meesleurt...",
       "cost": "",
       "image": "",
-      "isNew": true
+      "isNew": false
     },
     {
       "date": "2027-03-05",
@@ -8781,7 +8796,7 @@
       "date": "2027-05-04",
       "time": "",
       "title": "Codeine USA support Early slowcore pioneers Weinig",
-      "type": "Activiteit",
+      "type": "Concert",
       "location": "VERA Groningen",
       "locationLink": "",
       "website": "https://www.vera-groningen.nl/",
@@ -8790,7 +8805,7 @@
       "description": "bands laten traagheid zo krachtig klinken als Codeine. Voor de vijfde keer staat...",
       "cost": "",
       "image": "",
-      "isNew": true
+      "isNew": false
     },
     {
       "date": "2027-05-14",
@@ -8811,7 +8826,7 @@
       "date": "2027-05-14",
       "time": "",
       "title": "Codeine USA support Early slowcore pioneers",
-      "type": "Activiteit",
+      "type": "Concert",
       "location": "VERA Groningen",
       "locationLink": "",
       "website": "https://www.vera-groningen.nl/?post_type=events&p=155052&lang=nl",
@@ -10429,21 +10444,6 @@
     },
     {
       "date": "2027-10-01",
-      "time": "21:00 - 22:00",
-      "title": "Los Pirañas COL",
-      "type": "Concert",
-      "location": "VERA Groningen",
-      "locationLink": "",
-      "website": "https://www.vera-groningen.nl/programma/",
-      "source": "vera-groningen.nl",
-      "discoverySource": "Website",
-      "description": "Mainstage | : €13,- | doors: 21:00 - 22:00 | start: 21:30",
-      "cost": "",
-      "image": "",
-      "isNew": false
-    },
-    {
-      "date": "2027-10-01",
       "time": "",
       "title": "Musical Theater CATS - Het Meesterwerk",
       "type": "Concert",
@@ -10500,7 +10500,7 @@
       "description": "als favoriet Verketend Beeld. De rol van Coevorden in het slavernijverleden Verketend Beeld. De rol van Coevorden in het slavernijverleden t/m",
       "cost": "",
       "image": "",
-      "isNew": true
+      "isNew": false
     },
     {
       "date": "2027-10-03",
@@ -10545,7 +10545,7 @@
       "description": "Meer informatie staat op drenthe.nl.",
       "cost": "",
       "image": "",
-      "isNew": true
+      "isNew": false
     },
     {
       "date": "2027-10-03",
@@ -10590,7 +10590,7 @@
       "description": "Meer informatie staat op drenthe.nl.",
       "cost": "",
       "image": "",
-      "isNew": true
+      "isNew": false
     },
     {
       "date": "2027-10-03",
@@ -16206,6 +16206,21 @@
     },
     {
       "date": "2027-10-01",
+      "time": "21:00 - 22:00",
+      "title": "Los Pirañas COL",
+      "type": "Concert",
+      "location": "VERA Groningen",
+      "locationLink": "",
+      "website": "https://www.vera-groningen.nl/programma/",
+      "source": "vera-groningen.nl",
+      "discoverySource": "Website",
+      "description": "Mainstage | : €13,- | doors: 21:00 - 22:00 | start: 21:30",
+      "cost": "",
+      "image": "",
+      "isNew": false
+    },
+    {
+      "date": "2027-10-01",
       "time": "23:00 - 04:00",
       "title": "Push It Pushin Wood Soundsystem All Night Long",
       "type": "Dans",
@@ -16284,113 +16299,113 @@
     {
       "site": "https://www.uitgroningen.com/evenement/",
       "count": 60,
-      "newCount": 1,
-      "durationSeconds": 3.25,
+      "newCount": 0,
+      "durationSeconds": 4.42,
       "timedOut": false
     },
     {
       "site": "https://groningen.uitloper.nu/",
       "count": 60,
       "newCount": 0,
-      "durationSeconds": 6.07,
+      "durationSeconds": 6.1,
       "timedOut": false
     },
     {
       "site": "https://www.visitgroningen.nl/nl/doen/uitgaan",
       "count": 60,
-      "newCount": 19,
-      "durationSeconds": 7.25,
+      "newCount": 0,
+      "durationSeconds": 7.4,
       "timedOut": false
     },
     {
       "site": "https://gemeente.groningen.nl/evenementenkalender",
       "count": 0,
       "newCount": 0,
-      "durationSeconds": 2.42,
+      "durationSeconds": 2.71,
       "timedOut": false
     },
     {
       "site": "https://forum.nl/nl/agenda",
       "count": 60,
       "newCount": 0,
-      "durationSeconds": 4.09,
+      "durationSeconds": 4.84,
       "timedOut": false
     },
     {
       "site": "https://www.spotgroningen.nl/programma/",
       "count": 60,
       "newCount": 0,
-      "durationSeconds": 4.14,
+      "durationSeconds": 4.78,
       "timedOut": false
     },
     {
       "site": "https://simplon.nl/",
       "count": 60,
       "newCount": 0,
-      "durationSeconds": 15.16,
+      "durationSeconds": 15.93,
       "timedOut": false
     },
     {
       "site": "https://www.vera-groningen.nl/",
       "count": 60,
-      "newCount": 7,
-      "durationSeconds": 18.52,
+      "newCount": 1,
+      "durationSeconds": 16.18,
       "timedOut": false
     },
     {
       "site": "https://www.martiniplaza.nl/nl/",
       "count": 60,
       "newCount": 0,
-      "durationSeconds": 3.62,
+      "durationSeconds": 3.71,
       "timedOut": false
     },
     {
       "site": "https://www.groningermuseum.nl/en/now",
       "count": 0,
       "newCount": 0,
-      "durationSeconds": 1.81,
+      "durationSeconds": 1.99,
       "timedOut": false
     },
     {
       "site": "https://www.kultuuragenda.nl/",
       "count": 60,
-      "newCount": 2,
-      "durationSeconds": 15.4,
+      "newCount": 0,
+      "durationSeconds": 14.99,
       "timedOut": false
     },
     {
       "site": "https://www.noorderzon.nl/",
       "count": 60,
       "newCount": 0,
-      "durationSeconds": 7.76,
+      "durationSeconds": 7.91,
       "timedOut": false
     },
     {
       "site": "https://www.bibliotheekgroningen.nl/agenda",
       "count": 0,
       "newCount": 0,
-      "durationSeconds": 1.43,
+      "durationSeconds": 1.29,
       "timedOut": false
     },
     {
       "site": "https://www.groningen.nl/bezoeken/uitagenda",
       "count": 8,
       "newCount": 0,
-      "durationSeconds": 12.88,
+      "durationSeconds": 14.03,
       "timedOut": false
     },
     {
       "site": "https://www.drenthe.nl/uitagenda",
       "count": 60,
-      "newCount": 3,
-      "durationSeconds": 3.91,
+      "newCount": 0,
+      "durationSeconds": 2.59,
       "timedOut": false
     },
     {
       "site": "https://www.visitwadden.nl/nl/zien-en-doen/activiteiten",
       "count": 60,
       "newCount": 0,
-      "durationSeconds": 10.85,
+      "durationSeconds": 4.92,
       "timedOut": false
     }
   ]
