@@ -511,9 +511,9 @@
       padding: 0 2px;
       border-radius: var(--radius);
       color: var(--ink);
-      font-size: .70rem;
+      font-size: .68rem;
       font-weight: 650;
-      line-height: .90;
+      line-height: .78;
     }
 
     .siteList label:hover { background: var(--surface-soft); }
@@ -558,13 +558,14 @@
     .customSiteAdder { display:none; grid-column:1 / -1; width:100%; box-sizing:border-box; margin:0; padding:10px; border:1px solid var(--line); border-radius:10px; background:var(--surface); }
     .customSiteAdder.open { display:block; }
     .sidebarButtonRows { display:grid; grid-column:1 / -1; gap:8px; margin-top:10px; min-width:0; }
-    .sidebarPrimaryButtons, .sidebarDataButtons { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:8px; min-width:0; }
+    .sidebarPrimaryButtons { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:8px; min-width:0; }
+    .sidebarDataButtons { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px; min-width:0; }
     .sidebarButtonRows .btn { width:100%; min-width:0; min-height:40px; padding:7px 9px; line-height:1.2; white-space:normal; }
     #toggleCustomSiteBtn { background: var(--surface-soft); border: 1px solid var(--line); color: var(--primary-dark); font-weight: 850; }
     #toggleCustomSiteBtn:hover { background: var(--surface); border-color: var(--primary); }
     #deleteDataBtn { background:#c92a2a; border-color:#b42323; color:#fff; font-weight:900; }
     #deleteDataBtn:hover { background:#a61e1e; border-color:#8f1b1b; }
-    @media (max-width:360px) { .sidebarPrimaryButtons, .sidebarDataButtons { grid-template-columns:minmax(0,1fr); } }
+    @media (max-width:360px) { .sidebarPrimaryButtons { grid-template-columns:repeat(3,minmax(0,1fr)); } .sidebarDataButtons { grid-template-columns:repeat(2,minmax(0,1fr)); } }
     .customSiteRow { display:grid; grid-template-columns:minmax(0,1fr) auto; gap:6px; align-items:center; }
     .customSiteRow input { height:38px; font-size:.82rem; }
     .customSiteRow .btn { min-height:38px; padding:0 10px; }
