@@ -1239,7 +1239,7 @@
   </div>
 
   <script>
-    const APP_VERSION = "2026.10.23.4";
+    const APP_VERSION = "2026.10.23.5";
     const DEFAULT_MAX_EVENTS_PER_SITE = 60;
     const DEFAULT_SITE_TIME_LIMIT_SECONDS = 45;
     const SCAN_SETTINGS_KEY = "eventScanSettingsV2";
@@ -2600,6 +2600,13 @@
       const generic = /^(activiteit|evenement|agenda|uitagenda|programma|beau monde\s*,?)$/i.test(title) || title.length < 5;
       const description = cleanText(event.description || "").replace(/(voeg toe als favoriet\s*)+/ig, "").replace(/\s+/g, " ").trim();
       if (generic && description.length > 8) title = description;
+      if (generic && title.length < 8) {
+        try {
+          const slug = new URL(event.website).pathname.split("/").filter(Boolean).pop() || "";
+          const readableSlug = slug.replace(/^\d+[-_]*/, "").replace(/[-_]+/g, " ").replace(/\b\d{6,}\b/g, "").trim();
+          if (readableSlug.length > 7) title = readableSlug.charAt(0).toUpperCase() + readableSlug.slice(1);
+        } catch {}
+      }
       title = title.replace(/^Beau Monde\s*,\s*/i, "").replace(/\s*[,|–-]\s*$/, "").replace(/\s+/g, " ").trim();
       if (title.length > 110) title = `${title.slice(0, 107).replace(/\s+\S*$/, "")}…`;
       return title || "Activiteit — bekijk details";
