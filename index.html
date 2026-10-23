@@ -531,7 +531,7 @@
     .siteList span {
       overflow-wrap: anywhere;
     }
-    .customSiteAdder { padding:10px; border-top:1px solid var(--line); background:#101925; }
+    .customSiteAdder { display:none; padding:10px; border-top:1px solid var(--line); background:#101925; }\n    .customSiteAdder.open { display:block; }
     .customSiteRow { display:grid; grid-template-columns:minmax(0,1fr) auto; gap:6px; align-items:center; }
     .customSiteRow input { height:38px; font-size:.82rem; }
     .customSiteRow .btn { min-height:38px; padding:0 10px; }
@@ -1089,6 +1089,11 @@
   <main>
     <div class="pageLayout" id="pageLayout">
     <aside class="toolbar filterSidebar" id="filterSidebar" aria-label="Filters">
+      <div class="sidebarViewButtons" aria-label="Weergave">
+        <button class="btn btnSecondary" id="collapseTypesBtn" type="button">Types uitklappen</button>
+        <button class="btn btnSecondary" id="collapseSourcesBtn" type="button">Bron uitklappen</button>
+        <button class="btn btnSecondary" id="collapseBtn" type="button">Details uitklappen</button>
+      </div>
       <div class="filters">
         <div class="field">
           <label for="search">Zoeken</label>
@@ -1131,15 +1136,10 @@
           </select>
         </div>
 
-        <div class="sidebarViewButtons" aria-label="Weergave">
-          <button class="btn btnSecondary" id="collapseTypesBtn" type="button">Types uitklappen</button>
-          <button class="btn btnSecondary" id="collapseSourcesBtn" type="button">Bron uitklappen</button>
-          <button class="btn btnSecondary" id="collapseBtn" type="button">Details uitklappen</button>
-        </div>
-        <button class="btn btnPrimary" id="applyFiltersBtn" type="button">Filter toepassen</button>
         <div class="sidebarActionButtons">
           <button class="btn btnSecondary" id="refreshBtn" type="button">Ververs data</button>
           <button class="btn btnSecondary" id="resetBtn" type="button">Reset</button>
+          <button class="btn btnSecondary" id="toggleCustomSiteBtn" type="button" aria-expanded="false">Toevoegen</button>
           <button class="btn btnDanger" id="clearBtn" type="button">Verwijderen</button>
         </div>
       </div>
@@ -1178,13 +1178,12 @@
               </div>
             </div>
           </div>
-          <div class="customSiteAdder">
+          <div class="customSiteAdder" id="customSiteAdder">
             <label class="siteSelectLabel" for="customSiteUrl">Website toevoegen aan scraper</label>
             <div class="customSiteRow">
               <input id="customSiteUrl" type="url" placeholder="https://voorbeeld.nl/agenda" autocomplete="url">
-              <button class="btn btnPrimary" id="addCustomSiteBtn" type="button">Toevoegen</button>
+              <button class="btn btnPrimary" id="addCustomSiteBtn" type="button">Opslaan</button>
             </div>
-            <p class="customSiteHint">De website wordt lokaal bewaard, standaard aangevinkt en bij de volgende verversing meegestuurd naar de scraper.</p>
             <div class="status" id="customSiteStatus" aria-live="polite"></div>
           </div>
         </div>
@@ -1244,7 +1243,7 @@
   </div>
 
   <script>
-    const APP_VERSION = "2026.10.23.05";
+    const APP_VERSION = "2026.10.23.06";
     const DEFAULT_MAX_EVENTS_PER_SITE = 20;
     const DEFAULT_SITE_TIME_LIMIT_SECONDS = 20;
     const SCAN_SETTINGS_KEY = "eventScanSettingsV1";
@@ -2172,8 +2171,8 @@
       const intervalMs = Math.max(3000, Math.min(10000, Number(options.intervalMs) || 5000));
       for (let attempt = 1; attempt <= maxAttempts; attempt += 1) {
         const prefix = Number.isFinite(foundCount) ? `${foundText(foundCount)} gevonden.` : foundText(foundCount) + ".";
-        showStatus(`${prefix} De scraper kan nog bezig zijn. Controleren (${attempt}/${maxAttempts}, elke ${Math.round(intervalMs / 1000)} sec).`, "warn", { stop: true });
-        addLiveLog("App", "events.json", `Controle ${attempt}/${maxAttempts}`, "wachten", `${prefix} interval ${intervalMs / 1000}s`);
+        showStatus(`${prefix} Voortgangscontrole ${attempt}/${maxAttempts}: dit zijn controles, geen websites. Elke ${Math.round(intervalMs / 1000)} sec; maximaal ${Math.round(maxAttempts * intervalMs / 1000)} sec wachten op publicatie van de resultaten.`, "warn", { stop: true });
+        addLiveLog("App", "events.json", `Controle ${attempt}/${maxAttempts}`, "wachten", `${prefix} controle ${attempt}/${maxAttempts}; interval ${intervalMs / 1000}s; dit zijn pollingcontroles, geen websites`);
         const shouldContinue = await waitUnlessStopped(intervalMs);
         if (!shouldContinue) {
           showStatus("Controle gestopt. De update kan nog doorlopen; probeer later opnieuw.", "warn");
@@ -2228,7 +2227,7 @@
 
       await loadAll();
       const prefix = Number.isFinite(foundCount) ? `${foundText(foundCount)} gevonden.` : foundText(foundCount) + ".";
-      showStatus(`${prefix} Na ${Math.round(maxAttempts * intervalMs / 1000)} seconden is events.json nog niet gewijzigd. De scrape kan nog op GitHub draaien, of de bronnen hebben geen bruikbare resultaten geleverd. Open ‘Ruwe verversdata’ voor HTTP-fouten en AI-rate-limits; probeer niet direct meerdere keren achter elkaar te verversen.`, "warn");
+      showStatus(`${prefix} Na ${Math.round(maxAttempts * intervalMs / 1000)} seconden is events.json nog niet gewijzigd. De 18 controles zijn geen 18 websites. De huidige scraper publiceert de resultaten pas na afloop van de volledige workflow; daarom zijn tussentijdse resultaten van afzonderlijke websites nog niet beschikbaar. Controleer ‘Ruwe verversdata’ op HTTP-fouten en probeer niet direct meerdere keren achter elkaar te verversen.`, "warn");
       return false;
     }
 
@@ -3164,7 +3163,6 @@
         showStatus(`Scaninstellingen bewaard: ${currentScanSettings().maxEventsPerSite} events en ${currentScanSettings().siteTimeLimitSeconds} sec per website.`, "ok");
       });
     });
-    $("applyFiltersBtn").addEventListener("click", applyFilters);
     $("refreshBtn").addEventListener("click", refreshEvents);
     $("resetBtn").addEventListener("click", resetFilters);
     $("clearBtn").addEventListener("click", clearAllEvents);
@@ -3333,6 +3331,7 @@
     $("providerButton").addEventListener("click", () => toggleSelect("providerSelect", "providerButton"));
     $("siteButton").addEventListener("click", () => toggleSelect("siteSelect", "siteButton"));
     $("addCustomSiteBtn").addEventListener("click", addCustomSite);
+    $("toggleCustomSiteBtn").addEventListener("click", () => { const panel = $("customSiteAdder"); const open = panel.classList.toggle("open"); $("toggleCustomSiteBtn").setAttribute("aria-expanded", String(open)); $("toggleCustomSiteBtn").textContent = open ? "Sluiten" : "Toevoegen"; if (open) $("customSiteUrl").focus(); });
     $("customSiteUrl").addEventListener("keydown", (event) => {
       if (event.key === "Enter") {
         event.preventDefault();
@@ -3350,9 +3349,10 @@
     $("filterSidebarToggle").addEventListener("click", () => setSidebarOpen($("filterSidebar").hidden));
     // Bronnen staan direct onder Periode; verversen, resetten en verwijderen blijven bij elkaar.
     const filterGrid = document.querySelector(".filters");
-    filterGrid.insertBefore($("siteSelect"), $("applyFiltersBtn"));
-    const customSiteAdder = document.querySelector(".customSiteAdder");
-    if (customSiteAdder) filterGrid.insertBefore(customSiteAdder, $("applyFiltersBtn"));
+    filterGrid.appendChild($("siteSelect"));
+    const customSiteAdder = $("customSiteAdder");
+    const sidebarActions = document.querySelector(".sidebarActionButtons");
+    if (customSiteAdder && sidebarActions) sidebarActions.insertAdjacentElement("afterend", customSiteAdder);
     $("siteSelect").style.gridColumn = "1 / -1";
     $("siteSelect").style.marginTop = "2px";
     if (customSiteAdder) customSiteAdder.style.gridColumn = "1 / -1";
