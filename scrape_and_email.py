@@ -1354,7 +1354,13 @@ def start_urls_for_site(site_url):
     if host == "spotgroningen.nl":
         return [urljoin(exact, "/programma")]
     if host == "socialdeal.nl":
-        return [urljoin(f"{parsed.scheme}://{parsed.netloc}", "/dichtbij/groningen/")]
+        base = f"{parsed.scheme}://{parsed.netloc}"
+        # Different public listing pages expose complementary batches of deals.
+        return [
+            urljoin(base, "/dichtbij/groningen/"),
+            urljoin(base, "/ontdek/groningen/"),
+            urljoin(base, "/deals/groningen/"),
+        ]
     if host == "simplon.nl":
         return [urljoin(exact, "/programma/")]
     urls = [exact]
@@ -1847,7 +1853,7 @@ def scrape_site(site_url, site_index=0, site_total=0, progress_callback=None):
             progress_callback(dedupe_events(events))
         # VERA's programme parser already returns one clean record per event card.
         # Crawling every linked detail page with generic heuristics creates false events.
-        if canonical_host(normalized_site) not in {"vera-groningen.nl", "groningen.uitloper.nu", "simplon.nl"}:
+        if canonical_host(normalized_site) not in {"vera-groningen.nl", "groningen.uitloper.nu", "simplon.nl", "socialdeal.nl"}:
             found_links = collect_event_links(html, final_url, normalized_site)
             if canonical_host(normalized_site) == "forum.nl":
                 found_links = [
