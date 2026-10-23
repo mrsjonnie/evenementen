@@ -2556,23 +2556,15 @@
         group.events.push(event);
       }
 
-      const pages = [];
-      let pageGroups = [];
-      let pageEventCount = 0;
-      for (const group of groups) {
-        if (pageGroups.length && pageEventCount + group.events.length > eventsPerPage) {
-          pages.push(pageGroups);
-          pageGroups = [];
-          pageEventCount = 0;
-        }
-        pageGroups.push(group);
-        pageEventCount += group.events.length;
+      if (!categoryStateInitialized) {
+        groups.forEach((group) => collapsedTypeKeys.add(group.key));
+        categoryStateInitialized = true;
+      } else {
+        groups.forEach((group) => { if (!knownCategoryKeys.has(group.key)) collapsedTypeKeys.add(group.key); });
       }
-      if (pageGroups.length) pages.push(pageGroups);
-
-      const pageCount = Math.max(1, pages.length);
-      currentPage = Math.min(currentPage, pageCount);
-      const visibleGroups = pages[currentPage - 1] || [];
+      groups.forEach((group) => knownCategoryKeys.add(group.key));
+      const visibleGroups = groups;
+      const pageCount = 1;
       const visibleCount = visibleGroups.reduce((sum, group) => sum + group.events.length, 0);
       updateFilterBreakdown(pageCount, visibleCount);
 
@@ -2584,10 +2576,7 @@
         if (!collapsed) group.events.forEach((event) => renderedItems.push(renderCard(event)));
       }
       $("grid").innerHTML = renderedItems.join("");
-      $("pagination").style.display = "flex";
-      $("pageInfo").textContent = `Pagina ${currentPage} van ${pageCount}`;
-      $("prevPage").disabled = currentPage === 1;
-      $("nextPage").disabled = currentPage === pageCount;
+      $("pagination").style.display = "none";
     }
 
     function eventSourceLabel(event) {
