@@ -1497,11 +1497,13 @@
 
     function refreshDateWindow() {
       const mode = $("periodMode")?.value || "threeDays";
-      const start = mode === "always" ? formatDate(new Date()) : (dateFrom || $("dateSingle").value || formatDate(new Date()));
+      const today = formatDate(new Date());
+      const start = ["always", "alwaysFromToday"].includes(mode) ? today : (dateFrom || $("dateSingle").value || today);
       let end = dateTo || start;
-      if (mode === "threeDays") end = addDays(start, 2);
+      if (mode === "alwaysFromToday") end = addDays(start, 365);
+      else if (mode === "threeDays") end = addDays(start, 2);
       else if (mode === "week") end = addDays(start, 6);
-      else if (!end || end < start) end = start;
+      else if (!end || end < start || end === "9999-12-31") end = start;
       return { from: start, to: end };
     }
 
@@ -2693,7 +2695,8 @@
       }
 
       try {
-        const url = `${WORKER_URL}/weather?region=${encodeURIComponent(region)}&from=${dateFrom}&to=${dateTo}`;
+        const weatherTo = $("periodMode").value === "alwaysFromToday" ? addDays(dateFrom, 6) : dateTo;
+        const url = `${WORKER_URL}/weather?region=${encodeURIComponent(region)}&from=${dateFrom}&to=${weatherTo}`;
         const response = await fetch(url, { cache: "no-store" });
         if (!response.ok) throw new Error("Weer niet beschikbaar");
         const data = await response.json();
