@@ -1189,14 +1189,14 @@
 
         <div class="inlineTools">
           <input type="checkbox" id="newOnlyFilter" hidden>
-          <button class="btn btnSecondary filterToggle" id="newOnlyToggle" type="button" aria-pressed="false">Alleen nieuw <span id="newCountBadge">0</span></button>
+          <button class="btn btnSecondary filterToggle" id="newOnlyToggle" type="button" aria-pressed="false" hidden>Alleen nieuw <span id="newCountBadge">0</span></button>
           <button class="btn btnSecondary" id="toggleCustomSiteBtn" type="button" aria-expanded="false">Toevoegen</button>
-          <button class="btn btnDanger" id="clearBtn" type="button">Verwijderen</button>
+          <button class="btn btnSecondary" id="clearBtn" type="button">Ververs data</button>
         </div>
       </div>
       <div class="sidebarActionButtons">
-        <button class="btn btnSecondary" id="refreshBtn" type="button">Ververs data</button>
-        <button class="btn btnSecondary" id="resetBtn" type="button">Reset</button>
+        <button class="btn btnSecondary" id="refreshBtn" type="button" hidden>Ververs data</button>
+        <button class="btn btnSecondary" id="resetBtn" type="button">Alleen nieuw</button>
       </div>
 
     </aside>
@@ -1246,7 +1246,7 @@
   </div>
 
   <script>
-    const APP_VERSION = "2026.10.23.09";
+    const APP_VERSION = "2026.10.23.10";
     const DEFAULT_MAX_EVENTS_PER_SITE = 20;
     const DEFAULT_SITE_TIME_LIMIT_SECONDS = 20;
     const SCAN_SETTINGS_KEY = "eventScanSettingsV1";
@@ -2182,8 +2182,8 @@
     async function waitForUpdatedEvents(previousSignature, previousKeys, foundCount = null, options = {}) {
       const previousUpdatedAt = eventsUpdatedAt;
       const requireEvents = Boolean(options.requireEvents);
-      const maxAttempts = Math.max(1, Math.min(18, Number(options.maxAttempts) || 18));
-      const intervalMs = Math.max(3000, Math.min(10000, Number(options.intervalMs) || 5000));
+      const maxAttempts = Math.max(1, Math.min(10, Number(options.maxAttempts) || 10));
+      const intervalMs = Math.max(3000, Math.min(10000, Number(options.intervalMs) || 3000));
       for (let attempt = 1; attempt <= maxAttempts; attempt += 1) {
         const prefix = Number.isFinite(foundCount) ? `${foundText(foundCount)} gevonden.` : foundText(foundCount) + ".";
         showStatus(`${prefix} Voortgangscontrole ${attempt}/${maxAttempts}: dit zijn controles, geen websites. Elke ${Math.round(intervalMs / 1000)} sec; maximaal ${Math.round(maxAttempts * intervalMs / 1000)} sec wachten op publicatie van de resultaten.`, "warn", { stop: true });
