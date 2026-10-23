@@ -1054,9 +1054,11 @@ def start_urls_for_site(site_url):
     urls = [exact]
     host = canonical_host(exact)
     if "vera-groningen.nl" in host:
-        # VERA's root is not the best source for event data; the programme has
-        # direct links to /events/<slug>/ detail pages with ticket prices.
+        # VERA's programme contains direct event pages with ticket prices.
         urls.append(urljoin(exact, "/programma/"))
+    if "ibood.com" in host:
+        # The current Dutch storefront uses this path; the root redirects here.
+        urls.extend([urljoin(exact, "/nl/s-nl"), urljoin(exact, "/offers/nl/s-nl")])
     if parsed.path in {"", "/"}:
         base = f"{parsed.scheme}://{parsed.netloc}"
         urls.extend(urljoin(base, path) for path in COMMON_PATHS_FOR_ROOT_SITES)
@@ -1157,6 +1159,32 @@ def fetch_html(session, url, deadline):
     return response.text, response.url
 
 
+def ibood_offer_price(value):
+    """Pak de actuele dealprijs, niet de adviesprijs die er vaak vóór staat."""
+    text = clean_text(value)
+    after_advice = re.search(r"adviesprijs(?:\s+van\s+de\s+fabrikant)?", text, re.I)
+    if after_advice:
+        tail = text[after_advice.end():]
+        amounts = list(re.finditer(r"(?:€\s*)?\d{1,4}[,.]\s*\d{2}", tail))
+        if len(amounts) >= 2:
+            amount = amounts[1].group(0)
+        elif amounts:
+            amount = amounts[0].group(0)
+        else:
+            amount = ""
+    else:
+        amounts = list(re.finditer(r"€\s*\d{1,4}[,.]\s*\d{2}", text))
+        amount = amounts[-1].group(0) if amounts else ""
+    if not amount:
+        return first_price(text)
+    amount = re.sub(r"^€\s*", "", amount).replace(" ", "").replace(",", ".")
+    try:
+        number = float(amount)
+        return f"€ {number:,.2f}".replace(",", "X").replace(".", ",").replace("X", ".")
+    except ValueError:
+        return first_price(text)
+
+
 def extract_ibood_offers(html, page_url, site_url):
     """Haal productaanbiedingen van iBOOD op als doorlopende aanbiedingen."""
     if "ibood.com" not in canonical_host(site_url):
@@ -1176,7 +1204,8 @@ def extract_ibood_offers(html, page_url, site_url):
             text = clean_text(node.get_text(" ", strip=True))
             if not title or len(title) < 8 or not href or "ibood.com" not in canonical_host(href):
                 continue
-            if not PRICE_RE.search(text) or re.search(r"\b(voorwaarden|klantenservice|inloggen|mijn account|nieuwsbrief)\b", title, re.I):
+            offer_price = ibood_offer_price(text)
+            if not offer_price or re.search(r"\b(voorwaarden|klantenservice|inloggen|mijn account|nieuwsbrief)\b", title, re.I):
                 continue
             key = href.lower().split("?")[0].rstrip("/")
             if key in seen:
@@ -1195,7 +1224,7 @@ def extract_ibood_offers(html, page_url, site_url):
                 "source": "iBOOD",
                 "discoverySource": "Website",
                 "description": compact(text.replace(title, "", 1), 320) or "Online aanbieding op iBOOD.",
-                "cost": first_price(text),
+                "cost": offer_price,
                 "image": image,
             })
             if len(offers) >= MAX_EVENTS_PER_SITE:
