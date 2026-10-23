@@ -971,7 +971,20 @@
     .pageLayout { display: grid; grid-template-columns: minmax(0, 1fr); gap: 12px; align-items: start; }
     .pageLayout.sidebarOpen { grid-template-columns: 248px minmax(0, 1fr); }
     .contentArea { min-width: 0; }
-    .filterSidebarToggle { min-height: 34px; padding: 0 11px; align-self:flex-start; }
+     .filterSidebarToggle { min-height: 34px; padding: 0 11px; align-self:flex-start; }
+    .headerActions { display:flex; flex-wrap:wrap; gap:7px; align-items:center; justify-content:flex-start; margin-top:10px; }
+    .headerActions .btn { min-height:32px; padding:0 10px; }
+    .locationRadiusField { display:grid; gap:5px; min-width:0; }
+    .locationRadiusField label { font-size:.78rem; font-weight:850; }
+    .locationRadiusField label span { color:var(--muted); font-weight:650; }
+    .locationRadiusInputs { display:grid; grid-template-columns:minmax(0,1fr) 76px; gap:6px; }
+    .locationRadiusInputs input { min-width:0; width:100%; }
+    .mapSearchButton { width:100%; }
+    .card { position:relative; }
+    .card.isNew { background:#14291f; border-color:#69b987; box-shadow:0 8px 24px rgba(48,172,112,.13); }
+    .dateBadge { position:absolute; top:8px; right:8px; z-index:3; max-width:calc(100% - 16px); box-shadow:0 2px 10px rgba(0,0,0,.28); }
+    .card .badges { display:none; }
+    .card .desc .sourceSuffix { color:var(--muted); font-size:.84em; }
     #providerSelect { display:none!important; }
     .eventGroup { grid-column:1 / -1; min-width:0; }
     .eventGroupHeader { display:flex; width:100%; margin:8px 0 10px; padding:10px 12px; border:1px solid var(--line); border-left:4px solid var(--primary); border-radius:var(--radius); background:var(--surface-soft); color:var(--ink); text-align:left; font-weight:950; cursor:pointer; }
@@ -1019,6 +1032,11 @@
           </button>
         </h1>
         <p class="subtitle" id="pageSubtitle">Vind snel wat er te doen is, filter op datum en type, en ververs de lijst wanneer je nieuwe resultaten wilt ophalen.</p>
+        <div class="headerActions" aria-label="Weergavebediening">
+          <button class="btn btnSecondary filterSidebarToggle" id="filterSidebarToggle" type="button" aria-controls="filterSidebar" aria-expanded="false">Filters tonen</button>
+          <button class="btn btnSecondary" id="collapseBtn" type="button">Details uitklappen</button>
+          <button class="btn btnSecondary" id="collapseTypesBtn" type="button">Types inklappen</button>
+        </div>
         <div class="titlePanel" id="titlePanel">
           <div class="titlePanelContent">
             <span class="versionBadge" id="versionBadge">Versie wordt geladen</span>
@@ -1036,7 +1054,6 @@
       <div class="heroSide">
         <div class="weather" id="weatherBox" aria-live="polite"></div>
         <div class="status" id="status" aria-live="polite"></div>
-        <button class="btn btnSecondary filterSidebarToggle" id="filterSidebarToggle" type="button" aria-controls="filterSidebar" aria-expanded="false">Filters tonen</button>
       </div>
     </div>
   </header>
@@ -1050,15 +1067,14 @@
           <input id="search" type="search" placeholder="Naam, plaats of omschrijving">
         </div>
 
-        <div class="field">
-          <label for="region">Regio</label>
-          <input id="region" value="Groningen">
+        <div class="locationRadiusField">
+          <label for="region">Locatie <span>(straal in km)</span></label>
+          <div class="locationRadiusInputs">
+            <input id="region" value="Groningen" aria-label="Locatie of regio">
+            <input id="radius" type="number" min="0" max="300" value="0" inputmode="numeric" aria-label="Straal in kilometers, 0 is geen filter" title="0 = geen filter, hoger getal = filter in km">
+          </div>
         </div>
-
-        <div class="field">
-          <label for="radius">Straal</label>
-          <input id="radius" type="number" min="0" max="300" value="0" inputmode="numeric" aria-label="Straal in kilometers, 0 is geen filter" title="0 = geen filter, hoger getal = filter in km">
-        </div>
+        <button class="btn btnSecondary mapSearchButton" id="mapSearchBtn" type="button">Zoeken op kaart</button>
 
         <div class="field">
           <label for="typeFilter">Type</label>
@@ -1139,8 +1155,7 @@
       <div class="summary">
         <strong id="count">Evenementen laden...</strong>
         <span id="filterBreakdown"></span>
-        <div class="summaryControls"><button class="btn btnSecondary" id="collapseTypesBtn" type="button">Types inklappen</button></div>
-      </div>
+        </div>
 
     <section class="grid" id="grid" aria-live="polite"></section>
 
@@ -2433,21 +2448,13 @@
         </${website ? "a" : "div"}>
       `;
       const sourceLabel = eventSourceLabel(event);
-      const sourceTag = sourceLabel
-        ? (website
-          ? `<a class="tag sourceLink" href="${escapeHtml(website)}" target="_blank" rel="noopener noreferrer">${escapeHtml(sourceLabel)}</a>`
-          : `<span class="tag">${escapeHtml(sourceLabel)}</span>`)
-        : "";
+      const sourceSuffix = sourceLabel ? ` <span class="sourceSuffix">(${escapeHtml(sourceLabel)})</span>` : "";
 
       return `
         <article class="card ${isNew ? "isNew" : ""} ${expanded ? "expanded" : ""}">
+          <span class="tag tagAccent dateBadge">${escapeHtml(dateLabel)}</span>
           ${typeHeader}
           <div class="cardBody">
-            <div class="badges">
-              ${isNew ? '<span class="tag tagNew">Nieuw</span>' : ""}
-              ${sourceTag}
-              <span class="tag tagAccent">${escapeHtml(dateLabel)}</span>
-            </div>
             <h2 class="title"><button class="titleButton" type="button" data-event-key="${escapeHtml(cardKey)}" aria-expanded="${expanded ? "true" : "false"}">${title}</button></h2>
             <div class="details">
               <div class="detail"><span>Datum</span><span>${escapeHtml(prettyDate(event.date))}${event.time ? ` - ${escapeHtml(event.time)}` : ""}</span></div>
@@ -2455,7 +2462,7 @@
               <div class="detail"><span>Type</span><span>${escapeHtml(type || "Type onbekend")}</span></div>
               <div class="detail"><span>Prijs</span><span>${escapeHtml(event.cost || "Zie website")}</span></div>
             </div>
-            <p class="desc">${escapeHtml(event.description || "Geen omschrijving beschikbaar.")}</p>
+            <p class="desc">${escapeHtml(event.description || "Geen omschrijving beschikbaar.")}${sourceSuffix}</p>
             <div class="cardActions">
               ${website ? `<a class="btn btnPrimary" href="${escapeHtml(website)}" target="_blank" rel="noopener noreferrer">Meer info</a>` : ""}
               ${route ? `<button class="btn btnSecondary routeToggle" type="button" data-route="${escapeHtml(routeId)}" data-destination="${escapeHtml(routeDestinationText)}" data-route-url="${escapeHtml(route)}">Route</button>` : ""}
@@ -2915,6 +2922,13 @@
     $("resetBtn").addEventListener("click", resetFilters);
     $("clearBtn").addEventListener("click", clearAllEvents);
     $("collapseBtn").addEventListener("click", toggleCardsCollapsed);
+    $("mapSearchBtn").addEventListener("click", () => {
+      const region = cleanText($("region").value || "Groningen");
+      const radius = radiusFilterKm();
+      const query = cleanText($("search").value);
+      const mapQuery = [query || "evenementen", "in", region, radius > 0 ? `binnen ${radius} km` : ""].filter(Boolean).join(" ");
+      window.open(`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(mapQuery)}`, "_blank", "noopener,noreferrer");
+    });
     ["maxEventsPerSite", "siteTimeLimitSeconds"].forEach((id) => {
       $(id).addEventListener("change", () => {
         const settings = saveScanSettings();
