@@ -1319,6 +1319,70 @@ def valid_site_list(values):
     return result
 
 
+DEAL_SITES = [
+    ("iBOOD", "https://www.ibood.com/s-nl"),
+    ("Social Deal", "https://www.socialdeal.nl/"),
+    ("Groupon", "https://www.groupon.nl/"),
+]
+
+
+def scrape_deal_sources():
+    """Haal een kleine, aparte selectie actuele kortingsaanbiedingen op."""
+    offers = []
+    seen = set()
+    price_re = re.compile(r"(?:€\s?\d[\d.,]*|\d[\d.,]*\s?€)")
+    noise = re.compile(r"^(meer informatie|bekijk|inloggen|registreren|alle deals|home|menu|voorwaarden|privacy)$", re.I)
+    for source, url in DEAL_SITES:
+        try:
+            response = requests.get(url, headers=REQUEST_HEADERS, timeout=14)
+            response.raise_for_status()
+            soup = BeautifulSoup(response.text, "html.parser")
+            for anchor in soup.select("a[href]"):
+                href = urljoin(response.url, anchor.get("href", "")).split("#")[0]
+                title = clean_text(anchor.get_text(" ", strip=True))
+                if len(title) < 8 or len(title) > 150 or noise.match(title):
+                    continue
+                if href.rstrip("/") in {url.rstrip("/"), response.url.rstrip("/")}:
+                    continue
+                if not href.startswith(("https://", "http://")):
+                    continue
+                parent = anchor.find_parent(["article", "li"])
+                if parent is None:
+                    parent = anchor.find_parent("div")
+                context = clean_text(parent.get_text(" ", strip=True) if parent else title)
+                prices = []
+                for match in price_re.findall(context):
+                    normalized = clean_text(match)
+                    if normalized not in prices:
+                        prices.append(normalized)
+                key = (source.lower(), title.lower(), href.lower())
+                if key in seen:
+                    continue
+                seen.add(key)
+                offers.append({
+                    "source": source,
+                    "title": title,
+                    "price": prices[-1] if prices else "",
+                    "description": context[:260],
+                    "url": href,
+                    "updatedAt": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+                })
+                if sum(1 for offer in offers if offer["source"] == source) >= 12:
+                    break
+        except Exception as exc:
+            print(f"deal_source_error:{source}:{clean_text(str(exc))[:180]}")
+    with open("deals.json", "w", encoding="utf-8", newline="\n") as handle:
+        json.dump({"updatedAt": datetime.now(timezone.utc).isoformat(timespec="seconds"), "offers": offers}, handle, ensure_ascii=False, indent=2)
+        handle.write("\n")
+    print(f"deals:{len(offers)}")
+    return offers
+
+
+def is_deal_source(site):
+    host = urlparse(site).hostname or ""
+    return any(domain in host.lower() for domain in ("ibood.com", "socialdeal.nl", "groupon.nl"))
+
+
 def input_sites():
     selected = valid_site_list(parse_json_list(INPUT_SITES_RAW))
     if selected:
@@ -1397,9 +1461,11 @@ def main():
     previous_all = dedupe_events(previous_active + previous_archive)
     previous_all_keys = {event_key(event) for event in previous_all}
 
+    scrape_deal_sources()
+    event_sites = [site for site in sites if not is_deal_source(site)]
     all_events = []
-    total_sites = len(sites)
-    for index, site in enumerate(sites, start=1):
+    total_sites = len(event_sites)
+    for index, site in enumerate(event_sites, start=1):
         try:
             all_events.extend(scrape_site(site, index, total_sites))
         except Exception as exc:
