@@ -1144,7 +1144,7 @@
         <div class="inlineTools">
           <input type="checkbox" id="newOnlyFilter" hidden>
           <button class="btn btnSecondary filterToggle" id="newOnlyToggle" type="button" aria-pressed="false">Alleen nieuw <span id="newCountBadge">0</span></button>
-          <button class="btn btnSecondary" id="collapseBtn" type="button">Uitklappen</button>
+          
         </div>
         <button class="btn btnDanger" id="clearBtn" type="button">Alles verwijderen</button>
       </div>
@@ -2976,7 +2976,7 @@
       render();
     });
     $("collapseBtn").addEventListener("click", toggleCardsCollapsed);
-    $("collapseTypesBtn").addEventListener("click", () => { const types = [...new Set(filteredEvents.map((event) => displayType(event.type || "Activiteit")))]; const allCollapsed = types.length && types.every((type) => collapsedEventTypes.has(type)); collapsedEventTypes = allCollapsed ? new Set() : new Set(types); render(); $("collapseTypesBtn").textContent = allCollapsed ? "Types inklappen" : "Alle types uitklappen"; });
+    $("collapseTypesBtn").addEventListener("click", () => { const types = [...new Set(filteredEvents.map((event) => displayType(event.type || "Activiteit")))]; const allCollapsed = types.length && types.every((type) => collapsedEventTypes.has(type)); collapsedEventTypes = allCollapsed ? new Set() : new Set(types); render(); $("collapseTypesBtn").textContent = allCollapsed ? "Types inklappen" : "Types uitklappen"; });
     $("prevPage").addEventListener("click", () => { currentPage -= 1; render(); window.scrollTo({ top: 0, behavior: "smooth" }); });
     $("nextPage").addEventListener("click", () => { currentPage += 1; render(); window.scrollTo({ top: 0, behavior: "smooth" }); });
     $("allSitesBtn").addEventListener("click", () => {
