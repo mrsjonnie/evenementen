@@ -498,6 +498,8 @@
     .siteList label:hover { background: var(--surface-soft); }
     .sourceInfoWrap { display:flex; align-items:flex-start; gap:6px; min-width:0; flex-wrap:wrap; }
     .sourceInfo { flex:0 0 16px; width:16px; height:16px; padding:0; border:1px solid #b7791f; border-radius:50%; background:#fff2cc; color:#704600; font-size:10px; font-weight:1000; line-height:14px; text-align:center; cursor:pointer; }
+    .siteScanIcon { display:inline-flex; align-items:center; justify-content:center; width:13px; height:13px; margin-left:4px; color:#0b9b72; font-size:12px; vertical-align:middle; animation:siteScanSpin 1s linear infinite; }
+    @keyframes siteScanSpin { to { transform:rotate(360deg); } }
     .sourceInfoPopup { grid-column:1 / -1; display:block; margin:3px 0 2px 21px; padding:9px 11px; border:1px solid #c58b32; border-radius:8px; background:#fff4d6; color:#34250d; font-size:.82rem; font-weight:650; line-height:1.45; white-space:normal; overflow-wrap:anywhere; }
     .sourceInfoPopup[hidden] { display:none!important; }
 
@@ -1322,7 +1324,7 @@
       SPOT_ONLY_SITE,
       "https://simplon.nl/",
       "https://www.vera-groningen.nl/",
-      "https://www.martiniplaza.nl/nl/",
+      "https://www.martiniplaza.nl/nl/agenda",
       "https://www.groningermuseum.nl/en/now",
       "https://www.kultuuragenda.nl/",
       "https://www.noorderzon.nl/",
@@ -1343,6 +1345,7 @@
     let deletedEventKeys = new Set();
     let cardsCollapsed = true;
     let refreshAbortRequested = false;
+    let activeScanSites = new Set();
     let latestWeatherData = null;
     let currentPage = 1;
     let dateFrom = "";
@@ -2424,6 +2427,7 @@
       const siteRows = sites.map((site) => {
         const count = siteEventCountFor(site);
         const badge = count > 0 ? `<span class="siteResultBadge">(+${count})</span>` : "";
+        const isScanning = activeScanSites.has(site);
         const host = hostFromUrl(site);
         const shortUrl = host.replace(/^www\./i, "") + (new URL(site).pathname !== "/" ? new URL(site).pathname.replace(/\/$/, "") : "");
         const result = (latestSiteResults || []).find((item) => hostFromUrl(item.site || "") === host);
@@ -2432,7 +2436,7 @@
         const hasProblem = count === 0 || Boolean(result && (result.timedOut || Number(result.count || 0) === 0)) || errors.length > 0;
         const errorDetails = [...new Map(errors.map((row) => { const detail = cleanText(row.rawText || row.snippet || row.url || row.title || row.status || "Geen technische details beschikbaar"); return [detail, detail]; })).values()];
         const diagnostic = count > 0 ? `${count} evenementen gevonden. ${errors.length ? `${errors.length} foutmeldingen geregistreerd; voorbeelden: ${errorDetails.slice(0,3).join(" | ")}` : "Er zijn ook resultaten opgehaald."}` : errors.length ? `${errors.length} foutmeldingen geregistreerd. Details: ${errorDetails.slice(0,3).join(" | ")}` : result?.timedOut ? "De scan duurde te lang. Probeer het later opnieuw." : "Geen evenementen gevonden. Mogelijke oorzaak: website blokkeert scraping of laadt de agenda dynamisch. Open ‘Ruwe verversdata’ voor HTTP-status en URL.";
-        return `<label class="${count > 0 ? "siteFound" : ""}"><input class="siteCheck" type="checkbox" value="${escapeHtml(site)}"${selectedSites.has(site) ? " checked" : ""}><span class="sourceInfoWrap"><span title="${escapeHtml(site)}">${escapeHtml(shortUrl)}${badge}</span>${hasProblem ? `<button class="sourceInfo" type="button" aria-label="Scrape-informatie voor ${escapeHtml(site)}" aria-expanded="false" data-info-site="${escapeHtml(site)}">i</button>` : ""}</span>${hasProblem ? `<span class="sourceInfoPopup" data-info-popup="${escapeHtml(site)}" hidden>${escapeHtml(diagnostic)}</span>` : ""}</label>`;
+        return `<label class="${count > 0 ? "siteFound" : ""}"><input class="siteCheck" type="checkbox" value="${escapeHtml(site)}"${selectedSites.has(site) ? " checked" : ""}><span class="sourceInfoWrap"><span title="${escapeHtml(site)}">${escapeHtml(shortUrl)}${badge}${isScanning ? '<span class="siteScanIcon" title="Bezig met zoeken naar nieuwe data" aria-label="Bezig met zoeken naar nieuwe data">⟳</span>' : ""}</span>${hasProblem ? `<button class="sourceInfo" type="button" aria-label="Scrape-informatie voor ${escapeHtml(site)}" aria-expanded="false" data-info-site="${escapeHtml(site)}">i</button>` : ""}</span>${hasProblem ? `<span class="sourceInfoPopup" data-info-popup="${escapeHtml(site)}" hidden>${escapeHtml(diagnostic)}</span>` : ""}</label>`;
       }).join("");
       const aiRows = [["provMistral","Mistral AI"],["provOpenAI","ChatGPT / OpenAI"],["provSerpAPI","SerpAPI (webzoekbron)"]].map(([id,label]) => `<label><input class="aiSourceCheck" type="checkbox" data-provider="${id}"${$(id)?.checked ? " checked" : ""}> <span>${label}</span></label>`).join("");
       $("sitesList").innerHTML = siteRows + `<div class="sourceGroupLabel">AI- en zoekbronnen</div>` + aiRows;
@@ -2919,6 +2923,8 @@
         setBusy(button, false);
         return;
       }
+      activeScanSites = new Set(selectedSites);
+      renderSites(new Set(selectedSites));
       resetLiveLog();
       addLiveLog("App", selectedSites.join(", "), "Verversing gestart", "start", `${scanSettings.maxEventsPerSite} events/site, ${scanSettings.siteTimeLimitSeconds} sec/site`);
       if ($("provSerpAPI").checked) {
@@ -2996,6 +3002,8 @@
         addLiveLog("Worker", WORKER_URL, "Starten mislukt", "fout", message + networkHint);
         showStatus(`${prefix} Starten mislukt: ${message}.${networkHint}`.trim(), "error");
       } finally {
+        activeScanSites = new Set();
+        renderSites();
         setBusy(button, false);
       }
     }
