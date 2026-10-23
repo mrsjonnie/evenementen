@@ -163,6 +163,7 @@ DEFAULT_LOCATIONS = {
     "martiniplaza.nl": "Martiniplaza Groningen",
     "groningermuseum.nl": "Groninger Museum",
     "visitgroningen.nl": "Groningen",
+    "uitgroningen.com": "Groningen",
     "groningen.uitloper.nu": "Groningen",
     "kultuuragenda.nl": "Groningen",
     "noorderzon.nl": "Noorderplantsoen Groningen",
@@ -733,7 +734,21 @@ def description_after_title(chunk, title):
 
 def normalize_event(raw, site_url):
     website = normalized_url(raw.get("website"), site_url)
+    parsed_website = urlparse(website)
+    event_host = canonical_host(website)
+    event_path = parsed_website.path.rstrip("/").lower()
+    # De algemene /evenement-pagina op UitGroningen is navigatie ("voor wie"),
+    # geen afzonderlijk evenement. Alleen detailpagina's met een slug zijn geldig.
+    if event_host == "uitgroningen.com" and event_path == "/evenement":
+        return None
     title = clean_title(raw.get("title") or "")
+    # Deze detailpagina wordt soms met een generieke SEO-titel aangeleverd.
+    # Normaliseer hem naar de feitelijke activiteit en locatie.
+    is_dotan_at_spot = event_host == "uitgroningen.com" and event_path == "/evenement/dotan-in-groningen"
+    if is_dotan_at_spot:
+        title = "Dotan bij Spot"
+        raw["location"] = "Spot Groningen"
+        raw["type"] = "Concert"
     event_date = parse_date_text(raw.get("date") or raw.get("dateText") or "")
     if not event_date and raw.get("contextDate"):
         event_date = parse_date_text("", raw.get("contextDate"))
@@ -1264,6 +1279,11 @@ def scrape_site(site_url, site_index=0, site_total=0):
         events.extend(page_events)
         add_raw("Website", original_site, "Pagina geanalyseerd", "", final_url, "ok", f"{len(page_events)} events op deze pagina")
         detail_links.extend(collect_event_links(html, final_url, normalized_site))
+
+    # Bewust als detailpagina meenemen: deze pagina heeft een concrete show,
+    # ook wanneer de agenda-index de link niet goed als evenement herkent.
+    if canonical_host(normalized_site) == "uitgroningen.com":
+        detail_links.append("https://www.uitgroningen.com/evenement/dotan-in-groningen/")
 
     serp_links = serpapi_links_for_site(normalized_site)
     for link in serp_links:
