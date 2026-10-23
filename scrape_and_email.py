@@ -1147,6 +1147,12 @@ def extract_venue_agenda_events(html, page_url, site_url, discovery_source):
                 if compact_date:
                     month_num = MONTH_NUMBERS.get(compact_date.group(2).lower())
                     candidate_date = iso_from_parts(compact_date.group(1), month_num, compact_date.group(3)) if month_num else ""
+                # Simplon formats programme dates compactly as "do 29.10" rather than "29 oktober".
+                if not candidate_date and host == "simplon.nl":
+                    numeric_pattern = r"\b(?:" + WEEKDAY_PATTERN + r")\.?\s*(\d{1,2})\.(\d{1,2})(?:\.(20\d{2}))?\b"
+                    numeric_date = re.search(numeric_pattern, candidate_text, re.I)
+                    if numeric_date:
+                        candidate_date = iso_from_parts(numeric_date.group(1), numeric_date.group(2), numeric_date.group(3))
             if candidate_date:
                 card, card_text, event_date = parent, candidate_text, candidate_date
                 break
