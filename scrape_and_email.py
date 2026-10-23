@@ -1132,6 +1132,64 @@ def fetch_html(session, url, deadline):
     return response.text, response.url
 
 
+def sitemap_event_urls(session, site_url, deadline):
+    """Vind evenementdetailpagina's via gangbare XML-sitemaps; faalt stil als een site dit niet aanbiedt."""
+    parsed = urlparse(site_url)
+    root = f"{parsed.scheme}://{parsed.netloc}"
+    sitemap_candidates = [
+        urljoin(root, "/sitemap.xml"),
+        urljoin(root, "/sitemap_index.xml"),
+        urljoin(root, "/wp-sitemap.xml"),
+    ]
+    found = []
+    seen_sitemaps = set()
+    event_path = re.compile(r"(event|agenda|programma|concert|voorstelling|activiteit|expositie|tentoonstelling|festival|film|theater|tribe_events)", re.I)
+
+    for sitemap_url in sitemap_candidates:
+        if time.monotonic() >= deadline:
+            break
+        if sitemap_url in seen_sitemaps:
+            continue
+        seen_sitemaps.add(sitemap_url)
+        try:
+            xml, final_url = fetch_html(session, sitemap_url, deadline)
+        except Exception:
+            continue
+
+        soup = BeautifulSoup(xml, "html.parser")
+        locs = [clean_text(tag.get_text(" ", strip=True)) for tag in soup.find_all("loc")]
+        locs = [normalized_url(value, final_url) for value in locs]
+        locs = [value for value in locs if value and same_host(value, site_url)]
+        if not locs:
+            continue
+
+        if re.search(r"<sitemapindex\b", xml, re.I):
+            child_maps = [value for value in locs if event_path.search(urlparse(value).path)]
+            if not child_maps:
+                child_maps = locs[:3]
+            for child_map in child_maps[:4]:
+                if time.monotonic() >= deadline:
+                    break
+                try:
+                    child_xml, child_final = fetch_html(session, child_map, deadline)
+                except Exception:
+                    continue
+                child_soup = BeautifulSoup(child_xml, "html.parser")
+                child_locs = [normalized_url(clean_text(tag.get_text(" ", strip=True)), child_final) for tag in child_soup.find_all("loc")]
+                for value in child_locs:
+                    if value and same_host(value, site_url) and event_path.search(urlparse(value).path):
+                        found.append(value)
+        else:
+            for value in locs:
+                if event_path.search(urlparse(value).path):
+                    found.append(value)
+
+        if found:
+            break
+
+    return unique_urls(found)[:100]
+
+
 def scrape_site(site_url, site_index=0, site_total=0):
     original_site = clean_text(site_url)
     normalized_site = normalized_url(original_site)
@@ -1171,7 +1229,10 @@ def scrape_site(site_url, site_index=0, site_total=0):
     for link in serp_links:
         add_raw("SerpAPI", original_site, "Detail-link", "", link, "ingepland", "SerpAPI-link wordt alleen als detailpagina gecontroleerd")
 
-    detail_queue = unique_urls(detail_links + serp_links)
+    sitemap_links = sitemap_event_urls(session, normalized_site, deadline)
+    if sitemap_links:
+        add_raw("Website", original_site, "Sitemap gevonden", "", normalized_site, "ok", f"{len(sitemap_links)} evenementlinks via XML-sitemap")
+    detail_queue = unique_urls(detail_links + serp_links + sitemap_links)
     visited = set()
     for detail_url in detail_queue:
         if len(dedupe_events(events)) >= MAX_EVENTS_PER_SITE:
