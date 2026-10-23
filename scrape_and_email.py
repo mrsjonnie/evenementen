@@ -1534,7 +1534,7 @@ def extract_socialdeal_offers(html, page_url, site_url):
         r"\b(Groningen|Veendam|Drachten|Assen|Haren|Hoogezand|Stadskanaal|Zuidlaren|"
         r"Appingedam|Delfzijl|Winschoten|Leek|Marum|Roden|Norg|Oldekerk|Zuidbroek|"
         r"Midwolda|Anjum|Eanjum|Drouwen|Gasselte|Paterswolde|Amsterdam|Utrecht|"
-        r"Rotterdam|Den Haag|Zwolle|Leeuwarden|Online|Bij jou thuis)\\b",
+        r"Rotterdam|Den Haag|Zwolle|Leeuwarden|Online|Bij jou thuis)\b",
         re.I,
     )
     for anchor in soup.find_all("a", href=True):
@@ -1581,7 +1581,7 @@ def extract_socialdeal_offers(html, page_url, site_url):
         description = card_text
         if title:
             description = re.sub(re.escape(title), " ", description, count=1, flags=re.I)
-        description = re.sub(r"\b(?:verkocht|sold out)\\s*:?\\s*[\\d.,]*", " ", description, flags=re.I)
+        description = re.sub(r"\b(?:verkocht|sold out)\s*:?\s*[\d.,]*", " ", description, flags=re.I)
         description = compact(description, 420)
         if not description:
             description = f"Social Deal-aanbieding: {title}. Bekijk de dealpagina voor voorwaarden en beschikbaarheid."
