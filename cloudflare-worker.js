@@ -653,7 +653,12 @@ async function enrichBodyWithSerpApi(env, body = {}) {
     }))));
   }
   if (aiJobs.length) {
-    const aiResults = await Promise.all(aiJobs);
+    // Beperk gelijktijdige AI-verzoeken om pieken en HTTP 429-rate-limits te verminderen.
+    const aiResults = [];
+    for (let offset = 0; offset < aiJobs.length; offset += 3) {
+      const batch = await Promise.all(aiJobs.slice(offset, offset + 3));
+      aiResults.push(...batch);
+    }
     aiResults.forEach((result) => {
       aiRawLog.push(...result.rawLog);
       aiEventCandidates.push(...result.events);
