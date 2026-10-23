@@ -1095,7 +1095,7 @@
           <label for="region">Locatie <span>(straal in km)</span></label>
           <div class="locationRadiusInputs">
             <input id="region" value="Groningen" aria-label="Locatie of regio">
-            <input id="radius" type="number" min="0" max="300" value="0" inputmode="numeric" aria-label="Straal in kilometers, 0 is geen filter" title="0 = geen filter, hoger getal = filter in km">
+            <input id="radius" type="number" min="0" max="300" value="100" inputmode="numeric" aria-label="Straal in kilometers, 0 is geen filter" title="0 = geen filter, hoger getal = filter in km">
           </div>
         </div>
         <button class="btn btnSecondary mapSearchButton" id="mapSearchBtn" type="button">Zoeken op kaart</button>
@@ -1126,7 +1126,8 @@
           </select>
         </div>
 
-        <button class="btn btnPrimary" id="refreshBtn" type="button">Ververs</button>
+        <button class="btn btnPrimary" id="applyFiltersBtn" type="button">Filter toepassen</button>
+        <button class="btn btnSecondary" id="refreshBtn" type="button">Ververs data</button>
         <button class="btn btnSecondary" id="resetBtn" type="button">Reset</button>
       </div>
 
@@ -1468,7 +1469,9 @@
     }
 
     function radiusFilterKm() {
-      return Math.max(0, Number($("radius")?.value) || 0);
+      const input = $("radius");
+      if (!input || input.value === "") return 100;
+      return Math.max(0, Number(input.value) || 0);
     }
 
     function radiusPayloadValue() {
@@ -1647,7 +1650,8 @@
       "dot groningen": { lat: 53.2253, lon: 6.5672 },
       "grand theatre": { lat: 53.2183, lon: 6.5686 },
       "martiniplaza": { lat: 53.1993, lon: 6.5540 },
-      "bourtange": { lat: 53.0066, lon: 7.1923 }
+      "bourtange": { lat: 53.0066, lon: 7.1923 },
+      "amsterdam": { lat: 52.3676, lon: 4.9041 }
     };
 
     function normalizeRouteText(value) {
@@ -1737,10 +1741,9 @@
     }
 
     function routeContextLabel(event) {
-      const region = cleanText($("region")?.value || "Groningen") || "Groningen";
       const roadKm = eventDistanceKm(event);
-      if (!Number.isFinite(roadKm)) return `vanaf ${region}`;
-      return `vanaf ${region}: ${routeEstimate(event)}`;
+      if (!Number.isFinite(roadKm)) return "";
+      return routeEstimate(event);
     }
 
     function routeUrl(event) {
@@ -2375,8 +2378,10 @@
       let afterType = afterQuery.filter((event) => type === "all" || displayType(event.type || "").toLowerCase() === type);
       let afterNew = afterType.filter((event) => !newOnly || isNewEvent(event));
       const matchesRadius = (event) => {
+        if (!(radiusKm > 0)) return true;
         const eventKm = eventDistanceKm(event);
-        return !(radiusKm > 0 && Number.isFinite(eventKm) && eventKm > radiusKm);
+        // Als de plaats niet te bepalen is, niet stilzwijgend buiten de straal tonen.
+        return Number.isFinite(eventKm) && eventKm <= radiusKm;
       };
       let afterRadius = afterNew.filter(matchesRadius);
       let afterDate = afterRadius.filter(matchesDate);
@@ -2457,8 +2462,9 @@
       filteredEvents.forEach((event) => { const type = displayType(event.type || "Activiteit"); if (!allGroups.has(type)) allGroups.set(type, []); allGroups.get(type).push(event); });
       const visibleKeys = new Set(items.map(eventDedupeKey));
       const entries = [...allGroups.entries()].sort(([a],[b]) => {
-        const ac = /concert/i.test(a), bc = /concert/i.test(b);
-        return ac === bc ? a.localeCompare(b, "nl") : ac ? -1 : 1;
+        const rank = (value) => /concert/i.test(value) ? 0 : /theater|theatre/i.test(value) ? 1 : 2;
+        const ar = rank(a), br = rank(b);
+        return ar === br ? a.localeCompare(b, "nl") : ar - br;
       });
       return entries.map(([type, allForType]) => {
         const eventsForType = allForType.filter(event => visibleKeys.has(eventDedupeKey(event)));
@@ -2567,7 +2573,7 @@
               ${website ? `<a class="btn btnPrimary" href="${escapeHtml(website)}" target="_blank" rel="noopener noreferrer">Meer info</a>` : ""}
               ${route ? `<button class="btn btnSecondary routeToggle" type="button" data-route="${escapeHtml(routeId)}" data-destination="${escapeHtml(routeDestinationText)}" data-route-url="${escapeHtml(route)}">Route</button>` : ""}
               <button class="btn btnDanger deleteEventBtn" type="button" data-event-key="${escapeHtml(cardKey)}">Verwijder</button>
-              ${route ? `<span class="routeInfo">${escapeHtml(routeContext)}</span>` : ""}
+              ${route && routeContext ? `<span class="routeInfo">${escapeHtml(routeContext)}</span>` : ""}
             </div>
             ${route ? `<div class="routePanel" id="${escapeHtml(routeId)}"></div>` : ""}
           </div>
@@ -3018,6 +3024,7 @@
       });
     });
 
+    $("applyFiltersBtn").addEventListener("click", applyFilters);
     $("refreshBtn").addEventListener("click", refreshEvents);
     $("resetBtn").addEventListener("click", resetFilters);
     $("clearBtn").addEventListener("click", clearAllEvents);
