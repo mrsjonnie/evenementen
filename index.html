@@ -2127,7 +2127,7 @@
       const target = $("dealOffers");
       if (!target) return;
       try {
-        const response = await fetch(\`./deals.json?v=${Date.now()}\`, { cache: "no-store" });
+        const response = await fetch(`./deals.json?v=${Date.now()}`, { cache: "no-store" });
         if (!response.ok) throw new Error("Deals niet beschikbaar");
         const data = await response.json();
         const offers = Array.isArray(data.offers) ? data.offers : [];
@@ -2137,7 +2137,7 @@
         }
         target.innerHTML = offers.map((offer) => {
           const url = safeUrl(offer.url, { website: true });
-          return \`<article class="dealOffer"><div class="dealOfferSource">${escapeHtml(offer.source || "Aanbieding")}</div><a href="${escapeHtml(url || "#")}" target="_blank" rel="noopener noreferrer">${escapeHtml(offer.title || "Aanbieding bekijken")}</a>${offer.price ? \`<strong>${escapeHtml(offer.price)}</strong>\` : ""}<p>${escapeHtml(offer.description || "")}</p></article>\`;
+          return `<article class="dealOffer"><div class="dealOfferSource">${escapeHtml(offer.source || "Aanbieding")}</div><a href="${escapeHtml(url || "#")}" target="_blank" rel="noopener noreferrer">${escapeHtml(offer.title || "Aanbieding bekijken")}</a>${offer.price ? `<strong>${escapeHtml(offer.price)}</strong>` : ""}<p>${escapeHtml(offer.description || "")}</p></article>`;
         }).join("");
       } catch {
         target.innerHTML = '<p class="dealEmpty">Aanbiedingen konden niet worden geladen. De bronlinks blijven beschikbaar.</p>';
@@ -2270,11 +2270,11 @@
       list.innerHTML = aiMarkup + sites.map((site) => {
         const count = siteEventCountFor(site);
         const hasResult = count > 0;
-        const badge = hasResult ? \`<span class="siteResultBadge">(+${count})</span>\` : "";
-        return \`<label class="${hasResult ? "siteFound" : ""}">
+        const badge = hasResult ? `<span class="siteResultBadge">(+${count})</span>` : "";
+        return `<label class="${hasResult ? "siteFound" : ""}">
           <input class="siteCheck" type="checkbox" value="${escapeHtml(site)}"${selectedSites.has(site) ? " checked" : ""}>
           <span>${escapeHtml(siteDisplayName(site))}${badge}</span>
-        </label>\`;
+        </label>`;
       }).join("");
       providerStates.forEach((checked, id) => { const input = $(id); if (input) input.checked = checked; });
       updateSiteCount();
@@ -2503,7 +2503,7 @@
           const headerImage = typeImage(type, event.image);
           const count = visible.filter((item) => displayType(item.type || "Activiteit").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLocaleLowerCase("nl") === typeKey).length;
           const collapsed = collapsedTypeKeys.has(typeKey);
-          renderedItems.push(\`<button class="typeHeader eventTypeHeader" type="button" data-type-key="${escapeHtml(typeKey)}" aria-expanded="${collapsed ? "false" : "true"}" style="background-image: url('${escapeHtml(headerImage)}')"><span>${escapeHtml(type)}</span><span class="typeHeaderMeta">${collapsed ? "Toon" : "Verberg"} · ${count} activiteiten <span aria-hidden="true">${collapsed ? "+" : "−"}</span></span></button>\`);
+          renderedItems.push(`<button class="typeHeader eventTypeHeader" type="button" data-type-key="${escapeHtml(typeKey)}" aria-expanded="${collapsed ? "false" : "true"}" style="background-image: url('${escapeHtml(headerImage)}')"><span>${escapeHtml(type)}</span><span class="typeHeaderMeta">${collapsed ? "Toon" : "Verberg"} · ${count} activiteiten <span aria-hidden="true">${collapsed ? "+" : "−"}</span></span></button>`);
           previousTypeKey = typeKey;
         }
         if (!collapsedTypeKeys.has(typeKey)) renderedItems.push(renderCard(event));
@@ -2524,7 +2524,7 @@
       if (aiName) {
         let host = "";
         try { host = website ? new URL(website).hostname.replace(/^www\./, "") : ""; } catch {}
-        return \`AI ${aiName}${host ? " " + host : ""}\`;
+        return `AI ${aiName}${host ? " " + host : ""}`;
       }
       if (event.source && !/^(manual|onbekend|bron onbekend)$/i.test(event.source)) return cleanText(event.source);
       if (!website) return "";
