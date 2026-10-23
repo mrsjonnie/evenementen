@@ -1,11 +1,61 @@
 {
   "runId": "2026-10-23T15:21:25+00:00",
   "startedAt": "2026-10-23T15:21:25+00:00",
-  "completedCount": 0,
+  "completedCount": 1,
   "totalSites": 3,
-  "completedSites": [],
+  "completedSites": [
+    "https://www.groningermuseum.nl/en/now"
+  ],
   "events": [],
-  "siteResults": [],
-  "rawLog": [],
-  "status": "running"
+  "siteResults": [
+    {
+      "site": "https://www.groningermuseum.nl/en/now",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 0.96,
+      "timedOut": false
+    }
+  ],
+  "rawLog": [
+    {
+      "source": "Website",
+      "site": "https://www.groningermuseum.nl/en/now",
+      "title": "Start",
+      "date": "",
+      "url": "https://www.groningermuseum.nl/en/now",
+      "status": "start",
+      "rawText": "site 1/3: max 20 events, max 60 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.groningermuseum.nl/en/now",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://www.groningermuseum.nl/en/now",
+      "status": "strategie",
+      "rawText": "universele tentoonstellings- en activiteitenparser"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.groningermuseum.nl/en/now",
+      "title": "Pagina mislukt",
+      "date": "",
+      "url": "https://www.groningermuseum.nl/en/now",
+      "status": "fout",
+      "rawText": "HTTP 404"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.groningermuseum.nl/en/now",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://www.groningermuseum.nl/en/now",
+      "status": "klaar",
+      "rawText": "site 1/3: 0 unieke events in 0.96 sec"
+    }
+  ],
+  "status": "running",
+  "lastCompletedSite": "https://www.groningermuseum.nl/en/now",
+  "lastCompletedAt": "2026-10-23T15:21:27+00:00",
+  "lastSiteEventCount": 0
 }
