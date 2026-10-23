@@ -549,7 +549,7 @@
     .siteList input {
       width: 16px;
       height: 16px;
-      margin: 2px 0 0;
+      margin: 0;
     }
 
     .siteList span {
@@ -2492,15 +2492,15 @@
 
     function scraperTypeForSite(site) {
       const host = hostFromUrl(site).replace(/^www\./i, "");
-      if (host === "vera-groningen.nl") return "programma-kaarten";
-      if (host === "groningen.uitloper.nu") return "agenda-items";
-      if (host === "martiniplaza.nl") return "agenda-kaarten";
-      if (host === "spotgroningen.nl") return "universeel + kaartfallback";
-      if (host === "simplon.nl") return "compacte agenda-kaarten";
-      if (host === "forum.nl") return "universeel (eventkaarten)";
-      if (["socialdeal.nl", "groupon.nl"].includes(host)) return "aanbiedingen";
-      if (host === "ibood.com") return "aanbiedingen (iBOOD)";
-      return "universeel (JSON-LD/links/kaarten)";
+      if (host === "vera-groningen.nl") return "kaart";
+      if (host === "groningen.uitloper.nu") return "agenda";
+      if (host === "martiniplaza.nl") return "kaart";
+      if (host === "spotgroningen.nl") return "univ.+kaart";
+      if (host === "simplon.nl") return "kaart";
+      if (host === "forum.nl") return "univ.";
+      if (host === "zwolsetheaters.nl") return "agenda";
+      if (["socialdeal.nl", "groupon.nl", "ibood.com"].includes(host)) return "deal";
+      return "univ.";
     }
 
     function renderSites(selected = null) {
