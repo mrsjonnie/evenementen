@@ -1124,6 +1124,52 @@ def fetch_html(session, url, deadline):
     return response.text, response.url
 
 
+def extract_ibood_offers(html, page_url, site_url):
+    """Haal productaanbiedingen van iBOOD op als doorlopende aanbiedingen."""
+    if "ibood.com" not in canonical_host(site_url):
+        return []
+    soup = BeautifulSoup(html, "html.parser")
+    offers = []
+    seen = set()
+    selectors = ["article", "[class*='product-card']", "[class*='productCard']", "[class*='product-item']", "[class*='deal-card']", "[data-testid*='product']", "li"]
+    for selector in selectors:
+        for node in soup.select(selector):
+            title_node = node.select_one("h1, h2, h3, h4, [class*='title'], [class*='name']")
+            link_node = node.select_one("a[href]")
+            if not title_node or not link_node:
+                continue
+            title = clean_title(title_node.get_text(" ", strip=True))
+            href = normalized_url(link_node.get("href"), page_url)
+            text = clean_text(node.get_text(" ", strip=True))
+            if not title or len(title) < 8 or not href or "ibood.com" not in canonical_host(href):
+                continue
+            if not PRICE_RE.search(text) or re.search(r"\b(voorwaarden|klantenservice|inloggen|mijn account|nieuwsbrief)\b", title, re.I):
+                continue
+            key = href.lower().split("?")[0].rstrip("/")
+            if key in seen:
+                continue
+            seen.add(key)
+            image_node = node.select_one("img[src], img[data-src]")
+            image = normalized_url((image_node.get("src") or image_node.get("data-src")) if image_node else "", page_url)
+            offers.append({
+                "date": TODAY.isoformat(),
+                "time": "",
+                "title": title,
+                "type": "Aanbiedingen",
+                "location": "Online",
+                "locationLink": "",
+                "website": href,
+                "source": "iBOOD",
+                "discoverySource": "Website",
+                "description": compact(text.replace(title, "", 1), 320) or "Online aanbieding op iBOOD.",
+                "cost": first_price(text),
+                "image": image,
+            })
+            if len(offers) >= MAX_EVENTS_PER_SITE:
+                return offers
+    return offers
+
+
 def scrape_site(site_url, site_index=0, site_total=0):
     original_site = clean_text(site_url)
     normalized_site = normalized_url(original_site)
@@ -1155,8 +1201,13 @@ def scrape_site(site_url, site_index=0, site_total=0):
             continue
 
         page_events = parse_page_events(html, final_url, normalized_site, "Website")
+        if "ibood.com" in canonical_host(normalized_site):
+            offers = extract_ibood_offers(html, final_url, normalized_site)
+            page_events.extend(offers)
+            if offers:
+                add_raw("Website", original_site, "iBOOD-aanbiedingen gevonden", TODAY.isoformat(), final_url, "ok", f"{len(offers)} online aanbiedingen")
         events.extend(page_events)
-        add_raw("Website", original_site, "Pagina geanalyseerd", "", final_url, "ok", f"{len(page_events)} events op deze pagina")
+        add_raw("Website", original_site, "Pagina geanalyseerd", "", final_url, "ok", f"{len(page_events)} events/aanbiedingen op deze pagina")
         detail_links.extend(collect_event_links(html, final_url, normalized_site))
 
     serp_links = serpapi_links_for_site(normalized_site)
