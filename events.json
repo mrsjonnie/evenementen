@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-23T13:39:22+00:00",
+  "updatedAt": "2026-10-23T13:40:22+00:00",
   "events": [
     {
       "date": "2026-10-23",
@@ -935,7 +935,7 @@
     {
       "date": "2026-12-10",
       "time": "",
-      "title": "Event Holiday on Ice 10 dec.",
+      "title": "Holiday on Ice",
       "type": "Concert",
       "location": "Martiniplaza Groningen",
       "locationLink": "",
@@ -950,44 +950,14 @@
     {
       "date": "2026-12-10",
       "time": "",
-      "title": "Muziek Ilse DeLange 10 apr.",
-      "type": "Concert",
-      "location": "Martiniplaza Groningen",
-      "locationLink": "",
-      "website": "https://www.martiniplaza.nl/nl/agenda/ilse-delange",
-      "source": "martiniplaza.nl",
-      "discoverySource": "Website",
-      "description": "Internationaal Indoor Concours Hippique Groningen 2027 TAFKAL - MOST WANTED (2027)",
-      "cost": "",
-      "image": "",
-      "isNew": true
-    },
-    {
-      "date": "2026-12-10",
-      "time": "",
-      "title": "Sport Internationaal Indoor Concours Hippique Groningen 2027 21 dec.",
+      "title": "Internationaal Indoor Concours Hippique Groningen 2027",
       "type": "Concert",
       "location": "Martiniplaza Groningen",
       "locationLink": "",
       "website": "https://www.martiniplaza.nl/nl/agenda/internationaal-indoor-concours-hippique-groningen-2027",
       "source": "martiniplaza.nl",
       "discoverySource": "Website",
-      "description": "Internationaal Indoor Concours Hippique Groningen 2027 TAFKAL - MOST WANTED (2027)",
-      "cost": "",
-      "image": "",
-      "isNew": true
-    },
-    {
-      "date": "2026-12-10",
-      "time": "",
-      "title": "Theater TAFKAL - MOST WANTED (2027) 11 nov.",
-      "type": "Concert",
-      "location": "Martiniplaza Groningen",
-      "locationLink": "",
-      "website": "https://www.martiniplaza.nl/nl/agenda/tafkal-most-wanted",
-      "source": "martiniplaza.nl",
-      "discoverySource": "Website",
-      "description": "Internationaal Indoor Concours Hippique Groningen 2027 TAFKAL - MOST WANTED (2027)",
+      "description": "TAFKAL - MOST WANTED (2027)",
       "cost": "",
       "image": "",
       "isNew": true
@@ -1340,6 +1310,21 @@
     {
       "date": "2027-04-10",
       "time": "",
+      "title": "Ilse DeLange",
+      "type": "Concert",
+      "location": "Martiniplaza Groningen",
+      "locationLink": "",
+      "website": "https://www.martiniplaza.nl/nl/agenda/ilse-delange",
+      "source": "martiniplaza.nl",
+      "discoverySource": "Website",
+      "description": "Internationaal Indoor Concours Hippique Groningen 2027 TAFKAL - MOST WANTED (2027)",
+      "cost": "",
+      "image": "",
+      "isNew": true
+    },
+    {
+      "date": "2027-04-10",
+      "time": "",
       "title": "Sven Cilliers Intimate singer-songwriter pop",
       "type": "Concert",
       "location": "Simplon Groningen",
@@ -1351,6 +1336,21 @@
       "cost": "",
       "image": "https://simplon.nl/wp-content/uploads/2026/10/0V7A0072-scaled-e1733318004573-1600x900.jpg",
       "isNew": false
+    },
+    {
+      "date": "2027-04-10",
+      "time": "",
+      "title": "TAFKAL - MOST WANTED (2027)",
+      "type": "Concert",
+      "location": "Martiniplaza Groningen",
+      "locationLink": "",
+      "website": "https://www.martiniplaza.nl/nl/agenda/tafkal-most-wanted",
+      "source": "martiniplaza.nl",
+      "discoverySource": "Website",
+      "description": "Internationaal Indoor Concours Hippique Groningen 2027",
+      "cost": "",
+      "image": "",
+      "isNew": true
     },
     {
       "date": "2027-04-10",
@@ -1464,7 +1464,7 @@
       "site": "https://www.martiniplaza.nl/nl/agenda",
       "count": 16,
       "newCount": 4,
-      "durationSeconds": 9.75,
+      "durationSeconds": 9.14,
       "timedOut": false
     }
   ],
@@ -1742,7 +1742,7 @@
     {
       "source": "Website",
       "site": "https://www.martiniplaza.nl/nl/agenda",
-      "title": "Event Holiday on Ice 10 dec.",
+      "title": "Holiday on Ice",
       "date": "2026-12-10",
       "url": "https://www.martiniplaza.nl/nl/agenda/holiday-on-ice",
       "status": "venue-agenda kaart",
@@ -1751,7 +1751,7 @@
     {
       "source": "Website",
       "site": "https://www.martiniplaza.nl/nl/agenda",
-      "title": "Sport Internationaal Indoor Concours Hippique Groningen 2027 21 dec.",
+      "title": "Internationaal Indoor Concours Hippique Groningen 2027",
       "date": "2026-12-10",
       "url": "https://www.martiniplaza.nl/nl/agenda/internationaal-indoor-concours-hippique-groningen-2027",
       "status": "venue-agenda kaart",
@@ -1760,8 +1760,8 @@
     {
       "source": "Website",
       "site": "https://www.martiniplaza.nl/nl/agenda",
-      "title": "Muziek Ilse DeLange 10 apr.",
-      "date": "2026-12-10",
+      "title": "Ilse DeLange",
+      "date": "2027-04-10",
       "url": "https://www.martiniplaza.nl/nl/agenda/ilse-delange",
       "status": "venue-agenda kaart",
       "rawText": "Event Holiday on Ice 10 dec. Sport Internationaal Indoor Concours Hippique Groningen 2027 21 dec. Muziek Ilse DeLange 10 apr. Theater TAFKAL - MOST WANTED (2027) 11 nov."
@@ -1769,8 +1769,8 @@
     {
       "source": "Website",
       "site": "https://www.martiniplaza.nl/nl/agenda",
-      "title": "Theater TAFKAL - MOST WANTED (2027) 11 nov.",
-      "date": "2026-12-10",
+      "title": "TAFKAL - MOST WANTED (2027)",
+      "date": "2027-04-10",
       "url": "https://www.martiniplaza.nl/nl/agenda/tafkal-most-wanted",
       "status": "venue-agenda kaart",
       "rawText": "Event Holiday on Ice 10 dec. Sport Internationaal Indoor Concours Hippique Groningen 2027 21 dec. Muziek Ilse DeLange 10 apr. Theater TAFKAL - MOST WANTED (2027) 11 nov."
@@ -2169,7 +2169,7 @@
       "date": "",
       "url": "https://www.martiniplaza.nl/nl/agenda",
       "status": "klaar",
-      "rawText": "site 1/1: 16 unieke events in 9.75 sec"
+      "rawText": "site 1/1: 16 unieke events in 9.14 sec"
     }
   ]
 }
