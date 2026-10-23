@@ -1548,9 +1548,9 @@ SCRAPE_PROGRESS_FILE = "scrape-progress.json"
 
 def publish_scrape_progress(progress):
     """Publish per-site progress so the website can show finished sources before the full scrape ends."""
-    with open(SCRAPE_PROGRESS_FILE, "w", encoding="utf-8", newline="\\n") as handle:
+    with open(SCRAPE_PROGRESS_FILE, "w", encoding="utf-8", newline="\n") as handle:
         json.dump(progress, handle, ensure_ascii=False, indent=2)
-        handle.write("\\n")
+        handle.write("\n")
     try:
         subprocess.run(["git", "add", SCRAPE_PROGRESS_FILE], check=True, capture_output=True, text=True)
         changed = subprocess.run(["git", "diff", "--cached", "--quiet"], check=False)
