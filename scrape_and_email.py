@@ -278,7 +278,9 @@ def detect_scraper_type(site_url):
     if host == "forum.nl":
         return "universeel-eventkaarten"
     if host == "zwolsetheaters.nl":
-        return "programma-kaarten"
+        return "JSON-LD + detailpagina-crawler"
+    if host == "visitgroningen.nl":
+        return "Visit Groningen agenda-/routekaarten"
     if host == "socialdeal.nl":
         return "Social Deal-aanbiedingen"
     if host in {"groupon.nl", "ibood.com"}:
@@ -1336,6 +1338,21 @@ def start_urls_for_site(site_url):
             urljoin(base, "/programma/?category=all&history=0&lang=nl"),
             urljoin(base, "/?lang=nl"),
         ]
+    if host == "visitgroningen.nl":
+        base = f"{parsed.scheme}://{parsed.netloc}"
+        path = parsed.path.lower().rstrip("/")
+        if path == "/nl/doen/wandelen":
+            return unique_urls([
+                exact,
+                urljoin(base, "/nl/doen/wandelkaart-groningen"),
+                urljoin(base, "/nl/doen/wandelen"),
+            ])
+        if path == "/nl/doen/evenementen":
+            return unique_urls([
+                exact,
+                urljoin(base, "/nl/doen/uitgaan"),
+                urljoin(base, "/nl/doen/cultuur/evenementen"),
+            ])
     if host == "groningen.uitloper.nu":
         # Uitloper shows one selected date per page. Start on the requested date and
         # advance day by day until the configured event limit is reached.
@@ -1975,17 +1992,27 @@ def scrape_site(site_url, site_index=0, site_total=0, progress_callback=None):
             page_events = extract_date_listing_events(html, final_url, normalized_site, "Website")
             if not page_events:
                 page_events = parse_page_events(html, final_url, normalized_site, "Website")
-        elif canonical_host(normalized_site) in {"simplon.nl", "zwolsetheaters.nl"}:
+        elif canonical_host(normalized_site) == "zwolsetheaters.nl":
+            # Alternative to the old card parser: structured Event JSON-LD,
+            # semantic links and detail-page crawling. Do not infer event records
+            # from large visual-card ancestors on the overview page.
+            page_events = parse_page_events(html, final_url, normalized_site, "Website")
+            add_raw("Parser", original_site, "Zwolse alternatieve parser", "", final_url, "strategie",
+                    "JSON-LD + semantische links + detailpagina's; oude kaartparser overgeslagen")
+        elif canonical_host(normalized_site) == "simplon.nl":
             page_events = extract_venue_agenda_events(html, final_url, normalized_site, "Website")
-            if not page_events and canonical_host(normalized_site) == "zwolsetheaters.nl":
-                page_events = parse_page_events(html, final_url, normalized_site, "Website")
         else:
             page_events = parse_page_events(html, final_url, normalized_site, "Website")
         page_events = dedupe_events(page_events)
         if "vera-groningen.nl" not in canonical_host(normalized_site):
             feed_urls.extend(discover_feed_urls(html, final_url, normalized_site))
-        if "visitgroningen.nl" in canonical_host(normalized_site) and "/wandelen" in urlparse(final_url).path.lower():
-            page_events.extend(extract_visitgroningen_walks(html, final_url, normalized_site))
+        if "visitgroningen.nl" in canonical_host(normalized_site) and any(
+            part in urlparse(final_url).path.lower() for part in ("/wandelen", "/wandelkaart-groningen")
+        ):
+            walks = extract_visitgroningen_walks(html, final_url, normalized_site)
+            page_events.extend(walks)
+            add_raw("Parser", original_site, "Visit Groningen wandelroutes", "", final_url, "gespecialiseerde parser",
+                    f"{len(walks)} wandelroutes/activiteiten gevonden")
         if "ibood.com" in canonical_host(normalized_site):
             offers = extract_ibood_offers(html, final_url, normalized_site)
             page_events.extend(offers)
