@@ -1,11 +1,92 @@
 {
   "runId": "2026-10-23T15:19:28+00:00",
   "startedAt": "2026-10-23T15:19:28+00:00",
-  "completedCount": 0,
+  "completedCount": 1,
   "totalSites": 1,
-  "completedSites": [],
-  "events": [],
-  "siteResults": [],
+  "completedSites": [
+    "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen"
+  ],
+  "events": [
+    {
+      "date": "2026-10-24",
+      "time": "",
+      "title": "Al jaren en jaren opent dit muziekfestival",
+      "type": "Concert",
+      "location": "Groningen",
+      "locationLink": "",
+      "website": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen/eurosonic-noorderslag",
+      "source": "visitgroningen.nl",
+      "discoverySource": "Website",
+      "description": "Voor jou én voor de profs Internationaal én van eigen bodem Het verhaal van Eurosonic",
+      "cost": "gratis",
+      "image": ""
+    },
+    {
+      "date": "2026-10-24",
+      "time": "",
+      "title": "Eurosonic Noorderslag",
+      "type": "Concert",
+      "location": "(Forum Groningen)",
+      "locationLink": "",
+      "website": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen/eurosonic-noorderslag",
+      "source": "visitgroningen.nl",
+      "discoverySource": "Website",
+      "description": "Groningen is vier dagen lang de pophoofdstad van Europa tijdens Eurosonic Noorderslag. Dit muziekfestival is hét moment om nieuwe muziek te ontdekken.",
+      "cost": "gratis",
+      "image": "https://www.visitgroningen.nl/build/assets/general/logo.29ee4cfdb1a1e9fa4a48.svg"
+    },
+    {
+      "date": "2027-05-06",
+      "time": "",
+      "title": "). Een weekend waarin mensen de donderdag",
+      "type": "Festival",
+      "location": "Groningen",
+      "locationLink": "",
+      "website": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen/grasnapolsky",
+      "source": "visitgroningen.nl",
+      "discoverySource": "Website",
+      "description": "al vrij hebben, waardoor je op zondag rustig naar huis kunt zonder een extra dag vrij te hoeven nemen. Een moment waarop het festival eindelijk naar buiten kan. Ook financieel wordt het festival toegankelijker: de ticketprijzen zijn verlaagd, met een extra voordelig tarief voor jongeren tot en met 25 jaar. De nieuwe lo",
+      "cost": "",
+      "image": ""
+    },
+    {
+      "date": "2027-05-16",
+      "time": "",
+      "title": "Door naar Groningen stad te gaan wordt",
+      "type": "Festival",
+      "location": "De nieuwe locatie",
+      "locationLink": "",
+      "website": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen/grasnapolsky",
+      "source": "visitgroningen.nl",
+      "discoverySource": "Website",
+      "description": "Toegankelijker dan ooit Jarenlang vertelde Grasnapolsky verhalen op plekken met een rijk verleden, van de Graanrepubliek in Scheemda tot industriële locaties langs het water. Voor 2026 verhuist het festival naar het Suikerterrein in Groningen, een gebied dat misschien nog wel beter past bij de eigenzinnige sfeer van Gr",
+      "cost": "",
+      "image": ""
+    },
+    {
+      "date": "2027-05-16",
+      "time": "",
+      "title": "Grasnapolsky Festival 2026",
+      "type": "Concert",
+      "location": "De nieuwe locatie",
+      "locationLink": "",
+      "website": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen/grasnapolsky",
+      "source": "visitgroningen.nl",
+      "discoverySource": "Website",
+      "description": "Zin in een festival met een eigenzinnige sfeer? Grasnapolsky laat je genieten, verwonderen en ontdekken. In EMG & Zakkenloods in Stadshavens Groningen ontdek je bekendere artiesten en nieuwe ontdekkingen.",
+      "cost": "gratis",
+      "image": "https://www.visitgroningen.nl/build/assets/general/logo.29ee4cfdb1a1e9fa4a48.svg"
+    }
+  ],
+  "siteResults": [
+    {
+      "site": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen",
+      "count": 5,
+      "newCount": 0,
+      "durationSeconds": 11.74,
+      "timedOut": false
+    }
+  ],
   "rawLog": [
     {
       "source": "Website",
@@ -51,10 +132,371 @@
       "url": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen",
       "status": "ok",
       "rawText": "0 events/aanbiedingen op deze pagina"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen",
+      "title": "Lees meer",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen/eurosonic-noorderslag",
+      "status": "detail-link gevonden",
+      "rawText": "Lees meer"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen",
+      "title": "Lees meer",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen/grasnapolsky",
+      "status": "detail-link gevonden",
+      "rawText": "Lees meer"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen",
+      "title": "Lees meer",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen/hongerige-wolf",
+      "status": "detail-link gevonden",
+      "rawText": "Lees meer"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen",
+      "title": "Lees meer",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen/koningsdag",
+      "status": "detail-link gevonden",
+      "rawText": "Lees meer"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen",
+      "title": "Lees meer",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen/noorderzon",
+      "status": "detail-link gevonden",
+      "rawText": "Lees meer"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen",
+      "title": "Lees meer",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen/paradigm",
+      "status": "detail-link gevonden",
+      "rawText": "Lees meer"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen",
+      "title": "Lees meer",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen/terug-naar-het-begin-oud",
+      "status": "detail-link gevonden",
+      "rawText": "Lees meer"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/feed",
+      "status": "fout",
+      "rawText": "HTTP 404"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/rss",
+      "status": "fout",
+      "rawText": "HTTP 404"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/rss.xml",
+      "status": "fout",
+      "rawText": "HTTP 404"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/feed.xml",
+      "status": "fout",
+      "rawText": "HTTP 404"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/events/feed/",
+      "status": "fout",
+      "rawText": "HTTP 404"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen",
+      "title": "Eurosonic Noorderslag",
+      "date": "2026-10-24",
+      "url": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen/eurosonic-noorderslag",
+      "status": "event uit datumblok",
+      "rawText": "Eurosonic Noorderslag | Visit Groningen Ga naar inhoud Ga naar de homepage Terug Nu & nieuw Uitagenda Nieuwe winkels & horeca in de stad Oktober donkertemaand Het 10-jarig bestaan van Dark Sky Park Lauwersmeer staat in het teken van donker. Het is hoog tijd om de schoonheid van de duisternis te gaan ontdekken. Sunnemeerten Terug Dit is Groningen Top 10 bezienswaardigheden In Groningen ligt het allemaal opvallend dich"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen",
+      "title": "Eurosonic Noorderslag",
+      "date": "2026-10-24",
+      "url": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen/eurosonic-noorderslag",
+      "status": "event uit detailpagina",
+      "rawText": "Eurosonic Noorderslag | Visit Groningen Ga naar inhoud Ga naar de homepage Terug Nu & nieuw Uitagenda Nieuwe winkels & horeca in de stad Oktober donkertemaand Het 10-jarig bestaan van Dark Sky Park Lauwersmeer staat in het teken van donker. Het is hoog tijd om de schoonheid van de duisternis te gaan ontdekken. Sunnemeerten Terug Dit is Groningen Top 10 bezienswaardigheden In Groningen ligt het allemaal opvallend dich"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen",
+      "title": "Al jaren en jaren opent dit muziekfestival",
+      "date": "2026-10-24",
+      "url": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen/eurosonic-noorderslag",
+      "status": "event uit tekstregel",
+      "rawText": "Voor jou én voor de profs | Al jaren en jaren opent dit muziekfestival in januari het popseizoen. Internationale bezoekers en agentschappen komen naar Groningen om te netwerken en talent te spotten. Hier zie je de bands die later in het jaar de zomerfestivals vullen. Hier hoor je muziek die straks op elke radiozender te horen zal zijn. Hier ben je bij kleinschalige concerten van de wereldsterren van morgen. Eurosonic"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen",
+      "title": "Pagina geteld",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen/eurosonic-noorderslag",
+      "status": "analyse",
+      "rawText": "jsonld:0, links:0, datumblokken:1, kaarten:0, regels:1, detail:1"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen/eurosonic-noorderslag",
+      "status": "ok",
+      "rawText": "2 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen",
+      "title": "). Een weekend waarin mensen de donderdag",
+      "date": "2027-05-06",
+      "url": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen/grasnapolsky",
+      "status": "event uit datumblok",
+      "rawText": "6 mei). Een weekend waarin mensen de donderdag al vrij hebben, waardoor je op zondag rustig naar huis kunt zonder een extra dag vrij te hoeven nemen. Een moment waarop het festival eindelijk naar buiten kan. Ook financieel wordt het festival toegankelijker: de ticketprijzen zijn verlaagd, met een extra voordelig tarief voor jongeren tot en met 25 jaar. De nieuwe locatie Jarenlang vertelde Grasnapolsky verhalen op ple"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen",
+      "title": "(Hemelvaartweekend) Locatie: De voormalige suikerfabriek, Groningen Website:",
+      "date": "2026-05-06",
+      "url": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen/grasnapolsky",
+      "status": "event uit datumblok",
+      "rawText": "6 mei 2026 (Hemelvaartweekend) Locatie: De voormalige suikerfabriek, Groningen Website: www.grasnapolsky.nl Tickets: De Blind Passe-partouts zijn inmiddels uitverkocht. De verkoop van reguliere passe-partouts, dagkaarten en groepstickets is inmiddels gestart. Meer informatie Podcast Groninger Grond Onderweg naar Grasnapolsky? En meer weten over waar je naartoe gaat? Luister naar de podcastserie. Luister Ontdek ook Ev"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen",
+      "title": "Grasnapolsky Festival 2026",
+      "date": "2027-05-16",
+      "url": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen/grasnapolsky",
+      "status": "event uit detailpagina",
+      "rawText": "Grasnapolsky Festival 2026 | Visit Groningen Ga naar inhoud Ga naar de homepage Terug Nu & nieuw Uitagenda Nieuwe winkels & horeca in de stad Oktober donkertemaand Het 10-jarig bestaan van Dark Sky Park Lauwersmeer staat in het teken van donker. Het is hoog tijd om de schoonheid van de duisternis te gaan ontdekken. Sunnemeerten Terug Dit is Groningen Top 10 bezienswaardigheden In Groningen ligt het allemaal opvallend"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen",
+      "title": "Door naar Groningen stad te gaan wordt",
+      "date": "2027-05-16",
+      "url": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen/grasnapolsky",
+      "status": "event uit tekstregel",
+      "rawText": "Toegankelijker dan ooit | Door naar Groningen stad te gaan wordt het festival letterlijk toegankelijker. De locatie ligt op acht minuten fietsen van Groningen Centraal station. Geen pendelbussen meer, geen extra reistijd, geen extra kosten. Voor Groningers is er de mogelijkheid om thuis te slapen. Het festival vindt plaats in het Hemelvaartweekend (14, 15 & 16 mei). Een weekend waarin mensen de donderdag al vrij hebb"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen",
+      "title": "Data: donderdag 14 t/m zaterdag 16 mei 2026 (Hemelvaartweekend)",
+      "date": "2026-05-16",
+      "url": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen/grasnapolsky",
+      "status": "event uit tekstregel",
+      "rawText": "Praktische info | Data: donderdag 14 t/m zaterdag 16 mei 2026 (Hemelvaartweekend) | Locatie: De voormalige suikerfabriek, Groningen | Website: | www.grasnapolsky.nl | Tickets: De Blind Passe-partouts zijn inmiddels uitverkocht. De verkoop van reguliere passe-partouts, dagkaarten en groepstickets is inmiddels gestart."
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen",
+      "title": "Pagina geteld",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen/grasnapolsky",
+      "status": "analyse",
+      "rawText": "jsonld:0, links:0, datumblokken:2, kaarten:0, regels:2, detail:1"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen/grasnapolsky",
+      "status": "ok",
+      "rawText": "5 extra events"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen",
+      "title": "Pagina geteld",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen/hongerige-wolf",
+      "status": "analyse",
+      "rawText": "jsonld:0, links:0, datumblokken:0, kaarten:0, regels:0, detail:0"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen/hongerige-wolf",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen",
+      "title": "Detailpagina mislukt",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen/koningsdag",
+      "status": "fout",
+      "rawText": "HTTP 404"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen",
+      "title": "Noorderzon",
+      "date": "2026-08-20",
+      "url": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen/noorderzon",
+      "status": "event uit detailpagina",
+      "rawText": "Noorderzon Performing Arts Festival | Visit Groningen Ga naar inhoud Ga naar de homepage Terug Nu & nieuw Uitagenda Nieuwe winkels & horeca in de stad Oktober donkertemaand Het 10-jarig bestaan van Dark Sky Park Lauwersmeer staat in het teken van donker. Het is hoog tijd om de schoonheid van de duisternis te gaan ontdekken. Sunnemeerten Terug Dit is Groningen Top 10 bezienswaardigheden In Groningen ligt het allemaal"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen",
+      "title": "Elf dagen lang is festival Noorderzon het",
+      "date": "2026-08-20",
+      "url": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen/noorderzon",
+      "status": "event uit tekstregel",
+      "rawText": "Achter elke boom iets nieuws | Elf dagen lang is festival Noorderzon het hoogtepunt van de culturele zomer in Groningen. Van 20 t/m 30 augustus 2026 strijkt een bonte verzameling podiumartiesten en kunstenaars neer in het sfeervolle Noorderplantsoen. Noorderzon staat voor een feestelijke start van het culturele seizoen en een knallend einde van de zomervakantie. | Voorstellingen en foodtrucks | Vrijwel iedereen heeft"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen",
+      "title": "Pagina geteld",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen/noorderzon",
+      "status": "analyse",
+      "rawText": "jsonld:0, links:0, datumblokken:0, kaarten:0, regels:1, detail:1"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen/noorderzon",
+      "status": "ok",
+      "rawText": "2 extra events"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen",
+      "title": "Pagina geteld",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen/paradigm",
+      "status": "analyse",
+      "rawText": "jsonld:0, links:0, datumblokken:0, kaarten:0, regels:0, detail:0"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen/paradigm",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen",
+      "title": "laten de wierden en het erfgoed zich voor de 17e keer bezingen en bespelen. Of je nu van goede",
+      "date": "2026-05-01",
+      "url": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen/terug-naar-het-begin",
+      "status": "event uit datumblok",
+      "rawText": "1 mei 2026 laten de wierden en het erfgoed zich voor de 17e keer bezingen en bespelen. Of je nu van goede muziek, sprekend theater, bijzondere verhalen of lokale kunst houdt: Terug naar het begin brengt je méér. Het is een uniek weekend in een uniek landschap. Weids, lokaal en toch van ons allemaal. Ga mee op ontdekkingstocht Tijdens Terug naar het begin ontdek je steengoede artiesten in kerkjes vol verhalen. Het zij"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen",
+      "title": "Terug naar het begin",
+      "date": "2026-05-31",
+      "url": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen/terug-naar-het-begin",
+      "status": "event uit detailpagina",
+      "rawText": "Terug naar het Begin | Visit Groningen Ga naar inhoud Ga naar de homepage Terug Nu & nieuw Uitagenda Nieuwe winkels & horeca in de stad Oktober donkertemaand Het 10-jarig bestaan van Dark Sky Park Lauwersmeer staat in het teken van donker. Het is hoog tijd om de schoonheid van de duisternis te gaan ontdekken. Sunnemeerten Terug Dit is Groningen Top 10 bezienswaardigheden In Groningen ligt het allemaal opvallend dicht"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen",
+      "title": "Op 29, 30 en 31 mei 2026",
+      "date": "2026-05-31",
+      "url": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen/terug-naar-het-begin",
+      "status": "event uit tekstregel",
+      "rawText": "Praktische informatie | Op 29, 30 en 31 mei 2026 laten de wierden en het erfgoed zich voor de 17e keer bezingen en bespelen. Of je nu van goede muziek, sprekend theater, bijzondere verhalen of lokale kunst houdt: Terug naar het begin brengt je méér. Het is een uniek weekend in een uniek landschap. Weids, lokaal en toch van ons allemaal. | Ga mee op ontdekkingstocht | Tijdens Terug naar het begin ontdek je steengoede"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen",
+      "title": "Pagina geteld",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen/terug-naar-het-begin",
+      "status": "analyse",
+      "rawText": "jsonld:0, links:0, datumblokken:1, kaarten:0, regels:1, detail:1"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen/terug-naar-het-begin",
+      "status": "ok",
+      "rawText": "3 extra events"
+    },
+    {
+      "source": "Filter",
+      "site": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen",
+      "title": "Datumfilter toegepast",
+      "date": "2026-10-23",
+      "url": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen",
+      "status": "ok",
+      "rawText": "12 gevonden; 5 binnen 2026-10-23 t/m onbeperkt"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen",
+      "status": "klaar",
+      "rawText": "site 1/1: 5 unieke events in 11.74 sec"
     }
   ],
-  "status": "running",
+  "status": "finishing",
   "lastCompletedSite": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen",
-  "lastSiteEventCount": 0,
-  "lastUpdatedAt": "2026-10-23T15:19:30+00:00"
+  "lastSiteEventCount": 5,
+  "lastUpdatedAt": "2026-10-23T15:19:30+00:00",
+  "lastCompletedAt": "2026-10-23T15:19:41+00:00"
 }
