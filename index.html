@@ -2157,7 +2157,7 @@
         const data = await response.json();
         const offers = (Array.isArray(data.offers) ? data.offers : []).filter((offer) => {
           const text = `${offer.title || ""} ${offer.description || ""} ${offer.url || ""}`.toLowerCase();
-          return !/trustpilot|google\\.com\\/maps|play\\.google\\.com|apps\\.apple\\.com|\\breviews?\\b|machine-readable information|availability instructions|every deal/.test(text);
+          return !/trustpilot|google\.com\/maps|play\.google\.com|apps\.apple\.com|\breviews?\b|machine-readable information|availability instructions|every deal/.test(text);
         });
         if (!offers.length) {
           target.innerHTML = '<p class="dealEmpty">Nog geen actuele aanbiedingen gevonden. Ververs om de bronnen opnieuw te scannen.</p>';
@@ -2192,16 +2192,16 @@
 
     function eventCategory(event) {
       const evidence = [event?.title, event?.description, event?.type].map(cleanText).join(" ").toLowerCase();
-      if (/\\b(wandel|wandeling|wandelroute|hike|natuurtocht)\\w*\\b/.test(evidence)) return "Wandelen";
-      if (/\\b(restaurant|diner|lunch|brunch|proeverij|high tea|eten en drinken|foodtour)\\b/.test(evidence)) return "Restaurants";
-      if (/\\b(concert|live muziek|tribute|orkest|band|jazz|blues|pop\\s?rock|optreden)\\b/.test(evidence)) return "Concerten";
-      if (/\\b(theater|theatervoorstelling|toneel|musical|cabaret|stand-up)\\b/.test(evidence)) return "Theater";
-      if (/\\b(film|bioscoop|documentaire|zienema)\\b/.test(evidence)) return "Film";
-      if (/\\b(expositie|tentoonstelling|museum|kunstcollectie)\\b/.test(evidence)) return "Exposities";
-      if (/\\b(workshop|masterclass|cursus)\\b/.test(evidence)) return "Workshops";
-      if (/\\b(lezing|college|gesprek met|interview met|debat)\\b/.test(evidence)) return "Lezingen";
-      if (/\\bfestival\\b/.test(evidence)) return "Festivals";
-      if (/\\b(mark(t|ten)|braderie|rommelmarkt)\\b/.test(evidence)) return "Markten";
+      if (/\b(wandel|wandeling|wandelroute|hike|natuurtocht)\w*\b/.test(evidence)) return "Wandelen";
+      if (/\b(restaurant|diner|lunch|brunch|proeverij|high tea|eten en drinken|foodtour)\b/.test(evidence)) return "Restaurants";
+      if (/\b(concert|live muziek|tribute|orkest|band|jazz|blues|pop\s?rock|optreden)\b/.test(evidence)) return "Concerten";
+      if (/\b(theater|theatervoorstelling|toneel|musical|cabaret|stand-up)\b/.test(evidence)) return "Theater";
+      if (/\b(film|bioscoop|documentaire|zienema)\b/.test(evidence)) return "Film";
+      if (/\b(expositie|tentoonstelling|museum|kunstcollectie)\b/.test(evidence)) return "Exposities";
+      if (/\b(workshop|masterclass|cursus)\b/.test(evidence)) return "Workshops";
+      if (/\b(lezing|college|gesprek met|interview met|debat)\b/.test(evidence)) return "Lezingen";
+      if (/\bfestival\b/.test(evidence)) return "Festivals";
+      if (/\b(mark(t|ten)|braderie|rommelmarkt)\b/.test(evidence)) return "Markten";
       return displayType(event?.type);
     }
 
@@ -2608,11 +2608,11 @@
 
         function readableEventTitle(event) {
       let title = cleanText(event.title || "");
-      const generic = /^(activiteit|evenement|agenda|uitagenda|programma|beau monde\\s*,?)$/i.test(title) || title.length < 5;
-      const description = cleanText(event.description || "").replace(/(voeg toe als favoriet\\s*)+/ig, "").replace(/\\s+/g, " ").trim();
+      const generic = /^(activiteit|evenement|agenda|uitagenda|programma|beau monde\s*,?)$/i.test(title) || title.length < 5;
+      const description = cleanText(event.description || "").replace(/(voeg toe als favoriet\s*)+/ig, "").replace(/\s+/g, " ").trim();
       if (generic && description.length > 8) title = description;
-      title = title.replace(/^Beau Monde\\s*,\\s*/i, "").replace(/\\s*[,|–-]\\s*$/, "").replace(/\\s+/g, " ").trim();
-      if (title.length > 110) title = `${title.slice(0, 107).replace(/\\s+\\S*$/, "")}…`;
+      title = title.replace(/^Beau Monde\s*,\s*/i, "").replace(/\s*[,|–-]\s*$/, "").replace(/\s+/g, " ").trim();
+      if (title.length > 110) title = `${title.slice(0, 107).replace(/\s+\S*$/, "")}…`;
       return title || "Activiteit — bekijk details";
     }
 
