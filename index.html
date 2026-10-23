@@ -1274,7 +1274,7 @@
   </div>
 
   <script>
-    const APP_VERSION = "2026.10.23.8";
+    const APP_VERSION = "2026.10.23.9";
     const DEFAULT_MAX_EVENTS_PER_SITE = 60;
     const DEFAULT_SITE_TIME_LIMIT_SECONDS = 45;
     const SCAN_SETTINGS_KEY = "eventScanSettingsV2";
@@ -1753,9 +1753,9 @@
     }
 
     function eventCoords(event) {
-      const lat = Number(event.lat);
-      const lon = Number(event.lon);
-      if (Number.isFinite(lat) && Number.isFinite(lon)) return { lat, lon };
+      const lat = event.lat === "" || event.lat == null ? NaN : Number(event.lat);
+      const lon = event.lon === "" || event.lon == null ? NaN : Number(event.lon);
+      if (Number.isFinite(lat) && Number.isFinite(lon) && Math.abs(lat) <= 90 && Math.abs(lon) <= 180) return { lat, lon };
 
       const text = normalizeRouteText(`${event.title || ""} ${event.location || ""}`);
       const known = Object.entries(knownLocationCoords).find(([name]) => text.includes(name));
@@ -2128,7 +2128,7 @@
     async function waitForUpdatedEvents(previousSignature, previousKeys, foundCount = null, options = {}) {
       const previousUpdatedAt = eventsUpdatedAt;
       const requireEvents = Boolean(options.requireEvents);
-      const maxAttempts = Math.max(1, Math.min(60, Number(options.maxAttempts) || 60));
+      const maxAttempts = Math.max(1, Math.min(90, Number(options.maxAttempts) || 90));
       for (let attempt = 1; attempt <= maxAttempts; attempt += 1) {
         const prefix = Number.isFinite(foundCount) ? `${foundText(foundCount)} gevonden.` : foundText(foundCount) + ".";
         showStatus(`${prefix} Lijst controleren (${attempt}/${maxAttempts}).`, "warn", { stop: true });
