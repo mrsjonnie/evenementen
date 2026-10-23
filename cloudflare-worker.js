@@ -243,6 +243,8 @@ function normalizeAiEvent(site, item = {}, source = "ChatGPT", rank = 0) {
   if (!website || !sameHostUrl(website, site) || badWords.test(website)) return null;
   const title = cleanSerpTitle(item.title || item.name || "", site);
   const description = clean(item.description || item.summary || item.snippet || "");
+  const siteHost = (() => { try { return new URL(site).hostname.toLowerCase().replace(/^www\\./, ""); } catch { return ""; } })();
+  const isOfferSite = /(^|\\.)(socialdeal\\.nl|groupon\\.nl|ibood\\.com)$/.test(siteHost);
   const dateText = clean(item.date || item.dateText || `${title} ${description}`);
   const eventDate = normalizeDate(dateText);
   if (!eventDate || !title || title.length < 3 || /^(agenda|programma|tickets?|contact)$/i.test(title)) return null;
@@ -255,7 +257,7 @@ function normalizeAiEvent(site, item = {}, source = "ChatGPT", rank = 0) {
     date: eventDate,
     dateText,
     location: clean(item.location || item.venue?.name || item.venue || ""),
-    type: clean(item.type || ""),
+    type: isOfferSite ? "Aanbiedingen" : clean(item.type || ""),
     description,
     website,
     url: website,
