@@ -1195,7 +1195,7 @@
         </div>
       </div>
       <div class="sidebarActionButtons">
-        <button class="btn btnSecondary" id="refreshBtn" type="button" hidden>Ververs data</button>
+        <button class="btn btnSecondary" id="refreshBtn" type="button">Ververs data</button>
         <button class="btn btnSecondary" id="resetBtn" type="button">Alleen nieuw</button>
       </div>
 
@@ -2401,7 +2401,8 @@
         const rows = [...(latestRawLog || []), ...(liveLogRows || [])].filter((row) => hostFromUrl(row.site || row.url || "") === host);
         const errors = rows.filter((row) => /fout|mislukt|timeout|geen data|status 4|status 5/i.test(`${row.status || ""} ${row.title || ""}`));
         const hasProblem = count === 0 || Boolean(result && (result.timedOut || Number(result.count || 0) === 0)) || errors.length > 0;
-        const diagnostic = errors.length ? errors.slice(0,3).map((row) => `${row.title || "Melding"} — ${row.status || "controle mislukt"}`).join(" | ") : result?.timedOut ? "De scan duurde te lang. Probeer het later opnieuw." : "Geen resultaten opgehaald. De website kan scraping blokkeren of dynamische inhoud gebruiken.";
+        const errorDetails = [...new Map(errors.map((row) => { const detail = cleanText(row.rawText || row.snippet || row.url || row.title || row.status || "Geen technische details beschikbaar"); return [detail, detail]; })).values()];
+        const diagnostic = count > 0 ? `${count} evenementen gevonden. ${errors.length ? `${errors.length} foutmeldingen geregistreerd; voorbeelden: ${errorDetails.slice(0,3).join(" | ")}` : "Er zijn ook resultaten opgehaald."}` : errors.length ? `${errors.length} foutmeldingen geregistreerd. Details: ${errorDetails.slice(0,3).join(" | ")}` : result?.timedOut ? "De scan duurde te lang. Probeer het later opnieuw." : "Geen evenementen gevonden. Mogelijke oorzaak: website blokkeert scraping of laadt de agenda dynamisch. Open ‘Ruwe verversdata’ voor HTTP-status en URL.";
         return `<label class="${count > 0 ? "siteFound" : ""}"><input class="siteCheck" type="checkbox" value="${escapeHtml(site)}"${selectedSites.has(site) ? " checked" : ""}><span class="sourceInfoWrap"><span title="${escapeHtml(site)}">${escapeHtml(shortUrl)}${badge}</span>${hasProblem ? `<button class="sourceInfo" type="button" aria-label="Scrape-informatie voor ${escapeHtml(site)}" aria-expanded="false" data-info-site="${escapeHtml(site)}">i</button>` : ""}</span>${hasProblem ? `<span class="sourceInfoPopup" data-info-popup="${escapeHtml(site)}" hidden>${escapeHtml(diagnostic)}</span>` : ""}</label>`;
       }).join("");
       const aiRows = [["provMistral","Mistral AI"],["provOpenAI","ChatGPT / OpenAI"],["provSerpAPI","SerpAPI (webzoekbron)"]].map(([id,label]) => `<label><input class="aiSourceCheck" type="checkbox" data-provider="${id}"${$(id)?.checked ? " checked" : ""}> <span>${label}</span></label>`).join("");
@@ -3438,7 +3439,7 @@
     $("siteSelect").style.gridColumn = "1 / -1";
     $("siteSelect").style.marginTop = "2px";
     if (customSiteAdder) customSiteAdder.style.gridColumn = "1 / -1";
-    $("clearBtn").textContent = "Verwijderen";
+    $("clearBtn").textContent = "Ververs data";
     $("clearBtn").style.width = "auto";
     const savedSidebarWidth = Number(localStorage.getItem("eventsSidebarWidth"));
     const initialSidebarWidth = Number.isFinite(savedSidebarWidth) && savedSidebarWidth >= 220 && savedSidebarWidth <= 520 ? savedSidebarWidth : 248;
