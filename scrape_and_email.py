@@ -643,14 +643,23 @@ def best_link_for_node(node, page_url, site_url):
     if hasattr(node, "find_all"):
         links.extend(node.find_all("a", href=True))
     candidates = []
+    is_vera = "vera-groningen.nl" in canonical_host(site_url)
     for anchor in links:
         url = normalized_url(anchor.get("href"), page_url)
         if not url or not same_host(url, site_url) or BAD_URL_RE.search(url):
             continue
-        # Kultuuragenda gebruikt unieke activiteitspagina's zoals /agenda/1453156530/digger.
+        path = urlparse(url).path
+        # Prefer actual event detail pages over the general agenda/homepage.
+        if is_vera and re.search(r"/events/[^/?#]+", path, re.I):
+            return url
+        # Kultuuragenda uses unique activity pages such as /agenda/1453156530/digger.
         if "kultuuragenda.nl" in canonical_host(site_url) and re.search(r"/agenda/\d+/[^/?#]+", url, re.I):
             return url
         candidates.append(url)
+    if is_vera:
+        detail_candidates = [url for url in candidates if re.search(r"/events/[^/?#]+", urlparse(url).path, re.I)]
+        if detail_candidates:
+            return detail_candidates[0]
     return candidates[0] if candidates else normalized_url(page_url)
 
 
@@ -712,7 +721,14 @@ def normalize_event(raw, site_url):
     if not title_is_usable(title) or not event_date or not website:
         return None
 
-    location = "Amsterdam" if canonical_host(site_url).endswith("paradiso.nl") else (clean_text(raw.get("location") or "") or host_default_location(site_url))
+    raw_location = clean_text(raw.get("location") or "")
+    location_unknown = not raw_location or re.fullmatch(r"(?:locatie\s+)?(?:onbekend|unknown|n/?a|-)", raw_location, re.I)
+    if canonical_host(site_url).endswith("paradiso.nl"):
+        location = "Amsterdam"
+    elif "vera-groningen.nl" in canonical_host(site_url) and location_unknown:
+        location = "VERA Groningen"
+    else:
+        location = raw_location or host_default_location(site_url)
     event_type = classify_type(" ".join([raw.get("type", ""), title, raw.get("description", ""), location]), canonical_host(site_url))
     discovery_source = clean_text(raw.get("discoverySource") or "Website")
     description = compact(raw.get("description") or "", 420)
@@ -1036,6 +1052,11 @@ def start_urls_for_site(site_url):
         return []
     parsed = urlparse(exact)
     urls = [exact]
+    host = canonical_host(exact)
+    if "vera-groningen.nl" in host:
+        # VERA's root is not the best source for event data; the programme has
+        # direct links to /events/<slug>/ detail pages with ticket prices.
+        urls.append(urljoin(exact, "/programma/"))
     if parsed.path in {"", "/"}:
         base = f"{parsed.scheme}://{parsed.netloc}"
         urls.extend(urljoin(base, path) for path in COMMON_PATHS_FOR_ROOT_SITES)
