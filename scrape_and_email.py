@@ -38,8 +38,8 @@ def env_int(name, default, minimum, maximum):
     return max(minimum, min(maximum, value))
 
 
-MAX_EVENTS_PER_SITE = env_int("INPUT_MAX_EVENTS_PER_SITE", 20, 20, 100)
-SITE_TIME_LIMIT_SECONDS = env_int("INPUT_SITE_TIME_LIMIT_SECONDS", 20, 20, 60)
+MAX_EVENTS_PER_SITE = env_int("INPUT_MAX_EVENTS_PER_SITE", 20, 1, 100)
+SITE_TIME_LIMIT_SECONDS = env_int("INPUT_SITE_TIME_LIMIT_SECONDS", 20, 3, 60)
 MAX_RAW_ROWS = 1200
 TODAY = date.today()
 
@@ -167,6 +167,7 @@ DEFAULT_LOCATIONS = {
     "kultuuragenda.nl": "Groningen",
     "noorderzon.nl": "Noorderplantsoen Groningen",
     "concertgebouw.nl": "Concertgebouw Amsterdam",
+    "hedon.nl": "Hedon Zwolle",
     "hedon-zwolle.nl": "Hedon Zwolle",
     "paradiso.nl": "Paradiso Amsterdam",
     "vvvameland.nl": "Ameland",
@@ -729,6 +730,10 @@ def normalize_event(raw, site_url):
     location_unknown = not raw_location or re.fullmatch(r"(?:locatie\s+)?(?:onbekend|unknown|n/?a|-)", raw_location, re.I)
     if canonical_host(site_url).endswith("paradiso.nl"):
         location = "Amsterdam"
+    elif "concertgebouw.nl" in canonical_host(site_url) and location_unknown:
+        location = "Concertgebouw Amsterdam"
+    elif canonical_host(site_url).endswith("hedon.nl") and location_unknown:
+        location = "Hedon Zwolle"
     elif "vera-groningen.nl" in canonical_host(site_url) and location_unknown:
         location = "VERA Groningen"
     else:
@@ -1059,7 +1064,7 @@ def start_urls_for_site(site_url):
     host = canonical_host(exact)
     if "vera-groningen.nl" in host:
         # VERA's programme contains direct event pages with ticket prices.
-        urls.append(urljoin(exact, "/programma/"))
+        urls.extend([urljoin(exact, "/programma/"), urljoin(exact, "/events/")])
     if "ibood.com" in host:
         # The current Dutch storefront uses this path; the root redirects here.
         urls.extend([urljoin(exact, "/nl/s-nl"), urljoin(exact, "/offers/nl/s-nl")])
@@ -1189,6 +1194,41 @@ def ibood_offer_price(value):
         return first_price(text)
 
 
+def extract_visitgroningen_walks(html, page_url, site_url):
+    """Haal concrete wandelroutes/ideeën van Visit Groningen op i.p.v. een hardcoded overzicht."""
+    if "visitgroningen.nl" not in canonical_host(site_url) or "/wandelen" not in urlparse(page_url).path.lower():
+        return []
+    soup = BeautifulSoup(html, "html.parser")
+    result = []
+    seen = set()
+    for node in soup.select("article, [class*='card'], [class*='teaser'], [class*='tile'], li")[:500]:
+        anchor = node if getattr(node, "name", "") == "a" and node.get("href") else node.find("a", href=True)
+        if not anchor:
+            continue
+        url = normalized_url(anchor.get("href"), page_url)
+        title = clean_title(anchor.get_text(" ", strip=True) or node_title(node))
+        text = clean_text(node.get_text(" ", strip=True))
+        if not url or not same_host(url, site_url) or "/doen/wandelen" in urlparse(url).path.lower():
+            continue
+        if not title_is_usable(title) or title.lower() in seen:
+            continue
+        seen.add(title.lower())
+        result.append({
+            "date": TODAY.isoformat(),
+            "title": title,
+            "type": "Wandelen",
+            "location": "Groningen",
+            "website": url,
+            "description": compact(text or f"Wandelroute of wandelidee van Visit Groningen: {title}", 420),
+            "cost": "Gratis",
+            "discoverySource": "Website",
+        })
+        add_raw("Website", site_url, title, TODAY.isoformat(), url, "wandelroute gevonden", text)
+        if len(result) >= MAX_EVENTS_PER_SITE:
+            break
+    return result
+
+
 def extract_ibood_offers(html, page_url, site_url):
     """Haal productaanbiedingen van iBOOD op als doorlopende aanbiedingen."""
     if "ibood.com" not in canonical_host(site_url):
@@ -1256,7 +1296,7 @@ def scrape_site(site_url, site_index=0, site_total=0):
             add_raw(source_name, original_site, "Eventvelden gebruikt", "", normalized_site, "ok", f"{count} event-kandidaten direct uit {source_name}")
 
     for page_url in start_urls_for_site(normalized_site):
-        if len(dedupe_events(events)) >= MAX_EVENTS_PER_SITE or time.monotonic() >= deadline:
+        if (len(dedupe_events(events)) >= MAX_EVENTS_PER_SITE and "vera-groningen.nl" not in canonical_host(normalized_site)) or time.monotonic() >= deadline:
             timed_out = time.monotonic() >= deadline
             break
         try:
@@ -1267,6 +1307,8 @@ def scrape_site(site_url, site_index=0, site_total=0):
             continue
 
         page_events = parse_page_events(html, final_url, normalized_site, "Website")
+        if "visitgroningen.nl" in canonical_host(normalized_site) and "/wandelen" in urlparse(final_url).path.lower():
+            page_events.extend(extract_visitgroningen_walks(html, final_url, normalized_site))
         if "ibood.com" in canonical_host(normalized_site):
             offers = extract_ibood_offers(html, final_url, normalized_site)
             page_events.extend(offers)
@@ -1286,7 +1328,7 @@ def scrape_site(site_url, site_index=0, site_total=0):
     for detail_url in detail_queue:
         # Eerst echte activiteitspagina's uitlezen; de overzichtskaarten bevatten vaak te weinig details.
         is_activity_detail = is_kultuuragenda and bool(re.search(r"/agenda/\d+/[^/?#]+", urlparse(detail_url).path, re.I))
-        if len(dedupe_events(events)) >= MAX_EVENTS_PER_SITE and not is_activity_detail:
+        if len(dedupe_events(events)) >= MAX_EVENTS_PER_SITE and not is_activity_detail and "vera-groningen.nl" not in canonical_host(normalized_site):
             break
         if is_kultuuragenda and not is_activity_detail:
             continue
@@ -1424,7 +1466,22 @@ def main():
             add_raw("Website", site, "Site mislukt", "", site, "fout", str(exc))
             SITE_RESULTS.append({"site": site, "count": 0, "newCount": 0, "durationSeconds": 0, "timedOut": False})
 
-    active_events = dedupe_events(all_events)
+    scraped_events = dedupe_events(all_events)
+    selected_hosts = {canonical_host(site) for site in sites if canonical_host(site)}
+    successful_hosts = {
+        canonical_host(row.get("site", ""))
+        for row in RAW_DATA_ROWS
+        if row.get("status") == "ok" and row.get("title") == "Pagina gelezen"
+    }
+    # Keep data from unselected sites, and never erase a site's previous results when
+    # every request to that site failed (e.g. HTTP 403).
+    retained_previous = []
+    if not INPUT_CLEAR_ARCHIVE:
+        for event in previous_all:
+            host = canonical_host(event.get("website", ""))
+            if host not in selected_hosts or (host in selected_hosts and host not in successful_hosts and not any(canonical_host(item.get("website", "")) == host for item in scraped_events)):
+                retained_previous.append(event)
+    active_events = dedupe_events([*scraped_events, *retained_previous])
     active_keys = {event_key(event) for event in active_events}
 
     if INPUT_CLEAR_ARCHIVE:
