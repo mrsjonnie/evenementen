@@ -1021,6 +1021,8 @@
     .filterSidebar .inlineTools { display: grid; grid-template-columns: minmax(0, 1fr); gap: 6px; width: 100%; }
     .filterSidebar .inlineTools > * { width: 100%; }
     .sidebarViewButtons, .sidebarActionButtons { display:flex; flex-wrap:wrap; gap:5px; min-width:0; }
+    .sidebarViewButtons { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:5px; }
+    .sidebarViewButtons .btn { min-width:0; white-space:normal; line-height:1.15; }
     .sidebarViewButtons .btn, .sidebarActionButtons .btn { min-height:32px; padding:0 7px; font-size:.72rem; flex:1 1 auto; }
     .sidebarActionButtons { grid-column:1 / -1; }
     .sidebarViewButtons { grid-column:1 / -1; }
@@ -1029,6 +1031,9 @@
     .filterSidebar .siteList { max-height: 180px; padding: 6px; }
     .filterSidebar .siteList label { padding: 6px; font-size: .76rem; }
     .filterSidebar .rawLogPanel { margin-top: 8px; }
+    @media (max-width: 360px) {
+      .sidebarViewButtons { grid-template-columns:1fr; }
+    }
     @media (max-width: 900px) {
       .pageLayout.sidebarOpen { grid-template-columns: minmax(0, 1fr); }
       .sidebarResizeHandle { display:none; }
@@ -1116,9 +1121,9 @@
         </div>
 
         <div class="sidebarViewButtons" aria-label="Weergave">
-          <button class="btn btnSecondary" id="collapseBtn" type="button">Details uitklappen</button>
-          <button class="btn btnSecondary" id="collapseSourcesBtn" type="button">Bron uitklappen</button>
           <button class="btn btnSecondary" id="collapseTypesBtn" type="button">Types uitklappen</button>
+          <button class="btn btnSecondary" id="collapseSourcesBtn" type="button">Bron uitklappen</button>
+          <button class="btn btnSecondary" id="collapseBtn" type="button">Details uitklappen</button>
         </div>
         <button class="btn btnPrimary" id="applyFiltersBtn" type="button">Filter toepassen</button>
         <div class="sidebarActionButtons">
@@ -1219,7 +1224,7 @@
   </div>
 
   <script>
-    const APP_VERSION = "2026.10.23.01";
+    const APP_VERSION = "2026.10.23.02";
     const DEFAULT_MAX_EVENTS_PER_SITE = 20;
     const DEFAULT_SITE_TIME_LIMIT_SECONDS = 20;
     const SCAN_SETTINGS_KEY = "eventScanSettingsV1";
@@ -2099,11 +2104,12 @@
       const previousUpdatedAt = eventsUpdatedAt;
       const requireEvents = Boolean(options.requireEvents);
       const maxAttempts = Math.max(1, Math.min(18, Number(options.maxAttempts) || 18));
+      const intervalMs = Math.max(3000, Math.min(10000, Number(options.intervalMs) || 5000));
       for (let attempt = 1; attempt <= maxAttempts; attempt += 1) {
         const prefix = Number.isFinite(foundCount) ? `${foundText(foundCount)} gevonden.` : foundText(foundCount) + ".";
-        showStatus(`${prefix} Lijst controleren (${attempt}/${maxAttempts}).`, "warn", { stop: true });
-        addLiveLog("App", "events.json", `Controle ${attempt}/${maxAttempts}`, "wachten", prefix);
-        const shouldContinue = await waitUnlessStopped(10000);
+        showStatus(`${prefix} De scraper kan nog bezig zijn. Controleren (${attempt}/${maxAttempts}, elke ${Math.round(intervalMs / 1000)} sec).`, "warn", { stop: true });
+        addLiveLog("App", "events.json", `Controle ${attempt}/${maxAttempts}`, "wachten", `${prefix} interval ${intervalMs / 1000}s`);
+        const shouldContinue = await waitUnlessStopped(intervalMs);
         if (!shouldContinue) {
           showStatus("Controle gestopt. De update kan nog doorlopen; probeer later opnieuw.", "warn");
           return false;
@@ -2157,7 +2163,7 @@
 
       await loadAll();
       const prefix = Number.isFinite(foundCount) ? `${foundText(foundCount)} gevonden.` : foundText(foundCount) + ".";
-      showStatus(`${prefix} De lijst is nog hetzelfde. Kies eventueel meer websites en probeer opnieuw.`, "warn");
+      showStatus(`${prefix} Na ${Math.round(maxAttempts * intervalMs / 1000)} seconden is events.json nog niet gewijzigd. De scrape kan nog op GitHub draaien, of de bronnen hebben geen bruikbare resultaten geleverd. Open ‘Ruwe verversdata’ voor HTTP-fouten en AI-rate-limits; probeer niet direct meerdere keren achter elkaar te verversen.`, "warn");
       return false;
     }
 
@@ -2807,8 +2813,11 @@
         }
 
         const prefix = Number.isFinite(foundCount) ? `${foundText(foundCount)} gevonden.` : foundText(foundCount) + ".";
-        showStatus(`Verversverzoek geaccepteerd. ${prefix} Ik controleer of de scraper events.json echt heeft bijgewerkt.`, "warn", { stop: true });
-        await waitForUpdatedEvents(previousSignature, previousKeys, foundCount);
+        const workerRows = [...(Array.isArray(data.aiRawLog) ? data.aiRawLog : []), ...(Array.isArray(data.serpApiRawLog) ? data.serpApiRawLog : [])];
+        const rateLimited = workerRows.some((row) => /429|rate.?limit|rate_limited/i.test(JSON.stringify(row)));
+        const rateLimitNote = rateLimited ? " Een AI-/zoekbron meldt HTTP 429 (rate limit); die bron heeft tijdelijk te veel verzoeken ontvangen." : "";
+        showStatus(`Verversverzoek geaccepteerd. ${prefix}${rateLimitNote} Ik controleer of events.json echt wordt bijgewerkt.`, "warn", { stop: true });
+        await waitForUpdatedEvents(previousSignature, previousKeys, foundCount, { intervalMs: 5000 });
       } catch (error) {
         const prefix = Number.isFinite(foundCount) ? `${foundText(foundCount)} gevonden.` : "";
         showStatus(`${prefix} Starten mislukt: ${error.message}`.trim(), "error");
