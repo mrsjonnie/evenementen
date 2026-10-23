@@ -27,9 +27,12 @@ INPUT_SERPAPI_EVENTS_RAW = os.getenv("INPUT_SERPAPI_EVENTS", "[]").strip() or "[
 INPUT_AI_EVENTS_RAW = os.getenv("INPUT_AI_EVENTS", "[]").strip() or "[]"
 
 REQUEST_HEADERS = {
-    "User-Agent": "Mozilla/5.0 (Evenementen Scraper; +https://github.com/mrsjonnie/evenementen)",
-    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
-    "Accept-Language": "nl-NL,nl;q=0.9,en;q=0.7",
+    # Use a normal browser signature: Groupon and iBOOD reject non-browser scraper user agents.
+    "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36",
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
+    "Accept-Language": "nl-NL,nl;q=0.9,en-US;q=0.8,en;q=0.7",
+    "Cache-Control": "no-cache",
+    "Pragma": "no-cache",
 }
 
 
@@ -1955,10 +1958,16 @@ def scrape_site(site_url, site_index=0, site_total=0, progress_callback=None):
                         asset_url = normalized_url(asset, final_url)
                         asset_response = session.get(asset_url, headers=REQUEST_HEADERS, timeout=remaining_timeout(deadline))
                         asset_text = asset_response.text
+                        # Find likely API routes and request code rather than generic words in minified bundles.
                         matches = []
-                        for pattern in [r".{0,100}(?:api/|/api|graphql|fetch\(|axios|programme|program|event[s]?|activity|agenda).{0,140}"]:
-                            matches.extend(match.group(0) for match in re.finditer(pattern, asset_text, re.I))
-                        add_raw("Diagnose", original_site, "Zwolse JS " + urlparse(asset_url).path.rsplit("/", 1)[-1], "", asset_url, "diagnose", " | ".join(matches[:5]))
+                        url_pattern = r"""["'`]((?:https?://|/)[^"'`\s]{1,180})["'`]"""
+                        for match in re.finditer(url_pattern, asset_text, re.I):
+                            candidate = match.group(1)
+                            if re.search(r"(?:api|graphql|agenda|programma|event|performance|voorstelling|show|calendar)", candidate, re.I):
+                                matches.append(candidate)
+                        request_pattern = r".{0,100}(?:baseURL|axios\.create|fetch\(|graphql|/api/|api/).{0,180}"
+                        matches.extend(match.group(0) for match in re.finditer(request_pattern, asset_text, re.I))
+                        add_raw("Diagnose", original_site, "Zwolse JS " + urlparse(asset_url).path.rsplit("/", 1)[-1], "", asset_url, "diagnose", " | ".join(list(dict.fromkeys(matches))[:18]))
                     except Exception as asset_error:
                         add_raw("Diagnose", original_site, "Zwolse JS fout", "", asset, "fout", str(asset_error))
         except Exception as exc:
