@@ -974,18 +974,28 @@
       --shadow: 0 8px 24px rgba(0,0,0,.18);
     }
     .hero { border-bottom-width: 2px; background-position: center 45%; }
-    .heroInner { max-width: 1440px; padding-block: 10px; gap: 12px; }
-    h1 { font-size: clamp(1.35rem, 2vw, 1.75rem); letter-spacing: -.025em; }
-    .subtitle { margin-top: 3px; font-size: .88rem; line-height: 1.35; }
+    .dealSources { margin-top: 18px; padding: 12px; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); }
+    .dealSourcesHead { margin-bottom: 9px; }
+    .dealSourcesHead strong { display: block; color: var(--ink); font-size: .95rem; }
+    .dealSourcesHead span { display: block; color: var(--muted); font-size: .76rem; margin-top: 2px; }
+    .dealSourceLinks { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 8px; }
+    .dealSourceLinks a { display: flex; flex-direction: column; gap: 3px; padding: 10px; border: 1px solid var(--line); border-radius: 9px; color: var(--ink); text-decoration: none; background: var(--surface-soft); }
+    .dealSourceLinks a span { color: var(--muted); font-size: .76rem; }
+    .dealSourceLinks a:hover { border-color: var(--primary); }
+    @media (max-width: 680px) { .dealSourceLinks { grid-template-columns: 1fr; } }
+    .heroInner { max-width: 1440px; padding: 6px 14px; gap: 10px; }
+    h1 { font-size: clamp(1.2rem, 1.7vw, 1.5rem); letter-spacing: -.025em; }
+    .subtitle { margin-top: 2px; font-size: .78rem; line-height: 1.25; }
     .heroSide { gap: 4px; }
     .status { padding: 5px 8px; border-radius: 9px; font-size: .72rem; line-height: 1.25; }
-    main { max-width: 1440px; padding-top: 12px; }
-    .toolbar { padding: 12px; border-radius: 14px; box-shadow: 0 6px 20px rgba(0,0,0,.12); }
-    .filters { grid-template-columns: minmax(180px,1.6fr) minmax(130px,.9fr) minmax(90px,.55fr) minmax(140px,1fr) minmax(145px,1fr) minmax(150px,1fr) minmax(140px,1fr) auto auto; gap: 8px; }
+    .heroSide { max-width: 470px; }
+    main { max-width: 1440px; padding-top: 8px; }
+    .toolbar { padding: 8px; border-radius: 11px; box-shadow: 0 4px 14px rgba(0,0,0,.10); }
+    .filters { grid-template-columns: minmax(160px,1.5fr) minmax(115px,.85fr) minmax(76px,.5fr) minmax(120px,.9fr) minmax(125px,.95fr) minmax(130px,1fr) minmax(115px,.85fr) auto auto; gap: 6px; }
     .field label, .siteSelectLabel { margin-bottom: 4px; font-size: .74rem; letter-spacing: .01em; }
-    input, select { height: 38px; padding-inline: 9px; border-radius: 9px; font-size: .88rem; }
-    .btn { min-height: 38px; padding-inline: 11px; border-radius: 9px; font-size: .82rem; }
-    .secondRow { padding-top: 9px; gap: 8px; }
+    input, select { height: 34px; padding-inline: 8px; border-radius: 8px; font-size: .84rem; }
+    .btn { min-height: 34px; padding-inline: 9px; border-radius: 8px; font-size: .78rem; }
+    .secondRow { padding-top: 6px; gap: 6px; }
     .check { padding: 7px 9px; font-size: .8rem; }
     .summary { margin-block: 12px 8px; color: var(--muted); }
     .summary strong { color: var(--ink); font-size: 1rem; }
@@ -1103,12 +1113,12 @@
               <span aria-hidden="true">v</span>
             </button>
             <div class="sitePanel">
-              <div class="sitePanelHeader">Mistral zoekt per aangevinkte website naar echte eventvelden. ChatGPT en SerpAPI kunnen apart worden aangezet om te vergelijken.</div>
+              <div class="sitePanelHeader">Bronnen uitgelegd: websites worden rechtstreeks uitgelezen. Mistral controleert de gevonden webtekst; ChatGPT en Perplexity zoeken aanvullend online. SerpAPI levert zoekresultaten en links. AI-bronnen hebben een eigen API-sleutel nodig in Cloudflare en kunnen API-kosten veroorzaken. Resultaten worden samengevoegd en ontdubbeld.</div>
               <div class="siteList" id="providerList">
-                <label><input class="providerCheck" type="checkbox" id="provPerplexity" disabled> <span>Perplexity uit</span></label>
-                <label><input class="providerCheck" type="checkbox" id="provMistral" checked> <span>Mistral eventvelden</span></label>
-                <label><input class="providerCheck" type="checkbox" id="provOpenAI"> <span>ChatGPT eventvelden</span></label>
-                <label><input class="providerCheck" type="checkbox" id="provSerpAPI"> <span>SerpAPI eventvelden</span></label>
+                <label><input class="providerCheck" type="checkbox" id="provPerplexity"> <span>Perplexity webzoeker</span></label>
+                <label><input class="providerCheck" type="checkbox" id="provMistral" checked> <span>Mistral — analyseert webtekst</span></label>
+                <label><input class="providerCheck" type="checkbox" id="provOpenAI"> <span>ChatGPT — zoekt en extraheert</span></label>
+                <label><input class="providerCheck" type="checkbox" id="provSerpAPI"> <span>SerpAPI — zoekresultaten</span></label>
               </div>
             </div>
           </div>
@@ -1120,7 +1130,7 @@
               <span aria-hidden="true">v</span>
             </button>
             <div class="sitePanel">
-              <div class="sitePanelHeader">Websites worden rechtstreeks gescand; AI-bronnen zijn aanvullend. Selecteer websites om de scan én de resultaten te beperken.</div>
+              <div class="sitePanelHeader">Selecteer sites die rechtstreeks gescand moeten worden. Evenementensites leveren agenda-items; kortingssites zijn bedoeld voor deals en worden niet als evenemententitel geïmporteerd. De AI-zoekbronnen hierboven vullen de sitescan aan. Resultaten kunnen ontbreken als een site blokkeert of geen datum publiceert.</div>
               <div class="siteList" id="sitesList"></div>
               <div class="siteActions">
                 <button class="btn btnSecondary" id="allSitesBtn" type="button">Alles</button>
@@ -1146,6 +1156,15 @@
       </div>
 
     <section class="grid" id="grid" aria-live="polite"></section>
+
+    <section class="dealSources" aria-label="Dagaanbiedingen en kortingssites">
+      <div class="dealSourcesHead"><div><strong>Dagaanbiedingen &amp; korting</strong><span>Externe dealsites — aanbiedingen kunnen verlopen of uitverkocht raken.</span></div></div>
+      <div class="dealSourceLinks">
+        <a href="https://www.ibood.com/s-nl" target="_blank" rel="noopener noreferrer"><strong>iBOOD</strong><span>Dagdeals en flash sales</span></a>
+        <a href="https://www.socialdeal.nl/" target="_blank" rel="noopener noreferrer"><strong>Social Deal</strong><span>Uitjes, horeca en wellness</span></a>
+        <a href="https://www.groupon.nl/" target="_blank" rel="noopener noreferrer"><strong>Groupon</strong><span>Lokale deals en belevenissen</span></a>
+      </div>
+    </section>
 
     <nav class="pagination" id="pagination" aria-label="Paginering">
       <button class="btn btnSecondary" id="prevPage" type="button">Vorige</button>
@@ -1176,7 +1195,7 @@
   </div>
 
   <script>
-    const APP_VERSION = "2026.10.23.1";
+    const APP_VERSION = "2026.10.23.2";
     const DEFAULT_MAX_EVENTS_PER_SITE = 60;
     const DEFAULT_SITE_TIME_LIMIT_SECONDS = 45;
     const SCAN_SETTINGS_KEY = "eventScanSettingsV2";
@@ -1432,7 +1451,7 @@
 
     function providerSettings() {
       return {
-        perplexity: false,
+        perplexity: Boolean($("provPerplexity")?.checked),
         mistral: Boolean($("provMistral")?.checked),
         openai: Boolean($("provOpenAI")?.checked),
         chatgpt: Boolean($("provOpenAI")?.checked),
