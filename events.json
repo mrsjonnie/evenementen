@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-23T13:40:22+00:00",
+  "updatedAt": "2026-10-23T13:42:27+00:00",
   "events": [
     {
       "date": "2026-10-23",
@@ -945,7 +945,7 @@
       "description": "Internationaal Indoor Concours Hippique Groningen 2027 TAFKAL - MOST WANTED (2027)",
       "cost": "",
       "image": "",
-      "isNew": true
+      "isNew": false
     },
     {
       "date": "2026-12-10",
@@ -960,7 +960,7 @@
       "description": "TAFKAL - MOST WANTED (2027)",
       "cost": "",
       "image": "",
-      "isNew": true
+      "isNew": false
     },
     {
       "date": "2026-12-11",
@@ -1320,7 +1320,7 @@
       "description": "Internationaal Indoor Concours Hippique Groningen 2027 TAFKAL - MOST WANTED (2027)",
       "cost": "",
       "image": "",
-      "isNew": true
+      "isNew": false
     },
     {
       "date": "2027-04-10",
@@ -1350,7 +1350,7 @@
       "description": "Internationaal Indoor Concours Hippique Groningen 2027",
       "cost": "",
       "image": "",
-      "isNew": true
+      "isNew": false
     },
     {
       "date": "2027-04-10",
@@ -1463,8 +1463,8 @@
     {
       "site": "https://www.martiniplaza.nl/nl/agenda",
       "count": 16,
-      "newCount": 4,
-      "durationSeconds": 9.14,
+      "newCount": 0,
+      "durationSeconds": 7.55,
       "timedOut": false
     }
   ],
@@ -2169,7 +2169,7 @@
       "date": "",
       "url": "https://www.martiniplaza.nl/nl/agenda",
       "status": "klaar",
-      "rawText": "site 1/1: 16 unieke events in 9.14 sec"
+      "rawText": "site 1/1: 16 unieke events in 7.55 sec"
     }
   ]
 }
