@@ -82,16 +82,7 @@
       cursor: pointer;
     }
 
-    .titleChevron {
-      border: 1px solid rgba(255, 255, 255, .32);
-      border-radius: 999px;
-      padding: 1px 7px;
-      color: rgba(255, 255, 255, .86);
-      background: var(--hero-badge);
-      font-size: .84rem;
-      font-weight: 900;
-      line-height: 1.4;
-    }
+    .titleChevron { display:none; }
 
     .titlePanel {
       display: none;
@@ -977,13 +968,15 @@
     .pageLayout:not(.sidebarOpen) .sidebarResizeHandle { display:none; }
     .sidebarResizeHandle { width:7px; min-height:160px; align-self:stretch; cursor:col-resize; border-radius:8px; background:linear-gradient(90deg, transparent 2px, var(--line) 2px, var(--line) 5px, transparent 5px); touch-action:none; }
     .sidebarResizeHandle:hover, .sidebarResizeHandle:focus { background:var(--primary); outline:2px solid var(--primary); outline-offset:1px; }
-    .sourceGroup { min-width:0; margin:0 0 6px; }
+    .sourceGroup { min-width:0; margin:0 0 3px; }
     .sourceGroupHeader { display:flex; align-items:center; width:100%; gap:8px; margin:2px 0 5px; padding:6px 9px; border:1px solid var(--line); border-radius:8px; background:var(--surface); color:var(--ink); text-align:left; font-size:.84rem; font-weight:850; cursor:pointer; }
     .sourceGroupHeader small { margin-left:auto; color:var(--muted); font-weight:650; }
     .sourceGroup.collapsed .eventGroupCards { display:none; }
-    .sourceGroup .eventGroupCards { padding-left:8px; border-left:2px solid var(--line); }
-    .locationGroup { min-width:0; margin:0 0 5px; }
-    .locationGroupHeader { display:flex; align-items:center; width:100%; gap:8px; padding:5px 8px; border:1px solid var(--line); border-radius:7px; background:#101925; color:var(--muted); text-align:left; font-size:.78rem; font-weight:800; cursor:pointer; }
+    .sourceGroup .eventGroupCards { padding-left:4px; border-left:1px solid var(--line); gap:4px; }
+    .locationGroup { min-width:0; margin:0 0 2px; }
+    .locationGroup:not(.collapsed) { grid-column:1 / -1; width:100%; }
+    .locationGroupCards { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,360px),1fr)); gap:6px; width:100%; }
+    .locationGroupHeader { display:flex; align-items:center; width:100%; gap:8px; padding:4px 7px; border:1px solid var(--line); border-radius:7px; background:#101925; color:var(--muted); text-align:left; font-size:.78rem; font-weight:800; cursor:pointer; }
     .locationGroupHeader small { margin-left:auto; }
     .locationGroup.collapsed .locationGroupCards { display:none; }
     .locationGroupCards { padding:6px 0 2px 8px; }
@@ -1004,7 +997,7 @@
     .card .desc .sourceSuffix { color:var(--muted); font-size:.84em; }
     #providerSelect { display:none!important; }
     .eventGroup { grid-column:1 / -1; min-width:0; margin-bottom:2px; }
-    .eventGroupHeader { display:flex; width:100%; margin:3px 0 4px; padding:7px 10px; border:1px solid var(--line); border-left:4px solid var(--primary); border-radius:var(--radius); background:var(--surface-soft); color:var(--ink); text-align:left; font-weight:950; cursor:pointer; }
+    .eventGroupHeader { display:flex; width:100%; margin:2px 0 3px; padding:6px 9px; border:1px solid var(--line); border-left:4px solid var(--primary); border-radius:var(--radius); background:var(--surface-soft); color:var(--ink); text-align:left; font-weight:950; cursor:pointer; }
     .eventGroupHeader small { margin-left:auto; color:var(--muted); }
     .eventGroupCards { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,360px),1fr)); gap:8px; }
     .eventGroup.collapsed .eventGroupCards { display:none; }
@@ -1055,7 +1048,6 @@
         <h1>
           <button class="titleToggle" id="titleToggle" type="button" aria-expanded="false">
             <span id="pageTitle">Evenementen rond Groningen</span>
-            <span class="titleChevron" aria-hidden="true">v</span>
           </button>
         </h1>
         <p class="subtitle" id="pageSubtitle">Vind snel wat er te doen is, filter op datum en type, en ververs de lijst wanneer je nieuwe resultaten wilt ophalen.</p>
@@ -1067,8 +1059,8 @@
             <span class="versionBadge" id="versionBadge">Versie wordt geladen</span>
             <div class="status" id="status" aria-live="polite"></div>
             <div class="scanSettings" aria-label="Scaninstellingen">
-              <label class="scanSetting" for="maxEventsPerSite">Events <input id="maxEventsPerSite" type="number" min="20" max="100" step="1" value="20" inputmode="numeric"></label>
-              <label class="scanSetting" for="siteTimeLimitSeconds">Sec <input id="siteTimeLimitSeconds" type="number" min="20" max="60" step="1" value="20" inputmode="numeric"></label>
+              <label class="scanSetting" for="maxEventsPerSite">Events <input id="maxEventsPerSite" type="number" min="20" max="100" step="1" value="20" inputmode="numeric"> <small>zoeken per geselecteerde website</small></label>
+              <label class="scanSetting" for="siteTimeLimitSeconds">Sec <input id="siteTimeLimitSeconds" type="number" min="20" max="60" step="1" value="20" inputmode="numeric"> <small>zoeken per geselecteerde website</small></label>
             </div>
           </div>
           <details class="rawLogPanel" id="rawLogPanel">
@@ -3139,13 +3131,20 @@
       render();
     });
     $("collapseBtn").addEventListener("click", toggleCardsCollapsed);
-    $("collapseTypesBtn").addEventListener("click", () => { const types = [...new Set(filteredEvents.map((event) => displayType(event.type || "Activiteit")))]; const allCollapsed = types.length && types.every((type) => collapsedEventTypes.has(type)); collapsedEventTypes = allCollapsed ? new Set() : new Set(types); render(); $("collapseTypesBtn").textContent = allCollapsed ? "Types uitklappen" : "Types inklappen"; });
+    $("collapseTypesBtn").addEventListener("click", () => { const types = [...new Set(filteredEvents.map((event) => displayType(event.type || "Activiteit")))]; const allCollapsed = types.length && types.every((type) => collapsedEventTypes.has(type)); collapsedEventTypes = allCollapsed ? new Set() : new Set(types); if (allCollapsed) { collapsedSourceGroups = new Set(); collapsedLocationGroups = new Set(); } render(); $("collapseTypesBtn").textContent = allCollapsed ? "Types inklappen" : "Types uitklappen"; });
     $("collapseLocationsBtn").addEventListener("click", () => {
       const keys = [...new Set(filteredEvents.map((event) => displayType(event.type || "Activiteit") + "::" + (eventSourceLabel(event) || "Bron onbekend") + "::" + cleanText(event.location || "Locatie onbekend")))];
       const allCollapsed = keys.length > 0 && keys.every((key) => collapsedLocationGroups.has(key));
-      collapsedLocationGroups = allCollapsed ? new Set() : new Set(keys);
+      if (allCollapsed) {
+        collapsedEventTypes = new Set();
+        collapsedSourceGroups = new Set();
+        collapsedLocationGroups = new Set();
+      } else {
+        collapsedLocationGroups = new Set(keys);
+      }
       render();
-      $("collapseLocationsBtn").textContent = allCollapsed ? "Locaties uitklappen" : "Locaties inklappen";
+      $("collapseLocationsBtn").textContent = allCollapsed ? "Locaties inklappen" : "Locaties uitklappen";
+      $("collapseTypesBtn").textContent = allCollapsed ? "Types inklappen" : "Types uitklappen";
     });
     $("prevPage").addEventListener("click", () => { currentPage -= 1; render(); window.scrollTo({ top: 0, behavior: "smooth" }); });
     $("nextPage").addEventListener("click", () => { currentPage += 1; render(); window.scrollTo({ top: 0, behavior: "smooth" }); });
