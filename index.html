@@ -1773,9 +1773,6 @@
       }
 
       if (!isUsablePhysicalLocation(event)) return "";
-      const link = safeUrl(event.locationLink);
-      if (link) return link;
-
       const location = eventLocationLabel(event);
       return location && location !== "Locatie onbekend" ? `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(location)}` : "";
     }
