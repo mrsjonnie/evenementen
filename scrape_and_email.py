@@ -1119,7 +1119,7 @@ def extract_uitloper_events(html, page_url, site_url, discovery_source):
 def extract_venue_agenda_events(html, page_url, site_url, discovery_source):
     """Extract dated event cards from MartiniPlaza and SPOT programme listings."""
     host = canonical_host(site_url)
-    if host not in {"martiniplaza.nl", "spotgroningen.nl"}:
+    if host not in {"martiniplaza.nl", "spotgroningen.nl", "simplon.nl"}:
         return []
 
     soup = BeautifulSoup(html, "html.parser")
@@ -1284,6 +1284,8 @@ def start_urls_for_site(site_url):
         return [urljoin(exact, "/nl/agenda")]
     if host == "spotgroningen.nl":
         return [urljoin(exact, "/programma")]
+    if host == "simplon.nl":
+        return [urljoin(exact, "/programma/")]
     urls = [exact]
     if "ibood.com" in host:
         # The current Dutch storefront uses this path; the root redirects here.
@@ -1606,7 +1608,7 @@ def scrape_site(site_url, site_index=0, site_total=0):
             page_events = extract_vera_programme_events(html, final_url, normalized_site, "Website")
         elif canonical_host(normalized_site) == "groningen.uitloper.nu":
             page_events = extract_uitloper_events(html, final_url, normalized_site, "Website")
-        elif canonical_host(normalized_site) in {"martiniplaza.nl", "spotgroningen.nl"}:
+        elif canonical_host(normalized_site) in {"martiniplaza.nl", "spotgroningen.nl", "simplon.nl"}:
             page_events = extract_venue_agenda_events(html, final_url, normalized_site, "Website")
         else:
             page_events = parse_page_events(html, final_url, normalized_site, "Website")
