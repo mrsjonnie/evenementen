@@ -1030,12 +1030,17 @@
     .filterSidebar .sourcePickers { display: grid; grid-template-columns: minmax(0, 1fr); gap: 8px; width: 100%; }
     .filterSidebar .inlineTools { display: grid; grid-template-columns: minmax(0, 1fr); gap: 6px; width: 100%; }
     .filterSidebar .inlineTools > * { width: 100%; }
-    .sidebarViewButtons, .sidebarActionButtons { display:flex; flex-wrap:wrap; gap:5px; min-width:0; }
-    .sidebarViewButtons { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:5px; }
-    .sidebarViewButtons .btn { min-width:0; white-space:normal; line-height:1.15; }
-    .sidebarViewButtons .btn, .sidebarActionButtons .btn { min-height:32px; padding:0 7px; font-size:.72rem; flex:1 1 auto; }
-    .sidebarActionButtons { grid-column:1 / -1; }
+    .sidebarViewButtons, .sidebarActionButtons, .inlineTools { display:flex; flex-wrap:wrap; gap:8px; min-width:0; }
+    .sidebarViewButtons { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:10px; margin-bottom:12px; }
+    .sidebarViewButtons .btn { min-width:0; min-height:42px; padding:7px 10px; white-space:normal; line-height:1.2; font-size:.78rem; }
+    .sidebarActionButtons .btn, .inlineTools .btn { min-height:38px; padding:0 10px; font-size:.78rem; flex:1 1 auto; }
+    .sidebarActionButtons { grid-column:1 / -1; margin-top:12px; }
+    .inlineTools { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:8px; width:100%; }
+    .inlineTools > * { min-width:0; }
+    .inlineTools .btn { white-space:normal; line-height:1.15; }
     .sidebarViewButtons { grid-column:1 / -1; }
+    #refreshBtn { background:#087f5b; border-color:#087f5b; color:#fff; font-weight:900; }
+    #refreshBtn:hover { background:#066b4d; border-color:#066b4d; }
     .filterSidebar .sitePanel { position: static; top: auto; left: auto; right: auto; margin-top: 5px; box-shadow: none; }
     .filterSidebar .sitePanelHeader { padding: 7px 8px; font-size: .72rem; }
     .filterSidebar .siteList { max-height: 180px; padding: 6px; }
@@ -1136,12 +1141,6 @@
           </select>
         </div>
 
-        <div class="sidebarActionButtons">
-          <button class="btn btnSecondary" id="refreshBtn" type="button">Ververs data</button>
-          <button class="btn btnSecondary" id="resetBtn" type="button">Reset</button>
-          <button class="btn btnSecondary" id="toggleCustomSiteBtn" type="button" aria-expanded="false">Toevoegen</button>
-          <button class="btn btnDanger" id="clearBtn" type="button">Verwijderen</button>
-        </div>
       </div>
 
       <div class="secondRow">
@@ -1191,9 +1190,13 @@
         <div class="inlineTools">
           <input type="checkbox" id="newOnlyFilter" hidden>
           <button class="btn btnSecondary filterToggle" id="newOnlyToggle" type="button" aria-pressed="false">Alleen nieuw <span id="newCountBadge">0</span></button>
-          
+          <button class="btn btnSecondary" id="toggleCustomSiteBtn" type="button" aria-expanded="false">Toevoegen</button>
+          <button class="btn btnDanger" id="clearBtn" type="button">Verwijderen</button>
         </div>
-
+      </div>
+      <div class="sidebarActionButtons">
+        <button class="btn btnSecondary" id="refreshBtn" type="button">Ververs data</button>
+        <button class="btn btnSecondary" id="resetBtn" type="button">Reset</button>
       </div>
 
     </aside>
@@ -2775,7 +2778,7 @@
 
     function weatherDayRows(data) {
       const rows = [];
-      const start = new Date((dateFrom || formatDate(new Date())) + "T00:00:00");
+      const start = new Date(formatDate(new Date()) + "T00:00:00");
       const minBase = Number(data?.tempMin);
       const maxBase = Number(data?.tempMax);
       const rainBase = Number(data?.rainTotalMM);
@@ -2785,7 +2788,7 @@
       const formatter = new Intl.DateTimeFormat("nl-NL", { weekday: "short", day: "numeric", month: "short" });
 
       const daily = Array.isArray(data?.daily) ? data.daily : [];
-      for (let index = 0; index < 1; index += 1) {
+      for (let index = 0; index < 7; index += 1) {
         const day = new Date(start);
         day.setDate(start.getDate() + index);
         const source = daily[index] || {};
@@ -2813,8 +2816,9 @@
       }
 
       try {
-        const weatherTo = $("periodMode").value === "alwaysFromToday" ? addDays(dateFrom, 6) : dateTo;
-        const url = `${WORKER_URL}/weather?region=${encodeURIComponent(region)}&from=${dateFrom}&to=${weatherTo}`;
+        const forecastFrom = formatDate(new Date());
+        const forecastTo = addDays(forecastFrom, 6);
+        const url = `${WORKER_URL}/weather?region=${encodeURIComponent(region)}&from=${forecastFrom}&to=${forecastTo}`;
         const response = await fetch(url, { cache: "no-store" });
         if (!response.ok) throw new Error("Weer niet beschikbaar");
         const data = await response.json();
@@ -2822,9 +2826,9 @@
         latestWeatherData = data;
 
         const weatherItems = [
-          { label: `${data.summary} (${data.days} dagen)`, topic: "weersverwachting" },
+          { label: `Weerbeeld: ${data.summary}`, topic: "weerbeeld" },
           { label: `${data.daily?.[0]?.tempMin ?? data.tempMin}° - ${data.daily?.[0]?.tempMax ?? data.tempMax}° vandaag`, topic: "temperatuur" },
-          { label: `Regen ${data.rainChance}%`, topic: "regenradar", breakBefore: true },
+          { label: `Regen vandaag: ${String(data.daily?.[0]?.rainMM ?? data.rainTotalMM ?? 0).replace(".", ",")} mm`, topic: "regenradar", breakBefore: true },
           { label: `Wind ${data.windMax} km/u - ${data.rainTotalMM} mm regen`, topic: "wind neerslag" },
           { label: `UV ${data.uvMax}`, topic: "zonkracht" }
         ];
@@ -3346,7 +3350,7 @@
       const sourceName = weatherTopicSourceName(topic);
       const details = [
         topic === "temperatuur" ? weatherDayRows(latestWeatherData || {}) : "",
-        radarBlockHtml()
+        topic === "weerbeeld" ? radarBlockHtml() : ""
       ].filter(Boolean).join("");
       button.setAttribute("aria-expanded", "true");
       panel.dataset.topic = topic;
