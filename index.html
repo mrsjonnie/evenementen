@@ -1283,7 +1283,7 @@
   </div>
 
   <script>
-    const APP_VERSION = "2026.10.23.13";
+    const APP_VERSION = "2026.10.23.14";
     const DEFAULT_MAX_EVENTS_PER_SITE = 20;
     const DEFAULT_SITE_TIME_LIMIT_SECONDS = 20;
     const SCAN_SETTINGS_KEY = "eventScanSettingsV1";
@@ -2242,11 +2242,14 @@
       const previousUpdatedAt = eventsUpdatedAt;
       const requireEvents = Boolean(options.requireEvents);
       const maxAttempts = Math.max(1, Math.min(600, Number(options.maxAttempts) || 600));
-      const intervalMs = Math.max(3000, Math.min(10000, Number(options.intervalMs) || 3000));
+      const intervalMs = Math.max(1000, Math.min(10000, Number(options.intervalMs) || 1000));
+      const startedAt = Date.now();
       let latestProgress = null;
       for (let attempt = 1; attempt <= maxAttempts; attempt += 1) {
-        const prefix = Number.isFinite(foundCount) ? `${foundText(foundCount)} gevonden.` : foundText(foundCount) + ".";
-        showStatus(`${prefix} Live verversen: elke ${Math.round(intervalMs / 1000)} seconden voortgang controleren. Nieuwe resultaten verschijnen zodra een website klaar is.`, "warn", { stop: true });
+        const elapsedSeconds = Math.floor((Date.now() - startedAt) / 1000);
+        const liveNewCount = events.filter(isNewEvent).length;
+        const liveExistingCount = Math.max(0, events.length - liveNewCount);
+        showStatus(`Live verversen: ${elapsedSeconds}s verstreken; ${events.length} evenementen (${liveNewCount} nieuw, ${liveExistingCount} bestaand). Voortgang wordt iedere seconde gecontroleerd.`, "warn", { stop: true });
         const shouldContinue = await waitUnlessStopped(intervalMs);
         if (!shouldContinue) {
           showStatus("Controle gestopt. De update kan nog doorlopen; probeer later opnieuw.", "warn");
@@ -2260,14 +2263,20 @@
             options.progressStatus = cleanText(progress.status || "");
             options.progressEventCount = Array.isArray(progress.events) ? progress.events.length : 0;
           }
-          if (progress && progress.runId && progress.runId !== options.previousProgressRunId && Number(progress.completedCount) > 0) {
-            const shownRunId = progress.runId;
-            const previousShown = Number(options.lastProgressCount || 0);
+          if (progress && progress.runId && progress.runId !== options.previousProgressRunId) {
             const completed = Number(progress.completedCount) || 0;
-            if (completed > previousShown) {
-              options.lastProgressCount = completed;
+            const progressSignature = eventSignature(Array.isArray(progress.events) ? progress.events : []);
+            const hasNewProgressEvents = progressSignature !== options.lastProgressSignature;
+            const hasNewCompletedSite = completed > Number(options.lastProgressCount || 0);
+            if (hasNewProgressEvents || hasNewCompletedSite || progress.status === "completed") {
+              options.lastProgressSignature = progressSignature;
+              options.lastProgressCount = Math.max(Number(options.lastProgressCount || 0), completed);
               if (Array.isArray(progress.events) && progress.events.length) {
-                events = mergeVerifiedEvents([...events, ...progress.events]);
+                events = mergeVerifiedEvents([...events, ...progress.events]).map((event) => ({
+                  ...event,
+                  isNew: !previousKeys.has(eventDedupeKey(event))
+                }));
+                newEventKeys = eventKeySet(events.filter((event) => event.isNew));
                 latestSiteResults = Array.isArray(progress.siteResults) ? progress.siteResults : latestSiteResults;
                 latestRawLog = Array.isArray(progress.rawLog) ? progress.rawLog : latestRawLog;
                 fillTypes();
@@ -2649,6 +2658,7 @@
         afterNew: afterNew.length,
         afterDate: afterDate.length,
         afterRadius: afterRadius.length,
+        newCount: uniqueEvents.filter(isNewEvent).length,
         shown: afterDate.length
       };
 
@@ -2666,8 +2676,8 @@
       const target = $("filterBreakdown");
       if (!target || !filterStats) return;
 
-      const savedCount = Number(filterStats.archive) || 0;
-      const activeCount = Number(filterStats.active) || Math.max(0, (Number(filterStats.totalJson) || filterStats.loaded) - savedCount);
+      const newCount = Number(filterStats.newCount) || 0;
+      const existingCount = Math.max(0, Number(filterStats.loaded) - newCount);
       const filterParts = [];
       if (filterStats.afterDeleted !== filterStats.loaded) filterParts.push(`verwijderd:${filterStats.afterDeleted}`);
       filterParts.push(`website:${filterStats.afterSites}`);
@@ -2678,7 +2688,7 @@
       filterParts.push(`straal:${filterStats.afterRadius}`);
       filterParts.push(`periode:${filterStats.afterDate}`);
 
-      const eventsText = `totaal:${filterStats.loaded} (nieuw: ${activeCount}, bestaand: ${savedCount})`;
+      const eventsText = `totaal:${filterStats.loaded} (nieuw: ${newCount}, bestaand: ${existingCount})`;
       target.textContent = `${eventsText} - na filters: ${filterParts.join(", ")}`;
     }
 
@@ -2953,6 +2963,9 @@
       const previousKeys = eventKeySet(events);
       let foundCount = null;
       refreshAbortRequested = false;
+      newEventKeys = new Set();
+      events = events.map((event) => ({ ...event, isNew: false }));
+      updateNewCount();
       setBusy(button, true, "Bezig...");
       showStatus("Nieuwe evenementen ophalen...", "warn");
 
@@ -3032,7 +3045,7 @@
         const rateLimited = workerRows.some((row) => /429|rate.?limit|rate_limited/i.test(JSON.stringify(row)));
         const rateLimitNote = rateLimited ? " Een AI-/zoekbron meldt HTTP 429 (rate limit); die bron heeft tijdelijk te veel verzoeken ontvangen." : "";
         showStatus(`Verversverzoek geaccepteerd. ${prefix}${rateLimitNote} Ik controleer of events.json echt wordt bijgewerkt.`, "warn", { stop: true });
-        await waitForUpdatedEvents(previousSignature, previousKeys, foundCount, { intervalMs: 3000, maxAttempts: 200, previousProgressRunId: previousProgress?.runId || "", lastProgressCount: 0 });
+        await waitForUpdatedEvents(previousSignature, previousKeys, foundCount, { intervalMs: 1000, maxAttempts: 600, previousProgressRunId: previousProgress?.runId || "", lastProgressCount: 0, lastProgressSignature: "" });
       } catch (error) {
         const prefix = Number.isFinite(foundCount) ? `${foundText(foundCount)} gevonden.` : "";
         const message = String(error?.message || error || "Onbekende fout");
