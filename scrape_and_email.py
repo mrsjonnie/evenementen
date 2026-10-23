@@ -1343,7 +1343,6 @@ def save_payload(events, archive, previous_all_keys):
         "events": events,
         "archive": archive,
         "siteResults": SITE_RESULTS,
-        "rawLog": RAW_DATA_ROWS[:MAX_RAW_ROWS],
     }
     with open(DATA_FILE, "w", encoding="utf-8", newline="\n") as handle:
         json.dump(payload, handle, ensure_ascii=False, indent=2)
