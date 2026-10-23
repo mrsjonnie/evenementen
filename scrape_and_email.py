@@ -1621,7 +1621,15 @@ def scrape_site(site_url, site_index=0, site_total=0):
             page_events = extract_vera_programme_events(html, final_url, normalized_site, "Website")
         elif canonical_host(normalized_site) == "groningen.uitloper.nu":
             page_events = extract_uitloper_events(html, final_url, normalized_site, "Website")
-        elif canonical_host(normalized_site) in {"martiniplaza.nl", "spotgroningen.nl", "simplon.nl"}:
+        elif canonical_host(normalized_site) == "martiniplaza.nl":
+            # Martiniplaza's agenda cards vary in markup. Combine the venue-specific
+            # parser with generic JSON-LD, itemprop, card and dated-link strategies.
+            venue_events = extract_venue_agenda_events(html, final_url, normalized_site, "Website")
+            generic_events = parse_page_events(html, final_url, normalized_site, "Website")
+            page_events = dedupe_events([*venue_events, *generic_events])
+            add_raw("Parser", normalized_site, "Methoden gecombineerd", "", final_url, "info",
+                    f"Martiniplaza: venue-HTML {len(venue_events)}, generieke HTML/JSON-LD {len(generic_events)}")
+        elif canonical_host(normalized_site) in {"spotgroningen.nl", "simplon.nl"}:
             page_events = extract_venue_agenda_events(html, final_url, normalized_site, "Website")
         else:
             page_events = parse_page_events(html, final_url, normalized_site, "Website")
