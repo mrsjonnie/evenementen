@@ -468,7 +468,11 @@ def classify_type(text, host=""):
         return "Film"
     if re.search(r"\bdoc|documentaire\b", lower):
         return "Documentaire"
-    if re.search(r"\bmainstage|downstage|concert|muziek|music|pop|rock|jazz|blues|metal|klassiek|opera|orkest|band\b", lower):
+    if re.search(r"\b(wandel|wandeling|wandelroute|hiking|natuurtocht)\w*\b", lower):
+        return "Wandelen"
+    if re.search(r"\b(restaurant|diner|lunch|brunch|proeverij|high tea|foodtour|eten en drinken)\b", lower):
+        return "Restaurants"
+    if re.search(r"\bmainstage|downstage|concert|muziek|music|pop|rock|jazz|blues|metal|klassiek|opera|orkest|band|tribute|optreden\b", lower):
         return "Concert"
     if re.search(r"\btheater|toneel|cabaret|musical|kleinkunst|stand-up\b", lower):
         return "Theater"
@@ -1321,7 +1325,8 @@ def valid_site_list(values):
 
 DEAL_SITES = [
     ("iBOOD", "https://www.ibood.com/s-nl"),
-    ("Social Deal", "https://www.socialdeal.nl/"),
+    # De homepage bevat vooral navigatie/ratings. Deze regiofeed bevat individuele deals.
+    ("Social Deal", "https://www.socialdeal.nl/agent/html/deals/groningen/"),
     ("Groupon", "https://www.groupon.nl/"),
 ]
 
@@ -1336,7 +1341,7 @@ def scrape_deal_sources(selected_sites=None):
         if selected_sites is None or (urlparse(url).hostname or "").lower().removeprefix("www.") in selected_hosts
     ]
     price_re = re.compile(r"(?:€\s?\d[\d.,]*|\d[\d.,]*\s?€)")
-    noise = re.compile(r"^(meer informatie|bekijk|inloggen|registreren|alle deals|home|menu|voorwaarden|privacy)$", re.I)
+    noise = re.compile(r"^(meer informatie|bekijk|inloggen|registreren|alle deals|home|menu|voorwaarden|privacy|reviews?|locaties?|steden|deals in groningen|groningen)$", re.I)
     for source, url in selected_deals:
         try:
             response = requests.get(url, headers=REQUEST_HEADERS, timeout=14)
@@ -1345,12 +1350,24 @@ def scrape_deal_sources(selected_sites=None):
             for anchor in soup.select("a[href]"):
                 href = urljoin(response.url, anchor.get("href", "")).split("#")[0]
                 title = clean_text(anchor.get_text(" ", strip=True))
+                path = urlparse(href).path.lower().rstrip("/")
                 if len(title) < 8 or len(title) > 150 or noise.match(title):
                     continue
                 if href.rstrip("/") in {url.rstrip("/"), response.url.rstrip("/")}:
                     continue
                 if not href.startswith(("https://", "http://")):
                     continue
+                lower_href = href.lower()
+                if any(noise_word in lower_href for noise_word in ("trustpilot", "google.com/maps", "play.google.com", "apps.apple.com", "/llms.txt")):
+                    continue
+                if source == "Social Deal":
+                    # Alleen individuele deal/productpagina's, geen stads-, categorie- of reviewpagina's.
+                    if not re.search(r"/(?:deal|deals|aanbieding|voucher|product)(?:/|[-_])", path):
+                        continue
+                    if re.search(r"/(?:groningen|drenthe|friesland|overijssel|gelderland|limburg|noord-holland|zuid-holland)$", path):
+                        continue
+                    if re.search(r"\b(?:\d[.,]?\d?\s*(?:reviews?|beoordelingen)|reviews?)\b", title, re.I):
+                        continue
                 parent = anchor.find_parent(["article", "li"])
                 if parent is None:
                     parent = anchor.find_parent("div")
