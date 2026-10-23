@@ -1,6 +1,6 @@
 {
-  "requestedAt": "2026-10-23T15:21:07.912Z",
-  "trigger": "groninger-museum-kultuuragenda-noorderzon-universal-test",
+  "requestedAt": "2026-10-23T15:33:00.000Z",
+  "trigger": "targeted-groupon-ibood-zwolse-test",
   "region": "Groningen",
   "radius": "0",
   "category": "all",
@@ -10,7 +10,7 @@
   "minResults": "20",
   "maxEventsPerSite": "20",
   "siteTimeLimitSeconds": "60",
-  "sites": "[\"https://www.groningermuseum.nl/en/now\",\"https://www.kultuuragenda.nl/agenda\",\"https://www.noorderzon.nl/programma\"]",
+  "sites": "[\"https://www.groupon.nl/\",\"https://www.ibood.com/nl/\",\"https://www.zwolsetheaters.nl/programma\"]",
   "providers": "{\"mistral\":false,\"openai\":false,\"chatgpt\":false,\"serpapi\":false}",
   "serpApiLinks": "[]",
   "serpApiRawLog": "[]",
