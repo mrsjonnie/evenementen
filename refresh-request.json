@@ -1,20 +1,21 @@
 {
-  "requestedAt": "2026-10-23T14:27:56.056Z",
-  "trigger": "paradiso-en-zwolse-theaters-test",
-  "region": "Amsterdam en Zwolle",
+  "requestedAt": "2026-10-23T14:33:52.318Z",
+  "trigger": "socialdeal-groningen-parser-test",
+  "region": "Groningen",
   "radius": "0",
   "category": "all",
   "query": "",
   "dateFrom": "2026-10-23",
   "dateTo": "",
-  "minResults": "40",
-  "maxEventsPerSite": "40",
+  "minResults": "100",
+  "maxEventsPerSite": "100",
   "siteTimeLimitSeconds": "60",
-  "sites": "[\"https://www.paradiso.nl/landing/concertagenda-paradiso/2069817\",\"https://www.zwolsetheaters.nl/programma\"]",
+  "sites": "[\"https://www.socialdeal.nl/deals/groningen/\"]",
   "providers": "{\"mistral\":false,\"openai\":false,\"chatgpt\":false,\"serpapi\":false}",
   "serpApiLinks": "[]",
   "serpApiRawLog": "[]",
   "serpApiEvents": "[]",
   "aiEvents": "[]",
-  "clearArchive": "false"
+  "clearArchive": "false",
+  "selectedProviders": []
 }
