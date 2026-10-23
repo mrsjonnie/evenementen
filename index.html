@@ -968,18 +968,18 @@
     .pageLayout:not(.sidebarOpen) .sidebarResizeHandle { display:none; }
     .sidebarResizeHandle { width:7px; min-height:160px; align-self:stretch; cursor:col-resize; border-radius:8px; background:linear-gradient(90deg, transparent 2px, var(--line) 2px, var(--line) 5px, transparent 5px); touch-action:none; }
     .sidebarResizeHandle:hover, .sidebarResizeHandle:focus { background:var(--primary); outline:2px solid var(--primary); outline-offset:1px; }
-    .sourceGroup { min-width:0; margin:0 0 3px; }
-    .sourceGroupHeader { display:flex; align-items:center; width:100%; gap:8px; margin:2px 0 5px; padding:6px 9px; border:1px solid var(--line); border-radius:8px; background:var(--surface); color:var(--ink); text-align:left; font-size:.84rem; font-weight:850; cursor:pointer; }
+    .sourceGroup { min-width:0; margin:0 0 2px; }
+    .sourceGroupHeader { display:flex; align-items:center; width:100%; gap:8px; margin:1px 0 3px; padding:5px 8px; border:1px solid var(--line); border-radius:8px; background:var(--surface); color:var(--ink); text-align:left; font-size:.84rem; font-weight:850; cursor:pointer; }
     .sourceGroupHeader small { margin-left:auto; color:var(--muted); font-weight:650; }
     .sourceGroup.collapsed .eventGroupCards { display:none; }
-    .sourceGroup .eventGroupCards { padding-left:4px; border-left:1px solid var(--line); gap:4px; }
-    .locationGroup { min-width:0; margin:0 0 2px; }
+    .sourceGroup .eventGroupCards { padding-left:3px; border-left:1px solid var(--line); gap:3px; }
+    .locationGroup { min-width:0; margin:0; }
     .locationGroup:not(.collapsed) { grid-column:1 / -1; width:100%; }
-    .locationGroupCards { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,360px),1fr)); gap:6px; width:100%; }
-    .locationGroupHeader { display:flex; align-items:center; width:100%; gap:8px; padding:4px 7px; border:1px solid var(--line); border-radius:7px; background:#101925; color:var(--muted); text-align:left; font-size:.78rem; font-weight:800; cursor:pointer; }
+    .locationGroupCards { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,360px),1fr)); gap:5px; width:100%; }
+    .locationGroupHeader { display:flex; align-items:center; width:100%; gap:8px; padding:3px 6px; border:1px solid var(--line); border-radius:7px; background:#101925; color:var(--muted); text-align:left; font-size:.77rem; font-weight:800; cursor:pointer; }
     .locationGroupHeader small { margin-left:auto; }
     .locationGroup.collapsed .locationGroupCards { display:none; }
-    .locationGroupCards { padding:6px 0 2px 8px; }
+    .locationGroupCards { padding:4px 0 1px 5px; }
     .contentArea { min-width: 0; }
      .filterSidebarToggle { min-height: 34px; padding: 0 11px; align-self:flex-start; }
     .headerActions { display:flex; flex-wrap:wrap; gap:7px; align-items:center; justify-content:flex-start; margin-top:10px; }
@@ -3135,16 +3135,9 @@
     $("collapseLocationsBtn").addEventListener("click", () => {
       const keys = [...new Set(filteredEvents.map((event) => displayType(event.type || "Activiteit") + "::" + (eventSourceLabel(event) || "Bron onbekend") + "::" + cleanText(event.location || "Locatie onbekend")))];
       const allCollapsed = keys.length > 0 && keys.every((key) => collapsedLocationGroups.has(key));
-      if (allCollapsed) {
-        collapsedEventTypes = new Set();
-        collapsedSourceGroups = new Set();
-        collapsedLocationGroups = new Set();
-      } else {
-        collapsedLocationGroups = new Set(keys);
-      }
+      collapsedLocationGroups = allCollapsed ? new Set() : new Set(keys);
       render();
       $("collapseLocationsBtn").textContent = allCollapsed ? "Locaties inklappen" : "Locaties uitklappen";
-      $("collapseTypesBtn").textContent = allCollapsed ? "Types inklappen" : "Types uitklappen";
     });
     $("prevPage").addEventListener("click", () => { currentPage -= 1; render(); window.scrollTo({ top: 0, behavior: "smooth" }); });
     $("nextPage").addEventListener("click", () => { currentPage += 1; render(); window.scrollTo({ top: 0, behavior: "smooth" }); });
