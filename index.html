@@ -2480,7 +2480,7 @@
     }
 
     function sourceWebsiteDescription(event) {
-      const host = hostFromUrl(event.website || "").replace(/^www\\./i, "").toLowerCase();
+      const host = hostFromUrl(event.website || "").replace(/^www\./i, "").toLowerCase();
       const known = {
         "spotgroningen.nl":"programma met concerten, theater en live muziek in Groningen",
         "forum.nl":"cultuur, film, lezingen en activiteiten in Groningen",
@@ -2501,7 +2501,7 @@
         "vvvameland.nl":"activiteiten en uitjes op Ameland"
       };
       if (known[host]) return known[host];
-      const domain = host.replace(/^www\\./i, "") || "evenementenwebsite";
+      const domain = host.replace(/^www\./i, "") || "evenementenwebsite";
       return `agenda, informatie en praktische details over dit evenement op ${domain}`;
     }
 
