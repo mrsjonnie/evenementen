@@ -1130,9 +1130,9 @@ def extract_venue_agenda_events(html, page_url, site_url, discovery_source):
         url = normalized_url(anchor.get("href"), page_url)
         if not url or not same_host(url, site_url) or BAD_URL_RE.search(url):
             continue
-        if host == "martiniplaza.nl" and not re.search(r"/nl/agenda/[^/?#]+/?$", urlparse(url).path, re.I):
-            # Only actual agenda detail links are events. Ignore calendar controls,
-            # month headings, ticket buttons, forms and navigation that may share a date.
+        if host == "martiniplaza.nl" and not re.fullmatch(r"/nl/agenda/[^/]+/?", urlparse(url).path, re.I):
+            # Only a single detail slug below /nl/agenda is an event. Never emit the
+            # overview page itself or deeper nested/non-event URLs as event records.
             continue
         title = clean_title(node_title(anchor) or anchor.get_text(" ", strip=True) or anchor.get("aria-label") or anchor.get("title") or "")
         if host == "simplon.nl":
@@ -1320,10 +1320,10 @@ def start_urls_for_site(site_url):
             urls.append(f"{exact.rstrip('/')}?date={timestamp}")
         return urls
     if host == "martiniplaza.nl":
-        # The agenda and homepage both expose upcoming events; the homepage is a
-        # fallback when the agenda cards are rendered differently or omitted.
+        # Use the agenda only to discover event detail URLs. The homepage is not
+        # scraped as an event source; results must link one level deeper, e.g. /nl/agenda/guus-meeuwis.
         base = f"{parsed.scheme}://{parsed.netloc}"
-        return [urljoin(base, "/nl/agenda"), urljoin(base, "/nl/")]
+        return [urljoin(base, "/nl/agenda")]
     if host == "spotgroningen.nl":
         return [urljoin(exact, "/programma")]
     if host == "simplon.nl":
