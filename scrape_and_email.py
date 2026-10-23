@@ -1162,7 +1162,8 @@ def extract_venue_agenda_events(html, page_url, site_url, discovery_source):
                     numeric_date = re.search(numeric_pattern, candidate_text, re.I)
                     if numeric_date:
                         candidate_date = iso_from_parts(numeric_date.group(1), numeric_date.group(2), numeric_date.group(3))
-            if candidate_date and len(candidate_text) <= 1800:
+            max_card_text = 280 if host == "martiniplaza.nl" else 1800
+            if candidate_date and len(candidate_text) <= max_card_text:
                 card, card_text, event_date = parent, candidate_text, candidate_date
                 break
 
@@ -1642,12 +1643,9 @@ def scrape_site(site_url, site_index=0, site_total=0, progress_callback=None):
         elif canonical_host(normalized_site) == "groningen.uitloper.nu":
             page_events = extract_uitloper_events(html, final_url, normalized_site, "Website")
         elif canonical_host(normalized_site) == "martiniplaza.nl":
-            # The homepage is only a source of genuine /nl/agenda/<slug> detail links;
-            # its featured-card layout can associate unrelated dates with titles.
-            if urlparse(final_url).path.rstrip("/") == "/nl/agenda":
-                page_events = extract_venue_agenda_events(html, final_url, normalized_site, "Website")
-            else:
-                page_events = []
+            # Only accept small, event-card ancestors so the homepage cannot assign
+            # one card's date to a neighboring event or navigation link.
+            page_events = extract_venue_agenda_events(html, final_url, normalized_site, "Website")
         elif canonical_host(normalized_site) in {"spotgroningen.nl", "simplon.nl"}:
             page_events = extract_venue_agenda_events(html, final_url, normalized_site, "Website")
         else:
