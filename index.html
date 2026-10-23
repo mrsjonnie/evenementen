@@ -82,7 +82,7 @@
       cursor: pointer;
     }
 
-    .titleChevron { display:inline-block; font-size:.78em; opacity:.8; transition:transform .15s ease; }
+    .titleChevron { display:none !important; }
     .titleToggle[aria-expanded="true"] .titleChevron { transform:rotate(180deg); }
 
     .titlePanel {
@@ -1246,7 +1246,7 @@
   </div>
 
   <script>
-    const APP_VERSION = "2026.10.23.08";
+    const APP_VERSION = "2026.10.23.09";
     const DEFAULT_MAX_EVENTS_PER_SITE = 20;
     const DEFAULT_SITE_TIME_LIMIT_SECONDS = 20;
     const SCAN_SETTINGS_KEY = "eventScanSettingsV1";
@@ -2891,7 +2891,9 @@
       });
       const refreshWindow = refreshDateWindow();
       const category = $("typeFilter").value === "all" ? "" : $("typeFilter").value;
-      showStatus(`Nieuwe evenementen ophalen bij ${selectedSites.length} van ${sites.length || selectedSites.length} websites...`, "warn");
+      let previousProgress = null;
+      try { previousProgress = await fetchScrapeProgress(); } catch {}
+      showStatus(`Scrape voorbereiden: ${selectedSites.length} websites geselecteerd. De scraper verwerkt ze één voor één; de voortgang verschijnt per afgeronde website.`, "warn");
       const payload = {
         region: $("region").value.trim(),
         radius: radiusPayloadValue(),
@@ -2932,10 +2934,15 @@
         const rateLimited = workerRows.some((row) => /429|rate.?limit|rate_limited/i.test(JSON.stringify(row)));
         const rateLimitNote = rateLimited ? " Een AI-/zoekbron meldt HTTP 429 (rate limit); die bron heeft tijdelijk te veel verzoeken ontvangen." : "";
         showStatus(`Verversverzoek geaccepteerd. ${prefix}${rateLimitNote} Ik controleer of events.json echt wordt bijgewerkt.`, "warn", { stop: true });
-        await waitForUpdatedEvents(previousSignature, previousKeys, foundCount, { intervalMs: 5000, previousProgressRunId: previousProgress?.runId || "", lastProgressCount: 0 });
+        await waitForUpdatedEvents(previousSignature, previousKeys, foundCount, { intervalMs: 3000, previousProgressRunId: previousProgress?.runId || "", lastProgressCount: 0 });
       } catch (error) {
         const prefix = Number.isFinite(foundCount) ? `${foundText(foundCount)} gevonden.` : "";
-        showStatus(`${prefix} Starten mislukt: ${error.message}`.trim(), "error");
+        const message = String(error?.message || error || "Onbekende fout");
+        const networkHint = /failed to fetch|networkerror|load failed/i.test(message)
+          ? " De browser kan de Cloudflare Worker niet bereiken (netwerk/CORS of Worker-deployment). Controleer eerst de Worker-status via https://evenementen-refresh.mrsjonnie.workers.dev/health en probeer daarna opnieuw."
+          : "";
+        addLiveLog("Worker", WORKER_URL, "Starten mislukt", "fout", message + networkHint);
+        showStatus(`${prefix} Starten mislukt: ${message}.${networkHint}`.trim(), "error");
       } finally {
         setBusy(button, false);
       }
