@@ -1255,10 +1255,11 @@ def collect_event_links(html, page_url, site_url):
         if not url or not same_host(url, site_url):
             continue
         text = clean_text(anchor.get_text(" ", strip=True) or anchor.get("title") or anchor.get("aria-label"))
-        # Martiniplaza agenda cards often put the date outside the link. Always
-        # queue their detail pages so JSON-LD/detail-page dates can be extracted.
-        if is_martiniplaza and re.search(r"/nl/agenda/[^/?#]+/?$", urlparse(url).path, re.I):
-            scored.append((1000, url, text))
+        # Martiniplaza event cards link to /nl/agenda/<slug>. Ignore all other
+        # pages (magazine, navigation, contact forms) even if their text contains dates.
+        if is_martiniplaza:
+            if re.search(r"/nl/agenda/[^/?#]+/?$", urlparse(url).path, re.I):
+                scored.append((1000, url, text))
             continue
         # Prioriteer echte detailpagina's; /agenda zelf is alleen de overzichtspagina.
         if is_kultuuragenda and re.search(r"/agenda/\d+/[^/?#]+", url, re.I):
@@ -1641,9 +1642,12 @@ def scrape_site(site_url, site_index=0, site_total=0, progress_callback=None):
         elif canonical_host(normalized_site) == "groningen.uitloper.nu":
             page_events = extract_uitloper_events(html, final_url, normalized_site, "Website")
         elif canonical_host(normalized_site) == "martiniplaza.nl":
-            # Use the venue-specific card parser only. Generic date/link parsing
-            # mistakes calendar controls, month headings and ticket buttons for events.
-            page_events = extract_venue_agenda_events(html, final_url, normalized_site, "Website")
+            # The homepage is only a source of genuine /nl/agenda/<slug> detail links;
+            # its featured-card layout can associate unrelated dates with titles.
+            if urlparse(final_url).path.rstrip("/") == "/nl/agenda":
+                page_events = extract_venue_agenda_events(html, final_url, normalized_site, "Website")
+            else:
+                page_events = []
         elif canonical_host(normalized_site) in {"spotgroningen.nl", "simplon.nl"}:
             page_events = extract_venue_agenda_events(html, final_url, normalized_site, "Website")
         else:
