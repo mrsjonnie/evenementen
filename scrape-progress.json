@@ -52,10 +52,56 @@
       "url": "https://www.groningermuseum.nl/en/now",
       "status": "klaar",
       "rawText": "site 1/3: 0 unieke events in 1.02 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Start",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda",
+      "status": "start",
+      "rawText": "site 2/3: max 20 events, max 60 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda",
+      "status": "strategie",
+      "rawText": "universele detailpagina-parser (Kultuuragenda)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Pagina gelezen",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda",
+      "status": "ok",
+      "rawText": "151508 tekens HTML"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Kultuuragenda detailstrategie",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda",
+      "status": "strategie",
+      "rawText": "Overzicht overslaan; alleen echte /agenda/<id>/<slug> activiteitspagina’s verwerken"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Pagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda",
+      "status": "ok",
+      "rawText": "0 events/aanbiedingen op deze pagina"
     }
   ],
   "status": "running",
-  "lastCompletedSite": "https://www.groningermuseum.nl/en/now",
+  "lastCompletedSite": "https://www.kultuuragenda.nl/agenda",
   "lastCompletedAt": "2026-10-23T15:25:50+00:00",
-  "lastSiteEventCount": 0
+  "lastSiteEventCount": 0,
+  "lastUpdatedAt": "2026-10-23T15:25:52+00:00"
 }
