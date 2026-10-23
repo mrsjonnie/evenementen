@@ -973,13 +973,6 @@
     .sourceGroupHeader small { margin-left:auto; color:var(--muted); font-weight:650; }
     .sourceGroup.collapsed .eventGroupCards { display:none; }
     .sourceGroup .eventGroupCards { padding-left:3px; border-left:1px solid var(--line); gap:3px; }
-    .locationGroup { min-width:0; margin:0; }
-    .locationGroup:not(.collapsed) { grid-column:1 / -1; width:100%; }
-    .locationGroupCards { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,360px),1fr)); gap:5px; width:100%; }
-    .locationGroupHeader { display:flex; align-items:center; width:100%; gap:8px; padding:3px 6px; border:1px solid var(--line); border-radius:7px; background:#101925; color:var(--muted); text-align:left; font-size:.77rem; font-weight:800; cursor:pointer; }
-    .locationGroupHeader small { margin-left:auto; }
-    .locationGroup.collapsed .locationGroupCards { display:none; }
-    .locationGroupCards { padding:4px 0 1px 5px; }
     .contentArea { min-width: 0; }
      .filterSidebarToggle { min-height: 34px; padding: 0 11px; align-self:flex-start; }
     .headerActions { display:flex; flex-wrap:wrap; gap:7px; align-items:center; justify-content:flex-start; margin-top:10px; }
@@ -1121,7 +1114,6 @@
 
         <div class="sidebarViewButtons" aria-label="Weergave">
           <button class="btn btnSecondary" id="collapseBtn" type="button">Details uitklappen</button>
-          <button class="btn btnSecondary" id="collapseLocationsBtn" type="button">Locaties uitklappen</button>
           <button class="btn btnSecondary" id="collapseTypesBtn" type="button">Types uitklappen</button>
         </div>
         <button class="btn btnPrimary" id="applyFiltersBtn" type="button">Filter toepassen</button>
@@ -1317,7 +1309,6 @@
     let expandedEventKeys = new Set();
     let collapsedEventTypes = new Set();
     let collapsedSourceGroups = new Set();
-    let collapsedLocationGroups = new Set();
     let dynamicRegionCoord = null;
     let dynamicRegionKey = "";
     let regionLookupTimer = null;
@@ -2481,22 +2472,11 @@
           const key = type + "::" + source;
           const sourceCollapsed = collapsedSourceGroups.has(key);
           const sourceEvents = allSourceEvents.filter(event => visibleKeys.has(eventDedupeKey(event)));
-          const isUitloper = /groningen\.uitloper\.nu/i.test(source) || sourceEvents.some(event => /groningen\.uitloper\.nu/i.test(event.website || ""));
-          const sourceCards = sourceEvents.length ? (isUitloper ? sourceEvents.map(renderCard).join("") : renderLocationGroups(sourceEvents, type, source)) : `<p class="nextPageHint">Meer ${escapeHtml(source)}-evenementen staan op een andere pagina (${allSourceEvents.length} totaal).</p>`;
+          const sourceCards = sourceEvents.length ? sourceEvents.map(renderCard).join("") : `<p class="nextPageHint">Meer ${escapeHtml(source)}-evenementen staan op een andere pagina (${allSourceEvents.length} totaal).</p>`;
           return `<section class="sourceGroup ${sourceCollapsed ? "collapsed" : ""}"><button class="sourceGroupHeader" type="button" data-source-toggle="${escapeHtml(key)}" aria-expanded="${!sourceCollapsed}"><span>${escapeHtml(source)}</span><small>${allSourceEvents.length} evenementen</small></button><div class="eventGroupCards">${sourceCards}</div></section>`;
         }).join("");
         const cards = sourceHtml || `<p class="nextPageHint">Meer resultaten van dit type staan op een andere pagina (${allForType.length} totaal).</p>`;
         return `<section class="eventGroup ${collapsed ? "collapsed" : ""}"><button class="eventGroupHeader" type="button" data-type-toggle="${escapeHtml(type)}" aria-expanded="${!collapsed}"><span>${escapeHtml(type)}</span><small>${allForType.length} resultaten</small></button><div class="eventGroupCards">${cards}</div></section>`;
-      }).join("");
-    }
-
-    function renderLocationGroups(items, type, source) {
-      const groups = new Map();
-      items.forEach((event) => { const location = cleanText(event.location || "Locatie onbekend"); if (!groups.has(location)) groups.set(location, []); groups.get(location).push(event); });
-      return [...groups.entries()].sort(([a], [b]) => a.localeCompare(b, "nl")).map(([location, locationEvents]) => {
-        const key = [type, source, location].join("::");
-        const collapsed = collapsedLocationGroups.has(key);
-        return '<section class="locationGroup ' + (collapsed ? "collapsed" : "") + '"><button class="locationGroupHeader" type="button" data-location-toggle="' + escapeHtml(key) + '" aria-expanded="' + (!collapsed) + '"><span>' + escapeHtml(location) + '</span><small>' + locationEvents.length + '</small></button><div class="locationGroupCards">' + locationEvents.map(renderCard).join("") + '</div></section>';
       }).join("");
     }
 
@@ -2937,16 +2917,12 @@
       const allEvents = dedupeEvents(events);
       collapsedEventTypes = new Set(allEvents.map(event => displayType(event.type || "Activiteit")));
       collapsedSourceGroups = new Set();
-      collapsedLocationGroups = new Set();
       allEvents.forEach(event => {
         const type = displayType(event.type || "Activiteit");
         const source = eventSourceLabel(event) || "Bron onbekend";
-        const location = cleanText(event.location || "Locatie onbekend");
         collapsedSourceGroups.add(type + "::" + source);
-        collapsedLocationGroups.add(type + "::" + source + "::" + location);
       });
       if ($("collapseTypesBtn")) $("collapseTypesBtn").textContent = "Types uitklappen";
-      if ($("collapseLocationsBtn")) $("collapseLocationsBtn").textContent = "Locaties uitklappen";
     }
 
     function toggleCardsCollapsed() {
@@ -3113,8 +3089,6 @@
         deleteEventByKey(deleteButton.dataset.eventKey || "");
         return;
       }
-      const locationToggle = event.target.closest("[data-location-toggle]");
-      if (locationToggle) { const key = locationToggle.dataset.locationToggle || ""; if (collapsedLocationGroups.has(key)) collapsedLocationGroups.delete(key); else collapsedLocationGroups.add(key); render(); return; }
       const sourceToggle = event.target.closest("[data-source-toggle]");
       if (sourceToggle) { const key = sourceToggle.dataset.sourceToggle || ""; if (collapsedSourceGroups.has(key)) collapsedSourceGroups.delete(key); else collapsedSourceGroups.add(key); render(); return; }
       const typeToggle = event.target.closest("[data-type-toggle]");
@@ -3131,14 +3105,7 @@
       render();
     });
     $("collapseBtn").addEventListener("click", toggleCardsCollapsed);
-    $("collapseTypesBtn").addEventListener("click", () => { const types = [...new Set(filteredEvents.map((event) => displayType(event.type || "Activiteit")))]; const allCollapsed = types.length && types.every((type) => collapsedEventTypes.has(type)); collapsedEventTypes = allCollapsed ? new Set() : new Set(types); if (allCollapsed) { collapsedSourceGroups = new Set(); collapsedLocationGroups = new Set(); } render(); $("collapseTypesBtn").textContent = allCollapsed ? "Types inklappen" : "Types uitklappen"; });
-    $("collapseLocationsBtn").addEventListener("click", () => {
-      const keys = [...new Set(filteredEvents.map((event) => displayType(event.type || "Activiteit") + "::" + (eventSourceLabel(event) || "Bron onbekend") + "::" + cleanText(event.location || "Locatie onbekend")))];
-      const allCollapsed = keys.length > 0 && keys.every((key) => collapsedLocationGroups.has(key));
-      collapsedLocationGroups = allCollapsed ? new Set() : new Set(keys);
-      render();
-      $("collapseLocationsBtn").textContent = allCollapsed ? "Locaties inklappen" : "Locaties uitklappen";
-    });
+    $("collapseTypesBtn").addEventListener("click", () => { const types = [...new Set(filteredEvents.map((event) => displayType(event.type || "Activiteit")))]; const allCollapsed = types.length && types.every((type) => collapsedEventTypes.has(type)); collapsedEventTypes = allCollapsed ? new Set() : new Set(types); if (allCollapsed) { collapsedSourceGroups = new Set(); } render(); $("collapseTypesBtn").textContent = allCollapsed ? "Types inklappen" : "Types uitklappen"; });
     $("prevPage").addEventListener("click", () => { currentPage -= 1; render(); window.scrollTo({ top: 0, behavior: "smooth" }); });
     $("nextPage").addEventListener("click", () => { currentPage += 1; render(); window.scrollTo({ top: 0, behavior: "smooth" }); });
     $("allSitesBtn").addEventListener("click", () => {
