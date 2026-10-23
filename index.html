@@ -974,6 +974,7 @@
     [hidden] { display: none !important; }
     .pageLayout { display: grid; grid-template-columns: minmax(0, 1fr); gap: 12px; align-items: start; }
     .pageLayout.sidebarOpen { grid-template-columns: var(--sidebar-width, 248px) 7px minmax(0, 1fr); }
+    .pageLayout:not(.sidebarOpen) .sidebarResizeHandle { display:none; }
     .sidebarResizeHandle { width:7px; min-height:160px; align-self:stretch; cursor:col-resize; border-radius:8px; background:linear-gradient(90deg, transparent 2px, var(--line) 2px, var(--line) 5px, transparent 5px); touch-action:none; }
     .sidebarResizeHandle:hover, .sidebarResizeHandle:focus { background:var(--primary); outline:2px solid var(--primary); outline-offset:1px; }
     .sourceGroup { min-width:0; margin:0 0 6px; }
@@ -1009,7 +1010,7 @@
     .titlePanelContent .status { max-width:100%; }
     .grid .card .typeHeader { display:none; }
     .filterSidebar {
-      width: 248px;
+      width: 100%;
       min-width: 0;
       padding: 10px;
       position: sticky;
