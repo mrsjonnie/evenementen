@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-23T13:46:48+00:00",
+  "updatedAt": "2026-10-23T13:50:25+00:00",
   "events": [
     {
       "date": "2026-10-23",
@@ -855,7 +855,7 @@
       "description": "Meer informatie staat op spotgroningen.nl.",
       "cost": "",
       "image": "",
-      "isNew": true
+      "isNew": false
     },
     {
       "date": "2026-11-01",
@@ -870,7 +870,7 @@
       "description": "Muziek 2 De Klassieken Ga mee op een inspirerende reis door de muziekgeschiedenis!",
       "cost": "",
       "image": "",
-      "isNew": true
+      "isNew": false
     },
     {
       "date": "2026-11-01",
@@ -885,7 +885,7 @@
       "description": "Als Ik! Energiek theatercollege vol humor, zelfspot en een verfrissende kijk op het leven",
       "cost": "",
       "image": "",
-      "isNew": true
+      "isNew": false
     },
     {
       "date": "2026-11-01",
@@ -900,7 +900,7 @@
       "description": "muziek en herbewerkingen van Fresku-tracks",
       "cost": "",
       "image": "",
-      "isNew": true
+      "isNew": false
     },
     {
       "date": "2026-11-01",
@@ -915,7 +915,7 @@
       "description": "Meer informatie staat op spotgroningen.nl.",
       "cost": "",
       "image": "",
-      "isNew": true
+      "isNew": false
     },
     {
       "date": "2026-11-01",
@@ -945,7 +945,7 @@
       "description": "Meer informatie staat op spotgroningen.nl.",
       "cost": "",
       "image": "",
-      "isNew": true
+      "isNew": false
     },
     {
       "date": "2026-11-01",
@@ -960,7 +960,7 @@
       "description": "concours voor liedduo’s (zang en piano)",
       "cost": "",
       "image": "",
-      "isNew": true
+      "isNew": false
     },
     {
       "date": "2026-11-01",
@@ -2003,8 +2003,8 @@
     {
       "site": "https://spotgroningen.nl/programma",
       "count": 40,
-      "newCount": 7,
-      "durationSeconds": 4.81,
+      "newCount": 0,
+      "durationSeconds": 4.34,
       "timedOut": false
     }
   ],
@@ -11709,7 +11709,7 @@
       "date": "",
       "url": "https://spotgroningen.nl/programma",
       "status": "klaar",
-      "rawText": "site 1/1: 40 unieke events in 4.81 sec"
+      "rawText": "site 1/1: 40 unieke events in 4.34 sec"
     }
   ]
 }
