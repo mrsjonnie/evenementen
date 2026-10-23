@@ -1,6 +1,6 @@
 {
-  "requestedAt": "2026-10-23T15:19:10.312Z",
-  "trigger": "visitgroningen-event-detail-slugs-test",
+  "requestedAt": "2026-10-23T15:21:07.912Z",
+  "trigger": "groninger-museum-kultuuragenda-noorderzon-universal-test",
   "region": "Groningen",
   "radius": "0",
   "category": "all",
@@ -10,7 +10,7 @@
   "minResults": "20",
   "maxEventsPerSite": "20",
   "siteTimeLimitSeconds": "60",
-  "sites": "[\"https://www.visitgroningen.nl/nl/doen/cultuur/evenementen\"]",
+  "sites": "[\"https://www.groningermuseum.nl/en/now\",\"https://www.kultuuragenda.nl/agenda\",\"https://www.noorderzon.nl/programma\"]",
   "providers": "{\"mistral\":false,\"openai\":false,\"chatgpt\":false,\"serpapi\":false}",
   "serpApiLinks": "[]",
   "serpApiRawLog": "[]",
