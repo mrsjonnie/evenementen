@@ -2171,7 +2171,7 @@
       if (filter === "all") return true;
       const cost = cleanText(event.cost || "").toLowerCase();
       const evidence = [cost, cleanText(event.description || "").toLowerCase()].join(" ");
-      const isFree = /gratis|kosteloos|free entry|free admission|geen entree|entree vrij/.test(evidence) || /^(€\\s*0(?:[,.]00)?|0(?:[,.]00)?\\s*(?:€|eur)?)$/.test(cost);
+      const isFree = /gratis|kosteloos|free entry|free admission|geen entree|entree vrij/.test(evidence) || /^(€\s*0(?:[,.]00)?|0(?:[,.]00)?\s*(?:€|eur)?)$/.test(cost);
       const priceKnown = Boolean(cost && !/zie website|onbekend|n\\.v\\.t\\./.test(cost) && !isFree);
       return filter === "free" ? isFree : priceKnown;
     }
