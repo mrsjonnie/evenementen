@@ -682,6 +682,12 @@
 
     .eventTypeHeader:first-child { margin-top: 0; }
     .eventTypeHeader span { font-size: .95rem; }
+    .sourceGroupLabel { padding: 9px 10px 4px; color: var(--muted); font-size: .68rem; font-weight: 850; letter-spacing: .07em; text-transform: uppercase; border-top: 1px solid var(--line); }
+    .sourceGroupLabel:first-child { border-top: 0; }
+    .eventTypeHeader { width: 100%; cursor: pointer; text-align: left; color: inherit; font: inherit; justify-content: space-between; border: 1px solid var(--line); }
+    .eventTypeHeader .typeHeaderMeta { margin-left: auto; padding-left: 12px; font-size: .78rem; text-transform: none; letter-spacing: 0; }
+    .eventTypeHeader[aria-expanded="false"] { min-height: 52px; }
+    .eventTypeHeader:focus-visible { outline: 2px solid var(--primary-dark); outline-offset: 2px; }
     .grid.cardsCollapsed .cardBody { padding: 10px; gap: 7px; }
     .grid.cardsCollapsed .details,
     .grid.cardsCollapsed .desc,
@@ -994,6 +1000,14 @@
     .dealSourceLinks a { display: flex; flex-direction: column; gap: 3px; padding: 10px; border: 1px solid var(--line); border-radius: 9px; color: var(--ink); text-decoration: none; background: var(--surface-soft); }
     .dealSourceLinks a span { color: var(--muted); font-size: .76rem; }
     .dealSourceLinks a:hover { border-color: var(--primary); }
+    .dealOffers { display: grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap: 8px; margin-top: 10px; }
+    .dealOffer { min-width: 0; padding: 10px; border: 1px solid var(--line); border-radius: 9px; background: var(--surface-soft); }
+    .dealOfferSource { color: var(--muted); font-size: .7rem; font-weight: 850; text-transform: uppercase; letter-spacing: .04em; }
+    .dealOffer a { display: block; margin: 4px 0; color: var(--ink); font-weight: 800; text-decoration: none; }
+    .dealOffer a:hover { color: var(--primary-dark); text-decoration: underline; }
+    .dealOffer strong { color: var(--primary-dark); font-size: .86rem; }
+    .dealOffer p, .dealEmpty { margin: 4px 0 0; color: var(--muted); font-size: .76rem; line-height: 1.4; }
+    .dealEmpty { grid-column: 1 / -1; }
     @media (max-width: 680px) { .dealSourceLinks { grid-template-columns: 1fr; } }
     .heroInner { max-width: 1440px; padding: 6px 14px; gap: 10px; }
     h1 { font-size: clamp(1.2rem, 1.7vw, 1.5rem); letter-spacing: -.025em; }
@@ -1018,6 +1032,18 @@
     .desc { line-height: 1.55; color: #bdcbd4; }
     .tag { border-radius: 7px; font-size: .7rem; padding: 4px 7px; }
     .pagination { margin-top: 16px; }
+    /* Rustiger kaartbeeld: minder schaduw en minder visuele drukte. */
+    main { max-width: 1320px; padding-inline: 16px; }
+    .toolbar { background: rgba(23,35,45,.92); border-color: #293945; }
+    .grid { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 12px; }
+    .card { box-shadow: 0 3px 12px rgba(0,0,0,.10); border-radius: 11px; }
+    .card.isNew { box-shadow: 0 3px 12px rgba(0,0,0,.10); }
+    .cardBody { padding: 12px; gap: 9px; }
+    .eventTypeHeader { box-shadow: none; border-radius: 10px; margin-top: 12px; }
+    .typeHeader::after { background: linear-gradient(90deg, rgba(10,20,28,.66), rgba(10,20,28,.16)); }
+    .tag { font-weight: 750; }
+    .sitePanel { box-shadow: 0 12px 28px rgba(0,0,0,.22); }
+    .siteList label { padding-block: 8px; }
     @media (min-width: 960px) and (min-height: 740px) { .hero, .toolbar { position: static; } }
     @media (max-width: 1280px) { .filters { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
     @media (max-width: 680px) {
@@ -1118,32 +1144,23 @@
 
       <div class="secondRow">
         <div class="sourcePickers">
-          <div class="siteSelect" id="providerSelect">
-            <label class="siteSelectLabel" for="providerButton">Zoekbronnen</label>
-            <button class="btn btnSecondary siteButton" id="providerButton" type="button" aria-expanded="false">
-              <span><span id="providerCount">0</span> geselecteerd</span>
-              <span aria-hidden="true">v</span>
-            </button>
-            <div class="sitePanel">
-              <div class="sitePanelHeader">Bronnen uitgelegd: websites worden rechtstreeks uitgelezen. Mistral controleert de gevonden webtekst; ChatGPT en Perplexity zoeken aanvullend online. SerpAPI levert zoekresultaten en links. AI-bronnen hebben een eigen API-sleutel nodig in Cloudflare en kunnen API-kosten veroorzaken. Resultaten worden samengevoegd en ontdubbeld.</div>
-              <div class="siteList" id="providerList">
-                <label><input class="providerCheck" type="checkbox" id="provPerplexity"> <span>Perplexity webzoeker</span></label>
-                <label><input class="providerCheck" type="checkbox" id="provMistral" checked> <span>Mistral — analyseert webtekst</span></label>
-                <label><input class="providerCheck" type="checkbox" id="provOpenAI"> <span>ChatGPT — zoekt en extraheert</span></label>
-                <label><input class="providerCheck" type="checkbox" id="provSerpAPI"> <span>SerpAPI — zoekresultaten</span></label>
-              </div>
-            </div>
-          </div>
-
           <div class="siteSelect" id="siteSelect">
             <label class="siteSelectLabel" for="siteButton">Websites om te scannen</label>
             <button class="btn btnSecondary siteButton" id="siteButton" type="button" aria-expanded="false">
-              <span class="siteButtonMain"><span><span id="siteCount">0</span> websites geselecteerd</span></span>
+              <span class="siteButtonMain"><span><span id="siteCount">0</span> bronnen geselecteerd</span></span>
               <span aria-hidden="true">v</span>
             </button>
             <div class="sitePanel">
-              <div class="sitePanelHeader">Selecteer sites die rechtstreeks gescand moeten worden. Evenementensites leveren agenda-items; kortingssites zijn bedoeld voor deals en worden niet als evenemententitel geïmporteerd. De AI-zoekbronnen hierboven vullen de sitescan aan. Resultaten kunnen ontbreken als een site blokkeert of geen datum publiceert.</div>
-              <div class="siteList" id="sitesList"></div>
+              <div class="sitePanelHeader">Kies websites, kortingssites en AI-bronnen die bij het verversen gebruikt moeten worden. AI-resultaten tonen als bron bijvoorbeeld “AI ChatGPT spotgroningen.nl”. Voor Mistral, ChatGPT en Perplexity zijn API-sleutels in Cloudflare nodig; API-gebruik kan kosten veroorzaken.</div>
+              <div class="siteList" id="sitesList">
+                <div class="sourceGroupLabel">AI-bronnen</div>
+                <label><input class="providerCheck" type="checkbox" id="provMistral" checked> <span>Mistral — analyse webteksten</span></label>
+                <label><input class="providerCheck" type="checkbox" id="provOpenAI"> <span>ChatGPT — AI-zoekbron</span></label>
+                <label><input class="providerCheck" type="checkbox" id="provPerplexity"> <span>Perplexity — AI-webzoeker</span></label>
+                <div class="sourceGroupLabel">Zoekdiensten</div>
+                <label><input class="providerCheck" type="checkbox" id="provSerpAPI"> <span>SerpAPI — webzoekresultaten</span></label>
+                <div class="sourceGroupLabel">Websites en kortingssites</div>
+              </div>
               <div class="siteActions">
                 <button class="btn btnSecondary" id="allSitesBtn" type="button">Alles</button>
                 <button class="btn btnSecondary" id="noSitesBtn" type="button">Geen</button>
@@ -1176,6 +1193,7 @@
         <a href="https://www.socialdeal.nl/" target="_blank" rel="noopener noreferrer"><strong>Social Deal</strong><span>Uitjes, horeca en wellness</span></a>
         <a href="https://www.groupon.nl/" target="_blank" rel="noopener noreferrer"><strong>Groupon</strong><span>Lokale deals en belevenissen</span></a>
       </div>
+      <div id="dealOffers" class="dealOffers" aria-live="polite"></div>
     </section>
 
     <nav class="pagination" id="pagination" aria-label="Paginering">
@@ -1207,7 +1225,7 @@
   </div>
 
   <script>
-    const APP_VERSION = "2026.10.23.3";
+    const APP_VERSION = "2026.10.23.4";
     const DEFAULT_MAX_EVENTS_PER_SITE = 60;
     const DEFAULT_SITE_TIME_LIMIT_SECONDS = 45;
     const SCAN_SETTINGS_KEY = "eventScanSettingsV2";
@@ -1284,6 +1302,7 @@
     let newEventKeys = new Set();
     let deletedEventKeys = new Set();
     let cardsCollapsed = true;
+    let collapsedTypeKeys = new Set();
     let refreshAbortRequested = false;
     let latestWeatherData = null;
     let currentPage = 1;
@@ -1596,12 +1615,14 @@
     }
 
     function typeImage(type, image) {
-      const key = cleanText(type).toLowerCase();
+      const key = cleanText(type).toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
       const explicit = safeUrl(image);
-      return typeImages[key] || explicit || typeImages.default;
+      if (typeImages[key]) return typeImages[key];
+      const match = Object.keys(typeImages).find((candidate) => candidate !== "default" && (key.includes(candidate) || candidate.includes(key)));
+      return (match ? typeImages[match] : "") || explicit || (key ? "https://picsum.photos/seed/" + encodeURIComponent(key) + "/900/300" : typeImages.default);
     }
 
-    const regionCoords = {
+        const regionCoords = {
       groningen: { lat: 53.2194, lon: 6.5665 },
       assen: { lat: 52.9928, lon: 6.5642 },
       drachten: { lat: 53.1125, lon: 6.0989 },
@@ -2067,6 +2088,7 @@
             cardsCollapsed = true;
             expandedEventKeys = new Set();
             const actualNewCount = rememberNewEvents(events, previousKeys);
+            loadDealOffers();
             fillTypes();
             renderSites(checkedSites());
             renderRawLog();
@@ -2098,6 +2120,27 @@
       const prefix = Number.isFinite(foundCount) ? `${foundText(foundCount)} gevonden.` : foundText(foundCount) + ".";
       showStatus(`${prefix} De lijst is nog hetzelfde. Kies eventueel meer websites en probeer opnieuw.`, "warn");
       return false;
+    }
+
+    async function loadDealOffers() {
+      const target = $("dealOffers");
+      if (!target) return;
+      try {
+        const response = await fetch(\`./deals.json?v=${Date.now()}\`, { cache: "no-store" });
+        if (!response.ok) throw new Error("Deals niet beschikbaar");
+        const data = await response.json();
+        const offers = Array.isArray(data.offers) ? data.offers : [];
+        if (!offers.length) {
+          target.innerHTML = '<p class="dealEmpty">Nog geen actuele aanbiedingen gevonden. Ververs om de bronnen opnieuw te scannen.</p>';
+          return;
+        }
+        target.innerHTML = offers.map((offer) => {
+          const url = safeUrl(offer.url, { website: true });
+          return \`<article class="dealOffer"><div class="dealOfferSource">${escapeHtml(offer.source || "Aanbieding")}</div><a href="${escapeHtml(url || "#")}" target="_blank" rel="noopener noreferrer">${escapeHtml(offer.title || "Aanbieding bekijken")}</a>${offer.price ? \`<strong>${escapeHtml(offer.price)}</strong>\` : ""}<p>${escapeHtml(offer.description || "")}</p></article>\`;
+        }).join("");
+      } catch {
+        target.innerHTML = '<p class="dealEmpty">Aanbiedingen konden niet worden geladen. De bronlinks blijven beschikbaar.</p>';
+      }
     }
 
     function displayType(value) {
@@ -2165,6 +2208,8 @@
     }
 
     function eventMatchesSelectedSites(event, selectedHosts = selectedSiteHosts()) {
+      const discovery = cleanText(event.discoverySource || "").toLowerCase();
+      if (["chatgpt", "openai", "mistral", "perplexity"].includes(discovery)) return eventMatchesProviderFilter(event);
       if (!selectedHosts.size) return false;
       const eventHosts = [
         hostFromUrl(event.website),
@@ -2192,6 +2237,7 @@
       if (discovery === "serpapi" && !$("provSerpAPI")?.checked) return false;
       if ((discovery === "chatgpt" || discovery === "openai") && !$("provOpenAI")?.checked) return false;
       if (discovery === "mistral" && !$("provMistral")?.checked) return false;
+      if (discovery === "perplexity" && !$("provPerplexity")?.checked) return false;
       return true;
     }
 
@@ -2205,23 +2251,35 @@
       return filter === "free" ? isFree : priceKnown;
     }
 
+    function siteDisplayName(site) {
+      const host = hostFromUrl(site);
+      const labels = {
+        "ibood.com": "iBOOD — dagdeals",
+        "socialdeal.nl": "Social Deal — uitjes en korting",
+        "groupon.nl": "Groupon — lokale deals"
+      };
+      return labels[host] || host || site;
+    }
+
     function renderSites(selected = null) {
       const selectedSites = selected || new Set(sites);
-      $("sitesList").innerHTML = sites.map((site) => `
-        ${(() => {
-          const count = siteEventCountFor(site);
-          const hasResult = count > 0;
-          const badge = hasResult ? `<span class="siteResultBadge">(+${count})</span>` : "";
-          return `<label class="${hasResult ? "siteFound" : ""}">
+      const list = $("sitesList");
+      const providerStates = new Map([...list.querySelectorAll(".providerCheck")].map((check) => [check.id, check.checked]));
+      const aiMarkup = [...list.querySelectorAll(".sourceGroupLabel, .providerCheck")].map((node) => node.outerHTML).join("");
+      list.innerHTML = aiMarkup + sites.map((site) => {
+        const count = siteEventCountFor(site);
+        const hasResult = count > 0;
+        const badge = hasResult ? \`<span class="siteResultBadge">(+${count})</span>\` : "";
+        return \`<label class="${hasResult ? "siteFound" : ""}">
           <input class="siteCheck" type="checkbox" value="${escapeHtml(site)}"${selectedSites.has(site) ? " checked" : ""}>
-          <span>${escapeHtml(site)}${badge}</span>
-        </label>`;
-        })()}
-      `).join("");
+          <span>${escapeHtml(siteDisplayName(site))}${badge}</span>
+        </label>\`;
+      }).join("");
+      providerStates.forEach((checked, id) => { const input = $(id); if (input) input.checked = checked; });
       updateSiteCount();
     }
 
-    function renderRawLog() {
+        function renderRawLog() {
       const showSerpApi = Boolean($("provSerpAPI")?.checked);
       const showChatGpt = Boolean($("provOpenAI")?.checked);
       const showMistral = Boolean($("provMistral")?.checked);
@@ -2298,14 +2356,17 @@
     }
 
     function updateSiteCount() {
-      $("siteCount").textContent = document.querySelectorAll(".siteCheck:checked").length;
+      const target = $("siteCount");
+      if (target) target.textContent = document.querySelectorAll(".siteCheck:checked, .providerCheck:checked").length;
+      updateProviderCount();
     }
 
     function updateProviderCount() {
-      $("providerCount").textContent = document.querySelectorAll(".providerCheck:checked").length;
+      const target = $("providerCount");
+      if (target) target.textContent = document.querySelectorAll(".providerCheck:checked").length;
     }
 
-    function matchesDate(event) {
+        function matchesDate(event) {
       if (event.isPermanent) return true;
       if (!/^\d{4}-\d{2}-\d{2}$/.test(event.date || "")) return false;
       const today = new Date();
@@ -2433,15 +2494,18 @@
 
       let previousTypeKey = "";
       const renderedItems = [];
-      for (const event of visible) {
+      for (let index = 0; index < visible.length; index += 1) {
+        const event = visible[index];
         const type = displayType(event.type || "Activiteit");
         const typeKey = type.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLocaleLowerCase("nl");
         if (typeKey !== previousTypeKey) {
           const headerImage = typeImage(type, event.image);
-          renderedItems.push(`<div class="typeHeader eventTypeHeader" role="heading" aria-level="2" style="background-image: url('${escapeHtml(headerImage)}')"><span>${escapeHtml(type)}</span></div>`);
+          const count = visible.filter((item) => displayType(item.type || "Activiteit").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLocaleLowerCase("nl") === typeKey).length;
+          const collapsed = collapsedTypeKeys.has(typeKey);
+          renderedItems.push(\`<button class="typeHeader eventTypeHeader" type="button" data-type-key="${escapeHtml(typeKey)}" aria-expanded="${collapsed ? "false" : "true"}" style="background-image: url('${escapeHtml(headerImage)}')"><span>${escapeHtml(type)}</span><span class="typeHeaderMeta">${collapsed ? "Toon" : "Verberg"} · ${count} activiteiten <span aria-hidden="true">${collapsed ? "+" : "−"}</span></span></button>\`);
           previousTypeKey = typeKey;
         }
-        renderedItems.push(renderCard(event));
+        if (!collapsedTypeKeys.has(typeKey)) renderedItems.push(renderCard(event));
       }
       $("grid").innerHTML = renderedItems.join("");
       $("pagination").style.display = "flex";
@@ -2451,19 +2515,22 @@
     }
 
     function eventSourceLabel(event) {
-      const source = cleanText(event.source || "");
-      if (source && !/^(manual|onbekend|bron onbekend)$/i.test(source)) return source;
-
       const website = safeUrl(event.website, { website: true });
-      if (!website) return "";
-      try {
-        return new URL(website).hostname.replace(/^www\./, "");
-      } catch {
-        return "";
+      const discovery = cleanText(event.discoverySource || "").toLowerCase();
+      const sourceText = cleanText(event.source || "").toLowerCase();
+      const aiName = { chatgpt: "ChatGPT", openai: "ChatGPT", mistral: "Mistral", perplexity: "Perplexity" }[discovery]
+        || (/chatgpt|openai/.test(sourceText) ? "ChatGPT" : /mistral/.test(sourceText) ? "Mistral" : /perplexity/.test(sourceText) ? "Perplexity" : "");
+      if (aiName) {
+        let host = "";
+        try { host = website ? new URL(website).hostname.replace(/^www\./, "") : ""; } catch {}
+        return \`AI ${aiName}${host ? " " + host : ""}\`;
       }
+      if (event.source && !/^(manual|onbekend|bron onbekend)$/i.test(event.source)) return cleanText(event.source);
+      if (!website) return "";
+      try { return new URL(website).hostname.replace(/^www\./, ""); } catch { return ""; }
     }
 
-    function renderCard(event) {
+        function renderCard(event) {
       const title = escapeHtml(event.title || "Naam onbekend");
       const type = displayType(event.type || "Activiteit");
       const image = typeImage(type, event.image);
@@ -2942,6 +3009,7 @@
       updateProviderCount();
       applyFilters();
       loadWeather();
+      loadDealOffers();
     }
 
     controls.forEach((id) => {
@@ -2988,6 +3056,14 @@
       showStatus("Controle gestopt. De update kan nog doorlopen; probeer straks opnieuw.", "warn");
     });
     $("grid").addEventListener("click", (event) => {
+      const typeHeader = event.target.closest(".eventTypeHeader");
+      if (typeHeader) {
+        const key = typeHeader.dataset.typeKey || "";
+        if (collapsedTypeKeys.has(key)) collapsedTypeKeys.delete(key);
+        else collapsedTypeKeys.add(key);
+        render();
+        return;
+      }
       const deleteButton = event.target.closest(".deleteEventBtn");
       if (deleteButton) {
         deleteEventByKey(deleteButton.dataset.eventKey || "");
@@ -3007,22 +3083,19 @@
     $("prevPage").addEventListener("click", () => { currentPage -= 1; render(); window.scrollTo({ top: 0, behavior: "smooth" }); });
     $("nextPage").addEventListener("click", () => { currentPage += 1; render(); window.scrollTo({ top: 0, behavior: "smooth" }); });
     $("allSitesBtn").addEventListener("click", () => {
-      document.querySelectorAll(".siteCheck").forEach((check) => { check.checked = true; });
+      document.querySelectorAll(".siteCheck, .providerCheck").forEach((check) => { check.checked = true; });
       updateSiteCount();
       applyFilters();
     });
     $("noSitesBtn").addEventListener("click", () => {
-      document.querySelectorAll(".siteCheck").forEach((check) => { check.checked = false; });
+      document.querySelectorAll(".siteCheck, .providerCheck").forEach((check) => { check.checked = false; });
       updateSiteCount();
       applyFilters();
     });
     $("sitesList").addEventListener("change", () => {
       updateSiteCount();
-      applyFilters();
-    });
-    $("providerList").addEventListener("change", () => {
-      updateProviderCount();
       renderRawLog();
+      applyFilters();
     });
     document.addEventListener("click", async (event) => {
       const button = event.target.closest(".routeToggle");
@@ -3088,7 +3161,6 @@
       $(buttonId).setAttribute("aria-expanded", String(isOpen));
     }
 
-    $("providerButton").addEventListener("click", () => toggleSelect("providerSelect", "providerButton"));
     $("siteButton").addEventListener("click", () => toggleSelect("siteSelect", "siteButton"));
     $("titleToggle").addEventListener("click", () => {
       const panel = $("titlePanel");
@@ -3098,7 +3170,6 @@
     });
     document.addEventListener("click", (event) => {
       [
-        ["providerSelect", "providerButton"],
         ["siteSelect", "siteButton"]
       ].forEach(([selectId, buttonId]) => {
         if (!$(selectId).contains(event.target)) {
