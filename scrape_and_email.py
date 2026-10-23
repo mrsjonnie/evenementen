@@ -1134,7 +1134,7 @@ def extract_venue_agenda_events(html, page_url, site_url, discovery_source):
             # Only actual agenda detail links are events. Ignore calendar controls,
             # month headings, ticket buttons, forms and navigation that may share a date.
             continue
-        title = clean_title(anchor.get_text(" ", strip=True) or anchor.get("aria-label") or anchor.get("title") or "")
+        title = clean_title(node_title(anchor) or anchor.get_text(" ", strip=True) or anchor.get("aria-label") or anchor.get("title") or "")
         if host == "simplon.nl":
             # Simplon cards start with compact dates such as "vr 23.10"; these are not part of the title.
             title = re.sub(r"^(?:" + WEEKDAY_PATTERN + r")\.?\s*\d{1,2}\.\d{1,2}(?:\.20\d{2})?\s*", "", title, flags=re.I)
@@ -1150,6 +1150,14 @@ def extract_venue_agenda_events(html, page_url, site_url, discovery_source):
                 break
             candidate_text = clean_text(parent.get_text(" ", strip=True))
             candidate_date = parse_date_text(candidate_text)
+            if host == "martiniplaza.nl" and candidate_text and title:
+                # Homepage cards can share a parent with neighboring cards. Use the
+                # date closest to this event title rather than the first date in the group.
+                title_position = candidate_text.lower().find(title.lower())
+                date_matches = list(re.finditer(r"\\b\\d{1,2}\\s+(?:" + MONTH_PATTERN + r")(?:\\s+20\\d{2})?\\b", candidate_text, re.I))
+                if title_position >= 0 and date_matches:
+                    closest_date = min(date_matches, key=lambda match: abs(match.start() - title_position))
+                    candidate_date = parse_date_text(closest_date.group(0)) or candidate_date
             if not candidate_date:
                 compact_pattern = r"\b(?:" + WEEKDAY_PATTERN + r")\.?\s*(\d{1,2})\s*(" + MONTH_PATTERN + r")(?:\s*(20\d{2}))?\b"
                 compact_date = re.search(compact_pattern, candidate_text, re.I)
