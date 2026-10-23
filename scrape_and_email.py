@@ -1685,6 +1685,17 @@ def scrape_site(site_url, site_index=0, site_total=0, progress_callback=None):
                     if "json" in clean_text(script.get("type") or "").lower() or "application/ld+json" in clean_text(script.get("type") or "").lower()
                 ]
                 add_raw("Diagnose", original_site, "Zwolse JSON", "", final_url, "diagnose", " | ".join(embedded_json[:4]))
+                for asset in [script.get("src") for script in diagnostic_soup.find_all("script", src=True) if any(name in script.get("src", "") for name in ("main.js", "helpers.js"))]:
+                    try:
+                        asset_url = normalized_url(asset, final_url)
+                        asset_response = session.get(asset_url, headers=REQUEST_HEADERS, timeout=remaining_timeout(deadline))
+                        asset_text = asset_response.text
+                        matches = []
+                        for pattern in [r".{0,100}(?:api/|/api|graphql|fetch\(|axios|programme|program|event[s]?|activity|agenda).{0,140}"]:
+                            matches.extend(match.group(0) for match in re.finditer(pattern, asset_text, re.I))
+                        add_raw("Diagnose", original_site, "Zwolse JS " + urlparse(asset_url).path.rsplit("/", 1)[-1], "", asset_url, "diagnose", " | ".join(matches[:5]))
+                    except Exception as asset_error:
+                        add_raw("Diagnose", original_site, "Zwolse JS fout", "", asset, "fout", str(asset_error))
         except Exception as exc:
             add_raw("Website", original_site, "Pagina mislukt", "", page_url, "fout", str(exc))
             continue
