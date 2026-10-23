@@ -973,7 +973,14 @@
     /* Compacte filterzijbalk in de normale pagina-indeling; geen overlay. */
     [hidden] { display: none !important; }
     .pageLayout { display: grid; grid-template-columns: minmax(0, 1fr); gap: 12px; align-items: start; }
-    .pageLayout.sidebarOpen { grid-template-columns: 248px minmax(0, 1fr); }
+    .pageLayout.sidebarOpen { grid-template-columns: var(--sidebar-width, 248px) 7px minmax(0, 1fr); }
+    .sidebarResizeHandle { width:7px; min-height:160px; align-self:stretch; cursor:col-resize; border-radius:8px; background:linear-gradient(90deg, transparent 2px, var(--line) 2px, var(--line) 5px, transparent 5px); touch-action:none; }
+    .sidebarResizeHandle:hover, .sidebarResizeHandle:focus { background:var(--primary); outline:2px solid var(--primary); outline-offset:1px; }
+    .sourceGroup { min-width:0; margin:0 0 6px; }
+    .sourceGroupHeader { display:flex; align-items:center; width:100%; gap:8px; margin:2px 0 5px; padding:6px 9px; border:1px solid var(--line); border-radius:8px; background:var(--surface); color:var(--ink); text-align:left; font-size:.84rem; font-weight:850; cursor:pointer; }
+    .sourceGroupHeader small { margin-left:auto; color:var(--muted); font-weight:650; }
+    .sourceGroup.collapsed .eventGroupCards { display:none; }
+    .sourceGroup .eventGroupCards { padding-left:8px; border-left:2px solid var(--line); }
     .contentArea { min-width: 0; }
      .filterSidebarToggle { min-height: 34px; padding: 0 11px; align-self:flex-start; }
     .headerActions { display:flex; flex-wrap:wrap; gap:7px; align-items:center; justify-content:flex-start; margin-top:10px; }
@@ -1026,6 +1033,7 @@
     .filterSidebar .rawLogPanel { margin-top: 8px; }
     @media (max-width: 900px) {
       .pageLayout.sidebarOpen { grid-template-columns: minmax(0, 1fr); }
+      .sidebarResizeHandle { display:none; }
       .filterSidebar { width: auto; max-height: none; position: static; }
     }
   </style>
@@ -1069,7 +1077,7 @@
 
   <main>
     <div class="pageLayout" id="pageLayout">
-    <aside class="toolbar filterSidebar" id="filterSidebar" aria-label="Filters" hidden>
+    <aside class="toolbar filterSidebar" id="filterSidebar" aria-label="Filters">
       <div class="filters">
         <div class="field">
           <label for="search">Zoeken</label>
@@ -1160,6 +1168,7 @@
       </div>
 
     </aside>
+    <div class="sidebarResizeHandle" id="sidebarResizeHandle" role="separator" aria-orientation="vertical" aria-label="Zijbalkbreedte aanpassen" tabindex="0"></div>
 
     <div class="contentArea">
       <section class="mapSearchPanel" id="mapSearchPanel" hidden aria-label="Kaart zoeken">
@@ -1297,6 +1306,7 @@
     let liveLogRows = [];
     let expandedEventKeys = new Set();
     let collapsedEventTypes = new Set();
+    let collapsedSourceGroups = new Set();
     let dynamicRegionCoord = null;
     let dynamicRegionKey = "";
     let regionLookupTimer = null;
@@ -2206,12 +2216,13 @@
         const count = siteEventCountFor(site);
         const badge = count > 0 ? `<span class="siteResultBadge">(+${count})</span>` : "";
         const host = hostFromUrl(site);
+        const shortUrl = host.replace(/^www\./i, "") + (new URL(site).pathname !== "/" ? new URL(site).pathname.replace(/\/$/, "") : "");
         const result = (latestSiteResults || []).find((item) => hostFromUrl(item.site || "") === host);
         const rows = [...(latestRawLog || []), ...(liveLogRows || [])].filter((row) => hostFromUrl(row.site || row.url || "") === host);
         const errors = rows.filter((row) => /fout|mislukt|timeout|geen data|status 4|status 5/i.test(`${row.status || ""} ${row.title || ""}`));
         const hasProblem = count === 0 || Boolean(result && (result.timedOut || Number(result.count || 0) === 0)) || errors.length > 0;
-        const diagnostic = errors.length ? errors.slice(0,3).map((row) => `${row.title || "Melding"} — ${row.status || ""}: ${row.rawText || ""}`).join(" | ") : result?.timedOut ? "De scan liep tegen de tijdslimiet aan." : "Er zijn geen evenementen opgehaald. De site kan dynamische inhoud gebruiken of scraping blokkeren. Bekijk de ruwe verversdata voor details.";
-        return `<label class="${count > 0 ? "siteFound" : ""}"><input class="siteCheck" type="checkbox" value="${escapeHtml(site)}"${selectedSites.has(site) ? " checked" : ""}><span class="sourceInfoWrap"><span>${escapeHtml(site)}${badge}</span>${hasProblem ? `<button class="sourceInfo" type="button" aria-label="Scrape-informatie voor ${escapeHtml(site)}" aria-expanded="false" data-info-site="${escapeHtml(site)}">i</button>` : ""}</span>${hasProblem ? `<span class="sourceInfoPopup" data-info-popup="${escapeHtml(site)}" hidden>${escapeHtml(diagnostic)}</span>` : ""}</label>`;
+        const diagnostic = errors.length ? errors.slice(0,3).map((row) => `${row.title || "Melding"} — ${row.status || "controle mislukt"}`).join(" | ") : result?.timedOut ? "De scan duurde te lang. Probeer het later opnieuw." : "Geen resultaten opgehaald. De website kan scraping blokkeren of dynamische inhoud gebruiken.";
+        return `<label class="${count > 0 ? "siteFound" : ""}"><input class="siteCheck" type="checkbox" value="${escapeHtml(site)}"${selectedSites.has(site) ? " checked" : ""}><span class="sourceInfoWrap"><span title="${escapeHtml(site)}">${escapeHtml(shortUrl)}${badge}</span>${hasProblem ? `<button class="sourceInfo" type="button" aria-label="Scrape-informatie voor ${escapeHtml(site)}" aria-expanded="false" data-info-site="${escapeHtml(site)}">i</button>` : ""}</span>${hasProblem ? `<span class="sourceInfoPopup" data-info-popup="${escapeHtml(site)}" hidden>${escapeHtml(diagnostic)}</span>` : ""}</label>`;
       }).join("");
       const aiRows = [["provMistral","Mistral AI"],["provOpenAI","ChatGPT / OpenAI"],["provSerpAPI","SerpAPI (webzoekbron)"]].map(([id,label]) => `<label><input class="aiSourceCheck" type="checkbox" data-provider="${id}"${$(id)?.checked ? " checked" : ""}> <span>${label}</span></label>`).join("");
       $("sitesList").innerHTML = siteRows + `<div class="sourceGroupLabel">AI- en zoekbronnen</div>` + aiRows;
@@ -2433,10 +2444,23 @@
       const allGroups = new Map();
       filteredEvents.forEach((event) => { const type = displayType(event.type || "Activiteit"); if (!allGroups.has(type)) allGroups.set(type, []); allGroups.get(type).push(event); });
       const visibleKeys = new Set(items.map(eventDedupeKey));
-      return [...allGroups.entries()].map(([type, allForType]) => {
+      const entries = [...allGroups.entries()].sort(([a],[b]) => {
+        const ac = /concert/i.test(a), bc = /concert/i.test(b);
+        return ac === bc ? a.localeCompare(b, "nl") : ac ? -1 : 1;
+      });
+      return entries.map(([type, allForType]) => {
         const eventsForType = allForType.filter(event => visibleKeys.has(eventDedupeKey(event)));
         const collapsed = collapsedEventTypes.has(type);
-        const cards = eventsForType.length ? eventsForType.map(renderCard).join("") : `<p class="nextPageHint">Meer resultaten van dit type staan op een andere pagina (${allForType.length} totaal).</p>`;
+        const sourceGroups = new Map();
+        eventsForType.forEach(event => { const source = eventSourceLabel(event) || "Bron onbekend"; if (!sourceGroups.has(source)) sourceGroups.set(source, []); sourceGroups.get(source).push(event); });
+        const allSourceCounts = new Map();
+        allForType.forEach(event => { const source = eventSourceLabel(event) || "Bron onbekend"; allSourceCounts.set(source, (allSourceCounts.get(source) || 0) + 1); });
+        const sourceHtml = [...sourceGroups.entries()].sort(([a],[b]) => a.localeCompare(b, "nl")).map(([source, sourceEvents]) => {
+          const key = type + "::" + source;
+          const sourceCollapsed = collapsedSourceGroups.has(key);
+          return `<section class="sourceGroup ${sourceCollapsed ? "collapsed" : ""}"><button class="sourceGroupHeader" type="button" data-source-toggle="${escapeHtml(key)}" aria-expanded="${!sourceCollapsed}"><span>${escapeHtml(source)}</span><small>${allSourceCounts.get(source) || sourceEvents.length} evenementen</small></button><div class="eventGroupCards">${sourceEvents.map(renderCard).join("")}</div></section>`;
+        }).join("");
+        const cards = sourceHtml || `<p class="nextPageHint">Meer resultaten van dit type staan op een andere pagina (${allForType.length} totaal).</p>`;
         return `<section class="eventGroup ${collapsed ? "collapsed" : ""}"><button class="eventGroupHeader" type="button" data-type-toggle="${escapeHtml(type)}" aria-expanded="${!collapsed}"><span>${escapeHtml(type)}</span><small>${allForType.length} resultaten</small></button><div class="eventGroupCards">${cards}</div></section>`;
       }).join("");
     }
@@ -2452,6 +2476,32 @@
       } catch {
         return "";
       }
+    }
+
+    function sourceWebsiteDescription(event) {
+      const host = hostFromUrl(event.website || "").replace(/^www\\./i, "").toLowerCase();
+      const known = {
+        "spotgroningen.nl":"programma met concerten, theater en live muziek in Groningen",
+        "forum.nl":"cultuur, film, lezingen en activiteiten in Groningen",
+        "vera-groningen.nl":"concerten, clubavonden en film in Groningen",
+        "simplon.nl":"poppodium en clubnachten in Groningen",
+        "paradiso.nl":"concerten en culturele programma’s in Amsterdam",
+        "concertgebouw.nl":"klassieke muziek en concerten in Amsterdam",
+        "hedon-zwolle.nl":"concerten en evenementen in Zwolle",
+        "martiniplaza.nl":"concerten, theater en grote evenementen in Groningen",
+        "groningermuseum.nl":"tentoonstellingen en museumactiviteiten",
+        "visitgroningen.nl":"uitjes en evenementen in Groningen",
+        "groningen.uitloper.nu":"culturele agenda en lokale uitjes",
+        "kultuuragenda.nl":"culturele agenda met lokale activiteiten",
+        "noorderzon.nl":"podiumkunsten en festivalprogramma in Groningen",
+        "socialdeal.nl":"kortingsacties en lokale aanbiedingen",
+        "groupon.nl":"kortingsacties en aanbiedingen",
+        "ibood.com":"online dagaanbiedingen en producten",
+        "vvvameland.nl":"activiteiten en uitjes op Ameland"
+      };
+      if (known[host]) return known[host];
+      const domain = host.replace(/^www\\./i, "") || "evenementenwebsite";
+      return `agenda, informatie en praktische details over dit evenement op ${domain}`;
     }
 
     function renderCard(event) {
@@ -2475,7 +2525,8 @@
         </${website ? "a" : "div"}>
       `;
       const sourceLabel = eventSourceLabel(event);
-      const sourceSuffix = sourceLabel ? ` <span class="sourceSuffix">(${escapeHtml(sourceLabel)})</span>` : "";
+      const sourceInfo = sourceWebsiteDescription(event);
+      const sourceSuffix = sourceLabel ? ` <span class="sourceSuffix">(Bron: ${escapeHtml(sourceLabel)} — ${escapeHtml(sourceInfo)})</span>` : "";
 
       return `
         <article class="card ${isNew ? "isNew" : ""} ${expanded ? "expanded" : ""}">
@@ -2602,7 +2653,7 @@
 
         const weatherItems = [
           { label: `${data.summary} (${data.days} dagen)`, topic: "weersverwachting" },
-          { label: `${data.tempMin} graden - ${data.tempMax} graden`, topic: "temperatuur" },
+          { label: `${data.daily?.[0]?.tempMin ?? data.tempMin}° - ${data.daily?.[0]?.tempMax ?? data.tempMax}° vandaag`, topic: "temperatuur" },
           { label: `Regen ${data.rainChance}%`, topic: "regenradar", breakBefore: true },
           { label: `Wind ${data.windMax} km/u - ${data.rainTotalMM} mm regen`, topic: "wind neerslag" },
           { label: `UV ${data.uvMax}`, topic: "zonkracht" }
@@ -2993,6 +3044,8 @@
         deleteEventByKey(deleteButton.dataset.eventKey || "");
         return;
       }
+      const sourceToggle = event.target.closest("[data-source-toggle]");
+      if (sourceToggle) { const key = sourceToggle.dataset.sourceToggle || ""; if (collapsedSourceGroups.has(key)) collapsedSourceGroups.delete(key); else collapsedSourceGroups.add(key); render(); return; }
       const typeToggle = event.target.closest("[data-type-toggle]");
       if (typeToggle) { const type = typeToggle.dataset.typeToggle || ""; if (collapsedEventTypes.has(type)) collapsedEventTypes.delete(type); else collapsedEventTypes.add(type); render(); return; }
       const button = event.target.closest(".titleButton");
@@ -3084,7 +3137,7 @@
       const sourceName = weatherTopicSourceName(topic);
       const details = [
         topic === "temperatuur" ? weatherDayRows(latestWeatherData || {}) : "",
-        topic === "weersverwachting" && $("periodMode").value === "week" ? radarBlockHtml() : ""
+        topic === "weersverwachting" || topic === "regenradar" ? radarBlockHtml() : ""
       ].filter(Boolean).join("");
       button.setAttribute("aria-expanded", "true");
       panel.dataset.topic = topic;
@@ -3103,14 +3156,48 @@
 
     $("providerButton").addEventListener("click", () => toggleSelect("providerSelect", "providerButton"));
     $("siteButton").addEventListener("click", () => toggleSelect("siteSelect", "siteButton"));
-    $("filterSidebarToggle").addEventListener("click", () => {
+    function setSidebarOpen(isOpen) {
       const sidebar = $("filterSidebar");
       const layout = $("pageLayout");
-      const isOpen = sidebar.hidden;
       sidebar.hidden = !isOpen;
       layout.classList.toggle("sidebarOpen", isOpen);
       $("filterSidebarToggle").setAttribute("aria-expanded", String(isOpen));
       $("filterSidebarToggle").textContent = isOpen ? "Filters verbergen" : "Filters tonen";
+      localStorage.setItem("eventsSidebarOpen", isOpen ? "1" : "0");
+    }
+    $("filterSidebarToggle").addEventListener("click", () => setSidebarOpen($("filterSidebar").hidden));
+    const savedSidebarWidth = Number(localStorage.getItem("eventsSidebarWidth"));
+    const initialSidebarWidth = Number.isFinite(savedSidebarWidth) && savedSidebarWidth >= 220 && savedSidebarWidth <= 520 ? savedSidebarWidth : 248;
+    $("pageLayout").style.setProperty("--sidebar-width", initialSidebarWidth + "px");
+    $("sidebarResizeHandle").addEventListener("pointerdown", (event) => {
+      if (window.matchMedia("(max-width: 900px)").matches) return;
+      event.preventDefault();
+      const layout = $("pageLayout");
+      const handle = $("sidebarResizeHandle");
+      handle.setPointerCapture(event.pointerId);
+      const move = (moveEvent) => {
+        const rect = layout.getBoundingClientRect();
+        const width = Math.max(220, Math.min(520, moveEvent.clientX - rect.left));
+        layout.style.setProperty("--sidebar-width", width + "px");
+        localStorage.setItem("eventsSidebarWidth", String(Math.round(width)));
+      };
+      const stop = () => {
+        handle.removeEventListener("pointermove", move);
+        handle.removeEventListener("pointerup", stop);
+        handle.removeEventListener("pointercancel", stop);
+      };
+      handle.addEventListener("pointermove", move);
+      handle.addEventListener("pointerup", stop);
+      handle.addEventListener("pointercancel", stop);
+    });
+    $("sidebarResizeHandle").addEventListener("keydown", (event) => {
+      if (!["ArrowLeft","ArrowRight"].includes(event.key)) return;
+      event.preventDefault();
+      const layout = $("pageLayout");
+      const current = parseInt(getComputedStyle(layout).getPropertyValue("--sidebar-width"), 10) || 248;
+      const width = Math.max(220, Math.min(520, current + (event.key === "ArrowRight" ? 12 : -12)));
+      layout.style.setProperty("--sidebar-width", width + "px");
+      localStorage.setItem("eventsSidebarWidth", String(width));
     });
     $("titleToggle").addEventListener("click", () => {
       const panel = $("titlePanel");
@@ -3131,6 +3218,7 @@
     });
 
     const today = formatDate(new Date());
+    setSidebarOpen(localStorage.getItem("eventsSidebarOpen") !== "0");
     $("dateSingle").value = today;
     $("periodMode").value = "threeDays";
     dateFrom = today;
