@@ -1667,6 +1667,24 @@ def scrape_site(site_url, site_index=0, site_total=0, progress_callback=None):
         try:
             html, final_url = fetch_html(session, page_url, deadline)
             add_raw("Website", original_site, "Pagina gelezen", "", final_url, "ok", f"{len(html)} tekens HTML")
+            if canonical_host(normalized_site) == "zwolsetheaters.nl":
+                diagnostic_soup = BeautifulSoup(html, "html.parser")
+                script_info = [
+                    f"type={clean_text(script.get('type') or '')} src={clean_text(script.get('src') or '')} len={len(script.string or script.get_text() or '')}"
+                    for script in diagnostic_soup.find_all("script")
+                ]
+                add_raw("Diagnose", original_site, "Zwolse scripts", "", final_url, "diagnose", " | ".join(script_info[:12]))
+                anchor_info = [
+                    f"{clean_text(anchor.get_text(' ', strip=True))[:60]} => {clean_text(anchor.get('href') or '')[:140]}"
+                    for anchor in diagnostic_soup.find_all("a", href=True)
+                ]
+                add_raw("Diagnose", original_site, "Zwolse links", "", final_url, "diagnose", " | ".join(anchor_info[:18]))
+                embedded_json = [
+                    clean_text(script.string or script.get_text() or "")[:300]
+                    for script in diagnostic_soup.find_all("script")
+                    if "json" in clean_text(script.get("type") or "").lower() or "application/ld+json" in clean_text(script.get("type") or "").lower()
+                ]
+                add_raw("Diagnose", original_site, "Zwolse JSON", "", final_url, "diagnose", " | ".join(embedded_json[:4]))
         except Exception as exc:
             add_raw("Website", original_site, "Pagina mislukt", "", page_url, "fout", str(exc))
             continue
