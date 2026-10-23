@@ -1,6 +1,6 @@
 {
-  "runId": "2026-10-23T13:16:44+00:00",
-  "startedAt": "2026-10-23T13:16:44+00:00",
+  "runId": "2026-10-23T13:19:04+00:00",
+  "startedAt": "2026-10-23T13:19:04+00:00",
   "completedCount": 1,
   "totalSites": 1,
   "completedSites": [
@@ -853,7 +853,7 @@
       "site": "https://simplon.nl/",
       "count": 56,
       "newCount": 0,
-      "durationSeconds": 5.82,
+      "durationSeconds": 5.28,
       "timedOut": false
     }
   ],
@@ -1459,12 +1459,12 @@
       "date": "",
       "url": "https://simplon.nl/",
       "status": "klaar",
-      "rawText": "site 1/1: 56 unieke events in 5.82 sec"
+      "rawText": "site 1/1: 56 unieke events in 5.28 sec"
     }
   ],
   "status": "completed",
   "lastCompletedSite": "https://simplon.nl/",
-  "lastCompletedAt": "2026-10-23T13:16:51+00:00",
+  "lastCompletedAt": "2026-10-23T13:19:10+00:00",
   "lastSiteEventCount": 56,
-  "finishedAt": "2026-10-23T13:16:53+00:00"
+  "finishedAt": "2026-10-23T13:19:10+00:00"
 }
