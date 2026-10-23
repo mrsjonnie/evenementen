@@ -2368,6 +2368,11 @@
       };
 
       filteredEvents = afterDate.sort((a, b) => {
+        // Eerst alfabetisch op categorie/type, daarbinnen chronologisch op datum.
+        const typeA = displayType(a.type || "Activiteit").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLocaleLowerCase("nl");
+        const typeB = displayType(b.type || "Activiteit").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLocaleLowerCase("nl");
+        const typeOrder = typeA.localeCompare(typeB, "nl");
+        if (typeOrder !== 0) return typeOrder;
         if (a.isPermanent && !b.isPermanent) return 1;
         if (!a.isPermanent && b.isPermanent) return -1;
         return String(a.date || "").localeCompare(String(b.date || ""));
