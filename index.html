@@ -3234,8 +3234,8 @@
     $("periodMode").value = "threeDays";
     dateFrom = today;
     dateTo = addDays(today, 2);
-    eventsPerPage = Number(localStorage.getItem(PER_PAGE_KEY)) || 500;
-    if (![12, 18, 24, 48, 96, 500].includes(eventsPerPage)) eventsPerPage = 500;
+    const savedPerPage = Number(localStorage.getItem(PER_PAGE_KEY));
+    eventsPerPage = savedPerPage && savedPerPage !== 96 && [12, 18, 24, 48, 500].includes(savedPerPage) ? savedPerPage : 500;
     $("perPageSelect").value = String(eventsPerPage);
     $("versionBadge").textContent = `Versie ${APP_VERSION}`;
     applyVersionHeaderTheme();
