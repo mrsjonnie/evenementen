@@ -2488,25 +2488,45 @@
         return;
       }
 
-      const pageCount = Math.max(1, Math.ceil(filteredEvents.length / eventsPerPage));
-      currentPage = Math.min(currentPage, pageCount);
-      const visible = filteredEvents.slice((currentPage - 1) * eventsPerPage, currentPage * eventsPerPage);
-      updateFilterBreakdown(pageCount, visible.length);
-
-      let previousTypeKey = "";
-      const renderedItems = [];
-      for (let index = 0; index < visible.length; index += 1) {
-        const event = visible[index];
+      // Paginate by complete category groups so each type has one accordion header and all its activities stay together.
+      const groups = [];
+      for (const event of filteredEvents) {
         const type = displayType(event.type || "Activiteit");
         const typeKey = type.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLocaleLowerCase("nl");
-        if (typeKey !== previousTypeKey) {
-          const headerImage = typeImage(type, event.image);
-          const count = visible.filter((item) => displayType(item.type || "Activiteit").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLocaleLowerCase("nl") === typeKey).length;
-          const collapsed = collapsedTypeKeys.has(typeKey);
-          renderedItems.push(`<button class="typeHeader eventTypeHeader" type="button" data-type-key="${escapeHtml(typeKey)}" aria-expanded="${collapsed ? "false" : "true"}" style="background-image: url('${escapeHtml(headerImage)}')"><span>${escapeHtml(type)}</span><span class="typeHeaderMeta">${collapsed ? "Toon" : "Verberg"} · ${count} activiteiten <span aria-hidden="true">${collapsed ? "+" : "−"}</span></span></button>`);
-          previousTypeKey = typeKey;
+        let group = groups[groups.length - 1];
+        if (!group || group.key !== typeKey) {
+          group = { key: typeKey, type, image: event.image, events: [] };
+          groups.push(group);
         }
-        if (!collapsedTypeKeys.has(typeKey)) renderedItems.push(renderCard(event));
+        group.events.push(event);
+      }
+
+      const pages = [];
+      let pageGroups = [];
+      let pageEventCount = 0;
+      for (const group of groups) {
+        if (pageGroups.length && pageEventCount + group.events.length > eventsPerPage) {
+          pages.push(pageGroups);
+          pageGroups = [];
+          pageEventCount = 0;
+        }
+        pageGroups.push(group);
+        pageEventCount += group.events.length;
+      }
+      if (pageGroups.length) pages.push(pageGroups);
+
+      const pageCount = Math.max(1, pages.length);
+      currentPage = Math.min(currentPage, pageCount);
+      const visibleGroups = pages[currentPage - 1] || [];
+      const visibleCount = visibleGroups.reduce((sum, group) => sum + group.events.length, 0);
+      updateFilterBreakdown(pageCount, visibleCount);
+
+      const renderedItems = [];
+      for (const group of visibleGroups) {
+        const headerImage = typeImage(group.type, group.image);
+        const collapsed = collapsedTypeKeys.has(group.key);
+        renderedItems.push(`<button class="typeHeader eventTypeHeader" type="button" data-type-key="${escapeHtml(group.key)}" aria-expanded="${collapsed ? "false" : "true"}" style="background-image: url('${escapeHtml(headerImage)}')"><span>${escapeHtml(group.type)}</span><span class="typeHeaderMeta">${collapsed ? "Toon" : "Verberg"} · ${group.events.length} activiteiten <span aria-hidden="true">${collapsed ? "+" : "−"}</span></span></button>`);
+        if (!collapsed) group.events.forEach((event) => renderedItems.push(renderCard(event)));
       }
       $("grid").innerHTML = renderedItems.join("");
       $("pagination").style.display = "flex";
@@ -2916,7 +2936,7 @@
       document.querySelectorAll(".siteCheck").forEach((check) => { check.checked = true; });
       cardsCollapsed = true;
       expandedEventKeys = new Set();
-      $("collapseBtn").textContent = "Uitklappen";
+      $("collapseBtn").textContent = "Details uitklappen";
       updateSiteCount();
       updateProviderCount();
       $("dateSingle").value = formatDate(new Date());
@@ -2928,7 +2948,7 @@
     function toggleCardsCollapsed() {
       cardsCollapsed = !cardsCollapsed;
       expandedEventKeys = new Set();
-      $("collapseBtn").textContent = cardsCollapsed ? "Uitklappen" : "Inklappen";
+      $("collapseBtn").textContent = cardsCollapsed ? "Details uitklappen" : "Details inklappen";
       render();
     }
 
