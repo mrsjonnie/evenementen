@@ -1042,6 +1042,80 @@ def extract_vera_programme_events(html, page_url, site_url, discovery_source):
     return dedupe_events(events)
 
 
+def extract_uitloper_events(html, page_url, site_url, discovery_source):
+    """Parse Uitloper's day-based Groningen agenda, where event cards inherit the selected page date."""
+    if canonical_host(site_url) != "groningen.uitloper.nu":
+        return []
+
+    soup = BeautifulSoup(html, "html.parser")
+    page_text = " ".join(split_lines(soup)[:8])
+    event_date = parse_date_text(page_text)
+    if not event_date:
+        add_raw("Parser", site_url, "Uitloper datum niet gevonden", "", page_url, "waarschuwing", page_text[:240])
+        return []
+
+    events = []
+    seen = set()
+    category_paths = (
+        "muziek", "party", "theater", "kunst", "jeugd", "diversen",
+        "regio", "filmhuis", "quizzen", "literair", "jamsessie",
+    )
+    for anchor in soup.find_all("a", href=True):
+        url = normalized_url(anchor.get("href"), page_url)
+        if not url or not same_host(url, site_url) or BAD_URL_RE.search(url):
+            continue
+        path_parts = [part for part in urlparse(url).path.strip("/").split("/") if part]
+        if len(path_parts) < 2 or path_parts[0].lower() not in category_paths:
+            continue
+
+        text = clean_text(anchor.get_text(" ", strip=True) or anchor.get("aria-label") or anchor.get("title"))
+        if len(text) < 3 or text.lower() in {"overzicht", "tickets & info"}:
+            continue
+
+        title = node_title(anchor)
+        if not title_is_usable(title):
+            title = clean_title(re.split(r"\s+\d{1,2}[:.]\d{2}\s*(?:uur)?\b", text, maxsplit=1, flags=re.I)[0])
+        title = re.sub(r"\s*\d{1,2}[:.]\d{2}\s*(?:uur)?\b.*$", "", title, flags=re.I).strip()
+        if not title_is_usable(title) or len(title) < 3:
+            continue
+
+        location = ""
+        for heading in anchor.find_all_previous(["h3", "h4"]):
+            candidate = clean_text(heading.get_text(" ", strip=True))
+            if candidate and not re.search(r"\d", candidate) and candidate.lower() not in category_paths:
+                location = candidate
+                break
+        card_text = clean_text(anchor.parent.get_text(" ", strip=True) if anchor.parent else text)
+        description = card_text
+        if title:
+            description = re.sub(re.escape(title), " ", description, count=1, flags=re.I)
+        description = re.sub(r"\b(?:[01]?\d|2[0-3])[:.]\d{2}\s*(?:uur)?\b", " ", description, flags=re.I)
+        description = compact(description, 420)
+        key = (event_date, re.sub(r"[^a-z0-9]+", " ", title.lower()).strip(), url.lower())
+        if key in seen:
+            continue
+        seen.add(key)
+
+        event = normalize_event({
+            "date": event_date,
+            "title": title,
+            "type": classify_type(" ".join([title, text, location]), canonical_host(site_url)),
+            "location": location or "Groningen",
+            "website": url,
+            "description": description,
+            "image": first_image(anchor, page_url),
+            "time": first_time(text),
+            "cost": first_price(text),
+            "discoverySource": discovery_source,
+        }, site_url)
+        if event:
+            events.append(event)
+            add_raw(discovery_source, site_url, event["title"], event["date"], event["website"], "Uitloper agenda-item", text)
+
+    add_raw("Parser", site_url, "Uitloper-dagpagina", event_date, page_url, "gespecialiseerde parser", f"{len(events)} agenda-items op {event_date}")
+    return dedupe_events(events)
+
+
 def parse_page_events(html, page_url, site_url, discovery_source):
     soup = BeautifulSoup(html, "html.parser")
     events = []
@@ -1132,6 +1206,16 @@ def start_urls_for_site(site_url):
         # VERA's homepage/news archive contains old editorial posts that look like events.
         # Scrape only the current programme listing, which is the source of real event dates.
         return [urljoin(exact, "/programma/")]
+    if host == "groningen.uitloper.nu":
+        # Uitloper shows one selected date per page. Start on the requested date and
+        # advance day by day until the configured event limit is reached.
+        first_day = date.fromisoformat(INPUT_DATE_FROM) if re.fullmatch(r"20\\d{2}-\\d{2}-\\d{2}", INPUT_DATE_FROM) else TODAY
+        urls = []
+        for offset in range(14):
+            day = first_day + timedelta(days=offset)
+            timestamp = int(datetime(day.year, day.month, day.day, 12, 0, tzinfo=timezone.utc).timestamp())
+            urls.append(f"{exact.rstrip('/')}?date={timestamp}")
+        return urls
     urls = [exact]
     if "ibood.com" in host:
         # The current Dutch storefront uses this path; the root redirects here.
@@ -1452,6 +1536,8 @@ def scrape_site(site_url, site_index=0, site_total=0):
         if "vera-groningen.nl" in canonical_host(normalized_site):
             # Avoid generic/news parsing for VERA: it can mistake old news articles for events.
             page_events = extract_vera_programme_events(html, final_url, normalized_site, "Website")
+        elif canonical_host(normalized_site) == "groningen.uitloper.nu":
+            page_events = extract_uitloper_events(html, final_url, normalized_site, "Website")
         else:
             page_events = parse_page_events(html, final_url, normalized_site, "Website")
         page_events = dedupe_events(page_events)
@@ -1468,7 +1554,7 @@ def scrape_site(site_url, site_index=0, site_total=0):
         add_raw("Website", original_site, "Pagina geanalyseerd", "", final_url, "ok", f"{len(page_events)} events/aanbiedingen op deze pagina")
         # VERA's programme parser already returns one clean record per event card.
         # Crawling every linked detail page with generic heuristics creates false events.
-        if "vera-groningen.nl" not in canonical_host(normalized_site):
+        if "vera-groningen.nl" not in canonical_host(normalized_site) and canonical_host(normalized_site) != "groningen.uitloper.nu":
             detail_links.extend(collect_event_links(html, final_url, normalized_site))
 
     # Verwerk gevonden openbare feeds rechtstreeks; dit vereist geen API-key of AI.
