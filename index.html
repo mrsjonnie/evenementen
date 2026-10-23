@@ -1023,8 +1023,8 @@
           <div class="titlePanelContent">
             <span class="versionBadge" id="versionBadge">Versie wordt geladen</span>
             <div class="scanSettings" aria-label="Scaninstellingen">
-              <label class="scanSetting" for="maxEventsPerSite">Events <input id="maxEventsPerSite" type="number" min="20" max="100" step="1" value="20" inputmode="numeric"></label>
-              <label class="scanSetting" for="siteTimeLimitSeconds">Sec <input id="siteTimeLimitSeconds" type="number" min="20" max="60" step="1" value="20" inputmode="numeric"></label>
+              <label class="scanSetting" for="maxEventsPerSite">Events <input id="maxEventsPerSite" type="number" min="20" max="100" step="1" value="60" inputmode="numeric"></label>
+              <label class="scanSetting" for="siteTimeLimitSeconds">Sec <input id="siteTimeLimitSeconds" type="number" min="20" max="60" step="1" value="45" inputmode="numeric"></label>
             </div>
           </div>
         </div>
@@ -1120,7 +1120,7 @@
               <span aria-hidden="true">v</span>
             </button>
             <div class="sitePanel">
-              <div class="sitePanelHeader">Deze lijst komt uit sites.json. Aangevinkte websites worden gescand en filteren ook wat je ziet.</div>
+              <div class="sitePanelHeader">Websites worden rechtstreeks gescand; AI-bronnen zijn aanvullend. Selecteer websites om de scan én de resultaten te beperken.</div>
               <div class="siteList" id="sitesList"></div>
               <div class="siteActions">
                 <button class="btn btnSecondary" id="allSitesBtn" type="button">Alles</button>
