@@ -1126,11 +1126,12 @@ def start_urls_for_site(site_url):
     if not exact:
         return []
     parsed = urlparse(exact)
-    urls = [exact]
     host = canonical_host(exact)
     if "vera-groningen.nl" in host:
-        # VERA's programme contains direct event pages with ticket prices.
-        urls.extend([urljoin(exact, "/programma/"), urljoin(exact, "/events/")])
+        # VERA's homepage/news archive contains old editorial posts that look like events.
+        # Scrape only the current programme listing, which is the source of real event dates.
+        return [urljoin(exact, "/programma/")]
+    urls = [exact]
     if "ibood.com" in host:
         # The current Dutch storefront uses this path; the root redirects here.
         urls.extend([urljoin(exact, "/nl/s-nl"), urljoin(exact, "/offers/nl/s-nl")])
@@ -1447,9 +1448,11 @@ def scrape_site(site_url, site_index=0, site_total=0):
             add_raw("Website", original_site, "Pagina mislukt", "", page_url, "fout", str(exc))
             continue
 
-        page_events = parse_page_events(html, final_url, normalized_site, "Website")
-        # VERA's programme page uses dated event links rather than consistent Event JSON-LD.
-        page_events.extend(extract_vera_programme_events(html, final_url, normalized_site, "Website"))
+        if "vera-groningen.nl" in canonical_host(normalized_site):
+            # Avoid generic/news parsing for VERA: it can mistake old news articles for events.
+            page_events = extract_vera_programme_events(html, final_url, normalized_site, "Website")
+        else:
+            page_events = parse_page_events(html, final_url, normalized_site, "Website")
         page_events = dedupe_events(page_events)
         feed_urls.extend(discover_feed_urls(html, final_url, normalized_site))
         if "visitgroningen.nl" in canonical_host(normalized_site) and "/wandelen" in urlparse(final_url).path.lower():
@@ -1511,7 +1514,31 @@ def scrape_site(site_url, site_index=0, site_total=0):
         except Exception as exc:
             add_raw(discovery_source, original_site, "Detailpagina mislukt", "", detail_url, "fout", str(exc))
 
-    unique = dedupe_events(events)[:MAX_EVENTS_PER_SITE]
+    unique = dedupe_events(events)
+    # Treat the selected start date as an inclusive lower bound. If no date was selected,
+    # default to today so historical editorial posts are never shown as upcoming events.
+    try:
+        date_from = date.fromisoformat(INPUT_DATE_FROM[:10]) if INPUT_DATE_FROM else TODAY
+    except ValueError:
+        date_from = TODAY
+    try:
+        date_to = date.fromisoformat(INPUT_DATE_TO[:10]) if INPUT_DATE_TO and INPUT_DATE_TO[:10] != "9999-12-31" else None
+    except ValueError:
+        date_to = None
+    before_date_filter = len(unique)
+    filtered = []
+    for event in unique:
+        try:
+            event_day = date.fromisoformat(str(event.get("date", ""))[:10])
+        except ValueError:
+            continue
+        if event_day < date_from or (date_to and event_day > date_to):
+            continue
+        filtered.append(event)
+    if before_date_filter != len(filtered):
+        add_raw("Filter", original_site, "Datumfilter toegepast", date_from.isoformat(), normalized_site, "ok",
+                f"{before_date_filter} gevonden; {len(filtered)} binnen {date_from.isoformat()} t/m {date_to.isoformat() if date_to else 'onbeperkt'}")
+    unique = filtered[:MAX_EVENTS_PER_SITE]
     duration = round(time.monotonic() - started, 2)
     SITE_RESULTS.append(
         {
@@ -1685,7 +1712,10 @@ def main():
     if not INPUT_CLEAR_ARCHIVE:
         for event in previous_all:
             host = canonical_host(event.get("website", ""))
-            if host not in selected_hosts or (host in selected_hosts and not any(canonical_host(item.get("website", "")) == host for item in scraped_events)):
+            # Retain old data only when the selected source could not be fetched at all.
+            # A successful scrape with zero events in the selected date range must remove
+            # stale/historical events from that selected source instead of preserving them.
+            if host not in selected_hosts or (host in selected_hosts and host not in successful_hosts):
                 retained_previous.append(event)
     active_events = dedupe_events([*scraped_events, *retained_previous])
     active_keys = {event_key(event) for event in active_events}
