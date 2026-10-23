@@ -1707,7 +1707,14 @@ def scrape_site(site_url, site_index=0, site_total=0, progress_callback=None):
         discovery_source = "SerpAPI" if detail_url in serp_links else "Website"
         try:
             html, final_url = fetch_html(session, detail_url, deadline)
-            detail_events = parse_page_events(html, final_url, normalized_site, discovery_source)
+            if canonical_host(normalized_site) == "martiniplaza.nl":
+                # Detail pages contain many dated links (showtimes, ticket buttons,
+                # navigation and price labels). Extract only the page's main event.
+                detail_soup = BeautifulSoup(html, "html.parser")
+                detail_event = extract_detail_event(detail_soup, final_url, normalized_site, discovery_source)
+                detail_events = [detail_event] if detail_event else []
+            else:
+                detail_events = parse_page_events(html, final_url, normalized_site, discovery_source)
             before = len(dedupe_events(events))
             events.extend(detail_events)
             after = len(dedupe_events(events))
