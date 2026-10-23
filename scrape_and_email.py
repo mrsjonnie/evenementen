@@ -1286,9 +1286,15 @@ def start_urls_for_site(site_url):
     parsed = urlparse(exact)
     host = canonical_host(exact)
     if "vera-groningen.nl" in host:
-        # VERA's homepage/news archive contains old editorial posts that look like events.
-        # Scrape only the current programme listing, which is the source of real event dates.
-        return [urljoin(exact, "/programma/")]
+        # VERA's programme is paginated. The first page has a limited number of events,
+        # so fetch the next pages too when a larger per-site limit (e.g. 30) is requested.
+        # The date filter below still removes past events from every page.
+        base = f"{parsed.scheme}://{parsed.netloc}"
+        return [
+            urljoin(base, "/programma/?category=all&history=0&lang=nl"),
+            urljoin(base, "/programma/page/2/?category=all&history=0&lang=nl"),
+            urljoin(base, "/programma/page/3/?category=all&history=0&lang=nl"),
+        ]
     if host == "groningen.uitloper.nu":
         # Uitloper shows one selected date per page. Start on the requested date and
         # advance day by day until the configured event limit is reached.
