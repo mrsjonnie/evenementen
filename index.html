@@ -1286,7 +1286,7 @@
   </div>
 
   <script>
-    const APP_VERSION = "2026.10.23.19";
+    const APP_VERSION = "2026.10.23.20";
     const DEFAULT_MAX_EVENTS_PER_SITE = 20;
     const DEFAULT_SITE_TIME_LIMIT_SECONDS = 20;
     const SCAN_SETTINGS_KEY = "eventScanSettingsV1";
@@ -2252,7 +2252,7 @@
         const elapsedSeconds = Math.floor((Date.now() - startedAt) / 1000);
         const liveNewCount = events.filter(isNewEvent).length;
         const liveExistingCount = Math.max(0, events.length - liveNewCount);
-        showStatus(`Live verversen: ${elapsedSeconds}s verstreken; ${events.length} evenementen (${liveNewCount} nieuw, ${liveExistingCount} bestaand). Voortgang wordt iedere seconde gecontroleerd.`, "warn", { stop: true });
+        showStatus(`Live verversen: ${elapsedSeconds}s verstreken; ${events.length} evenementen (${liveNewCount} nieuw, ${liveExistingCount} bestaand). Maximaal 10 minuten; controle iedere seconde.`, "warn", { stop: true });
         const shouldContinue = await waitUnlessStopped(intervalMs);
         if (!shouldContinue) {
           showStatus("Controle gestopt. De update kan nog doorlopen; probeer later opnieuw.", "warn");
