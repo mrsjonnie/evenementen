@@ -1148,7 +1148,6 @@
             <option value="tomorrow">Morgen</option>
             <option value="specificDay">Specifieke dag</option>
             <option value="always">Altijd</option>
-            <option value="alwaysFromToday">Altijd vanaf vandaag</option>
             <option value="thisWeekend">Dit weekend</option>
             <option value="nextWeekend">Volgend weekend</option>
             <option value="alwaysFromToday" selected>Altijd vanaf vandaag</option>
@@ -1606,11 +1605,11 @@
     }
 
     function refreshDateWindow() {
-      const mode = $("periodMode")?.value || "threeDays";
+      const mode = $("periodMode")?.value || "alwaysFromToday";
       const today = formatDate(new Date());
       const start = ["always", "alwaysFromToday"].includes(mode) ? today : (dateFrom || $("dateSingle").value || today);
       let end = dateTo || start;
-      if (mode === "alwaysFromToday") end = addDays(start, 365);
+      if (mode === "alwaysFromToday") end = "9999-12-31";
       else if (mode === "threeDays") end = addDays(start, 2);
       else if (mode === "week") end = addDays(start, 6);
       else if (!end || end < start || end === "9999-12-31") end = start;
@@ -3541,7 +3540,7 @@
     const today = formatDate(new Date());
     setSidebarOpen(true);
     $("dateSingle").value = today;
-    $("periodMode").value = "threeDays";
+    $("periodMode").value = "alwaysFromToday";
     dateFrom = today;
     dateTo = addDays(today, 2);
     const savedPerPage = Number(localStorage.getItem(PER_PAGE_KEY));
