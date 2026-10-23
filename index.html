@@ -82,7 +82,8 @@
       cursor: pointer;
     }
 
-    .titleChevron { display:none; }
+    .titleChevron { display:inline-block; font-size:.78em; opacity:.8; transition:transform .15s ease; }
+    .titleToggle[aria-expanded="true"] .titleChevron { transform:rotate(180deg); }
 
     .titlePanel {
       display: none;
@@ -527,6 +528,12 @@
     .siteList span {
       overflow-wrap: anywhere;
     }
+    .customSiteAdder { padding:10px; border-top:1px solid var(--line); background:#101925; }
+    .customSiteRow { display:grid; grid-template-columns:minmax(0,1fr) auto; gap:6px; align-items:center; }
+    .customSiteRow input { height:38px; font-size:.82rem; }
+    .customSiteRow .btn { min-height:38px; padding:0 10px; }
+    .customSiteHint { margin:6px 0 0; color:var(--muted); font-size:.74rem; line-height:1.35; }
+    .customSiteAdder .status { margin-top:7px; max-width:none; }
 
     .siteActions {
       display: flex;
@@ -1048,12 +1055,9 @@
         <h1>
           <button class="titleToggle" id="titleToggle" type="button" aria-expanded="false">
             <span id="pageTitle">Evenementen rond Groningen</span>
+            <span class="titleChevron" aria-hidden="true">v</span>
           </button>
         </h1>
-        <p class="subtitle" id="pageSubtitle">Vind snel wat er te doen is, filter op datum en type, en ververs de lijst wanneer je nieuwe resultaten wilt ophalen.</p>
-        <div class="headerActions" aria-label="Weergavebediening">
-          <button class="btn btnSecondary filterSidebarToggle" id="filterSidebarToggle" type="button" aria-controls="filterSidebar" aria-expanded="false">Filters tonen</button>
-        </div>
         <div class="titlePanel" id="titlePanel">
           <div class="titlePanelContent">
             <span class="versionBadge" id="versionBadge">Versie wordt geladen</span>
@@ -1067,6 +1071,10 @@
             <summary id="rawLogSummary">Ruwe verversdata</summary>
             <div class="rawLogTableWrap" id="rawLogTableWrap"></div>
           </details>
+        </div>
+        <p class="subtitle" id="pageSubtitle">Vind snel wat er te doen is, filter op datum en type, en ververs de lijst wanneer je nieuwe resultaten wilt ophalen.</p>
+        <div class="headerActions" aria-label="Weergavebediening">
+          <button class="btn btnSecondary filterSidebarToggle" id="filterSidebarToggle" type="button" aria-controls="filterSidebar" aria-expanded="false">Filters tonen</button>
         </div>
       </div>
       <div class="heroSide">
@@ -1161,6 +1169,15 @@
             <div class="sitePanel">
               <div class="sitePanelHeader">Selecteer websites om te scannen en filteren.</div>
               <div class="siteList" id="sitesList"></div>
+              <div class="customSiteAdder">
+                <label class="siteSelectLabel" for="customSiteUrl">Website toevoegen aan scraper</label>
+                <div class="customSiteRow">
+                  <input id="customSiteUrl" type="url" placeholder="https://voorbeeld.nl/agenda" autocomplete="url">
+                  <button class="btn btnPrimary" id="addCustomSiteBtn" type="button">Toevoegen</button>
+                </div>
+                <p class="customSiteHint">De website wordt lokaal bewaard, standaard aangevinkt en bij de volgende verversing meegestuurd naar de scraper.</p>
+                <div class="status" id="customSiteStatus" aria-live="polite"></div>
+              </div>
               <div class="siteActions">
                 <button class="btn btnSecondary" id="allSitesBtn" type="button">Alles</button>
                 <button class="btn btnSecondary" id="noSitesBtn" type="button">Geen</button>
@@ -1224,10 +1241,11 @@
   </div>
 
   <script>
-    const APP_VERSION = "2026.10.23.02";
+    const APP_VERSION = "2026.10.23.03";
     const DEFAULT_MAX_EVENTS_PER_SITE = 20;
     const DEFAULT_SITE_TIME_LIMIT_SECONDS = 20;
     const SCAN_SETTINGS_KEY = "eventScanSettingsV1";
+    const CUSTOM_SITES_KEY = "evenementenCustomSitesV1";
     const SPOT_ONLY_SITE = "https://www.spotgroningen.nl/programma/";
     const WORKER_URL = "https://evenementen-refresh.mrsjonnie.workers.dev";
     const PER_PAGE_KEY = "evenementenPerPage";
@@ -1421,6 +1439,50 @@
       try {
         localStorage.setItem(key, JSON.stringify([...values]));
       } catch {}
+    }
+
+    function loadCustomSites() {
+      try {
+        const stored = JSON.parse(localStorage.getItem(CUSTOM_SITES_KEY) || "[]");
+        return mergeSites(Array.isArray(stored) ? stored : []);
+      } catch {
+        return [];
+      }
+    }
+
+    function saveCustomSites(values) {
+      const custom = mergeSites(values);
+      try { localStorage.setItem(CUSTOM_SITES_KEY, JSON.stringify(custom)); } catch {}
+      return custom;
+    }
+
+    function setCustomSiteStatus(message, kind = "warn") {
+      const status = $("customSiteStatus");
+      status.textContent = message;
+      status.className = "status show " + kind;
+    }
+
+    function addCustomSite() {
+      const input = $("customSiteUrl");
+      const normalized = normalizeSiteInput(input.value);
+      if (!normalized) {
+        setCustomSiteStatus("Vul een geldige website in die met http:// of https:// bereikbaar is.", "error");
+        return;
+      }
+      const host = hostFromUrl(normalized);
+      const key = normalized.toLowerCase().replace(/\/$/, "");
+      if (sites.some((site) => normalizeSiteInput(site).toLowerCase().replace(/\/$/, "") === key)) {
+        setCustomSiteStatus("Deze website staat al in de lijst.", "warn");
+        return;
+      }
+      const selected = new Set([...document.querySelectorAll(".siteCheck:checked")].map((check) => check.value));
+      saveCustomSites([...loadCustomSites(), normalized]);
+      sites = mergeSites([...sites, normalized]);
+      selected.add(normalized);
+      renderSites(selected);
+      updateSiteCount();
+      input.value = "";
+      setCustomSiteStatus(host + " toegevoegd en aangevinkt. Klik op ‘Ververs data’ om deze website te scrapen.", "ok");
     }
 
     function clampNumber(value, fallback, min, max) {
@@ -2197,9 +2259,14 @@
         if (radiusKm > 0 && eventKm > radiusKm) return false;
         return true;
       });
-      const types = [...new Set([...activeEvents.map((event) => displayType(event.type || "").trim()).filter((type) => type && type !== "Aanbiedingen"), "Aanbiedingen"])]
+      const observedTypes = [...new Set(activeEvents.map((event) => displayType(event.type || "").trim()).filter(Boolean))];
+      const hasTodayOffers = activeEvents.some((event) =>
+        displayType(event.type || "").toLowerCase() === "aanbiedingen" ||
+        /(^|\.)(socialdeal\.nl|groupon\.nl|ibood\.com)$/.test(hostFromUrl(event.website))
+      );
+      const types = observedTypes.filter((type) => type.toLowerCase() !== "aanbiedingen")
         .sort((a, b) => a.localeCompare(b, "nl"));
-      types.push(types.splice(types.indexOf("Aanbiedingen"), 1)[0]);
+      if (hasTodayOffers) types.push("Aanbiedingen");
 
       $("typeFilter").innerHTML = [
         '<option value="all">Alle types</option>',
@@ -2366,6 +2433,9 @@
 
     function matchesDate(event) {
       const mode = $("periodMode").value;
+      const isOffer = displayType(event.type || "").toLowerCase() === "aanbiedingen" ||
+        /(^|\.)(socialdeal\.nl|groupon\.nl|ibood\.com)$/.test(hostFromUrl(event.website));
+      if (isOffer) return /^\d{4}-\d{2}-\d{2}$/.test(event.date || "") && event.date === formatDate(new Date());
       if (mode === "always") return true;
       if (event.isPermanent) return true;
       if (!/^\d{4}-\d{2}-\d{2}$/.test(event.date || "")) return true;
@@ -3047,7 +3117,7 @@
       expandedEventKeys = new Set();
       $("collapseBtn").textContent = "Details uitklappen";
       collapseAllGroups();
-      sites = mergeSites(loaded[1]);
+      sites = mergeSites([...loaded[1], ...loadCustomSites()]);
       applyScanSettings();
       const currentKeys = eventKeySet(events);
       const detectedNew = knownKeys.size ? [...currentKeys].filter((key) => !knownKeys.has(key)) : [];
@@ -3255,6 +3325,13 @@
 
     $("providerButton").addEventListener("click", () => toggleSelect("providerSelect", "providerButton"));
     $("siteButton").addEventListener("click", () => toggleSelect("siteSelect", "siteButton"));
+    $("addCustomSiteBtn").addEventListener("click", addCustomSite);
+    $("customSiteUrl").addEventListener("keydown", (event) => {
+      if (event.key === "Enter") {
+        event.preventDefault();
+        addCustomSite();
+      }
+    });
     function setSidebarOpen(isOpen) {
       const sidebar = $("filterSidebar");
       const layout = $("pageLayout");
@@ -3308,7 +3385,6 @@
       const panel = $("titlePanel");
       const isOpen = panel.classList.toggle("open");
       $("titleToggle").setAttribute("aria-expanded", String(isOpen));
-      document.querySelector(".titleChevron").textContent = isOpen ? "^" : "v";
     });
     document.addEventListener("click", (event) => {
       [
