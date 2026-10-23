@@ -1454,7 +1454,8 @@ def scrape_site(site_url, site_index=0, site_total=0):
         else:
             page_events = parse_page_events(html, final_url, normalized_site, "Website")
         page_events = dedupe_events(page_events)
-        feed_urls.extend(discover_feed_urls(html, final_url, normalized_site))
+        if "vera-groningen.nl" not in canonical_host(normalized_site):
+            feed_urls.extend(discover_feed_urls(html, final_url, normalized_site))
         if "visitgroningen.nl" in canonical_host(normalized_site) and "/wandelen" in urlparse(final_url).path.lower():
             page_events.extend(extract_visitgroningen_walks(html, final_url, normalized_site))
         if "ibood.com" in canonical_host(normalized_site):
@@ -1464,7 +1465,10 @@ def scrape_site(site_url, site_index=0, site_total=0):
                 add_raw("Website", original_site, "iBOOD-aanbiedingen gevonden", TODAY.isoformat(), final_url, "ok", f"{len(offers)} online aanbiedingen")
         events.extend(page_events)
         add_raw("Website", original_site, "Pagina geanalyseerd", "", final_url, "ok", f"{len(page_events)} events/aanbiedingen op deze pagina")
-        detail_links.extend(collect_event_links(html, final_url, normalized_site))
+        # VERA's programme parser already returns one clean record per event card.
+        # Crawling every linked detail page with generic heuristics creates false events.
+        if "vera-groningen.nl" not in canonical_host(normalized_site):
+            detail_links.extend(collect_event_links(html, final_url, normalized_site))
 
     # Verwerk gevonden openbare feeds rechtstreeks; dit vereist geen API-key of AI.
     for feed_url in unique_urls(feed_urls):
@@ -1723,7 +1727,14 @@ def main():
     if INPUT_CLEAR_ARCHIVE:
         archive = []
     else:
-        preserved = [event for event in previous_all if event_key(event) not in active_keys]
+        preserved = [
+            event for event in previous_all
+            if event_key(event) not in active_keys
+            and not (
+                canonical_host(event.get("website", "")) in selected_hosts
+                and canonical_host(event.get("website", "")) in successful_hosts
+            )
+        ]
         archive = dedupe_events(preserved)[:1000]
 
     save_payload(active_events, archive, previous_all_keys)
