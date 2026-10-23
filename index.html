@@ -1243,7 +1243,7 @@
   </div>
 
   <script>
-    const APP_VERSION = "2026.10.23.06";
+    const APP_VERSION = "2026.10.23.07";
     const DEFAULT_MAX_EVENTS_PER_SITE = 20;
     const DEFAULT_SITE_TIME_LIMIT_SECONDS = 20;
     const SCAN_SETTINGS_KEY = "eventScanSettingsV1";
@@ -2115,6 +2115,17 @@
       return normalizeEventsPayload(data);
     }
 
+    async function fetchScrapeProgress() {
+      try {
+        const response = await fetch(`https://raw.githubusercontent.com/mrsjonnie/evenementen/main/scrape-progress.json?_=${Date.now()}`, { cache: "no-store" });
+        if (!response.ok) return null;
+        const data = await response.json();
+        return data && typeof data === "object" && data.runId ? data : null;
+      } catch {
+        return null;
+      }
+    }
+
     async function loadEventsWithMeta(fallback) {
       try {
         return await fetchEventsPayload();
@@ -2180,6 +2191,29 @@
         }
 
         try {
+          const progress = await fetchScrapeProgress();
+          if (progress && progress.runId && progress.runId !== options.previousProgressRunId && Number(progress.completedCount) > 0) {
+            const shownRunId = progress.runId;
+            const previousShown = Number(options.lastProgressCount || 0);
+            const completed = Number(progress.completedCount) || 0;
+            if (completed > previousShown) {
+              options.lastProgressCount = completed;
+              if (Array.isArray(progress.events) && progress.events.length) {
+                events = mergeVerifiedEvents([...events, ...progress.events]);
+                latestSiteResults = Array.isArray(progress.siteResults) ? progress.siteResults : latestSiteResults;
+                latestRawLog = Array.isArray(progress.rawLog) ? progress.rawLog : latestRawLog;
+                fillTypes();
+                renderSites(checkedSites());
+                renderRawLog();
+                applyFilters();
+              }
+              const site = cleanText(progress.lastCompletedSite || progress.completedSites?.[completed - 1] || "website");
+              const eventCount = Number(progress.lastSiteEventCount) || 0;
+              const detail = `Bron afgerond: ${site} (${completed}/${Number(progress.totalSites) || completed}). Deze bron leverde ${eventCount} evenementen op; ${Array.isArray(progress.events) ? progress.events.length : 0} in totaal tot nu toe.`;
+              addLiveLog("Scraper", site, "Website afgerond", "klaar", detail);
+              showStatus(detail + " De resultaten worden tussentijds getoond terwijl de overige websites doorgaan.", "ok", { stop: true });
+            }
+          }
           const freshPayload = await fetchEventsPayload();
           const hasFreshEvents = Array.isArray(freshPayload.events) && freshPayload.events.length > 0;
           const changed = (freshPayload.updatedAt && freshPayload.updatedAt !== previousUpdatedAt) || eventSignature(freshPayload.events) !== previousSignature;
@@ -2893,7 +2927,7 @@
         const rateLimited = workerRows.some((row) => /429|rate.?limit|rate_limited/i.test(JSON.stringify(row)));
         const rateLimitNote = rateLimited ? " Een AI-/zoekbron meldt HTTP 429 (rate limit); die bron heeft tijdelijk te veel verzoeken ontvangen." : "";
         showStatus(`Verversverzoek geaccepteerd. ${prefix}${rateLimitNote} Ik controleer of events.json echt wordt bijgewerkt.`, "warn", { stop: true });
-        await waitForUpdatedEvents(previousSignature, previousKeys, foundCount, { intervalMs: 5000 });
+        await waitForUpdatedEvents(previousSignature, previousKeys, foundCount, { intervalMs: 5000, previousProgressRunId: previousProgress?.runId || "", lastProgressCount: 0 });
       } catch (error) {
         const prefix = Number.isFinite(foundCount) ? `${foundText(foundCount)} gevonden.` : "";
         showStatus(`${prefix} Starten mislukt: ${error.message}`.trim(), "error");
