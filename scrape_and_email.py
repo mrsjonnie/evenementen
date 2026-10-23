@@ -1116,6 +1116,73 @@ def extract_uitloper_events(html, page_url, site_url, discovery_source):
     return dedupe_events(events)
 
 
+def extract_venue_agenda_events(html, page_url, site_url, discovery_source):
+    """Extract dated event cards from MartiniPlaza and SPOT programme listings."""
+    host = canonical_host(site_url)
+    if host not in {"martiniplaza.nl", "spotgroningen.nl"}:
+        return []
+
+    soup = BeautifulSoup(html, "html.parser")
+    events = []
+    seen = set()
+    for anchor in soup.find_all("a", href=True):
+        url = normalized_url(anchor.get("href"), page_url)
+        if not url or not same_host(url, site_url) or BAD_URL_RE.search(url):
+            continue
+        title = clean_title(anchor.get_text(" ", strip=True) or anchor.get("aria-label") or anchor.get("title") or "")
+        if not title_is_usable(title) or len(title) < 3:
+            continue
+
+        card = anchor
+        card_text = clean_text(anchor.get_text(" ", strip=True))
+        event_date = parse_date_text(card_text)
+        for parent in anchor.parents:
+            if getattr(parent, "name", None) in {"body", "html"}:
+                break
+            candidate_text = clean_text(parent.get_text(" ", strip=True))
+            candidate_date = parse_date_text(candidate_text)
+            if not candidate_date:
+                compact_date = re.search(
+                    rf"\\b(?:{WEEKDAY_PATTERN})\\.?\\s*(\\d{{1,2}})\\s*({MONTH_PATTERN})(?:\\s*(20\\d{{2}}))?\\b",
+                    candidate_text,
+                    re.I,
+                )
+                if compact_date:
+                    month_num = MONTH_NUMBERS.get(compact_date.group(2).lower())
+                    candidate_date = iso_from_parts(compact_date.group(1), month_num, compact_date.group(3)) if month_num else ""
+            if candidate_date:
+                card, card_text, event_date = parent, candidate_text, candidate_date
+                break
+
+        if not event_date or len(card_text) > 1800:
+            continue
+        description = description_from_lines(split_lines(card), title)
+        raw = {
+            "date": event_date,
+            "title": title,
+            "type": classify_type(card_text, host),
+            "location": host_default_location(site_url),
+            "website": url,
+            "description": description,
+            "image": first_image(card, page_url),
+            "time": first_time(card_text),
+            "cost": first_price(card_text),
+            "discoverySource": discovery_source,
+        }
+        event = normalize_event(raw, site_url)
+        if not event:
+            continue
+        key = (event["date"], re.sub(r"[^a-z0-9]+", " ", event["title"].lower()).strip(), event["website"])
+        if key in seen:
+            continue
+        seen.add(key)
+        events.append(event)
+        add_raw(discovery_source, site_url, event["title"], event["date"], event["website"], "venue-agenda kaart", card_text)
+
+    add_raw("Parser", site_url, "Agenda geanalyseerd", "", page_url, "gespecialiseerde parser", f"{len(events)} agenda-items gevonden")
+    return dedupe_events(events)
+
+
 def parse_page_events(html, page_url, site_url, discovery_source):
     soup = BeautifulSoup(html, "html.parser")
     events = []
@@ -1216,6 +1283,10 @@ def start_urls_for_site(site_url):
             timestamp = int(datetime(day.year, day.month, day.day, 12, 0, tzinfo=timezone.utc).timestamp())
             urls.append(f"{exact.rstrip('/')}?date={timestamp}")
         return urls
+    if host == "martiniplaza.nl":
+        return [urljoin(exact, "/nl/agenda")]
+    if host == "spotgroningen.nl":
+        return [urljoin(exact, "/programma")]
     urls = [exact]
     if "ibood.com" in host:
         # The current Dutch storefront uses this path; the root redirects here.
@@ -1538,6 +1609,8 @@ def scrape_site(site_url, site_index=0, site_total=0):
             page_events = extract_vera_programme_events(html, final_url, normalized_site, "Website")
         elif canonical_host(normalized_site) == "groningen.uitloper.nu":
             page_events = extract_uitloper_events(html, final_url, normalized_site, "Website")
+        elif canonical_host(normalized_site) in {"martiniplaza.nl", "spotgroningen.nl"}:
+            page_events = extract_venue_agenda_events(html, final_url, normalized_site, "Website")
         else:
             page_events = parse_page_events(html, final_url, normalized_site, "Website")
         page_events = dedupe_events(page_events)
