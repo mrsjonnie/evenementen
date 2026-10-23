@@ -1274,7 +1274,7 @@
   </div>
 
   <script>
-    const APP_VERSION = "2026.10.23.11";
+    const APP_VERSION = "2026.10.23.12";
     const DEFAULT_MAX_EVENTS_PER_SITE = 60;
     const DEFAULT_SITE_TIME_LIMIT_SECONDS = 45;
     const SCAN_SETTINGS_KEY = "eventScanSettingsV2";
@@ -2843,6 +2843,7 @@
       const region = $("region").value.trim();
       if (!region || !dateFrom || !dateTo) {
         $("weatherBox").innerHTML = "";
+        loadRainChart();
         return;
       }
 
@@ -3127,6 +3128,7 @@
       $("search").value = "";
       $("region").value = "Groningen";
       $("radius").value = "0";
+      try { localStorage.setItem(RADIUS_FILTER_KEY, "0"); localStorage.setItem(REGION_FILTER_KEY, "Groningen"); } catch {}
       $("periodMode").value = "todayWeekend";
       $("typeFilter").value = "all";
       $("costFilter").value = "all";
