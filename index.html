@@ -1274,7 +1274,7 @@
   </div>
 
   <script>
-    const APP_VERSION = "2026.10.23.10";
+    const APP_VERSION = "2026.10.23.11";
     const DEFAULT_MAX_EVENTS_PER_SITE = 60;
     const DEFAULT_SITE_TIME_LIMIT_SECONDS = 45;
     const SCAN_SETTINGS_KEY = "eventScanSettingsV2";
@@ -2197,29 +2197,29 @@
       if (!target) return;
       const sourceNames = ["iBOOD", "Social Deal", "Groupon"];
       try {
-        const response = await fetch(\`./deals.json?v=\${Date.now()}\`, { cache: "no-store" });
+        const response = await fetch(`./deals.json?v=${Date.now()}`, { cache: "no-store" });
         if (!response.ok) throw new Error("Deals niet beschikbaar");
         const data = await response.json();
         const offers = (Array.isArray(data.offers) ? data.offers : []).filter((offer) => {
           const title = cleanText(offer.title || "");
           const url = cleanText(offer.url || "");
-          const text = \`\${title} \${offer.description || ""} \${url}\`.toLowerCase();
-          if (!title || /^https?:\\/\\//i.test(title) || title.length < 5) return false;
-          if (/trustpilot|google\\.com\\/maps|play\\.google\\.com|apps\\.apple\\.com|\\breviews?\\b|beoordelingen|machine-readable information|availability instructions|every deal|\\/tag\\/(?:popular|favorite|food|events)\\/?/i.test(text)) return false;
+          const text = `${title} ${offer.description || ""} ${url}`.toLowerCase();
+          if (!title || /^https?:\/\//i.test(title) || title.length < 5) return false;
+          if (/trustpilot|google\.com\/maps|play\.google\.com|apps\.apple\.com|\breviews?\b|beoordelingen|machine-readable information|availability instructions|every deal|\/tag\/(?:popular|favorite|food|events)\/?/i.test(text)) return false;
           if (url && title.toLowerCase() === url.toLowerCase()) return false;
           return Boolean(safeUrl(url, { website: true }));
         });
         target.innerHTML = sourceNames.map((source, index) => {
           const sourceOffers = offers.filter((offer) => cleanText(offer.source).toLowerCase() === source.toLowerCase());
-          const groupId = \`dealGroup\${index}\`;
+          const groupId = `dealGroup${index}`;
           const content = sourceOffers.length ? sourceOffers.map((offer) => {
             const url = safeUrl(offer.url, { website: true });
-            return \`<article class="dealOffer"><div class="dealOfferSource">\${escapeHtml(source)}</div><a href="\${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">\${escapeHtml(offer.title)}</a>\${offer.price ? \`<strong>\${escapeHtml(offer.price)}</strong>\` : ""}<p>\${escapeHtml(offer.description || "")}</p></article>\`;
+            return `<article class="dealOffer"><div class="dealOfferSource">${escapeHtml(source)}</div><a href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(offer.title)}</a>${offer.price ? `<strong>${escapeHtml(offer.price)}</strong>` : ""}<p>${escapeHtml(offer.description || "")}</p></article>`;
           }).join("") : '<p class="dealEmpty">Geen bruikbare aanbiedingen gevonden. De bronlink blijft beschikbaar.</p>';
-          return \`<section class="offerGroup"><div class="offerTypeHeader"><button type="button" class="offerGroupToggle" data-group="\${groupId}" aria-expanded="true">Aanbiedingen \${escapeHtml(source)}</button><span>\${sourceOffers.length} aanbiedingen</span></div><div class="dealOffers offerGroupContent" id="\${groupId}">\${content}</div></section>\`;
+          return `<section class="offerGroup"><div class="offerTypeHeader"><button type="button" class="offerGroupToggle" data-group="${groupId}" aria-expanded="true">Aanbiedingen ${escapeHtml(source)}</button><span>${sourceOffers.length} aanbiedingen</span></div><div class="dealOffers offerGroupContent" id="${groupId}">${content}</div></section>`;
         }).join("");
       } catch {
-        target.innerHTML = sourceNames.map((source) => \`<section class="offerGroup"><div class="offerTypeHeader">Aanbiedingen \${escapeHtml(source)}</div><p class="dealEmpty">Aanbiedingen konden niet worden geladen.</p></section>\`).join("");
+        target.innerHTML = sourceNames.map((source) => `<section class="offerGroup"><div class="offerTypeHeader">Aanbiedingen ${escapeHtml(source)}</div><p class="dealEmpty">Aanbiedingen konden niet worden geladen.</p></section>`).join("");
       }
     }
 
@@ -2812,7 +2812,7 @@
           minutely_15: "precipitation", forecast_minutely_15: "8",
           hourly: "precipitation", forecast_hours: "3", timezone: "Europe/Amsterdam"
         });
-        const response = await fetch(\`https://api.open-meteo.com/v1/forecast?\${params.toString()}\`, { cache: "no-store" });
+        const response = await fetch(`https://api.open-meteo.com/v1/forecast?${params.toString()}`, { cache: "no-store" });
         if (!response.ok) throw new Error("Regenverwachting niet beschikbaar");
         const data = await response.json();
         let times = data?.minutely_15?.time || [];
@@ -2830,12 +2830,12 @@
           const width = Math.max(4, Math.min(28, step * .56));
           const time = point.time.toLocaleTimeString("nl-NL", { hour: "2-digit", minute: "2-digit" });
           const mm = point.value.toLocaleString("nl-NL", { maximumFractionDigits: 1 });
-          return \`<rect x="\${x.toFixed(1)}" y="\${(49-height).toFixed(1)}" width="\${width.toFixed(1)}" height="\${height.toFixed(1)}" rx="3" fill="\${point.value > .2 ? "#53b6d2" : "#71869a"}"><title>\${time}: \${mm} mm</title></rect>\`;
+          return `<rect x="${x.toFixed(1)}" y="${(49-height).toFixed(1)}" width="${width.toFixed(1)}" height="${height.toFixed(1)}" rx="3" fill="${point.value > .2 ? "#53b6d2" : "#71869a"}"><title>${time}: ${mm} mm</title></rect>`;
         }).join("");
         const first = points[0].time.toLocaleTimeString("nl-NL", { hour: "2-digit", minute: "2-digit" });
         const last = points[points.length - 1].time.toLocaleTimeString("nl-NL", { hour: "2-digit", minute: "2-digit" });
         const total = points.reduce((sum, point) => sum + point.value, 0);
-        target.innerHTML = \`<div class="rainChartTitle"><span>Regen komende 2 uur</span><span>\${total.toLocaleString("nl-NL",{maximumFractionDigits:1})} mm</span></div><svg viewBox="0 0 500 54" role="img" aria-label="Neerslag van \${first} tot \${last}">\${bars}<line x1="4" y1="50" x2="496" y2="50" stroke="rgba(255,255,255,.28)" stroke-width="1"/></svg><div class="rainChartLabels"><span>\${first}</span><span>\${last}</span></div>\`;
+        target.innerHTML = `<div class="rainChartTitle"><span>Regen komende 2 uur</span><span>${total.toLocaleString("nl-NL",{maximumFractionDigits:1})} mm</span></div><svg viewBox="0 0 500 54" role="img" aria-label="Neerslag van ${first} tot ${last}">${bars}<line x1="4" y1="50" x2="496" y2="50" stroke="rgba(255,255,255,.28)" stroke-width="1"/></svg><div class="rainChartLabels"><span>${first}</span><span>${last}</span></div>`;
       } catch { target.innerHTML = '<span>Regenverwachting tijdelijk niet beschikbaar.</span>'; }
     }
 
@@ -2897,12 +2897,12 @@
       const names = { mistral: "Mistral", openai: "ChatGPT", perplexity: "Perplexity", serpapi: "SerpAPI" };
       const messages = [];
       try {
-        const response = await fetch(\`\${WORKER_URL}/health?_=\${Date.now()}\`, { cache: "no-store" });
+        const response = await fetch(`${WORKER_URL}/health?_=${Date.now()}`, { cache: "no-store" });
         if (!response.ok) throw new Error("status niet beschikbaar");
         const health = await response.json();
         const keys = { mistral: "mistralConfigured", openai: "chatGptConfigured", perplexity: "perplexityConfigured", serpapi: "serpApiConfigured" };
         Object.keys(keys).forEach((key) => {
-          if (selected[key] && health[keys[key]] === false) messages.push(\`\${names[key]} werkt niet: API-sleutel ontbreekt in Cloudflare.\`);
+          if (selected[key] && health[keys[key]] === false) messages.push(`${names[key]} werkt niet: API-sleutel ontbreekt in Cloudflare.`);
         });
       } catch {
         if (Object.values(selected).some(Boolean)) messages.push("API-status niet bereikbaar; geselecteerde AI-/zoekbronnen zijn niet gecontroleerd.");
@@ -2917,8 +2917,8 @@
       rows.forEach((row) => {
         const status = cleanText(row.status || "").toLowerCase();
         const details = cleanText(row.rawText || row.message || "");
-        if (/(fout|error|failed|mislukt|unauthorized|forbidden|rate.?limit|api.?key)/i.test(\`\${status} \${details}\`)) {
-          messages.push(\`\${cleanText(row.source || "API-bron")} gaf een fout: \${details || status}.\`);
+        if (/(fout|error|failed|mislukt|unauthorized|forbidden|rate.?limit|api.?key)/i.test(`${status} ${details}`)) {
+          messages.push(`${cleanText(row.source || "API-bron")} gaf een fout: ${details || status}.`);
         }
       });
       if (messages.length) setApiInfo(messages);
