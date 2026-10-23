@@ -281,6 +281,12 @@ def detect_scraper_type(site_url):
         return "JSON-LD + detailpagina-crawler"
     if host == "visitgroningen.nl":
         return "Visit Groningen agenda-/routekaarten"
+    if host == "groningermuseum.nl":
+        return "universele tentoonstellings- en activiteitenparser"
+    if host == "kultuuragenda.nl":
+        return "universele detailpagina-parser (Kultuuragenda)"
+    if host == "noorderzon.nl":
+        return "universele programma- en detailpagina-parser"
     if host == "socialdeal.nl":
         return "Social Deal-aanbiedingen"
     if host in {"groupon.nl", "ibood.com"}:
@@ -1982,6 +1988,12 @@ def scrape_site(site_url, site_index=0, site_total=0, progress_callback=None):
             # detail URLs, then parse each detail page.
             page_events = []
             add_raw("Parser", original_site, "Forum detailstrategie", "", final_url, "strategie", "Overzicht overslaan; alleen /nl/agenda/<event> detailpagina's verwerken")
+        elif canonical_host(normalized_site) == "kultuuragenda.nl" and urlparse(final_url).path.rstrip("/").lower() == "/agenda":
+            # De agenda is alleen een linkdirectory: echte activiteiten staan op /agenda/<id>/<slug>.
+            # Voorkom dat algemene labels/kaarttekst als losse evenementen worden opgeslagen.
+            page_events = []
+            add_raw("Parser", original_site, "Kultuuragenda detailstrategie", "", final_url, "strategie",
+                    "Overzicht overslaan; alleen echte /agenda/<id>/<slug> activiteitspagina’s verwerken")
         elif canonical_host(normalized_site) == "paradiso.nl":
             # The landing/agenda page is only a link directory. Never turn its
             # generic heading/summary into an event; individual concert pages are parsed below.
