@@ -501,6 +501,8 @@
     }
 
     .siteList label:hover { background: var(--surface-soft); }
+    .siteList label > span { display:block; min-width:0; overflow-wrap:anywhere; }
+    .siteList label:has(.providerCheck) { grid-template-columns:18px minmax(0,1fr); }
 
     .siteList label.siteFound {
       border: 1px solid #32634b;
@@ -1066,6 +1068,34 @@
       main { padding-inline: 10px; }
     }
 
+
+    /* Header filters: compact dropdown instead of a fixed sidebar. */
+    .hero { position: relative; }
+    .headerFilterBar { max-width: 1360px; margin: 0 auto; padding: 0 16px 10px; }
+    .filterMenuToggle { min-height: 34px; padding: 0 12px; }
+    .hero .toolbar { display: none; position: absolute !important; z-index: 100; top: calc(100% - 2px); left: 50%; right: auto; bottom: auto; transform: translateX(-50%); width: min(1180px, calc(100vw - 24px)); max-height: min(76vh, 760px); overflow-y: auto; padding: 12px; border-radius: 12px; box-shadow: 0 18px 48px rgba(0,0,0,.42); }
+    .hero.filtersOpen .toolbar { display: block; }
+    .hero .filters { grid-template-columns: minmax(150px,1.6fr) minmax(130px,1fr) minmax(90px,.6fr) minmax(140px,1fr) minmax(140px,1fr) minmax(150px,1fr) minmax(110px,.8fr) auto auto; }
+    .hero .secondRow { align-items: center; }
+    .hero .sourcePickers { display: block; }
+    .hero .inlineTools { align-items: center; }
+    .sitePanelHeader { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+    .apiInfoButton { width: 23px; height: 23px; padding: 0; border: 1px solid var(--line); border-radius: 50%; background: var(--surface-soft); color: var(--primary-dark); font-weight: 950; cursor: pointer; flex: 0 0 auto; }
+    .apiInfoPopover { flex-basis: 100%; color: var(--warn); font-weight: 750; }
+    .apiInfoPopover[hidden], .apiInfoButton[hidden] { display: none !important; }
+    .summary { margin-top: 28px; padding-top: 12px; border-top: 1px solid var(--line); font-size: .78rem; }
+    .summary strong { font-size: .88rem; }
+    .rainChart { margin-top: 6px; width: 100%; max-width: 520px; padding: 8px 10px; border: 1px solid rgba(255,255,255,.18); border-radius: 9px; background: rgba(8,18,28,.5); color: rgba(255,255,255,.92); font-size: .72rem; }
+    .rainChartTitle { display:flex; justify-content:space-between; gap:8px; font-weight:850; margin-bottom:4px; }
+    .rainChart svg { display:block; width:100%; height:64px; overflow:visible; }
+    .rainChartLabels { display:flex; justify-content:space-between; color:rgba(255,255,255,.72); font-size:.65rem; }
+    .offerTypeHeader { display:flex; align-items:center; justify-content:space-between; gap:12px; margin:18px 0 8px; padding:12px 14px; border:1px solid #4b647e; border-radius:10px; background:linear-gradient(100deg,#20384b,#182b3c); color:#e8f5ff; font-weight:950; letter-spacing:.01em; }
+    .offerTypeHeader:first-child { margin-top:10px; }
+    .offerTypeHeader button { border:0; background:transparent; color:inherit; font:inherit; cursor:pointer; text-align:left; }
+    .offerGroup[hidden] { display:none; }
+    .dealEmpty { color:var(--muted); font-size:.84rem; }
+    @media (max-width: 1040px) { .hero .filters { grid-template-columns: repeat(3,minmax(0,1fr)); } .hero .filters .field:first-child { grid-column:auto; } }
+    @media (max-width: 680px) { .hero .filters { grid-template-columns: repeat(2,minmax(0,1fr)); } .hero .filters .field:first-child { grid-column:1/-1; } .hero .filters .btn { width:100%; } .heroSide { max-width:100%; } .weather { justify-content:flex-start; } .rainChart { max-width:100%; } }
   </style>
 </head>
 <body>
@@ -1082,6 +1112,7 @@
         <div class="titlePanel" id="titlePanel">
           <div class="titlePanelContent">
             <span class="versionBadge" id="versionBadge">Versie wordt geladen</span>
+            <div class="status" id="status" aria-live="polite"></div>
             <div class="scanSettings" aria-label="Scaninstellingen">
               <label class="scanSetting" for="maxEventsPerSite">Events <input id="maxEventsPerSite" type="number" min="20" max="100" step="1" value="60" inputmode="numeric"></label>
               <label class="scanSetting" for="siteTimeLimitSeconds">Sec <input id="siteTimeLimitSeconds" type="number" min="20" max="60" step="1" value="45" inputmode="numeric"></label>
@@ -1091,12 +1122,9 @@
       </div>
       <div class="heroSide">
         <div class="weather" id="weatherBox" aria-live="polite"></div>
-        <div class="status" id="status" aria-live="polite"></div>
       </div>
     </div>
-  </header>
-
-  <main>
+    <div class="headerFilterBar"><button class="btn btnPrimary filterMenuToggle" id="filterSidebarToggle" type="button" aria-expanded="false">Filters ▾</button></div>
     <section class="toolbar" id="filterSidebar" aria-label="Filters">
       <div class="filters">
         <div class="field">
@@ -1164,7 +1192,7 @@
               <span aria-hidden="true">v</span>
             </button>
             <div class="sitePanel">
-              <div class="sitePanelHeader">Kies websites, kortingssites en AI-bronnen die bij het verversen gebruikt moeten worden. AI-resultaten tonen als bron bijvoorbeeld “AI ChatGPT spotgroningen.nl”. Voor Mistral, ChatGPT en Perplexity zijn API-sleutels in Cloudflare nodig; API-gebruik kan kosten veroorzaken.</div>
+              <div class="sitePanelHeader"><span>Selecteer de bronnen die je wilt scannen.</span><button class="apiInfoButton" id="apiInfoButton" type="button" aria-label="API-bronstatus" title="API-status" hidden>i</button><div class="apiInfoPopover" id="apiInfoPopover" hidden></div></div>
               <div class="siteList" id="sitesList">
                 <div class="sourceGroupLabel">AI-bronnen</div>
                 <label><input class="providerCheck" type="checkbox" id="provMistral" checked> <span>Mistral — analyse webteksten</span></label>
@@ -1185,18 +1213,19 @@
         <div class="inlineTools">
           <input type="checkbox" id="newOnlyFilter" hidden>
           <button class="btn btnSecondary filterToggle" id="newOnlyToggle" type="button" aria-pressed="false">Alleen nieuw <span id="newCountBadge">0</span></button>
-          <button class="btn btnSecondary" id="collapseBtn" type="button">Uitklappen</button>
+          <button class="btn btnSecondary" id="collapseBtn" type="button">Details Evenementen Uitklappen</button>
+          <button class="btn btnSecondary" id="collapseTypesBtn" type="button">Details Typen Uitklappen</button>
         </div>
         <button class="btn btnDanger" id="clearBtn" type="button">Alles verwijderen</button>
       </div>
 
     </section>
-    <button class="btn btnPrimary sidebarToggle" id="filterSidebarToggle" type="button" aria-expanded="false">Filters</button>
+  </header>
 
-      <div class="summary">
-        <strong id="count">Evenementen laden...</strong>
-        <span id="filterBreakdown"></span>
-      </div>
+  <main>
+
+
+
 
     <section class="grid" id="grid" aria-live="polite"></section>
 
@@ -1225,6 +1254,10 @@
         </select>
       </label>
     </nav>
+    <div class="summary">
+        <strong id="count">Evenementen laden...</strong>
+        <span id="filterBreakdown"></span>
+      </div>
   </main>
 
   <div class="confirmOverlay" id="clearConfirm" role="dialog" aria-modal="true" aria-labelledby="clearConfirmTitle">
@@ -1239,7 +1272,7 @@
   </div>
 
   <script>
-    const APP_VERSION = "2026.10.23.5";
+    const APP_VERSION = "2026.10.23.6";
     const DEFAULT_MAX_EVENTS_PER_SITE = 60;
     const DEFAULT_SITE_TIME_LIMIT_SECONDS = 45;
     const SCAN_SETTINGS_KEY = "eventScanSettingsV2";
@@ -2084,7 +2117,7 @@
     async function waitForUpdatedEvents(previousSignature, previousKeys, foundCount = null, options = {}) {
       const previousUpdatedAt = eventsUpdatedAt;
       const requireEvents = Boolean(options.requireEvents);
-      const maxAttempts = Math.max(1, Math.min(18, Number(options.maxAttempts) || 18));
+      const maxAttempts = Math.max(1, Math.min(60, Number(options.maxAttempts) || 60));
       for (let attempt = 1; attempt <= maxAttempts; attempt += 1) {
         const prefix = Number.isFinite(foundCount) ? `${foundText(foundCount)} gevonden.` : foundText(foundCount) + ".";
         showStatus(`${prefix} Lijst controleren (${attempt}/${maxAttempts}).`, "warn", { stop: true });
@@ -2144,7 +2177,7 @@
 
       await loadAll();
       const prefix = Number.isFinite(foundCount) ? `${foundText(foundCount)} gevonden.` : foundText(foundCount) + ".";
-      showStatus(`${prefix} De lijst is nog hetzelfde. Kies eventueel meer websites en probeer opnieuw.`, "warn");
+      showStatus(`${prefix} De update is nog niet klaar. De bestaande lijst blijft staan; controleer het later opnieuw.`, "warn");
       return false;
     }
 
@@ -2321,7 +2354,7 @@
       const selectedSites = selected || new Set(sites);
       const list = $("sitesList");
       const providerStates = new Map([...list.querySelectorAll(".providerCheck")].map((check) => [check.id, check.checked]));
-      const aiMarkup = [...list.querySelectorAll(".sourceGroupLabel, .providerCheck")].map((node) => node.outerHTML).join("");
+      const aiMarkup = [...list.querySelectorAll(".sourceGroupLabel, label:has(.providerCheck)")].map((node) => node.outerHTML).join("");
       list.innerHTML = aiMarkup + sites.map((site) => {
         const count = siteEventCountFor(site);
         const hasResult = count > 0;
@@ -2997,7 +3030,7 @@
       document.querySelectorAll(".siteCheck").forEach((check) => { check.checked = true; });
       cardsCollapsed = true;
       expandedEventKeys = new Set();
-      $("collapseBtn").textContent = "Details uitklappen";
+      $("collapseBtn").textContent = "Details Evenementen Uitklappen";
       updateSiteCount();
       updateProviderCount();
       $("dateSingle").value = formatDate(new Date());
@@ -3009,7 +3042,20 @@
     function toggleCardsCollapsed() {
       cardsCollapsed = !cardsCollapsed;
       expandedEventKeys = new Set();
-      $("collapseBtn").textContent = cardsCollapsed ? "Details uitklappen" : "Details inklappen";
+      $("collapseBtn").textContent = cardsCollapsed ? "Details Evenementen Uitklappen" : "Details Evenementen Inklappen";
+      render();
+    }
+
+    function toggleTypesCollapsed() {
+      const headers = [...document.querySelectorAll(".eventTypeHeader")];
+      if (!headers.length) return;
+      const allCollapsed = headers.every((header) => header.getAttribute("aria-expanded") === "false");
+      headers.forEach((header) => {
+        const key = header.dataset.typeKey || "";
+        if (allCollapsed) collapsedTypeKeys.delete(key);
+        else collapsedTypeKeys.add(key);
+      });
+      $("collapseTypesBtn").textContent = allCollapsed ? "Details Typen Inklappen" : "Details Typen Uitklappen";
       render();
     }
 
@@ -3076,7 +3122,7 @@
       eventsJsonTotalCount = Number.isFinite(loadedTotalCount) ? loadedTotalCount : events.length;
       cardsCollapsed = true;
       expandedEventKeys = new Set();
-      $("collapseBtn").textContent = "Uitklappen";
+      $("collapseBtn").textContent = "Details Evenementen Uitklappen";
       sites = mergeSites(loaded[1]);
       applyScanSettings();
       const currentKeys = eventKeySet(events);
@@ -3107,14 +3153,15 @@
     });
 
     $("filterSidebarToggle").addEventListener("click", () => {
-      const open = $("filterSidebar").classList.toggle("sidebarOpen");
+      const open = document.querySelector(".hero").classList.toggle("filtersOpen");
       $("filterSidebarToggle").setAttribute("aria-expanded", String(open));
-      $("filterSidebarToggle").textContent = open ? "Sluit filters" : "Filters";
+      $("filterSidebarToggle").textContent = open ? "Filters sluiten ▲" : "Filters ▾";
     });
     $("refreshBtn").addEventListener("click", refreshEvents);
     $("resetBtn").addEventListener("click", resetFilters);
     $("clearBtn").addEventListener("click", clearAllEvents);
     $("collapseBtn").addEventListener("click", toggleCardsCollapsed);
+    $("collapseTypesBtn").addEventListener("click", toggleTypesCollapsed);
     ["maxEventsPerSite", "siteTimeLimitSeconds"].forEach((id) => {
       $(id).addEventListener("change", () => {
         const settings = saveScanSettings();
@@ -3256,6 +3303,11 @@
       document.querySelector(".titleChevron").textContent = isOpen ? "^" : "v";
     });
     document.addEventListener("click", (event) => {
+      if (!event.target.closest("#filterSidebarToggle") && !event.target.closest("#filterSidebar")) {
+        document.querySelector(".hero")?.classList.remove("filtersOpen");
+        $("filterSidebarToggle").setAttribute("aria-expanded", "false");
+        $("filterSidebarToggle").textContent = "Filters ▾";
+      }
       [
         ["siteSelect", "siteButton"]
       ].forEach(([selectId, buttonId]) => {
