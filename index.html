@@ -2220,13 +2220,12 @@
     async function waitForUpdatedEvents(previousSignature, previousKeys, foundCount = null, options = {}) {
       const previousUpdatedAt = eventsUpdatedAt;
       const requireEvents = Boolean(options.requireEvents);
-      const maxAttempts = Math.max(1, Math.min(10, Number(options.maxAttempts) || 10));
-      const intervalMs = Math.max(3000, Math.min(10000, Number(options.intervalMs) || 3000));
+      const maxAttempts = Math.max(1, Math.min(600, Number(options.maxAttempts) || 600));
+      const intervalMs = Math.max(1000, Math.min(10000, Number(options.intervalMs) || 1000));
       let latestProgress = null;
       for (let attempt = 1; attempt <= maxAttempts; attempt += 1) {
         const prefix = Number.isFinite(foundCount) ? `${foundText(foundCount)} gevonden.` : foundText(foundCount) + ".";
-        showStatus(`${prefix} Voortgangscontrole ${attempt}/${maxAttempts}: dit zijn controles, geen websites. Elke ${Math.round(intervalMs / 1000)} sec; maximaal ${Math.round(maxAttempts * intervalMs / 1000)} sec wachten op publicatie van de resultaten.`, "warn", { stop: true });
-        addLiveLog("App", "events.json", `Controle ${attempt}/${maxAttempts}`, "wachten", `${prefix} controle ${attempt}/${maxAttempts}; interval ${intervalMs / 1000}s; dit zijn pollingcontroles, geen websites`);
+        showStatus(`${prefix} Live verversen: elke ${Math.round(intervalMs / 1000)} seconde controleren op nieuwe website-resultaten. Tot de scraper klaar is.`, "warn", { stop: true });
         const shouldContinue = await waitUnlessStopped(intervalMs);
         if (!shouldContinue) {
           showStatus("Controle gestopt. De update kan nog doorlopen; probeer later opnieuw.", "warn");
@@ -2259,7 +2258,19 @@
               const eventCount = Number(progress.lastSiteEventCount) || 0;
               const detail = `Bron afgerond: ${site} (${completed}/${Number(progress.totalSites) || completed}). Deze bron leverde ${eventCount} evenementen op; ${Array.isArray(progress.events) ? progress.events.length : 0} in totaal tot nu toe.`;
               addLiveLog("Scraper", site, "Website afgerond", "klaar", detail);
-              showStatus(detail + " De resultaten worden tussentijds getoond terwijl de overige websites doorgaan.", "ok", { stop: true });
+              showStatus(detail + " De resultaten zijn direct zichtbaar; de overige websites lopen ondertussen door.", "ok", { stop: true });
+            }
+            if (progress.status === "completed") {
+              if (Array.isArray(progress.events)) events = mergeVerifiedEvents([...events, ...progress.events]);
+              latestSiteResults = Array.isArray(progress.siteResults) ? progress.siteResults : latestSiteResults;
+              latestRawLog = Array.isArray(progress.rawLog) ? progress.rawLog : latestRawLog;
+              fillTypes();
+              renderSites(checkedSites());
+              renderRawLog();
+              applyFilters();
+              addLiveLog("Scraper", "Alle websites", "Live verversing afgerond", "klaar", `${Number(progress.completedCount) || 0} websites afgerond; ${Array.isArray(progress.events) ? progress.events.length : 0} evenementen in de voortgangsdata.`);
+              showStatus(`Live verversen klaar: ${Number(progress.completedCount) || 0} websites verwerkt. De nieuwste resultaten zijn getoond.`, "ok");
+              return true;
             }
           }
           const freshPayload = await fetchEventsPayload();
@@ -2991,7 +3002,7 @@
         const rateLimited = workerRows.some((row) => /429|rate.?limit|rate_limited/i.test(JSON.stringify(row)));
         const rateLimitNote = rateLimited ? " Een AI-/zoekbron meldt HTTP 429 (rate limit); die bron heeft tijdelijk te veel verzoeken ontvangen." : "";
         showStatus(`Verversverzoek geaccepteerd. ${prefix}${rateLimitNote} Ik controleer of events.json echt wordt bijgewerkt.`, "warn", { stop: true });
-        await waitForUpdatedEvents(previousSignature, previousKeys, foundCount, { intervalMs: 5000, previousProgressRunId: previousProgress?.runId || "", lastProgressCount: 0 });
+        await waitForUpdatedEvents(previousSignature, previousKeys, foundCount, { intervalMs: 1000, maxAttempts: 600, previousProgressRunId: previousProgress?.runId || "", lastProgressCount: 0 });
       } catch (error) {
         const prefix = Number.isFinite(foundCount) ? `${foundText(foundCount)} gevonden.` : "";
         const message = String(error?.message || error || "Onbekende fout");
