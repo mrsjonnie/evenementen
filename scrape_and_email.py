@@ -1155,7 +1155,7 @@ def extract_venue_agenda_events(html, page_url, site_url, discovery_source):
         url = normalized_url(anchor.get("href"), page_url)
         if not url or not same_host(url, site_url) or BAD_URL_RE.search(url):
             continue
-        if host == "zwolsetheaters.nl" and not re.fullmatch(r"/(?:programma/[^/]+|voorstelling/[^/]+|event/[^/]+)/?", urlparse(url).path, re.I):
+        if host == "zwolsetheaters.nl" and not re.fullmatch(r"/(?:programma/[^/]+|voorstellingen?/[^/]+|events?/[^/]+|agenda/[^/]+)/?", urlparse(url).path, re.I):
             continue
         if host == "martiniplaza.nl" and not re.fullmatch(r"/nl/agenda/[^/]+/?", urlparse(url).path, re.I):
             # Only a single detail slug below /nl/agenda is an event. Never emit the
