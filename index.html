@@ -969,10 +969,12 @@
     .sidebarResizeHandle { width:7px; min-height:160px; align-self:stretch; cursor:col-resize; border-radius:8px; background:linear-gradient(90deg, transparent 2px, var(--line) 2px, var(--line) 5px, transparent 5px); touch-action:none; }
     .sidebarResizeHandle:hover, .sidebarResizeHandle:focus { background:var(--primary); outline:2px solid var(--primary); outline-offset:1px; }
     .sourceGroup { min-width:0; margin:0 0 2px; }
+    .sourceGroup:not(.collapsed) { grid-column:1 / -1; width:100%; }
     .sourceGroupHeader { display:flex; align-items:center; width:100%; gap:8px; margin:1px 0 3px; padding:5px 8px; border:1px solid var(--line); border-radius:8px; background:var(--surface); color:var(--ink); text-align:left; font-size:.84rem; font-weight:850; cursor:pointer; }
     .sourceGroupHeader small { margin-left:auto; color:var(--muted); font-weight:650; }
     .sourceGroup.collapsed .eventGroupCards { display:none; }
     .sourceGroup .eventGroupCards { padding-left:3px; border-left:1px solid var(--line); gap:3px; }
+    .sourceGroup:not(.collapsed) > .eventGroupCards { grid-template-columns:minmax(0,1fr); width:100%; }
     .contentArea { min-width: 0; }
      .filterSidebarToggle { min-height: 34px; padding: 0 11px; align-self:flex-start; }
     .headerActions { display:flex; flex-wrap:wrap; gap:7px; align-items:center; justify-content:flex-start; margin-top:10px; }
@@ -1114,6 +1116,7 @@
 
         <div class="sidebarViewButtons" aria-label="Weergave">
           <button class="btn btnSecondary" id="collapseBtn" type="button">Details uitklappen</button>
+          <button class="btn btnSecondary" id="collapseSourcesBtn" type="button">Bron uitklappen</button>
           <button class="btn btnSecondary" id="collapseTypesBtn" type="button">Types uitklappen</button>
         </div>
         <button class="btn btnPrimary" id="applyFiltersBtn" type="button">Filter toepassen</button>
@@ -1690,12 +1693,20 @@
       regionLookupTimer = setTimeout(resolveRegionCoord, 450);
     }
 
+    function eventLocationLabel(event) {
+      const location = cleanText(event.location || "");
+      const unknown = !location || /^(locatie onbekend|onbekend|unknown|n\\/?a|-)$/i.test(location);
+      const host = hostFromUrl(event.website || "").replace(/^www\\./i, "").toLowerCase();
+      if (unknown && host === "paradiso.nl") return "Amsterdam";
+      return location || "Locatie onbekend";
+    }
+
     function eventCoords(event) {
       const lat = Number(event.lat);
       const lon = Number(event.lon);
       if (Number.isFinite(lat) && Number.isFinite(lon)) return { lat, lon };
 
-      const text = normalizeRouteText(`${event.title || ""} ${event.location || ""}`);
+      const text = normalizeRouteText(`${event.title || ""} ${eventLocationLabel(event)}`);
       const known = Object.entries(knownLocationCoords).find(([name]) => text.includes(name));
       if (known) return known[1];
 
@@ -1753,14 +1764,15 @@
       const link = safeUrl(event.locationLink);
       if (link) return link;
 
-      const location = cleanText(event.location);
-      return location ? `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(location)}` : "";
+      const location = eventLocationLabel(event);
+      return location && location !== "Locatie onbekend" ? `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(location)}` : "";
     }
 
     function routeDestination(event) {
       const coords = eventCoords(event);
       if (coords) return `${coords.lat},${coords.lon}`;
-      return cleanText(event.location);
+      const location = eventLocationLabel(event);
+      return location === "Locatie onbekend" ? "" : location;
     }
 
     function routeEmbedUrl(origin, destination) {
@@ -2531,7 +2543,7 @@
       const routeContext = routeContextLabel(event);
       const routeId = `route-${Math.random().toString(36).slice(2)}`;
       const locationUrl = locationHomeUrl(event);
-      const locationLabel = escapeHtml(event.location || "Locatie onbekend");
+      const locationLabel = escapeHtml(eventLocationLabel(event));
       const dateLabel = event.periodLabel || prettyDate(event.date);
       const isNew = isNewEvent(event);
       const typeHeader = `
@@ -2923,6 +2935,7 @@
         collapsedSourceGroups.add(type + "::" + source);
       });
       if ($("collapseTypesBtn")) $("collapseTypesBtn").textContent = "Types uitklappen";
+      if ($("collapseSourcesBtn")) $("collapseSourcesBtn").textContent = "Bron uitklappen";
     }
 
     function toggleCardsCollapsed() {
@@ -3105,6 +3118,13 @@
       render();
     });
     $("collapseBtn").addEventListener("click", toggleCardsCollapsed);
+    $("collapseSourcesBtn").addEventListener("click", () => {
+      const keys = [...new Set(filteredEvents.map((event) => displayType(event.type || "Activiteit") + "::" + (eventSourceLabel(event) || "Bron onbekend")))];
+      const allCollapsed = keys.length > 0 && keys.every((key) => collapsedSourceGroups.has(key));
+      collapsedSourceGroups = allCollapsed ? new Set() : new Set(keys);
+      render();
+      $("collapseSourcesBtn").textContent = allCollapsed ? "Bron inklappen" : "Bron uitklappen";
+    });
     $("collapseTypesBtn").addEventListener("click", () => { const types = [...new Set(filteredEvents.map((event) => displayType(event.type || "Activiteit")))]; const allCollapsed = types.length && types.every((type) => collapsedEventTypes.has(type)); collapsedEventTypes = allCollapsed ? new Set() : new Set(types); if (allCollapsed) { collapsedSourceGroups = new Set(); } render(); $("collapseTypesBtn").textContent = allCollapsed ? "Types inklappen" : "Types uitklappen"; });
     $("prevPage").addEventListener("click", () => { currentPage -= 1; render(); window.scrollTo({ top: 0, behavior: "smooth" }); });
     $("nextPage").addEventListener("click", () => { currentPage += 1; render(); window.scrollTo({ top: 0, behavior: "smooth" }); });
