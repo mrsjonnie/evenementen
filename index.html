@@ -1279,6 +1279,9 @@
     const SPOT_ONLY_SITE = "https://www.spotgroningen.nl/programma/";
     const WORKER_URL = "https://evenementen-refresh.mrsjonnie.workers.dev";
     const PER_PAGE_KEY = "evenementenPerPage";
+    const RADIUS_FILTER_KEY = "evenementenRadiusKm";
+    const REGION_FILTER_KEY = "evenementenRegion";
+    const REGION_COORD_CACHE_KEY = "evenementenRegionCoordinates";
     let eventsPerPage = 96;
     const typeImages = {
       film: "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=900&q=80",
@@ -1367,6 +1370,9 @@
     let expandedEventKeys = new Set();
     let dynamicRegionCoord = null;
     let dynamicRegionKey = "";
+    let dynamicRegionCoord = null;
+    let storedRegionCoords = {};
+    try { storedRegionCoords = JSON.parse(localStorage.getItem(REGION_COORD_CACHE_KEY) || "{}") || {}; } catch { storedRegionCoords = {}; }
     let regionLookupTimer = null;
 
     const $ = (id) => document.getElementById(id);
@@ -1711,6 +1717,7 @@
 
     function regionCoord() {
       const region = currentRegionKey();
+      if (storedRegionCoords[region] && Number.isFinite(Number(storedRegionCoords[region].lat)) && Number.isFinite(Number(storedRegionCoords[region].lon))) return storedRegionCoords[region];
       if (regionCoords[region]) return regionCoords[region];
       if (dynamicRegionCoord && dynamicRegionKey === region) return dynamicRegionCoord;
       const match = Object.entries(regionCoords).find(([name]) => region.includes(name) || name.includes(region));
@@ -1732,6 +1739,8 @@
         if (Number.isFinite(lat) && Number.isFinite(lon)) {
           dynamicRegionKey = key;
           dynamicRegionCoord = { lat, lon };
+          storedRegionCoords[key] = dynamicRegionCoord;
+          try { localStorage.setItem(REGION_COORD_CACHE_KEY, JSON.stringify(storedRegionCoords)); } catch {}
           applyFilters();
         }
       } catch {}
@@ -1773,12 +1782,13 @@
     function eventDistanceKm(event) {
       const destination = eventCoords(event);
       if (!destination) return null;
-      return Math.max(.2, distanceKm(regionCoord(), destination) * 1.25);
+      return distanceKm(regionCoord(), destination);
     }
 
     function routeEstimate(event) {
-      const roadKm = eventDistanceKm(event);
-      if (!Number.isFinite(roadKm)) return "afstand onbekend";
+      const straightKm = eventDistanceKm(event);
+      if (!Number.isFinite(straightKm)) return "afstand onbekend";
+      const roadKm = straightKm * 1.25;
       const speed = roadKm < 8 ? 28 : 55;
       const minutes = Math.max(4, Math.round((roadKm / speed) * 60));
       return `${formatKm(roadKm)} km - ca. ${minutes} min`;
@@ -2184,24 +2194,31 @@
     async function loadDealOffers() {
       const target = $("dealOffers");
       if (!target) return;
+      const sourceNames = ["iBOOD", "Social Deal", "Groupon"];
       try {
-        const response = await fetch(`./deals.json?v=${Date.now()}`, { cache: "no-store" });
+        const response = await fetch(\`./deals.json?v=\${Date.now()}\`, { cache: "no-store" });
         if (!response.ok) throw new Error("Deals niet beschikbaar");
         const data = await response.json();
         const offers = (Array.isArray(data.offers) ? data.offers : []).filter((offer) => {
-          const text = `${offer.title || ""} ${offer.description || ""} ${offer.url || ""}`.toLowerCase();
-          return !/trustpilot|google\.com\/maps|play\.google\.com|apps\.apple\.com|\breviews?\b|machine-readable information|availability instructions|every deal/.test(text);
+          const title = cleanText(offer.title || "");
+          const url = cleanText(offer.url || "");
+          const text = \`\${title} \${offer.description || ""} \${url}\`.toLowerCase();
+          if (!title || /^https?:\\/\\//i.test(title) || title.length < 5) return false;
+          if (/trustpilot|google\\.com\\/maps|play\\.google\\.com|apps\\.apple\\.com|\\breviews?\\b|beoordelingen|machine-readable information|availability instructions|every deal|\\/tag\\/(?:popular|favorite|food|events)\\/?/i.test(text)) return false;
+          if (url && title.toLowerCase() === url.toLowerCase()) return false;
+          return Boolean(safeUrl(url, { website: true }));
         });
-        if (!offers.length) {
-          target.innerHTML = '<p class="dealEmpty">Nog geen actuele aanbiedingen gevonden. Ververs om de bronnen opnieuw te scannen.</p>';
-          return;
-        }
-        target.innerHTML = offers.map((offer) => {
-          const url = safeUrl(offer.url, { website: true });
-          return `<article class="dealOffer"><div class="dealOfferSource">${escapeHtml(offer.source || "Aanbieding")}</div><a href="${escapeHtml(url || "#")}" target="_blank" rel="noopener noreferrer">${escapeHtml(offer.title || "Aanbieding bekijken")}</a>${offer.price ? `<strong>${escapeHtml(offer.price)}</strong>` : ""}<p>${escapeHtml(offer.description || "")}</p></article>`;
+        target.innerHTML = sourceNames.map((source, index) => {
+          const sourceOffers = offers.filter((offer) => cleanText(offer.source).toLowerCase() === source.toLowerCase());
+          const groupId = \`dealGroup\${index}\`;
+          const content = sourceOffers.length ? sourceOffers.map((offer) => {
+            const url = safeUrl(offer.url, { website: true });
+            return \`<article class="dealOffer"><div class="dealOfferSource">\${escapeHtml(source)}</div><a href="\${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">\${escapeHtml(offer.title)}</a>\${offer.price ? \`<strong>\${escapeHtml(offer.price)}</strong>\` : ""}<p>\${escapeHtml(offer.description || "")}</p></article>\`;
+          }).join("") : '<p class="dealEmpty">Geen bruikbare aanbiedingen gevonden. De bronlink blijft beschikbaar.</p>';
+          return \`<section class="offerGroup"><div class="offerTypeHeader"><button type="button" class="offerGroupToggle" data-group="\${groupId}" aria-expanded="true">Aanbiedingen \${escapeHtml(source)}</button><span>\${sourceOffers.length} aanbiedingen</span></div><div class="dealOffers offerGroupContent" id="\${groupId}">\${content}</div></section>\`;
         }).join("");
       } catch {
-        target.innerHTML = '<p class="dealEmpty">Aanbiedingen konden niet worden geladen. De bronlinks blijven beschikbaar.</p>';
+        target.innerHTML = sourceNames.map((source) => \`<section class="offerGroup"><div class="offerTypeHeader">Aanbiedingen \${escapeHtml(source)}</div><p class="dealEmpty">Aanbiedingen konden niet worden geladen.</p></section>\`).join("");
       }
     }
 
@@ -2507,8 +2524,9 @@
       let afterCost = afterType.filter(eventMatchesCostFilter);
       let afterNew = afterCost.filter((event) => !newOnly || isNewEvent(event));
       const matchesRadius = (event) => {
+        if (radiusKm <= 0) return true;
         const eventKm = eventDistanceKm(event);
-        return !(radiusKm > 0 && Number.isFinite(eventKm) && eventKm > radiusKm);
+        return Number.isFinite(eventKm) && eventKm <= radiusKm;
       };
       let afterRadius = afterNew.filter(matchesRadius);
       let afterDate = afterRadius.filter(matchesDate);
@@ -3188,6 +3206,15 @@
       setBusy($("refreshBtn"), false);
       setBusy($("clearBtn"), false);
       showStatus("Controle gestopt. De update kan nog doorlopen; probeer straks opnieuw.", "warn");
+    });
+    $("dealOffers").addEventListener("click", (event) => {
+      const toggle = event.target.closest(".offerGroupToggle");
+      if (!toggle) return;
+      const panel = document.getElementById(toggle.dataset.group || "");
+      if (!panel) return;
+      const expanded = toggle.getAttribute("aria-expanded") !== "true";
+      toggle.setAttribute("aria-expanded", String(expanded));
+      panel.hidden = !expanded;
     });
     $("grid").addEventListener("click", (event) => {
       const typeHeader = event.target.closest(".eventTypeHeader");
