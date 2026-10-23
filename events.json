@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-23T14:12:45+00:00",
+  "updatedAt": "2026-10-23T14:13:29+00:00",
   "events": [
     {
       "date": "2026-10-23",
@@ -2379,7 +2379,7 @@
       "site": "https://www.zwolsetheaters.nl/programma",
       "count": 0,
       "newCount": 0,
-      "durationSeconds": 4.27,
+      "durationSeconds": 3.93,
       "timedOut": false
     }
   ],
@@ -2410,6 +2410,33 @@
       "url": "https://www.zwolsetheaters.nl/programma",
       "status": "ok",
       "rawText": "58175 tekens HTML"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Zwolse scripts",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/programma",
+      "status": "diagnose",
+      "rawText": "type= src= len=371 | type= src=/assets/js/chunk-vendors.main.js?v=L8F5KdDUVX9i4ON4PXhCti3ujgqHICgBWsZxug4CPgA len=0 | type= src=/assets/js/main.js?v=WgecduYVPp8i_9Rxhb1fyYhHd0tzmUbPgKM0R-XTk5A len=0 | type= src=/assets/js/helpers.js?v=HGrKdvmUXqEJb8FtU8ZsLaz1xOk0Jx-uSg48D1iyr6I len=0 | type=text/javascript src= len=373 | type= src=/scripts/contact-component.js?v=T0YxD1bwBCz0x5Tr6e1QJY0SeZgMP867CLiLKjc7BUI len=0 | typ"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Zwolse links",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/programma",
+      "status": "diagnose",
+      "rawText": ""
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Zwolse JSON",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/programma",
+      "status": "diagnose",
+      "rawText": ""
     },
     {
       "source": "Parser",
@@ -2490,7 +2517,7 @@
       "date": "",
       "url": "https://www.zwolsetheaters.nl/programma",
       "status": "klaar",
-      "rawText": "site 1/1: 0 unieke events in 4.27 sec"
+      "rawText": "site 1/1: 0 unieke events in 3.93 sec"
     }
   ]
 }
