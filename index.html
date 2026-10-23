@@ -1240,7 +1240,10 @@
       "https://www.concertgebouw.nl",
       "https://www.hedon-zwolle.nl",
       "https://www.paradiso.nl",
-      "https://www.vvvameland.nl/activiteiten-en-evenementen"
+      "https://www.vvvameland.nl/activiteiten-en-evenementen",
+      "https://www.socialdeal.nl/",
+      "https://www.groupon.nl/",
+      "https://www.ibood.com/nl/"
     ];
 
     let events = [];
@@ -2162,20 +2165,21 @@
 
     function renderSites(selected = null) {
       const selectedSites = selected || new Set(sites);
-      $("sitesList").innerHTML = sites.map((site) => `
-        ${(() => {
-          const count = siteEventCountFor(site);
-          const hasResult = count > 0;
-          const badge = hasResult ? `<span class="siteResultBadge">(+${count})</span>` : "";
-          return `<label class="${hasResult ? "siteFound" : ""}">
-          <input class="siteCheck" type="checkbox" value="${escapeHtml(site)}"${selectedSites.has(site) ? " checked" : ""}>
-          <span>${escapeHtml(site)}${badge}</span>
-        </label>`;
-        })()}
-      `).join("");
+      const siteRows = sites.map((site) => {
+        const count = siteEventCountFor(site);
+        const badge = count > 0 ? `<span class="siteResultBadge">(+${count})</span>` : "";
+        const host = hostFromUrl(site);
+        const result = (latestSiteResults || []).find((item) => hostFromUrl(item.site || "") === host);
+        const rows = [...(latestRawLog || []), ...(liveLogRows || [])].filter((row) => hostFromUrl(row.site || row.url || "") === host);
+        const errors = rows.filter((row) => /fout|mislukt|timeout|geen data|status 4|status 5/i.test(`${row.status || ""} ${row.title || ""}`));
+        const hasProblem = Boolean(result && (result.timedOut || Number(result.count || 0) === 0)) || errors.length > 0;
+        const diagnostic = errors.length ? errors.slice(0,3).map((row) => `${row.title || "Melding"} — ${row.status || ""}: ${row.rawText || ""}`).join(" | ") : result?.timedOut ? "De scan liep tegen de tijdslimiet aan." : "Er zijn geen evenementen opgehaald. De site kan dynamische inhoud gebruiken of scraping blokkeren. Bekijk de ruwe verversdata voor details.";
+        return `<label class="${count > 0 ? "siteFound" : ""}"><input class="siteCheck" type="checkbox" value="${escapeHtml(site)}"${selectedSites.has(site) ? " checked" : ""}><span class="sourceInfoWrap"><span>${escapeHtml(site)}${badge}</span>${hasProblem ? `<button class="sourceInfo" type="button" aria-label="Scrape-informatie voor ${escapeHtml(site)}" aria-expanded="false" data-info-site="${escapeHtml(site)}">i</button>` : ""}</span>${hasProblem ? `<span class="sourceInfoPopup" data-info-popup="${escapeHtml(site)}" hidden>${escapeHtml(diagnostic)}</span>` : ""}</label>`;
+      }).join("");
+      const aiRows = [["provMistral","Mistral AI"],["provOpenAI","ChatGPT / OpenAI"],["provSerpAPI","SerpAPI (webzoekbron)"]].map(([id,label]) => `<label><input class="aiSourceCheck" type="checkbox" data-provider="${id}"${$(id)?.checked ? " checked" : ""}> <span>${label}</span></label>`).join("");
+      $("sitesList").innerHTML = siteRows + `<div class="sourceGroupLabel">AI- en zoekbronnen</div>` + aiRows;
       updateSiteCount();
     }
-
     function renderRawLog() {
       const showSerpApi = Boolean($("provSerpAPI")?.checked);
       const showChatGpt = Boolean($("provOpenAI")?.checked);
@@ -2253,7 +2257,7 @@
     }
 
     function updateSiteCount() {
-      $("siteCount").textContent = document.querySelectorAll(".siteCheck:checked").length;
+      $("siteCount").textContent = document.querySelectorAll(".siteCheck:checked").length + document.querySelectorAll(".aiSourceCheck:checked").length;
     }
 
     function updateProviderCount() {
@@ -2792,7 +2796,8 @@
       $("provMistral").checked = true;
       $("provOpenAI").checked = false;
       $("provSerpAPI").checked = false;
-      document.querySelectorAll(".siteCheck").forEach((check) => { check.checked = true; });
+      document.querySelectorAll(".siteCheck, .aiSourceCheck").forEach((check) => { check.checked = true; });
+      document.querySelectorAll(".aiSourceCheck").forEach((check) => { const target = $(check.dataset.provider); if (target) target.checked = true; });
       cardsCollapsed = true;
       expandedEventKeys = new Set();
       $("collapseBtn").textContent = "Uitklappen";
@@ -2963,18 +2968,26 @@
       applyFilters();
     });
     $("noSitesBtn").addEventListener("click", () => {
-      document.querySelectorAll(".siteCheck").forEach((check) => { check.checked = false; });
+      document.querySelectorAll(".siteCheck, .aiSourceCheck").forEach((check) => { check.checked = false; });
+      document.querySelectorAll(".aiSourceCheck").forEach((check) => { const target = $(check.dataset.provider); if (target) target.checked = false; });
       updateSiteCount();
       applyFilters();
     });
-    $("sitesList").addEventListener("change", () => {
+    $("sitesList").addEventListener("change", (event) => {
+      const aiCheck = event.target.closest(".aiSourceCheck");
+      if (aiCheck) { const target = $(aiCheck.dataset.provider); if (target) target.checked = aiCheck.checked; updateProviderCount(); renderRawLog(); }
       updateSiteCount();
       applyFilters();
     });
-    $("providerList").addEventListener("change", () => {
-      updateProviderCount();
-      renderRawLog();
+    $("sitesList").addEventListener("click", (event) => {
+      const info = event.target.closest(".sourceInfo");
+      if (!info) return;
+      const site = info.dataset.infoSite || "";
+      const popup = [...document.querySelectorAll("[data-info-popup]")].find((item) => item.dataset.infoPopup === site);
+      if (popup) { popup.hidden = !popup.hidden; info.setAttribute("aria-expanded", String(!popup.hidden)); }
+      event.preventDefault(); event.stopPropagation();
     });
+    $("providerList")?.addEventListener("change", () => { updateProviderCount(); renderRawLog(); });
     document.addEventListener("click", async (event) => {
       const button = event.target.closest(".routeToggle");
       if (!button) return;
