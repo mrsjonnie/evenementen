@@ -1530,6 +1530,7 @@ def extract_socialdeal_offers(html, page_url, site_url):
     soup = BeautifulSoup(html, "html.parser")
     offers = []
     seen = set()
+    deal_limit = max(MAX_EVENTS_PER_SITE, 1000)
     city_pattern = re.compile(
         r"\b(Groningen|Veendam|Drachten|Assen|Haren|Hoogezand|Stadskanaal|Zuidlaren|"
         r"Appingedam|Delfzijl|Winschoten|Leek|Marum|Roden|Norg|Oldekerk|Zuidbroek|"
@@ -1580,10 +1581,9 @@ def extract_socialdeal_offers(html, page_url, site_url):
         location = ""
         for match in city_pattern.finditer(card_text):
             candidate = clean_text(match.group(1))
-            if candidate.lower() not in title.lower():
-                location = candidate
-                if candidate.lower() in {"online", "bij jou thuis"}:
-                    break
+            location = candidate
+            if candidate.lower() in {"online", "bij jou thuis"}:
+                break
         if not location:
             location = "Locatie niet vermeld"
         description = card_text
@@ -1610,8 +1610,9 @@ def extract_socialdeal_offers(html, page_url, site_url):
         if event:
             offers.append(event)
             add_raw("Website", site_url, title, date_text, href, "deal gevonden", f"Locatie: {location}; {description[:180]}")
-        if len(offers) >= MAX_EVENTS_PER_SITE:
+        if len(offers) >= deal_limit:
             break
+    add_raw("Parser", site_url, "Social Deal-telling", "", page_url, "ok", f"{len(offers)} aanbiedingen gevonden (limiet {deal_limit})")
     return dedupe_events(offers)
 
 
@@ -1943,7 +1944,8 @@ def scrape_site(site_url, site_index=0, site_total=0, progress_callback=None):
     if before_date_filter != len(filtered):
         add_raw("Filter", original_site, "Datumfilter toegepast", date_from.isoformat(), normalized_site, "ok",
                 f"{before_date_filter} gevonden; {len(filtered)} binnen {date_from.isoformat()} t/m {date_to.isoformat() if date_to else 'onbeperkt'}")
-    unique = filtered[:MAX_EVENTS_PER_SITE]
+    site_limit = max(MAX_EVENTS_PER_SITE, 1000) if canonical_host(normalized_site) == "socialdeal.nl" else MAX_EVENTS_PER_SITE
+    unique = filtered[:site_limit]
     duration = round(time.monotonic() - started, 2)
     SITE_RESULTS.append(
         {
