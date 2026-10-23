@@ -6,6 +6,55 @@
   "completedSites": [],
   "events": [],
   "siteResults": [],
-  "rawLog": [],
-  "status": "running"
+  "rawLog": [
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen",
+      "title": "Start",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen",
+      "status": "start",
+      "rawText": "site 1/1: max 20 events, max 60 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen",
+      "status": "strategie",
+      "rawText": "Visit Groningen agenda-/routekaarten"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen",
+      "title": "Pagina gelezen",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen",
+      "status": "ok",
+      "rawText": "208802 tekens HTML"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen",
+      "title": "Visit Groningen detailstrategie",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen",
+      "status": "strategie",
+      "rawText": "Overzicht overslaan; alleen detail-URL's met /evenementen/<slug> verwerken"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen",
+      "title": "Pagina geanalyseerd",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen",
+      "status": "ok",
+      "rawText": "0 events/aanbiedingen op deze pagina"
+    }
+  ],
+  "status": "running",
+  "lastCompletedSite": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen",
+  "lastSiteEventCount": 0,
+  "lastUpdatedAt": "2026-10-23T15:19:30+00:00"
 }
