@@ -70,9 +70,7 @@ on:
   push:
     paths:
       - refresh-request.json
-  schedule:
-    # Vrijdagochtend Nederlandse tijd: 08:00 zomertijd, 07:00 wintertijd.
-    # - cron: '0 6 * * 5'
+  # Automatische planning tijdelijk uitgeschakeld; handmatig starten of via refresh-request.json.
 
 permissions:
   contents: write
