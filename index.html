@@ -501,6 +501,10 @@
     }
 
     .siteList label:hover { background: var(--surface-soft); }
+    .sourceInfoWrap { display:flex; align-items:flex-start; gap:6px; min-width:0; flex-wrap:wrap; }
+    .sourceInfo { flex:0 0 22px; width:22px; height:22px; border:1px solid #b7791f; border-radius:50%; background:#fff2cc; color:#704600; font-weight:1000; line-height:1; cursor:pointer; }
+    .sourceInfoPopup { grid-column:1 / -1; display:block; margin:4px 0 2px 27px; padding:9px 11px; border:1px solid #c58b32; border-radius:8px; background:#fff4d6; color:#34250d; font-size:.82rem; font-weight:650; line-height:1.45; white-space:normal; overflow-wrap:anywhere; }
+    .sourceInfoPopup[hidden] { display:none!important; }
 
     .siteList label.siteFound {
       border: 1px solid #32634b;
@@ -986,11 +990,16 @@
     .card .badges { display:none; }
     .card .desc .sourceSuffix { color:var(--muted); font-size:.84em; }
     #providerSelect { display:none!important; }
-    .eventGroup { grid-column:1 / -1; min-width:0; }
-    .eventGroupHeader { display:flex; width:100%; margin:8px 0 10px; padding:10px 12px; border:1px solid var(--line); border-left:4px solid var(--primary); border-radius:var(--radius); background:var(--surface-soft); color:var(--ink); text-align:left; font-weight:950; cursor:pointer; }
+    .eventGroup { grid-column:1 / -1; min-width:0; margin-bottom:2px; }
+    .eventGroupHeader { display:flex; width:100%; margin:3px 0 4px; padding:7px 10px; border:1px solid var(--line); border-left:4px solid var(--primary); border-radius:var(--radius); background:var(--surface-soft); color:var(--ink); text-align:left; font-weight:950; cursor:pointer; }
     .eventGroupHeader small { margin-left:auto; color:var(--muted); }
-    .eventGroupCards { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:14px; }
+    .eventGroupCards { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,360px),1fr)); gap:8px; }
     .eventGroup.collapsed .eventGroupCards { display:none; }
+    .nextPageHint { margin:4px 0 8px; padding:8px 10px; color:var(--muted); font-size:.8rem; }
+    .mapSearchPanel { margin:0 0 14px; border:1px solid var(--line); border-radius:var(--radius); overflow:hidden; background:var(--surface); }
+    .mapSearchPanelHead { display:flex; justify-content:space-between; align-items:center; gap:10px; padding:9px 12px; }
+    .mapSearchPanel iframe { display:block; width:100%; height:min(66vh,650px); min-height:360px; border:0; background:#fff; }
+    .titlePanelContent .status { max-width:100%; }
     .grid .card .typeHeader { display:none; }
     .filterSidebar {
       width: 248px;
@@ -1040,6 +1049,7 @@
         <div class="titlePanel" id="titlePanel">
           <div class="titlePanelContent">
             <span class="versionBadge" id="versionBadge">Versie wordt geladen</span>
+            <div class="status" id="status" aria-live="polite"></div>
             <div class="scanSettings" aria-label="Scaninstellingen">
               <label class="scanSetting" for="maxEventsPerSite">Events <input id="maxEventsPerSite" type="number" min="20" max="100" step="1" value="20" inputmode="numeric"></label>
               <label class="scanSetting" for="siteTimeLimitSeconds">Sec <input id="siteTimeLimitSeconds" type="number" min="20" max="60" step="1" value="20" inputmode="numeric"></label>
@@ -1053,7 +1063,6 @@
       </div>
       <div class="heroSide">
         <div class="weather" id="weatherBox" aria-live="polite"></div>
-        <div class="status" id="status" aria-live="polite"></div>
       </div>
     </div>
   </header>
@@ -1097,7 +1106,8 @@
             <option value="always">Altijd</option>
             <option value="thisWeekend">Dit weekend</option>
             <option value="nextWeekend">Volgend weekend</option>
-            <option value="week" selected>7 dagen</option>
+            <option value="threeDays" selected>Vandaag + 2 dagen</option>
+            <option value="week">7 dagen</option>
           </select>
         </div>
 
@@ -1131,7 +1141,7 @@
               <span aria-hidden="true">v</span>
             </button>
             <div class="sitePanel">
-              <div class="sitePanelHeader">Deze lijst komt uit sites.json. Aangevinkte websites worden gescand en filteren ook wat je ziet.</div>
+              <div class="sitePanelHeader">Selecteer websites om te scannen en filteren.</div>
               <div class="siteList" id="sitesList"></div>
               <div class="siteActions">
                 <button class="btn btnSecondary" id="allSitesBtn" type="button">Alles</button>
@@ -1152,6 +1162,10 @@
     </aside>
 
     <div class="contentArea">
+      <section class="mapSearchPanel" id="mapSearchPanel" hidden aria-label="Kaart zoeken">
+        <div class="mapSearchPanelHead"><strong>Zoeken op kaart</strong><button class="btn btnSecondary" id="closeMapSearchBtn" type="button">Kaart sluiten</button></div>
+        <iframe id="mapSearchFrame" title="Zoeken op kaart" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </section>
       <div class="summary">
         <strong id="count">Evenementen laden...</strong>
         <span id="filterBreakdown"></span>
@@ -1464,11 +1478,12 @@
     }
 
     function refreshDateWindow() {
-      const mode = $("periodMode")?.value || "week";
+      const mode = $("periodMode")?.value || "threeDays";
       const start = mode === "always" ? formatDate(new Date()) : (dateFrom || $("dateSingle").value || formatDate(new Date()));
       let end = dateTo || start;
-      const plus14 = addDays(start, 14);
-      if (!end || end < plus14) end = plus14;
+      if (mode === "threeDays") end = addDays(start, 2);
+      else if (mode === "week") end = addDays(start, 6);
+      else if (!end || end < start) end = start;
       return { from: start, to: end };
     }
 
@@ -2296,6 +2311,8 @@
     function periodSubtitle() {
       if ($("periodMode").value === "always") return "Altijd";
       if ($("periodMode").value === "specificDay") return `Specifieke dag: ${prettyDate(dateFrom)}`;
+      if ($("periodMode").value === "threeDays") return "Vandaag + 2 dagen";
+      if ($("periodMode").value === "week") return "7 dagen";
       return `${prettyDate(dateFrom)} t/m ${prettyDate(dateTo)}`;
     }
 
@@ -2409,9 +2426,15 @@
 
 
     function renderGroupedEvents(items) {
-      const groups = new Map();
-      items.forEach((event) => { const type = displayType(event.type || "Activiteit"); if (!groups.has(type)) groups.set(type, []); groups.get(type).push(event); });
-      return [...groups.entries()].map(([type, eventsForType]) => { const collapsed = collapsedEventTypes.has(type); return `<section class="eventGroup ${collapsed ? "collapsed" : ""}"><button class="eventGroupHeader" type="button" data-type-toggle="${escapeHtml(type)}" aria-expanded="${!collapsed}"><span>${escapeHtml(type)}</span><small>${eventsForType.length} resultaten</small></button><div class="eventGroupCards">${eventsForType.map(renderCard).join("")}</div></section>`; }).join("");
+      const allGroups = new Map();
+      filteredEvents.forEach((event) => { const type = displayType(event.type || "Activiteit"); if (!allGroups.has(type)) allGroups.set(type, []); allGroups.get(type).push(event); });
+      const visibleKeys = new Set(items.map(eventDedupeKey));
+      return [...allGroups.entries()].map(([type, allForType]) => {
+        const eventsForType = allForType.filter(event => visibleKeys.has(eventDedupeKey(event)));
+        const collapsed = collapsedEventTypes.has(type);
+        const cards = eventsForType.length ? eventsForType.map(renderCard).join("") : `<p class="nextPageHint">Meer resultaten van dit type staan op een andere pagina (${allForType.length} totaal).</p>`;
+        return `<section class="eventGroup ${collapsed ? "collapsed" : ""}"><button class="eventGroupHeader" type="button" data-type-toggle="${escapeHtml(type)}" aria-expanded="${!collapsed}"><span>${escapeHtml(type)}</span><small>${allForType.length} resultaten</small></button><div class="eventGroupCards">${cards}</div></section>`;
+      }).join("");
     }
 
     function eventSourceLabel(event) {
@@ -2927,8 +2950,12 @@
       const radius = radiusFilterKm();
       const query = cleanText($("search").value);
       const mapQuery = [query || "evenementen", "in", region, radius > 0 ? `binnen ${radius} km` : ""].filter(Boolean).join(" ");
-      window.open(`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(mapQuery)}`, "_blank", "noopener,noreferrer");
+      const panel = $("mapSearchPanel");
+      $("mapSearchFrame").src = `https://www.google.com/maps?q=${encodeURIComponent(mapQuery)}&output=embed`;
+      panel.hidden = false;
+      panel.scrollIntoView({ behavior: "smooth", block: "start" });
     });
+    $("closeMapSearchBtn").addEventListener("click", () => { $("mapSearchPanel").hidden = true; $("mapSearchFrame").src = "about:blank"; });
     ["maxEventsPerSite", "siteTimeLimitSeconds"].forEach((id) => {
       $(id).addEventListener("change", () => {
         const settings = saveScanSettings();
@@ -3101,6 +3128,9 @@
 
     const today = formatDate(new Date());
     $("dateSingle").value = today;
+    $("periodMode").value = "threeDays";
+    dateFrom = today;
+    dateTo = addDays(today, 2);
     eventsPerPage = Number(localStorage.getItem(PER_PAGE_KEY)) || 96;
     if (![12, 18, 24, 48, 96].includes(eventsPerPage)) eventsPerPage = 96;
     $("perPageSelect").value = String(eventsPerPage);
