@@ -261,6 +261,26 @@ def host_default_location(site_url):
     return INPUT_REGION or "Groningen"
 
 
+def detect_scraper_type(site_url):
+    """Choose the preferred scraper strategy for a website."""
+    host = canonical_host(site_url)
+    if host == "vera-groningen.nl":
+        return "programma-kaarten"
+    if host == "groningen.uitloper.nu":
+        return "uitloper-agenda"
+    if host == "martiniplaza.nl":
+        return "agenda-kaarten"
+    if host == "spotgroningen.nl":
+        return "universeel-met-kaartfallback"
+    if host == "simplon.nl":
+        return "compacte-agenda-kaarten"
+    if host == "forum.nl":
+        return "universeel-eventkaarten"
+    if host in {"socialdeal.nl", "groupon.nl", "ibood.com"}:
+        return "aanbiedingen"
+    return "universeel-jsonld-links-kaarten"
+
+
 def source_label(url):
     host = canonical_host(url)
     return host or "website"
@@ -1627,6 +1647,7 @@ def scrape_site(site_url, site_index=0, site_total=0, progress_callback=None):
 
     progress = f"site {site_index}/{site_total}" if site_index and site_total else "site"
     add_raw("Website", original_site, "Start", "", normalized_site, "start", f"{progress}: max {MAX_EVENTS_PER_SITE} events, max {SITE_TIME_LIMIT_SECONDS} seconden")
+    add_raw("Parser", original_site, "Scrapertype vastgesteld", "", normalized_site, "strategie", detect_scraper_type(normalized_site))
 
     serpapi_events = serpapi_events_for_site(normalized_site)
     if serpapi_events:
