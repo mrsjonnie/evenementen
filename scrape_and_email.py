@@ -1600,7 +1600,7 @@ def parse_feed_events(feed_text, feed_url, site_url):
     return dedupe_events(events)
 
 
-def scrape_site(site_url, site_index=0, site_total=0):
+def scrape_site(site_url, site_index=0, site_total=0, progress_callback=None):
     original_site = clean_text(site_url)
     normalized_site = normalized_url(original_site)
     started = time.monotonic()
@@ -1660,6 +1660,8 @@ def scrape_site(site_url, site_index=0, site_total=0):
                 add_raw("Website", original_site, "iBOOD-aanbiedingen gevonden", TODAY.isoformat(), final_url, "ok", f"{len(offers)} online aanbiedingen")
         events.extend(page_events)
         add_raw("Website", original_site, "Pagina geanalyseerd", "", final_url, "ok", f"{len(page_events)} events/aanbiedingen op deze pagina")
+        if progress_callback:
+            progress_callback(dedupe_events(events))
         # VERA's programme parser already returns one clean record per event card.
         # Crawling every linked detail page with generic heuristics creates false events.
         if canonical_host(normalized_site) not in {"vera-groningen.nl", "groningen.uitloper.nu", "simplon.nl"}:
@@ -1881,8 +1883,18 @@ def main():
     publish_scrape_progress(progress)
     for index, site in enumerate(sites, start=1):
         before_count = len(all_events)
+        def publish_partial_site_progress(partial_events):
+            progress["events"] = dedupe_events([*all_events, *partial_events])
+            progress["siteResults"] = list(SITE_RESULTS)
+            progress["rawLog"] = RAW_DATA_ROWS[-MAX_RAW_ROWS:]
+            progress["lastCompletedSite"] = site
+            progress["lastSiteEventCount"] = len(dedupe_events(partial_events))
+            progress["lastUpdatedAt"] = datetime.now(timezone.utc).isoformat(timespec="seconds")
+            progress["status"] = "running"
+            publish_scrape_progress(progress)
+
         try:
-            all_events.extend(scrape_site(site, index, total_sites))
+            all_events.extend(scrape_site(site, index, total_sites, progress_callback=publish_partial_site_progress))
         except Exception as exc:
             add_raw("Website", site, "Site mislukt", "", site, "fout", str(exc))
             SITE_RESULTS.append({"site": site, "count": 0, "newCount": 0, "durationSeconds": 0, "timedOut": False})
