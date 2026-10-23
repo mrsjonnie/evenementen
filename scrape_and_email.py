@@ -1654,7 +1654,15 @@ def scrape_site(site_url, site_index=0, site_total=0, progress_callback=None):
             # Only accept small, event-card ancestors so the homepage cannot assign
             # one card's date to a neighboring event or navigation link.
             page_events = extract_venue_agenda_events(html, final_url, normalized_site, "Website")
-        elif canonical_host(normalized_site) in {"spotgroningen.nl", "simplon.nl"}:
+        elif canonical_host(normalized_site) == "spotgroningen.nl":
+            # Try the universal parser first (JSON-LD/Event schema, dated links,
+            # event cards and inline date blocks). SPOT's programme page is a
+            # modern listing where the venue-specific parser can miss events.
+            page_events = parse_page_events(html, final_url, normalized_site, "Website")
+            if not page_events:
+                add_raw("Parser", original_site, "Universele parser zonder resultaat", "", final_url, "fallback", "Geen events herkend; probeer de SPOT-kaartenparser")
+                page_events = extract_venue_agenda_events(html, final_url, normalized_site, "Website")
+        elif canonical_host(normalized_site) == "simplon.nl":
             page_events = extract_venue_agenda_events(html, final_url, normalized_site, "Website")
         else:
             page_events = parse_page_events(html, final_url, normalized_site, "Website")
