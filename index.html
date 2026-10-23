@@ -2286,9 +2286,18 @@
               }
               const site = cleanText(progress.lastCompletedSite || progress.completedSites?.[completed - 1] || "website");
               const eventCount = Number(progress.lastSiteEventCount) || 0;
-              const detail = `Bron afgerond: ${site} (${completed}/${Number(progress.totalSites) || completed}). Deze bron leverde ${eventCount} evenementen op; ${Array.isArray(progress.events) ? progress.events.length : 0} in totaal tot nu toe.`;
-              addLiveLog("Scraper", site, "Website afgerond", "klaar", detail);
-              showStatus(detail + " De resultaten zijn direct zichtbaar; de overige websites lopen ondertussen door.", "ok", { stop: true });
+              const isSiteComplete = completed > Number(options.lastReportedCompletedCount || 0);
+              const eventTotal = Array.isArray(progress.events) ? progress.events.length : 0;
+              const detail = isSiteComplete
+                ? `Bron afgerond: ${site} (${completed}/${Number(progress.totalSites) || completed}). Deze bron leverde ${eventCount} evenementen op; ${eventTotal} in totaal tot nu toe.`
+                : `Tussentijdse voortgang: ${site}; ${eventTotal} unieke evenementen gevonden tot nu toe.`;
+              if (isSiteComplete) {
+                options.lastReportedCompletedCount = completed;
+                addLiveLog("Scraper", site, "Website afgerond", "klaar", detail);
+              } else {
+                addLiveLog("Scraper", site, "Pagina verwerkt", "bezig", detail);
+              }
+              showStatus(detail + (isSiteComplete ? " De resultaten zijn direct zichtbaar; de scan gaat verder." : " De teller wordt bijgewerkt zodra nieuwe paginaresultaten binnenkomen."), "ok", { stop: true });
             }
             if (progress.status === "completed") {
               if (Array.isArray(progress.events)) events = mergeVerifiedEvents([...events, ...progress.events]);
