@@ -161,6 +161,11 @@ jobs:
                   env_file.write(f"{env_name}={value}\n")
           PY
 
+      - name: Configure Git identity for incremental progress
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
       - name: Run scraper
         run: python scrape_and_email.py
 
