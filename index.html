@@ -167,7 +167,7 @@
     .heroSide {
       display: flex;
       flex-direction: column;
-      align-items: flex-end;
+      align-items: flex-start;
       gap: 5px;
       min-width: 0;
       max-width: 560px;
@@ -971,7 +971,13 @@
     .pageLayout { display: grid; grid-template-columns: minmax(0, 1fr); gap: 12px; align-items: start; }
     .pageLayout.sidebarOpen { grid-template-columns: 248px minmax(0, 1fr); }
     .contentArea { min-width: 0; }
-    .filterSidebarToggle { min-height: 34px; padding: 0 11px; }
+    .filterSidebarToggle { min-height: 34px; padding: 0 11px; align-self:flex-start; }
+    .eventGroup { grid-column:1 / -1; min-width:0; }
+    .eventGroupHeader { display:flex; width:100%; margin:8px 0 10px; padding:10px 12px; border:1px solid var(--line); border-left:4px solid var(--primary); border-radius:var(--radius); background:var(--surface-soft); color:var(--ink); text-align:left; font-weight:950; cursor:pointer; }
+    .eventGroupHeader small { margin-left:auto; color:var(--muted); }
+    .eventGroupCards { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:14px; }
+    .eventGroup.collapsed .eventGroupCards { display:none; }
+    .grid .card .typeHeader { display:none; }
     .filterSidebar {
       width: 248px;
       min-width: 0;
@@ -1132,6 +1138,7 @@
       <div class="summary">
         <strong id="count">Evenementen laden...</strong>
         <span id="filterBreakdown"></span>
+        <div class="summaryControls"><button class="btn btnSecondary" id="collapseBtn" type="button">Details uitklappen</button><button class="btn btnSecondary" id="collapseTypesBtn" type="button">Types inklappen</button></div>
       </div>
 
     <section class="grid" id="grid" aria-live="polite"></section>
@@ -1256,6 +1263,7 @@
     let eventsJsonTotalCount = 0;
     let liveLogRows = [];
     let expandedEventKeys = new Set();
+    let collapsedEventTypes = new Set();
     let dynamicRegionCoord = null;
     let dynamicRegionKey = "";
     let regionLookupTimer = null;
@@ -2370,11 +2378,18 @@
       const visible = filteredEvents.slice((currentPage - 1) * eventsPerPage, currentPage * eventsPerPage);
       updateFilterBreakdown(pageCount, visible.length);
 
-      $("grid").innerHTML = visible.map(renderCard).join("");
+      $("grid").innerHTML = renderGroupedEvents(visible);
       $("pagination").style.display = "flex";
       $("pageInfo").textContent = `Pagina ${currentPage} van ${pageCount}`;
       $("prevPage").disabled = currentPage === 1;
       $("nextPage").disabled = currentPage === pageCount;
+    }
+
+
+    function renderGroupedEvents(items) {
+      const groups = new Map();
+      items.forEach((event) => { const type = displayType(event.type || "Activiteit"); if (!groups.has(type)) groups.set(type, []); groups.get(type).push(event); });
+      return [...groups.entries()].map(([type, eventsForType]) => { const collapsed = collapsedEventTypes.has(type); return `<section class="eventGroup ${collapsed ? "collapsed" : ""}"><button class="eventGroupHeader" type="button" data-type-toggle="${escapeHtml(type)}" aria-expanded="${!collapsed}"><span>${escapeHtml(type)}</span><small>${eventsForType.length} resultaten</small></button><div class="eventGroupCards">${eventsForType.map(renderCard).join("")}</div></section>`; }).join("");
     }
 
     function eventSourceLabel(event) {
@@ -2792,7 +2807,7 @@
     function toggleCardsCollapsed() {
       cardsCollapsed = !cardsCollapsed;
       expandedEventKeys = new Set();
-      $("collapseBtn").textContent = cardsCollapsed ? "Uitklappen" : "Inklappen";
+      $("collapseBtn").textContent = cardsCollapsed ? "Details uitklappen" : "Details inklappen";
       render();
     }
 
@@ -2925,6 +2940,8 @@
         deleteEventByKey(deleteButton.dataset.eventKey || "");
         return;
       }
+      const typeToggle = event.target.closest("[data-type-toggle]");
+      if (typeToggle) { const type = typeToggle.dataset.typeToggle || ""; if (collapsedEventTypes.has(type)) collapsedEventTypes.delete(type); else collapsedEventTypes.add(type); render(); return; }
       const button = event.target.closest(".titleButton");
       if (!button) return;
       const key = button.dataset.eventKey || "";
@@ -2936,6 +2953,8 @@
       }
       render();
     });
+    $("collapseBtn").addEventListener("click", toggleCardsCollapsed);
+    $("collapseTypesBtn").addEventListener("click", () => { const types = [...new Set(filteredEvents.map((event) => displayType(event.type || "Activiteit")))]; const allCollapsed = types.length && types.every((type) => collapsedEventTypes.has(type)); collapsedEventTypes = allCollapsed ? new Set() : new Set(types); render(); $("collapseTypesBtn").textContent = allCollapsed ? "Types inklappen" : "Alle types uitklappen"; });
     $("prevPage").addEventListener("click", () => { currentPage -= 1; render(); window.scrollTo({ top: 0, behavior: "smooth" }); });
     $("nextPage").addEventListener("click", () => { currentPage += 1; render(); window.scrollTo({ top: 0, behavior: "smooth" }); });
     $("allSitesBtn").addEventListener("click", () => {
