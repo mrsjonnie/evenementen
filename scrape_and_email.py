@@ -1479,7 +1479,7 @@ def main():
     if not INPUT_CLEAR_ARCHIVE:
         for event in previous_all:
             host = canonical_host(event.get("website", ""))
-            if host not in selected_hosts or (host in selected_hosts and host not in successful_hosts and not any(canonical_host(item.get("website", "")) == host for item in scraped_events)):
+            if host not in selected_hosts or (host in selected_hosts and not any(canonical_host(item.get("website", "")) == host for item in scraped_events)):
                 retained_previous.append(event)
     active_events = dedupe_events([*scraped_events, *retained_previous])
     active_keys = {event_key(event) for event in active_events}
