@@ -2435,7 +2435,12 @@
       const mode = $("periodMode").value;
       const isOffer = displayType(event.type || "").toLowerCase() === "aanbiedingen" ||
         /(^|\.)(socialdeal\.nl|groupon\.nl|ibood\.com)$/.test(hostFromUrl(event.website));
-      if (isOffer) return /^\d{4}-\d{2}-\d{2}$/.test(event.date || "") && event.date === formatDate(new Date());
+      if (isOffer) {
+        const today = formatDate(new Date());
+        if (!/^\d{4}-\d{2}-\d{2}$/.test(event.date || "") || event.date !== today) return false;
+        if (mode === "always" || mode === "alwaysFromToday") return true;
+        return today >= dateFrom && today <= dateTo;
+      }
       if (mode === "always") return true;
       if (event.isPermanent) return true;
       if (!/^\d{4}-\d{2}-\d{2}$/.test(event.date || "")) return true;
