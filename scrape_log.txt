@@ -1,7 +1,7 @@
 Website	https://www.groningermuseum.nl/en/now	start	Start		https://www.groningermuseum.nl/en/now	site 1/3: max 20 events, max 60 seconden
 Parser	https://www.groningermuseum.nl/en/now	strategie	Scrapertype vastgesteld		https://www.groningermuseum.nl/en/now	universele tentoonstellings- en activiteitenparser
 Website	https://www.groningermuseum.nl/en/now	fout	Pagina mislukt		https://www.groningermuseum.nl/en/now	HTTP 404
-Website	https://www.groningermuseum.nl/en/now	klaar	Klaar		https://www.groningermuseum.nl/en/now	site 1/3: 0 unieke events in 0.96 sec
+Website	https://www.groningermuseum.nl/en/now	klaar	Klaar		https://www.groningermuseum.nl/en/now	site 1/3: 0 unieke events in 1.02 sec
 Website	https://www.kultuuragenda.nl/agenda	start	Start		https://www.kultuuragenda.nl/agenda	site 2/3: max 20 events, max 60 seconden
 Parser	https://www.kultuuragenda.nl/agenda	strategie	Scrapertype vastgesteld		https://www.kultuuragenda.nl/agenda	universele detailpagina-parser (Kultuuragenda)
 Website	https://www.kultuuragenda.nl/agenda	ok	Pagina gelezen		https://www.kultuuragenda.nl/agenda	151508 tekens HTML
@@ -480,7 +480,7 @@ Website	https://www.kultuuragenda.nl/agenda	event uit dagblok	KultuurLoket	2026-
 Parser	https://www.kultuuragenda.nl/agenda	analyse	Pagina geteld		https://www.kultuuragenda.nl/agenda/937089014/franz	jsonld:0, links:0, datumblokken:0, kaarten:4, regels:11, detail:1
 Website	https://www.kultuuragenda.nl/agenda	ok	Detailpagina geanalyseerd		https://www.kultuuragenda.nl/agenda/937089014/franz	9 extra events
 Filter	https://www.kultuuragenda.nl/agenda	ok	Datumfilter toegepast	2026-10-23	https://www.kultuuragenda.nl/agenda	116 gevonden; 96 binnen 2026-10-23 t/m onbeperkt
-Website	https://www.kultuuragenda.nl/agenda	klaar	Klaar		https://www.kultuuragenda.nl/agenda	site 2/3: 20 unieke events in 18.84 sec
+Website	https://www.kultuuragenda.nl/agenda	klaar	Klaar		https://www.kultuuragenda.nl/agenda	site 2/3: 20 unieke events in 12.78 sec
 Website	https://www.noorderzon.nl/programma	start	Start		https://www.noorderzon.nl/programma	site 3/3: max 20 events, max 60 seconden
 Parser	https://www.noorderzon.nl/programma	strategie	Scrapertype vastgesteld		https://www.noorderzon.nl/programma	universele programma- en detailpagina-parser
 Website	https://www.noorderzon.nl/programma	ok	Pagina gelezen		https://www.noorderzon.nl/programma	734798 tekens HTML
