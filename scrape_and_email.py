@@ -1154,7 +1154,7 @@ def extract_venue_agenda_events(html, page_url, site_url, discovery_source):
                 # Homepage cards can share a parent with neighboring cards. Use the
                 # date closest to this event title rather than the first date in the group.
                 title_position = candidate_text.lower().find(title.lower())
-                date_matches = list(re.finditer(r"\\b\\d{1,2}\\s+(?:" + MONTH_PATTERN + r")(?:\\s+20\\d{2})?\\b", candidate_text, re.I))
+                date_matches = list(re.finditer(r"\b\d{1,2}\s+(?:" + MONTH_PATTERN + r")(?:\s+20\d{2})?\b", candidate_text, re.I))
                 if title_position >= 0 and date_matches:
                     closest_date = min(date_matches, key=lambda match: abs(match.start() - title_position))
                     candidate_date = parse_date_text(closest_date.group(0)) or candidate_date
