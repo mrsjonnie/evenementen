@@ -3425,7 +3425,7 @@
     $("providerButton").addEventListener("click", () => toggleSelect("providerSelect", "providerButton"));
     $("siteButton").addEventListener("click", () => toggleSelect("siteSelect", "siteButton"));
     $("addCustomSiteBtn").addEventListener("click", addCustomSite);
-    $("toggleCustomSiteBtn").addEventListener("click", () => { const panel = $("customSiteAdder"); const open = panel.classList.toggle("open"); $("toggleCustomSiteBtn").setAttribute("aria-expanded", String(open)); $("toggleCustomSiteBtn").textContent = open ? "Sluiten" : "Toevoegen"; if (open) $("customSiteUrl").focus(); });
+    $("toggleCustomSiteBtn").addEventListener("click", () => { const panel = $("customSiteAdder"); const open = panel.classList.toggle("open"); $("toggleCustomSiteBtn").setAttribute("aria-expanded", String(open)); $("toggleCustomSiteBtn").textContent = open ? "Sluiten" : "Toevoegen URL"; if (open) $("customSiteUrl").focus(); });
     $("customSiteUrl").addEventListener("keydown", (event) => {
       if (event.key === "Enter") {
         event.preventDefault();
