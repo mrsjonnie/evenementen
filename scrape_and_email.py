@@ -1365,6 +1365,12 @@ def start_urls_for_site(site_url):
             urljoin(base, "/ontdek/groningen/"),
             urljoin(base, "/deals/groningen/"),
         ]
+    if host == "groupon.nl":
+        base = f"{parsed.scheme}://{parsed.netloc}"
+        return unique_urls([
+            urljoin(base, "/"), urljoin(base, "/deal/"),
+            urljoin(base, "/best-deals/"), urljoin(base, "/local/"),
+        ])
     if host == "simplon.nl":
         return [urljoin(exact, "/programma/")]
     urls = [exact]
@@ -1626,6 +1632,127 @@ def extract_socialdeal_offers(html, page_url, site_url):
     return dedupe_events(offers)
 
 
+
+def extract_date_listing_events(html, page_url, site_url, discovery_source="Website"):
+    """Site-specific card parser for VVV Ameland and Concertgebouw listings."""
+    host = canonical_host(site_url)
+    if host not in {"vvvameland.nl", "concertgebouw.nl"}:
+        return []
+    soup = BeautifulSoup(html, "html.parser")
+    events = []
+    seen = set()
+    for anchor in soup.find_all("a", href=True):
+        href = normalized_url(anchor.get("href"), page_url)
+        if not href or not same_host(href, site_url) or BAD_URL_RE.search(href):
+            continue
+        # Climb only until a reasonably small card with a date is found.
+        card = anchor
+        card_text = clean_text(anchor.get_text(" ", strip=True))
+        event_date = parse_date_text(card_text)
+        for parent in anchor.parents:
+            if getattr(parent, "name", None) in {"body", "html"}:
+                break
+            candidate = clean_text(parent.get_text(" ", strip=True))
+            if len(candidate) > 1800:
+                break
+            candidate_date = parse_date_text(candidate)
+            if candidate_date:
+                card, card_text, event_date = parent, candidate, candidate_date
+                # Prefer the smallest ancestor containing a date and a usable title.
+                if node_title(parent) or anchor.get_text(" ", strip=True):
+                    break
+        if not event_date or not card_text or len(card_text) > 1800:
+            continue
+        title_node = card.select_one("h1, h2, h3, h4, [itemprop='name'], [class*='title'], [class*='titel']")
+        title = clean_title(title_node.get_text(" ", strip=True) if title_node else anchor.get_text(" ", strip=True))
+        if not title_is_usable(title):
+            title = node_title(card)
+        if not title_is_usable(title):
+            continue
+        path = urlparse(href).path.lower()
+        if host == "concertgebouw.nl" and not re.search(r"/concerten/|/concert/", path):
+            # The listing's real concert links use concert detail paths; skip filters/navigation.
+            if not re.search(r"/concerten-en-tickets/", path):
+                continue
+        key = (event_date, title.lower(), href.split("?")[0].rstrip("/"))
+        if key in seen:
+            continue
+        seen.add(key)
+        description = description_from_lines(split_lines(card), title)
+        image_node = card.select_one("img[src], img[data-src]")
+        image = normalized_url((image_node.get("src") or image_node.get("data-src") or "") if image_node else "", page_url)
+        location = "Ameland" if host == "vvvameland.nl" else "Concertgebouw Amsterdam"
+        event = normalize_event({
+            "date": event_date,
+            "title": title,
+            "type": classify_type(card_text, host),
+            "location": location,
+            "website": href,
+            "description": description or compact(card_text, 420),
+            "image": image,
+            "time": first_time(card_text),
+            "cost": first_price(card_text),
+            "discoverySource": discovery_source,
+        }, site_url)
+        if event:
+            events.append(event)
+            add_raw(discovery_source, site_url, title, event_date, href, "agenda-kaart", card_text)
+        if len(events) >= MAX_EVENTS_PER_SITE:
+            break
+    add_raw("Parser", site_url, "Agenda-kaarten geteld", "", page_url, "gespecialiseerde parser", f"{len(events)} resultaten")
+    return dedupe_events(events)
+
+
+def extract_groupon_offers(html, page_url, site_url):
+    """Extract Groupon product/deal cards without requiring an event date."""
+    if canonical_host(site_url) != "groupon.nl":
+        return []
+    soup = BeautifulSoup(html, "html.parser")
+    offers = []
+    seen = set()
+    selectors = [
+        "article", "[data-testid*='deal']", "[data-testid*='product']",
+        "[class*='deal-card']", "[class*='dealCard']", "[class*='tile']",
+        "[class*='product-card']", "[class*='productCard']",
+    ]
+    for selector in selectors:
+        for card in soup.select(selector)[:500]:
+            anchor = card if getattr(card, "name", "") == "a" and card.get("href") else card.select_one("a[href]")
+            if not anchor:
+                continue
+            href = normalized_url(anchor.get("href"), page_url)
+            if not href or canonical_host(href) != "groupon.nl" or BAD_URL_RE.search(href):
+                continue
+            text = clean_text(card.get_text(" ", strip=True))
+            if len(text) < 20 or len(text) > 1600 or not re.search(r"(?:€\\s*\\d|\\d+[,.]\\d{2}\\s*€)", text):
+                continue
+            title_node = card.select_one("h1, h2, h3, h4, [class*='title'], [class*='name']")
+            title = clean_title(title_node.get_text(" ", strip=True) if title_node else anchor.get_text(" ", strip=True))
+            if not title_is_usable(title) or title.lower() in {"bekijk deal", "meer informatie", "lees meer"}:
+                continue
+            key = href.split("?")[0].rstrip("/").lower()
+            if key in seen:
+                continue
+            seen.add(key)
+            image_node = card.select_one("img[src], img[data-src]")
+            image = normalized_url((image_node.get("src") or image_node.get("data-src") or "") if image_node else "", page_url)
+            description = compact(re.sub(re.escape(title), " ", text, count=1, flags=re.I), 420)
+            offers.append({
+                "date": TODAY.isoformat(), "time": "", "title": title,
+                "type": "Aanbiedingen", "location": "Online",
+                "locationLink": "", "website": href, "source": "Groupon",
+                "discoverySource": "Website",
+                "description": description or "Groupon-aanbieding; bekijk de dealpagina voor voorwaarden en beschikbaarheid.",
+                "cost": first_price(text), "image": image,
+            })
+            add_raw("Website", site_url, title, TODAY.isoformat(), href, "Groupon-deal gevonden", text)
+            if len(offers) >= MAX_EVENTS_PER_SITE:
+                add_raw("Parser", site_url, "Groupon-telling", "", page_url, "ok", f"{len(offers)} aanbiedingen; limiet {MAX_EVENTS_PER_SITE}")
+                return offers
+    add_raw("Parser", site_url, "Groupon-telling", "", page_url, "ok", f"{len(offers)} aanbiedingen gevonden; limiet {MAX_EVENTS_PER_SITE}")
+    return dedupe_events(offers)
+
+
 def extract_ibood_offers(html, page_url, site_url):
     """Haal productaanbiedingen van iBOOD op als doorlopende aanbiedingen."""
     if "ibood.com" not in canonical_host(site_url):
@@ -1840,6 +1967,14 @@ def scrape_site(site_url, site_index=0, site_total=0, progress_callback=None):
             page_events = extract_socialdeal_offers(html, final_url, normalized_site)
             if not page_events:
                 add_raw("Parser", original_site, "Social Deal-kaarten zonder resultaat", "", final_url, "fallback", "Geen kaartendeals herkend; controleer HTML/kaartstructuur")
+        elif canonical_host(normalized_site) == "groupon.nl":
+            page_events = extract_groupon_offers(html, final_url, normalized_site)
+            if not page_events:
+                add_raw("Parser", original_site, "Groupon-kaarten zonder resultaat", "", final_url, "fallback", "Geen deals herkend; controleer HTTP-status, HTML en eventuele blokkade")
+        elif canonical_host(normalized_site) in {"vvvameland.nl", "concertgebouw.nl"}:
+            page_events = extract_date_listing_events(html, final_url, normalized_site, "Website")
+            if not page_events:
+                page_events = parse_page_events(html, final_url, normalized_site, "Website")
         elif canonical_host(normalized_site) in {"simplon.nl", "zwolsetheaters.nl"}:
             page_events = extract_venue_agenda_events(html, final_url, normalized_site, "Website")
             if not page_events and canonical_host(normalized_site) == "zwolsetheaters.nl":
