@@ -558,8 +558,8 @@
     .sidebarButtonRows { display:grid; grid-column:1 / -1; gap:8px; margin-top:10px; min-width:0; }
     .sidebarPrimaryButtons, .sidebarDataButtons { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px; min-width:0; }
     .sidebarButtonRows .btn { width:100%; min-width:0; min-height:40px; padding:7px 9px; line-height:1.2; white-space:normal; }
-    #toggleCustomSiteBtn { background:#7c3aed; border-color:#6d28d9; color:#fff; font-weight:850; }
-    #toggleCustomSiteBtn:hover { background:#6d28d9; border-color:#5b21b6; }
+    #toggleCustomSiteBtn { background: var(--surface-soft); border: 1px solid var(--line); color: var(--primary-dark); font-weight: 850; }
+    #toggleCustomSiteBtn:hover { background: var(--surface); border-color: var(--primary); }
     #deleteDataBtn { background:#c92a2a; border-color:#b42323; color:#fff; font-weight:900; }
     #deleteDataBtn:hover { background:#a61e1e; border-color:#8f1b1b; }
     @media (max-width:360px) { .sidebarPrimaryButtons, .sidebarDataButtons { grid-template-columns:minmax(0,1fr); } }
@@ -1283,7 +1283,7 @@
   </div>
 
   <script>
-    const APP_VERSION = "2026.10.23.11";
+    const APP_VERSION = "2026.10.23.12";
     const DEFAULT_MAX_EVENTS_PER_SITE = 20;
     const DEFAULT_SITE_TIME_LIMIT_SECONDS = 20;
     const SCAN_SETTINGS_KEY = "eventScanSettingsV1";
