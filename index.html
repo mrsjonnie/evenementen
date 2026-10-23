@@ -1273,7 +1273,7 @@
   </div>
 
   <script>
-    const APP_VERSION = "2026.10.23.6";
+    const APP_VERSION = "2026.10.23.7";
     const DEFAULT_MAX_EVENTS_PER_SITE = 60;
     const DEFAULT_SITE_TIME_LIMIT_SECONDS = 45;
     const SCAN_SETTINGS_KEY = "eventScanSettingsV2";
@@ -1371,7 +1371,6 @@
     let expandedEventKeys = new Set();
     let dynamicRegionCoord = null;
     let dynamicRegionKey = "";
-    let dynamicRegionCoord = null;
     let storedRegionCoords = {};
     try { storedRegionCoords = JSON.parse(localStorage.getItem(REGION_COORD_CACHE_KEY) || "{}") || {}; } catch { storedRegionCoords = {}; }
     let regionLookupTimer = null;
