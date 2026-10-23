@@ -34,11 +34,11 @@ on:
       maxEventsPerSite:
         description: Maximum aantal evenementen per website
         required: false
-        default: '20'
+        default: '60'
       siteTimeLimitSeconds:
         description: Maximale zoektijd per website in seconden
         required: false
-        default: '20'
+        default: '45'
       sites:
         description: Extra websites als JSON-lijst
         required: false
@@ -71,8 +71,8 @@ on:
     paths:
       - refresh-request.json
   schedule:
-    # Vrijdagochtend Nederlandse tijd: 08:00 zomertijd, 07:00 wintertijd.
-    # - cron: '0 6 * * 5'
+    # Dagelijks om 07:00 Nederlandse zomertijd / 06:00 wintertijd.
+    - cron: '0 5 * * *'
 
 permissions:
   contents: write
@@ -109,8 +109,8 @@ jobs:
               "dateFrom": "",
               "dateTo": "",
               "minResults": "20",
-              "maxEventsPerSite": "20",
-              "siteTimeLimitSeconds": "20",
+              "maxEventsPerSite": "60",
+              "siteTimeLimitSeconds": "45",
               "sites": "[]",
               "providers": "{}",
               "serpApiLinks": "[]",
