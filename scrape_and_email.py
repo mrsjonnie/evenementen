@@ -1557,7 +1557,7 @@ def publish_scrape_progress(progress):
         if changed.returncode == 0:
             return
         subprocess.run(["git", "commit", "-m", "Update per-site scrape progress"], check=True, capture_output=True, text=True)
-        subprocess.run(["git", "push"], check=True, capture_output=True, text=True)
+        subprocess.run(["git", "push", "origin", "HEAD:main"], check=True, capture_output=True, text=True)
     except (FileNotFoundError, subprocess.CalledProcessError) as exc:
         # Progress is best-effort; the final events.json save must still complete.
         detail = getattr(exc, "stderr", "") or str(exc)
