@@ -1286,7 +1286,7 @@
   </div>
 
   <script>
-    const APP_VERSION = "2026.10.23.21";
+    const APP_VERSION = "2026.10.23.22";
     const DEFAULT_MAX_EVENTS_PER_SITE = 20;
     const DEFAULT_SITE_TIME_LIMIT_SECONDS = 20;
     const SCAN_SETTINGS_KEY = "eventScanSettingsV1";
@@ -2271,7 +2271,7 @@
             const progressSignature = eventSignature(Array.isArray(progress.events) ? progress.events : []);
             const hasNewProgressEvents = progressSignature !== options.lastProgressSignature;
             const hasNewCompletedSite = completed > Number(options.lastProgressCount || 0);
-            if (hasNewProgressEvents || hasNewCompletedSite || progress.status === "completed") {
+            if (hasNewProgressEvents || hasNewCompletedSite || (progress.status === "completed" && options.progressFinalizedRunId !== progress.runId)) {
               options.lastProgressSignature = progressSignature;
               options.lastProgressCount = Math.max(Number(options.lastProgressCount || 0), completed);
               if (Array.isArray(progress.events) && progress.events.length) {
@@ -2305,6 +2305,7 @@
               showStatus(detail + (isSiteComplete ? " De resultaten zijn direct zichtbaar; de scan gaat verder." : " De teller wordt bijgewerkt zodra nieuwe paginaresultaten binnenkomen."), "ok", { stop: true });
             }
             if (progress.status === "completed") {
+              options.progressFinalizedRunId = progress.runId;
               if (Array.isArray(progress.events)) {
                 const scanningHosts = new Set([...activeScanSites].map(hostFromUrl));
                 const retainedEvents = events.filter((event) => !scanningHosts.has(hostFromUrl(event.website)));
@@ -2321,15 +2322,14 @@
               renderRawLog();
               applyFilters();
               addLiveLog("Scraper", "Alle websites", "Live verversing afgerond", "klaar", `${Number(progress.completedCount) || 0} websites afgerond; ${Array.isArray(progress.events) ? progress.events.length : 0} evenementen in de voortgangsdata.`);
-              showStatus(`Live verversen klaar: ${Number(progress.completedCount) || 0} websites verwerkt. De nieuwste resultaten zijn getoond.`, "ok");
-              return true;
+              showStatus(`Scraper klaar: ${Number(progress.completedCount) || 0} websites verwerkt, ${Array.isArray(progress.events) ? progress.events.length : 0} resultaten in de voortgangsdata. Ik wacht nu op bevestiging dat events.json is bijgewerkt; de definitieve publicatie wordt nog gecontroleerd.`, "warn", { stop: true });
             }
           }
           // During an active scrape, scrape-progress.json is the live per-site source.
           // Avoid repeatedly downloading events.json as well; use it as a fallback
           // every fourth poll only when no new progress run is visible.
           const hasCurrentProgressRun = Boolean(progress && progress.runId && progress.runId !== options.previousProgressRunId);
-          const shouldCheckEventsPayload = !hasCurrentProgressRun && (attempt % 4 === 0);
+          const shouldCheckEventsPayload = (!hasCurrentProgressRun || progress?.status === "completed") && (attempt % 4 === 0);
           if (shouldCheckEventsPayload) {
             const freshPayload = await fetchEventsPayload();
             const hasFreshEvents = Array.isArray(freshPayload.events) && freshPayload.events.length > 0;
@@ -2385,7 +2385,7 @@
       const diagnostics = (siteDiagnostics ? ". Laatste website-uitkomsten: " + siteDiagnostics : "; er zijn nog geen nieuwe website-uitkomsten gepubliceerd");
       if (options.progressStatus === "completed") {
         const progressCount = Number(options.progressEventCount) || 0;
-        showStatus(prefix + " De scraper is afgerond (" + progressCount + " resultaten in de voortgangsdata), maar de definitieve events.json is na " + Math.round(maxAttempts * intervalMs / 1000) + " seconden nog niet zichtbaar bijgewerkt. De oude lijst blijft staan totdat de publicatie is bevestigd. " + sourceSummary + " Bekijk ‘Ruwe verversdata’ en de GitHub Actions-uitvoering. " + diagnostics, "warn");
+        showStatus(prefix + " De scraper is afgerond (" + progressCount + " resultaten in de voortgangsdata), maar de definitieve events.json is na " + Math.round(maxAttempts * intervalMs / 1000) + " seconden nog niet zichtbaar bijgewerkt. De huidige lijst blijft staan totdat de publicatie is bevestigd. " + sourceSummary + " Bekijk ‘Ruwe verversdata’ en de GitHub Actions-uitvoering. " + diagnostics, "warn");
       } else {
         showStatus(prefix + " Geen nieuwe publicatie na " + Math.round(maxAttempts * intervalMs / 1000) + " seconden: events.json is niet gewijzigd. " + sourceSummary + " Bekijk ‘Ruwe verversdata’ voor HTTP-status, foutmelding en URL per website" + diagnostics + ". De scraper publiceert de definitieve events.json pas aan het einde van de workflow.", "warn");
       }
