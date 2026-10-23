@@ -1503,6 +1503,7 @@
       sites = mergeSites([...sites, normalized]);
       selected.add(normalized);
       renderSites(selected);
+      saveSourceSelection();
       updateSiteCount();
       applyFilters();
       input.value = "";
@@ -2283,7 +2284,10 @@
 
       await loadAll();
       const prefix = Number.isFinite(foundCount) ? `${foundText(foundCount)} gevonden.` : foundText(foundCount) + ".";
-      showStatus(`${prefix} Na ${Math.round(maxAttempts * intervalMs / 1000)} seconden is events.json nog niet gewijzigd. De 18 controles zijn geen 18 websites. De huidige scraper publiceert de resultaten pas na afloop van de volledige workflow; daarom zijn tussentijdse resultaten van afzonderlijke websites nog niet beschikbaar. Controleer ‘Ruwe verversdata’ op HTTP-fouten en probeer niet direct meerdere keren achter elkaar te verversen.`, "warn");
+      const lastPublished = eventsUpdatedAt ? new Date(eventsUpdatedAt).toLocaleString("nl-NL") : "onbekend";
+      const sourceSummary = "Geselecteerde websites: " + selectedScanSites().length + "; resultaten in de huidige lijst: " + events.length + "; laatste publicatie van events.json: " + lastPublished + ".";
+      const siteDiagnostics = (latestSiteResults || []).slice(0, 5).map((item) => (item.site || "Website") + ": " + Number(item.count || 0) + " resultaten" + (item.timedOut ? " (timeout)" : "")).join(" | ");
+      showStatus(prefix + " Geen nieuwe publicatie na " + Math.round(maxAttempts * intervalMs / 1000) + " seconden: events.json is niet gewijzigd. " + sourceSummary + " Bekijk ‘Ruwe verversdata’ voor HTTP-status, foutmelding en URL per website" + (siteDiagnostics ? ". Laatste website-uitkomsten: " + siteDiagnostics : "; er zijn nog geen nieuwe website-uitkomsten gepubliceerd") + ". De scraper publiceert de definitieve events.json pas aan het einde van de workflow.", "warn");
       return false;
     }
 
@@ -3237,8 +3241,12 @@
       });
     });
     $("refreshBtn").addEventListener("click", refreshEvents);
-    $("resetBtn").addEventListener("click", resetFilters);
-    $("clearBtn").addEventListener("click", clearAllEvents);
+    $("clearBtn").addEventListener("click", refreshEvents);
+    $("resetBtn").addEventListener("click", () => {
+      $("newOnlyFilter").checked = !$("newOnlyFilter").checked;
+      $("newOnlyFilter").dispatchEvent(new Event("change", { bubbles: true }));
+      updateNewCount();
+    });
     $("collapseBtn").addEventListener("click", toggleCardsCollapsed);
     $("mapSearchBtn").addEventListener("click", () => {
       const region = cleanText($("region").value || "Groningen");
@@ -3325,6 +3333,7 @@
     $("sitesList").addEventListener("change", (event) => {
       const aiCheck = event.target.closest(".aiSourceCheck");
       if (aiCheck) { const target = $(aiCheck.dataset.provider); if (target) target.checked = aiCheck.checked; updateProviderCount(); renderRawLog(); }
+      saveSourceSelection();
       updateSiteCount();
       applyFilters();
     });
