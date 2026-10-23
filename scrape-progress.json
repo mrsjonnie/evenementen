@@ -1,11 +1,12 @@
 {
   "runId": "2026-10-23T15:16:35+00:00",
   "startedAt": "2026-10-23T15:16:35+00:00",
-  "completedCount": 2,
+  "completedCount": 3,
   "totalSites": 4,
   "completedSites": [
     "https://groningen.uitloper.nu/",
-    "https://www.visitgroningen.nl/nl/doen/evenementen"
+    "https://www.visitgroningen.nl/nl/doen/evenementen",
+    "https://www.visitgroningen.nl/nl/doen/wandelen"
   ],
   "events": [
     {
@@ -782,6 +783,13 @@
       "count": 20,
       "newCount": 0,
       "durationSeconds": 3.74,
+      "timedOut": false
+    },
+    {
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "count": 20,
+      "newCount": 0,
+      "durationSeconds": 2.45,
       "timedOut": false
     }
   ],
@@ -2486,11 +2494,677 @@
       "url": "https://www.visitgroningen.nl/nl/doen/wandelen",
       "status": "ok",
       "rawText": "20 events/aanbiedingen op deze pagina"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Gratis activiteiten in Groningen",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/blogs/10-x-budgetactiviteiten",
+      "status": "detail-link gevonden",
+      "rawText": "Gratis activiteiten in Groningen"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Theater, muziek en musea",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/cultuur",
+      "status": "detail-link gevonden",
+      "rawText": "Theater, muziek en musea"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Naar het museum",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/cultuur/naar-het-museum",
+      "status": "detail-link gevonden",
+      "rawText": "Naar het museum"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Evenement aanmelden",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/evenement-aanmelden",
+      "status": "detail-link gevonden",
+      "rawText": "Evenement aanmelden"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Tickets",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/plan-je-bezoek/tickets",
+      "status": "detail-link gevonden",
+      "rawText": "Tickets"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Deutsch de Gehen Sie zur deutschen Seite",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/de/aktivitaten/wandern",
+      "status": "detail-link gevonden",
+      "rawText": "Deutsch de Gehen Sie zur deutschen Seite"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "English en Go to the English page",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/en/things-to-do/walking",
+      "status": "detail-link gevonden",
+      "rawText": "English en Go to the English page"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Ga naar de homepage",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl",
+      "status": "detail-link gevonden",
+      "rawText": "Ga naar de homepage"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Blogs",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/blogs",
+      "status": "detail-link gevonden",
+      "rawText": "Blogs"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "10 x markante musea in Groningen",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/blogs/10-x-markante-musea-in-groningen",
+      "status": "detail-link gevonden",
+      "rawText": "10 x markante musea in Groningen"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "10 x parels van kerken",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/blogs/10-x-parels-van-kerken",
+      "status": "detail-link gevonden",
+      "rawText": "10 x parels van kerken"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "8 x herfstwandelingen in Groningen",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/blogs/8-x-herfstwandelingen-in-groningen",
+      "status": "detail-link gevonden",
+      "rawText": "8 x herfstwandelingen in Groningen"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Aandacht voor bekende Midden-Groninger: Aletta Jacobs",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/blogs/aandacht-voor-bekende-midden-groninger-aletta-jacobs",
+      "status": "detail-link gevonden",
+      "rawText": "Aandacht voor bekende Midden-Groninger: Aletta Jacobs"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Dagtripjes zonder auto",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/blogs/dagtripjes-zonder-auto",
+      "status": "detail-link gevonden",
+      "rawText": "Dagtripjes zonder auto"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "De leukste pluktuinen van Groningen",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/blogs/de-leukste-pluktuinen-van-groningen",
+      "status": "detail-link gevonden",
+      "rawText": "De leukste pluktuinen van Groningen"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Een dag op pad in Groningen stad",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/blogs/een-dag-op-pad-in-groningen-stad",
+      "status": "detail-link gevonden",
+      "rawText": "Een dag op pad in Groningen stad"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Een week in Stad en Ommeland",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/blogs/een-week-in-stad-en-ommeland",
+      "status": "detail-link gevonden",
+      "rawText": "Een week in Stad en Ommeland"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Hardloopwedstrijden aankomend jaar",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/blogs/hardloopwedstrijden-aankomend-jaar",
+      "status": "detail-link gevonden",
+      "rawText": "Hardloopwedstrijden aankomend jaar"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Lunchen in de stad",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/blogs/lunchen-in-groningen",
+      "status": "detail-link gevonden",
+      "rawText": "Lunchen in de stad"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Met kinderen wandelen en fietsen in Midden-Groningen",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/blogs/met-kinderen-fietsen-en-wandelen-in-midden-groningen",
+      "status": "detail-link gevonden",
+      "rawText": "Met kinderen wandelen en fietsen in Midden-Groningen"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Oktober donkertemaand",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/blogs/nacht-van-de-nacht",
+      "status": "detail-link gevonden",
+      "rawText": "Oktober donkertemaand"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Nieuwe winkels & horeca in de stad",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/blogs/nieuwe-winkels-en-horeca-groningen",
+      "status": "detail-link gevonden",
+      "rawText": "Nieuwe winkels & horeca in de stad"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "5 x Groningse boswandelingen",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/blogs/ontdek-de-groninger-bossen",
+      "status": "detail-link gevonden",
+      "rawText": "5 x Groningse boswandelingen"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Podwalk Winsum",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/blogs/ontdek-het-moois-van-winsum",
+      "status": "detail-link gevonden",
+      "rawText": "Podwalk Winsum"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Sunnemeerten",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/blogs/sunnemeerten",
+      "status": "detail-link gevonden",
+      "rawText": "Sunnemeerten"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Tour de Grunn",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/blogs/tour-de-grunn",
+      "status": "detail-link gevonden",
+      "rawText": "Tour de Grunn"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Wandel de herfst in - 8 pareltjes in Zuidoost Groningen",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/blogs/wandel-de-herfst-in-8-pareltjes-in-zuidoost-groningen",
+      "status": "detail-link gevonden",
+      "rawText": "Wandel de herfst in - 8 pareltjes in Zuidoost Groningen"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Wandel of vaar langs de geschiedenis",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/blogs/wandel-of-vaar-langs-de-geschiedenis",
+      "status": "detail-link gevonden",
+      "rawText": "Wandel of vaar langs de geschiedenis"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Wandelen met de hond in Groningen",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/blogs/wandelen-met-de-hond-in-groningen",
+      "status": "detail-link gevonden",
+      "rawText": "Wandelen met de hond in Groningen"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Zomerwandelingen in Groningen",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/blogs/zomerwandelingen-in-groningen",
+      "status": "detail-link gevonden",
+      "rawText": "Zomerwandelingen in Groningen"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Colofon",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/colofon",
+      "status": "detail-link gevonden",
+      "rawText": "Colofon"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Wat te doen",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen",
+      "status": "detail-link gevonden",
+      "rawText": "Wat te doen"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Eten & drinken",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/eten-en-drinken",
+      "status": "detail-link gevonden",
+      "rawText": "Eten & drinken"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Fietsen",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/fietsen",
+      "status": "detail-link gevonden",
+      "rawText": "Fietsen"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Met kinderen",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/met-kinderen",
+      "status": "detail-link gevonden",
+      "rawText": "Met kinderen"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Blotevoetenpad Opende",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/met-kinderen/blotevoetenpad-opende",
+      "status": "detail-link gevonden",
+      "rawText": "Blotevoetenpad Opende"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Overnachten",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/overnachten",
+      "status": "detail-link gevonden",
+      "rawText": "Overnachten"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Winkelen",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/shoppen",
+      "status": "detail-link gevonden",
+      "rawText": "Winkelen"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Top 10 bezienswaardigheden",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/top-10-bezienswaardigheden",
+      "status": "detail-link gevonden",
+      "rawText": "Top 10 bezienswaardigheden"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Uitagenda",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "detail-link gevonden",
+      "rawText": "Uitagenda"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Ga naar inhoud",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "status": "detail-link gevonden",
+      "rawText": "Ga naar inhoud"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Dagwandeling Graanrepubliek",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/wandelen/dagwandeling-graanrepubliek",
+      "status": "detail-link gevonden",
+      "rawText": "Dagwandeling Graanrepubliek"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Groeningenpad",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/wandelen/groeningenpad",
+      "status": "detail-link gevonden",
+      "rawText": "Groeningenpad"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Het Ziltepad",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/wandelen/het-ziltepad",
+      "status": "detail-link gevonden",
+      "rawText": "Het Ziltepad"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Oogstroute Westerkwartier",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/wandelen/oogstroute-westerkwartier",
+      "status": "detail-link gevonden",
+      "rawText": "Oogstroute Westerkwartier"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Pieterpad",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/wandelen/pieterpad",
+      "status": "detail-link gevonden",
+      "rawText": "Pieterpad"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Pronkjewailpad",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/wandelen/pronkjewailpad",
+      "status": "detail-link gevonden",
+      "rawText": "Pronkjewailpad"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Wandelroute Doezumermieden",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/wandelen/wandelroute-doezumermieden",
+      "status": "detail-link gevonden",
+      "rawText": "Wandelroute Doezumermieden"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Wandelroute Ennemaborg",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/wandelen/wandelroute-ennemaborg",
+      "status": "detail-link gevonden",
+      "rawText": "Wandelroute Ennemaborg"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Wandelroute Lettelberterpetten",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/wandelen/wandelroute-lettelberterpetten",
+      "status": "detail-link gevonden",
+      "rawText": "Wandelroute Lettelberterpetten"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Wandelroute Ommetje Middelstum",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/wandelen/wandelroute-ommetje-middelstum-rond",
+      "status": "detail-link gevonden",
+      "rawText": "Wandelroute Ommetje Middelstum"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Wandelroute Ter Apel",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/wandelen/wandelroute-ter-apel",
+      "status": "detail-link gevonden",
+      "rawText": "Wandelroute Ter Apel"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Favorieten",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/favorieten",
+      "status": "detail-link gevonden",
+      "rawText": "Favorieten"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Nu & nieuw",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/nu-nieuw",
+      "status": "detail-link gevonden",
+      "rawText": "Nu & nieuw"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Dit is Groningen",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/ontdekken",
+      "status": "detail-link gevonden",
+      "rawText": "Dit is Groningen"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Erfgoed",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/ontdekken/erfgoed",
+      "status": "detail-link gevonden",
+      "rawText": "Erfgoed"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Natuurgebieden",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/ontdekken/natuur",
+      "status": "detail-link gevonden",
+      "rawText": "Natuurgebieden"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Provincie",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/ontdekken/provincie",
+      "status": "detail-link gevonden",
+      "rawText": "Provincie"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Stad",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/ontdekken/stad",
+      "status": "detail-link gevonden",
+      "rawText": "Stad"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Stad",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/plan-je-bezoek/stadswandelingen",
+      "status": "detail-link gevonden",
+      "rawText": "Stad"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Eemsdelta",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/plekken/eemsdelta/wandelen-in-eemsdelta",
+      "status": "detail-link gevonden",
+      "rawText": "Eemsdelta"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "In de voetsporen van Aletta Jacobs",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/plekken/midden-groningen/aletta-jacobs",
+      "status": "detail-link gevonden",
+      "rawText": "In de voetsporen van Aletta Jacobs"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Roegepad",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/plekken/midden-groningen/t-roege-pad",
+      "status": "detail-link gevonden",
+      "rawText": "Roegepad"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Midden-Groningen",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/plekken/midden-groningen/wandelen-midden-groningen",
+      "status": "detail-link gevonden",
+      "rawText": "Midden-Groningen"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Oldambt",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/plekken/oldambt/wandelen-oldambt",
+      "status": "detail-link gevonden",
+      "rawText": "Oldambt"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Op de kaart",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/plekken/op-de-kaart",
+      "status": "detail-link gevonden",
+      "rawText": "Op de kaart"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Veenkoloniën",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/plekken/veenkolonien/natuur-van-de-veenkolonien",
+      "status": "detail-link gevonden",
+      "rawText": "Veenkoloniën"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Waddenkust",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/plekken/wadden",
+      "status": "detail-link gevonden",
+      "rawText": "Waddenkust"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Waddenland",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/plekken/waddenland/wandelen-in-waddenland",
+      "status": "detail-link gevonden",
+      "rawText": "Waddenland"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Westerkwartier",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/plekken/westerkwartier/wandelen-westerkwartier",
+      "status": "detail-link gevonden",
+      "rawText": "Westerkwartier"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Wandelen in Westerwolde",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/plekken/westerwolde/wandelen-in-westerwolde",
+      "status": "detail-link gevonden",
+      "rawText": "Wandelen in Westerwolde"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Reisideeën",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/reisideeen",
+      "status": "detail-link gevonden",
+      "rawText": "Reisideeën"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Toegankelijkheidsverklaring",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/toegankelijkheidsverklaring",
+      "status": "detail-link gevonden",
+      "rawText": "Toegankelijkheidsverklaring"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "status": "klaar",
+      "rawText": "site 3/4: 20 unieke events in 2.45 sec"
     }
   ],
   "status": "running",
   "lastCompletedSite": "https://www.visitgroningen.nl/nl/doen/wandelen",
   "lastSiteEventCount": 20,
   "lastUpdatedAt": "2026-10-23T15:16:48+00:00",
-  "lastCompletedAt": "2026-10-23T15:16:45+00:00"
+  "lastCompletedAt": "2026-10-23T15:16:49+00:00"
 }
