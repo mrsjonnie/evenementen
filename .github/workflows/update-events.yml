@@ -178,10 +178,13 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add events.json scrape_log.txt
-          git diff --cached --quiet || git commit -m "Auto update events.json"
-          # A progress commit or another repository update may have advanced main during scraping.
-          # Rebase our finished data commit before pushing so a successful scrape is not lost.
+          # Progress commits may have advanced origin/main during this run. Reset the index
+          # to the latest remote commit while preserving the freshly generated working files.
+          # Do not rebase old scrape-progress.json commits: they can conflict with each other.
           git fetch origin main
-          git rebase origin/main
+          git reset origin/main
+          git add events.json scrape_log.txt scrape-progress.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Publish scraped events and progress"
+          fi
           git push origin HEAD:main
