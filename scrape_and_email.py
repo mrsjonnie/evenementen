@@ -1288,6 +1288,7 @@ def collect_event_links(html, page_url, site_url):
     scored = []
     is_kultuuragenda = "kultuuragenda.nl" in canonical_host(site_url)
     is_martiniplaza = canonical_host(site_url) == "martiniplaza.nl"
+    is_visitgroningen = canonical_host(site_url) == "visitgroningen.nl"
     for anchor in soup.find_all("a", href=True):
         url = normalized_url(anchor.get("href"), page_url)
         if not url or not same_host(url, site_url):
@@ -1297,6 +1298,12 @@ def collect_event_links(html, page_url, site_url):
         # pages (magazine, navigation, contact forms) even if their text contains dates.
         if is_martiniplaza:
             if re.search(r"/nl/agenda/[^/?#]+/?$", urlparse(url).path, re.I):
+                scored.append((1000, url, text))
+            continue
+        # Visit Groningen: alleen echte evenement-detailpagina's onder /evenementen/<slug>.
+        # De overzichtspagina is een linkdirectory; algemene kaarten/tekst zijn geen events.
+        if is_visitgroningen:
+            if re.search(r"/evenementen/[^/?#]+/?$", urlparse(url).path, re.I):
                 scored.append((1000, url, text))
             continue
         # Prioriteer echte detailpagina's; /agenda zelf is alleen de overzichtspagina.
@@ -1992,6 +1999,12 @@ def scrape_site(site_url, site_index=0, site_total=0, progress_callback=None):
             page_events = extract_date_listing_events(html, final_url, normalized_site, "Website")
             if not page_events:
                 page_events = parse_page_events(html, final_url, normalized_site, "Website")
+        elif canonical_host(normalized_site) == "visitgroningen.nl" and "/evenementen" in urlparse(final_url).path.lower():
+            # Het overzicht is uitsluitend een bron voor detail-URL's. Alleen pagina's
+            # met /evenementen/<slug> worden als echte evenementen verwerkt.
+            page_events = []
+            add_raw("Parser", original_site, "Visit Groningen detailstrategie", "", final_url, "strategie",
+                    "Overzicht overslaan; alleen detail-URL's met /evenementen/<slug> verwerken")
         elif canonical_host(normalized_site) == "zwolsetheaters.nl":
             # Alternative to the old card parser: structured Event JSON-LD,
             # semantic links and detail-page crawling. Do not infer event records
@@ -2061,13 +2074,18 @@ def scrape_site(site_url, site_index=0, site_total=0, progress_callback=None):
 
     detail_queue = unique_urls(detail_links + serp_links)
     is_kultuuragenda = "kultuuragenda.nl" in canonical_host(normalized_site)
+    is_visitgroningen = canonical_host(normalized_site) == "visitgroningen.nl"
     visited = set()
     for detail_url in detail_queue:
         # Eerst echte activiteitspagina's uitlezen; de overzichtskaarten bevatten vaak te weinig details.
-        is_activity_detail = is_kultuuragenda and bool(re.search(r"/agenda/\d+/[^/?#]+", urlparse(detail_url).path, re.I))
-        if len(dedupe_events(events)) >= MAX_EVENTS_PER_SITE and not is_activity_detail and "vera-groningen.nl" not in canonical_host(normalized_site):
+        detail_path = urlparse(detail_url).path
+        is_activity_detail = is_kultuuragenda and bool(re.search(r"/agenda/\d+/[^/?#]+", detail_path, re.I))
+        is_visitgroningen_detail = is_visitgroningen and bool(re.search(r"/evenementen/[^/?#]+/?$", detail_path, re.I))
+        if len(dedupe_events(events)) >= MAX_EVENTS_PER_SITE and not is_activity_detail and not is_visitgroningen_detail and "vera-groningen.nl" not in canonical_host(normalized_site):
             break
         if is_kultuuragenda and not is_activity_detail:
+            continue
+        if is_visitgroningen and not is_visitgroningen_detail:
             continue
         if time.monotonic() >= deadline:
             timed_out = True
