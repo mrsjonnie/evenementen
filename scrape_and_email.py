@@ -1244,11 +1244,17 @@ def collect_event_links(html, page_url, site_url):
     soup = BeautifulSoup(html, "html.parser")
     scored = []
     is_kultuuragenda = "kultuuragenda.nl" in canonical_host(site_url)
+    is_martiniplaza = canonical_host(site_url) == "martiniplaza.nl"
     for anchor in soup.find_all("a", href=True):
         url = normalized_url(anchor.get("href"), page_url)
         if not url or not same_host(url, site_url):
             continue
         text = clean_text(anchor.get_text(" ", strip=True) or anchor.get("title") or anchor.get("aria-label"))
+        # Martiniplaza agenda cards often put the date outside the link. Always
+        # queue their detail pages so JSON-LD/detail-page dates can be extracted.
+        if is_martiniplaza and re.search(r"/nl/agenda/[^/?#]+/?$", urlparse(url).path, re.I):
+            scored.append((1000, url, text))
+            continue
         # Prioriteer echte detailpagina's; /agenda zelf is alleen de overzichtspagina.
         if is_kultuuragenda and re.search(r"/agenda/\d+/[^/?#]+", url, re.I):
             scored.append((1000, url, text))
