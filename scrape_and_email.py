@@ -1712,11 +1712,11 @@ def scrape_site(site_url, site_index=0, site_total=0, progress_callback=None):
         try:
             html, final_url = fetch_html(session, detail_url, deadline)
             if canonical_host(normalized_site) == "martiniplaza.nl":
-                # Detail pages contain many dated links (showtimes, ticket buttons,
-                # navigation and price labels). Extract only the page's main event.
+                # Detail pages contain unrelated dates in breadcrumbs, schedules and
+                # footer links. Trust structured Event data only; overview cards supply
+                # the fallback when a detail page has no Event schema.
                 detail_soup = BeautifulSoup(html, "html.parser")
-                detail_event = extract_detail_event(detail_soup, final_url, normalized_site, discovery_source)
-                detail_events = [detail_event] if detail_event else []
+                detail_events = parse_jsonld_events(detail_soup, final_url, normalized_site, discovery_source)
             else:
                 detail_events = parse_page_events(html, final_url, normalized_site, discovery_source)
             before = len(dedupe_events(events))
