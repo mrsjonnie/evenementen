@@ -1683,6 +1683,12 @@ def scrape_site(site_url, site_index=0, site_total=0, progress_callback=None):
             if not page_events:
                 add_raw("Parser", original_site, "Universele parser zonder resultaat", "", final_url, "fallback", "Geen events herkend; probeer de SPOT-kaartenparser")
                 page_events = extract_venue_agenda_events(html, final_url, normalized_site, "Website")
+        elif canonical_host(normalized_site) == "forum.nl":
+            # Forum's universal line parser mistakes genres, locations and footer
+            # labels for events. Use the overview only to discover actual agenda
+            # detail URLs, then parse each detail page.
+            page_events = []
+            add_raw("Parser", original_site, "Forum detailstrategie", "", final_url, "strategie", "Overzicht overslaan; alleen /nl/agenda/<event> detailpagina's verwerken")
         elif canonical_host(normalized_site) == "simplon.nl":
             page_events = extract_venue_agenda_events(html, final_url, normalized_site, "Website")
         else:
@@ -1704,7 +1710,14 @@ def scrape_site(site_url, site_index=0, site_total=0, progress_callback=None):
         # VERA's programme parser already returns one clean record per event card.
         # Crawling every linked detail page with generic heuristics creates false events.
         if canonical_host(normalized_site) not in {"vera-groningen.nl", "groningen.uitloper.nu", "simplon.nl"}:
-            detail_links.extend(collect_event_links(html, final_url, normalized_site))
+            found_links = collect_event_links(html, final_url, normalized_site)
+            if canonical_host(normalized_site) == "forum.nl":
+                found_links = [
+                    link for link in found_links
+                    if re.match(r"^/nl/agenda/(?!$)(?:film/)?[^/]+/?$", urlparse(link).path, re.I)
+                    or re.match(r"^/agenda/[^/]+/?$", urlparse(link).path, re.I)
+                ]
+            detail_links.extend(found_links)
 
     # Verwerk gevonden openbare feeds rechtstreeks; dit vereist geen API-key of AI.
     for feed_url in unique_urls(feed_urls):
@@ -1752,6 +1765,14 @@ def scrape_site(site_url, site_index=0, site_total=0, progress_callback=None):
                 # the fallback when a detail page has no Event schema.
                 detail_soup = BeautifulSoup(html, "html.parser")
                 detail_events = parse_jsonld_events(detail_soup, final_url, normalized_site, discovery_source)
+            elif canonical_host(normalized_site) == "forum.nl":
+                # Avoid the generic line parser on Forum detail pages: its genres,
+                # labels and navigation text are not events.
+                detail_soup = BeautifulSoup(html, "html.parser")
+                detail_events = parse_jsonld_events(detail_soup, final_url, normalized_site, discovery_source)
+                detail_event = extract_detail_event(detail_soup, final_url, normalized_site, discovery_source)
+                if detail_event:
+                    detail_events.append(detail_event)
             else:
                 detail_events = parse_page_events(html, final_url, normalized_site, discovery_source)
             before = len(dedupe_events(events))
