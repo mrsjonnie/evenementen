@@ -2452,13 +2452,13 @@
         const eventsForType = allForType.filter(event => visibleKeys.has(eventDedupeKey(event)));
         const collapsed = collapsedEventTypes.has(type);
         const sourceGroups = new Map();
-        eventsForType.forEach(event => { const source = eventSourceLabel(event) || "Bron onbekend"; if (!sourceGroups.has(source)) sourceGroups.set(source, []); sourceGroups.get(source).push(event); });
-        const allSourceCounts = new Map();
-        allForType.forEach(event => { const source = eventSourceLabel(event) || "Bron onbekend"; allSourceCounts.set(source, (allSourceCounts.get(source) || 0) + 1); });
-        const sourceHtml = [...sourceGroups.entries()].sort(([a],[b]) => a.localeCompare(b, "nl")).map(([source, sourceEvents]) => {
+        allForType.forEach(event => { const source = eventSourceLabel(event) || "Bron onbekend"; if (!sourceGroups.has(source)) sourceGroups.set(source, []); sourceGroups.get(source).push(event); });
+        const sourceHtml = [...sourceGroups.entries()].sort(([a],[b]) => a.localeCompare(b, "nl")).map(([source, allSourceEvents]) => {
           const key = type + "::" + source;
           const sourceCollapsed = collapsedSourceGroups.has(key);
-          return `<section class="sourceGroup ${sourceCollapsed ? "collapsed" : ""}"><button class="sourceGroupHeader" type="button" data-source-toggle="${escapeHtml(key)}" aria-expanded="${!sourceCollapsed}"><span>${escapeHtml(source)}</span><small>${allSourceCounts.get(source) || sourceEvents.length} evenementen</small></button><div class="eventGroupCards">${sourceEvents.map(renderCard).join("")}</div></section>`;
+          const sourceEvents = allSourceEvents.filter(event => visibleKeys.has(eventDedupeKey(event)));
+          const sourceCards = sourceEvents.length ? sourceEvents.map(renderCard).join("") : \`<p class="nextPageHint">Meer \${escapeHtml(source)}-evenementen staan op een andere pagina (\${allSourceEvents.length} totaal).</p>\`;
+          return \`<section class="sourceGroup \${sourceCollapsed ? "collapsed" : ""}"><button class="sourceGroupHeader" type="button" data-source-toggle="\${escapeHtml(key)}" aria-expanded="\${!sourceCollapsed}"><span>\${escapeHtml(source)}</span><small>\${allSourceEvents.length} evenementen</small></button><div class="eventGroupCards">\${sourceCards}</div></section>\`;
         }).join("");
         const cards = sourceHtml || `<p class="nextPageHint">Meer resultaten van dit type staan op een andere pagina (${allForType.length} totaal).</p>`;
         return `<section class="eventGroup ${collapsed ? "collapsed" : ""}"><button class="eventGroupHeader" type="button" data-type-toggle="${escapeHtml(type)}" aria-expanded="${!collapsed}"><span>${escapeHtml(type)}</span><small>${allForType.length} resultaten</small></button><div class="eventGroupCards">${cards}</div></section>`;
@@ -2616,7 +2616,7 @@
       const formatter = new Intl.DateTimeFormat("nl-NL", { weekday: "short", day: "numeric", month: "short" });
 
       const daily = Array.isArray(data?.daily) ? data.daily : [];
-      for (let index = 0; index < 7; index += 1) {
+      for (let index = 0; index < 1; index += 1) {
         const day = new Date(start);
         day.setDate(start.getDate() + index);
         const source = daily[index] || {};
@@ -3137,7 +3137,7 @@
       const sourceName = weatherTopicSourceName(topic);
       const details = [
         topic === "temperatuur" ? weatherDayRows(latestWeatherData || {}) : "",
-        topic === "weersverwachting" || topic === "regenradar" ? radarBlockHtml() : ""
+        radarBlockHtml()
       ].filter(Boolean).join("");
       button.setAttribute("aria-expanded", "true");
       panel.dataset.topic = topic;
