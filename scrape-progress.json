@@ -1,10 +1,11 @@
 {
   "runId": "2026-10-23T15:32:30+00:00",
   "startedAt": "2026-10-23T15:32:30+00:00",
-  "completedCount": 1,
+  "completedCount": 2,
   "totalSites": 3,
   "completedSites": [
-    "https://www.groupon.nl/"
+    "https://www.groupon.nl/",
+    "https://www.ibood.com/nl/"
   ],
   "events": [],
   "siteResults": [
@@ -13,6 +14,13 @@
       "count": 0,
       "newCount": 0,
       "durationSeconds": 0.46,
+      "timedOut": false
+    },
+    {
+      "site": "https://www.ibood.com/nl/",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 0.54,
       "timedOut": false
     }
   ],
@@ -88,10 +96,64 @@
       "url": "https://www.groupon.nl/",
       "status": "klaar",
       "rawText": "site 1/3: 0 unieke events in 0.46 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.ibood.com/nl/",
+      "title": "Start",
+      "date": "",
+      "url": "https://www.ibood.com/nl/",
+      "status": "start",
+      "rawText": "site 2/3: max 20 events, max 60 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.ibood.com/nl/",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://www.ibood.com/nl/",
+      "status": "strategie",
+      "rawText": "aanbiedingen"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.ibood.com/nl/",
+      "title": "Pagina mislukt",
+      "date": "",
+      "url": "https://www.ibood.com/nl/",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.ibood.com/nl/",
+      "title": "Pagina mislukt",
+      "date": "",
+      "url": "https://www.ibood.com/nl/s-nl",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.ibood.com/nl/",
+      "title": "Pagina mislukt",
+      "date": "",
+      "url": "https://www.ibood.com/offers/nl/s-nl",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.ibood.com/nl/",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://www.ibood.com/nl/",
+      "status": "klaar",
+      "rawText": "site 2/3: 0 unieke events in 0.54 sec"
     }
   ],
   "status": "running",
-  "lastCompletedSite": "https://www.groupon.nl/",
-  "lastCompletedAt": "2026-10-23T15:32:32+00:00",
+  "lastCompletedSite": "https://www.ibood.com/nl/",
+  "lastCompletedAt": "2026-10-23T15:32:34+00:00",
   "lastSiteEventCount": 0
 }
