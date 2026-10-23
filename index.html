@@ -1039,8 +1039,8 @@
     .inlineTools > * { min-width:0; }
     .inlineTools .btn { white-space:normal; line-height:1.15; }
     .sidebarViewButtons { grid-column:1 / -1; }
-    #refreshBtn { background:#087f5b; border-color:#087f5b; color:#fff; font-weight:900; }
-    #refreshBtn:hover { background:#066b4d; border-color:#066b4d; }
+    #refreshBtn, #clearBtn { background:#087f5b; border-color:#087f5b; color:#fff; font-weight:900; }
+    #refreshBtn:hover, #clearBtn:hover { background:#066b4d; border-color:#066b4d; }
     .filterSidebar .sitePanel { position: static; top: auto; left: auto; right: auto; margin-top: 5px; box-shadow: none; }
     .filterSidebar .sitePanelHeader { padding: 7px 8px; font-size: .72rem; }
     .filterSidebar .siteList { max-height: 180px; padding: 6px; }
@@ -3345,7 +3345,7 @@
       if (popup) { popup.hidden = !popup.hidden; info.setAttribute("aria-expanded", String(!popup.hidden)); }
       event.preventDefault(); event.stopPropagation();
     });
-    $("providerList")?.addEventListener("change", () => { updateProviderCount(); renderRawLog(); });
+    $("providerList")?.addEventListener("change", () => { saveSourceSelection(); updateProviderCount(); renderRawLog(); });
     document.addEventListener("click", async (event) => {
       const button = event.target.closest(".routeToggle");
       if (!button) return;
