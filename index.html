@@ -965,6 +965,47 @@
       .pagination .btn { width: auto; }
       .confirmActions { flex-direction: column-reverse; }
     }
+  
+    /* Compacte, rustige interface: vaste maatvoering, minder visuele ruis. */
+    :root {
+      --bg: #101820; --surface: #17232d; --surface-soft: #202f3b;
+      --ink: #edf4f8; --muted: #a6b7c4; --line: #314452;
+      --primary: #2b9ab5; --primary-dark: #8bd9e8; --radius: 12px;
+      --shadow: 0 8px 24px rgba(0,0,0,.18);
+    }
+    .hero { border-bottom-width: 2px; background-position: center 45%; }
+    .heroInner { max-width: 1440px; padding-block: 10px; gap: 12px; }
+    h1 { font-size: clamp(1.35rem, 2vw, 1.75rem); letter-spacing: -.025em; }
+    .subtitle { margin-top: 3px; font-size: .88rem; line-height: 1.35; }
+    .heroSide { gap: 4px; }
+    .status { padding: 5px 8px; border-radius: 9px; font-size: .72rem; line-height: 1.25; }
+    main { max-width: 1440px; padding-top: 12px; }
+    .toolbar { padding: 12px; border-radius: 14px; box-shadow: 0 6px 20px rgba(0,0,0,.12); }
+    .filters { grid-template-columns: minmax(180px,1.6fr) minmax(130px,.9fr) minmax(90px,.55fr) minmax(140px,1fr) minmax(145px,1fr) minmax(150px,1fr) minmax(140px,1fr) auto auto; gap: 8px; }
+    .field label, .siteSelectLabel { margin-bottom: 4px; font-size: .74rem; letter-spacing: .01em; }
+    input, select { height: 38px; padding-inline: 9px; border-radius: 9px; font-size: .88rem; }
+    .btn { min-height: 38px; padding-inline: 11px; border-radius: 9px; font-size: .82rem; }
+    .secondRow { padding-top: 9px; gap: 8px; }
+    .check { padding: 7px 9px; font-size: .8rem; }
+    .summary { margin-block: 12px 8px; color: var(--muted); }
+    .summary strong { color: var(--ink); font-size: 1rem; }
+    .grid { gap: 14px; }
+    .card { border-radius: 14px; overflow: hidden; border-color: #2a3b48; box-shadow: 0 6px 20px rgba(0,0,0,.14); }
+    .cardBody { padding: 14px; }
+    .title { font-size: 1.08rem; letter-spacing: -.015em; }
+    .desc { line-height: 1.55; color: #bdcbd4; }
+    .tag { border-radius: 7px; font-size: .7rem; padding: 4px 7px; }
+    .pagination { margin-top: 16px; }
+    @media (min-width: 960px) and (min-height: 740px) { .hero, .toolbar { position: static; } }
+    @media (max-width: 1280px) { .filters { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+    @media (max-width: 680px) {
+      .heroInner { padding: 10px 12px; }
+      .filters { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .filters .field:first-child { grid-column: 1 / -1; }
+      .filters .btn { width: 100%; }
+      main { padding-inline: 10px; }
+    }
+
   </style>
 </head>
 <body>
@@ -992,10 +1033,6 @@
         <div class="weather" id="weatherBox" aria-live="polite"></div>
         <div class="status" id="status" aria-live="polite"></div>
       </div>
-      <details class="rawLogPanel" id="rawLogPanel">
-        <summary id="rawLogSummary">Ruwe verversdata</summary>
-        <div class="rawLogTableWrap" id="rawLogTableWrap"></div>
-      </details>
     </div>
   </header>
 
@@ -1025,7 +1062,7 @@
         </div>
 
         <div class="field">
-          <label for="dateSingle">Startdatum</label>
+          <label for="dateSingle">Vanaf datum</label>
           <input id="dateSingle" type="date">
         </div>
 
@@ -1034,11 +1071,22 @@
           <select id="periodMode">
             <option value="today">Vandaag</option>
             <option value="tomorrow">Morgen</option>
-            <option value="specificDay">Specifieke dag</option>
-            <option value="always">Altijd</option>
             <option value="thisWeekend">Dit weekend</option>
             <option value="nextWeekend">Volgend weekend</option>
-            <option value="week" selected>7 dagen</option>
+            <option value="week">7 dagen</option>
+            <option value="fortnight" selected>14 dagen</option>
+            <option value="month">30 dagen</option>
+            <option value="specificDay">Alleen gekozen dag</option>
+            <option value="always">Alle toekomstige</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="costFilter">Prijs</label>
+          <select id="costFilter">
+            <option value="all">Alle prijzen</option>
+            <option value="free">Alleen gratis</option>
+            <option value="paid">Prijs bekend</option>
           </select>
         </div>
 
@@ -1222,7 +1270,7 @@
     let regionLookupTimer = null;
 
     const $ = (id) => document.getElementById(id);
-    const controls = ["search", "region", "radius", "typeFilter", "dateSingle", "periodMode", "newOnlyFilter"];
+    const controls = ["search", "region", "radius", "typeFilter", "dateSingle", "periodMode", "costFilter", "newOnlyFilter"];
 
     function cleanText(value) {
       return String(value ?? "")
@@ -1814,9 +1862,10 @@
       dateFrom = start;
       dateTo = start;
 
-      if (mode === "week") {
+      const days = mode === "week" ? 6 : mode === "fortnight" ? 13 : mode === "month" ? 29 : 0;
+      if (days > 0) {
         const end = new Date(startDate);
-        end.setDate(startDate.getDate() + 6);
+        end.setDate(startDate.getDate() + days);
         dateTo = formatDate(end);
       }
     }
@@ -2042,6 +2091,7 @@
 
         if (!eventMatchesSelectedSites(event, siteHosts)) return false;
         if (!eventMatchesProviderFilter(event)) return false;
+        if (!eventMatchesCostFilter(event)) return false;
         if (!matchesDate(event)) return false;
         if (query && !haystack.includes(query)) return false;
         if (newOnly && !isNewEvent(event)) return false;
@@ -2111,6 +2161,16 @@
       if ((discovery === "chatgpt" || discovery === "openai") && !$("provOpenAI")?.checked) return false;
       if (discovery === "mistral" && !$("provMistral")?.checked) return false;
       return true;
+    }
+
+    function eventMatchesCostFilter(event) {
+      const filter = $("costFilter")?.value || "all";
+      if (filter === "all") return true;
+      const cost = cleanText(event.cost || "").toLowerCase();
+      const evidence = [cost, cleanText(event.description || "").toLowerCase()].join(" ");
+      const isFree = /gratis|kosteloos|free entry|free admission|geen entree|entree vrij/.test(evidence) || /^(€\\s*0(?:[,.]00)?|0(?:[,.]00)?\\s*(?:€|eur)?)$/.test(cost);
+      const priceKnown = Boolean(cost && !/zie website|onbekend|n\\.v\\.t\\./.test(cost) && !isFree);
+      return filter === "free" ? isFree : priceKnown;
     }
 
     function renderSites(selected = null) {
@@ -2214,11 +2274,13 @@
     }
 
     function matchesDate(event) {
-      if ($("periodMode").value === "always") return true;
       if (event.isPermanent) return true;
-      if (!/^\d{4}-\d{2}-\d{2}$/.test(event.date || "")) return true;
-
+      if (!/^\d{4}-\d{2}-\d{2}$/.test(event.date || "")) return false;
+      const today = new Date();
+      today.setHours(0, 0, 0, 0);
       const day = new Date(event.date + "T00:00:00");
+      if (day < today) return false;
+      if ($("periodMode").value === "always") return true;
       const from = new Date(dateFrom + "T00:00:00");
       const to = new Date(dateTo + "T00:00:00");
       return day >= from && day <= to;
@@ -2260,7 +2322,8 @@
         return !query || haystack.includes(query);
       });
       let afterType = afterQuery.filter((event) => type === "all" || displayType(event.type || "").toLowerCase() === type);
-      let afterNew = afterType.filter((event) => !newOnly || isNewEvent(event));
+      let afterCost = afterType.filter(eventMatchesCostFilter);
+      let afterNew = afterCost.filter((event) => !newOnly || isNewEvent(event));
       const matchesRadius = (event) => {
         const eventKm = eventDistanceKm(event);
         return !(radiusKm > 0 && Number.isFinite(eventKm) && eventKm > radiusKm);
@@ -2717,7 +2780,7 @@
           applyFilters();
         }
         setBusy(button, false);
-        showStatus("Alles is verwijderd. Verversing is gestart; de logging blijft zichtbaar.", "ok", { stop: true });
+        showStatus("Verwijderverzoek verstuurd. De verversing kan nog even doorlopen.", "ok", { stop: true });
         waitForUpdatedEvents(previousSignature, previousKeys, scrapedCountFromResponse(data), { requireEvents: false, keepEmptyOnTimeout: true, maxAttempts: 6 })
           .catch((error) => showStatus(`Controle op nieuwe data mislukt: ${error.message}`, "warn"));
       } catch (error) {
@@ -2731,8 +2794,9 @@
       $("search").value = "";
       $("region").value = "Groningen";
       $("radius").value = "0";
-      $("periodMode").value = "always";
+      $("periodMode").value = "fortnight";
       $("typeFilter").value = "all";
+      $("costFilter").value = "all";
       $("newOnlyFilter").checked = false;
       $("provPerplexity").checked = false;
       $("provMistral").checked = true;
@@ -2744,7 +2808,7 @@
       $("collapseBtn").textContent = "Uitklappen";
       updateSiteCount();
       updateProviderCount();
-      $("dateSingle").value = "2020-01-01";
+      $("dateSingle").value = formatDate(new Date());
       applyFilters();
       loadWeather();
       hideStatus();
