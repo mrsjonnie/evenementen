@@ -2689,53 +2689,49 @@
     function renderCard(event) {
       const title = escapeHtml(readableEventTitle(event));
       const type = eventCategory(event);
-      const image = typeImage(type, event.image);
       const website = safeUrl(event.website, { website: true });
       const cardKey = eventDedupeKey(event);
       const expanded = expandedEventKeys.has(cardKey);
       const route = routeUrl(event);
       const routeDestinationText = routeDestination(event);
       const routeContext = routeContextLabel(event);
-      const routeId = `route-${Math.random().toString(36).slice(2)}`;
+      const routeId = \`route-\${Math.random().toString(36).slice(2)}\`;
       const locationUrl = locationHomeUrl(event);
       const locationLabel = escapeHtml(event.location || "Locatie onbekend");
       const dateLabel = event.periodLabel || prettyDate(event.date);
-      const isNew = isNewEvent(event);
       const sourceLabel = eventSourceLabel(event);
       const sourceTag = sourceLabel
         ? (website
-          ? `<a class="tag sourceLink" href="${escapeHtml(website)}" target="_blank" rel="noopener noreferrer">${escapeHtml(sourceLabel)}</a>`
-          : `<span class="tag">${escapeHtml(sourceLabel)}</span>`)
+          ? \`<a href="\${escapeHtml(website)}" target="_blank" rel="noopener noreferrer">\${escapeHtml(sourceLabel)}</a>\`
+          : escapeHtml(sourceLabel))
         : "";
 
-      return `
-        <article class="card ${isNew ? "isNew" : ""} ${expanded ? "expanded" : ""}">
+      return \`
+        <article class="card \${isNewEvent(event) ? "isNew" : ""} \${expanded ? "expanded" : ""}">
           <div class="cardBody">
-            <div class="badges">
-              ${isNew ? '<span class="tag tagNew">Nieuw</span>' : ""}
-              ${sourceTag}
-              <span class="tag tagAccent">${escapeHtml(dateLabel)}</span>
+            <div class="cardTopline">
+              <h2 class="title"><button class="titleButton" type="button" data-event-key="\${escapeHtml(cardKey)}" aria-expanded="\${expanded ? "true" : "false"}">\${title}</button></h2>
+              <span class="cardDate">\${escapeHtml(dateLabel)}</span>
             </div>
-            <h2 class="title"><button class="titleButton" type="button" data-event-key="${escapeHtml(cardKey)}" aria-expanded="${expanded ? "true" : "false"}">${title}</button></h2>
+            \${sourceTag ? \`<div class="cardSource">(\${sourceTag})</div>\` : ""}
             <div class="details">
-              <div class="detail"><span>Datum</span><span>${escapeHtml(prettyDate(event.date))}${event.time ? ` - ${escapeHtml(event.time)}` : ""}</span></div>
-              <div class="detail"><span>Plaats</span><span>${locationUrl ? `<a href="${escapeHtml(locationUrl)}" target="_blank" rel="noopener noreferrer">${locationLabel}</a>` : locationLabel}</span></div>
-              <div class="detail"><span>Type</span><span>${escapeHtml(type || "Type onbekend")}</span></div>
-              <div class="detail"><span>Prijs</span><span>${escapeHtml(event.cost || "Zie website")}</span></div>
+              <div class="detail"><span>Datum</span><span>\${escapeHtml(prettyDate(event.date))}\${event.time ? \` - \${escapeHtml(event.time)}\` : ""}</span></div>
+              <div class="detail"><span>Plaats</span><span>\${locationUrl ? \`<a href="\${escapeHtml(locationUrl)}" target="_blank" rel="noopener noreferrer">\${locationLabel}</a>\` : locationLabel}</span></div>
+              <div class="detail"><span>Type</span><span>\${escapeHtml(type || "Type onbekend")}</span></div>
+              <div class="detail"><span>Prijs</span><span>\${escapeHtml(event.cost || "Zie website")}</span></div>
             </div>
-            <p class="desc">${escapeHtml(event.description || "Geen omschrijving beschikbaar.")}</p>
+            <p class="desc">\${escapeHtml(event.description || "Geen omschrijving beschikbaar.")}</p>
             <div class="cardActions">
-              ${website ? `<a class="btn btnPrimary" href="${escapeHtml(website)}" target="_blank" rel="noopener noreferrer">Meer info</a>` : ""}
-              ${route ? `<button class="btn btnSecondary routeToggle" type="button" data-route="${escapeHtml(routeId)}" data-destination="${escapeHtml(routeDestinationText)}" data-route-url="${escapeHtml(route)}">Route</button>` : ""}
-              <button class="btn btnDanger deleteEventBtn" type="button" data-event-key="${escapeHtml(cardKey)}">Verwijder</button>
-              ${route ? `<span class="routeInfo">${escapeHtml(routeContext)}</span>` : ""}
+              \${website ? \`<a class="btn btnPrimary" href="\${escapeHtml(website)}" target="_blank" rel="noopener noreferrer">Meer info</a>\` : ""}
+              \${route ? \`<button class="btn btnSecondary routeToggle" type="button" data-route="\${escapeHtml(routeId)}" data-destination="\${escapeHtml(routeDestinationText)}" data-route-url="\${escapeHtml(route)}">Route</button>\` : ""}
+              <button class="btn btnDanger deleteEventBtn" type="button" data-event-key="\${escapeHtml(cardKey)}">Verwijder</button>
+              \${route ? \`<span class="routeInfo">\${escapeHtml(routeContext)}</span>\` : ""}
             </div>
-            ${route ? `<div class="routePanel" id="${escapeHtml(routeId)}"></div>` : ""}
+            \${route ? \`<div class="routePanel" id="\${escapeHtml(routeId)}"></div>\` : ""}
           </div>
         </article>
-      `;
+      \`;
     }
-
     const weeronlineLocations = {
       groningen: { name: "Groningen", id: "4056536" },
       assen: { name: "Assen", id: "4057114" },
