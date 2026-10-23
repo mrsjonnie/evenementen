@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-23T13:38:11+00:00",
+  "updatedAt": "2026-10-23T13:39:22+00:00",
   "events": [
     {
       "date": "2026-10-23",
@@ -933,6 +933,66 @@
       "isNew": false
     },
     {
+      "date": "2026-12-10",
+      "time": "",
+      "title": "Event Holiday on Ice 10 dec.",
+      "type": "Concert",
+      "location": "Martiniplaza Groningen",
+      "locationLink": "",
+      "website": "https://www.martiniplaza.nl/nl/agenda/holiday-on-ice",
+      "source": "martiniplaza.nl",
+      "discoverySource": "Website",
+      "description": "Internationaal Indoor Concours Hippique Groningen 2027 TAFKAL - MOST WANTED (2027)",
+      "cost": "",
+      "image": "",
+      "isNew": true
+    },
+    {
+      "date": "2026-12-10",
+      "time": "",
+      "title": "Muziek Ilse DeLange 10 apr.",
+      "type": "Concert",
+      "location": "Martiniplaza Groningen",
+      "locationLink": "",
+      "website": "https://www.martiniplaza.nl/nl/agenda/ilse-delange",
+      "source": "martiniplaza.nl",
+      "discoverySource": "Website",
+      "description": "Internationaal Indoor Concours Hippique Groningen 2027 TAFKAL - MOST WANTED (2027)",
+      "cost": "",
+      "image": "",
+      "isNew": true
+    },
+    {
+      "date": "2026-12-10",
+      "time": "",
+      "title": "Sport Internationaal Indoor Concours Hippique Groningen 2027 21 dec.",
+      "type": "Concert",
+      "location": "Martiniplaza Groningen",
+      "locationLink": "",
+      "website": "https://www.martiniplaza.nl/nl/agenda/internationaal-indoor-concours-hippique-groningen-2027",
+      "source": "martiniplaza.nl",
+      "discoverySource": "Website",
+      "description": "Internationaal Indoor Concours Hippique Groningen 2027 TAFKAL - MOST WANTED (2027)",
+      "cost": "",
+      "image": "",
+      "isNew": true
+    },
+    {
+      "date": "2026-12-10",
+      "time": "",
+      "title": "Theater TAFKAL - MOST WANTED (2027) 11 nov.",
+      "type": "Concert",
+      "location": "Martiniplaza Groningen",
+      "locationLink": "",
+      "website": "https://www.martiniplaza.nl/nl/agenda/tafkal-most-wanted",
+      "source": "martiniplaza.nl",
+      "discoverySource": "Website",
+      "description": "Internationaal Indoor Concours Hippique Groningen 2027 TAFKAL - MOST WANTED (2027)",
+      "cost": "",
+      "image": "",
+      "isNew": true
+    },
+    {
       "date": "2026-12-11",
       "time": "",
       "title": "10 jaar Kerst met Stippenlift Dé remedie tegen je winterdepressie",
@@ -1402,9 +1462,9 @@
   "siteResults": [
     {
       "site": "https://www.martiniplaza.nl/nl/agenda",
-      "count": 12,
-      "newCount": 0,
-      "durationSeconds": 11.16,
+      "count": 16,
+      "newCount": 4,
+      "durationSeconds": 9.75,
       "timedOut": false
     }
   ],
@@ -1682,11 +1742,101 @@
     {
       "source": "Website",
       "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Event Holiday on Ice 10 dec.",
+      "date": "2026-12-10",
+      "url": "https://www.martiniplaza.nl/nl/agenda/holiday-on-ice",
+      "status": "venue-agenda kaart",
+      "rawText": "Event Holiday on Ice 10 dec. Sport Internationaal Indoor Concours Hippique Groningen 2027 21 dec. Muziek Ilse DeLange 10 apr. Theater TAFKAL - MOST WANTED (2027) 11 nov."
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Sport Internationaal Indoor Concours Hippique Groningen 2027 21 dec.",
+      "date": "2026-12-10",
+      "url": "https://www.martiniplaza.nl/nl/agenda/internationaal-indoor-concours-hippique-groningen-2027",
+      "status": "venue-agenda kaart",
+      "rawText": "Event Holiday on Ice 10 dec. Sport Internationaal Indoor Concours Hippique Groningen 2027 21 dec. Muziek Ilse DeLange 10 apr. Theater TAFKAL - MOST WANTED (2027) 11 nov."
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Muziek Ilse DeLange 10 apr.",
+      "date": "2026-12-10",
+      "url": "https://www.martiniplaza.nl/nl/agenda/ilse-delange",
+      "status": "venue-agenda kaart",
+      "rawText": "Event Holiday on Ice 10 dec. Sport Internationaal Indoor Concours Hippique Groningen 2027 21 dec. Muziek Ilse DeLange 10 apr. Theater TAFKAL - MOST WANTED (2027) 11 nov."
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Theater TAFKAL - MOST WANTED (2027) 11 nov.",
+      "date": "2026-12-10",
+      "url": "https://www.martiniplaza.nl/nl/agenda/tafkal-most-wanted",
+      "status": "venue-agenda kaart",
+      "rawText": "Event Holiday on Ice 10 dec. Sport Internationaal Indoor Concours Hippique Groningen 2027 21 dec. Muziek Ilse DeLange 10 apr. Theater TAFKAL - MOST WANTED (2027) 11 nov."
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Fred van Leer - Ik weet het eigenlijk niet",
+      "date": "2026-10-24",
+      "url": "https://www.martiniplaza.nl/nl/agenda/fred-van-leer",
+      "status": "venue-agenda kaart",
+      "rawText": "Show / Entertainment Theater Fred van Leer - Ik weet het eigenlijk niet 24 oktober"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Guus Meeuwis",
+      "date": "2026-10-24",
+      "url": "https://www.martiniplaza.nl/nl/agenda/guus-meeuwis",
+      "status": "venue-agenda kaart",
+      "rawText": "Concert Muziek Guus Meeuwis 24 oktober"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Donar Groningen – CSO Voluntari 2026",
+      "date": "2026-10-27",
+      "url": "https://www.martiniplaza.nl/nl/agenda/donar-groningen-cso-voluntari-2026",
+      "status": "venue-agenda kaart",
+      "rawText": "Sport Sport Donar Groningen – CSO Voluntari 2026 27 oktober"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Jethro Tull",
+      "date": "2026-10-27",
+      "url": "https://www.martiniplaza.nl/nl/agenda/jethro-tull",
+      "status": "venue-agenda kaart",
+      "rawText": "Muziek Theater Jethro Tull 27 oktober"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Rob Lamberti - A Celebration of GEORGE MICHAEL",
+      "date": "2026-10-28",
+      "url": "https://www.martiniplaza.nl/nl/agenda/rob-lamberti",
+      "status": "venue-agenda kaart",
+      "rawText": "Muziek Theater Rob Lamberti - A Celebration of GEORGE MICHAEL 28 oktober"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Agenda geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/",
+      "status": "gespecialiseerde parser",
+      "rawText": "9 agenda-items gevonden"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
       "title": "Pagina geanalyseerd",
       "date": "",
       "url": "https://www.martiniplaza.nl/",
       "status": "ok",
-      "rawText": "0 events/aanbiedingen op deze pagina"
+      "rawText": "9 events/aanbiedingen op deze pagina"
     },
     {
       "source": "Website",
@@ -2019,7 +2169,7 @@
       "date": "",
       "url": "https://www.martiniplaza.nl/nl/agenda",
       "status": "klaar",
-      "rawText": "site 1/1: 12 unieke events in 11.16 sec"
+      "rawText": "site 1/1: 16 unieke events in 9.75 sec"
     }
   ]
 }
