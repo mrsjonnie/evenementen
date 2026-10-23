@@ -1,6 +1,6 @@
 {
-  "requestedAt": "2026-10-23T15:12:55.460Z",
-  "trigger": "test-vvv-groupon-concertgebouw-zwolsetheaters",
+  "requestedAt": "2026-10-23T15:13:46.916Z",
+  "trigger": "test-uitloper-visitgroningen-walks-events-zwolse-alternate-parser",
   "region": "Groningen",
   "radius": "0",
   "category": "all",
@@ -10,7 +10,7 @@
   "minResults": "20",
   "maxEventsPerSite": "20",
   "siteTimeLimitSeconds": "60",
-  "sites": "[\"https://www.vvvameland.nl/activiteiten-en-evenementen\",\"https://www.groupon.nl/\",\"https://www.concertgebouw.nl/concerten-en-tickets\",\"https://www.zwolsetheaters.nl/programma\"]",
+  "sites": "[\"https://groningen.uitloper.nu/\",\"https://www.visitgroningen.nl/nl/doen/evenementen\",\"https://www.visitgroningen.nl/nl/doen/wandelen\",\"https://www.zwolsetheaters.nl/programma\"]",
   "providers": "{\"mistral\":false,\"openai\":false,\"chatgpt\":false,\"serpapi\":false}",
   "serpApiLinks": "[]",
   "serpApiRawLog": "[]",
