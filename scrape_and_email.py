@@ -1142,11 +1142,8 @@ def extract_venue_agenda_events(html, page_url, site_url, discovery_source):
             candidate_text = clean_text(parent.get_text(" ", strip=True))
             candidate_date = parse_date_text(candidate_text)
             if not candidate_date:
-                compact_date = re.search(
-                    rf"\\b(?:{WEEKDAY_PATTERN})\\.?\\s*(\\d{{1,2}})\\s*({MONTH_PATTERN})(?:\\s*(20\\d{{2}}))?\\b",
-                    candidate_text,
-                    re.I,
-                )
+                compact_pattern = r"\\b(?:" + WEEKDAY_PATTERN + r")\\.?\\s*(\\d{1,2})\\s*(" + MONTH_PATTERN + r")(?:\\s*(20\\d{2}))?\\b"
+                compact_date = re.search(compact_pattern, candidate_text, re.I)
                 if compact_date:
                     month_num = MONTH_NUMBERS.get(compact_date.group(2).lower())
                     candidate_date = iso_from_parts(compact_date.group(1), month_num, compact_date.group(3)) if month_num else ""
