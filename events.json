@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-23T13:23:28+00:00",
+  "updatedAt": "2026-10-23T13:24:07+00:00",
   "events": [
     {
       "date": "2026-10-23",
@@ -1149,7 +1149,7 @@
       "site": "https://www.vera-groningen.nl/",
       "count": 20,
       "newCount": 0,
-      "durationSeconds": 3.44,
+      "durationSeconds": 3.25,
       "timedOut": false
     }
   ],
@@ -1791,7 +1791,7 @@
       "date": "",
       "url": "https://www.vera-groningen.nl/",
       "status": "klaar",
-      "rawText": "site 1/1: 20 unieke events in 3.44 sec"
+      "rawText": "site 1/1: 20 unieke events in 3.25 sec"
     }
   ]
 }

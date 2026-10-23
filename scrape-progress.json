@@ -1,6 +1,6 @@
 {
-  "runId": "2026-10-23T13:23:22+00:00",
-  "startedAt": "2026-10-23T13:23:22+00:00",
+  "runId": "2026-10-23T13:24:02+00:00",
+  "startedAt": "2026-10-23T13:24:02+00:00",
   "completedCount": 1,
   "totalSites": 1,
   "completedSites": [
@@ -313,7 +313,7 @@
       "site": "https://www.vera-groningen.nl/",
       "count": 20,
       "newCount": 0,
-      "durationSeconds": 3.44,
+      "durationSeconds": 3.25,
       "timedOut": false
     }
   ],
@@ -955,12 +955,12 @@
       "date": "",
       "url": "https://www.vera-groningen.nl/",
       "status": "klaar",
-      "rawText": "site 1/1: 20 unieke events in 3.44 sec"
+      "rawText": "site 1/1: 20 unieke events in 3.25 sec"
     }
   ],
   "status": "completed",
   "lastCompletedSite": "https://www.vera-groningen.nl/",
-  "lastCompletedAt": "2026-10-23T13:23:27+00:00",
+  "lastCompletedAt": "2026-10-23T13:24:06+00:00",
   "lastSiteEventCount": 20,
-  "finishedAt": "2026-10-23T13:23:28+00:00"
+  "finishedAt": "2026-10-23T13:24:07+00:00"
 }
