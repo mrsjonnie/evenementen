@@ -279,7 +279,9 @@ def detect_scraper_type(site_url):
         return "universeel-eventkaarten"
     if host == "zwolsetheaters.nl":
         return "programma-kaarten"
-    if host in {"socialdeal.nl", "groupon.nl", "ibood.com"}:
+    if host == "socialdeal.nl":
+        return "Social Deal-aanbiedingen"
+    if host in {"groupon.nl", "ibood.com"}:
         return "aanbiedingen"
     return "universeel-jsonld-links-kaarten"
 
@@ -1351,6 +1353,8 @@ def start_urls_for_site(site_url):
         return [urljoin(base, "/nl/agenda")]
     if host == "spotgroningen.nl":
         return [urljoin(exact, "/programma")]
+    if host == "socialdeal.nl":
+        return [urljoin(f"{parsed.scheme}://{parsed.netloc}", "/deals/groningen/")]
     if host == "simplon.nl":
         return [urljoin(exact, "/programma/")]
     urls = [exact]
@@ -1517,6 +1521,91 @@ def extract_visitgroningen_walks(html, page_url, site_url):
             break
     return result
 
+
+
+def extract_socialdeal_offers(html, page_url, site_url):
+    """Lees zichtbare Social Deal-aanbiedingen inclusief plaats en beschrijving."""
+    if "socialdeal.nl" not in canonical_host(site_url):
+        return []
+    soup = BeautifulSoup(html, "html.parser")
+    offers = []
+    seen = set()
+    city_pattern = re.compile(
+        r"\\b(Groningen|Veendam|Drachten|Assen|Haren|Hoogezand|Stadskanaal|Zuidlaren|"
+        r"Appingedam|Delfzijl|Winschoten|Leek|Marum|Roden|Norg|Oldekerk|Zuidbroek|"
+        r"Midwolda|Anjum|Eanjum|Drouwen|Gasselte|Paterswolde|Amsterdam|Utrecht|"
+        r"Rotterdam|Den Haag|Zwolle|Leeuwarden|Online|Bij jou thuis)\\b",
+        re.I,
+    )
+    for anchor in soup.find_all("a", href=True):
+        href = normalized_url(anchor.get("href"), page_url)
+        path = urlparse(href).path.lower()
+        if not href or "socialdeal.nl" not in canonical_host(href):
+            continue
+        if path.rstrip("/") in {"/", "/deals", "/deals/groningen"} or "/deals/" in path:
+            continue
+        if len([part for part in path.split("/") if part]) < 2:
+            continue
+        title = clean_title(anchor.get_text(" ", strip=True) or node_title(anchor))
+        if not title_is_usable(title) or title.lower() in {"bekijk deal", "meer informatie", "lees meer"}:
+            continue
+        node = anchor
+        for _ in range(4):
+            parent = getattr(node, "parent", None)
+            if not parent or not hasattr(parent, "get_text"):
+                break
+            text_blob = clean_text(parent.get_text(" ", strip=True))
+            if len(text_blob) >= 45:
+                node = parent
+                if parent.name in {"article", "li"} or any(
+                    token in " ".join(parent.get("class", [])).lower()
+                    for token in ("deal", "card", "offer", "product", "tile")
+                ):
+                    break
+        card_text = clean_text(node.get_text(" ", strip=True))
+        if len(card_text) < len(title) + 8:
+            card_text = clean_text(anchor.get_text(" ", strip=True))
+        key = href.lower().split("?")[0].rstrip("/")
+        if key in seen:
+            continue
+        seen.add(key)
+        location = ""
+        for match in city_pattern.finditer(card_text):
+            candidate = clean_text(match.group(1))
+            if candidate.lower() not in title.lower():
+                location = candidate
+                if candidate.lower() in {"online", "bij jou thuis"}:
+                    break
+        if not location:
+            location = "Locatie niet vermeld"
+        description = card_text
+        if title:
+            description = re.sub(re.escape(title), " ", description, count=1, flags=re.I)
+        description = re.sub(r"\\b(?:verkocht|sold out)\\s*:?\\s*[\\d.,]*", " ", description, flags=re.I)
+        description = compact(description, 420)
+        if not description:
+            description = f"Social Deal-aanbieding: {title}. Bekijk de dealpagina voor voorwaarden en beschikbaarheid."
+        date_text = parse_date_text(card_text) or TODAY.isoformat()
+        image_node = anchor.select_one("img[src], img[data-src]")
+        raw = {
+            "date": date_text,
+            "title": title,
+            "type": "Aanbiedingen",
+            "location": location,
+            "website": href,
+            "description": description,
+            "cost": first_price(card_text),
+            "image": normalized_url((image_node.get("src") or image_node.get("data-src") or ""), page_url) if image_node else "",
+            "discoverySource": "Website",
+            "siteUrl": site_url,
+        }
+        event = normalize_event(raw, site_url)
+        if event:
+            offers.append(event)
+            add_raw("Website", site_url, title, date_text, href, "deal gevonden", f"Locatie: {location}; {description[:180]}")
+        if len(offers) >= MAX_EVENTS_PER_SITE:
+            break
+    return dedupe_events(offers)
 
 def extract_ibood_offers(html, page_url, site_url):
     """Haal productaanbiedingen van iBOOD op als doorlopende aanbiedingen."""
@@ -1723,6 +1812,10 @@ def scrape_site(site_url, site_index=0, site_total=0, progress_callback=None):
             # detail URLs, then parse each detail page.
             page_events = []
             add_raw("Parser", original_site, "Forum detailstrategie", "", final_url, "strategie", "Overzicht overslaan; alleen /nl/agenda/<event> detailpagina's verwerken")
+        elif canonical_host(normalized_site) == "socialdeal.nl":
+            page_events = extract_socialdeal_offers(html, final_url, normalized_site)
+            if not page_events:
+                add_raw("Parser", original_site, "Social Deal-kaarten zonder resultaat", "", final_url, "fallback", "Geen kaartendeals herkend; controleer HTML/kaartstructuur")
         elif canonical_host(normalized_site) in {"simplon.nl", "zwolsetheaters.nl"}:
             page_events = extract_venue_agenda_events(html, final_url, normalized_site, "Website")
             if not page_events and canonical_host(normalized_site) == "zwolsetheaters.nl":
