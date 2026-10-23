@@ -1389,7 +1389,7 @@ def is_deal_source(site):
 
 
 def input_sites():
-    if "INPUT_SITES_RAW" in os.environ:
+    if "INPUT_SITES" in os.environ:
         return valid_site_list(parse_json_list(INPUT_SITES_RAW))
     try:
         with open(SITES_FILE, "r", encoding="utf-8") as handle:
