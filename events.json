@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-23T13:01:25+00:00",
+  "updatedAt": "2026-10-23T13:02:18+00:00",
   "events": [
     {
       "date": "2026-10-23",
@@ -1149,7 +1149,7 @@
       "site": "https://simplon.nl/",
       "count": 56,
       "newCount": 0,
-      "durationSeconds": 4.34,
+      "durationSeconds": 5.31,
       "timedOut": false
     }
   ],
@@ -1755,7 +1755,7 @@
       "date": "",
       "url": "https://simplon.nl/",
       "status": "klaar",
-      "rawText": "site 1/1: 56 unieke events in 4.34 sec"
+      "rawText": "site 1/1: 56 unieke events in 5.31 sec"
     }
   ]
 }
