@@ -19,7 +19,8 @@
       "discoverySource": "Website",
       "description": "Show / Entertainment",
       "cost": "",
-      "image": ""
+      "image": "",
+      "isNew": false
     },
     {
       "date": "2026-10-24",
@@ -33,7 +34,8 @@
       "discoverySource": "Website",
       "description": "Meer informatie staat op martiniplaza.nl.",
       "cost": "",
-      "image": ""
+      "image": "",
+      "isNew": false
     },
     {
       "date": "2026-10-27",
@@ -47,7 +49,8 @@
       "discoverySource": "Website",
       "description": "Meer informatie staat op martiniplaza.nl.",
       "cost": "",
-      "image": ""
+      "image": "",
+      "isNew": false
     },
     {
       "date": "2026-10-27",
@@ -61,7 +64,8 @@
       "discoverySource": "Website",
       "description": "Meer informatie staat op martiniplaza.nl.",
       "cost": "",
-      "image": ""
+      "image": "",
+      "isNew": false
     },
     {
       "date": "2026-10-28",
@@ -75,7 +79,8 @@
       "discoverySource": "Website",
       "description": "Meer informatie staat op martiniplaza.nl.",
       "cost": "",
-      "image": ""
+      "image": "",
+      "isNew": false
     },
     {
       "date": "2026-10-30",
@@ -89,7 +94,8 @@
       "discoverySource": "Website",
       "description": "Meer informatie staat op martiniplaza.nl.",
       "cost": "",
-      "image": ""
+      "image": "",
+      "isNew": false
     },
     {
       "date": "2026-10-31",
@@ -103,7 +109,8 @@
       "discoverySource": "Website",
       "description": "Meer informatie staat op martiniplaza.nl.",
       "cost": "",
-      "image": ""
+      "image": "",
+      "isNew": false
     },
     {
       "date": "2026-11-01",
@@ -117,7 +124,8 @@
       "discoverySource": "Website",
       "description": "Meer informatie staat op martiniplaza.nl.",
       "cost": "",
-      "image": ""
+      "image": "",
+      "isNew": false
     },
     {
       "date": "2026-11-03",
@@ -131,7 +139,8 @@
       "discoverySource": "Website",
       "description": "Meer informatie staat op martiniplaza.nl.",
       "cost": "",
-      "image": ""
+      "image": "",
+      "isNew": false
     },
     {
       "date": "2026-11-04",
@@ -145,7 +154,8 @@
       "discoverySource": "Website",
       "description": "Meer informatie staat op martiniplaza.nl.",
       "cost": "",
-      "image": ""
+      "image": "",
+      "isNew": false
     },
     {
       "date": "2026-11-05",
@@ -159,7 +169,8 @@
       "discoverySource": "Website",
       "description": "TAFKAL: SERIEUS GRAPPIG (UITVERKOCHT)",
       "cost": "",
-      "image": ""
+      "image": "",
+      "isNew": false
     },
     {
       "date": "2026-11-06",
@@ -173,7 +184,8 @@
       "discoverySource": "Website",
       "description": "TAFKAL: SERIEUS GRAPPIG (UITVERKOCHT)",
       "cost": "",
-      "image": ""
+      "image": "",
+      "isNew": false
     },
     {
       "date": "2026-12-10",
@@ -187,7 +199,8 @@
       "discoverySource": "Website",
       "description": "Internationaal Indoor Concours Hippique Groningen 2027 TAFKAL - MOST WANTED (2027)",
       "cost": "",
-      "image": ""
+      "image": "",
+      "isNew": true
     },
     {
       "date": "2026-12-10",
@@ -201,7 +214,8 @@
       "discoverySource": "Website",
       "description": "Internationaal Indoor Concours Hippique Groningen 2027 TAFKAL - MOST WANTED (2027)",
       "cost": "",
-      "image": ""
+      "image": "",
+      "isNew": true
     },
     {
       "date": "2026-12-10",
@@ -215,7 +229,8 @@
       "discoverySource": "Website",
       "description": "Internationaal Indoor Concours Hippique Groningen 2027 TAFKAL - MOST WANTED (2027)",
       "cost": "",
-      "image": ""
+      "image": "",
+      "isNew": true
     },
     {
       "date": "2026-12-10",
@@ -229,14 +244,15 @@
       "discoverySource": "Website",
       "description": "Internationaal Indoor Concours Hippique Groningen 2027 TAFKAL - MOST WANTED (2027)",
       "cost": "",
-      "image": ""
+      "image": "",
+      "isNew": true
     }
   ],
   "siteResults": [
     {
       "site": "https://www.martiniplaza.nl/nl/agenda",
       "count": 16,
-      "newCount": 0,
+      "newCount": 4,
       "durationSeconds": 9.75,
       "timedOut": false
     }
@@ -945,9 +961,10 @@
       "rawText": "site 1/1: 16 unieke events in 9.75 sec"
     }
   ],
-  "status": "finishing",
+  "status": "completed",
   "lastCompletedSite": "https://www.martiniplaza.nl/nl/agenda",
   "lastSiteEventCount": 16,
   "lastUpdatedAt": "2026-10-23T13:39:14+00:00",
-  "lastCompletedAt": "2026-10-23T13:39:21+00:00"
+  "lastCompletedAt": "2026-10-23T13:39:21+00:00",
+  "finishedAt": "2026-10-23T13:39:22+00:00"
 }
