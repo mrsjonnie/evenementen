@@ -1695,8 +1695,8 @@
 
     function eventLocationLabel(event) {
       const location = cleanText(event.location || "");
-      const unknown = !location || /^(locatie onbekend|onbekend|unknown|n\\/?a|-)$/i.test(location);
-      const host = hostFromUrl(event.website || "").replace(/^www\\./i, "").toLowerCase();
+      const unknown = !location || /^(locatie onbekend|onbekend|unknown|n\/?a|-)$/i.test(location);
+      const host = hostFromUrl(event.website || "").replace(/^www\./i, "").toLowerCase();
       if (unknown && host === "paradiso.nl") return "Amsterdam";
       return location || "Locatie onbekend";
     }
