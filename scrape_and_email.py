@@ -38,8 +38,8 @@ def env_int(name, default, minimum, maximum):
     return max(minimum, min(maximum, value))
 
 
-MAX_EVENTS_PER_SITE = env_int("INPUT_MAX_EVENTS_PER_SITE", 20, 20, 100)
-SITE_TIME_LIMIT_SECONDS = env_int("INPUT_SITE_TIME_LIMIT_SECONDS", 20, 20, 60)
+MAX_EVENTS_PER_SITE = env_int("INPUT_MAX_EVENTS_PER_SITE", 60, 20, 100)
+SITE_TIME_LIMIT_SECONDS = env_int("INPUT_SITE_TIME_LIMIT_SECONDS", 45, 20, 60)
 MAX_RAW_ROWS = 1200
 TODAY = date.today()
 
@@ -107,7 +107,7 @@ BAD_URL_RE = re.compile(
     re.I,
 )
 BAD_TITLE_RE = re.compile(
-    r"^(menu|home|agenda|programma|filter|datum|soort|locatie|sluiten|zoek|zoeken|tickets?|koop ticket|mijn tickets|meer info|lees meer|bekijk|bekijk volledige programma|toon info|favoriet|voeg toe|image|profiel|privacy|contact|nieuwsbrief)$",
+    r"^(menu|home|agenda|programma|filter|datum|soort|locatie|sluiten|zoek|zoeken|tickets?|koop ticket|mijn tickets|meer info|lees meer|bekijk|bekijk volledige programma|toon info|favoriet|voeg toe|image|profiel|privacy|contact|nieuwsbrief|coming up|confirmed mainstage|mainstage|downstage|zienema|kelderbar|join the club|werken bij vera|vacature|vacatures|support vera|schrijf je in voor.*)$",
     re.I,
 )
 STATUS_WORDS_RE = re.compile(
@@ -181,6 +181,9 @@ COMMON_PATHS_FOR_ROOT_SITES = [
     "/evenementen",
     "/activiteiten",
     "/activiteiten-en-evenementen",
+    "/uitagenda",
+    "/agenda/activiteiten",
+    "/agenda/evenementen",
     "/concerten-en-tickets",
     "/en/concerts-and-tickets",
 ]
@@ -703,6 +706,13 @@ def normalize_event(raw, site_url):
     if not event_date and raw.get("contextDate"):
         event_date = parse_date_text("", raw.get("contextDate"))
     if not title_is_usable(title) or not event_date or not website:
+        return None
+    # De actieve lijst bevat alleen aankomende evenementen; oude scrapefragmenten
+    # mogen niet opnieuw als actuele activiteit worden gepubliceerd.
+    try:
+        if date.fromisoformat(event_date) < TODAY:
+            return None
+    except ValueError:
         return None
 
     location = clean_text(raw.get("location") or "") or host_default_location(site_url)
