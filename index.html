@@ -504,16 +504,18 @@
 
     .siteList label {
       display: grid;
-      grid-template-columns: 12px minmax(0, 1fr);
-      gap: 2px;
+      grid-template-columns: 14px minmax(0, 1fr);
+      column-gap: 7px;
+      row-gap: 0;
       align-items: center;
       padding: 0 2px;
       border-radius: var(--radius);
       color: var(--ink);
-      font-size: .72rem;
+      font-size: .70rem;
       font-weight: 650;
-      line-height: .95;
+      line-height: .9;
     }
+    .siteList label input.siteCheck, .siteList label input.aiSourceCheck { margin:0; }
 
     .siteList label:hover { background: var(--surface-soft); }
     .sourceInfoWrap { display:flex; align-items:center; gap:2px; min-width:0; flex-wrap:wrap; }
@@ -1226,7 +1228,6 @@
 
         <div class="inlineTools">
           <input type="checkbox" id="newOnlyFilter" hidden>
-          <button class="btn btnSecondary filterToggle" id="newOnlyToggle" type="button" aria-pressed="false" hidden>Alleen nieuw <span id="newCountBadge">0</span></button>
           <button class="btn btnSecondary" id="toggleCustomSiteBtn" type="button" aria-expanded="false">Toevoegen URL</button>
           <button class="btn btnSecondary" id="clearBtn" type="button">Ververs data</button>
         </div>
@@ -1284,7 +1285,7 @@
   </div>
 
   <script>
-    const APP_VERSION = "2026.10.23.18";
+    const APP_VERSION = "2026.10.23.19";
     const DEFAULT_MAX_EVENTS_PER_SITE = 20;
     const DEFAULT_SITE_TIME_LIMIT_SECONDS = 20;
     const SCAN_SETTINGS_KEY = "eventScanSettingsV1";
@@ -2491,15 +2492,14 @@
 
     function scraperTypeForSite(site) {
       const host = hostFromUrl(site).replace(/^www\./i, "");
-      if (host === "vera-groningen.nl") return "programma-kaarten";
-      if (host === "groningen.uitloper.nu") return "agenda-items";
-      if (host === "martiniplaza.nl") return "agenda-kaarten";
-      if (host === "spotgroningen.nl") return "universeel + kaartfallback";
-      if (host === "simplon.nl") return "compacte agenda-kaarten";
-      if (host === "forum.nl") return "universeel (eventkaarten)";
-      if (["socialdeal.nl", "groupon.nl"].includes(host)) return "aanbiedingen";
-      if (host === "ibood.com") return "aanbiedingen (iBOOD)";
-      return "universeel (JSON-LD/links/kaarten)";
+      if (host === "vera-groningen.nl") return "kaart";
+      if (host === "groningen.uitloper.nu") return "agenda";
+      if (host === "martiniplaza.nl") return "kaart";
+      if (host === "spotgroningen.nl") return "univ.+kaart";
+      if (host === "simplon.nl") return "kaart";
+      if (host === "forum.nl") return "univ.";
+      if (["socialdeal.nl", "groupon.nl", "ibood.com"].includes(host)) return "deal";
+      return "univ.";
     }
 
     function renderSites(selected = null) {
