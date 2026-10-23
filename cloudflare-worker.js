@@ -1336,6 +1336,7 @@ export default {
         serpApiConfigured: Boolean(env.SERPAPI_TOKEN),
         chatGptConfigured: Boolean(env.CHATGPT_API_KEY),
         mistralConfigured: Boolean(env.MISTRAL_API_KEY),
+        perplexityConfigured: Boolean(env.PERPLEXITY_API_KEY),
         acceptedTokenNames: ["GITHUB_TOKEN", "GH_TOKEN", "GITHUB_PAT"],
         githubOwner: env.GITHUB_OWNER || "mrsjonnie",
         githubRepo: env.GITHUB_REPO || "evenementen",
