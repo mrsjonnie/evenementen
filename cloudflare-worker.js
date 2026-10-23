@@ -1037,8 +1037,7 @@ async function saveEventsToGithub(env, foundEvents, options = {}) {
     updatedAt: new Date().toISOString(),
     events: merged,
     archive,
-    siteResults: [],
-    rawLog: []
+    siteResults: []
   };
 
   const putResponse = await githubFetch(env, "/contents/events.json", {
@@ -1097,8 +1096,7 @@ async function deleteEventFromGithub(env, target = {}) {
     updatedAt: new Date().toISOString(),
     events,
     archive,
-    siteResults: existing.siteResults,
-    rawLog: existing.rawLog
+    siteResults: existing.siteResults
   };
 
   const putResponse = await githubFetch(env, "/contents/events.json", {
