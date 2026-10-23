@@ -1176,10 +1176,10 @@
   </div>
 
   <script>
-    const APP_VERSION = "2026.06.08.19";
-    const DEFAULT_MAX_EVENTS_PER_SITE = 20;
-    const DEFAULT_SITE_TIME_LIMIT_SECONDS = 20;
-    const SCAN_SETTINGS_KEY = "eventScanSettingsV1";
+    const APP_VERSION = "2026.10.23.1";
+    const DEFAULT_MAX_EVENTS_PER_SITE = 60;
+    const DEFAULT_SITE_TIME_LIMIT_SECONDS = 45;
+    const SCAN_SETTINGS_KEY = "eventScanSettingsV2";
     const SPOT_ONLY_SITE = "https://www.spotgroningen.nl/programma/";
     const WORKER_URL = "https://evenementen-refresh.mrsjonnie.workers.dev";
     const PER_PAGE_KEY = "evenementenPerPage";
@@ -1229,8 +1229,10 @@
       }
     ];
     const fallbackSites = [
+      "https://www.uitagendagroningen.nl/",
       "https://groningen.uitloper.nu/",
       "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "https://www.uitloper.nl/groningen",
       "https://forum.nl/nl/agenda",
       SPOT_ONLY_SITE,
       "https://simplon.nl/",
@@ -1239,10 +1241,11 @@
       "https://www.groningermuseum.nl/en/now",
       "https://www.kultuuragenda.nl/",
       "https://www.noorderzon.nl/",
-      "https://www.concertgebouw.nl",
-      "https://www.hedon-zwolle.nl",
-      "https://www.paradiso.nl",
-      "https://www.vvvameland.nl/activiteiten-en-evenementen"
+      "https://www.bibliotheekgroningen.nl/agenda",
+      "https://www.groningen.nl/agenda",
+      "https://www.oogtv.nl/agenda/",
+      "https://www.drenthe.nl/uitagenda",
+      "https://www.visitwadden.nl/nl/zien-en-doen/activiteiten"
     ];
 
     let events = [];
