@@ -3160,6 +3160,8 @@
 
     controls.forEach((id) => {
       $(id).addEventListener("input", () => {
+        if (id === "radius") { try { localStorage.setItem(RADIUS_FILTER_KEY, String(radiusFilterKm())); } catch {} }
+        if (id === "region") { try { localStorage.setItem(REGION_FILTER_KEY, $("region").value.trim()); } catch {} }
         applyFilters();
         if (id === "region") scheduleRegionResolve();
       });
@@ -3347,6 +3349,12 @@
 
     const today = formatDate(new Date());
     $("dateSingle").value = today;
+    try {
+      const savedRadius = localStorage.getItem(RADIUS_FILTER_KEY);
+      if (savedRadius !== null && Number.isFinite(Number(savedRadius))) $("radius").value = String(Math.max(0, Math.min(300, Number(savedRadius))));
+      const savedRegion = cleanText(localStorage.getItem(REGION_FILTER_KEY) || "");
+      if (savedRegion) $("region").value = savedRegion;
+    } catch {}
     eventsPerPage = Number(localStorage.getItem(PER_PAGE_KEY)) || 96;
     if (![12, 18, 24, 48, 96].includes(eventsPerPage)) eventsPerPage = 96;
     $("perPageSelect").value = String(eventsPerPage);
