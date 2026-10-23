@@ -649,7 +649,9 @@ async function enrichBodyWithSerpApi(env, body = {}) {
     return { body, serpApiAddedCount: 0, serpApiRawCount: 0, serpApiRawLog: [], serpApiEventsCount: 0, aiEventsCount: 0, aiRawCount: 0, aiRawLog: [] };
   }
 
-  const priority = [...selected].sort((a, b) => {
+  // Kortingsportals zijn aparte dealbronnen en mogen niet als agenda-sites door de AI/zoeklaag.
+  const eventSiteSelection = [...selected].filter((site) => !/(?:ibood\.com|socialdeal\.nl|groupon\.nl)/i.test(site));
+  const priority = eventSiteSelection.sort((a, b) => {
     const aScore = /spotgroningen|vera-groningen|forum\.nl/i.test(a) ? 0 : 1;
     const bScore = /spotgroningen|vera-groningen|forum\.nl/i.test(b) ? 0 : 1;
     return aScore - bScore;
