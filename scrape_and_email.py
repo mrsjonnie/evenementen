@@ -1209,7 +1209,7 @@ def start_urls_for_site(site_url):
     if host == "groningen.uitloper.nu":
         # Uitloper shows one selected date per page. Start on the requested date and
         # advance day by day until the configured event limit is reached.
-        first_day = date.fromisoformat(INPUT_DATE_FROM) if re.fullmatch(r"20\\d{2}-\\d{2}-\\d{2}", INPUT_DATE_FROM) else TODAY
+        first_day = date.fromisoformat(INPUT_DATE_FROM) if re.fullmatch(r"20\d{2}-\d{2}-\d{2}", INPUT_DATE_FROM) else TODAY
         urls = []
         for offset in range(14):
             day = first_day + timedelta(days=offset)
