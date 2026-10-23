@@ -87,7 +87,10 @@
 
     .titlePanel {
       display: none;
-      margin-top: 9px;
+      position: relative;
+      width: 100%;
+      clear: both;
+      margin: 5px 0 0;
     }
 
     .titlePanel.open { display: block; }
@@ -1169,20 +1172,20 @@
             <div class="sitePanel">
               <div class="sitePanelHeader">Selecteer websites om te scannen en filteren.</div>
               <div class="siteList" id="sitesList"></div>
-              <div class="customSiteAdder">
-                <label class="siteSelectLabel" for="customSiteUrl">Website toevoegen aan scraper</label>
-                <div class="customSiteRow">
-                  <input id="customSiteUrl" type="url" placeholder="https://voorbeeld.nl/agenda" autocomplete="url">
-                  <button class="btn btnPrimary" id="addCustomSiteBtn" type="button">Toevoegen</button>
-                </div>
-                <p class="customSiteHint">De website wordt lokaal bewaard, standaard aangevinkt en bij de volgende verversing meegestuurd naar de scraper.</p>
-                <div class="status" id="customSiteStatus" aria-live="polite"></div>
-              </div>
               <div class="siteActions">
                 <button class="btn btnSecondary" id="allSitesBtn" type="button">Alles</button>
                 <button class="btn btnSecondary" id="noSitesBtn" type="button">Geen</button>
               </div>
             </div>
+          </div>
+          <div class="customSiteAdder">
+            <label class="siteSelectLabel" for="customSiteUrl">Website toevoegen aan scraper</label>
+            <div class="customSiteRow">
+              <input id="customSiteUrl" type="url" placeholder="https://voorbeeld.nl/agenda" autocomplete="url">
+              <button class="btn btnPrimary" id="addCustomSiteBtn" type="button">Toevoegen</button>
+            </div>
+            <p class="customSiteHint">De website wordt lokaal bewaard, standaard aangevinkt en bij de volgende verversing meegestuurd naar de scraper.</p>
+            <div class="status" id="customSiteStatus" aria-live="polite"></div>
           </div>
         </div>
 
@@ -1241,7 +1244,7 @@
   </div>
 
   <script>
-    const APP_VERSION = "2026.10.23.03";
+    const APP_VERSION = "2026.10.23.04";
     const DEFAULT_MAX_EVENTS_PER_SITE = 20;
     const DEFAULT_SITE_TIME_LIMIT_SECONDS = 20;
     const SCAN_SETTINGS_KEY = "eventScanSettingsV1";
@@ -2259,14 +2262,13 @@
         if (radiusKm > 0 && eventKm > radiusKm) return false;
         return true;
       });
+      // Alleen types tonen die na alle huidige filters werkelijk voorkomen.
+      // Aanbiedingen komen via de actuele deal-sites binnen en worden door matchesDate tot vandaag beperkt.
       const observedTypes = [...new Set(activeEvents.map((event) => displayType(event.type || "").trim()).filter(Boolean))];
-      const hasTodayOffers = activeEvents.some((event) =>
-        displayType(event.type || "").toLowerCase() === "aanbiedingen" ||
-        /(^|\.)(socialdeal\.nl|groupon\.nl|ibood\.com)$/.test(hostFromUrl(event.website))
-      );
+      const offerType = observedTypes.find((type) => type.toLowerCase() === "aanbiedingen");
       const types = observedTypes.filter((type) => type.toLowerCase() !== "aanbiedingen")
         .sort((a, b) => a.localeCompare(b, "nl"));
-      if (hasTodayOffers) types.push("Aanbiedingen");
+      if (offerType) types.push(offerType);
 
       $("typeFilter").innerHTML = [
         '<option value="all">Alle types</option>',
@@ -3349,8 +3351,11 @@
     // Bronnen staan direct onder Periode; verversen, resetten en verwijderen blijven bij elkaar.
     const filterGrid = document.querySelector(".filters");
     filterGrid.insertBefore($("siteSelect"), $("applyFiltersBtn"));
+    const customSiteAdder = document.querySelector(".customSiteAdder");
+    if (customSiteAdder) filterGrid.insertBefore(customSiteAdder, $("applyFiltersBtn"));
     $("siteSelect").style.gridColumn = "1 / -1";
     $("siteSelect").style.marginTop = "2px";
+    if (customSiteAdder) customSiteAdder.style.gridColumn = "1 / -1";
     $("clearBtn").textContent = "Verwijderen";
     $("clearBtn").style.width = "auto";
     const savedSidebarWidth = Number(localStorage.getItem("eventsSidebarWidth"));
