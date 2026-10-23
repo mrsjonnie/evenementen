@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-23T15:13:34+00:00",
+  "updatedAt": "2026-10-23T15:14:12+00:00",
   "events": [
     {
       "date": "2026-10-23",
@@ -17424,28 +17424,28 @@
       "site": "https://www.vvvameland.nl/activiteiten-en-evenementen",
       "count": 20,
       "newCount": 20,
-      "durationSeconds": 5.98,
+      "durationSeconds": 6.58,
       "timedOut": false
     },
     {
       "site": "https://www.groupon.nl/",
       "count": 0,
       "newCount": 0,
-      "durationSeconds": 0.42,
+      "durationSeconds": 0.21,
       "timedOut": false
     },
     {
       "site": "https://www.concertgebouw.nl/concerten-en-tickets",
       "count": 20,
       "newCount": 20,
-      "durationSeconds": 4.31,
+      "durationSeconds": 3.5,
       "timedOut": false
     },
     {
       "site": "https://www.zwolsetheaters.nl/programma",
       "count": 0,
       "newCount": 0,
-      "durationSeconds": 8.63,
+      "durationSeconds": 9.05,
       "timedOut": false
     }
   ],
@@ -19185,7 +19185,7 @@
       "date": "",
       "url": "https://www.vvvameland.nl/activiteiten-en-evenementen",
       "status": "klaar",
-      "rawText": "site 1/4: 20 unieke events in 5.98 sec"
+      "rawText": "site 1/4: 20 unieke events in 6.58 sec"
     },
     {
       "source": "Website",
@@ -19248,7 +19248,7 @@
       "date": "",
       "url": "https://www.groupon.nl/",
       "status": "klaar",
-      "rawText": "site 2/4: 0 unieke events in 0.42 sec"
+      "rawText": "site 2/4: 0 unieke events in 0.21 sec"
     },
     {
       "source": "Website",
@@ -19275,7 +19275,7 @@
       "date": "",
       "url": "https://www.concertgebouw.nl/concerten-en-tickets",
       "status": "ok",
-      "rawText": "776955 tekens HTML"
+      "rawText": "776969 tekens HTML"
     },
     {
       "source": "Website",
@@ -20454,7 +20454,7 @@
       "date": "",
       "url": "https://www.concertgebouw.nl/concerten-en-tickets",
       "status": "klaar",
-      "rawText": "site 3/4: 20 unieke events in 4.31 sec"
+      "rawText": "site 3/4: 20 unieke events in 3.5 sec"
     },
     {
       "source": "Website",
@@ -20616,7 +20616,7 @@
       "date": "",
       "url": "https://www.zwolsetheaters.nl/programma",
       "status": "klaar",
-      "rawText": "site 4/4: 0 unieke events in 8.63 sec"
+      "rawText": "site 4/4: 0 unieke events in 9.05 sec"
     }
   ]
 }

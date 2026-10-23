@@ -190,17 +190,17 @@ Website	https://www.vvvameland.nl/activiteiten-en-evenementen	event uit dagblok	
 Website	https://www.vvvameland.nl/activiteiten-en-evenementen	event uit dagblok	Activiteiten en evenementen	2027-07-22	https://www.vvvameland.nl/agenda/activiteiten-evenementen/ambachtelijke-dag?startdate=2027-07-22	Activiteiten en evenementen | Hulp nodig? | Sluiten | Choose your language | We noticed your device is in a differnt language.
 Parser	https://www.vvvameland.nl/activiteiten-en-evenementen	analyse	Pagina geteld		https://www.vvvameland.nl/agenda/activiteiten-evenementen/ambachtelijke-dag?startdate=2027-07-22	jsonld:0, links:0, datumblokken:4, kaarten:3, regels:72, detail:1
 Website	https://www.vvvameland.nl/activiteiten-en-evenementen	ok	Detailpagina geanalyseerd		https://www.vvvameland.nl/agenda/activiteiten-evenementen/ambachtelijke-dag?startdate=2027-07-22	72 extra events
-Website	https://www.vvvameland.nl/activiteiten-en-evenementen	klaar	Klaar		https://www.vvvameland.nl/activiteiten-en-evenementen	site 1/4: 20 unieke events in 5.98 sec
+Website	https://www.vvvameland.nl/activiteiten-en-evenementen	klaar	Klaar		https://www.vvvameland.nl/activiteiten-en-evenementen	site 1/4: 20 unieke events in 6.58 sec
 Website	https://www.groupon.nl/	start	Start		https://www.groupon.nl/	site 2/4: max 20 events, max 60 seconden
 Parser	https://www.groupon.nl/	strategie	Scrapertype vastgesteld		https://www.groupon.nl/	aanbiedingen
 Website	https://www.groupon.nl/	fout	Pagina mislukt		https://www.groupon.nl/	HTTP 403
 Website	https://www.groupon.nl/	fout	Pagina mislukt		https://www.groupon.nl/deal/	HTTP 403
 Website	https://www.groupon.nl/	fout	Pagina mislukt		https://www.groupon.nl/best-deals/	HTTP 403
 Website	https://www.groupon.nl/	fout	Pagina mislukt		https://www.groupon.nl/local/	HTTP 403
-Website	https://www.groupon.nl/	klaar	Klaar		https://www.groupon.nl/	site 2/4: 0 unieke events in 0.42 sec
+Website	https://www.groupon.nl/	klaar	Klaar		https://www.groupon.nl/	site 2/4: 0 unieke events in 0.21 sec
 Website	https://www.concertgebouw.nl/concerten-en-tickets	start	Start		https://www.concertgebouw.nl/concerten-en-tickets	site 3/4: max 20 events, max 60 seconden
 Parser	https://www.concertgebouw.nl/concerten-en-tickets	strategie	Scrapertype vastgesteld		https://www.concertgebouw.nl/concerten-en-tickets	universeel-jsonld-links-kaarten
-Website	https://www.concertgebouw.nl/concerten-en-tickets	ok	Pagina gelezen		https://www.concertgebouw.nl/concerten-en-tickets	776955 tekens HTML
+Website	https://www.concertgebouw.nl/concerten-en-tickets	ok	Pagina gelezen		https://www.concertgebouw.nl/concerten-en-tickets	776969 tekens HTML
 Website	https://www.concertgebouw.nl/concerten-en-tickets	agenda-kaart	Concertgebouworkest Essentials: de Vijfde van Beethoven	2026-10-23	https://www.concertgebouw.nl/concerten/45875726-concertgebouworkest-essentials-de-vijfde-van-beethoven	Concertgebouworkest Essentials: de Vijfde van Beethoven 21:00 – 22:15 Grote Zaal v.a. € 20,00 met onder andere Beethoven Symfonie nr. 5 in c, op. 67 Mayer Faust Overture Informatie en bestellen Informatie en bestellen vr 23 okt 2026 Bookmark Luisteren Bookmark
 Website	https://www.concertgebouw.nl/concerten-en-tickets	agenda-kaart	La Tempête met Bach, Mendelssohn & Brahms	2026-10-24	https://www.concertgebouw.nl/concerten/45743344-la-tempete-met-bach-mendelssohn-brahms	La Tempête met Bach, Mendelssohn & Brahms 14:15 – 15:55 Grote Zaal v.a. € 29,00 met onder andere Brahms delen Ein deutsches Requiem, op. 45 Mendelssohn Trauer-Gesang, op. 116 Informatie en bestellen Informatie en bestellen za 24 okt 2026 Bookmark Bookmark
 Website	https://www.concertgebouw.nl/concerten-en-tickets	agenda-kaart	Nederlands Concertkoor en Toonkunstkoor Amsterdam: Dvořáks Stabat mater	2026-10-24	https://www.concertgebouw.nl/concerten/46013260-nederlands-concertkoor-en-toonkunstkoor-amsterdam-dvoraks-stabat-mater	Nederlands Concertkoor en Toonkunstkoor Amsterdam: Dvořáks Stabat mater 20:15 – 21:45 Grote Zaal v.a. € 35,00 Dvořák Stabat mater, op. 58 Informatie en bestellen Informatie en bestellen za 24 okt 2026 Bookmark Bookmark
@@ -331,7 +331,7 @@ Website	https://www.concertgebouw.nl/concerten-en-tickets	event uit tekstregel	B
 Website	https://www.concertgebouw.nl/concerten-en-tickets	event uit tekstregel	Joss Stone - Merry Christmas, Love	2026-12-14	https://www.concertgebouw.nl/concerten/43931216-fresku-metropole-orkest-o.l.v.-simon-dobson	Joss Stone - Merry Christmas, Love | ma 14 dec 2026 | Jan van Duikeren & Marcel Veenendaal | Overige informatie | Veelgestelde vragen | Verhuur
 Parser	https://www.concertgebouw.nl/concerten-en-tickets	analyse	Pagina geteld		https://www.concertgebouw.nl/concerten/43931216-fresku-metropole-orkest-o.l.v.-simon-dobson	jsonld:0, links:4, datumblokken:5, kaarten:15, regels:28, detail:1
 Website	https://www.concertgebouw.nl/concerten-en-tickets	ok	Detailpagina geanalyseerd		https://www.concertgebouw.nl/concerten/43931216-fresku-metropole-orkest-o.l.v.-simon-dobson	31 extra events
-Website	https://www.concertgebouw.nl/concerten-en-tickets	klaar	Klaar		https://www.concertgebouw.nl/concerten-en-tickets	site 3/4: 20 unieke events in 4.31 sec
+Website	https://www.concertgebouw.nl/concerten-en-tickets	klaar	Klaar		https://www.concertgebouw.nl/concerten-en-tickets	site 3/4: 20 unieke events in 3.5 sec
 Website	https://www.zwolsetheaters.nl/programma	start	Start		https://www.zwolsetheaters.nl/programma	site 4/4: max 20 events, max 60 seconden
 Parser	https://www.zwolsetheaters.nl/programma	strategie	Scrapertype vastgesteld		https://www.zwolsetheaters.nl/programma	programma-kaarten
 Website	https://www.zwolsetheaters.nl/programma	ok	Pagina gelezen		https://www.zwolsetheaters.nl/programma	58175 tekens HTML
@@ -349,4 +349,4 @@ RSS/Atom	https://www.zwolsetheaters.nl/programma	fout	Feed mislukt		https://www.
 RSS/Atom	https://www.zwolsetheaters.nl/programma	fout	Feed mislukt		https://www.zwolsetheaters.nl/rss.xml	HTTP 404
 RSS/Atom	https://www.zwolsetheaters.nl/programma	fout	Feed mislukt		https://www.zwolsetheaters.nl/feed.xml	HTTP 404
 RSS/Atom	https://www.zwolsetheaters.nl/programma	fout	Feed mislukt		https://www.zwolsetheaters.nl/events/feed/	HTTP 404
-Website	https://www.zwolsetheaters.nl/programma	klaar	Klaar		https://www.zwolsetheaters.nl/programma	site 4/4: 0 unieke events in 8.63 sec
+Website	https://www.zwolsetheaters.nl/programma	klaar	Klaar		https://www.zwolsetheaters.nl/programma	site 4/4: 0 unieke events in 9.05 sec
