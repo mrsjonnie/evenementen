@@ -2221,11 +2221,11 @@
       const previousUpdatedAt = eventsUpdatedAt;
       const requireEvents = Boolean(options.requireEvents);
       const maxAttempts = Math.max(1, Math.min(600, Number(options.maxAttempts) || 600));
-      const intervalMs = Math.max(1000, Math.min(10000, Number(options.intervalMs) || 1000));
+      const intervalMs = Math.max(3000, Math.min(10000, Number(options.intervalMs) || 3000));
       let latestProgress = null;
       for (let attempt = 1; attempt <= maxAttempts; attempt += 1) {
         const prefix = Number.isFinite(foundCount) ? `${foundText(foundCount)} gevonden.` : foundText(foundCount) + ".";
-        showStatus(`${prefix} Live verversen: elke ${Math.round(intervalMs / 1000)} seconde controleren op nieuwe website-resultaten. Tot de scraper klaar is.`, "warn", { stop: true });
+        showStatus(`${prefix} Live verversen: elke ${Math.round(intervalMs / 1000)} seconden voortgang controleren. Nieuwe resultaten verschijnen zodra een website klaar is.`, "warn", { stop: true });
         const shouldContinue = await waitUnlessStopped(intervalMs);
         if (!shouldContinue) {
           showStatus("Controle gestopt. De update kan nog doorlopen; probeer later opnieuw.", "warn");
@@ -2273,10 +2273,16 @@
               return true;
             }
           }
-          const freshPayload = await fetchEventsPayload();
-          const hasFreshEvents = Array.isArray(freshPayload.events) && freshPayload.events.length > 0;
-          const changed = (freshPayload.updatedAt && freshPayload.updatedAt !== previousUpdatedAt) || eventSignature(freshPayload.events) !== previousSignature;
-          if (changed && (!requireEvents || hasFreshEvents)) {
+          // During an active scrape, scrape-progress.json is the live per-site source.
+          // Avoid repeatedly downloading events.json as well; use it as a fallback
+          // every fourth poll only when no new progress run is visible.
+          const hasCurrentProgressRun = Boolean(progress && progress.runId && progress.runId !== options.previousProgressRunId);
+          const shouldCheckEventsPayload = !hasCurrentProgressRun && (attempt % 4 === 0);
+          if (shouldCheckEventsPayload) {
+            const freshPayload = await fetchEventsPayload();
+            const hasFreshEvents = Array.isArray(freshPayload.events) && freshPayload.events.length > 0;
+            const changed = (freshPayload.updatedAt && freshPayload.updatedAt !== previousUpdatedAt) || eventSignature(freshPayload.events) !== previousSignature;
+            if (changed && (!requireEvents || hasFreshEvents)) {
             events = mergeVerifiedEvents(freshPayload.events);
             eventsUpdatedAt = freshPayload.updatedAt;
             latestSiteResults = freshPayload.siteResults || [];
@@ -2296,8 +2302,9 @@
             renderRawLog();
             applyFilters();
             showStatus(refreshLoadedMessage(actualNewCount), "ok");
-            setTimeout(hideStatus, 4000);
-            return true;
+              setTimeout(hideStatus, 4000);
+              return true;
+            }
           }
         } catch (error) {
           showStatus(`Nog aan het wachten op nieuwe data: ${error.message}`, "warn", { stop: true });
@@ -3002,7 +3009,7 @@
         const rateLimited = workerRows.some((row) => /429|rate.?limit|rate_limited/i.test(JSON.stringify(row)));
         const rateLimitNote = rateLimited ? " Een AI-/zoekbron meldt HTTP 429 (rate limit); die bron heeft tijdelijk te veel verzoeken ontvangen." : "";
         showStatus(`Verversverzoek geaccepteerd. ${prefix}${rateLimitNote} Ik controleer of events.json echt wordt bijgewerkt.`, "warn", { stop: true });
-        await waitForUpdatedEvents(previousSignature, previousKeys, foundCount, { intervalMs: 1000, maxAttempts: 600, previousProgressRunId: previousProgress?.runId || "", lastProgressCount: 0 });
+        await waitForUpdatedEvents(previousSignature, previousKeys, foundCount, { intervalMs: 3000, maxAttempts: 200, previousProgressRunId: previousProgress?.runId || "", lastProgressCount: 0 });
       } catch (error) {
         const prefix = Number.isFinite(foundCount) ? `${foundText(foundCount)} gevonden.` : "";
         const message = String(error?.message || error || "Onbekende fout");
