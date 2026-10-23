@@ -1,6 +1,6 @@
 {
-  "requestedAt": "2026-10-23T13:46:20.412Z",
-  "trigger": "spotgroningen-universal-parser-test",
+  "requestedAt": "2026-10-23T13:53:04.295Z",
+  "trigger": "forum-agenda-universal-parser-test",
   "region": "Groningen",
   "radius": "0",
   "category": "all",
@@ -10,7 +10,7 @@
   "minResults": "40",
   "maxEventsPerSite": "40",
   "siteTimeLimitSeconds": "60",
-  "sites": "[\"https://spotgroningen.nl/programma\"]",
+  "sites": "[\"https://forum.nl/nl/agenda\"]",
   "providers": "{\"mistral\":false,\"openai\":false,\"chatgpt\":false,\"serpapi\":false}",
   "serpApiLinks": "[]",
   "serpApiRawLog": "[]",
