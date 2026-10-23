@@ -362,11 +362,35 @@ def strip_date_prefix(value):
 def clean_title(value):
     title = clean_text(value)
     title = re.sub(r"\s*\|\s*.*$", "", title)
-    title = re.sub(r"\s+-\s+(Forum|SPOT Groningen|VERA Groningen|Paradiso|Hedon|Concertgebouw).*$", "", title, flags=re.I)
+    title = re.sub(r"\s+-\s+(Forum|SPOT Groningen|VERA Groningen|Paradiso|Hedon|Concertgebouw|Simplon|Groninger Museum|Noorderzon|Groningen\.nl).*$", "", title, flags=re.I)
     title = STATUS_WORDS_RE.sub(" ", title)
+    title = re.sub(r"\s+(Home|Mijn|Menu)$", "", title, flags=re.I)
     title = re.sub(r"\s+", " ", title).strip(" -|")
     title = re.sub(r"\b(CAN|USA|UK|GB|NL|BEL|DE|FR|IT|ES|INT)\b$", "", title).strip()
     return title
+
+
+TITLE_NOISE_RE = re.compile(
+    r"\b(agenda filters|alle categorie[eë]n|bekijk volledige agenda|volledig programma|uitagenda(?: groningen)?|javascript moet ingeschakeld|filter wissen|programma mijn|werken bij|vacatures?|nieuwsbrief|webshop|bedrijfsleven)\b",
+    re.I,
+)
+
+
+def is_listing_page(page_url):
+    parsed = urlparse(page_url)
+    path = parsed.path.lower().strip("/")
+    segments = [segment for segment in path.split("/") if segment]
+    query = parsed.query.lower()
+    if re.search(r"(?:post_type=events?|[?&]p=\d+)", query):
+        return False
+    if re.search(r"(?:^|&)(when|page|filter|category|sort|where)=", query):
+        return True
+    listing_endings = {
+        "agenda", "programma", "uitagenda", "events", "event", "evenement",
+        "evenementen", "activiteiten", "activiteiten-en-evenementen",
+        "evenementenkalender", "now", "gids", "uitgaan"
+    }
+    return len(segments) <= 1 or segments[-1] in listing_endings
 
 
 def title_is_usable(title):
@@ -375,11 +399,15 @@ def title_is_usable(title):
         return False
     if len(title) < 3 or len(title) > 140:
         return False
+    if title[0] in ",.:;|/\\\\-" or TITLE_NOISE_RE.search(title):
+        return False
     if BAD_TITLE_RE.match(title):
         return False
     if re.fullmatch(r"\d{1,2}[:.]\d{2}.*", title):
         return False
     if parse_date_text(title) and len(title.split()) <= 4:
+        return False
+    if len(title.split()) <= 2 and title.lower() in {"aanmelden", "animatie", "avontuur", "documentaire", "alle categorieën"}:
         return False
     return True
 
@@ -783,6 +811,10 @@ def dedupe_events(events):
 
 
 def extract_detail_event(soup, page_url, site_url, discovery_source):
+    # Een agenda-overzicht bevat vaak tientallen datums; gebruik de eerste datum
+    # op zo'n pagina nooit als datum van de paginatitel zelf.
+    if is_listing_page(page_url):
+        return None
     title = page_title(soup) or meta_content(soup, "og:title", "twitter:title")
     description = meta_content(soup, "description", "og:description", "twitter:description")
     text = soup.get_text(" ", strip=True)
@@ -877,6 +909,8 @@ def extract_card_events(soup, page_url, site_url, discovery_source):
         if not title_is_usable(title):
             continue
         link = best_link_for_node(node, page_url, site_url)
+        if not link or link.rstrip("/") == page_url.rstrip("/"):
+            continue
         lines = split_lines(node)
         raw = {
             "date": event_date,
@@ -898,6 +932,8 @@ def extract_card_events(soup, page_url, site_url, discovery_source):
 
 
 def extract_line_events(soup, page_url, site_url, discovery_source):
+    if is_listing_page(page_url):
+        return []
     lines = split_lines(soup)
     events = []
     current_date = ""
