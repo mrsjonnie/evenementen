@@ -645,12 +645,12 @@
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(363px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(min(540px, 100%), 1fr));
       gap: 14px;
     }
 
     @media (min-width: 1590px) {
-      .grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+      .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     }
 
     .card {
@@ -1010,6 +1010,17 @@
     .dealEmpty { grid-column: 1 / -1; }
     @media (max-width: 680px) { .dealSourceLinks { grid-template-columns: 1fr; } }
     .heroInner { max-width: 1440px; padding: 6px 14px; gap: 10px; }
+    .toolbar { position: fixed !important; z-index: 80; top: 0; bottom: 0; left: 0; width: min(370px, 92vw); max-height: 100dvh; overflow-y: auto; border-radius: 0 12px 12px 0; transform: translateX(-105%); transition: transform .2s ease; box-shadow: 12px 0 34px rgba(0,0,0,.36); }
+    .toolbar.sidebarOpen { transform: translateX(0); }
+    .sidebarToggle { position: fixed; z-index: 81; left: 0; top: 42%; border-radius: 0 10px 10px 0; writing-mode: vertical-rl; padding: 12px 8px; min-height: 0; box-shadow: 3px 3px 12px rgba(0,0,0,.25); }
+    .toolbar.sidebarOpen + .sidebarToggle { left: min(370px, 92vw); }
+    .filters { grid-template-columns: minmax(0,1fr) minmax(0,1fr); }
+    #search { max-width: 220px; }
+    #costFilter { max-width: 150px; }
+    .toolbar .secondRow { display: flex; flex-direction: column; align-items: stretch; }
+    .toolbar .sourcePickers { display: block; width: 100%; }
+    .toolbar .inlineTools { justify-content: flex-start; }
+    @media (max-width: 680px) { .filters { grid-template-columns: repeat(2,minmax(0,1fr)); } #search { max-width: 100%; } }
     h1 { font-size: clamp(1.2rem, 1.7vw, 1.5rem); letter-spacing: -.025em; }
     .subtitle { margin-top: 2px; font-size: .78rem; line-height: 1.25; }
     .heroSide { gap: 4px; }
@@ -1086,7 +1097,7 @@
   </header>
 
   <main>
-    <section class="toolbar" aria-label="Filters">
+    <section class="toolbar" id="filterSidebar" aria-label="Filters">
       <div class="filters">
         <div class="field">
           <label for="search">Zoeken</label>
@@ -1123,7 +1134,8 @@
             <option value="thisWeekend">Dit weekend</option>
             <option value="nextWeekend">Volgend weekend</option>
             <option value="week">7 dagen</option>
-            <option value="fortnight" selected>14 dagen</option>
+            <option value="todayWeekend" selected>Vandaag + komend weekend</option>
+            <option value="fortnight">14 dagen</option>
             <option value="month">30 dagen</option>
             <option value="specificDay">Alleen gekozen dag</option>
             <option value="always">Alle toekomstige</option>
@@ -1179,6 +1191,7 @@
       </div>
 
     </section>
+    <button class="btn btnPrimary sidebarToggle" id="filterSidebarToggle" type="button" aria-expanded="false">Filters</button>
 
       <div class="summary">
         <strong id="count">Evenementen laden...</strong>
@@ -1304,6 +1317,8 @@
     let deletedEventKeys = new Set();
     let cardsCollapsed = true;
     let collapsedTypeKeys = new Set();
+    let categoryStateInitialized = false;
+    let knownCategoryKeys = new Set();
     let refreshAbortRequested = false;
     let latestWeatherData = null;
     let currentPage = 1;
@@ -1892,6 +1907,16 @@
         return;
       }
 
+      if (mode === "todayWeekend") {
+        const today = new Date();
+        today.setHours(0, 0, 0, 0);
+        const weekend = getWeekendRange(0);
+        dateFrom = formatDate(today);
+        dateTo = weekend.to < dateFrom ? dateFrom : weekend.to;
+        $("dateSingle").value = dateFrom;
+        return;
+      }
+
       if (mode === "today" || mode === "tomorrow") {
         const day = new Date();
         day.setHours(0, 0, 0, 0);
@@ -2130,7 +2155,10 @@
         const response = await fetch(`./deals.json?v=${Date.now()}`, { cache: "no-store" });
         if (!response.ok) throw new Error("Deals niet beschikbaar");
         const data = await response.json();
-        const offers = Array.isArray(data.offers) ? data.offers : [];
+        const offers = (Array.isArray(data.offers) ? data.offers : []).filter((offer) => {
+          const text = `${offer.title || ""} ${offer.description || ""} ${offer.url || ""}`.toLowerCase();
+          return !/trustpilot|google\\.com\\/maps|play\\.google\\.com|apps\\.apple\\.com|\\breviews?\\b|machine-readable information|availability instructions|every deal/.test(text);
+        });
         if (!offers.length) {
           target.innerHTML = '<p class="dealEmpty">Nog geen actuele aanbiedingen gevonden. Ververs om de bronnen opnieuw te scannen.</p>';
           return;
@@ -2145,9 +2173,36 @@
     }
 
     function displayType(value) {
-      const text = cleanText(value || "Activiteit");
-      if (!text) return "Activiteit";
-      return text.charAt(0).toUpperCase() + text.slice(1);
+      const raw = cleanText(value || "Activiteit").toLowerCase();
+      const aliases = {
+        "concert": "Concerten", "concerten": "Concerten", "muziek": "Concerten",
+        "wandeling": "Wandelen", "wandelingen": "Wandelen", "wandelen": "Wandelen",
+        "theater": "Theater", "toneel": "Theater", "musical": "Theater", "cabaret": "Theater",
+        "restaurant": "Restaurants", "restaurants": "Restaurants", "eten en drinken": "Restaurants", "culinair": "Restaurants",
+        "film": "Film", "bioscoop": "Film", "documentaire": "Film",
+        "expositie": "Exposities", "exposities": "Exposities", "tentoonstelling": "Exposities", "museum": "Exposities",
+        "workshop": "Workshops", "workshops": "Workshops", "cursus": "Workshops",
+        "lezing": "Lezingen", "lezingen": "Lezingen", "talk": "Lezingen",
+        "festival": "Festivals", "festivals": "Festivals", "markt": "Markten", "markten": "Markten",
+        "dans": "Dansen", "feest": "Feesten", "familie": "Voor kinderen", "kids": "Voor kinderen",
+        "sport": "Sport", "activiteit": "Overige activiteiten", "overige activiteiten": "Overige activiteiten"
+      };
+      return aliases[raw] || raw.charAt(0).toUpperCase() + raw.slice(1);
+    }
+
+    function eventCategory(event) {
+      const evidence = [event?.title, event?.description, event?.type].map(cleanText).join(" ").toLowerCase();
+      if (/\\b(wandel|wandeling|wandelroute|hike|natuurtocht)\\w*\\b/.test(evidence)) return "Wandelen";
+      if (/\\b(restaurant|diner|lunch|brunch|proeverij|high tea|eten en drinken|foodtour)\\b/.test(evidence)) return "Restaurants";
+      if (/\\b(concert|live muziek|tribute|orkest|band|jazz|blues|pop\\s?rock|optreden)\\b/.test(evidence)) return "Concerten";
+      if (/\\b(theater|theatervoorstelling|toneel|musical|cabaret|stand-up)\\b/.test(evidence)) return "Theater";
+      if (/\\b(film|bioscoop|documentaire|zienema)\\b/.test(evidence)) return "Film";
+      if (/\\b(expositie|tentoonstelling|museum|kunstcollectie)\\b/.test(evidence)) return "Exposities";
+      if (/\\b(workshop|masterclass|cursus)\\b/.test(evidence)) return "Workshops";
+      if (/\\b(lezing|college|gesprek met|interview met|debat)\\b/.test(evidence)) return "Lezingen";
+      if (/\\bfestival\\b/.test(evidence)) return "Festivals";
+      if (/\\b(mark(t|ten)|braderie|rommelmarkt)\\b/.test(evidence)) return "Markten";
+      return displayType(event?.type);
     }
 
     function fillTypes() {
@@ -2175,7 +2230,7 @@
         if (radiusKm > 0 && Number.isFinite(eventKm) && eventKm > radiusKm) return false;
         return true;
       });
-      const types = [...new Set(activeEvents.map((event) => displayType(event.type || "").trim()).filter(Boolean))]
+      const types = [...new Set(activeEvents.map((event) => eventCategory(event).trim()).filter(Boolean))]
         .sort((a, b) => a.localeCompare(b, "nl"));
 
       $("typeFilter").innerHTML = [
@@ -2415,7 +2470,7 @@
         ].join(" ").toLowerCase();
         return !query || haystack.includes(query);
       });
-      let afterType = afterQuery.filter((event) => type === "all" || displayType(event.type || "").toLowerCase() === type);
+      let afterType = afterQuery.filter((event) => type === "all" || eventCategory(event).toLowerCase() === type);
       let afterCost = afterType.filter(eventMatchesCostFilter);
       let afterNew = afterCost.filter((event) => !newOnly || isNewEvent(event));
       const matchesRadius = (event) => {
@@ -2443,8 +2498,8 @@
 
       filteredEvents = afterDate.sort((a, b) => {
         // Eerst alfabetisch op categorie/type, daarbinnen chronologisch op datum.
-        const typeA = displayType(a.type || "Activiteit").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLocaleLowerCase("nl");
-        const typeB = displayType(b.type || "Activiteit").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLocaleLowerCase("nl");
+        const typeA = eventCategory(a).normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLocaleLowerCase("nl");
+        const typeB = eventCategory(b).normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLocaleLowerCase("nl");
         const typeOrder = typeA.localeCompare(typeB, "nl");
         if (typeOrder !== 0) return typeOrder;
         if (a.isPermanent && !b.isPermanent) return 1;
@@ -2491,7 +2546,7 @@
       // Paginate by complete category groups so each type has one accordion header and all its activities stay together.
       const groups = [];
       for (const event of filteredEvents) {
-        const type = displayType(event.type || "Activiteit");
+        const type = eventCategory(event);
         const typeKey = type.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLocaleLowerCase("nl");
         let group = groups[groups.length - 1];
         if (!group || group.key !== typeKey) {
@@ -2551,9 +2606,19 @@
       try { return new URL(website).hostname.replace(/^www\./, ""); } catch { return ""; }
     }
 
-        function renderCard(event) {
-      const title = escapeHtml(event.title || "Naam onbekend");
-      const type = displayType(event.type || "Activiteit");
+        function readableEventTitle(event) {
+      let title = cleanText(event.title || "");
+      const generic = /^(activiteit|evenement|agenda|uitagenda|programma|beau monde\\s*,?)$/i.test(title) || title.length < 5;
+      const description = cleanText(event.description || "").replace(/(voeg toe als favoriet\\s*)+/ig, "").replace(/\\s+/g, " ").trim();
+      if (generic && description.length > 8) title = description;
+      title = title.replace(/^Beau Monde\\s*,\\s*/i, "").replace(/\\s*[,|–-]\\s*$/, "").replace(/\\s+/g, " ").trim();
+      if (title.length > 110) title = `${title.slice(0, 107).replace(/\\s+\\S*$/, "")}…`;
+      return title || "Activiteit — bekijk details";
+    }
+
+    function renderCard(event) {
+      const title = escapeHtml(readableEventTitle(event));
+      const type = eventCategory(event);
       const image = typeImage(type, event.image);
       const website = safeUrl(event.website, { website: true });
       const cardKey = eventDedupeKey(event);
@@ -2925,7 +2990,7 @@
       $("search").value = "";
       $("region").value = "Groningen";
       $("radius").value = "0";
-      $("periodMode").value = "fortnight";
+      $("periodMode").value = "todayWeekend";
       $("typeFilter").value = "all";
       $("costFilter").value = "all";
       $("newOnlyFilter").checked = false;
@@ -3045,6 +3110,11 @@
       });
     });
 
+    $("filterSidebarToggle").addEventListener("click", () => {
+      const open = $("filterSidebar").classList.toggle("sidebarOpen");
+      $("filterSidebarToggle").setAttribute("aria-expanded", String(open));
+      $("filterSidebarToggle").textContent = open ? "Sluit filters" : "Filters";
+    });
     $("refreshBtn").addEventListener("click", refreshEvents);
     $("resetBtn").addEventListener("click", resetFilters);
     $("clearBtn").addEventListener("click", clearAllEvents);
