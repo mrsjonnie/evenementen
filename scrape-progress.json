@@ -1,11 +1,97 @@
 {
   "runId": "2026-10-23T15:33:59+00:00",
   "startedAt": "2026-10-23T15:33:59+00:00",
-  "completedCount": 0,
+  "completedCount": 1,
   "totalSites": 3,
-  "completedSites": [],
+  "completedSites": [
+    "https://www.groupon.nl/"
+  ],
   "events": [],
-  "siteResults": [],
-  "rawLog": [],
-  "status": "running"
+  "siteResults": [
+    {
+      "site": "https://www.groupon.nl/",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 0.35,
+      "timedOut": false
+    }
+  ],
+  "rawLog": [
+    {
+      "source": "Website",
+      "site": "https://www.groupon.nl/",
+      "title": "Start",
+      "date": "",
+      "url": "https://www.groupon.nl/",
+      "status": "start",
+      "rawText": "site 1/3: max 20 events, max 60 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.groupon.nl/",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://www.groupon.nl/",
+      "status": "strategie",
+      "rawText": "aanbiedingen"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.groupon.nl/",
+      "title": "Pagina mislukt",
+      "date": "",
+      "url": "https://www.groupon.nl/",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.groupon.nl/",
+      "title": "Pagina mislukt",
+      "date": "",
+      "url": "https://www.groupon.nl/kortingsbonnen",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.groupon.nl/",
+      "title": "Pagina mislukt",
+      "date": "",
+      "url": "https://www.groupon.nl/deal/",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.groupon.nl/",
+      "title": "Pagina mislukt",
+      "date": "",
+      "url": "https://www.groupon.nl/best-deals/",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.groupon.nl/",
+      "title": "Pagina mislukt",
+      "date": "",
+      "url": "https://www.groupon.nl/local/",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.groupon.nl/",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://www.groupon.nl/",
+      "status": "klaar",
+      "rawText": "site 1/3: 0 unieke events in 0.35 sec"
+    }
+  ],
+  "status": "running",
+  "lastCompletedSite": "https://www.groupon.nl/",
+  "lastCompletedAt": "2026-10-23T15:34:01+00:00",
+  "lastSiteEventCount": 0
 }
