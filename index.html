@@ -1122,6 +1122,7 @@
       </div>
       <div class="heroSide">
         <div class="weather" id="weatherBox" aria-live="polite"></div>
+        <div class="rainChart" id="rainChart" aria-live="polite"></div>
       </div>
     </div>
     <div class="headerFilterBar"><button class="btn btnPrimary filterMenuToggle" id="filterSidebarToggle" type="button" aria-expanded="false">Filters ▾</button></div>
@@ -2796,6 +2797,44 @@
       return `<div class="weatherDays">${rows.join("")}</div>`;
     }
 
+    async function loadRainChart() {
+      const target = $("rainChart");
+      if (!target) return;
+      const coords = regionCoord();
+      target.innerHTML = "<span>Regen komende 2 uur laden…</span>";
+      try {
+        const params = new URLSearchParams({
+          latitude: String(coords.lat), longitude: String(coords.lon),
+          minutely_15: "precipitation", forecast_minutely_15: "8",
+          hourly: "precipitation", forecast_hours: "3", timezone: "Europe/Amsterdam"
+        });
+        const response = await fetch(\`https://api.open-meteo.com/v1/forecast?\${params.toString()}\`, { cache: "no-store" });
+        if (!response.ok) throw new Error("Regenverwachting niet beschikbaar");
+        const data = await response.json();
+        let times = data?.minutely_15?.time || [];
+        let values = data?.minutely_15?.precipitation || [];
+        if (!times.length || !values.length) { times = data?.hourly?.time || []; values = data?.hourly?.precipitation || []; }
+        const now = Date.now();
+        const points = times.map((time, index) => ({ time: new Date(time), value: Math.max(0, Number(values[index]) || 0) }))
+          .filter((point) => Number.isFinite(point.time.getTime()) && point.time.getTime() >= now - 60_000 && point.time.getTime() <= now + 2 * 60 * 60 * 1000).slice(0, 8);
+        if (!points.length) throw new Error("Geen neerslaggegevens");
+        const max = Math.max(.2, ...points.map((point) => point.value));
+        const step = 484 / points.length;
+        const bars = points.map((point, index) => {
+          const height = Math.max(2, point.value / max * 42);
+          const x = 8 + index * step;
+          const width = Math.max(4, Math.min(28, step * .56));
+          const time = point.time.toLocaleTimeString("nl-NL", { hour: "2-digit", minute: "2-digit" });
+          const mm = point.value.toLocaleString("nl-NL", { maximumFractionDigits: 1 });
+          return \`<rect x="\${x.toFixed(1)}" y="\${(49-height).toFixed(1)}" width="\${width.toFixed(1)}" height="\${height.toFixed(1)}" rx="3" fill="\${point.value > .2 ? "#53b6d2" : "#71869a"}"><title>\${time}: \${mm} mm</title></rect>\`;
+        }).join("");
+        const first = points[0].time.toLocaleTimeString("nl-NL", { hour: "2-digit", minute: "2-digit" });
+        const last = points[points.length - 1].time.toLocaleTimeString("nl-NL", { hour: "2-digit", minute: "2-digit" });
+        const total = points.reduce((sum, point) => sum + point.value, 0);
+        target.innerHTML = \`<div class="rainChartTitle"><span>Regen komende 2 uur</span><span>\${total.toLocaleString("nl-NL",{maximumFractionDigits:1})} mm</span></div><svg viewBox="0 0 500 54" role="img" aria-label="Neerslag van \${first} tot \${last}">\${bars}<line x1="4" y1="50" x2="496" y2="50" stroke="rgba(255,255,255,.28)" stroke-width="1"/></svg><div class="rainChartLabels"><span>\${first}</span><span>\${last}</span></div>\`;
+      } catch { target.innerHTML = '<span>Regenverwachting tijdelijk niet beschikbaar.</span>'; }
+    }
+
     async function loadWeather() {
       const region = $("region").value.trim();
       if (!region || !dateFrom || !dateTo) {
@@ -2823,9 +2862,11 @@
           ${weatherItems.map((item) => `${item.breakBefore ? '<span class="weatherBreak" aria-hidden="true"></span>' : ""}<button class="pill weatherToggle" type="button" data-topic="${escapeHtml(item.topic)}" data-label="${escapeHtml(item.label)}">${escapeHtml(item.label)}</button>`).join("")}
           <div class="weatherPanel" id="weatherPanel"></div>
         `;
+        loadRainChart();
       } catch {
         latestWeatherData = null;
         $("weatherBox").innerHTML = "";
+        loadRainChart();
       }
     }
 
@@ -2834,6 +2875,49 @@
       if (data?.status) parts.push(`status ${data.status}`);
       if (data?.details) parts.push(cleanText(data.details).slice(0, 320));
       return parts.filter(Boolean).join(" - ");
+    }
+
+    function setApiInfo(messages) {
+      const unique = [...new Set((messages || []).map(cleanText).filter(Boolean))];
+      const button = $("apiInfoButton");
+      const popover = $("apiInfoPopover");
+      if (!button || !popover) return;
+      button.hidden = unique.length === 0;
+      popover.hidden = unique.length === 0;
+      popover.textContent = unique.join(" ");
+      if (!unique.length) button.setAttribute("aria-expanded", "false");
+    }
+
+    async function checkApiSourceStatus() {
+      const selected = providerSettings();
+      const names = { mistral: "Mistral", openai: "ChatGPT", perplexity: "Perplexity", serpapi: "SerpAPI" };
+      const messages = [];
+      try {
+        const response = await fetch(\`\${WORKER_URL}/health?_=\${Date.now()}\`, { cache: "no-store" });
+        if (!response.ok) throw new Error("status niet beschikbaar");
+        const health = await response.json();
+        const keys = { mistral: "mistralConfigured", openai: "chatGptConfigured", perplexity: "perplexityConfigured", serpapi: "serpApiConfigured" };
+        Object.keys(keys).forEach((key) => {
+          if (selected[key] && !health[keys[key]]) messages.push(\`\${names[key]} werkt niet: API-sleutel ontbreekt in Cloudflare.\`);
+        });
+      } catch {
+        if (Object.values(selected).some(Boolean)) messages.push("API-status niet bereikbaar; geselecteerde AI-/zoekbronnen zijn niet gecontroleerd.");
+      }
+      setApiInfo(messages);
+      return messages;
+    }
+
+    function noteApiFailures(data) {
+      const messages = [];
+      const rows = [...(Array.isArray(data?.aiRawLog) ? data.aiRawLog : []), ...(Array.isArray(data?.serpApiRawLog) ? data.serpApiRawLog : [])];
+      rows.forEach((row) => {
+        const status = cleanText(row.status || "").toLowerCase();
+        const details = cleanText(row.rawText || row.message || "");
+        if (/(fout|error|failed|mislukt|unauthorized|forbidden|rate.?limit|api.?key)/i.test(\`\${status} \${details}\`)) {
+          messages.push(\`\${cleanText(row.source || "API-bron")} gaf een fout: \${details || status}.\`);
+        }
+      });
+      if (messages.length) setApiInfo(messages);
     }
 
     async function refreshEvents() {
@@ -2848,6 +2932,7 @@
 
       const scanSettings = saveScanSettings();
       const selectedSites = selectedScanSites();
+      await checkApiSourceStatus();
       if (!selectedSites.length) {
         showStatus("Vink minimaal een website aan om te verversen.", "warn");
         setBusy(button, false);
@@ -2905,6 +2990,7 @@
         if (!response.ok) throw new Error(workerErrorMessage(data, "Verversen is mislukt"));
         appendWorkerRawLog(data.serpApiRawLog);
         appendWorkerRawLog(data.aiRawLog);
+        noteApiFailures(data);
         if (Number(data.serpApiRawCount) || Number(data.serpApiAddedCount) || Number(data.serpApiEventsCount)) {
           addLiveLog("SerpAPI", selectedSites.join(", "), "Zoekresultaten ontvangen", "klaar", `${Number(data.serpApiRawCount) || 0} ruwe zoekregels, ${Number(data.serpApiAddedCount) || 0} links, ${Number(data.serpApiEventsCount) || 0} event-kandidaten`);
         }
