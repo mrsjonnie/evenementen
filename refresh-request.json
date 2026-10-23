@@ -1,6 +1,6 @@
 {
-  "requestedAt": "2026-10-23T14:34:28.049Z",
-  "trigger": "socialdeal-groningen-parser-test-v2",
+  "requestedAt": "2026-10-23T14:35:23.479Z",
+  "trigger": "socialdeal-nearby-parser-test",
   "region": "Groningen",
   "radius": "0",
   "category": "all",
@@ -10,7 +10,7 @@
   "minResults": "100",
   "maxEventsPerSite": "100",
   "siteTimeLimitSeconds": "60",
-  "sites": "[\"https://www.socialdeal.nl/deals/groningen/\"]",
+  "sites": "[\"https://www.socialdeal.nl/dichtbij/groningen/\"]",
   "providers": "{\"mistral\":false,\"openai\":false,\"chatgpt\":false,\"serpapi\":false}",
   "serpApiLinks": "[]",
   "serpApiRawLog": "[]",
