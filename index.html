@@ -2272,7 +2272,9 @@
               options.lastProgressSignature = progressSignature;
               options.lastProgressCount = Math.max(Number(options.lastProgressCount || 0), completed);
               if (Array.isArray(progress.events) && progress.events.length) {
-                events = mergeVerifiedEvents([...events, ...progress.events]).map((event) => ({
+                const scanningHosts = new Set([...activeScanSites].map(hostFromUrl));
+                const retainedEvents = events.filter((event) => !scanningHosts.has(hostFromUrl(event.website)));
+                events = mergeVerifiedEvents([...retainedEvents, ...progress.events]).map((event) => ({
                   ...event,
                   isNew: !previousKeys.has(eventDedupeKey(event))
                 }));
@@ -2300,7 +2302,15 @@
               showStatus(detail + (isSiteComplete ? " De resultaten zijn direct zichtbaar; de scan gaat verder." : " De teller wordt bijgewerkt zodra nieuwe paginaresultaten binnenkomen."), "ok", { stop: true });
             }
             if (progress.status === "completed") {
-              if (Array.isArray(progress.events)) events = mergeVerifiedEvents([...events, ...progress.events]);
+              if (Array.isArray(progress.events)) {
+                const scanningHosts = new Set([...activeScanSites].map(hostFromUrl));
+                const retainedEvents = events.filter((event) => !scanningHosts.has(hostFromUrl(event.website)));
+                events = mergeVerifiedEvents([...retainedEvents, ...progress.events]).map((event) => ({
+                  ...event,
+                  isNew: !previousKeys.has(eventDedupeKey(event))
+                }));
+                newEventKeys = eventKeySet(events.filter((event) => event.isNew));
+              }
               latestSiteResults = Array.isArray(progress.siteResults) ? progress.siteResults : latestSiteResults;
               latestRawLog = Array.isArray(progress.rawLog) ? progress.rawLog : latestRawLog;
               fillTypes();
