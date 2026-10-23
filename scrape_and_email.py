@@ -737,7 +737,8 @@ def normalize_event(raw, site_url):
         location = "Concertgebouw Amsterdam"
     elif canonical_host(site_url).endswith("hedon.nl") and location_unknown:
         location = "Hedon Zwolle"
-    elif "vera-groningen.nl" in canonical_host(site_url) and location_unknown:
+    elif "vera-groningen.nl" in canonical_host(site_url):
+        # Always show the venue's standard location, even if page metadata names a room/stage.
         location = "VERA Groningen"
     else:
         location = raw_location or host_default_location(site_url)
