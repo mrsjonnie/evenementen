@@ -256,7 +256,7 @@ function normalizeAiEvent(site, item = {}, source = "ChatGPT", rank = 0) {
     title,
     date: eventDate,
     dateText,
-    location: clean(item.location || item.venue?.name || item.venue || ""),
+    location: /(^|\.)paradiso\.nl$/i.test(siteHost) ? "Amsterdam" : clean(item.location || item.venue?.name || item.venue || ""),
     type: isOfferSite ? "Aanbiedingen" : clean(item.type || ""),
     description,
     website,
@@ -825,9 +825,9 @@ function eventFromJsonLd(node, pageUrl) {
   const type = Array.isArray(node["@type"]) ? node["@type"].join(" ") : String(node["@type"] || "");
   if (!/event/i.test(type)) return null;
 
-  const location = typeof node.location === "string"
+  const location = /(^|\.)paradiso\.nl$/i.test(new URL(pageUrl).hostname) ? "Amsterdam" : (typeof node.location === "string"
     ? node.location
-    : clean([node.location?.name, node.location?.address?.streetAddress, node.location?.address?.addressLocality].filter(Boolean).join(", "));
+    : clean([node.location?.name, node.location?.address?.streetAddress, node.location?.address?.addressLocality].filter(Boolean).join(", ")));
   const offer = Array.isArray(node.offers) ? node.offers[0] : node.offers;
   const image = Array.isArray(node.image) ? node.image[0] : node.image;
   const imageUrl = typeof image === "object" ? image?.url : image;
@@ -893,7 +893,7 @@ function eventFromPage(html, pageUrl, fallbackTitle = "") {
   const date = normalizeDate(meta(html, "event:start_time") || html);
   const description = meta(html, "og:description") || meta(html, "description") || clean(html).slice(0, 300);
   const image = meta(html, "og:image") || meta(html, "twitter:image");
-  const location = meta(html, "event:location") || new URL(pageUrl).hostname;
+  const location = /(^|\.)paradiso\.nl$/i.test(new URL(pageUrl).hostname) ? "Amsterdam" : (meta(html, "event:location") || new URL(pageUrl).hostname);
 
   return {
     title: clean(title),
