@@ -1156,7 +1156,7 @@ def sitemap_event_urls(session, site_url, deadline):
         except Exception:
             continue
 
-        soup = BeautifulSoup(xml, "html.parser")
+        soup = BeautifulSoup(xml, "xml")
         locs = [clean_text(tag.get_text(" ", strip=True)) for tag in soup.find_all("loc")]
         locs = [normalized_url(value, final_url) for value in locs]
         locs = [value for value in locs if value and same_host(value, site_url)]
@@ -1174,7 +1174,7 @@ def sitemap_event_urls(session, site_url, deadline):
                     child_xml, child_final = fetch_html(session, child_map, deadline)
                 except Exception:
                     continue
-                child_soup = BeautifulSoup(child_xml, "html.parser")
+                child_soup = BeautifulSoup(child_xml, "xml")
                 child_locs = [normalized_url(clean_text(tag.get_text(" ", strip=True)), child_final) for tag in child_soup.find_all("loc")]
                 for value in child_locs:
                     if value and same_host(value, site_url) and event_path.search(urlparse(value).path):
