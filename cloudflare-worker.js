@@ -1138,7 +1138,7 @@ function workflowInputs(body, overrides = {}) {
 
 async function dispatchWorkflow(env, inputs) {
   const configuredWorkflow = githubConfig(env).workflowFile;
-  const workflowFiles = [...new Set([configuredWorkflow, "update-events.yml", "daily_update.yml"].filter(Boolean))];
+  const workflowFiles = [...new Set([configuredWorkflow, "update-events.yml"].filter(Boolean))];
   const failures = [];
 
   for (const workflowFile of workflowFiles) {
@@ -1154,7 +1154,15 @@ async function dispatchWorkflow(env, inputs) {
       return { ok: true, workflowFile };
     }
 
-    failures.push(`${workflowFile}: status ${ghResponse.status} ${validateInput(await ghResponse.text(), 500)}`);
+    const responseText = validateInput(await ghResponse.text(), 500);
+    if (ghResponse.status === 401) {
+      return {
+        ok: false,
+        status: 401,
+        details: "GitHub heeft de token uit Cloudflare afgewezen (401 Bad credentials). Vervang in Cloudflare Workers > Settings > Variables and Secrets de GITHUB_TOKEN door een geldige token met Actions: write en Contents: read/write. " + responseText
+      };
+    }
+    failures.push(`${workflowFile}: status ${ghResponse.status} ${responseText}`);
   }
 
   return {
