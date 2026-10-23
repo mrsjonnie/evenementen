@@ -1274,7 +1274,7 @@
   </div>
 
   <script>
-    const APP_VERSION = "2026.10.23.9";
+    const APP_VERSION = "2026.10.23.10";
     const DEFAULT_MAX_EVENTS_PER_SITE = 60;
     const DEFAULT_SITE_TIME_LIMIT_SECONDS = 45;
     const SCAN_SETTINGS_KEY = "eventScanSettingsV2";
@@ -2592,6 +2592,7 @@
         updateFilterBreakdown(1, 0);
         $("grid").innerHTML = '<div class="empty">Geen evenementen gevonden. Pas je filters aan of haal nieuwe resultaten op met Ververs.</div>';
         $("pagination").style.display = "none";
+        $("collapseTypesBtn").textContent = "Details Typen Uitklappen";
         return;
       }
 
@@ -2628,6 +2629,9 @@
         if (!collapsed) group.events.forEach((event) => renderedItems.push(renderCard(event)));
       }
       $("grid").innerHTML = renderedItems.join("");
+      const typeHeaders = [...$("grid").querySelectorAll(".eventTypeHeader")];
+      const allTypesCollapsed = typeHeaders.length > 0 && typeHeaders.every((header) => header.getAttribute("aria-expanded") === "false");
+      $("collapseTypesBtn").textContent = allTypesCollapsed ? "Details Typen Uitklappen" : "Details Typen Inklappen";
       $("pagination").style.display = "none";
     }
 
@@ -2883,7 +2887,7 @@
       const popover = $("apiInfoPopover");
       if (!button || !popover) return;
       button.hidden = unique.length === 0;
-      popover.hidden = unique.length === 0;
+      popover.hidden = true;
       popover.textContent = unique.join(" ");
       if (!unique.length) button.setAttribute("aria-expanded", "false");
     }
