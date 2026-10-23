@@ -3,6 +3,7 @@ import json
 import os
 import re
 import time
+import subprocess
 import xml.etree.ElementTree as ET
 from email.utils import parsedate_to_datetime
 from datetime import date, datetime, timedelta, timezone
@@ -1542,6 +1543,27 @@ def save_payload(events, archive, previous_all_keys):
     return active_keys
 
 
+SCRAPE_PROGRESS_FILE = "scrape-progress.json"
+
+
+def publish_scrape_progress(progress):
+    """Publish per-site progress so the website can show finished sources before the full scrape ends."""
+    with open(SCRAPE_PROGRESS_FILE, "w", encoding="utf-8", newline="\\n") as handle:
+        json.dump(progress, handle, ensure_ascii=False, indent=2)
+        handle.write("\\n")
+    try:
+        subprocess.run(["git", "add", SCRAPE_PROGRESS_FILE], check=True, capture_output=True, text=True)
+        changed = subprocess.run(["git", "diff", "--cached", "--quiet"], check=False)
+        if changed.returncode == 0:
+            return
+        subprocess.run(["git", "commit", "-m", "Update per-site scrape progress"], check=True, capture_output=True, text=True)
+        subprocess.run(["git", "push"], check=True, capture_output=True, text=True)
+    except (FileNotFoundError, subprocess.CalledProcessError) as exc:
+        # Progress is best-effort; the final events.json save must still complete.
+        detail = getattr(exc, "stderr", "") or str(exc)
+        print(f"Could not publish scrape progress: {detail[:500]}")
+
+
 def main():
     import_serpapi_raw_log()
     sites = input_sites()
@@ -1553,12 +1575,36 @@ def main():
 
     all_events = []
     total_sites = len(sites)
+    progress = {
+        "runId": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+        "startedAt": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+        "completedCount": 0,
+        "totalSites": total_sites,
+        "completedSites": [],
+        "events": [],
+        "siteResults": [],
+        "rawLog": [],
+        "status": "running"
+    }
+    publish_scrape_progress(progress)
     for index, site in enumerate(sites, start=1):
+        before_count = len(all_events)
         try:
             all_events.extend(scrape_site(site, index, total_sites))
         except Exception as exc:
             add_raw("Website", site, "Site mislukt", "", site, "fout", str(exc))
             SITE_RESULTS.append({"site": site, "count": 0, "newCount": 0, "durationSeconds": 0, "timedOut": False})
+        site_events = dedupe_events(all_events[before_count:])
+        progress["completedCount"] = index
+        progress["completedSites"].append(site)
+        progress["events"] = dedupe_events(all_events)
+        progress["siteResults"] = list(SITE_RESULTS)
+        progress["rawLog"] = RAW_DATA_ROWS[-MAX_RAW_ROWS:]
+        progress["lastCompletedSite"] = site
+        progress["lastCompletedAt"] = datetime.now(timezone.utc).isoformat(timespec="seconds")
+        progress["lastSiteEventCount"] = len(site_events)
+        progress["status"] = "running" if index < total_sites else "finishing"
+        publish_scrape_progress(progress)
 
     scraped_events = dedupe_events(all_events)
     selected_hosts = {canonical_host(site) for site in sites if canonical_host(site)}
@@ -1585,6 +1631,13 @@ def main():
         archive = dedupe_events(preserved)[:1000]
 
     save_payload(active_events, archive, previous_all_keys)
+    progress["status"] = "completed"
+    progress["completedCount"] = total_sites
+    progress["events"] = dedupe_events(scraped_events)
+    progress["siteResults"] = list(SITE_RESULTS)
+    progress["rawLog"] = RAW_DATA_ROWS[-MAX_RAW_ROWS:]
+    progress["finishedAt"] = datetime.now(timezone.utc).isoformat(timespec="seconds")
+    publish_scrape_progress(progress)
 
 
 if __name__ == "__main__":
