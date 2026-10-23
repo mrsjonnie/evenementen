@@ -1347,10 +1347,14 @@ def start_urls_for_site(site_url):
             urls.append(f"{exact.rstrip('/')}?date={timestamp}")
         return urls
     if host == "martiniplaza.nl":
-        # Use the agenda only to discover event detail URLs. The homepage is not
-        # scraped as an event source; results must link one level deeper, e.g. /nl/agenda/guus-meeuwis.
+        # Use the agenda only to discover event detail URLs.
         base = f"{parsed.scheme}://{parsed.netloc}"
         return [urljoin(base, "/nl/agenda")]
+    if host == "paradiso.nl":
+        # The concertagenda landing page is an overview, not an event.
+        # Discover links there and parse only individual /programma/<slug>/<id> pages.
+        base = f"{parsed.scheme}://{parsed.netloc}"
+        return [urljoin(base, "/landing/concertagenda-paradiso/2069817")]
     if host == "spotgroningen.nl":
         return [urljoin(exact, "/programma")]
     if host == "socialdeal.nl":
@@ -1827,6 +1831,11 @@ def scrape_site(site_url, site_index=0, site_total=0, progress_callback=None):
             # detail URLs, then parse each detail page.
             page_events = []
             add_raw("Parser", original_site, "Forum detailstrategie", "", final_url, "strategie", "Overzicht overslaan; alleen /nl/agenda/<event> detailpagina's verwerken")
+        elif canonical_host(normalized_site) == "paradiso.nl":
+            # The landing/agenda page is only a link directory. Never turn its
+            # generic heading/summary into an event; individual concert pages are parsed below.
+            page_events = []
+            add_raw("Parser", original_site, "Paradiso detailstrategie", "", final_url, "strategie", "Agenda-overzicht overslaan; alleen individuele /programma/<slug>/<id> pagina's verwerken")
         elif canonical_host(normalized_site) == "socialdeal.nl":
             page_events = extract_socialdeal_offers(html, final_url, normalized_site)
             if not page_events:
@@ -1860,6 +1869,11 @@ def scrape_site(site_url, site_index=0, site_total=0, progress_callback=None):
                     link for link in found_links
                     if re.match(r"^/nl/agenda/(?!$)(?:film/)?[^/]+/?$", urlparse(link).path, re.I)
                     or re.match(r"^/agenda/[^/]+/?$", urlparse(link).path, re.I)
+                ]
+            if canonical_host(normalized_site) == "paradiso.nl":
+                found_links = [
+                    link for link in found_links
+                    if re.match(r"^/programma/[^/]+/\d+/?$", urlparse(link).path, re.I)
                 ]
             detail_links.extend(found_links)
 
