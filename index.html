@@ -2435,7 +2435,7 @@
       const renderedItems = [];
       for (const event of visible) {
         const type = displayType(event.type || "Activiteit");
-        const typeKey = type.normalize("NFD").replace(/[\\u0300-\\u036f]/g, "").toLocaleLowerCase("nl");
+        const typeKey = type.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLocaleLowerCase("nl");
         if (typeKey !== previousTypeKey) {
           const headerImage = typeImage(type, event.image);
           renderedItems.push(`<div class="typeHeader eventTypeHeader" role="heading" aria-level="2" style="background-image: url('${escapeHtml(headerImage)}')"><span>${escapeHtml(type)}</span></div>`);
