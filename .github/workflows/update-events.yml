@@ -104,14 +104,23 @@ jobs:
           python - <<'PY'
           import json
           import os
+          from datetime import date, timedelta
 
+          event = {}
+          event_path = os.environ.get("GITHUB_EVENT_PATH")
+          if event_path and os.path.exists(event_path):
+              with open(event_path, encoding="utf-8") as handle:
+                  event = json.load(handle)
+
+          event_name = os.environ.get("GITHUB_EVENT_NAME", "")
+          today = date.today()
           defaults = {
               "region": "Groningen",
               "radius": "0",
               "category": "all",
               "query": "",
-              "dateFrom": "",
-              "dateTo": "",
+              "dateFrom": today.isoformat(),
+              "dateTo": (today + timedelta(days=30)).isoformat(),
               "minResults": "20",
               "maxEventsPerSite": "60",
               "siteTimeLimitSeconds": "45",
@@ -124,21 +133,27 @@ jobs:
               "clearArchive": "false",
           }
 
-          event = {}
-          event_path = os.environ.get("GITHUB_EVENT_PATH")
-          if event_path and os.path.exists(event_path):
-              with open(event_path, encoding="utf-8") as handle:
-                  event = json.load(handle)
-
           values = dict(defaults)
           values.update(event.get("inputs") or {})
 
-          if os.path.exists("refresh-request.json"):
+          # Only a push caused by refresh-request.json should use that request.
+          # Scheduled runs must never replay yesterday's saved filters/source list.
+          if event_name == "push" and os.path.exists("refresh-request.json"):
               with open("refresh-request.json", encoding="utf-8") as handle:
                   request = json.load(handle)
               for key in defaults:
                   if key in request:
                       values[key] = request[key]
+
+          # Scheduled runs and manual dispatches without an explicit source list
+          # scan the currently configured sources in sites.json.
+          try:
+              with open("sites.json", encoding="utf-8") as handle:
+                  configured_sites = json.load(handle)
+          except (OSError, json.JSONDecodeError):
+              configured_sites = []
+          if event_name == "schedule" or not values.get("sites") or values.get("sites") == "[]":
+              values["sites"] = json.dumps(configured_sites, ensure_ascii=False)
 
           mapping = {
               "region": "INPUT_REGION",
@@ -163,7 +178,7 @@ jobs:
               for key, env_name in mapping.items():
                   value = values.get(key, defaults[key])
                   if isinstance(value, (list, dict)):
-                      value = json.dumps(value)
+                      value = json.dumps(value, ensure_ascii=False)
                   env_file.write(f"{env_name}={value}\n")
           PY
 
