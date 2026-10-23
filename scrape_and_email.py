@@ -643,24 +643,28 @@ def best_link_for_node(node, page_url, site_url):
     if hasattr(node, "find_all"):
         links.extend(node.find_all("a", href=True))
     candidates = []
-    is_vera = "vera-groningen.nl" in canonical_host(site_url)
+    host = canonical_host(site_url)
+    is_vera = "vera-groningen.nl" in host
     for anchor in links:
         url = normalized_url(anchor.get("href"), page_url)
         if not url or not same_host(url, site_url) or BAD_URL_RE.search(url):
             continue
         path = urlparse(url).path
-        # Prefer actual event detail pages over the general agenda/homepage.
+        # Prefer actual event detail pages over general overview pages.
         if is_vera and re.search(r"/events/[^/?#]+", path, re.I):
             return url
-        # Kultuuragenda uses unique activity pages such as /agenda/1453156530/digger.
-        if "kultuuragenda.nl" in canonical_host(site_url) and re.search(r"/agenda/\d+/[^/?#]+", url, re.I):
+        if "kultuuragenda.nl" in host and re.search(r"/agenda/\d+/[^/?#]+", url, re.I):
             return url
         candidates.append(url)
-    if is_vera:
-        detail_candidates = [url for url in candidates if re.search(r"/events/[^/?#]+", urlparse(url).path, re.I)]
-        if detail_candidates:
-            return detail_candidates[0]
-    return candidates[0] if candidates else normalized_url(page_url)
+    if not candidates:
+        return normalized_url(page_url)
+    detail_pattern = re.compile(r"/(?:events?|agenda|concerten?|programma|voorstellingen?|activiteiten?|event-details|show|shows|tickets?)/[^/?#]+", re.I)
+    detailed = [url for url in candidates if detail_pattern.search(urlparse(url).path)]
+    if detailed:
+        # Prefer the deepest detail URL, but keep stable ordering for ties.
+        return max(detailed, key=lambda url: len([part for part in urlparse(url).path.split("/") if part]))
+    non_root = [url for url in candidates if urlparse(url).path.strip("/")]
+    return non_root[0] if non_root else candidates[0]
 
 
 def line_after_date_location(line):
