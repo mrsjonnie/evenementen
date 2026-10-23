@@ -642,11 +642,16 @@ def best_link_for_node(node, page_url, site_url):
         links.append(node)
     if hasattr(node, "find_all"):
         links.extend(node.find_all("a", href=True))
+    candidates = []
     for anchor in links:
         url = normalized_url(anchor.get("href"), page_url)
-        if url and same_host(url, site_url) and not BAD_URL_RE.search(url):
+        if not url or not same_host(url, site_url) or BAD_URL_RE.search(url):
+            continue
+        # Kultuuragenda gebruikt unieke activiteitspagina's zoals /agenda/1453156530/digger.
+        if "kultuuragenda.nl" in canonical_host(site_url) and re.search(r"/agenda/\d+/[^/?#]+", url, re.I):
             return url
-    return normalized_url(page_url)
+        candidates.append(url)
+    return candidates[0] if candidates else normalized_url(page_url)
 
 
 def line_after_date_location(line):
@@ -995,11 +1000,18 @@ def link_score(anchor, url, text):
 def collect_event_links(html, page_url, site_url):
     soup = BeautifulSoup(html, "html.parser")
     scored = []
+    is_kultuuragenda = "kultuuragenda.nl" in canonical_host(site_url)
     for anchor in soup.find_all("a", href=True):
         url = normalized_url(anchor.get("href"), page_url)
         if not url or not same_host(url, site_url):
             continue
         text = clean_text(anchor.get_text(" ", strip=True) or anchor.get("title") or anchor.get("aria-label"))
+        # Prioriteer echte detailpagina's; /agenda zelf is alleen de overzichtspagina.
+        if is_kultuuragenda and re.search(r"/agenda/\d+/[^/?#]+", url, re.I):
+            scored.append((1000, url, text))
+            continue
+        if is_kultuuragenda and urlparse(url).path.rstrip("/") == "/agenda":
+            continue
         score = link_score(anchor, url, text)
         if score > 0:
             scored.append((score, url, text))
@@ -1215,10 +1227,15 @@ def scrape_site(site_url, site_index=0, site_total=0):
         add_raw("SerpAPI", original_site, "Detail-link", "", link, "ingepland", "SerpAPI-link wordt alleen als detailpagina gecontroleerd")
 
     detail_queue = unique_urls(detail_links + serp_links)
+    is_kultuuragenda = "kultuuragenda.nl" in canonical_host(normalized_site)
     visited = set()
     for detail_url in detail_queue:
-        if len(dedupe_events(events)) >= MAX_EVENTS_PER_SITE:
+        # Eerst echte activiteitspagina's uitlezen; de overzichtskaarten bevatten vaak te weinig details.
+        is_activity_detail = is_kultuuragenda and bool(re.search(r"/agenda/\d+/[^/?#]+", urlparse(detail_url).path, re.I))
+        if len(dedupe_events(events)) >= MAX_EVENTS_PER_SITE and not is_activity_detail:
             break
+        if is_kultuuragenda and not is_activity_detail:
+            continue
         if time.monotonic() >= deadline:
             timed_out = True
             break
