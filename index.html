@@ -1424,7 +1424,7 @@
   </div>
 
   <script>
-    const APP_VERSION = "2026.10.25.62";
+    const APP_VERSION = "2026.10.25.63";
     const STATUS_HISTORY_KEY = "evenementenStatusHistoryV1";
     const DEFAULT_MAX_EVENTS_PER_SITE = 20;
     const DEFAULT_SITE_TIME_LIMIT_SECONDS = 20;
@@ -2320,8 +2320,8 @@
     function showStatus(message, type = "", options = {}) {
       const status = $("status"); const text = cleanText(message);
       if (!status) return;
-      if (options.stop) keepActivityDetailsVisible();
       // Keep the activity history across browser refreshes, including during a long scrape.
+      // New status messages must never expand the details panel automatically.
       status.className = "status show";
       let messages = status.querySelector(".statusMessages");
       if (!messages) {
@@ -2482,8 +2482,8 @@
       if (["running", "finishing", "queued", "in_progress"].includes(status) && progressAgeSeconds >= 45) {
         if (titleProgress) {
           titleProgress.hidden = false;
-          titleProgress.textContent = "GEEN VOORTGANG " + progressAgeSeconds + "s · " + shortScrapeSiteName(progress.currentSite || "scraper");
-          titleProgress.title = "De laatste scraper-update is " + progressAgeSeconds + " seconden oud. De scraper kan vastgelopen zijn of de voortgang wordt niet gepubliceerd. Gebruik Stop om de GitHub-run te annuleren.";
+          titleProgress.textContent = "Wacht op update · " + shortScrapeSiteName(progress.currentSite || "website") + " · " + progressAgeSeconds + " sec";
+          titleProgress.title = "De scan heeft " + progressAgeSeconds + " seconden geen nieuwe voortgang gemeld. Laatste bekende website: " + shortScrapeSiteName(progress.currentSite || "onbekend") + ". De scan kan nog bezig zijn of vastzitten; open het detailoverzicht om de status en Stop-knop te bekijken.";
         }
         return;
       }
@@ -2577,14 +2577,13 @@
       const isNewRestoredRun = restoredProgressRunId !== progress.runId;
       restoredProgressRunId = progress.runId;
       restoredProgressUpdatedAt = cleanText(progress.lastUpdatedAt || progress.startedAt || "");
-      // Open details once when discovering a run; don't reopen them on every poll.
-      if (isNewRestoredRun) keepActivityDetailsVisible();
+      // Keep the details panel collapsed by default, including when a run is restored.
       const activeSiteName = shortScrapeSiteName(progress.currentSite || "");
       const updatedAtMs = Date.parse(progress.lastUpdatedAt || progress.siteStartedAt || progress.startedAt || "");
       const ageSeconds = Number.isFinite(updatedAtMs) ? Math.max(0, Math.floor((Date.now() - updatedAtMs) / 1000)) : 0;
       showStatus(
         ageSeconds >= 45
-          ? "GEEN ACTUELE VOORTGANG: laatste update " + ageSeconds + " seconden geleden; laatste bekende website: " + (activeSiteName || "onbekend") + ". De scraper kan vastgelopen zijn. Stop annuleert de GitHub-run."
+          ? "De scan meldt al " + ageSeconds + " seconden geen nieuwe update. Laatste bekende website: " + (activeSiteName || "onbekend") + ". De scan kan nog bezig zijn of vastzitten; open het detailoverzicht voor de scanstatus en Stop-knop."
           : activeSiteName
             ? "Scraper actief na pagina-herstel: " + (Number(progress.completedCount) || 0) + "/" + (Number(progress.totalSites) || 19) + " websites afgerond; nu bezig met " + activeSiteName + "."
             : "Scraper actief na pagina-herstel: " + (Number(progress.completedCount) || 0) + "/" + (Number(progress.totalSites) || 19) + " websites afgerond; wachten op actuele websitevoortgang.",
@@ -4187,9 +4186,9 @@
     primaryButtons.append($("toggleCustomSiteBtn"), $("resetBtn"), $("newOnlyToggle"));
     dataButtons.append($("clearBtn"), $("deleteDataBtn"));
     filterGrid.insertAdjacentElement("afterend", buttonRows);
+    buttonRows.append(dataButtons);
     buttonRows.append(primaryButtons);
     if (customSiteAdder) buttonRows.append(customSiteAdder);
-    buttonRows.append(dataButtons);
     inlineTools.hidden = true;
     if (sidebarActions) sidebarActions.hidden = true;
     $("siteSelect").style.gridColumn = "1 / -1";
