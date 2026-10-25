@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-25T10:55:31+00:00",
+  "updatedAt": "2026-10-25T10:57:40+00:00",
   "events": [
     {
       "date": "2026-10-25",
@@ -1480,7 +1480,7 @@
       "description": "Ontdek Home Sweet Home tijdens het Scandinavië Festival in De Nieuwe Kolk, het culturele hart van Assen. Laat je inspireren en ontmoet elkaar.",
       "cost": "",
       "image": "https://media.denieuwekolk.nl/ed47fcc9-0158-7791-0845-25b6c6381562/home-sweet-home?crop=3290%2C1974%2C109%2C0&scale=1200&optimizer=image",
-      "isNew": true
+      "isNew": false
     },
     {
       "date": "2026-10-25",
@@ -2752,7 +2752,7 @@
       "description": "Ontdek Värn tijdens het Scandinavië Festival bij De Nieuwe Kolk in Assen. Laat je inspireren door de cultuur en verhalen van Scandinavië.",
       "cost": "",
       "image": "https://media.denieuwekolk.nl/8a18ec02-92cf-3698-a454-e4dd4702d9fb/v-rn-st-6-jpg-sd-high?crop=3840%2C2304%2C0%2C0&scale=1200&optimizer=image",
-      "isNew": true
+      "isNew": false
     },
     {
       "date": "2026-10-25",
@@ -3595,7 +3595,7 @@
       "description": "Beleef Los Tigres bij Filmliga in De Nieuwe Kolk, het culturele hart van Assen. Ontdek bijzondere films en ontmoet elkaar in het cultuurhuis.",
       "cost": "",
       "image": "https://media.denieuwekolk.nl/3b5d4b04-8d0c-cd74-bcba-df0221588e89/los-tigres?crop=3840%2C2304%2C0%2C128&scale=1200&optimizer=image",
-      "isNew": true
+      "isNew": false
     },
     {
       "date": "2026-10-26",
@@ -5605,7 +5605,7 @@
       "description": "Beleef Fright Night: Clayface (16 jr.) bij De Nieuwe Kolk in Assen. Een huiveringwekkende filmavond voor liefhebbers van spanning en horror.",
       "cost": "",
       "image": "https://media.denieuwekolk.nl/ce379c24-80cb-c856-78fe-48ce7127f221/clayface?crop=2805%2C1683%2C517%2C0&scale=1200&optimizer=image",
-      "isNew": true
+      "isNew": false
     },
     {
       "date": "2026-10-31",
@@ -5725,7 +5725,7 @@
       "description": "Beleef tijdens Fright Night de film Other Mommy (16 jr.) bij De Nieuwe Kolk in Assen. Ontdek deze spannende filmavond en reserveer je tickets.",
       "cost": "",
       "image": "https://media.denieuwekolk.nl/ce420a8c-30e6-1985-aa78-292769df3e90/other-mommy?crop=3840%2C2304%2C0%2C128&scale=1200&optimizer=image",
-      "isNew": true
+      "isNew": false
     },
     {
       "date": "2026-10-31",
@@ -5800,7 +5800,7 @@
       "description": "Beleef de 50th Anniversary-vertoning van The Texas Chain Saw Massacre tijdens Fright Night. Een legendarische horrorfilm, vanaf 16 jaar.",
       "cost": "",
       "image": "https://media.denieuwekolk.nl/55b1c488-5fdd-460c-67ae-66f9d8a8b140/the-texas-chain-saw-massacre-50th-anniversary-ps-1-jpg-sd-high?crop=2592%2C1555%2C0%2C1142&scale=1200&optimizer=image",
-      "isNew": true
+      "isNew": false
     },
     {
       "date": "2026-11-01",
@@ -10894,21 +10894,21 @@
       "site": "https://www.zwolsetheaters.nl/programma",
       "count": 0,
       "newCount": 0,
-      "durationSeconds": 7.91,
+      "durationSeconds": 10.25,
       "timedOut": false
     },
     {
       "site": "https://denieuwekolk.nl/agenda",
-      "count": 6,
-      "newCount": 6,
-      "durationSeconds": 19.09,
-      "timedOut": false
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 20.15,
+      "timedOut": true
     },
     {
       "site": "https://www.filmvandaag.nl/bioscoop",
       "count": 0,
       "newCount": 0,
-      "durationSeconds": 2.27,
+      "durationSeconds": 3.01,
       "timedOut": false
     }
   ],
@@ -10929,7 +10929,7 @@
       "date": "",
       "url": "https://www.zwolsetheaters.nl/programma",
       "status": "strategie",
-      "rawText": "JSON-LD + detailpagina-crawler"
+      "rawText": "JavaScript-agenda + API/chunk-detectie"
     },
     {
       "source": "Website",
@@ -10970,6 +10970,15 @@
     {
       "source": "Diagnose",
       "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Zwolse JS scan chunk-vendors.main.js",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/assets/js/chunk-vendors.main.js?v=L8F5KdDUVX9i4ON4PXhCti3ujgqHICgBWsZxug4CPgA",
+      "status": "diagnose",
+      "rawText": "geen API-route herkend; 384411 tekens;"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.zwolsetheaters.nl/programma",
       "title": "Zwolse JS main.js #1",
       "date": "",
       "url": "https://www.zwolsetheaters.nl/assets/js/main.js?v=WgecduYVPp8i_9Rxhb1fyYhHd0tzmUbPgKM0R-XTk5A",
@@ -10984,6 +10993,51 @@
       "url": "https://www.zwolsetheaters.nl/assets/js/main.js?v=WgecduYVPp8i_9Rxhb1fyYhHd0tzmUbPgKM0R-XTk5A",
       "status": "diagnose",
       "rawText": "n this.client=e.default.create({timeout:18e6}),this.client.defaults.baseURL=this.baseUrl,this.client}),(0,g.A)(this,\"getMockResponse\",(e,t)=>({status:e,statusText:\"\",data:t,headers:{},config:{}})),(0,g.A)(this,\"handleResponse\",e=>{const{apiLoading:t}=(0,K.E)(),{cameli"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Zwolse JS main.js #3",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/assets/js/main.js?v=WgecduYVPp8i_9Rxhb1fyYhHd0tzmUbPgKM0R-XTk5A",
+      "status": "diagnose",
+      "rawText": "chunk-context: ],\"./_BaseFormPage.vue\":[6334,[3192]],\"./_BaseFormUmbraco.vue\":[4661,[9760,1088]],\"./fields/_BaseCheckbox.vue\":[9143,[8868]],\"./fields/_BaseCheckboxList.vue\":[6181,[8216]],\"."
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Zwolse JS main.js #4",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/assets/js/main.js?v=WgecduYVPp8i_9Rxhb1fyYhHd0tzmUbPgKM0R-XTk5A",
+      "status": "diagnose",
+      "rawText": "chunk-context: ()=>{if(this.client)return this.client;const e=await Promise.all([s.e(9760),s.e(6183)]).then(s.bind(s,3110));return this.client=e.default.create({timeout:18e6}),this.client.d"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Zwolse JS main.js #5",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/assets/js/main.js?v=WgecduYVPp8i_9Rxhb1fyYhHd0tzmUbPgKM0R-XTk5A",
+      "status": "diagnose",
+      "rawText": "chunk-context: is.client)return this.client;const e=await Promise.all([s.e(9760),s.e(6183)]).then(s.bind(s,3110));return this.client=e.default.create({timeout:18e6}),this.client.defaults.ba"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Zwolse JS main.js #6",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/assets/js/main.js?v=WgecduYVPp8i_9Rxhb1fyYhHd0tzmUbPgKM0R-XTk5A",
+      "status": "diagnose",
+      "rawText": "chunk-context: ,[]))}}(),function(){s.u=function(e){return 9760===e?\"js/9760.936.js\":6183===e?\"js/lib/axios.85f.js\":9285===e?\"js/9285.557.js\":3041===e?\"js/3041.8f5.js\":7793===e?\"js/7793.cc2"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Zwolse JS scan helpers.js",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/assets/js/helpers.js?v=HGrKdvmUXqEJb8FtU8ZsLaz1xOk0Jx-uSg48D1iyr6I",
+      "status": "diagnose",
+      "rawText": "geen API-route herkend; 732 tekens;"
     },
     {
       "source": "Parser",
@@ -11073,7 +11127,7 @@
       "date": "",
       "url": "https://www.zwolsetheaters.nl/programma",
       "status": "klaar",
-      "rawText": "site 1/3: 0 unieke events in 7.91 sec"
+      "rawText": "site 1/3: 0 unieke events in 10.25 sec"
     },
     {
       "source": "Website",
@@ -11841,645 +11895,6 @@
       "rawText": "Wicker"
     },
     {
-      "source": "Website",
-      "site": "https://denieuwekolk.nl/agenda",
-      "title": "Pagina gelezen",
-      "date": "",
-      "url": "https://denieuwekolk.nl/bieb/agenda",
-      "status": "ok",
-      "rawText": "404426 tekens HTML"
-    },
-    {
-      "source": "Parser",
-      "site": "https://denieuwekolk.nl/agenda",
-      "title": "De Nieuwe Kolk detailstrategie",
-      "date": "",
-      "url": "https://denieuwekolk.nl/bieb/agenda",
-      "status": "strategie",
-      "rawText": "Agenda gebruiken om detail-URL's te vinden; alleen de echte detailpagina als evenement verwerken"
-    },
-    {
-      "source": "Website",
-      "site": "https://denieuwekolk.nl/agenda",
-      "title": "Pagina geanalyseerd",
-      "date": "",
-      "url": "https://denieuwekolk.nl/bieb/agenda",
-      "status": "ok",
-      "rawText": "0 events/aanbiedingen op deze pagina"
-    },
-    {
-      "source": "Website",
-      "site": "https://denieuwekolk.nl/agenda",
-      "title": "Adviesplein",
-      "date": "",
-      "url": "https://denieuwekolk.nl/bieb/agenda/adviesplein",
-      "status": "detail-link gevonden",
-      "rawText": "Adviesplein"
-    },
-    {
-      "source": "Website",
-      "site": "https://denieuwekolk.nl/agenda",
-      "title": "Alzheimercafé",
-      "date": "",
-      "url": "https://denieuwekolk.nl/bieb/agenda/alzheimercafe-10044312",
-      "status": "detail-link gevonden",
-      "rawText": "Alzheimercafé"
-    },
-    {
-      "source": "Website",
-      "site": "https://denieuwekolk.nl/agenda",
-      "title": "Alzheimercafé",
-      "date": "",
-      "url": "https://denieuwekolk.nl/bieb/agenda/alzheimercafe-10044313",
-      "status": "detail-link gevonden",
-      "rawText": "Alzheimercafé"
-    },
-    {
-      "source": "Website",
-      "site": "https://denieuwekolk.nl/agenda",
-      "title": "Boekstartuurtje",
-      "date": "",
-      "url": "https://denieuwekolk.nl/bieb/agenda/boekstartuurtje-10047350",
-      "status": "detail-link gevonden",
-      "rawText": "Boekstartuurtje"
-    },
-    {
-      "source": "Website",
-      "site": "https://denieuwekolk.nl/agenda",
-      "title": "Bestel",
-      "date": "",
-      "url": "https://denieuwekolk.nl/bieb/agenda/boekstartuurtje-10047350/bestel/0437ca77-8bca-0f89-47cc-397884d18ff6",
-      "status": "detail-link gevonden",
-      "rawText": "Bestel"
-    },
-    {
-      "source": "Website",
-      "site": "https://denieuwekolk.nl/agenda",
-      "title": "Bouw een Hebocon battle-bot",
-      "date": "",
-      "url": "https://denieuwekolk.nl/bieb/agenda/bouw-een-hebocon-battle-bot",
-      "status": "detail-link gevonden",
-      "rawText": "Bouw een Hebocon battle-bot"
-    },
-    {
-      "source": "Website",
-      "site": "https://denieuwekolk.nl/agenda",
-      "title": "Bestel",
-      "date": "",
-      "url": "https://denieuwekolk.nl/bieb/agenda/bouw-een-hebocon-battle-bot/bestel/c9779f82-cd9d-3e4a-125b-58b9bf9bd133",
-      "status": "detail-link gevonden",
-      "rawText": "Bestel"
-    },
-    {
-      "source": "Website",
-      "site": "https://denieuwekolk.nl/agenda",
-      "title": "Carmilla",
-      "date": "",
-      "url": "https://denieuwekolk.nl/bieb/agenda/carmilla",
-      "status": "detail-link gevonden",
-      "rawText": "Carmilla"
-    },
-    {
-      "source": "Website",
-      "site": "https://denieuwekolk.nl/agenda",
-      "title": "Cursus Sterrenkunde",
-      "date": "",
-      "url": "https://denieuwekolk.nl/bieb/agenda/cursus-sterrenkunde",
-      "status": "detail-link gevonden",
-      "rawText": "Cursus Sterrenkunde"
-    },
-    {
-      "source": "Website",
-      "site": "https://denieuwekolk.nl/agenda",
-      "title": "Bestel",
-      "date": "",
-      "url": "https://denieuwekolk.nl/bieb/agenda/cursus-sterrenkunde/bestel/d5f84c53-48e8-a65d-c50a-34bb44c49b84",
-      "status": "detail-link gevonden",
-      "rawText": "Bestel"
-    },
-    {
-      "source": "Website",
-      "site": "https://denieuwekolk.nl/agenda",
-      "title": "Derde Dinsdag",
-      "date": "",
-      "url": "https://denieuwekolk.nl/bieb/agenda/derde-dinsdag-ramsey-nasr",
-      "status": "detail-link gevonden",
-      "rawText": "Derde Dinsdag"
-    },
-    {
-      "source": "Website",
-      "site": "https://denieuwekolk.nl/agenda",
-      "title": "Wachtlijst",
-      "date": "",
-      "url": "https://denieuwekolk.nl/bieb/agenda/derde-dinsdag-ramsey-nasr/bestel/c13c8fb0-f0ee-2147-651e-e58bb3b52d7d",
-      "status": "detail-link gevonden",
-      "rawText": "Wachtlijst"
-    },
-    {
-      "source": "Website",
-      "site": "https://denieuwekolk.nl/agenda",
-      "title": "DigiHandig",
-      "date": "",
-      "url": "https://denieuwekolk.nl/bieb/agenda/digihandig-10048206",
-      "status": "detail-link gevonden",
-      "rawText": "DigiHandig"
-    },
-    {
-      "source": "Website",
-      "site": "https://denieuwekolk.nl/agenda",
-      "title": "Wachtlijst",
-      "date": "",
-      "url": "https://denieuwekolk.nl/bieb/agenda/digihandig-10048206/bestel/702b4e5e-6a91-e71f-8183-0b8e9716a8ac",
-      "status": "detail-link gevonden",
-      "rawText": "Wachtlijst"
-    },
-    {
-      "source": "Website",
-      "site": "https://denieuwekolk.nl/agenda",
-      "title": "DigiVitaler",
-      "date": "",
-      "url": "https://denieuwekolk.nl/bieb/agenda/digivitaler",
-      "status": "detail-link gevonden",
-      "rawText": "DigiVitaler"
-    },
-    {
-      "source": "Website",
-      "site": "https://denieuwekolk.nl/agenda",
-      "title": "Dokter in de Zaal",
-      "date": "",
-      "url": "https://denieuwekolk.nl/bieb/agenda/dokter-in-de-zaal",
-      "status": "detail-link gevonden",
-      "rawText": "Dokter in de Zaal"
-    },
-    {
-      "source": "Website",
-      "site": "https://denieuwekolk.nl/agenda",
-      "title": "Bestel",
-      "date": "",
-      "url": "https://denieuwekolk.nl/bieb/agenda/dokter-in-de-zaal/bestel/de572d3c-96ec-e14e-dc4a-fd3a52b5d9ef",
-      "status": "detail-link gevonden",
-      "rawText": "Bestel"
-    },
-    {
-      "source": "Website",
-      "site": "https://denieuwekolk.nl/agenda",
-      "title": "Foto-expositie Verhalen van Verborgen Kracht",
-      "date": "",
-      "url": "https://denieuwekolk.nl/bieb/agenda/fotoexpositie-verhalen-van-verborgen-kracht-10050486",
-      "status": "detail-link gevonden",
-      "rawText": "Foto-expositie Verhalen van Verborgen Kracht"
-    },
-    {
-      "source": "Website",
-      "site": "https://denieuwekolk.nl/agenda",
-      "title": "Groot Dictee der Nederlandse Taal",
-      "date": "",
-      "url": "https://denieuwekolk.nl/bieb/agenda/groot-dictee-der-nederlandse-taal",
-      "status": "detail-link gevonden",
-      "rawText": "Groot Dictee der Nederlandse Taal"
-    },
-    {
-      "source": "Website",
-      "site": "https://denieuwekolk.nl/agenda",
-      "title": "Bestel",
-      "date": "",
-      "url": "https://denieuwekolk.nl/bieb/agenda/groot-dictee-der-nederlandse-taal/bestel/9b1ccb07-ab58-a214-3749-f5136f934c7d",
-      "status": "detail-link gevonden",
-      "rawText": "Bestel"
-    },
-    {
-      "source": "Website",
-      "site": "https://denieuwekolk.nl/agenda",
-      "title": "Het Vlucht Voorwaarts Praathuis",
-      "date": "",
-      "url": "https://denieuwekolk.nl/bieb/agenda/het-vlucht-voorwaarts-praathuis",
-      "status": "detail-link gevonden",
-      "rawText": "Het Vlucht Voorwaarts Praathuis"
-    },
-    {
-      "source": "Website",
-      "site": "https://denieuwekolk.nl/agenda",
-      "title": "INKT",
-      "date": "",
-      "url": "https://denieuwekolk.nl/bieb/agenda/inkt-10046644",
-      "status": "detail-link gevonden",
-      "rawText": "INKT"
-    },
-    {
-      "source": "Website",
-      "site": "https://denieuwekolk.nl/agenda",
-      "title": "Bestel",
-      "date": "",
-      "url": "https://denieuwekolk.nl/bieb/agenda/inkt-10046644/bestel/13354397-819e-a67e-b44e-22c4e853c6fe",
-      "status": "detail-link gevonden",
-      "rawText": "Bestel"
-    },
-    {
-      "source": "Website",
-      "site": "https://denieuwekolk.nl/agenda",
-      "title": "Klik & Tik",
-      "date": "",
-      "url": "https://denieuwekolk.nl/bieb/agenda/klik-tik",
-      "status": "detail-link gevonden",
-      "rawText": "Klik & Tik"
-    },
-    {
-      "source": "Website",
-      "site": "https://denieuwekolk.nl/agenda",
-      "title": "Wachtlijst",
-      "date": "",
-      "url": "https://denieuwekolk.nl/bieb/agenda/klik-tik/bestel/47b282c2-9624-0762-56c5-5a8dea887348",
-      "status": "detail-link gevonden",
-      "rawText": "Wachtlijst"
-    },
-    {
-      "source": "Website",
-      "site": "https://denieuwekolk.nl/agenda",
-      "title": "Masker maken",
-      "date": "",
-      "url": "https://denieuwekolk.nl/bieb/agenda/masker-maken",
-      "status": "detail-link gevonden",
-      "rawText": "Masker maken"
-    },
-    {
-      "source": "Website",
-      "site": "https://denieuwekolk.nl/agenda",
-      "title": "Bestel",
-      "date": "",
-      "url": "https://denieuwekolk.nl/bieb/agenda/masker-maken/bestel/554224cf-3cd2-ded3-67d7-a58f06e0f3c0",
-      "status": "detail-link gevonden",
-      "rawText": "Bestel"
-    },
-    {
-      "source": "Website",
-      "site": "https://denieuwekolk.nl/agenda",
-      "title": "Oefentafel Basisvaardigheden",
-      "date": "",
-      "url": "https://denieuwekolk.nl/bieb/agenda/oefentafel-basisvaardigheden",
-      "status": "detail-link gevonden",
-      "rawText": "Oefentafel Basisvaardigheden"
-    },
-    {
-      "source": "Website",
-      "site": "https://denieuwekolk.nl/agenda",
-      "title": "Omgaan met stress en grenzen",
-      "date": "",
-      "url": "https://denieuwekolk.nl/bieb/agenda/omgaan-met-stress-en-grenzen",
-      "status": "detail-link gevonden",
-      "rawText": "Omgaan met stress en grenzen"
-    },
-    {
-      "source": "Website",
-      "site": "https://denieuwekolk.nl/agenda",
-      "title": "Bestel",
-      "date": "",
-      "url": "https://denieuwekolk.nl/bieb/agenda/omgaan-met-stress-en-grenzen/bestel/28a01ade-b689-ebac-78c4-09c9a0f67041",
-      "status": "detail-link gevonden",
-      "rawText": "Bestel"
-    },
-    {
-      "source": "Website",
-      "site": "https://denieuwekolk.nl/agenda",
-      "title": "Ontdek NXT Lab",
-      "date": "",
-      "url": "https://denieuwekolk.nl/bieb/agenda/ontdek-nxt-lab-10048687",
-      "status": "detail-link gevonden",
-      "rawText": "Ontdek NXT Lab"
-    },
-    {
-      "source": "Website",
-      "site": "https://denieuwekolk.nl/agenda",
-      "title": "Prinsessenrok of prinsencape maken",
-      "date": "",
-      "url": "https://denieuwekolk.nl/bieb/agenda/prinsessenrok-of-prinsencape-maken",
-      "status": "detail-link gevonden",
-      "rawText": "Prinsessenrok of prinsencape maken"
-    },
-    {
-      "source": "Website",
-      "site": "https://denieuwekolk.nl/agenda",
-      "title": "Bestel",
-      "date": "",
-      "url": "https://denieuwekolk.nl/bieb/agenda/prinsessenrok-of-prinsencape-maken/bestel/48201472-2a3f-75f3-0c49-544f3a047a3d",
-      "status": "detail-link gevonden",
-      "rawText": "Bestel"
-    },
-    {
-      "source": "Website",
-      "site": "https://denieuwekolk.nl/agenda",
-      "title": "Programmeren met de Micro:bit",
-      "date": "",
-      "url": "https://denieuwekolk.nl/bieb/agenda/programmeren-met-de-micro-bit",
-      "status": "detail-link gevonden",
-      "rawText": "Programmeren met de Micro:bit"
-    },
-    {
-      "source": "Website",
-      "site": "https://denieuwekolk.nl/agenda",
-      "title": "Bestel",
-      "date": "",
-      "url": "https://denieuwekolk.nl/bieb/agenda/programmeren-met-de-micro-bit/bestel/21962e50-2338-479c-f546-143200a7b60e",
-      "status": "detail-link gevonden",
-      "rawText": "Bestel"
-    },
-    {
-      "source": "Website",
-      "site": "https://denieuwekolk.nl/agenda",
-      "title": "Programmeren met Lego Spike",
-      "date": "",
-      "url": "https://denieuwekolk.nl/bieb/agenda/programmeren-met-lego-spike",
-      "status": "detail-link gevonden",
-      "rawText": "Programmeren met Lego Spike"
-    },
-    {
-      "source": "Website",
-      "site": "https://denieuwekolk.nl/agenda",
-      "title": "Wachtlijst",
-      "date": "",
-      "url": "https://denieuwekolk.nl/bieb/agenda/programmeren-met-lego-spike/bestel/ce564eeb-9a34-f054-5336-12388aa53ba2",
-      "status": "detail-link gevonden",
-      "rawText": "Wachtlijst"
-    },
-    {
-      "source": "Website",
-      "site": "https://denieuwekolk.nl/agenda",
-      "title": "Schrijfcafé",
-      "date": "",
-      "url": "https://denieuwekolk.nl/bieb/agenda/schrijfcafe",
-      "status": "detail-link gevonden",
-      "rawText": "Schrijfcafé"
-    },
-    {
-      "source": "Website",
-      "site": "https://denieuwekolk.nl/agenda",
-      "title": "Steeds Lichter",
-      "date": "",
-      "url": "https://denieuwekolk.nl/bieb/agenda/steeds-lichter",
-      "status": "detail-link gevonden",
-      "rawText": "Steeds Lichter"
-    },
-    {
-      "source": "Website",
-      "site": "https://denieuwekolk.nl/agenda",
-      "title": "Bestel",
-      "date": "",
-      "url": "https://denieuwekolk.nl/bieb/agenda/steeds-lichter/bestel/310d2a53-d986-73ab-6ad7-0ef3980c9c8c",
-      "status": "detail-link gevonden",
-      "rawText": "Bestel"
-    },
-    {
-      "source": "Website",
-      "site": "https://denieuwekolk.nl/agenda",
-      "title": "Taalcafé",
-      "date": "",
-      "url": "https://denieuwekolk.nl/bieb/agenda/taalcafe",
-      "status": "detail-link gevonden",
-      "rawText": "Taalcafé"
-    },
-    {
-      "source": "Website",
-      "site": "https://denieuwekolk.nl/agenda",
-      "title": "Thuis – Ahmed Aboutaleb",
-      "date": "",
-      "url": "https://denieuwekolk.nl/bieb/agenda/thuis-ahmed-aboutaleb",
-      "status": "detail-link gevonden",
-      "rawText": "Thuis – Ahmed Aboutaleb"
-    },
-    {
-      "source": "Website",
-      "site": "https://denieuwekolk.nl/agenda",
-      "title": "Bestel",
-      "date": "",
-      "url": "https://denieuwekolk.nl/bieb/agenda/thuis-ahmed-aboutaleb/bestel/0ad181da-599a-57f9-94d6-00196fea8ca4",
-      "status": "detail-link gevonden",
-      "rawText": "Bestel"
-    },
-    {
-      "source": "Website",
-      "site": "https://denieuwekolk.nl/agenda",
-      "title": "Versier jouw bord of beker",
-      "date": "",
-      "url": "https://denieuwekolk.nl/bieb/agenda/versier-jouw-bord-of-beker",
-      "status": "detail-link gevonden",
-      "rawText": "Versier jouw bord of beker"
-    },
-    {
-      "source": "Website",
-      "site": "https://denieuwekolk.nl/agenda",
-      "title": "Bestel",
-      "date": "",
-      "url": "https://denieuwekolk.nl/bieb/agenda/versier-jouw-bord-of-beker/bestel/c67cec88-6502-f90a-db63-5a1376f840c8",
-      "status": "detail-link gevonden",
-      "rawText": "Bestel"
-    },
-    {
-      "source": "Website",
-      "site": "https://denieuwekolk.nl/agenda",
-      "title": "VR & Gamen",
-      "date": "",
-      "url": "https://denieuwekolk.nl/bieb/agenda/vr-gamen",
-      "status": "detail-link gevonden",
-      "rawText": "VR & Gamen"
-    },
-    {
-      "source": "Website",
-      "site": "https://denieuwekolk.nl/agenda",
-      "title": "Bestel",
-      "date": "",
-      "url": "https://denieuwekolk.nl/bieb/agenda/vr-gamen/bestel/3c369168-9fce-ce2d-9494-06a5c56d8888",
-      "status": "detail-link gevonden",
-      "rawText": "Bestel"
-    },
-    {
-      "source": "Website",
-      "site": "https://denieuwekolk.nl/agenda",
-      "title": "Wat Als?! Online veiligheid",
-      "date": "",
-      "url": "https://denieuwekolk.nl/theater/agenda/wat-als-online-veiligheid",
-      "status": "detail-link gevonden",
-      "rawText": "Wat Als?! Online veiligheid"
-    },
-    {
-      "source": "Website",
-      "site": "https://denieuwekolk.nl/agenda",
-      "title": "Bestel",
-      "date": "",
-      "url": "https://denieuwekolk.nl/theater/agenda/wat-als-online-veiligheid/bestel/e64c75b3-e8c3-fc09-d15e-a51e6384fd93",
-      "status": "detail-link gevonden",
-      "rawText": "Bestel"
-    },
-    {
-      "source": "Website",
-      "site": "https://denieuwekolk.nl/agenda",
-      "title": "10:00",
-      "date": "",
-      "url": "https://denieuwekolk.nl/bieb/agenda/digivitaler/bestel/2d51f0c6-1f14-061d-f3a5-f7a2f9d97c8c",
-      "status": "detail-link gevonden",
-      "rawText": "10:00"
-    },
-    {
-      "source": "Website",
-      "site": "https://denieuwekolk.nl/agenda",
-      "title": "Activiteiten & events",
-      "date": "",
-      "url": "https://denieuwekolk.nl/bieb/agenda",
-      "status": "detail-link gevonden",
-      "rawText": "Activiteiten & events"
-    },
-    {
-      "source": "Website",
-      "site": "https://denieuwekolk.nl/agenda",
-      "title": "films",
-      "date": "",
-      "url": "https://denieuwekolk.nl/bios/agenda",
-      "status": "detail-link gevonden",
-      "rawText": "films"
-    },
-    {
-      "source": "Website",
-      "site": "https://denieuwekolk.nl/agenda",
-      "title": "voorstellingen",
-      "date": "",
-      "url": "https://denieuwekolk.nl/theater/agenda",
-      "status": "detail-link gevonden",
-      "rawText": "voorstellingen"
-    },
-    {
-      "source": "Website",
-      "site": "https://denieuwekolk.nl/agenda",
-      "title": "Agenda",
-      "date": "",
-      "url": "https://denieuwekolk.nl/agenda",
-      "status": "detail-link gevonden",
-      "rawText": "Agenda"
-    },
-    {
-      "source": "Website",
-      "site": "https://denieuwekolk.nl/agenda",
-      "title": "Theater",
-      "date": "",
-      "url": "https://denieuwekolk.nl/theater",
-      "status": "detail-link gevonden",
-      "rawText": "Theater"
-    },
-    {
-      "source": "Website",
-      "site": "https://denieuwekolk.nl/agenda",
-      "title": "De Nieuwe Kolk",
-      "date": "",
-      "url": "https://denieuwekolk.nl/",
-      "status": "detail-link gevonden",
-      "rawText": "De Nieuwe Kolk"
-    },
-    {
-      "source": "Website",
-      "site": "https://denieuwekolk.nl/agenda",
-      "title": "Bezoek",
-      "date": "",
-      "url": "https://denieuwekolk.nl/bezoek",
-      "status": "detail-link gevonden",
-      "rawText": "Bezoek"
-    },
-    {
-      "source": "Website",
-      "site": "https://denieuwekolk.nl/agenda",
-      "title": "Huisregels",
-      "date": "",
-      "url": "https://denieuwekolk.nl/bezoek/huisregels",
-      "status": "detail-link gevonden",
-      "rawText": "Huisregels"
-    },
-    {
-      "source": "Website",
-      "site": "https://denieuwekolk.nl/agenda",
-      "title": "Veelgestelde vragen",
-      "date": "",
-      "url": "https://denieuwekolk.nl/bezoek/veelgestelde-vragen",
-      "status": "detail-link gevonden",
-      "rawText": "Veelgestelde vragen"
-    },
-    {
-      "source": "Website",
-      "site": "https://denieuwekolk.nl/agenda",
-      "title": "Locaties",
-      "date": "",
-      "url": "https://denieuwekolk.nl/bezoek/zalen-en-ruimtes",
-      "status": "detail-link gevonden",
-      "rawText": "Locaties"
-    },
-    {
-      "source": "Website",
-      "site": "https://denieuwekolk.nl/agenda",
-      "title": "Bieb",
-      "date": "",
-      "url": "https://denieuwekolk.nl/bieb",
-      "status": "detail-link gevonden",
-      "rawText": "Bieb"
-    },
-    {
-      "source": "Website",
-      "site": "https://denieuwekolk.nl/agenda",
-      "title": "Bios",
-      "date": "",
-      "url": "https://denieuwekolk.nl/bios",
-      "status": "detail-link gevonden",
-      "rawText": "Bios"
-    },
-    {
-      "source": "Website",
-      "site": "https://denieuwekolk.nl/agenda",
-      "title": "[email protected]",
-      "date": "",
-      "url": "https://denieuwekolk.nl/cdn-cgi/l/email-protection",
-      "status": "detail-link gevonden",
-      "rawText": "[email protected]"
-    },
-    {
-      "source": "Website",
-      "site": "https://denieuwekolk.nl/agenda",
-      "title": "Favorieten",
-      "date": "",
-      "url": "https://denieuwekolk.nl/favorieten",
-      "status": "detail-link gevonden",
-      "rawText": "Favorieten"
-    },
-    {
-      "source": "Website",
-      "site": "https://denieuwekolk.nl/agenda",
-      "title": "inloggen",
-      "date": "",
-      "url": "https://denieuwekolk.nl/mijn-dnk",
-      "status": "detail-link gevonden",
-      "rawText": "inloggen"
-    },
-    {
-      "source": "Website",
-      "site": "https://denieuwekolk.nl/agenda",
-      "title": "Onderwijs",
-      "date": "",
-      "url": "https://denieuwekolk.nl/onderwijs",
-      "status": "detail-link gevonden",
-      "rawText": "Onderwijs"
-    },
-    {
-      "source": "Website",
-      "site": "https://denieuwekolk.nl/agenda",
-      "title": "Verhuur",
-      "date": "",
-      "url": "https://denieuwekolk.nl/verhuur",
-      "status": "detail-link gevonden",
-      "rawText": "Verhuur"
-    },
-    {
-      "source": "Website",
-      "site": "https://denieuwekolk.nl/agenda",
-      "title": "Zakelijk",
-      "date": "",
-      "url": "https://denieuwekolk.nl/zakelijk",
-      "status": "detail-link gevonden",
-      "rawText": "Zakelijk"
-    },
-    {
       "source": "RSS/Atom",
       "site": "https://denieuwekolk.nl/agenda",
       "title": "Feed mislukt",
@@ -12752,47 +12167,11 @@
     {
       "source": "Website",
       "site": "https://denieuwekolk.nl/agenda",
-      "title": "Detailpagina geanalyseerd",
+      "title": "Detailpagina mislukt",
       "date": "",
       "url": "https://denieuwekolk.nl/bios/agenda/sense-and-sensibility",
-      "status": "ok",
-      "rawText": "1 extra events"
-    },
-    {
-      "source": "Website",
-      "site": "https://denieuwekolk.nl/agenda",
-      "title": "Detailpagina geanalyseerd",
-      "date": "",
-      "url": "https://denieuwekolk.nl/bios/agenda/shaun-het-schaap-het-beest-op-de-boerderij",
-      "status": "ok",
-      "rawText": "1 extra events"
-    },
-    {
-      "source": "Website",
-      "site": "https://denieuwekolk.nl/agenda",
-      "title": "Detailpagina geanalyseerd",
-      "date": "",
-      "url": "https://denieuwekolk.nl/bios/agenda/street-fighter",
-      "status": "ok",
-      "rawText": "1 extra events"
-    },
-    {
-      "source": "Website",
-      "site": "https://denieuwekolk.nl/agenda",
-      "title": "Detailpagina geanalyseerd",
-      "date": "",
-      "url": "https://denieuwekolk.nl/bios/agenda/verity",
-      "status": "ok",
-      "rawText": "1 extra events"
-    },
-    {
-      "source": "Website",
-      "site": "https://denieuwekolk.nl/agenda",
-      "title": "Detailpagina geanalyseerd",
-      "date": "",
-      "url": "https://denieuwekolk.nl/bios/agenda/wen-er-maar-aan",
-      "status": "ok",
-      "rawText": "1 extra events"
+      "status": "fout",
+      "rawText": "HTTPSConnectionPool(host='denieuwekolk.nl', port=443): Read timed out. (read timeout=0.2)"
     },
     {
       "source": "Filter",
@@ -12801,7 +12180,7 @@
       "date": "2026-10-25",
       "url": "https://denieuwekolk.nl/agenda",
       "status": "ok",
-      "rawText": "30 gevonden; 16 binnen 2026-10-25 t/m onbeperkt"
+      "rawText": "25 gevonden; 16 binnen 2026-10-25 t/m onbeperkt"
     },
     {
       "source": "Website",
@@ -12810,7 +12189,7 @@
       "date": "",
       "url": "https://denieuwekolk.nl/agenda",
       "status": "klaar",
-      "rawText": "site 2/3: 6 unieke events in 19.09 sec"
+      "rawText": "site 2/3: 0 unieke events in 20.15 sec"
     },
     {
       "source": "Website",
@@ -12855,7 +12234,7 @@
       "date": "",
       "url": "https://www.filmvandaag.nl/bioscoop",
       "status": "klaar",
-      "rawText": "site 3/3: 0 unieke events in 2.27 sec"
+      "rawText": "site 3/3: 0 unieke events in 3.01 sec"
     }
   ]
 }
