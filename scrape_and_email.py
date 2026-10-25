@@ -2420,12 +2420,12 @@ def publish_scrape_progress(progress):
         changed = subprocess.run(["git", "diff", "--cached", "--quiet"], check=False)
         if changed.returncode == 0:
             return
+        subprocess.run(
+            ["git", "commit", "-m", "Update per-site scrape progress"],
+            check=True, capture_output=True, text=True
+        )
 
         for attempt in range(1, 4):
-            subprocess.run(
-                ["git", "commit", "-m", "Update per-site scrape progress"],
-                check=True, capture_output=True, text=True
-            )
             pushed = subprocess.run(
                 ["git", "push", "origin", "HEAD:main"],
                 check=False, capture_output=True, text=True
@@ -2458,6 +2458,7 @@ def publish_scrape_progress(progress):
         # Progress is best-effort; the final events.json save must still complete.
         detail = getattr(exc, "stderr", "") or str(exc)
         print(f"Could not publish scrape progress: {detail[:500]}")
+
 
 
 def main():
