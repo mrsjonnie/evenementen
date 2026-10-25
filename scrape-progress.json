@@ -1,7 +1,7 @@
 {
   "runId": "2026-10-25T18:03:32.693130+00:00-9ae2f9f8",
   "startedAt": "2026-10-25T18:03:32+00:00",
-  "completedCount": 9,
+  "completedCount": 10,
   "totalSites": 19,
   "currentSite": "https://www.kultuuragenda.nl/agenda",
   "currentSiteIndex": 10,
@@ -14,7 +14,8 @@
     "https://simplon.nl/",
     "https://www.vera-groningen.nl/",
     "https://www.martiniplaza.nl/nl/agenda",
-    "https://groningermuseum.nl/programma"
+    "https://groningermuseum.nl/programma",
+    "https://www.kultuuragenda.nl/agenda"
   ],
   "events": [
     {
@@ -801,126 +802,16 @@
       "newCount": 12,
       "durationSeconds": 3.94,
       "timedOut": false
+    },
+    {
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 4.0,
+      "timedOut": true
     }
   ],
   "rawLog": [
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Beyond Reality",
-      "date": "2026-10-25",
-      "url": "https://groningen.uitloper.nu/kunst/beyond-reality",
-      "status": "Uitloper agenda-item",
-      "rawText": "Beyond Reality Exposanten Hedy Abeling, Wouter Berns en Bernard Divendal…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Gasten: Paul Kramer",
-      "date": "2026-10-25",
-      "url": "https://groningen.uitloper.nu/kunst/gasten-paul-kramer",
-      "status": "Uitloper agenda-item",
-      "rawText": "Gasten: Paul Kramer Duotentoonstelling met werken van Paul Kramer en Henk…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Figuranten",
-      "date": "2026-10-25",
-      "url": "https://groningen.uitloper.nu/kunst/figuranten",
-      "status": "Uitloper agenda-item",
-      "rawText": "Figuranten Sievert Bodde toont zestien fictieve portretten, in…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Permanente Expositie",
-      "date": "2026-10-25",
-      "url": "https://groningen.uitloper.nu/kunst/permanente-expositie",
-      "status": "Uitloper agenda-item",
-      "rawText": "Permanente Expositie De vaste tentoonstelling nodigt uit om kennis te nemen…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Marilyn",
-      "date": "2026-10-25",
-      "url": "https://groningen.uitloper.nu/kunst/marilyn",
-      "status": "Uitloper agenda-item",
-      "rawText": "Marilyn Deze expositie laat je de vrouw achter de mythe kennen;…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Schilderijen van Marrie Venderink",
-      "date": "2026-10-25",
-      "url": "https://groningen.uitloper.nu/kunst/schilderijen-vanmarrie-venderink",
-      "status": "Uitloper agenda-item",
-      "rawText": "Schilderijen van Marrie Venderink Expositie met schilderijen van Marrie Venderink …"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Het Witte Vlag Project",
-      "date": "2026-10-25",
-      "url": "https://groningen.uitloper.nu/kunst/het-witte-vlag-project",
-      "status": "Uitloper agenda-item",
-      "rawText": "Het Witte Vlag Project Een groepstentoonstelling met dertien hedendaagse…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Into Nature: Haunted by Waters",
-      "date": "2026-10-25",
-      "url": "https://groningen.uitloper.nu/kunst/into-nature-haunted-by-waters",
-      "status": "Uitloper agenda-item",
-      "rawText": "Into Nature: Haunted by Waters Voor deze editie maken twaalf kunstenaars nieuw werk…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Lieuwe van Gogh",
-      "date": "2026-10-25",
-      "url": "https://groningen.uitloper.nu/kunst/lieuwe-van-gogh",
-      "status": "Uitloper agenda-item",
-      "rawText": "Lieuwe van Gogh De kleurrijke gevel van Metamorphose gemaakt door…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Expositie Overwegend Vrouw (Glimmen)",
-      "date": "2026-10-25",
-      "url": "https://groningen.uitloper.nu/kunst/expositie-overwegend-vrouw-glimmen",
-      "status": "Uitloper agenda-item",
-      "rawText": "Expositie Overwegend Vrouw (Glimmen) Ingrid Veldscholten en Josephine Wortelboer exposeren…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Het Witte Vlag Project",
-      "date": "2026-10-25",
-      "url": "https://groningen.uitloper.nu/kunst/het-witte-vlag-project-1",
-      "status": "Uitloper agenda-item",
-      "rawText": "Het Witte Vlag Project In een tijd waarin zekerheden luid klinken en identiteiten…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Beyond Reality",
-      "date": "2026-10-25",
-      "url": "https://groningen.uitloper.nu/kunst/beyond-reality-1",
-      "status": "Uitloper agenda-item",
-      "rawText": "Beyond Reality Drie exposanten scheppen hun eigen werkelijkheid van…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Playing House - kinderbiënnale",
-      "date": "2026-10-25",
-      "url": "https://groningen.uitloper.nu/jeugd/playing-house-kinderbiennale",
-      "status": "Uitloper agenda-item",
-      "rawText": "Playing House - kinderbiënnale Welke bewust of onbewust aangeleerde regels worden…"
-    },
     {
       "source": "Website",
       "site": "https://groningen.uitloper.nu/",
@@ -11603,16 +11494,133 @@
       "url": "https://groningermuseum.nl/programma",
       "status": "klaar",
       "rawText": "site 9/19: 12 unieke events in 3.94 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Start",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda",
+      "status": "start",
+      "rawText": "site 10/19: max 12 events, max 4 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda",
+      "status": "strategie",
+      "rawText": "universele detailpagina-parser (Kultuuragenda)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Pagina gelezen",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda",
+      "status": "ok",
+      "rawText": "149272 tekens HTML"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Kultuuragenda detailstrategie",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda",
+      "status": "strategie",
+      "rawText": "Overzicht overslaan; alleen echte /agenda/<id>/<slug> activiteitspagina’s verwerken"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Pagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda",
+      "status": "ok",
+      "rawText": "0 events/aanbiedingen op deze pagina"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/1195684605/classics-the-misfits",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/137379264/shaun-het-schaap-het-beest-van-de-boerderij-al",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/1453156530/digger",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/1913404879/groningen-sax-fest-2026-closing-concert-saxofoonorkest050",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/1999062927/lezing-expeditie-ongering",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/2065667423/singer-songclub-2",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Detailpagina mislukt",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/272404645/lizz-wright",
+      "status": "fout",
+      "rawText": "HTTPSConnectionPool(host='www.kultuuragenda.nl', port=443): Read timed out. (read timeout=0.06812921899999935)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda",
+      "status": "klaar",
+      "rawText": "site 10/19: 0 unieke events in 4.0 sec"
     }
   ],
   "status": "running",
   "siteStartedAt": "2026-10-25T18:04:28+00:00",
-  "siteElapsedSeconds": 0,
-  "sitePageCount": 0,
+  "siteElapsedSeconds": 5,
+  "sitePageCount": 1,
   "lastSiteEventCount": 0,
-  "stage": "Websitepagina ophalen",
-  "lastUpdatedAt": "2026-10-25T18:04:28+00:00",
-  "lastSiteNewEventCount": 12,
-  "lastCompletedSite": "https://groningermuseum.nl/programma",
-  "lastCompletedAt": "2026-10-25T18:04:27+00:00"
+  "stage": "Website klaar; volgende website voorbereiden",
+  "lastUpdatedAt": "2026-10-25T18:04:31+00:00",
+  "lastSiteNewEventCount": 0,
+  "lastCompletedSite": "https://www.kultuuragenda.nl/agenda",
+  "lastCompletedAt": "2026-10-25T18:04:33+00:00"
 }
