@@ -58,3 +58,7 @@ Website	https://www.martiniplaza.nl/nl/agenda	start	Start		https://www.martinipl
 Parser	https://www.martiniplaza.nl/nl/agenda	strategie	Scrapertype vastgesteld		https://www.martiniplaza.nl/nl/agenda	agenda-kaarten
 Website	https://www.martiniplaza.nl/nl/agenda	fout	Pagina mislukt		https://www.martiniplaza.nl/nl/agenda	HTTPSConnectionPool(host='www.martiniplaza.nl', port=443): Read timed out.
 Website	https://www.martiniplaza.nl/nl/agenda	klaar	Klaar		https://www.martiniplaza.nl/nl/agenda	site 8/20: 0 unieke events in 2.0 sec
+Website	https://groningermuseum.nl/programma	start	Start		https://groningermuseum.nl/programma	site 9/20: max 5 events, max 2 seconden
+Parser	https://groningermuseum.nl/programma	strategie	Scrapertype vastgesteld		https://groningermuseum.nl/programma	universele tentoonstellings- en activiteitenparser
+Website	https://groningermuseum.nl/programma	fout	Pagina mislukt		https://groningermuseum.nl/programma	HTTPSConnectionPool(host='groningermuseum.nl', port=443): Read timed out. (read timeout=0.706535125000002)
+Website	https://groningermuseum.nl/programma	klaar	Klaar		https://groningermuseum.nl/programma	site 9/20: 0 unieke events in 2.0 sec
