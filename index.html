@@ -531,6 +531,10 @@
       line-height: .72;
     }
 
+    .siteRow { display:flex; align-items:flex-start; gap:2px; min-width:0; }
+    .siteRow > label { flex:1 1 auto; min-width:0; }
+    .siteRemove { flex:0 0 18px; width:18px; height:18px; margin:1px 1px 0 0; padding:0; border:1px solid transparent; border-radius:4px; background:transparent; color:var(--muted); font-size:13px; font-weight:900; line-height:14px; cursor:pointer; }
+    .siteRemove:hover { background:#4a1f27; border-color:#8f3948; color:#ffd9de; }
     .siteList label:hover { background: var(--surface-soft); }
     .sourceInfoWrap { display:flex; align-items:center; gap:2px; min-width:0; flex-wrap:wrap; }
     .scraperTypeLabel { color:var(--muted, #777); font-size:.88em; font-weight:500; white-space:normal; }
@@ -1108,6 +1112,7 @@
     .filterSidebar .sitePanelHeader { padding: 7px 8px; font-size: .72rem; }
     .filterSidebar .siteList { max-height: 180px; padding: 6px; }
     .filterSidebar .siteList label { padding: 0 1px; font-size: .64rem; line-height: .72; margin: 0; }
+    .filterSidebar .siteRemove { flex-basis:16px; width:16px; height:16px; margin-top:0; }
     .filterSidebar .rawLogPanel { margin-top: 8px; }
     @media (max-width: 360px) {
       .sidebarViewButtons { grid-template-columns:1fr; }
@@ -1313,11 +1318,12 @@
   </div>
 
   <script>
-    const APP_VERSION = "2026.10.25.06";
+    const APP_VERSION = "2026.10.25.07";
     const DEFAULT_MAX_EVENTS_PER_SITE = 20;
     const DEFAULT_SITE_TIME_LIMIT_SECONDS = 20;
     const SCAN_SETTINGS_KEY = "eventScanSettingsV1";
     const CUSTOM_SITES_KEY = "evenementenCustomSitesV1";
+    const REMOVED_SITES_KEY = "evenementenRemovedSitesV1";
     const SOURCE_SELECTION_KEY = "evenementenSourceSelectionV1";
     const SPOT_ONLY_SITE = "https://www.spotgroningen.nl/programma/";
     const WORKER_URL = "https://evenementen-refresh.mrsjonnie.workers.dev";
@@ -1370,21 +1376,23 @@
     const fallbackSites = [
       "https://groningen.uitloper.nu/",
       "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "https://www.visitgroningen.nl/nl/doen/wandelen",
       "https://forum.nl/nl/agenda",
       SPOT_ONLY_SITE,
       "https://simplon.nl/",
       "https://www.vera-groningen.nl/",
       "https://www.martiniplaza.nl/nl/agenda",
-      "https://www.groningermuseum.nl/en/now",
-      "https://www.kultuuragenda.nl/",
-      "https://www.noorderzon.nl/",
-      "https://www.concertgebouw.nl",
+      "https://groningermuseum.nl/programma",
+      "https://www.kultuuragenda.nl/agenda",
+      "https://www.noorderzon.nl/programma",
+      "https://www.concertgebouw.nl/concerten-en-tickets",
       "https://www.zwolsetheaters.nl/programma",
-      "https://www.paradiso.nl",
+      "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
       "https://www.vvvameland.nl/activiteiten-en-evenementen",
       "https://www.socialdeal.nl/",
       "https://www.groupon.nl/",
-      "https://www.ibood.com/nl/"
+      "https://www.ibood.com/s-nl"
     ];
 
     let events = [];
@@ -1524,6 +1532,39 @@
       }
     }
 
+    function siteIdentityKey(site) {
+      return normalizeSiteInput(site).toLowerCase().replace(/\/$/, "");
+    }
+
+    function loadRemovedSiteKeys() {
+      try {
+        const stored = JSON.parse(localStorage.getItem(REMOVED_SITES_KEY) || "[]");
+        return new Set((Array.isArray(stored) ? stored : []).map(siteIdentityKey).filter(Boolean));
+      } catch {
+        return new Set();
+      }
+    }
+
+    function saveRemovedSiteKeys(values) {
+      try { localStorage.setItem(REMOVED_SITES_KEY, JSON.stringify([...new Set(values)])); } catch {}
+    }
+
+    function removeSiteFromList(site) {
+      const key = siteIdentityKey(site);
+      if (!key) return;
+      sites = sites.filter((candidate) => siteIdentityKey(candidate) !== key);
+      saveCustomSites(loadCustomSites().filter((candidate) => siteIdentityKey(candidate) !== key));
+      const removed = loadRemovedSiteKeys();
+      removed.add(key);
+      saveRemovedSiteKeys(removed);
+      const selected = new Set([...document.querySelectorAll(".siteCheck:checked")].map((check) => check.value));
+      selected.delete(site);
+      renderSites(selected);
+      saveSourceSelection();
+      applyFilters();
+      showStatus(`${hostFromUrl(site)} verwijderd uit de websitelijst in deze browser. Je kunt de website later opnieuw toevoegen via ‘Toevoegen URL’.`, "ok");
+    }
+
     function saveCustomSites(values) {
       const custom = mergeSites(values);
       try { localStorage.setItem(CUSTOM_SITES_KEY, JSON.stringify(custom)); } catch {}
@@ -1567,6 +1608,9 @@
         return;
       }
       const selected = new Set([...document.querySelectorAll(".siteCheck:checked")].map((check) => check.value));
+      const removed = loadRemovedSiteKeys();
+      removed.delete(siteIdentityKey(normalized));
+      saveRemovedSiteKeys(removed);
       saveCustomSites([...loadCustomSites(), normalized]);
       sites = mergeSites([...sites, normalized]);
       selected.add(normalized);
@@ -2644,7 +2688,7 @@
         const errorDetails = [...new Map(errors.map((row) => { const detail = cleanText(row.rawText || row.snippet || row.url || row.title || row.status || "Geen technische details beschikbaar"); return [detail, detail]; })).values()];
         const diagnostic = count > 0 ? `${count} evenementen gevonden. ${errors.length ? `${errors.length} foutmeldingen geregistreerd; voorbeelden: ${errorDetails.slice(0,3).join(" | ")}` : "Er zijn ook resultaten opgehaald."}` : errors.length ? `${errors.length} foutmeldingen geregistreerd. Details: ${errorDetails.slice(0,3).join(" | ")}` : result?.timedOut ? "De scan duurde te lang. Probeer het later opnieuw." : "Geen evenementen gevonden. Mogelijke oorzaak: website blokkeert scraping of laadt de agenda dynamisch. Open ‘Ruwe verversdata’ voor HTTP-status en URL.";
         const scraperType = scraperTypeForSite(site);
-        return `<label class="${count > 0 ? "siteFound" : ""}"><input class="siteCheck" type="checkbox" value="${escapeHtml(site)}"${selectedSites.has(site) ? " checked" : ""}><span class="sourceInfoWrap"><span title="${escapeHtml(site)}">${escapeHtml(shortUrl)} <span class="scraperTypeLabel">(${escapeHtml(scraperType)})</span>${badge}${isScanning ? '<span class="siteScanIcon" title="Bezig met zoeken naar nieuwe data" aria-label="Bezig met zoeken naar nieuwe data">⟳</span>' : ""}</span>${hasProblem ? `<button class="sourceInfo" type="button" aria-label="Scrape-informatie voor ${escapeHtml(site)}" aria-expanded="false" data-info-site="${escapeHtml(site)}">i</button>` : ""}</span>${hasProblem ? `<span class="sourceInfoPopup" data-info-popup="${escapeHtml(site)}" hidden>${escapeHtml(diagnostic)}</span>` : ""}</label>`;
+        return `<div class="siteRow"><label class="${count > 0 ? "siteFound" : ""}"><input class="siteCheck" type="checkbox" value="${escapeHtml(site)}"${selectedSites.has(site) ? " checked" : ""}><span class="sourceInfoWrap"><span title="${escapeHtml(site)}">${escapeHtml(shortUrl)} <span class="scraperTypeLabel">(${escapeHtml(scraperType)})</span>${badge}${isScanning ? '<span class="siteScanIcon" title="Bezig met zoeken naar nieuwe data" aria-label="Bezig met zoeken naar nieuwe data">⟳</span>' : ""}</span>${hasProblem ? `<button class="sourceInfo" type="button" aria-label="Scrape-informatie voor ${escapeHtml(site)}" aria-expanded="false" data-info-site="${escapeHtml(site)}">i</button>` : ""}</span>${hasProblem ? `<span class="sourceInfoPopup" data-info-popup="${escapeHtml(site)}" hidden>${escapeHtml(diagnostic)}</span>` : ""}</label><button class="siteRemove" type="button" data-remove-site="${escapeHtml(site)}" aria-label="Verwijder ${escapeHtml(shortUrl)} uit de websitelijst" title="Verwijder website uit deze lijst">×</button></div>`;
       }).join("");
       const aiRows = [["provMistral","Mistral AI"],["provOpenAI","ChatGPT / OpenAI"],["provSerpAPI","SerpAPI (webzoekbron)"]].map(([id,label]) => `<label><input class="aiSourceCheck" type="checkbox" data-provider="${id}"${$(id)?.checked ? " checked" : ""}> <span>${label}</span></label>`).join("");
       $("sitesList").innerHTML = siteRows + `<div class="sourceGroupLabel">AI- en zoekbronnen</div>` + aiRows;
@@ -3443,7 +3487,8 @@
       expandedEventKeys = new Set();
       $("collapseBtn").textContent = "Details uitklappen";
       collapseAllGroups();
-      sites = mergeSites([...loaded[1], ...loadCustomSites()]);
+      const removedSiteKeys = loadRemovedSiteKeys();
+      sites = mergeSites([...loaded[1], ...loadCustomSites()]).filter((site) => !removedSiteKeys.has(siteIdentityKey(site)));
       applyScanSettings();
       const savedSources = loadSourceSelection();
       if (savedSources) {
@@ -3587,6 +3632,13 @@
       applyFilters();
     });
     $("sitesList").addEventListener("click", (event) => {
+      const remove = event.target.closest(".siteRemove");
+      if (remove) {
+        event.preventDefault();
+        event.stopPropagation();
+        removeSiteFromList(remove.dataset.removeSite || "");
+        return;
+      }
       const info = event.target.closest(".sourceInfo");
       if (!info) return;
       const site = info.dataset.infoSite || "";
