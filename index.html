@@ -1313,7 +1313,7 @@
   </div>
 
   <script>
-    const APP_VERSION = "2026.10.25.02";
+    const APP_VERSION = "2026.10.25.03";
     const DEFAULT_MAX_EVENTS_PER_SITE = 20;
     const DEFAULT_SITE_TIME_LIMIT_SECONDS = 20;
     const SCAN_SETTINGS_KEY = "eventScanSettingsV1";
@@ -2236,19 +2236,16 @@
         if (target) target.hidden = true;
         return;
       }
-      const site = cleanText(progress.lastCompletedSite || progress.completedSites?.[completed] || "");
+      const site = cleanText(progress.currentSite || progress.lastCompletedSite || progress.completedSites?.[completed] || "");
       const siteNumber = Math.min(total || 18, completed + 1);
       const newCount = events.filter(event => event.isNew || newEventKeys.has(eventDedupeKey(event))).length;
       const siteLabel = site ? site.replace(/^https?:\/\//, "").replace(/\/$/, "") : "website wordt voorbereid";
       if (titleProgress) {
         titleProgress.hidden = false;
-        titleProgress.textContent = `Zoeken.... (${siteNumber}/${total || 18})`;
+        titleProgress.textContent = `Zoeken.... (${siteNumber}/${total || 18}) · Controleert: ${siteLabel} · ${newCount} nieuwe evenementen gevonden`;
         titleProgress.title = `Bezig met ${siteLabel}; ${newCount} nieuwe evenementen gevonden`;
       }
-      if (target) {
-        target.hidden = false;
-        target.textContent = `Controleert: ${siteLabel} · ${newCount} nieuwe evenementen gevonden`;
-      }
+      if (target) target.hidden = true;
     }
 
     async function fetchScrapeProgress() {
@@ -2346,9 +2343,9 @@
               options.lastProgressSignature = progressSignature;
               options.lastProgressCount = Math.max(Number(options.lastProgressCount || 0), completed);
               if (Array.isArray(progress.events) && progress.events.length) {
-                const scanningHosts = new Set([...activeScanSites].map(hostFromUrl));
-                const retainedEvents = events.filter((event) => !scanningHosts.has(hostFromUrl(event.website)));
-                events = mergeVerifiedEvents([...retainedEvents, ...progress.events]).map((event) => ({
+                // Keep the previous complete list while progress data is partial.
+                // The selected websites are replaced with the final scan results at completion.
+                events = mergeVerifiedEvents([...events, ...progress.events]).map((event) => ({
                   ...event,
                   isNew: !previousKeys.has(eventDedupeKey(event))
                 }));
@@ -3048,7 +3045,7 @@
           { label: `Weerbeeld: ${data.summary}`, topic: "weerbeeld" },
           { label: `${data.daily?.[0]?.tempMin ?? data.tempMin}° - ${data.daily?.[0]?.tempMax ?? data.tempMax}° vandaag`, topic: "temperatuur" },
           { label: `Regen vandaag: ${String(data.daily?.[0]?.rainMM ?? data.rainTotalMM ?? 0).replace(".", ",")} mm`, topic: "regenradar", breakBefore: true },
-          { label: `Wind ${data.windMax} km/u - ${data.rainTotalMM} mm regen`, topic: "wind neerslag" },
+          { label: `Wind ${data.windMax} km/u`, topic: "wind" },
           { label: `UV ${data.uvMax}`, topic: "zonkracht" }
         ];
 
