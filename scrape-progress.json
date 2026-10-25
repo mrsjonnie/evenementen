@@ -1,12 +1,13 @@
 {
   "runId": "2026-10-25T09:34:17+00:00",
   "startedAt": "2026-10-25T09:34:17+00:00",
-  "completedCount": 3,
+  "completedCount": 4,
   "totalSites": 18,
   "completedSites": [
     "https://groningen.uitloper.nu/",
     "https://www.visitgroningen.nl/nl/doen/evenementen",
-    "https://www.visitgroningen.nl/nl/doen/wandelen"
+    "https://www.visitgroningen.nl/nl/doen/wandelen",
+    "https://forum.nl/nl/agenda"
   ],
   "events": [
     {
@@ -375,6 +376,90 @@
     },
     {
       "date": "2026-10-25",
+      "time": "20:20",
+      "title": "Brand New Landscape",
+      "type": "Film",
+      "location": "Bibliotheek",
+      "locationLink": "",
+      "website": "https://forum.nl/nl/agenda/film/brand-new-landscape?date=25-10-2026",
+      "source": "forum.nl",
+      "discoverySource": "Website",
+      "description": "Vanwege een update is ons bibliotheeksysteem tijdelijk niet beschikbaar. Excuses voor het ongemak. Filmseries & specials Hulp- en spreekuren Bibliotheekvestigingen Haal meer uit je abonnement Studie- en werkplekken Wifi, internet en printen Verhuur & zakelijk Vacatures & vrijwilligers",
+      "cost": "",
+      "image": "https://static.forum.nl/cache/brand-new-landscape.28330/brand-new-landscape-s1920x1080.jpg"
+    },
+    {
+      "date": "2026-10-25",
+      "time": "18:00",
+      "title": "Classics: Idiocracy - 20th Anniversary",
+      "type": "Film",
+      "location": "Bibliotheek",
+      "locationLink": "",
+      "website": "https://forum.nl/nl/agenda/film/classics-idiocracy-20th-anniversary?date=25-10-2026",
+      "source": "forum.nl",
+      "discoverySource": "Website",
+      "description": "Melige satirische sciencefictionfilm over een doodgewone Amerikaan die wordt ingevroren en eeuwen later ontwaakt in een wereld vol domheid. Plots is hij de slimste mens ter wereld. Twintig jaar later actueler dan ooit.",
+      "cost": "",
+      "image": "https://static.forum.nl/cache/classics-idiocracy-20th-anniversary.28071/classics-idiocracy-20th-anniversary-s1920x1080.jpg"
+    },
+    {
+      "date": "2026-10-25",
+      "time": "19:15",
+      "title": "Classics: Shall We Dance? - 30th Anniversary",
+      "type": "Film",
+      "location": "Bibliotheek",
+      "locationLink": "",
+      "website": "https://forum.nl/nl/agenda/film/classics-shall-we-dance-30th-anniversary?date=25-10-2026",
+      "source": "forum.nl",
+      "discoverySource": "Website",
+      "description": "Vanwege een update is ons bibliotheeksysteem tijdelijk niet beschikbaar. Excuses voor het ongemak. Filmseries & specials Hulp- en spreekuren Bibliotheekvestigingen Haal meer uit je abonnement Studie- en werkplekken Wifi, internet en printen Verhuur & zakelijk Vacatures & vrijwilligers",
+      "cost": "",
+      "image": "https://static.forum.nl/cache/classics-shall-we-dance-30th-anniversary.28137/classics-shall-we-dance-30th-anniversary-s1920x1080.jpg"
+    },
+    {
+      "date": "2026-10-25",
+      "time": "14:00",
+      "title": "Classics: The Misfits",
+      "type": "Film",
+      "location": "Bibliotheek",
+      "locationLink": "",
+      "website": "https://forum.nl/nl/agenda/film/classics-the-misfits?date=25-10-2026",
+      "source": "forum.nl",
+      "discoverySource": "Website",
+      "description": "Vanwege een update is ons bibliotheeksysteem tijdelijk niet beschikbaar. Excuses voor het ongemak. Filmseries & specials Hulp- en spreekuren Bibliotheekvestigingen Haal meer uit je abonnement Studie- en werkplekken Wifi, internet en printen Verhuur & zakelijk Vacatures & vrijwilligers",
+      "cost": "",
+      "image": "https://static.forum.nl/cache/classics-the-misfits.26458/classics-the-misfits-s1920x1080.jpg"
+    },
+    {
+      "date": "2026-10-25",
+      "time": "12:00",
+      "title": "Classics: Trainspotting - 30th Anniversary",
+      "type": "Film",
+      "location": "Bibliotheek",
+      "locationLink": "",
+      "website": "https://forum.nl/nl/agenda/film/classics-trainspotting-30th-anniversary?date=25-10-2026",
+      "source": "forum.nl",
+      "discoverySource": "Website",
+      "description": "Rauw, origineel en energiek portret van een groep jonge heroïneverslaafden in Edinburgh. Regisseur Danny Boyle (Slumdog Millionaire) verfilmde de gelijknamige cultroman van Irvine Welsh tot een van de meest invloedrijke Britse films van de jaren nege...",
+      "cost": "",
+      "image": "https://static.forum.nl/cache/classics-trainspotting-30th-anniversary.27653/classics-trainspotting-30th-anniversary-s1920x1080.jpg"
+    },
+    {
+      "date": "2026-10-25",
+      "time": "15:50",
+      "title": "Coward",
+      "type": "Film",
+      "location": "Bibliotheek",
+      "locationLink": "",
+      "website": "https://forum.nl/nl/agenda/film/coward?date=25-10-2026",
+      "source": "forum.nl",
+      "discoverySource": "Website",
+      "description": "Vanwege een update is ons bibliotheeksysteem tijdelijk niet beschikbaar. Excuses voor het ongemak. Filmseries & specials Hulp- en spreekuren Bibliotheekvestigingen Haal meer uit je abonnement Studie- en werkplekken Wifi, internet en printen Verhuur & zakelijk Vacatures & vrijwilligers",
+      "cost": "",
+      "image": "https://static.forum.nl/cache/coward.28047/coward-s1920x1080.jpg"
+    },
+    {
+      "date": "2026-10-25",
       "time": "15:00",
       "title": "De Koe - HelloGoodbye",
       "type": "Lezing",
@@ -403,6 +488,20 @@
     },
     {
       "date": "2026-10-25",
+      "time": "17:15",
+      "title": "Digger",
+      "type": "Film",
+      "location": "Bibliotheek",
+      "locationLink": "",
+      "website": "https://forum.nl/nl/agenda/film/digger?date=25-10-2026",
+      "source": "forum.nl",
+      "discoverySource": "Website",
+      "description": "Vanwege een update is ons bibliotheeksysteem tijdelijk niet beschikbaar. Excuses voor het ongemak. Filmseries & specials Hulp- en spreekuren Bibliotheekvestigingen Haal meer uit je abonnement Studie- en werkplekken Wifi, internet en printen Verhuur & zakelijk Vacatures & vrijwilligers",
+      "cost": "",
+      "image": "https://static.forum.nl/cache/digger.27583/digger-s1920x1080.jpg"
+    },
+    {
+      "date": "2026-10-25",
       "title": "Dit is Groningen",
       "type": "Wandelen",
       "location": "Groningen",
@@ -410,6 +509,62 @@
       "description": "Terug Dit is Groningen Top 10 bezienswaardigheden In Groningen ligt het allemaal opvallend dicht bij elkaar. De levendigheid van de stad, de stilte van een hofje, de weidsheid van het ommeland en de sporen van een eeuwenoud verleden. Stad Provincie Waddenkust Natuurgebieden",
       "cost": "Gratis",
       "discoverySource": "Website"
+    },
+    {
+      "date": "2026-10-25",
+      "time": "16:00",
+      "title": "Docs: Cutting Through Rocks",
+      "type": "Film",
+      "location": "Bibliotheek",
+      "locationLink": "",
+      "website": "https://forum.nl/nl/agenda/film/docs-cutting-through-rocks?date=25-10-2026",
+      "source": "forum.nl",
+      "discoverySource": "Website",
+      "description": "Vanwege een update is ons bibliotheeksysteem tijdelijk niet beschikbaar. Excuses voor het ongemak. Filmseries & specials Hulp- en spreekuren Bibliotheekvestigingen Haal meer uit je abonnement Studie- en werkplekken Wifi, internet en printen Verhuur & zakelijk Vacatures & vrijwilligers",
+      "cost": "",
+      "image": "https://static.forum.nl/cache/docs-cutting-through-rocks.28353/docs-cutting-through-rocks-s1920x1080.png"
+    },
+    {
+      "date": "2026-10-25",
+      "time": "18:20",
+      "title": "Docs: Imago",
+      "type": "Film",
+      "location": "Bibliotheek",
+      "locationLink": "",
+      "website": "https://forum.nl/nl/agenda/film/docs-imago?date=25-10-2026",
+      "source": "forum.nl",
+      "discoverySource": "Website",
+      "description": "Winnaar Beste Documentaire op Cannes Film Festival 2025.",
+      "cost": "",
+      "image": "https://static.forum.nl/cache/docs-imago.27825/docs-imago-s1920x1080.jpg"
+    },
+    {
+      "date": "2026-10-25",
+      "time": "11:00",
+      "title": "Docs: Naza",
+      "type": "Film",
+      "location": "Bibliotheek",
+      "locationLink": "",
+      "website": "https://forum.nl/nl/agenda/film/docs-naza?date=25-10-2026",
+      "source": "forum.nl",
+      "discoverySource": "Website",
+      "description": "Vanwege een update is ons bibliotheeksysteem tijdelijk niet beschikbaar. Excuses voor het ongemak. Filmseries & specials Hulp- en spreekuren Bibliotheekvestigingen Haal meer uit je abonnement Studie- en werkplekken Wifi, internet en printen Verhuur & zakelijk Vacatures & vrijwilligers",
+      "cost": "",
+      "image": "https://static.forum.nl/cache/docs-naza.28243/docs-naza-s1920x1080.png"
+    },
+    {
+      "date": "2026-10-25",
+      "time": "12:50",
+      "title": "Docs: The Cycle of Love",
+      "type": "Film",
+      "location": "Bibliotheek",
+      "locationLink": "",
+      "website": "https://forum.nl/nl/agenda/film/docs-the-cycle-of-love?date=25-10-2026",
+      "source": "forum.nl",
+      "discoverySource": "Website",
+      "description": "Vanwege een update is ons bibliotheeksysteem tijdelijk niet beschikbaar. Excuses voor het ongemak. Filmseries & specials Hulp- en spreekuren Bibliotheekvestigingen Haal meer uit je abonnement Studie- en werkplekken Wifi, internet en printen Verhuur & zakelijk Vacatures & vrijwilligers",
+      "cost": "",
+      "image": "https://static.forum.nl/cache/docs-the-cycle-of-love.27824/docs-the-cycle-of-love-s1920x1080.jpg"
     },
     {
       "date": "2026-10-25",
@@ -430,6 +585,20 @@
       "description": "Een week in Stad en Ommeland",
       "cost": "Gratis",
       "discoverySource": "Website"
+    },
+    {
+      "date": "2026-10-25",
+      "time": "16:30",
+      "title": "Erupcja",
+      "type": "Film",
+      "location": "Bibliotheek",
+      "locationLink": "",
+      "website": "https://forum.nl/nl/agenda/film/erupcja?date=25-10-2026",
+      "source": "forum.nl",
+      "discoverySource": "Website",
+      "description": "Charli XCX zet een krachtige hoofdrol neer in een eigenzinnige film over de verschillen tussen toeval en het lot.",
+      "cost": "",
+      "image": "https://static.forum.nl/cache/erupcja.28048/erupcja-s1920x1080.jpg"
     },
     {
       "date": "2026-10-25",
@@ -537,6 +706,20 @@
     },
     {
       "date": "2026-10-25",
+      "time": "10:50",
+      "title": "Human Nature",
+      "type": "Film",
+      "location": "Bibliotheek",
+      "locationLink": "",
+      "website": "https://forum.nl/nl/agenda/film/human-nature?date=25-10-2026",
+      "source": "forum.nl",
+      "discoverySource": "Website",
+      "description": "Vanwege een update is ons bibliotheeksysteem tijdelijk niet beschikbaar. Excuses voor het ongemak. Filmseries & specials Hulp- en spreekuren Bibliotheekvestigingen Haal meer uit je abonnement Studie- en werkplekken Wifi, internet en printen Verhuur & zakelijk Vacatures & vrijwilligers",
+      "cost": "",
+      "image": "https://static.forum.nl/cache/human-nature.27944/human-nature-s1920x1080.jpg"
+    },
+    {
+      "date": "2026-10-25",
       "time": "",
       "title": "Into Nature: Haunted by Waters",
       "type": "Expositie",
@@ -631,6 +814,20 @@
     },
     {
       "date": "2026-10-25",
+      "time": "10:00",
+      "title": "Marilyn",
+      "type": "Film",
+      "location": "Bibliotheek",
+      "locationLink": "",
+      "website": "https://forum.nl/nl/agenda/marilyn-expositie",
+      "source": "forum.nl",
+      "discoverySource": "Website",
+      "description": "Vanwege een update is ons bibliotheeksysteem tijdelijk niet beschikbaar. Excuses voor het ongemak. Filmseries & specials Hulp- en spreekuren Bibliotheekvestigingen Haal meer uit je abonnement Studie- en werkplekken Wifi, internet en printen Verhuur & zakelijk Vacatures & vrijwilligers",
+      "cost": "",
+      "image": "https://static.forum.nl/cache/marilyn.26383/marilyn-s1920x1080.jpg"
+    },
+    {
+      "date": "2026-10-25",
       "title": "Met kinderen",
       "type": "Wandelen",
       "location": "Groningen",
@@ -701,6 +898,20 @@
     },
     {
       "date": "2026-10-25",
+      "time": "11:10",
+      "title": "Sense and Sensibility",
+      "type": "Film",
+      "location": "Bibliotheek",
+      "locationLink": "",
+      "website": "https://forum.nl/nl/agenda/film/sense-and-sensibility?date=25-10-2026",
+      "source": "forum.nl",
+      "discoverySource": "Website",
+      "description": "Vanwege een update is ons bibliotheeksysteem tijdelijk niet beschikbaar. Excuses voor het ongemak. Filmseries & specials Hulp- en spreekuren Bibliotheekvestigingen Haal meer uit je abonnement Studie- en werkplekken Wifi, internet en printen Verhuur & zakelijk Vacatures & vrijwilligers",
+      "cost": "",
+      "image": "https://static.forum.nl/cache/sense-and-sensibility.27948/sense-and-sensibility-s1920x1080.jpg"
+    },
+    {
+      "date": "2026-10-25",
       "title": "Stad",
       "type": "Wandelen",
       "location": "Groningen",
@@ -711,6 +922,20 @@
     },
     {
       "date": "2026-10-25",
+      "time": "10:00",
+      "title": "Storyworld",
+      "type": "Film",
+      "location": "Bibliotheek",
+      "locationLink": "",
+      "website": "https://forum.nl/nl/agenda/storyworld",
+      "source": "forum.nl",
+      "discoverySource": "Website",
+      "description": "Vanwege een update is ons bibliotheeksysteem tijdelijk niet beschikbaar. Excuses voor het ongemak. Filmseries & specials Hulp- en spreekuren Bibliotheekvestigingen Haal meer uit je abonnement Studie- en werkplekken Wifi, internet en printen Verhuur & zakelijk Vacatures & vrijwilligers",
+      "cost": "gratis",
+      "image": "https://static.forum.nl/cache/storyworld.17364/storyworld-s1920x1080.jpg"
+    },
+    {
+      "date": "2026-10-25",
       "title": "Sunnemeerten",
       "type": "Wandelen",
       "location": "Groningen",
@@ -718,6 +943,20 @@
       "description": "Sunnemeerten",
       "cost": "Gratis",
       "discoverySource": "Website"
+    },
+    {
+      "date": "2026-10-25",
+      "time": "10:40",
+      "title": "The Beloved",
+      "type": "Film",
+      "location": "Bibliotheek",
+      "locationLink": "",
+      "website": "https://forum.nl/nl/agenda/film/the-beloved?date=25-10-2026",
+      "source": "forum.nl",
+      "discoverySource": "Website",
+      "description": "Vanwege een update is ons bibliotheeksysteem tijdelijk niet beschikbaar. Excuses voor het ongemak. Filmseries & specials Hulp- en spreekuren Bibliotheekvestigingen Haal meer uit je abonnement Studie- en werkplekken Wifi, internet en printen Verhuur & zakelijk Vacatures & vrijwilligers",
+      "cost": "",
+      "image": "https://static.forum.nl/cache/the-beloved.27946/the-beloved-s1920x1080.jpg"
     },
     {
       "date": "2026-10-25",
@@ -768,6 +1007,48 @@
       "description": "Winkelen",
       "cost": "Gratis",
       "discoverySource": "Website"
+    },
+    {
+      "date": "2026-10-26",
+      "time": "12:20",
+      "title": "De Gaulle: Liberté",
+      "type": "Film",
+      "location": "Bibliotheek",
+      "locationLink": "",
+      "website": "https://forum.nl/nl/agenda/film/de-gaulle-liberte?date=26-10-2026",
+      "source": "forum.nl",
+      "discoverySource": "Website",
+      "description": "Vanwege een update is ons bibliotheeksysteem tijdelijk niet beschikbaar. Excuses voor het ongemak. Filmseries & specials Hulp- en spreekuren Bibliotheekvestigingen Haal meer uit je abonnement Studie- en werkplekken Wifi, internet en printen Verhuur & zakelijk Vacatures & vrijwilligers",
+      "cost": "",
+      "image": "https://static.forum.nl/cache/de-gaulle-liberte.27941/de-gaulle-liberte-s1920x1080.jpg"
+    },
+    {
+      "date": "2026-10-26",
+      "time": "13:00",
+      "title": "Digihuis",
+      "type": "Film",
+      "location": "Bibliotheek",
+      "locationLink": "",
+      "website": "https://forum.nl/nl/agenda/digihuis?date=26-10-2026",
+      "source": "forum.nl",
+      "discoverySource": "Website",
+      "description": "Vanwege een update is ons bibliotheeksysteem tijdelijk niet beschikbaar. Excuses voor het ongemak. Filmseries & specials Hulp- en spreekuren Bibliotheekvestigingen Haal meer uit je abonnement Studie- en werkplekken Wifi, internet en printen Verhuur & zakelijk Vacatures & vrijwilligers",
+      "cost": "gratis",
+      "image": "https://static.forum.nl/cache/digihuis.28483/digihuis-s1920x1080.jpg"
+    },
+    {
+      "date": "2026-10-26",
+      "time": "12:00",
+      "title": "L'Inconnue",
+      "type": "Film",
+      "location": "Bibliotheek",
+      "locationLink": "",
+      "website": "https://forum.nl/nl/agenda/film/linconnue?date=26-10-2026",
+      "source": "forum.nl",
+      "discoverySource": "Website",
+      "description": "Nadat David na een feest wakker wordt in het lichaam van een mysterieuze vrouw, gaat hij op zoek naar de vrouw die nu zijn lichaam heeft.",
+      "cost": "",
+      "image": "https://static.forum.nl/cache/linconnue.28230/linconnue-s1920x1080.jpg"
     }
   ],
   "siteResults": [
@@ -790,6 +1071,13 @@
       "count": 20,
       "newCount": 0,
       "durationSeconds": 2.45,
+      "timedOut": false
+    },
+    {
+      "site": "https://forum.nl/nl/agenda",
+      "count": 20,
+      "newCount": 0,
+      "durationSeconds": 9.88,
       "timedOut": false
     }
   ],
@@ -3502,11 +3790,992 @@
       "url": "https://forum.nl/nl/agenda",
       "status": "ok",
       "rawText": "0 events/aanbiedingen op deze pagina"
+    },
+    {
+      "source": "Website",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "Marilyn",
+      "date": "",
+      "url": "https://forum.nl/agenda/marilyn-expositie",
+      "status": "detail-link gevonden",
+      "rawText": "Marilyn"
+    },
+    {
+      "source": "Website",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "Storyworld",
+      "date": "",
+      "url": "https://forum.nl/agenda/storyworld",
+      "status": "detail-link gevonden",
+      "rawText": "Storyworld"
+    },
+    {
+      "source": "Website",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "Filmagenda",
+      "date": "",
+      "url": "https://forum.nl/nl/film/filmagenda",
+      "status": "detail-link gevonden",
+      "rawText": "Filmagenda"
+    },
+    {
+      "source": "Website",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "Filmfestivals",
+      "date": "",
+      "url": "https://forum.nl/nl/film/filmfestivals",
+      "status": "detail-link gevonden",
+      "rawText": "Filmfestivals"
+    },
+    {
+      "source": "Website",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "Filmseries & specials",
+      "date": "",
+      "url": "https://forum.nl/nl/film/filmseries-specials",
+      "status": "detail-link gevonden",
+      "rawText": "Filmseries & specials"
+    },
+    {
+      "source": "Website",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "IDFA",
+      "date": "",
+      "url": "https://forum.nl/nl/film/idfa",
+      "status": "detail-link gevonden",
+      "rawText": "IDFA"
+    },
+    {
+      "source": "Website",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "Kinderfilms",
+      "date": "",
+      "url": "https://forum.nl/nl/film/kinderfilms",
+      "status": "detail-link gevonden",
+      "rawText": "Kinderfilms"
+    },
+    {
+      "source": "Website",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "Nu te zien",
+      "date": "",
+      "url": "https://forum.nl/nl/film/nu-te-zien",
+      "status": "detail-link gevonden",
+      "rawText": "Nu te zien"
+    },
+    {
+      "source": "Website",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "Verwacht",
+      "date": "",
+      "url": "https://forum.nl/nl/film/verwacht",
+      "status": "detail-link gevonden",
+      "rawText": "Verwacht"
+    },
+    {
+      "source": "Website",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "link",
+      "date": "",
+      "url": "https://forum.nl/nl/agenda/digihuis?date=26-10-2026",
+      "status": "detail-link gevonden",
+      "rawText": ""
+    },
+    {
+      "source": "Website",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "link",
+      "date": "",
+      "url": "https://forum.nl/nl/agenda/film/brand-new-landscape?date=25-10-2026",
+      "status": "detail-link gevonden",
+      "rawText": ""
+    },
+    {
+      "source": "Website",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "link",
+      "date": "",
+      "url": "https://forum.nl/nl/agenda/film/classics-idiocracy-20th-anniversary?date=25-10-2026",
+      "status": "detail-link gevonden",
+      "rawText": ""
+    },
+    {
+      "source": "Website",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "link",
+      "date": "",
+      "url": "https://forum.nl/nl/agenda/film/classics-shall-we-dance-30th-anniversary?date=25-10-2026",
+      "status": "detail-link gevonden",
+      "rawText": ""
+    },
+    {
+      "source": "Website",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "link",
+      "date": "",
+      "url": "https://forum.nl/nl/agenda/film/classics-the-misfits?date=25-10-2026",
+      "status": "detail-link gevonden",
+      "rawText": ""
+    },
+    {
+      "source": "Website",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "link",
+      "date": "",
+      "url": "https://forum.nl/nl/agenda/film/classics-trainspotting-30th-anniversary?date=25-10-2026",
+      "status": "detail-link gevonden",
+      "rawText": ""
+    },
+    {
+      "source": "Website",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "link",
+      "date": "",
+      "url": "https://forum.nl/nl/agenda/film/coward?date=25-10-2026",
+      "status": "detail-link gevonden",
+      "rawText": ""
+    },
+    {
+      "source": "Website",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "link",
+      "date": "",
+      "url": "https://forum.nl/nl/agenda/film/de-gaulle-liberte?date=26-10-2026",
+      "status": "detail-link gevonden",
+      "rawText": ""
+    },
+    {
+      "source": "Website",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "link",
+      "date": "",
+      "url": "https://forum.nl/nl/agenda/film/digger?date=25-10-2026",
+      "status": "detail-link gevonden",
+      "rawText": ""
+    },
+    {
+      "source": "Website",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "link",
+      "date": "",
+      "url": "https://forum.nl/nl/agenda/film/docs-cutting-through-rocks?date=25-10-2026",
+      "status": "detail-link gevonden",
+      "rawText": ""
+    },
+    {
+      "source": "Website",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "link",
+      "date": "",
+      "url": "https://forum.nl/nl/agenda/film/docs-imago?date=25-10-2026",
+      "status": "detail-link gevonden",
+      "rawText": ""
+    },
+    {
+      "source": "Website",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "link",
+      "date": "",
+      "url": "https://forum.nl/nl/agenda/film/docs-naza?date=25-10-2026",
+      "status": "detail-link gevonden",
+      "rawText": ""
+    },
+    {
+      "source": "Website",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "link",
+      "date": "",
+      "url": "https://forum.nl/nl/agenda/film/docs-naza?date=26-10-2026",
+      "status": "detail-link gevonden",
+      "rawText": ""
+    },
+    {
+      "source": "Website",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "link",
+      "date": "",
+      "url": "https://forum.nl/nl/agenda/film/docs-the-cycle-of-love?date=25-10-2026",
+      "status": "detail-link gevonden",
+      "rawText": ""
+    },
+    {
+      "source": "Website",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "link",
+      "date": "",
+      "url": "https://forum.nl/nl/agenda/film/docs-the-cycle-of-love?date=26-10-2026",
+      "status": "detail-link gevonden",
+      "rawText": ""
+    },
+    {
+      "source": "Website",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "link",
+      "date": "",
+      "url": "https://forum.nl/nl/agenda/film/erupcja?date=25-10-2026",
+      "status": "detail-link gevonden",
+      "rawText": ""
+    },
+    {
+      "source": "Website",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "link",
+      "date": "",
+      "url": "https://forum.nl/nl/agenda/film/human-nature?date=25-10-2026",
+      "status": "detail-link gevonden",
+      "rawText": ""
+    },
+    {
+      "source": "Website",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "link",
+      "date": "",
+      "url": "https://forum.nl/nl/agenda/film/linconnue?date=26-10-2026",
+      "status": "detail-link gevonden",
+      "rawText": ""
+    },
+    {
+      "source": "Website",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "link",
+      "date": "",
+      "url": "https://forum.nl/nl/agenda/film/sense-and-sensibility?date=25-10-2026",
+      "status": "detail-link gevonden",
+      "rawText": ""
+    },
+    {
+      "source": "Website",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "link",
+      "date": "",
+      "url": "https://forum.nl/nl/agenda/film/sense-and-sensibility?date=26-10-2026",
+      "status": "detail-link gevonden",
+      "rawText": ""
+    },
+    {
+      "source": "Website",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "link",
+      "date": "",
+      "url": "https://forum.nl/nl/agenda/film/the-beloved?date=25-10-2026",
+      "status": "detail-link gevonden",
+      "rawText": ""
+    },
+    {
+      "source": "Website",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "link",
+      "date": "",
+      "url": "https://forum.nl/nl/agenda/film/the-beloved?date=26-10-2026",
+      "status": "detail-link gevonden",
+      "rawText": ""
+    },
+    {
+      "source": "Website",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "link",
+      "date": "",
+      "url": "https://forum.nl/nl/agenda/film/the-incomer?date=25-10-2026",
+      "status": "detail-link gevonden",
+      "rawText": ""
+    },
+    {
+      "source": "Website",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "link",
+      "date": "",
+      "url": "https://forum.nl/nl/agenda/film/verhalen-uit-de-magische-tuin?date=25-10-2026",
+      "status": "detail-link gevonden",
+      "rawText": ""
+    },
+    {
+      "source": "Website",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "link",
+      "date": "",
+      "url": "https://forum.nl/nl/agenda/film/wicker?date=25-10-2026",
+      "status": "detail-link gevonden",
+      "rawText": ""
+    },
+    {
+      "source": "Website",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "link",
+      "date": "",
+      "url": "https://forum.nl/nl/agenda/film/wildwood?date=25-10-2026",
+      "status": "detail-link gevonden",
+      "rawText": ""
+    },
+    {
+      "source": "Website",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "link",
+      "date": "",
+      "url": "https://forum.nl/nl/agenda/film/yellow-letters?date=25-10-2026",
+      "status": "detail-link gevonden",
+      "rawText": ""
+    },
+    {
+      "source": "Website",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "link",
+      "date": "",
+      "url": "https://forum.nl/nl/agenda/film/youri?date=25-10-2026",
+      "status": "detail-link gevonden",
+      "rawText": ""
+    },
+    {
+      "source": "Website",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "link",
+      "date": "",
+      "url": "https://forum.nl/nl/agenda/film/youri?date=26-10-2026",
+      "status": "detail-link gevonden",
+      "rawText": ""
+    },
+    {
+      "source": "Website",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "link",
+      "date": "",
+      "url": "https://forum.nl/nl/agenda/het-boek-was-beter?date=25-10-2026",
+      "status": "detail-link gevonden",
+      "rawText": ""
+    },
+    {
+      "source": "Website",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "link",
+      "date": "",
+      "url": "https://forum.nl/nl/agenda/inloopspreekuur-eerste-hulp-bij-smartphone-tablet-laptop-en-computer?date=26-10-2026",
+      "status": "detail-link gevonden",
+      "rawText": ""
+    },
+    {
+      "source": "Website",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "link",
+      "date": "",
+      "url": "https://forum.nl/nl/agenda/klik-tik?date=26-10-2026",
+      "status": "detail-link gevonden",
+      "rawText": ""
+    },
+    {
+      "source": "Website",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "link",
+      "date": "",
+      "url": "https://forum.nl/nl/agenda/leesclub-makkelijk-lezen?date=26-10-2026",
+      "status": "detail-link gevonden",
+      "rawText": ""
+    },
+    {
+      "source": "Website",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "link",
+      "date": "",
+      "url": "https://forum.nl/nl/agenda/marilyn-expositie?date=25-10-2026",
+      "status": "detail-link gevonden",
+      "rawText": ""
+    },
+    {
+      "source": "Website",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "link",
+      "date": "",
+      "url": "https://forum.nl/nl/agenda/medialab-instuif?date=25-10-2026",
+      "status": "detail-link gevonden",
+      "rawText": ""
+    },
+    {
+      "source": "Website",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "link",
+      "date": "",
+      "url": "https://forum.nl/nl/agenda/shaun-het-schaap-het-beest-van-de-boerderij?date=25-10-2026",
+      "status": "detail-link gevonden",
+      "rawText": ""
+    },
+    {
+      "source": "Website",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "link",
+      "date": "",
+      "url": "https://forum.nl/nl/agenda/spelochtend-breinbieb?date=26-10-2026",
+      "status": "detail-link gevonden",
+      "rawText": ""
+    },
+    {
+      "source": "Website",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "link",
+      "date": "",
+      "url": "https://forum.nl/nl/agenda/storyworld?date=25-10-2026",
+      "status": "detail-link gevonden",
+      "rawText": ""
+    },
+    {
+      "source": "Website",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "link",
+      "date": "",
+      "url": "https://forum.nl/nl/agenda/taalcafe?date=26-10-2026",
+      "status": "detail-link gevonden",
+      "rawText": ""
+    },
+    {
+      "source": "Website",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "link",
+      "date": "",
+      "url": "https://forum.nl/nl/agenda/talks-events/boeliebots?date=25-10-2026",
+      "status": "detail-link gevonden",
+      "rawText": ""
+    },
+    {
+      "source": "Website",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "link",
+      "date": "",
+      "url": "https://forum.nl/nl/agenda/walk-in-smartlab?date=25-10-2026",
+      "status": "detail-link gevonden",
+      "rawText": ""
+    },
+    {
+      "source": "Website",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "link",
+      "date": "",
+      "url": "https://forum.nl/nl/agenda/werkplaats-sunnemeerten?date=25-10-2026",
+      "status": "detail-link gevonden",
+      "rawText": ""
+    },
+    {
+      "source": "Website",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "link",
+      "date": "",
+      "url": "https://forum.nl/nl/agenda/werkplaats-sunnemeerten?date=26-10-2026",
+      "status": "detail-link gevonden",
+      "rawText": ""
+    },
+    {
+      "source": "Website",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "link",
+      "date": "",
+      "url": "https://forum.nl/nl/agenda/workshop-striptekenen-met-loeki?date=25-10-2026",
+      "status": "detail-link gevonden",
+      "rawText": ""
+    },
+    {
+      "source": "Website",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "Basisvaardigheden",
+      "date": "",
+      "url": "https://forum.nl/nl/agenda?categorie=basisvaardigheden",
+      "status": "detail-link gevonden",
+      "rawText": "Basisvaardigheden"
+    },
+    {
+      "source": "Website",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "Cursussen",
+      "date": "",
+      "url": "https://forum.nl/nl/agenda?categorie=cursussen",
+      "status": "detail-link gevonden",
+      "rawText": "Cursussen"
+    },
+    {
+      "source": "Website",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "Talks & Events",
+      "date": "",
+      "url": "https://forum.nl/nl/agenda?categorie=talks-events",
+      "status": "detail-link gevonden",
+      "rawText": "Talks & Events"
+    },
+    {
+      "source": "Website",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "Volgende pagina",
+      "date": "",
+      "url": "https://forum.nl/nl/agenda?p=2",
+      "status": "detail-link gevonden",
+      "rawText": "Volgende pagina"
+    },
+    {
+      "source": "Website",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "Archief",
+      "date": "",
+      "url": "https://forum.nl/nl/expositie/archief",
+      "status": "detail-link gevonden",
+      "rawText": "Archief"
+    },
+    {
+      "source": "Website",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "Installatie Stad",
+      "date": "",
+      "url": "https://forum.nl/nl/expositie/stad",
+      "status": "detail-link gevonden",
+      "rawText": "Installatie Stad"
+    },
+    {
+      "source": "Website",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "nl",
+      "date": "",
+      "url": "https://forum.nl/nl/agenda",
+      "status": "detail-link gevonden",
+      "rawText": "nl"
+    },
+    {
+      "source": "Website",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "Expositie",
+      "date": "",
+      "url": "https://forum.nl/nl/agenda?categorie=expositie",
+      "status": "detail-link gevonden",
+      "rawText": "Expositie"
+    },
+    {
+      "source": "Website",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "Film",
+      "date": "",
+      "url": "https://forum.nl/nl/agenda?categorie=film",
+      "status": "detail-link gevonden",
+      "rawText": "Film"
+    },
+    {
+      "source": "Website",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "Kids",
+      "date": "",
+      "url": "https://forum.nl/nl/agenda?categorie=kids",
+      "status": "detail-link gevonden",
+      "rawText": "Kids"
+    },
+    {
+      "source": "Website",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "1",
+      "date": "",
+      "url": "https://forum.nl/nl/agenda?p=1",
+      "status": "detail-link gevonden",
+      "rawText": "1"
+    },
+    {
+      "source": "Website",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "25",
+      "date": "",
+      "url": "https://forum.nl/nl/agenda?p=25",
+      "status": "detail-link gevonden",
+      "rawText": "25"
+    },
+    {
+      "source": "Website",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "3",
+      "date": "",
+      "url": "https://forum.nl/nl/agenda?p=3",
+      "status": "detail-link gevonden",
+      "rawText": "3"
+    },
+    {
+      "source": "Website",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "4",
+      "date": "",
+      "url": "https://forum.nl/nl/agenda?p=4",
+      "status": "detail-link gevonden",
+      "rawText": "4"
+    },
+    {
+      "source": "Website",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "5",
+      "date": "",
+      "url": "https://forum.nl/nl/agenda?p=5",
+      "status": "detail-link gevonden",
+      "rawText": "5"
+    },
+    {
+      "source": "Website",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "Kids",
+      "date": "",
+      "url": "https://forum.nl/nl/bibliotheek/kids",
+      "status": "detail-link gevonden",
+      "rawText": "Kids"
+    },
+    {
+      "source": "Website",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "Expositie",
+      "date": "",
+      "url": "https://forum.nl/nl/expositie",
+      "status": "detail-link gevonden",
+      "rawText": "Expositie"
+    },
+    {
+      "source": "Website",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "Film",
+      "date": "",
+      "url": "https://forum.nl/nl/film",
+      "status": "detail-link gevonden",
+      "rawText": "Film"
+    },
+    {
+      "source": "Website",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "Bibliotheek",
+      "date": "",
+      "url": "https://forum.nl/nl/bibliotheek",
+      "status": "detail-link gevonden",
+      "rawText": "Bibliotheek"
+    },
+    {
+      "source": "Website",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "Collectie",
+      "date": "",
+      "url": "https://forum.nl/nl/bibliotheek/collectie",
+      "status": "detail-link gevonden",
+      "rawText": "Collectie"
+    },
+    {
+      "source": "Website",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "Haal meer uit je abonnement",
+      "date": "",
+      "url": "https://forum.nl/nl/bibliotheek/haal-meer-uit-je-abonnement",
+      "status": "detail-link gevonden",
+      "rawText": "Haal meer uit je abonnement"
+    },
+    {
+      "source": "Website",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "Hulp- en spreekuren",
+      "date": "",
+      "url": "https://forum.nl/nl/bibliotheek/hulp",
+      "status": "detail-link gevonden",
+      "rawText": "Hulp- en spreekuren"
+    },
+    {
+      "source": "Website",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "Lid worden",
+      "date": "",
+      "url": "https://forum.nl/nl/bibliotheek/lid-worden",
+      "status": "detail-link gevonden",
+      "rawText": "Lid worden"
+    },
+    {
+      "source": "Website",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "Nederlands leren",
+      "date": "",
+      "url": "https://forum.nl/nl/bibliotheek/nederlands-leren",
+      "status": "detail-link gevonden",
+      "rawText": "Nederlands leren"
+    },
+    {
+      "source": "Website",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "Studie- en werkplekken",
+      "date": "",
+      "url": "https://forum.nl/nl/bibliotheek/studie-werkplekken",
+      "status": "detail-link gevonden",
+      "rawText": "Studie- en werkplekken"
+    },
+    {
+      "source": "Website",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "Bibliotheekvestigingen",
+      "date": "",
+      "url": "https://forum.nl/nl/bibliotheek/vestigingen",
+      "status": "detail-link gevonden",
+      "rawText": "Bibliotheekvestigingen"
+    },
+    {
+      "source": "Website",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "Informatie",
+      "date": "",
+      "url": "https://forum.nl/nl/info",
+      "status": "detail-link gevonden",
+      "rawText": "Informatie"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://forum.nl/feed",
+      "status": "fout",
+      "rawText": "HTTP 404"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://forum.nl/rss",
+      "status": "fout",
+      "rawText": "HTTP 404"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://forum.nl/rss.xml",
+      "status": "fout",
+      "rawText": "HTTP 404"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://forum.nl/feed.xml",
+      "status": "fout",
+      "rawText": "HTTP 404"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://forum.nl/events/feed/",
+      "status": "fout",
+      "rawText": "HTTP 404"
+    },
+    {
+      "source": "Website",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://forum.nl/nl/agenda/marilyn-expositie",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://forum.nl/nl/agenda/storyworld",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://forum.nl/nl/agenda/digihuis?date=26-10-2026",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://forum.nl/nl/agenda/film/brand-new-landscape?date=25-10-2026",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://forum.nl/nl/agenda/film/classics-idiocracy-20th-anniversary?date=25-10-2026",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://forum.nl/nl/agenda/film/classics-shall-we-dance-30th-anniversary?date=25-10-2026",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://forum.nl/nl/agenda/film/classics-the-misfits?date=25-10-2026",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://forum.nl/nl/agenda/film/classics-trainspotting-30th-anniversary?date=25-10-2026",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://forum.nl/nl/agenda/film/coward?date=25-10-2026",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://forum.nl/nl/agenda/film/de-gaulle-liberte?date=26-10-2026",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://forum.nl/nl/agenda/film/digger?date=25-10-2026",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://forum.nl/nl/agenda/film/docs-cutting-through-rocks?date=25-10-2026",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://forum.nl/nl/agenda/film/docs-imago?date=25-10-2026",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://forum.nl/nl/agenda/film/docs-naza?date=25-10-2026",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://forum.nl/nl/agenda/film/docs-naza?date=26-10-2026",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://forum.nl/nl/agenda/film/docs-the-cycle-of-love?date=25-10-2026",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://forum.nl/nl/agenda/film/docs-the-cycle-of-love?date=26-10-2026",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://forum.nl/nl/agenda/film/erupcja?date=25-10-2026",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://forum.nl/nl/agenda/film/human-nature?date=25-10-2026",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://forum.nl/nl/agenda/film/linconnue?date=26-10-2026",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://forum.nl/nl/agenda/film/sense-and-sensibility?date=25-10-2026",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://forum.nl/nl/agenda/film/sense-and-sensibility?date=26-10-2026",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://forum.nl/nl/agenda/film/the-beloved?date=25-10-2026",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://forum.nl/nl/agenda",
+      "status": "klaar",
+      "rawText": "site 4/18: 20 unieke events in 9.88 sec"
     }
   ],
   "status": "running",
   "lastCompletedSite": "https://forum.nl/nl/agenda",
-  "lastSiteEventCount": 0,
+  "lastSiteEventCount": 20,
   "lastUpdatedAt": "2026-10-25T09:34:38+00:00",
-  "lastCompletedAt": "2026-10-25T09:34:36+00:00"
+  "lastCompletedAt": "2026-10-25T09:34:47+00:00"
 }
