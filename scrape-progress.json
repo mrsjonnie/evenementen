@@ -1,7 +1,7 @@
 {
   "runId": "2026-10-25T15:53:30.839407+00:00-55336eac",
   "startedAt": "2026-10-25T15:53:30+00:00",
-  "completedCount": 7,
+  "completedCount": 8,
   "totalSites": 19,
   "currentSite": "https://www.martiniplaza.nl/nl/agenda",
   "currentSiteIndex": 8,
@@ -12,7 +12,8 @@
     "https://forum.nl/nl/agenda",
     "https://www.spotgroningen.nl/programma/",
     "https://simplon.nl/",
-    "https://www.vera-groningen.nl/"
+    "https://www.vera-groningen.nl/",
+    "https://www.martiniplaza.nl/nl/agenda"
   ],
   "events": [],
   "siteResults": [
@@ -56,6 +57,13 @@
       "count": 0,
       "newCount": 0,
       "durationSeconds": 3.12,
+      "timedOut": true
+    },
+    {
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 2.0,
       "timedOut": true
     }
   ],
@@ -581,16 +589,34 @@
       "url": "https://www.martiniplaza.nl/nl/agenda",
       "status": "strategie",
       "rawText": "agenda-kaarten"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Pagina mislukt",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda",
+      "status": "fout",
+      "rawText": "HTTPSConnectionPool(host='www.martiniplaza.nl', port=443): Read timed out. (read timeout=0.8512269650000093)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda",
+      "status": "klaar",
+      "rawText": "site 8/19: 0 unieke events in 2.0 sec"
     }
   ],
   "status": "running",
   "siteStartedAt": "2026-10-25T15:54:14+00:00",
-  "siteElapsedSeconds": 1,
+  "siteElapsedSeconds": 3,
   "sitePageCount": 0,
   "lastSiteEventCount": 0,
-  "stage": "Websitepagina ophalen",
+  "stage": "Website klaar; volgende website voorbereiden",
   "lastUpdatedAt": "2026-10-25T15:54:15+00:00",
   "lastSiteNewEventCount": 0,
-  "lastCompletedSite": "https://www.vera-groningen.nl/",
-  "lastCompletedAt": "2026-10-25T15:54:12+00:00"
+  "lastCompletedSite": "https://www.martiniplaza.nl/nl/agenda",
+  "lastCompletedAt": "2026-10-25T15:54:17+00:00"
 }

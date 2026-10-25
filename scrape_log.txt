@@ -54,3 +54,7 @@ Website	https://www.vera-groningen.nl/	start	Start		https://www.vera-groningen.n
 Parser	https://www.vera-groningen.nl/	strategie	Scrapertype vastgesteld		https://www.vera-groningen.nl/	programma-kaarten
 Website	https://www.vera-groningen.nl/	fout	Pagina mislukt		https://www.vera-groningen.nl/programma/?category=all&history=0&lang=nl	HTTPSConnectionPool(host='www.vera-groningen.nl', port=443): Read timed out. (read timeout=0.8423709080000066)
 Website	https://www.vera-groningen.nl/	klaar	Klaar		https://www.vera-groningen.nl/	site 7/19: 0 unieke events in 3.12 sec
+Website	https://www.martiniplaza.nl/nl/agenda	start	Start		https://www.martiniplaza.nl/nl/agenda	site 8/19: max 5 events, max 2 seconden
+Parser	https://www.martiniplaza.nl/nl/agenda	strategie	Scrapertype vastgesteld		https://www.martiniplaza.nl/nl/agenda	agenda-kaarten
+Website	https://www.martiniplaza.nl/nl/agenda	fout	Pagina mislukt		https://www.martiniplaza.nl/nl/agenda	HTTPSConnectionPool(host='www.martiniplaza.nl', port=443): Read timed out. (read timeout=0.8512269650000093)
+Website	https://www.martiniplaza.nl/nl/agenda	klaar	Klaar		https://www.martiniplaza.nl/nl/agenda	site 8/19: 0 unieke events in 2.0 sec
