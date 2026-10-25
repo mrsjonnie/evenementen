@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-25T16:45:42+00:00",
+  "updatedAt": "2026-10-25T16:45:49+00:00",
   "events": [
     {
       "date": "2026-10-25",
@@ -1453,6 +1453,51 @@
       "cost": "",
       "image": "",
       "isNew": false
+    },
+    {
+      "date": "2028-12-31",
+      "time": "",
+      "title": "EXHIBITION",
+      "type": "Expositie",
+      "location": "Groninger Museum",
+      "locationLink": "",
+      "website": "https://groningermuseum.nl/programma",
+      "source": "groningermuseum.nl",
+      "discoverySource": "Website",
+      "description": "Nieuw licht – De Ploeg",
+      "cost": "",
+      "image": "",
+      "isNew": true
+    },
+    {
+      "date": "2029-01-07",
+      "time": "",
+      "title": "Elke dag",
+      "type": "Expositie",
+      "location": "Groninger Museum",
+      "locationLink": "",
+      "website": "https://groningermuseum.nl/programma",
+      "source": "groningermuseum.nl",
+      "discoverySource": "Website",
+      "description": "Familietour Nieuw licht – De Ploeg",
+      "cost": "",
+      "image": "",
+      "isNew": true
+    },
+    {
+      "date": "2029-01-07",
+      "time": "",
+      "title": "Elke dag EVENT Familietour Nieuw licht – De Ploeg",
+      "type": "Expositie",
+      "location": "Groninger Museum",
+      "locationLink": "",
+      "website": "https://groningermuseum.nl/programma",
+      "source": "groningermuseum.nl",
+      "discoverySource": "Website",
+      "description": "Meer informatie staat op groningermuseum.nl.",
+      "cost": "",
+      "image": "",
+      "isNew": true
     }
   ],
   "archive": [],
@@ -1510,6 +1555,13 @@
       "site": "https://www.martiniplaza.nl/nl/agenda",
       "count": 7,
       "newCount": 7,
+      "durationSeconds": 4.0,
+      "timedOut": true
+    },
+    {
+      "site": "https://groningermuseum.nl/programma",
+      "count": 3,
+      "newCount": 3,
       "durationSeconds": 4.0,
       "timedOut": true
     }
