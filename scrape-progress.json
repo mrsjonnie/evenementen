@@ -1,7 +1,7 @@
 {
   "runId": "2026-10-25T13:58:01.925766+00:00-04176762",
   "startedAt": "2026-10-25T13:58:01+00:00",
-  "completedCount": 13,
+  "completedCount": 14,
   "totalSites": 20,
   "currentSite": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
   "currentSiteIndex": 14,
@@ -18,7 +18,8 @@
     "https://www.kultuuragenda.nl/agenda",
     "https://www.noorderzon.nl/programma",
     "https://www.concertgebouw.nl/concerten-en-tickets",
-    "https://www.zwolsetheaters.nl/programma"
+    "https://www.zwolsetheaters.nl/programma",
+    "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html"
   ],
   "events": [
     {
@@ -188,6 +189,13 @@
       "newCount": 0,
       "durationSeconds": 6.23,
       "timedOut": true
+    },
+    {
+      "site": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 1.3,
+      "timedOut": false
     }
   ],
   "rawLog": [
@@ -10994,12 +11002,12 @@
   ],
   "status": "running",
   "siteStartedAt": "2026-10-25T13:59:26+00:00",
-  "siteElapsedSeconds": 1,
+  "siteElapsedSeconds": 2,
   "sitePageCount": 0,
   "lastSiteEventCount": 0,
-  "stage": "Websitepagina ophalen",
+  "stage": "Website klaar; volgende website voorbereiden",
   "lastUpdatedAt": "2026-10-25T13:59:27+00:00",
   "lastSiteNewEventCount": 0,
-  "lastCompletedSite": "https://www.zwolsetheaters.nl/programma",
-  "lastCompletedAt": "2026-10-25T13:59:25+00:00"
+  "lastCompletedSite": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+  "lastCompletedAt": "2026-10-25T13:59:28+00:00"
 }
