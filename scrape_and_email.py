@@ -1724,7 +1724,7 @@ def extract_biosagenda_events(html, page_url, site_url, discovery_source="Websit
         for parent in heading.parents:
             if getattr(parent, "name", None) in {"body", "html"}:
                 break
-            lines = [clean_text(line) for line in parent.get_text("\\n", strip=True).splitlines()]
+            lines = [clean_text(line) for line in parent.get_text("\n", strip=True).splitlines()]
             text = clean_text(" ".join(lines))
             if len(text) > 3200:
                 break
@@ -1771,7 +1771,7 @@ def extract_biosagenda_events(html, page_url, site_url, discovery_source="Websit
                 "type": "Film",
                 "location": cinema,
                 "website": film_url,
-                "description": description or f"Filmvertoningen in {cinema}. Speeltijden: {time_text}."
+                "description": description or f"Filmvertoningen in {cinema}. Speeltijden: {time_text}.",
                 "cost": first_price(card_text),
                 "image": image,
                 "discoverySource": discovery_source,
