@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-25T14:40:06+00:00",
+  "updatedAt": "2026-10-25T14:40:11+00:00",
   "events": [
     {
       "date": "2026-10-25",
@@ -11751,6 +11751,13 @@
       "newCount": 0,
       "durationSeconds": 2.98,
       "timedOut": true
+    },
+    {
+      "site": "https://denieuwekolk.nl/agenda",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 2.98,
+      "timedOut": true
     }
   ],
   "rawLog": [
@@ -15218,6 +15225,42 @@
       "url": "https://www.socialdeal.nl/",
       "status": "klaar",
       "rawText": "site 17/20: 0 unieke events in 2.98 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Start",
+      "date": "",
+      "url": "https://denieuwekolk.nl/agenda",
+      "status": "start",
+      "rawText": "site 18/20: max 5 events, max 2 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://denieuwekolk.nl/agenda",
+      "status": "strategie",
+      "rawText": "agenda-kaarten + datumregels (De Nieuwe Kolk)"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Pagina mislukt",
+      "date": "",
+      "url": "https://denieuwekolk.nl/agenda",
+      "status": "fout",
+      "rawText": "HTTPSConnectionPool(host='denieuwekolk.nl', port=443): Read timed out."
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://denieuwekolk.nl/agenda",
+      "status": "klaar",
+      "rawText": "site 18/20: 0 unieke events in 2.98 sec"
     }
   ]
 }
