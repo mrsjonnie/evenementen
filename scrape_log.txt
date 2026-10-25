@@ -254,3 +254,37 @@ Website	https://groningermuseum.nl/programma	detail-link gevonden	Schoolklassen 
 Website	https://groningermuseum.nl/programma	detail-link gevonden	Toegankelijkheid		https://groningermuseum.nl/toegankelijkheid	Toegankelijkheid
 Filter	https://groningermuseum.nl/programma	ok	Datumfilter toegepast	2026-10-25	https://groningermuseum.nl/programma	20 gevonden; 13 binnen 2026-10-25 t/m onbeperkt
 Website	https://groningermuseum.nl/programma	klaar	Klaar		https://groningermuseum.nl/programma	site 9/19: 5 unieke events in 2.01 sec
+Website	https://www.kultuuragenda.nl/agenda	start	Start		https://www.kultuuragenda.nl/agenda	site 10/19: max 5 events, max 2 seconden
+Parser	https://www.kultuuragenda.nl/agenda	strategie	Scrapertype vastgesteld		https://www.kultuuragenda.nl/agenda	universele detailpagina-parser (Kultuuragenda)
+Website	https://www.kultuuragenda.nl/agenda	ok	Pagina gelezen		https://www.kultuuragenda.nl/agenda	149272 tekens HTML
+Parser	https://www.kultuuragenda.nl/agenda	strategie	Kultuuragenda detailstrategie		https://www.kultuuragenda.nl/agenda	Overzicht overslaan; alleen echte /agenda/<id>/<slug> activiteitspagina’s verwerken
+Website	https://www.kultuuragenda.nl/agenda	ok	Pagina geanalyseerd		https://www.kultuuragenda.nl/agenda	0 events/aanbiedingen op deze pagina
+Website	https://www.kultuuragenda.nl/agenda	detail-link gevonden	Classics: The Misfits		https://www.kultuuragenda.nl/agenda/1195684605/classics-the-misfits	Classics: The Misfits
+Website	https://www.kultuuragenda.nl/agenda	detail-link gevonden	Shaun het Schaap: Het Beest van de Boerderij (6+)		https://www.kultuuragenda.nl/agenda/137379264/shaun-het-schaap-het-beest-van-de-boerderij-al	Shaun het Schaap: Het Beest van de Boerderij (6+)
+Website	https://www.kultuuragenda.nl/agenda	detail-link gevonden	Digger		https://www.kultuuragenda.nl/agenda/1453156530/digger	Digger
+Website	https://www.kultuuragenda.nl/agenda	detail-link gevonden	Groningen Sax Fest 2026 – Closing Concert: Saxofoonorkest050		https://www.kultuuragenda.nl/agenda/1913404879/groningen-sax-fest-2026-closing-concert-saxofoonorkest050	Groningen Sax Fest 2026 – Closing Concert: Saxofoonorkest050
+Website	https://www.kultuuragenda.nl/agenda	detail-link gevonden	Lezing: Expeditie Ongering		https://www.kultuuragenda.nl/agenda/1999062927/lezing-expeditie-ongering	Lezing: Expeditie Ongering
+Website	https://www.kultuuragenda.nl/agenda	detail-link gevonden	Singer-Songclub		https://www.kultuuragenda.nl/agenda/2065667423/singer-songclub-2	Singer-Songclub
+Website	https://www.kultuuragenda.nl/agenda	detail-link gevonden	Lizz Wright		https://www.kultuuragenda.nl/agenda/272404645/lizz-wright	Lizz Wright
+Website	https://www.kultuuragenda.nl/agenda	detail-link gevonden	Spruit Cinema (2+)		https://www.kultuuragenda.nl/agenda/2749036779/spruit-cinema-2-3	Spruit Cinema (2+)
+Website	https://www.kultuuragenda.nl/agenda	detail-link gevonden	Human Nature		https://www.kultuuragenda.nl/agenda/2995233160/human-nature	Human Nature
+Website	https://www.kultuuragenda.nl/agenda	detail-link gevonden	Sense and Sensibility		https://www.kultuuragenda.nl/agenda/3022524326/sense-and-sensibility	Sense and Sensibility
+Website	https://www.kultuuragenda.nl/agenda	detail-link gevonden	Coward		https://www.kultuuragenda.nl/agenda/3621902129/coward	Coward
+Website	https://www.kultuuragenda.nl/agenda	detail-link gevonden	The Incomer		https://www.kultuuragenda.nl/agenda/3640077526/the-incomer-1	The Incomer
+Website	https://www.kultuuragenda.nl/agenda	detail-link gevonden	Speuren tussen de klokken		https://www.kultuuragenda.nl/agenda/3665187559/speuren-tussen-de-klokken	Speuren tussen de klokken
+Website	https://www.kultuuragenda.nl/agenda	detail-link gevonden	The Beloved		https://www.kultuuragenda.nl/agenda/3730283290/the-beloved-1	The Beloved
+Website	https://www.kultuuragenda.nl/agenda	detail-link gevonden	Verhalen uit de Magische tuin (6+)		https://www.kultuuragenda.nl/agenda/3907376350/verhalen-uit-de-magische-tuin-6	Verhalen uit de Magische tuin (6+)
+Website	https://www.kultuuragenda.nl/agenda	detail-link gevonden	Verkleden en Speurtocht		https://www.kultuuragenda.nl/agenda/3960259753/verkleden-en-speurtocht	Verkleden en Speurtocht
+Website	https://www.kultuuragenda.nl/agenda	detail-link gevonden	Workshop striptekenen met Loeki (7+)		https://www.kultuuragenda.nl/agenda/4051513719/workshop-striptekenen-met-loeki-7	Workshop striptekenen met Loeki (7+)
+Website	https://www.kultuuragenda.nl/agenda	detail-link gevonden	VERA's Grunneger Zundag: StAD // Steernvanger // Olaf Vos		https://www.kultuuragenda.nl/agenda/4149300145/vera-s-grunneger-zundag-stad-steernvanger-olaf-vos	VERA's Grunneger Zundag: StAD // Steernvanger // Olaf Vos
+Website	https://www.kultuuragenda.nl/agenda	detail-link gevonden	Ernst, Bobbie en de Rest (3+) | 13:30 uur		https://www.kultuuragenda.nl/agenda/4199578416/ernst-bobbie-en-de-rest-3-13-30-uur	Ernst, Bobbie en de Rest (3+) | 13:30 uur
+Website	https://www.kultuuragenda.nl/agenda	detail-link gevonden	Minoes - 25th Anniversary (5+)		https://www.kultuuragenda.nl/agenda/540231476/minoes-25th-anniversary-5	Minoes - 25th Anniversary (5+)
+Website	https://www.kultuuragenda.nl/agenda	detail-link gevonden	Classics: Shall We Dance? - 30th Anniversary		https://www.kultuuragenda.nl/agenda/659659471/classics-shall-we-dance-30th-anniversary	Classics: Shall We Dance? - 30th Anniversary
+Website	https://www.kultuuragenda.nl/agenda	detail-link gevonden	Het boek was beter!		https://www.kultuuragenda.nl/agenda/790098669/het-boek-was-beter-1	Het boek was beter!
+Website	https://www.kultuuragenda.nl/agenda	detail-link gevonden	Docs: Imago		https://www.kultuuragenda.nl/agenda/811203126/docs-imago	Docs: Imago
+Website	https://www.kultuuragenda.nl/agenda	detail-link gevonden	Docs: The Cycle of Love		https://www.kultuuragenda.nl/agenda/922308090/docs-the-cycle-of-love	Docs: The Cycle of Love
+Website	https://www.kultuuragenda.nl/agenda	detail-link gevonden	Evenement aanmelden		https://www.kultuuragenda.nl/eventaanmeldformulier	Evenement aanmelden
+Website	https://www.kultuuragenda.nl/agenda	detail-link gevonden	Meld jouw activiteit aan		https://www.kultuuragenda.nl/odp-submit	Meld jouw activiteit aan
+Website	https://www.kultuuragenda.nl/agenda	detail-link gevonden	Ga naar de homepage		https://www.kultuuragenda.nl/	Ga naar de homepage
+Website	https://www.kultuuragenda.nl/agenda	detail-link gevonden	Plaatsingsvoorwaarden		https://www.kultuuragenda.nl/plaatsingsvoorwaarden	Plaatsingsvoorwaarden
+Website	https://www.kultuuragenda.nl/agenda	klaar	Klaar		https://www.kultuuragenda.nl/agenda	site 10/19: 0 unieke events in 2.02 sec
