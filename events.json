@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-25T14:08:43+00:00",
+  "updatedAt": "2026-10-25T14:08:51+00:00",
   "events": [
     {
       "date": "2026-10-25",
@@ -11647,6 +11647,13 @@
       "count": 0,
       "newCount": 0,
       "durationSeconds": 4.27,
+      "timedOut": true
+    },
+    {
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 5.82,
       "timedOut": true
     }
   ],
