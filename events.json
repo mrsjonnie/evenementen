@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-25T13:30:17+00:00",
+  "updatedAt": "2026-10-25T13:30:20+00:00",
   "events": [
     {
       "date": "2026-10-25",
@@ -11130,6 +11130,13 @@
       "newCount": 0,
       "durationSeconds": 5.85,
       "timedOut": true
+    },
+    {
+      "site": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 1.37,
+      "timedOut": false
     }
   ],
   "rawLog": [
