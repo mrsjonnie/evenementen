@@ -1,6 +1,6 @@
 {
-  "requestedAt": "2026-10-25T10:20:17.896Z",
-  "trigger": "verify-biosagenda-parser-after-syntax-fix",
+  "requestedAt": "2026-10-25T10:23:00.493Z",
+  "trigger": "verify-3-second-site-progress-and-activity-label",
   "region": "Groningen",
   "radius": "100",
   "category": "all",
@@ -9,7 +9,7 @@
   "dateTo": "",
   "minResults": "20",
   "maxEventsPerSite": "20",
-  "siteTimeLimitSeconds": "20",
+  "siteTimeLimitSeconds": "3",
   "sites": "[]",
   "providers": "{}",
   "serpApiLinks": "[]",
