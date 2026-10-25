@@ -113,7 +113,7 @@ BAD_URL_RE = re.compile(
     re.I,
 )
 BAD_TITLE_RE = re.compile(
-    r"^(menu|home|agenda|programma|filter|datum|soort|locatie|sluiten|zoek|zoeken|tickets?|koop ticket|mijn tickets|meer info|lees meer|bekijk|bekijk volledige programma|toon info|favoriet|voeg toe|image|profiel|privacy|contact|nieuwsbrief)$",
+    r"^(menu|home|agenda|programma|filter|datum|soort|locatie|sluiten|zoek|zoeken|tickets?|koop ticket|mijn tickets|meer info|lees meer|bekijk|bekijk volledige programma|toon info|favoriet|voeg toe|image|profiel|privacy|contact|nieuwsbrief|kom langs|lees|minder|aanmelden|bekijk data|ontmoetingsplein)$",
     re.I,
 )
 STATUS_WORDS_RE = re.compile(
@@ -1427,9 +1427,11 @@ def start_urls_for_site(site_url):
     if host == "spotgroningen.nl":
         return [urljoin(exact, "/programma")]
     if host == "filmvandaag.nl":
-        base = f"{parsed.scheme}://{parsed.netloc}"
-        # /bioscoop is a generic landing page; use the Groningen-specific film ladder.
-        return [urljoin(base, "/filmladder/stad/80-groningen")]
+        # /bioscoop is a generic landing page; try both canonical hosts for the Groningen film ladder.
+        return unique_urls([
+            "https://www.filmvandaag.nl/filmladder/stad/80-groningen",
+            "https://filmvandaag.nl/filmladder/stad/80-groningen",
+        ])
     if host == "denieuwekolk.nl":
         base = f"{parsed.scheme}://{parsed.netloc}"
         return unique_urls([urljoin(base, "/agenda"), urljoin(base, "/bieb/agenda")])
@@ -2206,7 +2208,7 @@ def scrape_site(site_url, site_index=0, site_total=0, progress_callback=None, ex
                     if "json" in clean_text(script.get("type") or "").lower() or "application/ld+json" in clean_text(script.get("type") or "").lower()
                 ]
                 add_raw("Diagnose", original_site, "Zwolse JSON", "", final_url, "diagnose", " | ".join(embedded_json[:4]))
-                for asset in [script.get("src") for script in diagnostic_soup.find_all("script", src=True) if any(name in script.get("src", "") for name in ("main.js", "helpers.js"))]:
+                for asset in [script.get("src") for script in diagnostic_soup.find_all("script", src=True) if any(name in script.get("src", "") for name in ("main.js", "helpers.js", "chunk-vendors.main.js"))]:
                     try:
                         asset_url = normalized_url(asset, final_url)
                         asset_response = session.get(asset_url, headers=REQUEST_HEADERS, timeout=remaining_timeout(deadline))
@@ -2220,7 +2222,9 @@ def scrape_site(site_url, site_index=0, site_total=0, progress_callback=None, ex
                                 matches.append(candidate)
                         request_pattern = r".{0,100}(?:baseURL|axios\.create|fetch\(|graphql|/api/|api/).{0,180}"
                         matches.extend(match.group(0) for match in re.finditer(request_pattern, asset_text, re.I))
-                        add_raw("Diagnose", original_site, "Zwolse JS " + urlparse(asset_url).path.rsplit("/", 1)[-1], "", asset_url, "diagnose", " | ".join(list(dict.fromkeys(matches))[:18]))
+                        unique_matches = list(dict.fromkeys(matches))
+                        for match_index, match_text in enumerate(unique_matches[:18], start=1):
+                            add_raw("Diagnose", original_site, f"Zwolse JS {urlparse(asset_url).path.rsplit('/', 1)[-1]} #{match_index}", "", asset_url, "diagnose", match_text)
                     except Exception as asset_error:
                         add_raw("Diagnose", original_site, "Zwolse JS fout", "", asset, "fout", str(asset_error))
         except Exception as exc:
@@ -2276,9 +2280,11 @@ def scrape_site(site_url, site_index=0, site_total=0, progress_callback=None, ex
             if not page_events:
                 page_events = parse_page_events(html, final_url, normalized_site, "Website")
         elif canonical_host(normalized_site) == "denieuwekolk.nl":
-            page_events = extract_date_listing_events(html, final_url, normalized_site, "Website")
-            if not page_events:
-                page_events = parse_page_events(html, final_url, normalized_site, "Website")
+            # The agenda is a directory of event detail pages. Skip generic line parsing
+            # here; it mistakes buttons and room names for events. Parse each detail page once.
+            page_events = []
+            add_raw("Parser", original_site, "De Nieuwe Kolk detailstrategie", "", final_url, "strategie",
+                    "Agenda gebruiken om detail-URL's te vinden; alleen de echte detailpagina als evenement verwerken")
         elif canonical_host(normalized_site) in {"vvvameland.nl", "concertgebouw.nl"}:
             page_events = extract_date_listing_events(html, final_url, normalized_site, "Website")
             if not page_events:
