@@ -2238,9 +2238,7 @@
       }
       const site = cleanText(progress.lastCompletedSite || progress.completedSites?.[completed] || "");
       const siteNumber = Math.min(total || 18, completed + 1);
-      const newCount = Array.isArray(progress.events)
-        ? progress.events.filter(event => !events.some(existing => eventDedupeKey(existing) === eventDedupeKey(event))).length
-        : 0;
+      const newCount = events.filter(event => event.isNew || newEventKeys.has(eventDedupeKey(event))).length;
       const siteLabel = site ? site.replace(/^https?:\/\//, "").replace(/\/$/, "") : "website wordt voorbereid";
       if (titleProgress) {
         titleProgress.hidden = false;
