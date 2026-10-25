@@ -72,7 +72,7 @@ button,input,select{font:inherit}button,.button{border:1px solid #48657c;border-
 <p class="url-help">Voeg een eigen website toe. Je kunt de link later verwijderen met ×; deze lijst blijft op dit apparaat bewaard.</p><div class="cards" id="customCards"></div><div class="empty" id="customEmpty">Nog geen eigen URL's toegevoegd.</div>
 </section>
 
-<footer>Startpagina · Weer voor Groningen · Versie 2026.10.25.71 · Indeling en eigen links worden alleen in deze browser opgeslagen.</footer>
+<footer>Startpagina · Weer voor Groningen · Versie 2026.10.25.72 · Indeling en eigen links worden alleen in deze browser opgeslagen.</footer>
 </main>
 <script>
 const $=id=>document.getElementById(id);
@@ -110,7 +110,7 @@ async function loadRainNowcast(){
   const response=await fetch("https://gpsgadget.buienradar.nl/data/raintext/?lat=53.2194&lon=6.5665",{cache:"no-store"});
   if(!response.ok)throw new Error("Buienradar niet beschikbaar");
   const text=await response.text(),now=new Date();
-  const samples=text.trim().split(/\\r?\\n/).map(line=>{const parts=line.trim().split("|");if(parts.length<2)return null;const value=Number(parts[0]);const tm=parts[1].trim();let dt;if(/^\\d{2}:\\d{2}$/.test(tm)){const [hh,mm]=tm.split(":").map(Number);dt=new Date(now);dt.setHours(hh,mm,0,0);if(dt<new Date(now.getTime()-10*60000))dt.setDate(dt.getDate()+1)}else dt=new Date(tm);return Number.isFinite(value)&&!Number.isNaN(dt.getTime())?{time:dt,rate:Math.pow(10,(value-109)/32)}:null}).filter(Boolean);
+  const samples=text.trim().split(/\r?\n/).map(line=>{const parts=line.trim().split("|");if(parts.length<2)return null;const value=Number(parts[0]);const tm=parts[1].trim();let dt;if(/^\d{2}:\d{2}$/.test(tm)){const [hh,mm]=tm.split(":").map(Number);dt=new Date(now);dt.setHours(hh,mm,0,0);if(dt<new Date(now.getTime()-10*60000))dt.setDate(dt.getDate()+1)}else dt=new Date(tm);return Number.isFinite(value)&&!Number.isNaN(dt.getTime())?{time:dt,rate:Math.pow(10,(value-109)/32)}:null}).filter(Boolean);
   if(!samples.length)throw new Error("Geen regenpunten");
   renderRainSamples(samples,"Bron: Buienradar");
  }catch(e){
