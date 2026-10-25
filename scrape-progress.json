@@ -1,13 +1,14 @@
 {
   "runId": "2026-10-25T15:53:30.839407+00:00-55336eac",
   "startedAt": "2026-10-25T15:53:30+00:00",
-  "completedCount": 2,
+  "completedCount": 3,
   "totalSites": 19,
   "currentSite": "https://www.visitgroningen.nl/nl/doen/wandelen",
   "currentSiteIndex": 3,
   "completedSites": [
     "https://groningen.uitloper.nu/",
-    "https://www.visitgroningen.nl/nl/doen/evenementen"
+    "https://www.visitgroningen.nl/nl/doen/evenementen",
+    "https://www.visitgroningen.nl/nl/doen/wandelen"
   ],
   "events": [],
   "siteResults": [
@@ -19,10 +20,10 @@
       "timedOut": true
     },
     {
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
       "count": 0,
       "newCount": 0,
-      "durationSeconds": 3.13,
+      "durationSeconds": 2,
       "timedOut": true
     }
   ],
@@ -368,16 +369,34 @@
       "url": "https://www.visitgroningen.nl/nl/doen/wandelen",
       "status": "strategie",
       "rawText": "Visit Groningen agenda-/routekaarten"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Pagina gelezen",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "status": "ok",
+      "rawText": "374114 tekens HTML"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Site-time-out",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "status": "timeout",
+      "rawText": "site overschreed de harde tijdslimiet van 2 seconden"
     }
   ],
   "status": "running",
   "siteStartedAt": "2026-10-25T15:53:50+00:00",
-  "siteElapsedSeconds": 2,
+  "siteElapsedSeconds": 4,
   "sitePageCount": 0,
   "lastSiteEventCount": 0,
-  "stage": "Websitepagina ophalen",
+  "stage": "Website klaar; volgende website voorbereiden",
   "lastUpdatedAt": "2026-10-25T15:53:52+00:00",
   "lastSiteNewEventCount": 0,
-  "lastCompletedSite": "https://www.visitgroningen.nl/nl/doen/evenementen",
-  "lastCompletedAt": "2026-10-25T15:53:49+00:00"
+  "lastCompletedSite": "https://www.visitgroningen.nl/nl/doen/wandelen",
+  "lastCompletedAt": "2026-10-25T15:53:54+00:00"
 }
