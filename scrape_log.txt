@@ -169,3 +169,7 @@ Website	https://denieuwekolk.nl/agenda	start	Start		https://denieuwekolk.nl/agen
 Parser	https://denieuwekolk.nl/agenda	strategie	Scrapertype vastgesteld		https://denieuwekolk.nl/agenda	agenda-kaarten + datumregels (De Nieuwe Kolk)
 Website	https://denieuwekolk.nl/agenda	fout	Pagina mislukt		https://denieuwekolk.nl/agenda	HTTPSConnectionPool(host='denieuwekolk.nl', port=443): Read timed out. (read timeout=0.9350157400000114)
 Website	https://denieuwekolk.nl/agenda	klaar	Klaar		https://denieuwekolk.nl/agenda	site 17/19: 0 unieke events in 3.39 sec
+Website	https://www.filmvandaag.nl/bioscoop	start	Start		https://www.filmvandaag.nl/bioscoop	site 18/19: max 5 events, max 2 seconden
+Parser	https://www.filmvandaag.nl/bioscoop	strategie	Scrapertype vastgesteld		https://www.filmvandaag.nl/bioscoop	bioscoopagenda Groningen (FilmVandaag)
+Website	https://www.filmvandaag.nl/bioscoop	fout	Pagina mislukt		https://www.filmvandaag.nl/filmladder/stad/80-groningen	HTTP 403
+Website	https://www.filmvandaag.nl/bioscoop	klaar	Klaar		https://www.filmvandaag.nl/bioscoop	site 18/19: 0 unieke events in 2.0 sec
