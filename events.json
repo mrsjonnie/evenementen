@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-25T16:58:48+00:00",
+  "updatedAt": "2026-10-25T16:58:50+00:00",
   "events": [
     {
       "date": "2026-10-25",
@@ -3606,6 +3606,13 @@
       "count": 0,
       "newCount": 0,
       "durationSeconds": 0.33,
+      "timedOut": false
+    },
+    {
+      "site": "https://www.pathe.nl/nl/bioscopen/pathe-groningen",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 0.05,
       "timedOut": false
     }
   ],
