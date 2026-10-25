@@ -66,3 +66,7 @@ Website	https://www.kultuuragenda.nl/agenda	start	Start		https://www.kultuuragen
 Parser	https://www.kultuuragenda.nl/agenda	strategie	Scrapertype vastgesteld		https://www.kultuuragenda.nl/agenda	universele detailpagina-parser (Kultuuragenda)
 Website	https://www.kultuuragenda.nl/agenda	fout	Pagina mislukt		https://www.kultuuragenda.nl/agenda	HTTPSConnectionPool(host='www.kultuuragenda.nl', port=443): Read timed out. (read timeout=0.9244031439999958)
 Website	https://www.kultuuragenda.nl/agenda	klaar	Klaar		https://www.kultuuragenda.nl/agenda	site 10/19: 0 unieke events in 2.0 sec
+Website	https://www.noorderzon.nl/programma	start	Start		https://www.noorderzon.nl/programma	site 11/19: max 5 events, max 2 seconden
+Parser	https://www.noorderzon.nl/programma	strategie	Scrapertype vastgesteld		https://www.noorderzon.nl/programma	universele programma- en detailpagina-parser
+Website	https://www.noorderzon.nl/programma	fout	Pagina mislukt		https://www.noorderzon.nl/programma	HTTPSConnectionPool(host='www.noorderzon.nl', port=443): Read timed out. (read timeout=0.8748635809999996)
+Website	https://www.noorderzon.nl/programma	klaar	Klaar		https://www.noorderzon.nl/programma	site 11/19: 0 unieke events in 2.0 sec
