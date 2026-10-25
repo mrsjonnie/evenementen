@@ -1309,6 +1309,57 @@ export default {
       }, 200);
     }
 
+    if (path === "/cancel" && request.method === "POST") {
+      try {
+        const config = githubConfig(env);
+        const workflowPath = encodeURIComponent(config.workflowFile);
+        const runsResponse = await githubFetch(
+          env,
+          `/actions/workflows/${workflowPath}/runs?branch=main&per_page=30`
+        );
+        if (!runsResponse.ok) {
+          const details = validateInput(await runsResponse.text(), 700);
+          return json({
+            ok: false,
+            error: "GitHub-runs konden niet worden opgehaald",
+            status: runsResponse.status,
+            details: /resource not accessible|forbidden|bad credentials/i.test(details)
+              ? "De GitHub-token van de Worker mist waarschijnlijk Actions-leesrechten (actions: read)."
+              : details
+          }, 502);
+        }
+        const runData = await runsResponse.json().catch(() => ({}));
+        const runs = Array.isArray(runData.workflow_runs) ? runData.workflow_runs : [];
+        const activeRuns = runs
+          .filter((run) => ["in_progress", "queued", "waiting", "requested"].includes(String(run.status || "")))
+          .sort((a, b) => new Date(b.created_at || 0) - new Date(a.created_at || 0));
+        if (!activeRuns.length) {
+          return json({ ok: true, cancelled: 0, message: "Geen actieve of ingeplande scraper-run gevonden." }, 200);
+        }
+
+        const results = [];
+        for (const run of activeRuns) {
+          const cancelResponse = await githubFetch(env, `/actions/runs/${Number(run.id)}/cancel`, { method: "POST" });
+          if (cancelResponse.status === 202 || cancelResponse.status === 409) {
+            results.push({ id: run.id, status: cancelResponse.status === 202 ? "annulering aangevraagd" : "run was al aan het stoppen" });
+          } else {
+            results.push({ id: run.id, status: "mislukt", details: validateInput(await cancelResponse.text(), 300) });
+          }
+        }
+        const cancelled = results.filter((item) => item.status !== "mislukt").length;
+        return json({
+          ok: cancelled > 0,
+          cancelled,
+          results,
+          message: cancelled
+            ? `Annulering aangevraagd voor ${cancelled} GitHub Actions-run(s).`
+            : "GitHub heeft geen run kunnen annuleren. Controleer de Actions-rechten van de Worker-token."
+        }, cancelled ? 200 : 502);
+      } catch (error) {
+        return json({ ok: false, error: "Annuleren is mislukt", details: validateInput(error.message, 700) }, 500);
+      }
+    }
+
     if (path === "/clear" && request.method === "POST") {
       try {
         const body = await request.json().catch(() => ({}));
