@@ -3666,15 +3666,24 @@
       "url": "https://www.filmvandaag.nl/bioscoop",
       "status": "strategie",
       "rawText": "bioscoopagenda Groningen (FilmVandaag)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.filmvandaag.nl/bioscoop",
+      "title": "Pagina mislukt",
+      "date": "",
+      "url": "https://www.filmvandaag.nl/filmladder/stad/80-groningen",
+      "status": "fout",
+      "rawText": "HTTP 403"
     }
   ],
   "status": "running",
   "siteStartedAt": "2026-10-25T14:40:12+00:00",
-  "siteElapsedSeconds": 1,
+  "siteElapsedSeconds": 3,
   "sitePageCount": 0,
   "lastSiteEventCount": 0,
   "stage": "Websitepagina ophalen",
-  "lastUpdatedAt": "2026-10-25T14:40:13+00:00",
+  "lastUpdatedAt": "2026-10-25T14:40:15+00:00",
   "lastSiteNewEventCount": 0,
   "lastCompletedSite": "https://denieuwekolk.nl/agenda",
   "lastCompletedAt": "2026-10-25T14:40:11+00:00"
