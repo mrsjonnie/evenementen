@@ -84,6 +84,21 @@
 
     .titleChevron { display:none !important; }
 
+    .titleProgressText {
+      display: inline-flex;
+      align-items: center;
+      border-radius: 999px;
+      padding: 3px 8px;
+      background: var(--surface-soft, #eef3f8);
+      color: var(--primary-dark);
+      font-size: .72rem;
+      font-weight: 850;
+      line-height: 1.35;
+      white-space: nowrap;
+      vertical-align: middle;
+    }
+    .titleProgressText[hidden] { display: none !important; }
+
     .titleBusyIndicator {
       display: inline-flex;
       align-items: center;
@@ -1111,6 +1126,7 @@
         <h1>
           <button class="titleToggle" id="titleToggle" type="button" aria-expanded="false">
             <span id="pageTitle">Evenementen rond Groningen</span>
+            <span id="titleProgressText" class="titleProgressText" aria-live="polite" hidden></span>
             <span id="titleBusyIndicator" class="titleBusyIndicator" role="status" aria-label="Zoeken naar nieuwe data" title="Zoeken naar nieuwe data" hidden><span class="titleBusySpinner" aria-hidden="true"></span></span>
             <span class="titleChevron" aria-hidden="true">v</span>
           </button>
@@ -2192,17 +2208,39 @@
       return normalizeEventsPayload(data);
     }
 
-    function updateLiveScrapeSummary(progress) {
+    function updateLiveScrapeSummary(progress, isCurrentRun = true) {
       const target = $("liveScrapeSummary");
-      if (!target || !progress || !progress.runId) return;
+      const titleProgress = $("titleProgressText");
+      if (!progress || !progress.runId) return;
+      if (!isCurrentRun) {
+        if (titleProgress) {
+          titleProgress.hidden = false;
+          titleProgress.textContent = "Zoeken starten…";
+        }
+        if (target) {
+          target.hidden = false;
+          target.textContent = "Wachten op de voortgang van de huidige zoekactie…";
+        }
+        return;
+      }
       const completed = Math.max(0, Number(progress.completedCount) || 0);
       const total = Math.max(completed, Number(progress.totalSites) || 0);
       const eventCount = Array.isArray(progress.events) ? progress.events.length : 0;
       const status = cleanText(progress.status || "running");
-      target.hidden = false;
-      target.textContent = status === "completed"
-        ? `Zoekronde afgerond: ${completed}/${total} websites · ${eventCount} evenementen gevonden.`
-        : `Live zoeken: ${completed}/${total} websites klaar · ${eventCount} evenementen gevonden tot nu toe.`;
+      const elapsedLabel = progress.lastUpdatedAt ? new Date(progress.lastUpdatedAt).toLocaleTimeString("nl-NL", { hour: "2-digit", minute: "2-digit", second: "2-digit" }) : "";
+      if (titleProgress) {
+        titleProgress.hidden = false;
+        titleProgress.textContent = status === "completed"
+          ? `Klaar · ${completed}/${total} · ${eventCount} ev.`
+          : `${completed}/${total} websites · ${eventCount} ev.`;
+        titleProgress.title = status === "completed" ? "Huidige zoekactie afgerond" : `Voortgang huidige zoekactie; laatste update ${elapsedLabel || "onbekend"}`;
+      }
+      if (target) {
+        target.hidden = false;
+        target.textContent = status === "completed"
+          ? `Zoekronde afgerond: ${completed}/${total} websites · ${eventCount} evenementen gevonden.`
+          : `Live zoeken: ${completed}/${total} websites klaar · ${eventCount} evenementen gevonden tot nu toe.`;
+      }
     }
 
     async function fetchScrapeProgress() {
@@ -2287,7 +2325,7 @@
           const progress = await fetchScrapeProgress();
           if (progress) {
             latestProgress = progress;
-            updateLiveScrapeSummary(progress);
+            updateLiveScrapeSummary(progress, Boolean(progress.runId && progress.runId !== options.previousProgressRunId));
             options.progressStatus = cleanText(progress.status || "");
             options.progressEventCount = Array.isArray(progress.events) ? progress.events.length : 0;
           }
