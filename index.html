@@ -1363,7 +1363,7 @@
   </div>
 
   <script>
-    const APP_VERSION = "2026.10.25.40";
+    const APP_VERSION = "2026.10.25.41";
     const DEFAULT_MAX_EVENTS_PER_SITE = 20;
     const DEFAULT_SITE_TIME_LIMIT_SECONDS = 20;
     const SCAN_SETTINGS_KEY = "eventScanSettingsV1";
@@ -2381,9 +2381,18 @@
       const status = cleanText(progress.status || "running");
       if (status === "completed") {
         if (titleProgress) {
+          const results = Array.isArray(progress.siteResults) ? progress.siteResults : [];
+          const hitCount = results.reduce((sum, item) => sum + (Number(item.count) || 0), 0);
+          const siteNewCount = results.reduce((sum, item) => sum + (Number(item.newCount) || 0), 0);
+          const newCount = Array.isArray(progress.events)
+            ? progress.events.filter(event => event.isNew).length
+            : siteNewCount;
+          const timeoutCount = results.filter(item => item.timedOut).length;
+          const zeroHitCount = results.filter(item => !(Number(item.count) || 0)).length;
+          const finishedCount = Math.min(completed, total);
           titleProgress.hidden = false;
-          titleProgress.textContent = `Zoeken afgerond (${Math.min(completed, total)}/${total} websites)`;
-          titleProgress.title = `De scraper heeft ${completed} websites afgerond. De definitieve publicatie wordt apart gecontroleerd.`;
+          titleProgress.textContent = `Zoeken klaar ${finishedCount}/${total} · ${hitCount} hits · ${newCount} nieuw · ${timeoutCount} time-outs`;
+          titleProgress.title = `Scraper afgerond: ${finishedCount}/${total} websites verwerkt. ${hitCount} evenementen gevonden op sites (site-resultaten), ${newCount} nieuw volgens de voortgangsdata; ${zeroHitCount} websites leverden 0 hits op en ${timeoutCount} liepen tegen de ingestelde tijdslimiet aan. Definitieve publicatie wordt apart gecontroleerd.`;
         }
         return;
       }
