@@ -1,7 +1,7 @@
 {
   "runId": "2026-10-25T18:56:08.114925+00:00-709e6c18",
   "startedAt": "2026-10-25T18:56:08+00:00",
-  "completedCount": 18,
+  "completedCount": 19,
   "totalSites": 20,
   "currentSite": "https://www.ibood.com/s-nl",
   "currentSiteIndex": 19,
@@ -23,7 +23,8 @@
     "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
     "https://www.vvvameland.nl/activiteiten-en-evenementen",
     "https://www.socialdeal.nl/",
-    "https://www.groupon.nl/kortingsbonnen/gemeente-groningen"
+    "https://www.groupon.nl/kortingsbonnen/gemeente-groningen",
+    "https://www.ibood.com/s-nl"
   ],
   "events": [
     {
@@ -3123,396 +3124,16 @@
       "newCount": 0,
       "durationSeconds": 0.4,
       "timedOut": false
+    },
+    {
+      "site": "https://www.ibood.com/s-nl",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 20.05,
+      "timedOut": true
     }
   ],
   "rawLog": [
-    {
-      "source": "Website",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "N i e u w l i c h t – D e P l o e g",
-      "date": "2025-10-25",
-      "url": "https://groningermuseum.nl/de-ploeg-nieuw-licht",
-      "status": "event uit detailpagina",
-      "rawText": "Groninger Museum Naar hoofdinhoud Naar navigatie Home Bezoek Programma Collectie Architectuur Over Menu NL Tickets N i e u w l i c h t – D e P l o e g Jan Wiegers, Interieur Bohémien, 1925 25 oktober 2025 – 7 januari 2029 Kunstenaars Wobbe Alkema Jan Altink Franciscus Hermanus Bach Johan Dijkstra Otto Eerelman Johan Faber Alida van Houten Job Hansen Jozef Israëls Jan Gerrit Jordens Ernst Ludwig Kirchner Ekke Kleima A"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "Jan Wiegers, Interieur Bohémien, 1925",
-      "date": "2025-10-25",
-      "url": "https://groningermuseum.nl/de-ploeg-nieuw-licht",
-      "status": "event uit tekstregel",
-      "rawText": "Jan Wiegers, Interieur Bohémien, 1925 | 25 oktober 2025 – 7 januari 2029 | Kunstenaars | Wobbe Alkema | Jan Altink | Franciscus Hermanus Bach"
-    },
-    {
-      "source": "Parser",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "Pagina geteld",
-      "date": "",
-      "url": "https://groningermuseum.nl/de-ploeg-nieuw-licht",
-      "status": "analyse",
-      "rawText": "jsonld:0, links:0, datumblokken:1, kaarten:0, regels:1, detail:1"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "Detailpagina geanalyseerd",
-      "date": "",
-      "url": "https://groningermuseum.nl/de-ploeg-nieuw-licht",
-      "status": "ok",
-      "rawText": "3 extra events"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "K e r a m i k o s C a r r i e r B a g",
-      "date": "2026-09-19",
-      "url": "https://groningermuseum.nl/keramikos-carrier-bag",
-      "status": "event uit detailpagina",
-      "rawText": "Groninger Museum Naar hoofdinhoud Naar navigatie Home Bezoek Programma Collectie Architectuur Over Menu NL Tickets K e r a m i k o s C a r r i e r B a g M a t t h e w L u t z - K i n o y & N a t s u k o U c h i n o Matthew Lutz-Kinoy and Natsuko Uchino during the installation of Keramikos 2 in Foreign Figs for Florence, Dingum at Villa Romana, Florence, 2012 Courtesy of the artists Photo by Dingum Matthew Lutz-Kinoy"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "Photo by Paul Hennebelle",
-      "date": "2026-09-19",
-      "url": "https://groningermuseum.nl/keramikos-carrier-bag",
-      "status": "event uit tekstregel",
-      "rawText": "Photo by Paul Hennebelle | 19 September 2026 – 10 Januari 2027 | OVER DE TENTOONSTELLING | Deze tentoonstelling viert de aankoop van ‘Keramikos 2’ door Groninger Museum, een gezamenlijk project van Matthew Lutz-Kinoy en Natsuko Uchino, bestaande uit meer dan 300 keramische serviesstukken en bijbehorende tafelkleden. De serviesstukken en tafelkleden, die tijdens “traveling dinner parties” als tafel- en eetgerei diende"
-    },
-    {
-      "source": "Parser",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "Pagina geteld",
-      "date": "",
-      "url": "https://groningermuseum.nl/keramikos-carrier-bag",
-      "status": "analyse",
-      "rawText": "jsonld:0, links:0, datumblokken:0, kaarten:0, regels:1, detail:1"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "Detailpagina geanalyseerd",
-      "date": "",
-      "url": "https://groningermuseum.nl/keramikos-carrier-bag",
-      "status": "ok",
-      "rawText": "2 extra events"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "P l a y i n g H o u s e",
-      "date": "2026-09-19",
-      "url": "https://groningermuseum.nl/playing-house",
-      "status": "event uit detailpagina",
-      "rawText": "Groninger Museum Naar hoofdinhoud Naar navigatie Home Bezoek Programma Collectie Architectuur Over Menu NL Tickets P l a y i n g H o u s e E e n k u n s t b i ë n n a l e m e t k i n d e r e n e n j o n g e r e n Mercedes Azpilicueta, CaccHho CucchhA, De Appel Amsterdam, 2025, Photo: Sander van Wettum. Eva Koťátková, The Dream Machine is Asleep, Kunsthal Charlottenborg, 2019 , Photo: David Stjernholm. Courtesy o"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "Petrit Halilaj, Abetare (Giacometti's Firedogs), 2025.",
-      "date": "2026-09-19",
-      "url": "https://groningermuseum.nl/playing-house",
-      "status": "event uit tekstregel",
-      "rawText": "Petrit Halilaj, Abetare (Giacometti's Firedogs), 2025. | 19 September 2026 – 10 Januari 2027 | Kunstenaars | Mercedes Azpilicueta | afra eisma | Petrit Halilaj"
-    },
-    {
-      "source": "Parser",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "Pagina geteld",
-      "date": "",
-      "url": "https://groningermuseum.nl/playing-house",
-      "status": "analyse",
-      "rawText": "jsonld:0, links:0, datumblokken:0, kaarten:0, regels:1, detail:1"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "Detailpagina geanalyseerd",
-      "date": "",
-      "url": "https://groningermuseum.nl/playing-house",
-      "status": "ok",
-      "rawText": "2 extra events"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "Kunstenaars Sol Calero Maurice van Es Núria",
-      "date": "2027-05-09",
-      "url": "https://groningermuseum.nl/the-architect-and-the-housewife",
-      "status": "event uit datumblok",
-      "rawText": "9 Mei 2027 Kunstenaars Sol Calero Maurice van Es Núria Fuster Zaha Hadid Alison Knowles Adam Linder Matthew Lutz-Kinoy & Natsuko Uchino Alessandro Mendini Michael Pfrommer Joanna Piotrowska Alida Pott Margaret Raspé Katie Schwab & Simon Worthington sophie serber Frances Stark Kathrin Sonntag Pamela Phatsimo Sunstrum Vivian Suter Mierle Laderman Ukeles Evelyn Taocheng Wang Nicole Wermers Elisabeth Wild OVER DE TENTOON"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "T h e A r c h i t e c t & t h e H o u s e w i f e",
-      "date": "2026-09-19",
-      "url": "https://groningermuseum.nl/the-architect-and-the-housewife",
-      "status": "event uit detailpagina",
-      "rawText": "Groninger Museum Naar hoofdinhoud Naar navigatie Home Bezoek Programma Collectie Architectuur Over Menu NL Tickets T h e A r c h i t e c t & t h e H o u s e w i f e C l e a n i n g t h e H o u s e , B u i l d i n g t h e F u t u r e Alessandro Mendini, Tea & coffee piazza, 1983, Photo: Groninger Museum; Photo John Stoel Nicole Wermers, Reclining Female #2, 2022 © Nicole Wermers. Courtesy of the artist and Herald St,"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "Kunstenaars",
-      "date": "2026-09-19",
-      "url": "https://groningermuseum.nl/the-architect-and-the-housewife",
-      "status": "event uit tekstregel",
-      "rawText": "Sol Calero, \"La Escuela del Sur\", 2015, Photo: Roberto Ruiz, Courtesy of Sol Calero, Berlin and Centro de Arte Dos de Mayo (CA2M), Móstoles, Madrid and ChertLüdde, Berlin | 19 September 2026 – 9 Mei 2027 | Kunstenaars | Sol Calero | Maurice van Es | Núria Fuster"
-    },
-    {
-      "source": "Parser",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "Pagina geteld",
-      "date": "",
-      "url": "https://groningermuseum.nl/the-architect-and-the-housewife",
-      "status": "analyse",
-      "rawText": "jsonld:0, links:0, datumblokken:1, kaarten:0, regels:1, detail:1"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "Detailpagina geanalyseerd",
-      "date": "",
-      "url": "https://groningermuseum.nl/the-architect-and-the-housewife",
-      "status": "ok",
-      "rawText": "3 extra events"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "The Architect & the Housewife: Cleaning the House, Building the Future",
-      "date": "2026-09-19",
-      "url": "https://groningermuseum.nl/nl-NL/the-architect-and-the-housewife",
-      "status": "event uit link",
-      "rawText": "The Architect & the Housewife: Cleaning the House, Building the Future 19 september 2026 – 9 mei 2027"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "Playing House. Een kunstbiënnale met kinderen en jongeren",
-      "date": "2026-09-19",
-      "url": "https://groningermuseum.nl/nl-NL/playing-house",
-      "status": "event uit link",
-      "rawText": "Playing House. Een kunstbiënnale met kinderen en jongeren 19 september 2026 – 10 januari 2027"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "The Convent of Pleasure",
-      "date": "2026-09-19",
-      "url": "https://groningermuseum.nl/nl-NL/ani-schulze-the-convent-of-pleasure",
-      "status": "event uit link",
-      "rawText": "The Convent of Pleasure Nieuw Licht 1: Ani Schulze 19 september 2026 – 9 mei 2027"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "Keramikos Carrier Bag",
-      "date": "2026-09-19",
-      "url": "https://groningermuseum.nl/nl-NL/keramikos-carrier-bag",
-      "status": "event uit link",
-      "rawText": "Keramikos Carrier Bag Matthew Lutz-Kinoy & Natsuko Uchino 19 september 2026 – 10 januari 2027"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "Nieuw licht – De Ploeg",
-      "date": "2025-10-25",
-      "url": "https://groningermuseum.nl/nl-NL/de-ploeg-nieuw-licht",
-      "status": "event uit link",
-      "rawText": "Nieuw licht – De Ploeg 25 oktober 2025 – 7 januari 2028"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "Playing House. Een kunstbiënnale met kinderen en jongeren",
-      "date": "2027-05-09",
-      "url": "https://groningermuseum.nl/",
-      "status": "event uit datumblok",
-      "rawText": "9 mei 2027 Playing House. Een kunstbiënnale met kinderen en jongeren"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "Keramikos Carrier Bag Matthew Lutz-Kinoy & Natsuko Uchino",
-      "date": "2027-05-09",
-      "url": "https://groningermuseum.nl/",
-      "status": "event uit datumblok",
-      "rawText": "9 mei 2027 Keramikos Carrier Bag Matthew Lutz-Kinoy & Natsuko Uchino"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "Ontdek het programma M u s e",
-      "date": "2028-01-07",
-      "url": "https://groningermuseum.nl/",
-      "status": "event uit datumblok",
-      "rawText": "7 januari 2028 Ontdek het programma M u s e u m g e b o u w Ontdek het museum I n o n z e c o l l e c t i e Jacqueline Kennedy Warhol, Andy Verzamelen Songs from the Compost: Mutating Bodies, Imploding Stars Budvytytė, Eglė Verzamelen Overwambuis (Groningen) onbekend Verzamelen Hellis Lamsweerde, Inez van Verzamelen Jonge vrouw met stroobundel Schwartze, Therese Verzamelen Playing kung fu in the park (uit de serie: T"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "Kunst en design",
-      "date": "2026-09-19",
-      "url": "https://groningermuseum.nl/",
-      "status": "event uit detailpagina",
-      "rawText": "Kunst en design | Groninger Museum Naar hoofdinhoud Naar navigatie Home Bezoek Programma Collectie Architectuur Over Menu NL Tickets Moge kunst de toekomst regisseren Moge kunst de toekomst regisseren Moge kunst de toekomst regisseren Moge kunst de toekomst regisseren Moge kunst de toekomst regisseren Moge kunst de toekomst regisseren Moge kunst de toekomst regisseren Moge kunst de toekomst regisseren Moge kunst de t"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "The Architect & the Housewife: Cleaning the House, Building the Future",
-      "date": "2026-09-19",
-      "url": "https://groningermuseum.nl/",
-      "status": "event uit tekstregel",
-      "rawText": "The Architect & the Housewife: Cleaning the House, Building the Future | 19 september 2026 – 9 mei 2027 | Playing House. Een kunstbiënnale met kinderen en jongeren | 19 september 2026 – 10 januari 2027 | The Convent of Pleasure | Nieuw Licht 1: Ani Schulze"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "Playing House. Een kunstbiënnale met kinderen en jongeren",
-      "date": "2026-09-19",
-      "url": "https://groningermuseum.nl/",
-      "status": "event uit tekstregel",
-      "rawText": "Playing House. Een kunstbiënnale met kinderen en jongeren | 19 september 2026 – 10 januari 2027 | The Convent of Pleasure | Nieuw Licht 1: Ani Schulze | 19 september 2026 – 9 mei 2027 | Keramikos Carrier Bag"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "Nieuw Licht 1: Ani Schulze",
-      "date": "2026-09-19",
-      "url": "https://groningermuseum.nl/",
-      "status": "event uit tekstregel",
-      "rawText": "Nieuw Licht 1: Ani Schulze | 19 september 2026 – 9 mei 2027 | Keramikos Carrier Bag | Matthew Lutz-Kinoy & Natsuko Uchino | 19 september 2026 – 10 januari 2027 | Nieuw licht – De Ploeg"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "Matthew Lutz-Kinoy & Natsuko Uchino",
-      "date": "2026-09-19",
-      "url": "https://groningermuseum.nl/",
-      "status": "event uit tekstregel",
-      "rawText": "Matthew Lutz-Kinoy & Natsuko Uchino | 19 september 2026 – 10 januari 2027 | Nieuw licht – De Ploeg | 25 oktober 2025 – 7 januari 2028 | Ontdek het programma | M"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "Nieuw licht – De Ploeg",
-      "date": "2025-10-25",
-      "url": "https://groningermuseum.nl/",
-      "status": "event uit tekstregel",
-      "rawText": "Nieuw licht – De Ploeg | 25 oktober 2025 – 7 januari 2028 | Ontdek het programma | M | u | s"
-    },
-    {
-      "source": "Parser",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "Pagina geteld",
-      "date": "",
-      "url": "https://groningermuseum.nl/",
-      "status": "analyse",
-      "rawText": "jsonld:0, links:5, datumblokken:3, kaarten:5, regels:5, detail:1"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "Detailpagina geanalyseerd",
-      "date": "",
-      "url": "https://groningermuseum.nl/",
-      "status": "ok",
-      "rawText": "8 extra events"
-    },
-    {
-      "source": "Parser",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "Pagina geteld",
-      "date": "",
-      "url": "https://groningermuseum.nl/groninger-museum-tour",
-      "status": "analyse",
-      "rawText": "jsonld:0, links:0, datumblokken:0, kaarten:0, regels:0, detail:0"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "Detailpagina geanalyseerd",
-      "date": "",
-      "url": "https://groningermuseum.nl/groninger-museum-tour",
-      "status": "ok",
-      "rawText": "0 extra events"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "Museumgebouw en architectuur",
-      "date": "2026-10-25",
-      "url": "https://groningermuseum.nl/museum-gebouw",
-      "status": "event uit datumblok",
-      "rawText": "Museumgebouw en architectuur | Groninger Museum Naar hoofdinhoud Naar navigatie Home Bezoek Programma Collectie Architectuur Over Menu NL Tickets M u s e u m g e b o u w O v e r d e g e s c h i e d e n i s e n d e t o e k o m s t Groninger Museum, opgericht in 1874 en eerder op twee andere locaties gevestigd, opende in 1994 zijn postmoderne gebouw op het eiland in het kanaal tussen het hoofdstation en het stadscentru"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "M u s e u m g e b o u w",
-      "date": "2026-10-25",
-      "url": "https://groningermuseum.nl/museum-gebouw",
-      "status": "event uit detailpagina",
-      "rawText": "Museumgebouw en architectuur | Groninger Museum Naar hoofdinhoud Naar navigatie Home Bezoek Programma Collectie Architectuur Over Menu NL Tickets M u s e u m g e b o u w O v e r d e g e s c h i e d e n i s e n d e t o e k o m s t Groninger Museum, opgericht in 1874 en eerder op twee andere locaties gevestigd, opende in 1994 zijn postmoderne gebouw op het eiland in het kanaal tussen het hoofdstation en het stadscentru"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "Michele de Lucchi ontwierp het paviljoen, dat",
-      "date": "2026-10-25",
-      "url": "https://groningermuseum.nl/museum-gebouw",
-      "status": "event uit tekstregel",
-      "rawText": "Early design of the De Lucchi pavilion by Michele de Lucchi, circa 1989 © Groninger Museum, Photo: John Stoel | Michele de Lucchi ontwierp het paviljoen, dat oorspronkelijk bedoeld was voor de archeologische en cultuurhistorische collectie van Groninger Museum, in de vorm van een bakstenen fort. Het materiaal is niet toevallig gekozen. Eeuwenlang hebben bakstenen, gevormd uit lokale klei en gebakken tot een warme roo"
-    },
-    {
-      "source": "Parser",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "Pagina geteld",
-      "date": "",
-      "url": "https://groningermuseum.nl/museum-gebouw",
-      "status": "analyse",
-      "rawText": "jsonld:0, links:0, datumblokken:1, kaarten:0, regels:1, detail:1"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "Detailpagina geanalyseerd",
-      "date": "",
-      "url": "https://groningermuseum.nl/museum-gebouw",
-      "status": "ok",
-      "rawText": "3 extra events"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "The Speech – open call",
-      "date": "2026-10-25",
-      "url": "https://groningermuseum.nl/the-speech-open-call",
-      "status": "event uit link",
-      "rawText": "25 okt 2026 - 22 nov 2026 Opgeven tot 24 oktober EDUCATION The Speech – open call"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "Workshop en Slow Looking activiteit",
-      "date": "2026-11-28",
-      "url": "https://groningermuseum.nl/workshops-en-slow-looking-activiteit-2",
-      "status": "event uit link",
-      "rawText": "28 nov 2026 10:15 t/m 12:30 EDUCATION Workshop en Slow Looking activiteit"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "Opgeven tot",
-      "date": "2026-11-02",
-      "url": "https://groningermuseum.nl/programma?type=EDUCATION",
-      "status": "event uit datumblok",
-      "rawText": "2 nov 2026 Opgeven tot"
-    },
     {
       "source": "Website",
       "site": "https://groningermuseum.nl/programma",
@@ -13925,16 +13546,403 @@
       "url": "https://www.groupon.nl/kortingsbonnen/gemeente-groningen",
       "status": "klaar",
       "rawText": "site 18/20: 0 unieke events in 0.4 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "Start",
+      "date": "",
+      "url": "https://www.ibood.com/s-nl",
+      "status": "start",
+      "rawText": "site 19/20: max 20 events, max 20 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://www.ibood.com/s-nl",
+      "status": "strategie",
+      "rawText": "aanbiedingen"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.ibood.com/offers/nl/s-nl",
+      "title": "403-tekstproxy mislukt",
+      "date": "",
+      "url": "https://www.ibood.com/offers/nl/s-nl",
+      "status": "fout",
+      "rawText": "HTTPSConnectionPool(host='r.jina.ai', port=443): Read timed out. (read timeout=1.25)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "Pagina mislukt",
+      "date": "",
+      "url": "https://www.ibood.com/offers/nl/s-nl",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.ibood.com/nl/s-nl",
+      "title": "403-tekstproxy gebruikt",
+      "date": "",
+      "url": "https://www.ibood.com/nl/s-nl",
+      "status": "fallback",
+      "rawText": "Bron gaf HTTP 403; tekstproxy leverde 47495 tekens: Title: iBOOD.com: dé beste aanbiedingen, acties & deal van de dag URL Source: http://www.ibood.com/nl/s-nl Published Time: Tue, 17 Mar 2026 16:05:26 GMT Markdown Content: NU! €7,50"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "Pagina gelezen",
+      "date": "",
+      "url": "https://www.ibood.com/nl/s-nl",
+      "status": "ok",
+      "rawText": "57430 tekens HTML"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "iBOOD-telling",
+      "date": "",
+      "url": "https://www.ibood.com/nl/s-nl",
+      "status": "geen resultaten",
+      "rawText": "0 aanbiedingen gevonden; limiet 20; HTML 57430 tekens"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "iBOOD zonder aanbiedingen",
+      "date": "",
+      "url": "https://www.ibood.com/nl/s-nl",
+      "status": "fallback",
+      "rawText": "Geen productkaarten herkend; HTML 57430 tekens; pagina /nl/s-nl"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "Pagina geanalyseerd",
+      "date": "",
+      "url": "https://www.ibood.com/nl/s-nl",
+      "status": "ok",
+      "rawText": "0 events/aanbiedingen op deze pagina"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "403-tekstproxy gebruikt",
+      "date": "",
+      "url": "https://www.ibood.com/s-nl",
+      "status": "fallback",
+      "rawText": "Bron gaf HTTP 403; tekstproxy leverde 254 tekens: Title: URL Source: http://www.ibood.com/s-nl Warning: This page maybe not yet fully loaded, consider explicitly specify a timeout. Warning: This is a cached snapshot of the origina"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "Pagina gelezen",
+      "date": "",
+      "url": "https://www.ibood.com/s-nl",
+      "status": "ok",
+      "rawText": "310 tekens HTML"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "iBOOD-telling",
+      "date": "",
+      "url": "https://www.ibood.com/s-nl",
+      "status": "geen resultaten",
+      "rawText": "0 aanbiedingen gevonden; limiet 20; HTML 310 tekens"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "iBOOD zonder aanbiedingen",
+      "date": "",
+      "url": "https://www.ibood.com/s-nl",
+      "status": "fallback",
+      "rawText": "Geen productkaarten herkend; HTML 310 tekens; pagina /s-nl"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "Pagina geanalyseerd",
+      "date": "",
+      "url": "https://www.ibood.com/s-nl",
+      "status": "ok",
+      "rawText": "0 events/aanbiedingen op deze pagina"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "Pagina geteld",
+      "date": "",
+      "url": "http://www.ibood.com/nl/s-nl",
+      "status": "analyse",
+      "rawText": "jsonld:0, links:0, datumblokken:0, kaarten:0, regels:0, detail:0"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "http://www.ibood.com/nl/s-nl",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.ibood.com/nl/s-nl/b/apple/fdd49684-29ac-59d6-adef-6536bdeecf47",
+      "title": "403-tekstproxy mislukt",
+      "date": "",
+      "url": "https://www.ibood.com/nl/s-nl/b/apple/fdd49684-29ac-59d6-adef-6536bdeecf47",
+      "status": "fout",
+      "rawText": "HTTPSConnectionPool(host='r.jina.ai', port=443): Read timed out. (read timeout=1.25)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "Detailpagina mislukt",
+      "date": "",
+      "url": "https://www.ibood.com/nl/s-nl/b/apple/fdd49684-29ac-59d6-adef-6536bdeecf47",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.ibood.com/nl/s-nl/b/ariel/a6417b7d-11b0-5d3e-9d70-7fb742b40af2",
+      "title": "403-tekstproxy mislukt",
+      "date": "",
+      "url": "https://www.ibood.com/nl/s-nl/b/ariel/a6417b7d-11b0-5d3e-9d70-7fb742b40af2",
+      "status": "fout",
+      "rawText": "HTTPSConnectionPool(host='r.jina.ai', port=443): Read timed out. (read timeout=1.25)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "Detailpagina mislukt",
+      "date": "",
+      "url": "https://www.ibood.com/nl/s-nl/b/ariel/a6417b7d-11b0-5d3e-9d70-7fb742b40af2",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.ibood.com/nl/s-nl/b/audiolab/f58b9bac-91db-5c2f-8e38-b83d15bad1d7",
+      "title": "403-tekstproxy mislukt",
+      "date": "",
+      "url": "https://www.ibood.com/nl/s-nl/b/audiolab/f58b9bac-91db-5c2f-8e38-b83d15bad1d7",
+      "status": "fout",
+      "rawText": "HTTPSConnectionPool(host='r.jina.ai', port=443): Read timed out. (read timeout=1.25)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "Detailpagina mislukt",
+      "date": "",
+      "url": "https://www.ibood.com/nl/s-nl/b/audiolab/f58b9bac-91db-5c2f-8e38-b83d15bad1d7",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.ibood.com/nl/s-nl/b/bissell/53f1732e-f71d-5105-9fd3-cb7f31787ab6",
+      "title": "403-tekstproxy mislukt",
+      "date": "",
+      "url": "https://www.ibood.com/nl/s-nl/b/bissell/53f1732e-f71d-5105-9fd3-cb7f31787ab6",
+      "status": "fout",
+      "rawText": "HTTPSConnectionPool(host='r.jina.ai', port=443): Read timed out. (read timeout=1.25)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "Detailpagina mislukt",
+      "date": "",
+      "url": "https://www.ibood.com/nl/s-nl/b/bissell/53f1732e-f71d-5105-9fd3-cb7f31787ab6",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.ibood.com/nl/s-nl/b/cricut/3794d6b5-35d1-5a67-8641-b353dffa659f",
+      "title": "403-tekstproxy mislukt",
+      "date": "",
+      "url": "https://www.ibood.com/nl/s-nl/b/cricut/3794d6b5-35d1-5a67-8641-b353dffa659f",
+      "status": "fout",
+      "rawText": "HTTPSConnectionPool(host='r.jina.ai', port=443): Read timed out. (read timeout=1.25)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "Detailpagina mislukt",
+      "date": "",
+      "url": "https://www.ibood.com/nl/s-nl/b/cricut/3794d6b5-35d1-5a67-8641-b353dffa659f",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.ibood.com/nl/s-nl/b/dewalt/aa972102-79c6-54b1-b2a4-b26148542064",
+      "title": "403-tekstproxy mislukt",
+      "date": "",
+      "url": "https://www.ibood.com/nl/s-nl/b/dewalt/aa972102-79c6-54b1-b2a4-b26148542064",
+      "status": "fout",
+      "rawText": "HTTPSConnectionPool(host='r.jina.ai', port=443): Read timed out. (read timeout=1.25)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "Detailpagina mislukt",
+      "date": "",
+      "url": "https://www.ibood.com/nl/s-nl/b/dewalt/aa972102-79c6-54b1-b2a4-b26148542064",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.ibood.com/nl/s-nl/b/dji/68262207-3ad0-5f79-a9f7-13f499b19867",
+      "title": "403-tekstproxy mislukt",
+      "date": "",
+      "url": "https://www.ibood.com/nl/s-nl/b/dji/68262207-3ad0-5f79-a9f7-13f499b19867",
+      "status": "fout",
+      "rawText": "HTTPSConnectionPool(host='r.jina.ai', port=443): Read timed out. (read timeout=1.25)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "Detailpagina mislukt",
+      "date": "",
+      "url": "https://www.ibood.com/nl/s-nl/b/dji/68262207-3ad0-5f79-a9f7-13f499b19867",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.ibood.com/nl/s-nl/b/douwe-egberts/48090699-792f-46fd-93dc-51b17cefbc35",
+      "title": "403-tekstproxy mislukt",
+      "date": "",
+      "url": "https://www.ibood.com/nl/s-nl/b/douwe-egberts/48090699-792f-46fd-93dc-51b17cefbc35",
+      "status": "fout",
+      "rawText": "HTTPSConnectionPool(host='r.jina.ai', port=443): Read timed out. (read timeout=1.25)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "Detailpagina mislukt",
+      "date": "",
+      "url": "https://www.ibood.com/nl/s-nl/b/douwe-egberts/48090699-792f-46fd-93dc-51b17cefbc35",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.ibood.com/nl/s-nl/b/dreame/cabfaa29-3b9a-55d0-be33-b1a2473a40fc",
+      "title": "403-tekstproxy mislukt",
+      "date": "",
+      "url": "https://www.ibood.com/nl/s-nl/b/dreame/cabfaa29-3b9a-55d0-be33-b1a2473a40fc",
+      "status": "fout",
+      "rawText": "HTTPSConnectionPool(host='r.jina.ai', port=443): Read timed out. (read timeout=1.25)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "Detailpagina mislukt",
+      "date": "",
+      "url": "https://www.ibood.com/nl/s-nl/b/dreame/cabfaa29-3b9a-55d0-be33-b1a2473a40fc",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.ibood.com/nl/s-nl/b/dreft/18c0c9f2-49bc-56f9-a912-d3b1334ea7eb",
+      "title": "403-tekstproxy mislukt",
+      "date": "",
+      "url": "https://www.ibood.com/nl/s-nl/b/dreft/18c0c9f2-49bc-56f9-a912-d3b1334ea7eb",
+      "status": "fout",
+      "rawText": "HTTPSConnectionPool(host='r.jina.ai', port=443): Read timed out. (read timeout=1.25)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "Detailpagina mislukt",
+      "date": "",
+      "url": "https://www.ibood.com/nl/s-nl/b/dreft/18c0c9f2-49bc-56f9-a912-d3b1334ea7eb",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.ibood.com/nl/s-nl/b/durex/79c1c5f4-3b42-53c6-8c2a-f7e8e1947023",
+      "title": "403-tekstproxy mislukt",
+      "date": "",
+      "url": "https://www.ibood.com/nl/s-nl/b/durex/79c1c5f4-3b42-53c6-8c2a-f7e8e1947023",
+      "status": "fout",
+      "rawText": "HTTPSConnectionPool(host='r.jina.ai', port=443): Read timed out. (read timeout=1.25)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "Detailpagina mislukt",
+      "date": "",
+      "url": "https://www.ibood.com/nl/s-nl/b/durex/79c1c5f4-3b42-53c6-8c2a-f7e8e1947023",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.ibood.com/nl/s-nl/b/ecovacs/be0c2f3c-3700-5e09-aef3-979fd755cdf8",
+      "title": "403-tekstproxy mislukt",
+      "date": "",
+      "url": "https://www.ibood.com/nl/s-nl/b/ecovacs/be0c2f3c-3700-5e09-aef3-979fd755cdf8",
+      "status": "fout",
+      "rawText": "HTTPSConnectionPool(host='r.jina.ai', port=443): Read timed out. (read timeout=1.25)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "Detailpagina mislukt",
+      "date": "",
+      "url": "https://www.ibood.com/nl/s-nl/b/ecovacs/be0c2f3c-3700-5e09-aef3-979fd755cdf8",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.ibood.com/nl/s-nl/b/eufy/c205002e-1595-530a-9c8a-05002ab674bc",
+      "title": "403-tekstproxy mislukt",
+      "date": "",
+      "url": "https://www.ibood.com/nl/s-nl/b/eufy/c205002e-1595-530a-9c8a-05002ab674bc",
+      "status": "fout",
+      "rawText": "HTTPSConnectionPool(host='r.jina.ai', port=443): Read timed out. (read timeout=0.40821435399999473)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "Detailpagina mislukt",
+      "date": "",
+      "url": "https://www.ibood.com/nl/s-nl/b/eufy/c205002e-1595-530a-9c8a-05002ab674bc",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://www.ibood.com/s-nl",
+      "status": "klaar",
+      "rawText": "site 19/20: 0 unieke events in 20.05 sec"
     }
   ],
   "status": "running",
   "siteStartedAt": "2026-10-25T18:58:36+00:00",
-  "siteElapsedSeconds": 0,
-  "sitePageCount": 0,
+  "siteElapsedSeconds": 22,
+  "sitePageCount": 2,
   "lastSiteEventCount": 0,
-  "stage": "Websitepagina ophalen",
-  "lastUpdatedAt": "2026-10-25T18:58:36+00:00",
+  "stage": "Website klaar; volgende website voorbereiden",
+  "lastUpdatedAt": "2026-10-25T18:58:40+00:00",
   "lastSiteNewEventCount": 0,
-  "lastCompletedSite": "https://www.groupon.nl/kortingsbonnen/gemeente-groningen",
-  "lastCompletedAt": "2026-10-25T18:58:35+00:00"
+  "lastCompletedSite": "https://www.ibood.com/s-nl",
+  "lastCompletedAt": "2026-10-25T18:58:58+00:00"
 }
