@@ -1,7 +1,7 @@
 {
   "runId": "2026-10-25T18:03:32.693130+00:00-9ae2f9f8",
   "startedAt": "2026-10-25T18:03:32+00:00",
-  "completedCount": 12,
+  "completedCount": 13,
   "totalSites": 19,
   "currentSite": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
   "currentSiteIndex": 13,
@@ -17,7 +17,8 @@
     "https://groningermuseum.nl/programma",
     "https://www.kultuuragenda.nl/agenda",
     "https://www.noorderzon.nl/programma",
-    "https://www.concertgebouw.nl/concerten-en-tickets"
+    "https://www.concertgebouw.nl/concerten-en-tickets",
+    "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html"
   ],
   "events": [
     {
@@ -1185,45 +1186,16 @@
       "newCount": 12,
       "durationSeconds": 2.66,
       "timedOut": false
+    },
+    {
+      "site": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 0.1,
+      "timedOut": false
     }
   ],
   "rawLog": [
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Kasper van der Laan Ruim",
-      "date": "2027-05-20",
-      "url": "https://www.spotgroningen.nl/programma/kasper-van-der-laan-9/",
-      "status": "event uit link",
-      "rawText": "Kasper van der Laan Ruim Fascinerend, onvoorspelbaar en absurd grappig Uitverkocht do 20 mei"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Kasper van der Laan Ruim",
-      "date": "2027-05-21",
-      "url": "https://www.spotgroningen.nl/programma/kasper-van-der-laan-10/",
-      "status": "event uit link",
-      "rawText": "Kasper van der Laan Ruim Fascinerend, onvoorspelbaar en absurd grappig Uitverkocht vr 21 mei"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Thomas van Luyn Super Normaal",
-      "date": "2027-05-22",
-      "url": "https://www.spotgroningen.nl/programma/thomas-van-luyn-5/",
-      "status": "event uit link",
-      "rawText": "Thomas van Luyn Super Normaal Hoe raar is het om herkenbaar te zijn za 22 mei"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Thomas van Luyn Super Normaal",
-      "date": "2027-05-23",
-      "url": "https://www.spotgroningen.nl/programma/thomas-van-luyn-6/",
-      "status": "event uit link",
-      "rawText": "Thomas van Luyn Super Normaal Hoe raar is het om herkenbaar te zijn zo 23 mei"
-    },
     {
       "source": "Website",
       "site": "https://www.spotgroningen.nl/programma/",
@@ -11987,16 +11959,52 @@
       "url": "https://www.concertgebouw.nl/concerten-en-tickets",
       "status": "klaar",
       "rawText": "site 12/19: 12 unieke events in 2.66 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "title": "Start",
+      "date": "",
+      "url": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "status": "start",
+      "rawText": "site 13/19: max 12 events, max 4 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "status": "strategie",
+      "rawText": "bioscoopfilms en speeldata (BiosAgenda Groningen)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "title": "Pagina mislukt",
+      "date": "",
+      "url": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "status": "klaar",
+      "rawText": "site 13/19: 0 unieke events in 0.1 sec"
     }
   ],
   "status": "running",
   "siteStartedAt": "2026-10-25T18:04:47+00:00",
-  "siteElapsedSeconds": 0,
+  "siteElapsedSeconds": 1,
   "sitePageCount": 0,
   "lastSiteEventCount": 0,
-  "stage": "Websitepagina ophalen",
-  "lastUpdatedAt": "2026-10-25T18:04:47+00:00",
-  "lastSiteNewEventCount": 12,
-  "lastCompletedSite": "https://www.concertgebouw.nl/concerten-en-tickets",
-  "lastCompletedAt": "2026-10-25T18:04:46+00:00"
+  "stage": "Website klaar; volgende website voorbereiden",
+  "lastUpdatedAt": "2026-10-25T18:04:48+00:00",
+  "lastSiteNewEventCount": 0,
+  "lastCompletedSite": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+  "lastCompletedAt": "2026-10-25T18:04:48+00:00"
 }
