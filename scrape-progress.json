@@ -1,7 +1,7 @@
 {
   "runId": "2026-10-25T10:34:32+00:00",
   "startedAt": "2026-10-25T10:34:32+00:00",
-  "completedCount": 12,
+  "completedCount": 13,
   "totalSites": 19,
   "currentSite": "https://www.zwolsetheaters.nl/programma",
   "currentSiteIndex": 13,
@@ -17,7 +17,8 @@
     "https://www.groningermuseum.nl/en/now",
     "https://www.kultuuragenda.nl/agenda",
     "https://www.noorderzon.nl/programma",
-    "https://www.concertgebouw.nl/concerten-en-tickets"
+    "https://www.concertgebouw.nl/concerten-en-tickets",
+    "https://www.zwolsetheaters.nl/programma"
   ],
   "events": [
     {
@@ -384,6 +385,13 @@
       "count": 0,
       "newCount": 0,
       "durationSeconds": 3.58,
+      "timedOut": true
+    },
+    {
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 6.04,
       "timedOut": true
     }
   ],
@@ -11190,9 +11198,9 @@
     }
   ],
   "status": "running",
-  "stage": "Pagina gelezen; evenementen verwerken",
+  "stage": "Website klaar; volgende website voorbereiden",
   "lastUpdatedAt": "2026-10-25T10:36:04+00:00",
   "lastSiteEventCount": 0,
-  "lastCompletedSite": "https://www.concertgebouw.nl/concerten-en-tickets",
-  "lastCompletedAt": "2026-10-25T10:35:57+00:00"
+  "lastCompletedSite": "https://www.zwolsetheaters.nl/programma",
+  "lastCompletedAt": "2026-10-25T10:36:05+00:00"
 }
