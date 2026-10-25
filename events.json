@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-25T16:00:28+00:00",
+  "updatedAt": "2026-10-25T16:00:33+00:00",
   "events": [
     {
       "date": "2026-10-25",
@@ -11777,6 +11777,13 @@
       "newCount": 0,
       "durationSeconds": 2.02,
       "timedOut": true
+    },
+    {
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 2.03,
+      "timedOut": true
     }
   ],
   "rawLog": [
@@ -14371,6 +14378,312 @@
       "url": "https://groningermuseum.nl/programma",
       "status": "klaar",
       "rawText": "site 9/19: 0 unieke events in 2.02 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Start",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda",
+      "status": "start",
+      "rawText": "site 10/19: max 5 events, max 2 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda",
+      "status": "strategie",
+      "rawText": "universele detailpagina-parser (Kultuuragenda)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Pagina gelezen",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda",
+      "status": "ok",
+      "rawText": "149272 tekens HTML"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Kultuuragenda detailstrategie",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda",
+      "status": "strategie",
+      "rawText": "Overzicht overslaan; alleen echte /agenda/<id>/<slug> activiteitspagina’s verwerken"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Pagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda",
+      "status": "ok",
+      "rawText": "0 events/aanbiedingen op deze pagina"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Classics: The Misfits",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/1195684605/classics-the-misfits",
+      "status": "detail-link gevonden",
+      "rawText": "Classics: The Misfits"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Shaun het Schaap: Het Beest van de Boerderij (6+)",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/137379264/shaun-het-schaap-het-beest-van-de-boerderij-al",
+      "status": "detail-link gevonden",
+      "rawText": "Shaun het Schaap: Het Beest van de Boerderij (6+)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Digger",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/1453156530/digger",
+      "status": "detail-link gevonden",
+      "rawText": "Digger"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Groningen Sax Fest 2026 – Closing Concert: Saxofoonorkest050",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/1913404879/groningen-sax-fest-2026-closing-concert-saxofoonorkest050",
+      "status": "detail-link gevonden",
+      "rawText": "Groningen Sax Fest 2026 – Closing Concert: Saxofoonorkest050"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Lezing: Expeditie Ongering",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/1999062927/lezing-expeditie-ongering",
+      "status": "detail-link gevonden",
+      "rawText": "Lezing: Expeditie Ongering"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Singer-Songclub",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/2065667423/singer-songclub-2",
+      "status": "detail-link gevonden",
+      "rawText": "Singer-Songclub"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Lizz Wright",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/272404645/lizz-wright",
+      "status": "detail-link gevonden",
+      "rawText": "Lizz Wright"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Spruit Cinema (2+)",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/2749036779/spruit-cinema-2-3",
+      "status": "detail-link gevonden",
+      "rawText": "Spruit Cinema (2+)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Human Nature",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/2995233160/human-nature",
+      "status": "detail-link gevonden",
+      "rawText": "Human Nature"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Sense and Sensibility",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/3022524326/sense-and-sensibility",
+      "status": "detail-link gevonden",
+      "rawText": "Sense and Sensibility"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Coward",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/3621902129/coward",
+      "status": "detail-link gevonden",
+      "rawText": "Coward"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "The Incomer",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/3640077526/the-incomer-1",
+      "status": "detail-link gevonden",
+      "rawText": "The Incomer"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Speuren tussen de klokken",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/3665187559/speuren-tussen-de-klokken",
+      "status": "detail-link gevonden",
+      "rawText": "Speuren tussen de klokken"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "The Beloved",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/3730283290/the-beloved-1",
+      "status": "detail-link gevonden",
+      "rawText": "The Beloved"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Verhalen uit de Magische tuin (6+)",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/3907376350/verhalen-uit-de-magische-tuin-6",
+      "status": "detail-link gevonden",
+      "rawText": "Verhalen uit de Magische tuin (6+)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Verkleden en Speurtocht",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/3960259753/verkleden-en-speurtocht",
+      "status": "detail-link gevonden",
+      "rawText": "Verkleden en Speurtocht"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Workshop striptekenen met Loeki (7+)",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/4051513719/workshop-striptekenen-met-loeki-7",
+      "status": "detail-link gevonden",
+      "rawText": "Workshop striptekenen met Loeki (7+)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "VERA's Grunneger Zundag: StAD // Steernvanger // Olaf Vos",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/4149300145/vera-s-grunneger-zundag-stad-steernvanger-olaf-vos",
+      "status": "detail-link gevonden",
+      "rawText": "VERA's Grunneger Zundag: StAD // Steernvanger // Olaf Vos"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Ernst, Bobbie en de Rest (3+) | 13:30 uur",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/4199578416/ernst-bobbie-en-de-rest-3-13-30-uur",
+      "status": "detail-link gevonden",
+      "rawText": "Ernst, Bobbie en de Rest (3+) | 13:30 uur"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Minoes - 25th Anniversary (5+)",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/540231476/minoes-25th-anniversary-5",
+      "status": "detail-link gevonden",
+      "rawText": "Minoes - 25th Anniversary (5+)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Classics: Shall We Dance? - 30th Anniversary",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/659659471/classics-shall-we-dance-30th-anniversary",
+      "status": "detail-link gevonden",
+      "rawText": "Classics: Shall We Dance? - 30th Anniversary"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Het boek was beter!",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/790098669/het-boek-was-beter-1",
+      "status": "detail-link gevonden",
+      "rawText": "Het boek was beter!"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Docs: Imago",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/811203126/docs-imago",
+      "status": "detail-link gevonden",
+      "rawText": "Docs: Imago"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Docs: The Cycle of Love",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/922308090/docs-the-cycle-of-love",
+      "status": "detail-link gevonden",
+      "rawText": "Docs: The Cycle of Love"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Evenement aanmelden",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/eventaanmeldformulier",
+      "status": "detail-link gevonden",
+      "rawText": "Evenement aanmelden"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Meld jouw activiteit aan",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/odp-submit",
+      "status": "detail-link gevonden",
+      "rawText": "Meld jouw activiteit aan"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Ga naar de homepage",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/",
+      "status": "detail-link gevonden",
+      "rawText": "Ga naar de homepage"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Plaatsingsvoorwaarden",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/plaatsingsvoorwaarden",
+      "status": "detail-link gevonden",
+      "rawText": "Plaatsingsvoorwaarden"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda",
+      "status": "klaar",
+      "rawText": "site 10/19: 0 unieke events in 2.03 sec"
     }
   ]
 }
