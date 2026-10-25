@@ -5,11 +5,17 @@ Diagnose	https://www.zwolsetheaters.nl/programma	diagnose	Zwolse scripts		https:
 Diagnose	https://www.zwolsetheaters.nl/programma	diagnose	Zwolse links		https://www.zwolsetheaters.nl/programma	
 Diagnose	https://www.zwolsetheaters.nl/programma	diagnose	Zwolse JSON		https://www.zwolsetheaters.nl/programma	
 Diagnose	https://www.zwolsetheaters.nl/programma	diagnose	Zwolse JS scan chunk-vendors.main.js		https://www.zwolsetheaters.nl/assets/js/chunk-vendors.main.js?v=L8F5KdDUVX9i4ON4PXhCti3ujgqHICgBWsZxug4CPgA	geen API-route herkend; 384411 tekens;
-Diagnose	https://www.zwolsetheaters.nl/programma	diagnose	Zwolse agenda-chunk		https://www.zwolsetheaters.nl/assets/js/9760.936.js	49199 tekens geladen
+Diagnose	https://www.zwolsetheaters.nl/programma	diagnose	Zwolse chunk geladen		https://www.zwolsetheaters.nl/assets/js/9760.936.js	49199 tekens; js/9760.936.js
 Diagnose	https://www.zwolsetheaters.nl/programma	diagnose	Zwolse API-aanroep		https://www.zwolsetheaters.nl/assets/js/9760.936.js	prototype.hasOwnProperty,enumerable:!1,writable:!0,configurable:!0});const l={url:s,method:s,data:s,baseURL:i,transformRequest:i,transformResponse:i,paramsSerializer:i,timeout:i,timeoutMessage:i,withCredentials:i,withXSRFToken:i,adapter:i,responseType:i,xsrfCookieName:i,xsrfHeaderName:i
 Diagnose	https://www.zwolsetheaters.nl/programma	diagnose	Zwolse API-aanroep		https://www.zwolsetheaters.nl/assets/js/9760.936.js	Token");const s=n("xsrfHeaderName"),i=n("xsrfCookieName");let a=n("headers");const c=n("auth"),l=n("baseURL"),u=n("allowAbsoluteUrls"),f=n("url");if(t.headers=a=We.from(a),t.url=dt(cn(l,f,u,t),n("params"),n("paramsSerializer")),c){const t=Re.getSafeProp(c,"username")||"",n=Re.getSafePro
 Diagnose	https://www.zwolsetheaters.nl/programma	diagnose	Zwolse API-aanroep		https://www.zwolsetheaters.nl/assets/js/9760.936.js	rls?t.allowAbsoluteUrls=this.defaults.allowAbsoluteUrls:t.allowAbsoluteUrls=!0),er.assertOptions(t,{baseUrl:tr.spelling("baseURL"),withXsrfToken:tr.spelling("withXSRFToken")},!0),t.method=(t.method||this.defaults.method||"get").toLowerCase();let s=o&&Re.merge(o.common,o[t.method]);o&&Re
 Diagnose	https://www.zwolsetheaters.nl/programma	diagnose	Zwolse API-aanroep		https://www.zwolsetheaters.nl/assets/js/9760.936.js	,u=c.length;while(f<u)l=l.then(c[f++],c[f++]);return l}getUri(e){e=fn(this.defaults,e);const t=cn(e.baseURL,e.url,e.allowAbsoluteUrls,e);return dt(t,e.params,e.paramsSerializer)}}Re.forEach(["delete","get","head","options"],function(e){nr.prototype[e]=function(t,n){return this.request(f
+Diagnose	https://www.zwolsetheaters.nl/programma	diagnose	Zwolse chunk geladen		https://www.zwolsetheaters.nl/assets/js/9285.557.js	182 tekens; js/9285.557.js
+Diagnose	https://www.zwolsetheaters.nl/programma	diagnose	Zwolse chunk geladen		https://www.zwolsetheaters.nl/assets/js/3041.8f5.js	182 tekens; js/3041.8f5.js
+Diagnose	https://www.zwolsetheaters.nl/programma	diagnose	Zwolse chunk geladen		https://www.zwolsetheaters.nl/assets/js/7793.cc2.js	818 tekens; js/7793.cc2.js
+Diagnose	https://www.zwolsetheaters.nl/programma	diagnose	Zwolse chunk geladen		https://www.zwolsetheaters.nl/assets/js/3186.2e6.js	690 tekens; js/3186.2e6.js
+Diagnose	https://www.zwolsetheaters.nl/programma	diagnose	Zwolse chunk geladen		https://www.zwolsetheaters.nl/assets/js/4654.61f.js	2263 tekens; js/4654.61f.js
+Diagnose	https://www.zwolsetheaters.nl/programma	diagnose	Zwolse chunk geladen		https://www.zwolsetheaters.nl/assets/js/8796.54a.js	1719 tekens; js/8796.54a.js
 Diagnose	https://www.zwolsetheaters.nl/programma	diagnose	Zwolse JS main.js #1		https://www.zwolsetheaters.nl/assets/js/main.js?v=WgecduYVPp8i_9Rxhb1fyYhHd0tzmUbPgKM0R-XTk5A	g}])},[(0,o.RG)(e.$slots,"default")],2)}s(9838);var ge=s(8585);class fe{constructor(){(0,g.A)(this,"baseUrl",""),(0,g.A)(this,"client",void 0),(0,g.A)(this,"getClient",async()=>{if(this.client)return this.client;const e=await Promise.all([s.e(9760),s.e(6183)]).then(s.bind(s,3110));retur
 Diagnose	https://www.zwolsetheaters.nl/programma	diagnose	Zwolse JS main.js #2		https://www.zwolsetheaters.nl/assets/js/main.js?v=WgecduYVPp8i_9Rxhb1fyYhHd0tzmUbPgKM0R-XTk5A	n this.client=e.default.create({timeout:18e6}),this.client.defaults.baseURL=this.baseUrl,this.client}),(0,g.A)(this,"getMockResponse",(e,t)=>({status:e,statusText:"",data:t,headers:{},config:{}})),(0,g.A)(this,"handleResponse",e=>{const{apiLoading:t}=(0,K.E)(),{cameli
 Diagnose	https://www.zwolsetheaters.nl/programma	diagnose	Zwolse JS main.js #3		https://www.zwolsetheaters.nl/assets/js/main.js?v=WgecduYVPp8i_9Rxhb1fyYhHd0tzmUbPgKM0R-XTk5A	chunk-context: ],"./_BaseFormPage.vue":[6334,[3192]],"./_BaseFormUmbraco.vue":[4661,[9760,1088]],"./fields/_BaseCheckbox.vue":[9143,[8868]],"./fields/_BaseCheckboxList.vue":[6181,[8216]],".
@@ -26,7 +32,7 @@ RSS/Atom	https://www.zwolsetheaters.nl/programma	fout	Feed mislukt		https://www.
 RSS/Atom	https://www.zwolsetheaters.nl/programma	fout	Feed mislukt		https://www.zwolsetheaters.nl/rss.xml	HTTP 404
 RSS/Atom	https://www.zwolsetheaters.nl/programma	fout	Feed mislukt		https://www.zwolsetheaters.nl/feed.xml	HTTP 404
 RSS/Atom	https://www.zwolsetheaters.nl/programma	fout	Feed mislukt		https://www.zwolsetheaters.nl/events/feed/	HTTP 404
-Website	https://www.zwolsetheaters.nl/programma	klaar	Klaar		https://www.zwolsetheaters.nl/programma	site 1/3: 0 unieke events in 8.09 sec
+Website	https://www.zwolsetheaters.nl/programma	klaar	Klaar		https://www.zwolsetheaters.nl/programma	site 1/3: 0 unieke events in 7.66 sec
 Website	https://denieuwekolk.nl/agenda	start	Start		https://denieuwekolk.nl/agenda	site 2/3: max 20 events, max 20 seconden
 Parser	https://denieuwekolk.nl/agenda	strategie	Scrapertype vastgesteld		https://denieuwekolk.nl/agenda	agenda-kaarten + datumregels (De Nieuwe Kolk)
 Website	https://denieuwekolk.nl/agenda	ok	Pagina gelezen		https://denieuwekolk.nl/agenda	856282 tekens HTML
@@ -112,6 +118,77 @@ Website	https://denieuwekolk.nl/agenda	detail-link gevonden	Whalefall		https://d
 Website	https://denieuwekolk.nl/agenda	detail-link gevonden	Bestel		https://denieuwekolk.nl/bios/agenda/whalefall/bestel/43e1016c-d56c-20f1-466d-44abb02157c6	Bestel
 Website	https://denieuwekolk.nl/agenda	detail-link gevonden	Bestel		https://denieuwekolk.nl/bios/agenda/whalefall/bestel/7a1e44a7-8252-f78e-c5c0-7512d913f0ff	Bestel
 Website	https://denieuwekolk.nl/agenda	detail-link gevonden	Wicker		https://denieuwekolk.nl/bios/agenda/wicker2	Wicker
+Website	https://denieuwekolk.nl/agenda	ok	Pagina gelezen		https://denieuwekolk.nl/bieb/agenda	404426 tekens HTML
+Parser	https://denieuwekolk.nl/agenda	strategie	De Nieuwe Kolk detailstrategie		https://denieuwekolk.nl/bieb/agenda	Agenda gebruiken om detail-URL's te vinden; alleen de echte detailpagina als evenement verwerken
+Website	https://denieuwekolk.nl/agenda	ok	Pagina geanalyseerd		https://denieuwekolk.nl/bieb/agenda	0 events/aanbiedingen op deze pagina
+Website	https://denieuwekolk.nl/agenda	detail-link gevonden	Adviesplein		https://denieuwekolk.nl/bieb/agenda/adviesplein	Adviesplein
+Website	https://denieuwekolk.nl/agenda	detail-link gevonden	Alzheimercafé		https://denieuwekolk.nl/bieb/agenda/alzheimercafe-10044312	Alzheimercafé
+Website	https://denieuwekolk.nl/agenda	detail-link gevonden	Alzheimercafé		https://denieuwekolk.nl/bieb/agenda/alzheimercafe-10044313	Alzheimercafé
+Website	https://denieuwekolk.nl/agenda	detail-link gevonden	Boekstartuurtje		https://denieuwekolk.nl/bieb/agenda/boekstartuurtje-10047350	Boekstartuurtje
+Website	https://denieuwekolk.nl/agenda	detail-link gevonden	Bestel		https://denieuwekolk.nl/bieb/agenda/boekstartuurtje-10047350/bestel/0437ca77-8bca-0f89-47cc-397884d18ff6	Bestel
+Website	https://denieuwekolk.nl/agenda	detail-link gevonden	Bouw een Hebocon battle-bot		https://denieuwekolk.nl/bieb/agenda/bouw-een-hebocon-battle-bot	Bouw een Hebocon battle-bot
+Website	https://denieuwekolk.nl/agenda	detail-link gevonden	Bestel		https://denieuwekolk.nl/bieb/agenda/bouw-een-hebocon-battle-bot/bestel/c9779f82-cd9d-3e4a-125b-58b9bf9bd133	Bestel
+Website	https://denieuwekolk.nl/agenda	detail-link gevonden	Carmilla		https://denieuwekolk.nl/bieb/agenda/carmilla	Carmilla
+Website	https://denieuwekolk.nl/agenda	detail-link gevonden	Cursus Sterrenkunde		https://denieuwekolk.nl/bieb/agenda/cursus-sterrenkunde	Cursus Sterrenkunde
+Website	https://denieuwekolk.nl/agenda	detail-link gevonden	Bestel		https://denieuwekolk.nl/bieb/agenda/cursus-sterrenkunde/bestel/d5f84c53-48e8-a65d-c50a-34bb44c49b84	Bestel
+Website	https://denieuwekolk.nl/agenda	detail-link gevonden	Derde Dinsdag		https://denieuwekolk.nl/bieb/agenda/derde-dinsdag-ramsey-nasr	Derde Dinsdag
+Website	https://denieuwekolk.nl/agenda	detail-link gevonden	Wachtlijst		https://denieuwekolk.nl/bieb/agenda/derde-dinsdag-ramsey-nasr/bestel/c13c8fb0-f0ee-2147-651e-e58bb3b52d7d	Wachtlijst
+Website	https://denieuwekolk.nl/agenda	detail-link gevonden	DigiHandig		https://denieuwekolk.nl/bieb/agenda/digihandig-10048206	DigiHandig
+Website	https://denieuwekolk.nl/agenda	detail-link gevonden	Wachtlijst		https://denieuwekolk.nl/bieb/agenda/digihandig-10048206/bestel/702b4e5e-6a91-e71f-8183-0b8e9716a8ac	Wachtlijst
+Website	https://denieuwekolk.nl/agenda	detail-link gevonden	DigiVitaler		https://denieuwekolk.nl/bieb/agenda/digivitaler	DigiVitaler
+Website	https://denieuwekolk.nl/agenda	detail-link gevonden	Dokter in de Zaal		https://denieuwekolk.nl/bieb/agenda/dokter-in-de-zaal	Dokter in de Zaal
+Website	https://denieuwekolk.nl/agenda	detail-link gevonden	Bestel		https://denieuwekolk.nl/bieb/agenda/dokter-in-de-zaal/bestel/de572d3c-96ec-e14e-dc4a-fd3a52b5d9ef	Bestel
+Website	https://denieuwekolk.nl/agenda	detail-link gevonden	Foto-expositie Verhalen van Verborgen Kracht		https://denieuwekolk.nl/bieb/agenda/fotoexpositie-verhalen-van-verborgen-kracht-10050486	Foto-expositie Verhalen van Verborgen Kracht
+Website	https://denieuwekolk.nl/agenda	detail-link gevonden	Groot Dictee der Nederlandse Taal		https://denieuwekolk.nl/bieb/agenda/groot-dictee-der-nederlandse-taal	Groot Dictee der Nederlandse Taal
+Website	https://denieuwekolk.nl/agenda	detail-link gevonden	Bestel		https://denieuwekolk.nl/bieb/agenda/groot-dictee-der-nederlandse-taal/bestel/9b1ccb07-ab58-a214-3749-f5136f934c7d	Bestel
+Website	https://denieuwekolk.nl/agenda	detail-link gevonden	Het Vlucht Voorwaarts Praathuis		https://denieuwekolk.nl/bieb/agenda/het-vlucht-voorwaarts-praathuis	Het Vlucht Voorwaarts Praathuis
+Website	https://denieuwekolk.nl/agenda	detail-link gevonden	INKT		https://denieuwekolk.nl/bieb/agenda/inkt-10046644	INKT
+Website	https://denieuwekolk.nl/agenda	detail-link gevonden	Bestel		https://denieuwekolk.nl/bieb/agenda/inkt-10046644/bestel/13354397-819e-a67e-b44e-22c4e853c6fe	Bestel
+Website	https://denieuwekolk.nl/agenda	detail-link gevonden	Klik & Tik		https://denieuwekolk.nl/bieb/agenda/klik-tik	Klik & Tik
+Website	https://denieuwekolk.nl/agenda	detail-link gevonden	Wachtlijst		https://denieuwekolk.nl/bieb/agenda/klik-tik/bestel/47b282c2-9624-0762-56c5-5a8dea887348	Wachtlijst
+Website	https://denieuwekolk.nl/agenda	detail-link gevonden	Masker maken		https://denieuwekolk.nl/bieb/agenda/masker-maken	Masker maken
+Website	https://denieuwekolk.nl/agenda	detail-link gevonden	Bestel		https://denieuwekolk.nl/bieb/agenda/masker-maken/bestel/554224cf-3cd2-ded3-67d7-a58f06e0f3c0	Bestel
+Website	https://denieuwekolk.nl/agenda	detail-link gevonden	Oefentafel Basisvaardigheden		https://denieuwekolk.nl/bieb/agenda/oefentafel-basisvaardigheden	Oefentafel Basisvaardigheden
+Website	https://denieuwekolk.nl/agenda	detail-link gevonden	Omgaan met stress en grenzen		https://denieuwekolk.nl/bieb/agenda/omgaan-met-stress-en-grenzen	Omgaan met stress en grenzen
+Website	https://denieuwekolk.nl/agenda	detail-link gevonden	Bestel		https://denieuwekolk.nl/bieb/agenda/omgaan-met-stress-en-grenzen/bestel/28a01ade-b689-ebac-78c4-09c9a0f67041	Bestel
+Website	https://denieuwekolk.nl/agenda	detail-link gevonden	Ontdek NXT Lab		https://denieuwekolk.nl/bieb/agenda/ontdek-nxt-lab-10048687	Ontdek NXT Lab
+Website	https://denieuwekolk.nl/agenda	detail-link gevonden	Prinsessenrok of prinsencape maken		https://denieuwekolk.nl/bieb/agenda/prinsessenrok-of-prinsencape-maken	Prinsessenrok of prinsencape maken
+Website	https://denieuwekolk.nl/agenda	detail-link gevonden	Bestel		https://denieuwekolk.nl/bieb/agenda/prinsessenrok-of-prinsencape-maken/bestel/48201472-2a3f-75f3-0c49-544f3a047a3d	Bestel
+Website	https://denieuwekolk.nl/agenda	detail-link gevonden	Programmeren met de Micro:bit		https://denieuwekolk.nl/bieb/agenda/programmeren-met-de-micro-bit	Programmeren met de Micro:bit
+Website	https://denieuwekolk.nl/agenda	detail-link gevonden	Bestel		https://denieuwekolk.nl/bieb/agenda/programmeren-met-de-micro-bit/bestel/21962e50-2338-479c-f546-143200a7b60e	Bestel
+Website	https://denieuwekolk.nl/agenda	detail-link gevonden	Programmeren met Lego Spike		https://denieuwekolk.nl/bieb/agenda/programmeren-met-lego-spike	Programmeren met Lego Spike
+Website	https://denieuwekolk.nl/agenda	detail-link gevonden	Wachtlijst		https://denieuwekolk.nl/bieb/agenda/programmeren-met-lego-spike/bestel/ce564eeb-9a34-f054-5336-12388aa53ba2	Wachtlijst
+Website	https://denieuwekolk.nl/agenda	detail-link gevonden	Schrijfcafé		https://denieuwekolk.nl/bieb/agenda/schrijfcafe	Schrijfcafé
+Website	https://denieuwekolk.nl/agenda	detail-link gevonden	Steeds Lichter		https://denieuwekolk.nl/bieb/agenda/steeds-lichter	Steeds Lichter
+Website	https://denieuwekolk.nl/agenda	detail-link gevonden	Bestel		https://denieuwekolk.nl/bieb/agenda/steeds-lichter/bestel/310d2a53-d986-73ab-6ad7-0ef3980c9c8c	Bestel
+Website	https://denieuwekolk.nl/agenda	detail-link gevonden	Taalcafé		https://denieuwekolk.nl/bieb/agenda/taalcafe	Taalcafé
+Website	https://denieuwekolk.nl/agenda	detail-link gevonden	Thuis – Ahmed Aboutaleb		https://denieuwekolk.nl/bieb/agenda/thuis-ahmed-aboutaleb	Thuis – Ahmed Aboutaleb
+Website	https://denieuwekolk.nl/agenda	detail-link gevonden	Bestel		https://denieuwekolk.nl/bieb/agenda/thuis-ahmed-aboutaleb/bestel/0ad181da-599a-57f9-94d6-00196fea8ca4	Bestel
+Website	https://denieuwekolk.nl/agenda	detail-link gevonden	Versier jouw bord of beker		https://denieuwekolk.nl/bieb/agenda/versier-jouw-bord-of-beker	Versier jouw bord of beker
+Website	https://denieuwekolk.nl/agenda	detail-link gevonden	Bestel		https://denieuwekolk.nl/bieb/agenda/versier-jouw-bord-of-beker/bestel/c67cec88-6502-f90a-db63-5a1376f840c8	Bestel
+Website	https://denieuwekolk.nl/agenda	detail-link gevonden	VR & Gamen		https://denieuwekolk.nl/bieb/agenda/vr-gamen	VR & Gamen
+Website	https://denieuwekolk.nl/agenda	detail-link gevonden	Bestel		https://denieuwekolk.nl/bieb/agenda/vr-gamen/bestel/3c369168-9fce-ce2d-9494-06a5c56d8888	Bestel
+Website	https://denieuwekolk.nl/agenda	detail-link gevonden	Wat Als?! Online veiligheid		https://denieuwekolk.nl/theater/agenda/wat-als-online-veiligheid	Wat Als?! Online veiligheid
+Website	https://denieuwekolk.nl/agenda	detail-link gevonden	Bestel		https://denieuwekolk.nl/theater/agenda/wat-als-online-veiligheid/bestel/e64c75b3-e8c3-fc09-d15e-a51e6384fd93	Bestel
+Website	https://denieuwekolk.nl/agenda	detail-link gevonden	10:00		https://denieuwekolk.nl/bieb/agenda/digivitaler/bestel/2d51f0c6-1f14-061d-f3a5-f7a2f9d97c8c	10:00
+Website	https://denieuwekolk.nl/agenda	detail-link gevonden	Activiteiten & events		https://denieuwekolk.nl/bieb/agenda	Activiteiten & events
+Website	https://denieuwekolk.nl/agenda	detail-link gevonden	films		https://denieuwekolk.nl/bios/agenda	films
+Website	https://denieuwekolk.nl/agenda	detail-link gevonden	voorstellingen		https://denieuwekolk.nl/theater/agenda	voorstellingen
+Website	https://denieuwekolk.nl/agenda	detail-link gevonden	Agenda		https://denieuwekolk.nl/agenda	Agenda
+Website	https://denieuwekolk.nl/agenda	detail-link gevonden	Theater		https://denieuwekolk.nl/theater	Theater
+Website	https://denieuwekolk.nl/agenda	detail-link gevonden	De Nieuwe Kolk		https://denieuwekolk.nl/	De Nieuwe Kolk
+Website	https://denieuwekolk.nl/agenda	detail-link gevonden	Bezoek		https://denieuwekolk.nl/bezoek	Bezoek
+Website	https://denieuwekolk.nl/agenda	detail-link gevonden	Huisregels		https://denieuwekolk.nl/bezoek/huisregels	Huisregels
+Website	https://denieuwekolk.nl/agenda	detail-link gevonden	Veelgestelde vragen		https://denieuwekolk.nl/bezoek/veelgestelde-vragen	Veelgestelde vragen
+Website	https://denieuwekolk.nl/agenda	detail-link gevonden	Locaties		https://denieuwekolk.nl/bezoek/zalen-en-ruimtes	Locaties
+Website	https://denieuwekolk.nl/agenda	detail-link gevonden	Bieb		https://denieuwekolk.nl/bieb	Bieb
+Website	https://denieuwekolk.nl/agenda	detail-link gevonden	Bios		https://denieuwekolk.nl/bios	Bios
+Website	https://denieuwekolk.nl/agenda	detail-link gevonden	[email protected]		https://denieuwekolk.nl/cdn-cgi/l/email-protection	[email protected]
+Website	https://denieuwekolk.nl/agenda	detail-link gevonden	Favorieten		https://denieuwekolk.nl/favorieten	Favorieten
+Website	https://denieuwekolk.nl/agenda	detail-link gevonden	inloggen		https://denieuwekolk.nl/mijn-dnk	inloggen
+Website	https://denieuwekolk.nl/agenda	detail-link gevonden	Onderwijs		https://denieuwekolk.nl/onderwijs	Onderwijs
+Website	https://denieuwekolk.nl/agenda	detail-link gevonden	Verhuur		https://denieuwekolk.nl/verhuur	Verhuur
+Website	https://denieuwekolk.nl/agenda	detail-link gevonden	Zakelijk		https://denieuwekolk.nl/zakelijk	Zakelijk
 RSS/Atom	https://denieuwekolk.nl/agenda	fout	Feed mislukt		https://denieuwekolk.nl/feed	HTTP 404
 RSS/Atom	https://denieuwekolk.nl/agenda	fout	Feed mislukt		https://denieuwekolk.nl/rss	HTTP 404
 RSS/Atom	https://denieuwekolk.nl/agenda	fout	Feed mislukt		https://denieuwekolk.nl/rss.xml	HTTP 404
@@ -150,9 +227,9 @@ Website	https://denieuwekolk.nl/agenda	ok	Detailpagina geanalyseerd		https://den
 Website	https://denieuwekolk.nl/agenda	ok	Detailpagina geanalyseerd		https://denieuwekolk.nl/bios/agenda/whalefall	1 extra events
 Website	https://denieuwekolk.nl/agenda	ok	Detailpagina geanalyseerd		https://denieuwekolk.nl/bios/agenda/wicker2	1 extra events
 Filter	https://denieuwekolk.nl/agenda	ok	Datumfilter toegepast	2026-10-25	https://denieuwekolk.nl/agenda	32 gevonden; 16 binnen 2026-10-25 t/m onbeperkt
-Website	https://denieuwekolk.nl/agenda	klaar	Klaar		https://denieuwekolk.nl/agenda	site 2/3: 0 unieke events in 17.94 sec
+Website	https://denieuwekolk.nl/agenda	klaar	Klaar		https://denieuwekolk.nl/agenda	site 2/3: 0 unieke events in 20.26 sec
 Website	https://www.filmvandaag.nl/bioscoop	start	Start		https://www.filmvandaag.nl/bioscoop	site 3/3: max 20 events, max 20 seconden
 Parser	https://www.filmvandaag.nl/bioscoop	strategie	Scrapertype vastgesteld		https://www.filmvandaag.nl/bioscoop	bioscoopagenda Groningen (FilmVandaag)
 Website	https://www.filmvandaag.nl/bioscoop	fout	Pagina mislukt		https://www.filmvandaag.nl/filmladder/stad/80-groningen	HTTP 403
 Website	https://www.filmvandaag.nl/bioscoop	fout	Pagina mislukt		https://filmvandaag.nl/filmladder/stad/80-groningen	HTTP 403
-Website	https://www.filmvandaag.nl/bioscoop	klaar	Klaar		https://www.filmvandaag.nl/bioscoop	site 3/3: 0 unieke events in 2.17 sec
+Website	https://www.filmvandaag.nl/bioscoop	klaar	Klaar		https://www.filmvandaag.nl/bioscoop	site 3/3: 0 unieke events in 2.41 sec
