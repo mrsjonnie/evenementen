@@ -10853,15 +10853,24 @@
       "url": "https://www.vera-groningen.nl/",
       "status": "strategie",
       "rawText": "programma-kaarten"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Pagina mislukt",
+      "date": "",
+      "url": "https://www.vera-groningen.nl/programma/?category=all&history=0&lang=nl",
+      "status": "fout",
+      "rawText": "HTTPSConnectionPool(host='www.vera-groningen.nl', port=443): Read timed out. (read timeout=0.8358082829999915)"
     }
   ],
   "status": "running",
   "siteStartedAt": "2026-10-25T13:58:43+00:00",
-  "siteElapsedSeconds": 1,
+  "siteElapsedSeconds": 3,
   "sitePageCount": 0,
   "lastSiteEventCount": 0,
   "stage": "Websitepagina ophalen",
-  "lastUpdatedAt": "2026-10-25T13:58:44+00:00",
+  "lastUpdatedAt": "2026-10-25T13:58:46+00:00",
   "lastSiteNewEventCount": 0,
   "lastCompletedSite": "https://simplon.nl/",
   "lastCompletedAt": "2026-10-25T13:58:42+00:00"
