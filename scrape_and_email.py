@@ -1525,7 +1525,9 @@ def import_serpapi_raw_log():
 
 
 def remaining_timeout(deadline):
-    return max(1.0, min(7.0, deadline - time.monotonic()))
+    # Respect short per-site budgets; never add a full extra second when only a
+    # fraction of the configured time remains.
+    return max(0.2, min(7.0, deadline - time.monotonic()))
 
 
 def fetch_html(session, url, deadline):
@@ -2307,6 +2309,7 @@ def scrape_site(site_url, site_index=0, site_total=0, progress_callback=None, ex
         event for event in filtered
         if event_key(event) not in existing_event_keys
     ])[:MAX_EVENTS_PER_SITE]
+    timed_out = timed_out or time.monotonic() >= deadline
     duration = round(time.monotonic() - started, 2)
     SITE_RESULTS.append(
         {
