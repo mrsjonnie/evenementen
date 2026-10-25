@@ -23,7 +23,8 @@
       "discoverySource": "Website",
       "description": "Ontdek de fotoexpositie Verhalen van Verborgen Kracht van Tara van Meeteren bij De Nieuwe Kolk in Assen. Laat je inspireren door bijzondere verhalen.",
       "cost": "",
-      "image": "https://media.denieuwekolk.nl/01a15ea4-eb5e-77e5-936a-2ed887933bd2/portret-angelina-crop-cinematic?crop=1477%2C886%2C417%2C0&scale=1200&optimizer=image"
+      "image": "https://media.denieuwekolk.nl/01a15ea4-eb5e-77e5-936a-2ed887933bd2/portret-angelina-crop-cinematic?crop=1477%2C886%2C417%2C0&scale=1200&optimizer=image",
+      "isNew": true
     },
     {
       "date": "2026-10-25",
@@ -37,7 +38,8 @@
       "discoverySource": "Website",
       "description": "Omgaan met stress en grenzen · De Nieuwe Kolk Activiteiten & events Maand van de Geschiedenis Voel jij je vaak gehaast, overprikkeld of alsof je altijd \"aan\" staat? Dan ben je niet de enige. In het kader van de Maand van de Geschiedenis 2026, met als thema Lichaam & Geest, verzorgt burn-out preventiecoach Els Veltheer",
       "cost": "",
-      "image": "https://media.denieuwekolk.nl/019db48d-3d03-7197-a158-e168c66eeb4c/stock-mentale-gezondheid?crop=3840%2C2304%2C0%2C128&scale=1200&optimizer=image"
+      "image": "https://media.denieuwekolk.nl/019db48d-3d03-7197-a158-e168c66eeb4c/stock-mentale-gezondheid?crop=3840%2C2304%2C0%2C128&scale=1200&optimizer=image",
+      "isNew": true
     },
     {
       "date": "2026-10-27",
@@ -51,7 +53,8 @@
       "discoverySource": "Website",
       "description": "Titel en navigatie overslaan Om een voorstelling of concert op je wachtlijst te zetten, moet je inloggen. 23 Brieven van Vincent 18:45 (einde 20:45) - andere datum en/of tijd - Log in om al je beschikbare prijzen te zien! Kies tickets en prijzen Om verder te gaan, kies eerst het stoel type/rang en hoeveel tickets je wi",
       "cost": "",
-      "image": "https://tickets.denieuwekolk.nl/mtUI/getImage?image=side&stlt=dnk&brnd=dnk"
+      "image": "https://tickets.denieuwekolk.nl/mtUI/getImage?image=side&stlt=dnk&brnd=dnk",
+      "isNew": true
     },
     {
       "date": "2026-10-28",
@@ -65,7 +68,8 @@
       "discoverySource": "Website",
       "description": "Titel en navigatie overslaan 15:00 (einde 16:00) Log in om al je beschikbare prijzen te zien! Kies tickets en prijzen tickets beschikbaar Vul de gegevens in Ik heb een voucher Bijvoorbeeld een De Leukste Deal voucher, DNK voucher of een DNK Filmpas. Let op: betalen met een Nationale Bioscoopbon kan in de laatste stap v",
       "cost": "",
-      "image": "https://tickets.denieuwekolk.nl/mtUI/getImage?image=side&stlt=dnk&brnd=dnk"
+      "image": "https://tickets.denieuwekolk.nl/mtUI/getImage?image=side&stlt=dnk&brnd=dnk",
+      "isNew": true
     },
     {
       "date": "2026-10-29",
@@ -79,7 +83,8 @@
       "discoverySource": "Website",
       "description": "Titel en navigatie overslaan Omgaan met stress en grenzen Maand van de Geschiedenis 20:00 (einde 20:50) Log in om al je beschikbare prijzen te zien! Kies tickets en prijzen Vul de gegevens in Ik heb een voucher Bijvoorbeeld een De Leukste Deal voucher, DNK voucher of een DNK Filmpas.",
       "cost": "",
-      "image": "https://tickets.denieuwekolk.nl/mtUI/getImage?image=side&stlt=dnk&brnd=dnk"
+      "image": "https://tickets.denieuwekolk.nl/mtUI/getImage?image=side&stlt=dnk&brnd=dnk",
+      "isNew": true
     }
   ],
   "siteResults": [
@@ -93,7 +98,7 @@
     {
       "site": "https://denieuwekolk.nl/agenda",
       "count": 5,
-      "newCount": 0,
+      "newCount": 2,
       "durationSeconds": 20.19,
       "timedOut": true
     },
@@ -1925,7 +1930,7 @@
       "rawText": "site 3/3: 0 unieke events in 1.96 sec"
     }
   ],
-  "status": "finishing",
+  "status": "completed",
   "siteStartedAt": "2026-10-25T10:54:08+00:00",
   "siteElapsedSeconds": 3,
   "sitePageCount": 0,
@@ -1933,5 +1938,6 @@
   "stage": "Website klaar; volgende website voorbereiden",
   "lastUpdatedAt": "2026-10-25T10:54:10+00:00",
   "lastCompletedSite": "https://www.filmvandaag.nl/bioscoop",
-  "lastCompletedAt": "2026-10-25T10:54:11+00:00"
+  "lastCompletedAt": "2026-10-25T10:54:11+00:00",
+  "finishedAt": "2026-10-25T10:54:12+00:00"
 }
