@@ -1,7 +1,7 @@
 {
   "runId": "2026-10-25T16:44:48.200890+00:00-61e091f2",
   "startedAt": "2026-10-25T16:44:48+00:00",
-  "completedCount": 11,
+  "completedCount": 12,
   "totalSites": 19,
   "currentSite": "https://www.concertgebouw.nl/concerten-en-tickets",
   "currentSiteIndex": 12,
@@ -16,7 +16,8 @@
     "https://www.martiniplaza.nl/nl/agenda",
     "https://groningermuseum.nl/programma",
     "https://www.kultuuragenda.nl/agenda",
-    "https://www.noorderzon.nl/programma"
+    "https://www.noorderzon.nl/programma",
+    "https://www.concertgebouw.nl/concerten-en-tickets"
   ],
   "events": [
     {
@@ -337,20 +338,6 @@
       "isNew": true
     },
     {
-      "date": "2026-10-26",
-      "time": "20:15",
-      "title": "Popup Choir Taylor Swift: zing mee met Maarten Bos en Tijmen de Koning",
-      "type": "Concert",
-      "location": "Concertgebouw Amsterdam",
-      "locationLink": "",
-      "website": "https://www.concertgebouw.nl/concerten/45959877-popup-choir-taylor-swift-zing-mee-met-maarten-bos-en-tijmen-de-koning",
-      "source": "concertgebouw.nl",
-      "discoverySource": "Website",
-      "description": "Informatie en bestellen Informatie en bestellen",
-      "cost": "",
-      "image": "https://d35w1qwxagl33g.cloudfront.net/production/_908x545_crop_center-center_none/Pop-up-Choir-c-Emma-Pot.jpg?stamp=2502211058&tag=sm"
-    },
-    {
       "date": "2026-10-27",
       "time": "",
       "title": "Abonnement Topmusici van eigen bodem",
@@ -379,20 +366,6 @@
       "cost": "",
       "image": "https://www.spotgroningen.nl/wp-content/uploads/2026/04/Alma-Quartet-Andreas-Terlaak-2-300-dpi-RGB-e1778073306161-300x137.jpg",
       "isNew": true
-    },
-    {
-      "date": "2026-10-27",
-      "time": "20:15",
-      "title": "Fresku & Metropole Orkest o.l.v. Simon Dobson",
-      "type": "Concert",
-      "location": "Concertgebouw Amsterdam",
-      "locationLink": "",
-      "website": "https://www.concertgebouw.nl/concerten/43931216-fresku-metropole-orkest-o.l.v.-simon-dobson",
-      "source": "concertgebouw.nl",
-      "discoverySource": "Website",
-      "description": "Fresku & Metropole Orkest o.l.v. Simon Dobson 20:15 – 21:45 Grote Zaal v.a. € 29,00 Meer informatie Meer informatie Uitverkocht di 27 okt 2026 Bookmark Bookmark",
-      "cost": "",
-      "image": "https://d35w1qwxagl33g.cloudfront.net/production/_908x545_crop_center-center_none/Fresku-2-Metropole-Orkest-c-Rowan-Brugmans.png?stamp=2602021200&tag=sm"
     },
     {
       "date": "2026-10-27",
@@ -426,20 +399,6 @@
     },
     {
       "date": "2026-10-27",
-      "time": "20:15",
-      "title": "Spotlight op Lucie Horsch: barok met Altstaedt en Dunford",
-      "type": "Concert",
-      "location": "Concertgebouw Amsterdam",
-      "locationLink": "",
-      "website": "https://www.concertgebouw.nl/concerten/41773095-spotlight-op-lucie-horsch-barok-met-altstaedt-en-dunford",
-      "source": "concertgebouw.nl",
-      "discoverySource": "Website",
-      "description": "Triosonate in a, RV 86 Sonate in e, RV 40 Informatie en bestellen Informatie en bestellen",
-      "cost": "",
-      "image": "https://d35w1qwxagl33g.cloudfront.net/production/_908x545_crop_center-center_none/Lucie-Horsch-c-Eduardus-Lee_2026-03-20-135629_hoaq.png?stamp=2603201456&tag=sm"
-    },
-    {
-      "date": "2026-10-27",
       "time": "",
       "title": "Trumps Amerika: chaos en gevaar? met Laila Frank, Anna van Zoest en Bob Deen",
       "type": "Activiteit",
@@ -470,20 +429,6 @@
     },
     {
       "date": "2026-10-28",
-      "time": "12:30",
-      "title": "Gratis Lunchconcert: Nederlandse Fluit Academie",
-      "type": "Concert",
-      "location": "Concertgebouw Amsterdam",
-      "locationLink": "",
-      "website": "https://www.concertgebouw.nl/concerten/46012123-gratis-lunchconcert-nederlandse-fluit-academie",
-      "source": "concertgebouw.nl",
-      "discoverySource": "Website",
-      "description": "Gratis Lunchconcert: Nederlandse Fluit Academie 12:30 – 13:00 Kleine Zaal met onder andere Clark Within Offermans Luna y Sierra Meer informatie Meer informatie Uitverkocht wo 28 okt 2026 Bookmark Bookmark",
-      "cost": "Gratis",
-      "image": "https://d35w1qwxagl33g.cloudfront.net/production/_908x545_crop_center-center_none/lunchconcert-2025.png?stamp=2507301539&tag=sm"
-    },
-    {
-      "date": "2026-10-28",
       "time": "20:15",
       "title": "Klaus Mäkela dirigeert Mahler 7 bij het Concertgebouworkest",
       "type": "Concert",
@@ -494,7 +439,8 @@
       "discoverySource": "Website",
       "description": "Informatie en bestellen Informatie en bestellen",
       "cost": "",
-      "image": "https://d35w1qwxagl33g.cloudfront.net/production/_908x545_crop_center-center_none/RCO-Klaus-Makela-c-Eduardus-Lee.png?stamp=2605221101&tag=sm"
+      "image": "https://d35w1qwxagl33g.cloudfront.net/production/_908x545_crop_center-center_none/RCO-Klaus-Makela-c-Eduardus-Lee.png?stamp=2605221101&tag=sm",
+      "isNew": true
     },
     {
       "date": "2026-10-28",
@@ -538,21 +484,8 @@
       "discoverySource": "Website",
       "description": "Strijkkwartet in Es Warmth from Other Suns Informatie en bestellen Informatie en bestellen",
       "cost": "",
-      "image": "https://d35w1qwxagl33g.cloudfront.net/production/_908x545_crop_center-center_none/Quatuor-Arod-©-Le-Philtre-Marc-de-Pierrefeu.png?stamp=2603200014&tag=sm"
-    },
-    {
-      "date": "2026-10-28",
-      "time": "11:00",
-      "title": "Zing-Cirkel Concertgebouw",
-      "type": "Concert",
-      "location": "Concertgebouw Amsterdam",
-      "locationLink": "",
-      "website": "https://www.concertgebouw.nl/concerten/45913708-zing-cirkel-concertgebouw",
-      "source": "concertgebouw.nl",
-      "discoverySource": "Website",
-      "description": "Zing-Cirkel Concertgebouw 11:00 – 13:00 Spiegelzaal v.a. € 20,00 Meer informatie Meer informatie Uitverkocht wo 28 okt 2026 Bookmark Bookmark",
-      "cost": "",
-      "image": "https://d35w1qwxagl33g.cloudfront.net/production/_908x545_crop_center-center_none/Zing-Cirkel-Concertgebouw-c-Michael-Floor.jpg?stamp=2605120959&tag=sm"
+      "image": "https://d35w1qwxagl33g.cloudfront.net/production/_908x545_crop_center-center_none/Quatuor-Arod-©-Le-Philtre-Marc-de-Pierrefeu.png?stamp=2603200014&tag=sm",
+      "isNew": true
     },
     {
       "date": "2026-10-29",
@@ -566,7 +499,8 @@
       "discoverySource": "Website",
       "description": "Symfonie nr. 3 in c, op. 78 'Orgelsymfonie' Concert voor klarinet en altviool in e, op. 88",
       "cost": "",
-      "image": "https://d35w1qwxagl33g.cloudfront.net/production/_908x545_crop_center-center_none/Makela-Rachlin-c-Milagro-Elstak.png?stamp=2605221057&tag=sm"
+      "image": "https://d35w1qwxagl33g.cloudfront.net/production/_908x545_crop_center-center_none/Makela-Rachlin-c-Milagro-Elstak.png?stamp=2605221057&tag=sm",
+      "isNew": true
     },
     {
       "date": "2026-10-29",
@@ -580,7 +514,8 @@
       "discoverySource": "Website",
       "description": "Sonate nr. 3 in f, op. 5 Träumerei Kinderszenen, op. 15 Informatie en bestellen Informatie en bestellen",
       "cost": "",
-      "image": "https://d35w1qwxagl33g.cloudfront.net/production/_908x545_crop_center-center_none/Aristo-Sham-c-Lisa-Marie_Mazzucco.png?stamp=2603192333&tag=sm"
+      "image": "https://d35w1qwxagl33g.cloudfront.net/production/_908x545_crop_center-center_none/Aristo-Sham-c-Lisa-Marie_Mazzucco.png?stamp=2603192333&tag=sm",
+      "isNew": true
     },
     {
       "date": "2026-10-29",
@@ -624,7 +559,8 @@
       "discoverySource": "Website",
       "description": "Informatie en bestellen Informatie en bestellen",
       "cost": "",
-      "image": "https://d35w1qwxagl33g.cloudfront.net/production/_908x545_crop_center-center_none/The-Coltrane-Mutations-c-Phile-Deprez.jpg?stamp=2610211120&tag=sm"
+      "image": "https://d35w1qwxagl33g.cloudfront.net/production/_908x545_crop_center-center_none/The-Coltrane-Mutations-c-Phile-Deprez.jpg?stamp=2610211120&tag=sm",
+      "isNew": true
     },
     {
       "date": "2026-10-30",
@@ -638,7 +574,8 @@
       "discoverySource": "Website",
       "description": "Klaus Mäkela dirigeert Mahler 7 bij het Concertgebouworkest 20:15 – 21:40 Grote Zaal v.a. € 29,00 Mahler Symfonie nr. 7 Meer informatie Meer informatie Uitverkocht vr 30 okt 2026 Bookmark Bookmark",
       "cost": "",
-      "image": "https://d35w1qwxagl33g.cloudfront.net/production/_908x545_crop_center-center_none/RCO-Klaus-Makela-c-Eduardus-Lee.png?stamp=2605221101&tag=sm"
+      "image": "https://d35w1qwxagl33g.cloudfront.net/production/_908x545_crop_center-center_none/RCO-Klaus-Makela-c-Eduardus-Lee.png?stamp=2605221101&tag=sm",
+      "isNew": true
     },
     {
       "date": "2026-10-31",
@@ -1062,6 +999,13 @@
       "count": 0,
       "newCount": 0,
       "durationSeconds": 4,
+      "timedOut": true
+    },
+    {
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "count": 6,
+      "newCount": 6,
+      "durationSeconds": 4.0,
       "timedOut": true
     }
   ],
@@ -11869,12 +11813,12 @@
   ],
   "status": "running",
   "siteStartedAt": "2026-10-25T16:46:03+00:00",
-  "siteElapsedSeconds": 4,
+  "siteElapsedSeconds": 5,
   "sitePageCount": 0,
-  "lastSiteEventCount": 11,
-  "stage": "Pagina gelezen; evenementen verwerken",
+  "lastSiteEventCount": 6,
+  "stage": "Website klaar; volgende website voorbereiden",
   "lastUpdatedAt": "2026-10-25T16:46:07+00:00",
   "lastSiteNewEventCount": 6,
-  "lastCompletedSite": "https://www.noorderzon.nl/programma",
-  "lastCompletedAt": "2026-10-25T16:46:02+00:00"
+  "lastCompletedSite": "https://www.concertgebouw.nl/concerten-en-tickets",
+  "lastCompletedAt": "2026-10-25T16:46:08+00:00"
 }
