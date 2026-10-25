@@ -146,3 +146,33 @@ Website	https://www.vera-groningen.nl/	start	Start		https://www.vera-groningen.n
 Parser	https://www.vera-groningen.nl/	strategie	Scrapertype vastgesteld		https://www.vera-groningen.nl/	programma-kaarten
 Website	https://www.vera-groningen.nl/	fout	Pagina mislukt		https://www.vera-groningen.nl/programma/?category=all&history=0&lang=nl	HTTPSConnectionPool(host='www.vera-groningen.nl', port=443): Read timed out. (read timeout=1.0638776859999979)
 Website	https://www.vera-groningen.nl/	klaar	Klaar		https://www.vera-groningen.nl/	site 7/20: 0 unieke events in 3.0 sec
+Website	https://www.martiniplaza.nl/nl/agenda	start	Start		https://www.martiniplaza.nl/nl/agenda	site 8/20: max 5 events, max 2 seconden
+Parser	https://www.martiniplaza.nl/nl/agenda	strategie	Scrapertype vastgesteld		https://www.martiniplaza.nl/nl/agenda	agenda-kaarten
+Website	https://www.martiniplaza.nl/nl/agenda	ok	Pagina gelezen		https://www.martiniplaza.nl/nl/agenda	146630 tekens HTML
+Website	https://www.martiniplaza.nl/nl/agenda	venue-agenda kaart	Donar Groningen – CSO Voluntari 2026	2026-10-27	https://www.martiniplaza.nl/nl/agenda/donar-groningen-cso-voluntari-2026	Sport Sport Donar Groningen – CSO Voluntari 2026 27 oktober
+Website	https://www.martiniplaza.nl/nl/agenda	venue-agenda kaart	Jethro Tull	2026-10-27	https://www.martiniplaza.nl/nl/agenda/jethro-tull	Muziek Theater Jethro Tull 27 oktober
+Website	https://www.martiniplaza.nl/nl/agenda	venue-agenda kaart	Rob Lamberti - A Celebration of GEORGE MICHAEL	2026-10-28	https://www.martiniplaza.nl/nl/agenda/rob-lamberti	Muziek Theater Rob Lamberti - A Celebration of GEORGE MICHAEL 28 oktober
+Website	https://www.martiniplaza.nl/nl/agenda	venue-agenda kaart	Francis van Broekhuizen - Tosca	2026-10-30	https://www.martiniplaza.nl/nl/agenda/francis-van-broekhuizen	Muziek Theater Francis van Broekhuizen - Tosca 30 oktober
+Website	https://www.martiniplaza.nl/nl/agenda	venue-agenda kaart	The Dire Straits Experience - “The Long Highway 2026 Tour”	2026-10-31	https://www.martiniplaza.nl/nl/agenda/the-dire-straits-experience	Muziek Theater The Dire Straits Experience - “The Long Highway 2026 Tour” 31 oktober
+Website	https://www.martiniplaza.nl/nl/agenda	venue-agenda kaart	Juf Braaksel - De Musical	2026-11-01	https://www.martiniplaza.nl/nl/agenda/juf-braaksel	Familie Theater Juf Braaksel - De Musical 01 november
+Website	https://www.martiniplaza.nl/nl/agenda	venue-agenda kaart	Promotiedagen 2026	2026-11-03	https://www.martiniplaza.nl/nl/agenda/promotiedagen-2026	Beurs Event Promotiedagen 2026 03 november
+Website	https://www.martiniplaza.nl/nl/agenda	venue-agenda kaart	Promotiedagen 2026	2026-11-04	https://www.martiniplaza.nl/nl/agenda/promotiedagen-2026	Beurs Event Promotiedagen 2026 04 november
+Website	https://www.martiniplaza.nl/nl/agenda	venue-agenda kaart	TAFKAL: SERIEUS GRAPPIG ( )	2026-11-05	https://www.martiniplaza.nl/nl/agenda/tafkal-serieus-grappig-uitverkocht	Cabaret Theater TAFKAL: SERIEUS GRAPPIG (UITVERKOCHT) 05 november
+Website	https://www.martiniplaza.nl/nl/agenda	venue-agenda kaart	TAFKAL: SERIEUS GRAPPIG ( )	2026-11-06	https://www.martiniplaza.nl/nl/agenda/tafkal-serieus-grappig-uitverkocht	Cabaret Theater TAFKAL: SERIEUS GRAPPIG (UITVERKOCHT) 06 november
+Website	https://www.martiniplaza.nl/nl/agenda	venue-agenda kaart	Taptoe Groningen 2026	2026-11-07	https://www.martiniplaza.nl/nl/agenda/taptoe-groningen-2026	Muziek Muziek Taptoe Groningen 2026 07 november
+Website	https://www.martiniplaza.nl/nl/agenda	venue-agenda kaart	TAFKAL: SERIEUS GRAPPIG ( )	2026-11-07	https://www.martiniplaza.nl/nl/agenda/tafkal-serieus-grappig-uitverkocht	Cabaret Theater TAFKAL: SERIEUS GRAPPIG (UITVERKOCHT) 07 november
+Parser	https://www.martiniplaza.nl/nl/agenda	gespecialiseerde parser	Agenda geanalyseerd		https://www.martiniplaza.nl/nl/agenda	12 agenda-items gevonden
+Website	https://www.martiniplaza.nl/nl/agenda	ok	Pagina geanalyseerd		https://www.martiniplaza.nl/nl/agenda	12 events/aanbiedingen op deze pagina
+Website	https://www.martiniplaza.nl/nl/agenda	detail-link gevonden	link		https://www.martiniplaza.nl/nl/agenda/cats-het-meesterwerk	
+Website	https://www.martiniplaza.nl/nl/agenda	detail-link gevonden	Donar Groningen – CSO Voluntari 2026		https://www.martiniplaza.nl/nl/agenda/donar-groningen-cso-voluntari-2026	Donar Groningen – CSO Voluntari 2026
+Website	https://www.martiniplaza.nl/nl/agenda	detail-link gevonden	Francis van Broekhuizen - Tosca		https://www.martiniplaza.nl/nl/agenda/francis-van-broekhuizen	Francis van Broekhuizen - Tosca
+Website	https://www.martiniplaza.nl/nl/agenda	detail-link gevonden	Jethro Tull		https://www.martiniplaza.nl/nl/agenda/jethro-tull	Jethro Tull
+Website	https://www.martiniplaza.nl/nl/agenda	detail-link gevonden	Juf Braaksel - De Musical		https://www.martiniplaza.nl/nl/agenda/juf-braaksel	Juf Braaksel - De Musical
+Website	https://www.martiniplaza.nl/nl/agenda	detail-link gevonden	Promotiedagen 2026		https://www.martiniplaza.nl/nl/agenda/promotiedagen-2026	Promotiedagen 2026
+Website	https://www.martiniplaza.nl/nl/agenda	detail-link gevonden	Rob Lamberti - A Celebration of GEORGE MICHAEL		https://www.martiniplaza.nl/nl/agenda/rob-lamberti	Rob Lamberti - A Celebration of GEORGE MICHAEL
+Website	https://www.martiniplaza.nl/nl/agenda	detail-link gevonden	TAFKAL: SERIEUS GRAPPIG (UITVERKOCHT)		https://www.martiniplaza.nl/nl/agenda/tafkal-serieus-grappig-uitverkocht	TAFKAL: SERIEUS GRAPPIG (UITVERKOCHT)
+Website	https://www.martiniplaza.nl/nl/agenda	detail-link gevonden	Taptoe Groningen 2026		https://www.martiniplaza.nl/nl/agenda/taptoe-groningen-2026	Taptoe Groningen 2026
+Website	https://www.martiniplaza.nl/nl/agenda	detail-link gevonden	link		https://www.martiniplaza.nl/nl/agenda/the-bodyguard-de-musical-2027	
+Website	https://www.martiniplaza.nl/nl/agenda	detail-link gevonden	The Dire Straits Experience - “The Long Highway 2026 Tour”		https://www.martiniplaza.nl/nl/agenda/the-dire-straits-experience	The Dire Straits Experience - “The Long Highway 2026 Tour”
+Website	https://www.martiniplaza.nl/nl/agenda	detail-link gevonden	link		https://www.martiniplaza.nl/nl/agenda/titanique	
+Website	https://www.martiniplaza.nl/nl/agenda	klaar	Klaar		https://www.martiniplaza.nl/nl/agenda	site 8/20: 0 unieke events in 2.04 sec
