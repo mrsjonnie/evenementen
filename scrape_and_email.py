@@ -2614,6 +2614,14 @@ def scrape_site(site_url, site_index=0, site_total=0, progress_callback=None, ex
                 # the fallback when a detail page has no Event schema.
                 detail_soup = BeautifulSoup(html, "html.parser")
                 detail_events = parse_jsonld_events(detail_soup, final_url, normalized_site, discovery_source)
+            elif canonical_host(normalized_site) == "pathe.nl":
+                # Pathé film detail pages often contain release dates that are not
+                # actual events. Accept only explicit Schema.org Event records.
+                detail_soup = BeautifulSoup(html, "html.parser")
+                detail_events = parse_jsonld_events(detail_soup, final_url, normalized_site, discovery_source)
+                add_raw(discovery_source, original_site, "Pathé Event-data gecontroleerd", "", final_url,
+                        "ok" if detail_events else "geen Event-data",
+                        f"{len(detail_events)} gestructureerde Event-items gevonden; gewone film-/releasedata niet als evenementen gebruikt")
             elif canonical_host(normalized_site) == "denieuwekolk.nl":
                 # Each De Nieuwe Kolk detail URL represents one activity. Ticket performance
                 # pages use a title plus a weekday/date/time/room line rather than Event JSON-LD.
