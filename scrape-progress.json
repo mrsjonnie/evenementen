@@ -1,13 +1,14 @@
 {
   "runId": "2026-10-25T16:44:48.200890+00:00-61e091f2",
   "startedAt": "2026-10-25T16:44:48+00:00",
-  "completedCount": 2,
+  "completedCount": 3,
   "totalSites": 19,
   "currentSite": "https://www.visitgroningen.nl/nl/doen/wandelen",
   "currentSiteIndex": 3,
   "completedSites": [
     "https://groningen.uitloper.nu/",
-    "https://www.visitgroningen.nl/nl/doen/evenementen"
+    "https://www.visitgroningen.nl/nl/doen/evenementen",
+    "https://www.visitgroningen.nl/nl/doen/wandelen"
   ],
   "events": [
     {
@@ -132,23 +133,14 @@
     },
     {
       "date": "2026-10-25",
-      "title": "Dit is Groningen",
-      "type": "Wandelen",
-      "location": "Groningen",
-      "website": "https://www.visitgroningen.nl/nl/ontdekken",
-      "description": "Terug Dit is Groningen Top 10 bezienswaardigheden In Groningen ligt het allemaal opvallend dicht bij elkaar. De levendigheid van de stad, de stilte van een hofje, de weidsheid van het ommeland en de sporen van een eeuwenoud verleden. Stad Provincie Waddenkust Natuurgebieden",
-      "cost": "Gratis",
-      "discoverySource": "Website"
-    },
-    {
-      "date": "2026-10-25",
       "title": "Eten & drinken",
       "type": "Wandelen",
       "location": "Groningen",
       "website": "https://www.visitgroningen.nl/nl/doen/eten-en-drinken",
       "description": "Eten & drinken",
       "cost": "Gratis",
-      "discoverySource": "Website"
+      "discoverySource": "Website",
+      "isNew": true
     },
     {
       "date": "2026-10-25",
@@ -173,7 +165,8 @@
       "website": "https://www.visitgroningen.nl/nl/doen/fietsen",
       "description": "Fietsen",
       "cost": "Gratis",
-      "discoverySource": "Website"
+      "discoverySource": "Website",
+      "isNew": true
     },
     {
       "date": "2026-10-25",
@@ -228,27 +221,8 @@
       "website": "https://www.visitgroningen.nl/nl/ontdekken/natuur",
       "description": "Natuurgebieden",
       "cost": "Gratis",
-      "discoverySource": "Website"
-    },
-    {
-      "date": "2026-10-25",
-      "title": "Nieuwe winkels & horeca in de stad",
-      "type": "Wandelen",
-      "location": "Groningen",
-      "website": "https://www.visitgroningen.nl/nl/blogs/nieuwe-winkels-en-horeca-groningen",
-      "description": "Nieuwe winkels & horeca in de stad",
-      "cost": "Gratis",
-      "discoverySource": "Website"
-    },
-    {
-      "date": "2026-10-25",
-      "title": "Nu & nieuw",
-      "type": "Wandelen",
-      "location": "Groningen",
-      "website": "https://www.visitgroningen.nl/nl/nu-nieuw",
-      "description": "Terug Nu & nieuw Uitagenda Nieuwe winkels & horeca in de stad Oktober donkertemaand Het 10-jarig bestaan van Dark Sky Park Lauwersmeer staat in het teken van donker. Het is hoog tijd om de schoonheid van de duisternis te gaan ontdekken. Sunnemeerten",
-      "cost": "Gratis",
-      "discoverySource": "Website"
+      "discoverySource": "Website",
+      "isNew": true
     },
     {
       "date": "2026-10-25",
@@ -258,7 +232,8 @@
       "website": "https://www.visitgroningen.nl/nl/ontdekken/provincie",
       "description": "Provincie",
       "cost": "Gratis",
-      "discoverySource": "Website"
+      "discoverySource": "Website",
+      "isNew": true
     },
     {
       "date": "2026-10-25",
@@ -268,27 +243,8 @@
       "website": "https://www.visitgroningen.nl/nl/ontdekken/stad",
       "description": "Stad",
       "cost": "Gratis",
-      "discoverySource": "Website"
-    },
-    {
-      "date": "2026-10-25",
-      "title": "Sunnemeerten",
-      "type": "Wandelen",
-      "location": "Groningen",
-      "website": "https://www.visitgroningen.nl/nl/blogs/sunnemeerten",
-      "description": "Sunnemeerten",
-      "cost": "Gratis",
-      "discoverySource": "Website"
-    },
-    {
-      "date": "2026-10-25",
-      "title": "Uitagenda",
-      "type": "Wandelen",
-      "location": "Groningen",
-      "website": "https://www.visitgroningen.nl/nl/doen/uitgaan",
-      "description": "Uitagenda",
-      "cost": "Gratis",
-      "discoverySource": "Website"
+      "discoverySource": "Website",
+      "isNew": true
     },
     {
       "date": "2026-10-25",
@@ -298,7 +254,8 @@
       "website": "https://www.visitgroningen.nl/nl/plekken/wadden",
       "description": "Waddenkust",
       "cost": "Gratis",
-      "discoverySource": "Website"
+      "discoverySource": "Website",
+      "isNew": true
     },
     {
       "date": "2026-10-25",
@@ -308,7 +265,8 @@
       "website": "https://www.visitgroningen.nl/nl/doen",
       "description": "Terug Wat te doen Bijzonder overnachten Overnachten was nog nooit zo leuk. Van slapen in een voormalige graanzolder van een molen tot overnachten in een iglo van stro: Groningen biedt voor ieder wat wils. Fietsen Wandelen Eten & drinken Winkelen Overnachten Met kinderen Theater, muziek en musea",
       "cost": "Gratis",
-      "discoverySource": "Website"
+      "discoverySource": "Website",
+      "isNew": true
     }
   ],
   "siteResults": [
@@ -324,6 +282,13 @@
       "count": 0,
       "newCount": 0,
       "durationSeconds": 5.28,
+      "timedOut": true
+    },
+    {
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "count": 7,
+      "newCount": 7,
+      "durationSeconds": 4.0,
       "timedOut": true
     }
   ],
@@ -1317,16 +1282,25 @@
       "url": "https://www.visitgroningen.nl/nl/doen/wandelen",
       "status": "ok",
       "rawText": "12 events/aanbiedingen op deze pagina"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "status": "klaar",
+      "rawText": "site 3/19: 7 unieke events in 4.0 sec"
     }
   ],
   "status": "running",
   "siteStartedAt": "2026-10-25T16:45:04+00:00",
   "siteElapsedSeconds": 5,
   "sitePageCount": 1,
-  "lastSiteEventCount": 12,
-  "stage": "Websitepagina ophalen",
+  "lastSiteEventCount": 7,
+  "stage": "Website klaar; volgende website voorbereiden",
   "lastUpdatedAt": "2026-10-25T16:45:09+00:00",
   "lastSiteNewEventCount": 7,
-  "lastCompletedSite": "https://www.visitgroningen.nl/nl/doen/evenementen",
-  "lastCompletedAt": "2026-10-25T16:45:03+00:00"
+  "lastCompletedSite": "https://www.visitgroningen.nl/nl/doen/wandelen",
+  "lastCompletedAt": "2026-10-25T16:45:09+00:00"
 }
