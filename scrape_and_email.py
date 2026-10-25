@@ -2161,6 +2161,12 @@ def scrape_site(site_url, site_index=0, site_total=0, progress_callback=None):
                 detail_event = extract_detail_event(detail_soup, final_url, normalized_site, discovery_source)
                 if detail_event:
                     detail_events.append(detail_event)
+            elif canonical_host(normalized_site) == "kultuuragenda.nl":
+                # A detail page describes exactly one activity. The generic listing
+                # parser can mistake footer/newsletter headings for additional events.
+                detail_soup = BeautifulSoup(html, "html.parser")
+                detail_event = extract_detail_event(detail_soup, final_url, normalized_site, discovery_source)
+                detail_events = [detail_event] if detail_event else []
             else:
                 detail_events = parse_page_events(html, final_url, normalized_site, discovery_source)
             before = len(dedupe_events(events))
