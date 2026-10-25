@@ -1785,15 +1785,33 @@
       "url": "https://www.filmvandaag.nl/bioscoop",
       "status": "klaar",
       "rawText": "site 18/19: 0 unieke events in 2.0 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.pathe.nl/nl/bioscopen/pathe-groningen",
+      "title": "Start",
+      "date": "",
+      "url": "https://www.pathe.nl/nl/bioscopen/pathe-groningen",
+      "status": "start",
+      "rawText": "site 19/19: max 5 events, max 2 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.pathe.nl/nl/bioscopen/pathe-groningen",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://www.pathe.nl/nl/bioscopen/pathe-groningen",
+      "status": "strategie",
+      "rawText": "Pathé Groningen via BiosAgenda-speeltijden"
     }
   ],
   "status": "running",
   "siteStartedAt": "2026-10-25T15:55:11+00:00",
-  "siteElapsedSeconds": 0,
+  "siteElapsedSeconds": 1,
   "sitePageCount": 0,
   "lastSiteEventCount": 0,
   "stage": "Websitepagina ophalen",
-  "lastUpdatedAt": "2026-10-25T15:55:11+00:00",
+  "lastUpdatedAt": "2026-10-25T15:55:12+00:00",
   "lastSiteNewEventCount": 0,
   "lastCompletedSite": "https://www.filmvandaag.nl/bioscoop",
   "lastCompletedAt": "2026-10-25T15:55:03+00:00"
