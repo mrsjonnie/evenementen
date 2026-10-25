@@ -351,15 +351,42 @@
       "url": "https://denieuwekolk.nl/agenda",
       "status": "strategie",
       "rawText": "agenda-kaarten + datumregels (De Nieuwe Kolk)"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Pagina gelezen",
+      "date": "",
+      "url": "https://denieuwekolk.nl/agenda",
+      "status": "ok",
+      "rawText": "856282 tekens HTML"
+    },
+    {
+      "source": "Parser",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "De Nieuwe Kolk detailstrategie",
+      "date": "",
+      "url": "https://denieuwekolk.nl/agenda",
+      "status": "strategie",
+      "rawText": "Agenda gebruiken om detail-URL's te vinden; alleen de echte detailpagina als evenement verwerken"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Pagina geanalyseerd",
+      "date": "",
+      "url": "https://denieuwekolk.nl/agenda",
+      "status": "ok",
+      "rawText": "0 events/aanbiedingen op deze pagina"
     }
   ],
   "status": "running",
   "siteStartedAt": "2026-10-25T10:59:54+00:00",
-  "siteElapsedSeconds": 1,
-  "sitePageCount": 0,
+  "siteElapsedSeconds": 4,
+  "sitePageCount": 1,
   "lastSiteEventCount": 0,
-  "stage": "Websitepagina ophalen",
-  "lastUpdatedAt": "2026-10-25T10:59:55+00:00",
+  "stage": "Pagina gelezen; evenementen verwerken",
+  "lastUpdatedAt": "2026-10-25T10:59:58+00:00",
   "lastCompletedSite": "https://www.zwolsetheaters.nl/programma",
   "lastCompletedAt": "2026-10-25T10:59:53+00:00"
 }
