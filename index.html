@@ -1318,7 +1318,7 @@
   </div>
 
   <script>
-    const APP_VERSION = "2026.10.25.34";
+    const APP_VERSION = "2026.10.25.35";
     const DEFAULT_MAX_EVENTS_PER_SITE = 20;
     const DEFAULT_SITE_TIME_LIMIT_SECONDS = 20;
     const SCAN_SETTINGS_KEY = "eventScanSettingsV1";
@@ -2263,7 +2263,7 @@
         "biosagenda.nl": "BiosAgenda", "paradiso.nl": "Paradiso", "vvvameland.nl": "VVV Ameland",
         "socialdeal.nl": "Social Deal", "groupon.nl": "Groupon", "ibood.com": "iBOOD"
       };
-      return labels[host] || host || "website wordt voorbereid";
+      return labels[host] || host.replace(/\.(nl|com|org|net|eu|be|de|info|nu)$/i, "") || "website wordt voorbereid";
     }
 
     function updateLiveScrapeSummary(progress, isCurrentRun = true) {
@@ -2310,7 +2310,7 @@
       const pageCount = Number(progress.sitePageCount) || 0;
       if (titleProgress) {
         titleProgress.hidden = false;
-        titleProgress.textContent = `Zoeken… (${siteNumber}/${total}) ${siteLabel} · ${stage} · ${elapsedSeconds}s · ${siteNewHits} nieuwe evenementen gevonden`;
+        titleProgress.textContent = `Zoeken… (${siteNumber}/${total} - ${siteLabel}) · ${stage} · ${elapsedSeconds}s · (+${siteNewHits})`;
         titleProgress.title = `Bezig met ${siteLabel}: ${stage}. ${elapsedSeconds} seconden verstreken; ${pageCount} pagina’s opgehaald; ${siteHits} evenementen gevonden, waarvan ${siteNewHits} nieuw.`;
       }
     }
