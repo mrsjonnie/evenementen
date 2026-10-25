@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- Verversstatus als scrollvak zonder dubbel inklappen, actuele voortgang en ruimere schermmarge in versie 2026.10.25.59. -->
+<!-- Compacte evenemententelling en filteruitsplitsing in de header, versie 2026.10.25.66. -->
 <html lang="nl">
 <head>
   <meta charset="UTF-8">
@@ -74,6 +74,28 @@
       font-size: 1.7rem;
       line-height: 1.08;
       letter-spacing: 0;
+    }
+
+    .headerEventSummary {
+      display: flex;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 3px 7px;
+      margin-top: 3px;
+      max-width: 100%;
+      color: rgba(255,255,255,.82);
+      font-size: .72rem;
+      line-height: 1.3;
+      font-weight: 650;
+    }
+    .headerEventSummary strong {
+      color: var(--primary-dark);
+      font-size: .76rem;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+    .headerEventSummary span {
+      overflow-wrap: anywhere;
     }
 
     .titleToggle {
@@ -1247,6 +1269,9 @@
             <span class="titleChevron" aria-hidden="true">v</span>
           </button>
         </h1>
+        <div class="headerEventSummary" aria-live="polite">
+          <strong id="count">Evenementen laden...</strong><span id="filterBreakdown"></span>
+        </div>
         <div class="titlePanel" id="titlePanel">
           <div class="titlePanelContent">
             <span class="versionBadge" id="versionBadge">Versie wordt geladen</span>
@@ -1385,10 +1410,8 @@
         <iframe id="mapSearchFrame" title="Zoeken op kaart" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </section>
       <div class="summary">
-        <strong id="count">Evenementen laden...</strong>
-        <span id="filterBreakdown"></span>
         <span id="liveScrapeSummary" class="liveScrapeSummary" aria-live="polite" hidden></span>
-        </div>
+      </div>
 
     <section class="grid" id="grid" aria-live="polite"></section>
 
@@ -1424,7 +1447,7 @@
   </div>
 
   <script>
-    const APP_VERSION = "2026.10.25.65";
+    const APP_VERSION = "2026.10.25.66";
     const STATUS_HISTORY_KEY = "evenementenStatusHistoryV1";
     const DISMISSED_SCRAPE_RUN_KEY = "evenementenDismissedScrapeRunV1";
     const DEFAULT_MAX_EVENTS_PER_SITE = 20;
@@ -3189,20 +3212,18 @@
       const target = $("filterBreakdown");
       if (!target || !filterStats) return;
 
-      const newCount = Number(filterStats.newCount) || 0;
-      const existingCount = Math.max(0, Number(filterStats.loaded) - newCount);
-      const filterParts = [];
+            const filterParts = [];
       if (filterStats.afterDeleted !== filterStats.loaded) filterParts.push(`verwijderd:${filterStats.afterDeleted}`);
-      filterParts.push(`website:${filterStats.afterSites}`);
+      
       if (filterStats.afterProviders !== filterStats.afterSites) filterParts.push(`bron:${filterStats.afterProviders}`);
       if (filterStats.afterQuery !== filterStats.afterProviders) filterParts.push(`zoektekst:${filterStats.afterQuery}`);
       if (filterStats.afterType !== filterStats.afterQuery) filterParts.push(`type:${filterStats.afterType}`);
-      if (filterStats.afterNew !== filterStats.afterType) filterParts.push(`nieuw:${filterStats.afterNew}`);
+      if (filterStats.afterNew !== filterStats.afterType) filterParts.push(`New:${filterStats.afterNew}`);
       filterParts.push(`straal:${filterStats.afterRadius}`);
-      filterParts.push(`periode:${filterStats.afterDate}`);
+      filterParts.push(`per:${filterStats.afterDate}`);
 
-      const eventsText = `totaal:${filterStats.loaded} (nieuw: ${newCount}, bestaand: ${existingCount})`;
-      target.textContent = `${eventsText} - na filters: ${filterParts.join(", ")}`;
+      const eventsText = `(Totaal:${filterStats.loaded} - na filters: ${filterParts.join(", ")})`;
+      target.textContent = eventsText;
     }
 
     function render() {
