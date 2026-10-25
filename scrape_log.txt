@@ -30,3 +30,16 @@ Website	https://groningen.uitloper.nu/	start	Start		https://groningen.uitloper.n
 Parser	https://groningen.uitloper.nu/	strategie	Scrapertype vastgesteld		https://groningen.uitloper.nu/	uitloper-agenda
 Website	https://groningen.uitloper.nu/	ok	Pagina gelezen		https://groningen.uitloper.nu/?date=1792929600	69586 tekens HTML
 Website	https://groningen.uitloper.nu/	timeout	Site-time-out		https://groningen.uitloper.nu/	site overschreed de harde tijdslimiet van 2 seconden
+Website	https://www.visitgroningen.nl/nl/doen/evenementen	start	Start		https://www.visitgroningen.nl/nl/doen/evenementen	site 2/20: max 5 events, max 2 seconden
+Parser	https://www.visitgroningen.nl/nl/doen/evenementen	strategie	Scrapertype vastgesteld		https://www.visitgroningen.nl/nl/doen/evenementen	Visit Groningen agenda-/routekaarten
+Website	https://www.visitgroningen.nl/nl/doen/evenementen	ok	Pagina gelezen		https://www.visitgroningen.nl/nl/doen/cultuur/evenementen	206716 tekens HTML
+Parser	https://www.visitgroningen.nl/nl/doen/evenementen	strategie	Visit Groningen detailstrategie		https://www.visitgroningen.nl/nl/doen/cultuur/evenementen	Overzicht overslaan; alleen detail-URL's met /evenementen/<slug> verwerken
+Website	https://www.visitgroningen.nl/nl/doen/evenementen	ok	Pagina geanalyseerd		https://www.visitgroningen.nl/nl/doen/cultuur/evenementen	0 events/aanbiedingen op deze pagina
+Website	https://www.visitgroningen.nl/nl/doen/evenementen	detail-link gevonden	Lees meer		https://www.visitgroningen.nl/nl/doen/cultuur/evenementen/eurosonic-noorderslag	Lees meer
+Website	https://www.visitgroningen.nl/nl/doen/evenementen	detail-link gevonden	Lees meer		https://www.visitgroningen.nl/nl/doen/cultuur/evenementen/grasnapolsky	Lees meer
+Website	https://www.visitgroningen.nl/nl/doen/evenementen	detail-link gevonden	Lees meer		https://www.visitgroningen.nl/nl/doen/cultuur/evenementen/hongerige-wolf	Lees meer
+Website	https://www.visitgroningen.nl/nl/doen/evenementen	detail-link gevonden	Lees meer		https://www.visitgroningen.nl/nl/doen/cultuur/evenementen/koningsdag	Lees meer
+Website	https://www.visitgroningen.nl/nl/doen/evenementen	detail-link gevonden	Lees meer		https://www.visitgroningen.nl/nl/doen/cultuur/evenementen/noorderzon	Lees meer
+Website	https://www.visitgroningen.nl/nl/doen/evenementen	detail-link gevonden	Lees meer		https://www.visitgroningen.nl/nl/doen/cultuur/evenementen/paradigm	Lees meer
+Website	https://www.visitgroningen.nl/nl/doen/evenementen	detail-link gevonden	Lees meer		https://www.visitgroningen.nl/nl/doen/cultuur/evenementen/terug-naar-het-begin-oud	Lees meer
+Website	https://www.visitgroningen.nl/nl/doen/evenementen	klaar	Klaar		https://www.visitgroningen.nl/nl/doen/evenementen	site 2/20: 0 unieke events in 2.93 sec
