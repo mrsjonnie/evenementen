@@ -3953,7 +3953,7 @@
       }
       restoredProgressRunId = "";
       const titleProgress = $("titleProgressText");
-      if (titleProgress) titleProgress.hidden = true;
+      // Keep the last known site visible until GitHub confirms cancellation.
       stopButton.disabled = true;
       stopButton.textContent = "Annuleren…";
       showStatus("Annulering van de GitHub-scraper aanvragen…", "warn");
@@ -3969,13 +3969,26 @@
         }
         setBusy($("refreshBtn"), false);
         setBusy($("clearBtn"), false);
-        showStatus(data.cancelled
-          ? `Annulering aangevraagd voor ${data.cancelled} GitHub Actions-run(s). Het stoppen kan enkele seconden duren.`
-          : (data.message || "Geen actieve scraper-run gevonden."), data.cancelled ? "ok" : "warn");
+        if (Number(data.stillStopping) > 0) {
+          progressMonitoringStopped = false;
+          stopButton.disabled = false;
+          stopButton.textContent = "Opnieuw stoppen";
+          showStatus(data.message || "GitHub heeft het stoppen nog niet bevestigd. Probeer opnieuw.", "warn", { stop: true });
+          restoreRunningScrapeProgress().catch(() => {});
+        } else {
+          if (titleProgress) titleProgress.hidden = true;
+          showStatus(data.stopped
+            ? `Stop bevestigd: ${data.stopped} GitHub Actions-run(s) beëindigd.`
+            : (data.message || "Geen actieve scraper-run gevonden."), data.stopped || !data.cancelled ? "ok" : "warn");
+        }
       } catch (error) {
+        progressMonitoringStopped = false;
         setBusy($("refreshBtn"), false);
         setBusy($("clearBtn"), false);
-        showStatus(`Annuleren via de Worker is mislukt: ${cleanText(error.message || error)}. Controleer of de Worker is bijgewerkt en de GitHub-token Actions-rechten heeft.`, "error");
+        stopButton.disabled = false;
+        stopButton.textContent = "Opnieuw stoppen";
+        showStatus(`Stoppen is niet bevestigd: ${cleanText(error.message || error)}. De voortgang blijft zichtbaar; probeer Stop opnieuw.`, "error", { stop: true });
+        restoreRunningScrapeProgress().catch(() => {});
       }
     });
     $("grid").addEventListener("click", (event) => {
