@@ -1183,3 +1183,7 @@ Website	https://www.spotgroningen.nl/programma/	detail-link gevonden	Cock Robin 
 Website	https://www.spotgroningen.nl/programma/	detail-link gevonden	Coffee Break ism Prins Claus Conservatorium Trakteer jezelf op koffie en muziek van aanstormend talent op de donderdagochtend do 21 jan		https://www.spotgroningen.nl/programma/coffee-break-ism-prins-claus-conservatorium-17/	Coffee Break ism Prins Claus Conservatorium Trakteer jezelf op koffie en muziek van aanstormend talent op de donderdagochtend do 21 jan
 Filter	https://www.spotgroningen.nl/programma/	ok	Datumfilter toegepast	2026-10-25	https://www.spotgroningen.nl/programma/	755 gevonden; 752 binnen 2026-10-25 t/m onbeperkt
 Website	https://www.spotgroningen.nl/programma/	klaar	Klaar		https://www.spotgroningen.nl/programma/	site 5/20: 5 unieke events in 4.38 sec
+Website	https://simplon.nl/	start	Start		https://simplon.nl/	site 6/20: max 5 events, max 2 seconden
+Parser	https://simplon.nl/	strategie	Scrapertype vastgesteld		https://simplon.nl/	compacte-agenda-kaarten
+Website	https://simplon.nl/	fout	Pagina mislukt		https://simplon.nl/programma/	HTTPSConnectionPool(host='simplon.nl', port=443): Read timed out. (read timeout=0.8673121360000025)
+Website	https://simplon.nl/	klaar	Klaar		https://simplon.nl/	site 6/20: 0 unieke events in 2.38 sec
