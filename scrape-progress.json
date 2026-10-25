@@ -1,13 +1,14 @@
 {
   "runId": "2026-10-25T18:14:16.615761+00:00-d4068e70",
   "startedAt": "2026-10-25T18:14:16+00:00",
-  "completedCount": 2,
+  "completedCount": 3,
   "totalSites": 3,
   "currentSite": "https://www.filmvandaag.nl/bioscoop",
   "currentSiteIndex": 3,
   "completedSites": [
     "https://www.ibood.com/s-nl",
-    "https://www.pathe.nl/bioscoop/groningen"
+    "https://www.pathe.nl/bioscoop/groningen",
+    "https://www.filmvandaag.nl/bioscoop"
   ],
   "events": [],
   "siteResults": [
@@ -24,6 +25,13 @@
       "newCount": 0,
       "durationSeconds": 4.02,
       "timedOut": true
+    },
+    {
+      "site": "https://www.filmvandaag.nl/bioscoop",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 3.14,
+      "timedOut": false
     }
   ],
   "rawLog": [
@@ -188,16 +196,79 @@
       "url": "https://www.pathe.nl/bioscoop/groningen",
       "status": "klaar",
       "rawText": "site 2/3: 0 unieke events in 4.02 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.filmvandaag.nl/bioscoop",
+      "title": "Start",
+      "date": "",
+      "url": "https://www.filmvandaag.nl/bioscoop",
+      "status": "start",
+      "rawText": "site 3/3: max 12 events, max 4 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.filmvandaag.nl/bioscoop",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://www.filmvandaag.nl/bioscoop",
+      "status": "strategie",
+      "rawText": "bioscoopagenda Groningen (FilmVandaag)"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.filmvandaag.nl/filmladder/stad/80-groningen",
+      "title": "403-tekstproxy mislukt",
+      "date": "",
+      "url": "https://www.filmvandaag.nl/filmladder/stad/80-groningen",
+      "status": "fout",
+      "rawText": "HTTPSConnectionPool(host='r.jina.ai', port=443): Read timed out. (read timeout=1.25)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.filmvandaag.nl/bioscoop",
+      "title": "Pagina mislukt",
+      "date": "",
+      "url": "https://www.filmvandaag.nl/filmladder/stad/80-groningen",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://filmvandaag.nl/filmladder/stad/80-groningen",
+      "title": "403-tekstproxy mislukt",
+      "date": "",
+      "url": "https://filmvandaag.nl/filmladder/stad/80-groningen",
+      "status": "fout",
+      "rawText": "HTTPSConnectionPool(host='r.jina.ai', port=443): Read timed out. (read timeout=1.25)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.filmvandaag.nl/bioscoop",
+      "title": "Pagina mislukt",
+      "date": "",
+      "url": "https://filmvandaag.nl/filmladder/stad/80-groningen",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.filmvandaag.nl/bioscoop",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://www.filmvandaag.nl/bioscoop",
+      "status": "klaar",
+      "rawText": "site 3/3: 0 unieke events in 3.14 sec"
     }
   ],
-  "status": "running",
+  "status": "finishing",
   "siteStartedAt": "2026-10-25T18:14:29+00:00",
-  "siteElapsedSeconds": 0,
+  "siteElapsedSeconds": 4,
   "sitePageCount": 0,
   "lastSiteEventCount": 0,
-  "stage": "Websitepagina ophalen",
-  "lastUpdatedAt": "2026-10-25T18:14:29+00:00",
+  "stage": "Website klaar; volgende website voorbereiden",
+  "lastUpdatedAt": "2026-10-25T18:14:32+00:00",
   "lastSiteNewEventCount": 0,
-  "lastCompletedSite": "https://www.pathe.nl/bioscoop/groningen",
-  "lastCompletedAt": "2026-10-25T18:14:28+00:00"
+  "lastCompletedSite": "https://www.filmvandaag.nl/bioscoop",
+  "lastCompletedAt": "2026-10-25T18:14:33+00:00"
 }

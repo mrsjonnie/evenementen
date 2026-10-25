@@ -16,3 +16,10 @@ Website	https://www.pathe.nl/bioscoop/groningen	fout	Pagina mislukt		https://www
 Diagnose	https://www.pathe.nl/nl/bioscopen/pathe-groningen	fout	403-tekstproxy mislukt		https://www.pathe.nl/nl/bioscopen/pathe-groningen	HTTPSConnectionPool(host='r.jina.ai', port=443): Read timed out. (read timeout=0.9758778810000024)
 Website	https://www.pathe.nl/bioscoop/groningen	fout	Pagina mislukt		https://www.pathe.nl/nl/bioscopen/pathe-groningen	HTTP 403
 Website	https://www.pathe.nl/bioscoop/groningen	klaar	Klaar		https://www.pathe.nl/bioscoop/groningen	site 2/3: 0 unieke events in 4.02 sec
+Website	https://www.filmvandaag.nl/bioscoop	start	Start		https://www.filmvandaag.nl/bioscoop	site 3/3: max 12 events, max 4 seconden
+Parser	https://www.filmvandaag.nl/bioscoop	strategie	Scrapertype vastgesteld		https://www.filmvandaag.nl/bioscoop	bioscoopagenda Groningen (FilmVandaag)
+Diagnose	https://www.filmvandaag.nl/filmladder/stad/80-groningen	fout	403-tekstproxy mislukt		https://www.filmvandaag.nl/filmladder/stad/80-groningen	HTTPSConnectionPool(host='r.jina.ai', port=443): Read timed out. (read timeout=1.25)
+Website	https://www.filmvandaag.nl/bioscoop	fout	Pagina mislukt		https://www.filmvandaag.nl/filmladder/stad/80-groningen	HTTP 403
+Diagnose	https://filmvandaag.nl/filmladder/stad/80-groningen	fout	403-tekstproxy mislukt		https://filmvandaag.nl/filmladder/stad/80-groningen	HTTPSConnectionPool(host='r.jina.ai', port=443): Read timed out. (read timeout=1.25)
+Website	https://www.filmvandaag.nl/bioscoop	fout	Pagina mislukt		https://filmvandaag.nl/filmladder/stad/80-groningen	HTTP 403
+Website	https://www.filmvandaag.nl/bioscoop	klaar	Klaar		https://www.filmvandaag.nl/bioscoop	site 3/3: 0 unieke events in 3.14 sec
