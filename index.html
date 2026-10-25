@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- Websitebeheer, uitklaplogica en statusveld bijgewerkt in versie 2026.10.25.56. -->
+<!-- Statusgeschiedenis en betrouwbare actuele voortgang in versie 2026.10.25.57. -->
 <html lang="nl">
 <head>
   <meta charset="UTF-8">
@@ -154,12 +154,44 @@
       align-items: center;
     }
 
-    .headerStatus {
+    .historyPanel {
       grid-column: 1 / -1;
       width: 100%;
-      max-width: none;
-      max-height: min(28vh, 220px);
+      min-width: 0;
       margin-top: 8px;
+      border: 1px solid rgba(255, 255, 255, .22);
+      border-radius: 9px;
+      background: rgba(8, 18, 28, .58);
+      overflow: hidden;
+      box-sizing: border-box;
+    }
+
+    .historyPanel > summary {
+      cursor: pointer;
+      padding: 9px 12px;
+      color: rgba(255, 255, 255, .94);
+      font-size: .82rem;
+      font-weight: 950;
+      user-select: none;
+    }
+
+    .historyPanelContent {
+      width: 100%;
+      min-width: 0;
+      border-top: 1px solid rgba(255, 255, 255, .14);
+      padding: 8px;
+      box-sizing: border-box;
+    }
+
+    .headerStatus {
+      width: 100%;
+      max-width: none;
+      max-height: min(34vh, 320px);
+      min-height: 42px;
+      margin: 0;
+      overflow-y: auto;
+      overflow-x: hidden;
+      box-sizing: border-box;
     }
 
     .rawLogPanel {
@@ -1233,7 +1265,12 @@
             </div>
           </div>
         </div>
-        <div class="status headerStatus" id="status" aria-label="Statusgeschiedenis" aria-live="polite"></div>
+        <details class="historyPanel" id="historyPanel" open>
+          <summary id="historyPanelSummary">Verversstatus en geschiedenis</summary>
+          <div class="historyPanelContent">
+            <div class="status headerStatus" id="status" aria-label="Statusgeschiedenis" aria-live="polite"></div>
+          </div>
+        </details>
         <div class="headerActions" aria-label="Weergavebediening">
           <button class="btn btnSecondary filterSidebarToggle" id="filterSidebarToggle" type="button" aria-controls="filterSidebar" aria-expanded="false">Filters tonen</button>
         </div>
@@ -1401,7 +1438,7 @@
   </div>
 
   <script>
-    const APP_VERSION = "2026.10.25.56";
+    const APP_VERSION = "2026.10.25.57";
     const DEFAULT_MAX_EVENTS_PER_SITE = 20;
     const DEFAULT_SITE_TIME_LIMIT_SECONDS = 20;
     const SCAN_SETTINGS_KEY = "eventScanSettingsV1";
@@ -3426,6 +3463,10 @@
           if (!progress?.runId) return;
           const status = cleanText(progress.status || "");
           const active = ["running", "finishing", "queued", "in_progress"].includes(status);
+          const isNewRun = Boolean(progress.runId && progress.runId !== (previousProgress?.runId || ""));
+          // A completed progress file may belong to the previous scrape. Never
+          // announce it as the result of this request until a new runId appears.
+          if (!isNewRun) return;
           if (!active && status !== "completed") return;
           if (active) {
             // Keep the compact title indicator alive even before the first site is published.
