@@ -619,7 +619,7 @@
     }
 
     .status {
-      display: none;
+      display: block;
       margin: 0;
       padding: 4px 7px;
       width: calc(100vw - 32px);
@@ -669,6 +669,22 @@
 
     .hero .status.show { display: block; }
     .status.show { display: block; }
+
+    .statusCompact {
+      display: block;
+      width: min(560px, calc(100vw - 32px));
+      min-width: 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      padding: 4px 8px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--surface-soft);
+      color: var(--primary-dark);
+      font-size: .76rem;
+      font-weight: 850;
+    }
     .status.ok { color: var(--good); border-color: #32634b; background: #12291e; }
     .status.warn { color: var(--warn); border-color: #6f5223; background: #2a2112; }
     .status.error { color: var(--danger); border-color: #733a33; background: #2c1817; }
@@ -1193,16 +1209,13 @@
         <div class="titlePanel open" id="titlePanel">
           <div class="titlePanelContent">
             <span class="versionBadge" id="versionBadge">Versie wordt geladen</span>
-            <div class="status" id="status" aria-live="polite"></div>
+            <div class="statusCompact" id="statusCompact" aria-live="polite">Gereed — nog geen zoekactie uitgevoerd.</div>
+            <div class="status" id="status" aria-label="Statusgeschiedenis" aria-live="polite"></div>
             <div class="scanSettings" aria-label="Scaninstellingen">
               <label class="scanSetting" for="maxEventsPerSite">Max. resultaten <input id="maxEventsPerSite" type="number" min="1" max="100" step="1" value="20" inputmode="numeric" title="Maximum aantal resultaten per geselecteerde website"> <small>per website</small></label>
               <label class="scanSetting" for="siteTimeLimitSeconds">Max. sec. <input id="siteTimeLimitSeconds" type="number" min="1" max="60" step="1" value="20" inputmode="numeric" title="Maximum zoektijd per geselecteerde website in seconden"> <small>per website</small></label>
             </div>
           </div>
-          <details class="rawLogPanel" id="rawLogPanel">
-            <summary id="rawLogSummary">Ruwe verversdata</summary>
-            <div class="rawLogTableWrap" id="rawLogTableWrap"></div>
-          </details>
         </div>
         <div class="headerActions" aria-label="Weergavebediening">
           <button class="btn btnSecondary filterSidebarToggle" id="filterSidebarToggle" type="button" aria-controls="filterSidebar" aria-expanded="false">Filters tonen</button>
@@ -1371,7 +1384,7 @@
   </div>
 
   <script>
-    const APP_VERSION = "2026.10.25.49";
+    const APP_VERSION = "2026.10.25.50";
     const DEFAULT_MAX_EVENTS_PER_SITE = 20;
     const DEFAULT_SITE_TIME_LIMIT_SECONDS = 20;
     const SCAN_SETTINGS_KEY = "eventScanSettingsV1";
@@ -2225,6 +2238,8 @@
     function showStatus(message, type = "", options = {}) {
       const status = $("status");
       const text = cleanText(message);
+      const compact = $("statusCompact");
+      if (compact) compact.textContent = text;
       if (!status) return;
       // The large status area is a scrollable history, not just a transient message.
       status.className = "status show";
@@ -2262,6 +2277,8 @@
       const status = $("status");
       status.className = "status";
       status.replaceChildren();
+      const compact = $("statusCompact");
+      if (compact) compact.textContent = "Gereed — nog geen zoekactie uitgevoerd.";
     }
 
     function setBusy(button, busy, text) {
@@ -2818,7 +2835,7 @@
         const errors = rows.filter((row) => /fout|mislukt|timeout|geen data|status 4|status 5/i.test(`${row.status || ""} ${row.title || ""}`));
         const hasProblem = count === 0 || Boolean(result && (result.timedOut || Number(result.count || 0) === 0)) || errors.length > 0;
         const errorDetails = [...new Map(errors.map((row) => { const detail = cleanText(row.rawText || row.snippet || row.url || row.title || row.status || "Geen technische details beschikbaar"); return [detail, detail]; })).values()];
-        const diagnostic = count > 0 ? `${count} evenementen gevonden. ${errors.length ? `${errors.length} foutmeldingen geregistreerd; voorbeelden: ${errorDetails.slice(0,3).join(" | ")}` : "Er zijn ook resultaten opgehaald."}` : errors.length ? `${errors.length} foutmeldingen geregistreerd. Details: ${errorDetails.slice(0,3).join(" | ")}` : result?.timedOut ? "De scan duurde te lang. Probeer het later opnieuw." : "Geen evenementen gevonden. Mogelijke oorzaak: website blokkeert scraping of laadt de agenda dynamisch. Open ‘Ruwe verversdata’ voor HTTP-status en URL.";
+        const diagnostic = count > 0 ? `${count} evenementen gevonden. ${errors.length ? `${errors.length} foutmeldingen geregistreerd; voorbeelden: ${errorDetails.slice(0,3).join(" | ")}` : "Er zijn ook resultaten opgehaald."}` : errors.length ? `${errors.length} foutmeldingen geregistreerd. Details: ${errorDetails.slice(0,3).join(" | ")}` : result?.timedOut ? "De scan duurde te lang. Probeer het later opnieuw." : "Geen evenementen gevonden. Mogelijke oorzaak: website blokkeert scraping of laadt de agenda dynamisch.";
         const scraperType = scraperTypeForSite(site);
         return `<div class="siteRow"><label class="${count > 0 ? "siteFound" : ""}"><input class="siteCheck" type="checkbox" value="${escapeHtml(site)}"${selectedSites.has(site) ? " checked" : ""}><span class="sourceInfoWrap"><span title="${escapeHtml(site)}">${escapeHtml(shortUrl)} <span class="scraperTypeLabel">(${escapeHtml(scraperType)})</span>${badge}${isScanning ? '<span class="siteScanIcon" title="Bezig met zoeken naar nieuwe data" aria-label="Bezig met zoeken naar nieuwe data">⟳</span>' : ""}</span>${hasProblem ? `<button class="sourceInfo" type="button" aria-label="Scrape-informatie voor ${escapeHtml(site)}" aria-expanded="false" data-info-site="${escapeHtml(site)}">i</button>` : ""}</span>${hasProblem ? `<span class="sourceInfoPopup" data-info-popup="${escapeHtml(site)}" hidden>${escapeHtml(diagnostic)}</span>` : ""}</label><button class="siteRemove" type="button" data-remove-site="${escapeHtml(site)}" aria-label="Verwijder ${escapeHtml(shortUrl)} uit de websitelijst" title="Verwijder website uit deze lijst">×</button></div>`;
       }).join("");
@@ -4024,6 +4041,7 @@
       layout.style.setProperty("--sidebar-width", width + "px");
       localStorage.setItem("eventsSidebarWidth", String(width));
     });
+    $("titleToggle").setAttribute("aria-expanded", "true");
     $("titleToggle").addEventListener("click", () => {
       const panel = $("titlePanel");
       const isOpen = panel.classList.toggle("open");
