@@ -1696,6 +1696,87 @@ def extract_socialdeal_offers(html, page_url, site_url):
 
 
 
+def extract_biosagenda_events(html, page_url, site_url, discovery_source="Website"):
+    """Extract upcoming Groningen film showings from BiosAgenda film cards only."""
+    soup = BeautifulSoup(html, "html.parser")
+    events = []
+    seen = set()
+    cinemas = {
+        "kinepolis groningen": "Kinepolis Groningen",
+        "pathé groningen": "Pathé Groningen",
+        "pathe groningen": "Pathé Groningen",
+        "rkz-bios": "RKZ-Bios Groningen",
+        "vera zienema": "Vera Zienema Groningen",
+    }
+    cinema = "Groningen"
+    for heading in soup.find_all(["h2", "h3", "h4"]):
+        title_text = clean_title(heading.get_text(" ", strip=True))
+        cinema_key = title_text.lower()
+        if cinema_key in cinemas:
+            cinema = cinemas[cinema_key]
+            continue
+        if not title_is_usable(title_text) or len(title_text) > 120:
+            continue
+        if re.search(r"bioscoopagenda|word lid|lees meer|top filmnieuws|nieuwsbrief|films in groningen", title_text, re.I):
+            continue
+        card = None
+        card_lines = []
+        for parent in heading.parents:
+            if getattr(parent, "name", None) in {"body", "html"}:
+                break
+            lines = [clean_text(line) for line in parent.get_text("\\n", strip=True).splitlines()]
+            text = clean_text(" ".join(lines))
+            if len(text) > 3200:
+                break
+            has_showtime = any(parse_date_text(line) and TIME_RE.search(line) for line in lines)
+            if has_showtime:
+                card = parent
+                card_lines = lines
+                break
+        if card is None:
+            continue
+        schedule_lines = []
+        for line_index, line in enumerate(card_lines):
+            event_day = parse_date_text(line)
+            if not event_day:
+                continue
+            schedule_text = line
+            for next_line in card_lines[line_index + 1:line_index + 3]:
+                if parse_date_text(next_line):
+                    break
+                if TIME_RE.search(next_line):
+                    schedule_text += " " + next_line
+            times = list(dict.fromkeys(match.group(0).replace(".", ":") for match in TIME_RE.finditer(schedule_text)))
+            if times:
+                schedule_lines.append((event_day, times))
+        if not schedule_lines:
+            continue
+        title_anchor = heading.find_parent("a") or heading.find("a")
+        film_url = normalized_url(title_anchor.get("href"), page_url) if title_anchor and title_anchor.get("href") else page_url
+        card_text = clean_text(card.get_text(" ", strip=True))
+        description = compact(" ".join(line for line in card_lines if not parse_date_text(line) and not TIME_RE.search(line) and clean_text(line) != title_text), 420)
+        image = first_image(card, page_url)
+        for event_day, times in schedule_lines:
+            event = normalize_event({
+                "title": title_text,
+                "date": event_day,
+                "time": ", ".join(times),
+                "type": "Film",
+                "location": cinema,
+                "website": film_url,
+                "description": description or f"Filmvertoningen in {cinema}. Speeltijden: {", ".join(times)}.",
+                "cost": first_price(card_text),
+                "image": image,
+                "discoverySource": discovery_source,
+            }, site_url)
+            if event:
+                key = event_key(event)
+                if key not in seen:
+                    seen.add(key)
+                    events.append(event)
+    add_raw("Parser", site_url, "BiosAgenda speeldata", "", page_url, "gespecialiseerde parser", f"{len(events)} filmvermeldingen met speeldata gevonden")
+    return dedupe_events(events)
+
 def extract_date_listing_events(html, page_url, site_url, discovery_source="Website"):
     """Site-specific card parser for VVV Ameland and Concertgebouw listings."""
     host = canonical_host(site_url)
@@ -2051,7 +2132,9 @@ def scrape_site(site_url, site_index=0, site_total=0, progress_callback=None, ex
             page_events = extract_groupon_offers(html, final_url, normalized_site)
             if not page_events:
                 add_raw("Parser", original_site, "Groupon-kaarten zonder resultaat", "", final_url, "fallback", "Geen deals herkend; controleer HTTP-status, HTML en eventuele blokkade")
-        elif canonical_host(normalized_site) in {"vvvameland.nl", "concertgebouw.nl", "biosagenda.nl"}:
+        elif canonical_host(normalized_site) == "biosagenda.nl":
+            page_events = extract_biosagenda_events(html, final_url, normalized_site, "Website")
+        elif canonical_host(normalized_site) in {"vvvameland.nl", "concertgebouw.nl"}:
             page_events = extract_date_listing_events(html, final_url, normalized_site, "Website")
             if not page_events:
                 page_events = parse_page_events(html, final_url, normalized_site, "Website")
@@ -2410,6 +2493,13 @@ def main():
     retained_previous = []
     if not INPUT_CLEAR_ARCHIVE:
         retained_previous = list(previous_all)
+        # Remove the first, generic-parser BiosAgenda results after a successful
+        # specialized scan; those rows may be news snippets rather than screenings.
+        if "biosagenda.nl" in selected_hosts and "biosagenda.nl" in successful_hosts:
+            retained_previous = [
+                event for event in retained_previous
+                if canonical_host(event.get("website", "")) != "biosagenda.nl"
+            ]
     active_events = dedupe_events([*retained_previous, *scraped_events])
     active_keys = {event_key(event) for event in active_events}
 
