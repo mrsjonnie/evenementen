@@ -64,7 +64,7 @@
       display: grid;
       grid-template-columns: minmax(0, 1fr) auto;
       gap: 14px;
-      align-items: center;
+      align-items: start;
     }
 
     h1 {
@@ -210,7 +210,9 @@
     .heroSide {
       display: flex;
       flex-direction: column;
-      align-items: flex-start;
+      align-items: flex-end;
+      justify-self: end;
+      align-self: start;
       gap: 5px;
       min-width: 0;
       max-width: 560px;
@@ -1060,6 +1062,7 @@
     @media (max-width: 900px) {
       .heroInner { grid-template-columns: 1fr; padding-top: 12px; padding-bottom: 12px; }
       .heroSide { align-items: flex-start; max-width: none; }
+      .heroSide { align-items: flex-start; justify-self: start; }
       .weather { justify-content: flex-start; }
       .sourcePickers { grid-template-columns: 1fr; }
     }
@@ -1363,7 +1366,7 @@
   </div>
 
   <script>
-    const APP_VERSION = "2026.10.25.41";
+    const APP_VERSION = "2026.10.25.42";
     const DEFAULT_MAX_EVENTS_PER_SITE = 20;
     const DEFAULT_SITE_TIME_LIMIT_SECONDS = 20;
     const SCAN_SETTINGS_KEY = "eventScanSettingsV1";
@@ -2439,6 +2442,7 @@
     let restoredProgressRunId = "";
     let restoredProgressUpdatedAt = "";
     let restoredProgressPollHandle = null;
+    let activeStartupProgressPollHandle = null;
     let progressMonitoringStopped = false;
 
     async function restoreRunningScrapeProgress() {
@@ -2471,7 +2475,7 @@
       const site = shortScrapeSiteName(progress.currentSite || "");
       const completed = Number(progress.completedCount) || 0;
       const total = Number(progress.totalSites) || 19;
-      showStatus(`Zoekactie loopt door: website ${Math.min(total, Math.max(1, Number(progress.currentSiteIndex) || completed + 1))}/${total} (${site}); ${completed} websites afgerond. Deze voortgang blijft zichtbaar, ook na herladen van de pagina.`, "warn", { stop: true });
+      // Active site and progress are already shown in the compact title.
 
       if (!restoredProgressPollHandle) {
         restoredProgressPollHandle = setInterval(() => {
@@ -2540,10 +2544,10 @@
         const elapsedSeconds = Math.floor((Date.now() - startedAt) / 1000);
         const liveNewCount = events.filter(isNewEvent).length;
         const liveExistingCount = Math.max(0, events.length - liveNewCount);
-        showStatus(`Live verversen: ${elapsedSeconds}s verstreken; ${events.length} evenementen (${liveNewCount} nieuw, ${liveExistingCount} bestaand). Publicatiewachttijd maximaal ${maxAttempts} seconden (${Math.round(maxAttempts / 60 * 10) / 10} min); status ververst iedere seconde. De ingestelde zoektijd geldt per website.`, "warn", { stop: true });
+        showStatus(`Publicatie controleren: ${elapsedSeconds}s verstreken; ${events.length} evenementen (${liveNewCount} nieuw, ${liveExistingCount} bestaand). Maximaal wachten: ${maxAttempts}s.`, "warn", { stop: true });
         const shouldContinue = await waitUnlessStopped(intervalMs);
         if (!shouldContinue) {
-          showStatus("Controle gestopt. De update kan nog doorlopen; probeer later opnieuw.", "warn");
+          if (!refreshAbortRequested) showStatus("Publicatiecontrole gestopt.", "warn");
           return false;
         }
 
@@ -3324,7 +3328,6 @@
       const previousSignature = eventSignature(events);
       const previousKeys = eventKeySet(events);
       let foundCount = null;
-      let startupProgressPollHandle = null;
       refreshAbortRequested = false;
       progressMonitoringStopped = false;
       newEventKeys = new Set();
@@ -3387,13 +3390,14 @@
             const completed = Number(progress.completedCount) || 0;
             const total = Number(progress.totalSites) || selectedSites.length;
             const siteNumber = Math.min(total, Math.max(1, Number(progress.currentSiteIndex) || completed + 1));
-            showStatus(`Zoekactie loopt: website ${siteNumber}/${total} (${shortScrapeSiteName(progress.currentSite)}); ${completed} websites afgerond. De voortgang wordt live bijgewerkt.`, "warn", { stop: true });
+            // Do not duplicate the active-site status already displayed in the title.
           } else if (status === "completed") {
             updateLiveScrapeSummary(progress, true);
           }
         } catch {}
       };
-      startupProgressPollHandle = setInterval(() => {
+      activeStartupProgressPollHandle = setInterval(() => {
+        if (refreshAbortRequested) return;
         pollProgressWhileStarting().catch(() => {});
       }, 1000);
       pollProgressWhileStarting().catch(() => {});
@@ -3403,7 +3407,7 @@
         titleProgress.title = "Verversverzoek wordt gestart. Daarna verschijnt hier de actieve website en de actuele stap."; 
       }
       if (titleBusyIndicator) titleBusyIndicator.hidden = false;
-      showStatus(`Scrape voorbereiden: ${selectedSites.length} websites geselecteerd; maximaal ${scanSettings.maxEventsPerSite} nieuwe resultaten per website en ${scanSettings.siteTimeLimitSeconds} seconden per website. Ik controleer de publicatie maximaal ${Math.round(totalWaitSeconds / 60 * 10) / 10} minuten (verwachte scantijd circa ${Math.round(expectedScanSeconds / 60 * 10) / 10} min); voortgang wordt iedere seconde bijgewerkt; de ingestelde zoektijd geldt per website.`, "warn");
+      showStatus(`Scrape voorbereiden: ${selectedSites.length} websites; maximaal ${scanSettings.maxEventsPerSite} resultaten per website en ${scanSettings.siteTimeLimitSeconds}s per website. Publicatiecontrole maximaal ${Math.round(totalWaitSeconds / 60 * 10) / 10} min (verwachte scantijd circa ${Math.round(expectedScanSeconds / 60 * 10) / 10} min).`, "warn");
       const payload = {
         region: $("region").value.trim(),
         radius: radiusPayloadValue(),
@@ -3445,7 +3449,10 @@
         const rateLimitNote = rateLimited ? " Een AI-/zoekbron meldt HTTP 429 (rate limit); die bron heeft tijdelijk te veel verzoeken ontvangen." : "";
         showStatus(`Verversverzoek geaccepteerd. ${prefix}${rateLimitNote} Ik controleer of events.json echt wordt bijgewerkt.`, "warn", { stop: true });
         await waitForUpdatedEvents(previousSignature, previousKeys, foundCount, { intervalMs: 1000, maxAttempts: totalWaitSeconds, previousProgressRunId: previousProgress?.runId || "", lastProgressCount: 0, lastProgressSignature: "" });
+        if (activeStartupProgressPollHandle) { clearInterval(activeStartupProgressPollHandle); activeStartupProgressPollHandle = null; }
       } catch (error) {
+        if (activeStartupProgressPollHandle) { clearInterval(activeStartupProgressPollHandle); activeStartupProgressPollHandle = null; }
+        if (refreshAbortRequested) return;
         const prefix = Number.isFinite(foundCount) ? `${foundText(foundCount)} gevonden.` : "";
         const message = String(error?.message || error || "Onbekende fout");
         const networkHint = /failed to fetch|networkerror|load failed/i.test(message)
@@ -3785,6 +3792,7 @@
     $("status").addEventListener("click", (event) => {
       if (!event.target.closest("#stopRefreshBtn")) return;
       refreshAbortRequested = true;
+      if (activeStartupProgressPollHandle) { clearInterval(activeStartupProgressPollHandle); activeStartupProgressPollHandle = null; }
       progressMonitoringStopped = true;
       if (restoredProgressPollHandle) {
         clearInterval(restoredProgressPollHandle);
@@ -3795,7 +3803,7 @@
       if (titleProgress) titleProgress.hidden = true;
       setBusy($("refreshBtn"), false);
       setBusy($("clearBtn"), false);
-      showStatus("Voortgangscontrole gestopt. De zoekactie op GitHub kan op de achtergrond nog doorlopen; met Stop wordt alleen deze browsercontrole beëindigd.", "warn");
+      showStatus("Browsercontrole gestopt. De actieve GitHub-scraper is niet op afstand annuleerbaar vanuit deze pagina; daarvoor is een annuleerfunctie in de Worker nodig.", "warn");
     });
     $("grid").addEventListener("click", (event) => {
       const deleteButton = event.target.closest(".deleteEventBtn");
