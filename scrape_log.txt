@@ -272,3 +272,7 @@ Website	https://www.kultuuragenda.nl/agenda	detail-link gevonden	Meld jouw activ
 Website	https://www.kultuuragenda.nl/agenda	detail-link gevonden	Ga naar de homepage		https://www.kultuuragenda.nl/	Ga naar de homepage
 Website	https://www.kultuuragenda.nl/agenda	detail-link gevonden	Plaatsingsvoorwaarden		https://www.kultuuragenda.nl/plaatsingsvoorwaarden	Plaatsingsvoorwaarden
 Website	https://www.kultuuragenda.nl/agenda	klaar	Klaar		https://www.kultuuragenda.nl/agenda	site 10/20: 0 unieke events in 2.03 sec
+Website	https://www.noorderzon.nl/programma	start	Start		https://www.noorderzon.nl/programma	site 11/20: max 5 events, max 2 seconden
+Parser	https://www.noorderzon.nl/programma	strategie	Scrapertype vastgesteld		https://www.noorderzon.nl/programma	universele programma- en detailpagina-parser
+Website	https://www.noorderzon.nl/programma	fout	Pagina mislukt		https://www.noorderzon.nl/programma	HTTPSConnectionPool(host='www.noorderzon.nl', port=443): Read timed out. (read timeout=1.0200551329999996)
+Website	https://www.noorderzon.nl/programma	klaar	Klaar		https://www.noorderzon.nl/programma	site 11/20: 0 unieke events in 2.0 sec
