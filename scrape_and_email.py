@@ -1434,7 +1434,7 @@ def start_urls_for_site(site_url):
         ])
     if host == "denieuwekolk.nl":
         base = f"{parsed.scheme}://{parsed.netloc}"
-        return [urljoin(base, "/agenda")]
+        return unique_urls([urljoin(base, "/agenda"), urljoin(base, "/bieb/agenda")])
     if host == "socialdeal.nl":
         base = f"{parsed.scheme}://{parsed.netloc}"
         # Different public listing pages expose complementary batches of deals.
