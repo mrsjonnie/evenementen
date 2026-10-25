@@ -2824,30 +2824,30 @@ def publish_scrape_progress(progress, include_data=False):
             paths_to_stage = [progress_path]
             if include_data:
                 paths_to_stage.extend([DATA_FILE, LOG_FILE])
-            staged = subprocess.run(["git", "add", *paths_to_stage], check=False, capture_output=True, text=True)
+            staged = subprocess.run(["git", "add", *paths_to_stage], check=False, capture_output=True, text=True, timeout=12)
             if staged.returncode != 0:
                 print(f"Could not stage scrape progress: {(staged.stderr or staged.stdout)[:350]}")
                 return
-            changed = subprocess.run(["git", "diff", "--cached", "--quiet"], check=False)
+            changed = subprocess.run(["git", "diff", "--cached", "--quiet"], check=False, timeout=8)
             if changed.returncode == 0:
                 return
-            committed = subprocess.run(["git", "commit", "-m", "Update per-site scrape progress"], check=False, capture_output=True, text=True)
+            committed = subprocess.run(["git", "commit", "-m", "Update per-site scrape progress"], check=False, capture_output=True, text=True, timeout=12)
             if committed.returncode != 0:
                 detail = (committed.stderr or committed.stdout or "git commit failed").strip()
                 print(f"Could not commit scrape progress: {detail[:350]}")
                 return
-            pushed = subprocess.run(["git", "push", "origin", "HEAD:main"], check=False, capture_output=True, text=True)
+            pushed = subprocess.run(["git", "push", "origin", "HEAD:main"], check=False, capture_output=True, text=True, timeout=15)
             if pushed.returncode == 0:
                 return
             detail = (pushed.stderr or pushed.stdout or "git push failed").strip()
             print(f"Progress publish attempt {attempt}/4 failed: {detail[:350]}")
-            fetched = subprocess.run(["git", "fetch", "origin", "main"], check=False, capture_output=True, text=True)
+            fetched = subprocess.run(["git", "fetch", "origin", "main"], check=False, capture_output=True, text=True, timeout=15)
             if fetched.returncode != 0:
                 print(f"Could not fetch latest main for progress retry: {(fetched.stderr or fetched.stdout)[:350]}")
                 return
             # Rebase can conflict on scrape-progress.json itself. Reset to the new
             # remote tip and re-apply only the latest progress snapshot.
-            reset = subprocess.run(["git", "reset", "--hard", "origin/main"], check=False, capture_output=True, text=True)
+            reset = subprocess.run(["git", "reset", "--hard", "origin/main"], check=False, capture_output=True, text=True, timeout=10)
             if reset.returncode != 0:
                 print(f"Could not reset to latest main: {(reset.stderr or reset.stdout)[:350]}")
                 return
@@ -2862,7 +2862,7 @@ def publish_scrape_progress(progress, include_data=False):
                         with open(backup, "rb") as source, open(target_path, "wb") as target:
                             target.write(source.read())
         print("Could not publish scrape progress after 4 attempts.")
-    except (FileNotFoundError, OSError, json.JSONDecodeError) as exc:
+    except (FileNotFoundError, OSError, json.JSONDecodeError, subprocess.TimeoutExpired) as exc:
         print(f"Could not publish scrape progress: {exc}")
 
 
