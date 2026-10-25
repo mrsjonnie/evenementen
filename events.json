@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-25T14:44:17+00:00",
+  "updatedAt": "2026-10-25T14:44:21+00:00",
   "events": [
     {
       "date": "2026-10-25",
@@ -11770,6 +11770,13 @@
       "newCount": 0,
       "durationSeconds": 2.04,
       "timedOut": true
+    },
+    {
+      "site": "https://groningermuseum.nl/programma",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 2.02,
+      "timedOut": true
     }
   ],
   "rawLog": [
@@ -22473,6 +22480,105 @@
       "url": "https://www.martiniplaza.nl/nl/agenda",
       "status": "klaar",
       "rawText": "site 8/20: 0 unieke events in 2.04 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningermuseum.nl/programma",
+      "title": "Start",
+      "date": "",
+      "url": "https://groningermuseum.nl/programma",
+      "status": "start",
+      "rawText": "site 9/20: max 5 events, max 2 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://groningermuseum.nl/programma",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://groningermuseum.nl/programma",
+      "status": "strategie",
+      "rawText": "universele tentoonstellings- en activiteitenparser"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningermuseum.nl/programma",
+      "title": "Pagina gelezen",
+      "date": "",
+      "url": "https://groningermuseum.nl/programma",
+      "status": "ok",
+      "rawText": "123920 tekens HTML"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningermuseum.nl/programma",
+      "title": "Nieuw licht – De Ploeg",
+      "date": "2025-10-25",
+      "url": "https://groningermuseum.nl/de-ploeg-nieuw-licht",
+      "status": "event uit link",
+      "rawText": "25 okt 2025 - 31 dec 2028 EXHIBITION Nieuw licht – De Ploeg"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningermuseum.nl/programma",
+      "title": "Familietour Nieuw licht – De Ploeg",
+      "date": "2025-10-25",
+      "url": "https://groningermuseum.nl/familietour-nieuw-licht-de-ploeg",
+      "status": "event uit link",
+      "rawText": "25 okt 2025 - 7 jan 2029 Elke dag EVENT Familietour Nieuw licht – De Ploeg"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningermuseum.nl/programma",
+      "title": "The Architect & the Housewife",
+      "date": "2026-09-19",
+      "url": "https://groningermuseum.nl/the-architect-and-the-housewife",
+      "status": "event uit link",
+      "rawText": "19 sep 2026 - 9 mei 2027 EXHIBITION The Architect & the Housewife"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningermuseum.nl/programma",
+      "title": "Playing House",
+      "date": "2026-09-19",
+      "url": "https://groningermuseum.nl/playing-house",
+      "status": "event uit link",
+      "rawText": "19 sep 2026 - 10 jan 2027 EXHIBITION Playing House"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningermuseum.nl/programma",
+      "title": "The Convent of Pleasure",
+      "date": "2026-09-19",
+      "url": "https://groningermuseum.nl/ani-schulze-the-convent-of-pleasure",
+      "status": "event uit link",
+      "rawText": "19 sep 2026 - 9 mei 2027 EXHIBITION The Convent of Pleasure"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningermuseum.nl/programma",
+      "title": "Keramikos Carrier Bag",
+      "date": "2026-09-19",
+      "url": "https://groningermuseum.nl/keramikos-carrier-bag",
+      "status": "event uit link",
+      "rawText": "19 sep 2026 - 10 jan 2027 EXHIBITION Keramikos Carrier Bag"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningermuseum.nl/programma",
+      "title": "EXHIBITION Nieuw licht – De Ploeg",
+      "date": "2028-12-01",
+      "url": "https://groningermuseum.nl/programma",
+      "status": "event uit datumblok",
+      "rawText": "1 dec 2028 EXHIBITION Nieuw licht – De Ploeg"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningermuseum.nl/programma",
+      "title": "Elke dag EVENT Familietour Nieuw licht – De Ploeg",
+      "date": "2029-01-07",
+      "url": "https://groningermuseum.nl/programma",
+      "status": "event uit datumblok",
+      "rawText": "7 jan 2029 Elke dag EVENT Familietour Nieuw licht – De Ploeg"
     }
   ]
 }
