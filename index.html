@@ -1318,7 +1318,7 @@
   </div>
 
   <script>
-    const APP_VERSION = "2026.10.25.28";
+    const APP_VERSION = "2026.10.25.29";
     const DEFAULT_MAX_EVENTS_PER_SITE = 20;
     const DEFAULT_SITE_TIME_LIMIT_SECONDS = 20;
     const SCAN_SETTINGS_KEY = "eventScanSettingsV1";
@@ -2290,8 +2290,12 @@
       if (!site) {
         if (titleProgress) {
           titleProgress.hidden = false;
-          titleProgress.textContent = `Zoeken… scraper starten (${completed}/${total} websites afgerond)`;
-          titleProgress.title = "De scraper is gestart maar heeft nog geen actieve website gepubliceerd."; 
+          const startedAt = Date.parse(progress.startedAt || progress.lastUpdatedAt || "");
+          const startupSeconds = Number.isFinite(startedAt) ? Math.max(0, Math.floor((Date.now() - startedAt) / 1000)) : 0;
+          titleProgress.textContent = `Zoeken… scraper starten (${completed}/${total} websites afgerond) · ${startupSeconds}s`;
+          titleProgress.title = startupSeconds >= 15
+            ? "De scraper heeft nog geen actieve website gepubliceerd. Dit kan wijzen op een vastgelopen workflow of een mislukte voortgangspublicatie; de status wordt opnieuw gecontroleerd."
+            : "De opdracht is gestart; wachten op de eerste website-status."; 
         }
         return;
       }
