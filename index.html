@@ -614,15 +614,47 @@
       display: none;
       margin: 0;
       padding: 6px 9px;
-      max-width: 560px;
+      width: calc(100vw - 32px);
+      max-width: none;
+      max-height: min(38vh, 320px);
+      overflow-x: hidden;
+      overflow-y: auto;
+      overscroll-behavior: contain;
+      box-sizing: border-box;
       font-size: .76rem;
       border-radius: var(--radius);
       border: 1px solid var(--line);
       background: var(--surface-soft);
       color: var(--muted);
       font-weight: 800;
-      line-height: 1.25;
+      line-height: 1.35;
+      scrollbar-gutter: stable;
     }
+
+    .statusMessages {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 6px;
+      min-width: 0;
+    }
+
+    .statusEntry {
+      display: block;
+      min-width: 0;
+      padding: 5px 7px;
+      border-bottom: 1px solid rgba(127, 127, 127, .22);
+      overflow-wrap: anywhere;
+      white-space: normal;
+    }
+
+    .statusEntry:last-child { border-bottom: 0; }
+    .statusEntry.ok { color: var(--good); }
+    .statusEntry.warn { color: var(--warn); }
+    .statusEntry.error { color: var(--danger); }
+    .statusEntry .statusLine { display: flex; flex-direction: row; flex-wrap: wrap; align-items: flex-start; gap: 8px; }
+    .statusEntry .statusLine span { min-width: 0; flex: 1 1 360px; overflow-wrap: anywhere; }
+    .statusEntry .btn { flex: 0 0 auto; width: auto; }
 
     .hero .status.show { display: block; }
     .status.show { display: block; }
@@ -1329,7 +1361,7 @@
   </div>
 
   <script>
-    const APP_VERSION = "2026.10.25.37";
+    const APP_VERSION = "2026.10.25.38";
     const DEFAULT_MAX_EVENTS_PER_SITE = 20;
     const DEFAULT_SITE_TIME_LIMIT_SECONDS = 20;
     const SCAN_SETTINGS_KEY = "eventScanSettingsV1";
@@ -2182,22 +2214,69 @@
 
     function showStatus(message, type = "", options = {}) {
       const status = $("status");
+      const text = cleanText(message);
+      if (!status) return;
       status.className = `status show ${type}`.trim();
-      if (options.stop) {
-        status.innerHTML = `
-          <div class="statusLine">
-            <span>${escapeHtml(message)}</span>
-            <button class="btn btnSecondary" id="stopRefreshBtn" type="button">Stop</button>
-          </div>
-        `;
-      } else {
-        status.textContent = message;
+      let messages = status.querySelector(".statusMessages");
+      if (!messages) {
+        status.replaceChildren();
+        messages = document.createElement("div");
+        messages.className = "statusMessages";
+        status.appendChild(messages);
       }
+
+      // Keep a vertical, scrollable history of status updates instead of replacing
+      // the previous message. Consecutive duplicates are ignored to avoid noise.
+      const lastEntry = messages.lastElementChild;
+      if (lastEntry?.dataset.message === text) {
+        lastEntry.className = `statusEntry ${type}`.trim();
+        lastEntry.replaceChildren();
+        const line = document.createElement("div");
+        line.className = "statusLine";
+        const span = document.createElement("span");
+        span.textContent = text;
+        line.appendChild(span);
+        if (options.stop) {
+          const button = document.createElement("button");
+          button.className = "btn btnSecondary";
+          button.id = "stopRefreshBtn";
+          button.type = "button";
+          button.textContent = "Stop";
+          line.appendChild(button);
+        }
+        lastEntry.appendChild(line);
+        status.scrollTop = status.scrollHeight;
+        return;
+      }
+
+      // There should only ever be one active Stop control.
+      status.querySelectorAll("#stopRefreshBtn").forEach(button => button.remove());
+      const entry = document.createElement("div");
+      entry.className = `statusEntry ${type}`.trim();
+      entry.dataset.message = text;
+      const line = document.createElement("div");
+      line.className = "statusLine";
+      const span = document.createElement("span");
+      span.textContent = text;
+      line.appendChild(span);
+      if (options.stop) {
+        const button = document.createElement("button");
+        button.className = "btn btnSecondary";
+        button.id = "stopRefreshBtn";
+        button.type = "button";
+        button.textContent = "Stop";
+        line.appendChild(button);
+      }
+      entry.appendChild(line);
+      messages.appendChild(entry);
+      while (messages.children.length > 80) messages.firstElementChild.remove();
+      status.scrollTop = status.scrollHeight;
     }
 
     function hideStatus() {
-      $("status").className = "status";
-      $("status").textContent = "";
+      const status = $("status");
+      status.className = "status";
+      status.replaceChildren();
     }
 
     function setBusy(button, busy, text) {
