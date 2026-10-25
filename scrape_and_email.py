@@ -45,7 +45,7 @@ def env_int(name, default, minimum, maximum):
 
 
 MAX_EVENTS_PER_SITE = env_int("INPUT_MAX_EVENTS_PER_SITE", 20, 1, 100)
-SITE_TIME_LIMIT_SECONDS = env_int("INPUT_SITE_TIME_LIMIT_SECONDS", 20, 3, 60)
+SITE_TIME_LIMIT_SECONDS = env_int("INPUT_SITE_TIME_LIMIT_SECONDS", 20, 1, 60)
 MAX_RAW_ROWS = 1200
 TODAY = date.today()
 
@@ -179,6 +179,8 @@ DEFAULT_LOCATIONS = {
     "paradiso.nl": "Paradiso Amsterdam",
     "vvvameland.nl": "Ameland",
     "biosagenda.nl": "Groningen",
+    "filmvandaag.nl": "Groningen",
+    "denieuwekolk.nl": "De Nieuwe Kolk Assen",
 }
 
 COMMON_PATHS_FOR_ROOT_SITES = [
@@ -293,6 +295,10 @@ def detect_scraper_type(site_url):
         return "universele programma- en detailpagina-parser"
     if host == "biosagenda.nl":
         return "bioscoopfilms en speeldata (BiosAgenda Groningen)"
+    if host == "filmvandaag.nl":
+        return "bioscoopagenda Groningen (FilmVandaag)"
+    if host == "denieuwekolk.nl":
+        return "agenda-kaarten + datumregels (De Nieuwe Kolk)"
     if host == "socialdeal.nl":
         return "Social Deal-aanbiedingen"
     if host in {"groupon.nl", "ibood.com"}:
@@ -1420,6 +1426,13 @@ def start_urls_for_site(site_url):
         return [urljoin(base, "/landing/concertagenda-paradiso/2069817")]
     if host == "spotgroningen.nl":
         return [urljoin(exact, "/programma")]
+    if host == "filmvandaag.nl":
+        base = f"{parsed.scheme}://{parsed.netloc}"
+        # /bioscoop is a generic landing page; use the Groningen-specific film ladder.
+        return [urljoin(base, "/filmladder/stad/80-groningen")]
+    if host == "denieuwekolk.nl":
+        base = f"{parsed.scheme}://{parsed.netloc}"
+        return unique_urls([urljoin(base, "/agenda"), urljoin(base, "/bieb/agenda")])
     if host == "socialdeal.nl":
         base = f"{parsed.scheme}://{parsed.netloc}"
         # Different public listing pages expose complementary batches of deals.
@@ -1789,10 +1802,104 @@ def extract_biosagenda_events(html, page_url, site_url, discovery_source="Websit
     add_raw("Parser", site_url, "BiosAgenda speeldata", "", page_url, "gespecialiseerde parser", f"{len(events)} filmvermeldingen met speeldata gevonden")
     return dedupe_events(events)
 
+def extract_filmvandaag_events(html, page_url, site_url, discovery_source="Website"):
+    """Extract dated showtimes from FilmVandaag's city-specific film ladder."""
+    if canonical_host(site_url) != "filmvandaag.nl":
+        return []
+    soup = BeautifulSoup(html, "html.parser")
+    events = []
+    seen = set()
+    day_labels = {
+        "vandaag": 0, "today": 0, "morgen": 1, "tomorrow": 1,
+        "maandag": 0, "dinsdag": 1, "woensdag": 2, "donderdag": 3,
+        "vrijdag": 4, "zaterdag": 5, "zondag": 6,
+        "ma": 0, "di": 1, "wo": 2, "do": 3, "vr": 4, "za": 5, "zo": 6,
+    }
+    for heading in soup.find_all(["h2", "h3", "h4"]):
+        title = clean_title(heading.get_text(" ", strip=True))
+        if not title_is_usable(title) or len(title) > 150:
+            continue
+        card = None
+        lines = []
+        for parent in heading.parents:
+            if getattr(parent, "name", None) in {"body", "html"}:
+                break
+            parent_lines = split_lines(parent)
+            text = clean_text(" ".join(parent_lines))
+            if len(text) > 2600:
+                break
+            if any(TIME_RE.search(line) for line in parent_lines) and len(parent_lines) >= 2:
+                card, lines = parent, parent_lines
+                break
+        if card is None:
+            continue
+        anchor = heading.find_parent("a") or heading.find("a") or card.find("a", href=True)
+        event_url = normalized_url(anchor.get("href"), page_url) if anchor and anchor.get("href") else page_url
+        if not same_host(event_url, site_url):
+            event_url = page_url
+        current_day = TODAY
+        emitted = 0
+        for line in lines:
+            normalized_line = clean_text(line).lower().strip(" :|")
+            explicit_date = parse_date_text(line)
+            label_match = re.match(r"^(vandaag|today|morgen|tomorrow|maandag|dinsdag|woensdag|donderdag|vrijdag|zaterdag|zondag|ma|di|wo|do|vr|za|zo)\b", normalized_line)
+            if explicit_date:
+                current_day = date.fromisoformat(explicit_date)
+            elif label_match:
+                label = label_match.group(1)
+                if label in {"vandaag", "today"}:
+                    current_day = TODAY
+                elif label in {"morgen", "tomorrow"}:
+                    current_day = TODAY + timedelta(days=1)
+                else:
+                    target_weekday = day_labels[label]
+                    offset = (target_weekday - TODAY.weekday()) % 7
+                    if offset == 0 and label not in {"ma", "di", "wo", "do", "vr", "za", "zo"}:
+                        offset = 7
+                    current_day = TODAY + timedelta(days=offset)
+            times = list(dict.fromkeys(m.group(0).replace(".", ":") for m in TIME_RE.finditer(line)))
+            for time_value in times:
+                key = (current_day.isoformat(), title.lower(), time_value)
+                if key in seen:
+                    continue
+                seen.add(key)
+                raw = {
+                    "date": current_day.isoformat(), "time": time_value, "title": title,
+                    "type": "Film", "location": "Groningen", "website": event_url,
+                    "description": compact(clean_text(card.get_text(" ", strip=True)), 420),
+                    "image": first_image(card, page_url), "discoverySource": discovery_source,
+                }
+                event = normalize_event(raw, site_url)
+                if event:
+                    events.append(event)
+                    add_raw(discovery_source, site_url, title, current_day.isoformat(), event_url, "FilmVandaag-vertoning", time_value)
+                    emitted += 1
+                    if len(events) >= MAX_EVENTS_PER_SITE:
+                        add_raw("Parser", site_url, "FilmVandaag-vertoningen geteld", "", page_url, "gespecialiseerde parser", f"{len(events)} resultaten")
+                        return dedupe_events(events)
+        if emitted == 0:
+            text = clean_text(card.get_text(" ", strip=True))
+            event_date = parse_date_text(text)
+            time_value = first_time(text)
+            if event_date and time_value:
+                event = normalize_event({
+                    "date": event_date, "time": time_value, "title": title, "type": "Film",
+                    "location": "Groningen", "website": event_url, "description": compact(text, 420),
+                    "image": first_image(card, page_url), "discoverySource": discovery_source,
+                }, site_url)
+                if event:
+                    events.append(event)
+                    add_raw(discovery_source, site_url, title, event_date, event_url, "FilmVandaag-kaart", text)
+                    if len(events) >= MAX_EVENTS_PER_SITE:
+                        break
+    add_raw("Parser", site_url, "FilmVandaag-vertoningen geteld", "", page_url, "gespecialiseerde parser", f"{len(events)} resultaten")
+    return dedupe_events(events)
+
+
 def extract_date_listing_events(html, page_url, site_url, discovery_source="Website"):
     """Site-specific card parser for VVV Ameland and Concertgebouw listings."""
     host = canonical_host(site_url)
-    if host not in {"vvvameland.nl", "concertgebouw.nl", "biosagenda.nl"}:
+    if host not in {"vvvameland.nl", "concertgebouw.nl", "biosagenda.nl", "denieuwekolk.nl"}:
         return []
     soup = BeautifulSoup(html, "html.parser")
     events = []
@@ -1837,7 +1944,7 @@ def extract_date_listing_events(html, page_url, site_url, discovery_source="Webs
         description = description_from_lines(split_lines(card), title)
         image_node = card.select_one("img[src], img[data-src]")
         image = normalized_url((image_node.get("src") or image_node.get("data-src") or "") if image_node else "", page_url)
-        location = "Ameland" if host == "vvvameland.nl" else "Concertgebouw Amsterdam"
+        location = ("Ameland" if host == "vvvameland.nl" else "Concertgebouw Amsterdam" if host == "concertgebouw.nl" else "De Nieuwe Kolk Assen")
         event = normalize_event({
             "date": event_date,
             "title": title,
@@ -2164,6 +2271,14 @@ def scrape_site(site_url, site_index=0, site_total=0, progress_callback=None, ex
                 add_raw("Parser", original_site, "Groupon-kaarten zonder resultaat", "", final_url, "fallback", "Geen deals herkend; controleer HTTP-status, HTML en eventuele blokkade")
         elif canonical_host(normalized_site) == "biosagenda.nl":
             page_events = extract_biosagenda_events(html, final_url, normalized_site, "Website")
+        elif canonical_host(normalized_site) == "filmvandaag.nl":
+            page_events = extract_filmvandaag_events(html, final_url, normalized_site, "Website")
+            if not page_events:
+                page_events = parse_page_events(html, final_url, normalized_site, "Website")
+        elif canonical_host(normalized_site) == "denieuwekolk.nl":
+            page_events = extract_date_listing_events(html, final_url, normalized_site, "Website")
+            if not page_events:
+                page_events = parse_page_events(html, final_url, normalized_site, "Website")
         elif canonical_host(normalized_site) in {"vvvameland.nl", "concertgebouw.nl"}:
             page_events = extract_date_listing_events(html, final_url, normalized_site, "Website")
             if not page_events:
@@ -2509,6 +2624,10 @@ def main():
         before_count = len(all_events)
         progress["currentSite"] = site
         progress["currentSiteIndex"] = index
+        progress["siteStartedAt"] = datetime.now(timezone.utc).isoformat(timespec="seconds")
+        progress["siteElapsedSeconds"] = 0
+        progress["sitePageCount"] = 0
+        progress["lastSiteEventCount"] = 0
         progress["stage"] = "Websitepagina ophalen"
         progress["completedCount"] = index - 1
         progress["status"] = "running"
@@ -2523,6 +2642,8 @@ def main():
             progress["currentSite"] = site
             progress["currentSiteIndex"] = index
             progress["lastSiteEventCount"] = len(dedupe_events(partial_events))
+            progress["siteElapsedSeconds"] = max(0, int((datetime.now(timezone.utc) - datetime.fromisoformat(progress["siteStartedAt"])).total_seconds()))
+            progress["sitePageCount"] = sum(1 for row in RAW_DATA_ROWS if row.get("site") == site and row.get("title") == "Pagina gelezen")
             progress["lastUpdatedAt"] = datetime.now(timezone.utc).isoformat(timespec="seconds")
             progress["status"] = "running"
             publish_scrape_progress(progress)
@@ -2542,6 +2663,7 @@ def main():
         progress["rawLog"] = RAW_DATA_ROWS[-MAX_RAW_ROWS:]
         progress["lastCompletedSite"] = site
         progress["lastCompletedAt"] = datetime.now(timezone.utc).isoformat(timespec="seconds")
+        progress["siteElapsedSeconds"] = max(0, int((datetime.now(timezone.utc) - datetime.fromisoformat(progress["siteStartedAt"])).total_seconds()))
         progress["lastSiteEventCount"] = len(site_events)
         progress["status"] = "running" if index < total_sites else "finishing"
         publish_scrape_progress(progress)
