@@ -48,3 +48,7 @@ Website	https://www.spotgroningen.nl/programma/	start	Start		https://www.spotgro
 Parser	https://www.spotgroningen.nl/programma/	strategie	Scrapertype vastgesteld		https://www.spotgroningen.nl/programma/	universeel-met-kaartfallback
 Website	https://www.spotgroningen.nl/programma/	ok	Pagina gelezen		https://www.spotgroningen.nl/programma	1000531 tekens HTML
 Website	https://www.spotgroningen.nl/programma/	timeout	Site-time-out		https://www.spotgroningen.nl/programma/	site overschreed de harde tijdslimiet van 2 seconden
+Website	https://simplon.nl/	start	Start		https://simplon.nl/	site 6/19: max 5 events, max 2 seconden
+Parser	https://simplon.nl/	strategie	Scrapertype vastgesteld		https://simplon.nl/	compacte-agenda-kaarten
+Website	https://simplon.nl/	fout	Pagina mislukt		https://simplon.nl/programma/	HTTPSConnectionPool(host='simplon.nl', port=443): Read timed out. (read timeout=0.9488324579999983)
+Website	https://simplon.nl/	klaar	Klaar		https://simplon.nl/	site 6/19: 0 unieke events in 2.0 sec
