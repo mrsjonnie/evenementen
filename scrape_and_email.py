@@ -1859,6 +1859,20 @@ def extract_date_listing_events(html, page_url, site_url, discovery_source="Webs
     return dedupe_events(events)
 
 
+def groupon_offer_price(value):
+    """Prefer Groupon's offered price over the original list price."""
+    text = clean_text(value)
+    match = re.search(r"aangeboden\s+prijs\s*€?\s*(\d{1,3}(?:\.\d{3})*(?:,\s*\d{2})?)", text, re.I)
+    if not match:
+        return first_price(text)
+    amount = match.group(1).replace(" ", "").replace(".", "").replace(",", ".")
+    try:
+        number = float(amount)
+        return f"€ {number:,.2f}".replace(",", "X").replace(".", ",").replace("X", ".")
+    except ValueError:
+        return first_price(text)
+
+
 def extract_groupon_offers(html, page_url, site_url):
     """Extract Groupon product/deal cards without requiring an event date."""
     if canonical_host(site_url) != "groupon.nl":
@@ -1899,7 +1913,7 @@ def extract_groupon_offers(html, page_url, site_url):
                 "locationLink": "", "website": href, "source": "Groupon",
                 "discoverySource": "Website",
                 "description": description or "Groupon-aanbieding; bekijk de dealpagina voor voorwaarden en beschikbaarheid.",
-                "cost": first_price(text), "image": image,
+                "cost": groupon_offer_price(text), "image": image,
             })
             add_raw("Website", site_url, title, TODAY.isoformat(), href, "Groupon-deal gevonden", text)
             if len(offers) >= MAX_EVENTS_PER_SITE:
