@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-25T16:13:09+00:00",
+  "updatedAt": "2026-10-25T16:13:14+00:00",
   "events": [
     {
       "date": "2027-01-10",
@@ -85,6 +85,13 @@
       "count": 0,
       "newCount": 0,
       "durationSeconds": 3.12,
+      "timedOut": true
+    },
+    {
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 2.96,
       "timedOut": true
     }
   ],
@@ -376,6 +383,42 @@
       "url": "https://groningen.uitloper.nu/",
       "status": "klaar",
       "rawText": "site 1/19: 0 unieke events in 3.12 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Start",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "status": "start",
+      "rawText": "site 2/19: max 5 events, max 2 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "status": "strategie",
+      "rawText": "Visit Groningen agenda-/routekaarten"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Pagina mislukt",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "status": "fout",
+      "rawText": "HTTPSConnectionPool(host='www.visitgroningen.nl', port=443): Read timed out. (read timeout=0.9780305870000063)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "status": "klaar",
+      "rawText": "site 2/19: 0 unieke events in 2.96 sec"
     }
   ]
 }

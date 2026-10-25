@@ -1,12 +1,13 @@
 {
   "runId": "2026-10-25T16:13:04.656609+00:00-97369fb4",
   "startedAt": "2026-10-25T16:13:04+00:00",
-  "completedCount": 1,
+  "completedCount": 2,
   "totalSites": 19,
   "currentSite": "https://www.visitgroningen.nl/nl/doen/evenementen",
   "currentSiteIndex": 2,
   "completedSites": [
-    "https://groningen.uitloper.nu/"
+    "https://groningen.uitloper.nu/",
+    "https://www.visitgroningen.nl/nl/doen/evenementen"
   ],
   "events": [],
   "siteResults": [
@@ -15,6 +16,13 @@
       "count": 0,
       "newCount": 0,
       "durationSeconds": 3.12,
+      "timedOut": true
+    },
+    {
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 2.96,
       "timedOut": true
     }
   ],
@@ -333,16 +341,25 @@
       "url": "https://www.visitgroningen.nl/nl/doen/evenementen",
       "status": "fout",
       "rawText": "HTTPSConnectionPool(host='www.visitgroningen.nl', port=443): Read timed out. (read timeout=0.9780305870000063)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "status": "klaar",
+      "rawText": "site 2/19: 0 unieke events in 2.96 sec"
     }
   ],
   "status": "running",
   "siteStartedAt": "2026-10-25T16:13:10+00:00",
-  "siteElapsedSeconds": 3,
+  "siteElapsedSeconds": 4,
   "sitePageCount": 0,
   "lastSiteEventCount": 0,
-  "stage": "Websitepagina ophalen",
+  "stage": "Website klaar; volgende website voorbereiden",
   "lastUpdatedAt": "2026-10-25T16:13:13+00:00",
   "lastSiteNewEventCount": 0,
-  "lastCompletedSite": "https://groningen.uitloper.nu/",
-  "lastCompletedAt": "2026-10-25T16:13:09+00:00"
+  "lastCompletedSite": "https://www.visitgroningen.nl/nl/doen/evenementen",
+  "lastCompletedAt": "2026-10-25T16:13:14+00:00"
 }
