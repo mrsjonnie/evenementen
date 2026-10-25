@@ -1313,7 +1313,7 @@
   </div>
 
   <script>
-    const APP_VERSION = "2026.10.25.05";
+    const APP_VERSION = "2026.10.25.06";
     const DEFAULT_MAX_EVENTS_PER_SITE = 20;
     const DEFAULT_SITE_TIME_LIMIT_SECONDS = 20;
     const SCAN_SETTINGS_KEY = "eventScanSettingsV1";
@@ -2267,6 +2267,47 @@
       }
     }
 
+    let restoredProgressRunId = "";
+    let restoredProgressUpdatedAt = "";
+    let restoredProgressPollHandle = null;
+
+    async function restoreRunningScrapeProgress() {
+      const progress = await fetchScrapeProgress();
+      if (!progress) return;
+      const status = cleanText(progress.status || "");
+      const isRunning = ["running", "finishing", "queued", "in_progress"].includes(status);
+      if (!isRunning) {
+        if (restoredProgressRunId && progress.runId === restoredProgressRunId) {
+          updateLiveScrapeSummary(progress, true);
+          showStatus("De zoekactie is afgerond.", "ok");
+          restoredProgressRunId = "";
+        }
+        if (restoredProgressPollHandle) {
+          clearInterval(restoredProgressPollHandle);
+          restoredProgressPollHandle = null;
+        }
+        return;
+      }
+
+      restoredProgressRunId = progress.runId;
+      restoredProgressUpdatedAt = cleanText(progress.lastUpdatedAt || progress.startedAt || "");
+      updateLiveScrapeSummary(progress, true);
+      if (Array.isArray(progress.rawLog)) {
+        latestRawLog = progress.rawLog;
+        renderRawLog();
+      }
+      const site = shortScrapeSiteName(progress.currentSite || "");
+      const completed = Number(progress.completedCount) || 0;
+      const total = Number(progress.totalSites) || 19;
+      showStatus(`Zoekactie loopt door: website ${Math.min(total, Math.max(1, Number(progress.currentSiteIndex) || completed + 1))}/${total} (${site}); ${completed} websites afgerond. Deze voortgang blijft zichtbaar, ook na herladen van de pagina.`, "warn", { stop: true });
+
+      if (!restoredProgressPollHandle) {
+        restoredProgressPollHandle = setInterval(() => {
+          restoreRunningScrapeProgress().catch(() => {});
+        }, 2500);
+      }
+    }
+
     async function loadEventsWithMeta(fallback) {
       try {
         return await fetchEventsPayload();
@@ -2681,8 +2722,9 @@
       liveLogRows = [];
       latestRawLog = [];
       renderRawLog();
+      // Keep raw diagnostics collapsed when a new refresh starts.
       const panel = $("rawLogPanel");
-      if (panel) panel.open = true;
+      if (panel) panel.open = false;
     }
 
     function updateSiteCount() {
@@ -3722,6 +3764,7 @@
     $("versionBadge").textContent = `Versie ${APP_VERSION}`;
     applyVersionHeaderTheme();
     loadAll();
+    restoreRunningScrapeProgress().catch(() => {});
   </script>
 </body>
 </html>
