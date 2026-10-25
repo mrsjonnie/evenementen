@@ -160,9 +160,9 @@
       display: block;
       width: 100%;
       max-width: none;
-      height: 7.5rem;
-      min-height: 7.5rem;
-      max-height: 7.5rem;
+      height: 6.4rem;
+      min-height: 6.4rem;
+      max-height: 6.4rem;
       margin: 8px 0 0;
       padding: 7px 9px;
       overflow-y: auto;
@@ -635,7 +635,7 @@
     .customSiteAdder.open { display:block; }
     .sidebarButtonRows { display:grid; grid-column:1 / -1; gap:8px; margin-top:10px; min-width:0; }
     .sidebarPrimaryButtons { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:8px; min-width:0; }
-    .sidebarDataButtons { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px; min-width:0; }
+    .sidebarDataButtons { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px; min-width:0; margin:0 0 10px; }
     .sidebarButtonRows .btn { width:100%; min-width:0; min-height:40px; padding:7px 9px; line-height:1.2; white-space:normal; }
     #toggleCustomSiteBtn { background: var(--surface-soft); border: 1px solid var(--line); color: var(--primary-dark); font-weight: 850; }
     #toggleCustomSiteBtn:hover { background: var(--surface); border-color: var(--primary); }
@@ -1424,8 +1424,9 @@
   </div>
 
   <script>
-    const APP_VERSION = "2026.10.25.63";
+    const APP_VERSION = "2026.10.25.64";
     const STATUS_HISTORY_KEY = "evenementenStatusHistoryV1";
+    const DISMISSED_SCRAPE_RUN_KEY = "evenementenDismissedScrapeRunV1";
     const DEFAULT_MAX_EVENTS_PER_SITE = 20;
     const DEFAULT_SITE_TIME_LIMIT_SECONDS = 20;
     const SCAN_SETTINGS_KEY = "eventScanSettingsV1";
@@ -2284,6 +2285,11 @@
     }
 
     let statusHistoryRestored = false;
+    function clearStatusHistory() {
+      const status = $("status");
+      if (status) { status.className = "status"; status.replaceChildren(); }
+      try { localStorage.removeItem(STATUS_HISTORY_KEY); } catch {}
+    }
     function persistStatusHistory() {
       const status = $("status");
       if (!status) return;
@@ -2335,16 +2341,18 @@
         persistStatusHistory();
         return;
       }
-      // Update the existing stale-progress row instead of adding a new row every second.
-      if (options.replaceLast && lastEntry && lastEntry.dataset.message?.startsWith(options.replaceLast)) {
-        lastEntry.dataset.message = text;
-        lastEntry.dataset.timestamp = new Date().toLocaleTimeString("nl-NL", { hour: "2-digit", minute: "2-digit", second: "2-digit" });
-        const span = lastEntry.querySelector(".statusLine span");
-        if (span) span.textContent = "[" + lastEntry.dataset.timestamp + "] " + text;
-        if (options.stop) ensureStatusStopButton(status);
-        status.scrollTop = status.scrollHeight;
-        persistStatusHistory();
-        return;
+      // Replace an existing stale-scan notice wherever it is in the history.
+      if (options.replaceLast) {
+        const staleEntry = [...messages.children].find((entry) => entry.dataset.message?.startsWith(options.replaceLast));
+        if (staleEntry) {
+          staleEntry.dataset.message = text;
+          staleEntry.dataset.timestamp = new Date().toLocaleTimeString("nl-NL", { hour: "2-digit", minute: "2-digit", second: "2-digit" });
+          const span = staleEntry.querySelector(".statusLine span");
+          if (span) span.textContent = "[" + staleEntry.dataset.timestamp + "] " + text;
+          if (options.stop) ensureStatusStopButton(status);
+          persistStatusHistory();
+          return;
+        }
       }
       const entry = document.createElement("div");
       entry.className = `statusEntry ${type}`.trim();
@@ -2482,8 +2490,8 @@
       if (["running", "finishing", "queued", "in_progress"].includes(status) && progressAgeSeconds >= 45) {
         if (titleProgress) {
           titleProgress.hidden = false;
-          titleProgress.textContent = "Wacht op update · " + shortScrapeSiteName(progress.currentSite || "website") + " · " + progressAgeSeconds + " sec";
-          titleProgress.title = "De scan heeft " + progressAgeSeconds + " seconden geen nieuwe voortgang gemeld. Laatste bekende website: " + shortScrapeSiteName(progress.currentSite || "onbekend") + ". De scan kan nog bezig zijn of vastzitten; open het detailoverzicht om de status en Stop-knop te bekijken.";
+          titleProgress.textContent = "Wacht op update · " + shortScrapeSiteName(progress.currentSite || "website");
+          titleProgress.title = "De scan heeft al enige tijd geen voortgang gemeld. Laatste bekende website: " + shortScrapeSiteName(progress.currentSite || "onbekend") + ". Bekijk de scanstatus of stop de scan indien nodig.";
         }
         return;
       }
@@ -2560,6 +2568,9 @@
       if (progressMonitoringStopped) return;
       if (!progress) return;
       const status = cleanText(progress.status || "");
+      let dismissedRunId = "";
+      try { dismissedRunId = localStorage.getItem(DISMISSED_SCRAPE_RUN_KEY) || ""; } catch {}
+      if (progress.runId === dismissedRunId) return;
       const isRunning = ["running", "finishing", "queued", "in_progress"].includes(status);
       if (!isRunning) {
         if (restoredProgressRunId && progress.runId === restoredProgressRunId) {
@@ -2583,12 +2594,12 @@
       const ageSeconds = Number.isFinite(updatedAtMs) ? Math.max(0, Math.floor((Date.now() - updatedAtMs) / 1000)) : 0;
       showStatus(
         ageSeconds >= 45
-          ? "De scan meldt al " + ageSeconds + " seconden geen nieuwe update. Laatste bekende website: " + (activeSiteName || "onbekend") + ". De scan kan nog bezig zijn of vastzitten; open het detailoverzicht voor de scanstatus en Stop-knop."
+          ? "Geen recente voortgang ontvangen. Laatste bekende website: " + (activeSiteName || "onbekend") + ". Controleer de scan of gebruik Stop."
           : activeSiteName
             ? "Scraper actief na pagina-herstel: " + (Number(progress.completedCount) || 0) + "/" + (Number(progress.totalSites) || 19) + " websites afgerond; nu bezig met " + activeSiteName + "."
             : "Scraper actief na pagina-herstel: " + (Number(progress.completedCount) || 0) + "/" + (Number(progress.totalSites) || 19) + " websites afgerond; wachten op actuele websitevoortgang.",
         ageSeconds >= 45 ? "error" : "warn",
-        ageSeconds >= 45 ? { stop: true, replaceLast: "De scan meldt al " } : { stop: true }
+        ageSeconds >= 45 ? { stop: true, replaceLast: "Geen recente voortgang ontvangen." } : { stop: true }
       );
       updateLiveScrapeSummary(progress, true);
       if (Array.isArray(progress.rawLog)) {
@@ -3462,6 +3473,7 @@
       updateDateRange();
       // Houd het grote detailpaneel dicht; voortgang verschijnt subtiel naast de titel.
       const button = $("refreshBtn");
+      clearStatusHistory();
       const previousSignature = eventSignature(events);
       const previousKeys = eventKeySet(events);
       let foundCount = null;
@@ -4185,8 +4197,9 @@
     dataButtons.className = "sidebarDataButtons";
     primaryButtons.append($("toggleCustomSiteBtn"), $("resetBtn"), $("newOnlyToggle"));
     dataButtons.append($("clearBtn"), $("deleteDataBtn"));
+    const viewButtons = document.querySelector(".sidebarViewButtons");
+    if (viewButtons) viewButtons.insertAdjacentElement("beforebegin", dataButtons);
     filterGrid.insertAdjacentElement("afterend", buttonRows);
-    buttonRows.append(dataButtons);
     buttonRows.append(primaryButtons);
     if (customSiteAdder) buttonRows.append(customSiteAdder);
     inlineTools.hidden = true;
