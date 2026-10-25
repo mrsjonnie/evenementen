@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- Header-scrapelog hersteld; Pathé-parser uitgebreid in versie 2026.10.25.55. -->
+<!-- Websitebeheer, uitklaplogica en statusveld bijgewerkt in versie 2026.10.25.56. -->
 <html lang="nl">
 <head>
   <meta charset="UTF-8">
@@ -152,6 +152,14 @@
       flex-wrap: wrap;
       gap: 8px;
       align-items: center;
+    }
+
+    .headerStatus {
+      grid-column: 1 / -1;
+      width: 100%;
+      max-width: none;
+      max-height: min(28vh, 220px);
+      margin-top: 8px;
     }
 
     .rawLogPanel {
@@ -1219,19 +1227,13 @@
           <div class="titlePanelContent">
             <span class="versionBadge" id="versionBadge">Versie wordt geladen</span>
             <div class="statusCompact" id="statusCompact" aria-live="polite">Gereed — nog geen zoekactie uitgevoerd.</div>
-            <div class="status" id="status" aria-label="Statusgeschiedenis" aria-live="polite"></div>
             <div class="scanSettings" aria-label="Scaninstellingen">
               <label class="scanSetting" for="maxEventsPerSite">Max. resultaten <input id="maxEventsPerSite" type="number" min="1" max="100" step="1" value="20" inputmode="numeric" title="Maximum aantal resultaten per geselecteerde website"> <small>per website</small></label>
               <label class="scanSetting" for="siteTimeLimitSeconds">Max. sec. <input id="siteTimeLimitSeconds" type="number" min="1" max="60" step="1" value="20" inputmode="numeric" title="Maximum zoektijd per geselecteerde website in seconden"> <small>per website</small></label>
             </div>
           </div>
         </div>
-        <details class="rawLogPanel" id="rawLogPanel">
-          <summary id="rawLogSummary">Ruwe verversdata (nog leeg)</summary>
-          <div class="rawLogTableWrap" id="rawLogTableWrap">
-            <div class="routePanelText">Nog geen ruwe verversdata beschikbaar. Ververs de lijst om dit te vullen.</div>
-          </div>
-        </details>
+        <div class="status headerStatus" id="status" aria-label="Statusgeschiedenis" aria-live="polite"></div>
         <div class="headerActions" aria-label="Weergavebediening">
           <button class="btn btnSecondary filterSidebarToggle" id="filterSidebarToggle" type="button" aria-controls="filterSidebar" aria-expanded="false">Filters tonen</button>
         </div>
@@ -1399,7 +1401,7 @@
   </div>
 
   <script>
-    const APP_VERSION = "2026.10.25.55";
+    const APP_VERSION = "2026.10.25.56";
     const DEFAULT_MAX_EVENTS_PER_SITE = 20;
     const DEFAULT_SITE_TIME_LIMIT_SECONDS = 20;
     const SCAN_SETTINGS_KEY = "eventScanSettingsV1";
@@ -1630,9 +1632,16 @@
       try { localStorage.setItem(REMOVED_SITES_KEY, JSON.stringify([...new Set(values)])); } catch {}
     }
 
-    function removeSiteFromList(site) {
+    async function removeSiteFromList(site) {
       const key = siteIdentityKey(site);
       if (!key) return;
+      const host = hostFromUrl(site);
+      const confirmed = await askClearConfirmation(
+        "Website verwijderen?",
+        `Weet je zeker dat je ${host} uit de lijst met websites wilt verwijderen? De website wordt in deze browser verborgen en kan later opnieuw worden toegevoegd.`,
+        "Website verwijderen"
+      );
+      if (!confirmed) return;
       sites = sites.filter((candidate) => siteIdentityKey(candidate) !== key);
       saveCustomSites(loadCustomSites().filter((candidate) => siteIdentityKey(candidate) !== key));
       const removed = loadRemovedSiteKeys();
@@ -1643,7 +1652,7 @@
       renderSites(selected);
       saveSourceSelection();
       applyFilters();
-      showStatus(`${hostFromUrl(site)} verwijderd uit de websitelijst in deze browser. Je kunt de website later opnieuw toevoegen via ‘Toevoegen URL’.`, "ok");
+      showStatus(`${host} verwijderd uit de websitelijst in deze browser. Je kunt de website later opnieuw toevoegen via ‘Toevoegen URL’.`, "ok");
     }
 
     function saveCustomSites(values) {
@@ -3524,12 +3533,21 @@
       }
     }
 
-    function askClearConfirmation() {
+    async function askClearConfirmation(title = "Alles verwijderen?", message = "Weet je zeker dat je alle evenementen en het archief wilt verwijderen en daarna opnieuw wilt verversen?", confirmLabel = "Verwijderen en verversen") {
       const overlay = $("clearConfirm");
       const confirmButton = $("clearConfirmBtn");
       const cancelButton = $("clearCancelBtn");
-      if (!overlay || !confirmButton || !cancelButton) return Promise.resolve(false);
-
+      if (!overlay || !confirmButton || !cancelButton) return false;
+      const titleElement = $("clearConfirmTitle");
+      const messageElement = overlay.querySelector(".confirmBox p");
+      const original = {
+        title: titleElement?.textContent || "Alles verwijderen?",
+        message: messageElement?.textContent || "",
+        confirmLabel: confirmButton.textContent
+      };
+      if (titleElement) titleElement.textContent = title;
+      if (messageElement) messageElement.textContent = message;
+      confirmButton.textContent = confirmLabel;
       overlay.classList.add("open");
       confirmButton.focus();
 
@@ -3540,16 +3558,15 @@
           cancelButton.removeEventListener("click", onCancel);
           overlay.removeEventListener("click", onBackdrop);
           document.removeEventListener("keydown", onKeyDown);
+          if (titleElement) titleElement.textContent = original.title;
+          if (messageElement) messageElement.textContent = original.message;
+          confirmButton.textContent = original.confirmLabel;
           resolve(answer);
         };
         const onConfirm = () => cleanup(true);
         const onCancel = () => cleanup(false);
-        const onBackdrop = (event) => {
-          if (event.target === overlay) cleanup(false);
-        };
-        const onKeyDown = (event) => {
-          if (event.key === "Escape") cleanup(false);
-        };
+        const onBackdrop = (event) => { if (event.target === overlay) cleanup(false); };
+        const onKeyDown = (event) => { if (event.key === "Escape") cleanup(false); };
         confirmButton.addEventListener("click", onConfirm);
         cancelButton.addEventListener("click", onCancel);
         overlay.addEventListener("click", onBackdrop);
@@ -3675,6 +3692,13 @@
     function toggleCardsCollapsed() {
       cardsCollapsed = !cardsCollapsed;
       expandedEventKeys = new Set();
+      if (!cardsCollapsed) {
+        // Bij details uitklappen ook alle bron- en typegroepen zichtbaar maken.
+        collapsedEventTypes = new Set();
+        collapsedSourceGroups = new Set();
+        $("collapseTypesBtn").textContent = "Types inklappen";
+        $("collapseSourcesBtn").textContent = "Bron inklappen";
+      }
       $("collapseBtn").textContent = cardsCollapsed ? "Details uitklappen" : "Details inklappen";
       render();
     }
@@ -3894,10 +3918,27 @@
       const keys = [...new Set(filteredEvents.map((event) => displayType(event.type || "Activiteit") + "::" + (eventSourceLabel(event) || "Bron onbekend")))];
       const allCollapsed = keys.length > 0 && keys.every((key) => collapsedSourceGroups.has(key));
       collapsedSourceGroups = allCollapsed ? new Set() : new Set(keys);
+      if (allCollapsed) {
+        // Bronnen uitklappen betekent ook dat de bovenliggende types openstaan.
+        collapsedEventTypes = new Set();
+        $("collapseTypesBtn").textContent = "Types inklappen";
+      }
       render();
       $("collapseSourcesBtn").textContent = allCollapsed ? "Bron inklappen" : "Bron uitklappen";
     });
-    $("collapseTypesBtn").addEventListener("click", () => { const types = [...new Set(filteredEvents.map((event) => displayType(event.type || "Activiteit")))]; const allCollapsed = types.length && types.every((type) => collapsedEventTypes.has(type)); collapsedEventTypes = allCollapsed ? new Set() : new Set(types); if (allCollapsed) { collapsedSourceGroups = new Set(); } render(); $("collapseTypesBtn").textContent = allCollapsed ? "Types inklappen" : "Types uitklappen"; });
+    $("collapseTypesBtn").addEventListener("click", () => {
+      const types = [...new Set(filteredEvents.map((event) => displayType(event.type || "Activiteit")))]; 
+      const allCollapsed = types.length && types.every((type) => collapsedEventTypes.has(type));
+      collapsedEventTypes = allCollapsed ? new Set() : new Set(types);
+      if (allCollapsed) {
+        collapsedSourceGroups = new Set();
+        $("collapseSourcesBtn").textContent = "Bron inklappen";
+      } else {
+        $("collapseSourcesBtn").textContent = "Bron uitklappen";
+      }
+      render();
+      $("collapseTypesBtn").textContent = allCollapsed ? "Types inklappen" : "Types uitklappen";
+    });
     $("prevPage").addEventListener("click", () => { currentPage -= 1; render(); window.scrollTo({ top: 0, behavior: "smooth" }); });
     $("nextPage").addEventListener("click", () => { currentPage += 1; render(); window.scrollTo({ top: 0, behavior: "smooth" }); });
     $("allSitesBtn").addEventListener("click", () => {
