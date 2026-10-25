@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-25T14:07:37+00:00",
+  "updatedAt": "2026-10-25T14:07:44+00:00",
   "events": [
     {
       "date": "2026-10-25",
@@ -11496,6 +11496,13 @@
       "newCount": 0,
       "durationSeconds": 4.61,
       "timedOut": true
+    },
+    {
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 4.66,
+      "timedOut": true
     }
   ],
   "rawLog": [
@@ -12209,6 +12216,123 @@
       "url": "https://groningen.uitloper.nu/",
       "status": "klaar",
       "rawText": "site 1/20: 0 unieke events in 4.61 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Start",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "status": "start",
+      "rawText": "site 2/20: max 5 events, max 2 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "status": "strategie",
+      "rawText": "Visit Groningen agenda-/routekaarten"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Pagina gelezen",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen",
+      "status": "ok",
+      "rawText": "206715 tekens HTML"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Visit Groningen detailstrategie",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen",
+      "status": "strategie",
+      "rawText": "Overzicht overslaan; alleen detail-URL's met /evenementen/<slug> verwerken"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Pagina geanalyseerd",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen",
+      "status": "ok",
+      "rawText": "0 events/aanbiedingen op deze pagina"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Lees meer",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen/eurosonic-noorderslag",
+      "status": "detail-link gevonden",
+      "rawText": "Lees meer"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Lees meer",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen/grasnapolsky",
+      "status": "detail-link gevonden",
+      "rawText": "Lees meer"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Lees meer",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen/hongerige-wolf",
+      "status": "detail-link gevonden",
+      "rawText": "Lees meer"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Lees meer",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen/koningsdag",
+      "status": "detail-link gevonden",
+      "rawText": "Lees meer"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Lees meer",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen/noorderzon",
+      "status": "detail-link gevonden",
+      "rawText": "Lees meer"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Lees meer",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen/paradigm",
+      "status": "detail-link gevonden",
+      "rawText": "Lees meer"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Lees meer",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen/terug-naar-het-begin-oud",
+      "status": "detail-link gevonden",
+      "rawText": "Lees meer"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "status": "klaar",
+      "rawText": "site 2/20: 0 unieke events in 4.66 sec"
     }
   ]
 }
