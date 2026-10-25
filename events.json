@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-25T13:55:09+00:00",
+  "updatedAt": "2026-10-25T13:55:15+00:00",
   "events": [
     {
       "date": "2026-10-25",
@@ -11512,6 +11512,13 @@
       "newCount": 0,
       "durationSeconds": 1.28,
       "timedOut": false
+    },
+    {
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 3.05,
+      "timedOut": true
     }
   ],
   "rawLog": [
