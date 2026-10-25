@@ -1,8 +1,328 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-25T09:24:22.936Z",
+  "updatedAt": "2026-10-25T09:25:11+00:00",
   "events": [],
   "archive": [],
-  "siteResults": [],
-  "rawLog": []
+  "siteResults": [
+    {
+      "site": "https://www.groupon.nl/",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 0.29,
+      "timedOut": false
+    },
+    {
+      "site": "https://www.ibood.com/nl/",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 0.51,
+      "timedOut": false
+    },
+    {
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 5.47,
+      "timedOut": false
+    }
+  ],
+  "rawLog": [
+    {
+      "source": "Website",
+      "site": "https://www.groupon.nl/",
+      "title": "Start",
+      "date": "",
+      "url": "https://www.groupon.nl/",
+      "status": "start",
+      "rawText": "site 1/3: max 20 events, max 60 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.groupon.nl/",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://www.groupon.nl/",
+      "status": "strategie",
+      "rawText": "aanbiedingen"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.groupon.nl/",
+      "title": "Pagina mislukt",
+      "date": "",
+      "url": "https://www.groupon.nl/",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.groupon.nl/",
+      "title": "Pagina mislukt",
+      "date": "",
+      "url": "https://www.groupon.nl/kortingsbonnen",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.groupon.nl/",
+      "title": "Pagina mislukt",
+      "date": "",
+      "url": "https://www.groupon.nl/deal/",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.groupon.nl/",
+      "title": "Pagina mislukt",
+      "date": "",
+      "url": "https://www.groupon.nl/best-deals/",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.groupon.nl/",
+      "title": "Pagina mislukt",
+      "date": "",
+      "url": "https://www.groupon.nl/local/",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.groupon.nl/",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://www.groupon.nl/",
+      "status": "klaar",
+      "rawText": "site 1/3: 0 unieke events in 0.29 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.ibood.com/nl/",
+      "title": "Start",
+      "date": "",
+      "url": "https://www.ibood.com/nl/",
+      "status": "start",
+      "rawText": "site 2/3: max 20 events, max 60 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.ibood.com/nl/",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://www.ibood.com/nl/",
+      "status": "strategie",
+      "rawText": "aanbiedingen"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.ibood.com/nl/",
+      "title": "Pagina mislukt",
+      "date": "",
+      "url": "https://www.ibood.com/nl/",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.ibood.com/nl/",
+      "title": "Pagina mislukt",
+      "date": "",
+      "url": "https://www.ibood.com/nl/s-nl",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.ibood.com/nl/",
+      "title": "Pagina mislukt",
+      "date": "",
+      "url": "https://www.ibood.com/offers/nl/s-nl",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.ibood.com/nl/",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://www.ibood.com/nl/",
+      "status": "klaar",
+      "rawText": "site 2/3: 0 unieke events in 0.51 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Start",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/programma",
+      "status": "start",
+      "rawText": "site 3/3: max 20 events, max 60 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/programma",
+      "status": "strategie",
+      "rawText": "JSON-LD + detailpagina-crawler"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Pagina gelezen",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/programma",
+      "status": "ok",
+      "rawText": "58193 tekens HTML"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Zwolse scripts",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/programma",
+      "status": "diagnose",
+      "rawText": "type= src= len=371 | type= src=/assets/js/chunk-vendors.main.js?v=L8F5KdDUVX9i4ON4PXhCti3ujgqHICgBWsZxug4CPgA len=0 | type= src=/assets/js/main.js?v=WgecduYVPp8i_9Rxhb1fyYhHd0tzmUbPgKM0R-XTk5A len=0 | type= src=/assets/js/helpers.js?v=HGrKdvmUXqEJb8FtU8ZsLaz1xOk0Jx-uSg48D1iyr6I len=0 | type=text/javascript src= len=373 | type= src=/scripts/contact-component.js?v=T0YxD1bwBCz0x5Tr6e1QJY0SeZgMP867CLiLKjc7BUI len=0 | typ"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Zwolse links",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/programma",
+      "status": "diagnose",
+      "rawText": ""
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Zwolse JSON",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/programma",
+      "status": "diagnose",
+      "rawText": ""
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Zwolse JS chunk-vendors.main.js",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/assets/js/chunk-vendors.main.js?v=L8F5KdDUVX9i4ON4PXhCti3ujgqHICgBWsZxug4CPgA",
+      "status": "diagnose",
+      "rawText": ""
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Zwolse JS main.js",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/assets/js/main.js?v=WgecduYVPp8i_9Rxhb1fyYhHd0tzmUbPgKM0R-XTk5A",
+      "status": "diagnose",
+      "rawText": "g}])},[(0,o.RG)(e.$slots,\"default\")],2)}s(9838);var ge=s(8585);class fe{constructor(){(0,g.A)(this,\"baseUrl\",\"\"),(0,g.A)(this,\"client\",void 0),(0,g.A)(this,\"getClient\",async()=>{if(this.client)return this.client;const e=await Promise.all([s.e(9760),s.e(6183)]).then(s.bind(s,3110));retur | n this.client=e.default.create({timeout:18e6}),this.client.defaults.baseURL=this.baseUrl,this.client}),(0,g.A)(this,\"getMockRespon"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Zwolse JS helpers.js",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/assets/js/helpers.js?v=HGrKdvmUXqEJb8FtU8ZsLaz1xOk0Jx-uSg48D1iyr6I",
+      "status": "diagnose",
+      "rawText": ""
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Agenda geanalyseerd",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/programma",
+      "status": "gespecialiseerde parser",
+      "rawText": "0 agenda-items gevonden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Pagina geteld",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/programma",
+      "status": "analyse",
+      "rawText": "jsonld:0, links:0, datumblokken:0, kaarten:0, regels:0, detail:0"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Zwolse programma-parser",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/programma",
+      "status": "strategie",
+      "rawText": "Programma-kaarten met datums + geneste detail-URL's; JSON-LD/generieke parser als fallback"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Pagina geanalyseerd",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/programma",
+      "status": "ok",
+      "rawText": "0 events/aanbiedingen op deze pagina"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Feed geanalyseerd",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/",
+      "status": "ok",
+      "rawText": "0 events uit openbare feed"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/rss",
+      "status": "fout",
+      "rawText": "HTTP 404"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/rss.xml",
+      "status": "fout",
+      "rawText": "HTTP 404"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/feed.xml",
+      "status": "fout",
+      "rawText": "HTTP 404"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/events/feed/",
+      "status": "fout",
+      "rawText": "HTTP 404"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/programma",
+      "status": "klaar",
+      "rawText": "site 3/3: 0 unieke events in 5.47 sec"
+    }
+  ]
 }
