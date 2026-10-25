@@ -1,7 +1,7 @@
 {
   "runId": "2026-10-25T16:18:10.746379+00:00-c24a216e",
   "startedAt": "2026-10-25T16:18:10+00:00",
-  "completedCount": 11,
+  "completedCount": 12,
   "totalSites": 19,
   "currentSite": "https://www.concertgebouw.nl/concerten-en-tickets",
   "currentSiteIndex": 12,
@@ -16,7 +16,8 @@
     "https://www.martiniplaza.nl/nl/agenda",
     "https://groningermuseum.nl/programma",
     "https://www.kultuuragenda.nl/agenda",
-    "https://www.noorderzon.nl/programma"
+    "https://www.noorderzon.nl/programma",
+    "https://www.concertgebouw.nl/concerten-en-tickets"
   ],
   "events": [
     {
@@ -269,6 +270,13 @@
       "count": 0,
       "newCount": 0,
       "durationSeconds": 2.0,
+      "timedOut": true
+    },
+    {
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 2,
       "timedOut": true
     }
   ],
@@ -1955,16 +1963,151 @@
       "url": "https://www.concertgebouw.nl/concerten-en-tickets",
       "status": "strategie",
       "rawText": "universeel-jsonld-links-kaarten"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Pagina gelezen",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "status": "ok",
+      "rawText": "774263 tekens HTML"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Popup Choir Taylor Swift: zing mee met Maarten Bos en Tijmen de Koning",
+      "date": "2026-10-26",
+      "url": "https://www.concertgebouw.nl/concerten/45959877-popup-choir-taylor-swift-zing-mee-met-maarten-bos-en-tijmen-de-koning",
+      "status": "agenda-kaart",
+      "rawText": "Popup Choir Taylor Swift: zing mee met Maarten Bos en Tijmen de Koning 20:15 – 22:30 Grote Zaal v.a. € 25,00 Informatie en bestellen Informatie en bestellen ma 26 okt 2026 Bookmark Bookmark"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Fresku & Metropole Orkest o.l.v. Simon Dobson",
+      "date": "2026-10-27",
+      "url": "https://www.concertgebouw.nl/concerten/43931216-fresku-metropole-orkest-o.l.v.-simon-dobson",
+      "status": "agenda-kaart",
+      "rawText": "Fresku & Metropole Orkest o.l.v. Simon Dobson 20:15 – 21:45 Grote Zaal v.a. € 29,00 Meer informatie Meer informatie Uitverkocht di 27 okt 2026 Bookmark Bookmark"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Spotlight op Lucie Horsch: barok met Altstaedt en Dunford",
+      "date": "2026-10-27",
+      "url": "https://www.concertgebouw.nl/concerten/41773095-spotlight-op-lucie-horsch-barok-met-altstaedt-en-dunford",
+      "status": "agenda-kaart",
+      "rawText": "Spotlight op Lucie Horsch: barok met Altstaedt en Dunford 20:15 – 22:10 Kleine Zaal v.a. € 29,00 met onder andere Vivaldi Triosonate in a, RV 86 Vivaldi Sonate in e, RV 40 Informatie en bestellen Informatie en bestellen Laatste kaarten di 27 okt 2026 Bookmark Bookmark"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Zing-Cirkel Concertgebouw",
+      "date": "2026-10-28",
+      "url": "https://www.concertgebouw.nl/concerten/45913708-zing-cirkel-concertgebouw",
+      "status": "agenda-kaart",
+      "rawText": "Zing-Cirkel Concertgebouw 11:00 – 13:00 Spiegelzaal v.a. € 20,00 Meer informatie Meer informatie Uitverkocht wo 28 okt 2026 Bookmark Bookmark"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Gratis Lunchconcert: Nederlandse Fluit Academie",
+      "date": "2026-10-28",
+      "url": "https://www.concertgebouw.nl/concerten/46012123-gratis-lunchconcert-nederlandse-fluit-academie",
+      "status": "agenda-kaart",
+      "rawText": "Gratis Lunchconcert: Nederlandse Fluit Academie 12:30 – 13:00 Kleine Zaal met onder andere Clark Within Offermans Luna y Sierra Meer informatie Meer informatie Uitverkocht wo 28 okt 2026 Bookmark Bookmark"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Zing-Cirkel Concertgebouw",
+      "date": "2026-10-28",
+      "url": "https://www.concertgebouw.nl/concerten/45913707-zing-cirkel-concertgebouw",
+      "status": "agenda-kaart",
+      "rawText": "Zing-Cirkel Concertgebouw 14:00 – 16:00 Spiegelzaal v.a. € 20,00 Informatie en bestellen Informatie en bestellen Laatste kaarten wo 28 okt 2026 Bookmark Bookmark"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Klaus Mäkela dirigeert Mahler 7 bij het Concertgebouworkest",
+      "date": "2026-10-28",
+      "url": "https://www.concertgebouw.nl/concerten/45881816-klaus-makela-dirigeert-mahler-7-bij-het-concertgebouworkest",
+      "status": "agenda-kaart",
+      "rawText": "Klaus Mäkela dirigeert Mahler 7 bij het Concertgebouworkest 20:15 – 21:40 Grote Zaal v.a. € 29,00 Mahler Symfonie nr. 7 Informatie en bestellen Informatie en bestellen Laatste kaarten wo 28 okt 2026 Bookmark Bookmark"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Quatuor Arod speelt Bartók, Carlos Simon en Fanny Mendelssohn",
+      "date": "2026-10-28",
+      "url": "https://www.concertgebouw.nl/concerten/37331019-quatuor-arod-speelt-bartok-carlos-simon-en-fanny-mendelssohn",
+      "status": "agenda-kaart",
+      "rawText": "Quatuor Arod speelt Bartók, Carlos Simon en Fanny Mendelssohn 20:15 – 22:20 Kleine Zaal v.a. € 29,00 met onder andere Fanny Mendelssohn Strijkkwartet in Es Simon Warmth from Other Suns Informatie en bestellen Informatie en bestellen wo 28 okt 2026 Bookmark Bookmark"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "25 jaar Academie Concertgebouworkest",
+      "date": "2026-10-29",
+      "url": "https://www.concertgebouw.nl/concerten/45881817-25-jaar-academie-concertgebouworkest",
+      "status": "agenda-kaart",
+      "rawText": "25 jaar Academie Concertgebouworkest 20:15 – 22:40 Grote Zaal v.a. € 20,00 met onder andere Saint-Saëns Symfonie nr. 3 in c, op. 78 'Orgelsymfonie' Bruch Concert voor klarinet en altviool in e, op. 88 Meer informatie Meer informatie Uitverkocht do 29 okt 2026 Bookmark Bookmark"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Aristo Sham speelt Brahms’ pianosonates",
+      "date": "2026-10-29",
+      "url": "https://www.concertgebouw.nl/concerten/43425438-aristo-sham-speelt-brahms-pianosonates",
+      "status": "agenda-kaart",
+      "rawText": "Aristo Sham speelt Brahms’ pianosonates 20:15 – 22:10 Kleine Zaal v.a. € 25,00 met onder andere Brahms Sonate nr. 3 in f, op. 5 Schumann Träumerei Kinderszenen, op. 15 Informatie en bestellen Informatie en bestellen do 29 okt 2026 Bookmark Bookmark"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Klaus Mäkela dirigeert Mahler 7 bij het Concertgebouworkest",
+      "date": "2026-10-30",
+      "url": "https://www.concertgebouw.nl/concerten/45881818-klaus-makela-dirigeert-mahler-7-bij-het-concertgebouworkest",
+      "status": "agenda-kaart",
+      "rawText": "Klaus Mäkela dirigeert Mahler 7 bij het Concertgebouworkest 20:15 – 21:40 Grote Zaal v.a. € 29,00 Mahler Symfonie nr. 7 Meer informatie Meer informatie Uitverkocht vr 30 okt 2026 Bookmark Bookmark"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Flat Earth Society: The Coltrane Mutations",
+      "date": "2026-10-30",
+      "url": "https://www.concertgebouw.nl/concerten/43931217-flat-earth-society-the-coltrane-mutations",
+      "status": "agenda-kaart",
+      "rawText": "Flat Earth Society: The Coltrane Mutations 20:15 – 22:00 Kleine Zaal v.a. € 19,00 Informatie en bestellen Informatie en bestellen vr 30 okt 2026 Bookmark Bookmark"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Agenda-kaarten geteld",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "status": "gespecialiseerde parser",
+      "rawText": "12 resultaten"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Site-time-out",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "status": "timeout",
+      "rawText": "site overschreed de harde tijdslimiet van 2 seconden"
     }
   ],
   "status": "running",
   "siteStartedAt": "2026-10-25T16:18:59+00:00",
-  "siteElapsedSeconds": 1,
+  "siteElapsedSeconds": 3,
   "sitePageCount": 0,
   "lastSiteEventCount": 0,
-  "stage": "Websitepagina ophalen",
+  "stage": "Website klaar; volgende website voorbereiden",
   "lastUpdatedAt": "2026-10-25T16:19:00+00:00",
   "lastSiteNewEventCount": 0,
-  "lastCompletedSite": "https://www.noorderzon.nl/programma",
-  "lastCompletedAt": "2026-10-25T16:18:58+00:00"
+  "lastCompletedSite": "https://www.concertgebouw.nl/concerten-en-tickets",
+  "lastCompletedAt": "2026-10-25T16:19:02+00:00"
 }
