@@ -1318,7 +1318,7 @@
   </div>
 
   <script>
-    const APP_VERSION = "2026.10.25.25";
+    const APP_VERSION = "2026.10.25.26";
     const DEFAULT_MAX_EVENTS_PER_SITE = 20;
     const DEFAULT_SITE_TIME_LIMIT_SECONDS = 20;
     const SCAN_SETTINGS_KEY = "eventScanSettingsV1";
@@ -2425,7 +2425,7 @@
         const elapsedSeconds = Math.floor((Date.now() - startedAt) / 1000);
         const liveNewCount = events.filter(isNewEvent).length;
         const liveExistingCount = Math.max(0, events.length - liveNewCount);
-        showStatus(`Live verversen: ${elapsedSeconds}s verstreken; ${events.length} evenementen (${liveNewCount} nieuw, ${liveExistingCount} bestaand). Maximaal ${maxAttempts} seconden (${Math.round(maxAttempts / 60 * 10) / 10} min); controle iedere seconde.`, "warn", { stop: true });
+        showStatus(`Live verversen: ${elapsedSeconds}s verstreken; ${events.length} evenementen (${liveNewCount} nieuw, ${liveExistingCount} bestaand). Publicatiewachttijd maximaal ${maxAttempts} seconden (${Math.round(maxAttempts / 60 * 10) / 10} min); status ververst iedere seconde. De ingestelde zoektijd geldt per website.`, "warn", { stop: true });
         const shouldContinue = await waitUnlessStopped(intervalMs);
         if (!shouldContinue) {
           showStatus("Controle gestopt. De update kan nog doorlopen; probeer later opnieuw.", "warn");
@@ -3248,7 +3248,7 @@
         titleProgress.title = "Verversverzoek wordt gestart. Daarna verschijnt hier de actieve website en de actuele stap."; 
       }
       if (titleBusyIndicator) titleBusyIndicator.hidden = false;
-      showStatus(`Scrape voorbereiden: ${selectedSites.length} websites geselecteerd; maximaal ${scanSettings.maxEventsPerSite} nieuwe resultaten per website en ${scanSettings.siteTimeLimitSeconds} seconden per website. Ik controleer de publicatie maximaal ${Math.round(totalWaitSeconds / 60 * 10) / 10} minuten (verwachte scantijd circa ${Math.round(expectedScanSeconds / 60 * 10) / 10} min); voortgang iedere seconde.`, "warn");
+      showStatus(`Scrape voorbereiden: ${selectedSites.length} websites geselecteerd; maximaal ${scanSettings.maxEventsPerSite} nieuwe resultaten per website en ${scanSettings.siteTimeLimitSeconds} seconden per website. Ik controleer de publicatie maximaal ${Math.round(totalWaitSeconds / 60 * 10) / 10} minuten (verwachte scantijd circa ${Math.round(expectedScanSeconds / 60 * 10) / 10} min); voortgang wordt iedere seconde bijgewerkt; de ingestelde zoektijd geldt per website.`, "warn");
       const payload = {
         region: $("region").value.trim(),
         radius: radiusPayloadValue(),
