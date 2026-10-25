@@ -1,7 +1,7 @@
 {
   "runId": "2026-10-25T17:54:10.535222+00:00-c7af6784",
   "startedAt": "2026-10-25T17:54:10+00:00",
-  "completedCount": 5,
+  "completedCount": 6,
   "totalSites": 14,
   "currentSite": "https://simplon.nl/",
   "currentSiteIndex": 6,
@@ -10,7 +10,8 @@
     "https://www.visitgroningen.nl/nl/doen/evenementen",
     "https://www.visitgroningen.nl/nl/doen/wandelen",
     "https://forum.nl/nl/agenda",
-    "https://www.spotgroningen.nl/programma/"
+    "https://www.spotgroningen.nl/programma/",
+    "https://simplon.nl/"
   ],
   "events": [
     {
@@ -2629,6 +2630,456 @@
       "cost": "",
       "image": "https://www.spotgroningen.nl/wp-content/uploads/2026/04/Marie-Koet-Eindspel-Anna-Perger-Nannie-Bronshoff-3-300-dpi-RGB-300x200.jpg",
       "isNew": true
+    },
+    {
+      "date": "2026-12-04",
+      "time": "",
+      "title": "ZWARTEWATER",
+      "type": "Concert",
+      "location": "Simplon Groningen",
+      "locationLink": "",
+      "website": "https://simplon.nl/events/zwartewater-2026/",
+      "source": "simplon.nl",
+      "discoverySource": "Website",
+      "description": "Spijkerharde Zwolse rap",
+      "cost": "",
+      "image": "https://simplon.nl/wp-content/uploads/2026/06/1.-MAIN-PERSFOTO-ZW-1600x900.jpg",
+      "isNew": true
+    },
+    {
+      "date": "2026-12-05",
+      "time": "",
+      "title": "Lézard",
+      "type": "Concert",
+      "location": "Simplon Groningen",
+      "locationLink": "",
+      "website": "https://simplon.nl/events/lezard-2026/",
+      "source": "simplon.nl",
+      "discoverySource": "Website",
+      "description": "A discopunk diorama",
+      "cost": "",
+      "image": "https://simplon.nl/wp-content/uploads/2026/04/Lezard_horizontal-1600x900.jpg",
+      "isNew": true
+    },
+    {
+      "date": "2026-12-09",
+      "time": "",
+      "title": "Comedytunes Comedynight",
+      "type": "Concert",
+      "location": "Simplon Groningen",
+      "locationLink": "",
+      "website": "https://simplon.nl/events/comedy-tunes-9-12/",
+      "source": "simplon.nl",
+      "discoverySource": "Website",
+      "description": "Jasper van der Veen // Jacob Adriani // Tim Alpherts // Meeuw Roovers",
+      "cost": "",
+      "image": "https://simplon.nl/wp-content/uploads/2026/06/1280x800_DEC2026_v01.jpg",
+      "isNew": true
+    },
+    {
+      "date": "2026-12-10",
+      "time": "",
+      "title": "Ciao Lucifer",
+      "type": "Concert",
+      "location": "Simplon Groningen",
+      "locationLink": "",
+      "website": "https://simplon.nl/events/ciao-lucifer-2026/",
+      "source": "simplon.nl",
+      "discoverySource": "Website",
+      "description": "Reality-escaping, uplifting indiepop",
+      "cost": "",
+      "image": "https://simplon.nl/wp-content/uploads/2026/04/Ciao-Lucifer-Press-Photo-2026-by-Bibian-Bingen-hr-1600x900.jpg",
+      "isNew": true
+    },
+    {
+      "date": "2026-12-11",
+      "time": "",
+      "title": "10 jaar Kerst met Stippenlift",
+      "type": "Concert",
+      "location": "Simplon Groningen",
+      "locationLink": "",
+      "website": "https://simplon.nl/events/stippenlift-2026/",
+      "source": "simplon.nl",
+      "discoverySource": "Website",
+      "description": "Dé remedie tegen je winterdepressie",
+      "cost": "",
+      "image": "https://simplon.nl/wp-content/uploads/2026/05/sl-kersttour-2026-a3-bg-1600x900.png",
+      "isNew": true
+    },
+    {
+      "date": "2026-12-16",
+      "time": "",
+      "title": "stay away from dante!",
+      "type": "Concert",
+      "location": "Simplon Groningen",
+      "locationLink": "",
+      "website": "https://simplon.nl/events/stay-away-from-dante/",
+      "source": "simplon.nl",
+      "discoverySource": "Website",
+      "description": "Een wereld vol verhalen, genres en verrassingen",
+      "cost": "",
+      "image": "https://simplon.nl/wp-content/uploads/2026/04/PRESS-1-door-Joel-Boone-1600x900.jpg",
+      "isNew": true
+    },
+    {
+      "date": "2026-12-18",
+      "time": "",
+      "title": "Tim Akkerman & The Ivy League",
+      "type": "Concert",
+      "location": "Simplon Groningen",
+      "locationLink": "",
+      "website": "https://simplon.nl/events/tim-akkerman-the-ivy-league-2026/",
+      "source": "simplon.nl",
+      "discoverySource": "Website",
+      "description": "Intimate singer-songwriter pop",
+      "cost": "",
+      "image": "https://simplon.nl/wp-content/uploads/2026/03/YouriClaessensPhotography_TAIL-6-of-6-1600x900.jpg",
+      "isNew": true
+    },
+    {
+      "date": "2027-01-08",
+      "time": "",
+      "title": "Eva van Manen",
+      "type": "Concert",
+      "location": "Simplon Groningen",
+      "locationLink": "",
+      "website": "https://simplon.nl/events/eva-van-manen-2027/",
+      "source": "simplon.nl",
+      "discoverySource": "Website",
+      "description": "Support: Luka | Een poëtische adempauze",
+      "cost": "",
+      "image": "https://simplon.nl/wp-content/uploads/2026/05/0-Persfoto5_EvavanManen-doorSharonJaneD-scaled-e1778593445810-1600x900.jpg",
+      "isNew": true
+    },
+    {
+      "date": "2027-01-09",
+      "time": "",
+      "title": "Alice Olsthoorn",
+      "type": "Concert",
+      "location": "Simplon Groningen",
+      "locationLink": "",
+      "website": "https://simplon.nl/events/alice-olsthoorn/",
+      "source": "simplon.nl",
+      "discoverySource": "Website",
+      "description": "Aanstekelijke hyperpop meets club muziek",
+      "cost": "",
+      "image": "https://simplon.nl/wp-content/uploads/2026/08/Alice_Nov2025_39-scaled-e1787059407567-1600x900.jpg",
+      "isNew": true
+    },
+    {
+      "date": "2027-01-22",
+      "time": "",
+      "title": "Klezmagic",
+      "type": "Concert",
+      "location": "Simplon Groningen",
+      "locationLink": "",
+      "website": "https://simplon.nl/events/klezmagic/",
+      "source": "simplon.nl",
+      "discoverySource": "Website",
+      "description": "Energetic Balkan and Klezmer",
+      "cost": "",
+      "image": "https://simplon.nl/wp-content/uploads/2026/03/2-klezmagic-optreden-1600x900.jpg",
+      "isNew": true
+    },
+    {
+      "date": "2027-02-05",
+      "time": "",
+      "title": "Starfish",
+      "type": "Concert",
+      "location": "Simplon Groningen",
+      "locationLink": "",
+      "website": "https://simplon.nl/events/starfish-3/",
+      "source": "simplon.nl",
+      "discoverySource": "Website",
+      "description": "Sun soaked mix of reggae pop and surf rock",
+      "cost": "",
+      "image": "https://simplon.nl/wp-content/uploads/2025/10/Starfish-1-1600x900.jpg",
+      "isNew": true
+    },
+    {
+      "date": "2027-02-12",
+      "time": "",
+      "title": "Yong Yello",
+      "type": "Concert",
+      "location": "Simplon Groningen",
+      "locationLink": "",
+      "website": "https://simplon.nl/events/yong-yello/",
+      "source": "simplon.nl",
+      "discoverySource": "Website",
+      "description": "Soulvolle en meeslepende Vlaamse hiphop",
+      "cost": "",
+      "image": "https://simplon.nl/wp-content/uploads/2026/08/Lars-De-Nijs-Breda-1-scaled-e1787650672249-1600x900.jpg",
+      "isNew": true
+    },
+    {
+      "date": "2027-02-13",
+      "time": "",
+      "title": "VISION",
+      "type": "Dans",
+      "location": "Simplon Groningen",
+      "locationLink": "",
+      "website": "https://simplon.nl/events/vision-februari-2027/",
+      "source": "simplon.nl",
+      "discoverySource": "Website",
+      "description": "Meer informatie staat op simplon.nl.",
+      "cost": "",
+      "image": "https://simplon.nl/wp-content/uploads/2026/10/A_Noisia-2026_pictureby_Farhad-Khodadadzade-1600x900.jpg",
+      "isNew": true
+    },
+    {
+      "date": "2027-02-13",
+      "time": "",
+      "title": "dance",
+      "type": "Dans",
+      "location": "Simplon Groningen",
+      "locationLink": "",
+      "website": "https://simplon.nl/events/vision-februari-2027/",
+      "source": "simplon.nl",
+      "discoverySource": "Website",
+      "description": "Meer informatie staat op simplon.nl.",
+      "cost": "",
+      "image": "https://simplon.nl/wp-content/uploads/2026/10/A_Noisia-2026_pictureby_Farhad-Khodadadzade-1600x900.jpg",
+      "isNew": true
+    },
+    {
+      "date": "2027-02-17",
+      "time": "",
+      "title": "Comedytunes Comedynight",
+      "type": "Concert",
+      "location": "Simplon Groningen",
+      "locationLink": "",
+      "website": "https://simplon.nl/events/comedy-tunes-17-2/",
+      "source": "simplon.nl",
+      "discoverySource": "Website",
+      "description": "Tim Kroezen // Gerrie Smits // Wilko Terwijn // Jacob Spoelstra",
+      "cost": "",
+      "image": "https://simplon.nl/wp-content/uploads/2026/06/1280x800_FEB2027_v01.jpg",
+      "isNew": true
+    },
+    {
+      "date": "2027-02-26",
+      "time": "",
+      "title": "Oh Voyage",
+      "type": "Concert",
+      "location": "Simplon Groningen",
+      "locationLink": "",
+      "website": "https://simplon.nl/events/oh-voyage-2026/",
+      "source": "simplon.nl",
+      "discoverySource": "Website",
+      "description": "Anatolian psych dance",
+      "cost": "",
+      "image": "https://simplon.nl/wp-content/uploads/2026/06/Artist-Photo-for-Album-Tour-1600x900.jpg",
+      "isNew": true
+    },
+    {
+      "date": "2027-02-26",
+      "time": "",
+      "title": "The Skints",
+      "type": "Concert",
+      "location": "Simplon Groningen",
+      "locationLink": "",
+      "website": "https://simplon.nl/events/the-skints-2026/",
+      "source": "simplon.nl",
+      "discoverySource": "Website",
+      "description": "East-London Reggae",
+      "cost": "",
+      "image": "https://simplon.nl/wp-content/uploads/2026/05/skints-louder-than-war.jpg",
+      "isNew": true
+    },
+    {
+      "date": "2027-03-05",
+      "time": "",
+      "title": "Kans",
+      "type": "Concert",
+      "location": "Simplon Groningen",
+      "locationLink": "",
+      "website": "https://simplon.nl/events/kans/",
+      "source": "simplon.nl",
+      "discoverySource": "Website",
+      "description": "Warme, emotionele r&b en hiphop",
+      "cost": "",
+      "image": "https://simplon.nl/wp-content/uploads/2026/09/Firefly_Gemini-Flash_verwijder-alle-tekst-en-logos-911338.png",
+      "isNew": true
+    },
+    {
+      "date": "2027-03-06",
+      "time": "",
+      "title": "TAPE TOY",
+      "type": "Concert",
+      "location": "Simplon Groningen",
+      "locationLink": "",
+      "website": "https://simplon.nl/events/tape-toy-2027/",
+      "source": "simplon.nl",
+      "discoverySource": "Website",
+      "description": "Hyperactive grungepop and punky shoegaze",
+      "cost": "",
+      "image": "https://simplon.nl/wp-content/uploads/2026/10/3.-TAPE-TOY-Texas-Schiffmacher-1600x900.png",
+      "isNew": true
+    },
+    {
+      "date": "2027-03-12",
+      "time": "",
+      "title": "Dominic Donner",
+      "type": "Concert",
+      "location": "Simplon Groningen",
+      "locationLink": "",
+      "website": "https://simplon.nl/events/dominic-donner/",
+      "source": "simplon.nl",
+      "discoverySource": "Website",
+      "description": "Dark pop and melancholic electronica",
+      "cost": "",
+      "image": "https://simplon.nl/wp-content/uploads/2026/09/Dominic-Donner-kleiner-1320x900.png",
+      "isNew": true
+    },
+    {
+      "date": "2027-03-19",
+      "time": "",
+      "title": "Politie Warnsveld",
+      "type": "Concert",
+      "location": "Simplon Groningen",
+      "locationLink": "",
+      "website": "https://simplon.nl/events/politie-warnsveld-2027/",
+      "source": "simplon.nl",
+      "discoverySource": "Website",
+      "description": "Compromisloze skapunk",
+      "cost": "",
+      "image": "https://simplon.nl/wp-content/uploads/2026/09/2026-09-30-Release-Oktober-content-3-HR-1-scaled-e1792663518732-1600x900.jpg",
+      "isNew": true
+    },
+    {
+      "date": "2027-03-20",
+      "time": "",
+      "title": "McScallyfest",
+      "type": "Concert",
+      "location": "Simplon Groningen",
+      "locationLink": "",
+      "website": "https://simplon.nl/events/mcscallyfest-2027/",
+      "source": "simplon.nl",
+      "discoverySource": "Website",
+      "description": "Minifestival en EP-release vol feestelijke folkpunk",
+      "cost": "",
+      "image": "https://simplon.nl/wp-content/uploads/2026/10/Groupfoto-1-1600x900.jpg",
+      "isNew": true
+    },
+    {
+      "date": "2027-04-02",
+      "time": "",
+      "title": "FIEP",
+      "type": "Concert",
+      "location": "Simplon Groningen",
+      "locationLink": "",
+      "website": "https://simplon.nl/events/fiep/",
+      "source": "simplon.nl",
+      "discoverySource": "Website",
+      "description": "Infectious, energetic indierock",
+      "cost": "",
+      "image": "https://simplon.nl/wp-content/uploads/2026/09/FIEP-AI-1600x900.png",
+      "isNew": true
+    },
+    {
+      "date": "2027-04-10",
+      "time": "",
+      "title": "Sven Cilliers",
+      "type": "Concert",
+      "location": "Simplon Groningen",
+      "locationLink": "",
+      "website": "https://simplon.nl/events/sven-cilliers-2027/",
+      "source": "simplon.nl",
+      "discoverySource": "Website",
+      "description": "Intimate singer-songwriter pop",
+      "cost": "",
+      "image": "https://simplon.nl/wp-content/uploads/2026/10/0V7A0072-scaled-e1733318004573-1600x900.jpg",
+      "isNew": true
+    },
+    {
+      "date": "2027-04-10",
+      "time": "",
+      "title": "ÃO Mesmerising mix of Portuguese artpop and alternative Latin",
+      "type": "Concert",
+      "location": "Simplon Groningen",
+      "locationLink": "",
+      "website": "https://simplon.nl/events/ao/",
+      "source": "simplon.nl",
+      "discoverySource": "Website",
+      "description": "Mesmerising mix of Portuguese artpop and alternative Latin",
+      "cost": "",
+      "image": "https://simplon.nl/wp-content/uploads/2026/09/AO_R0003013_RECHTHOEK-1080x900.jpg",
+      "isNew": true
+    },
+    {
+      "date": "2027-04-14",
+      "time": "",
+      "title": "Comedytunes Comedynight",
+      "type": "Concert",
+      "location": "Simplon Groningen",
+      "locationLink": "",
+      "website": "https://simplon.nl/events/comedy-tunes-14-4/",
+      "source": "simplon.nl",
+      "discoverySource": "Website",
+      "description": "Ronald Smink // Joran Welling // Hermes Ahmadi // Jasper Nieuwenhuis",
+      "cost": "",
+      "image": "https://simplon.nl/wp-content/uploads/2026/06/1280x800_APR2027_v01.jpg",
+      "isNew": true
+    },
+    {
+      "date": "2027-04-24",
+      "time": "",
+      "title": "Blackbird",
+      "type": "Concert",
+      "location": "Simplon Groningen",
+      "locationLink": "",
+      "website": "https://simplon.nl/events/blackbird-2027/",
+      "source": "simplon.nl",
+      "discoverySource": "Website",
+      "description": "Melodious vintage pop",
+      "cost": "",
+      "image": "https://simplon.nl/wp-content/uploads/2026/08/image002-1600x900.jpg",
+      "isNew": true
+    },
+    {
+      "date": "2027-04-30",
+      "time": "",
+      "title": "Josua Peter",
+      "type": "Concert",
+      "location": "Simplon Groningen",
+      "locationLink": "",
+      "website": "https://simplon.nl/events/josua-peter-2027/",
+      "source": "simplon.nl",
+      "discoverySource": "Website",
+      "description": "Dynamic indie folk and pop",
+      "cost": "",
+      "image": "https://simplon.nl/wp-content/uploads/2026/09/JOSUA-PETER-tour-2027-1600x900.jpeg",
+      "isNew": true
+    },
+    {
+      "date": "2027-05-14",
+      "time": "",
+      "title": "Nienke Leone",
+      "type": "Concert",
+      "location": "Simplon Groningen",
+      "locationLink": "",
+      "website": "https://simplon.nl/events/nienke-leone/",
+      "source": "simplon.nl",
+      "discoverySource": "Website",
+      "description": "Eerlijke en catchy popliedjes",
+      "cost": "",
+      "image": "https://simplon.nl/wp-content/uploads/2026/09/persfoto-3-nienke-leone-rubydijt-1600x900.jpg",
+      "isNew": true
+    },
+    {
+      "date": "2027-05-28",
+      "time": "",
+      "title": "Mood Bored",
+      "type": "Concert",
+      "location": "Simplon Groningen",
+      "locationLink": "",
+      "website": "https://simplon.nl/events/mood-bored-2027/",
+      "source": "simplon.nl",
+      "discoverySource": "Website",
+      "description": "Catchy and raw shoegaze mixed with catchy poppy hooks",
+      "cost": "",
+      "image": "https://simplon.nl/wp-content/uploads/2026/09/DSC02464-4-1600x900.jpg",
+      "isNew": true
     }
   ],
   "siteResults": [
@@ -2666,6 +3117,13 @@
       "newCount": 50,
       "durationSeconds": 3.2,
       "timedOut": false
+    },
+    {
+      "site": "https://simplon.nl/",
+      "count": 30,
+      "newCount": 30,
+      "durationSeconds": 5.0,
+      "timedOut": true
     }
   ],
   "rawLog": [
@@ -11978,591 +12436,6 @@
     {
       "source": "Website",
       "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Barokopera Amsterdam The Indian Queen Purcells barokmuziek verweven met migratieverhalen en klanken uit Zuid-Amerika za 17 apr",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/barokopera-amsterdam-8/",
-      "status": "detail-link gevonden",
-      "rawText": "Barokopera Amsterdam The Indian Queen Purcells barokmuziek verweven met migratieverhalen en klanken uit Zuid-Amerika za 17 apr"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "In de Waaier - Live Een avond met Bauke Mollema Een terugblik op bijna 20 jaar als wielrenner Uitverkocht zo 1 nov",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/bauke-mollema/",
-      "status": "detail-link gevonden",
-      "rawText": "In de Waaier - Live Een avond met Bauke Mollema Een terugblik op bijna 20 jaar als wielrenner Uitverkocht zo 1 nov"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Bazart Belgische popsensatie na tien jaar nog steeds sterker dan ooit za 13 feb",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/bazart-2/",
-      "status": "detail-link gevonden",
-      "rawText": "Bazart Belgische popsensatie na tien jaar nog steeds sterker dan ooit za 13 feb"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Be Bach (5+) Ton Meijer Interactieve, supertoegankelijke voorstelling waarin elk kind zich Bach waant do 25 feb",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/be-bach-5/",
-      "status": "detail-link gevonden",
-      "rawText": "Be Bach (5+) Ton Meijer Interactieve, supertoegankelijke voorstelling waarin elk kind zich Bach waant do 25 feb"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Bente Met DWARS laat Bente een nieuwe kant van haar persoonlijke en eigenzinnige pop horen Uitverkocht Net bevestigd do 13 mei",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/bente-5-13/",
-      "status": "detail-link gevonden",
-      "rawText": "Bente Met DWARS laat Bente een nieuwe kant van haar persoonlijke en eigenzinnige pop horen Uitverkocht Net bevestigd do 13 mei"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Bert Hadders Een centimeter roest is maar een millimeter staal vr 26 feb",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/bert-hadders/",
-      "status": "detail-link gevonden",
-      "rawText": "Bert Hadders Een centimeter roest is maar een millimeter staal vr 26 feb"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Bert Visscher, Martin van Waardenberg Sunshine Boys Ontroerend meesterwerk met komische zwaargewichten wo 2 jun",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/bert-visscher-martin-van-waardenberg-2/",
-      "status": "detail-link gevonden",
-      "rawText": "Bert Visscher, Martin van Waardenberg Sunshine Boys Ontroerend meesterwerk met komische zwaargewichten wo 2 jun"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Bert Visscher, Martin van Waardenberg Sunshine Boys Ontroerend meesterwerk met komische zwaargewichten do 3 jun",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/bert-visscher-martin-van-waardenberg-3/",
-      "status": "detail-link gevonden",
-      "rawText": "Bert Visscher, Martin van Waardenberg Sunshine Boys Ontroerend meesterwerk met komische zwaargewichten do 3 jun"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Bert Visscher, Martin van Waardenberg Sunshine Boys Ontroerend meesterwerk met komische zwaargewichten di 1 jun",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/bert-visscher-martin-van-waardenberg/",
-      "status": "detail-link gevonden",
-      "rawText": "Bert Visscher, Martin van Waardenberg Sunshine Boys Ontroerend meesterwerk met komische zwaargewichten di 1 jun"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Bertolf - Bluefinger Volume 2. Kundige Nederlandse singer-songwriter en multi-instrumentalist vr 18 dec",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/bertolf-bluefinger-volume-2/",
-      "status": "detail-link gevonden",
-      "rawText": "Bertolf - Bluefinger Volume 2. Kundige Nederlandse singer-songwriter en multi-instrumentalist vr 18 dec"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Blair Davie Eén van de meest veelbelovende nieuwe singer-songwriters uit de UK di 17 nov",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/blair-davie/",
-      "status": "detail-link gevonden",
-      "rawText": "Blair Davie Eén van de meest veelbelovende nieuwe singer-songwriters uit de UK di 17 nov"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Bo Tarenskeen | Het Nationale Theater Soekarno “Tarenskeen kleurt Soekarno prachtig in\" ★★★★ Trouw zo 1 nov",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/bo-tarenskeen-het-nationale-theater/",
-      "status": "detail-link gevonden",
-      "rawText": "Bo Tarenskeen | Het Nationale Theater Soekarno “Tarenskeen kleurt Soekarno prachtig in\" ★★★★ Trouw zo 1 nov"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "BOUKE ROCKS ELVIS Bouke brengt the King met volle overtuiging tot leven vr 4 jun",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/bouke-rocks-elvis/",
-      "status": "detail-link gevonden",
-      "rawText": "BOUKE ROCKS ELVIS Bouke brengt the King met volle overtuiging tot leven vr 4 jun"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Brabo Leone Sarah Janneh Sarah Janneh neemt je mee op een muzikale zoektocht do 9 sep",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/brabo-leone-2/",
-      "status": "detail-link gevonden",
-      "rawText": "Brabo Leone Sarah Janneh Sarah Janneh neemt je mee op een muzikale zoektocht do 9 sep"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Brabo Leone Sarah Janneh Sarah Janneh neemt je mee op een muzikale zoektocht vr 10 sep",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/brabo-leone-3/",
-      "status": "detail-link gevonden",
-      "rawText": "Brabo Leone Sarah Janneh Sarah Janneh neemt je mee op een muzikale zoektocht vr 10 sep"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Brabo Leone Sarah Janneh Sarah Janneh neemt je mee op een muzikale zoektocht za 11 sep",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/brabo-leone-4/",
-      "status": "detail-link gevonden",
-      "rawText": "Brabo Leone Sarah Janneh Sarah Janneh neemt je mee op een muzikale zoektocht za 11 sep"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Brabo Leone Sarah Janneh Sarah Janneh neemt je mee op een muzikale zoektocht wo 8 sep",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/brabo-leone/",
-      "status": "detail-link gevonden",
-      "rawText": "Brabo Leone Sarah Janneh Sarah Janneh neemt je mee op een muzikale zoektocht wo 8 sep"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Brand New Musical Kapsalon de musical Swingende voorstelling met muzikale invloeden van Afro-beats, hiphop, gospel en pop zo 6 jun",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/brand-new-musical/",
-      "status": "detail-link gevonden",
-      "rawText": "Brand New Musical Kapsalon de musical Swingende voorstelling met muzikale invloeden van Afro-beats, hiphop, gospel en pop zo 6 jun"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Breabach Folky Sunday Een avondje Schotse folk op z’n allerbest! zo 1 nov",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/breabach-2/",
-      "status": "detail-link gevonden",
-      "rawText": "Breabach Folky Sunday Een avondje Schotse folk op z’n allerbest! zo 1 nov"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Brodsky Quartet De Late kwartetten van Beethoven Duik een dag lang in zes van Beethovens beroemdste meesterwerken Wereldklasse za 30 jan",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/brodsky-quartet-2/",
-      "status": "detail-link gevonden",
-      "rawText": "Brodsky Quartet De Late kwartetten van Beethoven Duik een dag lang in zes van Beethovens beroemdste meesterwerken Wereldklasse za 30 jan"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Buddy Vedder & Shelley Bos Al het blauw van de hemel Gloednieuw muziektheaterstuk gebaseerd op de bestseller van Mélissa Da Costa Laatste kaarten do 14 okt",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/buddy-vedder-shelley-bos/",
-      "status": "detail-link gevonden",
-      "rawText": "Buddy Vedder & Shelley Bos Al het blauw van de hemel Gloednieuw muziektheaterstuk gebaseerd op de bestseller van Mélissa Da Costa Laatste kaarten do 14 okt"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Bureau Vergezicht & Romana Vrede Een groter verhaal Een indringende en poëtische solo over hoe we naar de wereld kijken ma 14 dec",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/bureau-vergezicht-2/",
-      "status": "detail-link gevonden",
-      "rawText": "Bureau Vergezicht & Romana Vrede Een groter verhaal Een indringende en poëtische solo over hoe we naar de wereld kijken ma 14 dec"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Bureau Vergezicht Een stukje naar de mensen toe “Een magisch cadeautje aan haar publiek.” (NRC ★★★★) do 8 apr",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/bureau-vergezicht/",
-      "status": "detail-link gevonden",
-      "rawText": "Bureau Vergezicht Een stukje naar de mensen toe “Een magisch cadeautje aan haar publiek.” (NRC ★★★★) do 8 apr"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Bushman's Revenge Noors powertrio combineert de energie van rock met de vrijheid van jazz Net bevestigd di 2 mrt",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/bushmans-revenge/",
-      "status": "detail-link gevonden",
-      "rawText": "Bushman's Revenge Noors powertrio combineert de energie van rock met de vrijheid van jazz Net bevestigd di 2 mrt"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Cabarestafette presenteert: NIEUW GELUID! De lekkerste lokroep uit de comedykelders wo 3 feb",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/cabarestafette-presenteert/",
-      "status": "detail-link gevonden",
-      "rawText": "Cabarestafette presenteert: NIEUW GELUID! De lekkerste lokroep uit de comedykelders wo 3 feb"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Cameretten Finalistentournee 60e editie di 18 mei",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/cameretten-2/",
-      "status": "detail-link gevonden",
-      "rawText": "Cameretten Finalistentournee 60e editie di 18 mei"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Cappella Amsterdam & Lavinia Meijer Glass 90 Muziek van Philip Glass, bewerkt voor harp en koor di 26 jan",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/cappella-amsterdam-lavinia-meijer/",
-      "status": "detail-link gevonden",
-      "rawText": "Cappella Amsterdam & Lavinia Meijer Glass 90 Muziek van Philip Glass, bewerkt voor harp en koor di 26 jan"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Caravan Palace Mixt moderne elektronische muziek met jazz en de vibe van de jaren twintig wo 28 okt",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/caravan-palace/",
-      "status": "detail-link gevonden",
-      "rawText": "Caravan Palace Mixt moderne elektronische muziek met jazz en de vibe van de jaren twintig wo 28 okt"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Caro Returning to Innocence Rauw, sensueel, gelaagd ma 9 nov",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/caro/",
-      "status": "detail-link gevonden",
-      "rawText": "Caro Returning to Innocence Rauw, sensueel, gelaagd ma 9 nov"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Chef'Special Nog één keer in de oorspronkelijke bezetting Uitverkocht za 10 apr",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/chefspecial-6/",
-      "status": "detail-link gevonden",
-      "rawText": "Chef'Special Nog één keer in de oorspronkelijke bezetting Uitverkocht za 10 apr"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Chef'Special Nog één keer in de oorspronkelijke bezetting zo 11 apr",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/chefspecial-7/",
-      "status": "detail-link gevonden",
-      "rawText": "Chef'Special Nog één keer in de oorspronkelijke bezetting zo 11 apr"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Choir! Choir! Choir! Presents: MAMMA MIA: An EPIC ABBA Sing-Along! Zing mee met ABBA's Greatest Hits! Net bevestigd wo 21 apr",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/choir-choir-choir-presents/",
-      "status": "detail-link gevonden",
-      "rawText": "Choir! Choir! Choir! Presents: MAMMA MIA: An EPIC ABBA Sing-Along! Zing mee met ABBA's Greatest Hits! Net bevestigd wo 21 apr"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Christian van Eijkelenburg Smalltalk Awkward gesprekjes, egoïstische mislukkelingen, gênante stiltes, theatrale betweters di 6 apr",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/christian-van-eijkelenburg-3/",
-      "status": "detail-link gevonden",
-      "rawText": "Christian van Eijkelenburg Smalltalk Awkward gesprekjes, egoïstische mislukkelingen, gênante stiltes, theatrale betweters di 6 apr"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Circus Treurdier Die Bloemkool (een moeilijke musical) Absurd verhaal over vermeende intelligentie en zogenaamde domheid wo 14 apr",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/circus-treurdier-9/",
-      "status": "detail-link gevonden",
-      "rawText": "Circus Treurdier Die Bloemkool (een moeilijke musical) Absurd verhaal over vermeende intelligentie en zogenaamde domheid wo 14 apr"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Claudia de Breij Oudejaarsconference 2026 Claudia de Breij is terug met de officiële Oudejaarsconference! Laatste kaarten wo 25 nov",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/claudia-de-breij-16/",
-      "status": "detail-link gevonden",
-      "rawText": "Claudia de Breij Oudejaarsconference 2026 Claudia de Breij is terug met de officiële Oudejaarsconference! Laatste kaarten wo 25 nov"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Claudia de Breij Oudejaarsconference 2026 Claudia de Breij is terug met de officiële Oudejaarsconference! Laatste kaarten do 26 nov",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/claudia-de-breij-17/",
-      "status": "detail-link gevonden",
-      "rawText": "Claudia de Breij Oudejaarsconference 2026 Claudia de Breij is terug met de officiële Oudejaarsconference! Laatste kaarten do 26 nov"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Clean Pete's Kerstshow Over-the-top kerstshow met een bijzondere mix van kerstklassiekers za 12 dec",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/clean-pete-kerstshow-2/",
-      "status": "detail-link gevonden",
-      "rawText": "Clean Pete's Kerstshow Over-the-top kerstshow met een bijzondere mix van kerstklassiekers za 12 dec"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Clean Pete Klassieke Revue met Thomas Beijer Clean Pete werpt een verfrissende blik op het klassieke repertoire do 15 apr",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/clean-pete-klassieke-revue-met-thomas-beijer/",
-      "status": "detail-link gevonden",
-      "rawText": "Clean Pete Klassieke Revue met Thomas Beijer Clean Pete werpt een verfrissende blik op het klassieke repertoire do 15 apr"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Clouseau Al meer dan veertig jaar een vaste waarde in de Nederlandstalige popmuziek Uitverkocht di 23 feb",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/clouseau-2/",
-      "status": "detail-link gevonden",
-      "rawText": "Clouseau Al meer dan veertig jaar een vaste waarde in de Nederlandstalige popmuziek Uitverkocht di 23 feb"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Clouseau Al meer dan veertig jaar een vaste waarde in de Nederlandstalige popmuziek Uitverkocht Net bevestigd ma 8 mrt",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/clouseau-3/",
-      "status": "detail-link gevonden",
-      "rawText": "Clouseau Al meer dan veertig jaar een vaste waarde in de Nederlandstalige popmuziek Uitverkocht Net bevestigd ma 8 mrt"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Club Lam Dolle Mina Humoristische, vurige performance over emancipatie, gelijkheid en liefde za 3 apr",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/club-lam-2/",
-      "status": "detail-link gevonden",
-      "rawText": "Club Lam Dolle Mina Humoristische, vurige performance over emancipatie, gelijkheid en liefde za 3 apr"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Club Motion 16+ clubnacht Eerste editie in Groningen trapt af met New Wave editie zo 27 dec",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/club-motion/",
-      "status": "detail-link gevonden",
-      "rawText": "Club Motion 16+ clubnacht Eerste editie in Groningen trapt af met New Wave editie zo 27 dec"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Cock Robin (85-89) Tour 2027 Avond vol hits en verborgen parels uit de gloriedagen van de band! wo 19 mei",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/cock-robin/",
-      "status": "detail-link gevonden",
-      "rawText": "Cock Robin (85-89) Tour 2027 Avond vol hits en verborgen parels uit de gloriedagen van de band! wo 19 mei"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Coffee Break ism Prins Claus Conservatorium Trakteer jezelf op koffie en muziek van aanstormend talent op de donderdagochtend do 21 jan",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/coffee-break-ism-prins-claus-conservatorium-17/",
-      "status": "detail-link gevonden",
-      "rawText": "Coffee Break ism Prins Claus Conservatorium Trakteer jezelf op koffie en muziek van aanstormend talent op de donderdagochtend do 21 jan"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Coffee Break ism Prins Claus Conservatorium Trakteer jezelf op koffie en muziek van aanstormend talent op de donderdagochtend do 18 feb",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/coffee-break-ism-prins-claus-conservatorium-18/",
-      "status": "detail-link gevonden",
-      "rawText": "Coffee Break ism Prins Claus Conservatorium Trakteer jezelf op koffie en muziek van aanstormend talent op de donderdagochtend do 18 feb"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Coffee Break ism Prins Claus Conservatorium Trakteer jezelf op koffie en muziek van aanstormend talent op de donderdagochtend do 4 mrt",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/coffee-break-ism-prins-claus-conservatorium-19/",
-      "status": "detail-link gevonden",
-      "rawText": "Coffee Break ism Prins Claus Conservatorium Trakteer jezelf op koffie en muziek van aanstormend talent op de donderdagochtend do 4 mrt"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Coffee Break ism Prins Claus Conservatorium Trakteer jezelf op koffie en muziek van aanstormend talent op de donderdagochtend do 13 mei",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/coffee-break-ism-prins-claus-conservatorium-20/",
-      "status": "detail-link gevonden",
-      "rawText": "Coffee Break ism Prins Claus Conservatorium Trakteer jezelf op koffie en muziek van aanstormend talent op de donderdagochtend do 13 mei"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Coffee Break ism Prins Claus Conservatorium Trakteer jezelf op koffie en muziek van aanstormend talent op de donderdagochtend do 27 mei",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/coffee-break-ism-prins-claus-conservatorium-21/",
-      "status": "detail-link gevonden",
-      "rawText": "Coffee Break ism Prins Claus Conservatorium Trakteer jezelf op koffie en muziek van aanstormend talent op de donderdagochtend do 27 mei"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Colin Blunstone support: Jesse Lynn Madera De kenmerkende stem achter o.a. The Zombies Net bevestigd ma 24 mei",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/colin-blunstone/",
-      "status": "detail-link gevonden",
-      "rawText": "Colin Blunstone support: Jesse Lynn Madera De kenmerkende stem achter o.a. The Zombies Net bevestigd ma 24 mei"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Combattimento 300 jaar Vier Jaargetijden van Vivaldi Een combinatie van de vier jaargetijden van Vivaldi en Durante ma 23 nov",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/combattimento-2/",
-      "status": "detail-link gevonden",
-      "rawText": "Combattimento 300 jaar Vier Jaargetijden van Vivaldi Een combinatie van de vier jaargetijden van Vivaldi en Durante ma 23 nov"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Compagnie Red, Yellow and Blue Katwijk “Een ijzersterk generatiedrama verpakt als hilarische sitcom.” ★★★★★ de Volkskrant Uitverkocht wo 10 feb",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/compagnie-red-yellow-and-blue-2/",
-      "status": "detail-link gevonden",
-      "rawText": "Compagnie Red, Yellow and Blue Katwijk “Een ijzersterk generatiedrama verpakt als hilarische sitcom.” ★★★★★ de Volkskrant Uitverkocht wo 10 feb"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Compagnie Red, Yellow and Blue Katwijk “Een ijzersterk generatiedrama verpakt als hilarische sitcom.” ★★★★★ de Volkskrant Uitverkocht do 11 feb",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/compagnie-red-yellow-and-blue/",
-      "status": "detail-link gevonden",
-      "rawText": "Compagnie Red, Yellow and Blue Katwijk “Een ijzersterk generatiedrama verpakt als hilarische sitcom.” ★★★★★ de Volkskrant Uitverkocht do 11 feb"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Conny Janssen Danst Behind the Wall Meeslepende dansvoorstelling met livemuziek van Roufaida vr 5 feb",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/conny-janssen-danst-9/",
-      "status": "detail-link gevonden",
-      "rawText": "Conny Janssen Danst Behind the Wall Meeslepende dansvoorstelling met livemuziek van Roufaida vr 5 feb"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Conor McLain Ierse singer-songwriter met persoonlijke pop- en folknummers Net bevestigd di 18 mei",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/conor-mclain/",
-      "status": "detail-link gevonden",
-      "rawText": "Conor McLain Ierse singer-songwriter met persoonlijke pop- en folknummers Net bevestigd di 18 mei"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "CONTRA (12+) WabiSabi | Het Houten Huis | HIIIT \"Een van de beste voorstellingen van het jaar\" (★★★★ Dagblad van het Noorden) di 9 feb",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/contra-12-2/",
-      "status": "detail-link gevonden",
-      "rawText": "CONTRA (12+) WabiSabi | Het Houten Huis | HIIIT \"Een van de beste voorstellingen van het jaar\" (★★★★ Dagblad van het Noorden) di 9 feb"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Contra (12+) WabiSabi | Het Houten Huis | HIIIT \"Een van de beste voorstellingen van het jaar\" (★★★★★ Dagblad van het Noorden) zo 15 nov",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/contra-12/",
-      "status": "detail-link gevonden",
-      "rawText": "Contra (12+) WabiSabi | Het Houten Huis | HIIIT \"Een van de beste voorstellingen van het jaar\" (★★★★★ Dagblad van het Noorden) zo 15 nov"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Culture (ft Kenyatta Hill) & Cedric Myton Twee legendarische reggae-acts op één avond di 25 mei",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/culture-ft-kenyatta-hill-cedric-myton/",
-      "status": "detail-link gevonden",
-      "rawText": "Culture (ft Kenyatta Hill) & Cedric Myton Twee legendarische reggae-acts op één avond di 25 mei"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Daan van der Hoeven Mensenmens (reprise) Weergaloze improvisaties en interacties met het publiek di 16 mrt",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/daan-van-der-hoeven-2/",
-      "status": "detail-link gevonden",
-      "rawText": "Daan van der Hoeven Mensenmens (reprise) Weergaloze improvisaties en interacties met het publiek di 16 mrt"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Daniel Arends High Class Bitch (reprise) Nadenken door je lachtranen heen Uitverkocht wo 31 mrt",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/daniel-arends-12/",
-      "status": "detail-link gevonden",
-      "rawText": "Daniel Arends High Class Bitch (reprise) Nadenken door je lachtranen heen Uitverkocht wo 31 mrt"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Daniel Arends Had ik maar nooit zo aardig gedaan (reprise) Twee shows op één avond Uitverkocht wo 31 mrt",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/daniel-arends-18/",
-      "status": "detail-link gevonden",
-      "rawText": "Daniel Arends Had ik maar nooit zo aardig gedaan (reprise) Twee shows op één avond Uitverkocht wo 31 mrt"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Daniel Arends High Class Bitch (reprise) Nadenken door je lachtranen heen Uitverkocht do 1 apr",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/daniel-arends-19/",
-      "status": "detail-link gevonden",
-      "rawText": "Daniel Arends High Class Bitch (reprise) Nadenken door je lachtranen heen Uitverkocht do 1 apr"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Daniel Arends Had ik maar nooit zo aardig gedaan (reprise) Twee shows op één avond Uitverkocht do 1 apr",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/daniel-arends-20/",
-      "status": "detail-link gevonden",
-      "rawText": "Daniel Arends Had ik maar nooit zo aardig gedaan (reprise) Twee shows op één avond Uitverkocht do 1 apr"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "David Linszen Striptease Van De Dood (reprise) Winnaar Neerlands Hoop Laatste kaarten ma 30 nov",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/david-linszen-2/",
-      "status": "detail-link gevonden",
-      "rawText": "David Linszen Striptease Van De Dood (reprise) Winnaar Neerlands Hoop Laatste kaarten ma 30 nov"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "David van Rosmalen Als ik jou was Intelligente mix van (woord)grappen, spoken word, pianoliedjes en nederhiphop wo 27 jan",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/david-van-rosmalen/",
-      "status": "detail-link gevonden",
-      "rawText": "David van Rosmalen Als ik jou was Intelligente mix van (woord)grappen, spoken word, pianoliedjes en nederhiphop wo 27 jan"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Davina Michelle Nederlandse popster tourt langs Europese zalen ma 29 mrt",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/davina-michelle-7/",
-      "status": "detail-link gevonden",
-      "rawText": "Davina Michelle Nederlandse popster tourt langs Europese zalen ma 29 mrt"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
       "title": "De Belangelozen Via Rudolphi Producties | Collectief T&T Armoede en vrijwilligerswerk, met scherpe humor en in herkenbare scènes belicht wo 16 dec",
       "date": "",
       "url": "https://www.spotgroningen.nl/programma/de-belangelozen/",
@@ -13468,16 +13341,601 @@
       "url": "https://www.spotgroningen.nl/programma/",
       "status": "klaar",
       "rawText": "site 5/14: 50 unieke events in 3.2 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://simplon.nl/",
+      "title": "Start",
+      "date": "",
+      "url": "https://simplon.nl/",
+      "status": "start",
+      "rawText": "site 6/14: max 50 events, max 5 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://simplon.nl/",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://simplon.nl/",
+      "status": "strategie",
+      "rawText": "compacte-agenda-kaarten"
+    },
+    {
+      "source": "Website",
+      "site": "https://simplon.nl/",
+      "title": "Pagina gelezen",
+      "date": "",
+      "url": "https://simplon.nl/programma/",
+      "status": "ok",
+      "rawText": "94996 tekens HTML"
+    },
+    {
+      "source": "Website",
+      "site": "https://simplon.nl/",
+      "title": "Godfried + Nina Bailey",
+      "date": "2026-10-29",
+      "url": "https://simplon.nl/events/godfried-nina-bailey/",
+      "status": "venue-agenda kaart",
+      "rawText": "do 29.10 Godfried + Nina Bailey Warme indie en pop up TICKETS"
+    },
+    {
+      "source": "Website",
+      "site": "https://simplon.nl/",
+      "title": "Chicco",
+      "date": "2026-10-30",
+      "url": "https://simplon.nl/events/chicco/",
+      "status": "venue-agenda kaart",
+      "rawText": "vr 30.10 Chicco Gezellige hedendaagse Nederlandse volk concert TICKETS"
+    },
+    {
+      "source": "Website",
+      "site": "https://simplon.nl/",
+      "title": "Lostboyshawty",
+      "date": "2026-10-31",
+      "url": "https://simplon.nl/events/lostboyshawty-2026/",
+      "status": "venue-agenda kaart",
+      "rawText": "za 31.10 Lostboyshawty Support: Lil Timmie | Opvallende hiphop, trap en R&B concert TICKETS"
+    },
+    {
+      "source": "Website",
+      "site": "https://simplon.nl/",
+      "title": "Modern Figure + Nakûde",
+      "date": "2026-11-05",
+      "url": "https://simplon.nl/events/modern-figure-nakude/",
+      "status": "venue-agenda kaart",
+      "rawText": "do 5.11 Modern Figure + Nakûde Alternative rock & postpunk up TICKETS"
+    },
+    {
+      "source": "Website",
+      "site": "https://simplon.nl/",
+      "title": "Queen's Pleasure",
+      "date": "2026-11-06",
+      "url": "https://simplon.nl/events/queens-pleasure-2026/",
+      "status": "venue-agenda kaart",
+      "rawText": "vr 6.11 Queen's Pleasure Energetic indierock concert TICKETS"
+    },
+    {
+      "source": "Website",
+      "site": "https://simplon.nl/",
+      "title": "Good Times",
+      "date": "2026-11-07",
+      "url": "https://simplon.nl/events/good-times-november-2026/",
+      "status": "venue-agenda kaart",
+      "rawText": "za 7.11 Good Times Avond vol 80, 90 en 00s throwbacks en gezelligheid dance TICKETS"
+    },
+    {
+      "source": "Website",
+      "site": "https://simplon.nl/",
+      "title": "dance",
+      "date": "2026-11-07",
+      "url": "https://simplon.nl/events/good-times-november-2026/",
+      "status": "venue-agenda kaart",
+      "rawText": "za 7.11 Good Times Avond vol 80, 90 en 00s throwbacks en gezelligheid dance TICKETS"
+    },
+    {
+      "source": "Website",
+      "site": "https://simplon.nl/",
+      "title": "Piter + Rupit",
+      "date": "2026-11-12",
+      "url": "https://simplon.nl/events/up-piter-rupit/",
+      "status": "venue-agenda kaart",
+      "rawText": "do 12.11 Piter + Rupit Warme singer-songwriter pop up TICKETS"
+    },
+    {
+      "source": "Website",
+      "site": "https://simplon.nl/",
+      "title": "Rijck",
+      "date": "2026-11-13",
+      "url": "https://simplon.nl/events/rijck-2026/",
+      "status": "venue-agenda kaart",
+      "rawText": "vr 13.11 Rijck Disruptieve hiphop met contrast concert TICKETS"
+    },
+    {
+      "source": "Website",
+      "site": "https://simplon.nl/",
+      "title": "NO CIGAR",
+      "date": "2026-11-13",
+      "url": "https://simplon.nl/events/no-cigar-2026/",
+      "status": "venue-agenda kaart",
+      "rawText": "vr 13.11 NO CIGAR Smooth indierock on psychedelics concert UITVERKOCHT"
+    },
+    {
+      "source": "Website",
+      "site": "https://simplon.nl/",
+      "title": "Bassface",
+      "date": "2026-11-14",
+      "url": "https://simplon.nl/events/bassface-november-2026/",
+      "status": "venue-agenda kaart",
+      "rawText": "za 14.11 Bassface SMG // Teej // Yannons // aotp dance TICKETS"
+    },
+    {
+      "source": "Website",
+      "site": "https://simplon.nl/",
+      "title": "dance",
+      "date": "2026-11-14",
+      "url": "https://simplon.nl/events/bassface-november-2026/",
+      "status": "venue-agenda kaart",
+      "rawText": "za 14.11 Bassface SMG // Teej // Yannons // aotp dance TICKETS"
+    },
+    {
+      "source": "Website",
+      "site": "https://simplon.nl/",
+      "title": "Big Sleep",
+      "date": "2026-11-14",
+      "url": "https://simplon.nl/events/big-sleep-2026/",
+      "status": "venue-agenda kaart",
+      "rawText": "za 14.11 Big Sleep Support: Stardog | dynamic Irish indierock concert UITVERKOCHT"
+    },
+    {
+      "source": "Website",
+      "site": "https://simplon.nl/",
+      "title": "Iskander Moon",
+      "date": "2026-11-18",
+      "url": "https://simplon.nl/events/iskander-moon-2026/",
+      "status": "venue-agenda kaart",
+      "rawText": "wo 18.11 Iskander Moon Folkpop with classical finesse concert TICKETS"
+    },
+    {
+      "source": "Website",
+      "site": "https://simplon.nl/",
+      "title": "Desire",
+      "date": "2026-11-20",
+      "url": "https://simplon.nl/events/desire-x-johnny-jewel/",
+      "status": "venue-agenda kaart",
+      "rawText": "vr 20.11 Desire Support: Johnny Jewel + Mothermary | An audiovisual disco noir experience concert TICKETS"
+    },
+    {
+      "source": "Website",
+      "site": "https://simplon.nl/",
+      "title": "TechNorth",
+      "date": "2026-11-21",
+      "url": "https://simplon.nl/events/technorth-november-2026/",
+      "status": "venue-agenda kaart",
+      "rawText": "za 21.11 TechNorth Doctor Juicy // Faris Hababa // Fran LF // Julan (Live) dance TICKETS"
+    },
+    {
+      "source": "Website",
+      "site": "https://simplon.nl/",
+      "title": "dance",
+      "date": "2026-11-21",
+      "url": "https://simplon.nl/events/technorth-november-2026/",
+      "status": "venue-agenda kaart",
+      "rawText": "za 21.11 TechNorth Doctor Juicy // Faris Hababa // Fran LF // Julan (Live) dance TICKETS"
+    },
+    {
+      "source": "Website",
+      "site": "https://simplon.nl/",
+      "title": "Mail for Sil + Brighid",
+      "date": "2026-11-26",
+      "url": "https://simplon.nl/events/up-mail-for-sil-brighid/",
+      "status": "venue-agenda kaart",
+      "rawText": "do 26.11 Mail for Sil + Brighid up TICKETS"
+    },
+    {
+      "source": "Website",
+      "site": "https://simplon.nl/",
+      "title": "NO BARRIER",
+      "date": "2026-11-27",
+      "url": "https://simplon.nl/events/no-barrier-november-2026/",
+      "status": "venue-agenda kaart",
+      "rawText": "vr 27.11 NO BARRIER XL Edition | Punk, Emo, Rock & Metalcore Party concert TICKETS"
+    },
+    {
+      "source": "Website",
+      "site": "https://simplon.nl/",
+      "title": "Wrest",
+      "date": "2026-11-27",
+      "url": "https://simplon.nl/events/wrest/",
+      "status": "venue-agenda kaart",
+      "rawText": "vr 27.11 Wrest Heartfelt Edinburgh indie rock concert UITVERKOCHT"
+    },
+    {
+      "source": "Website",
+      "site": "https://simplon.nl/",
+      "title": "2016 special",
+      "date": "2026-11-28",
+      "url": "https://simplon.nl/events/roodkopje-november-2026/",
+      "status": "venue-agenda kaart",
+      "rawText": "za 28.11 2016 special Roodkopje dance TICKETS"
+    },
+    {
+      "source": "Website",
+      "site": "https://simplon.nl/",
+      "title": "dance",
+      "date": "2026-11-28",
+      "url": "https://simplon.nl/events/roodkopje-november-2026/",
+      "status": "venue-agenda kaart",
+      "rawText": "za 28.11 2016 special Roodkopje dance TICKETS"
+    },
+    {
+      "source": "Website",
+      "site": "https://simplon.nl/",
+      "title": "Sondre Lerche",
+      "date": "2026-12-02",
+      "url": "https://simplon.nl/events/sondre-lechre/",
+      "status": "venue-agenda kaart",
+      "rawText": "wo 2.12 Sondre Lerche Catchy experimental pop concert TICKETS"
+    },
+    {
+      "source": "Website",
+      "site": "https://simplon.nl/",
+      "title": "Call It Off",
+      "date": "2026-12-04",
+      "url": "https://simplon.nl/events/call-it-off-taylor-swift-tribute/",
+      "status": "venue-agenda kaart",
+      "rawText": "vr 4.12 Call It Off Support: Biddy Early | Taylor Swift Tribute concert TICKETS"
+    },
+    {
+      "source": "Website",
+      "site": "https://simplon.nl/",
+      "title": "ZWARTEWATER",
+      "date": "2026-12-04",
+      "url": "https://simplon.nl/events/zwartewater-2026/",
+      "status": "venue-agenda kaart",
+      "rawText": "vr 4.12 ZWARTEWATER Spijkerharde Zwolse rap concert TICKETS"
+    },
+    {
+      "source": "Website",
+      "site": "https://simplon.nl/",
+      "title": "Lézard",
+      "date": "2026-12-05",
+      "url": "https://simplon.nl/events/lezard-2026/",
+      "status": "venue-agenda kaart",
+      "rawText": "za 5.12 Lézard A discopunk diorama concert TICKETS"
+    },
+    {
+      "source": "Website",
+      "site": "https://simplon.nl/",
+      "title": "Comedytunes Comedynight",
+      "date": "2026-12-09",
+      "url": "https://simplon.nl/events/comedy-tunes-9-12/",
+      "status": "venue-agenda kaart",
+      "rawText": "wo 9.12 Comedytunes Comedynight Jasper van der Veen // Jacob Adriani // Tim Alpherts // Meeuw Roovers concert TICKETS"
+    },
+    {
+      "source": "Website",
+      "site": "https://simplon.nl/",
+      "title": "Ciao Lucifer",
+      "date": "2026-12-10",
+      "url": "https://simplon.nl/events/ciao-lucifer-2026/",
+      "status": "venue-agenda kaart",
+      "rawText": "do 10.12 Ciao Lucifer Reality-escaping, uplifting indiepop concert TICKETS"
+    },
+    {
+      "source": "Website",
+      "site": "https://simplon.nl/",
+      "title": "10 jaar Kerst met Stippenlift",
+      "date": "2026-12-11",
+      "url": "https://simplon.nl/events/stippenlift-2026/",
+      "status": "venue-agenda kaart",
+      "rawText": "vr 11.12 10 jaar Kerst met Stippenlift Dé remedie tegen je winterdepressie concert TICKETS"
+    },
+    {
+      "source": "Website",
+      "site": "https://simplon.nl/",
+      "title": "stay away from dante!",
+      "date": "2026-12-16",
+      "url": "https://simplon.nl/events/stay-away-from-dante/",
+      "status": "venue-agenda kaart",
+      "rawText": "wo 16.12 stay away from dante! Een wereld vol verhalen, genres en verrassingen concert TICKETS"
+    },
+    {
+      "source": "Website",
+      "site": "https://simplon.nl/",
+      "title": "Tim Akkerman & The Ivy League",
+      "date": "2026-12-18",
+      "url": "https://simplon.nl/events/tim-akkerman-the-ivy-league-2026/",
+      "status": "venue-agenda kaart",
+      "rawText": "vr 18.12 Tim Akkerman & The Ivy League Intimate singer-songwriter pop concert TICKETS"
+    },
+    {
+      "source": "Website",
+      "site": "https://simplon.nl/",
+      "title": "Eva van Manen",
+      "date": "2027-01-08",
+      "url": "https://simplon.nl/events/eva-van-manen-2027/",
+      "status": "venue-agenda kaart",
+      "rawText": "vr 8.1 Eva van Manen Support: Luka | Een poëtische adempauze concert TICKETS"
+    },
+    {
+      "source": "Website",
+      "site": "https://simplon.nl/",
+      "title": "Alice Olsthoorn",
+      "date": "2027-01-09",
+      "url": "https://simplon.nl/events/alice-olsthoorn/",
+      "status": "venue-agenda kaart",
+      "rawText": "za 9.1 Alice Olsthoorn Aanstekelijke hyperpop meets club muziek concert TICKETS"
+    },
+    {
+      "source": "Website",
+      "site": "https://simplon.nl/",
+      "title": "Klezmagic",
+      "date": "2027-01-22",
+      "url": "https://simplon.nl/events/klezmagic/",
+      "status": "venue-agenda kaart",
+      "rawText": "vr 22.1 Klezmagic Energetic Balkan and Klezmer concert TICKETS"
+    },
+    {
+      "source": "Website",
+      "site": "https://simplon.nl/",
+      "title": "Starfish",
+      "date": "2027-02-05",
+      "url": "https://simplon.nl/events/starfish-3/",
+      "status": "venue-agenda kaart",
+      "rawText": "vr 5.2 Starfish Sun soaked mix of reggae pop and surf rock concert TICKETS"
+    },
+    {
+      "source": "Website",
+      "site": "https://simplon.nl/",
+      "title": "Yong Yello",
+      "date": "2027-02-12",
+      "url": "https://simplon.nl/events/yong-yello/",
+      "status": "venue-agenda kaart",
+      "rawText": "vr 12.2 Yong Yello Soulvolle en meeslepende Vlaamse hiphop concert TICKETS"
+    },
+    {
+      "source": "Website",
+      "site": "https://simplon.nl/",
+      "title": "VISION",
+      "date": "2027-02-13",
+      "url": "https://simplon.nl/events/vision-februari-2027/",
+      "status": "venue-agenda kaart",
+      "rawText": "za 13.2 VISION NOISIA + more tba dance UITVERKOCHT"
+    },
+    {
+      "source": "Website",
+      "site": "https://simplon.nl/",
+      "title": "dance",
+      "date": "2027-02-13",
+      "url": "https://simplon.nl/events/vision-februari-2027/",
+      "status": "venue-agenda kaart",
+      "rawText": "za 13.2 VISION NOISIA + more tba dance UITVERKOCHT"
+    },
+    {
+      "source": "Website",
+      "site": "https://simplon.nl/",
+      "title": "Comedytunes Comedynight",
+      "date": "2027-02-17",
+      "url": "https://simplon.nl/events/comedy-tunes-17-2/",
+      "status": "venue-agenda kaart",
+      "rawText": "wo 17.2 Comedytunes Comedynight Tim Kroezen // Gerrie Smits // Wilko Terwijn // Jacob Spoelstra concert TICKETS"
+    },
+    {
+      "source": "Website",
+      "site": "https://simplon.nl/",
+      "title": "The Skints",
+      "date": "2027-02-26",
+      "url": "https://simplon.nl/events/the-skints-2026/",
+      "status": "venue-agenda kaart",
+      "rawText": "vr 26.2 The Skints East-London Reggae concert TICKETS"
+    },
+    {
+      "source": "Website",
+      "site": "https://simplon.nl/",
+      "title": "Oh Voyage",
+      "date": "2027-02-26",
+      "url": "https://simplon.nl/events/oh-voyage-2026/",
+      "status": "venue-agenda kaart",
+      "rawText": "vr 26.2 Oh Voyage Anatolian psych dance concert TICKETS"
+    },
+    {
+      "source": "Website",
+      "site": "https://simplon.nl/",
+      "title": "Kans",
+      "date": "2027-03-05",
+      "url": "https://simplon.nl/events/kans/",
+      "status": "venue-agenda kaart",
+      "rawText": "vr 5.3 Kans Warme, emotionele r&b en hiphop concert TICKETS"
+    },
+    {
+      "source": "Website",
+      "site": "https://simplon.nl/",
+      "title": "TAPE TOY",
+      "date": "2027-03-06",
+      "url": "https://simplon.nl/events/tape-toy-2027/",
+      "status": "venue-agenda kaart",
+      "rawText": "za 6.3 TAPE TOY Hyperactive grungepop and punky shoegaze concert TICKETS"
+    },
+    {
+      "source": "Website",
+      "site": "https://simplon.nl/",
+      "title": "Dominic Donner",
+      "date": "2027-03-12",
+      "url": "https://simplon.nl/events/dominic-donner/",
+      "status": "venue-agenda kaart",
+      "rawText": "vr 12.3 Dominic Donner Dark pop and melancholic electronica concert TICKETS"
+    },
+    {
+      "source": "Website",
+      "site": "https://simplon.nl/",
+      "title": "Politie Warnsveld",
+      "date": "2027-03-19",
+      "url": "https://simplon.nl/events/politie-warnsveld-2027/",
+      "status": "venue-agenda kaart",
+      "rawText": "vr 19.3 Politie Warnsveld Compromisloze skapunk concert UITVERKOCHT"
+    },
+    {
+      "source": "Website",
+      "site": "https://simplon.nl/",
+      "title": "McScallyfest",
+      "date": "2027-03-20",
+      "url": "https://simplon.nl/events/mcscallyfest-2027/",
+      "status": "venue-agenda kaart",
+      "rawText": "za 20.3 McScallyfest Minifestival en EP-release vol feestelijke folkpunk concert TICKETS"
+    },
+    {
+      "source": "Website",
+      "site": "https://simplon.nl/",
+      "title": "FIEP",
+      "date": "2027-04-02",
+      "url": "https://simplon.nl/events/fiep/",
+      "status": "venue-agenda kaart",
+      "rawText": "vr 2.4 FIEP Infectious, energetic indierock concert TICKETS"
+    },
+    {
+      "source": "Website",
+      "site": "https://simplon.nl/",
+      "title": "ÃO Mesmerising mix of Portuguese artpop and alternative Latin",
+      "date": "2027-04-10",
+      "url": "https://simplon.nl/events/ao/",
+      "status": "venue-agenda kaart",
+      "rawText": "za 10.4 ÃO Mesmerising mix of Portuguese artpop and alternative Latin concert TICKETS"
+    },
+    {
+      "source": "Website",
+      "site": "https://simplon.nl/",
+      "title": "Sven Cilliers",
+      "date": "2027-04-10",
+      "url": "https://simplon.nl/events/sven-cilliers-2027/",
+      "status": "venue-agenda kaart",
+      "rawText": "za 10.4 Sven Cilliers Intimate singer-songwriter pop concert TICKETS"
+    },
+    {
+      "source": "Website",
+      "site": "https://simplon.nl/",
+      "title": "Comedytunes Comedynight",
+      "date": "2027-04-14",
+      "url": "https://simplon.nl/events/comedy-tunes-14-4/",
+      "status": "venue-agenda kaart",
+      "rawText": "wo 14.4 Comedytunes Comedynight Ronald Smink // Joran Welling // Hermes Ahmadi // Jasper Nieuwenhuis concert TICKETS"
+    },
+    {
+      "source": "Website",
+      "site": "https://simplon.nl/",
+      "title": "Blackbird",
+      "date": "2027-04-24",
+      "url": "https://simplon.nl/events/blackbird-2027/",
+      "status": "venue-agenda kaart",
+      "rawText": "za 24.4 Blackbird Melodious vintage pop concert TICKETS"
+    },
+    {
+      "source": "Website",
+      "site": "https://simplon.nl/",
+      "title": "Josua Peter",
+      "date": "2027-04-30",
+      "url": "https://simplon.nl/events/josua-peter-2027/",
+      "status": "venue-agenda kaart",
+      "rawText": "vr 30.4 Josua Peter Dynamic indie folk and pop concert TICKETS"
+    },
+    {
+      "source": "Website",
+      "site": "https://simplon.nl/",
+      "title": "Nienke Leone",
+      "date": "2027-05-14",
+      "url": "https://simplon.nl/events/nienke-leone/",
+      "status": "venue-agenda kaart",
+      "rawText": "vr 14.5 Nienke Leone Eerlijke en catchy popliedjes concert TICKETS"
+    },
+    {
+      "source": "Website",
+      "site": "https://simplon.nl/",
+      "title": "Mood Bored",
+      "date": "2027-05-28",
+      "url": "https://simplon.nl/events/mood-bored-2027/",
+      "status": "venue-agenda kaart",
+      "rawText": "vr 28.5 Mood Bored Catchy and raw shoegaze mixed with catchy poppy hooks concert TICKETS"
+    },
+    {
+      "source": "Parser",
+      "site": "https://simplon.nl/",
+      "title": "Agenda geanalyseerd",
+      "date": "",
+      "url": "https://simplon.nl/programma/",
+      "status": "gespecialiseerde parser",
+      "rawText": "54 agenda-items gevonden"
+    },
+    {
+      "source": "Website",
+      "site": "https://simplon.nl/",
+      "title": "Pagina geanalyseerd",
+      "date": "",
+      "url": "https://simplon.nl/programma/",
+      "status": "ok",
+      "rawText": "54 events/aanbiedingen op deze pagina"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://simplon.nl/",
+      "title": "Feed geanalyseerd",
+      "date": "",
+      "url": "https://simplon.nl/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fsimplon.nl%2Fprogramma%2F&format=xml",
+      "status": "ok",
+      "rawText": "0 events uit openbare feed"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://simplon.nl/",
+      "title": "Feed geanalyseerd",
+      "date": "",
+      "url": "https://simplon.nl/feed/",
+      "status": "ok",
+      "rawText": "0 events uit openbare feed"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://simplon.nl/",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://simplon.nl/rss.xml",
+      "status": "fout",
+      "rawText": "HTTP 404"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://simplon.nl/",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://simplon.nl/feed.xml",
+      "status": "fout",
+      "rawText": "HTTP 404"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://simplon.nl/",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://simplon.nl/events/feed/",
+      "status": "fout",
+      "rawText": "HTTPSConnectionPool(host='simplon.nl', port=443): Read timed out. (read timeout=0.15589769100000694)"
+    },
+    {
+      "source": "Website",
+      "site": "https://simplon.nl/",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://simplon.nl/",
+      "status": "klaar",
+      "rawText": "site 6/14: 30 unieke events in 5.0 sec"
     }
   ],
   "status": "running",
   "siteStartedAt": "2026-10-25T17:54:45+00:00",
-  "siteElapsedSeconds": 0,
-  "sitePageCount": 0,
-  "lastSiteEventCount": 0,
-  "stage": "Websitepagina ophalen",
-  "lastUpdatedAt": "2026-10-25T17:54:45+00:00",
-  "lastSiteNewEventCount": 50,
-  "lastCompletedSite": "https://www.spotgroningen.nl/programma/",
-  "lastCompletedAt": "2026-10-25T17:54:44+00:00"
+  "siteElapsedSeconds": 7,
+  "sitePageCount": 1,
+  "lastSiteEventCount": 30,
+  "stage": "Website klaar; volgende website voorbereiden",
+  "lastUpdatedAt": "2026-10-25T17:54:49+00:00",
+  "lastSiteNewEventCount": 30,
+  "lastCompletedSite": "https://simplon.nl/",
+  "lastCompletedAt": "2026-10-25T17:54:52+00:00"
 }
