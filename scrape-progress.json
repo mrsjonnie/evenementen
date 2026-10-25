@@ -731,7 +731,7 @@
       "rawText": "site 1/1: 0 unieke events in 14.05 sec"
     }
   ],
-  "status": "finishing",
+  "status": "completed",
   "siteStartedAt": "2026-10-25T13:03:39+00:00",
   "siteElapsedSeconds": 15,
   "sitePageCount": 1,
@@ -740,5 +740,6 @@
   "lastUpdatedAt": "2026-10-25T13:03:51+00:00",
   "lastSiteNewEventCount": 0,
   "lastCompletedSite": "https://www.zwolsetheaters.nl/programma",
-  "lastCompletedAt": "2026-10-25T13:03:54+00:00"
+  "lastCompletedAt": "2026-10-25T13:03:54+00:00",
+  "finishedAt": "2026-10-25T13:03:56+00:00"
 }
