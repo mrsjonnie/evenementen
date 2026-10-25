@@ -1,7 +1,7 @@
 {
   "runId": "2026-10-25T16:13:04.656609+00:00-97369fb4",
   "startedAt": "2026-10-25T16:13:04+00:00",
-  "completedCount": 18,
+  "completedCount": 19,
   "totalSites": 19,
   "currentSite": "https://www.pathe.nl/nl/bioscopen/pathe-groningen",
   "currentSiteIndex": 19,
@@ -23,7 +23,8 @@
     "https://www.vvvameland.nl/activiteiten-en-evenementen",
     "https://www.socialdeal.nl/",
     "https://denieuwekolk.nl/agenda",
-    "https://www.filmvandaag.nl/bioscoop"
+    "https://www.filmvandaag.nl/bioscoop",
+    "https://www.pathe.nl/nl/bioscopen/pathe-groningen"
   ],
   "events": [
     {
@@ -583,6 +584,13 @@
       "newCount": 0,
       "durationSeconds": 2.0,
       "timedOut": true
+    },
+    {
+      "site": "https://www.pathe.nl/nl/bioscopen/pathe-groningen",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 1.02,
+      "timedOut": false
     }
   ],
   "rawLog": [
@@ -4842,16 +4850,34 @@
       "url": "https://www.pathe.nl/nl/bioscopen/pathe-groningen",
       "status": "strategie",
       "rawText": "Pathé Groningen via BiosAgenda-speeltijden"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.pathe.nl/nl/bioscopen/pathe-groningen",
+      "title": "Pagina mislukt",
+      "date": "",
+      "url": "https://www.biosagenda.nl/films-bioscoop_path-groningen_128.html",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.pathe.nl/nl/bioscopen/pathe-groningen",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://www.pathe.nl/nl/bioscopen/pathe-groningen",
+      "status": "klaar",
+      "rawText": "site 19/19: 0 unieke events in 1.02 sec"
     }
   ],
-  "status": "running",
+  "status": "finishing",
   "siteStartedAt": "2026-10-25T16:14:27+00:00",
-  "siteElapsedSeconds": 1,
+  "siteElapsedSeconds": 2,
   "sitePageCount": 0,
   "lastSiteEventCount": 0,
-  "stage": "Websitepagina ophalen",
+  "stage": "Website klaar; volgende website voorbereiden",
   "lastUpdatedAt": "2026-10-25T16:14:28+00:00",
   "lastSiteNewEventCount": 0,
-  "lastCompletedSite": "https://www.filmvandaag.nl/bioscoop",
-  "lastCompletedAt": "2026-10-25T16:14:26+00:00"
+  "lastCompletedSite": "https://www.pathe.nl/nl/bioscopen/pathe-groningen",
+  "lastCompletedAt": "2026-10-25T16:14:29+00:00"
 }
