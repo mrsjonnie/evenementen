@@ -694,7 +694,7 @@ async function enrichBodyWithSerpApi(env, body = {}) {
         aiRawLog.push(...result.rawLog);
         aiEventCandidates.push(...result.events);
         if (job.provider === "Mistral" && result.rawLog.some((row) =>
-          /(?:status\\s*429|rate.?limit|rate_limited)/i.test(`${row.status || ""} ${row.rawText || ""}`)
+          /(?:status\s*429|rate.?limit|rate_limited)/i.test(`${row.status || ""} ${row.rawText || ""}`)
         )) {
           disabledProviders.add("Mistral");
         }
