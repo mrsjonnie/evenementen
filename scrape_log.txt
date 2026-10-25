@@ -15,7 +15,7 @@ RSS/Atom	https://www.zwolsetheaters.nl/programma	fout	Feed mislukt		https://www.
 RSS/Atom	https://www.zwolsetheaters.nl/programma	fout	Feed mislukt		https://www.zwolsetheaters.nl/rss.xml	HTTP 404
 RSS/Atom	https://www.zwolsetheaters.nl/programma	fout	Feed mislukt		https://www.zwolsetheaters.nl/feed.xml	HTTP 404
 RSS/Atom	https://www.zwolsetheaters.nl/programma	fout	Feed mislukt		https://www.zwolsetheaters.nl/events/feed/	HTTP 404
-Website	https://www.zwolsetheaters.nl/programma	klaar	Klaar		https://www.zwolsetheaters.nl/programma	site 1/3: 0 unieke events in 7.22 sec
+Website	https://www.zwolsetheaters.nl/programma	klaar	Klaar		https://www.zwolsetheaters.nl/programma	site 1/3: 0 unieke events in 7.91 sec
 Website	https://denieuwekolk.nl/agenda	start	Start		https://denieuwekolk.nl/agenda	site 2/3: max 20 events, max 20 seconden
 Parser	https://denieuwekolk.nl/agenda	strategie	Scrapertype vastgesteld		https://denieuwekolk.nl/agenda	agenda-kaarten + datumregels (De Nieuwe Kolk)
 Website	https://denieuwekolk.nl/agenda	ok	Pagina gelezen		https://denieuwekolk.nl/agenda	856282 tekens HTML
@@ -182,21 +182,35 @@ Website	https://denieuwekolk.nl/agenda	ok	Detailpagina geanalyseerd		https://den
 Website	https://denieuwekolk.nl/agenda	ok	Detailpagina geanalyseerd		https://denieuwekolk.nl/bieb/agenda/fotoexpositie-verhalen-van-verborgen-kracht-10050486	1 extra events
 Website	https://denieuwekolk.nl/agenda	ok	Detailpagina geanalyseerd		https://denieuwekolk.nl/bieb/agenda/het-vlucht-voorwaarts-praathuis	1 extra events
 Website	https://denieuwekolk.nl/agenda	ok	Detailpagina geanalyseerd		https://denieuwekolk.nl/bieb/agenda/masker-maken	1 extra events
-Website	https://denieuwekolk.nl/agenda	ok	Detailpagina geanalyseerd		https://tickets.denieuwekolk.nl/mtTicket/performance/10370772	1 extra events
 Website	https://denieuwekolk.nl/agenda	ok	Detailpagina geanalyseerd		https://denieuwekolk.nl/bieb/agenda/oefentafel-basisvaardigheden	1 extra events
 Website	https://denieuwekolk.nl/agenda	ok	Detailpagina geanalyseerd		https://denieuwekolk.nl/bieb/agenda/omgaan-met-stress-en-grenzen	1 extra events
-Website	https://denieuwekolk.nl/agenda	ok	Detailpagina geanalyseerd		https://tickets.denieuwekolk.nl/mtTicket/performance/10374346	1 extra events
 Website	https://denieuwekolk.nl/agenda	ok	Detailpagina geanalyseerd		https://denieuwekolk.nl/bieb/agenda/programmeren-met-lego-spike	1 extra events
-Website	https://denieuwekolk.nl/agenda	ok	Detailpagina geanalyseerd		https://tickets.denieuwekolk.nl/login/auth	0 extra events
 Website	https://denieuwekolk.nl/agenda	ok	Detailpagina geanalyseerd		https://denieuwekolk.nl/bieb/agenda/schrijfcafe	1 extra events
 Website	https://denieuwekolk.nl/agenda	ok	Detailpagina geanalyseerd		https://denieuwekolk.nl/bieb/agenda/taalcafe	1 extra events
 Website	https://denieuwekolk.nl/agenda	ok	Detailpagina geanalyseerd		https://denieuwekolk.nl/bios/agenda/23-brieven-van-vincent	1 extra events
-Website	https://denieuwekolk.nl/agenda	ok	Detailpagina geanalyseerd		https://tickets.denieuwekolk.nl/mtTicket/performance/10387791	1 extra events
-Website	https://denieuwekolk.nl/agenda	fout	Detailpagina mislukt		https://denieuwekolk.nl/bios/agenda/23-brieven-van-vincent/bestel/33e7d725-cd7b-f83d-96aa-8da4554f6e21	HTTPSConnectionPool(host='tickets.denieuwekolk.nl', port=443): Read timed out. (read timeout=3.6225369130000047)
-Filter	https://denieuwekolk.nl/agenda	ok	Datumfilter toegepast	2026-10-25	https://denieuwekolk.nl/agenda	14 gevonden; 13 binnen 2026-10-25 t/m onbeperkt
-Website	https://denieuwekolk.nl/agenda	klaar	Klaar		https://denieuwekolk.nl/agenda	site 2/3: 5 unieke events in 20.19 sec
+Website	https://denieuwekolk.nl/agenda	ok	Detailpagina geanalyseerd		https://denieuwekolk.nl/bios/agenda/clayface	1 extra events
+Website	https://denieuwekolk.nl/agenda	ok	Detailpagina geanalyseerd		https://denieuwekolk.nl/bios/agenda/de-club-van-sinterklaas-film-paniek-in-het-pietendorp	1 extra events
+Website	https://denieuwekolk.nl/agenda	ok	Detailpagina geanalyseerd		https://denieuwekolk.nl/bios/agenda/de-grote-sinterklaasfilm-en-de-vliegende-pieten	1 extra events
+Website	https://denieuwekolk.nl/agenda	ok	Detailpagina geanalyseerd		https://denieuwekolk.nl/bios/agenda/de-tattas-daan	1 extra events
+Website	https://denieuwekolk.nl/agenda	ok	Detailpagina geanalyseerd		https://denieuwekolk.nl/bios/agenda/filmliga-los-tigres	1 extra events
+Website	https://denieuwekolk.nl/agenda	ok	Detailpagina geanalyseerd		https://denieuwekolk.nl/bios/agenda/fright-night-clayface	1 extra events
+Website	https://denieuwekolk.nl/agenda	ok	Detailpagina geanalyseerd		https://denieuwekolk.nl/bios/agenda/fright-night-other-mommy	1 extra events
+Website	https://denieuwekolk.nl/agenda	ok	Detailpagina geanalyseerd		https://denieuwekolk.nl/bios/agenda/fright-night-texas-chainsaw-massacre	1 extra events
+Website	https://denieuwekolk.nl/agenda	ok	Detailpagina geanalyseerd		https://denieuwekolk.nl/bios/agenda/hallowiebe-overdrive	1 extra events
+Website	https://denieuwekolk.nl/agenda	ok	Detailpagina geanalyseerd		https://denieuwekolk.nl/bios/agenda/heart-of-the-beast	1 extra events
+Website	https://denieuwekolk.nl/agenda	ok	Detailpagina geanalyseerd		https://denieuwekolk.nl/bios/agenda/het-vergeten-eiland	1 extra events
+Website	https://denieuwekolk.nl/agenda	ok	Detailpagina geanalyseerd		https://denieuwekolk.nl/bios/agenda/minions-monsters-nl	1 extra events
+Website	https://denieuwekolk.nl/agenda	ok	Detailpagina geanalyseerd		https://denieuwekolk.nl/bios/agenda/scandinavie-festival-home-sweet-home	1 extra events
+Website	https://denieuwekolk.nl/agenda	ok	Detailpagina geanalyseerd		https://denieuwekolk.nl/bios/agenda/scandinavie-festival-varn	1 extra events
+Website	https://denieuwekolk.nl/agenda	ok	Detailpagina geanalyseerd		https://denieuwekolk.nl/bios/agenda/sense-and-sensibility	1 extra events
+Website	https://denieuwekolk.nl/agenda	ok	Detailpagina geanalyseerd		https://denieuwekolk.nl/bios/agenda/shaun-het-schaap-het-beest-op-de-boerderij	1 extra events
+Website	https://denieuwekolk.nl/agenda	ok	Detailpagina geanalyseerd		https://denieuwekolk.nl/bios/agenda/street-fighter	1 extra events
+Website	https://denieuwekolk.nl/agenda	ok	Detailpagina geanalyseerd		https://denieuwekolk.nl/bios/agenda/verity	1 extra events
+Website	https://denieuwekolk.nl/agenda	ok	Detailpagina geanalyseerd		https://denieuwekolk.nl/bios/agenda/wen-er-maar-aan	1 extra events
+Filter	https://denieuwekolk.nl/agenda	ok	Datumfilter toegepast	2026-10-25	https://denieuwekolk.nl/agenda	30 gevonden; 16 binnen 2026-10-25 t/m onbeperkt
+Website	https://denieuwekolk.nl/agenda	klaar	Klaar		https://denieuwekolk.nl/agenda	site 2/3: 6 unieke events in 19.09 sec
 Website	https://www.filmvandaag.nl/bioscoop	start	Start		https://www.filmvandaag.nl/bioscoop	site 3/3: max 20 events, max 20 seconden
 Parser	https://www.filmvandaag.nl/bioscoop	strategie	Scrapertype vastgesteld		https://www.filmvandaag.nl/bioscoop	bioscoopagenda Groningen (FilmVandaag)
 Website	https://www.filmvandaag.nl/bioscoop	fout	Pagina mislukt		https://www.filmvandaag.nl/filmladder/stad/80-groningen	HTTP 403
 Website	https://www.filmvandaag.nl/bioscoop	fout	Pagina mislukt		https://filmvandaag.nl/filmladder/stad/80-groningen	HTTP 403
-Website	https://www.filmvandaag.nl/bioscoop	klaar	Klaar		https://www.filmvandaag.nl/bioscoop	site 3/3: 0 unieke events in 1.96 sec
+Website	https://www.filmvandaag.nl/bioscoop	klaar	Klaar		https://www.filmvandaag.nl/bioscoop	site 3/3: 0 unieke events in 2.27 sec
