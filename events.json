@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-25T10:57:40+00:00",
+  "updatedAt": "2026-10-25T10:58:42+00:00",
   "events": [
     {
       "date": "2026-10-25",
@@ -10894,21 +10894,21 @@
       "site": "https://www.zwolsetheaters.nl/programma",
       "count": 0,
       "newCount": 0,
-      "durationSeconds": 10.25,
+      "durationSeconds": 8.09,
       "timedOut": false
     },
     {
       "site": "https://denieuwekolk.nl/agenda",
       "count": 0,
       "newCount": 0,
-      "durationSeconds": 20.15,
-      "timedOut": true
+      "durationSeconds": 17.94,
+      "timedOut": false
     },
     {
       "site": "https://www.filmvandaag.nl/bioscoop",
       "count": 0,
       "newCount": 0,
-      "durationSeconds": 3.01,
+      "durationSeconds": 2.17,
       "timedOut": false
     }
   ],
@@ -10975,6 +10975,51 @@
       "url": "https://www.zwolsetheaters.nl/assets/js/chunk-vendors.main.js?v=L8F5KdDUVX9i4ON4PXhCti3ujgqHICgBWsZxug4CPgA",
       "status": "diagnose",
       "rawText": "geen API-route herkend; 384411 tekens;"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Zwolse agenda-chunk",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/assets/js/9760.936.js",
+      "status": "diagnose",
+      "rawText": "49199 tekens geladen"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Zwolse API-aanroep",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/assets/js/9760.936.js",
+      "status": "diagnose",
+      "rawText": "prototype.hasOwnProperty,enumerable:!1,writable:!0,configurable:!0});const l={url:s,method:s,data:s,baseURL:i,transformRequest:i,transformResponse:i,paramsSerializer:i,timeout:i,timeoutMessage:i,withCredentials:i,withXSRFToken:i,adapter:i,responseType:i,xsrfCookieName:i,xsrfHeaderName:i"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Zwolse API-aanroep",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/assets/js/9760.936.js",
+      "status": "diagnose",
+      "rawText": "Token\");const s=n(\"xsrfHeaderName\"),i=n(\"xsrfCookieName\");let a=n(\"headers\");const c=n(\"auth\"),l=n(\"baseURL\"),u=n(\"allowAbsoluteUrls\"),f=n(\"url\");if(t.headers=a=We.from(a),t.url=dt(cn(l,f,u,t),n(\"params\"),n(\"paramsSerializer\")),c){const t=Re.getSafeProp(c,\"username\")||\"\",n=Re.getSafePro"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Zwolse API-aanroep",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/assets/js/9760.936.js",
+      "status": "diagnose",
+      "rawText": "rls?t.allowAbsoluteUrls=this.defaults.allowAbsoluteUrls:t.allowAbsoluteUrls=!0),er.assertOptions(t,{baseUrl:tr.spelling(\"baseURL\"),withXsrfToken:tr.spelling(\"withXSRFToken\")},!0),t.method=(t.method||this.defaults.method||\"get\").toLowerCase();let s=o&&Re.merge(o.common,o[t.method]);o&&Re"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Zwolse API-aanroep",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/assets/js/9760.936.js",
+      "status": "diagnose",
+      "rawText": ",u=c.length;while(f<u)l=l.then(c[f++],c[f++]);return l}getUri(e){e=fn(this.defaults,e);const t=cn(e.baseURL,e.url,e.allowAbsoluteUrls,e);return dt(t,e.params,e.paramsSerializer)}}Re.forEach([\"delete\",\"get\",\"head\",\"options\"],function(e){nr.prototype[e]=function(t,n){return this.request(f"
     },
     {
       "source": "Diagnose",
@@ -11127,7 +11172,7 @@
       "date": "",
       "url": "https://www.zwolsetheaters.nl/programma",
       "status": "klaar",
-      "rawText": "site 1/3: 0 unieke events in 10.25 sec"
+      "rawText": "site 1/3: 0 unieke events in 8.09 sec"
     },
     {
       "source": "Website",
@@ -12167,11 +12212,65 @@
     {
       "source": "Website",
       "site": "https://denieuwekolk.nl/agenda",
-      "title": "Detailpagina mislukt",
+      "title": "Detailpagina geanalyseerd",
       "date": "",
       "url": "https://denieuwekolk.nl/bios/agenda/sense-and-sensibility",
-      "status": "fout",
-      "rawText": "HTTPSConnectionPool(host='denieuwekolk.nl', port=443): Read timed out. (read timeout=0.2)"
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bios/agenda/shaun-het-schaap-het-beest-op-de-boerderij",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bios/agenda/street-fighter",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bios/agenda/verity",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bios/agenda/wen-er-maar-aan",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bios/agenda/whalefall",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bios/agenda/wicker2",
+      "status": "ok",
+      "rawText": "1 extra events"
     },
     {
       "source": "Filter",
@@ -12180,7 +12279,7 @@
       "date": "2026-10-25",
       "url": "https://denieuwekolk.nl/agenda",
       "status": "ok",
-      "rawText": "25 gevonden; 16 binnen 2026-10-25 t/m onbeperkt"
+      "rawText": "32 gevonden; 16 binnen 2026-10-25 t/m onbeperkt"
     },
     {
       "source": "Website",
@@ -12189,7 +12288,7 @@
       "date": "",
       "url": "https://denieuwekolk.nl/agenda",
       "status": "klaar",
-      "rawText": "site 2/3: 0 unieke events in 20.15 sec"
+      "rawText": "site 2/3: 0 unieke events in 17.94 sec"
     },
     {
       "source": "Website",
@@ -12234,7 +12333,7 @@
       "date": "",
       "url": "https://www.filmvandaag.nl/bioscoop",
       "status": "klaar",
-      "rawText": "site 3/3: 0 unieke events in 3.01 sec"
+      "rawText": "site 3/3: 0 unieke events in 2.17 sec"
     }
   ]
 }
