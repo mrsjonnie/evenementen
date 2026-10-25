@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-25T16:19:09+00:00",
+  "updatedAt": "2026-10-25T16:19:13+00:00",
   "events": [
     {
       "date": "2026-10-25",
@@ -779,6 +779,13 @@
       "count": 0,
       "newCount": 0,
       "durationSeconds": 2.07,
+      "timedOut": true
+    },
+    {
+      "site": "https://www.vvvameland.nl/activiteiten-en-evenementen",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 2.0,
       "timedOut": true
     }
   ],
@@ -3410,6 +3417,42 @@
       "url": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
       "status": "klaar",
       "rawText": "site 14/19: 0 unieke events in 2.07 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vvvameland.nl/activiteiten-en-evenementen",
+      "title": "Start",
+      "date": "",
+      "url": "https://www.vvvameland.nl/activiteiten-en-evenementen",
+      "status": "start",
+      "rawText": "site 15/19: max 12 events, max 2 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.vvvameland.nl/activiteiten-en-evenementen",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://www.vvvameland.nl/activiteiten-en-evenementen",
+      "status": "strategie",
+      "rawText": "universeel-jsonld-links-kaarten"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vvvameland.nl/activiteiten-en-evenementen",
+      "title": "Pagina mislukt",
+      "date": "",
+      "url": "https://www.vvvameland.nl/activiteiten-en-evenementen",
+      "status": "fout",
+      "rawText": "HTTPSConnectionPool(host='www.vvvameland.nl', port=443): Read timed out. (read timeout=1.045056561999985)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vvvameland.nl/activiteiten-en-evenementen",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://www.vvvameland.nl/activiteiten-en-evenementen",
+      "status": "klaar",
+      "rawText": "site 15/19: 0 unieke events in 2.0 sec"
     }
   ]
 }
