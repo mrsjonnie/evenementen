@@ -1318,7 +1318,7 @@
   </div>
 
   <script>
-    const APP_VERSION = "2026.10.25.33";
+    const APP_VERSION = "2026.10.25.34";
     const DEFAULT_MAX_EVENTS_PER_SITE = 20;
     const DEFAULT_SITE_TIME_LIMIT_SECONDS = 20;
     const SCAN_SETTINGS_KEY = "eventScanSettingsV1";
@@ -3261,6 +3261,32 @@
       const totalWaitSeconds = Math.min(600, Math.max(120, expectedScanSeconds + 120));
       const titleProgress = $("titleProgressText");
       const titleBusyIndicator = $("titleBusyIndicator");
+      // Poll progress while the Cloudflare Worker request is still pending.
+      // The worker can take tens of seconds to return after dispatching Actions;
+      // waiting for its response before polling leaves the title stuck at 0/N.
+      let startupProgressPollHandle = null;
+      const pollProgressWhileStarting = async () => {
+        try {
+          const progress = await fetchScrapeProgress();
+          if (!progress?.runId) return;
+          const status = cleanText(progress.status || "");
+          const active = ["running", "finishing", "queued", "in_progress"].includes(status);
+          if (!active && status !== "completed") return;
+          if (active && progress.currentSite) {
+            updateLiveScrapeSummary(progress, true);
+            const completed = Number(progress.completedCount) || 0;
+            const total = Number(progress.totalSites) || selectedSites.length;
+            const siteNumber = Math.min(total, Math.max(1, Number(progress.currentSiteIndex) || completed + 1));
+            showStatus(`Zoekactie loopt: website ${siteNumber}/${total} (${shortScrapeSiteName(progress.currentSite)}); ${completed} websites afgerond. De voortgang wordt live bijgewerkt.`, "warn", { stop: true });
+          } else if (status === "completed") {
+            updateLiveScrapeSummary(progress, true);
+          }
+        } catch {}
+      };
+      startupProgressPollHandle = setInterval(() => {
+        pollProgressWhileStarting().catch(() => {});
+      }, 1000);
+      pollProgressWhileStarting().catch(() => {});
       if (titleProgress) {
         titleProgress.hidden = false;
         titleProgress.textContent = `Zoeken… scraper starten (0/${selectedSites.length} websites afgerond)`;
@@ -3318,6 +3344,10 @@
         addLiveLog("Worker", WORKER_URL, "Starten mislukt", "fout", message + networkHint);
         showStatus(`${prefix} Starten mislukt: ${message}.${networkHint}`.trim(), "error");
       } finally {
+        if (startupProgressPollHandle) {
+          clearInterval(startupProgressPollHandle);
+          startupProgressPollHandle = null;
+        }
         activeScanSites = new Set();
         renderSites(new Set(selectedSites));
         const titleProgress = $("titleProgressText");
