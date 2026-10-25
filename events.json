@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-25T16:13:37+00:00",
+  "updatedAt": "2026-10-25T16:13:41+00:00",
   "events": [
     {
       "date": "2026-10-25",
@@ -74,6 +74,36 @@
     },
     {
       "date": "2026-10-27",
+      "time": "",
+      "title": "Donar Groningen – CSO Voluntari 2026",
+      "type": "Activiteit",
+      "location": "Martiniplaza Groningen",
+      "locationLink": "",
+      "website": "https://www.martiniplaza.nl/nl/agenda/donar-groningen-cso-voluntari-2026",
+      "source": "martiniplaza.nl",
+      "discoverySource": "Website",
+      "description": "Meer informatie staat op martiniplaza.nl.",
+      "cost": "",
+      "image": "",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-27",
+      "time": "",
+      "title": "Jethro Tull",
+      "type": "Concert",
+      "location": "Martiniplaza Groningen",
+      "locationLink": "",
+      "website": "https://www.martiniplaza.nl/nl/agenda/jethro-tull",
+      "source": "martiniplaza.nl",
+      "discoverySource": "Website",
+      "description": "Meer informatie staat op martiniplaza.nl.",
+      "cost": "",
+      "image": "",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-27",
       "time": "20:30",
       "title": "The Fly",
       "type": "Film",
@@ -85,6 +115,21 @@
       "description": "ZIENEMA ♥ HALLOWEEN Tuesday 27 October The Fly Zienema | Ticket: €6,66 | doors: 20:00 - 20:30 | start: 20:30 Sold out",
       "cost": "",
       "image": "https://www.vera-groningen.nl/wp/../vera/assets/img/logo-black.svg",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-28",
+      "time": "",
+      "title": "Rob Lamberti - A Celebration of GEORGE MICHAEL",
+      "type": "Concert",
+      "location": "Martiniplaza Groningen",
+      "locationLink": "",
+      "website": "https://www.martiniplaza.nl/nl/agenda/rob-lamberti",
+      "source": "martiniplaza.nl",
+      "discoverySource": "Website",
+      "description": "Meer informatie staat op martiniplaza.nl.",
+      "cost": "",
+      "image": "",
       "isNew": true
     },
     {
@@ -100,6 +145,21 @@
       "description": "CLUBKAARTSHOW Thursday 29 October Ulrika Spacek UK Mood Bored NL Mainstage | Ticket: €16,- | doors: 20:00 - 22:00 | start: 20:30 Koop ticket",
       "cost": "",
       "image": "https://www.vera-groningen.nl/wp/../vera/assets/img/logo-black.svg",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-30",
+      "time": "",
+      "title": "Francis van Broekhuizen - Tosca",
+      "type": "Concert",
+      "location": "Martiniplaza Groningen",
+      "locationLink": "",
+      "website": "https://www.martiniplaza.nl/nl/agenda/francis-van-broekhuizen",
+      "source": "martiniplaza.nl",
+      "discoverySource": "Website",
+      "description": "Meer informatie staat op martiniplaza.nl.",
+      "cost": "",
+      "image": "",
       "isNew": true
     },
     {
@@ -130,6 +190,21 @@
       "description": "Friday 30 October WAVEGRAVE Elysium Graaf Griezel // Fladdermus // DJ Stefan Dansen | Ticket: €5,- | doors: 22:00 - 03:00 | start: 22:00 Sold out",
       "cost": "",
       "image": "https://www.vera-groningen.nl/wp/../vera/assets/img/logo-black.svg",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-31",
+      "time": "",
+      "title": "The Dire Straits Experience - “The Long Highway 2026 Tour”",
+      "type": "Concert",
+      "location": "Martiniplaza Groningen",
+      "locationLink": "",
+      "website": "https://www.martiniplaza.nl/nl/agenda/the-dire-straits-experience",
+      "source": "martiniplaza.nl",
+      "discoverySource": "Website",
+      "description": "Meer informatie staat op martiniplaza.nl.",
+      "cost": "",
+      "image": "",
       "isNew": true
     },
     {
@@ -257,6 +332,13 @@
       "count": 5,
       "newCount": 5,
       "durationSeconds": 3.04,
+      "timedOut": true
+    },
+    {
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "count": 5,
+      "newCount": 5,
+      "durationSeconds": 2.03,
       "timedOut": true
     }
   ],
@@ -1655,6 +1737,276 @@
       "url": "https://www.vera-groningen.nl/",
       "status": "klaar",
       "rawText": "site 7/19: 5 unieke events in 3.04 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Start",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda",
+      "status": "start",
+      "rawText": "site 8/19: max 5 events, max 2 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda",
+      "status": "strategie",
+      "rawText": "agenda-kaarten"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Pagina gelezen",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda",
+      "status": "ok",
+      "rawText": "146630 tekens HTML"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Donar Groningen – CSO Voluntari 2026",
+      "date": "2026-10-27",
+      "url": "https://www.martiniplaza.nl/nl/agenda/donar-groningen-cso-voluntari-2026",
+      "status": "venue-agenda kaart",
+      "rawText": "Sport Sport Donar Groningen – CSO Voluntari 2026 27 oktober"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Jethro Tull",
+      "date": "2026-10-27",
+      "url": "https://www.martiniplaza.nl/nl/agenda/jethro-tull",
+      "status": "venue-agenda kaart",
+      "rawText": "Muziek Theater Jethro Tull 27 oktober"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Rob Lamberti - A Celebration of GEORGE MICHAEL",
+      "date": "2026-10-28",
+      "url": "https://www.martiniplaza.nl/nl/agenda/rob-lamberti",
+      "status": "venue-agenda kaart",
+      "rawText": "Muziek Theater Rob Lamberti - A Celebration of GEORGE MICHAEL 28 oktober"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Francis van Broekhuizen - Tosca",
+      "date": "2026-10-30",
+      "url": "https://www.martiniplaza.nl/nl/agenda/francis-van-broekhuizen",
+      "status": "venue-agenda kaart",
+      "rawText": "Muziek Theater Francis van Broekhuizen - Tosca 30 oktober"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "The Dire Straits Experience - “The Long Highway 2026 Tour”",
+      "date": "2026-10-31",
+      "url": "https://www.martiniplaza.nl/nl/agenda/the-dire-straits-experience",
+      "status": "venue-agenda kaart",
+      "rawText": "Muziek Theater The Dire Straits Experience - “The Long Highway 2026 Tour” 31 oktober"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Juf Braaksel - De Musical",
+      "date": "2026-11-01",
+      "url": "https://www.martiniplaza.nl/nl/agenda/juf-braaksel",
+      "status": "venue-agenda kaart",
+      "rawText": "Familie Theater Juf Braaksel - De Musical 01 november"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Promotiedagen 2026",
+      "date": "2026-11-03",
+      "url": "https://www.martiniplaza.nl/nl/agenda/promotiedagen-2026",
+      "status": "venue-agenda kaart",
+      "rawText": "Beurs Event Promotiedagen 2026 03 november"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Promotiedagen 2026",
+      "date": "2026-11-04",
+      "url": "https://www.martiniplaza.nl/nl/agenda/promotiedagen-2026",
+      "status": "venue-agenda kaart",
+      "rawText": "Beurs Event Promotiedagen 2026 04 november"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "TAFKAL: SERIEUS GRAPPIG ( )",
+      "date": "2026-11-05",
+      "url": "https://www.martiniplaza.nl/nl/agenda/tafkal-serieus-grappig-uitverkocht",
+      "status": "venue-agenda kaart",
+      "rawText": "Cabaret Theater TAFKAL: SERIEUS GRAPPIG (UITVERKOCHT) 05 november"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "TAFKAL: SERIEUS GRAPPIG ( )",
+      "date": "2026-11-06",
+      "url": "https://www.martiniplaza.nl/nl/agenda/tafkal-serieus-grappig-uitverkocht",
+      "status": "venue-agenda kaart",
+      "rawText": "Cabaret Theater TAFKAL: SERIEUS GRAPPIG (UITVERKOCHT) 06 november"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Taptoe Groningen 2026",
+      "date": "2026-11-07",
+      "url": "https://www.martiniplaza.nl/nl/agenda/taptoe-groningen-2026",
+      "status": "venue-agenda kaart",
+      "rawText": "Muziek Muziek Taptoe Groningen 2026 07 november"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "TAFKAL: SERIEUS GRAPPIG ( )",
+      "date": "2026-11-07",
+      "url": "https://www.martiniplaza.nl/nl/agenda/tafkal-serieus-grappig-uitverkocht",
+      "status": "venue-agenda kaart",
+      "rawText": "Cabaret Theater TAFKAL: SERIEUS GRAPPIG (UITVERKOCHT) 07 november"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Agenda geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda",
+      "status": "gespecialiseerde parser",
+      "rawText": "12 agenda-items gevonden"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Pagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda",
+      "status": "ok",
+      "rawText": "12 events/aanbiedingen op deze pagina"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "link",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/cats-het-meesterwerk",
+      "status": "detail-link gevonden",
+      "rawText": ""
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Donar Groningen – CSO Voluntari 2026",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/donar-groningen-cso-voluntari-2026",
+      "status": "detail-link gevonden",
+      "rawText": "Donar Groningen – CSO Voluntari 2026"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Francis van Broekhuizen - Tosca",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/francis-van-broekhuizen",
+      "status": "detail-link gevonden",
+      "rawText": "Francis van Broekhuizen - Tosca"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Jethro Tull",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/jethro-tull",
+      "status": "detail-link gevonden",
+      "rawText": "Jethro Tull"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Juf Braaksel - De Musical",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/juf-braaksel",
+      "status": "detail-link gevonden",
+      "rawText": "Juf Braaksel - De Musical"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Promotiedagen 2026",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/promotiedagen-2026",
+      "status": "detail-link gevonden",
+      "rawText": "Promotiedagen 2026"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Rob Lamberti - A Celebration of GEORGE MICHAEL",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/rob-lamberti",
+      "status": "detail-link gevonden",
+      "rawText": "Rob Lamberti - A Celebration of GEORGE MICHAEL"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "TAFKAL: SERIEUS GRAPPIG (UITVERKOCHT)",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/tafkal-serieus-grappig-uitverkocht",
+      "status": "detail-link gevonden",
+      "rawText": "TAFKAL: SERIEUS GRAPPIG (UITVERKOCHT)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Taptoe Groningen 2026",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/taptoe-groningen-2026",
+      "status": "detail-link gevonden",
+      "rawText": "Taptoe Groningen 2026"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "link",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/the-bodyguard-de-musical-2027",
+      "status": "detail-link gevonden",
+      "rawText": ""
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "The Dire Straits Experience - “The Long Highway 2026 Tour”",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/the-dire-straits-experience",
+      "status": "detail-link gevonden",
+      "rawText": "The Dire Straits Experience - “The Long Highway 2026 Tour”"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "link",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/titanique",
+      "status": "detail-link gevonden",
+      "rawText": ""
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda",
+      "status": "klaar",
+      "rawText": "site 8/19: 5 unieke events in 2.03 sec"
     }
   ]
 }
