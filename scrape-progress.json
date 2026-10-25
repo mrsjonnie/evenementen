@@ -1,7 +1,7 @@
 {
   "runId": "2026-10-25T10:34:32+00:00",
   "startedAt": "2026-10-25T10:34:32+00:00",
-  "completedCount": 18,
+  "completedCount": 19,
   "totalSites": 19,
   "currentSite": "https://www.ibood.com/nl/",
   "currentSiteIndex": 19,
@@ -23,7 +23,8 @@
     "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
     "https://www.vvvameland.nl/activiteiten-en-evenementen",
     "https://www.socialdeal.nl/",
-    "https://www.groupon.nl/"
+    "https://www.groupon.nl/",
+    "https://www.ibood.com/nl/"
   ],
   "events": [
     {
@@ -712,6 +713,13 @@
       "count": 0,
       "newCount": 0,
       "durationSeconds": 3.5,
+      "timedOut": true
+    },
+    {
+      "site": "https://www.ibood.com/nl/",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 3.8,
       "timedOut": true
     }
   ],
@@ -11517,10 +11525,10 @@
       "rawText": "vr 4.12 ZWARTEWATER Spijkerharde Zwolse rap concert TICKETS"
     }
   ],
-  "status": "running",
-  "stage": "Websitepagina ophalen",
+  "status": "finishing",
+  "stage": "Website klaar; volgende website voorbereiden",
   "lastUpdatedAt": "2026-10-25T10:36:44+00:00",
   "lastSiteEventCount": 0,
-  "lastCompletedSite": "https://www.groupon.nl/",
-  "lastCompletedAt": "2026-10-25T10:36:39+00:00"
+  "lastCompletedSite": "https://www.ibood.com/nl/",
+  "lastCompletedAt": "2026-10-25T10:36:45+00:00"
 }
