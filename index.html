@@ -1365,7 +1365,7 @@
   </div>
 
   <script>
-    const APP_VERSION = "2026.10.25.44";
+    const APP_VERSION = "2026.10.25.45";
     const DEFAULT_MAX_EVENTS_PER_SITE = 20;
     const DEFAULT_SITE_TIME_LIMIT_SECONDS = 20;
     const SCAN_SETTINGS_KEY = "eventScanSettingsV1";
@@ -3283,10 +3283,10 @@
 
     async function refreshEvents() {
       updateDateRange();
-      // Houd de titelstatus compact: sluit het details-paneel bij iedere nieuwe verversing.
+      // Toon tijdens verversen zowel de compacte titelstatus als het grote statusveld.
       const titlePanel = $("titlePanel");
-      if (titlePanel) titlePanel.classList.remove("open");
-      $("titleToggle")?.setAttribute("aria-expanded", "false");
+      if (titlePanel) titlePanel.classList.add("open");
+      $("titleToggle")?.setAttribute("aria-expanded", "true");
       const button = $("refreshBtn");
       const previousSignature = eventSignature(events);
       const previousKeys = eventKeySet(events);
@@ -3348,14 +3348,23 @@
           const status = cleanText(progress.status || "");
           const active = ["running", "finishing", "queued", "in_progress"].includes(status);
           if (!active && status !== "completed") return;
-          if (active && progress.currentSite) {
+          if (active) {
+            // Keep the compact title indicator alive even before the first site is published.
             updateLiveScrapeSummary(progress, true);
             const completed = Number(progress.completedCount) || 0;
-            const total = Number(progress.totalSites) || selectedSites.length;
+            const total = Math.max(1, Number(progress.totalSites) || selectedSites.length);
             const siteNumber = Math.min(total, Math.max(1, Number(progress.currentSiteIndex) || completed + 1));
-            // Do not duplicate the active-site status already displayed in the title.
+            const site = shortScrapeSiteName(progress.currentSite || "");
+            const stage = cleanText(progress.stage || "Websitepagina ophalen");
+            const siteStartedAt = Date.parse(progress.siteStartedAt || progress.lastUpdatedAt || progress.startedAt || "");
+            const elapsed = Number.isFinite(siteStartedAt) ? Math.max(0, Math.floor((Date.now() - siteStartedAt) / 1000)) : 0;
+            const detail = site ? `Website ${siteNumber}/${total}: ${site} · ${stage} · ${elapsed}s` : `Wachten op eerste website · ${completed}/${total} afgerond`;
+            showStatus(`Scraper actief: ${detail}. ${Array.isArray(progress.events) ? progress.events.length : 0} voorlopige hits.`, "warn", { stop: true });
           } else if (status === "completed") {
             updateLiveScrapeSummary(progress, true);
+            const results = Array.isArray(progress.siteResults) ? progress.siteResults : [];
+            const hitCount = results.reduce((sum, item) => sum + (Number(item.count) || 0), 0);
+            showStatus(`Scraper klaar: ${Math.min(Number(progress.completedCount) || 0, Number(progress.totalSites) || selectedSites.length)}/${Number(progress.totalSites) || selectedSites.length} websites afgerond · ${hitCount} hits gevonden. Publicatie wordt gecontroleerd.`, "warn", { stop: true });
           }
         } catch {}
       };
