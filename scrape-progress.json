@@ -3684,16 +3684,34 @@
       "url": "https://www.concertgebouw.nl/concerten-en-tickets",
       "status": "klaar",
       "rawText": "site 12/19: 5 unieke events in 2.11 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "title": "Start",
+      "date": "",
+      "url": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "status": "start",
+      "rawText": "site 13/19: max 5 events, max 2 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "status": "strategie",
+      "rawText": "bioscoopfilms en speeldata (BiosAgenda Groningen)"
     }
   ],
   "status": "running",
   "siteStartedAt": "2026-10-25T16:13:58+00:00",
-  "siteElapsedSeconds": 0,
+  "siteElapsedSeconds": 1,
   "sitePageCount": 0,
   "lastSiteEventCount": 0,
   "stage": "Websitepagina ophalen",
-  "lastUpdatedAt": "2026-10-25T16:13:58+00:00",
-  "lastSiteNewEventCount": 5,
+  "lastUpdatedAt": "2026-10-25T16:13:59+00:00",
+  "lastSiteNewEventCount": 0,
   "lastCompletedSite": "https://www.concertgebouw.nl/concerten-en-tickets",
   "lastCompletedAt": "2026-10-25T16:13:57+00:00"
 }
