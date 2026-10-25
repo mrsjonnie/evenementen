@@ -2588,7 +2588,7 @@
             ? "Scraper actief na pagina-herstel: " + (Number(progress.completedCount) || 0) + "/" + (Number(progress.totalSites) || 19) + " websites afgerond; nu bezig met " + activeSiteName + "."
             : "Scraper actief na pagina-herstel: " + (Number(progress.completedCount) || 0) + "/" + (Number(progress.totalSites) || 19) + " websites afgerond; wachten op actuele websitevoortgang.",
         ageSeconds >= 45 ? "error" : "warn",
-        ageSeconds >= 45 ? { stop: true, replaceLast: "GEEN ACTUELE VOORTGANG:" } : { stop: true }
+        ageSeconds >= 45 ? { stop: true, replaceLast: "De scan meldt al " } : { stop: true }
       );
       updateLiveScrapeSummary(progress, true);
       if (Array.isArray(progress.rawLog)) {
