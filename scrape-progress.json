@@ -4554,15 +4554,33 @@
       "url": "https://www.vvvameland.nl/activiteiten-en-evenementen",
       "status": "klaar",
       "rawText": "site 15/19: 0 unieke events in 2.0 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.socialdeal.nl/",
+      "title": "Start",
+      "date": "",
+      "url": "https://www.socialdeal.nl/",
+      "status": "start",
+      "rawText": "site 16/19: max 5 events, max 2 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.socialdeal.nl/",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://www.socialdeal.nl/",
+      "status": "strategie",
+      "rawText": "Social Deal-aanbiedingen"
     }
   ],
   "status": "running",
   "siteStartedAt": "2026-10-25T16:14:11+00:00",
-  "siteElapsedSeconds": 0,
+  "siteElapsedSeconds": 1,
   "sitePageCount": 0,
   "lastSiteEventCount": 0,
   "stage": "Websitepagina ophalen",
-  "lastUpdatedAt": "2026-10-25T16:14:11+00:00",
+  "lastUpdatedAt": "2026-10-25T16:14:12+00:00",
   "lastSiteNewEventCount": 0,
   "lastCompletedSite": "https://www.vvvameland.nl/activiteiten-en-evenementen",
   "lastCompletedAt": "2026-10-25T16:14:10+00:00"
