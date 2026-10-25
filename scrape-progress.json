@@ -1153,11 +1153,29 @@
       "url": "https://www.groupon.nl/kortingsbonnen/gemeente-groningen",
       "status": "klaar",
       "rawText": "site 2/5: 0 unieke events in 4.02 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "Start",
+      "date": "",
+      "url": "https://www.ibood.com/s-nl",
+      "status": "start",
+      "rawText": "site 3/5: max 20 events, max 20 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://www.ibood.com/s-nl",
+      "status": "strategie",
+      "rawText": "aanbiedingen"
     }
   ],
   "status": "running",
   "stage": "Websitepagina ophalen",
-  "lastUpdatedAt": "2026-10-25T10:44:17+00:00",
+  "lastUpdatedAt": "2026-10-25T10:44:18+00:00",
   "lastSiteEventCount": 0,
   "lastCompletedSite": "https://www.groupon.nl/kortingsbonnen/gemeente-groningen",
   "lastCompletedAt": "2026-10-25T10:44:16+00:00"
