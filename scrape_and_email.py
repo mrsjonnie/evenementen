@@ -5,7 +5,6 @@ import re
 import time
 import uuid
 import subprocess
-import signal
 import xml.etree.ElementTree as ET
 from email.utils import parsedate_to_datetime
 from datetime import date, datetime, timedelta, timezone
@@ -1578,9 +1577,9 @@ def import_serpapi_raw_log():
 
 
 def remaining_timeout(deadline):
-    # Respect short per-site budgets; never add a full extra second when only a
-    # fraction of the configured time remains.
-    return max(0.2, min(7.0, deadline - time.monotonic()))
+    # Respect short per-site budgets. Do not force a 0.2s request after the
+    # deadline; the caller checks the deadline before starting each request.
+    return max(0.05, min(7.0, deadline - time.monotonic()))
 
 
 def fetch_html(session, url, deadline):
@@ -2536,6 +2535,16 @@ def scrape_site(site_url, site_index=0, site_total=0, progress_callback=None, ex
                 ]
             detail_links.extend(found_links)
 
+    # Detail-first agenda's moeten eerst hun echte eventpagina's verwerken.
+    # Feed-endpoints kunnen traag zijn en anders de volledige site-begroting
+    # opgebruiken voordat Forum/Kultuuragenda/Paradiso/DNK/Visit Groningen
+    # ook maar één eventdetail heeft kunnen uitlezen.
+    if canonical_host(normalized_site) in {
+        "forum.nl", "kultuuragenda.nl", "paradiso.nl",
+        "denieuwekolk.nl", "visitgroningen.nl",
+    }:
+        feed_urls = []
+
     # Verwerk gevonden openbare feeds rechtstreeks; dit vereist geen API-key of AI.
     for feed_url in unique_urls(feed_urls):
         if time.monotonic() >= deadline or new_event_count(events) >= MAX_EVENTS_PER_SITE:
@@ -2703,7 +2712,7 @@ def scrape_site(site_url, site_index=0, site_total=0, progress_callback=None, ex
         event for event in filtered
         if event_key(event) not in existing_event_keys
     ])[:MAX_EVENTS_PER_SITE]
-    timed_out = timed_out or time.monotonic() >= deadline
+    timed_out = timed_out or (time.monotonic() >= deadline and new_event_count(events) < MAX_EVENTS_PER_SITE)
     duration = round(time.monotonic() - started, 2)
     SITE_RESULTS.append(
         {
@@ -2926,38 +2935,18 @@ def main():
             progress["sitePageCount"] = sum(1 for row in RAW_DATA_ROWS if row.get("site") == site and row.get("title") == "Pagina gelezen")
             progress["lastUpdatedAt"] = datetime.now(timezone.utc).isoformat(timespec="seconds")
             progress["status"] = "running"
-            publish_scrape_progress(progress)
+            # Keep this as an in-memory snapshot. GitHub commits/pushes here
+            # consume the same per-site time budget as the actual scraping.
 
-        # Enforce a hard wall-clock limit around the whole site's parser, not only HTTP calls.
-        # This prevents a pathological page/parser loop from pinning the workflow on one site.
-        class SiteDeadlineExceeded(TimeoutError):
-            pass
-
-        def _site_deadline_handler(signum, frame):
-            raise SiteDeadlineExceeded(f"site overschreed de harde tijdslimiet van {SITE_TIME_LIMIT_SECONDS} seconden")
-
-        previous_alarm_handler = signal.getsignal(signal.SIGALRM)
-        signal.signal(signal.SIGALRM, _site_deadline_handler)
-        signal.setitimer(signal.ITIMER_REAL, SITE_TIME_LIMIT_SECONDS)
+        # Do not interrupt parser code with SIGALRM: an asynchronous exception
+        # could discard valid events already extracted from a large page. The
+        # scraper checks the deadline between requests and detail pages, while
+        # HTTP calls use the remaining time budget.
         try:
             all_events.extend(scrape_site(site, index, total_sites, progress_callback=publish_partial_site_progress, existing_event_keys=previous_all_keys))
-        except SiteDeadlineExceeded as exc:
-            add_raw("Website", site, "Site-time-out", "", site, "timeout", str(exc))
-            if SITE_RESULTS and canonical_host(SITE_RESULTS[-1].get("site", "")) == canonical_host(site):
-                SITE_RESULTS.pop()
-            SITE_RESULTS.append({
-                "site": site,
-                "count": len(dedupe_events(all_events[before_count:])),
-                "newCount": len(dedupe_events(all_events[before_count:])),
-                "durationSeconds": SITE_TIME_LIMIT_SECONDS,
-                "timedOut": True
-            })
         except Exception as exc:
             add_raw("Website", site, "Site mislukt", "", site, "fout", str(exc))
             SITE_RESULTS.append({"site": site, "count": 0, "newCount": 0, "durationSeconds": 0, "timedOut": False})
-        finally:
-            signal.setitimer(signal.ITIMER_REAL, 0)
-            signal.signal(signal.SIGALRM, previous_alarm_handler)
         site_events = dedupe_events(all_events[before_count:])
         # Keep the source site's result count accurate as soon as this site finishes;
         # do not wait until the entire multi-site scan is saved.
