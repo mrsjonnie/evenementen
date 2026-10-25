@@ -1,7 +1,7 @@
 {
   "runId": "2026-10-25T15:15:50.045881+00:00-3458d584",
   "startedAt": "2026-10-25T15:15:50+00:00",
-  "completedCount": 14,
+  "completedCount": 15,
   "totalSites": 19,
   "currentSite": "https://www.vvvameland.nl/activiteiten-en-evenementen",
   "currentSiteIndex": 15,
@@ -19,7 +19,8 @@
     "https://www.noorderzon.nl/programma",
     "https://www.concertgebouw.nl/concerten-en-tickets",
     "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
-    "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817"
+    "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+    "https://www.vvvameland.nl/activiteiten-en-evenementen"
   ],
   "events": [],
   "siteResults": [
@@ -119,6 +120,13 @@
       "count": 0,
       "newCount": 0,
       "durationSeconds": 2.06,
+      "timedOut": true
+    },
+    {
+      "site": "https://www.vvvameland.nl/activiteiten-en-evenementen",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 2.0,
       "timedOut": true
     }
   ],
@@ -2768,16 +2776,34 @@
       "url": "https://www.vvvameland.nl/activiteiten-en-evenementen",
       "status": "strategie",
       "rawText": "universeel-jsonld-links-kaarten"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vvvameland.nl/activiteiten-en-evenementen",
+      "title": "Pagina mislukt",
+      "date": "",
+      "url": "https://www.vvvameland.nl/activiteiten-en-evenementen",
+      "status": "fout",
+      "rawText": "HTTPSConnectionPool(host='www.vvvameland.nl', port=443): Read timed out. (read timeout=1.0867711329999992)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vvvameland.nl/activiteiten-en-evenementen",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://www.vvvameland.nl/activiteiten-en-evenementen",
+      "status": "klaar",
+      "rawText": "site 15/19: 0 unieke events in 2.0 sec"
     }
   ],
   "status": "running",
   "siteStartedAt": "2026-10-25T15:16:56+00:00",
-  "siteElapsedSeconds": 1,
+  "siteElapsedSeconds": 3,
   "sitePageCount": 0,
   "lastSiteEventCount": 0,
-  "stage": "Websitepagina ophalen",
+  "stage": "Website klaar; volgende website voorbereiden",
   "lastUpdatedAt": "2026-10-25T15:16:57+00:00",
   "lastSiteNewEventCount": 0,
-  "lastCompletedSite": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
-  "lastCompletedAt": "2026-10-25T15:16:53+00:00"
+  "lastCompletedSite": "https://www.vvvameland.nl/activiteiten-en-evenementen",
+  "lastCompletedAt": "2026-10-25T15:16:59+00:00"
 }
