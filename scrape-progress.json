@@ -234,15 +234,33 @@
       "url": "https://www.zwolsetheaters.nl/programma",
       "status": "klaar",
       "rawText": "site 1/3: 0 unieke events in 10.25 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Start",
+      "date": "",
+      "url": "https://denieuwekolk.nl/agenda",
+      "status": "start",
+      "rawText": "site 2/3: max 20 events, max 20 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://denieuwekolk.nl/agenda",
+      "status": "strategie",
+      "rawText": "agenda-kaarten + datumregels (De Nieuwe Kolk)"
     }
   ],
   "status": "running",
   "siteStartedAt": "2026-10-25T10:57:13+00:00",
-  "siteElapsedSeconds": 0,
+  "siteElapsedSeconds": 1,
   "sitePageCount": 0,
   "lastSiteEventCount": 0,
   "stage": "Websitepagina ophalen",
-  "lastUpdatedAt": "2026-10-25T10:57:13+00:00",
+  "lastUpdatedAt": "2026-10-25T10:57:14+00:00",
   "lastCompletedSite": "https://www.zwolsetheaters.nl/programma",
   "lastCompletedAt": "2026-10-25T10:57:12+00:00"
 }
