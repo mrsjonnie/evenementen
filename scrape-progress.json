@@ -1,7 +1,7 @@
 {
   "runId": "2026-10-25T10:09:13+00:00",
   "startedAt": "2026-10-25T10:09:13+00:00",
-  "completedCount": 8,
+  "completedCount": 9,
   "totalSites": 18,
   "completedSites": [
     "https://groningen.uitloper.nu/",
@@ -11,7 +11,8 @@
     "https://www.spotgroningen.nl/programma/",
     "https://simplon.nl/",
     "https://www.vera-groningen.nl/",
-    "https://www.martiniplaza.nl/nl/agenda"
+    "https://www.martiniplaza.nl/nl/agenda",
+    "https://www.groningermuseum.nl/en/now"
   ],
   "events": [
     {
@@ -2104,6 +2105,13 @@
       "count": 12,
       "newCount": 0,
       "durationSeconds": 7.17,
+      "timedOut": false
+    },
+    {
+      "site": "https://www.groningermuseum.nl/en/now",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 0.96,
       "timedOut": false
     }
   ],
@@ -12910,8 +12918,8 @@
     }
   ],
   "status": "running",
-  "lastCompletedSite": "https://www.martiniplaza.nl/nl/agenda",
-  "lastSiteEventCount": 12,
+  "lastCompletedSite": "https://www.groningermuseum.nl/en/now",
+  "lastSiteEventCount": 0,
   "lastUpdatedAt": "2026-10-25T10:10:00+00:00",
-  "lastCompletedAt": "2026-10-25T10:10:06+00:00"
+  "lastCompletedAt": "2026-10-25T10:10:08+00:00"
 }
