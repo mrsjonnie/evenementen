@@ -2096,15 +2096,33 @@
       "url": "https://denieuwekolk.nl/agenda",
       "status": "klaar",
       "rawText": "site 2/3: 0 unieke events in 20.26 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.filmvandaag.nl/bioscoop",
+      "title": "Start",
+      "date": "",
+      "url": "https://www.filmvandaag.nl/bioscoop",
+      "status": "start",
+      "rawText": "site 3/3: max 20 events, max 20 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.filmvandaag.nl/bioscoop",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://www.filmvandaag.nl/bioscoop",
+      "status": "strategie",
+      "rawText": "bioscoopagenda Groningen (FilmVandaag)"
     }
   ],
   "status": "running",
   "siteStartedAt": "2026-10-25T11:00:17+00:00",
-  "siteElapsedSeconds": 0,
+  "siteElapsedSeconds": 1,
   "sitePageCount": 0,
   "lastSiteEventCount": 0,
   "stage": "Websitepagina ophalen",
-  "lastUpdatedAt": "2026-10-25T11:00:17+00:00",
+  "lastUpdatedAt": "2026-10-25T11:00:18+00:00",
   "lastCompletedSite": "https://denieuwekolk.nl/agenda",
   "lastCompletedAt": "2026-10-25T11:00:16+00:00"
 }
