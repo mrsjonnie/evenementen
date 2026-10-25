@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-25T13:58:59+00:00",
+  "updatedAt": "2026-10-25T13:59:05+00:00",
   "events": [
     {
       "date": "2026-10-25",
@@ -11551,6 +11551,13 @@
       "count": 0,
       "newCount": 0,
       "durationSeconds": 3.22,
+      "timedOut": true
+    },
+    {
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 3.52,
       "timedOut": true
     }
   ],
