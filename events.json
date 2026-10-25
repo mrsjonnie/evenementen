@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-25T16:58:17+00:00",
+  "updatedAt": "2026-10-25T16:58:29+00:00",
   "events": [
     {
       "date": "2026-10-25",
@@ -2760,6 +2760,21 @@
       "isNew": true
     },
     {
+      "date": "2027-03-01",
+      "time": "",
+      "title": "Appartementen",
+      "type": "Activiteit",
+      "location": "Ameland",
+      "locationLink": "",
+      "website": "https://www.vvvameland.nl/overnachten/appartementen",
+      "source": "vvvameland.nl",
+      "discoverySource": "Website",
+      "description": "Overzicht Appartementen Appartementen Buren 6 personen of meer Appartementen Nes 6 personen of meer Appartementen Ballum Appartementen Hollum 6 personen of meer",
+      "cost": "",
+      "image": "",
+      "isNew": true
+    },
+    {
       "date": "2027-03-03",
       "time": "",
       "title": "BODEGA",
@@ -2772,6 +2787,66 @@
       "description": "Wednesday 3 March BODEGA USA support Snarky and energetic artrock De New Yorkse artrockband BODEGA werd in 2016 gevormd uit de resten van het... Lees meer Koop ticket",
       "cost": "",
       "image": "https://www.vera-groningen.nl/wp/../vera/assets/img/logo-black.svg",
+      "isNew": true
+    },
+    {
+      "date": "2027-04-01",
+      "time": "",
+      "title": "Last-minutes",
+      "type": "Activiteit",
+      "location": "Ameland",
+      "locationLink": "",
+      "website": "https://www.vvvameland.nl/overnachten",
+      "source": "vvvameland.nl",
+      "discoverySource": "Website",
+      "description": "Overzicht Overnachten Overzicht Vakantiehuizen Vakantiehuizen Duingebied tussen Nes en Buren Vakantiehuizen Nes 7 of meer pers. Vakantiehuizen Ballum 7 of meer personen Vakantiehuizen Hollum 7 of meer personen Vakantiehuizen Buren 7 of meer personen Overzicht Appartementen",
+      "cost": "",
+      "image": "",
+      "isNew": true
+    },
+    {
+      "date": "2027-04-01",
+      "time": "",
+      "title": "Overnachten",
+      "type": "Activiteit",
+      "location": "Ameland",
+      "locationLink": "",
+      "website": "https://www.vvvameland.nl/overnachten",
+      "source": "vvvameland.nl",
+      "discoverySource": "Website",
+      "description": "Overzicht Overnachten Overzicht Vakantiehuizen Vakantiehuizen Duingebied tussen Nes en Buren Vakantiehuizen Nes 7 of meer pers. Vakantiehuizen Ballum 7 of meer personen Vakantiehuizen Hollum 7 of meer personen Vakantiehuizen Buren 7 of meer personen Overzicht Appartementen",
+      "cost": "",
+      "image": "",
+      "isNew": true
+    },
+    {
+      "date": "2027-04-01",
+      "time": "",
+      "title": "Vakantiehuizen",
+      "type": "Activiteit",
+      "location": "Ameland",
+      "locationLink": "",
+      "website": "https://www.vvvameland.nl/overnachten/vakantiehuizen",
+      "source": "vvvameland.nl",
+      "discoverySource": "Website",
+      "description": "Overzicht Vakantiehuizen Vakantiehuizen Duingebied tussen Nes en Buren Vakantiehuizen Nes 7 of meer pers. Vakantiehuizen Ballum 7 of meer personen Vakantiehuizen Hollum 7 of meer personen Vakantiehuizen Buren 7 of meer personen",
+      "cost": "",
+      "image": "",
+      "isNew": true
+    },
+    {
+      "date": "2027-04-01",
+      "time": "",
+      "title": "Vakantiehuizen Duingebied tussen Nes en Buren",
+      "type": "Activiteit",
+      "location": "Ameland",
+      "locationLink": "",
+      "website": "https://www.vvvameland.nl/overnachten/vakantiehuizen",
+      "source": "vvvameland.nl",
+      "discoverySource": "Website",
+      "description": "Overzicht Vakantiehuizen Vakantiehuizen Nes 7 of meer pers. Vakantiehuizen Ballum 7 of meer personen Vakantiehuizen Hollum 7 of meer personen Vakantiehuizen Buren 7 of meer personen",
+      "cost": "",
+      "image": "",
       "isNew": true
     },
     {
@@ -3264,6 +3339,13 @@
       "newCount": 12,
       "durationSeconds": 1.59,
       "timedOut": false
+    },
+    {
+      "site": "https://www.vvvameland.nl/activiteiten-en-evenementen",
+      "count": 5,
+      "newCount": 5,
+      "durationSeconds": 9.95,
+      "timedOut": true
     }
   ],
   "rawLog": [
