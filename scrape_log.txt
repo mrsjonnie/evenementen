@@ -10,3 +10,8 @@ Website	https://www.pathe.nl/bioscoop/groningen	fout	Pagina mislukt		https://www
 Website	https://www.pathe.nl/bioscoop/groningen	fout	Pagina mislukt		https://www.pathe.nl/nl/bioscopen/pathe-groningen	HTTP 403
 Website	https://www.pathe.nl/bioscoop/groningen	fout	Pagina mislukt		https://www.biosagenda.nl/films-bioscoop_path-groningen_128.html	HTTP 403
 Website	https://www.pathe.nl/bioscoop/groningen	klaar	Klaar		https://www.pathe.nl/bioscoop/groningen	site 2/3: 0 unieke events in 0.35 sec
+Website	https://www.filmvandaag.nl/bioscoop	start	Start		https://www.filmvandaag.nl/bioscoop	site 3/3: max 12 events, max 4 seconden
+Parser	https://www.filmvandaag.nl/bioscoop	strategie	Scrapertype vastgesteld		https://www.filmvandaag.nl/bioscoop	bioscoopagenda Groningen (FilmVandaag)
+Website	https://www.filmvandaag.nl/bioscoop	fout	Pagina mislukt		https://www.filmvandaag.nl/filmladder/stad/80-groningen	HTTP 403
+Website	https://www.filmvandaag.nl/bioscoop	fout	Pagina mislukt		https://filmvandaag.nl/filmladder/stad/80-groningen	HTTP 403
+Website	https://www.filmvandaag.nl/bioscoop	klaar	Klaar		https://www.filmvandaag.nl/bioscoop	site 3/3: 0 unieke events in 0.24 sec

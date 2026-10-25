@@ -1,13 +1,14 @@
 {
   "runId": "2026-10-25T18:11:58.348915+00:00-15d90f09",
   "startedAt": "2026-10-25T18:11:58+00:00",
-  "completedCount": 2,
+  "completedCount": 3,
   "totalSites": 3,
   "currentSite": "https://www.filmvandaag.nl/bioscoop",
   "currentSiteIndex": 3,
   "completedSites": [
     "https://www.ibood.com/s-nl",
-    "https://www.pathe.nl/bioscoop/groningen"
+    "https://www.pathe.nl/bioscoop/groningen",
+    "https://www.filmvandaag.nl/bioscoop"
   ],
   "events": [],
   "siteResults": [
@@ -23,6 +24,13 @@
       "count": 0,
       "newCount": 0,
       "durationSeconds": 0.35,
+      "timedOut": false
+    },
+    {
+      "site": "https://www.filmvandaag.nl/bioscoop",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 0.24,
       "timedOut": false
     }
   ],
@@ -134,16 +142,61 @@
       "url": "https://www.pathe.nl/bioscoop/groningen",
       "status": "klaar",
       "rawText": "site 2/3: 0 unieke events in 0.35 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.filmvandaag.nl/bioscoop",
+      "title": "Start",
+      "date": "",
+      "url": "https://www.filmvandaag.nl/bioscoop",
+      "status": "start",
+      "rawText": "site 3/3: max 12 events, max 4 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.filmvandaag.nl/bioscoop",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://www.filmvandaag.nl/bioscoop",
+      "status": "strategie",
+      "rawText": "bioscoopagenda Groningen (FilmVandaag)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.filmvandaag.nl/bioscoop",
+      "title": "Pagina mislukt",
+      "date": "",
+      "url": "https://www.filmvandaag.nl/filmladder/stad/80-groningen",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.filmvandaag.nl/bioscoop",
+      "title": "Pagina mislukt",
+      "date": "",
+      "url": "https://filmvandaag.nl/filmladder/stad/80-groningen",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.filmvandaag.nl/bioscoop",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://www.filmvandaag.nl/bioscoop",
+      "status": "klaar",
+      "rawText": "site 3/3: 0 unieke events in 0.24 sec"
     }
   ],
-  "status": "running",
+  "status": "finishing",
   "siteStartedAt": "2026-10-25T18:12:04+00:00",
-  "siteElapsedSeconds": 0,
+  "siteElapsedSeconds": 1,
   "sitePageCount": 0,
   "lastSiteEventCount": 0,
-  "stage": "Websitepagina ophalen",
-  "lastUpdatedAt": "2026-10-25T18:12:04+00:00",
+  "stage": "Website klaar; volgende website voorbereiden",
+  "lastUpdatedAt": "2026-10-25T18:12:05+00:00",
   "lastSiteNewEventCount": 0,
-  "lastCompletedSite": "https://www.pathe.nl/bioscoop/groningen",
-  "lastCompletedAt": "2026-10-25T18:12:03+00:00"
+  "lastCompletedSite": "https://www.filmvandaag.nl/bioscoop",
+  "lastCompletedAt": "2026-10-25T18:12:05+00:00"
 }
