@@ -1,7 +1,7 @@
 {
   "runId": "2026-10-25T09:46:16+00:00",
   "startedAt": "2026-10-25T09:46:16+00:00",
-  "completedCount": 15,
+  "completedCount": 16,
   "totalSites": 18,
   "completedSites": [
     "https://groningen.uitloper.nu/",
@@ -18,7 +18,8 @@
     "https://www.concertgebouw.nl/concerten-en-tickets",
     "https://www.zwolsetheaters.nl/programma",
     "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
-    "https://www.vvvameland.nl/activiteiten-en-evenementen"
+    "https://www.vvvameland.nl/activiteiten-en-evenementen",
+    "https://www.socialdeal.nl/"
   ],
   "events": [
     {
@@ -3756,6 +3757,13 @@
       "count": 20,
       "newCount": 0,
       "durationSeconds": 9.14,
+      "timedOut": false
+    },
+    {
+      "site": "https://www.socialdeal.nl/",
+      "count": 25,
+      "newCount": 0,
+      "durationSeconds": 2.57,
       "timedOut": false
     }
   ],
@@ -14565,5 +14573,5 @@
   "lastCompletedSite": "https://www.socialdeal.nl/",
   "lastSiteEventCount": 25,
   "lastUpdatedAt": "2026-10-25T09:47:55+00:00",
-  "lastCompletedAt": "2026-10-25T09:47:52+00:00"
+  "lastCompletedAt": "2026-10-25T09:47:56+00:00"
 }
