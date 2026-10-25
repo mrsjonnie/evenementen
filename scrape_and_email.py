@@ -2395,6 +2395,14 @@ def scrape_site(site_url, site_index=0, site_total=0, progress_callback=None, ex
                 # the fallback when a detail page has no Event schema.
                 detail_soup = BeautifulSoup(html, "html.parser")
                 detail_events = parse_jsonld_events(detail_soup, final_url, normalized_site, discovery_source)
+            elif canonical_host(normalized_site) == "denieuwekolk.nl":
+                # Each De Nieuwe Kolk detail URL represents one activity; avoid turning
+                # recurring schedule lines and footer controls into separate event titles.
+                detail_soup = BeautifulSoup(html, "html.parser")
+                detail_events = parse_jsonld_events(detail_soup, final_url, normalized_site, discovery_source)
+                if not detail_events:
+                    detail_event = extract_detail_event(detail_soup, final_url, normalized_site, discovery_source)
+                    detail_events = [detail_event] if detail_event else []
             elif canonical_host(normalized_site) == "forum.nl":
                 # Avoid the generic line parser on Forum detail pages: its genres,
                 # labels and navigation text are not events.
