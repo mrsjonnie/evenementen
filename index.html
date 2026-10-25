@@ -3214,6 +3214,7 @@
       const previousSignature = eventSignature(events);
       const previousKeys = eventKeySet(events);
       let foundCount = null;
+      let startupProgressPollHandle = null;
       refreshAbortRequested = false;
       progressMonitoringStopped = false;
       newEventKeys = new Set();
@@ -3264,7 +3265,6 @@
       // Poll progress while the Cloudflare Worker request is still pending.
       // The worker can take tens of seconds to return after dispatching Actions;
       // waiting for its response before polling leaves the title stuck at 0/N.
-      let startupProgressPollHandle = null;
       const pollProgressWhileStarting = async () => {
         try {
           const progress = await fetchScrapeProgress();
