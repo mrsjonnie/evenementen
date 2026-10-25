@@ -1,7 +1,7 @@
 {
   "runId": "2026-10-25T18:56:08.114925+00:00-709e6c18",
   "startedAt": "2026-10-25T18:56:08+00:00",
-  "completedCount": 17,
+  "completedCount": 18,
   "totalSites": 20,
   "currentSite": "https://www.groupon.nl/kortingsbonnen/gemeente-groningen",
   "currentSiteIndex": 18,
@@ -22,7 +22,8 @@
     "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
     "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
     "https://www.vvvameland.nl/activiteiten-en-evenementen",
-    "https://www.socialdeal.nl/"
+    "https://www.socialdeal.nl/",
+    "https://www.groupon.nl/kortingsbonnen/gemeente-groningen"
   ],
   "events": [
     {
@@ -3115,72 +3116,16 @@
       "newCount": 14,
       "durationSeconds": 13.59,
       "timedOut": false
+    },
+    {
+      "site": "https://www.groupon.nl/kortingsbonnen/gemeente-groningen",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 0.4,
+      "timedOut": false
     }
   ],
   "rawLog": [
-    {
-      "source": "Website",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "Detailpagina geanalyseerd",
-      "date": "",
-      "url": "https://groningermuseum.nl/familietour-nieuw-licht-de-ploeg",
-      "status": "ok",
-      "rawText": "0 extra events"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "OVER DE TENTOONSTELLING Wat is ervoor nodig",
-      "date": "2027-05-09",
-      "url": "https://groningermuseum.nl/ani-schulze-the-convent-of-pleasure",
-      "status": "event uit datumblok",
-      "rawText": "9 mei 2027 OVER DE TENTOONSTELLING Wat is ervoor nodig om een leven op te bouwen op je eigen voorwaarden?'Nieuw licht 1: Ani Schulze – The Convent of Pleasure' stelt die vraag. ‘Nieuw licht’ is een tentoonstellingsreeks waarin Groninger Museum kunstenaars uitnodigt om een nieuw licht te werpen op de collectie van werken van De Ploeg, de avant-gardistische kunstenaarsvereniging uit Groningen. Thematische verwantschap,"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "T h e C o n v e n t o f P l e a s u r e",
-      "date": "2026-09-19",
-      "url": "https://groningermuseum.nl/ani-schulze-the-convent-of-pleasure",
-      "status": "event uit detailpagina",
-      "rawText": "Groninger Museum Naar hoofdinhoud Naar navigatie Home Bezoek Programma Collectie Architectuur Over Menu NL Tickets T h e C o n v e n t o f P l e a s u r e N i e u w l i c h t 1 : A n i S c h u l z e Ani Schulze, The Convent of Pleasure - Episode 4: Harlequin’s Arrival, Video Still, 2026 Ani Schulze, The Convent of Pleasure - Episode 4: Harlequin’s Arrival, Video Still, 2026 19 september 2026 – 9 mei 2027 OVER DE TENT"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "Ani Schulze, The Convent of Pleasure - Episode 4: Harlequin’s Arrival, Video Still, 2026",
-      "date": "2026-09-19",
-      "url": "https://groningermuseum.nl/ani-schulze-the-convent-of-pleasure",
-      "status": "event uit tekstregel",
-      "rawText": "Ani Schulze, The Convent of Pleasure - Episode 4: Harlequin’s Arrival, Video Still, 2026 | 19 september 2026 – 9 mei 2027 | OVER DE TENTOONSTELLING | Wat is ervoor nodig om een leven op te bouwen op je eigen voorwaarden?'Nieuw licht 1: Ani Schulze – The Convent of Pleasure' stelt die vraag. | ‘Nieuw licht’ is een tentoonstellingsreeks waarin Groninger Museum kunstenaars uitnodigt om een nieuw licht te werpen op de co"
-    },
-    {
-      "source": "Parser",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "Pagina geteld",
-      "date": "",
-      "url": "https://groningermuseum.nl/ani-schulze-the-convent-of-pleasure",
-      "status": "analyse",
-      "rawText": "jsonld:0, links:0, datumblokken:1, kaarten:0, regels:1, detail:1"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "Detailpagina geanalyseerd",
-      "date": "",
-      "url": "https://groningermuseum.nl/ani-schulze-the-convent-of-pleasure",
-      "status": "ok",
-      "rawText": "3 extra events"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "Kunstenaars Wobbe Alkema Jan Altink Franciscus Hermanus",
-      "date": "2029-01-07",
-      "url": "https://groningermuseum.nl/de-ploeg-nieuw-licht",
-      "status": "event uit datumblok",
-      "rawText": "7 januari 2029 Kunstenaars Wobbe Alkema Jan Altink Franciscus Hermanus Bach Johan Dijkstra Otto Eerelman Johan Faber Alida van Houten Job Hansen Jozef Israëls Jan Gerrit Jordens Ernst Ludwig Kirchner Ekke Kleima Arnold Willem Kort George Martens Henk Melgers Hendrik Willem Mesdag Geesje Mesdag-van Calcar Sientje Mesdag-van Houten Alida Pott Willem Frederik Reinders Willem Sandberg Willem Valk Dirk de Vries Lam Hendri"
-    },
     {
       "source": "Website",
       "site": "https://groningermuseum.nl/programma",
@@ -13917,16 +13862,79 @@
       "url": "https://www.socialdeal.nl/",
       "status": "klaar",
       "rawText": "site 17/20: 14 unieke events in 13.59 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.groupon.nl/kortingsbonnen/gemeente-groningen",
+      "title": "Start",
+      "date": "",
+      "url": "https://www.groupon.nl/kortingsbonnen/gemeente-groningen",
+      "status": "start",
+      "rawText": "site 18/20: max 20 events, max 20 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.groupon.nl/kortingsbonnen/gemeente-groningen",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://www.groupon.nl/kortingsbonnen/gemeente-groningen",
+      "status": "strategie",
+      "rawText": "aanbiedingen"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.groupon.nl/kortingsbonnen/gemeente-groningen",
+      "title": "Pagina mislukt",
+      "date": "",
+      "url": "https://www.groupon.nl/kortingsbonnen/gemeente-groningen",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.groupon.nl/kortingsbonnen/gemeente-groningen",
+      "title": "Pagina mislukt",
+      "date": "",
+      "url": "https://www.groupon.nl/kortingsbonnen/groningen",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.groupon.nl/kortingsbonnen/gemeente-groningen",
+      "title": "Pagina mislukt",
+      "date": "",
+      "url": "https://www.groupon.nl/kortingsbonnen",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.groupon.nl/kortingsbonnen/gemeente-groningen",
+      "title": "Pagina mislukt",
+      "date": "",
+      "url": "https://www.groupon.nl/",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.groupon.nl/kortingsbonnen/gemeente-groningen",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://www.groupon.nl/kortingsbonnen/gemeente-groningen",
+      "status": "klaar",
+      "rawText": "site 18/20: 0 unieke events in 0.4 sec"
     }
   ],
   "status": "running",
   "siteStartedAt": "2026-10-25T18:58:34+00:00",
-  "siteElapsedSeconds": 0,
+  "siteElapsedSeconds": 1,
   "sitePageCount": 0,
   "lastSiteEventCount": 0,
-  "stage": "Websitepagina ophalen",
-  "lastUpdatedAt": "2026-10-25T18:58:34+00:00",
-  "lastSiteNewEventCount": 14,
-  "lastCompletedSite": "https://www.socialdeal.nl/",
-  "lastCompletedAt": "2026-10-25T18:58:32+00:00"
+  "stage": "Website klaar; volgende website voorbereiden",
+  "lastUpdatedAt": "2026-10-25T18:58:35+00:00",
+  "lastSiteNewEventCount": 0,
+  "lastCompletedSite": "https://www.groupon.nl/kortingsbonnen/gemeente-groningen",
+  "lastCompletedAt": "2026-10-25T18:58:35+00:00"
 }
