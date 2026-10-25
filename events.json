@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-25T18:56:52+00:00",
+  "updatedAt": "2026-10-25T18:56:57+00:00",
   "events": [
     {
       "date": "2026-10-25",
@@ -11705,6 +11705,13 @@
       "newCount": 0,
       "durationSeconds": 4.74,
       "timedOut": false
+    },
+    {
+      "site": "https://www.vera-groningen.nl/",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 2.11,
+      "timedOut": false
     }
   ],
   "rawLog": [
@@ -21600,312 +21607,6 @@
       "rawText": "755 events/aanbiedingen op deze pagina"
     },
     {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Blair Davie Eén van de meest veelbelovende nieuwe singer-songwriters uit de UK di 17 nov",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/blair-davie/",
-      "status": "detail-link gevonden",
-      "rawText": "Blair Davie Eén van de meest veelbelovende nieuwe singer-songwriters uit de UK di 17 nov"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Bo Tarenskeen | Het Nationale Theater Soekarno “Tarenskeen kleurt Soekarno prachtig in\" ★★★★ Trouw zo 1 nov",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/bo-tarenskeen-het-nationale-theater/",
-      "status": "detail-link gevonden",
-      "rawText": "Bo Tarenskeen | Het Nationale Theater Soekarno “Tarenskeen kleurt Soekarno prachtig in\" ★★★★ Trouw zo 1 nov"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "BOUKE ROCKS ELVIS Bouke brengt the King met volle overtuiging tot leven vr 4 jun",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/bouke-rocks-elvis/",
-      "status": "detail-link gevonden",
-      "rawText": "BOUKE ROCKS ELVIS Bouke brengt the King met volle overtuiging tot leven vr 4 jun"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Brabo Leone Sarah Janneh Sarah Janneh neemt je mee op een muzikale zoektocht do 9 sep",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/brabo-leone-2/",
-      "status": "detail-link gevonden",
-      "rawText": "Brabo Leone Sarah Janneh Sarah Janneh neemt je mee op een muzikale zoektocht do 9 sep"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Brabo Leone Sarah Janneh Sarah Janneh neemt je mee op een muzikale zoektocht vr 10 sep",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/brabo-leone-3/",
-      "status": "detail-link gevonden",
-      "rawText": "Brabo Leone Sarah Janneh Sarah Janneh neemt je mee op een muzikale zoektocht vr 10 sep"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Brabo Leone Sarah Janneh Sarah Janneh neemt je mee op een muzikale zoektocht za 11 sep",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/brabo-leone-4/",
-      "status": "detail-link gevonden",
-      "rawText": "Brabo Leone Sarah Janneh Sarah Janneh neemt je mee op een muzikale zoektocht za 11 sep"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Brabo Leone Sarah Janneh Sarah Janneh neemt je mee op een muzikale zoektocht wo 8 sep",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/brabo-leone/",
-      "status": "detail-link gevonden",
-      "rawText": "Brabo Leone Sarah Janneh Sarah Janneh neemt je mee op een muzikale zoektocht wo 8 sep"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Brand New Musical Kapsalon de musical Swingende voorstelling met muzikale invloeden van Afro-beats, hiphop, gospel en pop zo 6 jun",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/brand-new-musical/",
-      "status": "detail-link gevonden",
-      "rawText": "Brand New Musical Kapsalon de musical Swingende voorstelling met muzikale invloeden van Afro-beats, hiphop, gospel en pop zo 6 jun"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Breabach Folky Sunday Een avondje Schotse folk op z’n allerbest! zo 1 nov",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/breabach-2/",
-      "status": "detail-link gevonden",
-      "rawText": "Breabach Folky Sunday Een avondje Schotse folk op z’n allerbest! zo 1 nov"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Brodsky Quartet De Late kwartetten van Beethoven Duik een dag lang in zes van Beethovens beroemdste meesterwerken Wereldklasse za 30 jan",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/brodsky-quartet-2/",
-      "status": "detail-link gevonden",
-      "rawText": "Brodsky Quartet De Late kwartetten van Beethoven Duik een dag lang in zes van Beethovens beroemdste meesterwerken Wereldklasse za 30 jan"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Buddy Vedder & Shelley Bos Al het blauw van de hemel Gloednieuw muziektheaterstuk gebaseerd op de bestseller van Mélissa Da Costa Laatste kaarten do 14 okt",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/buddy-vedder-shelley-bos/",
-      "status": "detail-link gevonden",
-      "rawText": "Buddy Vedder & Shelley Bos Al het blauw van de hemel Gloednieuw muziektheaterstuk gebaseerd op de bestseller van Mélissa Da Costa Laatste kaarten do 14 okt"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Bureau Vergezicht & Romana Vrede Een groter verhaal Een indringende en poëtische solo over hoe we naar de wereld kijken ma 14 dec",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/bureau-vergezicht-2/",
-      "status": "detail-link gevonden",
-      "rawText": "Bureau Vergezicht & Romana Vrede Een groter verhaal Een indringende en poëtische solo over hoe we naar de wereld kijken ma 14 dec"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Bureau Vergezicht Een stukje naar de mensen toe “Een magisch cadeautje aan haar publiek.” (NRC ★★★★) do 8 apr",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/bureau-vergezicht/",
-      "status": "detail-link gevonden",
-      "rawText": "Bureau Vergezicht Een stukje naar de mensen toe “Een magisch cadeautje aan haar publiek.” (NRC ★★★★) do 8 apr"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Bushman's Revenge Noors powertrio combineert de energie van rock met de vrijheid van jazz Net bevestigd di 2 mrt",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/bushmans-revenge/",
-      "status": "detail-link gevonden",
-      "rawText": "Bushman's Revenge Noors powertrio combineert de energie van rock met de vrijheid van jazz Net bevestigd di 2 mrt"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Cabarestafette presenteert: NIEUW GELUID! De lekkerste lokroep uit de comedykelders wo 3 feb",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/cabarestafette-presenteert/",
-      "status": "detail-link gevonden",
-      "rawText": "Cabarestafette presenteert: NIEUW GELUID! De lekkerste lokroep uit de comedykelders wo 3 feb"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Cameretten Finalistentournee 60e editie di 18 mei",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/cameretten-2/",
-      "status": "detail-link gevonden",
-      "rawText": "Cameretten Finalistentournee 60e editie di 18 mei"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Cappella Amsterdam & Lavinia Meijer Glass 90 Muziek van Philip Glass, bewerkt voor harp en koor di 26 jan",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/cappella-amsterdam-lavinia-meijer/",
-      "status": "detail-link gevonden",
-      "rawText": "Cappella Amsterdam & Lavinia Meijer Glass 90 Muziek van Philip Glass, bewerkt voor harp en koor di 26 jan"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Caravan Palace Mixt moderne elektronische muziek met jazz en de vibe van de jaren twintig wo 28 okt",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/caravan-palace/",
-      "status": "detail-link gevonden",
-      "rawText": "Caravan Palace Mixt moderne elektronische muziek met jazz en de vibe van de jaren twintig wo 28 okt"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Caro Returning to Innocence Rauw, sensueel, gelaagd ma 9 nov",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/caro/",
-      "status": "detail-link gevonden",
-      "rawText": "Caro Returning to Innocence Rauw, sensueel, gelaagd ma 9 nov"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Chef'Special Nog één keer in de oorspronkelijke bezetting Uitverkocht za 10 apr",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/chefspecial-6/",
-      "status": "detail-link gevonden",
-      "rawText": "Chef'Special Nog één keer in de oorspronkelijke bezetting Uitverkocht za 10 apr"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Chef'Special Nog één keer in de oorspronkelijke bezetting zo 11 apr",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/chefspecial-7/",
-      "status": "detail-link gevonden",
-      "rawText": "Chef'Special Nog één keer in de oorspronkelijke bezetting zo 11 apr"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Choir! Choir! Choir! Presents: MAMMA MIA: An EPIC ABBA Sing-Along! Zing mee met ABBA's Greatest Hits! Net bevestigd wo 21 apr",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/choir-choir-choir-presents/",
-      "status": "detail-link gevonden",
-      "rawText": "Choir! Choir! Choir! Presents: MAMMA MIA: An EPIC ABBA Sing-Along! Zing mee met ABBA's Greatest Hits! Net bevestigd wo 21 apr"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Christian van Eijkelenburg Smalltalk Awkward gesprekjes, egoïstische mislukkelingen, gênante stiltes, theatrale betweters di 6 apr",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/christian-van-eijkelenburg-3/",
-      "status": "detail-link gevonden",
-      "rawText": "Christian van Eijkelenburg Smalltalk Awkward gesprekjes, egoïstische mislukkelingen, gênante stiltes, theatrale betweters di 6 apr"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Circus Treurdier Die Bloemkool (een moeilijke musical) Absurd verhaal over vermeende intelligentie en zogenaamde domheid wo 14 apr",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/circus-treurdier-9/",
-      "status": "detail-link gevonden",
-      "rawText": "Circus Treurdier Die Bloemkool (een moeilijke musical) Absurd verhaal over vermeende intelligentie en zogenaamde domheid wo 14 apr"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Claudia de Breij Oudejaarsconference 2026 Claudia de Breij is terug met de officiële Oudejaarsconference! Uitverkocht wo 25 nov",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/claudia-de-breij-16/",
-      "status": "detail-link gevonden",
-      "rawText": "Claudia de Breij Oudejaarsconference 2026 Claudia de Breij is terug met de officiële Oudejaarsconference! Uitverkocht wo 25 nov"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Claudia de Breij Oudejaarsconference 2026 Claudia de Breij is terug met de officiële Oudejaarsconference! Uitverkocht do 26 nov",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/claudia-de-breij-17/",
-      "status": "detail-link gevonden",
-      "rawText": "Claudia de Breij Oudejaarsconference 2026 Claudia de Breij is terug met de officiële Oudejaarsconference! Uitverkocht do 26 nov"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Clean Pete's Kerstshow Over-the-top kerstshow met een bijzondere mix van kerstklassiekers za 12 dec",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/clean-pete-kerstshow-2/",
-      "status": "detail-link gevonden",
-      "rawText": "Clean Pete's Kerstshow Over-the-top kerstshow met een bijzondere mix van kerstklassiekers za 12 dec"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Clean Pete Klassieke Revue met Thomas Beijer Clean Pete werpt een verfrissende blik op het klassieke repertoire do 15 apr",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/clean-pete-klassieke-revue-met-thomas-beijer/",
-      "status": "detail-link gevonden",
-      "rawText": "Clean Pete Klassieke Revue met Thomas Beijer Clean Pete werpt een verfrissende blik op het klassieke repertoire do 15 apr"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Clouseau Al meer dan veertig jaar een vaste waarde in de Nederlandstalige popmuziek Uitverkocht di 23 feb",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/clouseau-2/",
-      "status": "detail-link gevonden",
-      "rawText": "Clouseau Al meer dan veertig jaar een vaste waarde in de Nederlandstalige popmuziek Uitverkocht di 23 feb"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Clouseau Al meer dan veertig jaar een vaste waarde in de Nederlandstalige popmuziek Uitverkocht Net bevestigd ma 8 mrt",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/clouseau-3/",
-      "status": "detail-link gevonden",
-      "rawText": "Clouseau Al meer dan veertig jaar een vaste waarde in de Nederlandstalige popmuziek Uitverkocht Net bevestigd ma 8 mrt"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Club Lam Dolle Mina Humoristische, vurige performance over emancipatie, gelijkheid en liefde za 3 apr",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/club-lam-2/",
-      "status": "detail-link gevonden",
-      "rawText": "Club Lam Dolle Mina Humoristische, vurige performance over emancipatie, gelijkheid en liefde za 3 apr"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Club Motion 16+ clubnacht Eerste editie in Groningen trapt af met New Wave editie zo 27 dec",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/club-motion/",
-      "status": "detail-link gevonden",
-      "rawText": "Club Motion 16+ clubnacht Eerste editie in Groningen trapt af met New Wave editie zo 27 dec"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Cock Robin (85-89) Tour 2027 Avond vol hits en verborgen parels uit de gloriedagen van de band! wo 19 mei",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/cock-robin/",
-      "status": "detail-link gevonden",
-      "rawText": "Cock Robin (85-89) Tour 2027 Avond vol hits en verborgen parels uit de gloriedagen van de band! wo 19 mei"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Coffee Break ism Prins Claus Conservatorium Trakteer jezelf op koffie en muziek van aanstormend talent op de donderdagochtend do 21 jan",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/coffee-break-ism-prins-claus-conservatorium-17/",
-      "status": "detail-link gevonden",
-      "rawText": "Coffee Break ism Prins Claus Conservatorium Trakteer jezelf op koffie en muziek van aanstormend talent op de donderdagochtend do 21 jan"
-    },
-    {
       "source": "Filter",
       "site": "https://www.spotgroningen.nl/programma/",
       "title": "Datumfilter toegepast",
@@ -22507,6 +22208,312 @@
       "url": "https://simplon.nl/",
       "status": "klaar",
       "rawText": "site 6/20: 0 unieke events in 4.74 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Start",
+      "date": "",
+      "url": "https://www.vera-groningen.nl/",
+      "status": "start",
+      "rawText": "site 7/20: max 20 events, max 20 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://www.vera-groningen.nl/",
+      "status": "strategie",
+      "rawText": "programma-kaarten"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Pagina gelezen",
+      "date": "",
+      "url": "https://www.vera-groningen.nl/programma/?category=all&history=0&lang=nl",
+      "status": "ok",
+      "rawText": "74233 tekens HTML"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "VERA's Grunneger Zundag StAD // Steernvanger // Olaf Vos",
+      "date": "2026-10-25",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=154330&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Sunday 25 October VERA's Grunneger Zundag StAD // Steernvanger // Olaf Vos Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "The Fly",
+      "date": "2026-10-27",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=154391&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "ZIENEMA ♥ HALLOWEEN Tuesday 27 October The Fly Zienema | Ticket: €6,66 | doors: 20:00 - 20:30 | start: 20:30 Sold out"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Ulrika Spacek UK Mood Bored",
+      "date": "2026-10-29",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=150560&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "CLUBKAARTSHOW Thursday 29 October Ulrika Spacek UK Mood Bored NL Mainstage | Ticket: €16,- | doors: 20:00 - 22:00 | start: 20:30 Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Kruidkoek & Joost Oomen NL Mesofauna GRN",
+      "date": "2026-10-30",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=151519&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Friday 30 October Kruidkoek & Joost Oomen NL Mesofauna GRN Mainstage | Ticket: €18,- | doors: 19:30 - 21:00 | start: 20:00 Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "WAVEGRAVE Elysium Graaf Griezel // Fladdermus // DJ Stefan",
+      "date": "2026-10-30",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=154134&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Friday 30 October WAVEGRAVE Elysium Graaf Griezel // Fladdermus // DJ Stefan Dansen | Ticket: €5,- | doors: 22:00 - 03:00 | start: 22:00 Sold out"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Los Pirañas COL",
+      "date": "2026-10-31",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=152556&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Saturday 31 October Los Pirañas COL Mainstage | Ticket: €13,- | doors: 21:00 - 22:00 | start: 21:30 Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "The Etters NL Human Toys",
+      "date": "2026-10-31",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=154548&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Saturday 31 October The Etters NL Human Toys FR Downstage | Ticket: €5,- | doors: 22:30 - 23:30 | start: 23:00 Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Push It Pushin Wood Soundsystem All Night Long",
+      "date": "2026-10-31",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=154197&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Saturday 31 October Push It Pushin Wood Soundsystem All Night Long Dansen | Ticket: €5,- | doors: 23:00 - 04:00 | start: 23:01 Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Angine De Poitrine CAN Gros Mené",
+      "date": "2026-11-01",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=151279&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "SOLD OUT Sunday 1 November Angine De Poitrine CAN Gros Mené CAN Mainstage | Ticket: €24,- | doors: 19:30 - 22:00 | start: 20:30 Sold out"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Pavements",
+      "date": "2026-11-03",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=154871&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Tuesday 3 November Pavements Zienema | Ticket: €6,- | doors: 20:00 - 20:30 | start: 20:30 Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Hippotraktor BEL OLTAS",
+      "date": "2026-11-04",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=152263&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Wednesday 4 November Hippotraktor BEL OLTAS NL Mainstage | Ticket: €17,- | doors: 20:00 - 22:00 | start: 20:30 Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Pyrex USA Traumatizer",
+      "date": "2026-11-05",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=154976&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "RAT RACE X DOWNSTAGE EXTRA Thursday 5 November Pyrex USA Traumatizer NL Downstage | Ticket: €7,50 | doors: 21:00 - 22:00 | start: 21:30 Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Temples UK PAUW",
+      "date": "2026-11-06",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=151534&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Friday 6 November Temples UK PAUW NL Mainstage | Ticket: €24,- | doors: 19:30 - 22:00 | start: 20:30 Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "The Homesick NL Rhizocorp",
+      "date": "2026-11-07",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=153264&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Saturday 7 November The Homesick NL Rhizocorp UK Mainstage | Ticket: €14,- | doors: 20:00 - 22:00 | start: 20:30 Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Nagusame GRN",
+      "date": "2026-11-07",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=154867&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Saturday 7 November Nagusame GRN Downstage | Ticket: €5,- | doors: 22:30 - 23:30 | start: 23:00 Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Club VERA Line-up TBA",
+      "date": "2026-11-07",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=155064&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Saturday 7 November Club VERA Line-up TBA Dansen | Ticket: €5,- | doors: 23:00 - 03:00 | start: 23:01 Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Mystery cult film",
+      "date": "2026-11-10",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=154880&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Tuesday 10 November Mystery cult film Zienema | Ticket: €6,- | doors: 20:00 - 20:30 | start: 20:30 Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Shearwater USA + Loma USA + Any Kind",
+      "date": "2026-11-11",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=152600&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Wednesday 11 November Shearwater USA + Loma USA + Any Kind USA Mainstage | Ticket: €16,- | doors: 20:00 - 22:00 | start: 20:30 Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Supersuckers USA The Frankie Turbos",
+      "date": "2026-11-12",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=153215&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Thursday 12 November Supersuckers USA The Frankie Turbos NL Mainstage | Ticket: €15,- | doors: 20:00 - 22:00 | start: 20:30 Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Nordic Giants UK L.O.E.",
+      "date": "2026-11-13",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=153185&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Friday 13 November Nordic Giants UK L.O.E. UK Mainstage | Ticket: €15,- | doors: 20:00 - 22:00 | start: 20:30 Koop ticket"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "VERA-agendapagina",
+      "date": "",
+      "url": "https://www.vera-groningen.nl/programma/?category=all&history=0&lang=nl",
+      "status": "gespecialiseerde parser",
+      "rawText": "20 VERA-agenda-items uit eventlinks"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Pagina geanalyseerd",
+      "date": "",
+      "url": "https://www.vera-groningen.nl/programma/?category=all&history=0&lang=nl",
+      "status": "ok",
+      "rawText": "20 events/aanbiedingen op deze pagina"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Pagina gelezen",
+      "date": "",
+      "url": "https://www.vera-groningen.nl/?lang=nl",
+      "status": "ok",
+      "rawText": "75677 tekens HTML"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "BODEGA",
+      "date": "2027-03-03",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=154770&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Wednesday 3 March BODEGA USA support Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Tramhaus",
+      "date": "2026-12-19",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=152866&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "SATURDAY SHOW Saturday 19 December Tramhaus support Raw postpunk from Rotterdam In 2023 wonnen ze de VERA Poll, en ook in 2026 blijft deze band een vaste publieksfavoriet. Lees meer Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Madra Salach IRL",
+      "date": "2027-02-15",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=154849&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Monday 15 February Madra Salach IRL support Raw Irish folk Madra Salach (Iers voor ‘vuile hond’) is een zeskoppige band uit Dublin die traditionele Ierse folk meesleurt... Lees meer Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Codeine",
+      "date": "2027-05-14",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=155052&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Friday 14 May Codeine USA support Early slowcore pioneers Weinig bands laten traagheid zo krachtig klinken als Codeine. Voor de vijfde keer staat... Lees meer Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Black Marble",
+      "date": "2027-04-10",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=154962&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Saturday 10 April Black Marble USA support Gloomy synthpop and hooky cold wave Black Marble is het project van Chris Stewart, waarin cold wave, minimal synth, postpunk... Lees meer Koop ticket"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "VERA-agendapagina",
+      "date": "",
+      "url": "https://www.vera-groningen.nl/?lang=nl",
+      "status": "gespecialiseerde parser",
+      "rawText": "10 VERA-agenda-items uit eventlinks"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Pagina geanalyseerd",
+      "date": "",
+      "url": "https://www.vera-groningen.nl/?lang=nl",
+      "status": "ok",
+      "rawText": "10 events/aanbiedingen op deze pagina"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://www.vera-groningen.nl/",
+      "status": "klaar",
+      "rawText": "site 7/20: 0 unieke events in 2.11 sec"
     }
   ]
 }
