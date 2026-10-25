@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-25T15:05:14+00:00",
+  "updatedAt": "2026-10-25T15:05:18+00:00",
   "events": [
     {
       "date": "2026-10-25",
@@ -11763,6 +11763,13 @@
       "newCount": 0,
       "durationSeconds": 2.04,
       "timedOut": true
+    },
+    {
+      "site": "https://groningermuseum.nl/programma",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 2.02,
+      "timedOut": true
     }
   ],
   "rawLog": [
@@ -13286,6 +13293,645 @@
       "url": "https://www.martiniplaza.nl/nl/agenda",
       "status": "klaar",
       "rawText": "site 8/20: 0 unieke events in 2.04 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningermuseum.nl/programma",
+      "title": "Start",
+      "date": "",
+      "url": "https://groningermuseum.nl/programma",
+      "status": "start",
+      "rawText": "site 9/20: max 5 events, max 2 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://groningermuseum.nl/programma",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://groningermuseum.nl/programma",
+      "status": "strategie",
+      "rawText": "universele tentoonstellings- en activiteitenparser"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningermuseum.nl/programma",
+      "title": "Pagina gelezen",
+      "date": "",
+      "url": "https://groningermuseum.nl/programma",
+      "status": "ok",
+      "rawText": "123928 tekens HTML"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningermuseum.nl/programma",
+      "title": "Nieuw licht – De Ploeg",
+      "date": "2025-10-25",
+      "url": "https://groningermuseum.nl/de-ploeg-nieuw-licht",
+      "status": "event uit link",
+      "rawText": "25 okt 2025 - 31 dec 2028 EXHIBITION Nieuw licht – De Ploeg"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningermuseum.nl/programma",
+      "title": "Familietour Nieuw licht – De Ploeg",
+      "date": "2025-10-25",
+      "url": "https://groningermuseum.nl/familietour-nieuw-licht-de-ploeg",
+      "status": "event uit link",
+      "rawText": "25 okt 2025 - 7 jan 2029 Elke dag EVENT Familietour Nieuw licht – De Ploeg"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningermuseum.nl/programma",
+      "title": "The Architect & the Housewife",
+      "date": "2026-09-19",
+      "url": "https://groningermuseum.nl/the-architect-and-the-housewife",
+      "status": "event uit link",
+      "rawText": "19 sep 2026 - 9 mei 2027 EXHIBITION The Architect & the Housewife"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningermuseum.nl/programma",
+      "title": "Playing House",
+      "date": "2026-09-19",
+      "url": "https://groningermuseum.nl/playing-house",
+      "status": "event uit link",
+      "rawText": "19 sep 2026 - 10 jan 2027 EXHIBITION Playing House"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningermuseum.nl/programma",
+      "title": "The Convent of Pleasure",
+      "date": "2026-09-19",
+      "url": "https://groningermuseum.nl/ani-schulze-the-convent-of-pleasure",
+      "status": "event uit link",
+      "rawText": "19 sep 2026 - 9 mei 2027 EXHIBITION The Convent of Pleasure"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningermuseum.nl/programma",
+      "title": "Keramikos Carrier Bag",
+      "date": "2026-09-19",
+      "url": "https://groningermuseum.nl/keramikos-carrier-bag",
+      "status": "event uit link",
+      "rawText": "19 sep 2026 - 10 jan 2027 EXHIBITION Keramikos Carrier Bag"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningermuseum.nl/programma",
+      "title": "EXHIBITION Nieuw licht – De Ploeg",
+      "date": "2028-12-01",
+      "url": "https://groningermuseum.nl/programma",
+      "status": "event uit datumblok",
+      "rawText": "1 dec 2028 EXHIBITION Nieuw licht – De Ploeg"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningermuseum.nl/programma",
+      "title": "Elke dag EVENT Familietour Nieuw licht – De Ploeg",
+      "date": "2029-01-07",
+      "url": "https://groningermuseum.nl/programma",
+      "status": "event uit datumblok",
+      "rawText": "7 jan 2029 Elke dag EVENT Familietour Nieuw licht – De Ploeg"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningermuseum.nl/programma",
+      "title": "EXHIBITION The Architect & the Housewife",
+      "date": "2027-05-09",
+      "url": "https://groningermuseum.nl/programma",
+      "status": "event uit datumblok",
+      "rawText": "9 mei 2027 EXHIBITION The Architect & the Housewife"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningermuseum.nl/programma",
+      "title": "EXHIBITION The Convent of Pleasure",
+      "date": "2027-05-09",
+      "url": "https://groningermuseum.nl/programma",
+      "status": "event uit datumblok",
+      "rawText": "9 mei 2027 EXHIBITION The Convent of Pleasure"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningermuseum.nl/programma",
+      "title": "Nieuw licht – De Ploeg",
+      "date": "2025-10-25",
+      "url": "https://groningermuseum.nl/programma",
+      "status": "event uit kaart",
+      "rawText": "Programma | Groninger Museum Naar hoofdinhoud Naar navigatie Home Bezoek Programma Collectie Architectuur Over Menu NL Tickets Tentoonstellingen Educatie Activiteiten 25 okt 2025 - 31 dec 2028 EXHIBITION Nieuw licht – De Ploeg 25 okt 2025 - 7 jan 2029 Elke dag EVENT Familietour Nieuw licht – De Ploeg 19 sep 2026 - 9 mei 2027 EXHIBITION The Architect & the Housewife 19 sep 2026 - 10 jan 2027 EXHIBITION Playing House 1"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningermuseum.nl/programma",
+      "title": "Nieuw licht – De Ploeg",
+      "date": "2025-10-25",
+      "url": "https://groningermuseum.nl/programma",
+      "status": "event uit kaart",
+      "rawText": "25 okt 2025 - 31 dec 2028 EXHIBITION Nieuw licht – De Ploeg"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningermuseum.nl/programma",
+      "title": "Familietour Nieuw licht – De Ploeg",
+      "date": "2025-10-25",
+      "url": "https://groningermuseum.nl/programma",
+      "status": "event uit kaart",
+      "rawText": "25 okt 2025 - 7 jan 2029 Elke dag EVENT Familietour Nieuw licht – De Ploeg"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningermuseum.nl/programma",
+      "title": "The Architect & the Housewife",
+      "date": "2026-09-19",
+      "url": "https://groningermuseum.nl/programma",
+      "status": "event uit kaart",
+      "rawText": "19 sep 2026 - 9 mei 2027 EXHIBITION The Architect & the Housewife"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningermuseum.nl/programma",
+      "title": "Playing House",
+      "date": "2026-09-19",
+      "url": "https://groningermuseum.nl/programma",
+      "status": "event uit kaart",
+      "rawText": "19 sep 2026 - 10 jan 2027 EXHIBITION Playing House"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningermuseum.nl/programma",
+      "title": "The Convent of Pleasure",
+      "date": "2026-09-19",
+      "url": "https://groningermuseum.nl/programma",
+      "status": "event uit kaart",
+      "rawText": "19 sep 2026 - 9 mei 2027 EXHIBITION The Convent of Pleasure"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningermuseum.nl/programma",
+      "title": "Keramikos Carrier Bag",
+      "date": "2026-09-19",
+      "url": "https://groningermuseum.nl/programma",
+      "status": "event uit kaart",
+      "rawText": "19 sep 2026 - 10 jan 2027 EXHIBITION Keramikos Carrier Bag"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningermuseum.nl/programma",
+      "title": "EXHIBITION",
+      "date": "2028-12-31",
+      "url": "https://groningermuseum.nl/programma",
+      "status": "event uit tekstregel",
+      "rawText": "- | 31 dec 2028 | EXHIBITION | Nieuw licht – De Ploeg | 25 okt 2025 | -"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningermuseum.nl/programma",
+      "title": "Nieuw licht – De Ploeg",
+      "date": "2025-10-25",
+      "url": "https://groningermuseum.nl/programma",
+      "status": "event uit tekstregel",
+      "rawText": "Nieuw licht – De Ploeg | 25 okt 2025 | - | 7 jan 2029 | Elke dag | EVENT"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningermuseum.nl/programma",
+      "title": "Elke dag",
+      "date": "2029-01-07",
+      "url": "https://groningermuseum.nl/programma",
+      "status": "event uit tekstregel",
+      "rawText": "- | 7 jan 2029 | Elke dag | EVENT | Familietour Nieuw licht – De Ploeg | 19 sep 2026"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningermuseum.nl/programma",
+      "title": "Elke dag",
+      "date": "2029-01-07",
+      "url": "https://groningermuseum.nl/programma",
+      "status": "event uit dagblok",
+      "rawText": "Elke dag | EVENT | Familietour Nieuw licht – De Ploeg | 19 sep 2026 | -"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningermuseum.nl/programma",
+      "title": "Familietour Nieuw licht – De Ploeg",
+      "date": "2026-09-19",
+      "url": "https://groningermuseum.nl/programma",
+      "status": "event uit tekstregel",
+      "rawText": "Familietour Nieuw licht – De Ploeg | 19 sep 2026 | - | 9 mei 2027 | EXHIBITION | The Architect & the Housewife"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningermuseum.nl/programma",
+      "title": "EXHIBITION",
+      "date": "2027-05-09",
+      "url": "https://groningermuseum.nl/programma",
+      "status": "event uit tekstregel",
+      "rawText": "- | 9 mei 2027 | EXHIBITION | The Architect & the Housewife | 19 sep 2026 | -"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningermuseum.nl/programma",
+      "title": "The Architect & the Housewife",
+      "date": "2026-09-19",
+      "url": "https://groningermuseum.nl/programma",
+      "status": "event uit tekstregel",
+      "rawText": "The Architect & the Housewife | 19 sep 2026 | - | 10 jan 2027 | EXHIBITION | Playing House"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningermuseum.nl/programma",
+      "title": "EXHIBITION",
+      "date": "2027-01-10",
+      "url": "https://groningermuseum.nl/programma",
+      "status": "event uit tekstregel",
+      "rawText": "- | 10 jan 2027 | EXHIBITION | Playing House | 19 sep 2026 | -"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningermuseum.nl/programma",
+      "title": "Playing House",
+      "date": "2026-09-19",
+      "url": "https://groningermuseum.nl/programma",
+      "status": "event uit tekstregel",
+      "rawText": "Playing House | 19 sep 2026 | - | 9 mei 2027 | EXHIBITION | The Convent of Pleasure"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningermuseum.nl/programma",
+      "title": "EXHIBITION",
+      "date": "2027-05-09",
+      "url": "https://groningermuseum.nl/programma",
+      "status": "event uit tekstregel",
+      "rawText": "- | 9 mei 2027 | EXHIBITION | The Convent of Pleasure | 19 sep 2026 | -"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningermuseum.nl/programma",
+      "title": "The Convent of Pleasure",
+      "date": "2026-09-19",
+      "url": "https://groningermuseum.nl/programma",
+      "status": "event uit tekstregel",
+      "rawText": "The Convent of Pleasure | 19 sep 2026 | - | 10 jan 2027 | EXHIBITION | Keramikos Carrier Bag"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningermuseum.nl/programma",
+      "title": "EXHIBITION",
+      "date": "2027-01-10",
+      "url": "https://groningermuseum.nl/programma",
+      "status": "event uit tekstregel",
+      "rawText": "- | 10 jan 2027 | EXHIBITION | Keramikos Carrier Bag | Plan je bezoek | Toegankelijkheid"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningermuseum.nl/programma",
+      "title": "Bezoekersvoorwaarden",
+      "date": "2027-01-10",
+      "url": "https://groningermuseum.nl/programma",
+      "status": "event uit dagblok",
+      "rawText": "Bezoekersvoorwaarden | Architectuur | Educatie | Schoolklassen & lesprogramma's | Groninger Museum Tour"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningermuseum.nl/programma",
+      "title": "Architectuur",
+      "date": "2027-01-10",
+      "url": "https://groningermuseum.nl/programma",
+      "status": "event uit dagblok",
+      "rawText": "Architectuur | Educatie | Schoolklassen & lesprogramma's | Groninger Museum Tour | Juniorclub"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningermuseum.nl/programma",
+      "title": "Educatie",
+      "date": "2027-01-10",
+      "url": "https://groningermuseum.nl/programma",
+      "status": "event uit dagblok",
+      "rawText": "Educatie | Schoolklassen & lesprogramma's | Groninger Museum Tour | Juniorclub | Vrienden"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningermuseum.nl/programma",
+      "title": "Schoolklassen & lesprogramma's",
+      "date": "2027-01-10",
+      "url": "https://groningermuseum.nl/programma",
+      "status": "event uit dagblok",
+      "rawText": "Schoolklassen & lesprogramma's | Groninger Museum Tour | Juniorclub | Vrienden | Salon"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningermuseum.nl/programma",
+      "title": "Groninger Museum Tour",
+      "date": "2027-01-10",
+      "url": "https://groningermuseum.nl/programma",
+      "status": "event uit dagblok",
+      "rawText": "Groninger Museum Tour | Juniorclub | Vrienden | Salon | Club"
+    },
+    {
+      "source": "Parser",
+      "site": "https://groningermuseum.nl/programma",
+      "title": "Pagina geteld",
+      "date": "",
+      "url": "https://groningermuseum.nl/programma",
+      "status": "analyse",
+      "rawText": "jsonld:0, links:6, datumblokken:4, kaarten:7, regels:17, detail:0"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningermuseum.nl/programma",
+      "title": "Pagina geanalyseerd",
+      "date": "",
+      "url": "https://groningermuseum.nl/programma",
+      "status": "ok",
+      "rawText": "20 events/aanbiedingen op deze pagina"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningermuseum.nl/programma",
+      "title": "25 okt 2025 - 7 jan 2029 Elke dag EVENT Familietour Nieuw licht – De Ploeg",
+      "date": "",
+      "url": "https://groningermuseum.nl/familietour-nieuw-licht-de-ploeg",
+      "status": "detail-link gevonden",
+      "rawText": "25 okt 2025 - 7 jan 2029 Elke dag EVENT Familietour Nieuw licht – De Ploeg"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningermuseum.nl/programma",
+      "title": "19 sep 2026 - 9 mei 2027 EXHIBITION The Convent of Pleasure",
+      "date": "",
+      "url": "https://groningermuseum.nl/ani-schulze-the-convent-of-pleasure",
+      "status": "detail-link gevonden",
+      "rawText": "19 sep 2026 - 9 mei 2027 EXHIBITION The Convent of Pleasure"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningermuseum.nl/programma",
+      "title": "25 okt 2025 - 31 dec 2028 EXHIBITION Nieuw licht – De Ploeg",
+      "date": "",
+      "url": "https://groningermuseum.nl/de-ploeg-nieuw-licht",
+      "status": "detail-link gevonden",
+      "rawText": "25 okt 2025 - 31 dec 2028 EXHIBITION Nieuw licht – De Ploeg"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningermuseum.nl/programma",
+      "title": "19 sep 2026 - 10 jan 2027 EXHIBITION Keramikos Carrier Bag",
+      "date": "",
+      "url": "https://groningermuseum.nl/keramikos-carrier-bag",
+      "status": "detail-link gevonden",
+      "rawText": "19 sep 2026 - 10 jan 2027 EXHIBITION Keramikos Carrier Bag"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningermuseum.nl/programma",
+      "title": "19 sep 2026 - 10 jan 2027 EXHIBITION Playing House",
+      "date": "",
+      "url": "https://groningermuseum.nl/playing-house",
+      "status": "detail-link gevonden",
+      "rawText": "19 sep 2026 - 10 jan 2027 EXHIBITION Playing House"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningermuseum.nl/programma",
+      "title": "19 sep 2026 - 9 mei 2027 EXHIBITION The Architect & the Housewife",
+      "date": "",
+      "url": "https://groningermuseum.nl/the-architect-and-the-housewife",
+      "status": "detail-link gevonden",
+      "rawText": "19 sep 2026 - 9 mei 2027 EXHIBITION The Architect & the Housewife"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningermuseum.nl/programma",
+      "title": "Groninger Museum, naar de homepage",
+      "date": "",
+      "url": "https://groningermuseum.nl/",
+      "status": "detail-link gevonden",
+      "rawText": "Groninger Museum, naar de homepage"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningermuseum.nl/programma",
+      "title": "Groninger Museum Tour",
+      "date": "",
+      "url": "https://groningermuseum.nl/groninger-museum-tour",
+      "status": "detail-link gevonden",
+      "rawText": "Groninger Museum Tour"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningermuseum.nl/programma",
+      "title": "Architectuur",
+      "date": "",
+      "url": "https://groningermuseum.nl/museum-gebouw",
+      "status": "detail-link gevonden",
+      "rawText": "Architectuur"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningermuseum.nl/programma",
+      "title": "Educatie",
+      "date": "",
+      "url": "https://groningermuseum.nl/nl-NL/programma?type=EDUCATION",
+      "status": "detail-link gevonden",
+      "rawText": "Educatie"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningermuseum.nl/programma",
+      "title": "Tentoonstellingen",
+      "date": "",
+      "url": "https://groningermuseum.nl/nl-NL/programma?type=EXHIBITION",
+      "status": "detail-link gevonden",
+      "rawText": "Tentoonstellingen"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningermuseum.nl/programma",
+      "title": "Over",
+      "date": "",
+      "url": "https://groningermuseum.nl/over-het-museum",
+      "status": "detail-link gevonden",
+      "rawText": "Over"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningermuseum.nl/programma",
+      "title": "Naar hoofdinhoud",
+      "date": "",
+      "url": "https://groningermuseum.nl/programma",
+      "status": "detail-link gevonden",
+      "rawText": "Naar hoofdinhoud"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningermuseum.nl/programma",
+      "title": "Vrienden",
+      "date": "",
+      "url": "https://groningermuseum.nl/vrienden-van-het-museum",
+      "status": "detail-link gevonden",
+      "rawText": "Vrienden"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningermuseum.nl/programma",
+      "title": "Activiteiten",
+      "date": "",
+      "url": "https://groningermuseum.nl/nl-NL/programma?type=EVENT",
+      "status": "detail-link gevonden",
+      "rawText": "Activiteiten"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningermuseum.nl/programma",
+      "title": "Bezoekersvoorwaarden",
+      "date": "",
+      "url": "https://groningermuseum.nl/bezoekersvoorwaarden",
+      "status": "detail-link gevonden",
+      "rawText": "Bezoekersvoorwaarden"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningermuseum.nl/programma",
+      "title": "Club",
+      "date": "",
+      "url": "https://groningermuseum.nl/club",
+      "status": "detail-link gevonden",
+      "rawText": "Club"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningermuseum.nl/programma",
+      "title": "Collectie",
+      "date": "",
+      "url": "https://groningermuseum.nl/collectie",
+      "status": "detail-link gevonden",
+      "rawText": "Collectie"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningermuseum.nl/programma",
+      "title": "Educatie",
+      "date": "",
+      "url": "https://groningermuseum.nl/educatie-en-participatie",
+      "status": "detail-link gevonden",
+      "rawText": "Educatie"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningermuseum.nl/programma",
+      "title": "Juniorclub",
+      "date": "",
+      "url": "https://groningermuseum.nl/juniorclub",
+      "status": "detail-link gevonden",
+      "rawText": "Juniorclub"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningermuseum.nl/programma",
+      "title": "Colofon",
+      "date": "",
+      "url": "https://groningermuseum.nl/nl-NL/colofon",
+      "status": "detail-link gevonden",
+      "rawText": "Colofon"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningermuseum.nl/programma",
+      "title": "Organisatie",
+      "date": "",
+      "url": "https://groningermuseum.nl/nl-NL/organisatie-zaken",
+      "status": "detail-link gevonden",
+      "rawText": "Organisatie"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningermuseum.nl/programma",
+      "title": "Partners",
+      "date": "",
+      "url": "https://groningermuseum.nl/nl-NL/partners",
+      "status": "detail-link gevonden",
+      "rawText": "Partners"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningermuseum.nl/programma",
+      "title": "Vacatures & stages",
+      "date": "",
+      "url": "https://groningermuseum.nl/nl-NL/vacatures-stages",
+      "status": "detail-link gevonden",
+      "rawText": "Vacatures & stages"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningermuseum.nl/programma",
+      "title": "Zaalverhuur",
+      "date": "",
+      "url": "https://groningermuseum.nl/nl-NL/zaalverhuur",
+      "status": "detail-link gevonden",
+      "rawText": "Zaalverhuur"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningermuseum.nl/programma",
+      "title": "Partners",
+      "date": "",
+      "url": "https://groningermuseum.nl/partners",
+      "status": "detail-link gevonden",
+      "rawText": "Partners"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningermuseum.nl/programma",
+      "title": "Bezoek",
+      "date": "",
+      "url": "https://groningermuseum.nl/plan-je-bezoek",
+      "status": "detail-link gevonden",
+      "rawText": "Bezoek"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningermuseum.nl/programma",
+      "title": "Salon",
+      "date": "",
+      "url": "https://groningermuseum.nl/salon",
+      "status": "detail-link gevonden",
+      "rawText": "Salon"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningermuseum.nl/programma",
+      "title": "Schoolklassen & lesprogramma's",
+      "date": "",
+      "url": "https://groningermuseum.nl/school-groepen-educatieve-programmas",
+      "status": "detail-link gevonden",
+      "rawText": "Schoolklassen & lesprogramma's"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningermuseum.nl/programma",
+      "title": "Toegankelijkheid",
+      "date": "",
+      "url": "https://groningermuseum.nl/toegankelijkheid",
+      "status": "detail-link gevonden",
+      "rawText": "Toegankelijkheid"
+    },
+    {
+      "source": "Filter",
+      "site": "https://groningermuseum.nl/programma",
+      "title": "Datumfilter toegepast",
+      "date": "2026-10-25",
+      "url": "https://groningermuseum.nl/programma",
+      "status": "ok",
+      "rawText": "20 gevonden; 13 binnen 2026-10-25 t/m onbeperkt"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningermuseum.nl/programma",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://groningermuseum.nl/programma",
+      "status": "klaar",
+      "rawText": "site 9/20: 0 unieke events in 2.02 sec"
     }
   ]
 }
