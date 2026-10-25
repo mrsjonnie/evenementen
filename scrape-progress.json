@@ -1,13 +1,23 @@
 {
   "runId": "2026-10-25T16:13:04.656609+00:00-97369fb4",
   "startedAt": "2026-10-25T16:13:04+00:00",
-  "completedCount": 0,
+  "completedCount": 1,
   "totalSites": 19,
   "currentSite": "https://groningen.uitloper.nu/",
   "currentSiteIndex": 1,
-  "completedSites": [],
+  "completedSites": [
+    "https://groningen.uitloper.nu/"
+  ],
   "events": [],
-  "siteResults": [],
+  "siteResults": [
+    {
+      "site": "https://groningen.uitloper.nu/",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 3.12,
+      "timedOut": true
+    }
+  ],
   "rawLog": [
     {
       "source": "SerpAPI",
@@ -287,14 +297,25 @@
       "url": "https://groningen.uitloper.nu?date=1792929600",
       "status": "fout",
       "rawText": "HTTPSConnectionPool(host='groningen.uitloper.nu', port=443): Max retries exceeded with url: /?date=1792929600 (Caused by ConnectTimeoutError(<HTTPSConnection(host='groningen.uitloper.nu', port=443) at 0x76b9b9443ed0>, 'Connection to groningen.uitloper.nu timed out. (connect timeout=1.0098503969999797)'))"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://groningen.uitloper.nu/",
+      "status": "klaar",
+      "rawText": "site 1/19: 0 unieke events in 3.12 sec"
     }
   ],
   "status": "running",
   "siteStartedAt": "2026-10-25T16:13:05+00:00",
-  "siteElapsedSeconds": 3,
+  "siteElapsedSeconds": 4,
   "sitePageCount": 0,
   "lastSiteEventCount": 0,
-  "stage": "Websitepagina ophalen",
+  "stage": "Website klaar; volgende website voorbereiden",
   "lastUpdatedAt": "2026-10-25T16:13:08+00:00",
-  "lastSiteNewEventCount": 0
+  "lastSiteNewEventCount": 0,
+  "lastCompletedSite": "https://groningen.uitloper.nu/",
+  "lastCompletedAt": "2026-10-25T16:13:09+00:00"
 }
