@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-25T16:00:37+00:00",
+  "updatedAt": "2026-10-25T16:00:42+00:00",
   "events": [
     {
       "date": "2026-10-25",
@@ -11791,6 +11791,13 @@
       "newCount": 0,
       "durationSeconds": 2.0,
       "timedOut": true
+    },
+    {
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 2.14,
+      "timedOut": true
     }
   ],
   "rawLog": [
@@ -14727,6 +14734,582 @@
       "url": "https://www.noorderzon.nl/programma",
       "status": "klaar",
       "rawText": "site 11/19: 0 unieke events in 2.0 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Start",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "status": "start",
+      "rawText": "site 12/19: max 5 events, max 2 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "status": "strategie",
+      "rawText": "universeel-jsonld-links-kaarten"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Pagina gelezen",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "status": "ok",
+      "rawText": "776931 tekens HTML"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "De Vijfde van Beethoven door het Concertgebouworkest",
+      "date": "2026-10-25",
+      "url": "https://www.concertgebouw.nl/concerten/45875725-de-vijfde-van-beethoven-door-het-concertgebouworkest",
+      "status": "agenda-kaart",
+      "rawText": "De Vijfde van Beethoven door het Concertgebouworkest 14:15 – 16:15 Grote Zaal v.a. € 20,00 met onder andere Beethoven Symfonie nr. 5 in c, op. 67 Mozart Pianoconcert nr. 25 in C, KV 503 Meer informatie Meer informatie zo 25 okt 2026 Bookmark Luisteren Bookmark"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Beethoven! Ronald Brautigam speelt o.a. de 'Pathétique' en 'Mondschein'",
+      "date": "2026-10-25",
+      "url": "https://www.concertgebouw.nl/concerten/37970583-beethoven-ronald-brautigam-speelt-o.a.-de-pathetique-en-mondschein",
+      "status": "agenda-kaart",
+      "rawText": "Beethoven! Ronald Brautigam speelt o.a. de 'Pathétique' en 'Mondschein' 14:15 – 16:20 Kleine Zaal v.a. € 35,00 met onder andere Beethoven Sonate nr. 14 in cis, op. 27, nr. 2 'Mondschein' Beethoven Sonate nr. 13 in Es, op. 27, nr. 1 'Quasi una fantasia' Meer informatie Meer informatie zo 25 okt 2026 Bookmark Luisteren Bookmark"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Popup Choir Taylor Swift: zing mee met Maarten Bos en Tijmen de Koning",
+      "date": "2026-10-26",
+      "url": "https://www.concertgebouw.nl/concerten/45959877-popup-choir-taylor-swift-zing-mee-met-maarten-bos-en-tijmen-de-koning",
+      "status": "agenda-kaart",
+      "rawText": "Popup Choir Taylor Swift: zing mee met Maarten Bos en Tijmen de Koning 20:15 – 22:30 Grote Zaal v.a. € 25,00 Informatie en bestellen Informatie en bestellen ma 26 okt 2026 Bookmark Bookmark"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Fresku & Metropole Orkest o.l.v. Simon Dobson",
+      "date": "2026-10-27",
+      "url": "https://www.concertgebouw.nl/concerten/43931216-fresku-metropole-orkest-o.l.v.-simon-dobson",
+      "status": "agenda-kaart",
+      "rawText": "Fresku & Metropole Orkest o.l.v. Simon Dobson 20:15 – 21:45 Grote Zaal v.a. € 29,00 Meer informatie Meer informatie Uitverkocht di 27 okt 2026 Bookmark Bookmark"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Spotlight op Lucie Horsch: barok met Altstaedt en Dunford",
+      "date": "2026-10-27",
+      "url": "https://www.concertgebouw.nl/concerten/41773095-spotlight-op-lucie-horsch-barok-met-altstaedt-en-dunford",
+      "status": "agenda-kaart",
+      "rawText": "Spotlight op Lucie Horsch: barok met Altstaedt en Dunford 20:15 – 22:10 Kleine Zaal v.a. € 29,00 met onder andere Vivaldi Triosonate in a, RV 86 Vivaldi Sonate in e, RV 40 Informatie en bestellen Informatie en bestellen Laatste kaarten di 27 okt 2026 Bookmark Bookmark"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Agenda-kaarten geteld",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "status": "gespecialiseerde parser",
+      "rawText": "5 resultaten"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Pagina geanalyseerd",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "status": "ok",
+      "rawText": "5 events/aanbiedingen op deze pagina"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "25 jaar Academie Concertgebouworkest 20:15 – 22:40 Grote Zaal v.a. € 20,00 met onder andere Saint-Saëns Symfonie nr. 3 in c, op. 78 'Orgelsymfonie' Bruch Concert voor klarinet en a",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten/45881817-25-jaar-academie-concertgebouworkest",
+      "status": "detail-link gevonden",
+      "rawText": "25 jaar Academie Concertgebouworkest 20:15 – 22:40 Grote Zaal v.a. € 20,00 met onder andere Saint-Saëns Symfonie nr. 3 in c, op. 78 'Orgelsymfonie' Bruch Concert voor klarinet en altviool in e, op. 88 Meer informatie Meer informatie Uitverkocht do 29 okt 2026 Bookmark"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Fresku & Metropole Orkest o.l.v. Simon Dobson 20:15 – 21:45 Grote Zaal v.a. € 29,00 Meer informatie Meer informatie Uitverkocht di 27 okt 2026 Bookmark",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten/43931216-fresku-metropole-orkest-o.l.v.-simon-dobson",
+      "status": "detail-link gevonden",
+      "rawText": "Fresku & Metropole Orkest o.l.v. Simon Dobson 20:15 – 21:45 Grote Zaal v.a. € 29,00 Meer informatie Meer informatie Uitverkocht di 27 okt 2026 Bookmark"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Zing-Cirkel Concertgebouw 14:00 – 16:00 Spiegelzaal v.a. € 20,00 Informatie en bestellen Informatie en bestellen Laatste kaarten wo 28 okt 2026 Bookmark",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten/45913707-zing-cirkel-concertgebouw",
+      "status": "detail-link gevonden",
+      "rawText": "Zing-Cirkel Concertgebouw 14:00 – 16:00 Spiegelzaal v.a. € 20,00 Informatie en bestellen Informatie en bestellen Laatste kaarten wo 28 okt 2026 Bookmark"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Zing-Cirkel Concertgebouw 11:00 – 13:00 Spiegelzaal v.a. € 20,00 Meer informatie Meer informatie Uitverkocht wo 28 okt 2026 Bookmark",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten/45913708-zing-cirkel-concertgebouw",
+      "status": "detail-link gevonden",
+      "rawText": "Zing-Cirkel Concertgebouw 11:00 – 13:00 Spiegelzaal v.a. € 20,00 Meer informatie Meer informatie Uitverkocht wo 28 okt 2026 Bookmark"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Flat Earth Society: The Coltrane Mutations 20:15 – 22:00 Kleine Zaal v.a. € 19,00 Informatie en bestellen Informatie en bestellen vr 30 okt 2026 Bookmark",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten/43931217-flat-earth-society-the-coltrane-mutations",
+      "status": "detail-link gevonden",
+      "rawText": "Flat Earth Society: The Coltrane Mutations 20:15 – 22:00 Kleine Zaal v.a. € 19,00 Informatie en bestellen Informatie en bestellen vr 30 okt 2026 Bookmark"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Klaus Mäkela dirigeert Mahler 7 bij het Concertgebouworkest 20:15 – 21:40 Grote Zaal v.a. € 29,00 Mahler Symfonie nr. 7 Informatie en bestellen Informatie en bestellen Laatste kaar",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten/45881816-klaus-makela-dirigeert-mahler-7-bij-het-concertgebouworkest",
+      "status": "detail-link gevonden",
+      "rawText": "Klaus Mäkela dirigeert Mahler 7 bij het Concertgebouworkest 20:15 – 21:40 Grote Zaal v.a. € 29,00 Mahler Symfonie nr. 7 Informatie en bestellen Informatie en bestellen Laatste kaarten wo 28 okt 2026 Bookmark"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Klaus Mäkela dirigeert Mahler 7 bij het Concertgebouworkest 20:15 – 21:40 Grote Zaal v.a. € 29,00 Mahler Symfonie nr. 7 Meer informatie Meer informatie Uitverkocht vr 30 okt 2026 B",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten/45881818-klaus-makela-dirigeert-mahler-7-bij-het-concertgebouworkest",
+      "status": "detail-link gevonden",
+      "rawText": "Klaus Mäkela dirigeert Mahler 7 bij het Concertgebouworkest 20:15 – 21:40 Grote Zaal v.a. € 29,00 Mahler Symfonie nr. 7 Meer informatie Meer informatie Uitverkocht vr 30 okt 2026 Bookmark"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Popup Choir Taylor Swift: zing mee met Maarten Bos en Tijmen de Koning 20:15 – 22:30 Grote Zaal v.a. € 25,00 Informatie en bestellen Informatie en bestellen ma 26 okt 2026 Bookmark",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten/45959877-popup-choir-taylor-swift-zing-mee-met-maarten-bos-en-tijmen-de-koning",
+      "status": "detail-link gevonden",
+      "rawText": "Popup Choir Taylor Swift: zing mee met Maarten Bos en Tijmen de Koning 20:15 – 22:30 Grote Zaal v.a. € 25,00 Informatie en bestellen Informatie en bestellen ma 26 okt 2026 Bookmark"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Gratis Lunchconcert: Nederlandse Fluit Academie 12:30 – 13:00 Kleine Zaal met onder andere Clark Within Offermans Luna y Sierra Meer informatie Meer informatie Uitverkocht wo 28 ok",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten/46012123-gratis-lunchconcert-nederlandse-fluit-academie",
+      "status": "detail-link gevonden",
+      "rawText": "Gratis Lunchconcert: Nederlandse Fluit Academie 12:30 – 13:00 Kleine Zaal met onder andere Clark Within Offermans Luna y Sierra Meer informatie Meer informatie Uitverkocht wo 28 okt 2026 Bookmark"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Naar hoofdcontent",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "status": "detail-link gevonden",
+      "rawText": "Naar hoofdcontent"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Het Zondagochtend Concert",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/het-zondagochtend-concert",
+      "status": "detail-link gevonden",
+      "rawText": "Het Zondagochtend Concert"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Omgangsregels voor bezoekers Een mooi concert voor iedereen",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/omgangsregels-voor-bezoekers-van-het-concertgebouw",
+      "status": "detail-link gevonden",
+      "rawText": "Omgangsregels voor bezoekers Een mooi concert voor iedereen"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Verhuur Uw evenement in Het Concertgebouw",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/verhuur",
+      "status": "detail-link gevonden",
+      "rawText": "Verhuur Uw evenement in Het Concertgebouw"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Quatuor Arod speelt Bartók, Carlos Simon en Fanny Mendelssohn 20:15 – 22:20 Kleine Zaal v.a. € 29,00 met onder andere Fanny Mendelssohn Strijkkwartet in Es Simon Warmth from Other",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten/37331019-quatuor-arod-speelt-bartok-carlos-simon-en-fanny-mendelssohn",
+      "status": "detail-link gevonden",
+      "rawText": "Quatuor Arod speelt Bartók, Carlos Simon en Fanny Mendelssohn 20:15 – 22:20 Kleine Zaal v.a. € 29,00 met onder andere Fanny Mendelssohn Strijkkwartet in Es Simon Warmth from Other Suns Informatie en bestellen Informatie en bestellen wo 28 okt 2026 Bookmark"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Beethoven! Ronald Brautigam speelt o.a. de 'Pathétique' en 'Mondschein' 14:15 – 16:20 Kleine Zaal v.a. € 35,00 met onder andere Beethoven Sonate nr. 14 in cis, op. 27, nr. 2 'Monds",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten/37970583-beethoven-ronald-brautigam-speelt-o.a.-de-pathetique-en-mondschein",
+      "status": "detail-link gevonden",
+      "rawText": "Beethoven! Ronald Brautigam speelt o.a. de 'Pathétique' en 'Mondschein' 14:15 – 16:20 Kleine Zaal v.a. € 35,00 met onder andere Beethoven Sonate nr. 14 in cis, op. 27, nr. 2 'Mondschein' Beethoven Sonate nr. 13 in Es, op. 27, nr. 1 'Quasi una fantasia' Meer informatie Meer informatie zo 25 okt 2026 Bookmark Luisteren"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Spotlight op Lucie Horsch: barok met Altstaedt en Dunford 20:15 – 22:10 Kleine Zaal v.a. € 29,00 met onder andere Vivaldi Triosonate in a, RV 86 Vivaldi Sonate in e, RV 40 Informat",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten/41773095-spotlight-op-lucie-horsch-barok-met-altstaedt-en-dunford",
+      "status": "detail-link gevonden",
+      "rawText": "Spotlight op Lucie Horsch: barok met Altstaedt en Dunford 20:15 – 22:10 Kleine Zaal v.a. € 29,00 met onder andere Vivaldi Triosonate in a, RV 86 Vivaldi Sonate in e, RV 40 Informatie en bestellen Informatie en bestellen Laatste kaarten di 27 okt 2026 Bookmark"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Aristo Sham speelt Brahms’ pianosonates 20:15 – 22:10 Kleine Zaal v.a. € 25,00 met onder andere Brahms Sonate nr. 3 in f, op. 5 Schumann Träumerei Kinderszenen, op. 15 Informatie e",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten/43425438-aristo-sham-speelt-brahms-pianosonates",
+      "status": "detail-link gevonden",
+      "rawText": "Aristo Sham speelt Brahms’ pianosonates 20:15 – 22:10 Kleine Zaal v.a. € 25,00 met onder andere Brahms Sonate nr. 3 in f, op. 5 Schumann Träumerei Kinderszenen, op. 15 Informatie en bestellen Informatie en bestellen do 29 okt 2026 Bookmark"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Oosterse klanken van Sheherazade & Darvishi 14:15 – 16:30 Grote Zaal v.a. € 29,00 met onder andere Rimski-Korsakov Sheherazade, op. 35 'Symfonische suite naar Duizend-en-een-nacht'",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten/45743534-oosterse-klanken-van-sheherazade-darvishi",
+      "status": "detail-link gevonden",
+      "rawText": "Oosterse klanken van Sheherazade & Darvishi 14:15 – 16:30 Grote Zaal v.a. € 29,00 met onder andere Rimski-Korsakov Sheherazade, op. 35 'Symfonische suite naar Duizend-en-een-nacht' Lutosławski Celloconcert Informatie en bestellen Informatie en bestellen za 31 okt 2026 Bookmark"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "De Vijfde van Beethoven door het Concertgebouworkest 14:15 – 16:15 Grote Zaal v.a. € 20,00 met onder andere Beethoven Symfonie nr. 5 in c, op. 67 Mozart Pianoconcert nr. 25 in C, K",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten/45875725-de-vijfde-van-beethoven-door-het-concertgebouworkest",
+      "status": "detail-link gevonden",
+      "rawText": "De Vijfde van Beethoven door het Concertgebouworkest 14:15 – 16:15 Grote Zaal v.a. € 20,00 met onder andere Beethoven Symfonie nr. 5 in c, op. 67 Mozart Pianoconcert nr. 25 in C, KV 503 Meer informatie Meer informatie zo 25 okt 2026 Bookmark Luisteren"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "en",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/en/concerts-and-tickets",
+      "status": "detail-link gevonden",
+      "rawText": "en"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Naar homepage",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/",
+      "status": "detail-link gevonden",
+      "rawText": "Naar homepage"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Route & Parkeren Kom met het OV, de auto, de fiets of lopend",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/bereikbaarheid",
+      "status": "detail-link gevonden",
+      "rawText": "Route & Parkeren Kom met het OV, de auto, de fiets of lopend"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Cursussen Voor volwassenen",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/educatie/cursussen",
+      "status": "detail-link gevonden",
+      "rawText": "Cursussen Voor volwassenen"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Koninklijk Concertgebouw Concours Doe ook mee!",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/educatie/koninklijk-concertgebouw-concours",
+      "status": "detail-link gevonden",
+      "rawText": "Koninklijk Concertgebouw Concours Doe ook mee!"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "mbo | hbo | wo Voor studenten",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/educatie/mbo-hbo-wo",
+      "status": "detail-link gevonden",
+      "rawText": "mbo | hbo | wo Voor studenten"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Nog meer educatie",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/educatie/nog-meer-educatie",
+      "status": "detail-link gevonden",
+      "rawText": "Nog meer educatie"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Primair onderwijs Voor groepen 1 t/m 8",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/educatie/primair-onderwijs",
+      "status": "detail-link gevonden",
+      "rawText": "Primair onderwijs Voor groepen 1 t/m 8"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Veelgestelde vragen over schoolprojecten",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/educatie/veelgestelde-vragen-educatie",
+      "status": "detail-link gevonden",
+      "rawText": "Veelgestelde vragen over schoolprojecten"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Voortgezet onderwijs Voor vmbo, havo en vwo",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/educatie/voortgezet-onderwijs",
+      "status": "detail-link gevonden",
+      "rawText": "Voortgezet onderwijs Voor vmbo, havo en vwo"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Eten & Drinken Genieten in Restaurant LIER en Café Viotta",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/eten-en-drinken",
+      "status": "detail-link gevonden",
+      "rawText": "Eten & Drinken Genieten in Restaurant LIER en Café Viotta"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Familieconcerten",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/familieconcerten",
+      "status": "detail-link gevonden",
+      "rawText": "Familieconcerten"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Fondsen Deze fondsen en stichtingen ondersteunen het gebouw",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/fondsen",
+      "status": "detail-link gevonden",
+      "rawText": "Fondsen Deze fondsen en stichtingen ondersteunen het gebouw"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Hemelbestormers",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/hemelbestormers",
+      "status": "detail-link gevonden",
+      "rawText": "Hemelbestormers"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Jong publiek Met korting naar de mooiste concerten",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/jong-publiek",
+      "status": "detail-link gevonden",
+      "rawText": "Jong publiek Met korting naar de mooiste concerten"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Kaartverkoop Over het bestellen van kaarten",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/kaartverkoop",
+      "status": "detail-link gevonden",
+      "rawText": "Kaartverkoop Over het bestellen van kaarten"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Maandblad Preludium",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/kaartverkoop/ontdek-magazine-preludium",
+      "status": "detail-link gevonden",
+      "rawText": "Maandblad Preludium"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Rangen & Plattegronden Zaalindelingen en algemene plattegronden",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/kaartverkoop/rangen-plattegronden",
+      "status": "detail-link gevonden",
+      "rawText": "Rangen & Plattegronden Zaalindelingen en algemene plattegronden"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Concertvrienden en Entrée",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/kaartverkoop/vrienden-zijn-onmisbaar-voor-gebouw-en-orkest",
+      "status": "detail-link gevonden",
+      "rawText": "Concertvrienden en Entrée"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Keuzehulp Wij helpen u kiezen!",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/keuzehulp",
+      "status": "detail-link gevonden",
+      "rawText": "Keuzehulp Wij helpen u kiezen!"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Maatschappelijk verantwoord ondernemen Een Concertgebouw voor de toekomst",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/maatschappelijk-verantwoord-ondernemen",
+      "status": "detail-link gevonden",
+      "rawText": "Maatschappelijk verantwoord ondernemen Een Concertgebouw voor de toekomst"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Ontdek",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/ontdek",
+      "status": "detail-link gevonden",
+      "rawText": "Ontdek"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Organisatie Missie, visie en medewerkers",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/organisatie",
+      "status": "detail-link gevonden",
+      "rawText": "Organisatie Missie, visie en medewerkers"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Publicaties Waarom steunen muziekliefhebbers Het Concertgebouw?",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/publicaties",
+      "status": "detail-link gevonden",
+      "rawText": "Publicaties Waarom steunen muziekliefhebbers Het Concertgebouw?"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Reflecties op Europa",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/reflecties-op-europa",
+      "status": "detail-link gevonden",
+      "rawText": "Reflecties op Europa"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Rondom de concerten Van inleidingen tot nagesprekken",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/rondom-concerten",
+      "status": "detail-link gevonden",
+      "rawText": "Rondom de concerten Van inleidingen tot nagesprekken"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Schenken aan het Fonds Ontdek de verschillende mogelijkheden",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/schenken",
+      "status": "detail-link gevonden",
+      "rawText": "Schenken aan het Fonds Ontdek de verschillende mogelijkheden"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Series",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/series",
+      "status": "detail-link gevonden",
+      "rawText": "Series"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Sponsoring Als bedrijf het gebouw ondersteunen",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/sponsoring",
+      "status": "detail-link gevonden",
+      "rawText": "Sponsoring Als bedrijf het gebouw ondersteunen"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Steun ons Draag bij aan de toekomst van Het Concertgebouw",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/steun-ons",
+      "status": "detail-link gevonden",
+      "rawText": "Steun ons Draag bij aan de toekomst van Het Concertgebouw"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Nalaten & De Toegift Het Fonds opnemen in uw testament",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/steun-ons/nalaten",
+      "status": "detail-link gevonden",
+      "rawText": "Nalaten & De Toegift Het Fonds opnemen in uw testament"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Toegankelijkheid & speciale voorzieningen Het gebouw is toegankelijk voor iedereen",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/toegankelijkheid-speciale-voorzieningen",
+      "status": "detail-link gevonden",
+      "rawText": "Toegankelijkheid & speciale voorzieningen Het gebouw is toegankelijk voor iedereen"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Veelgestelde vragen Van kaarten bestellen tot garderobe",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/veelgestelde-vragen",
+      "status": "detail-link gevonden",
+      "rawText": "Veelgestelde vragen Van kaarten bestellen tot garderobe"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "VriendenLoterij ZomerConcerten",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/vriendenloterij-zomerconcerten",
+      "status": "detail-link gevonden",
+      "rawText": "VriendenLoterij ZomerConcerten"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "status": "klaar",
+      "rawText": "site 12/19: 0 unieke events in 2.14 sec"
     }
   ]
 }
