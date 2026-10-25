@@ -1,6 +1,6 @@
 {
-  "runId": "2026-10-25T09:25:00+00:00",
-  "startedAt": "2026-10-25T09:25:00+00:00",
+  "runId": "2026-10-25T09:25:32+00:00",
+  "startedAt": "2026-10-25T09:25:32+00:00",
   "completedCount": 3,
   "totalSites": 3,
   "completedSites": [
@@ -14,21 +14,21 @@
       "site": "https://www.groupon.nl/",
       "count": 0,
       "newCount": 0,
-      "durationSeconds": 0.29,
+      "durationSeconds": 0.46,
       "timedOut": false
     },
     {
       "site": "https://www.ibood.com/nl/",
       "count": 0,
       "newCount": 0,
-      "durationSeconds": 0.51,
+      "durationSeconds": 0.42,
       "timedOut": false
     },
     {
       "site": "https://www.zwolsetheaters.nl/programma",
       "count": 0,
       "newCount": 0,
-      "durationSeconds": 5.47,
+      "durationSeconds": 7.16,
       "timedOut": false
     }
   ],
@@ -103,7 +103,7 @@
       "date": "",
       "url": "https://www.groupon.nl/",
       "status": "klaar",
-      "rawText": "site 1/3: 0 unieke events in 0.29 sec"
+      "rawText": "site 1/3: 0 unieke events in 0.46 sec"
     },
     {
       "source": "Website",
@@ -157,7 +157,7 @@
       "date": "",
       "url": "https://www.ibood.com/nl/",
       "status": "klaar",
-      "rawText": "site 2/3: 0 unieke events in 0.51 sec"
+      "rawText": "site 2/3: 0 unieke events in 0.42 sec"
     },
     {
       "source": "Website",
@@ -328,13 +328,13 @@
       "date": "",
       "url": "https://www.zwolsetheaters.nl/programma",
       "status": "klaar",
-      "rawText": "site 3/3: 0 unieke events in 5.47 sec"
+      "rawText": "site 3/3: 0 unieke events in 7.16 sec"
     }
   ],
   "status": "completed",
   "lastCompletedSite": "https://www.zwolsetheaters.nl/programma",
-  "lastCompletedAt": "2026-10-25T09:25:10+00:00",
+  "lastCompletedAt": "2026-10-25T09:25:41+00:00",
   "lastSiteEventCount": 0,
-  "lastUpdatedAt": "2026-10-25T09:25:07+00:00",
-  "finishedAt": "2026-10-25T09:25:11+00:00"
+  "lastUpdatedAt": "2026-10-25T09:25:39+00:00",
+  "finishedAt": "2026-10-25T09:25:42+00:00"
 }
