@@ -3604,15 +3604,33 @@
       "url": "https://www.socialdeal.nl/",
       "status": "klaar",
       "rawText": "site 17/20: 0 unieke events in 2.98 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Start",
+      "date": "",
+      "url": "https://denieuwekolk.nl/agenda",
+      "status": "start",
+      "rawText": "site 18/20: max 5 events, max 2 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://denieuwekolk.nl/agenda",
+      "status": "strategie",
+      "rawText": "agenda-kaarten + datumregels (De Nieuwe Kolk)"
     }
   ],
   "status": "running",
   "siteStartedAt": "2026-10-25T14:40:07+00:00",
-  "siteElapsedSeconds": 0,
+  "siteElapsedSeconds": 1,
   "sitePageCount": 0,
   "lastSiteEventCount": 0,
   "stage": "Websitepagina ophalen",
-  "lastUpdatedAt": "2026-10-25T14:40:07+00:00",
+  "lastUpdatedAt": "2026-10-25T14:40:08+00:00",
   "lastSiteNewEventCount": 0,
   "lastCompletedSite": "https://www.socialdeal.nl/",
   "lastCompletedAt": "2026-10-25T14:40:06+00:00"
