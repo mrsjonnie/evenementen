@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-25T14:39:08+00:00",
+  "updatedAt": "2026-10-25T14:39:12+00:00",
   "events": [
     {
       "date": "2026-10-25",
@@ -11660,6 +11660,13 @@
       "newCount": 0,
       "durationSeconds": 2.09,
       "timedOut": true
+    },
+    {
+      "site": "https://www.spotgroningen.nl/programma/",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 2.0,
+      "timedOut": true
     }
   ],
   "rawLog": [
@@ -12886,6 +12893,42 @@
       "url": "https://forum.nl/nl/agenda",
       "status": "klaar",
       "rawText": "site 4/20: 0 unieke events in 2.09 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "Start",
+      "date": "",
+      "url": "https://www.spotgroningen.nl/programma/",
+      "status": "start",
+      "rawText": "site 5/20: max 5 events, max 2 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://www.spotgroningen.nl/programma/",
+      "status": "strategie",
+      "rawText": "universeel-met-kaartfallback"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "Pagina mislukt",
+      "date": "",
+      "url": "https://www.spotgroningen.nl/programma",
+      "status": "fout",
+      "rawText": "HTTPSConnectionPool(host='www.spotgroningen.nl', port=443): Read timed out. (read timeout=1.0741208720000017)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://www.spotgroningen.nl/programma/",
+      "status": "klaar",
+      "rawText": "site 5/20: 0 unieke events in 2.0 sec"
     }
   ]
 }
