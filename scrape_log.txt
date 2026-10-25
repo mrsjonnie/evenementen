@@ -123,3 +123,7 @@ Website	https://www.spotgroningen.nl/programma/	event uit link	Rockit	2026-11-14
 Website	https://www.spotgroningen.nl/programma/	event uit link	Repeatclub fABULEUS / Danaé Bosman	2026-11-14	https://www.spotgroningen.nl/programma/repeatclub/	Repeatclub fABULEUS / Danaé Bosman Openingsavond Jonge Harten Net bevestigd za 14 nov
 Website	https://www.spotgroningen.nl/programma/	event uit link	Contra (12+) WabiSabi	2026-11-15	https://www.spotgroningen.nl/programma/contra-12/	Contra (12+) WabiSabi | Het Houten Huis | HIIIT "Een van de beste voorstellingen van het jaar" (★★★★★ Dagblad van het Noorden) zo 15 nov
 Website	https://www.spotgroningen.nl/programma/	timeout	Site-time-out		https://www.spotgroningen.nl/programma/	site overschreed de harde tijdslimiet van 2 seconden
+Website	https://simplon.nl/	start	Start		https://simplon.nl/	site 6/19: max 5 events, max 2 seconden
+Parser	https://simplon.nl/	strategie	Scrapertype vastgesteld		https://simplon.nl/	compacte-agenda-kaarten
+Website	https://simplon.nl/	fout	Pagina mislukt		https://simplon.nl/programma/	HTTPSConnectionPool(host='simplon.nl', port=443): Read timed out. (read timeout=0.9458908309999856)
+Website	https://simplon.nl/	klaar	Klaar		https://simplon.nl/	site 6/19: 0 unieke events in 2.0 sec
