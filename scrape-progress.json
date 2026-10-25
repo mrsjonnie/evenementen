@@ -1,19 +1,87 @@
 {
   "runId": "2026-10-25T18:11:58.348915+00:00-15d90f09",
   "startedAt": "2026-10-25T18:11:58+00:00",
-  "completedCount": 0,
+  "completedCount": 1,
   "totalSites": 3,
   "currentSite": "https://www.ibood.com/s-nl",
   "currentSiteIndex": 1,
-  "completedSites": [],
+  "completedSites": [
+    "https://www.ibood.com/s-nl"
+  ],
   "events": [],
-  "siteResults": [],
-  "rawLog": [],
+  "siteResults": [
+    {
+      "site": "https://www.ibood.com/s-nl",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 0.36,
+      "timedOut": false
+    }
+  ],
+  "rawLog": [
+    {
+      "source": "Website",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "Start",
+      "date": "",
+      "url": "https://www.ibood.com/s-nl",
+      "status": "start",
+      "rawText": "site 1/3: max 12 events, max 4 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://www.ibood.com/s-nl",
+      "status": "strategie",
+      "rawText": "aanbiedingen"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "Pagina mislukt",
+      "date": "",
+      "url": "https://www.ibood.com/s-nl",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "Pagina mislukt",
+      "date": "",
+      "url": "https://www.ibood.com/nl/s-nl",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "Pagina mislukt",
+      "date": "",
+      "url": "https://www.ibood.com/offers/nl/s-nl",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://www.ibood.com/s-nl",
+      "status": "klaar",
+      "rawText": "site 1/3: 0 unieke events in 0.36 sec"
+    }
+  ],
   "status": "running",
   "siteStartedAt": "2026-10-25T18:11:59+00:00",
-  "siteElapsedSeconds": 0,
+  "siteElapsedSeconds": 1,
   "sitePageCount": 0,
   "lastSiteEventCount": 0,
-  "stage": "Websitepagina ophalen",
-  "lastUpdatedAt": "2026-10-25T18:11:59+00:00"
+  "stage": "Website klaar; volgende website voorbereiden",
+  "lastUpdatedAt": "2026-10-25T18:12:00+00:00",
+  "lastSiteNewEventCount": 0,
+  "lastCompletedSite": "https://www.ibood.com/s-nl",
+  "lastCompletedAt": "2026-10-25T18:12:00+00:00"
 }
