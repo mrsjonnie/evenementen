@@ -1337,22 +1337,40 @@ export default {
           return json({ ok: true, cancelled: 0, message: "Geen actieve of ingeplande scraper-run gevonden." }, 200);
         }
 
-        const results = [];
-        for (const run of activeRuns) {
+        // Request cancellation concurrently and verify whether GitHub has actually
+        // ended each run; accepting a cancel request is not the same as stopping.
+        const results = await Promise.all(activeRuns.map(async (run) => {
           const cancelResponse = await githubFetch(env, `/actions/runs/${Number(run.id)}/cancel`, { method: "POST" });
-          if (cancelResponse.status === 202 || cancelResponse.status === 409) {
-            results.push({ id: run.id, status: cancelResponse.status === 202 ? "annulering aangevraagd" : "run was al aan het stoppen" });
-          } else {
-            results.push({ id: run.id, status: "mislukt", details: validateInput(await cancelResponse.text(), 300) });
+          if (cancelResponse.status !== 202 && cancelResponse.status !== 409) {
+            return { id: run.id, status: "mislukt", details: validateInput(await cancelResponse.text(), 300) };
           }
-        }
+          let finalStatus = String(run.status || "unknown");
+          let conclusion = "";
+          for (let attempt = 0; attempt < 6; attempt += 1) {
+            if (attempt > 0) await new Promise((resolve) => setTimeout(resolve, 1000));
+            try {
+              const stateResponse = await githubFetch(env, `/actions/runs/${Number(run.id)}`);
+              if (stateResponse.ok) {
+                const state = await stateResponse.json();
+                finalStatus = String(state.status || finalStatus);
+                conclusion = String(state.conclusion || conclusion || "");
+                if (finalStatus === "completed") break;
+              }
+            } catch {}
+          }
+          return { id: run.id, status: finalStatus === "completed" ? "gestopt" : "stop aangevraagd", conclusion, finalStatus };
+        }));
         const cancelled = results.filter((item) => item.status !== "mislukt").length;
+        const stopped = results.filter((item) => item.status === "gestopt").length;
+        const stillStopping = results.filter((item) => item.status === "stop aangevraagd").length;
         return json({
           ok: cancelled > 0,
           cancelled,
+          stopped,
+          stillStopping,
           results,
           message: cancelled
-            ? `Annulering aangevraagd voor ${cancelled} GitHub Actions-run(s).`
+            ? `Stop aangevraagd voor ${cancelled} scraper-run(s): ${stopped} beëindigd bevestigd, ${stillStopping} nog niet als beëindigd bevestigd.`
             : "GitHub heeft geen run kunnen annuleren. Controleer de Actions-rechten van de Worker-token."
         }, cancelled ? 200 : 502);
       } catch (error) {
