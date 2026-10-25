@@ -1329,7 +1329,7 @@
   </div>
 
   <script>
-    const APP_VERSION = "2026.10.25.36";
+    const APP_VERSION = "2026.10.25.37";
     const DEFAULT_MAX_EVENTS_PER_SITE = 20;
     const DEFAULT_SITE_TIME_LIMIT_SECONDS = 20;
     const SCAN_SETTINGS_KEY = "eventScanSettingsV1";
@@ -2294,7 +2294,11 @@
       const total = Math.max(completed + 1, Number(progress.totalSites) || 19);
       const status = cleanText(progress.status || "running");
       if (status === "completed") {
-        if (titleProgress) titleProgress.hidden = true;
+        if (titleProgress) {
+          titleProgress.hidden = false;
+          titleProgress.textContent = `Zoeken afgerond (${Math.min(completed, total)}/${total} websites)`;
+          titleProgress.title = `De scraper heeft ${completed} websites afgerond. De definitieve publicatie wordt apart gecontroleerd.`;
+        }
         return;
       }
       const site = cleanText(progress.currentSite || "");
@@ -3354,6 +3358,12 @@
           : "";
         addLiveLog("Worker", WORKER_URL, "Starten mislukt", "fout", message + networkHint);
         showStatus(`${prefix} Starten mislukt: ${message}.${networkHint}`.trim(), "error");
+        const titleProgress = $("titleProgressText");
+        if (titleProgress) {
+          titleProgress.hidden = false;
+          titleProgress.textContent = "Zoeken mislukt · " + message;
+          titleProgress.title = message + networkHint;
+        }
       } finally {
         if (startupProgressPollHandle) {
           clearInterval(startupProgressPollHandle);
@@ -3363,7 +3373,8 @@
         renderSites(new Set(selectedSites));
         const titleProgress = $("titleProgressText");
         const titleBusyIndicator = $("titleBusyIndicator");
-        if (titleProgress) titleProgress.hidden = true;
+        // Keep the last useful progress/result visible after polling finishes.
+        // Hiding this element here made the status disappear immediately after the worker responded.
         if (titleBusyIndicator) titleBusyIndicator.hidden = true;
         setBusy(button, false);
       }
