@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- Stopgedrag, inklapbare statusgeschiedenis en ruimere rechtermarge in versie 2026.10.25.58. -->
+<!-- Verversstatus als scrollvak zonder dubbel inklappen, actuele voortgang en ruimere schermmarge in versie 2026.10.25.59. -->
 <html lang="nl">
 <head>
   <meta charset="UTF-8">
@@ -61,7 +61,8 @@
     .heroInner {
       max-width: 1360px;
       margin: 0 auto;
-      padding: 12px 28px 12px 16px;
+      padding: 12px 48px 12px 16px;
+      box-sizing: border-box;
       display: grid;
       grid-template-columns: minmax(0, 1fr) auto;
       gap: 14px;
@@ -137,7 +138,7 @@
     .titlePanel {
       display: none;
       position: relative;
-      width: min(1200px, calc(100vw - 48px));
+      width: min(1200px, calc(100vw - 64px));
       max-width: 1200px;
       margin-left: 0;
       clear: both;
@@ -154,44 +155,34 @@
       align-items: center;
     }
 
-    .historyPanel {
-      grid-column: 1 / -1;
-      width: 100%;
-      min-width: 0;
-      margin-top: 8px;
-      border: 1px solid rgba(255, 255, 255, .22);
-      border-radius: 9px;
-      background: rgba(8, 18, 28, .58);
-      overflow: hidden;
-      box-sizing: border-box;
-    }
-
-    .historyPanel > summary {
-      cursor: pointer;
-      padding: 9px 12px;
-      color: rgba(255, 255, 255, .94);
-      font-size: .82rem;
-      font-weight: 950;
-      user-select: none;
-    }
-
-    .historyPanelContent {
-      width: 100%;
-      min-width: 0;
-      border-top: 1px solid rgba(255, 255, 255, .14);
-      padding: 8px;
-      box-sizing: border-box;
-    }
-
     .headerStatus {
+      grid-column: 1 / -1;
+      display: block;
       width: 100%;
       max-width: none;
-      max-height: min(34vh, 320px);
-      min-height: 42px;
-      margin: 0;
+      height: 7.5rem;
+      min-height: 7.5rem;
+      max-height: 7.5rem;
+      margin: 8px 0 0;
+      padding: 7px 9px;
       overflow-y: auto;
       overflow-x: hidden;
       box-sizing: border-box;
+      border: 1px solid rgba(255, 255, 255, .22);
+      border-radius: 9px;
+      background: rgba(8, 18, 28, .58);
+    }
+
+    .headerStatus .statusMessages {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+
+    .headerStatus .statusEntry {
+      padding: 2px 0;
+      line-height: 1.25;
+      overflow-wrap: anywhere;
     }
 
     .rawLogPanel {
@@ -388,7 +379,8 @@
     main {
       max-width: 1360px;
       margin: 0 auto;
-      padding: 16px 28px 44px 16px;
+      padding: 16px 48px 44px 16px;
+      box-sizing: border-box;
     }
 
     .toolbar {
@@ -1258,18 +1250,12 @@
         <div class="titlePanel" id="titlePanel">
           <div class="titlePanelContent">
             <span class="versionBadge" id="versionBadge">Versie wordt geladen</span>
-            <div class="statusCompact" id="statusCompact" aria-live="polite">Gereed — nog geen zoekactie uitgevoerd.</div>
             <div class="scanSettings" aria-label="Scaninstellingen">
               <label class="scanSetting" for="maxEventsPerSite">Max. resultaten <input id="maxEventsPerSite" type="number" min="1" max="100" step="1" value="20" inputmode="numeric" title="Maximum aantal resultaten per geselecteerde website"> <small>per website</small></label>
               <label class="scanSetting" for="siteTimeLimitSeconds">Max. sec. <input id="siteTimeLimitSeconds" type="number" min="1" max="60" step="1" value="20" inputmode="numeric" title="Maximum zoektijd per geselecteerde website in seconden"> <small>per website</small></label>
             </div>
           </div>
-          <details class="historyPanel" id="historyPanel" open>
-            <summary id="historyPanelSummary">Verversstatus en geschiedenis</summary>
-            <div class="historyPanelContent">
-              <div class="status headerStatus" id="status" aria-label="Statusgeschiedenis" aria-live="polite"></div>
-            </div>
-          </details>
+          <div class="status headerStatus" id="status" aria-label="Verversstatus" aria-live="polite"></div>
         </div>
         <div class="headerActions" aria-label="Weergavebediening">
           <button class="btn btnSecondary filterSidebarToggle" id="filterSidebarToggle" type="button" aria-controls="filterSidebar" aria-expanded="false">Filters tonen</button>
@@ -1438,7 +1424,7 @@
   </div>
 
   <script>
-    const APP_VERSION = "2026.10.25.58";
+    const APP_VERSION = "2026.10.25.59";
     const DEFAULT_MAX_EVENTS_PER_SITE = 20;
     const DEFAULT_SITE_TIME_LIMIT_SECONDS = 20;
     const SCAN_SETTINGS_KEY = "eventScanSettingsV1";
@@ -2299,8 +2285,6 @@
     function showStatus(message, type = "", options = {}) {
       const status = $("status");
       const text = cleanText(message);
-      const compact = $("statusCompact");
-      if (compact) compact.textContent = text;
       if (!status) return;
       // The large status area is a scrollable history, not just a transient message.
       status.className = "status show";
@@ -2348,8 +2332,7 @@
       const status = $("status");
       status.className = "status";
       status.replaceChildren();
-      const compact = $("statusCompact");
-      if (compact) compact.textContent = "Gereed — nog geen zoekactie uitgevoerd.";
+
     }
 
     function setBusy(button, busy, text) {
