@@ -853,11 +853,29 @@
       "url": "https://www.visitgroningen.nl/nl/doen/wandelen",
       "status": "klaar",
       "rawText": "site 3/19: 0 unieke events in 4.48 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "Start",
+      "date": "",
+      "url": "https://forum.nl/nl/agenda",
+      "status": "start",
+      "rawText": "site 4/19: max 20 events, max 3 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://forum.nl/nl/agenda",
+      "status": "strategie",
+      "rawText": "universeel-eventkaarten"
     }
   ],
   "status": "running",
   "stage": "Websitepagina ophalen",
-  "lastUpdatedAt": "2026-10-25T10:34:58+00:00",
+  "lastUpdatedAt": "2026-10-25T10:34:59+00:00",
   "lastSiteEventCount": 0,
   "lastCompletedSite": "https://www.visitgroningen.nl/nl/doen/wandelen",
   "lastCompletedAt": "2026-10-25T10:34:57+00:00"
