@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- Statusgeschiedenis en betrouwbare actuele voortgang in versie 2026.10.25.57. -->
+<!-- Stopgedrag, inklapbare statusgeschiedenis en ruimere rechtermarge in versie 2026.10.25.58. -->
 <html lang="nl">
 <head>
   <meta charset="UTF-8">
@@ -61,7 +61,7 @@
     .heroInner {
       max-width: 1360px;
       margin: 0 auto;
-      padding: 12px 16px 12px;
+      padding: 12px 28px 12px 16px;
       display: grid;
       grid-template-columns: minmax(0, 1fr) auto;
       gap: 14px;
@@ -137,7 +137,7 @@
     .titlePanel {
       display: none;
       position: relative;
-      width: min(1200px, calc(100vw - 32px));
+      width: min(1200px, calc(100vw - 48px));
       max-width: 1200px;
       margin-left: 0;
       clear: both;
@@ -388,7 +388,7 @@
     main {
       max-width: 1360px;
       margin: 0 auto;
-      padding: 16px 16px 44px;
+      padding: 16px 28px 44px 16px;
     }
 
     .toolbar {
@@ -1264,13 +1264,13 @@
               <label class="scanSetting" for="siteTimeLimitSeconds">Max. sec. <input id="siteTimeLimitSeconds" type="number" min="1" max="60" step="1" value="20" inputmode="numeric" title="Maximum zoektijd per geselecteerde website in seconden"> <small>per website</small></label>
             </div>
           </div>
+          <details class="historyPanel" id="historyPanel" open>
+            <summary id="historyPanelSummary">Verversstatus en geschiedenis</summary>
+            <div class="historyPanelContent">
+              <div class="status headerStatus" id="status" aria-label="Statusgeschiedenis" aria-live="polite"></div>
+            </div>
+          </details>
         </div>
-        <details class="historyPanel" id="historyPanel" open>
-          <summary id="historyPanelSummary">Verversstatus en geschiedenis</summary>
-          <div class="historyPanelContent">
-            <div class="status headerStatus" id="status" aria-label="Statusgeschiedenis" aria-live="polite"></div>
-          </div>
-        </details>
         <div class="headerActions" aria-label="Weergavebediening">
           <button class="btn btnSecondary filterSidebarToggle" id="filterSidebarToggle" type="button" aria-controls="filterSidebar" aria-expanded="false">Filters tonen</button>
         </div>
@@ -1438,7 +1438,7 @@
   </div>
 
   <script>
-    const APP_VERSION = "2026.10.25.57";
+    const APP_VERSION = "2026.10.25.58";
     const DEFAULT_MAX_EVENTS_PER_SITE = 20;
     const DEFAULT_SITE_TIME_LIMIT_SECONDS = 20;
     const SCAN_SETTINGS_KEY = "eventScanSettingsV1";
