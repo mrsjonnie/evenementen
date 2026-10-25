@@ -50,3 +50,7 @@ Website	https://simplon.nl/	start	Start		https://simplon.nl/	site 6/20: max 5 ev
 Parser	https://simplon.nl/	strategie	Scrapertype vastgesteld		https://simplon.nl/	compacte-agenda-kaarten
 Website	https://simplon.nl/	fout	Pagina mislukt		https://simplon.nl/programma/	HTTPSConnectionPool(host='simplon.nl', port=443): Read timed out. (read timeout=0.7598368790000052)
 Website	https://simplon.nl/	klaar	Klaar		https://simplon.nl/	site 6/20: 0 unieke events in 2.0 sec
+Website	https://www.vera-groningen.nl/	start	Start		https://www.vera-groningen.nl/	site 7/20: max 5 events, max 2 seconden
+Parser	https://www.vera-groningen.nl/	strategie	Scrapertype vastgesteld		https://www.vera-groningen.nl/	programma-kaarten
+Website	https://www.vera-groningen.nl/	fout	Pagina mislukt		https://www.vera-groningen.nl/programma/?category=all&history=0&lang=nl	HTTPSConnectionPool(host='www.vera-groningen.nl', port=443): Read timed out. (read timeout=0.9735635210000027)
+Website	https://www.vera-groningen.nl/	klaar	Klaar		https://www.vera-groningen.nl/	site 7/20: 0 unieke events in 3.08 sec
