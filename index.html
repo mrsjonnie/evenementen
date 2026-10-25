@@ -2471,7 +2471,9 @@
       const pageCount = Number(progress.sitePageCount) || 0;
       if (titleProgress) {
         titleProgress.hidden = false;
-        titleProgress.textContent = `Zoeken ${siteNumber}/${total} · ${siteLabel}`;
+        // Include elapsed seconds in the visible label so users can see that
+        // the progress indicator is still being refreshed while one site runs.
+        titleProgress.textContent = `Zoeken ${siteNumber}/${total} · ${siteLabel} · ${elapsedSeconds}s`;
         titleProgress.title = `Bezig met ${siteLabel}: ${stage}. ${elapsedSeconds} seconden verstreken; ${pageCount} pagina’s opgehaald; ${siteHits} evenementen gevonden, waarvan ${siteNewHits} nieuw.`;
       }
     }
