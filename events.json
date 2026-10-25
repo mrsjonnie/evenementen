@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-25T13:41:49+00:00",
+  "updatedAt": "2026-10-25T13:41:53+00:00",
   "events": [
     {
       "date": "2026-10-25",
@@ -11294,6 +11294,13 @@
       "newCount": 0,
       "durationSeconds": 3.27,
       "timedOut": true
+    },
+    {
+      "site": "https://www.vvvameland.nl/activiteiten-en-evenementen",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 1.55,
+      "timedOut": false
     }
   ],
   "rawLog": [
