@@ -1831,7 +1831,7 @@
       "rawText": "site 19/19: 0 unieke events in 1.11 sec"
     }
   ],
-  "status": "finishing",
+  "status": "completed",
   "siteStartedAt": "2026-10-25T15:55:11+00:00",
   "siteElapsedSeconds": 2,
   "sitePageCount": 0,
@@ -1840,5 +1840,6 @@
   "lastUpdatedAt": "2026-10-25T15:55:12+00:00",
   "lastSiteNewEventCount": 0,
   "lastCompletedSite": "https://www.pathe.nl/nl/bioscopen/pathe-groningen",
-  "lastCompletedAt": "2026-10-25T15:55:13+00:00"
+  "lastCompletedAt": "2026-10-25T15:55:13+00:00",
+  "finishedAt": "2026-10-25T15:55:15+00:00"
 }
