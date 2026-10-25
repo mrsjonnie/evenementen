@@ -1,7 +1,7 @@
 {
   "runId": "2026-10-25T16:13:04.656609+00:00-97369fb4",
   "startedAt": "2026-10-25T16:13:04+00:00",
-  "completedCount": 15,
+  "completedCount": 16,
   "totalSites": 19,
   "currentSite": "https://www.socialdeal.nl/",
   "currentSiteIndex": 16,
@@ -20,7 +20,8 @@
     "https://www.concertgebouw.nl/concerten-en-tickets",
     "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
     "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
-    "https://www.vvvameland.nl/activiteiten-en-evenementen"
+    "https://www.vvvameland.nl/activiteiten-en-evenementen",
+    "https://www.socialdeal.nl/"
   ],
   "events": [
     {
@@ -68,7 +69,8 @@
       "discoverySource": "Website",
       "description": "46% hexagon events iChallenge Groningen (+121 locaties) 0 min. directions_walk Regulier €18 ,50 €9 ,95",
       "cost": "",
-      "image": "https://images.socialdeal.nl/deal/ichallenge-26012209430019.jpg"
+      "image": "https://images.socialdeal.nl/deal/ichallenge-26012209430019.jpg",
+      "isNew": true
     },
     {
       "date": "2026-10-25",
@@ -344,7 +346,8 @@
       "discoverySource": "Website",
       "description": "39% hexagon food Fujiyama Groningen 9.4 star Perfect • 191 beoordelingen Groningen 0 min. directions_walk Regulier €32 ,75 €19 ,95",
       "cost": "",
-      "image": "https://images.socialdeal.nl/deal/fujiyama-groningen-26031111204242.jpg"
+      "image": "https://images.socialdeal.nl/deal/fujiyama-groningen-26031111204242.jpg",
+      "isNew": true
     },
     {
       "date": "2027-04-09",
@@ -358,7 +361,8 @@
       "discoverySource": "Website",
       "description": "45% hexagon food World of Barista 9.4 star Perfect Groningen (+1 locatie) 0 min. directions_walk Regulier €10 ,75 €5 ,95",
       "cost": "",
-      "image": ""
+      "image": "",
+      "isNew": true
     },
     {
       "date": "2027-05-09",
@@ -417,7 +421,8 @@
       "discoverySource": "Website",
       "description": "30% hexagon food Bistro Bommen Berend 9.8 star Perfect • 374 beoordelingen Groningen 0 min. directions_walk Regulier €36 ,95 €25 ,95",
       "cost": "",
-      "image": "https://images.socialdeal.nl/deal/bistro-bommen-berend-26010810274719.jpg"
+      "image": "https://images.socialdeal.nl/deal/bistro-bommen-berend-26010810274719.jpg",
+      "isNew": true
     },
     {
       "date": "2027-08-09",
@@ -431,7 +436,8 @@
       "discoverySource": "Website",
       "description": "42% hexagon food Bistro Bommen Berend 9.8 star Perfect • 374 beoordelingen Groningen 0 min. directions_walk Regulier €28 ,65 €16 ,50",
       "cost": "",
-      "image": "https://images.socialdeal.nl/deal/bistro-bommen-berend-26010810282757.jpg"
+      "image": "https://images.socialdeal.nl/deal/bistro-bommen-berend-26010810282757.jpg",
+      "isNew": true
     },
     {
       "date": "2028-12-01",
@@ -553,6 +559,13 @@
       "count": 0,
       "newCount": 0,
       "durationSeconds": 2.0,
+      "timedOut": true
+    },
+    {
+      "site": "https://www.socialdeal.nl/",
+      "count": 5,
+      "newCount": 5,
+      "durationSeconds": 4.12,
       "timedOut": true
     }
   ],
@@ -4714,16 +4727,25 @@
       "url": "https://www.socialdeal.nl/dichtbij/groningen/",
       "status": "ok",
       "rawText": "5 events/aanbiedingen op deze pagina"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.socialdeal.nl/",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://www.socialdeal.nl/",
+      "status": "klaar",
+      "rawText": "site 16/19: 5 unieke events in 4.12 sec"
     }
   ],
   "status": "running",
   "siteStartedAt": "2026-10-25T16:14:11+00:00",
-  "siteElapsedSeconds": 4,
+  "siteElapsedSeconds": 5,
   "sitePageCount": 1,
   "lastSiteEventCount": 5,
-  "stage": "Websitepagina ophalen",
+  "stage": "Website klaar; volgende website voorbereiden",
   "lastUpdatedAt": "2026-10-25T16:14:15+00:00",
   "lastSiteNewEventCount": 5,
-  "lastCompletedSite": "https://www.vvvameland.nl/activiteiten-en-evenementen",
-  "lastCompletedAt": "2026-10-25T16:14:10+00:00"
+  "lastCompletedSite": "https://www.socialdeal.nl/",
+  "lastCompletedAt": "2026-10-25T16:14:16+00:00"
 }
