@@ -1,12 +1,13 @@
 {
   "runId": "2026-10-25T10:37:19+00:00",
   "startedAt": "2026-10-25T10:37:19+00:00",
-  "completedCount": 1,
+  "completedCount": 2,
   "totalSites": 5,
   "currentSite": "https://www.groupon.nl/kortingsbonnen/gemeente-groningen",
   "currentSiteIndex": 2,
   "completedSites": [
-    "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html"
+    "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+    "https://www.groupon.nl/kortingsbonnen/gemeente-groningen"
   ],
   "events": [
     {
@@ -296,6 +297,13 @@
       "count": 20,
       "newCount": 0,
       "durationSeconds": 3.63,
+      "timedOut": false
+    },
+    {
+      "site": "https://www.groupon.nl/kortingsbonnen/gemeente-groningen",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 4.74,
       "timedOut": false
     }
   ],
@@ -1127,12 +1135,30 @@
       "url": "https://www.groupon.nl/kortingsbonnen",
       "status": "fout",
       "rawText": "HTTP 403"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.groupon.nl/kortingsbonnen/gemeente-groningen",
+      "title": "Pagina mislukt",
+      "date": "",
+      "url": "https://www.groupon.nl/",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.groupon.nl/kortingsbonnen/gemeente-groningen",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://www.groupon.nl/kortingsbonnen/gemeente-groningen",
+      "status": "klaar",
+      "rawText": "site 2/5: 0 unieke events in 4.74 sec"
     }
   ],
   "status": "running",
-  "stage": "Websitepagina ophalen",
+  "stage": "Website klaar; volgende website voorbereiden",
   "lastUpdatedAt": "2026-10-25T10:37:31+00:00",
   "lastSiteEventCount": 0,
-  "lastCompletedSite": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
-  "lastCompletedAt": "2026-10-25T10:37:25+00:00"
+  "lastCompletedSite": "https://www.groupon.nl/kortingsbonnen/gemeente-groningen",
+  "lastCompletedAt": "2026-10-25T10:37:32+00:00"
 }
