@@ -1082,12 +1082,30 @@
       "url": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
       "status": "klaar",
       "rawText": "site 1/5: 20 unieke events in 3.21 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.groupon.nl/kortingsbonnen/gemeente-groningen",
+      "title": "Start",
+      "date": "",
+      "url": "https://www.groupon.nl/kortingsbonnen/gemeente-groningen",
+      "status": "start",
+      "rawText": "site 2/5: max 20 events, max 20 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.groupon.nl/kortingsbonnen/gemeente-groningen",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://www.groupon.nl/kortingsbonnen/gemeente-groningen",
+      "status": "strategie",
+      "rawText": "aanbiedingen"
     }
   ],
   "status": "running",
   "stage": "Websitepagina ophalen",
-  "lastUpdatedAt": "2026-10-25T10:44:11+00:00",
-  "lastSiteEventCount": 20,
+  "lastUpdatedAt": "2026-10-25T10:44:12+00:00",
+  "lastSiteEventCount": 0,
   "lastCompletedSite": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
   "lastCompletedAt": "2026-10-25T10:44:10+00:00"
 }
