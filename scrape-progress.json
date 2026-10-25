@@ -3,11 +3,17 @@
   "startedAt": "2026-10-25T15:53:30+00:00",
   "completedCount": 0,
   "totalSites": 19,
-  "currentSite": "",
-  "currentSiteIndex": 0,
+  "currentSite": "https://groningen.uitloper.nu/",
+  "currentSiteIndex": 1,
   "completedSites": [],
   "events": [],
   "siteResults": [],
   "rawLog": [],
-  "status": "running"
+  "status": "running",
+  "siteStartedAt": "2026-10-25T15:53:32+00:00",
+  "siteElapsedSeconds": 0,
+  "sitePageCount": 0,
+  "lastSiteEventCount": 0,
+  "stage": "Websitepagina ophalen",
+  "lastUpdatedAt": "2026-10-25T15:53:32+00:00"
 }
