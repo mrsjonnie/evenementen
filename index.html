@@ -1318,7 +1318,7 @@
   </div>
 
   <script>
-    const APP_VERSION = "2026.10.25.09";
+    const APP_VERSION = "2026.10.25.10";
     const DEFAULT_MAX_EVENTS_PER_SITE = 20;
     const DEFAULT_SITE_TIME_LIMIT_SECONDS = 20;
     const SCAN_SETTINGS_KEY = "eventScanSettingsV1";
@@ -2314,9 +2314,12 @@
     let restoredProgressRunId = "";
     let restoredProgressUpdatedAt = "";
     let restoredProgressPollHandle = null;
+    let progressMonitoringStopped = false;
 
     async function restoreRunningScrapeProgress() {
+      if (progressMonitoringStopped) return;
       const progress = await fetchScrapeProgress();
+      if (progressMonitoringStopped) return;
       if (!progress) return;
       const status = cleanText(progress.status || "");
       const isRunning = ["running", "finishing", "queued", "in_progress"].includes(status);
@@ -3167,6 +3170,7 @@
       const previousKeys = eventKeySet(events);
       let foundCount = null;
       refreshAbortRequested = false;
+      progressMonitoringStopped = false;
       newEventKeys = new Set();
       events = events.map((event) => ({ ...event, isNew: false }));
       updateNewCount();
@@ -3576,9 +3580,17 @@
     $("status").addEventListener("click", (event) => {
       if (!event.target.closest("#stopRefreshBtn")) return;
       refreshAbortRequested = true;
+      progressMonitoringStopped = true;
+      if (restoredProgressPollHandle) {
+        clearInterval(restoredProgressPollHandle);
+        restoredProgressPollHandle = null;
+      }
+      restoredProgressRunId = "";
+      const titleProgress = $("titleProgressText");
+      if (titleProgress) titleProgress.hidden = true;
       setBusy($("refreshBtn"), false);
       setBusy($("clearBtn"), false);
-      showStatus("Controle gestopt. De update kan nog doorlopen; probeer straks opnieuw.", "warn");
+      showStatus("Voortgangscontrole gestopt. De zoekactie op GitHub kan op de achtergrond nog doorlopen; met Stop wordt alleen deze browsercontrole beëindigd.", "warn");
     });
     $("grid").addEventListener("click", (event) => {
       const deleteButton = event.target.closest(".deleteEventBtn");
