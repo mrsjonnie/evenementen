@@ -704,8 +704,8 @@
     .statusEntry .statusLine { display: flex; flex-direction: row; flex-wrap: wrap; align-items: flex-start; gap: 8px; }
     .statusEntry .statusLine span { min-width: 0; flex: 1 1 auto; overflow-wrap: anywhere; }
     .statusEntry .btn { display: none !important; }
-    .statusStopControl { display:flex; justify-content:flex-end; padding:3px 0 0; }
-    .statusStopControl .btn { width:auto; min-height:26px; padding:3px 10px; font-size:.72rem; }
+    .statusStopControl { display:flex; justify-content:flex-end; position:sticky; bottom:-7px; z-index:2; margin:4px -2px -2px; padding:5px 2px 2px; background:rgba(8,18,28,.96); border-top:1px solid rgba(255,255,255,.18); }
+    .statusStopControl .btn { width:auto; min-height:28px; padding:4px 12px; font-size:.74rem; }
 
     .hero .status.show { display: block; }
     .status.show { display: block; }
@@ -1424,7 +1424,8 @@
   </div>
 
   <script>
-    const APP_VERSION = "2026.10.25.59";
+    const APP_VERSION = "2026.10.25.60";
+    const STATUS_HISTORY_KEY = "evenementenStatusHistoryV1";
     const DEFAULT_MAX_EVENTS_PER_SITE = 20;
     const DEFAULT_SITE_TIME_LIMIT_SECONDS = 20;
     const SCAN_SETTINGS_KEY = "eventScanSettingsV1";
@@ -2282,11 +2283,45 @@
       }
     }
 
-    function showStatus(message, type = "", options = {}) {
+    let statusHistoryRestored = false;
+    function persistStatusHistory() {
       const status = $("status");
-      const text = cleanText(message);
       if (!status) return;
-      // The large status area is a scrollable history, not just a transient message.
+      const rows = [...status.querySelectorAll(".statusMessages .statusEntry")].map((entry) => ({
+        message: entry.dataset.message || entry.textContent || "",
+        type: [...entry.classList].find((name) => ["ok", "warn", "error"].includes(name)) || "",
+        timestamp: entry.dataset.timestamp || ""
+      })).slice(-80);
+      try { localStorage.setItem(STATUS_HISTORY_KEY, JSON.stringify(rows)); } catch {}
+    }
+    function restoreStatusHistory() {
+      const status = $("status");
+      if (!status || statusHistoryRestored) return;
+      statusHistoryRestored = true;
+      let rows = [];
+      try { const saved = JSON.parse(localStorage.getItem(STATUS_HISTORY_KEY) || "[]"); if (Array.isArray(saved)) rows = saved.filter((item) => item && typeof item.message === "string").slice(-80); } catch {}
+      if (!rows.length) return;
+      status.className = "status show";
+      const messages = document.createElement("div"); messages.className = "statusMessages";
+      for (const item of rows) {
+        const entry = document.createElement("div"); entry.className = ("statusEntry " + (item.type || "")).trim();
+        entry.dataset.message = item.message; entry.dataset.timestamp = item.timestamp || "";
+        const line = document.createElement("div"); line.className = "statusLine";
+        const span = document.createElement("span"); span.textContent = (item.timestamp ? "[" + item.timestamp + "] " : "") + item.message;
+        line.appendChild(span); entry.appendChild(line); messages.appendChild(entry);
+      }
+      status.replaceChildren(messages); status.scrollTop = status.scrollHeight;
+    }
+    function keepActivityDetailsVisible() {
+      const panel = $("titlePanel"); const toggle = $("titleToggle");
+      if (panel && !panel.classList.contains("open")) panel.classList.add("open");
+      if (toggle) toggle.setAttribute("aria-expanded", "true");
+    }
+    function showStatus(message, type = "", options = {}) {
+      const status = $("status"); const text = cleanText(message);
+      if (!status) return;
+      if (options.stop) keepActivityDetailsVisible();
+      // Keep the activity history across browser refreshes, including during a long scrape.
       status.className = "status show";
       let messages = status.querySelector(".statusMessages");
       if (!messages) {
@@ -2297,6 +2332,7 @@
       const lastEntry = messages.lastElementChild;
       if (lastEntry?.dataset.message === text) {
         if (options.stop) ensureStatusStopButton(status);
+        persistStatusHistory();
         return;
       }
       const entry = document.createElement("div");
@@ -2306,6 +2342,7 @@
       line.className = "statusLine";
       const span = document.createElement("span");
       const timestamp = new Date().toLocaleTimeString("nl-NL", { hour: "2-digit", minute: "2-digit", second: "2-digit" });
+      entry.dataset.timestamp = timestamp;
       span.textContent = `[${timestamp}] ${text}`;
       line.appendChild(span);
       entry.appendChild(line);
@@ -2313,6 +2350,7 @@
       if (options.stop) ensureStatusStopButton(status);
       while (messages.children.length > 80) messages.firstElementChild?.remove();
       status.scrollTop = status.scrollHeight;
+      persistStatusHistory();
     }
     function ensureStatusStopButton(status) {
       let control = status.querySelector(".statusStopControl");
@@ -2517,6 +2555,14 @@
 
       restoredProgressRunId = progress.runId;
       restoredProgressUpdatedAt = cleanText(progress.lastUpdatedAt || progress.startedAt || "");
+      keepActivityDetailsVisible();
+      const activeSiteName = shortScrapeSiteName(progress.currentSite || "");
+      showStatus(
+        activeSiteName
+          ? "Scraper actief na pagina-herstel: " + (Number(progress.completedCount) || 0) + "/" + (Number(progress.totalSites) || 19) + " websites afgerond; nu bezig met " + activeSiteName + "."
+          : "Scraper actief na pagina-herstel: " + (Number(progress.completedCount) || 0) + "/" + (Number(progress.totalSites) || 19) + " websites afgerond; wachten op actuele websitevoortgang.",
+        "warn", { stop: true }
+      );
       updateLiveScrapeSummary(progress, true);
       if (Array.isArray(progress.rawLog)) {
         latestRawLog = progress.rawLog;
@@ -4170,6 +4216,7 @@
     eventsPerPage = savedPerPage && savedPerPage !== 96 && [12, 18, 24, 48, 500].includes(savedPerPage) ? savedPerPage : 500;
     $("perPageSelect").value = String(eventsPerPage);
     $("versionBadge").textContent = `Versie ${APP_VERSION}`;
+    restoreStatusHistory();
     applyVersionHeaderTheme();
     loadAll();
     restoreRunningScrapeProgress().catch(() => {});
