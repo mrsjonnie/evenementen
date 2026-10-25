@@ -298,3 +298,7 @@ Website	https://www.socialdeal.nl/	start	Start		https://www.socialdeal.nl/	site 
 Parser	https://www.socialdeal.nl/	strategie	Scrapertype vastgesteld		https://www.socialdeal.nl/	Social Deal-aanbiedingen
 Website	https://www.socialdeal.nl/	fout	Pagina mislukt		https://www.socialdeal.nl/dichtbij/groningen/	HTTPSConnectionPool(host='www.socialdeal.nl', port=443): Read timed out. (read timeout=1.0162409739999987)
 Website	https://www.socialdeal.nl/	klaar	Klaar		https://www.socialdeal.nl/	site 16/19: 0 unieke events in 3.03 sec
+Website	https://denieuwekolk.nl/agenda	start	Start		https://denieuwekolk.nl/agenda	site 17/19: max 12 events, max 2 seconden
+Parser	https://denieuwekolk.nl/agenda	strategie	Scrapertype vastgesteld		https://denieuwekolk.nl/agenda	agenda-kaarten + datumregels (De Nieuwe Kolk)
+Website	https://denieuwekolk.nl/agenda	fout	Pagina mislukt		https://denieuwekolk.nl/agenda	HTTPSConnectionPool(host='denieuwekolk.nl', port=443): Read timed out. (read timeout=0.8153080249999789)
+Website	https://denieuwekolk.nl/agenda	klaar	Klaar		https://denieuwekolk.nl/agenda	site 17/19: 0 unieke events in 3.17 sec
