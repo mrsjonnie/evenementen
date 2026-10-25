@@ -2454,6 +2454,22 @@ def scrape_site(site_url, site_index=0, site_total=0, progress_callback=None, ex
             page_events = extract_groupon_offers(html, final_url, normalized_site)
             if not page_events:
                 add_raw("Parser", original_site, "Groupon-kaarten zonder resultaat", "", final_url, "fallback", "Geen deals herkend; controleer HTTP-status, HTML en eventuele blokkade")
+        elif canonical_host(normalized_site) == "pathe.nl":
+            # The listing contains many ordinary films without show dates. Do not
+            # turn those into events; inspect detail pages for structured date/Event data.
+            page_events = []
+            soup = BeautifulSoup(html, "html.parser")
+            path_candidates = [
+                normalized_url(anchor.get("href"), final_url)
+                for anchor in soup.find_all("a", href=True)
+            ]
+            path_candidates = [
+                link for link in path_candidates if link and same_host(link, normalized_site)
+                and re.search(r"/(?:nl/)?(?:film|films|special|specials|event|evenement|programma|voorstelling)(?:/|$)", urlparse(link).path, re.I)
+            ]
+            add_raw("Parser", original_site, "Pathé detailstrategie", "", final_url, "strategie",
+                    f"Algemene filmkaarten overgeslagen; {len(unique_urls(path_candidates))} detailkandidaten op datum-/Event-data controleren")
+            detail_links.extend(path_candidates)
         elif canonical_host(normalized_site) == "biosagenda.nl":
             page_events = extract_biosagenda_events(html, final_url, normalized_site, "Website")
         elif canonical_host(normalized_site) == "filmvandaag.nl":
@@ -2531,6 +2547,11 @@ def scrape_site(site_url, site_index=0, site_total=0, progress_callback=None, ex
                 found_links = [
                     link for link in found_links
                     if re.match(r"^/programma/[^/]+/\d+/?$", urlparse(link).path, re.I)
+                ]
+            if canonical_host(normalized_site) == "pathe.nl":
+                found_links = [
+                    link for link in found_links
+                    if re.search(r"/(?:nl/)?(?:film|films|special|specials|event|evenement|programma|voorstelling)(?:/|$)", urlparse(link).path, re.I)
                 ]
             detail_links.extend(found_links)
 
