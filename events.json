@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-25T16:08:11+00:00",
+  "updatedAt": "2026-10-25T16:08:16+00:00",
   "events": [
     {
       "date": "2027-01-10",
@@ -92,6 +92,13 @@
       "count": 0,
       "newCount": 0,
       "durationSeconds": 2,
+      "timedOut": true
+    },
+    {
+      "site": "https://forum.nl/nl/agenda",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 2.0,
       "timedOut": true
     }
   ],
@@ -455,6 +462,42 @@
       "url": "https://www.visitgroningen.nl/nl/doen/wandelen",
       "status": "timeout",
       "rawText": "site overschreed de harde tijdslimiet van 2 seconden"
+    },
+    {
+      "source": "Website",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "Start",
+      "date": "",
+      "url": "https://forum.nl/nl/agenda",
+      "status": "start",
+      "rawText": "site 4/19: max 5 events, max 2 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://forum.nl/nl/agenda",
+      "status": "strategie",
+      "rawText": "universeel-eventkaarten"
+    },
+    {
+      "source": "Website",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "Pagina mislukt",
+      "date": "",
+      "url": "https://forum.nl/nl/agenda",
+      "status": "fout",
+      "rawText": "HTTPSConnectionPool(host='forum.nl', port=443): Read timed out."
+    },
+    {
+      "source": "Website",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://forum.nl/nl/agenda",
+      "status": "klaar",
+      "rawText": "site 4/19: 0 unieke events in 2.0 sec"
     }
   ]
 }
