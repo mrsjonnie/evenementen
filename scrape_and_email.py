@@ -2411,7 +2411,7 @@ SCRAPE_PROGRESS_FILE = "scrape-progress.json"
 
 
 def publish_scrape_progress(progress):
-    """Publish per-site progress so the website can show finished sources before the full scrape ends."""
+    """Publish live per-site progress, retrying if main advanced during a push."""
     with open(SCRAPE_PROGRESS_FILE, "w", encoding="utf-8", newline="\n") as handle:
         json.dump(progress, handle, ensure_ascii=False, indent=2)
         handle.write("\n")
@@ -2420,8 +2420,40 @@ def publish_scrape_progress(progress):
         changed = subprocess.run(["git", "diff", "--cached", "--quiet"], check=False)
         if changed.returncode == 0:
             return
-        subprocess.run(["git", "commit", "-m", "Update per-site scrape progress"], check=True, capture_output=True, text=True)
-        subprocess.run(["git", "push", "origin", "HEAD:main"], check=True, capture_output=True, text=True)
+
+        for attempt in range(1, 4):
+            subprocess.run(
+                ["git", "commit", "-m", "Update per-site scrape progress"],
+                check=True, capture_output=True, text=True
+            )
+            pushed = subprocess.run(
+                ["git", "push", "origin", "HEAD:main"],
+                check=False, capture_output=True, text=True
+            )
+            if pushed.returncode == 0:
+                return
+
+            detail = (pushed.stderr or pushed.stdout or "git push failed").strip()
+            print(f"Progress publish attempt {attempt}/3 failed: {detail[:350]}")
+            if attempt == 3:
+                break
+
+            fetched = subprocess.run(
+                ["git", "fetch", "origin", "main"],
+                check=False, capture_output=True, text=True
+            )
+            if fetched.returncode != 0:
+                print(f"Could not fetch latest main for progress retry: {(fetched.stderr or fetched.stdout)[:350]}")
+                break
+            rebased = subprocess.run(
+                ["git", "rebase", "origin/main"],
+                check=False, capture_output=True, text=True
+            )
+            if rebased.returncode != 0:
+                detail = (rebased.stderr or rebased.stdout or "git rebase failed").strip()
+                subprocess.run(["git", "rebase", "--abort"], check=False, capture_output=True, text=True)
+                print(f"Could not rebase progress update: {detail[:350]}")
+                break
     except (FileNotFoundError, subprocess.CalledProcessError) as exc:
         # Progress is best-effort; the final events.json save must still complete.
         detail = getattr(exc, "stderr", "") or str(exc)
