@@ -1114,19 +1114,10 @@
     
     /* Compacte filterzijbalk in de normale pagina-indeling; geen overlay. */
     [hidden] { display: none !important; }
+    /* Exacte, eerder werkende zijbalkindeling uit versie 2026.10.25.53 */
     .pageLayout { display: grid; grid-template-columns: minmax(0, 1fr); gap: 12px; align-items: start; }
-    .pageLayout.sidebarOpen { grid-template-columns: minmax(220px, var(--sidebar-width, 248px)) 7px minmax(0, 1fr); }
-    .pageLayout.sidebarOpen > .filterSidebar { grid-column: 1; grid-row: 1; width: 100%; min-width: 0; }
-    .pageLayout.sidebarOpen > .sidebarResizeHandle { grid-column: 2; grid-row: 1; }
-    .pageLayout.sidebarOpen > .contentArea { grid-column: 3; grid-row: 1; width: 100%; min-width: 0; }
-    .pageLayout:not(.sidebarOpen) > .contentArea { grid-column: 1; grid-row: 1; }
+    .pageLayout.sidebarOpen { grid-template-columns: var(--sidebar-width, 248px) 7px minmax(0, 1fr); }
     .pageLayout:not(.sidebarOpen) .sidebarResizeHandle { display:none; }
-    @media (max-width: 900px) {
-      .pageLayout.sidebarOpen { grid-template-columns: minmax(0, 1fr); }
-      .pageLayout.sidebarOpen > .filterSidebar { grid-column: 1; grid-row: 1; position: static; }
-      .pageLayout.sidebarOpen > .sidebarResizeHandle { display: none; }
-      .pageLayout.sidebarOpen > .contentArea { grid-column: 1; grid-row: 2; }
-    }
     .sidebarResizeHandle { width:7px; min-height:160px; align-self:stretch; cursor:col-resize; border-radius:8px; background:linear-gradient(90deg, transparent 2px, var(--line) 2px, var(--line) 5px, transparent 5px); touch-action:none; }
     .sidebarResizeHandle:hover, .sidebarResizeHandle:focus { background:var(--primary); outline:2px solid var(--primary); outline-offset:1px; }
     .sourceGroup { min-width:0; margin:0 0 2px; }
@@ -1239,7 +1230,7 @@
         </div>
       </div>
       <div class="heroSide">
-        <span class="versionBadge" id="versionBadge">Versie 2026.10.25.57</span>
+        <span class="versionBadge" id="versionBadge">Versie 2026.10.25.59</span>
         <div class="weather" id="weatherBox" aria-live="polite"></div>
       </div>
     </div>
@@ -1402,7 +1393,7 @@
   </div>
 
   <script>
-    const APP_VERSION = "2026.10.25.57";
+    const APP_VERSION = "2026.10.25.59";
     const DEFAULT_MAX_EVENTS_PER_SITE = 20;
     const DEFAULT_SITE_TIME_LIMIT_SECONDS = 20;
     const SCAN_SETTINGS_KEY = "eventScanSettingsV1";
@@ -4102,7 +4093,7 @@
 
     const today = formatDate(new Date());
     // Op brede schermen staan filters links naast de resultaten; op smalle schermen blijft het resultaatsscherm voorop.
-    setSidebarOpen(window.matchMedia("(min-width: 901px)").matches);
+    setSidebarOpen(true);
     $("dateSingle").value = today;
     $("periodMode").value = "alwaysFromToday";
     dateFrom = today;
