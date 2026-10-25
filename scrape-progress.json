@@ -2988,6 +2988,24 @@
       "url": "https://www.kultuuragenda.nl/agenda",
       "status": "klaar",
       "rawText": "site 10/19: 0 unieke events in 2.03 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.noorderzon.nl/programma",
+      "title": "Start",
+      "date": "",
+      "url": "https://www.noorderzon.nl/programma",
+      "status": "start",
+      "rawText": "site 11/19: max 5 events, max 2 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.noorderzon.nl/programma",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://www.noorderzon.nl/programma",
+      "status": "strategie",
+      "rawText": "universele programma- en detailpagina-parser"
     }
   ],
   "status": "running",
