@@ -1226,7 +1226,6 @@
         </h1>
         <div class="titlePanel" id="titlePanel">
           <div class="titlePanelContent">
-            <span class="versionBadge" id="versionBadge">Versie wordt geladen</span>
             <div class="statusCompact" id="statusCompact" aria-live="polite">Gereed — nog geen zoekactie uitgevoerd.</div>
             <div class="status" id="status" aria-label="Statusgeschiedenis" aria-live="polite"></div>
             <div class="scanSettings" aria-label="Scaninstellingen">
@@ -1240,6 +1239,7 @@
         </div>
       </div>
       <div class="heroSide">
+        <span class="versionBadge" id="versionBadge">Versie 2026.10.25.57</span>
         <div class="weather" id="weatherBox" aria-live="polite"></div>
       </div>
     </div>
@@ -1402,7 +1402,7 @@
   </div>
 
   <script>
-    const APP_VERSION = "2026.10.25.56";
+    const APP_VERSION = "2026.10.25.57";
     const DEFAULT_MAX_EVENTS_PER_SITE = 20;
     const DEFAULT_SITE_TIME_LIMIT_SECONDS = 20;
     const SCAN_SETTINGS_KEY = "eventScanSettingsV1";
@@ -4101,7 +4101,8 @@
     });
 
     const today = formatDate(new Date());
-    setSidebarOpen(true);
+    // Op brede schermen staan filters links naast de resultaten; op smalle schermen blijft het resultaatsscherm voorop.
+    setSidebarOpen(window.matchMedia("(min-width: 901px)").matches);
     $("dateSingle").value = today;
     $("periodMode").value = "alwaysFromToday";
     dateFrom = today;
