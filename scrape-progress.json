@@ -1,12 +1,13 @@
 {
   "runId": "2026-10-25T15:15:50.045881+00:00-3458d584",
   "startedAt": "2026-10-25T15:15:50+00:00",
-  "completedCount": 1,
+  "completedCount": 2,
   "totalSites": 19,
   "currentSite": "https://www.visitgroningen.nl/nl/doen/evenementen",
   "currentSiteIndex": 2,
   "completedSites": [
-    "https://groningen.uitloper.nu/"
+    "https://groningen.uitloper.nu/",
+    "https://www.visitgroningen.nl/nl/doen/evenementen"
   ],
   "events": [],
   "siteResults": [
@@ -15,6 +16,13 @@
       "count": 0,
       "newCount": 0,
       "durationSeconds": 3.01,
+      "timedOut": true
+    },
+    {
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 2.97,
       "timedOut": true
     }
   ],
@@ -333,16 +341,25 @@
       "url": "https://www.visitgroningen.nl/nl/doen/evenementen",
       "status": "fout",
       "rawText": "HTTPSConnectionPool(host='www.visitgroningen.nl', port=443): Max retries exceeded with url: /nl/doen/evenementen (Caused by NewConnectionError(\"HTTPSConnection(host='www.visitgroningen.nl', port=443): Failed to establish a new connection: [Errno 101] Network is unreachable\"))"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "status": "klaar",
+      "rawText": "site 2/19: 0 unieke events in 2.97 sec"
     }
   ],
   "status": "running",
   "siteStartedAt": "2026-10-25T15:15:56+00:00",
-  "siteElapsedSeconds": 3,
+  "siteElapsedSeconds": 4,
   "sitePageCount": 0,
   "lastSiteEventCount": 0,
-  "stage": "Websitepagina ophalen",
+  "stage": "Website klaar; volgende website voorbereiden",
   "lastUpdatedAt": "2026-10-25T15:15:59+00:00",
   "lastSiteNewEventCount": 0,
-  "lastCompletedSite": "https://groningen.uitloper.nu/",
-  "lastCompletedAt": "2026-10-25T15:15:55+00:00"
+  "lastCompletedSite": "https://www.visitgroningen.nl/nl/doen/evenementen",
+  "lastCompletedAt": "2026-10-25T15:16:00+00:00"
 }
