@@ -1171,11 +1171,20 @@
       "url": "https://www.ibood.com/s-nl",
       "status": "strategie",
       "rawText": "aanbiedingen"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "Pagina mislukt",
+      "date": "",
+      "url": "https://www.ibood.com/s-nl",
+      "status": "fout",
+      "rawText": "HTTP 403"
     }
   ],
   "status": "running",
   "stage": "Websitepagina ophalen",
-  "lastUpdatedAt": "2026-10-25T10:37:34+00:00",
+  "lastUpdatedAt": "2026-10-25T10:37:35+00:00",
   "lastSiteEventCount": 0,
   "lastCompletedSite": "https://www.groupon.nl/kortingsbonnen/gemeente-groningen",
   "lastCompletedAt": "2026-10-25T10:37:32+00:00"
