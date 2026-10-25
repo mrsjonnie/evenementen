@@ -477,11 +477,29 @@
       "url": "https://groningen.uitloper.nu/",
       "status": "klaar",
       "rawText": "site 1/19: 0 unieke events in 6.08 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Start",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "status": "start",
+      "rawText": "site 2/19: max 20 events, max 3 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "status": "strategie",
+      "rawText": "Visit Groningen agenda-/routekaarten"
     }
   ],
   "status": "running",
   "stage": "Websitepagina ophalen",
-  "lastUpdatedAt": "2026-10-25T10:34:44+00:00",
+  "lastUpdatedAt": "2026-10-25T10:34:45+00:00",
   "lastSiteEventCount": 0,
   "lastCompletedSite": "https://groningen.uitloper.nu/",
   "lastCompletedAt": "2026-10-25T10:34:43+00:00"
