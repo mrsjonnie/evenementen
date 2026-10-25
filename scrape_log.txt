@@ -42,3 +42,7 @@ Website	https://forum.nl/nl/agenda	start	Start		https://forum.nl/nl/agenda	site 
 Parser	https://forum.nl/nl/agenda	strategie	Scrapertype vastgesteld		https://forum.nl/nl/agenda	universeel-eventkaarten
 Website	https://forum.nl/nl/agenda	fout	Pagina mislukt		https://forum.nl/nl/agenda	HTTPSConnectionPool(host='forum.nl', port=443): Read timed out.
 Website	https://forum.nl/nl/agenda	klaar	Klaar		https://forum.nl/nl/agenda	site 4/20: 0 unieke events in 2.0 sec
+Website	https://www.spotgroningen.nl/programma/	start	Start		https://www.spotgroningen.nl/programma/	site 5/20: max 5 events, max 2 seconden
+Parser	https://www.spotgroningen.nl/programma/	strategie	Scrapertype vastgesteld		https://www.spotgroningen.nl/programma/	universeel-met-kaartfallback
+Website	https://www.spotgroningen.nl/programma/	fout	Pagina mislukt		https://www.spotgroningen.nl/programma	HTTPSConnectionPool(host='www.spotgroningen.nl', port=443): Read timed out.
+Website	https://www.spotgroningen.nl/programma/	klaar	Klaar		https://www.spotgroningen.nl/programma/	site 5/20: 0 unieke events in 2.0 sec
