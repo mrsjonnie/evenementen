@@ -1424,7 +1424,7 @@
   </div>
 
   <script>
-    const APP_VERSION = "2026.10.25.60";
+    const APP_VERSION = "2026.10.25.61";
     const STATUS_HISTORY_KEY = "evenementenStatusHistoryV1";
     const DEFAULT_MAX_EVENTS_PER_SITE = 20;
     const DEFAULT_SITE_TIME_LIMIT_SECONDS = 20;
@@ -2466,6 +2466,16 @@
       const completed = Math.max(0, Number(progress.completedCount) || 0);
       const total = Math.max(completed + 1, Number(progress.totalSites) || 19);
       const status = cleanText(progress.status || "running");
+      const progressUpdatedAt = Date.parse(progress.lastUpdatedAt || progress.siteStartedAt || progress.startedAt || "");
+      const progressAgeSeconds = Number.isFinite(progressUpdatedAt) ? Math.max(0, Math.floor((Date.now() - progressUpdatedAt) / 1000)) : 0;
+      if (["running", "finishing", "queued", "in_progress"].includes(status) && progressAgeSeconds >= 45) {
+        if (titleProgress) {
+          titleProgress.hidden = false;
+          titleProgress.textContent = "GEEN VOORTGANG " + progressAgeSeconds + "s · " + shortScrapeSiteName(progress.currentSite || "scraper");
+          titleProgress.title = "De laatste scraper-update is " + progressAgeSeconds + " seconden oud. De scraper kan vastgelopen zijn of de voortgang wordt niet gepubliceerd. Gebruik Stop om de GitHub-run te annuleren.";
+        }
+        return;
+      }
       if (status === "completed") {
         if (titleProgress) titleProgress.hidden = true;
         if (titleBusyIndicator) titleBusyIndicator.hidden = true;
@@ -2557,11 +2567,15 @@
       restoredProgressUpdatedAt = cleanText(progress.lastUpdatedAt || progress.startedAt || "");
       keepActivityDetailsVisible();
       const activeSiteName = shortScrapeSiteName(progress.currentSite || "");
+      const updatedAtMs = Date.parse(progress.lastUpdatedAt || progress.siteStartedAt || progress.startedAt || "");
+      const ageSeconds = Number.isFinite(updatedAtMs) ? Math.max(0, Math.floor((Date.now() - updatedAtMs) / 1000)) : 0;
       showStatus(
-        activeSiteName
-          ? "Scraper actief na pagina-herstel: " + (Number(progress.completedCount) || 0) + "/" + (Number(progress.totalSites) || 19) + " websites afgerond; nu bezig met " + activeSiteName + "."
-          : "Scraper actief na pagina-herstel: " + (Number(progress.completedCount) || 0) + "/" + (Number(progress.totalSites) || 19) + " websites afgerond; wachten op actuele websitevoortgang.",
-        "warn", { stop: true }
+        ageSeconds >= 45
+          ? "GEEN ACTUELE VOORTGANG: laatste update " + ageSeconds + " seconden geleden; laatste bekende website: " + (activeSiteName || "onbekend") + ". De scraper kan vastgelopen zijn. Stop annuleert de GitHub-run."
+          : activeSiteName
+            ? "Scraper actief na pagina-herstel: " + (Number(progress.completedCount) || 0) + "/" + (Number(progress.totalSites) || 19) + " websites afgerond; nu bezig met " + activeSiteName + "."
+            : "Scraper actief na pagina-herstel: " + (Number(progress.completedCount) || 0) + "/" + (Number(progress.totalSites) || 19) + " websites afgerond; wachten op actuele websitevoortgang.",
+        ageSeconds >= 45 ? "error" : "warn", { stop: true }
       );
       updateLiveScrapeSummary(progress, true);
       if (Array.isArray(progress.rawLog)) {
