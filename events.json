@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-25T13:44:23+00:00",
+  "updatedAt": "2026-10-25T13:44:29+00:00",
   "events": [
     {
       "date": "2026-10-25",
@@ -11382,6 +11382,13 @@
       "count": 0,
       "newCount": 0,
       "durationSeconds": 3.4,
+      "timedOut": true
+    },
+    {
+      "site": "https://denieuwekolk.nl/agenda",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 3.29,
       "timedOut": true
     }
   ],
