@@ -2360,15 +2360,33 @@
       "url": "https://www.kultuuragenda.nl/agenda",
       "status": "klaar",
       "rawText": "site 10/20: 0 unieke events in 2.0 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.noorderzon.nl/programma",
+      "title": "Start",
+      "date": "",
+      "url": "https://www.noorderzon.nl/programma",
+      "status": "start",
+      "rawText": "site 11/20: max 5 events, max 2 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.noorderzon.nl/programma",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://www.noorderzon.nl/programma",
+      "status": "strategie",
+      "rawText": "universele programma- en detailpagina-parser"
     }
   ],
   "status": "running",
   "siteStartedAt": "2026-10-25T14:39:36+00:00",
-  "siteElapsedSeconds": 0,
+  "siteElapsedSeconds": 1,
   "sitePageCount": 0,
   "lastSiteEventCount": 0,
   "stage": "Websitepagina ophalen",
-  "lastUpdatedAt": "2026-10-25T14:39:36+00:00",
+  "lastUpdatedAt": "2026-10-25T14:39:37+00:00",
   "lastSiteNewEventCount": 0,
   "lastCompletedSite": "https://www.kultuuragenda.nl/agenda",
   "lastCompletedAt": "2026-10-25T14:39:35+00:00"
