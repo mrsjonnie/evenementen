@@ -1614,7 +1614,7 @@ def remaining_timeout(deadline):
 
 def markdown_as_html(markdown_text):
     """Convert the useful subset of Reader Markdown into HTML for existing site parsers."""
-    lines = str(markdown_text or "").replace("\\r\\n", "\\n").replace("\\r", "\\n").splitlines()
+    lines = str(markdown_text or "").replace("\r\n", "\n").replace("\r", "\n").splitlines()
     rendered = []
     in_table = False
     for raw_line in lines:
