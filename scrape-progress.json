@@ -3,11 +3,13 @@
   "startedAt": "2026-10-25T10:44:05+00:00",
   "completedCount": 0,
   "totalSites": 5,
-  "currentSite": "",
-  "currentSiteIndex": 0,
+  "currentSite": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+  "currentSiteIndex": 1,
   "completedSites": [],
   "events": [],
   "siteResults": [],
   "rawLog": [],
-  "status": "running"
+  "status": "running",
+  "stage": "Websitepagina ophalen",
+  "lastUpdatedAt": "2026-10-25T10:44:06+00:00"
 }
