@@ -1,7 +1,7 @@
 {
   "runId": "2026-10-25T15:15:50.045881+00:00-3458d584",
   "startedAt": "2026-10-25T15:15:50+00:00",
-  "completedCount": 7,
+  "completedCount": 8,
   "totalSites": 19,
   "currentSite": "https://www.martiniplaza.nl/nl/agenda",
   "currentSiteIndex": 8,
@@ -12,7 +12,8 @@
     "https://forum.nl/nl/agenda",
     "https://www.spotgroningen.nl/programma/",
     "https://simplon.nl/",
-    "https://www.vera-groningen.nl/"
+    "https://www.vera-groningen.nl/",
+    "https://www.martiniplaza.nl/nl/agenda"
   ],
   "events": [],
   "siteResults": [
@@ -60,6 +61,13 @@
     },
     {
       "site": "https://www.vera-groningen.nl/",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 2,
+      "timedOut": true
+    },
+    {
+      "site": "https://www.martiniplaza.nl/nl/agenda",
       "count": 0,
       "newCount": 0,
       "durationSeconds": 2,
@@ -579,16 +587,34 @@
       "url": "https://www.martiniplaza.nl/nl/agenda",
       "status": "strategie",
       "rawText": "agenda-kaarten"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Pagina gelezen",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda",
+      "status": "ok",
+      "rawText": "146630 tekens HTML"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Site-time-out",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda",
+      "status": "timeout",
+      "rawText": "site overschreed de harde tijdslimiet van 2 seconden"
     }
   ],
   "status": "running",
   "siteStartedAt": "2026-10-25T15:16:25+00:00",
-  "siteElapsedSeconds": 1,
+  "siteElapsedSeconds": 3,
   "sitePageCount": 0,
   "lastSiteEventCount": 0,
-  "stage": "Websitepagina ophalen",
+  "stage": "Website klaar; volgende website voorbereiden",
   "lastUpdatedAt": "2026-10-25T15:16:26+00:00",
   "lastSiteNewEventCount": 0,
-  "lastCompletedSite": "https://www.vera-groningen.nl/",
-  "lastCompletedAt": "2026-10-25T15:16:24+00:00"
+  "lastCompletedSite": "https://www.martiniplaza.nl/nl/agenda",
+  "lastCompletedAt": "2026-10-25T15:16:28+00:00"
 }

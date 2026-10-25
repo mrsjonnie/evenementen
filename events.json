@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-25T15:16:24+00:00",
+  "updatedAt": "2026-10-25T15:16:28+00:00",
   "events": [
     {
       "date": "2026-10-25",
@@ -11763,6 +11763,13 @@
       "newCount": 0,
       "durationSeconds": 2,
       "timedOut": true
+    },
+    {
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 2,
+      "timedOut": true
     }
   ],
   "rawLog": [
@@ -12258,6 +12265,42 @@
       "title": "Site-time-out",
       "date": "",
       "url": "https://www.vera-groningen.nl/",
+      "status": "timeout",
+      "rawText": "site overschreed de harde tijdslimiet van 2 seconden"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Start",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda",
+      "status": "start",
+      "rawText": "site 8/19: max 5 events, max 2 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda",
+      "status": "strategie",
+      "rawText": "agenda-kaarten"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Pagina gelezen",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda",
+      "status": "ok",
+      "rawText": "146630 tekens HTML"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Site-time-out",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda",
       "status": "timeout",
       "rawText": "site overschreed de harde tijdslimiet van 2 seconden"
     }
