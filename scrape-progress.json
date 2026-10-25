@@ -1,7 +1,7 @@
 {
   "runId": "2026-10-25T15:59:48.715200+00:00-5fe52d31",
   "startedAt": "2026-10-25T15:59:48+00:00",
-  "completedCount": 4,
+  "completedCount": 5,
   "totalSites": 19,
   "currentSite": "https://www.spotgroningen.nl/programma/",
   "currentSiteIndex": 5,
@@ -9,7 +9,8 @@
     "https://groningen.uitloper.nu/",
     "https://www.visitgroningen.nl/nl/doen/evenementen",
     "https://www.visitgroningen.nl/nl/doen/wandelen",
-    "https://forum.nl/nl/agenda"
+    "https://forum.nl/nl/agenda",
+    "https://www.spotgroningen.nl/programma/"
   ],
   "events": [],
   "siteResults": [
@@ -39,6 +40,13 @@
       "count": 0,
       "newCount": 0,
       "durationSeconds": 2.0,
+      "timedOut": true
+    },
+    {
+      "site": "https://www.spotgroningen.nl/programma/",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 2,
       "timedOut": true
     }
   ],
@@ -528,16 +536,1141 @@
       "url": "https://www.spotgroningen.nl/programma/",
       "status": "strategie",
       "rawText": "universeel-met-kaartfallback"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "Pagina gelezen",
+      "date": "",
+      "url": "https://www.spotgroningen.nl/programma",
+      "status": "ok",
+      "rawText": "1000531 tekens HTML"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "Angelo Kelly & Band „READY TO ROCK“ Tour 2026",
+      "date": "2026-10-25",
+      "url": "https://www.spotgroningen.nl/programma/angelo-kelly-band/",
+      "status": "event uit link",
+      "rawText": "Angelo Kelly & Band „READY TO ROCK“ Tour 2026 Jongste telg Kelly Family is solo ready to rock! zo 25 okt"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "Lizz Wright",
+      "date": "2026-10-25",
+      "url": "https://www.spotgroningen.nl/programma/lizz-wright-2/",
+      "status": "event uit link",
+      "rawText": "Lizz Wright Warme mix van gospel, jazz en soul zo 25 okt"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "Nena",
+      "date": "2026-10-26",
+      "url": "https://www.spotgroningen.nl/programma/nena-2-26/",
+      "status": "event uit link",
+      "rawText": "Nena Eén van de grootste zangeressen van de Duitse popcultuur Uitverkocht ma 26 okt"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "Aaf en Lies Over de liefde (reprise)",
+      "date": "2026-10-26",
+      "url": "https://www.spotgroningen.nl/programma/aaf-en-lies/",
+      "status": "event uit link",
+      "rawText": "Aaf en Lies Over de liefde (reprise) Prachtige verhalen en prangende liefdesproblemen Uitverkocht ma 26 okt"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "Jon Allen & The Luna Kings + support: Levi Boon",
+      "date": "2026-10-27",
+      "url": "https://www.spotgroningen.nl/programma/jon-allen-the-luna-kings-2/",
+      "status": "event uit link",
+      "rawText": "Jon Allen & The Luna Kings + support: Levi Boon Britse singer-songwriter mixt Americana met Folk rock di 27 okt"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "Nena",
+      "date": "2026-10-27",
+      "url": "https://www.spotgroningen.nl/programma/nena-2-27/",
+      "status": "event uit link",
+      "rawText": "Nena Eén van de grootste zangeressen van de Duitse popcultuur Extra show di 27 okt"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "Abonnement Topmusici van eigen bodem",
+      "date": "2026-10-27",
+      "url": "https://www.spotgroningen.nl/programma/abonnement-topmusici/",
+      "status": "event uit link",
+      "rawText": "Abonnement Topmusici van eigen bodem Geniet met dit abonnement van Nederlandse topmusici in De Oosterpoort di 27 okt"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "Alma Quartet & Nicolas van Poucke Beethoven, Schumann",
+      "date": "2026-10-27",
+      "url": "https://www.spotgroningen.nl/programma/alma-quartet-nicolas-van-poucke/",
+      "status": "event uit link",
+      "rawText": "Alma Quartet & Nicolas van Poucke Beethoven, Schumann Vijf topmusici nemen je mee van Beethovens diepgang naar Schumanns romantiek di 27 okt"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "Trumps Amerika: chaos en gevaar? met Laila Frank, Anna van Zoest en Bob Deen",
+      "date": "2026-10-27",
+      "url": "https://www.spotgroningen.nl/programma/trumps-amerika-chaos-en-gevaar/",
+      "status": "event uit link",
+      "rawText": "Trumps Amerika: chaos en gevaar? met Laila Frank, Anna van Zoest en Bob Deen Een avond over macht en onzekerheid di 27 okt"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "Caravan Palace",
+      "date": "2026-10-28",
+      "url": "https://www.spotgroningen.nl/programma/caravan-palace/",
+      "status": "event uit link",
+      "rawText": "Caravan Palace Mixt moderne elektronische muziek met jazz en de vibe van de jaren twintig wo 28 okt"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "Nederlandse Bachvereniging Allerzielen",
+      "date": "2026-10-28",
+      "url": "https://www.spotgroningen.nl/programma/nederlandse-bachvereniging-19/",
+      "status": "event uit link",
+      "rawText": "Nederlandse Bachvereniging Allerzielen Troostrijke muziek rond Allerzielen wo 28 okt"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "Stu Larsen + support: Tim Hart",
+      "date": "2026-10-28",
+      "url": "https://www.spotgroningen.nl/programma/stu-larsen-3/",
+      "status": "event uit link",
+      "rawText": "Stu Larsen + support: Tim Hart Australische singer-songwriter en moderne troubadour Uitverkocht wo 28 okt"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "Lisa Ostermann De Baas (reprise)",
+      "date": "2026-10-28",
+      "url": "https://www.spotgroningen.nl/programma/lisa-ostermann-5/",
+      "status": "event uit link",
+      "rawText": "Lisa Ostermann De Baas (reprise) Winnaar Poelifinario in de categorie Engagement Uitverkocht wo 28 okt"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "Die 12 Cellisten der Berliner Philharmoniker",
+      "date": "2026-10-29",
+      "url": "https://www.spotgroningen.nl/programma/12-cellisten-der-berliner-philharmoniker/",
+      "status": "event uit link",
+      "rawText": "Die 12 Cellisten der Berliner Philharmoniker Een fascinerende reis door celloland met twaalf Berlijnse topcellisten Wereldklasse do 29 okt"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "Toneelgroep Maastricht Bijna een leven",
+      "date": "2026-10-29",
+      "url": "https://www.spotgroningen.nl/programma/toneelgroep-maastricht-stichting-nox-2/",
+      "status": "event uit link",
+      "rawText": "Toneelgroep Maastricht Bijna een leven \"Het acteerspel van Kavus, Kouta & Wouterse is uitzonderlijk goed\" ★★★★ de Volkskrant do 29 okt"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "Flaire Support: Djeezie & IDA",
+      "date": "2026-10-30",
+      "url": "https://www.spotgroningen.nl/programma/flaire-2/",
+      "status": "event uit link",
+      "rawText": "Flaire Support: Djeezie & IDA Dansbare synthpop met elektronische invloeden Uitverkocht vr 30 okt"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "Floor Jansen",
+      "date": "2026-10-30",
+      "url": "https://www.spotgroningen.nl/programma/floor-jansen-4/",
+      "status": "event uit link",
+      "rawText": "Floor Jansen Metalicoon en succesvolle soloartiest brengt krachtige persoonlijke show Uitverkocht vr 30 okt"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "Kluun en Yvanka van der Zwaan Best of….’Help, ik heb een puber!’ LIVE",
+      "date": "2026-10-30",
+      "url": "https://www.spotgroningen.nl/programma/kluun-en-yvanka-van-der-zwaan/",
+      "status": "event uit link",
+      "rawText": "Kluun en Yvanka van der Zwaan Best of….’Help, ik heb een puber!’ LIVE Hilarische, herkenbare en ontroerende puberverhalen na 100 podcastafleveringen vr 30 okt"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "Axel Flóvent + support: tjels",
+      "date": "2026-10-30",
+      "url": "https://www.spotgroningen.nl/programma/axel-flovent/",
+      "status": "event uit link",
+      "rawText": "Axel Flóvent + support: tjels Dromerige, introspectieve songs die je recht in het hart raken vr 30 okt"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "Ghostbusters Halloween Experience SPOT",
+      "date": "2026-10-31",
+      "url": "https://www.spotgroningen.nl/programma/ghostbusters-halloween-experience/",
+      "status": "event uit link",
+      "rawText": "Ghostbusters Halloween Experience SPOT | X YUSUF BOSS | De Wijk De Wereld Dans, halloween en Ghostbusters op het grote scherm za 31 okt"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "MEROL + support: MAHA",
+      "date": "2026-10-31",
+      "url": "https://www.spotgroningen.nl/programma/merol-3/",
+      "status": "event uit link",
+      "rawText": "MEROL + support: MAHA Brutale Nederlandse elektropop za 31 okt"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "Michael Prins Play With Fire Tour + support: DEHAZE",
+      "date": "2026-10-31",
+      "url": "https://www.spotgroningen.nl/programma/michael-prins-3/",
+      "status": "event uit link",
+      "rawText": "Michael Prins Play With Fire Tour + support: DEHAZE Singer-songwriter bekend van 'Close to You' komt met nieuw werk za 31 okt"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "The Meltdown",
+      "date": "2026-10-31",
+      "url": "https://www.spotgroningen.nl/programma/the-meltdown/",
+      "status": "event uit link",
+      "rawText": "The Meltdown Southern soul met invloeden uit Stax, Motown en de Nashville-songwriterstraditie za 31 okt"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "Bo Tarenskeen",
+      "date": "2026-11-01",
+      "url": "https://www.spotgroningen.nl/programma/bo-tarenskeen-het-nationale-theater/",
+      "status": "event uit link",
+      "rawText": "Bo Tarenskeen | Het Nationale Theater Soekarno “Tarenskeen kleurt Soekarno prachtig in\" ★★★★ Trouw zo 1 nov"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "In de Waaier - Live Een avond met Bauke Mollema",
+      "date": "2026-11-01",
+      "url": "https://www.spotgroningen.nl/programma/bauke-mollema/",
+      "status": "event uit link",
+      "rawText": "In de Waaier - Live Een avond met Bauke Mollema Een terugblik op bijna 20 jaar als wielrenner Uitverkocht zo 1 nov"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "Breabach Folky Sunday",
+      "date": "2026-11-01",
+      "url": "https://www.spotgroningen.nl/programma/breabach-2/",
+      "status": "event uit link",
+      "rawText": "Breabach Folky Sunday Een avondje Schotse folk op z’n allerbest! zo 1 nov"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "Roël Calister Ensemble The Work of Songs",
+      "date": "2026-11-01",
+      "url": "https://www.spotgroningen.nl/programma/roel-calister-ensemble/",
+      "status": "event uit link",
+      "rawText": "Roël Calister Ensemble The Work of Songs Krachtige verhalen komten tot leven door Afro-Curaçaose ritmes en melodieën zo 1 nov"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "Fresku & Metropole Orkest Hand op mijn hart",
+      "date": "2026-11-02",
+      "url": "https://www.spotgroningen.nl/programma/metropole-orkest-fresku/",
+      "status": "event uit link",
+      "rawText": "Fresku & Metropole Orkest Hand op mijn hart Nieuwe muziek en herbewerkingen van Fresku-tracks Uitverkocht ma 2 nov"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "The Fatal Flowers Seven Days To Remember",
+      "date": "2026-11-02",
+      "url": "https://www.spotgroningen.nl/programma/the-fatal-flowers-2/",
+      "status": "event uit link",
+      "rawText": "The Fatal Flowers Seven Days To Remember Legendarische Nederlandse gitaarrock met new wave en Amerikaanse invloeden. ma 2 nov"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "Plien & Bianca Harrekidee! (reprise)",
+      "date": "2026-11-02",
+      "url": "https://www.spotgroningen.nl/programma/plien-bianca-8/",
+      "status": "event uit link",
+      "rawText": "Plien & Bianca Harrekidee! (reprise) Een onvergetelijke stoet aan hilarische figuren Uitverkocht ma 2 nov"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "Plien & Bianca Harrekidee! (reprise)",
+      "date": "2026-11-03",
+      "url": "https://www.spotgroningen.nl/programma/plien-bianca-9/",
+      "status": "event uit link",
+      "rawText": "Plien & Bianca Harrekidee! (reprise) Een onvergetelijke stoet aan hilarische figuren Uitverkocht di 3 nov"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "Oersoep NITE & K.O.Brass",
+      "date": "2026-11-04",
+      "url": "https://www.spotgroningen.nl/programma/nite-52/",
+      "status": "event uit link",
+      "rawText": "Oersoep NITE & K.O.Brass Een passie voor de 21e eeuw wo 4 nov"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "Pynarello & Jochem Stavenuiter Pulcinella",
+      "date": "2026-11-04",
+      "url": "https://www.spotgroningen.nl/programma/pynarello-jochem-stavenuiter/",
+      "status": "event uit link",
+      "rawText": "Pynarello & Jochem Stavenuiter Pulcinella Maskers af! Mimespeler Jochem Stavenuiter zet Pynarello op z’n kop wo 4 nov"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "Marie Koet Eindspel (try-out)",
+      "date": "2026-11-04",
+      "url": "https://www.spotgroningen.nl/programma/marie-koet/",
+      "status": "event uit link",
+      "rawText": "Marie Koet Eindspel (try-out) Hét comedytalent van 2026 (de Volkskrant) Geannuleerd wo 4 nov"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "Aqueerius Beyond the Ball",
+      "date": "2026-11-05",
+      "url": "https://www.spotgroningen.nl/programma/aqueerius/",
+      "status": "event uit link",
+      "rawText": "Aqueerius Beyond the Ball “Een barok-wave parel vol lef, liefde en licht” - ★★★★★ Musicalsites do 5 nov"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "Jip Smit Motherland III: The Return of Katinka",
+      "date": "2026-11-05",
+      "url": "https://www.spotgroningen.nl/programma/jip-smit/",
+      "status": "event uit link",
+      "rawText": "Jip Smit Motherland III: The Return of Katinka Nerdy fantasytheater, fysieke komedie en vette satire do 5 nov"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "Noord Nederlands Orkest Sjostakovitsj 2 & Brahms 3",
+      "date": "2026-11-05",
+      "url": "https://www.spotgroningen.nl/programma/noord-nederlands-orkest-229/",
+      "status": "event uit link",
+      "rawText": "Noord Nederlands Orkest Sjostakovitsj 2 & Brahms 3 Het NNO en NNCK zorgen samen voor contrasterende werelden do 5 nov"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "Oersoep NITE & K.O.Brass",
+      "date": "2026-11-05",
+      "url": "https://www.spotgroningen.nl/programma/nite-51/",
+      "status": "event uit link",
+      "rawText": "Oersoep NITE & K.O.Brass Een passie voor de 21e eeuw do 5 nov"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "Marie Koet Eindspel (try-out)",
+      "date": "2026-11-05",
+      "url": "https://www.spotgroningen.nl/programma/marie-koet-2/",
+      "status": "event uit link",
+      "rawText": "Marie Koet Eindspel (try-out) Hét comedytalent van 2026 (de Volkskrant) Geannuleerd do 5 nov"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "Pieter Savenberg",
+      "date": "2026-11-05",
+      "url": "https://www.spotgroningen.nl/programma/pieter-savenberg/",
+      "status": "event uit link",
+      "rawText": "Pieter Savenberg Neoklassieke soundscapes in de prachtige kerk Ambitus do 5 nov"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "Oersoep NITE & K.O.Brass",
+      "date": "2026-11-06",
+      "url": "https://www.spotgroningen.nl/programma/nite-50/",
+      "status": "event uit link",
+      "rawText": "Oersoep NITE & K.O.Brass Een passie voor de 21e eeuw vr 6 nov"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "TakeRoot",
+      "date": "2026-11-07",
+      "url": "https://www.spotgroningen.nl/events/takeroot/",
+      "status": "event uit link",
+      "rawText": "TakeRoot 28e editie van TakeRoot met o.a. Willow Avalon, American Aquarium en The Del Fuegos za 7 nov"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "Diggy Dex De Zoektocht Naar Geluk",
+      "date": "2026-11-07",
+      "url": "https://www.spotgroningen.nl/programma/diggy-dex-4/",
+      "status": "event uit link",
+      "rawText": "Diggy Dex De Zoektocht Naar Geluk Op zoek naar de grote en kleine vragen van het leven Laatste kaarten za 7 nov"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "Toneelschuurproducties/Koen Verheijden Mystiek lichaam",
+      "date": "2026-11-07",
+      "url": "https://www.spotgroningen.nl/programma/toneelschuurproducties-koen-verheijden/",
+      "status": "event uit link",
+      "rawText": "Toneelschuurproducties/Koen Verheijden Mystiek lichaam Rauw-komische voorstelling naar Frans Kellendonks spraakmakende roman Laatste kaarten za 7 nov"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "Mus & kapitein Kwaadbaard (8+) Sterke Verhalen",
+      "date": "2026-11-08",
+      "url": "https://www.spotgroningen.nl/programma/mus-kapitein-kwaadbaard-8/",
+      "status": "event uit link",
+      "rawText": "Mus & kapitein Kwaadbaard (8+) Sterke Verhalen Muzikaal, vindingrijk en spannend zo 8 nov"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "Kracht PATS (6+) MAN",
+      "date": "2026-11-08",
+      "url": "https://www.spotgroningen.nl/programma/kracht-pats-6/",
+      "status": "event uit link",
+      "rawText": "Kracht PATS (6+) MAN || CO & House of Nouws Heldhaftige dansvoorstelling over de kracht van samenwerken, humor en grootheidswaan zo 8 nov"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "Mus & Kapitein Kwaadbaard (8+) Sterke Verhalen",
+      "date": "2026-11-08",
+      "url": "https://www.spotgroningen.nl/programma/mus-kapitein-kwaadbaard-8-2/",
+      "status": "event uit link",
+      "rawText": "Mus & Kapitein Kwaadbaard (8+) Sterke Verhalen Muzikaal, vindingrijk en spannend zo 8 nov"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "Macy Gray The Trouble With The Truth Tour",
+      "date": "2026-11-08",
+      "url": "https://www.spotgroningen.nl/programma/macy-gray/",
+      "status": "event uit link",
+      "rawText": "Macy Gray The Trouble With The Truth Tour Een onweerstaanbare mix van soul, r&b en funk zo 8 nov"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "Caro Returning to Innocence",
+      "date": "2026-11-09",
+      "url": "https://www.spotgroningen.nl/programma/caro/",
+      "status": "event uit link",
+      "rawText": "Caro Returning to Innocence Rauw, sensueel, gelaagd ma 9 nov"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "Simone Lamsma & Jonathan Fournel",
+      "date": "2026-11-09",
+      "url": "https://www.spotgroningen.nl/programma/simone-lamsma-jonathan-fournel/",
+      "status": "event uit link",
+      "rawText": "Simone Lamsma & Jonathan Fournel Internationaal vermaarde topvioliste en Franse sterpianist Wereldklasse ma 9 nov"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "Cursus Klassieke Muziek 2 De Klassieken",
+      "date": "2026-11-10",
+      "url": "https://www.spotgroningen.nl/programma/klassieke-muziek-2-de-klassieken/",
+      "status": "event uit link",
+      "rawText": "Cursus Klassieke Muziek 2 De Klassieken Ga mee op een inspirerende reis door de muziekgeschiedenis! di 10 nov"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "Gavin James and his band",
+      "date": "2026-11-10",
+      "url": "https://www.spotgroningen.nl/programma/gavin-james-2/",
+      "status": "event uit link",
+      "rawText": "Gavin James and his band Intens, puur en met een stem die keer op keer voor kippenvel zorgt Uitverkocht di 10 nov"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "Tangarine Running in the Family II",
+      "date": "2026-11-10",
+      "url": "https://www.spotgroningen.nl/programma/tangarine-7/",
+      "status": "event uit link",
+      "rawText": "Tangarine Running in the Family II Een muzikale avond vol verrassingen en muzikale verbroedering di 10 nov"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "Noord Nederlands Orkest Openbare repetitie",
+      "date": "2026-11-11",
+      "url": "https://www.spotgroningen.nl/programma/noord-nederlands-orkest-244/",
+      "status": "event uit link",
+      "rawText": "Noord Nederlands Orkest Openbare repetitie Iconische filmmuziek klinkt live in de concertzaal wo 11 nov"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "Cursus Klassieke Muziek 2 De Klassieken",
+      "date": "2026-11-11",
+      "url": "https://www.spotgroningen.nl/programma/klassieke-muziek-2-de-klassieken-2/",
+      "status": "event uit link",
+      "rawText": "Cursus Klassieke Muziek 2 De Klassieken Ga mee op een inspirerende reis door de muziekgeschiedenis! wo 11 nov"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "Jakop Ahlbom Company & ISH Dance Collective A Fine Mess",
+      "date": "2026-11-11",
+      "url": "https://www.spotgroningen.nl/programma/jakop-ahlbom-company-ish-dance-collective/",
+      "status": "event uit link",
+      "rawText": "Jakop Ahlbom Company & ISH Dance Collective A Fine Mess \"Een hilarische voorstelling\" ★★★★ de Volkskrant wo 11 nov"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "Eva Eikhout Het Leven Is Kort, Net Als Ik!",
+      "date": "2026-11-11",
+      "url": "https://www.spotgroningen.nl/programma/eva-eikhout/",
+      "status": "event uit link",
+      "rawText": "Eva Eikhout Het Leven Is Kort, Net Als Ik! Energiek theatercollege vol humor, zelfspot en een verfrissende kijk op het leven wo 11 nov"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "Iris Hond & Kamerata Zuid spelen Einaudi (Reprise)",
+      "date": "2026-11-11",
+      "url": "https://www.spotgroningen.nl/programma/iris-hond-kamerata-zuid-2/",
+      "status": "event uit link",
+      "rawText": "Iris Hond & Kamerata Zuid spelen Einaudi (Reprise) Iris Hond en Kamerata Zuid buigen zich over Italiaans pianofenomeen wo 11 nov"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "Niall McCabe",
+      "date": "2026-11-11",
+      "url": "https://www.spotgroningen.nl/programma/niall-mccabe/",
+      "status": "event uit link",
+      "rawText": "Niall McCabe Een karakteristieke mix van moderne Ierse folk en americana wo 11 nov"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "Tina Dico Live 2026",
+      "date": "2026-11-12",
+      "url": "https://www.spotgroningen.nl/programma/tina-dico/",
+      "status": "event uit link",
+      "rawText": "Tina Dico Live 2026 Scandinavische singer-songwriter brengt nieuw album do 12 nov"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "Jakop Ahlbom Company & ISH Dance Collective A Fine Mess",
+      "date": "2026-11-12",
+      "url": "https://www.spotgroningen.nl/programma/jakop-ahlbom-company-ish-dance-collective-2/",
+      "status": "event uit link",
+      "rawText": "Jakop Ahlbom Company & ISH Dance Collective A Fine Mess \"Een hilarische voorstelling\" ★★★★ de Volkskrant do 12 nov"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "Noord Nederlands Orkest Symfonische Soundtracks",
+      "date": "2026-11-12",
+      "url": "https://www.spotgroningen.nl/programma/noord-nederlands-orkest-230/",
+      "status": "event uit link",
+      "rawText": "Noord Nederlands Orkest Symfonische Soundtracks Iconische filmmuziek klinkt live in de concertzaal do 12 nov"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "Roufaida Coming Up For Air",
+      "date": "2026-11-12",
+      "url": "https://www.spotgroningen.nl/programma/roufaida/",
+      "status": "event uit link",
+      "rawText": "Roufaida Coming Up For Air Akoestische bewerking van doorbraakalbum do 12 nov"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "The Black Atlantic Work In The Dark’ Tour 2026/2027",
+      "date": "2026-11-12",
+      "url": "https://www.spotgroningen.nl/programma/the-black-atlantic/",
+      "status": "event uit link",
+      "rawText": "The Black Atlantic Work In The Dark’ Tour 2026/2027 Vernieuwende en intieme folk in een gelaagd jasje do 12 nov"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "Recirquel Paradisum",
+      "date": "2026-11-13",
+      "url": "https://www.spotgroningen.nl/programma/recirquel/",
+      "status": "event uit link",
+      "rawText": "Recirquel Paradisum Een fascinerende mix van circusacrobatiek en hedendaagse dans vr 13 nov"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "Rockit",
+      "date": "2026-11-14",
+      "url": "https://www.spotgroningen.nl/events/rockit/",
+      "status": "event uit link",
+      "rawText": "Rockit GoGo Penguin, Nate Smith, Tigran Hamasyan, Kurt Elling & Yellowjackets za 14 nov"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "Repeatclub fABULEUS / Danaé Bosman",
+      "date": "2026-11-14",
+      "url": "https://www.spotgroningen.nl/programma/repeatclub/",
+      "status": "event uit link",
+      "rawText": "Repeatclub fABULEUS / Danaé Bosman Openingsavond Jonge Harten Net bevestigd za 14 nov"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "Contra (12+) WabiSabi",
+      "date": "2026-11-15",
+      "url": "https://www.spotgroningen.nl/programma/contra-12/",
+      "status": "event uit link",
+      "rawText": "Contra (12+) WabiSabi | Het Houten Huis | HIIIT \"Een van de beste voorstellingen van het jaar\" (★★★★★ Dagblad van het Noorden) zo 15 nov"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "Noor + support: Else Lena",
+      "date": "2026-11-15",
+      "url": "https://www.spotgroningen.nl/programma/noor-2/",
+      "status": "event uit link",
+      "rawText": "Noor + support: Else Lena Nederlands poptalent met eerlijke teksten en een kwetsbare maar krachtige sound Laatste kaarten zo 15 nov"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "Gruppo Sportivo Stop Motion - The 50th Anniversary Tour",
+      "date": "2026-11-15",
+      "url": "https://www.spotgroningen.nl/programma/gruppo-sportivo/",
+      "status": "event uit link",
+      "rawText": "Gruppo Sportivo Stop Motion - The 50th Anniversary Tour Nog één keer de Nederpopklassiekers tijdens afscheidstour Uitverkocht zo 15 nov"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "The Dog Days Are Over 2.0 Grip/Jan Martens",
+      "date": "2026-11-16",
+      "url": "https://www.spotgroningen.nl/programma/the-dog-days-are-over-2-0/",
+      "status": "event uit link",
+      "rawText": "The Dog Days Are Over 2.0 Grip/Jan Martens Nieuwe versie van de theaterhit van Jan Martens ma 16 nov"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "Kneecap + support: FAWZI X SMOKAHOLIC",
+      "date": "2026-11-16",
+      "url": "https://www.spotgroningen.nl/programma/kneecap/",
+      "status": "event uit link",
+      "rawText": "Kneecap + support: FAWZI X SMOKAHOLIC Ierse raprave grootmeesters Uitverkocht ma 16 nov"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "Early James",
+      "date": "2026-11-16",
+      "url": "https://www.spotgroningen.nl/programma/early-james/",
+      "status": "event uit link",
+      "rawText": "Early James TakeRoot presents: Tom Waits-achtige roots met Alabama-soul ma 16 nov"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "Blair Davie",
+      "date": "2026-11-17",
+      "url": "https://www.spotgroningen.nl/programma/blair-davie/",
+      "status": "event uit link",
+      "rawText": "Blair Davie Eén van de meest veelbelovende nieuwe singer-songwriters uit de UK di 17 nov"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "Kokoroko",
+      "date": "2026-11-17",
+      "url": "https://www.spotgroningen.nl/programma/kokoroko/",
+      "status": "event uit link",
+      "rawText": "Kokoroko Euforische dansbare jazz en afrobeat di 17 nov"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "Groninger Studenten Cabaret Festival Halve finale 40e GSCF",
+      "date": "2026-11-18",
+      "url": "https://www.spotgroningen.nl/programma/groninger-studenten-cabaret-festival-22/",
+      "status": "event uit link",
+      "rawText": "Groninger Studenten Cabaret Festival Halve finale 40e GSCF Lachen en genieten van een avond vol aanstormend cabarettalent Laatste kaarten wo 18 nov"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "LEVI.SCT",
+      "date": "2026-11-18",
+      "url": "https://www.spotgroningen.nl/programma/levi-sct/",
+      "status": "event uit link",
+      "rawText": "LEVI.SCT Samensmelting van klassieke muziek met hiphop, house, trap en salsa wo 18 nov"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "Noord Nederlands Orkest Tussen het orkest",
+      "date": "2026-11-18",
+      "url": "https://www.spotgroningen.nl/programma/noord-nederlands-orkest-245/",
+      "status": "event uit link",
+      "rawText": "Noord Nederlands Orkest Tussen het orkest Midden in het orkest, omringd door muziek wo 18 nov"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "Abonnement Noord Nederlands Orkest Solisten",
+      "date": "2026-11-19",
+      "url": "https://www.spotgroningen.nl/programma/abonnement-nno/",
+      "status": "event uit link",
+      "rawText": "Abonnement Noord Nederlands Orkest Solisten Geniet met dit abonnement met concerten van het Noord Nederlands Orkest do 19 nov"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "Noord Nederlands Orkest en Alexei Volodin Rachmaninoff Paganini-rapsodie",
+      "date": "2026-11-19",
+      "url": "https://www.spotgroningen.nl/programma/noord-nederlands-orkest-223/",
+      "status": "event uit link",
+      "rawText": "Noord Nederlands Orkest en Alexei Volodin Rachmaninoff Paganini-rapsodie Een pianoconcert met steeds veranderende sfeer Wereldklasse do 19 nov"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "Thomas Oliemans, Cor Bakker en Bert van den Brink Van Brel tot Bennett",
+      "date": "2026-11-19",
+      "url": "https://www.spotgroningen.nl/programma/thomas-oliemans-cor-bakker-en-bert-van-den-brink/",
+      "status": "event uit link",
+      "rawText": "Thomas Oliemans, Cor Bakker en Bert van den Brink Van Brel tot Bennett Wereldberoemde nummers door bariton Thomas Oliemans en twee toppianisten do 19 nov"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "Groninger Studenten Cabaret Festival Halve finale 40e GSCF",
+      "date": "2026-11-19",
+      "url": "https://www.spotgroningen.nl/programma/groninger-studenten-cabaret-festival-23/",
+      "status": "event uit link",
+      "rawText": "Groninger Studenten Cabaret Festival Halve finale 40e GSCF Lachen en genieten van een avond vol aanstormend cabarettalent Laatste kaarten do 19 nov"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "My Darling Clementine",
+      "date": "2026-11-19",
+      "url": "https://www.spotgroningen.nl/programma/my-darling-clementine/",
+      "status": "event uit link",
+      "rawText": "My Darling Clementine TakeRoot presents: Een meesterlijke mix van country, soul en americana do 19 nov"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "Froukje + support: Jaïr Faria",
+      "date": "2026-11-20",
+      "url": "https://www.spotgroningen.nl/programma/froukje-20-nov/",
+      "status": "event uit link",
+      "rawText": "Froukje + support: Jaïr Faria Dansbare Nederlandse altpop Uitverkocht vr 20 nov"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "Jack and the Weatherman",
+      "date": "2026-11-20",
+      "url": "https://www.spotgroningen.nl/programma/jack-and-the-weatherman-2/",
+      "status": "event uit link",
+      "rawText": "Jack and the Weatherman Een internationale folk-popband uit Nederland Laatste kaarten vr 20 nov"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "Pitou + support: FEMI",
+      "date": "2026-11-20",
+      "url": "https://www.spotgroningen.nl/programma/pitou/",
+      "status": "event uit link",
+      "rawText": "Pitou + support: FEMI Een prachtige muzikale mix van folk, klassiek en experimentele pop vr 20 nov"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "Groninger Studenten Cabaret Festival Finale 40e GSCF",
+      "date": "2026-11-20",
+      "url": "https://www.spotgroningen.nl/programma/groninger-studenten-cabaret-festival-24/",
+      "status": "event uit link",
+      "rawText": "Groninger Studenten Cabaret Festival Finale 40e GSCF Lachen en genieten van een avond vol aanstormend cabarettalent Uitverkocht vr 20 nov"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "Froukje + support: Jaïr Faria",
+      "date": "2026-11-21",
+      "url": "https://www.spotgroningen.nl/programma/froukje-21-nov/",
+      "status": "event uit link",
+      "rawText": "Froukje + support: Jaïr Faria Dansbare Nederlandse altpop Uitverkocht za 21 nov"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "Gotu Jim + support: Igor",
+      "date": "2026-11-21",
+      "url": "https://www.spotgroningen.nl/programma/gotu-jim/",
+      "status": "event uit link",
+      "rawText": "Gotu Jim + support: Igor Melancholische mix van house, trap en emo za 21 nov"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "Isabèl Usher",
+      "date": "2026-11-21",
+      "url": "https://www.spotgroningen.nl/programma/isabel-usher/",
+      "status": "event uit link",
+      "rawText": "Isabèl Usher Nederlandstalige pop, hiphop en house met diepgaande teksten Uitverkocht za 21 nov"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "International Student LiedDuo Competition Finale",
+      "date": "2026-11-22",
+      "url": "https://www.spotgroningen.nl/programma/international-student-liedduo-competition-2/",
+      "status": "event uit link",
+      "rawText": "International Student LiedDuo Competition Finale Hét toonaangevende concours voor liedduo’s (zang en piano) zo 22 nov"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "Triggerfinger",
+      "date": "2026-11-22",
+      "url": "https://www.spotgroningen.nl/programma/triggerfinger-4/",
+      "status": "event uit link",
+      "rawText": "Triggerfinger Een nieuw tijdperk en sterker dan ooit! zo 22 nov"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "Bert Visscher en het Noordpool Strijkkwartet Bert Visscher, 65 Dat Zou Je Niet Zeggen",
+      "date": "2026-11-22",
+      "url": "https://www.spotgroningen.nl/programma/bert-visscher-en-het-noordpool-strijkkwartet-2/",
+      "status": "event uit link",
+      "rawText": "Bert Visscher en het Noordpool Strijkkwartet Bert Visscher, 65 Dat Zou Je Niet Zeggen Idiote scènes, prachtige liedjes en absurde verhalen Uitverkocht zo 22 nov"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "Combattimento 300 jaar Vier Jaargetijden van Vivaldi",
+      "date": "2026-11-23",
+      "url": "https://www.spotgroningen.nl/programma/combattimento-2/",
+      "status": "event uit link",
+      "rawText": "Combattimento 300 jaar Vier Jaargetijden van Vivaldi Een combinatie van de vier jaargetijden van Vivaldi en Durante ma 23 nov"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "Soweto Gospel Choir JOY",
+      "date": "2026-11-23",
+      "url": "https://www.spotgroningen.nl/programma/soweto-gospel-choir-3/",
+      "status": "event uit link",
+      "rawText": "Soweto Gospel Choir JOY Een muzikale viering van harmonie, vrijheid en hoop ma 23 nov"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "K-OTIC",
+      "date": "2026-11-24",
+      "url": "https://www.spotgroningen.nl/programma/k-otic/",
+      "status": "event uit link",
+      "rawText": "K-OTIC K-otic viert 25-jarig jubileum di 24 nov"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "Luka Bloom",
+      "date": "2026-11-24",
+      "url": "https://www.spotgroningen.nl/programma/luka-bloom-3/",
+      "status": "event uit link",
+      "rawText": "Luka Bloom Originele singer-songwriter uit Ierland di 24 nov"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "Claudia de Breij Oudejaarsconference 2026",
+      "date": "2026-11-25",
+      "url": "https://www.spotgroningen.nl/programma/claudia-de-breij-16/",
+      "status": "event uit link",
+      "rawText": "Claudia de Breij Oudejaarsconference 2026 Claudia de Breij is terug met de officiële Oudejaarsconference! Uitverkocht wo 25 nov"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "Myrte Siebinga GELUKKIG MAAR",
+      "date": "2026-11-25",
+      "url": "https://www.spotgroningen.nl/programma/myrte-siebinga/",
+      "status": "event uit link",
+      "rawText": "Myrte Siebinga GELUKKIG MAAR “Het komisch talent van Siebinga is fenomenaal” ★★★★★ DvhN Geannuleerd wo 25 nov"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "Dutch Classical Talent: Hadewych van Gent SPOT Lunchbreak",
+      "date": "2026-11-26",
+      "url": "https://www.spotgroningen.nl/programma/dutch-classical-talent-hadewych-van-gent/",
+      "status": "event uit link",
+      "rawText": "Dutch Classical Talent: Hadewych van Gent SPOT Lunchbreak Multitalent versmelt cello met zang do 26 nov"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "Claudia de Breij Oudejaarsconference 2026",
+      "date": "2026-11-26",
+      "url": "https://www.spotgroningen.nl/programma/claudia-de-breij-17/",
+      "status": "event uit link",
+      "rawText": "Claudia de Breij Oudejaarsconference 2026 Claudia de Breij is terug met de officiële Oudejaarsconference! Uitverkocht do 26 nov"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "Nederlands kamerkoor Vespers Rachmaninov",
+      "date": "2026-11-26",
+      "url": "https://www.spotgroningen.nl/programma/nederlands-kamerkoor-15/",
+      "status": "event uit link",
+      "rawText": "Nederlands kamerkoor Vespers Rachmaninov Hemelse harmonie met het beste koor van Nederland do 26 nov"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "Noord Nederlands Orkest Anime in Concert",
+      "date": "2026-11-26",
+      "url": "https://www.spotgroningen.nl/programma/noord-nederlands-orkest-231/",
+      "status": "event uit link",
+      "rawText": "Noord Nederlands Orkest Anime in Concert Iconische animatiemuziek met orkest, koor en sopraan do 26 nov"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "Flemming + support: Jim Gardner",
+      "date": "2026-11-27",
+      "url": "https://www.spotgroningen.nl/programma/flemming-4/",
+      "status": "event uit link",
+      "rawText": "Flemming + support: Jim Gardner Frisse, catchy Nederlandstalige pop Uitverkocht vr 27 nov"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "Het Nationale Theater Meeuw",
+      "date": "2026-11-27",
+      "url": "https://www.spotgroningen.nl/programma/het-nationale-theater-31/",
+      "status": "event uit link",
+      "rawText": "Het Nationale Theater Meeuw Het geploeter en de lol van twee generaties vr 27 nov"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "JP Den Tex & Tineke Schoemaker Spelen met de Blues",
+      "date": "2026-11-27",
+      "url": "https://www.spotgroningen.nl/programma/jp-den-tex-tineke-schoemaker/",
+      "status": "event uit link",
+      "rawText": "JP Den Tex & Tineke Schoemaker Spelen met de Blues Twee iconen van de Nederlandse muziek ontmoeten elkaar in de blues vr 27 nov"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "Timebox",
+      "date": "2026-11-27",
+      "url": "https://www.spotgroningen.nl/programma/timebox/",
+      "status": "event uit link",
+      "rawText": "Timebox Een ode aan Britse klassiekers uit de periode 1964-1974 Uitverkocht vr 27 nov"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "Subterranean Street Society",
+      "date": "2026-11-28",
+      "url": "https://www.spotgroningen.nl/programma/subterranean-street-society-2/",
+      "status": "event uit link",
+      "rawText": "Subterranean Street Society Rauwe folk-grunge met een poëtisch randje za 28 nov"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "The Veils + support: Anthonie Tonnon",
+      "date": "2026-11-28",
+      "url": "https://www.spotgroningen.nl/programma/the-veils-2/",
+      "status": "event uit link",
+      "rawText": "The Veils + support: Anthonie Tonnon Alternatieve indierock met een vleugje folk za 28 nov"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "Nanoek Next to Normal",
+      "date": "2026-11-28",
+      "url": "https://www.spotgroningen.nl/programma/nanoek-4/",
+      "status": "event uit link",
+      "rawText": "Nanoek Next to Normal Een eigentijdse pop-rockmusical met Willemijn Verkaik, Edwin Jonker e.a. za 28 nov"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "The Scene + support: Jan Douwe Kroeske",
+      "date": "2026-11-29",
+      "url": "https://www.spotgroningen.nl/programma/the-scene/",
+      "status": "event uit link",
+      "rawText": "The Scene + support: Jan Douwe Kroeske Na tien jaar stilte is The Scene terug! zo 29 nov"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "Waylon Time Jumper",
+      "date": "2026-11-29",
+      "url": "https://www.spotgroningen.nl/programma/waylon-8/",
+      "status": "event uit link",
+      "rawText": "Waylon Time Jumper Een diepe duik in de wereld van countrymuziek zo 29 nov"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "Joe Jackson",
+      "date": "2026-11-29",
+      "url": "https://www.spotgroningen.nl/programma/joe-jackson-3/",
+      "status": "event uit link",
+      "rawText": "Joe Jackson Britse muzikant Joe Jackson keert terug naar Groningen Uitverkocht zo 29 nov"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "David Linszen Striptease Van De Dood (reprise)",
+      "date": "2026-11-30",
+      "url": "https://www.spotgroningen.nl/programma/david-linszen-2/",
+      "status": "event uit link",
+      "rawText": "David Linszen Striptease Van De Dood (reprise) Winnaar Neerlands Hoop Laatste kaarten ma 30 nov"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "Paradox Jazz Orchestra feat. James Carter",
+      "date": "2026-11-30",
+      "url": "https://www.spotgroningen.nl/programma/paradox-jazz-orchestra-feat-james-carter/",
+      "status": "event uit link",
+      "rawText": "Paradox Jazz Orchestra feat. James Carter Levendige en eigentijdse ode aan de legendarische jazzvernieuwer ma 30 nov"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "Matthew and the Atlas Temple 10th Anniversary Tour + support: AK Patterson",
+      "date": "2026-12-01",
+      "url": "https://www.spotgroningen.nl/programma/matthew-and-the-atlas-3/",
+      "status": "event uit link",
+      "rawText": "Matthew and the Atlas Temple 10th Anniversary Tour + support: AK Patterson Een combinatie van folk, elektronica en alternatieve rock di 1 dec"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "NNO & Noordpool Orkest Radiohead, A Jazz Symphony",
+      "date": "2026-12-01",
+      "url": "https://www.spotgroningen.nl/programma/nno-noordpool-orkest/",
+      "status": "event uit link",
+      "rawText": "NNO & Noordpool Orkest Radiohead, A Jazz Symphony Radiohead in symfonische jazzvorm di 1 dec"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "Theater Oostpool Romeo en Julia",
+      "date": "2026-12-01",
+      "url": "https://www.spotgroningen.nl/programma/theater-oostpool-18/",
+      "status": "event uit link",
+      "rawText": "Theater Oostpool Romeo en Julia Hedendaagse bewerking van eeuwenoude klassieker di 1 dec"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "Jimmy Carr - Laughs funny Chambers Touring presents",
+      "date": "2026-12-02",
+      "url": "https://www.spotgroningen.nl/programma/jimmy-carr-laughs-funny/",
+      "status": "event uit link",
+      "rawText": "Jimmy Carr - Laughs funny Chambers Touring presents Spervuur van briljante oneliners en korte verhalen Uitverkocht wo 2 dec"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "Luuk Weggemans Lach maar om mij (try-out)",
+      "date": "2026-12-02",
+      "url": "https://www.spotgroningen.nl/programma/luuk-weggemans/",
+      "status": "event uit link",
+      "rawText": "Luuk Weggemans Lach maar om mij (try-out) Winnaar publieks- en persoonlijkheidsprijs Cameretten met pop-comedyshow Uitverkocht wo 2 dec"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "Maaike Ouboter",
+      "date": "2026-12-02",
+      "url": "https://www.spotgroningen.nl/programma/maaike-ouboter-8/",
+      "status": "event uit link",
+      "rawText": "Maaike Ouboter Een reis door de tijd langs haar gehele oeuvre wo 2 dec"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "Jimmy Carr - Laughs funny Chambers Touring presents",
+      "date": "2026-12-02",
+      "url": "https://www.spotgroningen.nl/programma/jimmy-carr-4/",
+      "status": "event uit link",
+      "rawText": "Jimmy Carr - Laughs funny Chambers Touring presents Spervuur van briljante oneliners en korte verhalen Uitverkocht Extra voorstelling wo 2 dec"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "HAEVN + support: Alex Apolline",
+      "date": "2026-12-03",
+      "url": "https://www.spotgroningen.nl/programma/haevn-6-2/",
+      "status": "event uit link",
+      "rawText": "HAEVN + support: Alex Apolline Filmische, meeslepende melodieën en warme stemgeluiden do 3 dec"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "Site-time-out",
+      "date": "",
+      "url": "https://www.spotgroningen.nl/programma/",
+      "status": "timeout",
+      "rawText": "site overschreed de harde tijdslimiet van 2 seconden"
     }
   ],
   "status": "running",
   "siteStartedAt": "2026-10-25T16:00:08+00:00",
-  "siteElapsedSeconds": 1,
+  "siteElapsedSeconds": 3,
   "sitePageCount": 0,
   "lastSiteEventCount": 0,
-  "stage": "Websitepagina ophalen",
+  "stage": "Website klaar; volgende website voorbereiden",
   "lastUpdatedAt": "2026-10-25T16:00:09+00:00",
   "lastSiteNewEventCount": 0,
-  "lastCompletedSite": "https://forum.nl/nl/agenda",
-  "lastCompletedAt": "2026-10-25T16:00:07+00:00"
+  "lastCompletedSite": "https://www.spotgroningen.nl/programma/",
+  "lastCompletedAt": "2026-10-25T16:00:11+00:00"
 }
