@@ -1,7 +1,7 @@
 {
   "runId": "2026-10-25T15:53:30.839407+00:00-55336eac",
   "startedAt": "2026-10-25T15:53:30+00:00",
-  "completedCount": 4,
+  "completedCount": 5,
   "totalSites": 19,
   "currentSite": "https://www.spotgroningen.nl/programma/",
   "currentSiteIndex": 5,
@@ -9,7 +9,8 @@
     "https://groningen.uitloper.nu/",
     "https://www.visitgroningen.nl/nl/doen/evenementen",
     "https://www.visitgroningen.nl/nl/doen/wandelen",
-    "https://forum.nl/nl/agenda"
+    "https://forum.nl/nl/agenda",
+    "https://www.spotgroningen.nl/programma/"
   ],
   "events": [],
   "siteResults": [
@@ -29,6 +30,13 @@
     },
     {
       "site": "https://forum.nl/nl/agenda",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 2.0,
+      "timedOut": true
+    },
+    {
+      "site": "https://www.spotgroningen.nl/programma/",
       "count": 0,
       "newCount": 0,
       "durationSeconds": 2.0,
@@ -449,16 +457,34 @@
       "url": "https://www.spotgroningen.nl/programma/",
       "status": "strategie",
       "rawText": "universeel-met-kaartfallback"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "Pagina mislukt",
+      "date": "",
+      "url": "https://www.spotgroningen.nl/programma",
+      "status": "fout",
+      "rawText": "HTTPSConnectionPool(host='www.spotgroningen.nl', port=443): Read timed out."
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://www.spotgroningen.nl/programma/",
+      "status": "klaar",
+      "rawText": "site 5/19: 0 unieke events in 2.0 sec"
     }
   ],
   "status": "running",
   "siteStartedAt": "2026-10-25T15:54:00+00:00",
-  "siteElapsedSeconds": 1,
+  "siteElapsedSeconds": 3,
   "sitePageCount": 0,
   "lastSiteEventCount": 0,
-  "stage": "Websitepagina ophalen",
+  "stage": "Website klaar; volgende website voorbereiden",
   "lastUpdatedAt": "2026-10-25T15:54:01+00:00",
   "lastSiteNewEventCount": 0,
-  "lastCompletedSite": "https://forum.nl/nl/agenda",
-  "lastCompletedAt": "2026-10-25T15:53:58+00:00"
+  "lastCompletedSite": "https://www.spotgroningen.nl/programma/",
+  "lastCompletedAt": "2026-10-25T15:54:03+00:00"
 }
