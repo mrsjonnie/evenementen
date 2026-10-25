@@ -2225,19 +2225,43 @@ def scrape_site(site_url, site_index=0, site_total=0, progress_callback=None, ex
                         asset_url = normalized_url(asset, final_url)
                         asset_response = session.get(asset_url, headers=REQUEST_HEADERS, timeout=remaining_timeout(deadline))
                         asset_text = asset_response.text
-                        # Find likely API routes and request code rather than generic words in minified bundles.
+                        # Find API routes and inspect lazy-loaded Webpack chunks: event data may live outside main.js.
                         matches = []
-                        url_pattern = r"""["'`]((?:https?://|/)[^"'`\s]{1,180})["'`]"""
+                        url_pattern = r"""["']((?:https?://|/)[^"']{1,180})["']"""
                         for match in re.finditer(url_pattern, asset_text, re.I):
                             candidate = match.group(1)
                             if re.search(r"(?:api|graphql|agenda|programma|event|performance|voorstelling|show|calendar)", candidate, re.I):
                                 matches.append(candidate)
                         request_pattern = r".{0,100}(?:baseURL|axios\.create|fetch\(|graphql|/api/|api/).{0,180}"
                         matches.extend(match.group(0) for match in re.finditer(request_pattern, asset_text, re.I))
+                        for chunk_id in ("9760", "6183"):
+                            chunk_context = [m.group(0) for m in re.finditer(rf".{0,70}{chunk_id}.{0,100}", asset_text, re.I)]
+                            matches.extend("chunk-context: " + context for context in chunk_context[:2])
+                            hashes = re.findall(rf'["\']?{chunk_id}["\']?\s*:\s*["\']([a-zA-Z0-9_-]{{4,}})["\']', asset_text)
+                            for chunk_hash in hashes[:2]:
+                                for relative in (f"{chunk_id}.{chunk_hash}.js", f"js/{chunk_id}.{chunk_hash}.js"):
+                                    chunk_url = normalized_url(relative, asset_url)
+                                    if not chunk_url or time.monotonic() >= deadline:
+                                        continue
+                                    try:
+                                        chunk_response = session.get(chunk_url, headers=REQUEST_HEADERS, timeout=remaining_timeout(deadline))
+                                        if chunk_response.status_code >= 400:
+                                            continue
+                                        chunk_text = chunk_response.text
+                                        add_raw("Diagnose", original_site, "Zwolse chunk geladen", "", chunk_url, "diagnose", f"chunk {chunk_id}, {len(chunk_text)} tekens")
+                                        for candidate_match in re.finditer(url_pattern, chunk_text, re.I):
+                                            candidate = candidate_match.group(1)
+                                            if re.search(r"(?:api|graphql|agenda|programma|event|performance|voorstelling|show|calendar)", candidate, re.I):
+                                                matches.append("chunk route: " + candidate)
+                                        matches.extend("chunk request: " + m.group(0) for m in re.finditer(request_pattern, chunk_text, re.I))
+                                    except Exception as chunk_error:
+                                        add_raw("Diagnose", original_site, "Zwolse chunk mislukt", "", chunk_url, "fout", str(chunk_error))
                         unique_matches = list(dict.fromkeys(matches))
+                        if not unique_matches:
+                            snippets = [m.group(0) for m in re.finditer(r".{0,40}(?:9760|6183).{0,70}", asset_text, re.I)][:3]
+                            add_raw("Diagnose", original_site, "Zwolse JS scan " + urlparse(asset_url).path.rsplit("/", 1)[-1], "", asset_url, "diagnose", f"geen API-route herkend; {len(asset_text)} tekens; " + " | ".join(snippets))
                         for match_index, match_text in enumerate(unique_matches[:18], start=1):
-                            add_raw("Diagnose", original_site, f"Zwolse JS {urlparse(asset_url).path.rsplit('/', 1)[-1]} #{match_index}", "", asset_url, "diagnose", match_text)
-                    except Exception as asset_error:
+                            add_raw("Diagnose", original_site, f"Zwolse JS {urlparse(asset_url).path.rsplit('/', 1)[-1]} #{match_index}", "", asset_url, "diagnose", match_text)                    except Exception as asset_error:
                         add_raw("Diagnose", original_site, "Zwolse JS fout", "", asset, "fout", str(asset_error))
         except Exception as exc:
             add_raw("Website", original_site, "Pagina mislukt", "", page_url, "fout", str(exc))
