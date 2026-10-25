@@ -1,13 +1,14 @@
 {
   "runId": "2026-10-25T10:44:05+00:00",
   "startedAt": "2026-10-25T10:44:05+00:00",
-  "completedCount": 2,
+  "completedCount": 3,
   "totalSites": 5,
   "currentSite": "https://www.ibood.com/s-nl",
   "currentSiteIndex": 3,
   "completedSites": [
     "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
-    "https://www.groupon.nl/kortingsbonnen/gemeente-groningen"
+    "https://www.groupon.nl/kortingsbonnen/gemeente-groningen",
+    "https://www.ibood.com/s-nl"
   ],
   "events": [
     {
@@ -304,6 +305,13 @@
       "count": 0,
       "newCount": 0,
       "durationSeconds": 4.02,
+      "timedOut": false
+    },
+    {
+      "site": "https://www.ibood.com/s-nl",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 1.98,
       "timedOut": false
     }
   ],
@@ -1180,12 +1188,30 @@
       "url": "https://www.ibood.com/s-nl",
       "status": "fout",
       "rawText": "HTTP 403"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "Pagina mislukt",
+      "date": "",
+      "url": "https://www.ibood.com/offers/nl/s-nl",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://www.ibood.com/s-nl",
+      "status": "klaar",
+      "rawText": "site 3/5: 0 unieke events in 1.98 sec"
     }
   ],
   "status": "running",
-  "stage": "Websitepagina ophalen",
+  "stage": "Website klaar; volgende website voorbereiden",
   "lastUpdatedAt": "2026-10-25T10:44:19+00:00",
   "lastSiteEventCount": 0,
-  "lastCompletedSite": "https://www.groupon.nl/kortingsbonnen/gemeente-groningen",
-  "lastCompletedAt": "2026-10-25T10:44:16+00:00"
+  "lastCompletedSite": "https://www.ibood.com/s-nl",
+  "lastCompletedAt": "2026-10-25T10:44:20+00:00"
 }
