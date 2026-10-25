@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-25T09:39:58+00:00",
+  "updatedAt": "2026-10-25T09:41:35+00:00",
   "events": [
     {
       "date": "2026-10-25",
@@ -4024,126 +4024,126 @@
       "site": "https://groningen.uitloper.nu/",
       "count": 20,
       "newCount": 0,
-      "durationSeconds": 2.25,
+      "durationSeconds": 2.04,
       "timedOut": false
     },
     {
       "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
       "count": 20,
       "newCount": 0,
-      "durationSeconds": 6.38,
+      "durationSeconds": 5.65,
       "timedOut": false
     },
     {
       "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
       "count": 20,
       "newCount": 0,
-      "durationSeconds": 1.61,
+      "durationSeconds": 1.53,
       "timedOut": false
     },
     {
       "site": "https://forum.nl/nl/agenda",
       "count": 20,
       "newCount": 0,
-      "durationSeconds": 8.26,
+      "durationSeconds": 7.58,
       "timedOut": false
     },
     {
       "site": "https://www.spotgroningen.nl/programma/",
       "count": 20,
       "newCount": 0,
-      "durationSeconds": 3.43,
+      "durationSeconds": 3.36,
       "timedOut": false
     },
     {
       "site": "https://simplon.nl/",
       "count": 20,
       "newCount": 0,
-      "durationSeconds": 2.06,
+      "durationSeconds": 2.18,
       "timedOut": false
     },
     {
       "site": "https://www.vera-groningen.nl/",
       "count": 20,
       "newCount": 0,
-      "durationSeconds": 2.85,
+      "durationSeconds": 3.18,
       "timedOut": false
     },
     {
       "site": "https://www.martiniplaza.nl/nl/agenda",
       "count": 12,
       "newCount": 0,
-      "durationSeconds": 5.6,
+      "durationSeconds": 5.27,
       "timedOut": false
     },
     {
       "site": "https://www.groningermuseum.nl/en/now",
       "count": 0,
       "newCount": 0,
-      "durationSeconds": 0.8,
+      "durationSeconds": 1.38,
       "timedOut": false
     },
     {
       "site": "https://www.kultuuragenda.nl/agenda",
       "count": 20,
       "newCount": 0,
-      "durationSeconds": 9.34,
+      "durationSeconds": 9.04,
       "timedOut": false
     },
     {
       "site": "https://www.noorderzon.nl/programma",
       "count": 20,
       "newCount": 0,
-      "durationSeconds": 4.89,
+      "durationSeconds": 4.8,
       "timedOut": false
     },
     {
       "site": "https://www.concertgebouw.nl/concerten-en-tickets",
       "count": 20,
       "newCount": 0,
-      "durationSeconds": 3.14,
+      "durationSeconds": 2.96,
       "timedOut": false
     },
     {
       "site": "https://www.zwolsetheaters.nl/programma",
       "count": 0,
       "newCount": 0,
-      "durationSeconds": 6.77,
+      "durationSeconds": 6.8,
       "timedOut": false
     },
     {
       "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
       "count": 20,
       "newCount": 5,
-      "durationSeconds": 8.03,
+      "durationSeconds": 6.78,
       "timedOut": false
     },
     {
       "site": "https://www.vvvameland.nl/activiteiten-en-evenementen",
       "count": 20,
       "newCount": 20,
-      "durationSeconds": 9.31,
+      "durationSeconds": 9.02,
       "timedOut": false
     },
     {
       "site": "https://www.socialdeal.nl/",
       "count": 25,
       "newCount": 0,
-      "durationSeconds": 1.98,
+      "durationSeconds": 1.74,
       "timedOut": false
     },
     {
       "site": "https://www.groupon.nl/",
       "count": 0,
       "newCount": 0,
-      "durationSeconds": 0.34,
+      "durationSeconds": 0.36,
       "timedOut": false
     },
     {
       "site": "https://www.ibood.com/nl/",
       "count": 0,
       "newCount": 0,
-      "durationSeconds": 0.3,
+      "durationSeconds": 0.48,
       "timedOut": false
     }
   ],
@@ -4605,7 +4605,7 @@
       "date": "",
       "url": "https://groningen.uitloper.nu/",
       "status": "klaar",
-      "rawText": "site 1/18: 20 unieke events in 2.25 sec"
+      "rawText": "site 1/18: 20 unieke events in 2.04 sec"
     },
     {
       "source": "Website",
@@ -4632,7 +4632,7 @@
       "date": "",
       "url": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen",
       "status": "ok",
-      "rawText": "206720 tekens HTML"
+      "rawText": "206718 tekens HTML"
     },
     {
       "source": "Parser",
@@ -6567,7 +6567,7 @@
       "date": "",
       "url": "https://www.visitgroningen.nl/nl/doen/evenementen",
       "status": "klaar",
-      "rawText": "site 2/18: 20 unieke events in 6.38 sec"
+      "rawText": "site 2/18: 20 unieke events in 5.65 sec"
     },
     {
       "source": "Website",
@@ -6810,7 +6810,7 @@
       "date": "",
       "url": "https://www.visitgroningen.nl/nl/doen/wandelen",
       "status": "klaar",
-      "rawText": "site 3/18: 20 unieke events in 1.61 sec"
+      "rawText": "site 3/18: 20 unieke events in 1.53 sec"
     },
     {
       "source": "Website",
@@ -7836,7 +7836,7 @@
       "date": "",
       "url": "https://forum.nl/nl/agenda",
       "status": "klaar",
-      "rawText": "site 4/18: 20 unieke events in 8.26 sec"
+      "rawText": "site 4/18: 20 unieke events in 7.58 sec"
     },
     {
       "source": "Website",
