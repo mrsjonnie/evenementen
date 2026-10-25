@@ -1,7 +1,7 @@
 {
   "runId": "2026-10-25T18:03:32.693130+00:00-9ae2f9f8",
   "startedAt": "2026-10-25T18:03:32+00:00",
-  "completedCount": 14,
+  "completedCount": 15,
   "totalSites": 19,
   "currentSite": "https://www.vvvameland.nl/activiteiten-en-evenementen",
   "currentSiteIndex": 15,
@@ -19,7 +19,8 @@
     "https://www.noorderzon.nl/programma",
     "https://www.concertgebouw.nl/concerten-en-tickets",
     "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
-    "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817"
+    "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+    "https://www.vvvameland.nl/activiteiten-en-evenementen"
   ],
   "events": [
     {
@@ -1381,63 +1382,16 @@
       "newCount": 12,
       "durationSeconds": 2.8,
       "timedOut": false
+    },
+    {
+      "site": "https://www.vvvameland.nl/activiteiten-en-evenementen",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 6.66,
+      "timedOut": true
     }
   ],
   "rawLog": [
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Yentl & De Boer Rekhalzen",
-      "date": "2026-12-05",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "5 dec Yentl & De Boer Rekhalzen Winnaars Poelifinario Kleinkunst 2023 met programma vol prachtige, grappige liedjes Uitverkocht 14:30 uur"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Kingfishr + SUPPORT: Tadgh Nolan Meeslepende folkrock met",
-      "date": "2026-12-06",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "6 dec Kingfishr + SUPPORT: Tadgh Nolan Meeslepende folkrock met Ierse roots Uitverkocht"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Yentl & De Boer Rekhalzen",
-      "date": "2026-12-06",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "6 dec Yentl & De Boer Rekhalzen Winnaars Poelifinario Kleinkunst 2023 met programma vol prachtige, grappige liedjes Uitverkocht 20:15 uur"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Muireann Nic Amhlaoibh Band Folky Sunday Een avond",
-      "date": "2026-12-06",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "6 dec Muireann Nic Amhlaoibh Band Folky Sunday Een avond Ierse traditionele muziek, zang en dans op het allerhoogste niveau"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "SYML & Metropole Orkest Minimalistische indiepop clasht met orkestrale grandeur",
-      "date": "2026-12-06",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "6 dec SYML & Metropole Orkest Minimalistische indiepop clasht met orkestrale grandeur Laatste kaarten"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Andries Tunru & Stefan Hendrikx De nogal",
-      "date": "2026-12-07",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "7 dec Andries Tunru & Stefan Hendrikx De nogal hyperbijzondere Groningse Oudejaars-improvisatie-extravaganza 2026 Volledig geïmproviseerde Oudejaars-show"
-    },
     {
       "source": "Website",
       "site": "https://www.spotgroningen.nl/programma/",
@@ -12183,16 +12137,70 @@
       "url": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
       "status": "klaar",
       "rawText": "site 14/19: 12 unieke events in 2.8 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vvvameland.nl/activiteiten-en-evenementen",
+      "title": "Start",
+      "date": "",
+      "url": "https://www.vvvameland.nl/activiteiten-en-evenementen",
+      "status": "start",
+      "rawText": "site 15/19: max 12 events, max 4 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.vvvameland.nl/activiteiten-en-evenementen",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://www.vvvameland.nl/activiteiten-en-evenementen",
+      "status": "strategie",
+      "rawText": "universeel-jsonld-links-kaarten"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vvvameland.nl/activiteiten-en-evenementen",
+      "title": "Pagina gelezen",
+      "date": "",
+      "url": "https://www.vvvameland.nl/activiteiten-en-evenementen",
+      "status": "ok",
+      "rawText": "2871868 tekens HTML"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.vvvameland.nl/activiteiten-en-evenementen",
+      "title": "Agenda-kaarten geteld",
+      "date": "",
+      "url": "https://www.vvvameland.nl/activiteiten-en-evenementen",
+      "status": "gespecialiseerde parser",
+      "rawText": "12 resultaten"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vvvameland.nl/activiteiten-en-evenementen",
+      "title": "Pagina geanalyseerd",
+      "date": "",
+      "url": "https://www.vvvameland.nl/activiteiten-en-evenementen",
+      "status": "ok",
+      "rawText": "5 events/aanbiedingen op deze pagina"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vvvameland.nl/activiteiten-en-evenementen",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://www.vvvameland.nl/activiteiten-en-evenementen",
+      "status": "klaar",
+      "rawText": "site 15/19: 0 unieke events in 6.66 sec"
     }
   ],
   "status": "running",
   "siteStartedAt": "2026-10-25T18:04:55+00:00",
-  "siteElapsedSeconds": 0,
-  "sitePageCount": 0,
+  "siteElapsedSeconds": 8,
+  "sitePageCount": 1,
   "lastSiteEventCount": 0,
-  "stage": "Websitepagina ophalen",
-  "lastUpdatedAt": "2026-10-25T18:04:55+00:00",
-  "lastSiteNewEventCount": 12,
-  "lastCompletedSite": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
-  "lastCompletedAt": "2026-10-25T18:04:53+00:00"
+  "stage": "Website klaar; volgende website voorbereiden",
+  "lastUpdatedAt": "2026-10-25T18:05:01+00:00",
+  "lastSiteNewEventCount": 0,
+  "lastCompletedSite": "https://www.vvvameland.nl/activiteiten-en-evenementen",
+  "lastCompletedAt": "2026-10-25T18:05:03+00:00"
 }
