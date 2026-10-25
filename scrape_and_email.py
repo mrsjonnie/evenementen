@@ -2051,44 +2051,59 @@ def extract_ibood_offers(html, page_url, site_url):
     soup = BeautifulSoup(html, "html.parser")
     offers = []
     seen = set()
-    selectors = ["article", "[class*='product-card']", "[class*='productCard']", "[class*='product-item']", "[class*='deal-card']", "[data-testid*='product']", "li"]
-    for selector in selectors:
-        for node in soup.select(selector):
-            title_node = node.select_one("h1, h2, h3, h4, [class*='title'], [class*='name']")
-            link_node = node.select_one("a[href]")
-            if not title_node or not link_node:
-                continue
-            title = clean_title(title_node.get_text(" ", strip=True))
-            href = normalized_url(link_node.get("href"), page_url)
-            text = clean_text(node.get_text(" ", strip=True))
-            if not title or len(title) < 8 or not href or "ibood.com" not in canonical_host(href):
-                continue
-            offer_price = ibood_offer_price(text)
-            if not offer_price or re.search(r"\b(voorwaarden|klantenservice|inloggen|mijn account|nieuwsbrief)\b", title, re.I):
-                continue
-            key = href.lower().split("?")[0].rstrip("/")
-            if key in seen:
-                continue
-            seen.add(key)
-            image_node = node.select_one("img[src], img[data-src]")
-            image = normalized_url((image_node.get("src") or image_node.get("data-src")) if image_node else "", page_url)
-            offers.append({
-                "date": TODAY.isoformat(),
-                "time": "",
-                "title": title,
-                "type": "Aanbiedingen",
-                "location": "Online",
-                "locationLink": "",
-                "website": href,
-                "source": "iBOOD",
-                "discoverySource": "Website",
-                "description": compact(text.replace(title, "", 1), 320) or "Online aanbieding op iBOOD.",
-                "cost": offer_price,
-                "image": image,
-            })
-            if len(offers) >= MAX_EVENTS_PER_SITE:
-                return offers
-    add_raw("Parser", site_url, "iBOOD-telling", "", page_url, "ok" if offers else "geen resultaten", f"{len(offers)} aanbiedingen gevonden; limiet {MAX_EVENTS_PER_SITE}; HTML {len(html)} tekens")
+    # Start at each product heading, then use the nearest compact ancestor that
+    # contains both its product URL and a sale price. This avoids treating a
+    # whole list/grid as one deal when iBOOD changes its CSS class names.
+    title_nodes = soup.find_all(["h1", "h2", "h3", "h4"])
+    for title_node in title_nodes:
+        title = clean_title(title_node.get_text(" ", strip=True))
+        if not title or len(title) < 8 or re.search(r"\b(voorwaarden|klantenservice|inloggen|mijn account|nieuwsbrief|alle deals)\b", title, re.I):
+            continue
+        node = None
+        href = ""
+        text = ""
+        for parent in title_node.parents:
+            if getattr(parent, "name", None) in {"body", "html"}:
+                break
+            parent_text = clean_text(parent.get_text(" ", strip=True))
+            if len(parent_text) > 1800:
+                break
+            links = parent.find_all("a", href=True)
+            title_link = title_node.find_parent("a") or title_node.find("a")
+            candidates = ([title_link] if title_link else []) + links
+            product_href = next((normalized_url(link.get("href"), page_url) for link in candidates
+                                 if normalized_url(link.get("href"), page_url)
+                                 and "ibood.com" in canonical_host(normalized_url(link.get("href"), page_url))), "")
+            if product_href and ibood_offer_price(parent_text):
+                node, href, text = parent, product_href, parent_text
+                break
+        if not node or not href:
+            continue
+        offer_price = ibood_offer_price(text)
+        if not offer_price:
+            continue
+        key = href.lower().split("?")[0].rstrip("/")
+        if key in seen:
+            continue
+        seen.add(key)
+        image_node = node.select_one("img[src], img[data-src]")
+        image = normalized_url((image_node.get("src") or image_node.get("data-src")) if image_node else "", page_url)
+        offers.append({
+            "date": TODAY.isoformat(),
+            "time": "",
+            "title": title,
+            "type": "Aanbiedingen",
+            "location": "Online",
+            "locationLink": "",
+            "website": href,
+            "source": "iBOOD",
+            "discoverySource": "Website",
+            "description": compact(text.replace(title, "", 1), 320) or "Online aanbieding op iBOOD.",
+            "cost": offer_price,
+            "image": image,
+        })
+        if len(offers) >= MAX_EVENTS_PER_SITE:
+            break
     add_raw("Parser", site_url, "iBOOD-telling", "", page_url, "ok" if offers else "geen resultaten", f"{len(offers)} aanbiedingen gevonden; limiet {MAX_EVENTS_PER_SITE}; HTML {len(html)} tekens")
     return offers
 
