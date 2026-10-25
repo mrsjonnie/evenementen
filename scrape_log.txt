@@ -177,3 +177,7 @@ Website	https://www.spotgroningen.nl/programma/	event uit link	Maaike Ouboter	20
 Website	https://www.spotgroningen.nl/programma/	event uit link	Jimmy Carr - Laughs funny Chambers Touring presents	2026-12-02	https://www.spotgroningen.nl/programma/jimmy-carr-4/	Jimmy Carr - Laughs funny Chambers Touring presents Spervuur van briljante oneliners en korte verhalen Uitverkocht Extra voorstelling wo 2 dec
 Website	https://www.spotgroningen.nl/programma/	event uit link	HAEVN + support: Alex Apolline	2026-12-03	https://www.spotgroningen.nl/programma/haevn-6-2/	HAEVN + support: Alex Apolline Filmische, meeslepende melodieën en warme stemgeluiden do 3 dec
 Website	https://www.spotgroningen.nl/programma/	timeout	Site-time-out		https://www.spotgroningen.nl/programma/	site overschreed de harde tijdslimiet van 2 seconden
+Website	https://simplon.nl/	start	Start		https://simplon.nl/	site 6/19: max 5 events, max 2 seconden
+Parser	https://simplon.nl/	strategie	Scrapertype vastgesteld		https://simplon.nl/	compacte-agenda-kaarten
+Website	https://simplon.nl/	fout	Pagina mislukt		https://simplon.nl/programma/	HTTPSConnectionPool(host='simplon.nl', port=443): Read timed out. (read timeout=1.0294174960000078)
+Website	https://simplon.nl/	klaar	Klaar		https://simplon.nl/	site 6/19: 0 unieke events in 2.0 sec
