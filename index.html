@@ -2430,9 +2430,20 @@
           const progress = await fetchScrapeProgress();
           if (progress) {
             latestProgress = progress;
+            // Update per-site diagnostics independently of event count. A site returning
+            // zero events or timing out must still refresh the website list immediately.
             updateLiveScrapeSummary(progress, Boolean(progress.runId && progress.runId !== options.previousProgressRunId));
             options.progressStatus = cleanText(progress.status || "");
             options.progressEventCount = Array.isArray(progress.events) ? progress.events.length : 0;
+            const siteResults = Array.isArray(progress.siteResults) ? progress.siteResults : null;
+            const siteResultsSignature = JSON.stringify(siteResults || []);
+            if (siteResults && siteResultsSignature !== options.lastSiteResultsSignature) {
+              options.lastSiteResultsSignature = siteResultsSignature;
+              latestSiteResults = siteResults;
+              latestRawLog = Array.isArray(progress.rawLog) ? progress.rawLog : latestRawLog;
+              renderSites(checkedSites());
+              renderRawLog();
+            }
           }
           if (progress && progress.runId && progress.runId !== options.previousProgressRunId) {
             const completed = Number(progress.completedCount) || 0;
@@ -2554,14 +2565,15 @@
       await loadAll();
       const prefix = Number.isFinite(foundCount) ? `${foundText(foundCount)} gevonden.` : foundText(foundCount) + ".";
       const lastPublished = eventsUpdatedAt ? new Date(eventsUpdatedAt).toLocaleString("nl-NL") : "onbekend";
-      const sourceSummary = "Geselecteerde websites: " + selectedScanSites().length + "; resultaten in de huidige lijst: " + events.length + "; laatste publicatie van events.json: " + lastPublished + ".";
-      const siteDiagnostics = (latestSiteResults || []).slice(0, 5).map((item) => (item.site || "Website") + ": " + Number(item.count || 0) + " resultaten" + (item.timedOut ? " (timeout)" : "")).join(" | ");
-      const diagnostics = (siteDiagnostics ? ". Laatste website-uitkomsten: " + siteDiagnostics : "; er zijn nog geen nieuwe website-uitkomsten gepubliceerd");
+      const sourceSummary = "Sites " + selectedScanSites().length + " · lijst " + events.length + " · publicatie " + lastPublished + ".";
+      const siteDiagnostics = (latestSiteResults || []).slice(-3).map((item) => shortScrapeSiteName(item.site || "Website") + " " + Number(item.count || 0) + (item.timedOut ? " (timeout)" : "")).join(" · ");
+      const diagnostics = siteDiagnostics ? " Laatste sites: " + siteDiagnostics + "." : " Nog geen site-uitkomsten beschikbaar.";
+      const elapsed = Math.round(maxAttempts * intervalMs / 1000);
       if (options.progressStatus === "completed") {
         const progressCount = Number(options.progressEventCount) || 0;
-        showStatus(prefix + " De scraper is afgerond (" + progressCount + " resultaten in de voortgangsdata), maar de definitieve events.json is na " + Math.round(maxAttempts * intervalMs / 1000) + " seconden nog niet zichtbaar bijgewerkt. De huidige lijst blijft staan totdat de publicatie is bevestigd. " + sourceSummary + " Bekijk ‘Ruwe verversdata’ en de GitHub Actions-uitvoering. " + diagnostics, "warn");
+        showStatus(prefix + " Scraper klaar (" + progressCount + " in voortgang), maar events.json is na " + elapsed + "s nog niet bijgewerkt. Huidige lijst behouden. " + sourceSummary + diagnostics + " Ruwe verversdata / GitHub Actions.", "warn");
       } else {
-        showStatus(prefix + " Geen nieuwe publicatie na " + Math.round(maxAttempts * intervalMs / 1000) + " seconden: events.json is niet gewijzigd. " + sourceSummary + " Bekijk ‘Ruwe verversdata’ voor HTTP-status, foutmelding en URL per website" + diagnostics + ". De scraper publiceert de definitieve events.json pas aan het einde van de workflow.", "warn");
+        showStatus(prefix + " Geen publicatie na " + elapsed + "s; events.json is niet gewijzigd. " + sourceSummary + diagnostics + " Controleer Ruwe verversdata / GitHub Actions.", "warn");
       }
       return false;
     }
