@@ -854,15 +854,33 @@
       "url": "https://www.visitgroningen.nl/nl/doen/evenementen",
       "status": "klaar",
       "rawText": "site 2/20: 0 unieke events in 4.48 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Start",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "status": "start",
+      "rawText": "site 3/20: max 5 events, max 2 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "status": "strategie",
+      "rawText": "Visit Groningen agenda-/routekaarten"
     }
   ],
   "status": "running",
   "siteStartedAt": "2026-10-25T13:24:32+00:00",
-  "siteElapsedSeconds": 0,
+  "siteElapsedSeconds": 1,
   "sitePageCount": 0,
   "lastSiteEventCount": 0,
   "stage": "Websitepagina ophalen",
-  "lastUpdatedAt": "2026-10-25T13:24:32+00:00",
+  "lastUpdatedAt": "2026-10-25T13:24:33+00:00",
   "lastSiteNewEventCount": 0,
   "lastCompletedSite": "https://www.visitgroningen.nl/nl/doen/evenementen",
   "lastCompletedAt": "2026-10-25T13:24:31+00:00"
