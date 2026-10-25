@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-25T16:04:19+00:00",
+  "updatedAt": "2026-10-25T16:04:23+00:00",
   "events": [
     {
       "date": "2027-01-10",
@@ -163,6 +163,13 @@
       "newCount": 0,
       "durationSeconds": 1.08,
       "timedOut": false
+    },
+    {
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 2.0,
+      "timedOut": true
     }
   ],
   "rawLog": [
@@ -1560,6 +1567,42 @@
       "url": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
       "status": "klaar",
       "rawText": "site 13/19: 0 unieke events in 1.08 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Start",
+      "date": "",
+      "url": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "status": "start",
+      "rawText": "site 14/19: max 5 events, max 2 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "status": "strategie",
+      "rawText": "universeel-jsonld-links-kaarten"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Pagina mislukt",
+      "date": "",
+      "url": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "status": "fout",
+      "rawText": "HTTPSConnectionPool(host='www.paradiso.nl', port=443): Read timed out. (read timeout=0.8577142309999886)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "status": "klaar",
+      "rawText": "site 14/19: 0 unieke events in 2.0 sec"
     }
   ]
 }
