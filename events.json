@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-25T16:45:55+00:00",
+  "updatedAt": "2026-10-25T16:46:02+00:00",
   "events": [
     {
       "date": "2026-10-25",
@@ -1570,6 +1570,13 @@
       "count": 0,
       "newCount": 0,
       "durationSeconds": 4.0,
+      "timedOut": true
+    },
+    {
+      "site": "https://www.noorderzon.nl/programma",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 4,
       "timedOut": true
     }
   ],
