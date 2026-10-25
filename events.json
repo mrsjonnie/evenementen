@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-25T15:16:00+00:00",
+  "updatedAt": "2026-10-25T15:16:07+00:00",
   "events": [
     {
       "date": "2026-10-25",
@@ -11728,6 +11728,13 @@
       "newCount": 0,
       "durationSeconds": 2.97,
       "timedOut": true
+    },
+    {
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 2.98,
+      "timedOut": true
     }
   ],
   "rawLog": [
@@ -12054,6 +12061,42 @@
       "url": "https://www.visitgroningen.nl/nl/doen/evenementen",
       "status": "klaar",
       "rawText": "site 2/19: 0 unieke events in 2.97 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Start",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "status": "start",
+      "rawText": "site 3/19: max 5 events, max 2 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "status": "strategie",
+      "rawText": "Visit Groningen agenda-/routekaarten"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Pagina mislukt",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "status": "fout",
+      "rawText": "HTTPSConnectionPool(host='www.visitgroningen.nl', port=443): Read timed out."
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "status": "klaar",
+      "rawText": "site 3/19: 0 unieke events in 2.98 sec"
     }
   ]
 }
