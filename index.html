@@ -1371,7 +1371,7 @@
   </div>
 
   <script>
-    const APP_VERSION = "2026.10.25.48";
+    const APP_VERSION = "2026.10.25.49";
     const DEFAULT_MAX_EVENTS_PER_SITE = 20;
     const DEFAULT_SITE_TIME_LIMIT_SECONDS = 20;
     const SCAN_SETTINGS_KEY = "eventScanSettingsV1";
@@ -2234,15 +2234,16 @@
         messages.className = "statusMessages";
         status.replaceChildren(messages);
       }
-      const priorEntries = [...messages.querySelectorAll(".statusEntry")];
-      if (priorEntries.some((item) => item.dataset.message === text)) return;
+      const lastEntry = messages.lastElementChild;
+      if (lastEntry?.dataset.message === text) return;
       const entry = document.createElement("div");
       entry.className = `statusEntry ${type}`.trim();
       entry.dataset.message = text;
       const line = document.createElement("div");
       line.className = "statusLine";
       const span = document.createElement("span");
-      span.textContent = text;
+      const timestamp = new Date().toLocaleTimeString("nl-NL", { hour: "2-digit", minute: "2-digit", second: "2-digit" });
+      span.textContent = `[${timestamp}] ${text}`;
       line.appendChild(span);
       if (options.stop) {
         const button = document.createElement("button");
