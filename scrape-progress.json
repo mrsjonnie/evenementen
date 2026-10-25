@@ -1,13 +1,14 @@
 {
   "runId": "2026-10-25T10:54:54+00:00",
   "startedAt": "2026-10-25T10:54:54+00:00",
-  "completedCount": 2,
+  "completedCount": 3,
   "totalSites": 3,
   "currentSite": "https://www.filmvandaag.nl/bioscoop",
   "currentSiteIndex": 3,
   "completedSites": [
     "https://www.zwolsetheaters.nl/programma",
-    "https://denieuwekolk.nl/agenda"
+    "https://denieuwekolk.nl/agenda",
+    "https://www.filmvandaag.nl/bioscoop"
   ],
   "events": [
     {
@@ -108,6 +109,13 @@
       "count": 6,
       "newCount": 0,
       "durationSeconds": 19.09,
+      "timedOut": false
+    },
+    {
+      "site": "https://www.filmvandaag.nl/bioscoop",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 2.27,
       "timedOut": false
     }
   ],
@@ -2037,15 +2045,33 @@
       "url": "https://www.filmvandaag.nl/filmladder/stad/80-groningen",
       "status": "fout",
       "rawText": "HTTP 403"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.filmvandaag.nl/bioscoop",
+      "title": "Pagina mislukt",
+      "date": "",
+      "url": "https://filmvandaag.nl/filmladder/stad/80-groningen",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.filmvandaag.nl/bioscoop",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://www.filmvandaag.nl/bioscoop",
+      "status": "klaar",
+      "rawText": "site 3/3: 0 unieke events in 2.27 sec"
     }
   ],
-  "status": "running",
+  "status": "finishing",
   "siteStartedAt": "2026-10-25T10:55:26+00:00",
-  "siteElapsedSeconds": 3,
+  "siteElapsedSeconds": 4,
   "sitePageCount": 0,
   "lastSiteEventCount": 0,
-  "stage": "Websitepagina ophalen",
+  "stage": "Website klaar; volgende website voorbereiden",
   "lastUpdatedAt": "2026-10-25T10:55:29+00:00",
-  "lastCompletedSite": "https://denieuwekolk.nl/agenda",
-  "lastCompletedAt": "2026-10-25T10:55:25+00:00"
+  "lastCompletedSite": "https://www.filmvandaag.nl/bioscoop",
+  "lastCompletedAt": "2026-10-25T10:55:30+00:00"
 }
