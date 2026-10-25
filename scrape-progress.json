@@ -10791,16 +10791,34 @@
       "url": "https://www.spotgroningen.nl/programma/",
       "status": "klaar",
       "rawText": "site 5/20: 5 unieke events in 5.37 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://simplon.nl/",
+      "title": "Start",
+      "date": "",
+      "url": "https://simplon.nl/",
+      "status": "start",
+      "rawText": "site 6/20: max 5 events, max 2 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://simplon.nl/",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://simplon.nl/",
+      "status": "strategie",
+      "rawText": "compacte-agenda-kaarten"
     }
   ],
   "status": "running",
   "siteStartedAt": "2026-10-25T14:09:51+00:00",
-  "siteElapsedSeconds": 0,
+  "siteElapsedSeconds": 1,
   "sitePageCount": 0,
   "lastSiteEventCount": 0,
   "stage": "Websitepagina ophalen",
-  "lastUpdatedAt": "2026-10-25T14:09:51+00:00",
-  "lastSiteNewEventCount": 5,
+  "lastUpdatedAt": "2026-10-25T14:09:52+00:00",
+  "lastSiteNewEventCount": 0,
   "lastCompletedSite": "https://www.spotgroningen.nl/programma/",
   "lastCompletedAt": "2026-10-25T14:09:50+00:00"
 }
