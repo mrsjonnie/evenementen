@@ -1,7 +1,7 @@
 {
   "runId": "2026-10-25T16:18:10.746379+00:00-c24a216e",
   "startedAt": "2026-10-25T16:18:10+00:00",
-  "completedCount": 8,
+  "completedCount": 9,
   "totalSites": 19,
   "currentSite": "https://groningermuseum.nl/programma",
   "currentSiteIndex": 9,
@@ -13,7 +13,8 @@
     "https://www.spotgroningen.nl/programma/",
     "https://simplon.nl/",
     "https://www.vera-groningen.nl/",
-    "https://www.martiniplaza.nl/nl/agenda"
+    "https://www.martiniplaza.nl/nl/agenda",
+    "https://groningermuseum.nl/programma"
   ],
   "events": [
     {
@@ -245,6 +246,13 @@
       "count": 0,
       "newCount": 0,
       "durationSeconds": 2,
+      "timedOut": true
+    },
+    {
+      "site": "https://groningermuseum.nl/programma",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 2.0,
       "timedOut": true
     }
   ],
@@ -1832,16 +1840,34 @@
       "url": "https://groningermuseum.nl/programma",
       "status": "strategie",
       "rawText": "universele tentoonstellings- en activiteitenparser"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningermuseum.nl/programma",
+      "title": "Pagina mislukt",
+      "date": "",
+      "url": "https://groningermuseum.nl/programma",
+      "status": "fout",
+      "rawText": "HTTPSConnectionPool(host='groningermuseum.nl', port=443): Read timed out."
+    },
+    {
+      "source": "Website",
+      "site": "https://groningermuseum.nl/programma",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://groningermuseum.nl/programma",
+      "status": "klaar",
+      "rawText": "site 9/19: 0 unieke events in 2.0 sec"
     }
   ],
   "status": "running",
   "siteStartedAt": "2026-10-25T16:18:46+00:00",
-  "siteElapsedSeconds": 1,
+  "siteElapsedSeconds": 3,
   "sitePageCount": 0,
   "lastSiteEventCount": 0,
-  "stage": "Websitepagina ophalen",
+  "stage": "Website klaar; volgende website voorbereiden",
   "lastUpdatedAt": "2026-10-25T16:18:47+00:00",
   "lastSiteNewEventCount": 0,
-  "lastCompletedSite": "https://www.martiniplaza.nl/nl/agenda",
-  "lastCompletedAt": "2026-10-25T16:18:45+00:00"
+  "lastCompletedSite": "https://groningermuseum.nl/programma",
+  "lastCompletedAt": "2026-10-25T16:18:49+00:00"
 }

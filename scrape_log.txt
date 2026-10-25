@@ -172,3 +172,7 @@ Website	https://www.martiniplaza.nl/nl/agenda	venue-agenda kaart	Promotiedagen 2
 Website	https://www.martiniplaza.nl/nl/agenda	venue-agenda kaart	Promotiedagen 2026	2026-11-04	https://www.martiniplaza.nl/nl/agenda/promotiedagen-2026	Beurs Event Promotiedagen 2026 04 november
 Website	https://www.martiniplaza.nl/nl/agenda	venue-agenda kaart	TAFKAL: SERIEUS GRAPPIG ( )	2026-11-05	https://www.martiniplaza.nl/nl/agenda/tafkal-serieus-grappig-uitverkocht	Cabaret Theater TAFKAL: SERIEUS GRAPPIG (UITVERKOCHT) 05 november
 Website	https://www.martiniplaza.nl/nl/agenda	timeout	Site-time-out		https://www.martiniplaza.nl/nl/agenda	site overschreed de harde tijdslimiet van 2 seconden
+Website	https://groningermuseum.nl/programma	start	Start		https://groningermuseum.nl/programma	site 9/19: max 12 events, max 2 seconden
+Parser	https://groningermuseum.nl/programma	strategie	Scrapertype vastgesteld		https://groningermuseum.nl/programma	universele tentoonstellings- en activiteitenparser
+Website	https://groningermuseum.nl/programma	fout	Pagina mislukt		https://groningermuseum.nl/programma	HTTPSConnectionPool(host='groningermuseum.nl', port=443): Read timed out.
+Website	https://groningermuseum.nl/programma	klaar	Klaar		https://groningermuseum.nl/programma	site 9/19: 0 unieke events in 2.0 sec

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-25T16:18:45+00:00",
+  "updatedAt": "2026-10-25T16:18:49+00:00",
   "events": [
     {
       "date": "2026-10-25",
@@ -737,6 +737,13 @@
       "count": 0,
       "newCount": 0,
       "durationSeconds": 2,
+      "timedOut": true
+    },
+    {
+      "site": "https://groningermuseum.nl/programma",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 2.0,
       "timedOut": true
     }
   ],
@@ -2306,6 +2313,42 @@
       "url": "https://www.martiniplaza.nl/nl/agenda",
       "status": "timeout",
       "rawText": "site overschreed de harde tijdslimiet van 2 seconden"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningermuseum.nl/programma",
+      "title": "Start",
+      "date": "",
+      "url": "https://groningermuseum.nl/programma",
+      "status": "start",
+      "rawText": "site 9/19: max 12 events, max 2 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://groningermuseum.nl/programma",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://groningermuseum.nl/programma",
+      "status": "strategie",
+      "rawText": "universele tentoonstellings- en activiteitenparser"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningermuseum.nl/programma",
+      "title": "Pagina mislukt",
+      "date": "",
+      "url": "https://groningermuseum.nl/programma",
+      "status": "fout",
+      "rawText": "HTTPSConnectionPool(host='groningermuseum.nl', port=443): Read timed out."
+    },
+    {
+      "source": "Website",
+      "site": "https://groningermuseum.nl/programma",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://groningermuseum.nl/programma",
+      "status": "klaar",
+      "rawText": "site 9/19: 0 unieke events in 2.0 sec"
     }
   ]
 }
