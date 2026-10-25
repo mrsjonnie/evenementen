@@ -1,14 +1,15 @@
 {
   "runId": "2026-10-25T15:59:48.715200+00:00-5fe52d31",
   "startedAt": "2026-10-25T15:59:48+00:00",
-  "completedCount": 3,
+  "completedCount": 4,
   "totalSites": 19,
   "currentSite": "https://forum.nl/nl/agenda",
   "currentSiteIndex": 4,
   "completedSites": [
     "https://groningen.uitloper.nu/",
     "https://www.visitgroningen.nl/nl/doen/evenementen",
-    "https://www.visitgroningen.nl/nl/doen/wandelen"
+    "https://www.visitgroningen.nl/nl/doen/wandelen",
+    "https://forum.nl/nl/agenda"
   ],
   "events": [],
   "siteResults": [
@@ -31,6 +32,13 @@
       "count": 0,
       "newCount": 0,
       "durationSeconds": 3.19,
+      "timedOut": true
+    },
+    {
+      "site": "https://forum.nl/nl/agenda",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 2.0,
       "timedOut": true
     }
   ],
@@ -484,16 +492,34 @@
       "url": "https://forum.nl/nl/agenda",
       "status": "strategie",
       "rawText": "universeel-eventkaarten"
+    },
+    {
+      "source": "Website",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "Pagina mislukt",
+      "date": "",
+      "url": "https://forum.nl/nl/agenda",
+      "status": "fout",
+      "rawText": "HTTPSConnectionPool(host='forum.nl', port=443): Read timed out."
+    },
+    {
+      "source": "Website",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://forum.nl/nl/agenda",
+      "status": "klaar",
+      "rawText": "site 4/19: 0 unieke events in 2.0 sec"
     }
   ],
   "status": "running",
   "siteStartedAt": "2026-10-25T16:00:04+00:00",
-  "siteElapsedSeconds": 1,
+  "siteElapsedSeconds": 3,
   "sitePageCount": 0,
   "lastSiteEventCount": 0,
-  "stage": "Websitepagina ophalen",
+  "stage": "Website klaar; volgende website voorbereiden",
   "lastUpdatedAt": "2026-10-25T16:00:05+00:00",
   "lastSiteNewEventCount": 0,
-  "lastCompletedSite": "https://www.visitgroningen.nl/nl/doen/wandelen",
-  "lastCompletedAt": "2026-10-25T16:00:03+00:00"
+  "lastCompletedSite": "https://forum.nl/nl/agenda",
+  "lastCompletedAt": "2026-10-25T16:00:07+00:00"
 }
