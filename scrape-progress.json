@@ -3457,11 +3457,56 @@
       "url": "https://www.visitgroningen.nl/nl/doen/wandelen",
       "status": "klaar",
       "rawText": "site 3/18: 20 unieke events in 2.38 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "Start",
+      "date": "",
+      "url": "https://forum.nl/nl/agenda",
+      "status": "start",
+      "rawText": "site 4/18: max 20 events, max 60 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://forum.nl/nl/agenda",
+      "status": "strategie",
+      "rawText": "universeel-eventkaarten"
+    },
+    {
+      "source": "Website",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "Pagina gelezen",
+      "date": "",
+      "url": "https://forum.nl/nl/agenda",
+      "status": "ok",
+      "rawText": "175575 tekens HTML"
+    },
+    {
+      "source": "Parser",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "Forum detailstrategie",
+      "date": "",
+      "url": "https://forum.nl/nl/agenda",
+      "status": "strategie",
+      "rawText": "Overzicht overslaan; alleen /nl/agenda/<event> detailpagina's verwerken"
+    },
+    {
+      "source": "Website",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "Pagina geanalyseerd",
+      "date": "",
+      "url": "https://forum.nl/nl/agenda",
+      "status": "ok",
+      "rawText": "0 events/aanbiedingen op deze pagina"
     }
   ],
   "status": "running",
-  "lastCompletedSite": "https://www.visitgroningen.nl/nl/doen/wandelen",
-  "lastSiteEventCount": 20,
-  "lastUpdatedAt": "2026-10-25T10:09:28+00:00",
+  "lastCompletedSite": "https://forum.nl/nl/agenda",
+  "lastSiteEventCount": 0,
+  "lastUpdatedAt": "2026-10-25T10:09:32+00:00",
   "lastCompletedAt": "2026-10-25T10:09:29+00:00"
 }
