@@ -1684,15 +1684,24 @@
       "url": "https://www.socialdeal.nl/",
       "status": "strategie",
       "rawText": "Social Deal-aanbiedingen"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.socialdeal.nl/",
+      "title": "Pagina mislukt",
+      "date": "",
+      "url": "https://www.socialdeal.nl/dichtbij/groningen/",
+      "status": "fout",
+      "rawText": "HTTPSConnectionPool(host='www.socialdeal.nl', port=443): Read timed out. (read timeout=0.9289602000000059)"
     }
   ],
   "status": "running",
   "siteStartedAt": "2026-10-25T16:04:28+00:00",
-  "siteElapsedSeconds": 1,
+  "siteElapsedSeconds": 3,
   "sitePageCount": 0,
   "lastSiteEventCount": 0,
   "stage": "Websitepagina ophalen",
-  "lastUpdatedAt": "2026-10-25T16:04:29+00:00",
+  "lastUpdatedAt": "2026-10-25T16:04:31+00:00",
   "lastSiteNewEventCount": 0,
   "lastCompletedSite": "https://www.vvvameland.nl/activiteiten-en-evenementen",
   "lastCompletedAt": "2026-10-25T16:04:27+00:00"
