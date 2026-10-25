@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-25T16:45:29+00:00",
+  "updatedAt": "2026-10-25T16:45:36+00:00",
   "events": [
     {
       "date": "2026-10-25",
@@ -1020,6 +1020,21 @@
       "isNew": false
     },
     {
+      "date": "2026-11-11",
+      "time": "20:30",
+      "title": "Shearwater USA + Loma USA + Any Kind",
+      "type": "Concert",
+      "location": "VERA Groningen",
+      "locationLink": "",
+      "website": "https://www.vera-groningen.nl/?post_type=events&p=152600&lang=nl",
+      "source": "vera-groningen.nl",
+      "discoverySource": "Website",
+      "description": "Wednesday 11 November Shearwater USA + Loma USA + Any Kind USA Mainstage | Ticket: €16,- | doors: 20:00 - 22:00 | start: 20:30 Koop ticket",
+      "cost": "",
+      "image": "https://www.vera-groningen.nl/wp/../vera/assets/img/logo-black.svg",
+      "isNew": true
+    },
+    {
       "date": "2026-11-12",
       "time": "",
       "title": "Piter + Rupit",
@@ -1035,6 +1050,21 @@
       "isNew": true
     },
     {
+      "date": "2026-11-12",
+      "time": "20:30",
+      "title": "Supersuckers USA The Frankie Turbos",
+      "type": "Concert",
+      "location": "VERA Groningen",
+      "locationLink": "",
+      "website": "https://www.vera-groningen.nl/?post_type=events&p=153215&lang=nl",
+      "source": "vera-groningen.nl",
+      "discoverySource": "Website",
+      "description": "Thursday 12 November Supersuckers USA The Frankie Turbos NL Mainstage | Ticket: €15,- | doors: 20:00 - 22:00 | start: 20:30 Koop ticket",
+      "cost": "",
+      "image": "https://www.vera-groningen.nl/wp/../vera/assets/img/logo-black.svg",
+      "isNew": true
+    },
+    {
       "date": "2026-11-13",
       "time": "",
       "title": "NO CIGAR",
@@ -1047,6 +1077,21 @@
       "description": "Smooth indierock on psychedelics",
       "cost": "",
       "image": "https://simplon.nl/wp-content/uploads/2026/05/No-Cigar-Press-shot-1-1200x853-1.jpeg",
+      "isNew": true
+    },
+    {
+      "date": "2026-11-13",
+      "time": "20:30",
+      "title": "Nordic Giants UK L.O.E.",
+      "type": "Concert",
+      "location": "VERA Groningen",
+      "locationLink": "",
+      "website": "https://www.vera-groningen.nl/?post_type=events&p=153185&lang=nl",
+      "source": "vera-groningen.nl",
+      "discoverySource": "Website",
+      "description": "Friday 13 November Nordic Giants UK L.O.E. UK Mainstage | Ticket: €15,- | doors: 20:00 - 22:00 | start: 20:30 Koop ticket",
+      "cost": "",
+      "image": "https://www.vera-groningen.nl/wp/../vera/assets/img/logo-black.svg",
       "isNew": true
     },
     {
@@ -1346,6 +1391,13 @@
       "site": "https://simplon.nl/",
       "count": 12,
       "newCount": 12,
+      "durationSeconds": 4.0,
+      "timedOut": true
+    },
+    {
+      "site": "https://www.vera-groningen.nl/",
+      "count": 3,
+      "newCount": 3,
       "durationSeconds": 4.0,
       "timedOut": true
     }
