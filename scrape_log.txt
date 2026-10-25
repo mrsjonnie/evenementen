@@ -62,3 +62,7 @@ Website	https://groningermuseum.nl/programma	start	Start		https://groningermuseu
 Parser	https://groningermuseum.nl/programma	strategie	Scrapertype vastgesteld		https://groningermuseum.nl/programma	universele tentoonstellings- en activiteitenparser
 Website	https://groningermuseum.nl/programma	fout	Pagina mislukt		https://groningermuseum.nl/programma	HTTPSConnectionPool(host='groningermuseum.nl', port=443): Read timed out. (read timeout=0.8051123439999941)
 Website	https://groningermuseum.nl/programma	klaar	Klaar		https://groningermuseum.nl/programma	site 9/19: 0 unieke events in 2.0 sec
+Website	https://www.kultuuragenda.nl/agenda	start	Start		https://www.kultuuragenda.nl/agenda	site 10/19: max 5 events, max 2 seconden
+Parser	https://www.kultuuragenda.nl/agenda	strategie	Scrapertype vastgesteld		https://www.kultuuragenda.nl/agenda	universele detailpagina-parser (Kultuuragenda)
+Website	https://www.kultuuragenda.nl/agenda	fout	Pagina mislukt		https://www.kultuuragenda.nl/agenda	HTTPSConnectionPool(host='www.kultuuragenda.nl', port=443): Read timed out. (read timeout=0.9244031439999958)
+Website	https://www.kultuuragenda.nl/agenda	klaar	Klaar		https://www.kultuuragenda.nl/agenda	site 10/19: 0 unieke events in 2.0 sec
