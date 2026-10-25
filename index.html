@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- Publicatiesynchronisatie 2026-10-25: behoud herstelde versie 2026.10.25.54 en trigger GitHub Pages-deployment. -->
+<!-- Header-scrapelog hersteld; Pathé-parser uitgebreid in versie 2026.10.25.55. -->
 <html lang="nl">
 <head>
   <meta charset="UTF-8">
@@ -1226,6 +1226,12 @@
             </div>
           </div>
         </div>
+        <details class="rawLogPanel" id="rawLogPanel">
+          <summary id="rawLogSummary">Ruwe verversdata (nog leeg)</summary>
+          <div class="rawLogTableWrap" id="rawLogTableWrap">
+            <div class="routePanelText">Nog geen ruwe verversdata beschikbaar. Ververs de lijst om dit te vullen.</div>
+          </div>
+        </details>
         <div class="headerActions" aria-label="Weergavebediening">
           <button class="btn btnSecondary filterSidebarToggle" id="filterSidebarToggle" type="button" aria-controls="filterSidebar" aria-expanded="false">Filters tonen</button>
         </div>
@@ -1393,7 +1399,7 @@
   </div>
 
   <script>
-    const APP_VERSION = "2026.10.25.54";
+    const APP_VERSION = "2026.10.25.55";
     const DEFAULT_MAX_EVENTS_PER_SITE = 20;
     const DEFAULT_SITE_TIME_LIMIT_SECONDS = 20;
     const SCAN_SETTINGS_KEY = "eventScanSettingsV1";
