@@ -1937,7 +1937,12 @@ def parse_feed_events(feed_text, feed_url, site_url):
     return dedupe_events(events)
 
 
-def scrape_site(site_url, site_index=0, site_total=0, progress_callback=None):
+def scrape_site(site_url, site_index=0, site_total=0, progress_callback=None, existing_event_keys=None):
+    existing_event_keys = set(existing_event_keys or set())
+
+    def new_event_count(candidates):
+        return sum(1 for event in dedupe_events(candidates) if event_key(event) not in existing_event_keys)
+
     original_site = clean_text(site_url)
     normalized_site = normalized_url(original_site)
     started = time.monotonic()
@@ -1959,7 +1964,7 @@ def scrape_site(site_url, site_index=0, site_total=0, progress_callback=None):
             add_raw(source_name, original_site, "Eventvelden gebruikt", "", normalized_site, "ok", f"{count} event-kandidaten direct uit {source_name}")
 
     for page_url in start_urls_for_site(normalized_site):
-        if (len(dedupe_events(events)) >= MAX_EVENTS_PER_SITE and "vera-groningen.nl" not in canonical_host(normalized_site)) or time.monotonic() >= deadline:
+        if (new_event_count(events) >= MAX_EVENTS_PER_SITE and "vera-groningen.nl" not in canonical_host(normalized_site)) or time.monotonic() >= deadline:
             timed_out = time.monotonic() >= deadline
             break
         try:
@@ -2203,10 +2208,13 @@ def scrape_site(site_url, site_index=0, site_total=0, progress_callback=None):
     if before_date_filter != len(filtered):
         add_raw("Filter", original_site, "Datumfilter toegepast", date_from.isoformat(), normalized_site, "ok",
                 f"{before_date_filter} gevonden; {len(filtered)} binnen {date_from.isoformat()} t/m {date_to.isoformat() if date_to else 'onbeperkt'}")
-    # This cap applies only to candidates found in this scan. Previously saved events
-    # are merged separately in main(), so a site with 20 saved events can add up to
-    # MAX_EVENTS_PER_SITE more on the next scan.
-    unique = filtered[:MAX_EVENTS_PER_SITE]
+    # Count the cap against events not already saved. Existing matches do not consume
+    # this scan's allowance, so each source can contribute up to MAX_EVENTS_PER_SITE
+    # genuinely new events even when its previous collection is already large.
+    unique = dedupe_events([
+        event for event in filtered
+        if event_key(event) not in existing_event_keys
+    ])[:MAX_EVENTS_PER_SITE]
     duration = round(time.monotonic() - started, 2)
     SITE_RESULTS.append(
         {
@@ -2371,7 +2379,7 @@ def main():
             publish_scrape_progress(progress)
 
         try:
-            all_events.extend(scrape_site(site, index, total_sites, progress_callback=publish_partial_site_progress))
+            all_events.extend(scrape_site(site, index, total_sites, progress_callback=publish_partial_site_progress, existing_event_keys=previous_all_keys))
         except Exception as exc:
             add_raw("Website", site, "Site mislukt", "", site, "fout", str(exc))
             SITE_RESULTS.append({"site": site, "count": 0, "newCount": 0, "durationSeconds": 0, "timedOut": False})
