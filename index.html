@@ -78,8 +78,15 @@
       all: unset;
       display: inline-flex;
       align-items: center;
-      gap: 8px;
+      flex-wrap: wrap;
+      gap: 6px 8px;
+      max-width: 100%;
       cursor: pointer;
+    }
+
+    #pageTitle {
+      flex: 0 0 auto;
+      white-space: nowrap;
     }
 
     .titleChevron { display:none !important; }
@@ -87,14 +94,18 @@
     .titleProgressText {
       display: inline-flex;
       align-items: center;
-      border-radius: 999px;
+      flex: 0 1 560px;
+      max-width: 100%;
+      min-width: 0;
+      border-radius: 8px;
       padding: 3px 8px;
       background: var(--surface-soft, #eef3f8);
       color: var(--primary-dark);
       font-size: .72rem;
       font-weight: 850;
       line-height: 1.35;
-      white-space: nowrap;
+      white-space: normal;
+      overflow-wrap: anywhere;
       vertical-align: middle;
     }
     .titleProgressText[hidden] { display: none !important; }
@@ -1318,7 +1329,7 @@
   </div>
 
   <script>
-    const APP_VERSION = "2026.10.25.35";
+    const APP_VERSION = "2026.10.25.36";
     const DEFAULT_MAX_EVENTS_PER_SITE = 20;
     const DEFAULT_SITE_TIME_LIMIT_SECONDS = 20;
     const SCAN_SETTINGS_KEY = "eventScanSettingsV1";
