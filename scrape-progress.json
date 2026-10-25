@@ -1919,15 +1919,33 @@
       "url": "https://www.filmvandaag.nl/bioscoop",
       "status": "klaar",
       "rawText": "site 19/20: 0 unieke events in 2.0 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.pathe.nl/nl/bioscopen/pathe-groningen",
+      "title": "Start",
+      "date": "",
+      "url": "https://www.pathe.nl/nl/bioscopen/pathe-groningen",
+      "status": "start",
+      "rawText": "site 20/20: max 5 events, max 2 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.pathe.nl/nl/bioscopen/pathe-groningen",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://www.pathe.nl/nl/bioscopen/pathe-groningen",
+      "status": "strategie",
+      "rawText": "universeel-jsonld-links-kaarten"
     }
   ],
   "status": "running",
   "siteStartedAt": "2026-10-25T14:58:51+00:00",
-  "siteElapsedSeconds": 0,
+  "siteElapsedSeconds": 1,
   "sitePageCount": 0,
   "lastSiteEventCount": 0,
   "stage": "Websitepagina ophalen",
-  "lastUpdatedAt": "2026-10-25T14:58:51+00:00",
+  "lastUpdatedAt": "2026-10-25T14:58:52+00:00",
   "lastSiteNewEventCount": 0,
   "lastCompletedSite": "https://www.filmvandaag.nl/bioscoop",
   "lastCompletedAt": "2026-10-25T14:58:48+00:00"
