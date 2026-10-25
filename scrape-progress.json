@@ -2027,6 +2027,24 @@
       "url": "https://www.martiniplaza.nl/nl/agenda",
       "status": "klaar",
       "rawText": "site 8/19: 0 unieke events in 2.04 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningermuseum.nl/programma",
+      "title": "Start",
+      "date": "",
+      "url": "https://groningermuseum.nl/programma",
+      "status": "start",
+      "rawText": "site 9/19: max 5 events, max 2 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://groningermuseum.nl/programma",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://groningermuseum.nl/programma",
+      "status": "strategie",
+      "rawText": "universele tentoonstellings- en activiteitenparser"
     }
   ],
   "status": "running",
