@@ -98,3 +98,7 @@ Website	https://www.filmvandaag.nl/bioscoop	start	Start		https://www.filmvandaag
 Parser	https://www.filmvandaag.nl/bioscoop	strategie	Scrapertype vastgesteld		https://www.filmvandaag.nl/bioscoop	bioscoopagenda Groningen (FilmVandaag)
 Website	https://www.filmvandaag.nl/bioscoop	fout	Pagina mislukt		https://www.filmvandaag.nl/filmladder/stad/80-groningen	HTTP 403
 Website	https://www.filmvandaag.nl/bioscoop	klaar	Klaar		https://www.filmvandaag.nl/bioscoop	site 18/19: 0 unieke events in 2.0 sec
+Website	https://www.pathe.nl/nl/bioscopen/pathe-groningen	start	Start		https://www.pathe.nl/nl/bioscopen/pathe-groningen	site 19/19: max 5 events, max 2 seconden
+Parser	https://www.pathe.nl/nl/bioscopen/pathe-groningen	strategie	Scrapertype vastgesteld		https://www.pathe.nl/nl/bioscopen/pathe-groningen	Pathé Groningen via BiosAgenda-speeltijden
+Website	https://www.pathe.nl/nl/bioscopen/pathe-groningen	fout	Pagina mislukt		https://www.biosagenda.nl/films-bioscoop_path-groningen_128.html	HTTP 403
+Website	https://www.pathe.nl/nl/bioscopen/pathe-groningen	klaar	Klaar		https://www.pathe.nl/nl/bioscopen/pathe-groningen	site 19/19: 0 unieke events in 1.15 sec
