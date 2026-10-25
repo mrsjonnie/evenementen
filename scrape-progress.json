@@ -1,7 +1,7 @@
 {
   "runId": "2026-10-25T16:13:04.656609+00:00-97369fb4",
   "startedAt": "2026-10-25T16:13:04+00:00",
-  "completedCount": 12,
+  "completedCount": 13,
   "totalSites": 19,
   "currentSite": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
   "currentSiteIndex": 13,
@@ -17,7 +17,8 @@
     "https://groningermuseum.nl/programma",
     "https://www.kultuuragenda.nl/agenda",
     "https://www.noorderzon.nl/programma",
-    "https://www.concertgebouw.nl/concerten-en-tickets"
+    "https://www.concertgebouw.nl/concerten-en-tickets",
+    "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html"
   ],
   "events": [
     {
@@ -460,6 +461,13 @@
       "newCount": 5,
       "durationSeconds": 2.11,
       "timedOut": true
+    },
+    {
+      "site": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 1.2,
+      "timedOut": false
     }
   ],
   "rawLog": [
@@ -3702,16 +3710,34 @@
       "url": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
       "status": "strategie",
       "rawText": "bioscoopfilms en speeldata (BiosAgenda Groningen)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "title": "Pagina mislukt",
+      "date": "",
+      "url": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "status": "klaar",
+      "rawText": "site 13/19: 0 unieke events in 1.2 sec"
     }
   ],
   "status": "running",
   "siteStartedAt": "2026-10-25T16:13:58+00:00",
-  "siteElapsedSeconds": 1,
+  "siteElapsedSeconds": 2,
   "sitePageCount": 0,
   "lastSiteEventCount": 0,
-  "stage": "Websitepagina ophalen",
+  "stage": "Website klaar; volgende website voorbereiden",
   "lastUpdatedAt": "2026-10-25T16:13:59+00:00",
   "lastSiteNewEventCount": 0,
-  "lastCompletedSite": "https://www.concertgebouw.nl/concerten-en-tickets",
-  "lastCompletedAt": "2026-10-25T16:13:57+00:00"
+  "lastCompletedSite": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+  "lastCompletedAt": "2026-10-25T16:14:00+00:00"
 }

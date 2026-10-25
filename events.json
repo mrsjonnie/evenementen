@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-25T16:13:57+00:00",
+  "updatedAt": "2026-10-25T16:14:00+00:00",
   "events": [
     {
       "date": "2026-10-25",
@@ -518,6 +518,13 @@
       "newCount": 5,
       "durationSeconds": 2.11,
       "timedOut": true
+    },
+    {
+      "site": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 1.2,
+      "timedOut": false
     }
   ],
   "rawLog": [
@@ -3742,6 +3749,42 @@
       "url": "https://www.concertgebouw.nl/concerten-en-tickets",
       "status": "klaar",
       "rawText": "site 12/19: 5 unieke events in 2.11 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "title": "Start",
+      "date": "",
+      "url": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "status": "start",
+      "rawText": "site 13/19: max 5 events, max 2 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "status": "strategie",
+      "rawText": "bioscoopfilms en speeldata (BiosAgenda Groningen)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "title": "Pagina mislukt",
+      "date": "",
+      "url": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "status": "klaar",
+      "rawText": "site 13/19: 0 unieke events in 1.2 sec"
     }
   ]
 }
