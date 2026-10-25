@@ -1,6 +1,6 @@
 Website	https://www.zwolsetheaters.nl/programma	start	Start		https://www.zwolsetheaters.nl/programma	site 1/1: max 20 events, max 60 seconden
 Parser	https://www.zwolsetheaters.nl/programma	strategie	Scrapertype vastgesteld		https://www.zwolsetheaters.nl/programma	JavaScript-agenda + API/chunk-detectie
-Website	https://www.zwolsetheaters.nl/programma	ok	Pagina gelezen		https://www.zwolsetheaters.nl/programma	57798 tekens HTML
+Website	https://www.zwolsetheaters.nl/programma	ok	Pagina gelezen		https://www.zwolsetheaters.nl/programma	57636 tekens HTML
 Diagnose	https://www.zwolsetheaters.nl/programma	diagnose	Zwolse scripts		https://www.zwolsetheaters.nl/programma	type= src= len=371 | type= src=/assets/js/chunk-vendors.main.js?v=L8F5KdDUVX9i4ON4PXhCti3ujgqHICgBWsZxug4CPgA len=0 | type= src=/assets/js/main.js?v=WgecduYVPp8i_9Rxhb1fyYhHd0tzmUbPgKM0R-XTk5A len=0 | type= src=/assets/js/helpers.js?v=HGrKdvmUXqEJb8FtU8ZsLaz1xOk0Jx-uSg48D1iyr6I len=0 | type=text/javascript src= len=373 | type= src=/scripts/contact-component.js?v=T0YxD1bwBCz0x5Tr6e1QJY0SeZgMP867CLiLKjc7BUI len=0 | typ
 Diagnose	https://www.zwolsetheaters.nl/programma	diagnose	Zwolse links		https://www.zwolsetheaters.nl/programma	
 Diagnose	https://www.zwolsetheaters.nl/programma	diagnose	Zwolse JSON		https://www.zwolsetheaters.nl/programma	
@@ -76,4 +76,4 @@ RSS/Atom	https://www.zwolsetheaters.nl/programma	fout	Feed mislukt		https://www.
 RSS/Atom	https://www.zwolsetheaters.nl/programma	fout	Feed mislukt		https://www.zwolsetheaters.nl/rss.xml	HTTP 404
 RSS/Atom	https://www.zwolsetheaters.nl/programma	fout	Feed mislukt		https://www.zwolsetheaters.nl/feed.xml	HTTP 404
 RSS/Atom	https://www.zwolsetheaters.nl/programma	fout	Feed mislukt		https://www.zwolsetheaters.nl/events/feed/	HTTP 404
-Website	https://www.zwolsetheaters.nl/programma	klaar	Klaar		https://www.zwolsetheaters.nl/programma	site 1/1: 0 unieke events in 13.69 sec
+Website	https://www.zwolsetheaters.nl/programma	klaar	Klaar		https://www.zwolsetheaters.nl/programma	site 1/1: 0 unieke events in 10.37 sec
