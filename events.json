@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-25T15:05:01+00:00",
+  "updatedAt": "2026-10-25T15:05:05+00:00",
   "events": [
     {
       "date": "2026-10-25",
@@ -11742,6 +11742,13 @@
       "newCount": 0,
       "durationSeconds": 2,
       "timedOut": true
+    },
+    {
+      "site": "https://simplon.nl/",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 2.0,
+      "timedOut": true
     }
   ],
   "rawLog": [
@@ -12923,6 +12930,42 @@
       "url": "https://www.spotgroningen.nl/programma/",
       "status": "timeout",
       "rawText": "site overschreed de harde tijdslimiet van 2 seconden"
+    },
+    {
+      "source": "Website",
+      "site": "https://simplon.nl/",
+      "title": "Start",
+      "date": "",
+      "url": "https://simplon.nl/",
+      "status": "start",
+      "rawText": "site 6/20: max 5 events, max 2 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://simplon.nl/",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://simplon.nl/",
+      "status": "strategie",
+      "rawText": "compacte-agenda-kaarten"
+    },
+    {
+      "source": "Website",
+      "site": "https://simplon.nl/",
+      "title": "Pagina mislukt",
+      "date": "",
+      "url": "https://simplon.nl/programma/",
+      "status": "fout",
+      "rawText": "HTTPSConnectionPool(host='simplon.nl', port=443): Read timed out. (read timeout=1.0735402349999958)"
+    },
+    {
+      "source": "Website",
+      "site": "https://simplon.nl/",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://simplon.nl/",
+      "status": "klaar",
+      "rawText": "site 6/20: 0 unieke events in 2.0 sec"
     }
   ]
 }
