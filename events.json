@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-25T16:18:16+00:00",
+  "updatedAt": "2026-10-25T16:18:20+00:00",
   "events": [
     {
       "date": "2026-10-25",
@@ -516,6 +516,13 @@
       "newCount": 0,
       "durationSeconds": 3.55,
       "timedOut": true
+    },
+    {
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 2,
+      "timedOut": true
     }
   ],
   "rawLog": [
@@ -806,6 +813,51 @@
       "url": "https://groningen.uitloper.nu/",
       "status": "klaar",
       "rawText": "site 1/19: 0 unieke events in 3.55 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Start",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "status": "start",
+      "rawText": "site 2/19: max 12 events, max 2 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "status": "strategie",
+      "rawText": "Visit Groningen agenda-/routekaarten"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Pagina gelezen",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen",
+      "status": "ok",
+      "rawText": "206720 tekens HTML"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Visit Groningen detailstrategie",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen",
+      "status": "strategie",
+      "rawText": "Overzicht overslaan; alleen detail-URL's met /evenementen/<slug> verwerken"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Site-time-out",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "status": "timeout",
+      "rawText": "site overschreed de harde tijdslimiet van 2 seconden"
     }
   ]
 }
