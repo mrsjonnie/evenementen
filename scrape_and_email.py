@@ -284,7 +284,7 @@ def detect_scraper_type(site_url):
     if host == "forum.nl":
         return "universeel-eventkaarten"
     if host == "zwolsetheaters.nl":
-        return "JSON-LD + detailpagina-crawler"
+        return "JavaScript-agenda + API/chunk-detectie"
     if host == "visitgroningen.nl":
         return "Visit Groningen agenda-/routekaarten"
     if host == "groningermuseum.nl":
@@ -1434,7 +1434,7 @@ def start_urls_for_site(site_url):
         ])
     if host == "denieuwekolk.nl":
         base = f"{parsed.scheme}://{parsed.netloc}"
-        return unique_urls([urljoin(base, "/agenda"), urljoin(base, "/bieb/agenda")])
+        return [urljoin(base, "/agenda")]
     if host == "socialdeal.nl":
         base = f"{parsed.scheme}://{parsed.netloc}"
         # Different public listing pages expose complementary batches of deals.
@@ -2235,7 +2235,7 @@ def scrape_site(site_url, site_index=0, site_total=0, progress_callback=None, ex
                         request_pattern = r".{0,100}(?:baseURL|axios\.create|fetch\(|graphql|/api/|api/).{0,180}"
                         matches.extend(match.group(0) for match in re.finditer(request_pattern, asset_text, re.I))
                         for chunk_id in ("9760", "6183"):
-                            chunk_context = [m.group(0) for m in re.finditer(rf".{0,70}{chunk_id}.{0,100}", asset_text, re.I)]
+                            chunk_context = [m.group(0) for m in re.finditer(rf".{{0,70}}{chunk_id}.{{0,100}}", asset_text, re.I)]
                             matches.extend("chunk-context: " + context for context in chunk_context[:2])
                             hashes = re.findall(rf'["\']?{chunk_id}["\']?\s*:\s*["\']([a-zA-Z0-9_-]{{4,}})["\']', asset_text)
                             for chunk_hash in hashes[:2]:
