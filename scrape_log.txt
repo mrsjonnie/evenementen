@@ -7,3 +7,12 @@ Website	https://www.ibood.com/s-nl	fout	Pagina mislukt		https://www.ibood.com/nl
 Diagnose	https://www.ibood.com/s-nl	fout	403-tekstproxy mislukt		https://www.ibood.com/s-nl	HTTPSConnectionPool(host='r.jina.ai', port=443): Read timed out. (read timeout=1.076346608999998)
 Website	https://www.ibood.com/s-nl	fout	Pagina mislukt		https://www.ibood.com/s-nl	HTTP 403
 Website	https://www.ibood.com/s-nl	klaar	Klaar		https://www.ibood.com/s-nl	site 1/3: 0 unieke events in 4.02 sec
+Website	https://www.pathe.nl/bioscoop/groningen	start	Start		https://www.pathe.nl/bioscoop/groningen	site 2/3: max 12 events, max 4 seconden
+Parser	https://www.pathe.nl/bioscoop/groningen	strategie	Scrapertype vastgesteld		https://www.pathe.nl/bioscoop/groningen	Pathé Groningen via BiosAgenda-speeltijden
+Diagnose	https://www.biosagenda.nl/films-bioscoop_path-groningen_128.html	fout	403-tekstproxy mislukt		https://www.biosagenda.nl/films-bioscoop_path-groningen_128.html	HTTPSConnectionPool(host='r.jina.ai', port=443): Read timed out. (read timeout=1.25)
+Website	https://www.pathe.nl/bioscoop/groningen	fout	Pagina mislukt		https://www.biosagenda.nl/films-bioscoop_path-groningen_128.html	HTTP 403
+Diagnose	https://www.pathe.nl/bioscoop/groningen	fout	403-tekstproxy mislukt		https://www.pathe.nl/bioscoop/groningen	HTTPSConnectionPool(host='r.jina.ai', port=443): Read timed out. (read timeout=1.25)
+Website	https://www.pathe.nl/bioscoop/groningen	fout	Pagina mislukt		https://www.pathe.nl/bioscoop/groningen	HTTP 403
+Diagnose	https://www.pathe.nl/nl/bioscopen/pathe-groningen	fout	403-tekstproxy mislukt		https://www.pathe.nl/nl/bioscopen/pathe-groningen	HTTPSConnectionPool(host='r.jina.ai', port=443): Read timed out. (read timeout=0.9758778810000024)
+Website	https://www.pathe.nl/bioscoop/groningen	fout	Pagina mislukt		https://www.pathe.nl/nl/bioscopen/pathe-groningen	HTTP 403
+Website	https://www.pathe.nl/bioscoop/groningen	klaar	Klaar		https://www.pathe.nl/bioscoop/groningen	site 2/3: 0 unieke events in 4.02 sec
