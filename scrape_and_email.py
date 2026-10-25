@@ -49,6 +49,23 @@ MAX_EVENTS_PER_SITE = env_int("INPUT_MAX_EVENTS_PER_SITE", 20, 1, 100)
 SITE_TIME_LIMIT_SECONDS = env_int("INPUT_SITE_TIME_LIMIT_SECONDS", 20, 1, 60)
 MAX_RAW_ROWS = 1200
 TODAY = date.today()
+try:
+    SCAN_DATE_FROM = date.fromisoformat(INPUT_DATE_FROM[:10]) if INPUT_DATE_FROM else TODAY
+except ValueError:
+    SCAN_DATE_FROM = TODAY
+try:
+    SCAN_DATE_TO = date.fromisoformat(INPUT_DATE_TO[:10]) if INPUT_DATE_TO and INPUT_DATE_TO[:10] != "9999-12-31" else None
+except ValueError:
+    SCAN_DATE_TO = None
+
+
+def event_in_requested_date_window(event):
+    try:
+        event_day = date.fromisoformat(str(event.get("date", ""))[:10])
+    except (TypeError, ValueError):
+        return False
+    return event_day >= SCAN_DATE_FROM and (SCAN_DATE_TO is None or event_day <= SCAN_DATE_TO)
+
 
 MONTH_NUMBERS = {
     "januari": 1,
@@ -2246,28 +2263,12 @@ def parse_feed_events(feed_text, feed_url, site_url):
 
 def scrape_site(site_url, site_index=0, site_total=0, progress_callback=None, existing_event_keys=None):
     existing_event_keys = set(existing_event_keys or set())
-    # Apply the requested date window while counting toward the per-scan cap.
+    # Count only genuinely new events inside the requested date window toward this scan's cap.
     # Otherwise old/out-of-range cards can consume the limit before valid events are found.
-    try:
-        scan_date_from = date.fromisoformat(INPUT_DATE_FROM[:10]) if INPUT_DATE_FROM else TODAY
-    except ValueError:
-        scan_date_from = TODAY
-    try:
-        scan_date_to = date.fromisoformat(INPUT_DATE_TO[:10]) if INPUT_DATE_TO and INPUT_DATE_TO[:10] != "9999-12-31" else None
-    except ValueError:
-        scan_date_to = None
-
-    def event_in_date_window(event):
-        try:
-            event_day = date.fromisoformat(str(event.get("date", ""))[:10])
-        except (TypeError, ValueError):
-            return False
-        return event_day >= scan_date_from and (scan_date_to is None or event_day <= scan_date_to)
-
     def new_event_count(candidates):
         return sum(
             1 for event in dedupe_events(candidates)
-            if event_key(event) not in existing_event_keys and event_in_date_window(event)
+            if event_key(event) not in existing_event_keys and event_in_requested_date_window(event)
         )
 
     original_site = clean_text(site_url)
@@ -2666,14 +2667,8 @@ def scrape_site(site_url, site_index=0, site_total=0, progress_callback=None, ex
     unique = dedupe_events(events)
     # Treat the selected start date as an inclusive lower bound. If no date was selected,
     # default to today so historical editorial posts are never shown as upcoming events.
-    try:
-        date_from = date.fromisoformat(INPUT_DATE_FROM[:10]) if INPUT_DATE_FROM else TODAY
-    except ValueError:
-        date_from = TODAY
-    try:
-        date_to = date.fromisoformat(INPUT_DATE_TO[:10]) if INPUT_DATE_TO and INPUT_DATE_TO[:10] != "9999-12-31" else None
-    except ValueError:
-        date_to = None
+    date_from = SCAN_DATE_FROM
+    date_to = SCAN_DATE_TO
     before_date_filter = len(unique)
     filtered = []
     for event in unique:
@@ -2889,8 +2884,15 @@ def main():
             progress["rawLog"] = RAW_DATA_ROWS[-MAX_RAW_ROWS:]
             progress["currentSite"] = site
             progress["currentSiteIndex"] = index
-            progress["lastSiteEventCount"] = len(dedupe_events(partial_events))
-            progress["lastSiteNewEventCount"] = sum(1 for event in dedupe_events(partial_events) if event_key(event) not in previous_all_keys)
+            in_range_partial = [
+                event for event in dedupe_events(partial_events)
+                if event_in_requested_date_window(event)
+            ]
+            progress["lastSiteEventCount"] = min(MAX_EVENTS_PER_SITE, len(in_range_partial))
+            progress["lastSiteNewEventCount"] = min(
+                MAX_EVENTS_PER_SITE,
+                sum(1 for event in in_range_partial if event_key(event) not in previous_all_keys)
+            )
             progress["siteElapsedSeconds"] = max(0, int((datetime.now(timezone.utc) - datetime.fromisoformat(progress["siteStartedAt"])).total_seconds()))
             progress["sitePageCount"] = sum(1 for row in RAW_DATA_ROWS if row.get("site") == site and row.get("title") == "Pagina gelezen")
             progress["lastUpdatedAt"] = datetime.now(timezone.utc).isoformat(timespec="seconds")
