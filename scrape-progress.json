@@ -1,7 +1,7 @@
 {
   "runId": "2026-10-25T13:53:34.546177+00:00-b4dc5ad6",
   "startedAt": "2026-10-25T13:53:34+00:00",
-  "completedCount": 19,
+  "completedCount": 20,
   "totalSites": 20,
   "currentSite": "https://www.pathe.nl/nl/bioscopen/pathe-groningen",
   "currentSiteIndex": 20,
@@ -24,7 +24,8 @@
     "https://www.vvvameland.nl/activiteiten-en-evenementen",
     "https://www.socialdeal.nl/",
     "https://denieuwekolk.nl/agenda",
-    "https://www.filmvandaag.nl/bioscoop"
+    "https://www.filmvandaag.nl/bioscoop",
+    "https://www.pathe.nl/nl/bioscopen/pathe-groningen"
   ],
   "events": [
     {
@@ -236,6 +237,13 @@
       "newCount": 0,
       "durationSeconds": 2.57,
       "timedOut": true
+    },
+    {
+      "site": "https://www.pathe.nl/nl/bioscopen/pathe-groningen",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 1.34,
+      "timedOut": false
     }
   ],
   "rawLog": [
@@ -11040,14 +11048,14 @@
       "rawText": "Muziek Theater Francis van Broekhuizen - Tosca 30 oktober"
     }
   ],
-  "status": "running",
+  "status": "finishing",
   "siteStartedAt": "2026-10-25T13:55:39+00:00",
-  "siteElapsedSeconds": 1,
+  "siteElapsedSeconds": 2,
   "sitePageCount": 0,
   "lastSiteEventCount": 0,
-  "stage": "Websitepagina ophalen",
+  "stage": "Website klaar; volgende website voorbereiden",
   "lastUpdatedAt": "2026-10-25T13:55:40+00:00",
   "lastSiteNewEventCount": 0,
-  "lastCompletedSite": "https://www.filmvandaag.nl/bioscoop",
-  "lastCompletedAt": "2026-10-25T13:55:37+00:00"
+  "lastCompletedSite": "https://www.pathe.nl/nl/bioscopen/pathe-groningen",
+  "lastCompletedAt": "2026-10-25T13:55:41+00:00"
 }
