@@ -48,7 +48,7 @@ Website	https://groningen.uitloper.nu/	Uitloper agenda-item	Beklimming Martinito
 Website	https://groningen.uitloper.nu/	Uitloper agenda-item	Pubquiz	2026-10-25	https://groningen.uitloper.nu/quizzen/pubquiz-18	Pubquiz 19:00 uur De pubquiz is een triviantquiz die bestaat uit 8 rondes…
 Parser	https://groningen.uitloper.nu/	gespecialiseerde parser	Uitloper-dagpagina	2026-10-25	https://groningen.uitloper.nu/?date=1792929600	45 agenda-items op 2026-10-25
 Website	https://groningen.uitloper.nu/	ok	Pagina geanalyseerd		https://groningen.uitloper.nu/?date=1792929600	42 events/aanbiedingen op deze pagina
-Website	https://groningen.uitloper.nu/	klaar	Klaar		https://groningen.uitloper.nu/	site 1/18: 20 unieke events in 2.29 sec
+Website	https://groningen.uitloper.nu/	klaar	Klaar		https://groningen.uitloper.nu/	site 1/18: 20 unieke events in 1.95 sec
 Website	https://www.visitgroningen.nl/nl/doen/evenementen	start	Start		https://www.visitgroningen.nl/nl/doen/evenementen	site 2/18: max 20 events, max 60 seconden
 Parser	https://www.visitgroningen.nl/nl/doen/evenementen	strategie	Scrapertype vastgesteld		https://www.visitgroningen.nl/nl/doen/evenementen	Visit Groningen agenda-/routekaarten
 Website	https://www.visitgroningen.nl/nl/doen/evenementen	ok	Pagina gelezen		https://www.visitgroningen.nl/nl/doen/cultuur/evenementen	206723 tekens HTML
@@ -266,7 +266,7 @@ Website	https://www.visitgroningen.nl/nl/doen/evenementen	event uit tekstregel	O
 Parser	https://www.visitgroningen.nl/nl/doen/evenementen	analyse	Pagina geteld		https://www.visitgroningen.nl/nl/doen/cultuur/evenementen/terug-naar-het-begin	jsonld:0, links:0, datumblokken:1, kaarten:0, regels:1, detail:1
 Website	https://www.visitgroningen.nl/nl/doen/evenementen	ok	Detailpagina geanalyseerd		https://www.visitgroningen.nl/nl/doen/cultuur/evenementen/terug-naar-het-begin	3 extra events
 Filter	https://www.visitgroningen.nl/nl/doen/evenementen	ok	Datumfilter toegepast	2026-10-25	https://www.visitgroningen.nl/nl/doen/evenementen	108 gevonden; 101 binnen 2026-10-25 t/m onbeperkt
-Website	https://www.visitgroningen.nl/nl/doen/evenementen	klaar	Klaar		https://www.visitgroningen.nl/nl/doen/evenementen	site 2/18: 20 unieke events in 5.27 sec
+Website	https://www.visitgroningen.nl/nl/doen/evenementen	klaar	Klaar		https://www.visitgroningen.nl/nl/doen/evenementen	site 2/18: 20 unieke events in 4.32 sec
 Website	https://www.visitgroningen.nl/nl/doen/wandelen	start	Start		https://www.visitgroningen.nl/nl/doen/wandelen	site 3/18: max 20 events, max 60 seconden
 Parser	https://www.visitgroningen.nl/nl/doen/wandelen	strategie	Scrapertype vastgesteld		https://www.visitgroningen.nl/nl/doen/wandelen	Visit Groningen agenda-/routekaarten
 Website	https://www.visitgroningen.nl/nl/doen/wandelen	ok	Pagina gelezen		https://www.visitgroningen.nl/nl/doen/wandelen	374114 tekens HTML
@@ -293,7 +293,7 @@ Website	https://www.visitgroningen.nl/nl/doen/wandelen	wandelroute gevonden	Een 
 Website	https://www.visitgroningen.nl/nl/doen/wandelen	wandelroute gevonden	Lunchen in de stad	2026-10-25	https://www.visitgroningen.nl/nl/blogs/lunchen-in-groningen	Lunchen in de stad
 Parser	https://www.visitgroningen.nl/nl/doen/wandelen	gespecialiseerde parser	Visit Groningen wandelroutes		https://www.visitgroningen.nl/nl/doen/wandelen	20 wandelroutes/activiteiten gevonden
 Website	https://www.visitgroningen.nl/nl/doen/wandelen	ok	Pagina geanalyseerd		https://www.visitgroningen.nl/nl/doen/wandelen	20 events/aanbiedingen op deze pagina
-Website	https://www.visitgroningen.nl/nl/doen/wandelen	klaar	Klaar		https://www.visitgroningen.nl/nl/doen/wandelen	site 3/18: 20 unieke events in 1.76 sec
+Website	https://www.visitgroningen.nl/nl/doen/wandelen	klaar	Klaar		https://www.visitgroningen.nl/nl/doen/wandelen	site 3/18: 20 unieke events in 1.68 sec
 Website	https://forum.nl/nl/agenda	start	Start		https://forum.nl/nl/agenda	site 4/18: max 20 events, max 60 seconden
 Parser	https://forum.nl/nl/agenda	strategie	Scrapertype vastgesteld		https://forum.nl/nl/agenda	universeel-eventkaarten
 Website	https://forum.nl/nl/agenda	ok	Pagina gelezen		https://forum.nl/nl/agenda	175473 tekens HTML
@@ -409,7 +409,7 @@ Website	https://forum.nl/nl/agenda	ok	Detailpagina geanalyseerd		https://forum.n
 Website	https://forum.nl/nl/agenda	ok	Detailpagina geanalyseerd		https://forum.nl/nl/agenda/film/the-beloved?date=25-10-2026	1 extra events
 Website	https://forum.nl/nl/agenda	ok	Detailpagina geanalyseerd		https://forum.nl/nl/agenda/film/the-beloved?date=26-10-2026	0 extra events
 Website	https://forum.nl/nl/agenda	ok	Detailpagina geanalyseerd		https://forum.nl/nl/agenda/film/the-incomer?date=25-10-2026	1 extra events
-Website	https://forum.nl/nl/agenda	klaar	Klaar		https://forum.nl/nl/agenda	site 4/18: 20 unieke events in 7.19 sec
+Website	https://forum.nl/nl/agenda	klaar	Klaar		https://forum.nl/nl/agenda	site 4/18: 20 unieke events in 7.18 sec
 Website	https://www.spotgroningen.nl/programma/	start	Start		https://www.spotgroningen.nl/programma/	site 5/18: max 20 events, max 60 seconden
 Parser	https://www.spotgroningen.nl/programma/	strategie	Scrapertype vastgesteld		https://www.spotgroningen.nl/programma/	universeel-met-kaartfallback
 Website	https://www.spotgroningen.nl/programma/	ok	Pagina gelezen		https://www.spotgroningen.nl/programma	1000535 tekens HTML
