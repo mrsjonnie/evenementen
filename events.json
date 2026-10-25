@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-25T18:57:46+00:00",
+  "updatedAt": "2026-10-25T18:57:58+00:00",
   "events": [
     {
       "date": "2026-10-25",
@@ -12707,513 +12707,16 @@
       "newCount": 20,
       "durationSeconds": 2.37,
       "timedOut": false
+    },
+    {
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 10.04,
+      "timedOut": false
     }
   ],
   "rawLog": [
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Lisa Ostermann De Baas (reprise) Winnaar Poelifinario in de categorie Engagement",
-      "date": "2027-10-08",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "8 okt Lisa Ostermann De Baas (reprise) Winnaar Poelifinario in de categorie Engagement Uitverkocht"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Die 12 Cellisten der Berliner Philharmoniker Een",
-      "date": "2027-10-08",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "8 okt Die 12 Cellisten der Berliner Philharmoniker Een fascinerende reis door celloland met twaalf Berlijnse topcellisten Wereldklasse"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Toneelgroep Maastricht Bijna een leven \"Het acteerspel",
-      "date": "2027-10-09",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "9 okt Toneelgroep Maastricht Bijna een leven \"Het acteerspel van Kavus, Kouta & Wouterse is uitzonderlijk goed\" ★★★★ de Volkskrant"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Flaire Support: Djeezie & IDA Dansbare synthpop met elektronische invloeden",
-      "date": "2027-10-09",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "9 okt Flaire Support: Djeezie & IDA Dansbare synthpop met elektronische invloeden Uitverkocht"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "MEROL + support: MAHA Brutale Nederlandse elektropop",
-      "date": "2027-10-01",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "1 okt MEROL + support: MAHA Brutale Nederlandse elektropop"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Michael Prins Play With Fire Tour + support: DEHAZE Singer-songwriter",
-      "date": "2027-10-01",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "1 okt Michael Prins Play With Fire Tour + support: DEHAZE Singer-songwriter bekend van 'Close to You' komt met nieuw werk"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "The Meltdown Southern soul met invloeden uit Stax, Motown en de Nashville-songwriterstraditie",
-      "date": "2027-10-01",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "1 okt The Meltdown Southern soul met invloeden uit Stax, Motown en de Nashville-songwriterstraditie"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "november Bo Tarenskeen",
-      "date": "2027-10-01",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "1 okt november Bo Tarenskeen | Het Nationale Theater Soekarno “Tarenskeen kleurt Soekarno prachtig in\" ★★★★ Trouw"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "In de Waaier - Live Een avond met Bauke Mollema Een terugblik op bijna 20 jaar als wielrenner",
-      "date": "2026-11-01",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "1 nov In de Waaier - Live Een avond met Bauke Mollema Een terugblik op bijna 20 jaar als wielrenner Uitverkocht"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Breabach Folky Sunday Een avondje Schotse folk op z’n allerbest!",
-      "date": "2026-11-01",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "1 nov Breabach Folky Sunday Een avondje Schotse folk op z’n allerbest!"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Roël Calister Ensemble The Work of Songs Krachtige",
-      "date": "2026-11-01",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "1 nov Roël Calister Ensemble The Work of Songs Krachtige verhalen komten tot leven door Afro-Curaçaose ritmes en melodieën"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Fresku & Metropole Orkest Hand op mijn hart Nieuwe",
-      "date": "2026-11-01",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "1 nov Fresku & Metropole Orkest Hand op mijn hart Nieuwe muziek en herbewerkingen van Fresku-tracks Uitverkocht"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "The Fatal Flowers Seven Days To Remember Legendarische Nederlandse gitaarrock met new wave en",
-      "date": "2026-11-02",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "2 nov The Fatal Flowers Seven Days To Remember Legendarische Nederlandse gitaarrock met new wave en Amerikaanse invloeden."
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Plien & Bianca Harrekidee! (reprise) Een onvergetelijke stoet aan hilarische figuren",
-      "date": "2026-11-02",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "2 nov Plien & Bianca Harrekidee! (reprise) Een onvergetelijke stoet aan hilarische figuren Uitverkocht"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Oersoep NITE & K.O.Brass Een passie voor de 21e eeuw",
-      "date": "2026-11-03",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "3 nov Oersoep NITE & K.O.Brass Een passie voor de 21e eeuw"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Pynarello & Jochem Stavenuiter Pulcinella Maskers af!",
-      "date": "2026-11-04",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "4 nov Pynarello & Jochem Stavenuiter Pulcinella Maskers af! Mimespeler Jochem Stavenuiter zet Pynarello op z’n kop"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Marie Koet Eindspel (try-out) Hét comedytalent van 2026 (de Volkskrant)",
-      "date": "2026-11-04",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "4 nov Marie Koet Eindspel (try-out) Hét comedytalent van 2026 (de Volkskrant) Geannuleerd"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Aqueerius Beyond the Ball “Een barok-wave parel vol lef, liefde en licht” - ★★★★★ Musicalsites",
-      "date": "2026-11-04",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "4 nov Aqueerius Beyond the Ball “Een barok-wave parel vol lef, liefde en licht” - ★★★★★ Musicalsites"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Jip Smit Motherland III: The Return of",
-      "date": "2026-11-05",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "5 nov Jip Smit Motherland III: The Return of Katinka Nerdy fantasytheater, fysieke komedie en vette satire"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Noord Nederlands Orkest Sjostakovitsj 2 & Brahms",
-      "date": "2026-11-05",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "5 nov Noord Nederlands Orkest Sjostakovitsj 2 & Brahms 3 Het NNO en NNCK zorgen samen voor contrasterende werelden"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Oersoep NITE & K.O.Brass Een passie voor de 21e eeuw",
-      "date": "2026-11-05",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "5 nov Oersoep NITE & K.O.Brass Een passie voor de 21e eeuw"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Marie Koet Eindspel (try-out) Hét comedytalent van 2026 (de Volkskrant)",
-      "date": "2026-11-05",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "5 nov Marie Koet Eindspel (try-out) Hét comedytalent van 2026 (de Volkskrant) Geannuleerd"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Pieter Savenberg Neoklassieke soundscapes in de",
-      "date": "2026-11-05",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "5 nov Pieter Savenberg Neoklassieke soundscapes in de prachtige kerk Ambitus"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "TakeRoot 28e editie van TakeRoot met o.a. Willow Avalon, American Aquarium en The Del Fuegos",
-      "date": "2026-11-06",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "6 nov TakeRoot 28e editie van TakeRoot met o.a. Willow Avalon, American Aquarium en The Del Fuegos"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Diggy Dex De Zoektocht Naar Geluk Op zoek naar de grote en kleine vragen van het leven",
-      "date": "2026-11-07",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "7 nov Diggy Dex De Zoektocht Naar Geluk Op zoek naar de grote en kleine vragen van het leven Laatste kaarten"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Toneelschuurproducties/Koen Verheijden Mystiek lichaam Rauw-komische voorstelling naar",
-      "date": "2026-11-07",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "7 nov Toneelschuurproducties/Koen Verheijden Mystiek lichaam Rauw-komische voorstelling naar Frans Kellendonks spraakmakende roman Laatste kaarten"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Mus & kapitein Kwaadbaard (8+) Sterke",
-      "date": "2026-11-07",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "7 nov Mus & kapitein Kwaadbaard (8+) Sterke Verhalen Muzikaal, vindingrijk en spannend"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Kracht PATS (6+) MAN",
-      "date": "2026-11-08",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "8 nov Kracht PATS (6+) MAN || CO & House of Nouws Heldhaftige dansvoorstelling over de kracht van samenwerken, humor en grootheidswaan"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Mus & Kapitein Kwaadbaard (8+) Sterke",
-      "date": "2026-11-08",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "8 nov Mus & Kapitein Kwaadbaard (8+) Sterke Verhalen Muzikaal, vindingrijk en spannend"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Macy Gray The Trouble With The Truth Tour Een onweerstaanbare mix van soul, r&b en funk",
-      "date": "2026-11-08",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "8 nov Macy Gray The Trouble With The Truth Tour Een onweerstaanbare mix van soul, r&b en funk"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Caro Returning to Innocence Rauw, sensueel, gelaagd",
-      "date": "2026-11-08",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "8 nov Caro Returning to Innocence Rauw, sensueel, gelaagd"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Simone Lamsma & Jonathan Fournel Internationaal vermaarde",
-      "date": "2026-11-09",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "9 nov Simone Lamsma & Jonathan Fournel Internationaal vermaarde topvioliste en Franse sterpianist Wereldklasse"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Cursus Klassieke",
-      "date": "2026-11-09",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "9 nov Cursus Klassieke Muziek 2 De Klassieken Ga mee op een inspirerende reis door de muziekgeschiedenis!"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Cursus Klassieke",
-      "date": "2026-11-01",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "1 nov Cursus Klassieke Muziek 2 De Klassieken Ga mee op een inspirerende reis door de muziekgeschiedenis!"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Jakop Ahlbom Company & ISH Dance Collective",
-      "date": "2026-11-01",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "1 nov Jakop Ahlbom Company & ISH Dance Collective A Fine Mess \"Een hilarische voorstelling\" ★★★★ de Volkskrant"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Eva Eikhout Het Leven Is Kort, Net",
-      "date": "2026-11-01",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "1 nov Eva Eikhout Het Leven Is Kort, Net Als Ik! Energiek theatercollege vol humor, zelfspot en een verfrissende kijk op het leven"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Iris Hond & Kamerata Zuid spelen Einaudi",
-      "date": "2026-11-01",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "1 nov Iris Hond & Kamerata Zuid spelen Einaudi (Reprise) Iris Hond en Kamerata Zuid buigen zich over Italiaans pianofenomeen"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Niall McCabe Een karakteristieke mix van moderne",
-      "date": "2026-11-01",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "1 nov Niall McCabe Een karakteristieke mix van moderne Ierse folk en americana"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Tina Dico Live 2026 Scandinavische singer-songwriter brengt nieuw album",
-      "date": "2026-11-01",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "1 nov Tina Dico Live 2026 Scandinavische singer-songwriter brengt nieuw album"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Jakop Ahlbom Company & ISH Dance Collective",
-      "date": "2026-11-02",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "2 nov Jakop Ahlbom Company & ISH Dance Collective A Fine Mess \"Een hilarische voorstelling\" ★★★★ de Volkskrant"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Noord Nederlands Orkest Symfonische Soundtracks Iconische filmmuziek",
-      "date": "2026-11-02",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "2 nov Noord Nederlands Orkest Symfonische Soundtracks Iconische filmmuziek klinkt live in de concertzaal"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Roufaida Coming Up For Air Akoestische bewerking van doorbraakalbum",
-      "date": "2026-11-02",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "2 nov Roufaida Coming Up For Air Akoestische bewerking van doorbraakalbum"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "The Black Atlantic Work In The Dark’",
-      "date": "2026-11-02",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "2 nov The Black Atlantic Work In The Dark’ Tour 2026/2027 Vernieuwende en intieme folk in een gelaagd jasje"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Recirquel Paradisum Een fascinerende mix van circusacrobatiek en",
-      "date": "2026-11-02",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "2 nov Recirquel Paradisum Een fascinerende mix van circusacrobatiek en hedendaagse dans"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Rockit GoGo Penguin, Nate Smith, Tigran Hamasyan, Kurt Elling & Yellowjackets",
-      "date": "2026-11-03",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "3 nov Rockit GoGo Penguin, Nate Smith, Tigran Hamasyan, Kurt Elling & Yellowjackets"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Repeatclub fABULEUS / Danaé Bosman Openingsavond Jonge Harten",
-      "date": "2026-11-04",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "4 nov Repeatclub fABULEUS / Danaé Bosman Openingsavond Jonge Harten Net bevestigd"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Contra (12+) WabiSabi",
-      "date": "2026-11-04",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "4 nov Contra (12+) WabiSabi | Het Houten Huis | HIIIT \"Een van de beste voorstellingen van het jaar\" (★★★★★ Dagblad van het Noorden)"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Noor + support: Else Lena Nederlands poptalent",
-      "date": "2026-11-05",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "5 nov Noor + support: Else Lena Nederlands poptalent met eerlijke teksten en een kwetsbare maar krachtige sound Laatste kaarten"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Gruppo Sportivo Stop Motion - The 50th",
-      "date": "2026-11-05",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "5 nov Gruppo Sportivo Stop Motion - The 50th Anniversary Tour Nog één keer de Nederpopklassiekers tijdens afscheidstour Uitverkocht"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "The Dog Days Are Over 2.0 Grip/Jan Martens Nieuwe versie van de theaterhit van Jan Martens",
-      "date": "2026-11-05",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "5 nov The Dog Days Are Over 2.0 Grip/Jan Martens Nieuwe versie van de theaterhit van Jan Martens"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Kneecap + support: FAWZI X SMOKAHOLIC",
-      "date": "2026-11-06",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "6 nov Kneecap + support: FAWZI X SMOKAHOLIC Ierse raprave grootmeesters Uitverkocht"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Early James TakeRoot presents: Tom Waits-achtige roots met Alabama-soul",
-      "date": "2026-11-06",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "6 nov Early James TakeRoot presents: Tom Waits-achtige roots met Alabama-soul"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Blair Davie Eén van de meest veelbelovende nieuwe singer-songwriters uit de",
-      "date": "2026-11-06",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "6 nov Blair Davie Eén van de meest veelbelovende nieuwe singer-songwriters uit de UK"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Kokoroko Euforische dansbare",
-      "date": "2026-11-07",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "7 nov Kokoroko Euforische dansbare jazz en afrobeat"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Groninger Studenten",
-      "date": "2026-11-07",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "7 nov Groninger Studenten Cabaret Festival Halve finale 40e GSCF Lachen en genieten van een avond vol aanstormend cabarettalent Laatste kaarten"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "LEVI.SCT Samensmelting van klassieke",
-      "date": "2026-11-08",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "8 nov LEVI.SCT Samensmelting van klassieke muziek met hiphop, house, trap en salsa"
-    },
     {
       "source": "Website",
       "site": "https://www.spotgroningen.nl/programma/",
@@ -23509,6 +23012,510 @@
       "url": "https://www.concertgebouw.nl/concerten-en-tickets",
       "status": "klaar",
       "rawText": "site 12/20: 20 unieke events in 2.37 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Start",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/programma",
+      "status": "start",
+      "rawText": "site 13/20: max 20 events, max 20 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/programma",
+      "status": "strategie",
+      "rawText": "JavaScript-agenda + API/chunk-detectie"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Pagina gelezen",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/programma",
+      "status": "ok",
+      "rawText": "57679 tekens HTML"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Zwolse scripts",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/programma",
+      "status": "diagnose",
+      "rawText": "type= src= len=371 | type= src=/assets/js/chunk-vendors.main.js?v=L8F5KdDUVX9i4ON4PXhCti3ujgqHICgBWsZxug4CPgA len=0 | type= src=/assets/js/main.js?v=WgecduYVPp8i_9Rxhb1fyYhHd0tzmUbPgKM0R-XTk5A len=0 | type= src=/assets/js/helpers.js?v=HGrKdvmUXqEJb8FtU8ZsLaz1xOk0Jx-uSg48D1iyr6I len=0 | type=text/javascript src= len=373 | type= src=/scripts/contact-component.js?v=T0YxD1bwBCz0x5Tr6e1QJY0SeZgMP867CLiLKjc7BUI len=0 | typ"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Zwolse links",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/programma",
+      "status": "diagnose",
+      "rawText": ""
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Zwolse JSON",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/programma",
+      "status": "diagnose",
+      "rawText": ""
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Zwolse JS scan chunk-vendors.main.js",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/assets/js/chunk-vendors.main.js?v=L8F5KdDUVX9i4ON4PXhCti3ujgqHICgBWsZxug4CPgA",
+      "status": "diagnose",
+      "rawText": "geen API-route herkend; 384411 tekens;"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Zwolse chunk geladen",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/assets/js/9760.936.js",
+      "status": "diagnose",
+      "rawText": "49199 tekens; js/9760.936.js"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Zwolse API-route",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/assets/js/9760.936.js",
+      "status": "diagnose",
+      "rawText": "),be=e=>e&&(S(e)||E(e))&&E(e.then)&&E(e.catch),ye=((e,t)=>e?setImmediate:t?((e,t)=>(V.addEventListener("
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Zwolse API-aanroep",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/assets/js/9760.936.js",
+      "status": "diagnose",
+      "rawText": "prototype.hasOwnProperty,enumerable:!1,writable:!0,configurable:!0});const l={url:s,method:s,data:s,baseURL:i,transformRequest:i,transformResponse:i,paramsSerializer:i,timeout:i,timeoutMessage:i,withCredentials:i,withXSRFToken:i,adapter:i,responseType:i,xsrfCookieName:i,xsrfHeaderName:i"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Zwolse chunk geladen",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/assets/js/9285.557.js",
+      "status": "diagnose",
+      "rawText": "182 tekens; js/9285.557.js"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Zwolse chunk geladen",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/assets/js/3041.8f5.js",
+      "status": "diagnose",
+      "rawText": "182 tekens; js/3041.8f5.js"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Zwolse chunk geladen",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/assets/js/7793.cc2.js",
+      "status": "diagnose",
+      "rawText": "818 tekens; js/7793.cc2.js"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Zwolse chunk geladen",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/assets/js/3186.2e6.js",
+      "status": "diagnose",
+      "rawText": "690 tekens; js/3186.2e6.js"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Zwolse chunk geladen",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/assets/js/4654.61f.js",
+      "status": "diagnose",
+      "rawText": "2263 tekens; js/4654.61f.js"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Zwolse chunk geladen",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/assets/js/8796.54a.js",
+      "status": "diagnose",
+      "rawText": "1719 tekens; js/8796.54a.js"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Zwolse chunk geladen",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/assets/js/7210.7c9.js",
+      "status": "diagnose",
+      "rawText": "137 tekens; js/7210.7c9.js"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Zwolse chunk geladen",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/assets/js/2967.957.js",
+      "status": "diagnose",
+      "rawText": "1439 tekens; js/2967.957.js"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Zwolse chunk geladen",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/assets/js/base/overview/base-overview-filter-dropdown.dd7.js",
+      "status": "diagnose",
+      "rawText": "2338 tekens; js/base/overview/base-overview-filter-dropdown.dd7.js"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Zwolse chunk geladen",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/assets/js/base/overview/base-overview-filter-checkbox.2ad.js",
+      "status": "diagnose",
+      "rawText": "2533 tekens; js/base/overview/base-overview-filter-checkbox.2ad.js"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Zwolse chunk geladen",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/assets/js/base/overview/base-news-overview-item.e4f.js",
+      "status": "diagnose",
+      "rawText": "2188 tekens; js/base/overview/base-news-overview-item.e4f.js"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Zwolse chunk geladen",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/assets/js/lib/gsap.b3b.js",
+      "status": "diagnose",
+      "rawText": "67929 tekens; js/lib/gsap.b3b.js"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Zwolse API-route",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/assets/js/lib/gsap.b3b.js",
+      "status": "diagnose",
+      "rawText": ")},W=function(t,e){return!e&&console.warn(t)},Q=function(t,e){return t&&(q[t]=e)&&V&&(V[t]=e)||q},H=function(){return 0},Z={suppressEvents:!0,isStart:!0},$={suppressEvents:!0},J={},K=[],tt={},et={},rt={},it=30,nt=[],st="
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Zwolse chunk geladen",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/assets/js/icons.ff5.js",
+      "status": "diagnose",
+      "rawText": "2027 tekens; js/icons.ff5.js"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Zwolse chunk geladen",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/assets/js/base/icons.797.js",
+      "status": "diagnose",
+      "rawText": "8474 tekens; js/base/icons.797.js"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Zwolse API-route",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/assets/js/base/icons.797.js",
+      "status": "diagnose",
+      "rawText": "img/base_calendar.svg"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Zwolse chunk geladen",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/assets/js/base/icons-arrows.0fc.js",
+      "status": "diagnose",
+      "rawText": "1737 tekens; js/base/icons-arrows.0fc.js"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Zwolse chunk geladen",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/assets/js/base/icons-socials.b2b.js",
+      "status": "diagnose",
+      "rawText": "453 tekens; js/base/icons-socials.b2b.js"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Zwolse chunk geladen",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/assets/js/base/form/base-fields.c2f.js",
+      "status": "diagnose",
+      "rawText": "24151 tekens; js/base/form/base-fields.c2f.js"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Zwolse chunk geladen",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/assets/js/directives/in-viewport.directive.460.js",
+      "status": "diagnose",
+      "rawText": "682 tekens; js/directives/in-viewport.directive.460.js"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Zwolse API-route",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/assets/js/directives/in-viewport.directive.460.js",
+      "status": "diagnose",
+      "rawText": "]={mounted:(e,t)=>{e.inViewportEvent=()=>{u(e,t.arg||0,!1,!0)&&!e.hasAttribute("
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Zwolse chunk geladen",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/assets/js/directives/out-viewport.directive.15f.js",
+      "status": "diagnose",
+      "rawText": "701 tekens; js/directives/out-viewport.directive.15f.js"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Zwolse API-route",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/assets/js/directives/out-viewport.directive.15f.js",
+      "status": "diagnose",
+      "rawText": "]={mounted:(t,e)=>{t.outViewportEvent=(0,r.A)(()=>{u(t,e.arg||0,!1,!0)||t.hasAttribute("
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Zwolse chunk geladen",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/assets/js/directives/click-outside.directive.3ef.js",
+      "status": "diagnose",
+      "rawText": "447 tekens; js/directives/click-outside.directive.3ef.js"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Zwolse API-route",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/assets/js/directives/click-outside.directive.3ef.js",
+      "status": "diagnose",
+      "rawText": "]={beforeMount:function(e,n){e.clickOutsideEvent=function(t){e==t.target||e.contains(t.target)||null===e.offsetParent||"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Zwolse chunk geladen",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/assets/js/base/base-faq-accordion.21c.js",
+      "status": "diagnose",
+      "rawText": "3322 tekens; js/base/base-faq-accordion.21c.js"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Zwolse chunk geladen",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/assets/js/base/form/base-form-container.9cf.js",
+      "status": "diagnose",
+      "rawText": "604 tekens; js/base/form/base-form-container.9cf.js"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Zwolse chunk geladen",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/assets/js/base/form/base-form-field.05f.js",
+      "status": "diagnose",
+      "rawText": "3877 tekens; js/base/form/base-form-field.05f.js"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Zwolse API-route",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/assets/js/base/form/base-form-field.05f.js",
+      "status": "diagnose",
+      "rawText": ",1),e.showIndicator||e.model?.showIndicator?((0,a.uX)(),(0,a.CE)("
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Zwolse JS main.js #1",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/assets/js/main.js?v=WgecduYVPp8i_9Rxhb1fyYhHd0tzmUbPgKM0R-XTk5A",
+      "status": "diagnose",
+      "rawText": "g}])},[(0,o.RG)(e.$slots,\"default\")],2)}s(9838);var ge=s(8585);class fe{constructor(){(0,g.A)(this,\"baseUrl\",\"\"),(0,g.A)(this,\"client\",void 0),(0,g.A)(this,\"getClient\",async()=>{if(this.client)return this.client;const e=await Promise.all([s.e(9760),s.e(6183)]).then(s.bind(s,3110));retur"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Zwolse JS main.js #2",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/assets/js/main.js?v=WgecduYVPp8i_9Rxhb1fyYhHd0tzmUbPgKM0R-XTk5A",
+      "status": "diagnose",
+      "rawText": "n this.client=e.default.create({timeout:18e6}),this.client.defaults.baseURL=this.baseUrl,this.client}),(0,g.A)(this,\"getMockResponse\",(e,t)=>({status:e,statusText:\"\",data:t,headers:{},config:{}})),(0,g.A)(this,\"handleResponse\",e=>{const{apiLoading:t}=(0,K.E)(),{cameli"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Zwolse JS main.js #3",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/assets/js/main.js?v=WgecduYVPp8i_9Rxhb1fyYhHd0tzmUbPgKM0R-XTk5A",
+      "status": "diagnose",
+      "rawText": "chunk-context: ],\"./_BaseFormPage.vue\":[6334,[3192]],\"./_BaseFormUmbraco.vue\":[4661,[9760,1088]],\"./fields/_BaseCheckbox.vue\":[9143,[8868]],\"./fields/_BaseCheckboxList.vue\":[6181,[8216]],\"."
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Zwolse JS main.js #4",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/assets/js/main.js?v=WgecduYVPp8i_9Rxhb1fyYhHd0tzmUbPgKM0R-XTk5A",
+      "status": "diagnose",
+      "rawText": "chunk-context: ()=>{if(this.client)return this.client;const e=await Promise.all([s.e(9760),s.e(6183)]).then(s.bind(s,3110));return this.client=e.default.create({timeout:18e6}),this.client.d"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Zwolse JS main.js #5",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/assets/js/main.js?v=WgecduYVPp8i_9Rxhb1fyYhHd0tzmUbPgKM0R-XTk5A",
+      "status": "diagnose",
+      "rawText": "chunk-context: is.client)return this.client;const e=await Promise.all([s.e(9760),s.e(6183)]).then(s.bind(s,3110));return this.client=e.default.create({timeout:18e6}),this.client.defaults.ba"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Zwolse JS main.js #6",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/assets/js/main.js?v=WgecduYVPp8i_9Rxhb1fyYhHd0tzmUbPgKM0R-XTk5A",
+      "status": "diagnose",
+      "rawText": "chunk-context: ,[]))}}(),function(){s.u=function(e){return 9760===e?\"js/9760.936.js\":6183===e?\"js/lib/axios.85f.js\":9285===e?\"js/9285.557.js\":3041===e?\"js/3041.8f5.js\":7793===e?\"js/7793.cc2"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Zwolse JS scan helpers.js",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/assets/js/helpers.js?v=HGrKdvmUXqEJb8FtU8ZsLaz1xOk0Jx-uSg48D1iyr6I",
+      "status": "diagnose",
+      "rawText": "geen API-route herkend; 732 tekens;"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Agenda geanalyseerd",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/programma",
+      "status": "gespecialiseerde parser",
+      "rawText": "0 agenda-items gevonden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Pagina geteld",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/programma",
+      "status": "analyse",
+      "rawText": "jsonld:0, links:0, datumblokken:0, kaarten:0, regels:0, detail:0"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Zwolse programma-parser",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/programma",
+      "status": "strategie",
+      "rawText": "Programma-kaarten met datums + geneste detail-URL's; JSON-LD/generieke parser als fallback"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Pagina geanalyseerd",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/programma",
+      "status": "ok",
+      "rawText": "0 events/aanbiedingen op deze pagina"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Feed geanalyseerd",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/",
+      "status": "ok",
+      "rawText": "0 events uit openbare feed"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/rss",
+      "status": "fout",
+      "rawText": "HTTP 404"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/rss.xml",
+      "status": "fout",
+      "rawText": "HTTP 404"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/feed.xml",
+      "status": "fout",
+      "rawText": "HTTP 404"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/events/feed/",
+      "status": "fout",
+      "rawText": "HTTP 404"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/programma",
+      "status": "klaar",
+      "rawText": "site 13/20: 0 unieke events in 10.04 sec"
     }
   ]
 }
