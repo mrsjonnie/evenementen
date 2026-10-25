@@ -1456,9 +1456,14 @@ def start_urls_for_site(site_url):
     if host == "simplon.nl":
         return [urljoin(exact, "/programma/")]
     urls = [exact]
-    if "ibood.com" in host:
-        # The current Dutch storefront uses this path; the root redirects here.
-        urls.extend([urljoin(exact, "/s-nl"), urljoin(exact, "/offers/nl/s-nl")])
+    if host == "filmvandaag.nl":
+        # The generic /bioscoop page is not the city timetable. Use Groningen's
+        # actual film ladder, which contains cinema headings, day columns and times.
+        urls = [urljoin(f"{parsed.scheme}://{parsed.netloc}", "/filmladder/stad/80-groningen")]
+    if host == "ibood.com":
+        # Current Dutch storefront; try both localized routes used by iBOOD.
+        base = f"{parsed.scheme}://{parsed.netloc}"
+        urls.extend([urljoin(base, "/nl/s-nl"), urljoin(base, "/s-nl"), urljoin(base, "/offers/nl/s-nl")])
     if parsed.path in {"", "/"}:
         base = f"{parsed.scheme}://{parsed.netloc}"
         urls.extend(urljoin(base, path) for path in COMMON_PATHS_FOR_ROOT_SITES)
@@ -2418,6 +2423,15 @@ def scrape_site(site_url, site_index=0, site_total=0, progress_callback=None, ex
             page_events = extract_filmvandaag_events(html, final_url, normalized_site, "Website")
             if not page_events:
                 page_events = parse_page_events(html, final_url, normalized_site, "Website")
+                add_raw("Diagnose", original_site, "FilmVandaag zonder speeldata", "", final_url, "fallback",
+                        f"Geen gespecialiseerde vertoningen gevonden; HTML {len(html)} tekens; pagina {urlparse(final_url).path}")
+        elif canonical_host(normalized_site) == "ibood.com":
+            # The dedicated parser existed but was never wired into the scrape path,
+            # so generic event parsing could not recognize the product/price cards.
+            page_events = extract_ibood_offers(html, final_url, normalized_site)
+            if not page_events:
+                add_raw("Diagnose", original_site, "iBOOD zonder aanbiedingen", "", final_url, "fallback",
+                        f"Geen productkaarten herkend; HTML {len(html)} tekens; pagina {urlparse(final_url).path}")
         elif canonical_host(normalized_site) == "denieuwekolk.nl":
             # The agenda is a directory of event detail pages. Skip generic line parsing
             # here; it mistakes buttons and room names for events. Parse each detail page once.
