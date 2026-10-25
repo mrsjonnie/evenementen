@@ -2261,7 +2261,8 @@ def scrape_site(site_url, site_index=0, site_total=0, progress_callback=None, ex
                             snippets = [m.group(0) for m in re.finditer(r".{0,40}(?:9760|6183).{0,70}", asset_text, re.I)][:3]
                             add_raw("Diagnose", original_site, "Zwolse JS scan " + urlparse(asset_url).path.rsplit("/", 1)[-1], "", asset_url, "diagnose", f"geen API-route herkend; {len(asset_text)} tekens; " + " | ".join(snippets))
                         for match_index, match_text in enumerate(unique_matches[:18], start=1):
-                            add_raw("Diagnose", original_site, f"Zwolse JS {urlparse(asset_url).path.rsplit('/', 1)[-1]} #{match_index}", "", asset_url, "diagnose", match_text)                    except Exception as asset_error:
+                            add_raw("Diagnose", original_site, f"Zwolse JS {urlparse(asset_url).path.rsplit('/', 1)[-1]} #{match_index}", "", asset_url, "diagnose", match_text)
+                    except Exception as asset_error:
                         add_raw("Diagnose", original_site, "Zwolse JS fout", "", asset, "fout", str(asset_error))
         except Exception as exc:
             add_raw("Website", original_site, "Pagina mislukt", "", page_url, "fout", str(exc))
