@@ -1391,15 +1391,33 @@
       "url": "https://www.vera-groningen.nl/",
       "status": "klaar",
       "rawText": "site 7/20: 0 unieke events in 3.0 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Start",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda",
+      "status": "start",
+      "rawText": "site 8/20: max 5 events, max 2 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda",
+      "status": "strategie",
+      "rawText": "agenda-kaarten"
     }
   ],
   "status": "running",
   "siteStartedAt": "2026-10-25T14:39:22+00:00",
-  "siteElapsedSeconds": 0,
+  "siteElapsedSeconds": 1,
   "sitePageCount": 0,
   "lastSiteEventCount": 0,
   "stage": "Websitepagina ophalen",
-  "lastUpdatedAt": "2026-10-25T14:39:22+00:00",
+  "lastUpdatedAt": "2026-10-25T14:39:23+00:00",
   "lastSiteNewEventCount": 0,
   "lastCompletedSite": "https://www.vera-groningen.nl/",
   "lastCompletedAt": "2026-10-25T14:39:21+00:00"
