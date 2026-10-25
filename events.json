@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-25T14:44:31+00:00",
+  "updatedAt": "2026-10-25T14:44:35+00:00",
   "events": [
     {
       "date": "2026-10-25",
@@ -11790,6 +11790,13 @@
       "count": 0,
       "newCount": 0,
       "durationSeconds": 2.0,
+      "timedOut": true
+    },
+    {
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 2.15,
       "timedOut": true
     }
   ],
