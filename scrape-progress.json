@@ -3,8 +3,8 @@
   "startedAt": "2026-10-25T18:13:24+00:00",
   "completedCount": 1,
   "totalSites": 3,
-  "currentSite": "https://www.ibood.com/s-nl",
-  "currentSiteIndex": 1,
+  "currentSite": "https://www.pathe.nl/bioscoop/groningen",
+  "currentSiteIndex": 2,
   "completedSites": [
     "https://www.ibood.com/s-nl"
   ],
@@ -129,12 +129,12 @@
     }
   ],
   "status": "running",
-  "siteStartedAt": "2026-10-25T18:13:25+00:00",
-  "siteElapsedSeconds": 5,
-  "sitePageCount": 1,
+  "siteStartedAt": "2026-10-25T18:13:31+00:00",
+  "siteElapsedSeconds": 0,
+  "sitePageCount": 0,
   "lastSiteEventCount": 0,
-  "stage": "Website klaar; volgende website voorbereiden",
-  "lastUpdatedAt": "2026-10-25T18:13:29+00:00",
+  "stage": "Websitepagina ophalen",
+  "lastUpdatedAt": "2026-10-25T18:13:31+00:00",
   "lastSiteNewEventCount": 0,
   "lastCompletedSite": "https://www.ibood.com/s-nl",
   "lastCompletedAt": "2026-10-25T18:13:30+00:00"
