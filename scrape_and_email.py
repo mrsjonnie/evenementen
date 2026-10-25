@@ -2567,34 +2567,54 @@ def scrape_site(site_url, site_index=0, site_total=0, progress_callback=None, ex
                 if canonical_host(final_url) == "tickets.denieuwekolk.nl" and re.search(r"/mtTicket/performance/\d+", urlparse(final_url).path, re.I):
                     ticket_text = clean_text(detail_soup.get_text(" ", strip=True))
                     ticket_title = ""
-                    for heading in detail_soup.find_all(["h1", "h2", "h3"]):
+                    for heading in detail_soup.find_all(["h1", "h2"]):
                         candidate = clean_title(heading.get_text(" ", strip=True))
-                        if "23 brieven van vincent" in candidate.lower():
-                            ticket_title = "23 Brieven van Vincent"
+                        if title_is_usable(candidate) and not re.search(r"\b(ticket|bestellen|winkelwagen|reserveren)\b", candidate, re.I):
+                            ticket_title = candidate
                             break
                     if not ticket_title:
-                        ticket_title = "23 Brieven van Vincent" if "23 brieven van vincent" in ticket_text.lower() else page_title(detail_soup)
-                    date_match = re.search(r"\b(dinsdag\s+27\s+oktober\s+2026)\b", ticket_text, re.I)
-                    time_match = re.search(r"\b(\d{1,2}:\d{2})\s*(?:\(einde\s*\d{1,2}:\d{2}\))?\s*(Filmzaal\s*\d+)\b", ticket_text, re.I)
-                    if date_match and time_match and ticket_title:
-                        ticket_date = parse_date_text(date_match.group(1))
-                        ticket_room = clean_text(time_match.group(2))
-                        ticket_time = time_match.group(1)
+                        ticket_title = clean_title(meta_content(detail_soup, "og:title", "twitter:title"))
+                    if not ticket_title:
+                        ticket_title = page_title(detail_soup)
+
+                    # Performance URLs are individual showtimes. Parse the actual
+                    # weekday/date instead of hardcoding one known screening.
+                    date_matches = list(DUTCH_DATE_RE.finditer(ticket_text))
+                    time_room_matches = list(re.finditer(
+                        r"\b([01]?\d|2[0-3]):[0-5]\d\s*(?:\(\s*(?:einde|tot)\s*[01]?\d:[0-5]\d\s*\))?\s*((?:Filmzaal|Theaterzaal|Zaal|Studio|Cinema)\s*\d+)\b",
+                        ticket_text, re.I
+                    ))
+                    ticket_date = ""
+                    ticket_time = ""
+                    ticket_room = ""
+                    if date_matches and time_room_matches:
+                        # Choose the date nearest the showtime/room text; ticket pages
+                        # may also contain booking or footer dates.
+                        pair = min(
+                            ((d, t) for d in date_matches for t in time_room_matches),
+                            key=lambda pair: abs(pair[0].start() - pair[1].start())
+                        )
+                        ticket_date = parse_date_text(pair[0].group(0))
+                        ticket_time = re.search(r"\b[01]?\d:[0-5]\d\b", pair[1].group(0)).group(0)
+                        ticket_room = clean_text(pair[1].group(2))
+                    if ticket_date and ticket_time and ticket_room and title_is_usable(ticket_title):
                         ticket_event = normalize_event({
                             "title": ticket_title,
                             "date": ticket_date,
                             "time": ticket_time,
-                            "type": "film",
+                            "type": classify_type(ticket_title + " " + ticket_text, normalized_site),
                             "location": f"De Nieuwe Kolk Assen, {ticket_room}",
                             "website": final_url,
-                            "description": "Filmvertoning in De Nieuwe Kolk.",
+                            "description": f"Voorstelling in {ticket_room}, De Nieuwe Kolk Assen.",
                             "discoverySource": discovery_source,
                         }, normalized_site)
                         detail_events = [ticket_event] if ticket_event else []
-                        add_raw(discovery_source, original_site, ticket_title, ticket_date, final_url, "ticketpagina", f"{ticket_time}; De Nieuwe Kolk Assen, {ticket_room}")
+                        add_raw(discovery_source, original_site, ticket_title, ticket_date, final_url, "ticketpagina",
+                                f"{ticket_time}; De Nieuwe Kolk Assen, {ticket_room}")
                     else:
                         detail_events = []
-                        add_raw(discovery_source, original_site, "DNK-ticketpagina niet volledig herkend", "", final_url, "diagnose", ticket_text[:400])
+                        add_raw(discovery_source, original_site, "DNK-ticketpagina niet volledig herkend", "", final_url, "diagnose",
+                                f"titel={ticket_title}; datums={len(date_matches)}; tijden/ruimtes={len(time_room_matches)}; tekst={ticket_text[:260]}")
                 else:
                     detail_events = parse_jsonld_events(detail_soup, final_url, normalized_site, discovery_source)
                     if not detail_events:
