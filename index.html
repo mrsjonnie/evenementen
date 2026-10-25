@@ -1313,7 +1313,7 @@
   </div>
 
   <script>
-    const APP_VERSION = "2026.10.25.05";
+    const APP_VERSION = "2026.10.25.03";
     const DEFAULT_MAX_EVENTS_PER_SITE = 20;
     const DEFAULT_SITE_TIME_LIMIT_SECONDS = 20;
     const SCAN_SETTINGS_KEY = "eventScanSettingsV1";
@@ -2213,16 +2213,18 @@
       const titleProgress = $("titleProgressText");
       if (!progress || !progress.runId) return;
       if (!isCurrentRun) {
-        const siteTotal = Math.max(1, Number(progress.totalSites) || 19);
-        const currentSite = 1;
-        const site = cleanText(progress.currentSite || progress.sites?.[0] || "");
-        const shortSite = site ? site.replace(/^https?:\\/\\//, "").replace(/^www\\./, "").replace(/\\/$/, "").split("/")[0] : "start";
+        const completedSoFar = Math.max(0, Number(progress.completedCount) || 0);
+        const siteTotal = Math.max(completedSoFar + 1, Number(progress.totalSites) || 18);
+        const currentSite = Math.min(siteTotal, completedSoFar + 1);
         if (titleProgress) {
           titleProgress.hidden = false;
-          titleProgress.textContent = `Zoeken.... (${currentSite}/${siteTotal}) (${shortSite})`;
-          titleProgress.title = "Zoekactie gestart; wacht op de eerste actuele voortgang";
+          titleProgress.textContent = `Zoeken.... (${currentSite}/${siteTotal})`;
+          titleProgress.title = "Zoekactie gestart; wachten op de eerste actuele voortgang";
         }
-        if (target) target.hidden = true;
+        if (target) {
+          target.hidden = false;
+          target.textContent = `Zoeken.... (${currentSite}/${siteTotal}) — wachten op de voortgang van de huidige zoekactie…`;
+        }
         return;
       }
       const completed = Math.max(0, Number(progress.completedCount) || 0);
@@ -2235,13 +2237,12 @@
         return;
       }
       const site = cleanText(progress.currentSite || progress.lastCompletedSite || progress.completedSites?.[completed] || "");
-      const siteNumber = Math.min(total || 19, completed + 1);
-      const siteLabel = site ? site.replace(/^https?:\\/\\//, "").replace(/^www\\./, "").replace(/\\/$/, "") : "website wordt voorbereid";
-      const shortSite = siteLabel.split("/")[0];
-      const newCount = Number(progress.lastSiteEventCount ?? progress.siteResults?.find(item => item.site === site)?.newCount ?? 0);
+      const siteNumber = Math.min(total || 18, completed + 1);
+      const newCount = events.filter(event => event.isNew || newEventKeys.has(eventDedupeKey(event))).length;
+      const siteLabel = site ? site.replace(/^https?:\/\//, "").replace(/\/$/, "") : "website wordt voorbereid";
       if (titleProgress) {
         titleProgress.hidden = false;
-        titleProgress.textContent = `Zoeken.... (${siteNumber}/${total || 19}) (${shortSite}) · ${newCount} nieuwe evenementen gevonden`;
+        titleProgress.textContent = `Zoeken.... (${siteNumber}/${total || 18}) · Controleert: ${siteLabel} · ${newCount} nieuwe evenementen gevonden`;
         titleProgress.title = `Bezig met ${siteLabel}; ${newCount} nieuwe evenementen gevonden`;
       }
       if (target) target.hidden = true;
