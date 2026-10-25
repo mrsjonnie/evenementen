@@ -615,10 +615,10 @@
     .status {
       display: none;
       margin: 0;
-      padding: 6px 9px;
+      padding: 4px 7px;
       width: calc(100vw - 32px);
       max-width: none;
-      max-height: min(38vh, 320px);
+      max-height: min(22vh, 160px);
       overflow-x: hidden;
       overflow-y: auto;
       overscroll-behavior: contain;
@@ -629,7 +629,7 @@
       background: var(--surface-soft);
       color: var(--muted);
       font-weight: 800;
-      line-height: 1.35;
+      line-height: 1.25;
       scrollbar-gutter: stable;
     }
 
@@ -637,14 +637,14 @@
       display: flex;
       flex-direction: column;
       align-items: stretch;
-      gap: 6px;
+      gap: 2px;
       min-width: 0;
     }
 
     .statusEntry {
       display: block;
       min-width: 0;
-      padding: 5px 7px;
+      padding: 3px 5px;
       border-bottom: 1px solid rgba(127, 127, 127, .22);
       overflow-wrap: anywhere;
       white-space: normal;
@@ -1363,7 +1363,7 @@
   </div>
 
   <script>
-    const APP_VERSION = "2026.10.25.39";
+    const APP_VERSION = "2026.10.25.40";
     const DEFAULT_MAX_EVENTS_PER_SITE = 20;
     const DEFAULT_SITE_TIME_LIMIT_SECONDS = 20;
     const SCAN_SETTINGS_KEY = "eventScanSettingsV1";
@@ -2230,7 +2230,12 @@
       // Keep a vertical, scrollable history of status updates instead of replacing
       // the previous message. Consecutive duplicates are ignored to avoid noise.
       const lastEntry = messages.lastElementChild;
-      if (lastEntry?.dataset.message === text) {
+      // A changing elapsed-seconds counter is the same status update, not a new log row.
+      const statusSignature = (value) => value
+        .replace(/\b\d+(?:\.\d+)?s(?=\s+verstreken\b)/gi, "<elapsed>s")
+        .replace(/\b\d+\s+seconden(?=\s+verstreken\b)/gi, "<elapsed> seconden");
+      if (lastEntry && (lastEntry.dataset.message === text || statusSignature(lastEntry.dataset.message || "") === statusSignature(text))) {
+        lastEntry.dataset.message = text;
         lastEntry.className = `statusEntry ${type}`.trim();
         lastEntry.replaceChildren();
         const line = document.createElement("div");
