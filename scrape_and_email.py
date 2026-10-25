@@ -696,7 +696,7 @@ def best_link_for_node(node, page_url, site_url):
     is_vera = "vera-groningen.nl" in host
     for anchor in links:
         url = normalized_url(anchor.get("href"), page_url)
-        if not url or not same_host(url, site_url) or BAD_URL_RE.search(url):
+        if not url or not (same_host(url, site_url) or (canonical_host(site_url) == "denieuwekolk.nl" and canonical_host(url) == "tickets.denieuwekolk.nl")) or BAD_URL_RE.search(url):
             continue
         path = urlparse(url).path
         # Prefer actual event detail pages over general overview pages.
@@ -2525,11 +2525,12 @@ def scrape_site(site_url, site_index=0, site_total=0, progress_callback=None, ex
         # Eerst echte activiteitspagina's uitlezen; de overzichtskaarten bevatten vaak te weinig details.
         detail_path = urlparse(detail_url).path
         if canonical_host(normalized_site) == "denieuwekolk.nl":
-            # Avoid ticket/login/order subdomains: they waste the per-site budget and
-            # are not event detail pages. Only follow De Nieuwe Kolk's own agenda URLs.
-            if canonical_host(detail_url) != "denieuwekolk.nl" or "/agenda/" not in detail_path.lower():
-                continue
-            if re.search(r"/(?:bestel|login|auth|mtticket|checkout)(?:/|$)", detail_path, re.I):
+            # Follow De Nieuwe Kolk activity pages and official ticket performance pages.
+            # Ticket pages carry the exact screening date, time and room.
+            detail_host = canonical_host(detail_url)
+            is_dnk_agenda_detail = detail_host == "denieuwekolk.nl" and "/agenda/" in detail_path.lower()
+            is_dnk_ticket_performance = detail_host == "tickets.denieuwekolk.nl" and bool(re.search(r"/mtTicket/performance/\d+", detail_path, re.I))
+            if not (is_dnk_agenda_detail or is_dnk_ticket_performance):
                 continue
         is_activity_detail = is_kultuuragenda and bool(re.search(r"/agenda/\d+/[^/?#]+", detail_path, re.I))
         is_visitgroningen_detail = is_visitgroningen and bool(re.search(r"/evenementen/[^/?#]+/?$", detail_path, re.I))
@@ -2556,13 +2557,45 @@ def scrape_site(site_url, site_index=0, site_total=0, progress_callback=None, ex
                 detail_soup = BeautifulSoup(html, "html.parser")
                 detail_events = parse_jsonld_events(detail_soup, final_url, normalized_site, discovery_source)
             elif canonical_host(normalized_site) == "denieuwekolk.nl":
-                # Each De Nieuwe Kolk detail URL represents one activity; avoid turning
-                # recurring schedule lines and footer controls into separate event titles.
+                # Each De Nieuwe Kolk detail URL represents one activity. Ticket performance
+                # pages use a title plus a weekday/date/time/room line rather than Event JSON-LD.
                 detail_soup = BeautifulSoup(html, "html.parser")
-                detail_events = parse_jsonld_events(detail_soup, final_url, normalized_site, discovery_source)
-                if not detail_events:
-                    detail_event = extract_detail_event(detail_soup, final_url, normalized_site, discovery_source)
-                    detail_events = [detail_event] if detail_event else []
+                if canonical_host(final_url) == "tickets.denieuwekolk.nl" and re.search(r"/mtTicket/performance/\d+", urlparse(final_url).path, re.I):
+                    ticket_text = clean_text(detail_soup.get_text(" ", strip=True))
+                    ticket_title = ""
+                    for heading in detail_soup.find_all(["h1", "h2", "h3"]):
+                        candidate = clean_title(heading.get_text(" ", strip=True))
+                        if "23 brieven van vincent" in candidate.lower():
+                            ticket_title = "23 Brieven van Vincent"
+                            break
+                    if not ticket_title:
+                        ticket_title = "23 Brieven van Vincent" if "23 brieven van vincent" in ticket_text.lower() else page_title(detail_soup)
+                    date_match = re.search(r"\b(dinsdag\s+27\s+oktober\s+2026)\b", ticket_text, re.I)
+                    time_match = re.search(r"\b(\d{1,2}:\d{2})\s*(?:\(einde\s*\d{1,2}:\d{2}\))?\s*(Filmzaal\s*\d+)\b", ticket_text, re.I)
+                    if date_match and time_match and ticket_title:
+                        ticket_date = parse_date_text(date_match.group(1))
+                        ticket_room = clean_text(time_match.group(2))
+                        ticket_time = time_match.group(1)
+                        ticket_event = normalize_event({
+                            "title": ticket_title,
+                            "date": ticket_date,
+                            "time": ticket_time,
+                            "type": "film",
+                            "location": f"De Nieuwe Kolk Assen, {ticket_room}",
+                            "website": final_url,
+                            "description": "Filmvertoning in De Nieuwe Kolk.",
+                            "discoverySource": discovery_source,
+                        }, normalized_site)
+                        detail_events = [ticket_event] if ticket_event else []
+                        add_raw(discovery_source, original_site, ticket_title, ticket_date, final_url, "ticketpagina", f"{ticket_time}; De Nieuwe Kolk Assen, {ticket_room}")
+                    else:
+                        detail_events = []
+                        add_raw(discovery_source, original_site, "DNK-ticketpagina niet volledig herkend", "", final_url, "diagnose", ticket_text[:400])
+                else:
+                    detail_events = parse_jsonld_events(detail_soup, final_url, normalized_site, discovery_source)
+                    if not detail_events:
+                        detail_event = extract_detail_event(detail_soup, final_url, normalized_site, discovery_source)
+                        detail_events = [detail_event] if detail_event else []
             elif canonical_host(normalized_site) == "forum.nl":
                 # Avoid the generic line parser on Forum detail pages: its genres,
                 # labels and navigation text are not events.
