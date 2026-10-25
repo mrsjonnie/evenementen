@@ -178,6 +178,7 @@ DEFAULT_LOCATIONS = {
     "zwolsetheaters.nl": "Hedon Zwolle",
     "paradiso.nl": "Paradiso Amsterdam",
     "vvvameland.nl": "Ameland",
+    "biosagenda.nl": "Groningen",
 }
 
 COMMON_PATHS_FOR_ROOT_SITES = [
@@ -290,6 +291,8 @@ def detect_scraper_type(site_url):
         return "universele detailpagina-parser (Kultuuragenda)"
     if host == "noorderzon.nl":
         return "universele programma- en detailpagina-parser"
+    if host == "biosagenda.nl":
+        return "bioscoopfilms en speeldata (BiosAgenda Groningen)"
     if host == "socialdeal.nl":
         return "Social Deal-aanbiedingen"
     if host in {"groupon.nl", "ibood.com"}:
@@ -1606,7 +1609,7 @@ def extract_socialdeal_offers(html, page_url, site_url):
     soup = BeautifulSoup(html, "html.parser")
     offers = []
     seen = set()
-    deal_limit = max(MAX_EVENTS_PER_SITE, 1000)
+    deal_limit = MAX_EVENTS_PER_SITE
     city_pattern = re.compile(
         r"\b(Groningen|Veendam|Drachten|Assen|Haren|Hoogezand|Stadskanaal|Zuidlaren|"
         r"Appingedam|Delfzijl|Winschoten|Leek|Marum|Roden|Norg|Oldekerk|Zuidbroek|"
@@ -1696,7 +1699,7 @@ def extract_socialdeal_offers(html, page_url, site_url):
 def extract_date_listing_events(html, page_url, site_url, discovery_source="Website"):
     """Site-specific card parser for VVV Ameland and Concertgebouw listings."""
     host = canonical_host(site_url)
-    if host not in {"vvvameland.nl", "concertgebouw.nl"}:
+    if host not in {"vvvameland.nl", "concertgebouw.nl", "biosagenda.nl"}:
         return []
     soup = BeautifulSoup(html, "html.parser")
     events = []
@@ -2043,7 +2046,7 @@ def scrape_site(site_url, site_index=0, site_total=0, progress_callback=None):
             page_events = extract_groupon_offers(html, final_url, normalized_site)
             if not page_events:
                 add_raw("Parser", original_site, "Groupon-kaarten zonder resultaat", "", final_url, "fallback", "Geen deals herkend; controleer HTTP-status, HTML en eventuele blokkade")
-        elif canonical_host(normalized_site) in {"vvvameland.nl", "concertgebouw.nl"}:
+        elif canonical_host(normalized_site) in {"vvvameland.nl", "concertgebouw.nl", "biosagenda.nl"}:
             page_events = extract_date_listing_events(html, final_url, normalized_site, "Website")
             if not page_events:
                 page_events = parse_page_events(html, final_url, normalized_site, "Website")
@@ -2200,8 +2203,10 @@ def scrape_site(site_url, site_index=0, site_total=0, progress_callback=None):
     if before_date_filter != len(filtered):
         add_raw("Filter", original_site, "Datumfilter toegepast", date_from.isoformat(), normalized_site, "ok",
                 f"{before_date_filter} gevonden; {len(filtered)} binnen {date_from.isoformat()} t/m {date_to.isoformat() if date_to else 'onbeperkt'}")
-    site_limit = max(MAX_EVENTS_PER_SITE, 1000) if canonical_host(normalized_site) == "socialdeal.nl" else MAX_EVENTS_PER_SITE
-    unique = filtered[:site_limit]
+    # This cap applies only to candidates found in this scan. Previously saved events
+    # are merged separately in main(), so a site with 20 saved events can add up to
+    # MAX_EVENTS_PER_SITE more on the next scan.
+    unique = filtered[:MAX_EVENTS_PER_SITE]
     duration = round(time.monotonic() - started, 2)
     SITE_RESULTS.append(
         {
@@ -2336,6 +2341,8 @@ def main():
         "startedAt": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "completedCount": 0,
         "totalSites": total_sites,
+        "currentSite": "",
+        "currentSiteIndex": 0,
         "completedSites": [],
         "events": [],
         "siteResults": [],
@@ -2345,11 +2352,19 @@ def main():
     publish_scrape_progress(progress)
     for index, site in enumerate(sites, start=1):
         before_count = len(all_events)
+        progress["currentSite"] = site
+        progress["currentSiteIndex"] = index
+        progress["completedCount"] = index - 1
+        progress["status"] = "running"
+        progress["lastUpdatedAt"] = datetime.now(timezone.utc).isoformat(timespec="seconds")
+        publish_scrape_progress(progress)
+
         def publish_partial_site_progress(partial_events):
             progress["events"] = dedupe_events([*all_events, *partial_events])
             progress["siteResults"] = list(SITE_RESULTS)
             progress["rawLog"] = RAW_DATA_ROWS[-MAX_RAW_ROWS:]
-            progress["lastCompletedSite"] = site
+            progress["currentSite"] = site
+            progress["currentSiteIndex"] = index
             progress["lastSiteEventCount"] = len(dedupe_events(partial_events))
             progress["lastUpdatedAt"] = datetime.now(timezone.utc).isoformat(timespec="seconds")
             progress["status"] = "running"
@@ -2362,6 +2377,7 @@ def main():
             SITE_RESULTS.append({"site": site, "count": 0, "newCount": 0, "durationSeconds": 0, "timedOut": False})
         site_events = dedupe_events(all_events[before_count:])
         progress["completedCount"] = index
+        progress["lastCompletedSite"] = site
         progress["completedSites"].append(site)
         progress["events"] = dedupe_events(all_events)
         progress["siteResults"] = list(SITE_RESULTS)
