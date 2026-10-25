@@ -1475,9 +1475,15 @@ def start_urls_for_site(site_url):
     if host == "spotgroningen.nl":
         return [urljoin(exact, "/programma")]
     if host == "pathe.nl":
-        # The official Pathé programme is client-rendered. Use the dedicated Pathé Groningen
-        # cinema timetable on BiosAgenda as a stable server-rendered fallback with real dates/times.
-        return ["https://www.biosagenda.nl/films-bioscoop_path-groningen_128.html"]
+        # Try the requested official Groningen cinema listing first. Keep the known
+        # server-rendered BiosAgenda timetable as a fallback if Pathé serves only
+        # client-side shell HTML or its anti-bot page.
+        return unique_urls([
+            exact,
+            "https://www.pathe.nl/bioscoop/groningen",
+            "https://www.pathe.nl/nl/bioscopen/pathe-groningen",
+            "https://www.biosagenda.nl/films-bioscoop_path-groningen_128.html",
+        ])
     if host == "filmvandaag.nl":
         # /bioscoop is a generic landing page; try both canonical hosts for the Groningen film ladder.
         return unique_urls([
@@ -1874,8 +1880,8 @@ def extract_biosagenda_events(html, page_url, site_url, discovery_source="Websit
     return dedupe_events(events)
 
 def extract_filmvandaag_events(html, page_url, site_url, discovery_source="Website"):
-    """Extract dated showtimes from FilmVandaag's city-specific film ladder."""
-    if canonical_host(site_url) != "filmvandaag.nl":
+    """Extract dated Groningen showtimes from FilmVandaag or Pathé listing markup."""
+    if canonical_host(site_url) not in {"filmvandaag.nl", "pathe.nl"}:
         return []
     soup = BeautifulSoup(html, "html.parser")
     events = []
@@ -1948,7 +1954,7 @@ def extract_filmvandaag_events(html, page_url, site_url, discovery_source="Websi
                             seen.add(key)
                             event = normalize_event({
                                 "date": show_day.isoformat(), "time": time_value, "title": title,
-                                "type": "Film", "location": "Groningen", "website": event_url,
+                                "type": "Film", "location": "Pathé Groningen" if canonical_host(site_url) == "pathe.nl" else "Groningen", "website": event_url,
                                 "description": compact(clean_text(card.get_text(" ", strip=True)), 420),
                                 "image": first_image(card, page_url), "discoverySource": discovery_source,
                             }, site_url)
@@ -1989,7 +1995,7 @@ def extract_filmvandaag_events(html, page_url, site_url, discovery_source="Websi
                 seen.add(key)
                 raw = {
                     "date": current_day.isoformat(), "time": time_value, "title": title,
-                    "type": "Film", "location": "Groningen", "website": event_url,
+                    "type": "Film", "location": "Pathé Groningen" if canonical_host(site_url) == "pathe.nl" else "Groningen", "website": event_url,
                     "description": compact(clean_text(card.get_text(" ", strip=True)), 420),
                     "image": first_image(card, page_url), "discoverySource": discovery_source,
                 }
@@ -2008,7 +2014,7 @@ def extract_filmvandaag_events(html, page_url, site_url, discovery_source="Websi
             if event_date and time_value:
                 event = normalize_event({
                     "date": event_date, "time": time_value, "title": title, "type": "Film",
-                    "location": "Groningen", "website": event_url, "description": compact(text, 420),
+                    "location": "Pathé Groningen" if canonical_host(site_url) == "pathe.nl" else "Groningen", "website": event_url, "description": compact(text, 420),
                     "image": first_image(card, page_url), "discoverySource": discovery_source,
                 }, site_url)
                 if event:
@@ -2476,15 +2482,22 @@ def scrape_site(site_url, site_index=0, site_total=0, progress_callback=None, ex
         elif canonical_host(normalized_site) == "biosagenda.nl":
             page_events = extract_biosagenda_events(html, final_url, normalized_site, "Website")
         elif canonical_host(normalized_site) == "pathe.nl":
-            # Parse the dedicated Pathé Groningen listing; it contains film titles and dated showtimes.
-            page_events = extract_biosagenda_events(html, final_url, normalized_site, "Website")
-            add_raw("Diagnose", original_site, "Pathé-speeltijden", "", final_url, "fallback", f"{len(page_events)} filmvermeldingen met speeldata uit de Pathé Groningen-agenda")
+            # Pathé's own Groningen page first: use its date/time grid when server-rendered,
+            # then JSON-LD/cards/inline dates. The later BiosAgenda URL remains a fallback.
+            page_events = extract_filmvandaag_events(html, final_url, normalized_site, "Website")
             if not page_events:
-                add_raw("Diagnose", original_site, "Pathé zonder resultaten", "", final_url, "fallback", f"Geen speeldata herkend; HTML {len(html)} tekens; controleer bronstructuur")
+                page_events = parse_page_events(html, final_url, normalized_site, "Website")
+            add_raw("Diagnose", original_site, "Pathé-speeltijden", "", final_url, "fallback",
+                    f"{len(page_events)} filmvermeldingen herkend; HTML {len(html)} tekens; pagina {urlparse(final_url).path}")
+            if not page_events:
+                add_raw("Diagnose", original_site, "Pathé zonder resultaten", "", final_url, "fallback",
+                        "Geen speeldata herkend; volgende URL in de lijst is de BiosAgenda-fallback")
         elif canonical_host(normalized_site) == "filmvandaag.nl":
             page_events = extract_filmvandaag_events(html, final_url, normalized_site, "Website")
             if not page_events:
                 page_events = parse_page_events(html, final_url, normalized_site, "Website")
+                add_raw("Diagnose", original_site, "FilmVandaag algemene parser", "", final_url, "fallback",
+                        f"Gespecialiseerde filmladder-parser vond 0; algemene parser vond {len(page_events)}")
                 add_raw("Diagnose", original_site, "FilmVandaag zonder speeldata", "", final_url, "fallback",
                         f"Geen gespecialiseerde vertoningen gevonden; HTML {len(html)} tekens; pagina {urlparse(final_url).path}")
         elif canonical_host(normalized_site) == "ibood.com":
