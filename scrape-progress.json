@@ -1,7 +1,7 @@
 {
   "runId": "2026-10-25T10:00:52+00:00",
   "startedAt": "2026-10-25T10:00:52+00:00",
-  "completedCount": 9,
+  "completedCount": 10,
   "totalSites": 18,
   "completedSites": [
     "https://groningen.uitloper.nu/",
@@ -12,7 +12,8 @@
     "https://simplon.nl/",
     "https://www.vera-groningen.nl/",
     "https://www.martiniplaza.nl/nl/agenda",
-    "https://www.groningermuseum.nl/en/now"
+    "https://www.groningermuseum.nl/en/now",
+    "https://www.kultuuragenda.nl/agenda"
   ],
   "events": [
     {
@@ -545,17 +546,17 @@
     },
     {
       "date": "2026-10-25",
-      "time": "18:20",
+      "time": "18:20 - 20:19",
       "title": "Docs: Imago",
       "type": "Film",
-      "location": "Bibliotheek",
+      "location": "Groningen",
       "locationLink": "",
-      "website": "https://forum.nl/nl/agenda/film/docs-imago?date=25-10-2026",
-      "source": "forum.nl",
+      "website": "https://www.kultuuragenda.nl/agenda/811203126/docs-imago",
+      "source": "kultuuragenda.nl",
       "discoverySource": "Website",
-      "description": "Winnaar Beste Documentaire op Cannes Film Festival 2025.",
-      "cost": "",
-      "image": "https://static.forum.nl/cache/docs-imago.27825/docs-imago-s1920x1080.jpg"
+      "description": "Wanneer filmmaker Déni een stuk land erft in Georgië begint hij aan een zoektocht naar zijn roots, familie en de betekenis van thuis. Zou hij hier een nieuw leven kunnen beginnen? Winnaar Beste Documentaire op het filmfestival van Cannes.",
+      "cost": "gratis",
+      "image": "https://assets.plaece.nl/thumb/hmjwLnCMn_HfWsnTOsQo1rKcTfCq33X6eRSacM-oT-U/resizing_type:fit/width:650/height:366/gravity:sm/aHR0cHM6Ly9hc3NldHMucGxhZWNlLm5sL29kcC1ncm9uaW5nZW4vaW1hZ2UvYTg4YWZkM2ZiM2Q0MmY5Yjc3ZjZlZTU0NzEzOWY4ZjFhZDc1M2ZmZV8wMWExNzAzZC03YjNlLTczZDgtYjNkZi0yNTE2NDUyNTc2YWQuanBn.jpg"
     },
     {
       "date": "2026-10-25",
@@ -604,6 +605,20 @@
       "description": "Een week in Stad en Ommeland",
       "cost": "Gratis",
       "discoverySource": "Website"
+    },
+    {
+      "date": "2026-10-25",
+      "time": "13:30",
+      "title": "Ernst, Bobbie en de Rest (3+)",
+      "type": "Concert",
+      "location": "Groningen",
+      "locationLink": "",
+      "website": "https://www.kultuuragenda.nl/agenda/4199578416/ernst-bobbie-en-de-rest-3-13-30-uur",
+      "source": "kultuuragenda.nl",
+      "discoverySource": "Website",
+      "description": "Ernst, Bobbie en de Rest (3+) | 13:30 uur | Kultuuragenda Groningen Ga naar de homepage Evenement aanmelden naar Ernst, Bobbie en de Rest (3+) | 13:30 uur naar Ernst, Bobbie en de Rest (3+) | 13:30 uur Bel: 0599 63 17 31 van Ernst, Bobbie en de Rest (3+) | 13:30 uur",
+      "cost": "gratis",
+      "image": "https://assets.plaece.nl/thumb/lRs8elXnW--hKAnivuKrIb77JErTE4pnwvKaC0nhEzM/resizing_type:fit/width:650/height:366/gravity:sm/aHR0cHM6Ly9hc3NldHMucGxhZWNlLm5sL29kcC1ncm9uaW5nZW4vaW1hZ2UvNDNlZTU2N2ZlZTNmOTljYjJjZmI0Y2VlN2ZmN2IyZTJjMjRhODZlNV8wMWEwMjIxMC05MzI4LTc1NzktYTY4OC0zZTVmZjY5MDE1NWMuanBn.jpg"
     },
     {
       "date": "2026-10-25",
@@ -711,6 +726,20 @@
     },
     {
       "date": "2026-10-25",
+      "time": "14:00 - 15:15",
+      "title": "Groningen Sax Fest 2026 – Closing Concert: Saxofoonorkest050",
+      "type": "Concert",
+      "location": "Groningen",
+      "locationLink": "",
+      "website": "https://www.kultuuragenda.nl/agenda/1913404879/groningen-sax-fest-2026-closing-concert-saxofoonorkest050",
+      "source": "kultuuragenda.nl",
+      "discoverySource": "Website",
+      "description": "Groningen Sax Fest 2026 – Closing Concert: Saxofoonorkest050 | Kultuuragenda Groningen Ga naar de homepage Evenement aanmelden Prins Claus Conservatorium – AE Zaal naar Groningen Sax Fest 2026 – Closing Concert: Saxofoonorkest050 naar Groningen Sax Fest 2026 – Closing Concert: Saxofoonorkest050",
+      "cost": "gratis",
+      "image": "https://assets.plaece.nl/thumb/M24mP9GjQ9TfI1CbhNnzgsgHSStVtdb29dOJnLC0gnk/resizing_type:fit/width:650/height:366/gravity:sm/aHR0cHM6Ly9hc3NldHMucGxhZWNlLm5sL29kcC1ncm9uaW5nZW4vaW1hZ2UvMWNhYzE0Y2UxNTg4MzU4ZGEwNjAwMDRlMjI1ZTkyMDAzNmU3ZjI5Ml8wMWExMTJkZi1iYzNkLTdmNmYtYjMyMC04MWEwNDA5NTIwMTguanBn.jpg"
+    },
+    {
+      "date": "2026-10-25",
       "time": "",
       "title": "Het Witte Vlag Project",
       "type": "Expositie",
@@ -722,6 +751,34 @@
       "description": "Een groepstentoonstelling met dertien hedendaagse…",
       "cost": "",
       "image": "https://groningen.uitloper.nu/images/smallthumb/files/whiteflag-notes-nr-1---karin-van-der-molen-arte-laguna-final.jpg"
+    },
+    {
+      "date": "2026-10-25",
+      "time": "14:30 - 18:00",
+      "title": "Het boek was beter!",
+      "type": "Film",
+      "location": "Groningen",
+      "locationLink": "",
+      "website": "https://www.kultuuragenda.nl/agenda/790098669/het-boek-was-beter-1",
+      "source": "kultuuragenda.nl",
+      "discoverySource": "Website",
+      "description": "Kijk maandelijks in gezelschap van liefhebbers een nieuwe of klassieke boekverfilming, waarna we bespreken in hoeverre het boek beter was. Of toch de film?",
+      "cost": "gratis",
+      "image": "https://assets.plaece.nl/thumb/fSgXyEx8qyO0L49Fl5gPi04HykTSMVYmjrcZ4YZbtyg/resizing_type:fit/width:650/height:366/gravity:sm/aHR0cHM6Ly9hc3NldHMucGxhZWNlLm5sL29kcC1ncm9uaW5nZW4vaW1hZ2UvZWZjZWM1MWFiZjVkYjYxMjMzZjVlNzIxOWVmOGQ5ZDRiNjU5NjIwOF8wMWExNzAzZC01ZDE1LTc0ODMtODU2Yi1lYjE2ODgyNjgzYTAuanBn.jpg"
+    },
+    {
+      "date": "2026-10-25",
+      "time": "10:50 - 12:51",
+      "title": "Human Nature",
+      "type": "Concert",
+      "location": "Groningen",
+      "locationLink": "",
+      "website": "https://www.kultuuragenda.nl/agenda/2995233160/human-nature",
+      "source": "kultuuragenda.nl",
+      "discoverySource": "Website",
+      "description": "De makers van The North nemen je mee op een reis van 500 kilometer door de laatste wildernis van Europa. In misschien wel de meest authentieke outdoor speelfilm, waarin Sophie (30) besluit een tocht van 500 kilometer te maken door het Arctische gebied van Noorwegen.",
+      "cost": "gratis",
+      "image": "https://assets.plaece.nl/thumb/x93Zp9SowycihoHk-jFc90bRf81OxAjjf7D3K_1zdKM/resizing_type:fit/width:650/height:366/gravity:sm/aHR0cHM6Ly9hc3NldHMucGxhZWNlLm5sL29kcC1ncm9uaW5nZW4vaW1hZ2UvNGI5ODc4ZTE1N2U4NzQ5MDEzNjNjYTdiNWI4NmJhNWYyN2RhZGIxOV8wMWExNzAzZC0yZDNmLTc0NmItOGFhMS1mY2VmOTVjOTgxMzcuanBn.jpg"
     },
     {
       "date": "2026-10-25",
@@ -778,6 +835,20 @@
       "description": "Kunst die je gezien moet hebben en kunst die je misschien…",
       "cost": "",
       "image": "https://groningen.uitloper.nu/images/smallthumb/files/2022/dc963a7aa69486861578ed73fd213fd7a64bd3f0.jpg"
+    },
+    {
+      "date": "2026-10-25",
+      "time": "14:00-15:30",
+      "title": "Lezing: Expeditie Ongering",
+      "type": "Concert",
+      "location": "Groningen",
+      "locationLink": "",
+      "website": "https://www.kultuuragenda.nl/agenda/1999062927/lezing-expeditie-ongering",
+      "source": "kultuuragenda.nl",
+      "discoverySource": "Website",
+      "description": "Lezing: Expeditie Ongering | Kultuuragenda Groningen Ga naar de homepage Evenement aanmelden Kunstcentrum De Ploeg naar Lezing: Expeditie Ongering naar Lezing: Expeditie Ongering van Lezing: Expeditie Ongering Auteurs Doeke Sijens (Hantum, 1955) en Jannes de Vries (Midwolde, 1954) onderzochten de bijzondere familiegesc",
+      "cost": "Gratis",
+      "image": "https://assets.plaece.nl/thumb/aJJMa0_nW5v5VPxkho8G6d9lIy0G5O_IiVzE64kZe1w/resizing_type:fit/width:650/height:366/gravity:sm/aHR0cHM6Ly9hc3NldHMucGxhZWNlLm5sL29kcC1ncm9uaW5nZW4vaW1hZ2UvZGUxNDdmYmNkODIwZDQxYmZkMjYxMTExMWU1NjNlY2QzZDQxYjJiYV8wMWExMGU3Yi0zNWFhLTc5MjEtYjdjMS1jYjA5ZDMzMDY2NTIuanBn.jpg"
     },
     {
       "date": "2026-10-25",
@@ -840,6 +911,20 @@
       "description": "Met kinderen",
       "cost": "Gratis",
       "discoverySource": "Website"
+    },
+    {
+      "date": "2026-10-25",
+      "time": "10:20 - 12:09",
+      "title": "Minoes - 25th Anniversary (5+)",
+      "type": "Film",
+      "location": "Groningen",
+      "locationLink": "",
+      "website": "https://www.kultuuragenda.nl/agenda/540231476/minoes-25th-anniversary-5",
+      "source": "kultuuragenda.nl",
+      "discoverySource": "Website",
+      "description": "Na 25 jaar is Minoes terug in de bioscoop! Minoes ziet eruit als een mens, maar eigenlijk is ze een poes. Ze spint, ze geeft kopjes en 's nachts zit ze op het dak met andere katten te praten. Als ze bij Tibbe intrekt, begint een spannend en grappig avontuur.",
+      "cost": "gratis",
+      "image": "https://assets.plaece.nl/thumb/35he1w1ALLjT4f6lvKTqB5S-9cUPlk9gVwWIOuRFuHA/resizing_type:fit/width:650/height:366/gravity:sm/aHR0cHM6Ly9hc3NldHMucGxhZWNlLm5sL29kcC1ncm9uaW5nZW4vaW1hZ2UvOTlmY2UyZjg3MmQ1Zjk2NThiYjg5OTg0MzE3ZTliOTAzMThkNWVkN18wMWExNzAzZC0xY2I3LTc0NmMtOGQyZS0wZTliODY1ZjkyNjcuanBn.jpg"
     },
     {
       "date": "2026-10-25",
@@ -914,6 +999,34 @@
       "description": "Vanwege een update is ons bibliotheeksysteem tijdelijk niet beschikbaar. Excuses voor het ongemak. Filmseries & specials Hulp- en spreekuren Bibliotheekvestigingen Haal meer uit je abonnement Studie- en werkplekken Wifi, internet en printen Verhuur & zakelijk Vacatures & vrijwilligers",
       "cost": "",
       "image": "https://static.forum.nl/cache/sense-and-sensibility.27948/sense-and-sensibility-s1920x1080.jpg"
+    },
+    {
+      "date": "2026-10-25",
+      "time": "15:00 - 18:00",
+      "title": "Singer-Songclub",
+      "type": "Concert",
+      "location": "Groningen",
+      "locationLink": "",
+      "website": "https://www.kultuuragenda.nl/agenda/2065667423/singer-songclub-2",
+      "source": "kultuuragenda.nl",
+      "discoverySource": "Website",
+      "description": "Luister gratis naar de beste Singer Songwriters in ons Grand Café.",
+      "cost": "gratis",
+      "image": "https://assets.plaece.nl/thumb/zafbDllBgtEKaac7gRWhXG3Og3HxSmDHNKuFRfMrb_s/resizing_type:fit/width:650/height:366/gravity:sm/aHR0cHM6Ly9hc3NldHMucGxhZWNlLm5sL29kcC1ncm9uaW5nZW4vaW1hZ2UvM2JkNGY1MzMwZjc0ODdhYTM4OTRhMGM5MTQyZTJmNmUyOGVjYmU5N18wMWExNjY3Yy1jNTE2LTcxNzgtYjEyMy1kYTdiZDk4Yzk3OGEuanBn.jpg"
+    },
+    {
+      "date": "2026-10-25",
+      "time": "10:30",
+      "title": "Spruit Cinema (2+)",
+      "type": "Film",
+      "location": "Groningen",
+      "locationLink": "",
+      "website": "https://www.kultuuragenda.nl/agenda/2749036779/spruit-cinema-2-3",
+      "source": "kultuuragenda.nl",
+      "discoverySource": "Website",
+      "description": "Kinderen tussen 2 en 6 jaar kunnen iedere zondagochtend bij ons terecht om de allerleukste animatiefilmpjes te kijken en te spelen, met hun ouders binnen handbereik. Bekijk hier welke films we draaien.",
+      "cost": "gratis",
+      "image": "https://assets.plaece.nl/thumb/PA3l2D9--c0nLjn9kcPmLypRVIryD6HVbNAKzhoL6ps/resizing_type:fit/width:650/height:366/gravity:sm/aHR0cHM6Ly9hc3NldHMucGxhZWNlLm5sL29kcC1ncm9uaW5nZW4vaW1hZ2UvM2U4NzlmMTc2OWFiNGJlZmUwMTBlYzFhNTE5NTI2Yzk2YzhlZDNlNF8wMWExNzAzZC0yNWZlLTczNjQtYjk0Mi02MzEyMzE4NjU4NmYucG5n.png"
     },
     {
       "date": "2026-10-25",
@@ -1010,6 +1123,20 @@
       "description": "Sunday 25 October VERA's Grunneger Zundag StAD // Steernvanger // Olaf Vos Mainstage | Ticket: €10,- | doors: 15:00 - 16:30 | start: 15:30 Koop ticket",
       "cost": "",
       "image": "https://www.vera-groningen.nl/wp/../vera/assets/img/logo-black.svg"
+    },
+    {
+      "date": "2026-10-25",
+      "time": "12:30 - 13:58",
+      "title": "Verhalen uit de Magische tuin (6+)",
+      "type": "Film",
+      "location": "Groningen",
+      "locationLink": "",
+      "website": "https://www.kultuuragenda.nl/agenda/3907376350/verhalen-uit-de-magische-tuin-6",
+      "source": "kultuuragenda.nl",
+      "discoverySource": "Website",
+      "description": "Verhalen uit de Magische Tuin is een betoverende stop-motionfilm vol warmte, humor en verbeeldingskracht. Een magisch avontuur voor jong en oud over de kracht van verhalen, fantasie en familie.",
+      "cost": "gratis",
+      "image": "https://assets.plaece.nl/thumb/e9Rfu_UaMRtQIze68Q_ZcpgVPxQn1Bn_owY2PWswa3o/resizing_type:fit/width:650/height:366/gravity:sm/aHR0cHM6Ly9hc3NldHMucGxhZWNlLm5sL29kcC1ncm9uaW5nZW4vaW1hZ2UvYTNmNzllMWNlYmVjYzk4ZDBmNDYwYTljZDAyZTI4YWY0OWZiZGUzNF8wMWExNzAzZC0zZTNjLTdhYmQtOTFmYS0yYzJkMjYzNDI0MDYuanBn.jpg"
     },
     {
       "date": "2026-10-25",
@@ -2112,6 +2239,13 @@
       "count": 0,
       "newCount": 0,
       "durationSeconds": 0.97,
+      "timedOut": false
+    },
+    {
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "count": 20,
+      "newCount": 0,
+      "durationSeconds": 6.22,
       "timedOut": false
     }
   ],
@@ -12919,7 +13053,7 @@
   ],
   "status": "running",
   "lastCompletedSite": "https://www.kultuuragenda.nl/agenda",
-  "lastSiteEventCount": 0,
+  "lastSiteEventCount": 20,
   "lastUpdatedAt": "2026-10-25T10:01:36+00:00",
-  "lastCompletedAt": "2026-10-25T10:01:34+00:00"
+  "lastCompletedAt": "2026-10-25T10:01:42+00:00"
 }
