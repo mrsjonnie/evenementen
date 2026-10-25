@@ -867,7 +867,7 @@ def extract_detail_event(soup, page_url, site_url, discovery_source):
         title = meta_content(soup, "og:title", "twitter:title")
         if not title and soup.title:
             title = clean_title(soup.title.get_text(" ", strip=True))
-        if not title or not title_is_usable(title):
+        if not title or not title_is_usable(title) or clean_text(title).lower() in {"het", "de", "een", "agenda", "programma"}:
             title = kultuuragenda_title_from_url(page_url)
         if not title or not title_is_usable(title):
             title = page_title(soup)
