@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-25T09:26:03+00:00",
+  "updatedAt": "2026-10-25T09:28:47+00:00",
   "events": [],
   "archive": [],
   "siteResults": [
@@ -15,14 +15,14 @@
       "site": "https://www.ibood.com/nl/",
       "count": 0,
       "newCount": 0,
-      "durationSeconds": 0.29,
+      "durationSeconds": 0.46,
       "timedOut": false
     },
     {
       "site": "https://www.zwolsetheaters.nl/programma",
       "count": 0,
       "newCount": 0,
-      "durationSeconds": 6.25,
+      "durationSeconds": 5.6,
       "timedOut": false
     }
   ],
@@ -151,7 +151,7 @@
       "date": "",
       "url": "https://www.ibood.com/nl/",
       "status": "klaar",
-      "rawText": "site 2/3: 0 unieke events in 0.29 sec"
+      "rawText": "site 2/3: 0 unieke events in 0.46 sec"
     },
     {
       "source": "Website",
@@ -322,7 +322,7 @@
       "date": "",
       "url": "https://www.zwolsetheaters.nl/programma",
       "status": "klaar",
-      "rawText": "site 3/3: 0 unieke events in 6.25 sec"
+      "rawText": "site 3/3: 0 unieke events in 5.6 sec"
     }
   ]
 }

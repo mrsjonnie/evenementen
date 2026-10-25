@@ -11,7 +11,7 @@ Parser	https://www.ibood.com/nl/	strategie	Scrapertype vastgesteld		https://www.
 Website	https://www.ibood.com/nl/	fout	Pagina mislukt		https://www.ibood.com/nl/	HTTP 403
 Website	https://www.ibood.com/nl/	fout	Pagina mislukt		https://www.ibood.com/nl/s-nl	HTTP 403
 Website	https://www.ibood.com/nl/	fout	Pagina mislukt		https://www.ibood.com/offers/nl/s-nl	HTTP 403
-Website	https://www.ibood.com/nl/	klaar	Klaar		https://www.ibood.com/nl/	site 2/3: 0 unieke events in 0.29 sec
+Website	https://www.ibood.com/nl/	klaar	Klaar		https://www.ibood.com/nl/	site 2/3: 0 unieke events in 0.46 sec
 Website	https://www.zwolsetheaters.nl/programma	start	Start		https://www.zwolsetheaters.nl/programma	site 3/3: max 20 events, max 60 seconden
 Parser	https://www.zwolsetheaters.nl/programma	strategie	Scrapertype vastgesteld		https://www.zwolsetheaters.nl/programma	JSON-LD + detailpagina-crawler
 Website	https://www.zwolsetheaters.nl/programma	ok	Pagina gelezen		https://www.zwolsetheaters.nl/programma	58193 tekens HTML
@@ -30,4 +30,4 @@ RSS/Atom	https://www.zwolsetheaters.nl/programma	fout	Feed mislukt		https://www.
 RSS/Atom	https://www.zwolsetheaters.nl/programma	fout	Feed mislukt		https://www.zwolsetheaters.nl/rss.xml	HTTP 404
 RSS/Atom	https://www.zwolsetheaters.nl/programma	fout	Feed mislukt		https://www.zwolsetheaters.nl/feed.xml	HTTP 404
 RSS/Atom	https://www.zwolsetheaters.nl/programma	fout	Feed mislukt		https://www.zwolsetheaters.nl/events/feed/	HTTP 404
-Website	https://www.zwolsetheaters.nl/programma	klaar	Klaar		https://www.zwolsetheaters.nl/programma	site 3/3: 0 unieke events in 6.25 sec
+Website	https://www.zwolsetheaters.nl/programma	klaar	Klaar		https://www.zwolsetheaters.nl/programma	site 3/3: 0 unieke events in 5.6 sec
