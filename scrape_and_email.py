@@ -1612,13 +1612,56 @@ def remaining_timeout(deadline):
     return max(0.05, min(7.0, deadline - time.monotonic()))
 
 
+def markdown_as_html(markdown_text):
+    """Convert the useful subset of Reader Markdown into HTML for existing site parsers."""
+    lines = clean_text(markdown_text).splitlines()
+    rendered = []
+    in_table = False
+    for raw_line in lines:
+        line = raw_line.strip()
+        if not line:
+            if in_table:
+                rendered.append("</table>")
+                in_table = False
+            continue
+        if re.fullmatch(r"\|?\s*:?-{3,}:?\s*(\|\s*:?-{3,}:?\s*)+\|?", line):
+            continue
+        if "|" in line and line.count("|") >= 2:
+            cells = [cell.strip() for cell in line.strip("|").split("|")]
+            if not in_table:
+                rendered.append("<table>")
+                in_table = True
+            tag = "th" if line.startswith("|") and any(c.startswith("##") for c in cells) else "td"
+            rendered.append("<tr>" + "".join(f"<{tag}>{cell}</{tag}>" for cell in cells) + "</tr>")
+            continue
+        if in_table:
+            rendered.append("</table>")
+            in_table = False
+        heading = re.match(r"^(#{1,6})\s+(.+)$", line)
+        if heading:
+            level = len(heading.group(1))
+            rendered.append(f"<h{level}>{heading.group(2)}</h{level}>")
+            continue
+        if line.startswith(("- ", "* ", "• ")):
+            line = line[2:].strip()
+        rendered.append(f"<p>{line}</p>")
+    if in_table:
+        rendered.append("</table>")
+    html_text = "\n".join(rendered)
+    html_text = re.sub(r"!\[([^\]]*)\]\(([^)]+)\)", r'<img alt="\1" src="\2">', html_text)
+    html_text = re.sub(r"\[([^\]]+)\]\((https?://[^)]+)\)", r'<a href="\2">\1</a>', html_text)
+    html_text = re.sub(r"\*\*(.+?)\*\*", r"<strong>\1</strong>", html_text)
+    html_text = re.sub(r"(?<!\*)\*([^*]+)\*(?!\*)", r"<em>\1</em>", html_text)
+    return "<html><body>" + html_text + "</body></html>"
+
+
 def fetch_html(session, url, deadline):
     if time.monotonic() >= deadline:
         raise TimeoutError("tijdslimiet bereikt")
     response = session.get(url, headers=REQUEST_HEADERS, timeout=remaining_timeout(deadline), allow_redirects=True)
-    if response.status_code == 403 and canonical_host(url) == "filmvandaag.nl" and time.monotonic() < deadline:
-        # FilmVandaag sometimes rejects a bare scripted navigation. Retry once with
-        # ordinary browser navigation headers before reporting the source as blocked.
+    host = canonical_host(url)
+    if response.status_code == 403 and host == "filmvandaag.nl" and time.monotonic() < deadline:
+        # Retry once with ordinary browser navigation headers before using the text proxy.
         retry_headers = dict(REQUEST_HEADERS)
         retry_headers.update({
             "Referer": "https://www.google.com/",
@@ -1628,6 +1671,27 @@ def fetch_html(session, url, deadline):
             "Sec-Fetch-Site": "cross-site",
         })
         response = session.get(url, headers=retry_headers, timeout=remaining_timeout(deadline), allow_redirects=True)
+
+    if response.status_code == 403 and host in {"ibood.com", "pathe.nl", "filmvandaag.nl", "biosagenda.nl"} and time.monotonic() + 0.1 < deadline:
+        # GitHub-hosted runners can be denied by anti-bot rules even when the page
+        # is public in a normal browser. Try a text-rendering proxy for these
+        # known sources, then convert its Markdown into simple HTML for the same parsers.
+        proxy_url = "https://r.jina.ai/" + url
+        try:
+            proxy_response = session.get(
+                proxy_url, headers=REQUEST_HEADERS,
+                timeout=min(2.5, remaining_timeout(deadline)), allow_redirects=True
+            )
+            if proxy_response.status_code < 400 and len(proxy_response.text.strip()) > 100:
+                proxy_text = proxy_response.text
+                if "<html" not in proxy_text[:1000].lower() and "<body" not in proxy_text[:1000].lower():
+                    proxy_text = markdown_as_html(proxy_text)
+                add_raw("Diagnose", url, "403-tekstproxy gebruikt", "", url, "fallback",
+                        f"Bron gaf HTTP 403; tekstproxy leverde {len(proxy_response.text)} tekens")
+                return proxy_text, url
+        except Exception as proxy_error:
+            add_raw("Diagnose", url, "403-tekstproxy mislukt", "", url, "fout", str(proxy_error))
+
     if response.status_code >= 400:
         raise requests.HTTPError(f"HTTP {response.status_code}")
     content_type = response.headers.get("content-type", "")
