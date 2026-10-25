@@ -1313,7 +1313,7 @@
   </div>
 
   <script>
-    const APP_VERSION = "2026.10.25.04";
+    const APP_VERSION = "2026.10.25.05";
     const DEFAULT_MAX_EVENTS_PER_SITE = 20;
     const DEFAULT_SITE_TIME_LIMIT_SECONDS = 20;
     const SCAN_SETTINGS_KEY = "eventScanSettingsV1";
@@ -2232,8 +2232,8 @@
         const siteLabel = shortScrapeSiteName("https://groningen.uitloper.nu/");
         if (titleProgress) {
           titleProgress.hidden = false;
-          titleProgress.textContent = `Zoeken.... (1/${siteTotal}) (${siteLabel})`;
-          titleProgress.title = "Nieuwe zoekactie gestart; voortgang van de eerste website wordt verwacht";
+          titleProgress.textContent = `Zoeken.... (1/${siteTotal}) (${siteLabel}) · Websitepagina ophalen`;
+          titleProgress.title = "Nieuwe zoekactie gestart; de eerste website wordt opgehaald";
         }
         return;
       }
@@ -2248,10 +2248,11 @@
       const siteNumber = Math.min(total, Math.max(1, Number(progress.currentSiteIndex) || completed + 1));
       const newCount = events.filter(event => event.isNew || newEventKeys.has(eventDedupeKey(event))).length;
       const siteLabel = shortScrapeSiteName(site);
+      const stage = cleanText(progress.stage || "Websitepagina ophalen");
       if (titleProgress) {
         titleProgress.hidden = false;
-        titleProgress.textContent = `Zoeken.... (${siteNumber}/${total}) (${siteLabel}) · ${newCount} nieuwe evenementen gevonden`;
-        titleProgress.title = `Bezig met ${siteLabel}; ${newCount} nieuwe evenementen gevonden`;
+        titleProgress.textContent = `Zoeken.... (${siteNumber}/${total}) (${siteLabel}) · ${stage}`;
+        titleProgress.title = `Bezig met ${siteLabel}: ${stage}. ${newCount} nieuwe evenementen gevonden`;
       }
     }
 
