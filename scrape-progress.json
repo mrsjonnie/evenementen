@@ -1,13 +1,23 @@
 {
   "runId": "2026-10-25T14:38:51.320222+00:00-2b89bca6",
   "startedAt": "2026-10-25T14:38:51+00:00",
-  "completedCount": 0,
+  "completedCount": 1,
   "totalSites": 20,
   "currentSite": "https://groningen.uitloper.nu/",
   "currentSiteIndex": 1,
-  "completedSites": [],
+  "completedSites": [
+    "https://groningen.uitloper.nu/"
+  ],
   "events": [],
-  "siteResults": [],
+  "siteResults": [
+    {
+      "site": "https://groningen.uitloper.nu/",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 2,
+      "timedOut": true
+    }
+  ],
   "rawLog": [
     {
       "source": "SerpAPI",
@@ -278,14 +288,34 @@
       "url": "https://groningen.uitloper.nu/",
       "status": "strategie",
       "rawText": "uitloper-agenda"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "Pagina gelezen",
+      "date": "",
+      "url": "https://groningen.uitloper.nu/?date=1792929600",
+      "status": "ok",
+      "rawText": "69586 tekens HTML"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "Site-time-out",
+      "date": "",
+      "url": "https://groningen.uitloper.nu/",
+      "status": "timeout",
+      "rawText": "site overschreed de harde tijdslimiet van 2 seconden"
     }
   ],
   "status": "running",
   "siteStartedAt": "2026-10-25T14:38:52+00:00",
-  "siteElapsedSeconds": 1,
+  "siteElapsedSeconds": 3,
   "sitePageCount": 0,
   "lastSiteEventCount": 0,
-  "stage": "Websitepagina ophalen",
+  "stage": "Website klaar; volgende website voorbereiden",
   "lastUpdatedAt": "2026-10-25T14:38:53+00:00",
-  "lastSiteNewEventCount": 0
+  "lastSiteNewEventCount": 0,
+  "lastCompletedSite": "https://groningen.uitloper.nu/",
+  "lastCompletedAt": "2026-10-25T14:38:55+00:00"
 }
