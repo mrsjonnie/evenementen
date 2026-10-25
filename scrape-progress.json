@@ -1,7 +1,7 @@
 {
   "runId": "2026-10-25T10:44:05+00:00",
   "startedAt": "2026-10-25T10:44:05+00:00",
-  "completedCount": 4,
+  "completedCount": 5,
   "totalSites": 5,
   "currentSite": "https://www.zwolsetheaters.nl/programma",
   "currentSiteIndex": 5,
@@ -9,7 +9,8 @@
     "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
     "https://www.groupon.nl/kortingsbonnen/gemeente-groningen",
     "https://www.ibood.com/s-nl",
-    "https://groningermuseum.nl/programma"
+    "https://groningermuseum.nl/programma",
+    "https://www.zwolsetheaters.nl/programma"
   ],
   "events": [
     {
@@ -362,6 +363,13 @@
       "count": 3,
       "newCount": 0,
       "durationSeconds": 6.64,
+      "timedOut": false
+    },
+    {
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 7.39,
       "timedOut": false
     }
   ],
@@ -2282,12 +2290,66 @@
       "url": "https://www.zwolsetheaters.nl/programma",
       "status": "ok",
       "rawText": "0 events/aanbiedingen op deze pagina"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Feed geanalyseerd",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/",
+      "status": "ok",
+      "rawText": "0 events uit openbare feed"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/rss",
+      "status": "fout",
+      "rawText": "HTTP 404"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/rss.xml",
+      "status": "fout",
+      "rawText": "HTTP 404"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/feed.xml",
+      "status": "fout",
+      "rawText": "HTTP 404"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/events/feed/",
+      "status": "fout",
+      "rawText": "HTTP 404"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/programma",
+      "status": "klaar",
+      "rawText": "site 5/5: 0 unieke events in 7.39 sec"
     }
   ],
-  "status": "running",
-  "stage": "Pagina gelezen; evenementen verwerken",
+  "status": "finishing",
+  "stage": "Website klaar; volgende website voorbereiden",
   "lastUpdatedAt": "2026-10-25T10:44:36+00:00",
   "lastSiteEventCount": 0,
-  "lastCompletedSite": "https://groningermuseum.nl/programma",
-  "lastCompletedAt": "2026-10-25T10:44:29+00:00"
+  "lastCompletedSite": "https://www.zwolsetheaters.nl/programma",
+  "lastCompletedAt": "2026-10-25T10:44:38+00:00"
 }
