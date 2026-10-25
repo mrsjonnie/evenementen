@@ -1318,7 +1318,7 @@
   </div>
 
   <script>
-    const APP_VERSION = "2026.10.25.32";
+    const APP_VERSION = "2026.10.25.33";
     const DEFAULT_MAX_EVENTS_PER_SITE = 20;
     const DEFAULT_SITE_TIME_LIMIT_SECONDS = 20;
     const SCAN_SETTINGS_KEY = "eventScanSettingsV1";
@@ -2439,7 +2439,16 @@
 
         try {
           const progress = await fetchScrapeProgress();
-          if (progress && progress.runId && progress.runId !== options.previousProgressRunId) {
+          // Adopt an already-running scan as well as a newly-created run. A refresh
+          // can start while its workflow is already publishing progress; comparing
+          // only runId then leaves the title stuck at "scraper starten".
+          const isRelevantProgress = Boolean(
+            progress?.runId && (
+              progress.runId !== options.previousProgressRunId ||
+              (["running", "finishing", "queued", "in_progress"].includes(cleanText(progress.status || "")) && Boolean(progress.currentSite))
+            )
+          );
+          if (isRelevantProgress) {
             latestProgress = progress;
             // Ignore the old progress snapshot from before this refresh. Otherwise it
             // overwrites the startup label every second and the new site's name never appears.
@@ -2456,7 +2465,7 @@
               renderRawLog();
             }
           }
-          if (progress && progress.runId && progress.runId !== options.previousProgressRunId) {
+          if (isRelevantProgress) {
             const completed = Number(progress.completedCount) || 0;
             const progressSignature = eventSignature(Array.isArray(progress.events) ? progress.events : []);
             const hasNewProgressEvents = progressSignature !== options.lastProgressSignature;
