@@ -3,8 +3,8 @@
   "startedAt": "2026-10-25T10:51:26+00:00",
   "completedCount": 2,
   "totalSites": 3,
-  "currentSite": "https://denieuwekolk.nl/agenda",
-  "currentSiteIndex": 2,
+  "currentSite": "https://www.filmvandaag.nl/bioscoop",
+  "currentSiteIndex": 3,
   "completedSites": [
     "https://www.zwolsetheaters.nl/programma",
     "https://denieuwekolk.nl/agenda"
@@ -2533,12 +2533,12 @@
     }
   ],
   "status": "running",
-  "siteStartedAt": "2026-10-25T10:51:38+00:00",
-  "siteElapsedSeconds": 10,
-  "sitePageCount": 2,
-  "lastSiteEventCount": 20,
-  "stage": "Website klaar; volgende website voorbereiden",
-  "lastUpdatedAt": "2026-10-25T10:51:45+00:00",
+  "siteStartedAt": "2026-10-25T10:51:49+00:00",
+  "siteElapsedSeconds": 0,
+  "sitePageCount": 0,
+  "lastSiteEventCount": 0,
+  "stage": "Websitepagina ophalen",
+  "lastUpdatedAt": "2026-10-25T10:51:49+00:00",
   "lastCompletedSite": "https://denieuwekolk.nl/agenda",
   "lastCompletedAt": "2026-10-25T10:51:48+00:00"
 }
