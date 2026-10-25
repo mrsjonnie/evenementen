@@ -1,7 +1,7 @@
 {
   "runId": "2026-10-25T16:18:10.746379+00:00-c24a216e",
   "startedAt": "2026-10-25T16:18:10+00:00",
-  "completedCount": 6,
+  "completedCount": 7,
   "totalSites": 19,
   "currentSite": "https://www.vera-groningen.nl/",
   "currentSiteIndex": 7,
@@ -11,79 +11,10 @@
     "https://www.visitgroningen.nl/nl/doen/wandelen",
     "https://forum.nl/nl/agenda",
     "https://www.spotgroningen.nl/programma/",
-    "https://simplon.nl/"
+    "https://simplon.nl/",
+    "https://www.vera-groningen.nl/"
   ],
   "events": [
-    {
-      "date": "2026-10-25",
-      "time": "",
-      "title": "VERA's Grunneger Zundag StAD // Steernvanger // Olaf Vos",
-      "type": "Activiteit",
-      "location": "VERA Groningen",
-      "locationLink": "",
-      "website": "https://www.vera-groningen.nl/?post_type=events&p=154330&lang=nl",
-      "source": "vera-groningen.nl",
-      "discoverySource": "Website",
-      "description": "Sunday 25 October VERA's Grunneger Zundag StAD // Steernvanger // Olaf Vos Koop ticket",
-      "cost": "",
-      "image": "https://www.vera-groningen.nl/wp/../vera/assets/img/logo-black.svg"
-    },
-    {
-      "date": "2026-10-27",
-      "time": "20:30",
-      "title": "The Fly",
-      "type": "Film",
-      "location": "VERA Groningen",
-      "locationLink": "",
-      "website": "https://www.vera-groningen.nl/?post_type=events&p=154391&lang=nl",
-      "source": "vera-groningen.nl",
-      "discoverySource": "Website",
-      "description": "ZIENEMA ♥ HALLOWEEN Tuesday 27 October The Fly Zienema | Ticket: €6,66 | doors: 20:00 - 20:30 | start: 20:30 Sold out",
-      "cost": "",
-      "image": "https://www.vera-groningen.nl/wp/../vera/assets/img/logo-black.svg"
-    },
-    {
-      "date": "2026-10-29",
-      "time": "20:30",
-      "title": "Ulrika Spacek UK Mood Bored",
-      "type": "Concert",
-      "location": "VERA Groningen",
-      "locationLink": "",
-      "website": "https://www.vera-groningen.nl/?post_type=events&p=150560&lang=nl",
-      "source": "vera-groningen.nl",
-      "discoverySource": "Website",
-      "description": "CLUBKAARTSHOW Thursday 29 October Ulrika Spacek UK Mood Bored NL Mainstage | Ticket: €16,- | doors: 20:00 - 22:00 | start: 20:30 Koop ticket",
-      "cost": "",
-      "image": "https://www.vera-groningen.nl/wp/../vera/assets/img/logo-black.svg"
-    },
-    {
-      "date": "2026-10-30",
-      "time": "20:00",
-      "title": "Kruidkoek & Joost Oomen NL Mesofauna GRN",
-      "type": "Concert",
-      "location": "VERA Groningen",
-      "locationLink": "",
-      "website": "https://www.vera-groningen.nl/?post_type=events&p=151519&lang=nl",
-      "source": "vera-groningen.nl",
-      "discoverySource": "Website",
-      "description": "Friday 30 October Kruidkoek & Joost Oomen NL Mesofauna GRN Mainstage | Ticket: €18,- | doors: 19:30 - 21:00 | start: 20:00 Koop ticket",
-      "cost": "",
-      "image": "https://www.vera-groningen.nl/wp/../vera/assets/img/logo-black.svg"
-    },
-    {
-      "date": "2026-10-30",
-      "time": "22:00",
-      "title": "WAVEGRAVE Elysium Graaf Griezel // Fladdermus // DJ Stefan",
-      "type": "Dans",
-      "location": "VERA Groningen",
-      "locationLink": "",
-      "website": "https://www.vera-groningen.nl/?post_type=events&p=154134&lang=nl",
-      "source": "vera-groningen.nl",
-      "discoverySource": "Website",
-      "description": "Friday 30 October WAVEGRAVE Elysium Graaf Griezel // Fladdermus // DJ Stefan Dansen | Ticket: €5,- | doors: 22:00 - 03:00 | start: 22:00 Sold out",
-      "cost": "",
-      "image": "https://www.vera-groningen.nl/wp/../vera/assets/img/logo-black.svg"
-    },
     {
       "date": "2026-10-31",
       "time": "21:30",
@@ -96,7 +27,8 @@
       "discoverySource": "Website",
       "description": "Saturday 31 October Los Pirañas COL Mainstage | Ticket: €13,- | doors: 21:00 - 22:00 | start: 21:30 Koop ticket",
       "cost": "",
-      "image": "https://www.vera-groningen.nl/wp/../vera/assets/img/logo-black.svg"
+      "image": "https://www.vera-groningen.nl/wp/../vera/assets/img/logo-black.svg",
+      "isNew": true
     },
     {
       "date": "2026-10-31",
@@ -110,7 +42,8 @@
       "discoverySource": "Website",
       "description": "Saturday 31 October Push It Pushin Wood Soundsystem All Night Long Dansen | Ticket: €5,- | doors: 23:00 - 04:00 | start: 23:01 Koop ticket",
       "cost": "",
-      "image": "https://www.vera-groningen.nl/wp/../vera/assets/img/logo-black.svg"
+      "image": "https://www.vera-groningen.nl/wp/../vera/assets/img/logo-black.svg",
+      "isNew": true
     },
     {
       "date": "2026-10-31",
@@ -124,7 +57,8 @@
       "discoverySource": "Website",
       "description": "Saturday 31 October The Etters NL Human Toys FR Downstage | Ticket: €5,- | doors: 22:30 - 23:30 | start: 23:00 Koop ticket",
       "cost": "",
-      "image": "https://www.vera-groningen.nl/wp/../vera/assets/img/logo-black.svg"
+      "image": "https://www.vera-groningen.nl/wp/../vera/assets/img/logo-black.svg",
+      "isNew": true
     },
     {
       "date": "2026-11-01",
@@ -138,7 +72,8 @@
       "discoverySource": "Website",
       "description": "SOLD OUT Sunday 1 November Angine De Poitrine CAN Gros Mené CAN Mainstage | Ticket: €24,- | doors: 19:30 - 22:00 | start: 20:30 Sold out",
       "cost": "",
-      "image": "https://www.vera-groningen.nl/wp/../vera/assets/img/logo-black.svg"
+      "image": "https://www.vera-groningen.nl/wp/../vera/assets/img/logo-black.svg",
+      "isNew": true
     },
     {
       "date": "2026-11-03",
@@ -152,7 +87,8 @@
       "discoverySource": "Website",
       "description": "Tuesday 3 November Pavements Zienema | Ticket: €6,- | doors: 20:00 - 20:30 | start: 20:30 Koop ticket",
       "cost": "",
-      "image": "https://www.vera-groningen.nl/wp/../vera/assets/img/logo-black.svg"
+      "image": "https://www.vera-groningen.nl/wp/../vera/assets/img/logo-black.svg",
+      "isNew": true
     },
     {
       "date": "2026-11-04",
@@ -166,7 +102,8 @@
       "discoverySource": "Website",
       "description": "Wednesday 4 November Hippotraktor BEL OLTAS NL Mainstage | Ticket: €17,- | doors: 20:00 - 22:00 | start: 20:30 Koop ticket",
       "cost": "",
-      "image": "https://www.vera-groningen.nl/wp/../vera/assets/img/logo-black.svg"
+      "image": "https://www.vera-groningen.nl/wp/../vera/assets/img/logo-black.svg",
+      "isNew": true
     },
     {
       "date": "2026-11-05",
@@ -180,7 +117,8 @@
       "discoverySource": "Website",
       "description": "RAT RACE X DOWNSTAGE EXTRA Thursday 5 November Pyrex USA Traumatizer NL Downstage | Ticket: €7,50 | doors: 21:00 - 22:00 | start: 21:30 Koop ticket",
       "cost": "",
-      "image": "https://www.vera-groningen.nl/wp/../vera/assets/img/logo-black.svg"
+      "image": "https://www.vera-groningen.nl/wp/../vera/assets/img/logo-black.svg",
+      "isNew": true
     },
     {
       "date": "2026-11-06",
@@ -194,7 +132,8 @@
       "discoverySource": "Website",
       "description": "Friday 6 November Temples UK PAUW NL Mainstage | Ticket: €24,- | doors: 19:30 - 22:00 | start: 20:30 Koop ticket",
       "cost": "",
-      "image": "https://www.vera-groningen.nl/wp/../vera/assets/img/logo-black.svg"
+      "image": "https://www.vera-groningen.nl/wp/../vera/assets/img/logo-black.svg",
+      "isNew": true
     },
     {
       "date": "2026-11-07",
@@ -208,7 +147,8 @@
       "discoverySource": "Website",
       "description": "Saturday 7 November Club VERA Line-up TBA Dansen | Ticket: €5,- | doors: 23:00 - 03:00 | start: 23:01 Koop ticket",
       "cost": "",
-      "image": "https://www.vera-groningen.nl/wp/../vera/assets/img/logo-black.svg"
+      "image": "https://www.vera-groningen.nl/wp/../vera/assets/img/logo-black.svg",
+      "isNew": true
     },
     {
       "date": "2026-11-07",
@@ -222,7 +162,8 @@
       "discoverySource": "Website",
       "description": "Saturday 7 November Nagusame GRN Downstage | Ticket: €5,- | doors: 22:30 - 23:30 | start: 23:00 Koop ticket",
       "cost": "",
-      "image": "https://www.vera-groningen.nl/wp/../vera/assets/img/logo-black.svg"
+      "image": "https://www.vera-groningen.nl/wp/../vera/assets/img/logo-black.svg",
+      "isNew": true
     },
     {
       "date": "2026-11-07",
@@ -236,7 +177,8 @@
       "discoverySource": "Website",
       "description": "Saturday 7 November The Homesick NL Rhizocorp UK Mainstage | Ticket: €14,- | doors: 20:00 - 22:00 | start: 20:30 Koop ticket",
       "cost": "",
-      "image": "https://www.vera-groningen.nl/wp/../vera/assets/img/logo-black.svg"
+      "image": "https://www.vera-groningen.nl/wp/../vera/assets/img/logo-black.svg",
+      "isNew": true
     },
     {
       "date": "2026-11-10",
@@ -250,49 +192,8 @@
       "discoverySource": "Website",
       "description": "Tuesday 10 November Mystery cult film Zienema | Ticket: €6,- | doors: 20:00 - 20:30 | start: 20:30 Koop ticket",
       "cost": "",
-      "image": "https://www.vera-groningen.nl/wp/../vera/assets/img/logo-black.svg"
-    },
-    {
-      "date": "2026-11-11",
-      "time": "20:30",
-      "title": "Shearwater USA + Loma USA + Any Kind",
-      "type": "Concert",
-      "location": "VERA Groningen",
-      "locationLink": "",
-      "website": "https://www.vera-groningen.nl/?post_type=events&p=152600&lang=nl",
-      "source": "vera-groningen.nl",
-      "discoverySource": "Website",
-      "description": "Wednesday 11 November Shearwater USA + Loma USA + Any Kind USA Mainstage | Ticket: €16,- | doors: 20:00 - 22:00 | start: 20:30 Koop ticket",
-      "cost": "",
-      "image": "https://www.vera-groningen.nl/wp/../vera/assets/img/logo-black.svg"
-    },
-    {
-      "date": "2026-11-12",
-      "time": "20:30",
-      "title": "Supersuckers USA The Frankie Turbos",
-      "type": "Concert",
-      "location": "VERA Groningen",
-      "locationLink": "",
-      "website": "https://www.vera-groningen.nl/?post_type=events&p=153215&lang=nl",
-      "source": "vera-groningen.nl",
-      "discoverySource": "Website",
-      "description": "Thursday 12 November Supersuckers USA The Frankie Turbos NL Mainstage | Ticket: €15,- | doors: 20:00 - 22:00 | start: 20:30 Koop ticket",
-      "cost": "",
-      "image": "https://www.vera-groningen.nl/wp/../vera/assets/img/logo-black.svg"
-    },
-    {
-      "date": "2026-11-13",
-      "time": "20:30",
-      "title": "Nordic Giants UK L.O.E.",
-      "type": "Concert",
-      "location": "VERA Groningen",
-      "locationLink": "",
-      "website": "https://www.vera-groningen.nl/?post_type=events&p=153185&lang=nl",
-      "source": "vera-groningen.nl",
-      "discoverySource": "Website",
-      "description": "Friday 13 November Nordic Giants UK L.O.E. UK Mainstage | Ticket: €15,- | doors: 20:00 - 22:00 | start: 20:30 Koop ticket",
-      "cost": "",
-      "image": "https://www.vera-groningen.nl/wp/../vera/assets/img/logo-black.svg"
+      "image": "https://www.vera-groningen.nl/wp/../vera/assets/img/logo-black.svg",
+      "isNew": true
     }
   ],
   "siteResults": [
@@ -329,6 +230,13 @@
       "count": 0,
       "newCount": 0,
       "durationSeconds": 2.0,
+      "timedOut": true
+    },
+    {
+      "site": "https://www.vera-groningen.nl/",
+      "count": 12,
+      "newCount": 12,
+      "durationSeconds": 2.95,
       "timedOut": true
     }
   ],
@@ -1772,16 +1680,25 @@
       "url": "https://www.vera-groningen.nl/programma/?category=all&history=0&lang=nl",
       "status": "ok",
       "rawText": "20 events/aanbiedingen op deze pagina"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://www.vera-groningen.nl/",
+      "status": "klaar",
+      "rawText": "site 7/19: 12 unieke events in 2.95 sec"
     }
   ],
   "status": "running",
   "siteStartedAt": "2026-10-25T16:18:37+00:00",
-  "siteElapsedSeconds": 3,
+  "siteElapsedSeconds": 4,
   "sitePageCount": 1,
   "lastSiteEventCount": 12,
-  "stage": "Websitepagina ophalen",
+  "stage": "Website klaar; volgende website voorbereiden",
   "lastUpdatedAt": "2026-10-25T16:18:40+00:00",
   "lastSiteNewEventCount": 12,
-  "lastCompletedSite": "https://simplon.nl/",
-  "lastCompletedAt": "2026-10-25T16:18:36+00:00"
+  "lastCompletedSite": "https://www.vera-groningen.nl/",
+  "lastCompletedAt": "2026-10-25T16:18:41+00:00"
 }
