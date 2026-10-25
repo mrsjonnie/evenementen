@@ -6,6 +6,7 @@ on:
       - main
     paths:
       - index.html
+      - evenementen.html
       - .github/workflows/release-version.yml
 
 permissions:
@@ -22,9 +23,9 @@ jobs:
         id: version
         shell: bash
         run: |
-          VERSION="$(sed -nE 's/.*const APP_VERSION = "([^"]+)".*/\1/p' index.html | head -n 1)"
+          VERSION="$(sed -nE 's/.*const APP_VERSION = "([^"]+)".*/\1/p' evenementen.html | head -n 1)"
           if [ -z "$VERSION" ]; then
-            echo "::error::APP_VERSION was not found in index.html"
+            echo "::error::APP_VERSION was not found in evenementen.html"
             exit 1
           fi
           echo "version=$VERSION" >> "$GITHUB_OUTPUT"
