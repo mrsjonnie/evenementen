@@ -34,12 +34,12 @@ button,input,select{font:inherit}button,.button{border:1px solid #48657c;border-
 </div></details>
 
 <section class="section" id="module-events" data-module="events" draggable="false">
-<div class="section-title"><h2>Evenementen</h2><div class="section-tools"><span class="drag-handle" draggable="true" title="Sleep om dit blok te verplaatsen">⠿ Verplaatsen</span></div></div>
+<div class="section-title"><h2>Evenementen</h2><div class="section-tools"><span class="drag-handle" draggable="true" role="button" tabindex="0" title="Sleep deze greep naar een ander blok om de volgorde te wijzigen">⠿ Sleep</span><span class="move-buttons"><button type="button" class="move-up" aria-label="Blok omhoog">↑</button><button type="button" class="move-down" aria-label="Blok omlaag">↓</button></span></div></div>
 <div class="cards"><a class="card" href="./evenementen.html"><span class="ico">📅</span><span class="card-copy"><strong>Evenementen rond Groningen</strong><small>Open de evenementenagenda en filters</small></span><span class="arrow">↗</span></a></div>
 </section>
 
 <section class="section" id="module-ai" data-module="ai" draggable="false">
-<div class="section-title"><h2>AI-chatbots</h2><div class="section-tools"><span class="muted">Typ of spreek je zoekterm in</span><span class="drag-handle" draggable="true" title="Sleep om dit blok te verplaatsen">⠿ Verplaatsen</span></div></div>
+<div class="section-title"><h2>AI-chatbots</h2><div class="section-tools"><span class="muted">Typ of spreek je zoekterm in</span><span class="drag-handle" draggable="true" role="button" tabindex="0" title="Sleep deze greep naar een ander blok om de volgorde te wijzigen">⠿ Sleep</span><span class="move-buttons"><button type="button" class="move-up" aria-label="Blok omhoog">↑</button><button type="button" class="move-down" aria-label="Blok omlaag">↓</button></span></div></div>
 <form class="ai-search" id="aiForm">
 <input class="ai-input" id="aiQuery" type="search" placeholder="Wat wil je aan AI vragen of laten zoeken?" aria-label="Zoekterm voor AI" required>
 <select id="aiProvider" aria-label="Kies AI-chatbot">
@@ -57,7 +57,7 @@ button,input,select{font:inherit}button,.button{border:1px solid #48657c;border-
 
 
 <section class="section" id="module-puzzles" data-module="puzzles" draggable="false">
-<div class="section-title"><h2>Dagelijkse puzzels</h2><div class="section-tools"><span class="drag-handle" draggable="true" title="Sleep om dit blok te verplaatsen">⠿ Verplaatsen</span></div></div>
+<div class="section-title"><h2>Dagelijkse puzzels</h2><div class="section-tools"><span class="drag-handle" draggable="true" role="button" tabindex="0" title="Sleep deze greep naar een ander blok om de volgorde te wijzigen">⠿ Sleep</span><span class="move-buttons"><button type="button" class="move-up" aria-label="Blok omhoog">↑</button><button type="button" class="move-down" aria-label="Blok omlaag">↓</button></span></div></div>
 <p class="drag-help">NRC en DVHN worden hieronder geprobeerd in te laden. Sommige websites blokkeren weergave in een iframe; gebruik dan de knop om de puzzel rechtstreeks te openen.</p>
 <div class="puzzle-grid">
 <article class="panel puzzle-panel"><h3>NRC Puzzels</h3><p>Dagelijkse woordpuzzels en sudoku's</p><iframe class="puzzle-frame" src="https://www.nrc.nl/puzzels/" title="NRC puzzels" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe><div class="puzzle-fallback"><a class="button" href="https://www.nrc.nl/puzzels/" target="_blank" rel="noopener noreferrer">Open NRC Puzzels ↗</a></div></article>
@@ -66,14 +66,14 @@ button,input,select{font:inherit}button,.button{border:1px solid #48657c;border-
 </section>
 
 <section class="section" id="module-news" data-module="news" draggable="false">
-<div class="section-title"><h2>Kranten en nieuws</h2><div class="section-tools"><span class="drag-handle" draggable="true" title="Sleep om dit blok te verplaatsen">⠿ Verplaatsen</span></div></div>
+<div class="section-title"><h2>Kranten en nieuws</h2><div class="section-tools"><span class="drag-handle" draggable="true" role="button" tabindex="0" title="Sleep deze greep naar een ander blok om de volgorde te wijzigen">⠿ Sleep</span><span class="move-buttons"><button type="button" class="move-up" aria-label="Blok omhoog">↑</button><button type="button" class="move-down" aria-label="Blok omlaag">↓</button></span></div></div>
 <div class="cards">
 <a class="card" href="https://www.dvhn.nl/" target="_blank" rel="noopener noreferrer"><span class="ico">📰</span><span class="card-copy"><strong>Dagblad van het Noorden</strong><small>DVHN · regionaal nieuws</small></span><span class="arrow">↗</span></a>
 <a class="card" href="https://www.nrc.nl/" target="_blank" rel="noopener noreferrer"><span class="ico">🗞️</span><span class="card-copy"><strong>NRC</strong><small>Nieuws en achtergronden</small></span><span class="arrow">↗</span></a>
 </div></section>
 
 <section class="section" id="module-custom" data-module="custom" draggable="false">
-<div class="section-title"><h2>Nieuwe URL toevoegen</h2><div class="section-tools"><span class="drag-handle" draggable="true" title="Sleep om dit blok te verplaatsen">⠿ Verplaatsen</span></div></div>
+<div class="section-title"><h2>Nieuwe URL toevoegen</h2><div class="section-tools"><span class="drag-handle" draggable="true" role="button" tabindex="0" title="Sleep deze greep naar een ander blok om de volgorde te wijzigen">⠿ Sleep</span><span class="move-buttons"><button type="button" class="move-up" aria-label="Blok omhoog">↑</button><button type="button" class="move-down" aria-label="Blok omlaag">↓</button></span></div></div>
 <form class="url-form" id="urlForm"><input id="urlTitle" placeholder="Naam (bijv. Mijn website)" aria-label="Naam van website" required maxlength="80"><input id="urlAddress" type="url" placeholder="https://voorbeeld.nl" aria-label="Website-URL" required><select id="urlCategory" aria-label="Categorie"><option value="custom">Mijn websites</option><option value="ai">AI-chatbots</option><option value="news">Nieuws</option><option value="other">Overig</option></select><button type="submit">＋ Toevoegen</button></form>
 <p class="url-help">Voeg een eigen website toe. Je kunt de link later verwijderen met ×; deze lijst blijft op dit apparaat bewaard.</p><div class="cards" id="customCards"></div><div class="empty" id="customEmpty">Nog geen eigen URL's toegevoegd.</div>
 </section>
