@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-25T14:40:15+00:00",
+  "updatedAt": "2026-10-25T14:40:20+00:00",
   "events": [
     {
       "date": "2026-10-25",
@@ -11765,6 +11765,13 @@
       "newCount": 0,
       "durationSeconds": 2.0,
       "timedOut": true
+    },
+    {
+      "site": "https://www.pathe.nl/nl/bioscopen/pathe-groningen",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 1.36,
+      "timedOut": false
     }
   ],
   "rawLog": [
@@ -15304,6 +15311,42 @@
       "url": "https://www.filmvandaag.nl/bioscoop",
       "status": "klaar",
       "rawText": "site 19/20: 0 unieke events in 2.0 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.pathe.nl/nl/bioscopen/pathe-groningen",
+      "title": "Start",
+      "date": "",
+      "url": "https://www.pathe.nl/nl/bioscopen/pathe-groningen",
+      "status": "start",
+      "rawText": "site 20/20: max 5 events, max 2 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.pathe.nl/nl/bioscopen/pathe-groningen",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://www.pathe.nl/nl/bioscopen/pathe-groningen",
+      "status": "strategie",
+      "rawText": "universeel-jsonld-links-kaarten"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.pathe.nl/nl/bioscopen/pathe-groningen",
+      "title": "Pagina mislukt",
+      "date": "",
+      "url": "https://www.pathe.nl/nl/bioscopen/pathe-groningen",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.pathe.nl/nl/bioscopen/pathe-groningen",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://www.pathe.nl/nl/bioscopen/pathe-groningen",
+      "status": "klaar",
+      "rawText": "site 20/20: 0 unieke events in 1.36 sec"
     }
   ]
 }
