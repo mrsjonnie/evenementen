@@ -2263,25 +2263,27 @@ def scrape_site(site_url, site_index=0, site_total=0, progress_callback=None, ex
                         # Read a few lazy chunks from Webpack's filename map; agenda components
                         # and their API paths are not present in the server-rendered listing.
                         chunk_paths = list(dict.fromkeys(re.findall(r'\d+===e\?"([^"]+\.js)"', asset_text)))
-                        for relative in [path for path in chunk_paths if "axios" not in path.lower()][:7]:
-                            if time.monotonic() + 1.5 >= deadline:
+                        for relative in [path for path in chunk_paths if "axios" not in path.lower()][:24]:
+                            if time.monotonic() + 1.1 >= deadline:
                                 break
                             chunk_url = urljoin(asset_root, relative)
                             try:
                                 chunk_response = session.get(
                                     chunk_url, headers=REQUEST_HEADERS,
-                                    timeout=min(1.2, remaining_timeout(deadline))
+                                    timeout=min(1.0, remaining_timeout(deadline))
                                 )
                                 if chunk_response.status_code >= 400:
                                     continue
                                 chunk_text = chunk_response.text
                                 add_raw("Diagnose", original_site, "Zwolse chunk geladen", "", chunk_url, "diagnose", f"{len(chunk_text)} tekens; {relative}")
                                 found_routes = []
-                                for candidate_match in re.finditer(url_pattern, chunk_text, re.I):
-                                    candidate = candidate_match.group(1)
-                                    if re.search(r"(?:api|graphql|agenda|programma|event|performance|voorstelling|show|calendar)", candidate, re.I):
-                                        found_routes.append(candidate)
-                                for candidate in list(dict.fromkeys(found_routes))[:10]:
+                                route_pattern = r"""["']([^"']{1,200}(?:/api/|api/|graphql|agenda|programma|event|performance|voorstelling|show|calendar)[^"']{0,200})["']"""
+                                for pattern in (url_pattern, route_pattern):
+                                    for candidate_match in re.finditer(pattern, chunk_text, re.I):
+                                        candidate = candidate_match.group(1)
+                                        if re.search(r"(?:api|graphql|agenda|programma|event|performance|voorstelling|show|calendar)", candidate, re.I):
+                                            found_routes.append(candidate)
+                                for candidate in list(dict.fromkeys(found_routes))[:12]:
                                     add_raw("Diagnose", original_site, "Zwolse API-route", "", chunk_url, "diagnose", candidate)
                                 request_matches = list(dict.fromkeys(m.group(0) for m in re.finditer(request_pattern, chunk_text, re.I)))
                                 for request_match in request_matches[:4]:
