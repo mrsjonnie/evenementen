@@ -1190,7 +1190,7 @@
             <span class="titleChevron" aria-hidden="true">v</span>
           </button>
         </h1>
-        <div class="titlePanel" id="titlePanel">
+        <div class="titlePanel open" id="titlePanel">
           <div class="titlePanelContent">
             <span class="versionBadge" id="versionBadge">Versie wordt geladen</span>
             <div class="status" id="status" aria-live="polite"></div>
@@ -1204,7 +1204,6 @@
             <div class="rawLogTableWrap" id="rawLogTableWrap"></div>
           </details>
         </div>
-        <p class="subtitle" id="pageSubtitle">Vind snel wat er te doen is, filter op datum en type, en ververs de lijst wanneer je nieuwe resultaten wilt ophalen.</p>
         <div class="headerActions" aria-label="Weergavebediening">
           <button class="btn btnSecondary filterSidebarToggle" id="filterSidebarToggle" type="button" aria-controls="filterSidebar" aria-expanded="false">Filters tonen</button>
         </div>
@@ -1372,7 +1371,7 @@
   </div>
 
   <script>
-    const APP_VERSION = "2026.10.25.47";
+    const APP_VERSION = "2026.10.25.48";
     const DEFAULT_MAX_EVENTS_PER_SITE = 20;
     const DEFAULT_SITE_TIME_LIMIT_SECONDS = 20;
     const SCAN_SETTINGS_KEY = "eventScanSettingsV1";
@@ -2227,11 +2226,16 @@
       const status = $("status");
       const text = cleanText(message);
       if (!status) return;
-      // One current status only; detailed history remains in the raw-data panel.
-      status.className = `status show ${type}`.trim();
-      status.replaceChildren();
-      const messages = document.createElement("div");
-      messages.className = "statusMessages";
+      // The large status area is a scrollable history, not just a transient message.
+      status.className = "status show";
+      let messages = status.querySelector(".statusMessages");
+      if (!messages) {
+        messages = document.createElement("div");
+        messages.className = "statusMessages";
+        status.replaceChildren(messages);
+      }
+      const priorEntries = [...messages.querySelectorAll(".statusEntry")];
+      if (priorEntries.some((item) => item.dataset.message === text)) return;
       const entry = document.createElement("div");
       entry.className = `statusEntry ${type}`.trim();
       entry.dataset.message = text;
@@ -2250,7 +2254,7 @@
       }
       entry.appendChild(line);
       messages.appendChild(entry);
-      status.appendChild(messages);
+      while (messages.children.length > 80) messages.firstElementChild?.remove();
       status.scrollTop = status.scrollHeight;
     }
     function hideStatus() {
@@ -2364,7 +2368,7 @@
           const zeroHitCount = results.filter(item => !(Number(item.count) || 0)).length;
           const finishedCount = Math.min(completed, total);
           titleProgress.hidden = false;
-          titleProgress.textContent = `Zoeken klaar ${finishedCount}/${total} · ${hitCount} hits · ${newCount} nieuw · ${timeoutCount} time-outs`;
+          titleProgress.textContent = `Klaar ${finishedCount}/${total} · ${newCount} nieuw`;
           titleProgress.title = `Scraper afgerond: ${finishedCount}/${total} websites verwerkt. ${hitCount} evenementen gevonden op sites (site-resultaten), ${newCount} nieuw volgens de voortgangsdata; ${zeroHitCount} websites leverden 0 hits op en ${timeoutCount} liepen tegen de ingestelde tijdslimiet aan. Definitieve publicatie wordt apart gecontroleerd.`;
         }
         return;
@@ -2375,7 +2379,7 @@
           titleProgress.hidden = false;
           const startedAt = Date.parse(progress.startedAt || progress.lastUpdatedAt || "");
           const startupSeconds = Number.isFinite(startedAt) ? Math.max(0, Math.floor((Date.now() - startedAt) / 1000)) : 0;
-          titleProgress.textContent = `Zoeken… scraper starten (${completed}/${total} websites afgerond) · ${startupSeconds}s`;
+          titleProgress.textContent = `Zoeken ${completed}/${total} · starten`;
           titleProgress.title = startupSeconds >= 15
             ? "De scraper heeft nog geen actieve website gepubliceerd. Dit kan wijzen op een vastgelopen workflow of een mislukte voortgangspublicatie; de status wordt opnieuw gecontroleerd."
             : "De opdracht is gestart; wachten op de eerste website-status."; 
@@ -2393,7 +2397,7 @@
       const pageCount = Number(progress.sitePageCount) || 0;
       if (titleProgress) {
         titleProgress.hidden = false;
-        titleProgress.textContent = `Zoeken… (${siteNumber}/${total} - ${siteLabel}) · ${stage} · ${elapsedSeconds}s · (+${siteNewHits})`;
+        titleProgress.textContent = `Zoeken ${siteNumber}/${total} · ${siteLabel}`;
         titleProgress.title = `Bezig met ${siteLabel}: ${stage}. ${elapsedSeconds} seconden verstreken; ${pageCount} pagina’s opgehaald; ${siteHits} evenementen gevonden, waarvan ${siteNewHits} nieuw.`;
       }
     }
@@ -2957,7 +2961,7 @@
       const siteHosts = selectedSiteHosts();
 
       $("pageTitle").textContent = `Evenementen rond ${region || "je regio"}`;
-      $("pageSubtitle").textContent = `${periodSubtitle()} - ${radiusSubtitle()}`;
+
       document.title = `Evenementen rond ${region || "je regio"}`;
 
       const uniqueEvents = dedupeEvents(events);
@@ -3372,7 +3376,7 @@
             const stage = cleanText(progress.stage || "Websitepagina ophalen");
             const siteStartedAt = Date.parse(progress.siteStartedAt || progress.lastUpdatedAt || progress.startedAt || "");
             const elapsed = Number.isFinite(siteStartedAt) ? Math.max(0, Math.floor((Date.now() - siteStartedAt) / 1000)) : 0;
-            const detail = site ? `Website ${siteNumber}/${total}: ${site} · ${stage} · ${elapsed}s` : `Wachten op eerste website · ${completed}/${total} afgerond`;
+            const detail = site ? `Website ${siteNumber}/${total}: ${site} · ${stage}` : `Wachten op eerste website · ${completed}/${total} afgerond`;
             showStatus(`Scraper actief: ${detail}. ${Array.isArray(progress.events) ? progress.events.length : 0} voorlopige hits.`, "warn", { stop: true });
           } else if (status === "completed") {
             updateLiveScrapeSummary(progress, true);
