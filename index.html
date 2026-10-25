@@ -1211,7 +1211,7 @@
             <span class="titleChevron" aria-hidden="true">v</span>
           </button>
         </h1>
-        <div class="titlePanel open" id="titlePanel">
+        <div class="titlePanel" id="titlePanel">
           <div class="titlePanelContent">
             <span class="versionBadge" id="versionBadge">Versie wordt geladen</span>
             <div class="statusCompact" id="statusCompact" aria-live="polite">Gereed — nog geen zoekactie uitgevoerd.</div>
@@ -1389,7 +1389,7 @@
   </div>
 
   <script>
-    const APP_VERSION = "2026.10.25.51";
+    const APP_VERSION = "2026.10.25.52";
     const DEFAULT_MAX_EVENTS_PER_SITE = 20;
     const DEFAULT_SITE_TIME_LIMIT_SECONDS = 20;
     const SCAN_SETTINGS_KEY = "eventScanSettingsV1";
@@ -4047,7 +4047,7 @@
       layout.style.setProperty("--sidebar-width", width + "px");
       localStorage.setItem("eventsSidebarWidth", String(width));
     });
-    $("titleToggle").setAttribute("aria-expanded", "true");
+    $("titleToggle").setAttribute("aria-expanded", String($("titlePanel").classList.contains("open")));
     $("titleToggle").addEventListener("click", () => {
       const panel = $("titlePanel");
       const isOpen = panel.classList.toggle("open");
