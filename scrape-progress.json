@@ -1,7 +1,7 @@
 {
   "runId": "2026-10-25T10:09:13+00:00",
   "startedAt": "2026-10-25T10:09:13+00:00",
-  "completedCount": 7,
+  "completedCount": 8,
   "totalSites": 18,
   "completedSites": [
     "https://groningen.uitloper.nu/",
@@ -10,7 +10,8 @@
     "https://forum.nl/nl/agenda",
     "https://www.spotgroningen.nl/programma/",
     "https://simplon.nl/",
-    "https://www.vera-groningen.nl/"
+    "https://www.vera-groningen.nl/",
+    "https://www.martiniplaza.nl/nl/agenda"
   ],
   "events": [
     {
@@ -2096,6 +2097,13 @@
       "count": 20,
       "newCount": 0,
       "durationSeconds": 4.35,
+      "timedOut": false
+    },
+    {
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "count": 12,
+      "newCount": 0,
+      "durationSeconds": 7.17,
       "timedOut": false
     }
   ],
@@ -12905,5 +12913,5 @@
   "lastCompletedSite": "https://www.martiniplaza.nl/nl/agenda",
   "lastSiteEventCount": 12,
   "lastUpdatedAt": "2026-10-25T10:10:00+00:00",
-  "lastCompletedAt": "2026-10-25T10:09:57+00:00"
+  "lastCompletedAt": "2026-10-25T10:10:06+00:00"
 }
