@@ -1142,7 +1142,7 @@
             <div class="status" id="status" aria-live="polite"></div>
             <div class="scanSettings" aria-label="Scaninstellingen">
               <label class="scanSetting" for="maxEventsPerSite">Max. resultaten <input id="maxEventsPerSite" type="number" min="1" max="100" step="1" value="20" inputmode="numeric" title="Maximum aantal resultaten per geselecteerde website"> <small>per website</small></label>
-              <label class="scanSetting" for="siteTimeLimitSeconds">Max. sec. <input id="siteTimeLimitSeconds" type="number" min="3" max="60" step="1" value="20" inputmode="numeric" title="Maximum zoektijd per geselecteerde website in seconden"> <small>per website</small></label>
+              <label class="scanSetting" for="siteTimeLimitSeconds">Max. sec. <input id="siteTimeLimitSeconds" type="number" min="1" max="60" step="1" value="20" inputmode="numeric" title="Maximum zoektijd per geselecteerde website in seconden"> <small>per website</small></label>
             </div>
           </div>
           <details class="rawLogPanel" id="rawLogPanel">
@@ -1318,7 +1318,7 @@
   </div>
 
   <script>
-    const APP_VERSION = "2026.10.25.10";
+    const APP_VERSION = "2026.10.25.11";
     const DEFAULT_MAX_EVENTS_PER_SITE = 20;
     const DEFAULT_SITE_TIME_LIMIT_SECONDS = 20;
     const SCAN_SETTINGS_KEY = "eventScanSettingsV1";
@@ -1633,7 +1633,7 @@
         const stored = JSON.parse(localStorage.getItem(SCAN_SETTINGS_KEY) || "{}");
         return {
           maxEventsPerSite: clampNumber(stored.maxEventsPerSite, DEFAULT_MAX_EVENTS_PER_SITE, 1, 100),
-          siteTimeLimitSeconds: clampNumber(stored.siteTimeLimitSeconds, DEFAULT_SITE_TIME_LIMIT_SECONDS, 3, 60)
+          siteTimeLimitSeconds: clampNumber(stored.siteTimeLimitSeconds, DEFAULT_SITE_TIME_LIMIT_SECONDS, 1, 60)
         };
       } catch {
         return {
@@ -1654,7 +1654,7 @@
     function currentScanSettings() {
       return {
         maxEventsPerSite: clampNumber($("maxEventsPerSite")?.value, DEFAULT_MAX_EVENTS_PER_SITE, 1, 100),
-        siteTimeLimitSeconds: clampNumber($("siteTimeLimitSeconds")?.value, DEFAULT_SITE_TIME_LIMIT_SECONDS, 3, 60)
+        siteTimeLimitSeconds: clampNumber($("siteTimeLimitSeconds")?.value, DEFAULT_SITE_TIME_LIMIT_SECONDS, 1, 60)
       };
     }
 
