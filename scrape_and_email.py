@@ -2112,7 +2112,7 @@ def scrape_site(site_url, site_index=0, site_total=0, progress_callback=None, ex
 
     # Verwerk gevonden openbare feeds rechtstreeks; dit vereist geen API-key of AI.
     for feed_url in unique_urls(feed_urls):
-        if time.monotonic() >= deadline or len(dedupe_events(events)) >= MAX_EVENTS_PER_SITE:
+        if time.monotonic() >= deadline or new_event_count(events) >= MAX_EVENTS_PER_SITE:
             break
         try:
             feed_response = session.get(feed_url, headers=REQUEST_HEADERS, timeout=remaining_timeout(deadline), allow_redirects=True)
@@ -2139,7 +2139,7 @@ def scrape_site(site_url, site_index=0, site_total=0, progress_callback=None, ex
         detail_path = urlparse(detail_url).path
         is_activity_detail = is_kultuuragenda and bool(re.search(r"/agenda/\d+/[^/?#]+", detail_path, re.I))
         is_visitgroningen_detail = is_visitgroningen and bool(re.search(r"/evenementen/[^/?#]+/?$", detail_path, re.I))
-        if len(dedupe_events(events)) >= MAX_EVENTS_PER_SITE and not is_activity_detail and not is_visitgroningen_detail and "vera-groningen.nl" not in canonical_host(normalized_site):
+        if new_event_count(events) >= MAX_EVENTS_PER_SITE and not is_activity_detail and not is_visitgroningen_detail and "vera-groningen.nl" not in canonical_host(normalized_site):
             break
         if is_kultuuragenda and not is_activity_detail:
             continue
