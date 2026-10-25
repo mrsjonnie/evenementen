@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-25T13:58:17+00:00",
+  "updatedAt": "2026-10-25T13:58:24+00:00",
   "events": [
     {
       "date": "2026-10-25",
@@ -11428,6 +11428,13 @@
       "newCount": 0,
       "durationSeconds": 4.4,
       "timedOut": true
+    },
+    {
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 4.37,
+      "timedOut": true
     }
   ],
   "rawLog": [
@@ -12258,6 +12265,114 @@
       "url": "https://www.visitgroningen.nl/nl/doen/evenementen",
       "status": "klaar",
       "rawText": "site 2/20: 0 unieke events in 4.4 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Start",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "status": "start",
+      "rawText": "site 3/20: max 5 events, max 2 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "status": "strategie",
+      "rawText": "Visit Groningen agenda-/routekaarten"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Pagina gelezen",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "status": "ok",
+      "rawText": "374114 tekens HTML"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Pagina geteld",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "status": "analyse",
+      "rawText": "jsonld:0, links:0, datumblokken:0, kaarten:0, regels:0, detail:0"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Nu & nieuw",
+      "date": "2026-10-25",
+      "url": "https://www.visitgroningen.nl/nl/nu-nieuw",
+      "status": "wandelroute gevonden",
+      "rawText": "Terug Nu & nieuw Uitagenda Nieuwe winkels & horeca in de stad Oktober donkertemaand Het 10-jarig bestaan van Dark Sky Park Lauwersmeer staat in het teken van donker. Het is hoog tijd om de schoonheid van de duisternis te gaan ontdekken. Sunnemeerten"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Uitagenda",
+      "date": "2026-10-25",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "wandelroute gevonden",
+      "rawText": "Uitagenda"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Nieuwe winkels & horeca in de stad",
+      "date": "2026-10-25",
+      "url": "https://www.visitgroningen.nl/nl/blogs/nieuwe-winkels-en-horeca-groningen",
+      "status": "wandelroute gevonden",
+      "rawText": "Nieuwe winkels & horeca in de stad"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Sunnemeerten",
+      "date": "2026-10-25",
+      "url": "https://www.visitgroningen.nl/nl/blogs/sunnemeerten",
+      "status": "wandelroute gevonden",
+      "rawText": "Sunnemeerten"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Dit is Groningen",
+      "date": "2026-10-25",
+      "url": "https://www.visitgroningen.nl/nl/ontdekken",
+      "status": "wandelroute gevonden",
+      "rawText": "Terug Dit is Groningen Top 10 bezienswaardigheden In Groningen ligt het allemaal opvallend dicht bij elkaar. De levendigheid van de stad, de stilte van een hofje, de weidsheid van het ommeland en de sporen van een eeuwenoud verleden. Stad Provincie Waddenkust Natuurgebieden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Visit Groningen wandelroutes",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "status": "gespecialiseerde parser",
+      "rawText": "5 wandelroutes/activiteiten gevonden"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Pagina geanalyseerd",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "status": "ok",
+      "rawText": "5 events/aanbiedingen op deze pagina"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "status": "klaar",
+      "rawText": "site 3/20: 0 unieke events in 4.37 sec"
     }
   ]
 }
