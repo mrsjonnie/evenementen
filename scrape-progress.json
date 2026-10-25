@@ -1,7 +1,7 @@
 {
   "runId": "2026-10-25T14:09:17.154647+00:00-4c9a5ca8",
   "startedAt": "2026-10-25T14:09:17+00:00",
-  "completedCount": 6,
+  "completedCount": 7,
   "totalSites": 20,
   "currentSite": "https://www.vera-groningen.nl/",
   "currentSiteIndex": 7,
@@ -11,7 +11,8 @@
     "https://www.visitgroningen.nl/nl/doen/wandelen",
     "https://forum.nl/nl/agenda",
     "https://www.spotgroningen.nl/programma/",
-    "https://simplon.nl/"
+    "https://simplon.nl/",
+    "https://www.vera-groningen.nl/"
   ],
   "events": [
     {
@@ -131,6 +132,13 @@
       "count": 0,
       "newCount": 0,
       "durationSeconds": 2.39,
+      "timedOut": true
+    },
+    {
+      "site": "https://www.vera-groningen.nl/",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 3.21,
       "timedOut": true
     }
   ],
@@ -10862,16 +10870,25 @@
       "url": "https://www.vera-groningen.nl/programma/?category=all&history=0&lang=nl",
       "status": "fout",
       "rawText": "HTTPSConnectionPool(host='www.vera-groningen.nl', port=443): Read timed out. (read timeout=0.8220165109999868)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://www.vera-groningen.nl/",
+      "status": "klaar",
+      "rawText": "site 7/20: 0 unieke events in 3.21 sec"
     }
   ],
   "status": "running",
   "siteStartedAt": "2026-10-25T14:09:56+00:00",
-  "siteElapsedSeconds": 3,
+  "siteElapsedSeconds": 4,
   "sitePageCount": 0,
   "lastSiteEventCount": 0,
-  "stage": "Websitepagina ophalen",
+  "stage": "Website klaar; volgende website voorbereiden",
   "lastUpdatedAt": "2026-10-25T14:09:59+00:00",
   "lastSiteNewEventCount": 0,
-  "lastCompletedSite": "https://simplon.nl/",
-  "lastCompletedAt": "2026-10-25T14:09:55+00:00"
+  "lastCompletedSite": "https://www.vera-groningen.nl/",
+  "lastCompletedAt": "2026-10-25T14:10:00+00:00"
 }
