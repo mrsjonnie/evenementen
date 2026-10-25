@@ -1,7 +1,7 @@
 {
   "runId": "2026-10-25T10:09:13+00:00",
   "startedAt": "2026-10-25T10:09:13+00:00",
-  "completedCount": 17,
+  "completedCount": 18,
   "totalSites": 18,
   "completedSites": [
     "https://groningen.uitloper.nu/",
@@ -20,7 +20,8 @@
     "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
     "https://www.vvvameland.nl/activiteiten-en-evenementen",
     "https://www.socialdeal.nl/",
-    "https://www.groupon.nl/"
+    "https://www.groupon.nl/",
+    "https://www.ibood.com/nl/"
   ],
   "events": [
     {
@@ -3772,6 +3773,13 @@
       "count": 0,
       "newCount": 0,
       "durationSeconds": 0.24,
+      "timedOut": false
+    },
+    {
+      "site": "https://www.ibood.com/nl/",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 0.25,
       "timedOut": false
     }
   ],
@@ -14577,9 +14585,9 @@
       "rawText": "Jon Allen & The Luna Kings + support: Levi Boon Britse singer-songwriter mixt Americana met Folk rock di 27 okt Nena Eén van de grootste zangeressen van de Duitse popcultuur Extra show di 27 okt Abonnement Topmusici van eigen bodem Geniet met dit abonnement van Nederlandse topmusici in De Oosterpoort di 27 okt Alma Quartet & Nicolas van Poucke Beethoven, Schumann Vijf topmusici nemen je mee van Beethovens diepgang na"
     }
   ],
-  "status": "running",
-  "lastCompletedSite": "https://www.groupon.nl/",
+  "status": "finishing",
+  "lastCompletedSite": "https://www.ibood.com/nl/",
   "lastSiteEventCount": 0,
   "lastUpdatedAt": "2026-10-25T10:11:00+00:00",
-  "lastCompletedAt": "2026-10-25T10:11:03+00:00"
+  "lastCompletedAt": "2026-10-25T10:11:05+00:00"
 }
