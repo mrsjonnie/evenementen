@@ -1566,7 +1566,7 @@ def import_serpapi_raw_log():
         if not isinstance(row, dict):
             continue
         add_raw(
-            "SerpAPI",
+            row.get("source") or "SerpAPI",
             row.get("site") or "",
             row.get("title") or "",
             row.get("date") or "",
