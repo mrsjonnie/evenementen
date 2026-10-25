@@ -3976,6 +3976,7 @@
         clearInterval(restoredProgressPollHandle);
         restoredProgressPollHandle = null;
       }
+      const stoppedRunId = restoredProgressRunId;
       restoredProgressRunId = "";
       const titleProgress = $("titleProgressText");
       // Keep the last known site visible until GitHub confirms cancellation.
@@ -4002,9 +4003,14 @@
           restoreRunningScrapeProgress().catch(() => {});
         } else {
           if (titleProgress) titleProgress.hidden = true;
+          if (stoppedRunId) {
+            try { localStorage.setItem(DISMISSED_SCRAPE_RUN_KEY, stoppedRunId); } catch {}
+          }
+          clearStatusHistory();
           showStatus(data.stopped
-            ? `Stop bevestigd: ${data.stopped} GitHub Actions-run(s) beëindigd.`
-            : (data.message || "Geen actieve scraper-run gevonden."), data.stopped || !data.cancelled ? "ok" : "warn");
+            ? `Scan gestopt: ${data.stopped} GitHub Actions-run(s) beëindigd. Een volgende verversing begint met een lege status.`
+            : "Geen actieve scraper-run meer gevonden. Een volgende verversing begint met een lege status.",
+            data.stopped || !data.cancelled ? "ok" : "warn");
         }
       } catch (error) {
         progressMonitoringStopped = false;
