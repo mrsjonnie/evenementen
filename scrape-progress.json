@@ -335,7 +335,7 @@
       "rawText": "site 1/1: 0 unieke events in 1.92 sec"
     }
   ],
-  "status": "finishing",
+  "status": "completed",
   "siteStartedAt": "2026-10-25T23:14:30+00:00",
   "siteElapsedSeconds": 3,
   "sitePageCount": 2,
@@ -344,5 +344,6 @@
   "lastUpdatedAt": "2026-10-25T23:14:33+00:00",
   "lastSiteNewEventCount": 0,
   "lastCompletedSite": "https://www.vera-groningen.nl/",
-  "lastCompletedAt": "2026-10-25T23:14:33+00:00"
+  "lastCompletedAt": "2026-10-25T23:14:33+00:00",
+  "finishedAt": "2026-10-25T23:14:34+00:00"
 }
