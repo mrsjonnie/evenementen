@@ -1,0 +1,4305 @@
+<!DOCTYPE html>
+<!-- Compacte evenemententelling en filteruitsplitsing in de header, versie 2026.10.25.66. -->
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Evenementen rond Groningen</title>
+  <style>
+    :root {
+      --bg: #0e141b;
+      --surface: #151f2b;
+      --surface-soft: #1d2a38;
+      --ink: #edf5ff;
+      --muted: #9db0c5;
+      --line: #2d4054;
+      --primary: #53b6d2;
+      --primary-dark: #8bd8ed;
+      --accent: #d55f3f;
+      --good: #72d6a1;
+      --warn: #f0bd62;
+      --danger: #ff8d80;
+      --shadow: 0 18px 38px rgba(0, 0, 0, .32);
+      --radius: 8px;
+      --hero-left: rgba(7, 17, 27, .92);
+      --hero-right: rgba(14, 29, 42, .54);
+      --hero-accent: #53b6d2;
+      --hero-badge: rgba(255, 255, 255, .13);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Inter, "Segoe UI", Arial, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+    }
+
+    button,
+    input,
+    select {
+      font: inherit;
+    }
+
+    button:focus-visible,
+    input:focus-visible,
+    select:focus-visible,
+    a:focus-visible {
+      outline: 3px solid rgba(23, 107, 135, .28);
+      outline-offset: 2px;
+    }
+
+    .hero {
+      color: #fff;
+      background:
+        linear-gradient(90deg, var(--hero-left), var(--hero-right)),
+        url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1800&q=82") center/cover;
+      border-bottom: 4px solid var(--hero-accent);
+    }
+
+    .heroInner {
+      max-width: 1360px;
+      margin: 0 auto;
+      padding: 12px 48px 12px 16px;
+      box-sizing: border-box;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 14px;
+      align-items: start;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 1.7rem;
+      line-height: 1.08;
+      letter-spacing: 0;
+    }
+
+    .headerEventSummary {
+      display: flex;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 3px 7px;
+      margin-top: 3px;
+      max-width: 100%;
+      color: rgba(255,255,255,.82);
+      font-size: .72rem;
+      line-height: 1.3;
+      font-weight: 650;
+    }
+    .headerEventSummary strong {
+      color: var(--primary-dark);
+      font-size: .76rem;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+    .headerEventSummary span {
+      overflow-wrap: anywhere;
+    }
+
+    .titleToggle {
+      all: unset;
+      display: inline-flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 6px 8px;
+      max-width: 100%;
+      cursor: pointer;
+    }
+
+    #pageTitle {
+      flex: 0 0 auto;
+      white-space: nowrap;
+    }
+
+    .titleChevron { display:none !important; }
+
+    .titleProgressText {
+      display: inline-flex;
+      align-items: center;
+      flex: 0 1 420px;
+      max-width: 100%;
+      min-width: 0;
+      border: 1px solid rgba(255,255,255,.14);
+      border-radius: 6px;
+      padding: 2px 7px;
+      background: rgba(255,255,255,.08);
+      color: rgba(255,255,255,.88);
+      font-size: .68rem;
+      font-weight: 650;
+      line-height: 1.25;
+      white-space: normal;
+      overflow-wrap: anywhere;
+      vertical-align: middle;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.025);
+    }
+    .titleProgressText[hidden] { display: none !important; }
+
+    .titleBusyIndicator {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 19px;
+      height: 19px;
+      flex: 0 0 19px;
+      color: var(--primary);
+    }
+    .titleBusyIndicator[hidden] { display: none !important; }
+    .titleBusySpinner {
+      width: 15px;
+      height: 15px;
+      border: 2px solid currentColor;
+      border-right-color: transparent;
+      border-radius: 50%;
+      animation: titleBusySpin .75s linear infinite;
+    }
+    @keyframes titleBusySpin { to { transform: rotate(360deg); } }
+    .titleToggle[aria-expanded="true"] .titleChevron { transform:rotate(180deg); }
+
+    .titlePanel {
+      display: none;
+      position: relative;
+      width: min(1200px, calc(100vw - 64px));
+      max-width: 1200px;
+      margin-left: 0;
+      clear: both;
+      margin-top: 5px;
+      box-sizing: border-box;
+    }
+
+    .titlePanel.open { display: block; }
+
+    .titlePanelContent {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .headerStatus {
+      grid-column: 1 / -1;
+      display: block;
+      width: 100%;
+      max-width: none;
+      height: 6.4rem;
+      min-height: 6.4rem;
+      max-height: 6.4rem;
+      margin: 8px 0 0;
+      padding: 7px 9px;
+      overflow-y: auto;
+      overflow-x: hidden;
+      box-sizing: border-box;
+      border: 1px solid rgba(255, 255, 255, .22);
+      border-radius: 9px;
+      background: rgba(8, 18, 28, .58);
+    }
+
+    .headerStatus .statusMessages {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+
+    .headerStatus .statusEntry {
+      padding: 2px 0;
+      line-height: 1.25;
+      overflow-wrap: anywhere;
+    }
+
+    .rawLogPanel {
+      grid-column: 1 / -1;
+      width: 100%;
+      margin-top: 10px;
+      border: 1px solid rgba(255, 255, 255, .2);
+      border-radius: 8px;
+      background: rgba(8, 18, 28, .58);
+      overflow: hidden;
+    }
+
+    .rawLogPanel summary {
+      cursor: pointer;
+      padding: 9px 10px;
+      color: rgba(255, 255, 255, .9);
+      font-size: .8rem;
+      font-weight: 950;
+    }
+
+    .rawLogTableWrap {
+      height: min(38vh, 300px);
+      max-height: 300px;
+      min-height: 90px;
+      overflow: auto !important;
+      overscroll-behavior: contain;
+      touch-action: pan-y;
+      border-top: 1px solid rgba(255, 255, 255, .14);
+    }
+
+    .rawLogTable {
+      width: 100%;
+      min-width: 760px;
+      border-collapse: collapse;
+      font-size: .75rem;
+      color: rgba(255, 255, 255, .86);
+    }
+
+    .rawLogTable th,
+    .rawLogTable td {
+      padding: 7px 8px;
+      border-bottom: 1px solid rgba(255, 255, 255, .1);
+      text-align: left;
+      vertical-align: top;
+    }
+
+    .rawLogTable th {
+      color: #d7f5ff;
+      background: rgba(255, 255, 255, .06);
+      white-space: nowrap;
+    }
+
+    .rawLogTable a { color: #bdefff; font-weight: 900; }
+
+    .subtitle {
+      margin: 4px 0 0;
+      max-width: 760px;
+      color: rgba(255, 255, 255, .84);
+      font-weight: 700;
+      line-height: 1.45;
+    }
+
+    
+    .heroSide {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-self: end;
+      align-self: start;
+      gap: 5px;
+      min-width: 0;
+      max-width: 560px;
+    }
+
+    .weather {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 8px;
+      max-width: 560px;
+    }
+
+    .weatherBreak {
+      flex-basis: 100%;
+      height: 0;
+    }
+
+    .versionBadge {
+      display: inline-flex;
+      align-items: center;
+      border: 1px solid rgba(255, 255, 255, .32);
+      border-radius: 999px;
+      min-height: 24px;
+      padding: 3px 8px;
+      color: rgba(255, 255, 255, .88);
+      background: var(--hero-badge);
+      font-size: .72rem;
+      font-weight: 900;
+    }
+
+    .scanSettings {
+      display: inline-flex;
+      flex-wrap: wrap;
+      gap: 4px;
+      align-items: center;
+    }
+
+    .scanSetting {
+      display: inline-flex;
+      align-items: center;
+      gap: 3px;
+      border: 1px solid rgba(255, 255, 255, .28);
+      border-radius: 999px;
+      min-height: 25px;
+      padding: 2px 7px;
+      background: rgba(255, 255, 255, .1);
+      color: rgba(255, 255, 255, .88);
+      font-size: .74rem;
+      font-weight: 900;
+      line-height: 1;
+    }
+
+    .scanSetting input {
+      width: 44px;
+      height: 20px;
+      border: 0;
+      border-radius: 999px;
+      padding: 1px 3px;
+      background: rgba(255, 255, 255, .95);
+      color: #102033;
+      font: inherit;
+      line-height: 1;
+      text-align: center;
+    }
+
+    .pill {
+      border: 1px solid rgba(255, 255, 255, .34);
+      background: rgba(255, 255, 255, .16);
+      color: #fff;
+      border-radius: 999px;
+      padding: 7px 10px;
+      font-size: .82rem;
+      font-weight: 800;
+      white-space: nowrap;
+      backdrop-filter: blur(8px);
+      cursor: pointer;
+    }
+
+    .weatherPanel {
+      display: none;
+      width: 100%;
+      margin-top: 8px;
+      border: 1px solid rgba(255, 255, 255, .26);
+      border-radius: var(--radius);
+      background: rgba(8, 18, 28, .78);
+      padding: 10px;
+      color: rgba(255, 255, 255, .9);
+      font-size: .86rem;
+      font-weight: 750;
+      line-height: 1.45;
+    }
+
+    .weatherPanel.open { display: block; }
+
+    .weatherPanel a { color: #bdefff; font-weight: 950; }
+
+    .weatherDays {
+      display: grid;
+      gap: 6px;
+      margin-top: 10px;
+    }
+
+    .weatherDay {
+      display: grid;
+      grid-template-columns: 42px minmax(92px, 1fr) auto;
+      gap: 10px;
+      border-top: 1px solid rgba(255, 255, 255, .16);
+      padding-top: 6px;
+      align-items: center;
+    }
+
+    .weatherDay img {
+      width: 38px;
+      height: 38px;
+      object-fit: contain;
+    }
+
+    .weatherRain {
+      color: #bdefff;
+      font-weight: 850;
+      font-size: .82rem;
+    }
+
+    main {
+      max-width: 1360px;
+      margin: 0 auto;
+      padding: 16px 48px 44px 16px;
+      box-sizing: border-box;
+    }
+
+    .toolbar {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 14px;
+    }
+
+    .filters {
+      display: grid;
+      grid-template-columns: 1.7fr 1fr .8fr 1fr 1fr 1fr auto auto;
+      gap: 10px;
+      align-items: end;
+    }
+
+    .field { min-width: 0; }
+
+    .field label {
+      display: block;
+      margin: 0 0 5px;
+      color: var(--primary-dark);
+      font-weight: 900;
+      font-size: .82rem;
+    }
+
+    input,
+    select {
+      width: 100%;
+      min-width: 0;
+      height: 42px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #101925;
+      color: var(--ink);
+      padding: 0 11px;
+      font-weight: 700;
+    }
+
+    #dateSingle {
+      max-width: 100%;
+      min-width: 0;
+    }
+
+    input::placeholder { color: #788da3; }
+
+    .btn {
+      min-height: 42px;
+      border: 0;
+      border-radius: var(--radius);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+      padding: 0 13px;
+      font-weight: 900;
+      text-decoration: none;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    .btnPrimary { background: var(--primary); color: #fff; }
+    .btnPrimary:hover { background: var(--primary-dark); }
+    .btnSecondary { background: var(--surface-soft); color: var(--primary-dark); }
+    .btnDanger { background: #311b19; color: var(--danger); border: 1px solid #6b3a34; }
+    .btn[disabled] { opacity: .58; cursor: not-allowed; }
+
+    .secondRow {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: flex-end;
+      padding-top: 12px;
+    }
+
+    .inlineTools {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: flex-end;
+    }
+
+    .inlineTools .check {
+      min-height: 42px;
+    }
+
+    .filterToggle[aria-pressed="true"] {
+      background: #153923;
+      color: var(--good);
+      border: 1px solid #32634b;
+    }
+
+    .sourcePickers {
+      display: grid;
+      grid-template-columns: minmax(220px, .72fr) minmax(320px, 1.28fr);
+      gap: 10px;
+      flex: 1;
+      min-width: 0;
+    }
+
+    .checks {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .check {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 8px 10px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: var(--surface-soft);
+      color: var(--primary-dark);
+      font-size: .84rem;
+      font-weight: 900;
+      user-select: none;
+    }
+
+    .check input {
+      width: auto;
+      height: auto;
+      margin: 0;
+    }
+
+    .siteSelect {
+      position: relative;
+      min-width: 0;
+    }
+
+    .siteSelectLabel {
+      display: block;
+      margin: 0 0 5px;
+      color: var(--primary-dark);
+      font-weight: 900;
+      font-size: .82rem;
+    }
+
+    .siteButton {
+      width: 100%;
+      justify-content: space-between;
+      border: 1px solid var(--line);
+      background: var(--surface);
+      color: var(--ink);
+      font-weight: 850;
+      padding-inline: 12px;
+    }
+
+    .siteButtonMain {
+      display: inline-flex;
+      align-items: baseline;
+      gap: 8px;
+      min-width: 0;
+    }
+
+    .sitePanel {
+      position: absolute;
+      z-index: 10;
+      top: 68px;
+      left: 0;
+      right: 0;
+      display: none;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .siteSelect.open .sitePanel { display: block; }
+
+    .sitePanelHeader {
+      padding: 10px 12px;
+      border-bottom: 1px solid var(--line);
+      color: var(--muted);
+      font-size: .82rem;
+      font-weight: 800;
+      line-height: 1.35;
+      background: #101925;
+    }
+
+    .siteList {
+      display: grid;
+      gap: 0;
+      max-height: 260px;
+      overflow: auto;
+      padding: 1px;
+    }
+
+    .siteList label {
+      display: grid;
+      grid-template-columns: 14px minmax(0, 1fr);
+      column-gap: 7px;
+      row-gap: 0;
+      align-items: center;
+      padding: 0 2px;
+      border-radius: var(--radius);
+      color: var(--ink);
+      font-size: .64rem;
+      font-weight: 600;
+      line-height: .72;
+    }
+
+    .siteRow { display:flex; align-items:flex-start; gap:2px; min-width:0; }
+    .siteRow > label { flex:1 1 auto; min-width:0; }
+    .siteRemove { flex:0 0 18px; width:18px; height:18px; margin:1px 1px 0 0; padding:0; border:1px solid transparent; border-radius:4px; background:transparent; color:var(--muted); font-size:13px; font-weight:900; line-height:14px; cursor:pointer; }
+    .siteRemove:hover { background:#4a1f27; border-color:#8f3948; color:#ffd9de; }
+    .siteList label:hover { background: var(--surface-soft); }
+    .sourceInfoWrap { display:flex; align-items:center; gap:2px; min-width:0; flex-wrap:wrap; }
+    .scraperTypeLabel { color:var(--muted, #777); font-size:.88em; font-weight:500; white-space:normal; }
+    .sourceInfo { flex:0 0 10px; width:10px; height:10px; padding:0; border:1px solid #b7791f; border-radius:50%; background:#fff2cc; color:#704600; font-size:7px; font-weight:900; line-height:8px; text-align:center; cursor:pointer; }
+    .siteScanIcon { display:inline-flex; align-items:center; justify-content:center; width:11px; height:11px; margin-left:3px; color:#0b9b72; font-size:10px; vertical-align:middle; animation:siteScanSpin 1s linear infinite; }
+    @keyframes siteScanSpin { to { transform:rotate(360deg); } }
+    .siteActivityLine { grid-column:2; display:block; min-width:0; margin:2px 0 3px; color:var(--muted); font-size:.62rem; font-weight:750; line-height:1.2; white-space:normal; overflow-wrap:anywhere; }
+    .siteActivityLine.hasEvents { color:var(--good); }
+    .sourceInfoPopup { grid-column:1 / -1; display:block; margin:2px 0 1px 17px; padding:6px 8px; border:1px solid #c58b32; border-radius:6px; background:#fff4d6; color:#34250d; font-size:.76rem; font-weight:600; line-height:1.3; white-space:normal; overflow-wrap:anywhere; }
+    .sourceInfoPopup[hidden] { display:none!important; }
+
+    .siteList label.siteFound {
+      border: 1px solid #32634b;
+      background: #12291e;
+    }
+
+    .siteList label.siteFound span {
+      color: var(--good);
+    }
+
+    .siteResultBadge {
+      display: inline-flex;
+      margin-left: 6px;
+      color: var(--muted);
+      font-size: .76rem;
+      font-weight: 900;
+    }
+
+    .siteFound .siteResultBadge {
+      color: var(--good);
+    }
+
+    .siteList input {
+      width: 16px;
+      height: 16px;
+      margin: 0;
+    }
+
+    .siteList span {
+      overflow-wrap: anywhere;
+    }
+    .customSiteAdder { display:none; grid-column:1 / -1; width:100%; box-sizing:border-box; margin:0; padding:10px; border:1px solid var(--line); border-radius:10px; background:var(--surface); }
+    .customSiteAdder.open { display:block; }
+    .sidebarButtonRows { display:grid; grid-column:1 / -1; gap:8px; margin-top:10px; min-width:0; }
+    .sidebarPrimaryButtons { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:8px; min-width:0; }
+    .sidebarDataButtons { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px; min-width:0; margin:0 0 10px; }
+    .sidebarButtonRows .btn { width:100%; min-width:0; min-height:40px; padding:7px 9px; line-height:1.2; white-space:normal; }
+    #toggleCustomSiteBtn { background: var(--surface-soft); border: 1px solid var(--line); color: var(--primary-dark); font-weight: 850; }
+    #toggleCustomSiteBtn:hover { background: var(--surface); border-color: var(--primary); }
+    #deleteDataBtn { background:#c92a2a; border-color:#b42323; color:#fff; font-weight:900; }
+    #deleteDataBtn:hover { background:#a61e1e; border-color:#8f1b1b; }
+    @media (max-width:360px) { .sidebarPrimaryButtons { grid-template-columns:repeat(3,minmax(0,1fr)); } .sidebarDataButtons { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+    .customSiteRow { display:grid; grid-template-columns:minmax(0,1fr) auto; gap:6px; align-items:center; }
+    .customSiteRow input { height:38px; font-size:.82rem; }
+    .customSiteRow .btn { min-height:38px; padding:0 10px; }
+    .customSiteHint { margin:6px 0 0; color:var(--muted); font-size:.74rem; line-height:1.35; }
+    .customSiteAdder .status { margin-top:7px; max-width:none; }
+
+    .siteActions {
+      display: flex;
+      gap: 8px;
+      padding: 8px;
+      border-top: 1px solid var(--line);
+      background: #101925;
+    }
+
+    .status {
+      display: block;
+      margin: 0;
+      padding: 3px 5px;
+      width: 100%;
+      max-width: 1200px;
+      height: auto;
+      max-height: min(28vh, 220px);
+      overflow-x: hidden !important;
+      overflow-y: auto !important;
+      overscroll-behavior: contain;
+      touch-action: pan-y;
+      scrollbar-gutter: stable both-edges;
+      box-sizing: border-box;
+      font-size: .72rem;
+      border-radius: var(--radius);
+      border: 1px solid var(--line);
+      background: var(--surface-soft);
+      color: var(--muted);
+      font-weight: 800;
+      line-height: 1.12;
+      scrollbar-gutter: stable;
+    }
+
+    .statusMessages {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0;
+      min-width: 0;
+    }
+
+    .statusEntry {
+      display: block;
+      min-width: 0;
+      padding: 1px 3px;
+      border-bottom: 1px solid rgba(127, 127, 127, .16);
+      overflow-wrap: anywhere;
+      white-space: normal;
+    }
+
+    .statusEntry:last-child { border-bottom: 0; }
+    .statusEntry.ok { color: var(--good); }
+    .statusEntry.warn { color: var(--warn); }
+    .statusEntry.error { color: var(--danger); }
+    .statusEntry .statusLine { display: flex; flex-direction: row; flex-wrap: wrap; align-items: flex-start; gap: 8px; }
+    .statusEntry .statusLine span { min-width: 0; flex: 1 1 auto; overflow-wrap: anywhere; }
+    .statusEntry .btn { display: none !important; }
+    .statusStopControl { display:flex; justify-content:flex-end; position:sticky; bottom:-7px; z-index:2; margin:4px -2px -2px; padding:5px 2px 2px; background:rgba(8,18,28,.96); border-top:1px solid rgba(255,255,255,.18); }
+    .statusStopControl .btn { width:auto; min-height:28px; padding:4px 12px; font-size:.74rem; }
+
+    .hero .status.show { display: block; }
+    .status.show { display: block; }
+
+    .statusCompact {
+      display: block;
+      width: 100%;
+      max-width: none;
+      min-width: 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      padding: 4px 8px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--surface-soft);
+      color: var(--primary-dark);
+      font-size: .76rem;
+      font-weight: 850;
+    }
+    .status.ok { color: var(--good); border-color: #32634b; background: #12291e; }
+    .status.warn { color: var(--warn); border-color: #6f5223; background: #2a2112; }
+    .status.error { color: var(--danger); border-color: #733a33; background: #2c1817; }
+
+    .statusLine {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .statusLine span {
+      min-width: 0;
+      flex: 1;
+    }
+
+    .confirmOverlay {
+      position: fixed;
+      inset: 0;
+      z-index: 100;
+      display: none;
+      place-items: center;
+      padding: 18px;
+      background: rgba(0, 0, 0, .62);
+      backdrop-filter: blur(7px);
+    }
+
+    .confirmOverlay.open { display: grid; }
+
+    .confirmBox {
+      width: min(480px, 100%);
+      border: 1px solid rgba(255, 255, 255, .14);
+      border-radius: 8px;
+      background: #172232;
+      box-shadow: 0 24px 70px rgba(0, 0, 0, .46);
+      padding: 18px;
+      color: #f4f7fb;
+    }
+
+    .confirmBox h2 {
+      margin: 0 0 8px;
+      font-size: 1.1rem;
+      letter-spacing: 0;
+    }
+
+    .confirmBox p {
+      margin: 0;
+      color: rgba(244, 247, 251, .82);
+      line-height: 1.45;
+      font-weight: 700;
+    }
+
+    .confirmActions {
+      display: flex;
+      justify-content: flex-end;
+      gap: 8px;
+      margin-top: 16px;
+    }
+
+    .liveScrapeSummary {
+      flex-basis: 100%;
+      display: block;
+      margin-top: 5px;
+      color: var(--primary-dark);
+      font-size: .84rem;
+      font-weight: 800;
+    }
+    .liveScrapeSummary[hidden] { display: none !important; }
+
+    .summary {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: center;
+      flex-wrap: wrap;
+      margin: 18px 2px 12px;
+    }
+
+    .summary strong {
+      color: var(--primary-dark);
+      font-size: 1.05rem;
+    }
+
+    .summary span {
+      color: var(--muted);
+      font-weight: 750;
+    }
+
+    .summaryControls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(363px, 1fr));
+      gap: 14px;
+    }
+
+    @media (min-width: 1590px) {
+      .grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    }
+
+    .card {
+      min-width: 0;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: 0 12px 28px rgba(0, 0, 0, .24);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card.isNew {
+      border-color: rgba(114, 214, 161, .72);
+      box-shadow: 0 14px 32px rgba(48, 172, 112, .18);
+    }
+
+    .grid.cardsCollapsed .typeHeader { min-height: 48px; }
+    .grid.cardsCollapsed .cardBody { padding: 10px; gap: 7px; }
+    .grid.cardsCollapsed .details,
+    .grid.cardsCollapsed .desc,
+    .grid.cardsCollapsed .cardActions,
+    .grid.cardsCollapsed .routePanel { display: none; }
+
+    .grid.cardsCollapsed .card.expanded .details { display: grid; }
+    .grid.cardsCollapsed .card.expanded .desc { display: block; }
+    .grid.cardsCollapsed .card.expanded .cardActions { display: flex; }
+    .grid.cardsCollapsed .card.expanded .routePanel.open { display: block; }
+
+    .typeHeader {
+      min-height: 74px;
+      background: var(--surface-soft) center/cover;
+      position: relative;
+      display: flex;
+      align-items: end;
+      padding: 10px 12px;
+      text-decoration: none;
+    }
+
+    .typeHeader::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, rgba(16, 32, 51, .62), rgba(16, 32, 51, .10));
+    }
+
+    .typeHeader span {
+      position: relative;
+      z-index: 1;
+      color: #fff;
+      font-weight: 950;
+      font-size: .84rem;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+    }
+
+    .typeHeaderLink:hover span,
+    .sourceLink:hover {
+      text-decoration: underline;
+    }
+
+    .cardBody {
+      padding: 13px;
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      max-width: 100%;
+      border-radius: 999px;
+      padding: 5px 8px;
+      background: var(--surface-soft);
+      color: var(--primary-dark);
+      font-weight: 900;
+      font-size: .76rem;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      text-decoration: none;
+    }
+
+    .tagAccent {
+      background: #341d18;
+      color: var(--accent);
+    }
+
+    .tagNew {
+      background: #153923;
+      color: var(--good);
+    }
+
+    .title {
+      margin: 0;
+      color: var(--ink);
+      font-size: 1.05rem;
+      line-height: 1.25;
+    }
+
+    .titleButton {
+      width: 100%;
+      border: 0;
+      padding: 0;
+      background: transparent;
+      color: inherit;
+      font: inherit;
+      text-align: left;
+      cursor: pointer;
+    }
+
+    .titleButton:hover { color: var(--primary-dark); }
+
+    .details {
+      display: grid;
+      gap: 6px;
+      color: #c9d6e6;
+      font-size: .9rem;
+      font-weight: 780;
+    }
+
+    .detail {
+      display: grid;
+      grid-template-columns: 58px minmax(0, 1fr);
+      gap: 10px;
+      align-items: start;
+    }
+
+    .detail span:last-child {
+      overflow-wrap: anywhere;
+    }
+
+    .detail a {
+      color: var(--primary-dark);
+      font-weight: 900;
+      text-decoration: none;
+    }
+
+    .detail a:hover { text-decoration: underline; }
+
+    .desc {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.45;
+      font-size: .9rem;
+      font-weight: 650;
+    }
+
+    .cardActions {
+      margin-top: auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      padding-top: 2px;
+    }
+
+    .routeInfo {
+      display: inline-flex;
+      align-items: center;
+      min-height: 42px;
+      color: var(--muted);
+      font-weight: 850;
+      font-size: .86rem;
+    }
+
+    .routePanel {
+      display: none;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #101925;
+      overflow: hidden;
+    }
+
+    .routePanel.open { display: block; }
+
+    .routePanelText {
+      padding: 10px 12px;
+      color: var(--muted);
+      font-size: .88rem;
+      font-weight: 800;
+      line-height: 1.45;
+    }
+
+    .routePanel iframe {
+      display: block;
+      width: 100%;
+      height: 260px;
+      border: 0;
+      background: #0b1118;
+    }
+
+    .routePanel a {
+      color: var(--primary-dark);
+      font-weight: 950;
+    }
+
+    .radarTile {
+      display: block;
+      width: min(100%, 420px);
+      border: 1px solid rgba(255, 255, 255, .24);
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: rgba(8, 18, 28, .78);
+      text-decoration: none;
+      margin-top: 10px;
+    }
+
+    .radarTile img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: contain;
+      background: #0b1118;
+    }
+
+    .radarTile span {
+      display: block;
+      padding: 8px 10px;
+      color: rgba(255, 255, 255, .9);
+      font-size: .82rem;
+      font-weight: 900;
+    }
+
+    .empty {
+      grid-column: 1 / -1;
+      padding: 28px;
+      background: var(--surface);
+      border: 1px dashed #3b5269;
+      border-radius: var(--radius);
+      text-align: center;
+      color: var(--muted);
+      font-weight: 800;
+      line-height: 1.5;
+    }
+
+    .pagination {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      margin-top: 16px;
+      flex-wrap: wrap;
+    }
+
+    .pageText {
+      min-width: 118px;
+      text-align: center;
+      color: var(--muted);
+      font-weight: 900;
+    }
+
+    .perPageControl {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--muted);
+      font-size: .86rem;
+      font-weight: 900;
+    }
+
+    .perPageControl select {
+      width: auto;
+      min-width: 76px;
+      height: 38px;
+    }
+
+    @media (max-width: 1120px) {
+      .filters { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    }
+
+    @media (min-width: 960px) and (min-height: 740px) {
+      .hero {
+        position: sticky;
+        top: 0;
+        z-index: 40;
+      }
+
+      .toolbar {
+        position: sticky;
+        top: 126px;
+        z-index: 35;
+      }
+    }
+
+    @media (max-width: 900px) {
+      .heroInner { grid-template-columns: 1fr; padding-top: 12px; padding-bottom: 12px; }
+      .heroSide { align-items: flex-start; justify-self: start; max-width: none; }
+      .weather { justify-content: flex-start; }
+      .sourcePickers { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 680px) {
+      .heroInner { padding-top: 10px; padding-bottom: 10px; }
+      h1 { font-size: 1.55rem; }
+      .filters { grid-template-columns: 1fr; }
+      #dateSingle { font-size: .95rem; padding-inline: 8px; }
+      .grid { grid-template-columns: 1fr; }
+      .siteSelect { min-width: 100%; max-width: none; }
+      .btn { width: 100%; }
+      .checks { width: 100%; }
+      .check { flex: 1; justify-content: center; }
+      .inlineTools { width: 100%; }
+      .pagination .btn { width: auto; }
+      .confirmActions { flex-direction: column-reverse; }
+    }
+    
+    /* Compacte filterzijbalk in de normale pagina-indeling; geen overlay. */
+    [hidden] { display: none !important; }
+    .pageLayout { display: grid; grid-template-columns: minmax(0, 1fr); gap: 12px; align-items: start; }
+    .pageLayout.sidebarOpen { grid-template-columns: var(--sidebar-width, 248px) 7px minmax(0, 1fr); }
+    .pageLayout:not(.sidebarOpen) .sidebarResizeHandle { display:none; }
+    .sidebarResizeHandle { width:7px; min-height:160px; align-self:stretch; cursor:col-resize; border-radius:8px; background:linear-gradient(90deg, transparent 2px, var(--line) 2px, var(--line) 5px, transparent 5px); touch-action:none; }
+    .sidebarResizeHandle:hover, .sidebarResizeHandle:focus { background:var(--primary); outline:2px solid var(--primary); outline-offset:1px; }
+    .sourceGroup { min-width:0; margin:0 0 2px; }
+    .sourceGroup:not(.collapsed) { grid-column:1 / -1; width:100%; }
+    .sourceGroupHeader { display:flex; align-items:center; width:100%; gap:8px; margin:1px 0 3px; padding:5px 8px; border:1px solid var(--line); border-radius:8px; background:var(--surface); color:var(--ink); text-align:left; font-size:.84rem; font-weight:850; cursor:pointer; }
+    .sourceGroupHeader small { margin-left:auto; color:var(--muted); font-weight:650; }
+    .sourceGroup.collapsed .eventGroupCards { display:none; }
+    .sourceGroup .eventGroupCards { padding-left:3px; border-left:1px solid var(--line); gap:3px; }
+    .sourceGroup:not(.collapsed) > .eventGroupCards { grid-template-columns:minmax(0,1fr); width:100%; }
+    .contentArea { min-width: 0; }
+     .filterSidebarToggle { min-height: 34px; padding: 0 11px; align-self:flex-start; }
+    .headerActions { display:flex; flex-wrap:wrap; gap:7px; align-items:center; justify-content:flex-start; margin-top:10px; }
+    .headerActions .btn { min-height:32px; padding:0 10px; }
+    .locationRadiusField { display:grid; gap:5px; min-width:0; }
+    .locationRadiusField label { font-size:.78rem; font-weight:850; }
+    .locationRadiusField label span { color:var(--muted); font-weight:650; }
+    .locationRadiusInputs { display:grid; grid-template-columns:minmax(0,1fr) 76px; gap:6px; }
+    .locationRadiusInputs input { min-width:0; width:100%; }
+    .mapSearchButton { width:100%; }
+    .card { position:relative; }
+    .card.isNew { background:#14291f; border-color:#69b987; box-shadow:0 8px 24px rgba(48,172,112,.13); }
+    .dateBadge { position:absolute; top:8px; right:8px; z-index:3; max-width:calc(100% - 16px); box-shadow:0 2px 10px rgba(0,0,0,.28); }
+    .card .badges { display:none; }
+    .card .desc .sourceSuffix { color:var(--muted); font-size:.84em; }
+    #providerSelect { display:none!important; }
+    .eventGroup { grid-column:1 / -1; min-width:0; margin-bottom:2px; }
+    .eventGroupHeader { display:flex; width:100%; margin:2px 0 3px; padding:6px 9px; border:1px solid var(--line); border-left:4px solid var(--primary); border-radius:var(--radius); background:var(--surface-soft); color:var(--ink); text-align:left; font-weight:950; cursor:pointer; }
+    .eventGroupHeader small { margin-left:auto; color:var(--muted); }
+    .eventGroupCards { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,360px),1fr)); gap:8px; }
+    .eventGroup.collapsed .eventGroupCards { display:none; }
+    .nextPageHint { margin:4px 0 8px; padding:8px 10px; color:var(--muted); font-size:.8rem; }
+    .mapSearchPanel { margin:0 0 14px; border:1px solid var(--line); border-radius:var(--radius); overflow:hidden; background:var(--surface); }
+    .mapSearchPanelHead { display:flex; justify-content:space-between; align-items:center; gap:10px; padding:9px 12px; }
+    .mapSearchPanel iframe { display:block; width:100%; height:min(66vh,650px); min-height:360px; border:0; background:#fff; }
+    .titlePanelContent .status { max-width:100%; }
+    .grid .card .typeHeader { display:none; }
+    .filterSidebar {
+      width: 100%;
+      min-width: 0;
+      padding: 10px;
+      position: sticky;
+      top: 12px;
+      z-index: 1;
+      max-height: calc(100vh - 24px);
+      overflow-y: auto;
+    }
+    .filterSidebar .filters { grid-template-columns: minmax(0, 1fr); gap: 7px; }
+    .filterSidebar .field label, .filterSidebar .siteSelectLabel { margin-bottom: 3px; font-size: .74rem; }
+    .filterSidebar input, .filterSidebar select { height: 34px; padding: 0 8px; font-size: .82rem; }
+    .filterSidebar .btn { min-height: 34px; padding: 0 9px; font-size: .78rem; }
+    .filterSidebar .secondRow { flex-direction: column; align-items: stretch; gap: 7px; padding-top: 8px; }
+    .filterSidebar .sourcePickers { display: grid; grid-template-columns: minmax(0, 1fr); gap: 8px; width: 100%; }
+    .filterSidebar .inlineTools { display: grid; grid-template-columns: minmax(0, 1fr); gap: 6px; width: 100%; }
+    .filterSidebar .inlineTools > * { width: 100%; }
+    .sidebarViewButtons, .sidebarActionButtons, .inlineTools { display:flex; flex-wrap:wrap; gap:8px; min-width:0; }
+    .sidebarViewButtons { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:10px; margin-bottom:12px; }
+    .sidebarViewButtons .btn { min-width:0; min-height:42px; padding:7px 10px; white-space:normal; line-height:1.2; font-size:.78rem; }
+    /* De drie knoppen om onderdelen uit te klappen zijn paars. */
+    .sidebarViewButtons .btn { background:#7c3aed; border-color:#6d28d9; color:#fff; }
+    .sidebarViewButtons .btn:hover { background:#6d28d9; border-color:#5b21b6; color:#fff; }
+    .sidebarViewButtons .btn:focus-visible { outline:3px solid #c4b5fd; outline-offset:2px; }
+    .sidebarActionButtons .btn, .inlineTools .btn { min-height:38px; padding:0 10px; font-size:.78rem; flex:1 1 auto; }
+    .sidebarActionButtons { grid-column:1 / -1; margin-top:12px; }
+    .filterSidebar .inlineTools { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:8px; width:100%; }
+    .inlineTools > * { min-width:0; }
+    .inlineTools .btn { white-space:normal; line-height:1.15; }
+    .sidebarViewButtons { grid-column:1 / -1; }
+    #refreshBtn, #clearBtn { background:#087f5b; border-color:#087f5b; color:#fff; font-weight:900; }
+    #refreshBtn:hover, #clearBtn:hover { background:#066b4d; border-color:#066b4d; }
+    .filterSidebar .sitePanel { position: static; top: auto; left: auto; right: auto; margin-top: 5px; box-shadow: none; }
+    .filterSidebar .sitePanelHeader { padding: 7px 8px; font-size: .72rem; }
+    .filterSidebar .siteList { max-height: 180px; padding: 6px; }
+    .filterSidebar .siteList label { padding: 0 1px; font-size: .64rem; line-height: .72; margin: 0; }
+    .filterSidebar .siteRemove { flex-basis:16px; width:16px; height:16px; margin-top:0; }
+    .filterSidebar .rawLogPanel { margin-top: 8px; }
+    @media (max-width: 360px) {
+      .sidebarViewButtons { grid-template-columns:1fr; }
+    }
+    @media (max-width: 900px) {
+      .pageLayout.sidebarOpen { grid-template-columns: minmax(0, 1fr); }
+      .sidebarResizeHandle { display:none; }
+      .filterSidebar { width: auto; max-height: none; position: static; }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="heroInner">
+      <div>
+        <h1>
+          <button class="titleToggle" id="titleToggle" type="button" aria-expanded="false">
+            <span id="pageTitle">Evenementen rond Groningen</span>
+            <span id="titleProgressText" class="titleProgressText" aria-live="polite" hidden></span>
+            <span id="titleBusyIndicator" class="titleBusyIndicator" role="status" aria-label="Zoeken naar nieuwe data" title="Zoeken naar nieuwe data" hidden><span class="titleBusySpinner" aria-hidden="true"></span></span>
+            <span class="titleChevron" aria-hidden="true">v</span>
+          </button>
+        </h1>
+        <div class="headerEventSummary" aria-live="polite">
+          <strong id="count">Evenementen laden...</strong><span id="filterBreakdown"></span>
+        </div>
+        <div class="titlePanel" id="titlePanel">
+          <div class="titlePanelContent">
+            <span class="versionBadge" id="versionBadge">Versie wordt geladen</span>
+            <div class="scanSettings" aria-label="Scaninstellingen">
+              <label class="scanSetting" for="maxEventsPerSite">Max. resultaten <input id="maxEventsPerSite" type="number" min="1" max="100" step="1" value="20" inputmode="numeric" title="Maximum aantal resultaten per geselecteerde website"> <small>per website</small></label>
+              <label class="scanSetting" for="siteTimeLimitSeconds">Max. sec. <input id="siteTimeLimitSeconds" type="number" min="1" max="60" step="1" value="20" inputmode="numeric" title="Maximum zoektijd per geselecteerde website in seconden"> <small>per website</small></label>
+            </div>
+          </div>
+          <div class="status headerStatus" id="status" aria-label="Verversstatus" aria-live="polite"></div>
+        </div>
+        <div class="headerActions" aria-label="Weergavebediening">
+          <button class="btn btnSecondary filterSidebarToggle" id="filterSidebarToggle" type="button" aria-controls="filterSidebar" aria-expanded="false">Filters tonen</button>
+        </div>
+      </div>
+      <div class="heroSide">
+        <div class="weather" id="weatherBox" aria-live="polite"></div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="pageLayout" id="pageLayout">
+    <aside class="toolbar filterSidebar" id="filterSidebar" aria-label="Filters">
+      <div class="sidebarViewButtons" aria-label="Weergave">
+        <button class="btn btnSecondary" id="collapseTypesBtn" type="button">Types uitklappen</button>
+        <button class="btn btnSecondary" id="collapseSourcesBtn" type="button">Bron uitklappen</button>
+        <button class="btn btnSecondary" id="collapseBtn" type="button">Details uitklappen</button>
+      </div>
+      <div class="filters">
+        <div class="field">
+          <label for="search">Zoeken</label>
+          <input id="search" type="search" placeholder="Naam, plaats of omschrijving">
+        </div>
+
+        <div class="locationRadiusField">
+          <label for="region">Locatie <span>(straal in km)</span></label>
+          <div class="locationRadiusInputs">
+            <input id="region" value="Groningen" aria-label="Locatie of regio">
+            <input id="radius" type="number" min="0" max="300" value="100" inputmode="numeric" aria-label="Straal in kilometers, 0 is geen filter" title="0 = geen filter, hoger getal = filter in km">
+          </div>
+        </div>
+        <button class="btn btnSecondary mapSearchButton" id="mapSearchBtn" type="button">Zoeken op kaart</button>
+
+        <div class="field">
+          <label for="typeFilter">Type</label>
+          <select id="typeFilter">
+            <option value="all">Alle types</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="dateSingle">Startdatum</label>
+          <input id="dateSingle" type="date">
+        </div>
+
+        <div class="field">
+          <label for="periodMode">Periode</label>
+          <select id="periodMode">
+            <option value="today">Vandaag</option>
+            <option value="tomorrow">Morgen</option>
+            <option value="specificDay">Specifieke dag</option>
+            <option value="always">Altijd</option>
+            <option value="thisWeekend">Dit weekend</option>
+            <option value="nextWeekend">Volgend weekend</option>
+            <option value="alwaysFromToday" selected>Altijd vanaf vandaag</option>
+            <option value="threeDays">Startdatum +2 dagen</option>
+            <option value="week">Startdatum +7 dagen</option>
+          </select>
+        </div>
+
+      </div>
+
+      <div class="secondRow">
+        <div class="sourcePickers">
+          <div class="siteSelect" id="providerSelect">
+            <label class="siteSelectLabel" for="providerButton">Zoekbronnen</label>
+            <button class="btn btnSecondary siteButton" id="providerButton" type="button" aria-expanded="false">
+              <span><span id="providerCount">0</span> geselecteerd</span>
+              <span aria-hidden="true">v</span>
+            </button>
+            <div class="sitePanel">
+              <div class="sitePanelHeader">Mistral zoekt per aangevinkte website naar echte eventvelden. ChatGPT en SerpAPI kunnen apart worden aangezet om te vergelijken.</div>
+              <div class="siteList" id="providerList">
+                <label><input class="providerCheck" type="checkbox" id="provPerplexity" disabled> <span>Perplexity uit</span></label>
+                <label><input class="providerCheck" type="checkbox" id="provMistral"> <span>Mistral eventvelden</span></label>
+                <label><input class="providerCheck" type="checkbox" id="provOpenAI"> <span>ChatGPT eventvelden</span></label>
+                <label><input class="providerCheck" type="checkbox" id="provSerpAPI"> <span>SerpAPI eventvelden</span></label>
+              </div>
+            </div>
+          </div>
+
+          <div class="siteSelect" id="siteSelect">
+            <label class="siteSelectLabel" for="siteButton">Websites en AI-bronnen</label>
+            <button class="btn btnSecondary siteButton" id="siteButton" type="button" aria-expanded="false">
+              <span class="siteButtonMain"><span><span id="siteCount">0</span> bronnen geselecteerd</span></span>
+              <span aria-hidden="true">v</span>
+            </button>
+            <div class="sitePanel">
+              <div class="sitePanelHeader">Selecteer websites om te scannen en filteren.</div>
+              <div class="siteList" id="sitesList"></div>
+              <div class="siteActions">
+                <button class="btn btnSecondary" id="allSitesBtn" type="button">Alles</button>
+                <button class="btn btnSecondary" id="noSitesBtn" type="button">Geen</button>
+              </div>
+            </div>
+          </div>
+          <div class="customSiteAdder" id="customSiteAdder">
+            <label class="siteSelectLabel" for="customSiteUrl">Website toevoegen aan scraper</label>
+            <div class="customSiteRow">
+              <input id="customSiteUrl" type="url" placeholder="https://voorbeeld.nl/agenda" autocomplete="url">
+              <button class="btn btnSecondary" id="addCustomSiteBtn" type="button">Opslaan</button>
+            </div>
+            <div class="status" id="customSiteStatus" aria-live="polite"></div>
+          </div>
+        </div>
+
+        <div class="inlineTools">
+          <input type="checkbox" id="newOnlyFilter" hidden>
+          <button class="btn btnSecondary filterToggle" id="newOnlyToggle" type="button" aria-pressed="false">Nieuw</button>
+          <button class="btn btnSecondary" id="toggleCustomSiteBtn" type="button" aria-expanded="false">Toevoegen URL</button>
+          <button class="btn btnSecondary" id="clearBtn" type="button">Ververs data</button>
+        </div>
+      </div>
+      <div class="sidebarActionButtons">
+        <button class="btn btnSecondary" id="refreshBtn" type="button" hidden>Ververs data</button>
+        <button class="btn btnSecondary" id="resetBtn" type="button">Reset filter</button>
+        <button class="btn btnDanger" id="deleteDataBtn" type="button">Verwijderen data</button>
+      </div>
+
+    </aside>
+    <div class="sidebarResizeHandle" id="sidebarResizeHandle" role="separator" aria-orientation="vertical" aria-label="Zijbalkbreedte aanpassen" tabindex="0"></div>
+
+    <div class="contentArea">
+      <section class="mapSearchPanel" id="mapSearchPanel" hidden aria-label="Kaart zoeken">
+        <div class="mapSearchPanelHead"><strong>Zoeken op kaart</strong><button class="btn btnSecondary" id="closeMapSearchBtn" type="button">Kaart sluiten</button></div>
+        <iframe id="mapSearchFrame" title="Zoeken op kaart" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </section>
+      <div class="summary">
+        <span id="liveScrapeSummary" class="liveScrapeSummary" aria-live="polite" hidden></span>
+      </div>
+
+    <section class="grid" id="grid" aria-live="polite"></section>
+
+    <nav class="pagination" id="pagination" aria-label="Paginering">
+      <button class="btn btnSecondary" id="prevPage" type="button">Vorige</button>
+      <span class="pageText" id="pageInfo">Pagina 1 van 1</span>
+      <button class="btn btnSecondary" id="nextPage" type="button">Volgende</button>
+      <label class="perPageControl" for="perPageSelect">
+        Per pagina
+        <select id="perPageSelect">
+          <option value="12">12</option>
+          <option value="18">18</option>
+          <option value="24">24</option>
+          <option value="48">48</option>
+          <option value="96">96</option>
+          <option value="500">500</option>
+        </select>
+      </label>
+    </nav>
+    </div>
+    </div>
+  </main>
+
+  <div class="confirmOverlay" id="clearConfirm" role="dialog" aria-modal="true" aria-labelledby="clearConfirmTitle">
+    <div class="confirmBox">
+      <h2 id="clearConfirmTitle">Alles verwijderen?</h2>
+      <p>Weet je zeker dat je alle evenementen en het archief wilt verwijderen en daarna opnieuw wilt verversen?</p>
+      <div class="confirmActions">
+        <button class="btn btnSecondary" id="clearCancelBtn" type="button">Annuleren</button>
+        <button class="btn btnDanger" id="clearConfirmBtn" type="button">Verwijderen en verversen</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const APP_VERSION = "2026.10.25.66";
+    const STATUS_HISTORY_KEY = "evenementenStatusHistoryV1";
+    const DISMISSED_SCRAPE_RUN_KEY = "evenementenDismissedScrapeRunV1";
+    const DEFAULT_MAX_EVENTS_PER_SITE = 20;
+    const DEFAULT_SITE_TIME_LIMIT_SECONDS = 20;
+    const SCAN_SETTINGS_KEY = "eventScanSettingsV1";
+    const CUSTOM_SITES_KEY = "evenementenCustomSitesV1";
+    const REMOVED_SITES_KEY = "evenementenRemovedSitesV1";
+    const SOURCE_SELECTION_KEY = "evenementenSourceSelectionV1";
+    const SPOT_ONLY_SITE = "https://www.spotgroningen.nl/programma/";
+    const WORKER_URL = "https://evenementen-refresh.mrsjonnie.workers.dev";
+    const PER_PAGE_KEY = "evenementenPerPage";
+    let eventsPerPage = 96;
+    const typeImages = {
+      film: "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=900&q=80",
+      museum: "https://images.unsplash.com/photo-1566127992631-137a642a90f4?auto=format&fit=crop&w=900&q=80",
+      historie: "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?auto=format&fit=crop&w=900&q=80",
+      muziek: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=900&q=80",
+      theater: "https://images.unsplash.com/photo-1503095396549-807759245b35?auto=format&fit=crop&w=900&q=80",
+      markt: "https://images.unsplash.com/photo-1488459716781-31db52582fe9?auto=format&fit=crop&w=900&q=80",
+      festival: "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?auto=format&fit=crop&w=900&q=80",
+      sport: "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=900&q=80",
+      culinair: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=900&q=80",
+      kinderen: "https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=900&q=80",
+      natuur: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=900&q=80",
+      workshop: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80",
+      lezing: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=900&q=80",
+      default: "https://images.unsplash.com/photo-1517457373958-b7bdd4587205?auto=format&fit=crop&w=900&q=80"
+    };
+    const fallbackEvents = [
+      {
+        title: "Groninger Museum",
+        type: "museum",
+        date: "Hele jaar",
+        location: "Groningen",
+        cost: "Zie website",
+        description: "Moderne kunst en wisselende tentoonstellingen.",
+        image: "https://picsum.photos/seed/Groninger+Museum/800/500",
+        website: "https://www.groningermuseum.nl",
+        source: "",
+        periodLabel: "Hele jaar",
+        isPermanent: true
+      },
+      {
+        title: "Fort Bourtange",
+        type: "historie",
+        date: "Hele jaar",
+        location: "Bourtange",
+        cost: "Zie website",
+        description: "Historische vesting met demonstraties en musea.",
+        image: "https://picsum.photos/seed/Fort+Bourtange/800/500",
+        website: "https://www.bourtange.nl",
+        source: "",
+        periodLabel: "Hele jaar",
+        isPermanent: true
+      }
+    ];
+    const fallbackSites = [
+      "https://groningen.uitloper.nu/",
+      "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "https://forum.nl/nl/agenda",
+      SPOT_ONLY_SITE,
+      "https://simplon.nl/",
+      "https://www.vera-groningen.nl/",
+      "https://www.martiniplaza.nl/nl/agenda",
+      "https://groningermuseum.nl/programma",
+      "https://www.kultuuragenda.nl/agenda",
+      "https://www.noorderzon.nl/programma",
+      "https://www.concertgebouw.nl/concerten-en-tickets",
+      "https://www.zwolsetheaters.nl/programma",
+      "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "https://www.vvvameland.nl/activiteiten-en-evenementen",
+      "https://www.socialdeal.nl/",
+      "https://www.groupon.nl/kortingsbonnen/gemeente-groningen",
+      "https://www.ibood.com/s-nl"
+    ];
+
+    let events = [];
+    let sites = [];
+    let filteredEvents = [];
+    let filterStats = null;
+    let newEventKeys = new Set();
+    let deletedEventKeys = new Set();
+    let cardsCollapsed = true;
+    let refreshAbortRequested = false;
+    let activeScanSites = new Set();
+    let latestWeatherData = null;
+    let currentPage = 1;
+    let dateFrom = "";
+    let dateTo = "";
+    let eventsUpdatedAt = "";
+    let latestSiteResults = [];
+    let latestRawLog = [];
+    let eventsArchiveCount = 0;
+    let eventsActiveCount = 0;
+    let eventsJsonTotalCount = 0;
+    let liveLogRows = [];
+    let expandedEventKeys = new Set();
+    let collapsedEventTypes = new Set();
+    let collapsedSourceGroups = new Set();
+    let dynamicRegionCoord = null;
+    let dynamicRegionKey = "";
+    let regionLookupTimer = null;
+
+    const $ = (id) => document.getElementById(id);
+    const controls = ["search", "region", "radius", "typeFilter", "dateSingle", "periodMode", "newOnlyFilter"];
+
+    function cleanText(value) {
+      return String(value ?? "")
+        .replace(/\u00c3\u00a2\u00c2\u0082\u00c2\u00ac|\u00e2\u0082\u00ac|\u20ac/g, "€")
+        .replace(/\bEUR\s*(?=\d)/gi, "€ ")
+        .replace(/\bEUR\b/gi, "€")
+        .replace(/€\s*(?=\d)/g, "€ ")
+        .replace(/\u00c2\u00b7|\u00b7/g, "-")
+        .replace(/\u00c2\u00b0C|\u00b0C/g, " graden")
+        .trim();
+    }
+
+    const versionHeaderThemes = [
+      { left: "rgba(9, 32, 42, .94)", right: "rgba(54, 95, 115, .56)", accent: "#53b6d2", badge: "rgba(83, 182, 210, .22)" },
+      { left: "rgba(24, 34, 24, .94)", right: "rgba(78, 112, 69, .58)", accent: "#72d6a1", badge: "rgba(114, 214, 161, .22)" },
+      { left: "rgba(42, 26, 18, .94)", right: "rgba(138, 86, 44, .55)", accent: "#f0bd62", badge: "rgba(240, 189, 98, .22)" },
+      { left: "rgba(43, 21, 29, .94)", right: "rgba(142, 68, 78, .55)", accent: "#ff8d80", badge: "rgba(255, 141, 128, .22)" },
+      { left: "rgba(18, 28, 48, .94)", right: "rgba(61, 86, 143, .55)", accent: "#8fb7ff", badge: "rgba(143, 183, 255, .22)" },
+      { left: "rgba(25, 25, 39, .94)", right: "rgba(92, 83, 141, .55)", accent: "#b7a7ff", badge: "rgba(183, 167, 255, .22)" },
+      { left: "rgba(18, 42, 37, .94)", right: "rgba(49, 124, 105, .55)", accent: "#67dcc4", badge: "rgba(103, 220, 196, .22)" },
+      { left: "rgba(44, 29, 19, .94)", right: "rgba(139, 102, 57, .55)", accent: "#e7c276", badge: "rgba(231, 194, 118, .22)" },
+      { left: "rgba(28, 38, 30, .94)", right: "rgba(89, 123, 79, .55)", accent: "#a4d66f", badge: "rgba(164, 214, 111, .22)" },
+      { left: "rgba(39, 22, 42, .94)", right: "rgba(122, 71, 133, .55)", accent: "#e69bef", badge: "rgba(230, 155, 239, .2)" }
+    ];
+
+    function applyVersionHeaderTheme() {
+      const numbers = APP_VERSION.match(/\d+/g) || [];
+      const patch = Number(numbers[numbers.length - 1]) || 0;
+      const theme = versionHeaderThemes[patch % versionHeaderThemes.length];
+      const root = document.documentElement;
+      root.style.setProperty("--hero-left", theme.left);
+      root.style.setProperty("--hero-right", theme.right);
+      root.style.setProperty("--hero-accent", theme.accent);
+      root.style.setProperty("--hero-badge", theme.badge);
+    }
+
+    function escapeHtml(value) {
+      return cleanText(value).replace(/[&<>"']/g, (char) => ({
+        "&": "&amp;",
+        "<": "&lt;",
+        ">": "&gt;",
+        '"': "&quot;",
+        "'": "&#039;"
+      }[char]));
+    }
+
+    function safeUrl(value, options = {}) {
+      try {
+        let raw = cleanText(value);
+        if (!raw || raw === "#") return "";
+        if (!/^[a-z][a-z0-9+.-]*:/i.test(raw) && /^[\w.-]+\.[a-z]{2,}/i.test(raw)) {
+          raw = `https://${raw}`;
+        }
+        const url = new URL(raw, window.location.href);
+        const allowed = options.mail ? ["http:", "https:", "mailto:"] : ["http:", "https:"];
+        if (!allowed.includes(url.protocol)) return "";
+        if (options.website && (!url.hostname || !url.hostname.includes("."))) return "";
+        return url.href;
+      } catch {
+        return "";
+      }
+    }
+
+    const NEW_EVENTS_KEY = "evenementenNewEventKeys";
+    const KNOWN_EVENTS_KEY = "evenementenKnownEventKeys";
+    const DELETED_EVENTS_KEY = "evenementenDeletedEventKeys";
+
+    function normalizeSiteInput(value) {
+      let raw = cleanText(value);
+      if (!raw) return "";
+      if (!/^[a-z][a-z0-9+.-]*:/i.test(raw) && /^[\w.-]+\.[a-z]{2,}/i.test(raw)) {
+        raw = `https://${raw}`;
+      }
+
+      try {
+        const url = new URL(raw);
+        if (!["http:", "https:"].includes(url.protocol) || !url.hostname.includes(".")) return "";
+        url.hash = "";
+        return url.href;
+      } catch {
+        return "";
+      }
+    }
+
+    function loadStoredSet(key) {
+      try {
+        const stored = JSON.parse(localStorage.getItem(key) || "[]");
+        return new Set(Array.isArray(stored) ? stored.map(cleanText).filter(Boolean) : []);
+      } catch {
+        return new Set();
+      }
+    }
+
+    function saveStoredSet(key, values) {
+      try {
+        localStorage.setItem(key, JSON.stringify([...values]));
+      } catch {}
+    }
+
+    function loadCustomSites() {
+      try {
+        const stored = JSON.parse(localStorage.getItem(CUSTOM_SITES_KEY) || "[]");
+        return mergeSites(Array.isArray(stored) ? stored : []);
+      } catch {
+        return [];
+      }
+    }
+
+    function siteIdentityKey(site) {
+      return normalizeSiteInput(site).toLowerCase().replace(/\/$/, "");
+    }
+
+    function loadRemovedSiteKeys() {
+      try {
+        const stored = JSON.parse(localStorage.getItem(REMOVED_SITES_KEY) || "[]");
+        return new Set((Array.isArray(stored) ? stored : []).map(siteIdentityKey).filter(Boolean));
+      } catch {
+        return new Set();
+      }
+    }
+
+    function saveRemovedSiteKeys(values) {
+      try { localStorage.setItem(REMOVED_SITES_KEY, JSON.stringify([...new Set(values)])); } catch {}
+    }
+
+    async function removeSiteFromList(site) {
+      const key = siteIdentityKey(site);
+      if (!key) return;
+      const host = hostFromUrl(site);
+      const confirmed = await askClearConfirmation(
+        "Website verwijderen?",
+        `Weet je zeker dat je ${host} uit de lijst met websites wilt verwijderen? De website wordt in deze browser verborgen en kan later opnieuw worden toegevoegd.`,
+        "Website verwijderen"
+      );
+      if (!confirmed) return;
+      sites = sites.filter((candidate) => siteIdentityKey(candidate) !== key);
+      saveCustomSites(loadCustomSites().filter((candidate) => siteIdentityKey(candidate) !== key));
+      const removed = loadRemovedSiteKeys();
+      removed.add(key);
+      saveRemovedSiteKeys(removed);
+      const selected = new Set([...document.querySelectorAll(".siteCheck:checked")].map((check) => check.value));
+      selected.delete(site);
+      renderSites(selected);
+      saveSourceSelection();
+      applyFilters();
+      showStatus(`${host} verwijderd uit de websitelijst in deze browser. Je kunt de website later opnieuw toevoegen via ‘Toevoegen URL’.`, "ok");
+    }
+
+    function saveCustomSites(values) {
+      const custom = mergeSites(values);
+      try { localStorage.setItem(CUSTOM_SITES_KEY, JSON.stringify(custom)); } catch {}
+      return custom;
+    }
+
+    function loadSourceSelection() {
+      try {
+        const stored = JSON.parse(localStorage.getItem(SOURCE_SELECTION_KEY) || "null");
+        return stored && typeof stored === "object" ? stored : null;
+      } catch { return null; }
+    }
+
+    function saveSourceSelection() {
+      const selectedSites = [...document.querySelectorAll(".siteCheck:checked")].map((check) => check.value);
+      const providers = {
+        mistral: Boolean($("provMistral")?.checked),
+        openai: Boolean($("provOpenAI")?.checked),
+        serpapi: Boolean($("provSerpAPI")?.checked)
+      };
+      try { localStorage.setItem(SOURCE_SELECTION_KEY, JSON.stringify({ selectedSites, providers })); } catch {}
+    }
+
+    function setCustomSiteStatus(message, kind = "warn") {
+      const status = $("customSiteStatus");
+      status.textContent = message;
+      status.className = "status show " + kind;
+    }
+
+    function addCustomSite() {
+      const input = $("customSiteUrl");
+      const normalized = normalizeSiteInput(input.value);
+      if (!normalized) {
+        setCustomSiteStatus("Vul een geldige website in die met http:// of https:// bereikbaar is.", "error");
+        return;
+      }
+      const host = hostFromUrl(normalized);
+      const key = normalized.toLowerCase().replace(/\/$/, "");
+      if (sites.some((site) => normalizeSiteInput(site).toLowerCase().replace(/\/$/, "") === key)) {
+        setCustomSiteStatus("Deze website staat al in de lijst.", "warn");
+        return;
+      }
+      const selected = new Set([...document.querySelectorAll(".siteCheck:checked")].map((check) => check.value));
+      const removed = loadRemovedSiteKeys();
+      removed.delete(siteIdentityKey(normalized));
+      saveRemovedSiteKeys(removed);
+      saveCustomSites([...loadCustomSites(), normalized]);
+      sites = mergeSites([...sites, normalized]);
+      selected.add(normalized);
+      renderSites(selected);
+      saveSourceSelection();
+      updateSiteCount();
+      applyFilters();
+      input.value = "";
+      setCustomSiteStatus(host + " toegevoegd en aangevinkt. Klik op ‘Ververs data’ om deze website te scrapen.", "ok");
+    }
+
+    function clampNumber(value, fallback, min, max) {
+      const number = Number(value);
+      if (!Number.isFinite(number)) return fallback;
+      return Math.max(min, Math.min(max, Math.round(number)));
+    }
+
+    function loadScanSettings() {
+      try {
+        const stored = JSON.parse(localStorage.getItem(SCAN_SETTINGS_KEY) || "{}");
+        return {
+          maxEventsPerSite: clampNumber(stored.maxEventsPerSite, DEFAULT_MAX_EVENTS_PER_SITE, 1, 100),
+          siteTimeLimitSeconds: clampNumber(stored.siteTimeLimitSeconds, DEFAULT_SITE_TIME_LIMIT_SECONDS, 1, 60)
+        };
+      } catch {
+        return {
+          maxEventsPerSite: DEFAULT_MAX_EVENTS_PER_SITE,
+          siteTimeLimitSeconds: DEFAULT_SITE_TIME_LIMIT_SECONDS
+        };
+      }
+    }
+
+    function saveScanSettings() {
+      const settings = currentScanSettings();
+      try {
+        localStorage.setItem(SCAN_SETTINGS_KEY, JSON.stringify(settings));
+      } catch {}
+      return settings;
+    }
+
+    function currentScanSettings() {
+      return {
+        maxEventsPerSite: clampNumber($("maxEventsPerSite")?.value, DEFAULT_MAX_EVENTS_PER_SITE, 1, 100),
+        siteTimeLimitSeconds: clampNumber($("siteTimeLimitSeconds")?.value, DEFAULT_SITE_TIME_LIMIT_SECONDS, 1, 60)
+      };
+    }
+
+    function applyScanSettings() {
+      const settings = loadScanSettings();
+      $("maxEventsPerSite").value = settings.maxEventsPerSite;
+      $("siteTimeLimitSeconds").value = settings.siteTimeLimitSeconds;
+    }
+
+    function selectedScanSites() {
+      return [...document.querySelectorAll(".siteCheck:checked")].map((check) => check.value);
+    }
+
+    function radiusFilterKm() {
+      const input = $("radius");
+      if (!input || input.value === "") return 100;
+      return Math.max(0, Number(input.value) || 0);
+    }
+
+    function radiusPayloadValue() {
+      return String(radiusFilterKm());
+    }
+
+    function radiusSubtitle() {
+      const radiusKm = radiusFilterKm();
+      return radiusKm > 0 ? `straal ${radiusKm} km` : "straal 0 (geen filter)";
+    }
+
+    function providerSettings() {
+      return {
+        perplexity: false,
+        mistral: Boolean($("provMistral")?.checked),
+        openai: Boolean($("provOpenAI")?.checked),
+        chatgpt: Boolean($("provOpenAI")?.checked),
+        serpapi: Boolean($("provSerpAPI")?.checked)
+      };
+    }
+
+    function addDays(dateValue, days) {
+      const date = new Date((dateValue || formatDate(new Date())) + "T00:00:00");
+      date.setDate(date.getDate() + days);
+      return formatDate(date);
+    }
+
+    function refreshDateWindow() {
+      const mode = $("periodMode")?.value || "alwaysFromToday";
+      const today = formatDate(new Date());
+      const start = ["always", "alwaysFromToday"].includes(mode) ? today : (dateFrom || $("dateSingle").value || today);
+      let end = dateTo || start;
+      if (mode === "alwaysFromToday") end = "9999-12-31";
+      else if (mode === "threeDays") end = addDays(start, 2);
+      else if (mode === "week") end = addDays(start, 6);
+      else if (!end || end < start || end === "9999-12-31") end = start;
+      return { from: start, to: end };
+    }
+
+    function mergeSites(baseSites) {
+      const seen = new Set();
+      const merged = [];
+      (baseSites || []).forEach((site) => {
+        const original = cleanText(site);
+        const normalized = normalizeSiteInput(original);
+        const key = normalized.toLowerCase().replace(/\/$/, "");
+        if (original && normalized && !seen.has(key)) {
+          seen.add(key);
+          merged.push(original);
+        }
+      });
+      return merged;
+    }
+
+    function eventKeySet(items) {
+      return new Set((items || []).map(eventDedupeKey));
+    }
+
+    function mergeVerifiedEvents(items) {
+      const merged = dedupeEvents(items || []).map((event) => {
+        const host = hostFromUrl(event.website);
+        return /(^|\.)(socialdeal\.nl|groupon\.nl|ibood\.com)$/.test(host) ? { ...event, type: "Aanbiedingen" } : event;
+      });
+      return merged.filter((event) => !deletedEventKeys.has(eventDedupeKey(event)));
+    }
+    function isNewEvent(event) {
+      return Boolean(event?.isNew || event?.new || newEventKeys.has(eventDedupeKey(event)));
+    }
+
+    function rememberNewEvents(items, previousKeys) {
+      const freshKeys = eventKeySet(items);
+      const found = [...freshKeys].filter((key) => !previousKeys.has(key));
+      newEventKeys = new Set(found);
+      saveStoredSet(NEW_EVENTS_KEY, newEventKeys);
+      saveStoredSet(KNOWN_EVENTS_KEY, freshKeys);
+      updateNewCount();
+      return found.length;
+    }
+
+    function updateNewCount() {
+      const count = events.filter(isNewEvent).length;
+      if ($("newCountBadge")) $("newCountBadge").textContent = count;
+      if ($("newOnlyToggle")) $("newOnlyToggle").setAttribute("aria-pressed", $("newOnlyFilter")?.checked ? "true" : "false");
+    }
+
+    function visibleNewCount() {
+      return filteredEvents.filter(isNewEvent).length;
+    }
+
+    function refreshLoadedMessage(totalNew) {
+      if (!Number.isFinite(totalNew)) return "De lijst is gecontroleerd en geladen.";
+      const visible = visibleNewCount();
+      if (totalNew > 0 && visible === 0) {
+        return `${foundText(totalNew)} gevonden, maar verborgen door huidige periode/filter.`;
+      }
+      if (visible > 0 && visible < totalNew) {
+        return `${foundText(totalNew)} gevonden, ${visible} zichtbaar met huidige filters.`;
+      }
+      return `${foundText(totalNew)} gevonden. De lijst is gecontroleerd en geladen.`;
+    }
+
+    function normalizeEventTitle(value) {
+      const months = "januari|februari|maart|april|mei|juni|juli|augustus|september|oktober|november|december|jan|feb|mrt|apr|jun|jul|aug|sep|sept|okt|nov|dec|january|february|march|april|may|june|july|august|september|october|november|december";
+      const weekdays = "monday|tuesday|wednesday|thursday|friday|saturday|sunday|maandag|dinsdag|woensdag|donderdag|vrijdag|zaterdag|zondag";
+      let text = cleanText(value).toLowerCase();
+      text = text.replace(new RegExp(`^(?:${weekdays})\\s+\\d{1,2}\\s+(?:${months})\\s+`, "i"), "");
+      text = text.split(/\b(mainstage|downstage|zienema|dansen)\b|\bticket\b|\bdoors\b|\bstart\b|\bsold out\b|\bkoop ticket\b/i)[0];
+      return text
+        .replace(/\b20\d{2}\b/g, "")
+        .replace(/^(concert|theater|film|bioscoop|markt|workshop|event|evenement):\s*/i, "")
+        .replace(/[^a-z0-9]+/g, " ")
+        .trim();
+    }
+
+    function eventDedupeKey(event) {
+      const title = normalizeEventTitle(event.title);
+      const date = cleanText(event.date || "");
+      const location = cleanText(event.location || "").toLowerCase()
+        .replace(/\b(start|startpunt|bij|diverse|locaties|locatie)\b/g, "")
+        .replace(/[^a-z0-9]+/g, " ")
+        .trim();
+      return title.length > 8 ? `${date}|${title}` : `${date}|${title}|${location}`;
+    }
+
+    function eventQuality(event) {
+      let score = 0;
+      const title = cleanText(event.title || "");
+      if (safeUrl(event.website, { website: true })) score += 12;
+      if (safeUrl(event.image)) score += 4;
+      if (event.description && cleanText(event.description).length > 60) score += 4;
+      if (event.time) score += 2;
+      if (event.lat && event.lon) score += 2;
+      if (event.source && !/onbekend|manual/i.test(event.source)) score += 1;
+      if (title && title.length <= 90) score += 3;
+      if (/\b(ticket|doors|start|koop ticket|sold out)\b/i.test(title)) score -= 5;
+      return score;
+    }
+
+    function dedupeEvents(items) {
+      const byKey = new Map();
+      for (const event of items || []) {
+        const key = eventDedupeKey(event);
+        const current = byKey.get(key);
+        if (!current || eventQuality(event) > eventQuality(current)) {
+          byKey.set(key, event);
+        }
+      }
+      return [...byKey.values()];
+    }
+
+    function typeImage(type, image) {
+      const key = cleanText(type).toLowerCase();
+      const explicit = safeUrl(image);
+      return typeImages[key] || explicit || typeImages.default;
+    }
+
+    const regionCoords = {
+      groningen: { lat: 53.2194, lon: 6.5665 },
+      assen: { lat: 52.9928, lon: 6.5642 },
+      drachten: { lat: 53.1125, lon: 6.0989 },
+      leeuwarden: { lat: 53.2012, lon: 5.7999 },
+      winschoten: { lat: 53.1442, lon: 7.0347 },
+      veendam: { lat: 53.1067, lon: 6.8792 },
+      appingedam: { lat: 53.3217, lon: 6.8583 }
+    };
+
+    const knownLocationCoords = {
+      "grote markt": { lat: 53.2189, lon: 6.5685 },
+      "forum groningen": { lat: 53.2186, lon: 6.5713 },
+      "groninger museum": { lat: 53.2124, lon: 6.5654 },
+      "martinikerk": { lat: 53.2191, lon: 6.5683 },
+      "oosterpoort": { lat: 53.2129, lon: 6.5741 },
+      "vera": { lat: 53.2164, lon: 6.5688 },
+      "noorderplantsoen": { lat: 53.2241, lon: 6.5574 },
+      "stadspark": { lat: 53.2078, lon: 6.5382 },
+      "prinsentuin": { lat: 53.2211, lon: 6.5688 },
+      "suikerterrein": { lat: 53.2105, lon: 6.5344 },
+      "dot groningen": { lat: 53.2253, lon: 6.5672 },
+      "grand theatre": { lat: 53.2183, lon: 6.5686 },
+      "martiniplaza": { lat: 53.1993, lon: 6.5540 },
+      "bourtange": { lat: 53.0066, lon: 7.1923 },
+      "amsterdam": { lat: 52.3676, lon: 4.9041 }
+    };
+
+    function normalizeRouteText(value) {
+      return cleanText(value)
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, " ")
+        .trim();
+    }
+
+    function currentRegionKey() {
+      return normalizeRouteText($("region")?.value || "Groningen");
+    }
+
+    function regionCoord() {
+      const region = currentRegionKey();
+      if (regionCoords[region]) return regionCoords[region];
+      if (dynamicRegionCoord && dynamicRegionKey === region) return dynamicRegionCoord;
+      const match = Object.entries(regionCoords).find(([name]) => region.includes(name) || name.includes(region));
+      return match ? match[1] : regionCoords.groningen;
+    }
+
+    async function resolveRegionCoord() {
+      const regionLabel = cleanText($("region")?.value || "");
+      const key = currentRegionKey();
+      if (!regionLabel || regionCoords[key] || dynamicRegionKey === key) return;
+      try {
+        const url = `https://nominatim.openstreetmap.org/search?format=json&limit=1&countrycodes=nl&q=${encodeURIComponent(regionLabel)}`;
+        const response = await fetch(url, { headers: { "Accept": "application/json" } });
+        if (!response.ok) return;
+        const data = await response.json();
+        const first = Array.isArray(data) ? data[0] : null;
+        const lat = Number(first?.lat);
+        const lon = Number(first?.lon);
+        if (Number.isFinite(lat) && Number.isFinite(lon)) {
+          dynamicRegionKey = key;
+          dynamicRegionCoord = { lat, lon };
+          applyFilters();
+        }
+      } catch {}
+    }
+
+    function scheduleRegionResolve() {
+      clearTimeout(regionLookupTimer);
+      regionLookupTimer = setTimeout(resolveRegionCoord, 450);
+    }
+
+    function eventLocationLabel(event) {
+      if (/vera-groningen\.nl/i.test(event?.website || "")) return "VERA Groningen";
+      const location = cleanText(event.location || "");
+      const unknown = !location || /^(locatie onbekend|onbekend|unknown|n\/?a|-)$/i.test(location);
+      const host = hostFromUrl(event.website || "").replace(/^www\./i, "").toLowerCase();
+      if (unknown && host === "paradiso.nl") return "Amsterdam";
+      return location || "Locatie onbekend";
+    }
+
+    function isUsablePhysicalLocation(event) {
+      const location = cleanText(event?.location || "");
+      if (!location) return false;
+      const key = normalizeRouteText(location);
+      if (/^(locatie onbekend|onbekend|unknown|n a|online|thuis|op locatie|nader te bepalen|tba|-)$/i.test(key)) return false;
+      if (/^(locatie onbekend|onbekend|unknown|n\/?a|online|thuis|nader te bepalen|tba|-)$/i.test(location)) return false;
+      return true;
+    }
+
+    function eventCoords(event) {
+      if (!isUsablePhysicalLocation(event)) return null;
+      const lat = Number(event.lat);
+      const lon = Number(event.lon);
+      if (Number.isFinite(lat) && Number.isFinite(lon)) return { lat, lon };
+
+      const text = normalizeRouteText(eventLocationLabel(event));
+      const known = Object.entries(knownLocationCoords).find(([name]) => text.includes(name));
+      if (known) return known[1];
+
+      const city = Object.entries(regionCoords).find(([name]) => text.includes(name));
+      return city ? city[1] : null;
+    }
+
+    function distanceKm(from, to) {
+      const earthKm = 6371;
+      const lat1 = from.lat * Math.PI / 180;
+      const lat2 = to.lat * Math.PI / 180;
+      const dLat = (to.lat - from.lat) * Math.PI / 180;
+      const dLon = (to.lon - from.lon) * Math.PI / 180;
+      const a = Math.sin(dLat / 2) ** 2 + Math.cos(lat1) * Math.cos(lat2) * Math.sin(dLon / 2) ** 2;
+      return earthKm * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+    }
+
+    function formatKm(km) {
+      const rounded = km < 10 ? km.toFixed(1) : String(Math.round(km));
+      return rounded.replace(".", ",");
+    }
+
+    function eventDistanceKm(event) {
+      const destination = eventCoords(event);
+      if (!destination) return null;
+      return Math.max(.2, distanceKm(regionCoord(), destination) * 1.25);
+    }
+
+    function eventRadiusKm(event) {
+      const knownDistance = eventDistanceKm(event);
+      // Zonder bruikbare locatie behandelen we de activiteit als lokaal: 1 km vanaf de gekozen regio.
+      return Number.isFinite(knownDistance) ? knownDistance : 1;
+    }
+
+    function routeEstimate(event) {
+      const roadKm = eventDistanceKm(event);
+      if (!Number.isFinite(roadKm)) return "afstand onbekend";
+      const speed = roadKm < 8 ? 28 : 55;
+      const minutes = Math.max(4, Math.round((roadKm / speed) * 60));
+      return `${formatKm(roadKm)} km - ca. ${minutes} min`;
+    }
+
+    function routeContextLabel(event) {
+      const roadKm = eventDistanceKm(event);
+      if (!Number.isFinite(roadKm)) return "";
+      return routeEstimate(event);
+    }
+
+    function routeUrl(event) {
+      const destination = eventCoords(event);
+      if (destination) {
+        return `https://www.google.com/maps/dir/?api=1&destination=${destination.lat},${destination.lon}`;
+      }
+
+      if (!isUsablePhysicalLocation(event)) return "";
+      const location = eventLocationLabel(event);
+      return location && location !== "Locatie onbekend" ? `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(location)}` : "";
+    }
+
+    function routeDestination(event) {
+      const coords = eventCoords(event);
+      if (coords) return `${coords.lat},${coords.lon}`;
+      const location = eventLocationLabel(event);
+      return location === "Locatie onbekend" ? "" : location;
+    }
+
+    function routeEmbedUrl(origin, destination) {
+      return `https://www.google.com/maps?output=embed&saddr=${encodeURIComponent(origin)}&daddr=${encodeURIComponent(destination)}`;
+    }
+
+    function routeSearchEmbedUrl(destination) {
+      return `https://www.google.com/maps?q=${encodeURIComponent(destination)}&output=embed`;
+    }
+
+    function locationHomeUrl(event) {
+      const candidates = [
+        event.locationWebsite,
+        event.venueWebsite,
+        event.placeWebsite,
+        event.locationUrl,
+        event.website
+      ];
+      return candidates.map((url) => safeUrl(url, { website: true })).find(Boolean) || "";
+    }
+
+    function getBrowserLocation() {
+      return new Promise((resolve, reject) => {
+        if (!navigator.geolocation) {
+          reject(new Error("Locatie is niet beschikbaar in deze browser"));
+          return;
+        }
+
+        navigator.geolocation.getCurrentPosition(
+          (position) => resolve({
+            lat: position.coords.latitude,
+            lon: position.coords.longitude
+          }),
+          () => reject(new Error("Locatie is niet toegestaan")),
+          { enableHighAccuracy: true, timeout: 10000, maximumAge: 60000 }
+        );
+      });
+    }
+
+    function parseCoordText(value) {
+      const match = cleanText(value).match(/^(-?\d+(?:\.\d+)?),(-?\d+(?:\.\d+)?)$/);
+      if (!match) return null;
+      return { lat: Number(match[1]), lon: Number(match[2]) };
+    }
+
+    function renderRoutePanel(panel, html) {
+      panel.innerHTML = html;
+      panel.classList.add("open");
+    }
+
+    async function openRoutePanel(button, panel) {
+      const destination = cleanText(button.dataset.destination);
+      const routeUrlValue = safeUrl(button.dataset.routeUrl);
+      if (!destination) return;
+
+      renderRoutePanel(panel, '<div class="routePanelText">Huidige locatie ophalen...</div>');
+
+      try {
+        const origin = await getBrowserLocation();
+        const destinationCoords = parseCoordText(destination);
+        const distanceText = destinationCoords
+          ? routeEstimateFrom(origin, destinationCoords)
+          : "afstand onbekend";
+        const embedUrl = routeEmbedUrl(`${origin.lat},${origin.lon}`, destination);
+        const mapsUrl = `https://www.google.com/maps/dir/?api=1&origin=${origin.lat},${origin.lon}&destination=${encodeURIComponent(destination)}`;
+        renderRoutePanel(panel, `
+          <div class="routePanelText">
+            Route vanaf je huidige locatie: ${escapeHtml(distanceText)}.
+            <a href="${escapeHtml(mapsUrl)}" target="_blank" rel="noopener noreferrer">Open in Google Maps</a>
+          </div>
+          <iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="${escapeHtml(embedUrl)}" title="Routekaart"></iframe>
+        `);
+      } catch {
+        const embedUrl = routeSearchEmbedUrl(destination);
+        renderRoutePanel(panel, `
+          <div class="routePanelText">
+            Sta locatie toe om de route vanaf je huidige plek in de pagina te tonen.
+            <a href="${escapeHtml(routeUrlValue)}" target="_blank" rel="noopener noreferrer">Open route in Google Maps</a>
+          </div>
+          <iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="${escapeHtml(embedUrl)}" title="Routekaart"></iframe>
+        `);
+      }
+    }
+
+    function routeEstimateFrom(origin, destination) {
+      const roadKm = Math.max(.2, distanceKm(origin, destination) * 1.25);
+      const speed = roadKm < 8 ? 28 : 55;
+      const minutes = Math.max(4, Math.round((roadKm / speed) * 60));
+      return `${formatKm(roadKm)} km - ca. ${minutes} min`;
+    }
+
+    function formatDate(date) {
+      // Gebruik expliciet de Nederlandse tijdzone (CET/CEST), ongeacht de timezone van het apparaat.
+      const parts = new Intl.DateTimeFormat("en-GB", {
+        timeZone: "Europe/Amsterdam", year: "numeric", month: "2-digit", day: "2-digit"
+      }).formatToParts(date);
+      const values = Object.fromEntries(parts.map((part) => [part.type, part.value]));
+      return `${values.year}-${values.month}-${values.day}`;
+    }
+
+    function prettyDate(value) {
+      if (!/^\d{4}-\d{2}-\d{2}$/.test(value || "")) return value || "Datum onbekend";
+      return new Intl.DateTimeFormat("nl-NL", {
+        weekday: "short",
+        day: "numeric",
+        month: "short",
+        year: "numeric"
+      }).format(new Date(value + "T00:00:00"));
+    }
+
+    function getWeekendRange(offsetWeeks = 0) {
+      const today = new Date();
+      today.setHours(0, 0, 0, 0);
+      const day = today.getDay();
+      const saturday = new Date(today);
+
+      if (day === 0) {
+        saturday.setDate(today.getDate() - 1);
+      } else {
+        saturday.setDate(today.getDate() + ((6 - day + 7) % 7));
+      }
+
+      saturday.setDate(saturday.getDate() + offsetWeeks * 7);
+      const sunday = new Date(saturday);
+      sunday.setDate(saturday.getDate() + 1);
+      return { from: formatDate(saturday), to: formatDate(sunday) };
+    }
+
+    function updateDateRange() {
+      const mode = $("periodMode").value;
+      const baseDate = $("dateSingle").value;
+
+      if (mode === "always") {
+        dateFrom = "";
+        dateTo = "";
+        return;
+      }
+
+      if (mode === "alwaysFromToday") {
+        const today = formatDate(new Date());
+        dateFrom = today;
+        dateTo = "9999-12-31";
+        return;
+      }
+
+      if (mode === "today" || mode === "tomorrow") {
+        const day = new Date();
+        day.setHours(0, 0, 0, 0);
+        if (mode === "tomorrow") day.setDate(day.getDate() + 1);
+        const value = formatDate(day);
+        $("dateSingle").value = value;
+        dateFrom = value;
+        dateTo = value;
+        return;
+      }
+
+      if (mode === "thisWeekend" || mode === "nextWeekend") {
+        const range = getWeekendRange(mode === "nextWeekend" ? 1 : 0);
+        dateFrom = range.from;
+        dateTo = range.to;
+        $("dateSingle").value = range.from;
+        return;
+      }
+
+      const start = baseDate || formatDate(new Date());
+      const startDate = new Date(start + "T00:00:00");
+      dateFrom = start;
+      dateTo = start;
+
+      if (mode === "threeDays") {
+        const end = new Date(startDate);
+        end.setDate(startDate.getDate() + 2);
+        dateTo = formatDate(end);
+      } else if (mode === "week") {
+        const end = new Date(startDate);
+        end.setDate(startDate.getDate() + 6);
+        dateTo = formatDate(end);
+      }
+    }
+
+    let statusHistoryRestored = false;
+    function clearStatusHistory() {
+      const status = $("status");
+      if (status) { status.className = "status"; status.replaceChildren(); }
+      try { localStorage.removeItem(STATUS_HISTORY_KEY); } catch {}
+    }
+    function persistStatusHistory() {
+      const status = $("status");
+      if (!status) return;
+      const rows = [...status.querySelectorAll(".statusMessages .statusEntry")].map((entry) => ({
+        message: entry.dataset.message || entry.textContent || "",
+        type: [...entry.classList].find((name) => ["ok", "warn", "error"].includes(name)) || "",
+        timestamp: entry.dataset.timestamp || ""
+      })).slice(-80);
+      try { localStorage.setItem(STATUS_HISTORY_KEY, JSON.stringify(rows)); } catch {}
+    }
+    function restoreStatusHistory() {
+      const status = $("status");
+      if (!status || statusHistoryRestored) return;
+      statusHistoryRestored = true;
+      let rows = [];
+      try { const saved = JSON.parse(localStorage.getItem(STATUS_HISTORY_KEY) || "[]"); if (Array.isArray(saved)) rows = saved.filter((item) => item && typeof item.message === "string").slice(-80); } catch {}
+      if (!rows.length) return;
+      status.className = "status show";
+      const messages = document.createElement("div"); messages.className = "statusMessages";
+      for (const item of rows) {
+        const entry = document.createElement("div"); entry.className = ("statusEntry " + (item.type || "")).trim();
+        entry.dataset.message = item.message; entry.dataset.timestamp = item.timestamp || "";
+        const line = document.createElement("div"); line.className = "statusLine";
+        const span = document.createElement("span"); span.textContent = (item.timestamp ? "[" + item.timestamp + "] " : "") + item.message;
+        line.appendChild(span); entry.appendChild(line); messages.appendChild(entry);
+      }
+      status.replaceChildren(messages); status.scrollTop = status.scrollHeight;
+    }
+    function keepActivityDetailsVisible() {
+      const panel = $("titlePanel"); const toggle = $("titleToggle");
+      if (panel && !panel.classList.contains("open")) panel.classList.add("open");
+      if (toggle) toggle.setAttribute("aria-expanded", "true");
+    }
+    function showStatus(message, type = "", options = {}) {
+      const status = $("status"); const text = cleanText(message);
+      if (!status) return;
+      // Keep the activity history across browser refreshes, including during a long scrape.
+      // New status messages must never expand the details panel automatically.
+      status.className = "status show";
+      let messages = status.querySelector(".statusMessages");
+      if (!messages) {
+        messages = document.createElement("div");
+        messages.className = "statusMessages";
+        status.replaceChildren(messages);
+      }
+      const lastEntry = messages.lastElementChild;
+      if (lastEntry?.dataset.message === text) {
+        if (options.stop) ensureStatusStopButton(status);
+        persistStatusHistory();
+        return;
+      }
+      // Replace an existing stale-scan notice wherever it is in the history.
+      if (options.replaceLast) {
+        const staleEntry = [...messages.children].find((entry) => entry.dataset.message?.startsWith(options.replaceLast));
+        if (staleEntry) {
+          staleEntry.dataset.message = text;
+          staleEntry.dataset.timestamp = new Date().toLocaleTimeString("nl-NL", { hour: "2-digit", minute: "2-digit", second: "2-digit" });
+          const span = staleEntry.querySelector(".statusLine span");
+          if (span) span.textContent = "[" + staleEntry.dataset.timestamp + "] " + text;
+          if (options.stop) ensureStatusStopButton(status);
+          persistStatusHistory();
+          return;
+        }
+      }
+      const entry = document.createElement("div");
+      entry.className = `statusEntry ${type}`.trim();
+      entry.dataset.message = text;
+      const line = document.createElement("div");
+      line.className = "statusLine";
+      const span = document.createElement("span");
+      const timestamp = new Date().toLocaleTimeString("nl-NL", { hour: "2-digit", minute: "2-digit", second: "2-digit" });
+      entry.dataset.timestamp = timestamp;
+      span.textContent = `[${timestamp}] ${text}`;
+      line.appendChild(span);
+      entry.appendChild(line);
+      messages.appendChild(entry);
+      if (options.stop) ensureStatusStopButton(status);
+      while (messages.children.length > 80) messages.firstElementChild?.remove();
+      status.scrollTop = status.scrollHeight;
+      persistStatusHistory();
+    }
+    function ensureStatusStopButton(status) {
+      let control = status.querySelector(".statusStopControl");
+      if (!control) {
+        control = document.createElement("div");
+        control.className = "statusStopControl";
+        const button = document.createElement("button");
+        button.className = "btn btnSecondary";
+        button.id = "stopRefreshBtn";
+        button.type = "button";
+        button.textContent = "Stop";
+        control.appendChild(button);
+        status.appendChild(control);
+      }
+    }
+    function hideStatus() {
+      const status = $("status");
+      status.className = "status";
+      status.replaceChildren();
+
+    }
+
+    function setBusy(button, busy, text) {
+      button.disabled = busy;
+      button.dataset.originalText ||= button.textContent;
+      button.textContent = busy ? text : button.dataset.originalText;
+    }
+
+    const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
+    async function waitUnlessStopped(totalMs) {
+      const interval = 250;
+      for (let elapsed = 0; elapsed < totalMs; elapsed += interval) {
+        if (refreshAbortRequested) return false;
+        await delay(interval);
+      }
+      return !refreshAbortRequested;
+    }
+
+    function eventSignature(items) {
+      return JSON.stringify(items.map((event) => [
+        event.title || "",
+        event.date || "",
+        event.location || "",
+        event.website || ""
+      ]).slice(0, 250));
+    }
+
+    function normalizeEventsPayload(data) {
+      if (Array.isArray(data)) {
+        return {
+          events: dedupeEvents(data),
+          updatedAt: "",
+          siteResults: [],
+          rawLog: [],
+          activeCount: data.length,
+          archiveCount: 0,
+          totalCount: data.length
+        };
+      }
+      if (data && Array.isArray(data.events)) {
+        const activeItems = data.events;
+        const savedItems = Array.isArray(data.archive) ? data.archive : [];
+        const archiveCount = savedItems.length;
+        const activeCount = activeItems.length;
+        return {
+          events: dedupeEvents([...activeItems, ...savedItems]),
+          updatedAt: cleanText(data.updatedAt || ""),
+          siteResults: Array.isArray(data.siteResults) ? data.siteResults : [],
+          rawLog: Array.isArray(data.rawLog) ? data.rawLog : [],
+          activeCount,
+          archiveCount,
+          totalCount: activeCount + archiveCount
+        };
+      }
+      throw new Error("events.json heeft geen geldige lijst");
+    }
+
+    async function fetchEventsPayload() {
+      const response = await fetch(`./events.json?_=${Date.now()}`, { cache: "no-store" });
+      if (!response.ok) throw new Error("events.json kon niet worden geladen");
+      const data = await response.json();
+      return normalizeEventsPayload(data);
+    }
+
+    function shortScrapeSiteName(url) {
+      const host = String(url || "").replace(/^https?:\/\//i, "").replace(/^www\./i, "").split(/[/?#]/)[0].toLowerCase();
+      const labels = {
+        "groningen.uitloper.nu": "Uitloper", "visitgroningen.nl": "VisitGroningen", "forum.nl": "Forum",
+        "spotgroningen.nl": "SPOT", "simplon.nl": "Simplon", "vera-groningen.nl": "VERA",
+        "martiniplaza.nl": "Martiniplaza", "groningermuseum.nl": "Groninger Museum",
+        "kultuuragenda.nl": "Kultuuragenda", "noorderzon.nl": "Noorderzon",
+        "concertgebouw.nl": "Concertgebouw", "zwolsetheaters.nl": "Zwolse Theaters",
+        "biosagenda.nl": "BiosAgenda", "paradiso.nl": "Paradiso", "vvvameland.nl": "VVV Ameland",
+        "socialdeal.nl": "Social Deal", "groupon.nl": "Groupon", "ibood.com": "iBOOD"
+      };
+      return labels[host] || host.replace(/\.(nl|com|org|net|eu|be|de|info|nu)$/i, "") || "website wordt voorbereid";
+    }
+
+    function updateLiveScrapeSummary(progress, isCurrentRun = true) {
+      const target = $("liveScrapeSummary");
+      const titleProgress = $("titleProgressText");
+      if (target) target.hidden = true;
+      if (!progress || !progress.runId) return;
+      if (!isCurrentRun) {
+        if (titleProgress) {
+          titleProgress.hidden = false;
+          titleProgress.textContent = "Zoeken… scraper starten";
+          titleProgress.title = "De opdracht is verzonden. De naam van de eerste website verschijnt zodra de scraper zijn nieuwe voortgang heeft gepubliceerd.";
+        }
+        return;
+      }
+      const completed = Math.max(0, Number(progress.completedCount) || 0);
+      const total = Math.max(completed + 1, Number(progress.totalSites) || 19);
+      const status = cleanText(progress.status || "running");
+      const progressUpdatedAt = Date.parse(progress.lastUpdatedAt || progress.siteStartedAt || progress.startedAt || "");
+      const progressAgeSeconds = Number.isFinite(progressUpdatedAt) ? Math.max(0, Math.floor((Date.now() - progressUpdatedAt) / 1000)) : 0;
+      if (["running", "finishing", "queued", "in_progress"].includes(status) && progressAgeSeconds >= 45) {
+        if (titleProgress) {
+          titleProgress.hidden = false;
+          titleProgress.textContent = "Wacht op update · " + shortScrapeSiteName(progress.currentSite || "website");
+          titleProgress.title = "De scan heeft al enige tijd geen voortgang gemeld. Laatste bekende website: " + shortScrapeSiteName(progress.currentSite || "onbekend") + ". Bekijk de scanstatus of stop de scan indien nodig.";
+        }
+        return;
+      }
+      if (status === "completed") {
+        if (titleProgress) titleProgress.hidden = true;
+        if (titleBusyIndicator) titleBusyIndicator.hidden = true;
+        if (titleProgress) {
+          const results = Array.isArray(progress.siteResults) ? progress.siteResults : [];
+          const hitCount = results.reduce((sum, item) => sum + (Number(item.count) || 0), 0);
+          const siteNewCount = results.reduce((sum, item) => sum + (Number(item.newCount) || 0), 0);
+          const newCount = Array.isArray(progress.events)
+            ? progress.events.filter(event => event.isNew).length
+            : siteNewCount;
+          const timeoutCount = results.filter(item => item.timedOut).length;
+          const zeroHitCount = results.filter(item => !(Number(item.count) || 0)).length;
+          const finishedCount = Math.min(completed, total);
+          titleProgress.hidden = false;
+          titleProgress.textContent = `Klaar ${finishedCount}/${total} · ${newCount} nieuw`;
+          titleProgress.title = `Scraper afgerond: ${finishedCount}/${total} websites verwerkt. ${hitCount} evenementen gevonden op sites (site-resultaten), ${newCount} nieuw volgens de voortgangsdata; ${zeroHitCount} websites leverden 0 hits op en ${timeoutCount} liepen tegen de ingestelde tijdslimiet aan. Definitieve publicatie wordt apart gecontroleerd.`;
+        }
+        return;
+      }
+      const site = cleanText(progress.currentSite || "");
+      if (!site) {
+        if (titleProgress) {
+          titleProgress.hidden = false;
+          const startedAt = Date.parse(progress.startedAt || progress.lastUpdatedAt || "");
+          const startupSeconds = Number.isFinite(startedAt) ? Math.max(0, Math.floor((Date.now() - startedAt) / 1000)) : 0;
+          titleProgress.textContent = `Zoeken ${completed}/${total} · starten`;
+          titleProgress.title = startupSeconds >= 15
+            ? "De scraper heeft nog geen actieve website gepubliceerd. Dit kan wijzen op een vastgelopen workflow of een mislukte voortgangspublicatie; de status wordt opnieuw gecontroleerd."
+            : "De opdracht is gestart; wachten op de eerste website-status."; 
+        }
+        return;
+      }
+      const siteNumber = Math.min(total, Math.max(1, Number(progress.currentSiteIndex) || completed + 1));
+      const newCount = events.filter(event => event.isNew || newEventKeys.has(eventDedupeKey(event))).length;
+      const siteLabel = shortScrapeSiteName(site);
+      const stage = cleanText(progress.stage || "Websitepagina ophalen");
+      const siteStartedAt = Date.parse(progress.siteStartedAt || progress.lastUpdatedAt || progress.startedAt || "");
+      const elapsedSeconds = Number.isFinite(siteStartedAt) ? Math.max(0, Math.floor((Date.now() - siteStartedAt) / 1000)) : (Number(progress.siteElapsedSeconds) || 0);
+      const siteHits = Number(progress.lastSiteEventCount) || 0;
+      const siteNewHits = Number(progress.lastSiteNewEventCount) || 0;
+      const pageCount = Number(progress.sitePageCount) || 0;
+      if (titleProgress) {
+        titleProgress.hidden = false;
+        // Include elapsed seconds in the visible label so users can see that
+        // the progress indicator is still being refreshed while one site runs.
+        titleProgress.textContent = `Zoeken ${siteNumber}/${total} · ${siteLabel} · ${elapsedSeconds}s`;
+        titleProgress.title = `Bezig met ${siteLabel}: ${stage}. ${elapsedSeconds} seconden verstreken; ${pageCount} pagina’s opgehaald; ${siteHits} evenementen gevonden, waarvan ${siteNewHits} nieuw.`;
+      }
+    }
+
+    async function fetchScrapeProgress() {
+      try {
+        const response = await fetch(`https://raw.githubusercontent.com/mrsjonnie/evenementen/main/scrape-progress.json?_=${Date.now()}`, { cache: "no-store" });
+        if (!response.ok) return null;
+        const data = await response.json();
+        return data && typeof data === "object" && data.runId ? data : null;
+      } catch {
+        return null;
+      }
+    }
+
+    let restoredProgressRunId = "";
+    let restoredProgressUpdatedAt = "";
+    let restoredProgressPollHandle = null;
+    let activeStartupProgressPollHandle = null;
+    let progressMonitoringStopped = false;
+
+    async function restoreRunningScrapeProgress() {
+      if (progressMonitoringStopped) return;
+      const progress = await fetchScrapeProgress();
+      if (progressMonitoringStopped) return;
+      if (!progress) return;
+      const status = cleanText(progress.status || "");
+      let dismissedRunId = "";
+      try { dismissedRunId = localStorage.getItem(DISMISSED_SCRAPE_RUN_KEY) || ""; } catch {}
+      if (progress.runId === dismissedRunId) return;
+      const isRunning = ["running", "finishing", "queued", "in_progress"].includes(status);
+      if (!isRunning) {
+        if (restoredProgressRunId && progress.runId === restoredProgressRunId) {
+          updateLiveScrapeSummary(progress, true);
+          showStatus("De zoekactie is afgerond.", "ok");
+          restoredProgressRunId = "";
+        }
+        if (restoredProgressPollHandle) {
+          clearInterval(restoredProgressPollHandle);
+          restoredProgressPollHandle = null;
+        }
+        return;
+      }
+
+      const isNewRestoredRun = restoredProgressRunId !== progress.runId;
+      restoredProgressRunId = progress.runId;
+      restoredProgressUpdatedAt = cleanText(progress.lastUpdatedAt || progress.startedAt || "");
+      // Keep the details panel collapsed by default, including when a run is restored.
+      const activeSiteName = shortScrapeSiteName(progress.currentSite || "");
+      const updatedAtMs = Date.parse(progress.lastUpdatedAt || progress.siteStartedAt || progress.startedAt || "");
+      const ageSeconds = Number.isFinite(updatedAtMs) ? Math.max(0, Math.floor((Date.now() - updatedAtMs) / 1000)) : 0;
+      showStatus(
+        ageSeconds >= 45
+          ? "Geen recente voortgang ontvangen. Laatste bekende website: " + (activeSiteName || "onbekend") + ". Controleer de scan of gebruik Stop."
+          : activeSiteName
+            ? "Scraper actief na pagina-herstel: " + (Number(progress.completedCount) || 0) + "/" + (Number(progress.totalSites) || 19) + " websites afgerond; nu bezig met " + activeSiteName + "."
+            : "Scraper actief na pagina-herstel: " + (Number(progress.completedCount) || 0) + "/" + (Number(progress.totalSites) || 19) + " websites afgerond; wachten op actuele websitevoortgang.",
+        ageSeconds >= 45 ? "error" : "warn",
+        ageSeconds >= 45 ? { stop: true, replaceLast: "Geen recente voortgang ontvangen." } : { stop: true }
+      );
+      updateLiveScrapeSummary(progress, true);
+      if (Array.isArray(progress.rawLog)) {
+        latestRawLog = progress.rawLog;
+        renderRawLog();
+      }
+      const site = shortScrapeSiteName(progress.currentSite || "");
+      const completed = Number(progress.completedCount) || 0;
+      const total = Number(progress.totalSites) || 19;
+      // Active site and progress are already shown in the compact title.
+
+      if (!restoredProgressPollHandle) {
+        restoredProgressPollHandle = setInterval(() => {
+          restoreRunningScrapeProgress().catch(() => {});
+        }, 1000);
+      }
+    }
+
+    async function loadEventsWithMeta(fallback) {
+      try {
+        return await fetchEventsPayload();
+      } catch {
+        return { events: fallback, updatedAt: "", siteResults: [], rawLog: [], archiveCount: 0, totalCount: fallback.length };
+      }
+    }
+
+    async function loadJson(path, fallback) {
+      try {
+        const response = await fetch(`${path}?_=${Date.now()}`, { cache: "no-store" });
+        if (!response.ok) throw new Error(`${path} kon niet worden geladen`);
+        const data = await response.json();
+        if (path.includes("events.json")) {
+          if (Array.isArray(data)) return dedupeEvents(data);
+          if (data && Array.isArray(data.events)) return dedupeEvents(data.events);
+        }
+        if (Array.isArray(data)) return data;
+        return fallback;
+      } catch {
+        return fallback;
+      }
+    }
+
+    function scrapedCountFromResponse(data) {
+      const values = [
+        data?.aiEventsCount,
+        data?.serpApiEventsCount,
+        data?.scrapedCount,
+        data?.newCount,
+        data?.addedCount,
+        data?.count,
+        Array.isArray(data?.events) ? data.events.length : undefined
+      ];
+      const value = values.map(Number).find((item) => Number.isFinite(item) && item > 0);
+      return Number.isFinite(value) ? Math.max(0, value) : null;
+    }
+
+    function foundText(count) {
+      if (!Number.isFinite(count)) return "Aantal nieuwe evenementen nog onbekend";
+      return `${count} ${count === 1 ? "nieuw evenement" : "nieuwe evenementen"}`;
+    }
+
+    function appendWorkerRawLog(rows) {
+      if (!Array.isArray(rows) || !rows.length) return;
+      latestRawLog = [...rows, ...(latestRawLog || [])].slice(0, 900);
+      renderRawLog();
+    }
+
+    async function waitForUpdatedEvents(previousSignature, previousKeys, foundCount = null, options = {}) {
+      const previousUpdatedAt = eventsUpdatedAt;
+      const requireEvents = Boolean(options.requireEvents);
+      const maxAttempts = Math.max(1, Math.min(86400, Number(options.maxAttempts) || 600));
+      const intervalMs = Math.max(1000, Math.min(10000, Number(options.intervalMs) || 1000));
+      const startedAt = Date.now();
+      let latestProgress = null;
+      for (let attempt = 1; attempt <= maxAttempts; attempt += 1) {
+        if (attempt === 1) {
+          const liveNewCount = events.filter(isNewEvent).length;
+          const liveExistingCount = Math.max(0, events.length - liveNewCount);
+          showStatus(`Publicatie controleren: ${events.length} evenementen (${liveNewCount} nieuw, ${liveExistingCount} bestaand). Ik controleer op nieuwe publicatie.`, "warn", { stop: true });
+        }
+        const shouldContinue = await waitUnlessStopped(intervalMs);
+        if (!shouldContinue) {
+          if (!refreshAbortRequested) showStatus("Publicatiecontrole gestopt.", "warn");
+          return false;
+        }
+
+        try {
+          const progress = await fetchScrapeProgress();
+          // Adopt an already-running scan as well as a newly-created run. A refresh
+          // can start while its workflow is already publishing progress; comparing
+          // only runId then leaves the title stuck at "scraper starten".
+          const isRelevantProgress = Boolean(
+            progress?.runId && (
+              progress.runId !== options.previousProgressRunId ||
+              (["running", "finishing", "queued", "in_progress"].includes(cleanText(progress.status || "")) && Boolean(progress.currentSite))
+            )
+          );
+          if (isRelevantProgress) {
+            latestProgress = progress;
+            // Ignore the old progress snapshot from before this refresh. Otherwise it
+            // overwrites the startup label every second and the new site's name never appears.
+            updateLiveScrapeSummary(progress, true);
+            options.progressStatus = cleanText(progress.status || "");
+            options.progressEventCount = Array.isArray(progress.events) ? progress.events.length : 0;
+            const siteResults = Array.isArray(progress.siteResults) ? progress.siteResults : null;
+            const siteResultsSignature = JSON.stringify(siteResults || []);
+            if (siteResults && siteResultsSignature !== options.lastSiteResultsSignature) {
+              options.lastSiteResultsSignature = siteResultsSignature;
+              latestSiteResults = siteResults;
+              latestRawLog = Array.isArray(progress.rawLog) ? progress.rawLog : latestRawLog;
+              renderSites(checkedSites());
+              renderRawLog();
+            }
+          }
+          if (isRelevantProgress) {
+            const completed = Number(progress.completedCount) || 0;
+            const progressSignature = eventSignature(Array.isArray(progress.events) ? progress.events : []);
+            const hasNewProgressEvents = progressSignature !== options.lastProgressSignature;
+            const hasNewCompletedSite = completed > Number(options.lastProgressCount || 0);
+            if (hasNewProgressEvents || hasNewCompletedSite || (progress.status === "completed" && options.progressFinalizedRunId !== progress.runId)) {
+              options.lastProgressSignature = progressSignature;
+              options.lastProgressCount = Math.max(Number(options.lastProgressCount || 0), completed);
+              if (Array.isArray(progress.events) && progress.events.length) {
+                // Keep the previous complete list while progress data is partial.
+                // The selected websites are replaced with the final scan results at completion.
+                events = mergeVerifiedEvents([...events, ...progress.events]).map((event) => ({
+                  ...event,
+                  isNew: !previousKeys.has(eventDedupeKey(event))
+                }));
+                newEventKeys = eventKeySet(events.filter((event) => event.isNew));
+                latestSiteResults = Array.isArray(progress.siteResults) ? progress.siteResults : latestSiteResults;
+                latestRawLog = Array.isArray(progress.rawLog) ? progress.rawLog : latestRawLog;
+                fillTypes();
+                renderSites(checkedSites());
+                renderRawLog();
+                applyFilters();
+              }
+              const site = cleanText(progress.lastCompletedSite || progress.completedSites?.[completed - 1] || "website");
+              const eventCount = Number(progress.lastSiteEventCount) || 0;
+              const isSiteComplete = completed > Number(options.lastReportedCompletedCount || 0);
+              const eventTotal = Array.isArray(progress.events) ? progress.events.length : 0;
+              const newTotal = Array.isArray(progress.events)
+                ? progress.events.filter(event => !previousKeys.has(eventDedupeKey(event))).length
+                : 0;
+              const sourceResult = Array.isArray(progress.siteResults)
+                ? progress.siteResults.find(item => hostFromUrl(item.site || "") === hostFromUrl(site))
+                : null;
+              const newForSite = sourceResult && Number.isFinite(Number(sourceResult.newCount))
+                ? Number(sourceResult.newCount)
+                : (Array.isArray(progress.events)
+                  ? progress.events.filter(event => hostFromUrl(event.website) === hostFromUrl(site) && !previousKeys.has(eventDedupeKey(event))).length
+                  : 0);
+              const detail = isSiteComplete
+                ? `Website gecontroleerd: ${site} (${completed}/${Number(progress.totalSites) || completed}) · ${newForSite} nieuwe evenementen van deze website; ${newTotal} nieuw totaal gevonden.`
+                : `Bezig met: ${site} · ${newTotal} nieuwe evenementen gevonden tot nu toe.`;
+              if (isSiteComplete) {
+                options.lastReportedCompletedCount = completed;
+                addLiveLog("Scraper", site, "Website afgerond", "klaar", detail);
+                showStatus(detail + " De scan gaat verder.", "ok", { stop: true });
+              }
+            }
+            if (progress.status === "completed") {
+              options.progressFinalizedRunId = progress.runId;
+              if (Array.isArray(progress.events)) {
+                const scanningHosts = new Set([...activeScanSites].map(hostFromUrl));
+                const retainedEvents = events.filter((event) => !scanningHosts.has(hostFromUrl(event.website)));
+                events = mergeVerifiedEvents([...retainedEvents, ...progress.events]).map((event) => ({
+                  ...event,
+                  isNew: !previousKeys.has(eventDedupeKey(event))
+                }));
+                newEventKeys = eventKeySet(events.filter((event) => event.isNew));
+              }
+              latestSiteResults = Array.isArray(progress.siteResults) ? progress.siteResults : latestSiteResults;
+              latestRawLog = Array.isArray(progress.rawLog) ? progress.rawLog : latestRawLog;
+              fillTypes();
+              renderSites(checkedSites());
+              renderRawLog();
+              applyFilters();
+              (Array.isArray(progress.siteResults) ? progress.siteResults : []).forEach((item) => {
+                const siteName = cleanText(item.site || item.url || "Onbekende website");
+                const siteCount = Number(item.count) || 0;
+                const siteNewCount = Number(item.newCount) || 0;
+                const resultStatus = item.timedOut ? "time-out" : (item.error ? "fout" : (siteCount > 0 ? "klaar" : "geen hits"));
+                const detail = siteName + ": " + siteCount + " hits, " + siteNewCount + " nieuw" + (item.timedOut ? " · tijdslimiet bereikt" : "") + (item.error ? " · " + cleanText(item.error) : "") + ".";
+                addLiveLog("Scraper", siteName, "Website resultaat", resultStatus, detail);
+                showStatus(detail, item.timedOut || item.error ? "warn" : (siteCount > 0 ? "ok" : "warn"));
+              });
+              addLiveLog("Scraper", "Alle websites", "Live verversing afgerond", "klaar", `${Number(progress.completedCount) || 0} websites afgerond; ${Array.isArray(progress.events) ? progress.events.length : 0} evenementen in de voortgangsdata.`);
+              showStatus(`Scraper klaar: ${Number(progress.completedCount) || 0} websites verwerkt, ${Array.isArray(progress.events) ? progress.events.length : 0} resultaten in de voortgangsdata. Ik wacht nu op bevestiging dat events.json is bijgewerkt; de definitieve publicatie wordt nog gecontroleerd.`, "warn", { stop: true });
+            }
+          }
+          // During an active scrape, scrape-progress.json is the live per-site source.
+          // Avoid repeatedly downloading events.json as well; use it as a fallback
+          // every fourth poll only when no new progress run is visible.
+          const hasCurrentProgressRun = Boolean(progress && progress.runId && progress.runId !== options.previousProgressRunId);
+          const shouldCheckEventsPayload = (!hasCurrentProgressRun || progress?.status === "completed") && (attempt % 4 === 0);
+          if (shouldCheckEventsPayload) {
+            const freshPayload = await fetchEventsPayload();
+            const hasFreshEvents = Array.isArray(freshPayload.events) && freshPayload.events.length > 0;
+            const changed = (freshPayload.updatedAt && freshPayload.updatedAt !== previousUpdatedAt) || eventSignature(freshPayload.events) !== previousSignature;
+            if (changed && (!requireEvents || hasFreshEvents)) {
+            events = mergeVerifiedEvents(freshPayload.events);
+            eventsUpdatedAt = freshPayload.updatedAt;
+            latestSiteResults = freshPayload.siteResults || [];
+            latestRawLog = freshPayload.rawLog || [];
+            const freshActiveCount = Number(freshPayload.activeCount);
+            const freshArchiveCount = Number(freshPayload.archiveCount);
+            const freshTotalCount = Number(freshPayload.totalCount);
+            eventsActiveCount = Number.isFinite(freshActiveCount) ? freshActiveCount : freshPayload.events.length;
+            eventsArchiveCount = Number.isFinite(freshArchiveCount) ? freshArchiveCount : 0;
+            eventsJsonTotalCount = Number.isFinite(freshTotalCount) ? freshTotalCount : events.length;
+            addLiveLog("App", "events.json", "Nieuwe lijst geladen", "klaar", `${freshPayload.events.length} events`);
+            cardsCollapsed = true;
+            expandedEventKeys = new Set();
+            const actualNewCount = rememberNewEvents(events, previousKeys);
+            fillTypes();
+            renderSites(checkedSites());
+            renderRawLog();
+            applyFilters();
+            showStatus(refreshLoadedMessage(actualNewCount), "ok");
+              setTimeout(hideStatus, 4000);
+              return true;
+            }
+          }
+        } catch (error) {
+          showStatus(`Nog aan het wachten op nieuwe data: ${error.message}`, "warn", { stop: true });
+        }
+      }
+
+      if (options.keepEmptyOnTimeout) {
+        events = [];
+        latestSiteResults = [];
+        eventsActiveCount = 0;
+        eventsArchiveCount = 0;
+        eventsJsonTotalCount = 0;
+        fillTypes();
+        renderSites(checkedSites());
+        applyFilters();
+        const prefix = Number.isFinite(foundCount) ? `${foundText(foundCount)} gevonden.` : foundText(foundCount) + ".";
+        showStatus(`${prefix} De oude lijst blijft verborgen; de verversing kan nog doorlopen.`, "warn");
+        return false;
+      }
+
+      await loadAll();
+      const prefix = Number.isFinite(foundCount) ? `${foundText(foundCount)} gevonden.` : foundText(foundCount) + ".";
+      const lastPublished = eventsUpdatedAt ? new Date(eventsUpdatedAt).toLocaleString("nl-NL") : "onbekend";
+      const sourceSummary = "Sites " + selectedScanSites().length + " · lijst " + events.length + " · publicatie " + lastPublished + ".";
+      const siteDiagnostics = (latestSiteResults || []).slice(-3).map((item) => shortScrapeSiteName(item.site || "Website") + " " + Number(item.count || 0) + (item.timedOut ? " (timeout)" : "")).join(" · ");
+      const diagnostics = siteDiagnostics ? " Laatste sites: " + siteDiagnostics + "." : " Nog geen site-uitkomsten beschikbaar.";
+      const elapsed = Math.round(maxAttempts * intervalMs / 1000);
+      if (options.progressStatus === "completed") {
+        const progressCount = Number(options.progressEventCount) || 0;
+        showStatus(prefix + " Scraper klaar (" + progressCount + " in voortgang), maar events.json is na " + elapsed + "s nog niet bijgewerkt. Huidige lijst behouden. " + sourceSummary + diagnostics + " Ruwe verversdata / GitHub Actions.", "warn");
+      } else {
+        showStatus(prefix + " Geen publicatie na " + elapsed + "s; events.json is niet gewijzigd. " + sourceSummary + diagnostics + " Controleer Ruwe verversdata / GitHub Actions.", "warn");
+      }
+      return false;
+    }
+
+    function displayType(value) {
+      const text = cleanText(value || "Activiteit");
+      if (!text) return "Activiteit";
+      return text.charAt(0).toUpperCase() + text.slice(1);
+    }
+
+    function fillTypes() {
+      const current = $("typeFilter").value || "all";
+      const query = ($("search")?.value || "").trim().toLowerCase();
+      const newOnly = Boolean($("newOnlyFilter")?.checked);
+      const radiusKm = radiusFilterKm();
+      const siteHosts = selectedSiteHosts();
+      const activeEvents = dedupeEvents(events).filter((event) => {
+        const haystack = [
+          event.title,
+          event.description,
+          event.location,
+          event.type,
+          event.source
+        ].join(" ").toLowerCase();
+
+        if (!eventMatchesSelectedSites(event, siteHosts)) return false;
+        if (!eventMatchesProviderFilter(event)) return false;
+        if (!matchesDate(event)) return false;
+        if (query && !haystack.includes(query)) return false;
+        if (newOnly && !isNewEvent(event)) return false;
+        const eventKm = eventRadiusKm(event);
+        if (radiusKm > 0 && eventKm > radiusKm) return false;
+        return true;
+      });
+      // Alleen types tonen die na alle huidige filters werkelijk voorkomen.
+      // Aanbiedingen komen via de actuele deal-sites binnen en worden door matchesDate tot vandaag beperkt.
+      const observedTypes = [...new Set(activeEvents.map((event) => displayType(event.type || "").trim()).filter(Boolean))];
+      const offerType = observedTypes.find((type) => type.toLowerCase() === "aanbiedingen");
+      const types = observedTypes.filter((type) => type.toLowerCase() !== "aanbiedingen")
+        .sort((a, b) => a.localeCompare(b, "nl"));
+      if (offerType) types.push(offerType);
+
+      $("typeFilter").innerHTML = [
+        '<option value="all">Alle types</option>',
+        ...types.map((type) => `<option value="${escapeHtml(type.toLowerCase())}">${escapeHtml(type)}</option>`)
+      ].join("");
+
+      if ([...$("typeFilter").options].some((option) => option.value === current)) {
+        $("typeFilter").value = current;
+      } else {
+        $("typeFilter").value = "all";
+      }
+    }
+
+    function checkedSites() {
+      return new Set([...document.querySelectorAll(".siteCheck:checked")].map((check) => check.value));
+    }
+
+    function hostFromUrl(value) {
+      const url = safeUrl(value, { website: true });
+      if (!url) return "";
+      try {
+        return new URL(url).hostname.toLowerCase().replace(/^www\./, "");
+      } catch {
+        return "";
+      }
+    }
+
+    function selectedSiteHosts() {
+      return new Set([...checkedSites()].map(hostFromUrl).filter(Boolean));
+    }
+
+    function eventMatchesSelectedSites(event, selectedHosts = selectedSiteHosts()) {
+      if (!selectedHosts.size) return false;
+      const eventHosts = [
+        hostFromUrl(event.website),
+        hostFromUrl(event.locationLink),
+        cleanText(event.source || "").toLowerCase().replace(/^www\./, "")
+      ].filter(Boolean);
+      if (!eventHosts.length) return false;
+      return eventHosts.some((eventHost) =>
+        [...selectedHosts].some((selectedHost) =>
+          eventHost === selectedHost || eventHost.endsWith(`.${selectedHost}`) || selectedHost.endsWith(`.${eventHost}`)
+        )
+      );
+    }
+
+    function siteEventCountFor(site) {
+      const siteHost = hostFromUrl(site);
+      if (!siteHost) return 0;
+      return dedupeEvents(events).filter((event) =>
+        !deletedEventKeys.has(eventDedupeKey(event)) && eventMatchesSelectedSites(event, new Set([siteHost]))
+      ).length;
+    }
+
+    function eventMatchesProviderFilter(event) {
+      const discovery = cleanText(event.discoverySource || "").toLowerCase();
+      if (discovery === "serpapi" && !$("provSerpAPI")?.checked) return false;
+      if ((discovery === "chatgpt" || discovery === "openai") && !$("provOpenAI")?.checked) return false;
+      if (discovery === "mistral" && !$("provMistral")?.checked) return false;
+      return true;
+    }
+
+    function scraperTypeForSite(site) {
+      const host = hostFromUrl(site).replace(/^www\./i, "");
+      if (host === "vera-groningen.nl") return "kaart";
+      if (host === "groningen.uitloper.nu") return "agenda";
+      if (host === "martiniplaza.nl") return "kaart";
+      if (host === "spotgroningen.nl") return "univ.+kaart";
+      if (host === "simplon.nl") return "kaart";
+      if (host === "forum.nl") return "univ.";
+      if (host === "zwolsetheaters.nl") return "agenda";
+      if (["socialdeal.nl", "groupon.nl", "ibood.com"].includes(host)) return "deal";
+      return "univ.";
+    }
+
+    function renderSites(selected = null) {
+      const titleBusyIndicator = $("titleBusyIndicator");
+      if (titleBusyIndicator) titleBusyIndicator.hidden = activeScanSites.size === 0;
+      const selectedSites = selected || new Set(sites);
+      const siteRows = sites.map((site) => {
+        const count = siteEventCountFor(site);
+        const badge = count > 0 ? `<span class="siteResultBadge">(+${count})</span>` : "";
+        const isScanning = activeScanSites.has(site);
+        const host = hostFromUrl(site);
+        const shortUrl = host.replace(/^www\./i, "") + (new URL(site).pathname !== "/" ? new URL(site).pathname.replace(/\/$/, "") : "");
+        const result = (latestSiteResults || []).find((item) => hostFromUrl(item.site || "") === host);
+        const rows = [...(latestRawLog || []), ...(liveLogRows || [])].filter((row) => hostFromUrl(row.site || row.url || "") === host);
+        const errors = rows.filter((row) => /fout|mislukt|timeout|geen data|status 4|status 5/i.test(`${row.status || ""} ${row.title || ""}`));
+        const hasProblem = count === 0 || Boolean(result && (result.timedOut || Number(result.count || 0) === 0)) || errors.length > 0;
+        const errorDetails = [...new Map(errors.map((row) => { const detail = cleanText(row.rawText || row.snippet || row.url || row.title || row.status || "Geen technische details beschikbaar"); return [detail, detail]; })).values()];
+        const diagnostic = count > 0 ? `${count} evenementen gevonden. ${errors.length ? `${errors.length} foutmeldingen geregistreerd; voorbeelden: ${errorDetails.slice(0,3).join(" | ")}` : "Er zijn ook resultaten opgehaald."}` : errors.length ? `${errors.length} foutmeldingen geregistreerd. Details: ${errorDetails.slice(0,3).join(" | ")}` : result?.timedOut ? "De scan duurde te lang. Probeer het later opnieuw." : "Geen evenementen gevonden. Mogelijke oorzaak: website blokkeert scraping of laadt de agenda dynamisch.";
+        const scraperType = scraperTypeForSite(site);
+        const activityLine = count === 1 ? "1 activiteit beschikbaar" : `${count} activiteiten beschikbaar`;
+        return `<div class="siteRow"><label class="${count > 0 ? "siteFound" : ""}"><input class="siteCheck" type="checkbox" value="${escapeHtml(site)}"${selectedSites.has(site) ? " checked" : ""}><span class="sourceInfoWrap"><span title="${escapeHtml(site)}">${escapeHtml(shortUrl)} <span class="scraperTypeLabel">(${escapeHtml(scraperType)})</span>${badge}${isScanning ? '<span class="siteScanIcon" title="Bezig met zoeken naar nieuwe data" aria-label="Bezig met zoeken naar nieuwe data">⟳</span>' : ""}</span>${hasProblem ? `<button class="sourceInfo" type="button" aria-label="Scrape-informatie voor ${escapeHtml(site)}" aria-expanded="false" data-info-site="${escapeHtml(site)}">i</button>` : ""}</span><span class="siteActivityLine${count > 0 ? " hasEvents" : ""}">${escapeHtml(activityLine)}</span>${hasProblem ? `<span class="sourceInfoPopup" data-info-popup="${escapeHtml(site)}" hidden>${escapeHtml(diagnostic)}</span>` : ""}</label><button class="siteRemove" type="button" data-remove-site="${escapeHtml(site)}" aria-label="Verwijder ${escapeHtml(shortUrl)} uit de websitelijst" title="Verwijder website uit deze lijst">×</button></div>`;
+      }).join("");
+      const aiRows = [["provMistral","Mistral AI"],["provOpenAI","ChatGPT / OpenAI"],["provSerpAPI","SerpAPI (webzoekbron)"]].map(([id,label]) => `<label><input class="aiSourceCheck" type="checkbox" data-provider="${id}"${$(id)?.checked ? " checked" : ""}> <span>${label}</span></label>`).join("");
+      $("sitesList").innerHTML = siteRows + `<div class="sourceGroupLabel">AI- en zoekbronnen</div>` + aiRows;
+      updateSiteCount();
+    }
+    function renderRawLog() {
+      const wrap = $("rawLogTableWrap");
+      const previousScrollTop = wrap?.scrollTop || 0;
+      const showSerpApi = Boolean($("provSerpAPI")?.checked);
+      const showChatGpt = Boolean($("provOpenAI")?.checked);
+      const showMistral = Boolean($("provMistral")?.checked);
+      const rows = [...(liveLogRows || []), ...(latestRawLog || [])]
+        .filter((row) => {
+          const source = cleanText(row.source).toLowerCase();
+          if (source === "serpapi" && !showSerpApi) return false;
+          if ((source === "chatgpt" || source === "openai") && !showChatGpt) return false;
+          if (source === "mistral" && !showMistral) return false;
+          return true;
+        })
+        .slice(0, 600);
+      const summary = $("rawLogSummary");
+      if (!summary || !wrap) return;
+      summary.textContent = rows.length ? `Ruwe verversdata (${rows.length} regels, klik om te tonen/verbergen)` : "Ruwe verversdata (nog leeg)";
+      if (!rows.length) {
+        wrap.innerHTML = '<div class="routePanelText">Nog geen ruwe verversdata beschikbaar. Ververs de lijst om dit te vullen.</div>';
+        wrap.scrollTop = 0;
+        return;
+      }
+
+      wrap.innerHTML = `
+        <table class="rawLogTable">
+          <thead>
+            <tr>
+              <th>Bron</th>
+              <th>Website</th>
+              <th>Titel</th>
+              <th>Datum</th>
+              <th>Status</th>
+              <th>Ruwe tekst / link</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${rows.map((row) => {
+              const url = safeUrl(row.url, { website: true });
+              const rawText = cleanText(row.rawText || row.snippet || row.url || "").slice(0, 220);
+              return `
+                <tr>
+                  <td>${escapeHtml(row.source || "Website")}</td>
+                  <td>${escapeHtml(row.site || "")}</td>
+                  <td>${escapeHtml(row.title || "")}</td>
+                  <td>${escapeHtml(row.date || "")}</td>
+                  <td>${escapeHtml(row.status || "")}</td>
+                  <td>${url ? `<a href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(rawText || url)}</a>` : escapeHtml(rawText)}</td>
+                </tr>
+              `;
+            }).join("")}
+          </tbody>
+        </table>
+      `;
+      wrap.scrollTop = previousScrollTop;
+    }
+
+    function addLiveLog(source, site, title, status, rawText = "", url = "") {
+      const key = [source, site, title, status, cleanText(rawText), url].join("|").toLowerCase();
+      const duplicateIndex = liveLogRows.findIndex((row) =>
+        [row.source, row.site, row.title, row.status, cleanText(row.rawText), row.url].join("|").toLowerCase() === key
+      );
+      if (duplicateIndex >= 0) return;
+      liveLogRows.unshift({
+        source,
+        site,
+        title,
+        date: new Date().toLocaleTimeString("nl-NL", { hour: "2-digit", minute: "2-digit", second: "2-digit" }),
+        url,
+        status,
+        rawText
+      });
+      liveLogRows = liveLogRows.slice(0, 120);
+      renderRawLog();
+    }
+
+    function resetLiveLog() {
+      liveLogRows = [];
+      latestRawLog = [];
+      renderRawLog();
+      // Keep raw diagnostics collapsed when a new refresh starts.
+      const panel = $("rawLogPanel");
+      if (panel) panel.open = false;
+    }
+
+    function updateSiteCount() {
+      $("siteCount").textContent = document.querySelectorAll(".siteCheck:checked").length + document.querySelectorAll(".aiSourceCheck:checked").length;
+    }
+
+    function updateProviderCount() {
+      $("providerCount").textContent = document.querySelectorAll(".providerCheck:checked").length;
+    }
+
+    function matchesDate(event) {
+      const mode = $("periodMode").value;
+      const isOffer = displayType(event.type || "").toLowerCase() === "aanbiedingen" ||
+        /(^|\.)(socialdeal\.nl|groupon\.nl|ibood\.com)$/.test(hostFromUrl(event.website));
+      if (isOffer) {
+        const today = formatDate(new Date());
+        if (!/^\d{4}-\d{2}-\d{2}$/.test(event.date || "") || event.date !== today) return false;
+        if (mode === "always" || mode === "alwaysFromToday") return true;
+        return today >= dateFrom && today <= dateTo;
+      }
+      if (mode === "always") return true;
+      if (event.isPermanent) return true;
+      if (!/^\d{4}-\d{2}-\d{2}$/.test(event.date || "")) return true;
+      if (mode === "alwaysFromToday") return event.date >= formatDate(new Date());
+
+      const day = new Date(event.date + "T00:00:00");
+      const from = new Date(dateFrom + "T00:00:00");
+      const to = new Date(dateTo + "T00:00:00");
+      return day >= from && day <= to;
+    }
+
+    function periodSubtitle() {
+      const mode = $("periodMode").value;
+      if (mode === "always") return "Altijd";
+      if (mode === "alwaysFromToday") return "Altijd vanaf vandaag";
+      if (mode === "specificDay") return `Specifieke dag: ${prettyDate(dateFrom)}`;
+      if (mode === "threeDays") return `Startdatum +2 dagen (vanaf ${prettyDate(dateFrom)})`;
+      if (mode === "week") return `Startdatum +7 dagen (vanaf ${prettyDate(dateFrom)})`;
+      return `Van ${prettyDate(dateFrom)} tot ${prettyDate(dateTo || dateFrom)}`;
+    }
+
+    function applyFilters() {
+      updateDateRange();
+      fillTypes();
+
+      const query = $("search").value.trim().toLowerCase();
+      const type = $("typeFilter").value;
+      const region = $("region").value.trim();
+      const newOnly = $("newOnlyFilter").checked;
+      const radiusKm = radiusFilterKm();
+      const siteHosts = selectedSiteHosts();
+
+      $("pageTitle").textContent = `Evenementen rond ${region || "je regio"}`;
+
+      document.title = `Evenementen rond ${region || "je regio"}`;
+
+      const uniqueEvents = dedupeEvents(events);
+      let afterDeleted = uniqueEvents.filter((event) => !deletedEventKeys.has(eventDedupeKey(event)));
+      let afterSites = afterDeleted.filter((event) => eventMatchesSelectedSites(event, siteHosts));
+      let afterProviders = afterSites.filter(eventMatchesProviderFilter);
+      let afterQuery = afterProviders.filter((event) => {
+        const haystack = [
+          event.title,
+          event.description,
+          event.location,
+          event.type,
+          event.source
+        ].join(" ").toLowerCase();
+        return !query || haystack.includes(query);
+      });
+      let afterType = afterQuery.filter((event) => type === "all" || displayType(event.type || "").toLowerCase() === type);
+      let afterNew = afterType.filter((event) => !newOnly || isNewEvent(event));
+      const matchesRadius = (event) => {
+        if (!(radiusKm > 0)) return true;
+        const eventKm = eventRadiusKm(event);
+        return eventKm <= radiusKm;
+      };
+      let afterRadius = afterNew.filter(matchesRadius);
+      let afterDate = afterRadius.filter(matchesDate);
+
+      filterStats = {
+        loaded: uniqueEvents.length,
+        active: eventsActiveCount,
+        archive: eventsArchiveCount,
+        totalJson: eventsJsonTotalCount || uniqueEvents.length,
+        afterDeleted: afterDeleted.length,
+        afterSites: afterSites.length,
+        afterProviders: afterProviders.length,
+        afterQuery: afterQuery.length,
+        afterType: afterType.length,
+        afterNew: afterNew.length,
+        afterDate: afterDate.length,
+        afterRadius: afterRadius.length,
+        newCount: uniqueEvents.filter(isNewEvent).length,
+        shown: afterDate.length
+      };
+
+      filteredEvents = afterDate.sort((a, b) => {
+        if (a.isPermanent && !b.isPermanent) return 1;
+        if (!a.isPermanent && b.isPermanent) return -1;
+        return String(a.date || "").localeCompare(String(b.date || ""));
+      });
+
+      currentPage = 1;
+      render();
+    }
+
+    function updateFilterBreakdown(pageCount = 1, visibleCount = 0) {
+      const target = $("filterBreakdown");
+      if (!target || !filterStats) return;
+
+            const filterParts = [];
+      if (filterStats.afterDeleted !== filterStats.loaded) filterParts.push(`verwijderd:${filterStats.afterDeleted}`);
+      
+      if (filterStats.afterProviders !== filterStats.afterSites) filterParts.push(`bron:${filterStats.afterProviders}`);
+      if (filterStats.afterQuery !== filterStats.afterProviders) filterParts.push(`zoektekst:${filterStats.afterQuery}`);
+      if (filterStats.afterType !== filterStats.afterQuery) filterParts.push(`type:${filterStats.afterType}`);
+      if (filterStats.afterNew !== filterStats.afterType) filterParts.push(`New:${filterStats.afterNew}`);
+      filterParts.push(`straal:${filterStats.afterRadius}`);
+      filterParts.push(`per:${filterStats.afterDate}`);
+
+      const eventsText = `(Totaal:${filterStats.loaded} - na filters: ${filterParts.join(", ")})`;
+      target.textContent = eventsText;
+    }
+
+    function render() {
+      updateNewCount();
+      $("count").textContent = `${filteredEvents.length} ${filteredEvents.length === 1 ? "evenement" : "evenementen"}`;
+      $("grid").classList.toggle("cardsCollapsed", cardsCollapsed);
+
+      if (!filteredEvents.length) {
+        updateFilterBreakdown(1, 0);
+        $("grid").innerHTML = '<div class="empty">Geen evenementen gevonden. Pas je filters aan of haal nieuwe resultaten op met Ververs.</div>';
+        $("pagination").style.display = "none";
+        return;
+      }
+
+      const pageCount = Math.max(1, Math.ceil(filteredEvents.length / eventsPerPage));
+      currentPage = Math.min(currentPage, pageCount);
+      const visible = filteredEvents.slice((currentPage - 1) * eventsPerPage, currentPage * eventsPerPage);
+      updateFilterBreakdown(pageCount, visible.length);
+
+      $("grid").innerHTML = renderGroupedEvents(visible);
+      $("pagination").style.display = "flex";
+      $("pageInfo").textContent = `Pagina ${currentPage} van ${pageCount}`;
+      $("prevPage").disabled = currentPage === 1;
+      $("nextPage").disabled = currentPage === pageCount;
+    }
+
+
+    function renderGroupedEvents(items) {
+      const allGroups = new Map();
+      filteredEvents.forEach((event) => { const type = displayType(event.type || "Activiteit"); if (!allGroups.has(type)) allGroups.set(type, []); allGroups.get(type).push(event); });
+      const visibleKeys = new Set(items.map(eventDedupeKey));
+      const entries = [...allGroups.entries()].sort(([a],[b]) => {
+        const rank = (value) => /^aanbiedingen$/i.test(value) ? 99 : /concert/i.test(value) ? 0 : /theater|theatre/i.test(value) ? 1 : 2;
+        const ar = rank(a), br = rank(b);
+        return ar === br ? a.localeCompare(b, "nl") : ar - br;
+      });
+      return entries.map(([type, allForType]) => {
+        const eventsForType = allForType.filter(event => visibleKeys.has(eventDedupeKey(event)));
+        const collapsed = collapsedEventTypes.has(type);
+        const sourceGroups = new Map();
+        allForType.forEach(event => { const source = eventSourceLabel(event) || "Bron onbekend"; if (!sourceGroups.has(source)) sourceGroups.set(source, []); sourceGroups.get(source).push(event); });
+        const sourceHtml = [...sourceGroups.entries()].sort(([a],[b]) => a.localeCompare(b, "nl")).map(([source, allSourceEvents]) => {
+          const key = type + "::" + source;
+          const sourceCollapsed = collapsedSourceGroups.has(key);
+          const sourceEvents = allSourceEvents.filter(event => visibleKeys.has(eventDedupeKey(event)));
+          const sourceCards = sourceEvents.length ? sourceEvents.map(renderCard).join("") : `<p class="nextPageHint">Meer ${escapeHtml(source)}-evenementen staan op een andere pagina (${allSourceEvents.length} totaal).</p>`;
+          return `<section class="sourceGroup ${sourceCollapsed ? "collapsed" : ""}"><button class="sourceGroupHeader" type="button" data-source-toggle="${escapeHtml(key)}" aria-expanded="${!sourceCollapsed}"><span>${escapeHtml(source)}</span><small>${allSourceEvents.length} evenementen</small></button><div class="eventGroupCards">${sourceCards}</div></section>`;
+        }).join("");
+        const cards = sourceHtml || `<p class="nextPageHint">Meer resultaten van dit type staan op een andere pagina (${allForType.length} totaal).</p>`;
+        return `<section class="eventGroup ${collapsed ? "collapsed" : ""}"><button class="eventGroupHeader" type="button" data-type-toggle="${escapeHtml(type)}" aria-expanded="${!collapsed}"><span>${escapeHtml(type)}</span><small>${allForType.length} resultaten</small></button><div class="eventGroupCards">${cards}</div></section>`;
+      }).join("");
+    }
+
+    function eventSourceLabel(event) {
+      const source = cleanText(event.source || "");
+      if (source && !/^(manual|onbekend|bron onbekend)$/i.test(source)) return source;
+
+      const website = safeUrl(event.website, { website: true });
+      if (!website) return "";
+      try {
+        return new URL(website).hostname.replace(/^www\./, "");
+      } catch {
+        return "";
+      }
+    }
+
+    function sourceWebsiteDescription(event) {
+      const host = hostFromUrl(event.website || "").replace(/^www\./i, "").toLowerCase();
+      const known = {
+        "spotgroningen.nl":"programma met concerten, theater en live muziek in Groningen",
+        "forum.nl":"cultuur, film, lezingen en activiteiten in Groningen",
+        "vera-groningen.nl":"concerten, clubavonden en film in Groningen",
+        "simplon.nl":"poppodium en clubnachten in Groningen",
+        "paradiso.nl":"concerten en culturele programma’s in Amsterdam",
+        "concertgebouw.nl":"klassieke muziek en concerten in Amsterdam",
+        "zwolsetheaters.nl":"concerten en evenementen in Zwolle",
+        "martiniplaza.nl":"concerten, theater en grote evenementen in Groningen",
+        "groningermuseum.nl":"tentoonstellingen en museumactiviteiten",
+        "visitgroningen.nl":"uitjes en evenementen in Groningen",
+        "groningen.uitloper.nu":"culturele agenda en lokale uitjes",
+        "kultuuragenda.nl":"culturele agenda met lokale activiteiten",
+        "noorderzon.nl":"podiumkunsten en festivalprogramma in Groningen",
+        "socialdeal.nl":"kortingsacties en lokale aanbiedingen",
+        "groupon.nl":"kortingsacties en aanbiedingen",
+        "ibood.com":"online dagaanbiedingen en producten",
+        "vvvameland.nl":"activiteiten en uitjes op Ameland"
+      };
+      if (known[host]) return known[host];
+      const domain = host.replace(/^www\./i, "") || "evenementenwebsite";
+      return `agenda, informatie en praktische details over dit evenement op ${domain}`;
+    }
+
+    function renderCard(event) {
+      const title = escapeHtml(event.title || "Naam onbekend");
+      const type = displayType(event.type || "Activiteit");
+      const image = typeImage(type, event.image);
+      const website = safeUrl(event.website, { website: true });
+      const cardKey = eventDedupeKey(event);
+      const expanded = expandedEventKeys.has(cardKey);
+      const route = routeUrl(event);
+      const routeDestinationText = routeDestination(event);
+      const routeContext = routeContextLabel(event);
+      const routeId = `route-${Math.random().toString(36).slice(2)}`;
+      const locationUrl = isUsablePhysicalLocation(event) ? routeUrl(event) : "";
+      const locationLabel = escapeHtml(eventLocationLabel(event));
+      const dateLabel = event.periodLabel ? (event.periodLabel + " · " + String(event.date || "").slice(0, 4)) : prettyDate(event.date);
+      const isNew = isNewEvent(event);
+      const typeHeader = `
+        <${website ? "a" : "div"} class="typeHeader ${website ? "typeHeaderLink" : ""}" style="background-image: url('${escapeHtml(image)}')"${website ? ` href="${escapeHtml(website)}" target="_blank" rel="noopener noreferrer"` : ""}>
+          <span>${escapeHtml(type)}</span>
+        </${website ? "a" : "div"}>
+      `;
+      const sourceLabel = eventSourceLabel(event);
+      const sourceInfo = sourceWebsiteDescription(event);
+      const sourceSuffix = sourceLabel ? ` <span class="sourceSuffix">(Bron: ${escapeHtml(sourceLabel)} — ${escapeHtml(sourceInfo)})</span>` : "";
+
+      return `
+        <article class="card ${isNew ? "isNew" : ""} ${expanded ? "expanded" : ""}">
+          <span class="tag tagAccent dateBadge">${escapeHtml(dateLabel)}</span>
+          ${typeHeader}
+          <div class="cardBody">
+            <h2 class="title"><button class="titleButton" type="button" data-event-key="${escapeHtml(cardKey)}" aria-expanded="${expanded ? "true" : "false"}">${title}</button></h2>
+            <div class="details">
+              <div class="detail"><span>Datum</span><span>${escapeHtml(prettyDate(event.date))}${event.time ? ` - ${escapeHtml(event.time)}` : ""}</span></div>
+              <div class="detail"><span>Plaats</span><span>${locationUrl ? `<a href="${escapeHtml(locationUrl)}" target="_blank" rel="noopener noreferrer">${locationLabel}</a>` : locationLabel}</span></div>
+              <div class="detail"><span>Type</span><span>${escapeHtml(type || "Type onbekend")}</span></div>
+              <div class="detail"><span>Prijs</span><span>${escapeHtml(event.cost || "Zie website")}</span></div>
+            </div>
+            <p class="desc">${escapeHtml(event.description || "Geen omschrijving beschikbaar.")}${sourceSuffix}</p>
+            <div class="cardActions">
+              ${website ? `<a class="btn btnPrimary" href="${escapeHtml(website)}" target="_blank" rel="noopener noreferrer">Meer info</a>` : ""}
+              ${route ? `<button class="btn btnSecondary routeToggle" type="button" data-route="${escapeHtml(routeId)}" data-destination="${escapeHtml(routeDestinationText)}" data-route-url="${escapeHtml(route)}">Route</button>` : ""}
+              <button class="btn btnDanger deleteEventBtn" type="button" data-event-key="${escapeHtml(cardKey)}">Verwijder</button>
+              ${route && routeContext ? `<span class="routeInfo">${escapeHtml(routeContext)}</span>` : ""}
+            </div>
+            ${route ? `<div class="routePanel" id="${escapeHtml(routeId)}"></div>` : ""}
+          </div>
+        </article>
+      `;
+    }
+
+    const weeronlineLocations = {
+      groningen: { name: "Groningen", id: "4056536" },
+      assen: { name: "Assen", id: "4057114" },
+      drachten: { name: "Drachten", id: "4056923" },
+      leeuwarden: { name: "Leeuwarden", id: "4056855" },
+      zwolle: { name: "Zwolle", id: "4057438" }
+    };
+
+    function weeronlineLocation(region) {
+      const key = cleanText(region).toLowerCase()
+        .normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+        .replace(/[^a-z0-9]+/g, " ")
+        .trim();
+      return weeronlineLocations[key] || null;
+    }
+
+    function weeronlineSearch(region, topic) {
+      return `https://www.weeronline.nl/zoekresultaten?keyword=${encodeURIComponent(`${region} ${topic}`.trim())}`;
+    }
+
+    function weatherTopicUrl(region, topic) {
+      const normalized = cleanText(topic).toLowerCase();
+      const location = weeronlineLocation(region);
+      if (!location) return weeronlineSearch(region, topic);
+
+      const base = `https://www.weeronline.nl/Europa/Nederland/${encodeURIComponent(location.name)}/${location.id}`;
+      if (normalized.includes("regen") || normalized.includes("neerslag") || normalized.includes("buien")) {
+        return `https://www.weeronline.nl/regenradar/${encodeURIComponent(location.name)}/${location.id}`;
+      }
+      if (normalized.includes("zon") || normalized.includes("uv")) {
+        return `${base}/zon`;
+      }
+      if (normalized.includes("week") || normalized.includes("verwachting")) {
+        return `${base}/weersverwachting-14dagen`;
+      }
+      return base;
+    }
+
+    function weatherTopicSourceName() {
+      return "Weeronline";
+    }
+
+    function radarBlockHtml() {
+      return `
+        <a class="radarTile" href="https://www.buienradar.nl/nederland/neerslag/buienradar" target="_blank" rel="noopener noreferrer">
+          <img src="https://image.buienradar.nl/2.0/image/single/RadarMapRainNL?height=512&width=768" alt="Buienradar neerslagkaart">
+          <span>Buienradar neerslagkaart</span>
+        </a>
+      `;
+    }
+
+    function weatherDayRows(data) {
+      const rows = [];
+      const start = new Date(formatDate(new Date()) + "T00:00:00");
+      const minBase = Number(data?.tempMin);
+      const maxBase = Number(data?.tempMax);
+      const rainBase = Number(data?.rainTotalMM);
+      const min = Number.isFinite(minBase) ? minBase : 12;
+      const max = Number.isFinite(maxBase) ? maxBase : 18;
+      const rainTotal = Number.isFinite(rainBase) ? rainBase : 0;
+      const formatter = new Intl.DateTimeFormat("nl-NL", { weekday: "short", day: "numeric", month: "short" });
+
+      const daily = Array.isArray(data?.daily) ? data.daily : [];
+      for (let index = 0; index < 7; index += 1) {
+        const day = new Date(start);
+        day.setDate(start.getDate() + index);
+        const source = daily[index] || {};
+        const dayMin = Number.isFinite(Number(source.tempMin)) ? Number(source.tempMin) : Math.round(min + ((index % 3) - 1));
+        const dayMax = Number.isFinite(Number(source.tempMax)) ? Number(source.tempMax) : Math.max(dayMin + 2, Math.round(max + (((index + 1) % 3) - 1)));
+        const rain = Number.isFinite(Number(source.rainMM)) ? Number(source.rainMM) : Math.max(0, Math.round((rainTotal / 7 + ((index % 2) ? .4 : -.2)) * 10) / 10);
+        const icon = rain > 2 ? "10d" : rain > .3 ? "04d" : "01d";
+        rows.push(`
+          <div class="weatherDay">
+            <img src="https://openweathermap.org/img/wn/${icon}@2x.png" alt="Weerbeeld">
+            <span>${escapeHtml(formatter.format(day))}<br><span class="weatherRain">${String(rain).replace(".", ",")} mm regen</span></span>
+            <strong>${dayMin} - ${dayMax} graden</strong>
+          </div>
+        `);
+      }
+
+      return `<div class="weatherDays">${rows.join("")}</div>`;
+    }
+
+    async function loadWeather() {
+      const region = $("region").value.trim();
+      if (!region || !dateFrom || !dateTo) {
+        $("weatherBox").innerHTML = "";
+        return;
+      }
+
+      try {
+        const forecastFrom = formatDate(new Date());
+        const forecastTo = addDays(forecastFrom, 6);
+        const url = `${WORKER_URL}/weather?region=${encodeURIComponent(region)}&from=${forecastFrom}&to=${forecastTo}`;
+        const response = await fetch(url, { cache: "no-store" });
+        if (!response.ok) throw new Error("Weer niet beschikbaar");
+        const data = await response.json();
+        if (!data || !data.ok) throw new Error("Weer niet beschikbaar");
+        latestWeatherData = data;
+
+        const weatherItems = [
+          { label: `Weerbeeld: ${data.summary}`, topic: "weerbeeld" },
+          { label: `${data.daily?.[0]?.tempMin ?? data.tempMin}° - ${data.daily?.[0]?.tempMax ?? data.tempMax}° vandaag`, topic: "temperatuur" },
+          { label: `Regen vandaag: ${String(data.daily?.[0]?.rainMM ?? data.rainTotalMM ?? 0).replace(".", ",")} mm`, topic: "regenradar", breakBefore: true },
+          { label: `Wind ${data.windMax} km/u`, topic: "wind" },
+          { label: `UV ${data.uvMax}`, topic: "zonkracht" }
+        ];
+
+        $("weatherBox").innerHTML = `
+          ${weatherItems.map((item) => `${item.breakBefore ? '<span class="weatherBreak" aria-hidden="true"></span>' : ""}<button class="pill weatherToggle" type="button" data-topic="${escapeHtml(item.topic)}" data-label="${escapeHtml(item.label)}">${escapeHtml(item.label)}</button>`).join("")}
+          <div class="weatherPanel" id="weatherPanel"></div>
+        `;
+      } catch {
+        latestWeatherData = null;
+        $("weatherBox").innerHTML = "";
+      }
+    }
+
+    function workerErrorMessage(data, fallback) {
+      const parts = [data?.error || data?.message || fallback || "Onbekende fout"];
+      if (data?.status) parts.push(`status ${data.status}`);
+      if (data?.details) parts.push(cleanText(data.details).slice(0, 320));
+      return parts.filter(Boolean).join(" - ");
+    }
+
+    async function refreshEvents() {
+      updateDateRange();
+      // Houd het grote detailpaneel dicht; voortgang verschijnt subtiel naast de titel.
+      const button = $("refreshBtn");
+      clearStatusHistory();
+      const previousSignature = eventSignature(events);
+      const previousKeys = eventKeySet(events);
+      let foundCount = null;
+      refreshAbortRequested = false;
+      progressMonitoringStopped = false;
+      newEventKeys = new Set();
+      events = events.map((event) => ({ ...event, isNew: false }));
+      updateNewCount();
+      setBusy(button, true, "Bezig...");
+      showStatus("Nieuwe evenementen ophalen...", "warn");
+
+      const scanSettings = saveScanSettings();
+      const selectedSites = selectedScanSites();
+      if (!selectedSites.length) {
+        showStatus("Vink minimaal een website aan om te verversen.", "warn");
+        setBusy(button, false);
+        return;
+      }
+      activeScanSites = new Set(selectedSites);
+      renderSites(new Set(selectedSites));
+      resetLiveLog();
+      addLiveLog("App", selectedSites.join(", "), "Verversing gestart", "start", `${scanSettings.maxEventsPerSite} events/site, ${scanSettings.siteTimeLimitSeconds} sec/site`);
+      if ($("provSerpAPI").checked) {
+        addLiveLog("SerpAPI", selectedSites.join(", "), "Extra zoeklaag gestart", "zoeken", "SerpAPI zoekt per geselecteerde website naar eventvelden en agenda-links.");
+      } else {
+        addLiveLog("SerpAPI", selectedSites.join(", "), "Extra zoeklaag", "uit", "SerpAPI staat uit; alleen de websites zelf worden gescand.");
+      }
+      if ($("provOpenAI").checked) {
+        addLiveLog("ChatGPT", selectedSites.join(", "), "AI zoeklaag gestart", "zoeken", "ChatGPT zoekt per website naar eventvelden.");
+      }
+      if ($("provMistral").checked) {
+        addLiveLog("Mistral", selectedSites.join(", "), "AI analyse gestart", "zoeken", "Mistral analyseert zichtbare tekst van de website.");
+      }
+      selectedSites.forEach((site, index) => {
+        addLiveLog(
+          "Scan",
+          site,
+          `Website ${index + 1}/${selectedSites.length} ingepland`,
+          "wachten",
+          `Max ${scanSettings.siteTimeLimitSeconds} seconden zoeken, max ${scanSettings.maxEventsPerSite} evenementen ophalen`
+        );
+      });
+      const refreshWindow = refreshDateWindow();
+      const category = $("typeFilter").value === "all" ? "" : $("typeFilter").value;
+      let previousProgress = null;
+      try { previousProgress = await fetchScrapeProgress(); } catch {}
+      const expectedScanSeconds = scanSettings.siteTimeLimitSeconds * selectedSites.length;
+      const totalWaitSeconds = Math.min(600, Math.max(120, expectedScanSeconds + 120));
+      const titleProgress = $("titleProgressText");
+      const titleBusyIndicator = $("titleBusyIndicator");
+      // Poll progress while the Cloudflare Worker request is still pending.
+      // The worker can take tens of seconds to return after dispatching Actions;
+      // waiting for its response before polling leaves the title stuck at 0/N.
+      const pollProgressWhileStarting = async () => {
+        try {
+          const progress = await fetchScrapeProgress();
+          if (!progress?.runId) return;
+          const status = cleanText(progress.status || "");
+          const active = ["running", "finishing", "queued", "in_progress"].includes(status);
+          const isNewRun = Boolean(progress.runId && progress.runId !== (previousProgress?.runId || ""));
+          // A completed progress file may belong to the previous scrape. Never
+          // announce it as the result of this request until a new runId appears.
+          if (!isNewRun) return;
+          if (!active && status !== "completed") return;
+          if (active) {
+            // Keep the compact title indicator alive even before the first site is published.
+            updateLiveScrapeSummary(progress, true);
+            const completed = Number(progress.completedCount) || 0;
+            const total = Math.max(1, Number(progress.totalSites) || selectedSites.length);
+            const siteNumber = Math.min(total, Math.max(1, Number(progress.currentSiteIndex) || completed + 1));
+            const site = shortScrapeSiteName(progress.currentSite || "");
+            const stage = cleanText(progress.stage || "Websitepagina ophalen");
+            const siteStartedAt = Date.parse(progress.siteStartedAt || progress.lastUpdatedAt || progress.startedAt || "");
+            const elapsed = Number.isFinite(siteStartedAt) ? Math.max(0, Math.floor((Date.now() - siteStartedAt) / 1000)) : 0;
+            const detail = site ? `Website ${siteNumber}/${total}: ${site} · ${stage}` : `Wachten op eerste website · ${completed}/${total} afgerond`;
+            showStatus(`Scraper actief: ${detail}. ${Array.isArray(progress.events) ? progress.events.length : 0} voorlopige hits.`, "warn", { stop: true });
+          } else if (status === "completed") {
+            updateLiveScrapeSummary(progress, true);
+            const results = Array.isArray(progress.siteResults) ? progress.siteResults : [];
+            const hitCount = results.reduce((sum, item) => sum + (Number(item.count) || 0), 0);
+            showStatus(`Scraper klaar: ${Math.min(Number(progress.completedCount) || 0, Number(progress.totalSites) || selectedSites.length)}/${Number(progress.totalSites) || selectedSites.length} websites afgerond · ${hitCount} hits gevonden. Publicatie wordt gecontroleerd.`, "warn", { stop: true });
+          }
+        } catch {}
+      };
+      activeStartupProgressPollHandle = setInterval(() => {
+        if (refreshAbortRequested) return;
+        pollProgressWhileStarting().catch(() => {});
+      }, 1000);
+      pollProgressWhileStarting().catch(() => {});
+      if (titleProgress) {
+        titleProgress.hidden = false;
+        titleProgress.textContent = `Zoeken… scraper starten (0/${selectedSites.length} websites afgerond)`;
+        titleProgress.title = "Verversverzoek wordt gestart. Daarna verschijnt hier de actieve website en de actuele stap."; 
+      }
+      if (titleBusyIndicator) titleBusyIndicator.hidden = false;
+      showStatus(`Scrape voorbereiden: ${selectedSites.length} websites; maximaal ${scanSettings.maxEventsPerSite} resultaten per website en ${scanSettings.siteTimeLimitSeconds}s per website. Publicatiecontrole maximaal ${Math.round(totalWaitSeconds / 60 * 10) / 10} min (verwachte scantijd circa ${Math.round(expectedScanSeconds / 60 * 10) / 10} min).`, "warn");
+      const payload = {
+        region: $("region").value.trim(),
+        radius: radiusPayloadValue(),
+        query: $("search").value.trim(),
+        category,
+        dateFrom: refreshWindow.from,
+        dateTo: refreshWindow.to,
+        minResults: scanSettings.maxEventsPerSite,
+        maxEventsPerSite: scanSettings.maxEventsPerSite,
+        siteTimeLimitSeconds: scanSettings.siteTimeLimitSeconds,
+        sites: selectedSites,
+        providers: providerSettings(),
+        selectedProviders: Object.entries(providerSettings()).filter(([, enabled]) => enabled).map(([name]) => name)
+      };
+
+      try {
+        let response = await fetch(WORKER_URL, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload)
+        });
+        let data = await response.json().catch(() => ({}));
+        foundCount = scrapedCountFromResponse(data);
+        addLiveLog("Worker", "Cloudflare", "Verversverzoek verstuurd", response.ok ? "gestart" : "fout", workerErrorMessage(data, response.ok ? "GitHub Actions gestart" : "Start mislukt"));
+
+        if (!response.ok) throw new Error(workerErrorMessage(data, "Verversen is mislukt"));
+        appendWorkerRawLog(data.serpApiRawLog);
+        appendWorkerRawLog(data.aiRawLog);
+        if (Number(data.serpApiRawCount) || Number(data.serpApiAddedCount) || Number(data.serpApiEventsCount)) {
+          addLiveLog("SerpAPI", selectedSites.join(", "), "Zoekresultaten ontvangen", "klaar", `${Number(data.serpApiRawCount) || 0} ruwe zoekregels, ${Number(data.serpApiAddedCount) || 0} links, ${Number(data.serpApiEventsCount) || 0} event-kandidaten`);
+        }
+        if (Number(data.aiRawCount) || Number(data.aiEventsCount)) {
+          addLiveLog("AI", selectedSites.join(", "), "AI-resultaten ontvangen", "klaar", `${Number(data.aiRawCount) || 0} logregels, ${Number(data.aiEventsCount) || 0} event-kandidaten`);
+        }
+
+        const prefix = Number.isFinite(foundCount) ? `${foundText(foundCount)} gevonden.` : foundText(foundCount) + ".";
+        const workerRows = [...(Array.isArray(data.aiRawLog) ? data.aiRawLog : []), ...(Array.isArray(data.serpApiRawLog) ? data.serpApiRawLog : [])];
+        const rateLimited = workerRows.some((row) => /429|rate.?limit|rate_limited/i.test(JSON.stringify(row)));
+        const rateLimitNote = rateLimited ? " Een AI-/zoekbron meldt HTTP 429 (rate limit); die bron heeft tijdelijk te veel verzoeken ontvangen." : "";
+        showStatus(`Verversverzoek geaccepteerd. ${prefix}${rateLimitNote} Ik controleer of events.json echt wordt bijgewerkt.`, "warn", { stop: true });
+        await waitForUpdatedEvents(previousSignature, previousKeys, foundCount, { intervalMs: 1000, maxAttempts: totalWaitSeconds, previousProgressRunId: previousProgress?.runId || "", lastProgressCount: 0, lastProgressSignature: "" });
+        if (activeStartupProgressPollHandle) { clearInterval(activeStartupProgressPollHandle); activeStartupProgressPollHandle = null; }
+      } catch (error) {
+        if (activeStartupProgressPollHandle) { clearInterval(activeStartupProgressPollHandle); activeStartupProgressPollHandle = null; }
+        if (refreshAbortRequested) return;
+        const prefix = Number.isFinite(foundCount) ? `${foundText(foundCount)} gevonden.` : "";
+        const message = String(error?.message || error || "Onbekende fout");
+        const networkHint = /failed to fetch|networkerror|load failed/i.test(message)
+          ? " De browser kan de Cloudflare Worker niet bereiken (netwerk/CORS of Worker-deployment). Controleer eerst de Worker-status via https://evenementen-refresh.mrsjonnie.workers.dev/health en probeer daarna opnieuw."
+          : "";
+        addLiveLog("Worker", WORKER_URL, "Starten mislukt", "fout", message + networkHint);
+        showStatus(`${prefix} Starten mislukt: ${message}.${networkHint}`.trim(), "error");
+        const titleProgress = $("titleProgressText");
+        if (titleProgress) {
+          titleProgress.hidden = true;
+          titleProgress.textContent = "Zoeken mislukt · " + message;
+          titleProgress.title = message + networkHint;
+        }
+      } finally {
+        if (startupProgressPollHandle) {
+          clearInterval(startupProgressPollHandle);
+          startupProgressPollHandle = null;
+        }
+        activeScanSites = new Set();
+        renderSites(new Set(selectedSites));
+        const titleProgress = $("titleProgressText");
+        const titleBusyIndicator = $("titleBusyIndicator");
+        // Keep the last useful progress/result visible after polling finishes.
+        // Hiding this element here made the status disappear immediately after the worker responded.
+        if (titleBusyIndicator) titleBusyIndicator.hidden = true;
+        setBusy(button, false);
+      }
+    }
+
+    async function askClearConfirmation(title = "Alles verwijderen?", message = "Weet je zeker dat je alle evenementen en het archief wilt verwijderen en daarna opnieuw wilt verversen?", confirmLabel = "Verwijderen en verversen") {
+      const overlay = $("clearConfirm");
+      const confirmButton = $("clearConfirmBtn");
+      const cancelButton = $("clearCancelBtn");
+      if (!overlay || !confirmButton || !cancelButton) return false;
+      const titleElement = $("clearConfirmTitle");
+      const messageElement = overlay.querySelector(".confirmBox p");
+      const original = {
+        title: titleElement?.textContent || "Alles verwijderen?",
+        message: messageElement?.textContent || "",
+        confirmLabel: confirmButton.textContent
+      };
+      if (titleElement) titleElement.textContent = title;
+      if (messageElement) messageElement.textContent = message;
+      confirmButton.textContent = confirmLabel;
+      overlay.classList.add("open");
+      confirmButton.focus();
+
+      return new Promise((resolve) => {
+        const cleanup = (answer) => {
+          overlay.classList.remove("open");
+          confirmButton.removeEventListener("click", onConfirm);
+          cancelButton.removeEventListener("click", onCancel);
+          overlay.removeEventListener("click", onBackdrop);
+          document.removeEventListener("keydown", onKeyDown);
+          if (titleElement) titleElement.textContent = original.title;
+          if (messageElement) messageElement.textContent = original.message;
+          confirmButton.textContent = original.confirmLabel;
+          resolve(answer);
+        };
+        const onConfirm = () => cleanup(true);
+        const onCancel = () => cleanup(false);
+        const onBackdrop = (event) => { if (event.target === overlay) cleanup(false); };
+        const onKeyDown = (event) => { if (event.key === "Escape") cleanup(false); };
+        confirmButton.addEventListener("click", onConfirm);
+        cancelButton.addEventListener("click", onCancel);
+        overlay.addEventListener("click", onBackdrop);
+        document.addEventListener("keydown", onKeyDown);
+      });
+    }
+
+    async function clearAllEvents() {
+      if (!await askClearConfirmation()) return;
+
+      updateDateRange();
+      const button = $("deleteDataBtn");
+      const scanSettings = saveScanSettings();
+      const refreshWindow = refreshDateWindow();
+      const selectedSites = selectedScanSites();
+      if (!selectedSites.length) {
+        showStatus("Vink minimaal een website aan om opnieuw te verversen.", "warn");
+        return;
+      }
+      resetLiveLog();
+      addLiveLog("App", selectedSites.join(", "), "Alles verwijderen", "start", "Archief wissen en opnieuw verversen");
+      const previousSignature = eventSignature(events);
+      const previousKeys = eventKeySet(events);
+      refreshAbortRequested = false;
+      setBusy(button, true, "Verwijderen...");
+      showStatus("Evenementen en archief verwijderen en verversing starten...", "warn");
+
+      try {
+        const response = await fetch(`${WORKER_URL}/clear`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            includeArchive: true,
+            refreshAfterClear: true,
+            region: $("region").value.trim(),
+            radius: radiusPayloadValue(),
+            query: $("search").value.trim(),
+            category: $("typeFilter").value === "all" ? "" : $("typeFilter").value,
+            dateFrom: refreshWindow.from,
+            dateTo: refreshWindow.to,
+            minResults: scanSettings.maxEventsPerSite,
+            maxEventsPerSite: scanSettings.maxEventsPerSite,
+            siteTimeLimitSeconds: scanSettings.siteTimeLimitSeconds,
+            sites: selectedSites,
+            providers: providerSettings()
+          })
+        });
+        const data = await response.json().catch(() => ({}));
+        if (!response.ok) throw new Error(workerErrorMessage(data, "Verwijderen is mislukt"));
+        appendWorkerRawLog(data.serpApiRawLog);
+        appendWorkerRawLog(data.aiRawLog);
+        if (Number(data.serpApiRawCount) || Number(data.serpApiAddedCount) || Number(data.serpApiEventsCount)) {
+          addLiveLog("SerpAPI", selectedSites.join(", "), "Zoekresultaten ontvangen", "klaar", `${Number(data.serpApiRawCount) || 0} ruwe zoekregels, ${Number(data.serpApiAddedCount) || 0} links, ${Number(data.serpApiEventsCount) || 0} event-kandidaten`);
+        }
+        if (Number(data.aiRawCount) || Number(data.aiEventsCount)) {
+          addLiveLog("AI", selectedSites.join(", "), "AI-resultaten ontvangen", "klaar", `${Number(data.aiRawCount) || 0} logregels, ${Number(data.aiEventsCount) || 0} event-kandidaten`);
+        }
+
+        newEventKeys = new Set();
+        saveStoredSet(NEW_EVENTS_KEY, newEventKeys);
+        if (data?.cleared) {
+          events = [];
+          eventsUpdatedAt = "";
+          latestSiteResults = [];
+          latestRawLog = [];
+          eventsActiveCount = 0;
+          eventsArchiveCount = 0;
+          eventsJsonTotalCount = 0;
+          fillTypes();
+          renderSites(checkedSites());
+          renderRawLog();
+          applyFilters();
+        }
+        setBusy(button, false);
+        showStatus("Alles is verwijderd. Verversing is gestart; de logging blijft zichtbaar.", "ok", { stop: true });
+        waitForUpdatedEvents(previousSignature, previousKeys, scrapedCountFromResponse(data), { requireEvents: false, keepEmptyOnTimeout: true, maxAttempts: 6 })
+          .catch((error) => showStatus(`Controle op nieuwe data mislukt: ${error.message}`, "warn"));
+      } catch (error) {
+        showStatus(`Verwijderen mislukt: ${error.message}`, "error");
+      } finally {
+        setBusy(button, false);
+      }
+    }
+
+    function resetFilters() {
+      $("search").value = "";
+      $("region").value = "Groningen";
+      $("radius").value = "100";
+      $("periodMode").value = "always";
+      $("typeFilter").value = "all";
+      $("newOnlyFilter").checked = false;
+      $("provPerplexity").checked = false;
+      $("provMistral").checked = false;
+      $("provOpenAI").checked = false;
+      $("provSerpAPI").checked = false;
+      document.querySelectorAll(".siteCheck, .aiSourceCheck").forEach((check) => { check.checked = true; });
+      document.querySelectorAll(".aiSourceCheck").forEach((check) => { const target = $(check.dataset.provider); if (target) target.checked = true; });
+      cardsCollapsed = true;
+      expandedEventKeys = new Set();
+      $("collapseBtn").textContent = "Details uitklappen";
+      collapseAllGroups();
+      updateSiteCount();
+      updateProviderCount();
+      $("dateSingle").value = formatDate(new Date());
+      applyFilters();
+      loadWeather();
+      hideStatus();
+    }
+
+    function collapseAllGroups() {
+      const allEvents = dedupeEvents(events);
+      collapsedEventTypes = new Set(allEvents.map(event => displayType(event.type || "Activiteit")));
+      collapsedSourceGroups = new Set();
+      allEvents.forEach(event => {
+        const type = displayType(event.type || "Activiteit");
+        const source = eventSourceLabel(event) || "Bron onbekend";
+        collapsedSourceGroups.add(type + "::" + source);
+      });
+      if ($("collapseTypesBtn")) $("collapseTypesBtn").textContent = "Types uitklappen";
+      if ($("collapseSourcesBtn")) $("collapseSourcesBtn").textContent = "Bron uitklappen";
+    }
+
+    function toggleCardsCollapsed() {
+      cardsCollapsed = !cardsCollapsed;
+      expandedEventKeys = new Set();
+      if (!cardsCollapsed) {
+        // Bij details uitklappen ook alle bron- en typegroepen zichtbaar maken.
+        collapsedEventTypes = new Set();
+        collapsedSourceGroups = new Set();
+        $("collapseTypesBtn").textContent = "Types inklappen";
+        $("collapseSourcesBtn").textContent = "Bron inklappen";
+      }
+      $("collapseBtn").textContent = cardsCollapsed ? "Details uitklappen" : "Details inklappen";
+      render();
+    }
+
+    async function deleteEventByKey(key) {
+      const event = events.find((item) => eventDedupeKey(item) === key);
+      if (!event) return;
+      if (!confirm(`Verwijder "${event.title}" uit de lijst en het archief?`)) return;
+
+      addLiveLog("App", event.website || event.source || "", event.title, "verwijderen", "Verwijderverzoek versturen");
+      try {
+        const response = await fetch(`${WORKER_URL}/delete-event`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            key,
+            title: event.title,
+            date: event.date,
+            website: event.website
+          })
+        });
+        const data = await response.json().catch(() => ({}));
+        if (!response.ok) throw new Error(workerErrorMessage(data, "Verwijderen is mislukt"));
+
+        events = events.filter((item) => eventDedupeKey(item) !== key);
+        deletedEventKeys.add(key);
+        newEventKeys.delete(key);
+        expandedEventKeys.delete(key);
+        const remainingEvents = Number(data.remainingEvents);
+        const remainingArchive = Number(data.remainingArchive);
+        eventsActiveCount = Number.isFinite(remainingEvents) ? remainingEvents : events.length;
+        eventsArchiveCount = Number.isFinite(remainingArchive) ? remainingArchive : 0;
+        eventsJsonTotalCount = eventsActiveCount + eventsArchiveCount;
+        saveStoredSet(DELETED_EVENTS_KEY, deletedEventKeys);
+        saveStoredSet(NEW_EVENTS_KEY, newEventKeys);
+        saveStoredSet(KNOWN_EVENTS_KEY, eventKeySet(events));
+        renderSites(checkedSites());
+        applyFilters();
+        showStatus(`Verwijderd uit overzicht en archief: ${cleanText(event.title)}.`, "ok");
+        addLiveLog("App", event.website || event.source || "", event.title, "verwijderd", `${data.removedEvents || 0} actief, ${data.removedArchive || 0} archief`);
+        setTimeout(hideStatus, 4000);
+      } catch (error) {
+        showStatus(`Verwijderen mislukt: ${error.message}`, "error");
+      }
+    }
+
+    async function loadAll() {
+      updateDateRange();
+      const knownKeys = loadStoredSet(KNOWN_EVENTS_KEY);
+      const storedNewKeys = loadStoredSet(NEW_EVENTS_KEY);
+      deletedEventKeys = loadStoredSet(DELETED_EVENTS_KEY);
+      const loaded = await Promise.all([
+        loadEventsWithMeta(fallbackEvents),
+        loadJson("./sites.json", fallbackSites)
+      ]);
+      events = mergeVerifiedEvents(loaded[0].events);
+
+      eventsUpdatedAt = loaded[0].updatedAt;
+      latestSiteResults = loaded[0].siteResults || [];
+      latestRawLog = loaded[0].rawLog || [];
+      const loadedActiveCount = Number(loaded[0].activeCount);
+      const loadedArchiveCount = Number(loaded[0].archiveCount);
+      const loadedTotalCount = Number(loaded[0].totalCount);
+      eventsActiveCount = Number.isFinite(loadedActiveCount) ? loadedActiveCount : loaded[0].events.length;
+      eventsArchiveCount = Number.isFinite(loadedArchiveCount) ? loadedArchiveCount : 0;
+      eventsJsonTotalCount = Number.isFinite(loadedTotalCount) ? loadedTotalCount : events.length;
+      cardsCollapsed = true;
+      expandedEventKeys = new Set();
+      $("collapseBtn").textContent = "Details uitklappen";
+      collapseAllGroups();
+      const removedSiteKeys = loadRemovedSiteKeys();
+      sites = mergeSites([...loaded[1], ...loadCustomSites()]).filter((site) => !removedSiteKeys.has(siteIdentityKey(site)));
+      applyScanSettings();
+      const savedSources = loadSourceSelection();
+      if (savedSources) {
+        $("provMistral").checked = Boolean(savedSources.providers?.mistral);
+        $("provOpenAI").checked = Boolean(savedSources.providers?.openai);
+        $("provSerpAPI").checked = Boolean(savedSources.providers?.serpapi);
+      }
+      const currentKeys = eventKeySet(events);
+      const detectedNew = knownKeys.size ? [...currentKeys].filter((key) => !knownKeys.has(key)) : [];
+      newEventKeys = detectedNew.length ? new Set(detectedNew) : storedNewKeys;
+      saveStoredSet(NEW_EVENTS_KEY, newEventKeys);
+      saveStoredSet(KNOWN_EVENTS_KEY, currentKeys);
+
+      fillTypes();
+      const selectedFromStorage = savedSources && Array.isArray(savedSources.selectedSites)
+        ? new Set(savedSources.selectedSites.filter((site) => sites.includes(site)))
+        : new Set(sites);
+      renderSites(selectedFromStorage);
+      renderRawLog();
+      updateProviderCount();
+      applyFilters();
+      loadWeather();
+    }
+
+    controls.forEach((id) => {
+      $(id).addEventListener("input", () => {
+        if (id === "dateSingle" && $("dateSingle").value) $("periodMode").value = "specificDay";
+        applyFilters();
+        if (id === "region") scheduleRegionResolve();
+      });
+      $(id).addEventListener("change", () => {
+        if (id === "dateSingle" && $("dateSingle").value) $("periodMode").value = "specificDay";
+        applyFilters();
+        if (id === "region") scheduleRegionResolve();
+        if (["region", "dateSingle", "periodMode"].includes(id)) loadWeather();
+      });
+    });
+
+    ["maxEventsPerSite", "siteTimeLimitSeconds"].forEach((id) => {
+      $(id).addEventListener("input", () => {
+        const settings = currentScanSettings();
+        try { localStorage.setItem(SCAN_SETTINGS_KEY, JSON.stringify(settings)); } catch {}
+      });
+      $(id).addEventListener("change", () => {
+        saveScanSettings();
+        showStatus(`Scaninstellingen bewaard: ${currentScanSettings().maxEventsPerSite} events en ${currentScanSettings().siteTimeLimitSeconds} sec per website.`, "ok");
+      });
+    });
+    $("refreshBtn").addEventListener("click", refreshEvents);
+    $("clearBtn").addEventListener("click", refreshEvents);
+    $("resetBtn").addEventListener("click", resetFilters);
+    $("deleteDataBtn").addEventListener("click", clearAllEvents);
+    $("collapseBtn").addEventListener("click", toggleCardsCollapsed);
+    $("mapSearchBtn").addEventListener("click", () => {
+      const region = cleanText($("region").value || "Groningen");
+      const radius = radiusFilterKm();
+      const query = cleanText($("search").value);
+      const mapQuery = [query || "evenementen", "in", region, radius > 0 ? `binnen ${radius} km` : ""].filter(Boolean).join(" ");
+      const panel = $("mapSearchPanel");
+      $("mapSearchFrame").src = `https://www.google.com/maps?q=${encodeURIComponent(mapQuery)}&output=embed`;
+      panel.hidden = false;
+      panel.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+    $("closeMapSearchBtn").addEventListener("click", () => { $("mapSearchPanel").hidden = true; $("mapSearchFrame").src = "about:blank"; });
+    ["maxEventsPerSite", "siteTimeLimitSeconds"].forEach((id) => {
+      $(id).addEventListener("change", () => {
+        const settings = saveScanSettings();
+        $("maxEventsPerSite").value = settings.maxEventsPerSite;
+        $("siteTimeLimitSeconds").value = settings.siteTimeLimitSeconds;
+      });
+    });
+    $("newOnlyToggle").addEventListener("click", () => {
+      $("newOnlyFilter").checked = !$("newOnlyFilter").checked;
+      $("newOnlyFilter").dispatchEvent(new Event("change", { bubbles: true }));
+      updateNewCount();
+    });
+    $("perPageSelect").addEventListener("change", () => {
+      eventsPerPage = Number($("perPageSelect").value) || 96;
+      try {
+        localStorage.setItem(PER_PAGE_KEY, String(eventsPerPage));
+      } catch {}
+      currentPage = 1;
+      render();
+    });
+    $("status").addEventListener("click", async (event) => {
+      const stopButton = event.target.closest("#stopRefreshBtn");
+      if (!stopButton) return;
+      refreshAbortRequested = true;
+      if (activeStartupProgressPollHandle) { clearInterval(activeStartupProgressPollHandle); activeStartupProgressPollHandle = null; }
+      progressMonitoringStopped = true;
+      if (restoredProgressPollHandle) {
+        clearInterval(restoredProgressPollHandle);
+        restoredProgressPollHandle = null;
+      }
+      const stoppedRunId = restoredProgressRunId;
+      restoredProgressRunId = "";
+      const titleProgress = $("titleProgressText");
+      // Keep the last known site visible until GitHub confirms cancellation.
+      stopButton.disabled = true;
+      stopButton.textContent = "Annuleren…";
+      showStatus("Annulering van de GitHub-scraper aanvragen…", "warn");
+      try {
+        const response = await fetch(`${WORKER_URL}/cancel`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({})
+        });
+        const data = await response.json().catch(() => ({}));
+        if (!response.ok || data.ok === false) {
+          throw new Error(data.details || data.error || `HTTP ${response.status}`);
+        }
+        setBusy($("refreshBtn"), false);
+        setBusy($("clearBtn"), false);
+        if (Number(data.stillStopping) > 0) {
+          progressMonitoringStopped = false;
+          stopButton.disabled = false;
+          stopButton.textContent = "Opnieuw stoppen";
+          showStatus(data.message || "GitHub heeft het stoppen nog niet bevestigd. Probeer opnieuw.", "warn", { stop: true });
+          restoreRunningScrapeProgress().catch(() => {});
+        } else {
+          if (titleProgress) titleProgress.hidden = true;
+          if (stoppedRunId) {
+            try { localStorage.setItem(DISMISSED_SCRAPE_RUN_KEY, stoppedRunId); } catch {}
+          }
+          clearStatusHistory();
+          showStatus(data.stopped
+            ? `Scan gestopt: ${data.stopped} GitHub Actions-run(s) beëindigd. Een volgende verversing begint met een lege status.`
+            : "Geen actieve scraper-run meer gevonden. Een volgende verversing begint met een lege status.",
+            data.stopped || !data.cancelled ? "ok" : "warn");
+        }
+      } catch (error) {
+        progressMonitoringStopped = false;
+        setBusy($("refreshBtn"), false);
+        setBusy($("clearBtn"), false);
+        stopButton.disabled = false;
+        stopButton.textContent = "Opnieuw stoppen";
+        showStatus(`Stoppen is niet bevestigd: ${cleanText(error.message || error)}. De voortgang blijft zichtbaar; probeer Stop opnieuw.`, "error", { stop: true });
+        restoreRunningScrapeProgress().catch(() => {});
+      }
+    });
+    $("grid").addEventListener("click", (event) => {
+      const deleteButton = event.target.closest(".deleteEventBtn");
+      if (deleteButton) {
+        deleteEventByKey(deleteButton.dataset.eventKey || "");
+        return;
+      }
+      const sourceToggle = event.target.closest("[data-source-toggle]");
+      if (sourceToggle) { const key = sourceToggle.dataset.sourceToggle || ""; if (collapsedSourceGroups.has(key)) collapsedSourceGroups.delete(key); else collapsedSourceGroups.add(key); render(); return; }
+      const typeToggle = event.target.closest("[data-type-toggle]");
+      if (typeToggle) { const type = typeToggle.dataset.typeToggle || ""; if (collapsedEventTypes.has(type)) collapsedEventTypes.delete(type); else collapsedEventTypes.add(type); render(); return; }
+      const button = event.target.closest(".titleButton");
+      if (!button) return;
+      const key = button.dataset.eventKey || "";
+      if (!key) return;
+      if (expandedEventKeys.has(key)) {
+        expandedEventKeys.delete(key);
+      } else {
+        expandedEventKeys.add(key);
+      }
+      render();
+    });
+    $("collapseBtn").addEventListener("click", toggleCardsCollapsed);
+    $("collapseSourcesBtn").addEventListener("click", () => {
+      const keys = [...new Set(filteredEvents.map((event) => displayType(event.type || "Activiteit") + "::" + (eventSourceLabel(event) || "Bron onbekend")))];
+      const allCollapsed = keys.length > 0 && keys.every((key) => collapsedSourceGroups.has(key));
+      collapsedSourceGroups = allCollapsed ? new Set() : new Set(keys);
+      if (allCollapsed) {
+        // Bronnen uitklappen betekent ook dat de bovenliggende types openstaan.
+        collapsedEventTypes = new Set();
+        $("collapseTypesBtn").textContent = "Types inklappen";
+      }
+      render();
+      $("collapseSourcesBtn").textContent = allCollapsed ? "Bron inklappen" : "Bron uitklappen";
+    });
+    $("collapseTypesBtn").addEventListener("click", () => {
+      const types = [...new Set(filteredEvents.map((event) => displayType(event.type || "Activiteit")))]; 
+      const allCollapsed = types.length && types.every((type) => collapsedEventTypes.has(type));
+      collapsedEventTypes = allCollapsed ? new Set() : new Set(types);
+      if (allCollapsed) {
+        collapsedSourceGroups = new Set();
+        $("collapseSourcesBtn").textContent = "Bron inklappen";
+      } else {
+        $("collapseSourcesBtn").textContent = "Bron uitklappen";
+      }
+      render();
+      $("collapseTypesBtn").textContent = allCollapsed ? "Types inklappen" : "Types uitklappen";
+    });
+    $("prevPage").addEventListener("click", () => { currentPage -= 1; render(); window.scrollTo({ top: 0, behavior: "smooth" }); });
+    $("nextPage").addEventListener("click", () => { currentPage += 1; render(); window.scrollTo({ top: 0, behavior: "smooth" }); });
+    $("allSitesBtn").addEventListener("click", () => {
+      document.querySelectorAll(".siteCheck, .aiSourceCheck").forEach((check) => { check.checked = true; });
+      document.querySelectorAll(".aiSourceCheck").forEach((check) => { const target = $(check.dataset.provider); if (target) target.checked = true; });
+      updateSiteCount();
+      applyFilters();
+    });
+    $("noSitesBtn").addEventListener("click", () => {
+      document.querySelectorAll(".siteCheck, .aiSourceCheck").forEach((check) => { check.checked = false; });
+      document.querySelectorAll(".aiSourceCheck").forEach((check) => { const target = $(check.dataset.provider); if (target) target.checked = false; });
+      updateSiteCount();
+      applyFilters();
+    });
+    $("sitesList").addEventListener("change", (event) => {
+      const aiCheck = event.target.closest(".aiSourceCheck");
+      if (aiCheck) { const target = $(aiCheck.dataset.provider); if (target) target.checked = aiCheck.checked; updateProviderCount(); renderRawLog(); }
+      saveSourceSelection();
+      updateSiteCount();
+      applyFilters();
+    });
+    $("sitesList").addEventListener("click", (event) => {
+      const remove = event.target.closest(".siteRemove");
+      if (remove) {
+        event.preventDefault();
+        event.stopPropagation();
+        removeSiteFromList(remove.dataset.removeSite || "");
+        return;
+      }
+      const info = event.target.closest(".sourceInfo");
+      if (!info) return;
+      const site = info.dataset.infoSite || "";
+      const popup = [...document.querySelectorAll("[data-info-popup]")].find((item) => item.dataset.infoPopup === site);
+      if (popup) { popup.hidden = !popup.hidden; info.setAttribute("aria-expanded", String(!popup.hidden)); }
+      event.preventDefault(); event.stopPropagation();
+    });
+    $("providerList")?.addEventListener("change", () => { saveSourceSelection(); updateProviderCount(); renderRawLog(); });
+    document.addEventListener("click", async (event) => {
+      const button = event.target.closest(".routeToggle");
+      if (!button) return;
+
+      const panel = document.getElementById(button.dataset.route);
+      if (!panel) return;
+
+      const isOpen = panel.classList.contains("open");
+      document.querySelectorAll(".routeToggle").forEach((item) => {
+        if (item !== button) item.textContent = "Route";
+      });
+      document.querySelectorAll(".routePanel.open").forEach((item) => {
+        if (item !== panel) item.classList.remove("open");
+      });
+
+      if (isOpen) {
+        panel.classList.remove("open");
+        button.textContent = "Route";
+        return;
+      }
+
+      button.textContent = "Sluit route";
+      await openRoutePanel(button, panel);
+    });
+    document.addEventListener("click", (event) => {
+      const button = event.target.closest(".weatherToggle");
+      if (!button) return;
+
+      const panel = $("weatherPanel");
+      if (!panel) return;
+
+      const topic = cleanText(button.dataset.topic || button.textContent);
+      const label = cleanText(button.dataset.label || button.textContent);
+      const region = $("region").value.trim() || "Groningen";
+      const alreadyOpen = panel.classList.contains("open") && panel.dataset.topic === topic;
+      document.querySelectorAll(".weatherToggle").forEach((item) => item.setAttribute("aria-expanded", "false"));
+
+      if (alreadyOpen) {
+        panel.classList.remove("open");
+        panel.dataset.topic = "";
+        return;
+      }
+
+      const url = weatherTopicUrl(region, topic);
+      const sourceName = weatherTopicSourceName(topic);
+      const details = [
+        topic === "temperatuur" ? weatherDayRows(latestWeatherData || {}) : "",
+        topic === "weerbeeld" ? radarBlockHtml() : ""
+      ].filter(Boolean).join("");
+      button.setAttribute("aria-expanded", "true");
+      panel.dataset.topic = topic;
+      panel.innerHTML = `
+        <span>${escapeHtml(label)} voor ${escapeHtml(region)}</span><br>
+        <a href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">Bekijk ${escapeHtml(topic)} op ${escapeHtml(sourceName)}</a>
+        ${details}
+      `;
+      panel.classList.add("open");
+    });
+    function toggleSelect(selectId, buttonId) {
+      const select = $(selectId);
+      const isOpen = select.classList.toggle("open");
+      $(buttonId).setAttribute("aria-expanded", String(isOpen));
+    }
+
+    $("providerButton").addEventListener("click", () => toggleSelect("providerSelect", "providerButton"));
+    $("siteButton").addEventListener("click", () => toggleSelect("siteSelect", "siteButton"));
+    $("addCustomSiteBtn").addEventListener("click", addCustomSite);
+    $("toggleCustomSiteBtn").addEventListener("click", () => { const panel = $("customSiteAdder"); const open = panel.classList.toggle("open"); $("toggleCustomSiteBtn").setAttribute("aria-expanded", String(open)); $("toggleCustomSiteBtn").textContent = open ? "Sluiten" : "Toevoegen URL"; if (open) $("customSiteUrl").focus(); });
+    $("customSiteUrl").addEventListener("keydown", (event) => {
+      if (event.key === "Enter") {
+        event.preventDefault();
+        addCustomSite();
+      }
+    });
+    function setSidebarOpen(isOpen) {
+      const sidebar = $("filterSidebar");
+      const layout = $("pageLayout");
+      sidebar.hidden = !isOpen;
+      layout.classList.toggle("sidebarOpen", isOpen);
+      $("filterSidebarToggle").setAttribute("aria-expanded", String(isOpen));
+      $("filterSidebarToggle").textContent = isOpen ? "Filters verbergen" : "Filters tonen";
+    }
+    $("filterSidebarToggle").addEventListener("click", () => setSidebarOpen($("filterSidebar").hidden));
+    // Ordeneer de acties in twee vaste rijen en plaats het URL-invoerveld direct onder de knop.
+    const filterGrid = document.querySelector(".filters");
+    filterGrid.appendChild($("siteSelect"));
+    const customSiteAdder = $("customSiteAdder");
+    const sidebarActions = document.querySelector(".sidebarActionButtons");
+    const inlineTools = $("toggleCustomSiteBtn").parentElement;
+    const buttonRows = document.createElement("div");
+    buttonRows.className = "sidebarButtonRows";
+    const primaryButtons = document.createElement("div");
+    primaryButtons.className = "sidebarPrimaryButtons";
+    const dataButtons = document.createElement("div");
+    dataButtons.className = "sidebarDataButtons";
+    primaryButtons.append($("toggleCustomSiteBtn"), $("resetBtn"), $("newOnlyToggle"));
+    dataButtons.append($("clearBtn"), $("deleteDataBtn"));
+    const viewButtons = document.querySelector(".sidebarViewButtons");
+    if (viewButtons) viewButtons.insertAdjacentElement("beforebegin", dataButtons);
+    filterGrid.insertAdjacentElement("afterend", buttonRows);
+    buttonRows.append(primaryButtons);
+    if (customSiteAdder) buttonRows.append(customSiteAdder);
+    inlineTools.hidden = true;
+    if (sidebarActions) sidebarActions.hidden = true;
+    $("siteSelect").style.gridColumn = "1 / -1";
+    $("siteSelect").style.marginTop = "2px";
+    $("toggleCustomSiteBtn").textContent = "Toevoegen URL";
+    $("clearBtn").textContent = "Ververs data";
+    const savedSidebarWidth = Number(localStorage.getItem("eventsSidebarWidth"));
+    const initialSidebarWidth = Number.isFinite(savedSidebarWidth) && savedSidebarWidth >= 220 && savedSidebarWidth <= 520 ? savedSidebarWidth : 248;
+    $("pageLayout").style.setProperty("--sidebar-width", initialSidebarWidth + "px");
+    $("sidebarResizeHandle").addEventListener("pointerdown", (event) => {
+      if (window.matchMedia("(max-width: 900px)").matches) return;
+      event.preventDefault();
+      const layout = $("pageLayout");
+      const handle = $("sidebarResizeHandle");
+      handle.setPointerCapture(event.pointerId);
+      const move = (moveEvent) => {
+        const rect = layout.getBoundingClientRect();
+        const width = Math.max(220, Math.min(520, moveEvent.clientX - rect.left));
+        layout.style.setProperty("--sidebar-width", width + "px");
+        localStorage.setItem("eventsSidebarWidth", String(Math.round(width)));
+      };
+      const stop = () => {
+        handle.removeEventListener("pointermove", move);
+        handle.removeEventListener("pointerup", stop);
+        handle.removeEventListener("pointercancel", stop);
+      };
+      handle.addEventListener("pointermove", move);
+      handle.addEventListener("pointerup", stop);
+      handle.addEventListener("pointercancel", stop);
+    });
+    $("sidebarResizeHandle").addEventListener("keydown", (event) => {
+      if (!["ArrowLeft","ArrowRight"].includes(event.key)) return;
+      event.preventDefault();
+      const layout = $("pageLayout");
+      const current = parseInt(getComputedStyle(layout).getPropertyValue("--sidebar-width"), 10) || 248;
+      const width = Math.max(220, Math.min(520, current + (event.key === "ArrowRight" ? 12 : -12)));
+      layout.style.setProperty("--sidebar-width", width + "px");
+      localStorage.setItem("eventsSidebarWidth", String(width));
+    });
+    $("titleToggle").setAttribute("aria-expanded", String($("titlePanel").classList.contains("open")));
+    $("titleToggle").addEventListener("click", () => {
+      const panel = $("titlePanel");
+      const isOpen = panel.classList.toggle("open");
+      $("titleToggle").setAttribute("aria-expanded", String(isOpen));
+    });
+    document.addEventListener("click", (event) => {
+      [
+        ["providerSelect", "providerButton"],
+        ["siteSelect", "siteButton"]
+      ].forEach(([selectId, buttonId]) => {
+        if (!$(selectId).contains(event.target)) {
+          $(selectId).classList.remove("open");
+          $(buttonId).setAttribute("aria-expanded", "false");
+        }
+      });
+    });
+
+    const today = formatDate(new Date());
+    setSidebarOpen(true);
+    $("dateSingle").value = today;
+    $("periodMode").value = "alwaysFromToday";
+    dateFrom = today;
+    dateTo = addDays(today, 2);
+    const savedPerPage = Number(localStorage.getItem(PER_PAGE_KEY));
+    eventsPerPage = savedPerPage && savedPerPage !== 96 && [12, 18, 24, 48, 500].includes(savedPerPage) ? savedPerPage : 500;
+    $("perPageSelect").value = String(eventsPerPage);
+    $("versionBadge").textContent = `Versie ${APP_VERSION}`;
+    restoreStatusHistory();
+    applyVersionHeaderTheme();
+    loadAll();
+    restoreRunningScrapeProgress().catch(() => {});
+  </script>
+</body>
+</html>
