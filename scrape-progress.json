@@ -1,42 +1,15 @@
 {
   "runId": "2026-10-25T10:51:26+00:00",
   "startedAt": "2026-10-25T10:51:26+00:00",
-  "completedCount": 1,
+  "completedCount": 2,
   "totalSites": 3,
   "currentSite": "https://denieuwekolk.nl/agenda",
   "currentSiteIndex": 2,
   "completedSites": [
-    "https://www.zwolsetheaters.nl/programma"
+    "https://www.zwolsetheaters.nl/programma",
+    "https://denieuwekolk.nl/agenda"
   ],
   "events": [
-    {
-      "date": "2026-10-25",
-      "time": "12:55",
-      "title": "De Club van Sinterklaas film: Paniek in het Pietendorp",
-      "type": "Film",
-      "location": "De Nieuwe Kolk Assen",
-      "locationLink": "",
-      "website": "https://denieuwekolk.nl/bios/agenda/de-club-van-sinterklaas-film-paniek-in-het-pietendorp",
-      "source": "denieuwekolk.nl",
-      "discoverySource": "Website",
-      "description": "De Club van Sinterklaas film: Paniek in het Pietendorp zondag 25 oktober De Club van Sinterklaas film: Paniek in het Pietendorp bios 12:55 Bestel Meer info",
-      "cost": "",
-      "image": "https://media.denieuwekolk.nl/bd67c10e-0724-dd3d-d31a-8fa28c2ab543/de-club-van-sinterklaas-film-paniek-in-het-pietendorp-ps-1-jpg-sd-high?crop=2000%2C3000%2C50%2C0&scale=2880&optimizer=image"
-    },
-    {
-      "date": "2026-10-25",
-      "time": "13:10",
-      "title": "De Grote Sinterklaasfilm en de Vliegende Pieten",
-      "type": "Familie",
-      "location": "De Nieuwe Kolk Assen",
-      "locationLink": "",
-      "website": "https://denieuwekolk.nl/bios/agenda/de-grote-sinterklaasfilm-en-de-vliegende-pieten",
-      "source": "denieuwekolk.nl",
-      "discoverySource": "Website",
-      "description": "De Grote Sinterklaasfilm en de Vliegende Pieten zondag 25 oktober De Grote Sinterklaasfilm en de Vliegende Pieten familiefilm bios 13:10 Bestel Meer info",
-      "cost": "",
-      "image": "https://media.denieuwekolk.nl/62a94b14-f0be-2a34-6f03-290741de6fd9/de-grote-sinterklaasfilm-en-de-vliegende-pieten-ps-1-jpg-sd-high?crop=2560%2C3840%2C64%2C0&scale=2880&optimizer=image"
-    },
     {
       "date": "2026-10-25",
       "time": "15:30",
@@ -50,34 +23,6 @@
       "description": "HalloWiebe: Overdrive zondag 25 oktober HalloWiebe: Overdrive familiefilm komedie bios 15:30 Bestel Meer info",
       "cost": "",
       "image": "https://media.denieuwekolk.nl/651b9bc6-44c8-a073-f21d-00fae15cff00/hallowiebe-overdrive-ps-1-jpg-sd-high?crop=2560%2C3840%2C16%2C0&scale=2880&optimizer=image"
-    },
-    {
-      "date": "2026-10-25",
-      "time": "12:45",
-      "title": "Het Vergeten Eiland",
-      "type": "Familie",
-      "location": "De Nieuwe Kolk Assen",
-      "locationLink": "",
-      "website": "https://denieuwekolk.nl/bios/agenda/het-vergeten-eiland",
-      "source": "denieuwekolk.nl",
-      "discoverySource": "Website",
-      "description": "Het Vergeten Eiland zondag 25 oktober Het Vergeten Eiland animatie komedie avontuur familiefilm bios 12:45 NL 15:30 NL Bestel Meer info",
-      "cost": "",
-      "image": "https://media.denieuwekolk.nl/a70229b1-aa02-f210-7ce1-70533896ff0d/het-vergeten-eiland?crop=2560%2C3840%2C64%2C0&scale=2880&optimizer=image"
-    },
-    {
-      "date": "2026-10-25",
-      "time": "13:00",
-      "title": "Minions & Monsters",
-      "type": "Familie",
-      "location": "De Nieuwe Kolk Assen",
-      "locationLink": "",
-      "website": "https://denieuwekolk.nl/bios/agenda/minions-monsters-nl",
-      "source": "denieuwekolk.nl",
-      "discoverySource": "Website",
-      "description": "Minions & Monsters NL Minions & Monsters NL",
-      "cost": "",
-      "image": "https://media.denieuwekolk.nl/019ecf65-de71-762c-bfa4-13a2c9f1b875/minions-monsters-1sheet-uncomfortablejames-nl-datum?crop=2560%2C3840%2C64%2C0&scale=2880&optimizer=image"
     },
     {
       "date": "2026-10-25",
@@ -120,20 +65,6 @@
       "description": "Wen Er Maar Aan zondag 25 oktober Wen Er Maar Aan komedie bios 15:25 19:00 Bestel Meer info",
       "cost": "",
       "image": "https://media.denieuwekolk.nl/cfc2527d-4295-fdbb-ed30-7614abfd17ab/wen-er-maar-aan-ps-1-jpg-sd-high?crop=2000%2C3000%2C50%2C0&scale=2880&optimizer=image"
-    },
-    {
-      "date": "2026-10-25",
-      "time": "15:20",
-      "title": "Wildwood",
-      "type": "Activiteit",
-      "location": "De Nieuwe Kolk Assen",
-      "locationLink": "",
-      "website": "https://denieuwekolk.nl/bios/agenda/wildwood",
-      "source": "denieuwekolk.nl",
-      "discoverySource": "Website",
-      "description": "Wildwood zondag 25 oktober Wildwood animatie avontuur fantasie bios 15:20 OV Bestel Meer info",
-      "cost": "",
-      "image": "https://media.denieuwekolk.nl/529791cb-d991-d612-263b-636b2f0bd656/wildwood-ps-1-jpg-sd-high?crop=2560%2C3840%2C64%2C0&scale=2880&optimizer=image"
     },
     {
       "date": "2026-10-27",
@@ -179,6 +110,20 @@
     },
     {
       "date": "2026-10-28",
+      "time": "14:00",
+      "title": "Kom langs",
+      "type": "Activiteit",
+      "location": "De Nieuwe Kolk Assen",
+      "locationLink": "",
+      "website": "https://denieuwekolk.nl/bieb/agenda/adviesplein",
+      "source": "denieuwekolk.nl",
+      "discoverySource": "Website",
+      "description": "Meer informatie staat op denieuwekolk.nl.",
+      "cost": "",
+      "image": ""
+    },
+    {
+      "date": "2026-10-28",
       "time": "15:00",
       "title": "Masker maken",
       "type": "Workshop",
@@ -204,6 +149,20 @@
       "description": "Oefentafel Basisvaardigheden woensdag 28 oktober Meer info Oefentafel Basisvaardigheden 14:00 Meer info",
       "cost": "",
       "image": "https://media.denieuwekolk.nl/019fa7b8-180a-7491-a9a4-d18a9af79b2c/stock-oefentafel?crop=1706%2C2559%2C1823%2C0&scale=2559&optimizer=image"
+    },
+    {
+      "date": "2026-10-28",
+      "time": "14:00",
+      "title": "Ontmoetingsplein",
+      "type": "Activiteit",
+      "location": "De Nieuwe Kolk Assen",
+      "locationLink": "",
+      "website": "https://denieuwekolk.nl/bieb/agenda/adviesplein",
+      "source": "denieuwekolk.nl",
+      "discoverySource": "Website",
+      "description": "Meer informatie staat op denieuwekolk.nl.",
+      "cost": "",
+      "image": ""
     },
     {
       "date": "2026-10-29",
@@ -304,46 +263,32 @@
       "image": "https://media.denieuwekolk.nl/019e3a95-95ca-7209-bfca-64d938f1ab9f/didz-1760x960?crop=1397%2C2095%2C1221%2C0&scale=2095&optimizer=image"
     },
     {
-      "date": "2026-11-25",
+      "date": "2026-11-04",
       "time": "14:00",
-      "title": "Adviesplein",
-      "type": "Spreekuur",
+      "title": "Ontmoetingsplein",
+      "type": "Activiteit",
       "location": "De Nieuwe Kolk Assen",
       "locationLink": "",
       "website": "https://denieuwekolk.nl/bieb/agenda/adviesplein",
       "source": "denieuwekolk.nl",
       "discoverySource": "Website",
-      "description": "Adviesplein woensdag 4 t/m woensdag 25 november Meer info Adviesplein Gratis spreekuren spreekuur 14:00 Meer info",
-      "cost": "Gratis",
-      "image": "https://media.denieuwekolk.nl/019b2b7f-587f-7995-b37c-718d7a6b8c75/dnk-adviesplein-3-12-2025-2?crop=1706%2C2559%2C1123%2C1&scale=2559&optimizer=image"
+      "description": "Meer informatie staat op denieuwekolk.nl.",
+      "cost": "",
+      "image": ""
     },
     {
-      "date": "2026-11-25",
+      "date": "2026-11-11",
       "time": "14:00",
-      "title": "Oefentafel Basisvaardigheden",
+      "title": "Ontmoetingsplein",
       "type": "Activiteit",
       "location": "De Nieuwe Kolk Assen",
       "locationLink": "",
-      "website": "https://denieuwekolk.nl/bieb/agenda/oefentafel-basisvaardigheden",
+      "website": "https://denieuwekolk.nl/bieb/agenda/adviesplein",
       "source": "denieuwekolk.nl",
       "discoverySource": "Website",
-      "description": "Oefentafel Basisvaardigheden woensdag 4 t/m woensdag 25 november Meer info Oefentafel Basisvaardigheden 14:00 Meer info",
+      "description": "Meer informatie staat op denieuwekolk.nl.",
       "cost": "",
-      "image": "https://media.denieuwekolk.nl/019fa7b8-180a-7491-a9a4-d18a9af79b2c/stock-oefentafel?crop=1706%2C2559%2C1823%2C0&scale=2559&optimizer=image"
-    },
-    {
-      "date": "2026-11-30",
-      "time": "",
-      "title": "Foto-expositie Verhalen van Verborgen Kracht",
-      "type": "Expositie",
-      "location": "De Nieuwe Kolk Assen",
-      "locationLink": "",
-      "website": "https://denieuwekolk.nl/bieb/agenda/fotoexpositie-verhalen-van-verborgen-kracht-10050486",
-      "source": "denieuwekolk.nl",
-      "discoverySource": "Website",
-      "description": "Foto-expositie Verhalen van Verborgen Kracht maandag 2 t/m maandag 30 november Meer info Foto-expositie Verhalen van Verborgen Kracht Tara van Meeteren Meer info",
-      "cost": "",
-      "image": "https://media.denieuwekolk.nl/01a15ea4-eb5e-77e5-936a-2ed887933bd2/portret-angelina-crop-cinematic?crop=591%2C886%2C860%2C0&scale=886&optimizer=image"
+      "image": ""
     }
   ],
   "siteResults": [
@@ -352,6 +297,13 @@
       "count": 0,
       "newCount": 0,
       "durationSeconds": 7.94,
+      "timedOut": false
+    },
+    {
+      "site": "https://denieuwekolk.nl/agenda",
+      "count": 20,
+      "newCount": 0,
+      "durationSeconds": 9.26,
       "timedOut": false
     }
   ],
@@ -1678,15 +1630,915 @@
       "url": "https://denieuwekolk.nl/bieb/agenda",
       "status": "ok",
       "rawText": "15 events/aanbiedingen op deze pagina"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Adviesplein",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda/adviesplein",
+      "status": "detail-link gevonden",
+      "rawText": "Adviesplein"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Alzheimercafé",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda/alzheimercafe-10044312",
+      "status": "detail-link gevonden",
+      "rawText": "Alzheimercafé"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Alzheimercafé",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda/alzheimercafe-10044313",
+      "status": "detail-link gevonden",
+      "rawText": "Alzheimercafé"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Boekstartuurtje",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda/boekstartuurtje-10047350",
+      "status": "detail-link gevonden",
+      "rawText": "Boekstartuurtje"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Bestel",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda/boekstartuurtje-10047350/bestel/0437ca77-8bca-0f89-47cc-397884d18ff6",
+      "status": "detail-link gevonden",
+      "rawText": "Bestel"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Bouw een Hebocon battle-bot",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda/bouw-een-hebocon-battle-bot",
+      "status": "detail-link gevonden",
+      "rawText": "Bouw een Hebocon battle-bot"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Bestel",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda/bouw-een-hebocon-battle-bot/bestel/c9779f82-cd9d-3e4a-125b-58b9bf9bd133",
+      "status": "detail-link gevonden",
+      "rawText": "Bestel"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Carmilla",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda/carmilla",
+      "status": "detail-link gevonden",
+      "rawText": "Carmilla"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Cursus Sterrenkunde",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda/cursus-sterrenkunde",
+      "status": "detail-link gevonden",
+      "rawText": "Cursus Sterrenkunde"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Bestel",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda/cursus-sterrenkunde/bestel/d5f84c53-48e8-a65d-c50a-34bb44c49b84",
+      "status": "detail-link gevonden",
+      "rawText": "Bestel"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Derde Dinsdag",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda/derde-dinsdag-ramsey-nasr",
+      "status": "detail-link gevonden",
+      "rawText": "Derde Dinsdag"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Wachtlijst",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda/derde-dinsdag-ramsey-nasr/bestel/c13c8fb0-f0ee-2147-651e-e58bb3b52d7d",
+      "status": "detail-link gevonden",
+      "rawText": "Wachtlijst"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "DigiHandig",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda/digihandig-10048206",
+      "status": "detail-link gevonden",
+      "rawText": "DigiHandig"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Wachtlijst",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda/digihandig-10048206/bestel/702b4e5e-6a91-e71f-8183-0b8e9716a8ac",
+      "status": "detail-link gevonden",
+      "rawText": "Wachtlijst"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "DigiVitaler",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda/digivitaler",
+      "status": "detail-link gevonden",
+      "rawText": "DigiVitaler"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Dokter in de Zaal",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda/dokter-in-de-zaal",
+      "status": "detail-link gevonden",
+      "rawText": "Dokter in de Zaal"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Bestel",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda/dokter-in-de-zaal/bestel/de572d3c-96ec-e14e-dc4a-fd3a52b5d9ef",
+      "status": "detail-link gevonden",
+      "rawText": "Bestel"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Foto-expositie Verhalen van Verborgen Kracht",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda/fotoexpositie-verhalen-van-verborgen-kracht-10050486",
+      "status": "detail-link gevonden",
+      "rawText": "Foto-expositie Verhalen van Verborgen Kracht"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Groot Dictee der Nederlandse Taal",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda/groot-dictee-der-nederlandse-taal",
+      "status": "detail-link gevonden",
+      "rawText": "Groot Dictee der Nederlandse Taal"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Bestel",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda/groot-dictee-der-nederlandse-taal/bestel/9b1ccb07-ab58-a214-3749-f5136f934c7d",
+      "status": "detail-link gevonden",
+      "rawText": "Bestel"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Het Vlucht Voorwaarts Praathuis",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda/het-vlucht-voorwaarts-praathuis",
+      "status": "detail-link gevonden",
+      "rawText": "Het Vlucht Voorwaarts Praathuis"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "INKT",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda/inkt-10046644",
+      "status": "detail-link gevonden",
+      "rawText": "INKT"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Bestel",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda/inkt-10046644/bestel/13354397-819e-a67e-b44e-22c4e853c6fe",
+      "status": "detail-link gevonden",
+      "rawText": "Bestel"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Klik & Tik",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda/klik-tik",
+      "status": "detail-link gevonden",
+      "rawText": "Klik & Tik"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Wachtlijst",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda/klik-tik/bestel/47b282c2-9624-0762-56c5-5a8dea887348",
+      "status": "detail-link gevonden",
+      "rawText": "Wachtlijst"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Masker maken",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda/masker-maken",
+      "status": "detail-link gevonden",
+      "rawText": "Masker maken"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Bestel",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda/masker-maken/bestel/554224cf-3cd2-ded3-67d7-a58f06e0f3c0",
+      "status": "detail-link gevonden",
+      "rawText": "Bestel"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Oefentafel Basisvaardigheden",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda/oefentafel-basisvaardigheden",
+      "status": "detail-link gevonden",
+      "rawText": "Oefentafel Basisvaardigheden"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Omgaan met stress en grenzen",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda/omgaan-met-stress-en-grenzen",
+      "status": "detail-link gevonden",
+      "rawText": "Omgaan met stress en grenzen"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Bestel",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda/omgaan-met-stress-en-grenzen/bestel/28a01ade-b689-ebac-78c4-09c9a0f67041",
+      "status": "detail-link gevonden",
+      "rawText": "Bestel"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Ontdek NXT Lab",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda/ontdek-nxt-lab-10048687",
+      "status": "detail-link gevonden",
+      "rawText": "Ontdek NXT Lab"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Prinsessenrok of prinsencape maken",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda/prinsessenrok-of-prinsencape-maken",
+      "status": "detail-link gevonden",
+      "rawText": "Prinsessenrok of prinsencape maken"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Bestel",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda/prinsessenrok-of-prinsencape-maken/bestel/48201472-2a3f-75f3-0c49-544f3a047a3d",
+      "status": "detail-link gevonden",
+      "rawText": "Bestel"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Programmeren met de Micro:bit",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda/programmeren-met-de-micro-bit",
+      "status": "detail-link gevonden",
+      "rawText": "Programmeren met de Micro:bit"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Bestel",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda/programmeren-met-de-micro-bit/bestel/21962e50-2338-479c-f546-143200a7b60e",
+      "status": "detail-link gevonden",
+      "rawText": "Bestel"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Programmeren met Lego Spike",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda/programmeren-met-lego-spike",
+      "status": "detail-link gevonden",
+      "rawText": "Programmeren met Lego Spike"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Wachtlijst",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda/programmeren-met-lego-spike/bestel/ce564eeb-9a34-f054-5336-12388aa53ba2",
+      "status": "detail-link gevonden",
+      "rawText": "Wachtlijst"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Schrijfcafé",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda/schrijfcafe",
+      "status": "detail-link gevonden",
+      "rawText": "Schrijfcafé"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Steeds Lichter",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda/steeds-lichter",
+      "status": "detail-link gevonden",
+      "rawText": "Steeds Lichter"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Bestel",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda/steeds-lichter/bestel/310d2a53-d986-73ab-6ad7-0ef3980c9c8c",
+      "status": "detail-link gevonden",
+      "rawText": "Bestel"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Taalcafé",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda/taalcafe",
+      "status": "detail-link gevonden",
+      "rawText": "Taalcafé"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Thuis – Ahmed Aboutaleb",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda/thuis-ahmed-aboutaleb",
+      "status": "detail-link gevonden",
+      "rawText": "Thuis – Ahmed Aboutaleb"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Bestel",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda/thuis-ahmed-aboutaleb/bestel/0ad181da-599a-57f9-94d6-00196fea8ca4",
+      "status": "detail-link gevonden",
+      "rawText": "Bestel"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Versier jouw bord of beker",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda/versier-jouw-bord-of-beker",
+      "status": "detail-link gevonden",
+      "rawText": "Versier jouw bord of beker"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Bestel",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda/versier-jouw-bord-of-beker/bestel/c67cec88-6502-f90a-db63-5a1376f840c8",
+      "status": "detail-link gevonden",
+      "rawText": "Bestel"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "VR & Gamen",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda/vr-gamen",
+      "status": "detail-link gevonden",
+      "rawText": "VR & Gamen"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Bestel",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda/vr-gamen/bestel/3c369168-9fce-ce2d-9494-06a5c56d8888",
+      "status": "detail-link gevonden",
+      "rawText": "Bestel"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Wat Als?! Online veiligheid",
+      "date": "",
+      "url": "https://denieuwekolk.nl/theater/agenda/wat-als-online-veiligheid",
+      "status": "detail-link gevonden",
+      "rawText": "Wat Als?! Online veiligheid"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Bestel",
+      "date": "",
+      "url": "https://denieuwekolk.nl/theater/agenda/wat-als-online-veiligheid/bestel/e64c75b3-e8c3-fc09-d15e-a51e6384fd93",
+      "status": "detail-link gevonden",
+      "rawText": "Bestel"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "10:00",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda/digivitaler/bestel/2d51f0c6-1f14-061d-f3a5-f7a2f9d97c8c",
+      "status": "detail-link gevonden",
+      "rawText": "10:00"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Activiteiten & events",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda",
+      "status": "detail-link gevonden",
+      "rawText": "Activiteiten & events"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "films",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bios/agenda",
+      "status": "detail-link gevonden",
+      "rawText": "films"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "voorstellingen",
+      "date": "",
+      "url": "https://denieuwekolk.nl/theater/agenda",
+      "status": "detail-link gevonden",
+      "rawText": "voorstellingen"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Agenda",
+      "date": "",
+      "url": "https://denieuwekolk.nl/agenda",
+      "status": "detail-link gevonden",
+      "rawText": "Agenda"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Theater",
+      "date": "",
+      "url": "https://denieuwekolk.nl/theater",
+      "status": "detail-link gevonden",
+      "rawText": "Theater"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "De Nieuwe Kolk",
+      "date": "",
+      "url": "https://denieuwekolk.nl/",
+      "status": "detail-link gevonden",
+      "rawText": "De Nieuwe Kolk"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Bezoek",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bezoek",
+      "status": "detail-link gevonden",
+      "rawText": "Bezoek"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Huisregels",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bezoek/huisregels",
+      "status": "detail-link gevonden",
+      "rawText": "Huisregels"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Veelgestelde vragen",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bezoek/veelgestelde-vragen",
+      "status": "detail-link gevonden",
+      "rawText": "Veelgestelde vragen"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Locaties",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bezoek/zalen-en-ruimtes",
+      "status": "detail-link gevonden",
+      "rawText": "Locaties"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Bieb",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb",
+      "status": "detail-link gevonden",
+      "rawText": "Bieb"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Bios",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bios",
+      "status": "detail-link gevonden",
+      "rawText": "Bios"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "[email protected]",
+      "date": "",
+      "url": "https://denieuwekolk.nl/cdn-cgi/l/email-protection",
+      "status": "detail-link gevonden",
+      "rawText": "[email protected]"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Favorieten",
+      "date": "",
+      "url": "https://denieuwekolk.nl/favorieten",
+      "status": "detail-link gevonden",
+      "rawText": "Favorieten"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "inloggen",
+      "date": "",
+      "url": "https://denieuwekolk.nl/mijn-dnk",
+      "status": "detail-link gevonden",
+      "rawText": "inloggen"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Onderwijs",
+      "date": "",
+      "url": "https://denieuwekolk.nl/onderwijs",
+      "status": "detail-link gevonden",
+      "rawText": "Onderwijs"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Verhuur",
+      "date": "",
+      "url": "https://denieuwekolk.nl/verhuur",
+      "status": "detail-link gevonden",
+      "rawText": "Verhuur"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Zakelijk",
+      "date": "",
+      "url": "https://denieuwekolk.nl/zakelijk",
+      "status": "detail-link gevonden",
+      "rawText": "Zakelijk"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://denieuwekolk.nl/feed",
+      "status": "fout",
+      "rawText": "HTTP 404"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://denieuwekolk.nl/rss",
+      "status": "fout",
+      "rawText": "HTTP 404"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://denieuwekolk.nl/rss.xml",
+      "status": "fout",
+      "rawText": "HTTP 404"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://denieuwekolk.nl/feed.xml",
+      "status": "fout",
+      "rawText": "HTTP 404"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://denieuwekolk.nl/events/feed/",
+      "status": "fout",
+      "rawText": "HTTP 404"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Adviesplein",
+      "date": "2026-10-28",
+      "url": "https://denieuwekolk.nl/bieb/agenda/adviesplein",
+      "status": "event uit detailpagina",
+      "rawText": "Adviesplein · De Nieuwe Kolk Zoeken Over ons Onderwijs Verhuur Zakelijk De Nieuwe Kolk menu sluiten Agenda films voorstellingen Activiteiten & events Bieb Theater Bios Bezoek inloggen zoeken Zoeken op de site Deel WhatsApp Facebook X E-mail Kopieer link spreekuur Adviesplein Gratis spreekuren Adviesplein Datum Iedere woensdagmiddag Tijd 14:00 Bekijk data Heb je een vraag of kun je wel wat ondersteuning gebruiken? Op"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Kom langs",
+      "date": "2026-10-28",
+      "url": "https://denieuwekolk.nl/bieb/agenda/adviesplein",
+      "status": "event uit tekstregel",
+      "rawText": "Kom langs | woensdag 28 oktober | 14:00 | Ontmoetingsplein | woensdag 4 november | 14:00"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Ontmoetingsplein",
+      "date": "2026-10-28",
+      "url": "https://denieuwekolk.nl/bieb/agenda/adviesplein",
+      "status": "event uit dagblok",
+      "rawText": "Ontmoetingsplein | woensdag 4 november | 14:00 | Ontmoetingsplein | woensdag 11 november"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Ontmoetingsplein",
+      "date": "2026-11-04",
+      "url": "https://denieuwekolk.nl/bieb/agenda/adviesplein",
+      "status": "event uit tekstregel",
+      "rawText": "Ontmoetingsplein | woensdag 4 november | 14:00 | Ontmoetingsplein | woensdag 11 november | 14:00"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Ontmoetingsplein",
+      "date": "2026-11-04",
+      "url": "https://denieuwekolk.nl/bieb/agenda/adviesplein",
+      "status": "event uit dagblok",
+      "rawText": "Ontmoetingsplein | woensdag 11 november | 14:00 | Ontmoetingsplein | woensdag 18 november"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Ontmoetingsplein",
+      "date": "2026-11-11",
+      "url": "https://denieuwekolk.nl/bieb/agenda/adviesplein",
+      "status": "event uit tekstregel",
+      "rawText": "Ontmoetingsplein | woensdag 11 november | 14:00 | Ontmoetingsplein | woensdag 18 november | 14:00"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Ontmoetingsplein",
+      "date": "2026-11-11",
+      "url": "https://denieuwekolk.nl/bieb/agenda/adviesplein",
+      "status": "event uit dagblok",
+      "rawText": "Ontmoetingsplein | woensdag 18 november | 14:00 | Ontmoetingsplein | woensdag 25 november"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Ontmoetingsplein",
+      "date": "2026-11-18",
+      "url": "https://denieuwekolk.nl/bieb/agenda/adviesplein",
+      "status": "event uit tekstregel",
+      "rawText": "Ontmoetingsplein | woensdag 18 november | 14:00 | Ontmoetingsplein | woensdag 25 november | 14:00"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Ontmoetingsplein",
+      "date": "2026-11-18",
+      "url": "https://denieuwekolk.nl/bieb/agenda/adviesplein",
+      "status": "event uit dagblok",
+      "rawText": "Ontmoetingsplein | woensdag 25 november | 14:00 | Ontmoetingsplein | woensdag 2 december"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Ontmoetingsplein",
+      "date": "2026-11-25",
+      "url": "https://denieuwekolk.nl/bieb/agenda/adviesplein",
+      "status": "event uit tekstregel",
+      "rawText": "Ontmoetingsplein | woensdag 25 november | 14:00 | Ontmoetingsplein | woensdag 2 december | 14:00"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Ontmoetingsplein",
+      "date": "2026-11-25",
+      "url": "https://denieuwekolk.nl/bieb/agenda/adviesplein",
+      "status": "event uit dagblok",
+      "rawText": "Ontmoetingsplein | woensdag 2 december | 14:00 | Ontmoetingsplein | woensdag 9 december"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Ontmoetingsplein",
+      "date": "2026-12-02",
+      "url": "https://denieuwekolk.nl/bieb/agenda/adviesplein",
+      "status": "event uit tekstregel",
+      "rawText": "Ontmoetingsplein | woensdag 2 december | 14:00 | Ontmoetingsplein | woensdag 9 december | 14:00"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Ontmoetingsplein",
+      "date": "2026-12-02",
+      "url": "https://denieuwekolk.nl/bieb/agenda/adviesplein",
+      "status": "event uit dagblok",
+      "rawText": "Ontmoetingsplein | woensdag 9 december | 14:00 | Ontmoetingsplein | woensdag 16 december"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Ontmoetingsplein",
+      "date": "2026-12-09",
+      "url": "https://denieuwekolk.nl/bieb/agenda/adviesplein",
+      "status": "event uit tekstregel",
+      "rawText": "Ontmoetingsplein | woensdag 9 december | 14:00 | Ontmoetingsplein | woensdag 16 december | 14:00"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Ontmoetingsplein",
+      "date": "2026-12-09",
+      "url": "https://denieuwekolk.nl/bieb/agenda/adviesplein",
+      "status": "event uit dagblok",
+      "rawText": "Ontmoetingsplein | woensdag 16 december | 14:00 | Ontmoetingsplein | woensdag 23 december"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Ontmoetingsplein",
+      "date": "2026-12-16",
+      "url": "https://denieuwekolk.nl/bieb/agenda/adviesplein",
+      "status": "event uit tekstregel",
+      "rawText": "Ontmoetingsplein | woensdag 16 december | 14:00 | Ontmoetingsplein | woensdag 23 december | 14:00"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Ontmoetingsplein",
+      "date": "2026-12-16",
+      "url": "https://denieuwekolk.nl/bieb/agenda/adviesplein",
+      "status": "event uit dagblok",
+      "rawText": "Ontmoetingsplein | woensdag 23 december | 14:00 | Ontmoetingsplein | woensdag 30 december"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Ontmoetingsplein",
+      "date": "2026-12-23",
+      "url": "https://denieuwekolk.nl/bieb/agenda/adviesplein",
+      "status": "event uit tekstregel",
+      "rawText": "Ontmoetingsplein | woensdag 23 december | 14:00 | Ontmoetingsplein | woensdag 30 december | 14:00"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Ontmoetingsplein",
+      "date": "2026-12-23",
+      "url": "https://denieuwekolk.nl/bieb/agenda/adviesplein",
+      "status": "event uit dagblok",
+      "rawText": "Ontmoetingsplein | woensdag 30 december | 14:00 | Ontmoetingsplein | Ben je er als eerste bij?"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Ontmoetingsplein",
+      "date": "2026-12-30",
+      "url": "https://denieuwekolk.nl/bieb/agenda/adviesplein",
+      "status": "event uit tekstregel",
+      "rawText": "Ontmoetingsplein | woensdag 30 december | 14:00 | Ontmoetingsplein | Ben je er als eerste bij? | Meld je aan voor onze nieuwsbrief! Zo ben jij als eerste op de hoogte van nieuwe voorstellingen, films en events."
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "lees",
+      "date": "2026-12-30",
+      "url": "https://denieuwekolk.nl/bieb/agenda/adviesplein",
+      "status": "event uit dagblok",
+      "rawText": "lees | minder | Aanmelden | Bekijk data | Wij zijn dé plek in Drenthe voor theater, films, boeken en ontmoetingen. Waar iedereen altijd iets interessants kan vinden en er 365 dagen zijn om naar uit te kijken."
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "minder",
+      "date": "2026-12-30",
+      "url": "https://denieuwekolk.nl/bieb/agenda/adviesplein",
+      "status": "event uit dagblok",
+      "rawText": "minder | Aanmelden | Bekijk data | Wij zijn dé plek in Drenthe voor theater, films, boeken en ontmoetingen. Waar iedereen altijd iets interessants kan vinden en er 365 dagen zijn om naar uit te kijken. | lees"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Aanmelden",
+      "date": "2026-12-30",
+      "url": "https://denieuwekolk.nl/bieb/agenda/adviesplein",
+      "status": "event uit dagblok",
+      "rawText": "Aanmelden | Bekijk data | Wij zijn dé plek in Drenthe voor theater, films, boeken en ontmoetingen. Waar iedereen altijd iets interessants kan vinden en er 365 dagen zijn om naar uit te kijken. | lees | meer"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Bekijk data",
+      "date": "2026-12-30",
+      "url": "https://denieuwekolk.nl/bieb/agenda/adviesplein",
+      "status": "event uit dagblok",
+      "rawText": "Bekijk data | Wij zijn dé plek in Drenthe voor theater, films, boeken en ontmoetingen. Waar iedereen altijd iets interessants kan vinden en er 365 dagen zijn om naar uit te kijken. | lees | meer | lees"
+    },
+    {
+      "source": "Parser",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Pagina geteld",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda/adviesplein",
+      "status": "analyse",
+      "rawText": "jsonld:0, links:0, datumblokken:0, kaarten:0, regels:23, detail:1"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda/adviesplein",
+      "status": "ok",
+      "rawText": "15 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://denieuwekolk.nl/agenda",
+      "status": "klaar",
+      "rawText": "site 2/3: 20 unieke events in 9.26 sec"
     }
   ],
   "status": "running",
   "siteStartedAt": "2026-10-25T10:51:38+00:00",
-  "siteElapsedSeconds": 7,
+  "siteElapsedSeconds": 10,
   "sitePageCount": 2,
-  "lastSiteEventCount": 24,
-  "stage": "Pagina gelezen; evenementen verwerken",
+  "lastSiteEventCount": 20,
+  "stage": "Website klaar; volgende website voorbereiden",
   "lastUpdatedAt": "2026-10-25T10:51:45+00:00",
-  "lastCompletedSite": "https://www.zwolsetheaters.nl/programma",
-  "lastCompletedAt": "2026-10-25T10:51:36+00:00"
+  "lastCompletedSite": "https://denieuwekolk.nl/agenda",
+  "lastCompletedAt": "2026-10-25T10:51:48+00:00"
 }
