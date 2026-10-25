@@ -303,3 +303,7 @@ Parser	https://denieuwekolk.nl/agenda	strategie	Scrapertype vastgesteld		https:/
 Website	https://denieuwekolk.nl/agenda	ok	Pagina gelezen		https://denieuwekolk.nl/agenda	766343 tekens HTML
 Parser	https://denieuwekolk.nl/agenda	strategie	De Nieuwe Kolk detailstrategie		https://denieuwekolk.nl/agenda	Agenda gebruiken om detail-URL's te vinden; alleen de echte detailpagina als evenement verwerken
 Website	https://denieuwekolk.nl/agenda	timeout	Site-time-out		https://denieuwekolk.nl/agenda	site overschreed de harde tijdslimiet van 2 seconden
+Website	https://www.filmvandaag.nl/bioscoop	start	Start		https://www.filmvandaag.nl/bioscoop	site 18/19: max 5 events, max 2 seconden
+Parser	https://www.filmvandaag.nl/bioscoop	strategie	Scrapertype vastgesteld		https://www.filmvandaag.nl/bioscoop	bioscoopagenda Groningen (FilmVandaag)
+Website	https://www.filmvandaag.nl/bioscoop	fout	Pagina mislukt		https://www.filmvandaag.nl/filmladder/stad/80-groningen	HTTP 403
+Website	https://www.filmvandaag.nl/bioscoop	klaar	Klaar		https://www.filmvandaag.nl/bioscoop	site 18/19: 0 unieke events in 2.0 sec

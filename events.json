@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-25T15:17:08+00:00",
+  "updatedAt": "2026-10-25T15:17:12+00:00",
   "events": [
     {
       "date": "2026-10-25",
@@ -11833,6 +11833,13 @@
       "newCount": 0,
       "durationSeconds": 2,
       "timedOut": true
+    },
+    {
+      "site": "https://www.filmvandaag.nl/bioscoop",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 2.0,
+      "timedOut": true
     }
   ],
   "rawLog": [
@@ -14580,6 +14587,42 @@
       "url": "https://denieuwekolk.nl/agenda",
       "status": "timeout",
       "rawText": "site overschreed de harde tijdslimiet van 2 seconden"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.filmvandaag.nl/bioscoop",
+      "title": "Start",
+      "date": "",
+      "url": "https://www.filmvandaag.nl/bioscoop",
+      "status": "start",
+      "rawText": "site 18/19: max 5 events, max 2 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.filmvandaag.nl/bioscoop",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://www.filmvandaag.nl/bioscoop",
+      "status": "strategie",
+      "rawText": "bioscoopagenda Groningen (FilmVandaag)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.filmvandaag.nl/bioscoop",
+      "title": "Pagina mislukt",
+      "date": "",
+      "url": "https://www.filmvandaag.nl/filmladder/stad/80-groningen",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.filmvandaag.nl/bioscoop",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://www.filmvandaag.nl/bioscoop",
+      "status": "klaar",
+      "rawText": "site 18/19: 0 unieke events in 2.0 sec"
     }
   ]
 }
