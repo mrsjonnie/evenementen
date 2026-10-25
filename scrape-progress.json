@@ -1,7 +1,7 @@
 {
   "runId": "2026-10-25T18:03:32.693130+00:00-9ae2f9f8",
   "startedAt": "2026-10-25T18:03:32+00:00",
-  "completedCount": 17,
+  "completedCount": 18,
   "totalSites": 19,
   "currentSite": "https://www.filmvandaag.nl/bioscoop",
   "currentSiteIndex": 18,
@@ -22,7 +22,8 @@
     "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
     "https://www.vvvameland.nl/activiteiten-en-evenementen",
     "https://www.socialdeal.nl/",
-    "https://denieuwekolk.nl/agenda"
+    "https://denieuwekolk.nl/agenda",
+    "https://www.filmvandaag.nl/bioscoop"
   ],
   "events": [
     {
@@ -1480,54 +1481,16 @@
       "newCount": 0,
       "durationSeconds": 4.06,
       "timedOut": true
+    },
+    {
+      "site": "https://www.filmvandaag.nl/bioscoop",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 0.35,
+      "timedOut": false
     }
   ],
   "rawLog": [
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Bach Collegium Japan Händels Messiah",
-      "date": "2026-12-03",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "3 dec Bach Collegium Japan Händels Messiah Wereldberoemd barokorkest brengt geliefd koorwerk uit de muziekgeschiedenis Wereldklasse"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Bureau Vergezicht & Romana Vrede Een groter",
-      "date": "2026-12-04",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "4 dec Bureau Vergezicht & Romana Vrede Een groter verhaal Een indringende en poëtische solo over hoe we naar de wereld kijken"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Dunja Jocic & Spellbound Contemporary Ballet Folk",
-      "date": "2026-12-04",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "4 dec Dunja Jocic & Spellbound Contemporary Ballet Folk Hypnotiserende dansvoorstelling over de verleiding van collectieve krachten"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Kamagurka Op zekere dag Absurde humor en onnavolgbare verbeeldingskracht",
-      "date": "2026-12-05",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "5 dec Kamagurka Op zekere dag Absurde humor en onnavolgbare verbeeldingskracht"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "De Belangelozen Via Rudolphi Producties",
-      "date": "2026-12-05",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "5 dec De Belangelozen Via Rudolphi Producties | Collectief T&T Armoede en vrijwilligerswerk, met scherpe humor en in herkenbare scènes belicht"
-    },
     {
       "source": "Website",
       "site": "https://www.spotgroningen.nl/programma/",
@@ -12282,16 +12245,61 @@
       "url": "https://denieuwekolk.nl/agenda",
       "status": "klaar",
       "rawText": "site 17/19: 0 unieke events in 4.06 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.filmvandaag.nl/bioscoop",
+      "title": "Start",
+      "date": "",
+      "url": "https://www.filmvandaag.nl/bioscoop",
+      "status": "start",
+      "rawText": "site 18/19: max 12 events, max 4 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.filmvandaag.nl/bioscoop",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://www.filmvandaag.nl/bioscoop",
+      "status": "strategie",
+      "rawText": "bioscoopagenda Groningen (FilmVandaag)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.filmvandaag.nl/bioscoop",
+      "title": "Pagina mislukt",
+      "date": "",
+      "url": "https://www.filmvandaag.nl/filmladder/stad/80-groningen",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.filmvandaag.nl/bioscoop",
+      "title": "Pagina mislukt",
+      "date": "",
+      "url": "https://filmvandaag.nl/filmladder/stad/80-groningen",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.filmvandaag.nl/bioscoop",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://www.filmvandaag.nl/bioscoop",
+      "status": "klaar",
+      "rawText": "site 18/19: 0 unieke events in 0.35 sec"
     }
   ],
   "status": "running",
   "siteStartedAt": "2026-10-25T18:05:20+00:00",
-  "siteElapsedSeconds": 0,
+  "siteElapsedSeconds": 2,
   "sitePageCount": 0,
   "lastSiteEventCount": 0,
-  "stage": "Websitepagina ophalen",
-  "lastUpdatedAt": "2026-10-25T18:05:20+00:00",
+  "stage": "Website klaar; volgende website voorbereiden",
+  "lastUpdatedAt": "2026-10-25T18:05:22+00:00",
   "lastSiteNewEventCount": 0,
-  "lastCompletedSite": "https://denieuwekolk.nl/agenda",
-  "lastCompletedAt": "2026-10-25T18:05:19+00:00"
+  "lastCompletedSite": "https://www.filmvandaag.nl/bioscoop",
+  "lastCompletedAt": "2026-10-25T18:05:22+00:00"
 }
