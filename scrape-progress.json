@@ -1,6 +1,6 @@
 {
-  "runId": "2026-10-25T10:20:37+00:00",
-  "startedAt": "2026-10-25T10:20:37+00:00",
+  "runId": "2026-10-25T10:23:07+00:00",
+  "startedAt": "2026-10-25T10:23:07+00:00",
   "completedCount": 19,
   "totalSites": 19,
   "currentSite": "https://www.ibood.com/nl/",
@@ -2343,133 +2343,133 @@
       "site": "https://groningen.uitloper.nu/",
       "count": 20,
       "newCount": 20,
-      "durationSeconds": 3.83,
+      "durationSeconds": 3.05,
       "timedOut": false
     },
     {
       "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
       "count": 20,
       "newCount": 20,
-      "durationSeconds": 6.75,
+      "durationSeconds": 5.73,
       "timedOut": false
     },
     {
       "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
       "count": 0,
       "newCount": 20,
-      "durationSeconds": 7.37,
+      "durationSeconds": 7.15,
       "timedOut": false
     },
     {
       "site": "https://forum.nl/nl/agenda",
       "count": 0,
       "newCount": 0,
-      "durationSeconds": 12.15,
+      "durationSeconds": 15.14,
       "timedOut": false
     },
     {
       "site": "https://www.spotgroningen.nl/programma/",
       "count": 0,
       "newCount": 0,
-      "durationSeconds": 5.55,
+      "durationSeconds": 3.01,
       "timedOut": false
     },
     {
       "site": "https://simplon.nl/",
       "count": 14,
       "newCount": 14,
-      "durationSeconds": 6.23,
+      "durationSeconds": 5.58,
       "timedOut": false
     },
     {
       "site": "https://www.vera-groningen.nl/",
       "count": 0,
       "newCount": 0,
-      "durationSeconds": 4.36,
+      "durationSeconds": 3.16,
       "timedOut": false
     },
     {
       "site": "https://www.martiniplaza.nl/nl/agenda",
       "count": 0,
       "newCount": 0,
-      "durationSeconds": 5.5,
+      "durationSeconds": 6.19,
       "timedOut": false
     },
     {
       "site": "https://www.groningermuseum.nl/en/now",
       "count": 0,
       "newCount": 0,
-      "durationSeconds": 0.87,
+      "durationSeconds": 1.0,
       "timedOut": false
     },
     {
       "site": "https://www.kultuuragenda.nl/agenda",
       "count": 0,
       "newCount": 0,
-      "durationSeconds": 7.54,
+      "durationSeconds": 7.37,
       "timedOut": false
     },
     {
       "site": "https://www.noorderzon.nl/programma",
       "count": 20,
       "newCount": 20,
-      "durationSeconds": 3.88,
+      "durationSeconds": 5.32,
       "timedOut": false
     },
     {
       "site": "https://www.concertgebouw.nl/concerten-en-tickets",
       "count": 20,
       "newCount": 20,
-      "durationSeconds": 3.36,
+      "durationSeconds": 3.5,
       "timedOut": false
     },
     {
       "site": "https://www.zwolsetheaters.nl/programma",
       "count": 0,
       "newCount": 0,
-      "durationSeconds": 5.63,
+      "durationSeconds": 7.24,
       "timedOut": false
     },
     {
       "site": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
       "count": 20,
       "newCount": 20,
-      "durationSeconds": 1.69,
+      "durationSeconds": 2.16,
       "timedOut": false
     },
     {
       "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
       "count": 20,
       "newCount": 20,
-      "durationSeconds": 5.27,
+      "durationSeconds": 6.05,
       "timedOut": false
     },
     {
       "site": "https://www.vvvameland.nl/activiteiten-en-evenementen",
       "count": 20,
       "newCount": 20,
-      "durationSeconds": 7.5,
+      "durationSeconds": 9.44,
       "timedOut": false
     },
     {
       "site": "https://www.socialdeal.nl/",
       "count": 0,
       "newCount": 0,
-      "durationSeconds": 13.75,
+      "durationSeconds": 18.94,
       "timedOut": false
     },
     {
       "site": "https://www.groupon.nl/",
       "count": 0,
       "newCount": 0,
-      "durationSeconds": 0.29,
+      "durationSeconds": 0.32,
       "timedOut": false
     },
     {
       "site": "https://www.ibood.com/nl/",
       "count": 0,
       "newCount": 0,
-      "durationSeconds": 0.49,
+      "durationSeconds": 0.32,
       "timedOut": false
     }
   ],
@@ -3291,7 +3291,7 @@
       "date": "",
       "url": "https://groningen.uitloper.nu/",
       "status": "klaar",
-      "rawText": "site 1/19: 20 unieke events in 3.83 sec"
+      "rawText": "site 1/19: 20 unieke events in 3.05 sec"
     },
     {
       "source": "Website",
@@ -3318,7 +3318,7 @@
       "date": "",
       "url": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen",
       "status": "ok",
-      "rawText": "206711 tekens HTML"
+      "rawText": "206723 tekens HTML"
     },
     {
       "source": "Parser",
@@ -5253,7 +5253,7 @@
       "date": "",
       "url": "https://www.visitgroningen.nl/nl/doen/evenementen",
       "status": "klaar",
-      "rawText": "site 2/19: 20 unieke events in 6.75 sec"
+      "rawText": "site 2/19: 20 unieke events in 5.73 sec"
     },
     {
       "source": "Website",
@@ -5577,7 +5577,7 @@
       "date": "",
       "url": "https://www.visitgroningen.nl/nl/doen/wandelen",
       "status": "klaar",
-      "rawText": "site 3/19: 0 unieke events in 7.37 sec"
+      "rawText": "site 3/19: 0 unieke events in 7.15 sec"
     },
     {
       "source": "Website",
@@ -6819,7 +6819,7 @@
       "date": "",
       "url": "https://forum.nl/nl/agenda",
       "status": "klaar",
-      "rawText": "site 4/19: 0 unieke events in 12.15 sec"
+      "rawText": "site 4/19: 0 unieke events in 15.14 sec"
     },
     {
       "source": "Website",
@@ -6842,92 +6842,11 @@
     {
       "source": "Website",
       "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Pagina gelezen",
+      "title": "Pagina mislukt",
       "date": "",
       "url": "https://www.spotgroningen.nl/programma",
-      "status": "ok",
-      "rawText": "0 tekens HTML"
-    },
-    {
-      "source": "Parser",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Pagina geteld",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "analyse",
-      "rawText": "jsonld:0, links:0, datumblokken:0, kaarten:0, regels:0, detail:0"
-    },
-    {
-      "source": "Parser",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Universele parser zonder resultaat",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "fallback",
-      "rawText": "Geen events herkend; probeer de SPOT-kaartenparser"
-    },
-    {
-      "source": "Parser",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Agenda geanalyseerd",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "gespecialiseerde parser",
-      "rawText": "0 agenda-items gevonden"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Pagina geanalyseerd",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "ok",
-      "rawText": "0 events/aanbiedingen op deze pagina"
-    },
-    {
-      "source": "RSS/Atom",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Feed geanalyseerd",
-      "date": "",
-      "url": "https://www.spotgroningen.nl",
-      "status": "ok",
-      "rawText": "0 events uit openbare feed"
-    },
-    {
-      "source": "RSS/Atom",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Feed mislukt",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/rss",
       "status": "fout",
-      "rawText": "HTTP 500"
-    },
-    {
-      "source": "RSS/Atom",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Feed mislukt",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/rss.xml",
-      "status": "fout",
-      "rawText": "HTTP 404"
-    },
-    {
-      "source": "RSS/Atom",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Feed mislukt",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/feed.xml",
-      "status": "fout",
-      "rawText": "HTTP 404"
-    },
-    {
-      "source": "RSS/Atom",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Feed mislukt",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/events/feed/",
-      "status": "fout",
-      "rawText": "HTTP 404"
+      "rawText": "HTTPSConnectionPool(host='www.spotgroningen.nl', port=443): Max retries exceeded with url: /programma (Caused by NameResolutionError(\"HTTPSConnection(host='www.spotgroningen.nl', port=443): Failed to resolve 'www.spotgroningen.nl' ([Errno -5] No address associated with hostname)\"))"
     },
     {
       "source": "Website",
@@ -6936,7 +6855,7 @@
       "date": "",
       "url": "https://www.spotgroningen.nl/programma/",
       "status": "klaar",
-      "rawText": "site 5/19: 0 unieke events in 5.55 sec"
+      "rawText": "site 5/19: 0 unieke events in 3.01 sec"
     },
     {
       "source": "Website",
@@ -7517,11 +7436,11 @@
     {
       "source": "RSS/Atom",
       "site": "https://simplon.nl/",
-      "title": "Feed geanalyseerd",
+      "title": "Feed mislukt",
       "date": "",
       "url": "https://simplon.nl/events/feed/",
-      "status": "ok",
-      "rawText": "0 events uit openbare feed"
+      "status": "fout",
+      "rawText": "HTTP 429"
     },
     {
       "source": "Website",
@@ -7530,7 +7449,7 @@
       "date": "",
       "url": "https://simplon.nl/",
       "status": "klaar",
-      "rawText": "site 6/19: 14 unieke events in 6.23 sec"
+      "rawText": "site 6/19: 14 unieke events in 5.58 sec"
     },
     {
       "source": "Website",
@@ -7764,16 +7683,16 @@
       "date": "",
       "url": "https://www.vera-groningen.nl/?lang=nl",
       "status": "ok",
-      "rawText": "75653 tekens HTML"
+      "rawText": "75673 tekens HTML"
     },
     {
       "source": "Website",
       "site": "https://www.vera-groningen.nl/",
-      "title": "Madra Salach IRL",
-      "date": "2027-02-15",
-      "url": "https://www.vera-groningen.nl/?post_type=events&p=154849&lang=nl",
+      "title": "BODEGA",
+      "date": "2027-03-03",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=154770&lang=nl",
       "status": "VERA agenda-item",
-      "rawText": "Monday 15 February Madra Salach IRL support Koop ticket"
+      "rawText": "Wednesday 3 March BODEGA USA support Koop ticket"
     },
     {
       "source": "Website",
@@ -7787,11 +7706,11 @@
     {
       "source": "Website",
       "site": "https://www.vera-groningen.nl/",
-      "title": "BODEGA",
-      "date": "2027-03-03",
-      "url": "https://www.vera-groningen.nl/?post_type=events&p=154770&lang=nl",
+      "title": "Madra Salach IRL",
+      "date": "2027-02-15",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=154849&lang=nl",
       "status": "VERA agenda-item",
-      "rawText": "Wednesday 3 March BODEGA USA support Snarky and energetic artrock De New Yorkse artrockband BODEGA werd in 2016 gevormd uit de resten van het... Lees meer Koop ticket"
+      "rawText": "Monday 15 February Madra Salach IRL support Raw Irish folk Madra Salach (Iers voor ‘vuile hond’) is een zeskoppige band uit Dublin die traditionele Ierse folk meesleurt... Lees meer Koop ticket"
     },
     {
       "source": "Website",
@@ -7881,7 +7800,7 @@
       "date": "",
       "url": "https://www.vera-groningen.nl/",
       "status": "klaar",
-      "rawText": "site 7/19: 0 unieke events in 4.36 sec"
+      "rawText": "site 7/19: 0 unieke events in 3.16 sec"
     },
     {
       "source": "Website",
@@ -8304,7 +8223,7 @@
       "date": "",
       "url": "https://www.martiniplaza.nl/nl/agenda",
       "status": "klaar",
-      "rawText": "site 8/19: 0 unieke events in 5.5 sec"
+      "rawText": "site 8/19: 0 unieke events in 6.19 sec"
     },
     {
       "source": "Website",
@@ -8340,7 +8259,7 @@
       "date": "",
       "url": "https://www.groningermuseum.nl/en/now",
       "status": "klaar",
-      "rawText": "site 9/19: 0 unieke events in 0.87 sec"
+      "rawText": "site 9/19: 0 unieke events in 1.0 sec"
     },
     {
       "source": "Website",
@@ -8916,7 +8835,7 @@
       "date": "",
       "url": "https://www.kultuuragenda.nl/agenda",
       "status": "klaar",
-      "rawText": "site 10/19: 0 unieke events in 7.54 sec"
+      "rawText": "site 10/19: 0 unieke events in 7.37 sec"
     },
     {
       "source": "Website",
@@ -13273,12 +13192,93 @@
       "url": "https://www.noorderzon.nl/programma/dieren-zijn-ook-mensen",
       "status": "event uit kaart",
       "rawText": "Dieren zijn ook mensen Programma soort &Society Teun van de Keuken Datum range 29 aug Waarom we nog steeds zoveel vlees eten en dat niet zouden moeten doen. Lees verder Meer informatie over Dieren zijn ook mensen"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.noorderzon.nl/programma",
+      "title": "Lees verder",
+      "date": "2027-08-29",
+      "url": "https://www.noorderzon.nl/programma",
+      "status": "event uit kaart",
+      "rawText": "Dieren zijn ook mensen Programma soort &Society Teun van de Keuken Datum range 29 aug Waarom we nog steeds zoveel vlees eten en dat niet zouden moeten doen. Lees verder Meer informatie over Dieren zijn ook mensen"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.noorderzon.nl/programma",
+      "title": "Programma soort &Society Teun van de Keuken Datum range 29 aug",
+      "date": "2027-08-29",
+      "url": "https://www.noorderzon.nl/programma",
+      "status": "event uit kaart",
+      "rawText": "Programma soort &Society Teun van de Keuken Datum range 29 aug"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.noorderzon.nl/programma",
+      "title": "Lees verder",
+      "date": "2027-08-28",
+      "url": "https://www.noorderzon.nl/programma/van-de-afhaalchinees-tot-sexotisch-tot-de-witte-man",
+      "status": "event uit kaart",
+      "rawText": "Van De Afhaalchinees tot Sexotisch tot De Witte Man Programma soort &Society Uitverkocht Qian van Binsbergen i.s.m. Omroep ZWART Datum range 28 aug Tijdens Noorderzon vertelt Qian over haar werk en haar nieuwste programma, waarvan de inhoud later bekend wordt gemaakt. Lees verder Meer informatie over Van De Afhaalchinees tot Sexotisch tot De Witte Man"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.noorderzon.nl/programma",
+      "title": "Lees verder",
+      "date": "2027-08-28",
+      "url": "https://www.noorderzon.nl/programma/van-de-afhaalchinees-tot-sexotisch-tot-de-witte-man",
+      "status": "event uit kaart",
+      "rawText": "Van De Afhaalchinees tot Sexotisch tot De Witte Man Programma soort &Society Uitverkocht Qian van Binsbergen i.s.m. Omroep ZWART Datum range 28 aug Tijdens Noorderzon vertelt Qian over haar werk en haar nieuwste programma, waarvan de inhoud later bekend wordt gemaakt. Lees verder Meer informatie over Van De Afhaalchinees tot Sexotisch tot De Witte Man"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.noorderzon.nl/programma",
+      "title": "Lees verder",
+      "date": "2027-08-28",
+      "url": "https://www.noorderzon.nl/programma/van-de-afhaalchinees-tot-sexotisch-tot-de-witte-man",
+      "status": "event uit kaart",
+      "rawText": "Van De Afhaalchinees tot Sexotisch tot De Witte Man Programma soort &Society Uitverkocht Qian van Binsbergen i.s.m. Omroep ZWART Datum range 28 aug Tijdens Noorderzon vertelt Qian over haar werk en haar nieuwste programma, waarvan de inhoud later bekend wordt gemaakt. Lees verder Meer informatie over Van De Afhaalchinees tot Sexotisch tot De Witte Man"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.noorderzon.nl/programma",
+      "title": "Lees verder",
+      "date": "2027-08-28",
+      "url": "https://www.noorderzon.nl/programma",
+      "status": "event uit kaart",
+      "rawText": "Van De Afhaalchinees tot Sexotisch tot De Witte Man Programma soort &Society Uitverkocht Qian van Binsbergen i.s.m. Omroep ZWART Datum range 28 aug Tijdens Noorderzon vertelt Qian over haar werk en haar nieuwste programma, waarvan de inhoud later bekend wordt gemaakt. Lees verder Meer informatie over Van De Afhaalchinees tot Sexotisch tot De Witte Man"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.noorderzon.nl/programma",
+      "title": "Programma soort &Society",
+      "date": "2027-08-28",
+      "url": "https://www.noorderzon.nl/programma",
+      "status": "event uit kaart",
+      "rawText": "Programma soort &Society Uitverkocht Qian van Binsbergen i.s.m. Omroep ZWART Datum range 28 aug"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.noorderzon.nl/programma",
+      "title": "Programma › Noorderzon",
+      "date": "2027-08-20",
+      "url": "https://www.noorderzon.nl/programma",
+      "status": "event uit detailpagina",
+      "rawText": "Programma › Noorderzon Deze website vraagt je toestemming cookies te gebruiken voor Facebook , LinkedIn , Vimeo en YouTube . Lees het cookiebeleid voor meer informatie. Ik ga akkoord Ik ga niet akkoord Spring naar inhoud Selecteer uw taal nl Nederlands en English Open ActiveTickets account Open ActiveTickets winkelwagen Doorzoek de website Zoek Programma Plan je bezoek Steun ons Doe mee Over Contact Open Sluit Menu P"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.noorderzon.nl/programma",
+      "title": "Noorderzon 2026 vindt plaats van 20",
+      "date": "2027-08-20",
+      "url": "https://www.noorderzon.nl/programma",
+      "status": "event uit tekstregel",
+      "rawText": "Programma | Noorderzon 2026 vindt plaats van 20 - 30 augustus. Met trots presenteren we hier ons programma vol internationaal theater- en dans, &Society- en &Literaturia, containers, kinder- en muziekprogramma, en een vrij toegankelijk park vol verrassingen. | Kaarten | online verkrijgbaar. | Altijd als eerste op de hoogte? Download de | app"
     }
   ],
   "status": "completed",
-  "lastUpdatedAt": "2026-10-25T10:22:49+00:00",
+  "lastUpdatedAt": "2026-10-25T10:25:14+00:00",
   "lastSiteEventCount": 0,
   "lastCompletedSite": "https://www.ibood.com/nl/",
-  "lastCompletedAt": "2026-10-25T10:22:50+00:00",
-  "finishedAt": "2026-10-25T10:22:50+00:00"
+  "lastCompletedAt": "2026-10-25T10:25:15+00:00",
+  "finishedAt": "2026-10-25T10:25:16+00:00"
 }

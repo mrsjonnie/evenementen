@@ -88,10 +88,10 @@ Website	https://groningen.uitloper.nu/	Uitloper agenda-item	Azart - Come Make Ar
 Website	https://groningen.uitloper.nu/	Uitloper agenda-item	Pubquiz	2026-10-26	https://groningen.uitloper.nu/quizzen/pubquiz-fourth-monday-repeating-1	Pubquiz 20:00 uur Elke vierde maandag van de maand. Teams van maximaal…
 Parser	https://groningen.uitloper.nu/	gespecialiseerde parser	Uitloper-dagpagina	2026-10-26	https://groningen.uitloper.nu/?date=1793016000	37 agenda-items op 2026-10-26
 Website	https://groningen.uitloper.nu/	ok	Pagina geanalyseerd		https://groningen.uitloper.nu/?date=1793016000	35 events/aanbiedingen op deze pagina
-Website	https://groningen.uitloper.nu/	klaar	Klaar		https://groningen.uitloper.nu/	site 1/19: 20 unieke events in 3.83 sec
+Website	https://groningen.uitloper.nu/	klaar	Klaar		https://groningen.uitloper.nu/	site 1/19: 20 unieke events in 3.05 sec
 Website	https://www.visitgroningen.nl/nl/doen/evenementen	start	Start		https://www.visitgroningen.nl/nl/doen/evenementen	site 2/19: max 20 events, max 20 seconden
 Parser	https://www.visitgroningen.nl/nl/doen/evenementen	strategie	Scrapertype vastgesteld		https://www.visitgroningen.nl/nl/doen/evenementen	Visit Groningen agenda-/routekaarten
-Website	https://www.visitgroningen.nl/nl/doen/evenementen	ok	Pagina gelezen		https://www.visitgroningen.nl/nl/doen/cultuur/evenementen	206711 tekens HTML
+Website	https://www.visitgroningen.nl/nl/doen/evenementen	ok	Pagina gelezen		https://www.visitgroningen.nl/nl/doen/cultuur/evenementen	206723 tekens HTML
 Parser	https://www.visitgroningen.nl/nl/doen/evenementen	strategie	Visit Groningen detailstrategie		https://www.visitgroningen.nl/nl/doen/cultuur/evenementen	Overzicht overslaan; alleen detail-URL's met /evenementen/<slug> verwerken
 Website	https://www.visitgroningen.nl/nl/doen/evenementen	ok	Pagina geanalyseerd		https://www.visitgroningen.nl/nl/doen/cultuur/evenementen	0 events/aanbiedingen op deze pagina
 Website	https://www.visitgroningen.nl/nl/doen/evenementen	detail-link gevonden	Lees meer		https://www.visitgroningen.nl/nl/doen/cultuur/evenementen/eurosonic-noorderslag	Lees meer
@@ -306,7 +306,7 @@ Website	https://www.visitgroningen.nl/nl/doen/evenementen	event uit tekstregel	O
 Parser	https://www.visitgroningen.nl/nl/doen/evenementen	analyse	Pagina geteld		https://www.visitgroningen.nl/nl/doen/cultuur/evenementen/terug-naar-het-begin	jsonld:0, links:0, datumblokken:1, kaarten:0, regels:1, detail:1
 Website	https://www.visitgroningen.nl/nl/doen/evenementen	ok	Detailpagina geanalyseerd		https://www.visitgroningen.nl/nl/doen/cultuur/evenementen/terug-naar-het-begin	3 extra events
 Filter	https://www.visitgroningen.nl/nl/doen/evenementen	ok	Datumfilter toegepast	2026-10-25	https://www.visitgroningen.nl/nl/doen/evenementen	108 gevonden; 101 binnen 2026-10-25 t/m onbeperkt
-Website	https://www.visitgroningen.nl/nl/doen/evenementen	klaar	Klaar		https://www.visitgroningen.nl/nl/doen/evenementen	site 2/19: 20 unieke events in 6.75 sec
+Website	https://www.visitgroningen.nl/nl/doen/evenementen	klaar	Klaar		https://www.visitgroningen.nl/nl/doen/evenementen	site 2/19: 20 unieke events in 5.73 sec
 Website	https://www.visitgroningen.nl/nl/doen/wandelen	start	Start		https://www.visitgroningen.nl/nl/doen/wandelen	site 3/19: max 20 events, max 20 seconden
 Parser	https://www.visitgroningen.nl/nl/doen/wandelen	strategie	Scrapertype vastgesteld		https://www.visitgroningen.nl/nl/doen/wandelen	Visit Groningen agenda-/routekaarten
 Website	https://www.visitgroningen.nl/nl/doen/wandelen	ok	Pagina gelezen		https://www.visitgroningen.nl/nl/doen/wandelen	374114 tekens HTML
@@ -342,7 +342,7 @@ RSS/Atom	https://www.visitgroningen.nl/nl/doen/wandelen	fout	Feed mislukt		https
 RSS/Atom	https://www.visitgroningen.nl/nl/doen/wandelen	fout	Feed mislukt		https://www.visitgroningen.nl/rss.xml	HTTP 404
 RSS/Atom	https://www.visitgroningen.nl/nl/doen/wandelen	fout	Feed mislukt		https://www.visitgroningen.nl/feed.xml	HTTP 404
 RSS/Atom	https://www.visitgroningen.nl/nl/doen/wandelen	fout	Feed mislukt		https://www.visitgroningen.nl/events/feed/	HTTP 404
-Website	https://www.visitgroningen.nl/nl/doen/wandelen	klaar	Klaar		https://www.visitgroningen.nl/nl/doen/wandelen	site 3/19: 0 unieke events in 7.37 sec
+Website	https://www.visitgroningen.nl/nl/doen/wandelen	klaar	Klaar		https://www.visitgroningen.nl/nl/doen/wandelen	site 3/19: 0 unieke events in 7.15 sec
 Website	https://forum.nl/nl/agenda	start	Start		https://forum.nl/nl/agenda	site 4/19: max 20 events, max 20 seconden
 Parser	https://forum.nl/nl/agenda	strategie	Scrapertype vastgesteld		https://forum.nl/nl/agenda	universeel-eventkaarten
 Website	https://forum.nl/nl/agenda	ok	Pagina gelezen		https://forum.nl/nl/agenda	175573 tekens HTML
@@ -480,20 +480,11 @@ Website	https://forum.nl/nl/agenda	ok	Detailpagina geanalyseerd		https://forum.n
 Website	https://forum.nl/nl/agenda	ok	Detailpagina geanalyseerd		https://forum.nl/nl/agenda/werkplaats-sunnemeerten?date=25-10-2026	1 extra events
 Website	https://forum.nl/nl/agenda	ok	Detailpagina geanalyseerd		https://forum.nl/nl/agenda/werkplaats-sunnemeerten?date=26-10-2026	0 extra events
 Website	https://forum.nl/nl/agenda	ok	Detailpagina geanalyseerd		https://forum.nl/nl/agenda/workshop-striptekenen-met-loeki?date=25-10-2026	1 extra events
-Website	https://forum.nl/nl/agenda	klaar	Klaar		https://forum.nl/nl/agenda	site 4/19: 0 unieke events in 12.15 sec
+Website	https://forum.nl/nl/agenda	klaar	Klaar		https://forum.nl/nl/agenda	site 4/19: 0 unieke events in 15.14 sec
 Website	https://www.spotgroningen.nl/programma/	start	Start		https://www.spotgroningen.nl/programma/	site 5/19: max 20 events, max 20 seconden
 Parser	https://www.spotgroningen.nl/programma/	strategie	Scrapertype vastgesteld		https://www.spotgroningen.nl/programma/	universeel-met-kaartfallback
-Website	https://www.spotgroningen.nl/programma/	ok	Pagina gelezen		https://www.spotgroningen.nl/programma	0 tekens HTML
-Parser	https://www.spotgroningen.nl/programma/	analyse	Pagina geteld		https://www.spotgroningen.nl/programma	jsonld:0, links:0, datumblokken:0, kaarten:0, regels:0, detail:0
-Parser	https://www.spotgroningen.nl/programma/	fallback	Universele parser zonder resultaat		https://www.spotgroningen.nl/programma	Geen events herkend; probeer de SPOT-kaartenparser
-Parser	https://www.spotgroningen.nl/programma/	gespecialiseerde parser	Agenda geanalyseerd		https://www.spotgroningen.nl/programma	0 agenda-items gevonden
-Website	https://www.spotgroningen.nl/programma/	ok	Pagina geanalyseerd		https://www.spotgroningen.nl/programma	0 events/aanbiedingen op deze pagina
-RSS/Atom	https://www.spotgroningen.nl/programma/	ok	Feed geanalyseerd		https://www.spotgroningen.nl	0 events uit openbare feed
-RSS/Atom	https://www.spotgroningen.nl/programma/	fout	Feed mislukt		https://www.spotgroningen.nl/rss	HTTP 500
-RSS/Atom	https://www.spotgroningen.nl/programma/	fout	Feed mislukt		https://www.spotgroningen.nl/rss.xml	HTTP 404
-RSS/Atom	https://www.spotgroningen.nl/programma/	fout	Feed mislukt		https://www.spotgroningen.nl/feed.xml	HTTP 404
-RSS/Atom	https://www.spotgroningen.nl/programma/	fout	Feed mislukt		https://www.spotgroningen.nl/events/feed/	HTTP 404
-Website	https://www.spotgroningen.nl/programma/	klaar	Klaar		https://www.spotgroningen.nl/programma/	site 5/19: 0 unieke events in 5.55 sec
+Website	https://www.spotgroningen.nl/programma/	fout	Pagina mislukt		https://www.spotgroningen.nl/programma	HTTPSConnectionPool(host='www.spotgroningen.nl', port=443): Max retries exceeded with url: /programma (Caused by NameResolutionError("HTTPSConnection(host='www.spotgroningen.nl', port=443): Failed to resolve 'www.spotgroningen.nl' ([Errno -5] No address associated with hostname)"))
+Website	https://www.spotgroningen.nl/programma/	klaar	Klaar		https://www.spotgroningen.nl/programma/	site 5/19: 0 unieke events in 3.01 sec
 Website	https://simplon.nl/	start	Start		https://simplon.nl/	site 6/19: max 20 events, max 20 seconden
 Parser	https://simplon.nl/	strategie	Scrapertype vastgesteld		https://simplon.nl/	compacte-agenda-kaarten
 Website	https://simplon.nl/	ok	Pagina gelezen		https://simplon.nl/programma/	94996 tekens HTML
@@ -558,8 +549,8 @@ RSS/Atom	https://simplon.nl/	ok	Feed geanalyseerd		https://simplon.nl/feed/	0 ev
 RSS/Atom	https://simplon.nl/	ok	Feed geanalyseerd		https://simplon.nl/feed/	0 events uit openbare feed
 RSS/Atom	https://simplon.nl/	fout	Feed mislukt		https://simplon.nl/rss.xml	HTTP 404
 RSS/Atom	https://simplon.nl/	fout	Feed mislukt		https://simplon.nl/feed.xml	HTTP 404
-RSS/Atom	https://simplon.nl/	ok	Feed geanalyseerd		https://simplon.nl/events/feed/	0 events uit openbare feed
-Website	https://simplon.nl/	klaar	Klaar		https://simplon.nl/	site 6/19: 14 unieke events in 6.23 sec
+RSS/Atom	https://simplon.nl/	fout	Feed mislukt		https://simplon.nl/events/feed/	HTTP 429
+Website	https://simplon.nl/	klaar	Klaar		https://simplon.nl/	site 6/19: 14 unieke events in 5.58 sec
 Website	https://www.vera-groningen.nl/	start	Start		https://www.vera-groningen.nl/	site 7/19: max 20 events, max 20 seconden
 Parser	https://www.vera-groningen.nl/	strategie	Scrapertype vastgesteld		https://www.vera-groningen.nl/	programma-kaarten
 Website	https://www.vera-groningen.nl/	ok	Pagina gelezen		https://www.vera-groningen.nl/programma/?category=all&history=0&lang=nl	74233 tekens HTML
@@ -585,10 +576,10 @@ Website	https://www.vera-groningen.nl/	VERA agenda-item	Supersuckers USA The Fra
 Website	https://www.vera-groningen.nl/	VERA agenda-item	Nordic Giants UK L.O.E.	2026-11-13	https://www.vera-groningen.nl/?post_type=events&p=153185&lang=nl	Friday 13 November Nordic Giants UK L.O.E. UK Mainstage | Ticket: €15,- | doors: 20:00 - 22:00 | start: 20:30 Koop ticket
 Parser	https://www.vera-groningen.nl/	gespecialiseerde parser	VERA-agendapagina		https://www.vera-groningen.nl/programma/?category=all&history=0&lang=nl	20 VERA-agenda-items uit eventlinks
 Website	https://www.vera-groningen.nl/	ok	Pagina geanalyseerd		https://www.vera-groningen.nl/programma/?category=all&history=0&lang=nl	20 events/aanbiedingen op deze pagina
-Website	https://www.vera-groningen.nl/	ok	Pagina gelezen		https://www.vera-groningen.nl/?lang=nl	75653 tekens HTML
-Website	https://www.vera-groningen.nl/	VERA agenda-item	Madra Salach IRL	2027-02-15	https://www.vera-groningen.nl/?post_type=events&p=154849&lang=nl	Monday 15 February Madra Salach IRL support Koop ticket
+Website	https://www.vera-groningen.nl/	ok	Pagina gelezen		https://www.vera-groningen.nl/?lang=nl	75673 tekens HTML
+Website	https://www.vera-groningen.nl/	VERA agenda-item	BODEGA	2027-03-03	https://www.vera-groningen.nl/?post_type=events&p=154770&lang=nl	Wednesday 3 March BODEGA USA support Koop ticket
 Website	https://www.vera-groningen.nl/	VERA agenda-item	Tramhaus	2026-12-18	https://www.vera-groningen.nl/?post_type=events&p=152859&lang=nl	FRIDAY SHOW Friday 18 December Tramhaus support Raw postpunk from Rotterdam In 2023 wonnen ze de VERA Poll, en ook in 2026 blijft deze band een vaste publieksfavoriet. Lees meer Koop ticket
-Website	https://www.vera-groningen.nl/	VERA agenda-item	BODEGA	2027-03-03	https://www.vera-groningen.nl/?post_type=events&p=154770&lang=nl	Wednesday 3 March BODEGA USA support Snarky and energetic artrock De New Yorkse artrockband BODEGA werd in 2016 gevormd uit de resten van het... Lees meer Koop ticket
+Website	https://www.vera-groningen.nl/	VERA agenda-item	Madra Salach IRL	2027-02-15	https://www.vera-groningen.nl/?post_type=events&p=154849&lang=nl	Monday 15 February Madra Salach IRL support Raw Irish folk Madra Salach (Iers voor ‘vuile hond’) is een zeskoppige band uit Dublin die traditionele Ierse folk meesleurt... Lees meer Koop ticket
 Website	https://www.vera-groningen.nl/	VERA agenda-item	VERA's Grunneger Zundag StAD // Steernvanger // Olaf Vos	2026-10-25	https://www.vera-groningen.nl/?post_type=events&p=154330&lang=nl	Sunday 25 October VERA's Grunneger Zundag StAD // Steernvanger // Olaf Vos Mainstage | Ticket: €10,- | doors: 15:00 - 16:30 | start: 15:30 Koop ticket
 Website	https://www.vera-groningen.nl/	VERA agenda-item	The Fly	2026-10-27	https://www.vera-groningen.nl/?post_type=events&p=154391&lang=nl	ZIENEMA ♥ HALLOWEEN Tuesday 27 October The Fly Zienema | Ticket: €6,66 | doors: 20:00 - 20:30 | start: 20:30 Sold out
 Website	https://www.vera-groningen.nl/	VERA agenda-item	Ulrika Spacek UK Mood Bored	2026-10-29	https://www.vera-groningen.nl/?post_type=events&p=150560&lang=nl	CLUBKAARTSHOW Thursday 29 October Ulrika Spacek UK Mood Bored NL Mainstage | Ticket: €16,- | doors: 20:00 - 22:00 | start: 20:30 Koop ticket
@@ -598,7 +589,7 @@ Website	https://www.vera-groningen.nl/	VERA agenda-item	Codeine	2027-05-14	https
 Website	https://www.vera-groningen.nl/	VERA agenda-item	Black Marble	2027-04-10	https://www.vera-groningen.nl/?post_type=events&p=154962&lang=nl	Saturday 10 April Black Marble USA support Gloomy synthpop and hooky cold wave Black Marble is het project van Chris Stewart, waarin cold wave, minimal synth, postpunk... Lees meer Koop ticket
 Parser	https://www.vera-groningen.nl/	gespecialiseerde parser	VERA-agendapagina		https://www.vera-groningen.nl/?lang=nl	10 VERA-agenda-items uit eventlinks
 Website	https://www.vera-groningen.nl/	ok	Pagina geanalyseerd		https://www.vera-groningen.nl/?lang=nl	10 events/aanbiedingen op deze pagina
-Website	https://www.vera-groningen.nl/	klaar	Klaar		https://www.vera-groningen.nl/	site 7/19: 0 unieke events in 4.36 sec
+Website	https://www.vera-groningen.nl/	klaar	Klaar		https://www.vera-groningen.nl/	site 7/19: 0 unieke events in 3.16 sec
 Website	https://www.martiniplaza.nl/nl/agenda	start	Start		https://www.martiniplaza.nl/nl/agenda	site 8/19: max 20 events, max 20 seconden
 Parser	https://www.martiniplaza.nl/nl/agenda	strategie	Scrapertype vastgesteld		https://www.martiniplaza.nl/nl/agenda	agenda-kaarten
 Website	https://www.martiniplaza.nl/nl/agenda	ok	Pagina gelezen		https://www.martiniplaza.nl/nl/agenda	146630 tekens HTML
@@ -645,11 +636,11 @@ Website	https://www.martiniplaza.nl/nl/agenda	ok	Detailpagina geanalyseerd		http
 Website	https://www.martiniplaza.nl/nl/agenda	ok	Detailpagina geanalyseerd		https://www.martiniplaza.nl/nl/agenda/the-bodyguard-de-musical-2027	0 extra events
 Website	https://www.martiniplaza.nl/nl/agenda	ok	Detailpagina geanalyseerd		https://www.martiniplaza.nl/nl/agenda/the-dire-straits-experience	0 extra events
 Website	https://www.martiniplaza.nl/nl/agenda	ok	Detailpagina geanalyseerd		https://www.martiniplaza.nl/nl/agenda/titanique	0 extra events
-Website	https://www.martiniplaza.nl/nl/agenda	klaar	Klaar		https://www.martiniplaza.nl/nl/agenda	site 8/19: 0 unieke events in 5.5 sec
+Website	https://www.martiniplaza.nl/nl/agenda	klaar	Klaar		https://www.martiniplaza.nl/nl/agenda	site 8/19: 0 unieke events in 6.19 sec
 Website	https://www.groningermuseum.nl/en/now	start	Start		https://www.groningermuseum.nl/en/now	site 9/19: max 20 events, max 20 seconden
 Parser	https://www.groningermuseum.nl/en/now	strategie	Scrapertype vastgesteld		https://www.groningermuseum.nl/en/now	universele tentoonstellings- en activiteitenparser
 Website	https://www.groningermuseum.nl/en/now	fout	Pagina mislukt		https://www.groningermuseum.nl/en/now	HTTP 404
-Website	https://www.groningermuseum.nl/en/now	klaar	Klaar		https://www.groningermuseum.nl/en/now	site 9/19: 0 unieke events in 0.87 sec
+Website	https://www.groningermuseum.nl/en/now	klaar	Klaar		https://www.groningermuseum.nl/en/now	site 9/19: 0 unieke events in 1.0 sec
 Website	https://www.kultuuragenda.nl/agenda	start	Start		https://www.kultuuragenda.nl/agenda	site 10/19: max 20 events, max 20 seconden
 Parser	https://www.kultuuragenda.nl/agenda	strategie	Scrapertype vastgesteld		https://www.kultuuragenda.nl/agenda	universele detailpagina-parser (Kultuuragenda)
 Website	https://www.kultuuragenda.nl/agenda	ok	Pagina gelezen		https://www.kultuuragenda.nl/agenda	149272 tekens HTML
@@ -713,7 +704,7 @@ Website	https://www.kultuuragenda.nl/agenda	ok	Detailpagina geanalyseerd		https:
 Website	https://www.kultuuragenda.nl/agenda	ok	Detailpagina geanalyseerd		https://www.kultuuragenda.nl/agenda/811203126/docs-imago	1 extra events
 Website	https://www.kultuuragenda.nl/agenda	ok	Detailpagina geanalyseerd		https://www.kultuuragenda.nl/agenda/922308090/docs-the-cycle-of-love	1 extra events
 Filter	https://www.kultuuragenda.nl/agenda	ok	Datumfilter toegepast	2026-10-25	https://www.kultuuragenda.nl/agenda	24 gevonden; 23 binnen 2026-10-25 t/m onbeperkt
-Website	https://www.kultuuragenda.nl/agenda	klaar	Klaar		https://www.kultuuragenda.nl/agenda	site 10/19: 0 unieke events in 7.54 sec
+Website	https://www.kultuuragenda.nl/agenda	klaar	Klaar		https://www.kultuuragenda.nl/agenda	site 10/19: 0 unieke events in 7.37 sec
 Website	https://www.noorderzon.nl/programma	start	Start		https://www.noorderzon.nl/programma	site 11/19: max 20 events, max 20 seconden
 Parser	https://www.noorderzon.nl/programma	strategie	Scrapertype vastgesteld		https://www.noorderzon.nl/programma	universele programma- en detailpagina-parser
 Website	https://www.noorderzon.nl/programma	ok	Pagina gelezen		https://www.noorderzon.nl/programma	734798 tekens HTML
@@ -1198,3 +1189,12 @@ Website	https://www.noorderzon.nl/programma	event uit kaart	Programma soort &Soc
 Website	https://www.noorderzon.nl/programma	event uit kaart	Lees verder	2027-08-29	https://www.noorderzon.nl/programma/dieren-zijn-ook-mensen	Dieren zijn ook mensen Programma soort &Society Teun van de Keuken Datum range 29 aug Waarom we nog steeds zoveel vlees eten en dat niet zouden moeten doen. Lees verder Meer informatie over Dieren zijn ook mensen
 Website	https://www.noorderzon.nl/programma	event uit kaart	Lees verder	2027-08-29	https://www.noorderzon.nl/programma/dieren-zijn-ook-mensen	Dieren zijn ook mensen Programma soort &Society Teun van de Keuken Datum range 29 aug Waarom we nog steeds zoveel vlees eten en dat niet zouden moeten doen. Lees verder Meer informatie over Dieren zijn ook mensen
 Website	https://www.noorderzon.nl/programma	event uit kaart	Lees verder	2027-08-29	https://www.noorderzon.nl/programma/dieren-zijn-ook-mensen	Dieren zijn ook mensen Programma soort &Society Teun van de Keuken Datum range 29 aug Waarom we nog steeds zoveel vlees eten en dat niet zouden moeten doen. Lees verder Meer informatie over Dieren zijn ook mensen
+Website	https://www.noorderzon.nl/programma	event uit kaart	Lees verder	2027-08-29	https://www.noorderzon.nl/programma	Dieren zijn ook mensen Programma soort &Society Teun van de Keuken Datum range 29 aug Waarom we nog steeds zoveel vlees eten en dat niet zouden moeten doen. Lees verder Meer informatie over Dieren zijn ook mensen
+Website	https://www.noorderzon.nl/programma	event uit kaart	Programma soort &Society Teun van de Keuken Datum range 29 aug	2027-08-29	https://www.noorderzon.nl/programma	Programma soort &Society Teun van de Keuken Datum range 29 aug
+Website	https://www.noorderzon.nl/programma	event uit kaart	Lees verder	2027-08-28	https://www.noorderzon.nl/programma/van-de-afhaalchinees-tot-sexotisch-tot-de-witte-man	Van De Afhaalchinees tot Sexotisch tot De Witte Man Programma soort &Society Uitverkocht Qian van Binsbergen i.s.m. Omroep ZWART Datum range 28 aug Tijdens Noorderzon vertelt Qian over haar werk en haar nieuwste programma, waarvan de inhoud later bekend wordt gemaakt. Lees verder Meer informatie over Van De Afhaalchinees tot Sexotisch tot De Witte Man
+Website	https://www.noorderzon.nl/programma	event uit kaart	Lees verder	2027-08-28	https://www.noorderzon.nl/programma/van-de-afhaalchinees-tot-sexotisch-tot-de-witte-man	Van De Afhaalchinees tot Sexotisch tot De Witte Man Programma soort &Society Uitverkocht Qian van Binsbergen i.s.m. Omroep ZWART Datum range 28 aug Tijdens Noorderzon vertelt Qian over haar werk en haar nieuwste programma, waarvan de inhoud later bekend wordt gemaakt. Lees verder Meer informatie over Van De Afhaalchinees tot Sexotisch tot De Witte Man
+Website	https://www.noorderzon.nl/programma	event uit kaart	Lees verder	2027-08-28	https://www.noorderzon.nl/programma/van-de-afhaalchinees-tot-sexotisch-tot-de-witte-man	Van De Afhaalchinees tot Sexotisch tot De Witte Man Programma soort &Society Uitverkocht Qian van Binsbergen i.s.m. Omroep ZWART Datum range 28 aug Tijdens Noorderzon vertelt Qian over haar werk en haar nieuwste programma, waarvan de inhoud later bekend wordt gemaakt. Lees verder Meer informatie over Van De Afhaalchinees tot Sexotisch tot De Witte Man
+Website	https://www.noorderzon.nl/programma	event uit kaart	Lees verder	2027-08-28	https://www.noorderzon.nl/programma	Van De Afhaalchinees tot Sexotisch tot De Witte Man Programma soort &Society Uitverkocht Qian van Binsbergen i.s.m. Omroep ZWART Datum range 28 aug Tijdens Noorderzon vertelt Qian over haar werk en haar nieuwste programma, waarvan de inhoud later bekend wordt gemaakt. Lees verder Meer informatie over Van De Afhaalchinees tot Sexotisch tot De Witte Man
+Website	https://www.noorderzon.nl/programma	event uit kaart	Programma soort &Society	2027-08-28	https://www.noorderzon.nl/programma	Programma soort &Society Uitverkocht Qian van Binsbergen i.s.m. Omroep ZWART Datum range 28 aug
+Website	https://www.noorderzon.nl/programma	event uit detailpagina	Programma › Noorderzon	2027-08-20	https://www.noorderzon.nl/programma	Programma › Noorderzon Deze website vraagt je toestemming cookies te gebruiken voor Facebook , LinkedIn , Vimeo en YouTube . Lees het cookiebeleid voor meer informatie. Ik ga akkoord Ik ga niet akkoord Spring naar inhoud Selecteer uw taal nl Nederlands en English Open ActiveTickets account Open ActiveTickets winkelwagen Doorzoek de website Zoek Programma Plan je bezoek Steun ons Doe mee Over Contact Open Sluit Menu P
+Website	https://www.noorderzon.nl/programma	event uit tekstregel	Noorderzon 2026 vindt plaats van 20	2027-08-20	https://www.noorderzon.nl/programma	Programma | Noorderzon 2026 vindt plaats van 20 - 30 augustus. Met trots presenteren we hier ons programma vol internationaal theater- en dans, &Society- en &Literaturia, containers, kinder- en muziekprogramma, en een vrij toegankelijk park vol verrassingen. | Kaarten | online verkrijgbaar. | Altijd als eerste op de hoogte? Download de | app
