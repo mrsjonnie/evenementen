@@ -2052,6 +2052,8 @@ def scrape_site(site_url, site_index=0, site_total=0, progress_callback=None, ex
             add_raw(source_name, original_site, "Eventvelden gebruikt", "", normalized_site, "ok", f"{count} event-kandidaten direct uit {source_name}")
 
     for page_url in start_urls_for_site(normalized_site):
+        if progress_callback:
+            progress_callback(dedupe_events(events), stage="Websitepagina ophalen")
         if (new_event_count(events) >= MAX_EVENTS_PER_SITE and "vera-groningen.nl" not in canonical_host(normalized_site)) or time.monotonic() >= deadline:
             timed_out = time.monotonic() >= deadline
             break
@@ -2182,7 +2184,7 @@ def scrape_site(site_url, site_index=0, site_total=0, progress_callback=None, ex
         events.extend(page_events)
         add_raw("Website", original_site, "Pagina geanalyseerd", "", final_url, "ok", f"{len(page_events)} events/aanbiedingen op deze pagina")
         if progress_callback:
-            progress_callback(dedupe_events(events))
+            progress_callback(dedupe_events(events), stage="Pagina gelezen; evenementen verwerken")
         # VERA's programme parser already returns one clean record per event card.
         # Crawling every linked detail page with generic heuristics creates false events.
         if canonical_host(normalized_site) not in {"vera-groningen.nl", "groningen.uitloper.nu", "simplon.nl", "socialdeal.nl"}:
@@ -2224,7 +2226,9 @@ def scrape_site(site_url, site_index=0, site_total=0, progress_callback=None, ex
     is_kultuuragenda = "kultuuragenda.nl" in canonical_host(normalized_site)
     is_visitgroningen = canonical_host(normalized_site) == "visitgroningen.nl"
     visited = set()
-    for detail_url in detail_queue:
+    for detail_index, detail_url in enumerate(detail_queue, start=1):
+        if progress_callback:
+            progress_callback(dedupe_events(events), stage=f"Evenementdetails controleren ({detail_index}/{len(detail_queue)})")
         # Eerst echte activiteitspagina's uitlezen; de overzichtskaarten bevatten vaak te weinig details.
         detail_path = urlparse(detail_url).path
         is_activity_detail = is_kultuuragenda and bool(re.search(r"/agenda/\d+/[^/?#]+", detail_path, re.I))
@@ -2452,12 +2456,14 @@ def main():
         before_count = len(all_events)
         progress["currentSite"] = site
         progress["currentSiteIndex"] = index
+        progress["stage"] = "Websitepagina ophalen"
         progress["completedCount"] = index - 1
         progress["status"] = "running"
         progress["lastUpdatedAt"] = datetime.now(timezone.utc).isoformat(timespec="seconds")
         publish_scrape_progress(progress)
 
-        def publish_partial_site_progress(partial_events):
+        def publish_partial_site_progress(partial_events, stage="Evenementen verwerken"):
+            progress["stage"] = stage
             progress["events"] = dedupe_events([*all_events, *partial_events])
             progress["siteResults"] = list(SITE_RESULTS)
             progress["rawLog"] = RAW_DATA_ROWS[-MAX_RAW_ROWS:]
@@ -2476,6 +2482,7 @@ def main():
         site_events = dedupe_events(all_events[before_count:])
         progress["completedCount"] = index
         progress["lastCompletedSite"] = site
+        progress["stage"] = "Website klaar; volgende website voorbereiden"
         progress["completedSites"].append(site)
         progress["events"] = dedupe_events(all_events)
         progress["siteResults"] = list(SITE_RESULTS)
