@@ -1,7 +1,7 @@
 {
   "runId": "2026-10-25T16:44:48.200890+00:00-61e091f2",
   "startedAt": "2026-10-25T16:44:48+00:00",
-  "completedCount": 13,
+  "completedCount": 14,
   "totalSites": 19,
   "currentSite": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
   "currentSiteIndex": 14,
@@ -18,7 +18,8 @@
     "https://www.kultuuragenda.nl/agenda",
     "https://www.noorderzon.nl/programma",
     "https://www.concertgebouw.nl/concerten-en-tickets",
-    "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html"
+    "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+    "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817"
   ],
   "events": [
     {
@@ -1015,6 +1016,13 @@
       "newCount": 0,
       "durationSeconds": 1.22,
       "timedOut": false
+    },
+    {
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 4,
+      "timedOut": true
     }
   ],
   "rawLog": [
@@ -11821,12 +11829,12 @@
   ],
   "status": "running",
   "siteStartedAt": "2026-10-25T16:46:13+00:00",
-  "siteElapsedSeconds": 4,
+  "siteElapsedSeconds": 5,
   "sitePageCount": 0,
   "lastSiteEventCount": 0,
-  "stage": "Pagina gelezen; evenementen verwerken",
+  "stage": "Website klaar; volgende website voorbereiden",
   "lastUpdatedAt": "2026-10-25T16:46:17+00:00",
   "lastSiteNewEventCount": 0,
-  "lastCompletedSite": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
-  "lastCompletedAt": "2026-10-25T16:46:12+00:00"
+  "lastCompletedSite": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+  "lastCompletedAt": "2026-10-25T16:46:18+00:00"
 }
