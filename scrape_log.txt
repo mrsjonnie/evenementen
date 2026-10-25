@@ -74,3 +74,7 @@ Website	https://www.concertgebouw.nl/concerten-en-tickets	start	Start		https://w
 Parser	https://www.concertgebouw.nl/concerten-en-tickets	strategie	Scrapertype vastgesteld		https://www.concertgebouw.nl/concerten-en-tickets	universeel-jsonld-links-kaarten
 Website	https://www.concertgebouw.nl/concerten-en-tickets	fout	Pagina mislukt		https://www.concertgebouw.nl/concerten-en-tickets	HTTPSConnectionPool(host='www.concertgebouw.nl', port=443): Read timed out.
 Website	https://www.concertgebouw.nl/concerten-en-tickets	klaar	Klaar		https://www.concertgebouw.nl/concerten-en-tickets	site 12/19: 0 unieke events in 2.0 sec
+Website	https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html	start	Start		https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html	site 13/19: max 5 events, max 2 seconden
+Parser	https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html	strategie	Scrapertype vastgesteld		https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html	bioscoopfilms en speeldata (BiosAgenda Groningen)
+Website	https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html	fout	Pagina mislukt		https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html	HTTP 403
+Website	https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html	klaar	Klaar		https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html	site 13/19: 0 unieke events in 1.19 sec
