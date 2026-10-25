@@ -2260,25 +2260,34 @@ def scrape_site(site_url, site_index=0, site_total=0, progress_callback=None, ex
                         # Fetch the agenda module directly because the listing HTML contains no event links.
                         asset_parts = urlparse(asset_url)
                         asset_root = f"{asset_parts.scheme}://{asset_parts.netloc}/assets/"
-                        chunk_match = re.search(r'9760===e\?"([^"]+\.js)"', asset_text)
-                        if chunk_match and time.monotonic() < deadline:
-                            chunk_url = urljoin(asset_root, chunk_match.group(1))
+                        # Read a few lazy chunks from Webpack's filename map; agenda components
+                        # and their API paths are not present in the server-rendered listing.
+                        chunk_paths = list(dict.fromkeys(re.findall(r'\d+===e\?"([^"]+\.js)"', asset_text)))
+                        for relative in [path for path in chunk_paths if "axios" not in path.lower()][:7]:
+                            if time.monotonic() + 1.5 >= deadline:
+                                break
+                            chunk_url = urljoin(asset_root, relative)
                             try:
                                 chunk_response = session.get(
                                     chunk_url, headers=REQUEST_HEADERS,
-                                    timeout=min(2.0, remaining_timeout(deadline))
+                                    timeout=min(1.2, remaining_timeout(deadline))
                                 )
-                                if chunk_response.status_code < 400:
-                                    chunk_text = chunk_response.text
-                                    add_raw("Diagnose", original_site, "Zwolse agenda-chunk", "", chunk_url, "diagnose", f"{len(chunk_text)} tekens geladen")
-                                    for candidate_match in re.finditer(url_pattern, chunk_text, re.I):
-                                        candidate = candidate_match.group(1)
-                                        if re.search(r"(?:api|graphql|agenda|programma|event|performance|voorstelling|show|calendar)", candidate, re.I):
-                                            add_raw("Diagnose", original_site, "Zwolse API-route", "", chunk_url, "diagnose", candidate)
-                                    for request_match in re.finditer(request_pattern, chunk_text, re.I):
-                                        add_raw("Diagnose", original_site, "Zwolse API-aanroep", "", chunk_url, "diagnose", request_match.group(0))
+                                if chunk_response.status_code >= 400:
+                                    continue
+                                chunk_text = chunk_response.text
+                                add_raw("Diagnose", original_site, "Zwolse chunk geladen", "", chunk_url, "diagnose", f"{len(chunk_text)} tekens; {relative}")
+                                found_routes = []
+                                for candidate_match in re.finditer(url_pattern, chunk_text, re.I):
+                                    candidate = candidate_match.group(1)
+                                    if re.search(r"(?:api|graphql|agenda|programma|event|performance|voorstelling|show|calendar)", candidate, re.I):
+                                        found_routes.append(candidate)
+                                for candidate in list(dict.fromkeys(found_routes))[:10]:
+                                    add_raw("Diagnose", original_site, "Zwolse API-route", "", chunk_url, "diagnose", candidate)
+                                request_matches = list(dict.fromkeys(m.group(0) for m in re.finditer(request_pattern, chunk_text, re.I)))
+                                for request_match in request_matches[:4]:
+                                    add_raw("Diagnose", original_site, "Zwolse API-aanroep", "", chunk_url, "diagnose", request_match)
                             except Exception as chunk_error:
-                                add_raw("Diagnose", original_site, "Zwolse agenda-chunk fout", "", chunk_url, "fout", str(chunk_error))
+                                add_raw("Diagnose", original_site, "Zwolse chunk fout", "", chunk_url, "fout", str(chunk_error))
                         unique_matches = list(dict.fromkeys(matches))
                         if not unique_matches:
                             snippets = [m.group(0) for m in re.finditer(r".{0,40}(?:9760|6183).{0,70}", asset_text, re.I)][:3]
