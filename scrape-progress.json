@@ -2253,15 +2253,42 @@
       "url": "https://www.kultuuragenda.nl/agenda",
       "status": "strategie",
       "rawText": "universele detailpagina-parser (Kultuuragenda)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Pagina gelezen",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda",
+      "status": "ok",
+      "rawText": "149272 tekens HTML"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Kultuuragenda detailstrategie",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda",
+      "status": "strategie",
+      "rawText": "Overzicht overslaan; alleen echte /agenda/<id>/<slug> activiteitspagina’s verwerken"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Pagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda",
+      "status": "ok",
+      "rawText": "0 events/aanbiedingen op deze pagina"
     }
   ],
   "status": "running",
   "siteStartedAt": "2026-10-25T15:05:20+00:00",
-  "siteElapsedSeconds": 1,
-  "sitePageCount": 0,
+  "siteElapsedSeconds": 3,
+  "sitePageCount": 1,
   "lastSiteEventCount": 0,
-  "stage": "Websitepagina ophalen",
-  "lastUpdatedAt": "2026-10-25T15:05:21+00:00",
+  "stage": "Pagina gelezen; evenementen verwerken",
+  "lastUpdatedAt": "2026-10-25T15:05:23+00:00",
   "lastSiteNewEventCount": 0,
   "lastCompletedSite": "https://groningermuseum.nl/programma",
   "lastCompletedAt": "2026-10-25T15:05:18+00:00"
