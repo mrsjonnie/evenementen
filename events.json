@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-25T13:55:26+00:00",
+  "updatedAt": "2026-10-25T13:55:32+00:00",
   "events": [
     {
       "date": "2026-10-25",
@@ -11529,6 +11529,13 @@
     },
     {
       "site": "https://www.socialdeal.nl/",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 3.29,
+      "timedOut": true
+    },
+    {
+      "site": "https://denieuwekolk.nl/agenda",
       "count": 0,
       "newCount": 0,
       "durationSeconds": 3.29,
