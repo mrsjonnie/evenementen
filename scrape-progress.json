@@ -1,7 +1,7 @@
 {
   "runId": "2026-10-25T15:04:39.336290+00:00-82633d80",
   "startedAt": "2026-10-25T15:04:39+00:00",
-  "completedCount": 18,
+  "completedCount": 19,
   "totalSites": 20,
   "currentSite": "https://www.filmvandaag.nl/bioscoop",
   "currentSiteIndex": 19,
@@ -23,7 +23,8 @@
     "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
     "https://www.vvvameland.nl/activiteiten-en-evenementen",
     "https://www.socialdeal.nl/",
-    "https://denieuwekolk.nl/agenda"
+    "https://denieuwekolk.nl/agenda",
+    "https://www.filmvandaag.nl/bioscoop"
   ],
   "events": [],
   "siteResults": [
@@ -144,6 +145,13 @@
       "count": 0,
       "newCount": 0,
       "durationSeconds": 3.08,
+      "timedOut": true
+    },
+    {
+      "site": "https://www.filmvandaag.nl/bioscoop",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 2.0,
       "timedOut": true
     }
   ],
@@ -3072,6 +3080,15 @@
       "url": "https://www.filmvandaag.nl/filmladder/stad/80-groningen",
       "status": "fout",
       "rawText": "HTTP 403"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.filmvandaag.nl/bioscoop",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://www.filmvandaag.nl/bioscoop",
+      "status": "klaar",
+      "rawText": "site 19/20: 0 unieke events in 2.0 sec"
     }
   ],
   "status": "running",
@@ -3079,9 +3096,9 @@
   "siteElapsedSeconds": 3,
   "sitePageCount": 0,
   "lastSiteEventCount": 0,
-  "stage": "Websitepagina ophalen",
+  "stage": "Website klaar; volgende website voorbereiden",
   "lastUpdatedAt": "2026-10-25T15:06:06+00:00",
   "lastSiteNewEventCount": 0,
-  "lastCompletedSite": "https://denieuwekolk.nl/agenda",
-  "lastCompletedAt": "2026-10-25T15:06:02+00:00"
+  "lastCompletedSite": "https://www.filmvandaag.nl/bioscoop",
+  "lastCompletedAt": "2026-10-25T15:06:06+00:00"
 }
