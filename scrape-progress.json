@@ -8,8 +8,28 @@
   "completedSites": [],
   "events": [],
   "siteResults": [],
-  "rawLog": [],
+  "rawLog": [
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "Start",
+      "date": "",
+      "url": "https://groningen.uitloper.nu/",
+      "status": "start",
+      "rawText": "site 1/19: max 20 events, max 3 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://groningen.uitloper.nu/",
+      "status": "strategie",
+      "rawText": "uitloper-agenda"
+    }
+  ],
   "status": "running",
   "stage": "Websitepagina ophalen",
-  "lastUpdatedAt": "2026-10-25T10:34:35+00:00"
+  "lastUpdatedAt": "2026-10-25T10:34:37+00:00",
+  "lastSiteEventCount": 0
 }
