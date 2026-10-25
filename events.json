@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-25T14:10:00+00:00",
+  "updatedAt": "2026-10-25T14:10:06+00:00",
   "events": [
     {
       "date": "2026-10-25",
@@ -11688,6 +11688,13 @@
       "newCount": 0,
       "durationSeconds": 3.21,
       "timedOut": true
+    },
+    {
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 3.47,
+      "timedOut": true
     }
   ],
   "rawLog": [
@@ -22427,6 +22434,69 @@
       "url": "https://www.vera-groningen.nl/",
       "status": "klaar",
       "rawText": "site 7/20: 0 unieke events in 3.21 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Start",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda",
+      "status": "start",
+      "rawText": "site 8/20: max 5 events, max 2 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda",
+      "status": "strategie",
+      "rawText": "agenda-kaarten"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Pagina gelezen",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda",
+      "status": "ok",
+      "rawText": "146630 tekens HTML"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Donar Groningen – CSO Voluntari 2026",
+      "date": "2026-10-27",
+      "url": "https://www.martiniplaza.nl/nl/agenda/donar-groningen-cso-voluntari-2026",
+      "status": "venue-agenda kaart",
+      "rawText": "Sport Sport Donar Groningen – CSO Voluntari 2026 27 oktober"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Jethro Tull",
+      "date": "2026-10-27",
+      "url": "https://www.martiniplaza.nl/nl/agenda/jethro-tull",
+      "status": "venue-agenda kaart",
+      "rawText": "Muziek Theater Jethro Tull 27 oktober"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Rob Lamberti - A Celebration of GEORGE MICHAEL",
+      "date": "2026-10-28",
+      "url": "https://www.martiniplaza.nl/nl/agenda/rob-lamberti",
+      "status": "venue-agenda kaart",
+      "rawText": "Muziek Theater Rob Lamberti - A Celebration of GEORGE MICHAEL 28 oktober"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Francis van Broekhuizen - Tosca",
+      "date": "2026-10-30",
+      "url": "https://www.martiniplaza.nl/nl/agenda/francis-van-broekhuizen",
+      "status": "venue-agenda kaart",
+      "rawText": "Muziek Theater Francis van Broekhuizen - Tosca 30 oktober"
     }
   ]
 }
