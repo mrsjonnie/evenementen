@@ -3,8 +3,8 @@
   "startedAt": "2026-10-25T10:59:44+00:00",
   "completedCount": 1,
   "totalSites": 3,
-  "currentSite": "https://www.zwolsetheaters.nl/programma",
-  "currentSiteIndex": 1,
+  "currentSite": "https://denieuwekolk.nl/agenda",
+  "currentSiteIndex": 2,
   "completedSites": [
     "https://www.zwolsetheaters.nl/programma"
   ],
@@ -336,12 +336,12 @@
     }
   ],
   "status": "running",
-  "siteStartedAt": "2026-10-25T10:59:45+00:00",
-  "siteElapsedSeconds": 8,
-  "sitePageCount": 1,
+  "siteStartedAt": "2026-10-25T10:59:54+00:00",
+  "siteElapsedSeconds": 0,
+  "sitePageCount": 0,
   "lastSiteEventCount": 0,
-  "stage": "Website klaar; volgende website voorbereiden",
-  "lastUpdatedAt": "2026-10-25T10:59:50+00:00",
+  "stage": "Websitepagina ophalen",
+  "lastUpdatedAt": "2026-10-25T10:59:54+00:00",
   "lastCompletedSite": "https://www.zwolsetheaters.nl/programma",
   "lastCompletedAt": "2026-10-25T10:59:53+00:00"
 }
