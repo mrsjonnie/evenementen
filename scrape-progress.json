@@ -1,7 +1,7 @@
 {
   "runId": "2026-10-25T10:20:37+00:00",
   "startedAt": "2026-10-25T10:20:37+00:00",
-  "completedCount": 4,
+  "completedCount": 5,
   "totalSites": 19,
   "currentSite": "https://www.spotgroningen.nl/programma/",
   "currentSiteIndex": 5,
@@ -9,7 +9,8 @@
     "https://groningen.uitloper.nu/",
     "https://www.visitgroningen.nl/nl/doen/evenementen",
     "https://www.visitgroningen.nl/nl/doen/wandelen",
-    "https://forum.nl/nl/agenda"
+    "https://forum.nl/nl/agenda",
+    "https://www.spotgroningen.nl/programma/"
   ],
   "events": [
     {
@@ -600,6 +601,13 @@
       "count": 0,
       "newCount": 0,
       "durationSeconds": 12.15,
+      "timedOut": false
+    },
+    {
+      "site": "https://www.spotgroningen.nl/programma/",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 5.55,
       "timedOut": false
     }
   ],
@@ -5013,11 +5021,65 @@
       "url": "https://www.spotgroningen.nl/programma",
       "status": "ok",
       "rawText": "0 events/aanbiedingen op deze pagina"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "Feed geanalyseerd",
+      "date": "",
+      "url": "https://www.spotgroningen.nl",
+      "status": "ok",
+      "rawText": "0 events uit openbare feed"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://www.spotgroningen.nl/rss",
+      "status": "fout",
+      "rawText": "HTTP 500"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://www.spotgroningen.nl/rss.xml",
+      "status": "fout",
+      "rawText": "HTTP 404"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://www.spotgroningen.nl/feed.xml",
+      "status": "fout",
+      "rawText": "HTTP 404"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://www.spotgroningen.nl/events/feed/",
+      "status": "fout",
+      "rawText": "HTTP 404"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://www.spotgroningen.nl/programma/",
+      "status": "klaar",
+      "rawText": "site 5/19: 0 unieke events in 5.55 sec"
     }
   ],
   "status": "running",
   "lastUpdatedAt": "2026-10-25T10:21:19+00:00",
   "lastSiteEventCount": 0,
-  "lastCompletedSite": "https://forum.nl/nl/agenda",
-  "lastCompletedAt": "2026-10-25T10:21:15+00:00"
+  "lastCompletedSite": "https://www.spotgroningen.nl/programma/",
+  "lastCompletedAt": "2026-10-25T10:21:24+00:00"
 }
