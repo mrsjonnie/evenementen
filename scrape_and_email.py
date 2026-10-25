@@ -1430,9 +1430,13 @@ def start_urls_for_site(site_url):
         ]
     if host == "groupon.nl":
         base = f"{parsed.scheme}://{parsed.netloc}"
+        # Prefer the Groningen-specific local-deals listing; the root can default to Amsterdam.
         return unique_urls([
-            urljoin(base, "/"), urljoin(base, "/kortingsbonnen"), urljoin(base, "/deal/"),
-            urljoin(base, "/best-deals/"), urljoin(base, "/local/"),
+            exact,
+            urljoin(base, "/kortingsbonnen/gemeente-groningen"),
+            urljoin(base, "/kortingsbonnen/groningen"),
+            urljoin(base, "/kortingsbonnen"),
+            urljoin(base, "/"),
         ])
     if host == "simplon.nl":
         return [urljoin(exact, "/programma/")]
@@ -1543,24 +1547,23 @@ def fetch_html(session, url, deadline):
 
 
 def ibood_offer_price(value):
-    """Pak de actuele dealprijs, niet de adviesprijs die er vaak vóór staat."""
+    """Pak de actuele iBOOD-dealprijs, ook als die als 1.399,- of 69, 95 wordt getoond."""
     text = clean_text(value)
+    price_pattern = r"(?:€\s*)?\d{1,3}(?:\.\d{3})*(?:,\s*\d{2}|,\s*-|\.\s*\d{2})"
     after_advice = re.search(r"adviesprijs(?:\s+van\s+de\s+fabrikant)?", text, re.I)
-    if after_advice:
-        tail = text[after_advice.end():]
-        amounts = list(re.finditer(r"(?:€\s*)?\d{1,4}[,.]\s*\d{2}", tail))
-        if len(amounts) >= 2:
-            amount = amounts[1].group(0)
-        elif amounts:
-            amount = amounts[0].group(0)
-        else:
-            amount = ""
-    else:
-        amounts = list(re.finditer(r"€\s*\d{1,4}[,.]\s*\d{2}", text))
-        amount = amounts[-1].group(0) if amounts else ""
+    search_text = text[after_advice.end():] if after_advice else text
+    amounts = list(re.finditer(price_pattern, search_text, re.I))
+    amount = amounts[1].group(0) if after_advice and len(amounts) >= 2 else (
+        amounts[0].group(0) if after_advice and amounts else
+        amounts[-1].group(0) if amounts else ""
+    )
     if not amount:
         return first_price(text)
-    amount = re.sub(r"^€\s*", "", amount).replace(" ", "").replace(",", ".")
+    amount = re.sub(r"^€\s*", "", amount).replace(" ", "")
+    if amount.endswith(",-"):
+        amount = amount[:-2] + ".00"
+    elif "," in amount:
+        amount = amount.replace(".", "").replace(",", ".")
     try:
         number = float(amount)
         return f"€ {number:,.2f}".replace(",", "X").replace(".", ",").replace("X", ".")
@@ -1866,7 +1869,7 @@ def extract_groupon_offers(html, page_url, site_url):
     selectors = [
         "article", "[data-testid*='deal']", "[data-testid*='product']",
         "[class*='deal-card']", "[class*='dealCard']", "[class*='tile']",
-        "[class*='product-card']", "[class*='productCard']",
+        "[class*='card']", "[class*='offer']", "[class*='product']",
     ]
     for selector in selectors:
         for card in soup.select(selector)[:500]:
@@ -1950,6 +1953,7 @@ def extract_ibood_offers(html, page_url, site_url):
             })
             if len(offers) >= MAX_EVENTS_PER_SITE:
                 return offers
+    add_raw("Parser", site_url, "iBOOD-telling", "", page_url, "ok" if offers else "geen resultaten", f"{len(offers)} aanbiedingen gevonden; limiet {MAX_EVENTS_PER_SITE}; HTML {len(html)} tekens")
     add_raw("Parser", site_url, "iBOOD-telling", "", page_url, "ok" if offers else "geen resultaten", f"{len(offers)} aanbiedingen gevonden; limiet {MAX_EVENTS_PER_SITE}; HTML {len(html)} tekens")
     return offers
 
