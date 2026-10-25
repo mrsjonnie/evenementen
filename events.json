@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-25T18:13:36+00:00",
+  "updatedAt": "2026-10-25T18:13:43+00:00",
   "events": [
     {
       "date": "2026-10-25",
@@ -10477,6 +10477,13 @@
       "newCount": 0,
       "durationSeconds": 4.03,
       "timedOut": true
+    },
+    {
+      "site": "https://www.filmvandaag.nl/bioscoop",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 4.03,
+      "timedOut": true
     }
   ],
   "rawLog": [
@@ -10650,6 +10657,69 @@
       "url": "https://www.pathe.nl/bioscoop/groningen",
       "status": "klaar",
       "rawText": "site 2/3: 0 unieke events in 4.03 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.filmvandaag.nl/bioscoop",
+      "title": "Start",
+      "date": "",
+      "url": "https://www.filmvandaag.nl/bioscoop",
+      "status": "start",
+      "rawText": "site 3/3: max 12 events, max 4 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.filmvandaag.nl/bioscoop",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://www.filmvandaag.nl/bioscoop",
+      "status": "strategie",
+      "rawText": "bioscoopagenda Groningen (FilmVandaag)"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.filmvandaag.nl/filmladder/stad/80-groningen",
+      "title": "403-tekstproxy mislukt",
+      "date": "",
+      "url": "https://www.filmvandaag.nl/filmladder/stad/80-groningen",
+      "status": "fout",
+      "rawText": "HTTPSConnectionPool(host='r.jina.ai', port=443): Read timed out. (read timeout=2.5)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.filmvandaag.nl/bioscoop",
+      "title": "Pagina mislukt",
+      "date": "",
+      "url": "https://www.filmvandaag.nl/filmladder/stad/80-groningen",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://filmvandaag.nl/filmladder/stad/80-groningen",
+      "title": "403-tekstproxy mislukt",
+      "date": "",
+      "url": "https://filmvandaag.nl/filmladder/stad/80-groningen",
+      "status": "fout",
+      "rawText": "HTTPSConnectionPool(host='r.jina.ai', port=443): Read timed out. (read timeout=1.1769205549999953)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.filmvandaag.nl/bioscoop",
+      "title": "Pagina mislukt",
+      "date": "",
+      "url": "https://filmvandaag.nl/filmladder/stad/80-groningen",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.filmvandaag.nl/bioscoop",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://www.filmvandaag.nl/bioscoop",
+      "status": "klaar",
+      "rawText": "site 3/3: 0 unieke events in 4.03 sec"
     }
   ]
 }
