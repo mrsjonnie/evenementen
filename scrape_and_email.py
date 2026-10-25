@@ -5,6 +5,7 @@ import re
 import time
 import uuid
 import subprocess
+import signal
 import xml.etree.ElementTree as ET
 from email.utils import parsedate_to_datetime
 from datetime import date, datetime, timedelta, timezone
@@ -2914,11 +2915,36 @@ def main():
             progress["status"] = "running"
             publish_scrape_progress(progress)
 
+        # Enforce a hard wall-clock limit around the whole site's parser, not only HTTP calls.
+        # This prevents a pathological page/parser loop from pinning the workflow on one site.
+        class SiteDeadlineExceeded(TimeoutError):
+            pass
+
+        def _site_deadline_handler(signum, frame):
+            raise SiteDeadlineExceeded(f"site overschreed de harde tijdslimiet van {SITE_TIME_LIMIT_SECONDS} seconden")
+
+        previous_alarm_handler = signal.getsignal(signal.SIGALRM)
+        signal.signal(signal.SIGALRM, _site_deadline_handler)
+        signal.setitimer(signal.ITIMER_REAL, SITE_TIME_LIMIT_SECONDS)
         try:
             all_events.extend(scrape_site(site, index, total_sites, progress_callback=publish_partial_site_progress, existing_event_keys=previous_all_keys))
+        except SiteDeadlineExceeded as exc:
+            add_raw("Website", site, "Site-time-out", "", site, "timeout", str(exc))
+            if SITE_RESULTS and canonical_host(SITE_RESULTS[-1].get("site", "")) == canonical_host(site):
+                SITE_RESULTS.pop()
+            SITE_RESULTS.append({
+                "site": site,
+                "count": len(dedupe_events(all_events[before_count:])),
+                "newCount": len(dedupe_events(all_events[before_count:])),
+                "durationSeconds": SITE_TIME_LIMIT_SECONDS,
+                "timedOut": True
+            })
         except Exception as exc:
             add_raw("Website", site, "Site mislukt", "", site, "fout", str(exc))
             SITE_RESULTS.append({"site": site, "count": 0, "newCount": 0, "durationSeconds": 0, "timedOut": False})
+        finally:
+            signal.setitimer(signal.ITIMER_REAL, 0)
+            signal.signal(signal.SIGALRM, previous_alarm_handler)
         site_events = dedupe_events(all_events[before_count:])
         # Keep the source site's result count accurate as soon as this site finishes;
         # do not wait until the entire multi-site scan is saved.
