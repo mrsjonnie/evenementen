@@ -1392,7 +1392,7 @@
   </div>
 
   <script>
-    const APP_VERSION = "2026.10.25.56";
+    const APP_VERSION = "2026.10.25.55";
     const DEFAULT_MAX_EVENTS_PER_SITE = 20;
     const DEFAULT_SITE_TIME_LIMIT_SECONDS = 20;
     const SCAN_SETTINGS_KEY = "eventScanSettingsV1";
@@ -3761,9 +3761,6 @@
       const selectedFromStorage = savedSources && Array.isArray(savedSources.selectedSites)
         ? new Set(savedSources.selectedSites.filter((site) => sites.includes(site)))
         : new Set(sites);
-      // Newly added default source: include Pathé in the first test run for existing users too.
-      const patheSite = sites.find((site) => hostFromUrl(site) === "pathe.nl");
-      if (patheSite && savedSources && !savedSources.selectedSites?.includes(patheSite)) selectedFromStorage.add(patheSite);
       renderSites(selectedFromStorage);
       renderRawLog();
       updateProviderCount();
