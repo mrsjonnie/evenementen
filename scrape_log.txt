@@ -482,3 +482,7 @@ Website	https://www.vvvameland.nl/activiteiten-en-evenementen	start	Start		https
 Parser	https://www.vvvameland.nl/activiteiten-en-evenementen	strategie	Scrapertype vastgesteld		https://www.vvvameland.nl/activiteiten-en-evenementen	universeel-jsonld-links-kaarten
 Website	https://www.vvvameland.nl/activiteiten-en-evenementen	fout	Pagina mislukt		https://www.vvvameland.nl/activiteiten-en-evenementen	HTTPSConnectionPool(host='www.vvvameland.nl', port=443): Read timed out. (read timeout=0.9416616089999934)
 Website	https://www.vvvameland.nl/activiteiten-en-evenementen	klaar	Klaar		https://www.vvvameland.nl/activiteiten-en-evenementen	site 15/19: 0 unieke events in 2.0 sec
+Website	https://www.socialdeal.nl/	start	Start		https://www.socialdeal.nl/	site 16/19: max 5 events, max 2 seconden
+Parser	https://www.socialdeal.nl/	strategie	Scrapertype vastgesteld		https://www.socialdeal.nl/	Social Deal-aanbiedingen
+Website	https://www.socialdeal.nl/	fout	Pagina mislukt		https://www.socialdeal.nl/dichtbij/groningen/	HTTPSConnectionPool(host='www.socialdeal.nl', port=443): Read timed out. (read timeout=0.9900147369999956)
+Website	https://www.socialdeal.nl/	klaar	Klaar		https://www.socialdeal.nl/	site 16/19: 0 unieke events in 3.0 sec
