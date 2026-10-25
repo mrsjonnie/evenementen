@@ -1,7 +1,7 @@
 {
   "runId": "2026-10-25T14:57:18.459303+00:00-2bf5937b",
   "startedAt": "2026-10-25T14:57:18+00:00",
-  "completedCount": 17,
+  "completedCount": 18,
   "totalSites": 20,
   "currentSite": "https://denieuwekolk.nl/agenda",
   "currentSiteIndex": 18,
@@ -22,7 +22,8 @@
     "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
     "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
     "https://www.vvvameland.nl/activiteiten-en-evenementen",
-    "https://www.socialdeal.nl/"
+    "https://www.socialdeal.nl/",
+    "https://denieuwekolk.nl/agenda"
   ],
   "events": [],
   "siteResults": [
@@ -136,6 +137,13 @@
       "count": 0,
       "newCount": 0,
       "durationSeconds": 3.09,
+      "timedOut": true
+    },
+    {
+      "site": "https://denieuwekolk.nl/agenda",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 3.16,
       "timedOut": true
     }
   ],
@@ -1858,16 +1866,25 @@
       "url": "https://denieuwekolk.nl/agenda",
       "status": "fout",
       "rawText": "HTTPSConnectionPool(host='denieuwekolk.nl', port=443): Read timed out. (read timeout=0.8348415239999838)"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://denieuwekolk.nl/agenda",
+      "status": "klaar",
+      "rawText": "site 18/20: 0 unieke events in 3.16 sec"
     }
   ],
   "status": "running",
   "siteStartedAt": "2026-10-25T14:58:39+00:00",
-  "siteElapsedSeconds": 4,
+  "siteElapsedSeconds": 5,
   "sitePageCount": 0,
   "lastSiteEventCount": 0,
-  "stage": "Websitepagina ophalen",
+  "stage": "Website klaar; volgende website voorbereiden",
   "lastUpdatedAt": "2026-10-25T14:58:43+00:00",
   "lastSiteNewEventCount": 0,
-  "lastCompletedSite": "https://www.socialdeal.nl/",
-  "lastCompletedAt": "2026-10-25T14:58:38+00:00"
+  "lastCompletedSite": "https://denieuwekolk.nl/agenda",
+  "lastCompletedAt": "2026-10-25T14:58:44+00:00"
 }
