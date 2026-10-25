@@ -2240,7 +2240,9 @@ def extract_ibood_offers(html, page_url, site_url):
                 href = ""
                 for anchor in ([node] if getattr(node, "name", "") == "a" and node.get("href") else []) + node.find_all("a", href=True):
                     candidate = normalized_url(anchor.get("href"), page_url)
-                    if candidate and canonical_host(candidate) == "ibood.com" and re.search(r"/(?:product|products|deal|offers|p)/|/s-nl/", urlparse(candidate).path, re.I):
+                    candidate_path = urlparse(candidate).path.lower() if candidate else ""
+                    is_listing = candidate_path.rstrip("/") in {"/s-nl", "/nl/s-nl", "/offers/nl/s-nl"}
+                    if candidate and canonical_host(candidate) == "ibood.com" and not is_listing and not re.search(r"/(?:categorie|category|merken|brands|b/|flash-sales?)(?:/|$)", candidate_path, re.I):
                         href = candidate
                         break
                 if not href:
@@ -2249,7 +2251,7 @@ def extract_ibood_offers(html, page_url, site_url):
                 if not price:
                     continue
                 title = node_title(node)
-                if not title or len(title) < 5 or re.search(r"\\b(voorwaarden|klantenservice|inloggen|mijn account|nieuwsbrief|alle deals|iBOOD)\\b", title, re.I):
+                if not title or len(title) < 5 or re.search(r"\b(voorwaarden|klantenservice|inloggen|mijn account|nieuwsbrief|alle deals|iBOOD)\b", title, re.I):
                     continue
                 key = href.lower().split("?")[0].rstrip("/")
                 if key in seen:
@@ -2571,9 +2573,12 @@ def scrape_site(site_url, site_index=0, site_total=0, progress_callback=None, ex
         elif canonical_host(normalized_site) == "biosagenda.nl":
             page_events = extract_biosagenda_events(html, final_url, normalized_site, "Website")
         elif canonical_host(normalized_site) == "pathe.nl":
-            # Pathé's own Groningen page first: use its date/time grid when server-rendered,
-            # then JSON-LD/cards/inline dates. The later BiosAgenda URL remains a fallback.
-            page_events = extract_filmvandaag_events(html, final_url, normalized_site, "Website")
+            # Pathé's own Groningen page first. When the next URL is the BiosAgenda
+            # fallback, use its dedicated cinema parser rather than treating it as Pathé HTML.
+            if canonical_host(final_url) == "biosagenda.nl":
+                page_events = extract_biosagenda_events(html, final_url, normalized_site, "Website")
+            else:
+                page_events = extract_filmvandaag_events(html, final_url, normalized_site, "Website")
             if not page_events:
                 page_events = parse_page_events(html, final_url, normalized_site, "Website")
             add_raw("Diagnose", original_site, "Pathé-speeltijden", "", final_url, "fallback",
