@@ -1,7 +1,7 @@
 {
   "runId": "2026-10-25T17:54:10.535222+00:00-c7af6784",
   "startedAt": "2026-10-25T17:54:10+00:00",
-  "completedCount": 13,
+  "completedCount": 14,
   "totalSites": 14,
   "currentSite": "https://www.vvvameland.nl/activiteiten-en-evenementen",
   "currentSiteIndex": 14,
@@ -18,7 +18,8 @@
     "https://www.noorderzon.nl/programma",
     "https://www.concertgebouw.nl/concerten-en-tickets",
     "https://www.zwolsetheaters.nl/programma",
-    "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817"
+    "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+    "https://www.vvvameland.nl/activiteiten-en-evenementen"
   ],
   "events": [
     {
@@ -131,6 +132,36 @@
     },
     {
       "date": "2026-10-25",
+      "time": "",
+      "title": "Archery Tag",
+      "type": "Activiteit",
+      "location": "Ameland",
+      "locationLink": "",
+      "website": "https://www.vvvameland.nl/agenda/activiteiten-evenementen/archery-tag?startdate=2026-10-25",
+      "source": "vvvameland.nl",
+      "discoverySource": "Website",
+      "description": "Archery tag is een unieke combinatie van intensiteit en spanning. Deze activiteit doet denken aan trefbal of paintball, ... Persoon vanaf 12 jaar:",
+      "cost": "",
+      "image": "https://ameland-cdn.travelbase.nl/image-transforms/tile/896x672/7c13123185ca0374cc6914d2a14c9ccc.webp",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-25",
+      "time": "",
+      "title": "Beach golf",
+      "type": "Activiteit",
+      "location": "Ameland",
+      "locationLink": "",
+      "website": "https://www.vvvameland.nl/agenda/activiteiten-evenementen/beach-golf?startdate=2026-10-25",
+      "source": "vvvameland.nl",
+      "discoverySource": "Website",
+      "description": "Beachgolf is een leuke sportactiviteit voor zowel beginnende als meer ervaren golfers. Bij beachgolf vormt het zand een ... Persoon vanaf 12 jaar:",
+      "cost": "",
+      "image": "https://ameland-cdn.travelbase.nl/image-transforms/tile/896x672/aec5e966a73ebdef615d3ea493d23c86.webp",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-25",
       "time": "16:00",
       "title": "Bezinning",
       "type": "Activiteit",
@@ -176,6 +207,36 @@
     },
     {
       "date": "2026-10-25",
+      "time": "",
+      "title": "Blokarten",
+      "type": "Activiteit",
+      "location": "Ameland",
+      "locationLink": "",
+      "website": "https://www.vvvameland.nl/agenda/activiteiten-evenementen/blokarten?startdate=2026-10-25",
+      "source": "vvvameland.nl",
+      "discoverySource": "Website",
+      "description": "Scheuren over het strand van Ameland in een blokart! Ervaar de power van de wind in het zeil en cross met grote snelheid... Persoon vanaf 11 jaar:",
+      "cost": "",
+      "image": "https://ameland-cdn.travelbase.nl/image-transforms/tile/896x672/bd8e6f05d9555af5d945c647a70995f1.webp",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-25",
+      "time": "",
+      "title": "Blokarten duokart",
+      "type": "Familie",
+      "location": "Ameland",
+      "locationLink": "",
+      "website": "https://www.vvvameland.nl/agenda/activiteiten-evenementen/duo-kart?startdate=2026-10-25",
+      "source": "vvvameland.nl",
+      "discoverySource": "Website",
+      "description": "Speciaal voor kinderen onder de 11 jaar hebben we duozitters, zodat ze mee kunnen zeilen met een volwassene. Eén volwassene en één kind.:",
+      "cost": "",
+      "image": "https://ameland-cdn.travelbase.nl/image-transforms/tile/896x672/4184dfd001b86c06f7f048b37a1aef50.webp",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-25",
       "title": "Blotevoetenpad Opende",
       "type": "Wandelen",
       "location": "Groningen",
@@ -213,6 +274,51 @@
       "description": "Voeg toe als favoriet Voeg toe als favoriet",
       "cost": "",
       "image": "https://assets.plaece.nl/thumb/Mt38zo_ZVH5DzRxTIHolHw7KA-rxVYCpNREfjApvooo/resizing_type:fit/width:500/height:0/gravity:sm/enlarge:0/aHR0cHM6Ly9hc3NldHMucGxhZWNlLm5sL29kcC1ncm9uaW5nZW4vaW1hZ2UvNWViYWEwMDdkMGMxOTZlMDJmYzg5YjE3ZmY1OTUzZDY0ZmIyZDQ0OV8wMWExNDAzZC00ZjdmLTdkZmItYTU0MC1lZjc3ZWI3NWY0OWQuanBn.jpg",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-25",
+      "time": "",
+      "title": "Boogschieten",
+      "type": "Activiteit",
+      "location": "Ameland",
+      "locationLink": "",
+      "website": "https://www.vvvameland.nl/agenda/activiteiten-evenementen/boogschieten?startdate=2026-10-25",
+      "source": "vvvameland.nl",
+      "discoverySource": "Website",
+      "description": "Boogschieten op Ameland is een verrassend leuke activiteit, die plaatsvindt op het strand. Na een uitgebreide instructie... Persoon vanaf 10 jaar:",
+      "cost": "",
+      "image": "https://ameland-cdn.travelbase.nl/image-transforms/tile/896x672/285cf23026fb3ce911c2e4c15a0a48a7.webp",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-25",
+      "time": "",
+      "title": "Branding kajakken",
+      "type": "Activiteit",
+      "location": "Ameland",
+      "locationLink": "",
+      "website": "https://www.vvvameland.nl/agenda/activiteiten-evenementen/kajakken?startdate=2026-10-25",
+      "source": "vvvameland.nl",
+      "discoverySource": "Website",
+      "description": "Kajakken is geliefd bij jong en oud en zowel geschikt voor beginners als gevorderden. Onder leiding van een gediplomeerd... Persoon vanaf 12 jaar:",
+      "cost": "",
+      "image": "https://ameland-cdn.travelbase.nl/image-transforms/tile/896x672/6b3a8f76ca145c9db850d0d318d381a6.webp",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-25",
+      "time": "",
+      "title": "Bubble voetbal",
+      "type": "Activiteit",
+      "location": "Ameland",
+      "locationLink": "",
+      "website": "https://www.vvvameland.nl/agenda/activiteiten-evenementen/bubble-voetbal?startdate=2026-10-25",
+      "source": "vvvameland.nl",
+      "discoverySource": "Website",
+      "description": "Bubble voetbal is vergelijkbaar met echt voetballen; twee teams die proberen de bal in elkaars doel te werken. Er is ech... Persoon vanaf 12 jaar:",
+      "cost": "",
+      "image": "https://ameland-cdn.travelbase.nl/image-transforms/tile/896x672/83928e326e22e7694ca4aca076d81bb5.webp",
       "isNew": true
     },
     {
@@ -474,6 +580,21 @@
       "description": "In de voetsporen van Aletta Jacobs In de voetsporen van Aletta Jacobs",
       "cost": "Gratis",
       "discoverySource": "Website",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-25",
+      "time": "",
+      "title": "Kids surfles, 8-12 jaar Ben jij onder",
+      "type": "Familie",
+      "location": "Ameland",
+      "locationLink": "",
+      "website": "https://www.vvvameland.nl/agenda/activiteiten-evenementen/kids-surfles?startdate=2026-10-25",
+      "source": "vvvameland.nl",
+      "discoverySource": "Website",
+      "description": "Ben jij onder de 12 jaar en wil je graag leren surfen? Dan is de 'Kids surfles' echt wat voor jou. Wij organiseren een ...",
+      "cost": "",
+      "image": "https://ameland-cdn.travelbase.nl/image-transforms/tile/896x672/23d79697ad3c613f5d6a710258591024.webp",
       "isNew": true
     },
     {
@@ -838,6 +959,21 @@
     },
     {
       "date": "2026-10-25",
+      "time": "",
+      "title": "Powerkiten",
+      "type": "Activiteit",
+      "location": "Ameland",
+      "locationLink": "",
+      "website": "https://www.vvvameland.nl/agenda/activiteiten-evenementen/powerkiten?startdate=2026-10-25",
+      "source": "vvvameland.nl",
+      "discoverySource": "Website",
+      "description": "Ervaar de kracht van de wind met een powerkite op Ameland. Ameland Adventure organiseert deze spectaculaire activiteit o... Persoon vanaf 12 jaar:",
+      "cost": "",
+      "image": "https://ameland-cdn.travelbase.nl/image-transforms/tile/896x672/8d7c30cf7b10b49f854c2a295a5c9413.webp",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-25",
       "time": "19:00",
       "title": "Pubquiz",
       "type": "Activiteit",
@@ -860,6 +996,21 @@
       "description": "Terug Reisideeën Een week in Stad en Ommeland Een dag op pad in Groningen stad Dagtripjes zonder auto De rijkdom van Groningen is haar veranderlijke landschap. Binnen een mum van tijd sta je vanuit de stad aan de Waddenzee, midden in het groen of bij een schattig wierdedorp. Lunchen in de stad Naar het museum",
       "cost": "Gratis",
       "discoverySource": "Website",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-25",
+      "time": "",
+      "title": "Robbentocht met Ms Zeehond",
+      "type": "Familie",
+      "location": "Ameland",
+      "locationLink": "",
+      "website": "https://www.vvvameland.nl/agenda/activiteiten-evenementen/zeehond?startdate=2026-10-25",
+      "source": "vvvameland.nl",
+      "discoverySource": "Website",
+      "description": "Varen in ons prachtige Waddengebied en zeehonden van dichtbij bekijken is een unieke belevenis voor het gehele gezin!",
+      "cost": "",
+      "image": "https://ameland-cdn.travelbase.nl/image-transforms/tile/896x672/6dc4166c5aa3123f245a786381d0eb9c.webp",
       "isNew": true
     },
     {
@@ -976,6 +1127,21 @@
       "description": "Een reis door de tijd, langs de technische én creatieve…",
       "cost": "",
       "image": "https://groningen.uitloper.nu/images/smallthumb/files/2025/mario-storyworld-9x16.png",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-25",
+      "time": "",
+      "title": "Strandrit met de Strandexpress",
+      "type": "Familie",
+      "location": "Ameland",
+      "locationLink": "",
+      "website": "https://www.vvvameland.nl/agenda/activiteiten-evenementen/strandexpress?startdate=2026-10-25",
+      "source": "vvvameland.nl",
+      "discoverySource": "Website",
+      "description": "Met een comfortabele strandbus over het strand naar natuurgebied “’t Oerd” en \"De Hôn\". Gedurende de strandrit kun je ge... Kind 3 t/m 11 jaar:",
+      "cost": "",
+      "image": "https://ameland-cdn.travelbase.nl/image-transforms/tile/896x672/775bc655c77d679c193f1982dac04668.webp",
       "isNew": true
     },
     {
@@ -1197,6 +1363,21 @@
       "description": "Met STAD, Steernvanger en Olaf Vos.",
       "cost": "",
       "image": "https://groningen.uitloper.nu/images/smallthumb/files/screenshot-2026-09-29-at-15-49-09-stad-2400-jpg--jpeg-afbeelding-2400---1800-pixels----geschaald--50--.png",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-25",
+      "time": "",
+      "title": "Verfijn resultaten",
+      "type": "Concert",
+      "location": "Ameland",
+      "locationLink": "",
+      "website": "https://www.vvvameland.nl/activiteiten-en-evenementen?view=list&date_start=2026-10-26&date_end=2026-11-01",
+      "source": "vvvameland.nl",
+      "discoverySource": "Website",
+      "description": "Concerten en optredens Paardenreddingboot",
+      "cost": "",
+      "image": "",
       "isNew": true
     },
     {
@@ -1530,6 +1711,21 @@
     },
     {
       "date": "2026-10-26",
+      "time": "",
+      "title": "Branding kajakken",
+      "type": "Activiteit",
+      "location": "Ameland",
+      "locationLink": "",
+      "website": "https://www.vvvameland.nl/agenda/activiteiten-evenementen/kajakken?startdate=2026-10-26",
+      "source": "vvvameland.nl",
+      "discoverySource": "Website",
+      "description": "Kajakken is geliefd bij jong en oud en zowel geschikt voor beginners als gevorderden. Onder leiding van een gediplomeerd... Persoon vanaf 12 jaar:",
+      "cost": "",
+      "image": "https://ameland-cdn.travelbase.nl/image-transforms/tile/896x672/6b3a8f76ca145c9db850d0d318d381a6.webp",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-26",
       "time": "19:30",
       "title": "Chanel Beads + urika's bedroom",
       "type": "Concert",
@@ -1571,6 +1767,21 @@
       "description": "Tijdens een rondleiding nemen onze medewerkers je…",
       "cost": "",
       "image": "https://groningen.uitloper.nu/images/smallthumb/files/screenshot-2026-09-22-at-16-31-27-depotrondleidingen-lichaam---geest---groningerarchieven-nl.png",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-26",
+      "time": "",
+      "title": "ECO-safari Paal 17",
+      "type": "Familie",
+      "location": "Ameland",
+      "locationLink": "",
+      "website": "https://www.vvvameland.nl/agenda/activiteiten-evenementen/eco-safari-paal-17?startdate=2026-10-26",
+      "source": "vvvameland.nl",
+      "discoverySource": "Website",
+      "description": "Vanaf het Natuurcentrum gaan we met twee volledig elektrische buggy’s een tocht maken door diverse landschappen van het ...",
+      "cost": "",
+      "image": "https://ameland-cdn.travelbase.nl/image-transforms/tile/896x672/b52d310fcbd748b53d3a30c784eb338d.webp",
       "isNew": true
     },
     {
@@ -1676,6 +1887,21 @@
       "description": "Naar aanleiding van onderzoek in Groningen kozen Matthew…",
       "cost": "",
       "image": "https://groningen.uitloper.nu/images/smallthumb/files/screenshot-2026-08-21-at-15-09-02-matthew-lutz-kinoy---natsuko-uchino-keramikos-carrier-bag-groninger-museum.png",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-26",
+      "time": "",
+      "title": "Kids surfles, 8-12 jaar Ben jij onder",
+      "type": "Familie",
+      "location": "Ameland",
+      "locationLink": "",
+      "website": "https://www.vvvameland.nl/agenda/activiteiten-evenementen/kids-surfles?startdate=2026-10-26",
+      "source": "vvvameland.nl",
+      "discoverySource": "Website",
+      "description": "Ben jij onder de 12 jaar en wil je graag leren surfen? Dan is de 'Kids surfles' echt wat voor jou. Wij organiseren een ...",
+      "cost": "",
+      "image": "https://ameland-cdn.travelbase.nl/image-transforms/tile/896x672/23d79697ad3c613f5d6a710258591024.webp",
       "isNew": true
     },
     {
@@ -1860,6 +2086,21 @@
     },
     {
       "date": "2026-10-26",
+      "time": "",
+      "title": "Powerkiten",
+      "type": "Activiteit",
+      "location": "Ameland",
+      "locationLink": "",
+      "website": "https://www.vvvameland.nl/agenda/activiteiten-evenementen/powerkiten?startdate=2026-10-26",
+      "source": "vvvameland.nl",
+      "discoverySource": "Website",
+      "description": "Ervaar de kracht van de wind met een powerkite op Ameland. Ameland Adventure organiseert deze spectaculaire activiteit o... Persoon vanaf 12 jaar:",
+      "cost": "",
+      "image": "https://ameland-cdn.travelbase.nl/image-transforms/tile/896x672/8d7c30cf7b10b49f854c2a295a5c9413.webp",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-26",
       "time": "20:00",
       "title": "Pubquiz",
       "type": "Activiteit",
@@ -1916,6 +2157,36 @@
       "description": "Een reis door de tijd, langs de technische én creatieve…",
       "cost": "",
       "image": "https://groningen.uitloper.nu/images/smallthumb/files/2025/mario-storyworld-9x16.png",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-26",
+      "time": "",
+      "title": "Tennis op gravelbaan Nes",
+      "type": "Activiteit",
+      "location": "Ameland",
+      "locationLink": "",
+      "website": "https://www.vvvameland.nl/agenda/activiteiten-evenementen/tennisbaan-nes?startdate=2026-10-26",
+      "source": "vvvameland.nl",
+      "discoverySource": "Website",
+      "description": "Tijdens je verblijf een balletje slaan op een gravelbaan? Dat kan! Huur een tennisbaan af voor € 15,- per uur",
+      "cost": "",
+      "image": "https://ameland-cdn.travelbase.nl/image-transforms/tile/896x672/c3671e164e65eb26a22db5421e92c405.webp",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-26",
+      "time": "",
+      "title": "Tennis op kunstgrasbaan in Hollum",
+      "type": "Activiteit",
+      "location": "Ameland",
+      "locationLink": "",
+      "website": "https://www.vvvameland.nl/agenda/activiteiten-evenementen/tennisbaan-hollum?startdate=2026-10-26",
+      "source": "vvvameland.nl",
+      "discoverySource": "Website",
+      "description": "Tijdens je verblijf een balletje slaan op een kunstgrasbaan? Dat kan! Huur een tennisbaan af voor € 15 per uur",
+      "cost": "",
+      "image": "https://ameland-cdn.travelbase.nl/image-transforms/tile/896x672/121f6f951ebe28c187c975e6c17c081d.webp",
       "isNew": true
     },
     {
@@ -4439,6 +4710,21 @@
       "isNew": true
     },
     {
+      "date": "2027-03-01",
+      "time": "",
+      "title": "Overzicht Appartementen Appartementen Buren 1-3 personen Appartementen",
+      "type": "Activiteit",
+      "location": "Ameland",
+      "locationLink": "",
+      "website": "https://www.vvvameland.nl/overnachten/appartementen",
+      "source": "vvvameland.nl",
+      "discoverySource": "Website",
+      "description": "Overzicht Appartementen Appartementen Buren 6 personen of meer Appartementen Nes 6 personen of meer Appartementen Ballum Appartementen Hollum 6 personen of meer",
+      "cost": "",
+      "image": "",
+      "isNew": true
+    },
+    {
       "date": "2027-03-05",
       "time": "",
       "title": "Kans",
@@ -5475,63 +5761,16 @@
       "newCount": 50,
       "durationSeconds": 2.09,
       "timedOut": false
+    },
+    {
+      "site": "https://www.vvvameland.nl/activiteiten-en-evenementen",
+      "count": 19,
+      "newCount": 19,
+      "durationSeconds": 6.89,
+      "timedOut": true
     }
   ],
   "rawLog": [
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Tröckener Kecks",
-      "date": "2026-10-20",
-      "url": "https://www.spotgroningen.nl/programma/trockener-kecks/",
-      "status": "event uit link",
-      "rawText": "Tröckener Kecks Na 25 jaar terug op het podium wo 20 okt"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Kayhan Kalhor Ensemble",
-      "date": "2026-11-17",
-      "url": "https://www.spotgroningen.nl/programma/kayhan-kalhor-ensemble/",
-      "status": "event uit link",
-      "rawText": "Kayhan Kalhor Ensemble Wereldberoemde Iraanse maestro van de kemenche wo 17 nov"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Kovacs",
-      "date": "2026-12-11",
-      "url": "https://www.spotgroningen.nl/programma/kovacs-4/",
-      "status": "event uit link",
-      "rawText": "Kovacs Een chanteuse met een tijdloos en tegelijkertijd rauw stemgeluid za 11 dec"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Lizz Wright Warme mix van gospel,",
-      "date": "2027-10-05",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "5 okt Lizz Wright Warme mix van gospel, jazz en soul"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Nena Eén van de",
-      "date": "2027-10-05",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "5 okt Nena Eén van de grootste zangeressen van de Duitse popcultuur Uitverkocht"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Aaf en Lies Over de liefde (reprise)",
-      "date": "2027-10-06",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "6 okt Aaf en Lies Over de liefde (reprise) Prachtige verhalen en prangende liefdesproblemen Uitverkocht"
-    },
     {
       "source": "Website",
       "site": "https://www.spotgroningen.nl/programma/",
@@ -16277,16 +16516,70 @@
       "url": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
       "status": "klaar",
       "rawText": "site 13/14: 50 unieke events in 2.09 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vvvameland.nl/activiteiten-en-evenementen",
+      "title": "Start",
+      "date": "",
+      "url": "https://www.vvvameland.nl/activiteiten-en-evenementen",
+      "status": "start",
+      "rawText": "site 14/14: max 50 events, max 5 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.vvvameland.nl/activiteiten-en-evenementen",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://www.vvvameland.nl/activiteiten-en-evenementen",
+      "status": "strategie",
+      "rawText": "universeel-jsonld-links-kaarten"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vvvameland.nl/activiteiten-en-evenementen",
+      "title": "Pagina gelezen",
+      "date": "",
+      "url": "https://www.vvvameland.nl/activiteiten-en-evenementen",
+      "status": "ok",
+      "rawText": "2871868 tekens HTML"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.vvvameland.nl/activiteiten-en-evenementen",
+      "title": "Agenda-kaarten geteld",
+      "date": "",
+      "url": "https://www.vvvameland.nl/activiteiten-en-evenementen",
+      "status": "gespecialiseerde parser",
+      "rawText": "50 resultaten"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vvvameland.nl/activiteiten-en-evenementen",
+      "title": "Pagina geanalyseerd",
+      "date": "",
+      "url": "https://www.vvvameland.nl/activiteiten-en-evenementen",
+      "status": "ok",
+      "rawText": "24 events/aanbiedingen op deze pagina"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vvvameland.nl/activiteiten-en-evenementen",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://www.vvvameland.nl/activiteiten-en-evenementen",
+      "status": "klaar",
+      "rawText": "site 14/14: 19 unieke events in 6.89 sec"
     }
   ],
-  "status": "running",
+  "status": "finishing",
   "siteStartedAt": "2026-10-25T17:55:39+00:00",
-  "siteElapsedSeconds": 0,
-  "sitePageCount": 0,
-  "lastSiteEventCount": 0,
-  "stage": "Websitepagina ophalen",
-  "lastUpdatedAt": "2026-10-25T17:55:39+00:00",
-  "lastSiteNewEventCount": 50,
-  "lastCompletedSite": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
-  "lastCompletedAt": "2026-10-25T17:55:38+00:00"
+  "siteElapsedSeconds": 9,
+  "sitePageCount": 1,
+  "lastSiteEventCount": 19,
+  "stage": "Website klaar; volgende website voorbereiden",
+  "lastUpdatedAt": "2026-10-25T17:55:46+00:00",
+  "lastSiteNewEventCount": 19,
+  "lastCompletedSite": "https://www.vvvameland.nl/activiteiten-en-evenementen",
+  "lastCompletedAt": "2026-10-25T17:55:48+00:00"
 }
