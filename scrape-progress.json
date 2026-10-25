@@ -1,7 +1,7 @@
 {
   "runId": "2026-10-25T14:43:38.283171+00:00-eace0535",
   "startedAt": "2026-10-25T14:43:38+00:00",
-  "completedCount": 18,
+  "completedCount": 19,
   "totalSites": 20,
   "currentSite": "https://www.filmvandaag.nl/bioscoop",
   "currentSiteIndex": 19,
@@ -23,7 +23,8 @@
     "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
     "https://www.vvvameland.nl/activiteiten-en-evenementen",
     "https://www.socialdeal.nl/",
-    "https://denieuwekolk.nl/agenda"
+    "https://denieuwekolk.nl/agenda",
+    "https://www.filmvandaag.nl/bioscoop"
   ],
   "events": [
     {
@@ -227,6 +228,13 @@
       "count": 0,
       "newCount": 0,
       "durationSeconds": 3.23,
+      "timedOut": true
+    },
+    {
+      "site": "https://www.filmvandaag.nl/bioscoop",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 2.0,
       "timedOut": true
     }
   ],
@@ -11034,12 +11042,12 @@
   ],
   "status": "running",
   "siteStartedAt": "2026-10-25T14:45:05+00:00",
-  "siteElapsedSeconds": 2,
+  "siteElapsedSeconds": 3,
   "sitePageCount": 0,
   "lastSiteEventCount": 0,
-  "stage": "Websitepagina ophalen",
+  "stage": "Website klaar; volgende website voorbereiden",
   "lastUpdatedAt": "2026-10-25T14:45:07+00:00",
   "lastSiteNewEventCount": 0,
-  "lastCompletedSite": "https://denieuwekolk.nl/agenda",
-  "lastCompletedAt": "2026-10-25T14:45:04+00:00"
+  "lastCompletedSite": "https://www.filmvandaag.nl/bioscoop",
+  "lastCompletedAt": "2026-10-25T14:45:08+00:00"
 }
