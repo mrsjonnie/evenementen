@@ -23,7 +23,8 @@
       "discoverySource": "Website",
       "description": "Ontdek Home Sweet Home tijdens het Scandinavië Festival in De Nieuwe Kolk, het culturele hart van Assen. Laat je inspireren en ontmoet elkaar.",
       "cost": "",
-      "image": "https://media.denieuwekolk.nl/ed47fcc9-0158-7791-0845-25b6c6381562/home-sweet-home?crop=3290%2C1974%2C109%2C0&scale=1200&optimizer=image"
+      "image": "https://media.denieuwekolk.nl/ed47fcc9-0158-7791-0845-25b6c6381562/home-sweet-home?crop=3290%2C1974%2C109%2C0&scale=1200&optimizer=image",
+      "isNew": true
     },
     {
       "date": "2026-10-25",
@@ -37,7 +38,8 @@
       "discoverySource": "Website",
       "description": "Ontdek Värn tijdens het Scandinavië Festival bij De Nieuwe Kolk in Assen. Laat je inspireren door de cultuur en verhalen van Scandinavië.",
       "cost": "",
-      "image": "https://media.denieuwekolk.nl/8a18ec02-92cf-3698-a454-e4dd4702d9fb/v-rn-st-6-jpg-sd-high?crop=3840%2C2304%2C0%2C0&scale=1200&optimizer=image"
+      "image": "https://media.denieuwekolk.nl/8a18ec02-92cf-3698-a454-e4dd4702d9fb/v-rn-st-6-jpg-sd-high?crop=3840%2C2304%2C0%2C0&scale=1200&optimizer=image",
+      "isNew": true
     },
     {
       "date": "2026-10-26",
@@ -51,7 +53,8 @@
       "discoverySource": "Website",
       "description": "Beleef Los Tigres bij Filmliga in De Nieuwe Kolk, het culturele hart van Assen. Ontdek bijzondere films en ontmoet elkaar in het cultuurhuis.",
       "cost": "",
-      "image": "https://media.denieuwekolk.nl/3b5d4b04-8d0c-cd74-bcba-df0221588e89/los-tigres?crop=3840%2C2304%2C0%2C128&scale=1200&optimizer=image"
+      "image": "https://media.denieuwekolk.nl/3b5d4b04-8d0c-cd74-bcba-df0221588e89/los-tigres?crop=3840%2C2304%2C0%2C128&scale=1200&optimizer=image",
+      "isNew": true
     },
     {
       "date": "2026-10-31",
@@ -65,7 +68,8 @@
       "discoverySource": "Website",
       "description": "Beleef Fright Night: Clayface (16 jr.) bij De Nieuwe Kolk in Assen. Een huiveringwekkende filmavond voor liefhebbers van spanning en horror.",
       "cost": "",
-      "image": "https://media.denieuwekolk.nl/ce379c24-80cb-c856-78fe-48ce7127f221/clayface?crop=2805%2C1683%2C517%2C0&scale=1200&optimizer=image"
+      "image": "https://media.denieuwekolk.nl/ce379c24-80cb-c856-78fe-48ce7127f221/clayface?crop=2805%2C1683%2C517%2C0&scale=1200&optimizer=image",
+      "isNew": true
     },
     {
       "date": "2026-10-31",
@@ -79,7 +83,8 @@
       "discoverySource": "Website",
       "description": "Beleef tijdens Fright Night de film Other Mommy (16 jr.) bij De Nieuwe Kolk in Assen. Ontdek deze spannende filmavond en reserveer je tickets.",
       "cost": "",
-      "image": "https://media.denieuwekolk.nl/ce420a8c-30e6-1985-aa78-292769df3e90/other-mommy?crop=3840%2C2304%2C0%2C128&scale=1200&optimizer=image"
+      "image": "https://media.denieuwekolk.nl/ce420a8c-30e6-1985-aa78-292769df3e90/other-mommy?crop=3840%2C2304%2C0%2C128&scale=1200&optimizer=image",
+      "isNew": true
     },
     {
       "date": "2026-10-31",
@@ -93,7 +98,8 @@
       "discoverySource": "Website",
       "description": "Beleef de 50th Anniversary-vertoning van The Texas Chain Saw Massacre tijdens Fright Night. Een legendarische horrorfilm, vanaf 16 jaar.",
       "cost": "",
-      "image": "https://media.denieuwekolk.nl/55b1c488-5fdd-460c-67ae-66f9d8a8b140/the-texas-chain-saw-massacre-50th-anniversary-ps-1-jpg-sd-high?crop=2592%2C1555%2C0%2C1142&scale=1200&optimizer=image"
+      "image": "https://media.denieuwekolk.nl/55b1c488-5fdd-460c-67ae-66f9d8a8b140/the-texas-chain-saw-massacre-50th-anniversary-ps-1-jpg-sd-high?crop=2592%2C1555%2C0%2C1142&scale=1200&optimizer=image",
+      "isNew": true
     }
   ],
   "siteResults": [
@@ -107,7 +113,7 @@
     {
       "site": "https://denieuwekolk.nl/agenda",
       "count": 6,
-      "newCount": 0,
+      "newCount": 6,
       "durationSeconds": 19.09,
       "timedOut": false
     },
@@ -2065,7 +2071,7 @@
       "rawText": "site 3/3: 0 unieke events in 2.27 sec"
     }
   ],
-  "status": "finishing",
+  "status": "completed",
   "siteStartedAt": "2026-10-25T10:55:26+00:00",
   "siteElapsedSeconds": 4,
   "sitePageCount": 0,
@@ -2073,5 +2079,6 @@
   "stage": "Website klaar; volgende website voorbereiden",
   "lastUpdatedAt": "2026-10-25T10:55:29+00:00",
   "lastCompletedSite": "https://www.filmvandaag.nl/bioscoop",
-  "lastCompletedAt": "2026-10-25T10:55:30+00:00"
+  "lastCompletedAt": "2026-10-25T10:55:30+00:00",
+  "finishedAt": "2026-10-25T10:55:31+00:00"
 }
