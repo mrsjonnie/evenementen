@@ -178,6 +178,7 @@ GENERIC_TITLE_WORDS = {
 
 RAW_DATA_ROWS = []
 SITE_RESULTS = []
+RAW_ROW_KEYS = set()
 
 DEFAULT_LOCATIONS = {
     "forum.nl": "Forum Groningen",
@@ -333,19 +334,42 @@ def source_label(url):
 
 
 def add_raw(source, site, title, event_date="", url="", status="", raw_text=""):
-    if len(RAW_DATA_ROWS) >= MAX_RAW_ROWS:
+    row = {
+        "source": clean_text(source or "Website"),
+        "site": clean_text(site),
+        "title": compact(title, 180),
+        "date": clean_text(event_date),
+        "url": normalized_url(url) or clean_text(url),
+        "status": compact(status, 80),
+        "rawText": compact(raw_text, 420),
+    }
+    key = (row["source"], row["site"], row["title"], row["date"], row["url"], row["status"])
+    if key in RAW_ROW_KEYS:
         return
-    RAW_DATA_ROWS.append(
-        {
-            "source": clean_text(source or "Website"),
-            "site": clean_text(site),
-            "title": compact(title, 180),
-            "date": clean_text(event_date),
-            "url": normalized_url(url) or clean_text(url),
-            "status": compact(status, 80),
-            "rawText": compact(raw_text, 420),
+
+    # Do not let a prolific site (for example SPOT's many event cards) fill the
+    # log with early detail rows and hide every later website's status/errors.
+    if len(RAW_DATA_ROWS) >= MAX_RAW_ROWS:
+        low_value_statuses = {
+            "detail-link gevonden", "event uit kaart", "venue-agenda kaart",
+            "agenda-kaart", "deal gevonden", "wandelroute gevonden",
+            "detail-link", "ingepland",
         }
-    )
+        remove_index = next(
+            (i for i, existing in enumerate(RAW_DATA_ROWS)
+             if str(existing.get("status", "")).lower() in low_value_statuses
+             or str(existing.get("title", "")).lower() == "mistral analyse"),
+            0,
+        )
+        removed = RAW_DATA_ROWS.pop(remove_index)
+        RAW_ROW_KEYS.discard((
+            removed.get("source", ""), removed.get("site", ""),
+            removed.get("title", ""), removed.get("date", ""),
+            removed.get("url", ""), removed.get("status", ""),
+        ))
+
+    RAW_DATA_ROWS.append(row)
+    RAW_ROW_KEYS.add(key)
 
 
 def parse_reference_date():
@@ -2705,7 +2729,9 @@ def scrape_site(site_url, site_index=0, site_total=0, progress_callback=None, ex
         event for event in filtered
         if event_key(event) not in existing_event_keys
     ])[:MAX_EVENTS_PER_SITE]
-    timed_out = timed_out or (time.monotonic() >= deadline and new_event_count(events) < MAX_EVENTS_PER_SITE)
+    # Hitting the result cap is a successful completion even if parsing took a
+    # little longer than the budget; only mark a timeout when the cap was not met.
+    timed_out = time.monotonic() >= deadline and new_event_count(events) < MAX_EVENTS_PER_SITE
     duration = round(time.monotonic() - started, 2)
     SITE_RESULTS.append(
         {
@@ -2789,7 +2815,7 @@ def save_payload(events, archive, previous_all_keys):
         "events": events,
         "archive": archive,
         "siteResults": SITE_RESULTS,
-        "rawLog": RAW_DATA_ROWS[:MAX_RAW_ROWS],
+        "rawLog": RAW_DATA_ROWS[-MAX_RAW_ROWS:],
     }
     with open(DATA_FILE, "w", encoding="utf-8", newline="\n") as handle:
         json.dump(payload, handle, ensure_ascii=False, indent=2)
