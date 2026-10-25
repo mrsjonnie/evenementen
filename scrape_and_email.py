@@ -1475,17 +1475,16 @@ def start_urls_for_site(site_url):
     if host == "spotgroningen.nl":
         return [urljoin(exact, "/programma")]
     if host == "pathe.nl":
-        # Try the requested official Groningen cinema listing first. Keep the known
-        # server-rendered BiosAgenda timetable as a fallback if Pathé serves only
-        # client-side shell HTML or its anti-bot page.
+        # Prefer the dedicated Groningen timetable as a fallback before retrying
+        # equivalent Pathé URLs that may all be blocked from hosted runners.
         return unique_urls([
+            "https://www.biosagenda.nl/films-bioscoop_path-groningen_128.html",
             exact,
             "https://www.pathe.nl/bioscoop/groningen",
             "https://www.pathe.nl/nl/bioscopen/pathe-groningen",
-            "https://www.biosagenda.nl/films-bioscoop_path-groningen_128.html",
         ])
     if host == "filmvandaag.nl":
-        # /bioscoop is a generic landing page; try both canonical hosts for the Groningen film ladder.
+        # /bioscoop is generic; the Groningen city timetable contains actual film/day/time rows.
         return unique_urls([
             "https://www.filmvandaag.nl/filmladder/stad/80-groningen",
             "https://filmvandaag.nl/filmladder/stad/80-groningen",
@@ -1519,9 +1518,15 @@ def start_urls_for_site(site_url):
         # actual film ladder, which contains cinema headings, day columns and times.
         urls = [urljoin(f"{parsed.scheme}://{parsed.netloc}", "/filmladder/stad/80-groningen")]
     if host == "ibood.com":
-        # Current Dutch storefront; try both localized routes used by iBOOD.
+        # The current Dutch deals page is /offers/nl/s-nl; try it before
+        # the shorter legacy/localized aliases.
         base = f"{parsed.scheme}://{parsed.netloc}"
-        urls.extend([urljoin(base, "/nl/s-nl"), urljoin(base, "/s-nl"), urljoin(base, "/offers/nl/s-nl")])
+        urls = [
+            urljoin(base, "/offers/nl/s-nl"),
+            urljoin(base, "/nl/s-nl"),
+            urljoin(base, "/s-nl"),
+            exact,
+        ]
     if parsed.path in {"", "/"}:
         base = f"{parsed.scheme}://{parsed.netloc}"
         urls.extend(urljoin(base, path) for path in COMMON_PATHS_FOR_ROOT_SITES)
@@ -1676,18 +1681,23 @@ def fetch_html(session, url, deadline):
         # GitHub-hosted runners can be denied by anti-bot rules even when the page
         # is public in a normal browser. Try a text-rendering proxy for these
         # known sources, then convert its Markdown into simple HTML for the same parsers.
-        proxy_url = "https://r.jina.ai/" + url
+        parsed_target = urlparse(url)
+        # Reader's stable fetch form uses an http:// target even when the source
+        # itself redirects to HTTPS.
+        proxy_url = "https://r.jina.ai/http://" + parsed_target.netloc + parsed_target.path
+        if parsed_target.query:
+            proxy_url += "?" + parsed_target.query
         try:
             proxy_response = session.get(
                 proxy_url, headers=REQUEST_HEADERS,
-                timeout=min(2.5, remaining_timeout(deadline)), allow_redirects=True
+                timeout=min(1.25, remaining_timeout(deadline)), allow_redirects=True
             )
             if proxy_response.status_code < 400 and len(proxy_response.text.strip()) > 100:
                 proxy_text = proxy_response.text
                 if "<html" not in proxy_text[:1000].lower() and "<body" not in proxy_text[:1000].lower():
                     proxy_text = markdown_as_html(proxy_text)
                 add_raw("Diagnose", url, "403-tekstproxy gebruikt", "", url, "fallback",
-                        f"Bron gaf HTTP 403; tekstproxy leverde {len(proxy_response.text)} tekens")
+                        f"Bron gaf HTTP 403; tekstproxy leverde {len(proxy_response.text)} tekens: {compact(proxy_response.text, 180)}")
                 return proxy_text, url
         except Exception as proxy_error:
             add_raw("Diagnose", url, "403-tekstproxy mislukt", "", url, "fout", str(proxy_error))
