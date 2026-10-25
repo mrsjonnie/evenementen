@@ -2209,7 +2209,7 @@
     }
 
     function shortScrapeSiteName(url) {
-      const host = String(url || "").replace(/^https?:\\/\\//i, "").replace(/^www\\./i, "").split(/[/?#]/)[0].toLowerCase();
+      const host = String(url || "").replace(/^https?:\/\//i, "").replace(/^www\./i, "").split(/[/?#]/)[0].toLowerCase();
       const labels = {
         "groningen.uitloper.nu": "Uitloper", "visitgroningen.nl": "VisitGroningen", "forum.nl": "Forum",
         "spotgroningen.nl": "SPOT", "simplon.nl": "Simplon", "vera-groningen.nl": "VERA",
