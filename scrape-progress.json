@@ -1,7 +1,7 @@
 {
   "runId": "2026-10-25T17:54:10.535222+00:00-c7af6784",
   "startedAt": "2026-10-25T17:54:10+00:00",
-  "completedCount": 8,
+  "completedCount": 9,
   "totalSites": 14,
   "currentSite": "https://www.kultuuragenda.nl/agenda",
   "currentSiteIndex": 9,
@@ -13,7 +13,8 @@
     "https://www.spotgroningen.nl/programma/",
     "https://simplon.nl/",
     "https://www.vera-groningen.nl/",
-    "https://www.martiniplaza.nl/nl/agenda"
+    "https://www.martiniplaza.nl/nl/agenda",
+    "https://www.kultuuragenda.nl/agenda"
   ],
   "events": [
     {
@@ -443,6 +444,21 @@
       "description": "Voeg toe als favoriet Voeg toe als favoriet",
       "cost": "",
       "image": "https://assets.plaece.nl/thumb/Wx7HugDv5I5UsPbvvym5tSS52SNTK0H6hblcuv1PD44/resizing_type:fit/width:500/height:0/gravity:sm/enlarge:0/aHR0cHM6Ly9hc3NldHMucGxhZWNlLm5sL29kcC1ncm9uaW5nZW4vaW1hZ2UvYTVlYWE4ZGYyMDIzNWQ0MzEyYjRhNmFhOTc5OTcwNzkwN2RkODI5NF8wMWExMzMwZi04Yzk5LTdiNzctYjVjNi0wZDEzMmU4NDY0YWUuanBn.jpg",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-25",
+      "time": "10:50 - 12:51",
+      "title": "Human Nature",
+      "type": "Concert",
+      "location": "Groningen",
+      "locationLink": "",
+      "website": "https://www.kultuuragenda.nl/agenda/2995233160/human-nature",
+      "source": "kultuuragenda.nl",
+      "discoverySource": "Website",
+      "description": "De makers van The North nemen je mee op een reis van 500 kilometer door de laatste wildernis van Europa. In misschien wel de meest authentieke outdoor speelfilm, waarin Sophie (30) besluit een tocht van 500 kilometer te maken door het Arctische gebied van Noorwegen.",
+      "cost": "gratis",
+      "image": "https://assets.plaece.nl/thumb/x93Zp9SowycihoHk-jFc90bRf81OxAjjf7D3K_1zdKM/resizing_type:fit/width:650/height:366/gravity:sm/aHR0cHM6Ly9hc3NldHMucGxhZWNlLm5sL29kcC1ncm9uaW5nZW4vaW1hZ2UvNGI5ODc4ZTE1N2U4NzQ5MDEzNjNjYTdiNWI4NmJhNWYyN2RhZGIxOV8wMWExNzAzZC0yZDNmLTc0NmItOGFhMS1mY2VmOTVjOTgxMzcuanBn.jpg",
       "isNew": true
     },
     {
@@ -885,6 +901,21 @@
     },
     {
       "date": "2026-10-25",
+      "time": "11:10 - 13:32",
+      "title": "Sense and Sensibility",
+      "type": "Concert",
+      "location": "Groningen",
+      "locationLink": "",
+      "website": "https://www.kultuuragenda.nl/agenda/3022524326/sense-and-sensibility",
+      "source": "kultuuragenda.nl",
+      "discoverySource": "Website",
+      "description": "Meeslepende verfilming van Jane Austens beroemde roman Sense and Sensibility: een verrukkelijk, geestig en herkenbaar verhaal over liefde en de band tussen twee zussen.",
+      "cost": "gratis",
+      "image": "https://assets.plaece.nl/thumb/PP1RP0hyzfCkeqrAXsJ1GdFK4TZtH8h9P8Emy_kFjKs/resizing_type:fit/width:650/height:366/gravity:sm/aHR0cHM6Ly9hc3NldHMucGxhZWNlLm5sL29kcC1ncm9uaW5nZW4vaW1hZ2UvZjFmZjRkZTk3MGIyMTBhNDE5ZWFiNDFhYjMyZWEzZTM0OTY2MjYwOF8wMWExNzAzZC0zNzIyLTcxOGEtYWEzZC0zODkzYjAzOWFmZjYuanBn.jpg",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-25",
       "time": "",
       "title": "Speuren tussen de klokken",
       "type": "Activiteit",
@@ -896,6 +927,21 @@
       "description": "Voeg toe als favoriet Voeg toe als favoriet",
       "cost": "",
       "image": "https://assets.plaece.nl/thumb/rZmmSXbjge8oJg4sipsNu1gAnAKyklX5fiNEk8AYM1s/resizing_type:fit/width:500/height:0/gravity:sm/enlarge:0/aHR0cHM6Ly9hc3NldHMucGxhZWNlLm5sL29kcC1ncm9uaW5nZW4vaW1hZ2UvNTMxN2M1Mzk5ZTllN2RlNDZmYjQ0Y2M0ZTBiN2E0ODg2NmFhMWJhM18wMWExNmIyYi0xNTcxLTdkNGMtYjJmMy01YTk4ZmZlOGM1ZmYuanBn.jpg",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-25",
+      "time": "10:30",
+      "title": "Spruit Cinema (2+)",
+      "type": "Film",
+      "location": "Groningen",
+      "locationLink": "",
+      "website": "https://www.kultuuragenda.nl/agenda/2749036779/spruit-cinema-2-3",
+      "source": "kultuuragenda.nl",
+      "discoverySource": "Website",
+      "description": "Kinderen tussen 2 en 6 jaar kunnen iedere zondagochtend bij ons terecht om de allerleukste animatiefilmpjes te kijken en te spelen, met hun ouders binnen handbereik. Bekijk hier welke films we draaien.",
+      "cost": "gratis",
+      "image": "https://assets.plaece.nl/thumb/PA3l2D9--c0nLjn9kcPmLypRVIryD6HVbNAKzhoL6ps/resizing_type:fit/width:650/height:366/gravity:sm/aHR0cHM6Ly9hc3NldHMucGxhZWNlLm5sL29kcC1ncm9uaW5nZW4vaW1hZ2UvM2U4NzlmMTc2OWFiNGJlZmUwMTBlYzFhNTE5NTI2Yzk2YzhlZDNlNF8wMWExNzAzZC0yNWZlLTczNjQtYjk0Mi02MzEyMzE4NjU4NmYucG5n.png",
       "isNew": true
     },
     {
@@ -3139,6 +3185,13 @@
       "count": 0,
       "newCount": 0,
       "durationSeconds": 5.15,
+      "timedOut": true
+    },
+    {
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "count": 3,
+      "newCount": 3,
+      "durationSeconds": 5.0,
       "timedOut": true
     }
   ],
@@ -12450,177 +12503,6 @@
       "rawText": "755 events/aanbiedingen op deze pagina"
     },
     {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Huub van der Lubbe en Jan Robijns NEEM HET LICHT Liedjes uit het rijke muzikale verhalen, nieuw werk, verhalen en anekdotes Uitverkocht ma 22 mrt",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/huub-van-der-lubbe-en-jan-robijns/",
-      "status": "detail-link gevonden",
-      "rawText": "Huub van der Lubbe en Jan Robijns NEEM HET LICHT Liedjes uit het rijke muzikale verhalen, nieuw werk, verhalen en anekdotes Uitverkocht ma 22 mrt"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Ilse DeLange Hoogtepunten aangevuld met nieuw repertoire en persoonlijke verhalen za 10 apr",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/ilse-delange-6/",
-      "status": "detail-link gevonden",
-      "rawText": "Ilse DeLange Hoogtepunten aangevuld met nieuw repertoire en persoonlijke verhalen za 10 apr"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Ilse Warringa, Theo Maassen e.a. RATATATATA! Een topcast in bloedvorm do 8 apr",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/ilse-warringa-theo-maassen-etc-2/",
-      "status": "detail-link gevonden",
-      "rawText": "Ilse Warringa, Theo Maassen e.a. RATATATATA! Een topcast in bloedvorm do 8 apr"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Ilse Warringa, Theo Maassen e.a. RATATATATA! Een topcast in bloedvorm wo 7 apr",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/ilse-warringa-theo-maassen-etc/",
-      "status": "detail-link gevonden",
-      "rawText": "Ilse Warringa, Theo Maassen e.a. RATATATATA! Een topcast in bloedvorm wo 7 apr"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "International Student LiedDuo Competition Finale Hét toonaangevende concours voor liedduo’s (zang en piano) zo 22 nov",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/international-student-liedduo-competition-2/",
-      "status": "detail-link gevonden",
-      "rawText": "International Student LiedDuo Competition Finale Hét toonaangevende concours voor liedduo’s (zang en piano) zo 22 nov"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Introdans KYLIAN Introdans eert het kunstenaarschap van meesterchoreograaf Jirí Kylián wo 17 mrt",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/introdans-8/",
-      "status": "detail-link gevonden",
-      "rawText": "Introdans KYLIAN Introdans eert het kunstenaarschap van meesterchoreograaf Jirí Kylián wo 17 mrt"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Iris Hond & Kamerata Zuid spelen Einaudi (Reprise) Iris Hond en Kamerata Zuid buigen zich over Italiaans pianofenomeen wo 11 nov",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/iris-hond-kamerata-zuid-2/",
-      "status": "detail-link gevonden",
-      "rawText": "Iris Hond & Kamerata Zuid spelen Einaudi (Reprise) Iris Hond en Kamerata Zuid buigen zich over Italiaans pianofenomeen wo 11 nov"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Isa Hoes, Edwin Jonker e.a. De Verbouwing Naar het zinderende boek van Saskia Noort vr 19 mrt",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/isa-hoes-edwin-jonker-e-a/",
-      "status": "detail-link gevonden",
-      "rawText": "Isa Hoes, Edwin Jonker e.a. De Verbouwing Naar het zinderende boek van Saskia Noort vr 19 mrt"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Isabèl Usher Nederlandstalige pop, hiphop en house met diepgaande teksten Uitverkocht za 21 nov",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/isabel-usher/",
-      "status": "detail-link gevonden",
-      "rawText": "Isabèl Usher Nederlandstalige pop, hiphop en house met diepgaande teksten Uitverkocht za 21 nov"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "ISH Dance Collective Rythm and flow Spectaculaire hiphopdans en urban sports die je op het puntje van je stoel brengt zo 4 apr",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/ish-dance-collective/",
-      "status": "detail-link gevonden",
-      "rawText": "ISH Dance Collective Rythm and flow Spectaculaire hiphopdans en urban sports die je op het puntje van je stoel brengt zo 4 apr"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "ITA Ensemble Wuthering Heights Geen romantisch liefdesverhaal, maar een blik op wat macht met mensen doet di 26 jan",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/ita-3/",
-      "status": "detail-link gevonden",
-      "rawText": "ITA Ensemble Wuthering Heights Geen romantisch liefdesverhaal, maar een blik op wat macht met mensen doet di 26 jan"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "ITA Ensemble Wuthering Heights Geen romantisch liefdesverhaal, maar een blik op wat macht met mensen doet wo 27 jan",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/ita-ensemble/",
-      "status": "detail-link gevonden",
-      "rawText": "ITA Ensemble Wuthering Heights Geen romantisch liefdesverhaal, maar een blik op wat macht met mensen doet wo 27 jan"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Ivgi&Greben What we leave behind Indringende dansvoorstelling over nalatenschap, verbondenheid en transformatie do 1 apr",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/ivgigreben-4/",
-      "status": "detail-link gevonden",
-      "rawText": "Ivgi&Greben What we leave behind Indringende dansvoorstelling over nalatenschap, verbondenheid en transformatie do 1 apr"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Ivo Pogorelich Barokke helderheid en romantische diepte door een eigenzinnige meester Wereldklasse do 20 mei",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/ivo-pogorelich/",
-      "status": "detail-link gevonden",
-      "rawText": "Ivo Pogorelich Barokke helderheid en romantische diepte door een eigenzinnige meester Wereldklasse do 20 mei"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Jack and the Weatherman Een internationale folk-popband uit Nederland Laatste kaarten vr 20 nov",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/jack-and-the-weatherman-2/",
-      "status": "detail-link gevonden",
-      "rawText": "Jack and the Weatherman Een internationale folk-popband uit Nederland Laatste kaarten vr 20 nov"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Jakop Ahlbom Company & ISH Dance Collective A Fine Mess \"Een hilarische voorstelling\" ★★★★ de Volkskrant do 12 nov",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/jakop-ahlbom-company-ish-dance-collective-2/",
-      "status": "detail-link gevonden",
-      "rawText": "Jakop Ahlbom Company & ISH Dance Collective A Fine Mess \"Een hilarische voorstelling\" ★★★★ de Volkskrant do 12 nov"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Jakop Ahlbom Company & ISH Dance Collective A Fine Mess \"Een hilarische voorstelling\" ★★★★ de Volkskrant wo 11 nov",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/jakop-ahlbom-company-ish-dance-collective/",
-      "status": "detail-link gevonden",
-      "rawText": "Jakop Ahlbom Company & ISH Dance Collective A Fine Mess \"Een hilarische voorstelling\" ★★★★ de Volkskrant wo 11 nov"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Jan Henk de Groot & Reinout Douma Groningse troubadour met verhalende muziek in streektaal do 11 feb",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/jan-henk-de-groot-reinout-douma/",
-      "status": "detail-link gevonden",
-      "rawText": "Jan Henk de Groot & Reinout Douma Groningse troubadour met verhalende muziek in streektaal do 11 feb"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Jan van Duikeren & Marcel Veenendaal Dear Son Twee muzikale werelden komen samen in een gedeelde passie voor jazz zo 13 dec",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/jan-van-duikeren-marcel-veenendaal/",
-      "status": "detail-link gevonden",
-      "rawText": "Jan van Duikeren & Marcel Veenendaal Dear Son Twee muzikale werelden komen samen in een gedeelde passie voor jazz zo 13 dec"
-    },
-    {
       "source": "Filter",
       "site": "https://www.spotgroningen.nl/programma/",
       "title": "Datumfilter toegepast",
@@ -12664,249 +12546,6 @@
       "url": "https://simplon.nl/programma/",
       "status": "ok",
       "rawText": "94996 tekens HTML"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "Godfried + Nina Bailey",
-      "date": "2026-10-29",
-      "url": "https://simplon.nl/events/godfried-nina-bailey/",
-      "status": "venue-agenda kaart",
-      "rawText": "do 29.10 Godfried + Nina Bailey Warme indie en pop up TICKETS"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "Chicco",
-      "date": "2026-10-30",
-      "url": "https://simplon.nl/events/chicco/",
-      "status": "venue-agenda kaart",
-      "rawText": "vr 30.10 Chicco Gezellige hedendaagse Nederlandse volk concert TICKETS"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "Lostboyshawty",
-      "date": "2026-10-31",
-      "url": "https://simplon.nl/events/lostboyshawty-2026/",
-      "status": "venue-agenda kaart",
-      "rawText": "za 31.10 Lostboyshawty Support: Lil Timmie | Opvallende hiphop, trap en R&B concert TICKETS"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "Modern Figure + Nakûde",
-      "date": "2026-11-05",
-      "url": "https://simplon.nl/events/modern-figure-nakude/",
-      "status": "venue-agenda kaart",
-      "rawText": "do 5.11 Modern Figure + Nakûde Alternative rock & postpunk up TICKETS"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "Queen's Pleasure",
-      "date": "2026-11-06",
-      "url": "https://simplon.nl/events/queens-pleasure-2026/",
-      "status": "venue-agenda kaart",
-      "rawText": "vr 6.11 Queen's Pleasure Energetic indierock concert TICKETS"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "Good Times",
-      "date": "2026-11-07",
-      "url": "https://simplon.nl/events/good-times-november-2026/",
-      "status": "venue-agenda kaart",
-      "rawText": "za 7.11 Good Times Avond vol 80, 90 en 00s throwbacks en gezelligheid dance TICKETS"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "dance",
-      "date": "2026-11-07",
-      "url": "https://simplon.nl/events/good-times-november-2026/",
-      "status": "venue-agenda kaart",
-      "rawText": "za 7.11 Good Times Avond vol 80, 90 en 00s throwbacks en gezelligheid dance TICKETS"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "Piter + Rupit",
-      "date": "2026-11-12",
-      "url": "https://simplon.nl/events/up-piter-rupit/",
-      "status": "venue-agenda kaart",
-      "rawText": "do 12.11 Piter + Rupit Warme singer-songwriter pop up TICKETS"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "Rijck",
-      "date": "2026-11-13",
-      "url": "https://simplon.nl/events/rijck-2026/",
-      "status": "venue-agenda kaart",
-      "rawText": "vr 13.11 Rijck Disruptieve hiphop met contrast concert TICKETS"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "NO CIGAR",
-      "date": "2026-11-13",
-      "url": "https://simplon.nl/events/no-cigar-2026/",
-      "status": "venue-agenda kaart",
-      "rawText": "vr 13.11 NO CIGAR Smooth indierock on psychedelics concert UITVERKOCHT"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "Bassface",
-      "date": "2026-11-14",
-      "url": "https://simplon.nl/events/bassface-november-2026/",
-      "status": "venue-agenda kaart",
-      "rawText": "za 14.11 Bassface SMG // Teej // Yannons // aotp dance TICKETS"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "dance",
-      "date": "2026-11-14",
-      "url": "https://simplon.nl/events/bassface-november-2026/",
-      "status": "venue-agenda kaart",
-      "rawText": "za 14.11 Bassface SMG // Teej // Yannons // aotp dance TICKETS"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "Big Sleep",
-      "date": "2026-11-14",
-      "url": "https://simplon.nl/events/big-sleep-2026/",
-      "status": "venue-agenda kaart",
-      "rawText": "za 14.11 Big Sleep Support: Stardog | dynamic Irish indierock concert UITVERKOCHT"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "Iskander Moon",
-      "date": "2026-11-18",
-      "url": "https://simplon.nl/events/iskander-moon-2026/",
-      "status": "venue-agenda kaart",
-      "rawText": "wo 18.11 Iskander Moon Folkpop with classical finesse concert TICKETS"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "Desire",
-      "date": "2026-11-20",
-      "url": "https://simplon.nl/events/desire-x-johnny-jewel/",
-      "status": "venue-agenda kaart",
-      "rawText": "vr 20.11 Desire Support: Johnny Jewel + Mothermary | An audiovisual disco noir experience concert TICKETS"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "TechNorth",
-      "date": "2026-11-21",
-      "url": "https://simplon.nl/events/technorth-november-2026/",
-      "status": "venue-agenda kaart",
-      "rawText": "za 21.11 TechNorth Doctor Juicy // Faris Hababa // Fran LF // Julan (Live) dance TICKETS"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "dance",
-      "date": "2026-11-21",
-      "url": "https://simplon.nl/events/technorth-november-2026/",
-      "status": "venue-agenda kaart",
-      "rawText": "za 21.11 TechNorth Doctor Juicy // Faris Hababa // Fran LF // Julan (Live) dance TICKETS"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "Mail for Sil + Brighid",
-      "date": "2026-11-26",
-      "url": "https://simplon.nl/events/up-mail-for-sil-brighid/",
-      "status": "venue-agenda kaart",
-      "rawText": "do 26.11 Mail for Sil + Brighid up TICKETS"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "NO BARRIER",
-      "date": "2026-11-27",
-      "url": "https://simplon.nl/events/no-barrier-november-2026/",
-      "status": "venue-agenda kaart",
-      "rawText": "vr 27.11 NO BARRIER XL Edition | Punk, Emo, Rock & Metalcore Party concert TICKETS"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "Wrest",
-      "date": "2026-11-27",
-      "url": "https://simplon.nl/events/wrest/",
-      "status": "venue-agenda kaart",
-      "rawText": "vr 27.11 Wrest Heartfelt Edinburgh indie rock concert UITVERKOCHT"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "2016 special",
-      "date": "2026-11-28",
-      "url": "https://simplon.nl/events/roodkopje-november-2026/",
-      "status": "venue-agenda kaart",
-      "rawText": "za 28.11 2016 special Roodkopje dance TICKETS"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "dance",
-      "date": "2026-11-28",
-      "url": "https://simplon.nl/events/roodkopje-november-2026/",
-      "status": "venue-agenda kaart",
-      "rawText": "za 28.11 2016 special Roodkopje dance TICKETS"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "Sondre Lerche",
-      "date": "2026-12-02",
-      "url": "https://simplon.nl/events/sondre-lechre/",
-      "status": "venue-agenda kaart",
-      "rawText": "wo 2.12 Sondre Lerche Catchy experimental pop concert TICKETS"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "Call It Off",
-      "date": "2026-12-04",
-      "url": "https://simplon.nl/events/call-it-off-taylor-swift-tribute/",
-      "status": "venue-agenda kaart",
-      "rawText": "vr 4.12 Call It Off Support: Biddy Early | Taylor Swift Tribute concert TICKETS"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "ZWARTEWATER",
-      "date": "2026-12-04",
-      "url": "https://simplon.nl/events/zwartewater-2026/",
-      "status": "venue-agenda kaart",
-      "rawText": "vr 4.12 ZWARTEWATER Spijkerharde Zwolse rap concert TICKETS"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "Lézard",
-      "date": "2026-12-05",
-      "url": "https://simplon.nl/events/lezard-2026/",
-      "status": "venue-agenda kaart",
-      "rawText": "za 5.12 Lézard A discopunk diorama concert TICKETS"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "Comedytunes Comedynight",
-      "date": "2026-12-09",
-      "url": "https://simplon.nl/events/comedy-tunes-9-12/",
-      "status": "venue-agenda kaart",
-      "rawText": "wo 9.12 Comedytunes Comedynight Jasper van der Veen // Jacob Adriani // Tim Alpherts // Meeuw Roovers concert TICKETS"
     },
     {
       "source": "Website",
@@ -13942,16 +13581,430 @@
       "url": "https://www.martiniplaza.nl/nl/agenda",
       "status": "klaar",
       "rawText": "site 8/14: 0 unieke events in 5.15 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Start",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda",
+      "status": "start",
+      "rawText": "site 9/14: max 50 events, max 5 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda",
+      "status": "strategie",
+      "rawText": "universele detailpagina-parser (Kultuuragenda)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Pagina gelezen",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda",
+      "status": "ok",
+      "rawText": "149272 tekens HTML"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Kultuuragenda detailstrategie",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda",
+      "status": "strategie",
+      "rawText": "Overzicht overslaan; alleen echte /agenda/<id>/<slug> activiteitspagina’s verwerken"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Pagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda",
+      "status": "ok",
+      "rawText": "0 events/aanbiedingen op deze pagina"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Classics: The Misfits",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/1195684605/classics-the-misfits",
+      "status": "detail-link gevonden",
+      "rawText": "Classics: The Misfits"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Shaun het Schaap: Het Beest van de Boerderij (6+)",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/137379264/shaun-het-schaap-het-beest-van-de-boerderij-al",
+      "status": "detail-link gevonden",
+      "rawText": "Shaun het Schaap: Het Beest van de Boerderij (6+)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Digger",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/1453156530/digger",
+      "status": "detail-link gevonden",
+      "rawText": "Digger"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Groningen Sax Fest 2026 – Closing Concert: Saxofoonorkest050",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/1913404879/groningen-sax-fest-2026-closing-concert-saxofoonorkest050",
+      "status": "detail-link gevonden",
+      "rawText": "Groningen Sax Fest 2026 – Closing Concert: Saxofoonorkest050"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Lezing: Expeditie Ongering",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/1999062927/lezing-expeditie-ongering",
+      "status": "detail-link gevonden",
+      "rawText": "Lezing: Expeditie Ongering"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Singer-Songclub",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/2065667423/singer-songclub-2",
+      "status": "detail-link gevonden",
+      "rawText": "Singer-Songclub"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Lizz Wright",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/272404645/lizz-wright",
+      "status": "detail-link gevonden",
+      "rawText": "Lizz Wright"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Spruit Cinema (2+)",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/2749036779/spruit-cinema-2-3",
+      "status": "detail-link gevonden",
+      "rawText": "Spruit Cinema (2+)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Human Nature",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/2995233160/human-nature",
+      "status": "detail-link gevonden",
+      "rawText": "Human Nature"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Sense and Sensibility",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/3022524326/sense-and-sensibility",
+      "status": "detail-link gevonden",
+      "rawText": "Sense and Sensibility"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Coward",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/3621902129/coward",
+      "status": "detail-link gevonden",
+      "rawText": "Coward"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "The Incomer",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/3640077526/the-incomer-1",
+      "status": "detail-link gevonden",
+      "rawText": "The Incomer"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Speuren tussen de klokken",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/3665187559/speuren-tussen-de-klokken",
+      "status": "detail-link gevonden",
+      "rawText": "Speuren tussen de klokken"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "The Beloved",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/3730283290/the-beloved-1",
+      "status": "detail-link gevonden",
+      "rawText": "The Beloved"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Verhalen uit de Magische tuin (6+)",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/3907376350/verhalen-uit-de-magische-tuin-6",
+      "status": "detail-link gevonden",
+      "rawText": "Verhalen uit de Magische tuin (6+)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Verkleden en Speurtocht",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/3960259753/verkleden-en-speurtocht",
+      "status": "detail-link gevonden",
+      "rawText": "Verkleden en Speurtocht"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Workshop striptekenen met Loeki (7+)",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/4051513719/workshop-striptekenen-met-loeki-7",
+      "status": "detail-link gevonden",
+      "rawText": "Workshop striptekenen met Loeki (7+)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "VERA's Grunneger Zundag: StAD // Steernvanger // Olaf Vos",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/4149300145/vera-s-grunneger-zundag-stad-steernvanger-olaf-vos",
+      "status": "detail-link gevonden",
+      "rawText": "VERA's Grunneger Zundag: StAD // Steernvanger // Olaf Vos"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Ernst, Bobbie en de Rest (3+) | 13:30 uur",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/4199578416/ernst-bobbie-en-de-rest-3-13-30-uur",
+      "status": "detail-link gevonden",
+      "rawText": "Ernst, Bobbie en de Rest (3+) | 13:30 uur"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Minoes - 25th Anniversary (5+)",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/540231476/minoes-25th-anniversary-5",
+      "status": "detail-link gevonden",
+      "rawText": "Minoes - 25th Anniversary (5+)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Classics: Shall We Dance? - 30th Anniversary",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/659659471/classics-shall-we-dance-30th-anniversary",
+      "status": "detail-link gevonden",
+      "rawText": "Classics: Shall We Dance? - 30th Anniversary"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Het boek was beter!",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/790098669/het-boek-was-beter-1",
+      "status": "detail-link gevonden",
+      "rawText": "Het boek was beter!"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Docs: Imago",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/811203126/docs-imago",
+      "status": "detail-link gevonden",
+      "rawText": "Docs: Imago"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Docs: The Cycle of Love",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/922308090/docs-the-cycle-of-love",
+      "status": "detail-link gevonden",
+      "rawText": "Docs: The Cycle of Love"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Evenement aanmelden",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/eventaanmeldformulier",
+      "status": "detail-link gevonden",
+      "rawText": "Evenement aanmelden"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Meld jouw activiteit aan",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/odp-submit",
+      "status": "detail-link gevonden",
+      "rawText": "Meld jouw activiteit aan"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Ga naar de homepage",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/",
+      "status": "detail-link gevonden",
+      "rawText": "Ga naar de homepage"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Plaatsingsvoorwaarden",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/plaatsingsvoorwaarden",
+      "status": "detail-link gevonden",
+      "rawText": "Plaatsingsvoorwaarden"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/1195684605/classics-the-misfits",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/137379264/shaun-het-schaap-het-beest-van-de-boerderij-al",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/1453156530/digger",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/1913404879/groningen-sax-fest-2026-closing-concert-saxofoonorkest050",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/1999062927/lezing-expeditie-ongering",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/2065667423/singer-songclub-2",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/272404645/lizz-wright",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/2749036779/spruit-cinema-2-3",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/2995233160/human-nature",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/3022524326/sense-and-sensibility",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/3621902129/coward",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Detailpagina mislukt",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/3640077526/the-incomer-1",
+      "status": "fout",
+      "rawText": "HTTPSConnectionPool(host='www.kultuuragenda.nl', port=443): Read timed out. (read timeout=0.35510882100000174)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda",
+      "status": "klaar",
+      "rawText": "site 9/14: 3 unieke events in 5.0 sec"
     }
   ],
   "status": "running",
   "siteStartedAt": "2026-10-25T17:55:05+00:00",
-  "siteElapsedSeconds": 0,
-  "sitePageCount": 0,
-  "lastSiteEventCount": 0,
-  "stage": "Websitepagina ophalen",
-  "lastUpdatedAt": "2026-10-25T17:55:05+00:00",
-  "lastSiteNewEventCount": 0,
-  "lastCompletedSite": "https://www.martiniplaza.nl/nl/agenda",
-  "lastCompletedAt": "2026-10-25T17:55:04+00:00"
+  "siteElapsedSeconds": 7,
+  "sitePageCount": 1,
+  "lastSiteEventCount": 3,
+  "stage": "Website klaar; volgende website voorbereiden",
+  "lastUpdatedAt": "2026-10-25T17:55:08+00:00",
+  "lastSiteNewEventCount": 3,
+  "lastCompletedSite": "https://www.kultuuragenda.nl/agenda",
+  "lastCompletedAt": "2026-10-25T17:55:12+00:00"
 }
