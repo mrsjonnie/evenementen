@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-25T14:58:10+00:00",
+  "updatedAt": "2026-10-25T14:58:14+00:00",
   "events": [
     {
       "date": "2026-10-25",
@@ -11784,6 +11784,13 @@
       "newCount": 0,
       "durationSeconds": 2.0,
       "timedOut": true
+    },
+    {
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 2.0,
+      "timedOut": true
     }
   ],
   "rawLog": [
@@ -12434,6 +12441,42 @@
       "url": "https://www.noorderzon.nl/programma",
       "status": "klaar",
       "rawText": "site 11/20: 0 unieke events in 2.0 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Start",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "status": "start",
+      "rawText": "site 12/20: max 5 events, max 2 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "status": "strategie",
+      "rawText": "universeel-jsonld-links-kaarten"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Pagina mislukt",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "status": "fout",
+      "rawText": "HTTPSConnectionPool(host='www.concertgebouw.nl', port=443): Read timed out."
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "status": "klaar",
+      "rawText": "site 12/20: 0 unieke events in 2.0 sec"
     }
   ]
 }
