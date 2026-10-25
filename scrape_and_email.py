@@ -1757,14 +1757,15 @@ def extract_biosagenda_events(html, page_url, site_url, discovery_source="Websit
         description = compact(" ".join(line for line in card_lines if not parse_date_text(line) and not TIME_RE.search(line) and clean_text(line) != title_text), 420)
         image = first_image(card, page_url)
         for event_day, times in schedule_lines:
+            time_text = ", ".join(times)
             event = normalize_event({
                 "title": title_text,
                 "date": event_day,
-                "time": ", ".join(times),
+                "time": time_text,
                 "type": "Film",
                 "location": cinema,
                 "website": film_url,
-                "description": description or f"Filmvertoningen in {cinema}. Speeltijden: {", ".join(times)}.",
+                "description": description or f"Filmvertoningen in {cinema}. Speeltijden: {time_text}."
                 "cost": first_price(card_text),
                 "image": image,
                 "discoverySource": discovery_source,
