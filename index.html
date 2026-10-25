@@ -1365,7 +1365,7 @@
   </div>
 
   <script>
-    const APP_VERSION = "2026.10.25.45";
+    const APP_VERSION = "2026.10.25.46";
     const DEFAULT_MAX_EVENTS_PER_SITE = 20;
     const DEFAULT_SITE_TIME_LIMIT_SECONDS = 20;
     const SCAN_SETTINGS_KEY = "eventScanSettingsV1";
@@ -3761,8 +3761,9 @@
       currentPage = 1;
       render();
     });
-    $("status").addEventListener("click", (event) => {
-      if (!event.target.closest("#stopRefreshBtn")) return;
+    $("status").addEventListener("click", async (event) => {
+      const stopButton = event.target.closest("#stopRefreshBtn");
+      if (!stopButton) return;
       refreshAbortRequested = true;
       if (activeStartupProgressPollHandle) { clearInterval(activeStartupProgressPollHandle); activeStartupProgressPollHandle = null; }
       progressMonitoringStopped = true;
@@ -3773,9 +3774,29 @@
       restoredProgressRunId = "";
       const titleProgress = $("titleProgressText");
       if (titleProgress) titleProgress.hidden = true;
-      setBusy($("refreshBtn"), false);
-      setBusy($("clearBtn"), false);
-      showStatus("Browsercontrole gestopt. De actieve GitHub-scraper is niet op afstand annuleerbaar vanuit deze pagina; daarvoor is een annuleerfunctie in de Worker nodig.", "warn");
+      stopButton.disabled = true;
+      stopButton.textContent = "Annuleren…";
+      showStatus("Annulering van de GitHub-scraper aanvragen…", "warn");
+      try {
+        const response = await fetch(`${WORKER_URL}/cancel`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({})
+        });
+        const data = await response.json().catch(() => ({}));
+        if (!response.ok || data.ok === false) {
+          throw new Error(data.details || data.error || `HTTP ${response.status}`);
+        }
+        setBusy($("refreshBtn"), false);
+        setBusy($("clearBtn"), false);
+        showStatus(data.cancelled
+          ? `Annulering aangevraagd voor ${data.cancelled} GitHub Actions-run(s). Het stoppen kan enkele seconden duren.`
+          : (data.message || "Geen actieve scraper-run gevonden."), data.cancelled ? "ok" : "warn");
+      } catch (error) {
+        setBusy($("refreshBtn"), false);
+        setBusy($("clearBtn"), false);
+        showStatus(`Annuleren via de Worker is mislukt: ${cleanText(error.message || error)}. Controleer of de Worker is bijgewerkt en de GitHub-token Actions-rechten heeft.`, "error");
+      }
     });
     $("grid").addEventListener("click", (event) => {
       const deleteButton = event.target.closest(".deleteEventBtn");
