@@ -1,7 +1,7 @@
 {
   "runId": "2026-10-25T15:15:50.045881+00:00-3458d584",
   "startedAt": "2026-10-25T15:15:50+00:00",
-  "completedCount": 5,
+  "completedCount": 6,
   "totalSites": 19,
   "currentSite": "https://simplon.nl/",
   "currentSiteIndex": 6,
@@ -10,7 +10,8 @@
     "https://www.visitgroningen.nl/nl/doen/evenementen",
     "https://www.visitgroningen.nl/nl/doen/wandelen",
     "https://forum.nl/nl/agenda",
-    "https://www.spotgroningen.nl/programma/"
+    "https://www.spotgroningen.nl/programma/",
+    "https://simplon.nl/"
   ],
   "events": [],
   "siteResults": [
@@ -48,6 +49,13 @@
       "newCount": 0,
       "durationSeconds": 2.0,
       "timedOut": true
+    },
+    {
+      "site": "https://simplon.nl/",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 1.76,
+      "timedOut": false
     }
   ],
   "rawLog": [
@@ -491,16 +499,34 @@
       "url": "https://simplon.nl/",
       "status": "strategie",
       "rawText": "compacte-agenda-kaarten"
+    },
+    {
+      "source": "Website",
+      "site": "https://simplon.nl/",
+      "title": "Pagina mislukt",
+      "date": "",
+      "url": "https://simplon.nl/programma/",
+      "status": "fout",
+      "rawText": "HTTP 429"
+    },
+    {
+      "source": "Website",
+      "site": "https://simplon.nl/",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://simplon.nl/",
+      "status": "klaar",
+      "rawText": "site 6/19: 0 unieke events in 1.76 sec"
     }
   ],
   "status": "running",
   "siteStartedAt": "2026-10-25T15:16:17+00:00",
-  "siteElapsedSeconds": 1,
+  "siteElapsedSeconds": 3,
   "sitePageCount": 0,
   "lastSiteEventCount": 0,
-  "stage": "Websitepagina ophalen",
+  "stage": "Website klaar; volgende website voorbereiden",
   "lastUpdatedAt": "2026-10-25T15:16:18+00:00",
   "lastSiteNewEventCount": 0,
-  "lastCompletedSite": "https://www.spotgroningen.nl/programma/",
-  "lastCompletedAt": "2026-10-25T15:16:16+00:00"
+  "lastCompletedSite": "https://simplon.nl/",
+  "lastCompletedAt": "2026-10-25T15:16:20+00:00"
 }
