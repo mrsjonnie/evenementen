@@ -2379,6 +2379,7 @@
     function updateLiveScrapeSummary(progress, isCurrentRun = true) {
       const target = $("liveScrapeSummary");
       const titleProgress = $("titleProgressText");
+      const titleBusyIndicator = $("titleBusyIndicator");
       if (target) target.hidden = true;
       if (!progress || !progress.runId) return;
       if (!isCurrentRun) {
@@ -2405,7 +2406,7 @@
           const timeoutCount = results.filter(item => item.timedOut).length;
           const zeroHitCount = results.filter(item => !(Number(item.count) || 0)).length;
           const finishedCount = Math.min(completed, total);
-          titleProgress.hidden = false;
+          titleProgress.hidden = true;
           titleProgress.textContent = `Klaar ${finishedCount}/${total} · ${newCount} nieuw`;
           titleProgress.title = `Scraper afgerond: ${finishedCount}/${total} websites verwerkt. ${hitCount} evenementen gevonden op sites (site-resultaten), ${newCount} nieuw volgens de voortgangsdata; ${zeroHitCount} websites leverden 0 hits op en ${timeoutCount} liepen tegen de ingestelde tijdslimiet aan. Definitieve publicatie wordt apart gecontroleerd.`;
         }
@@ -3511,8 +3512,10 @@
         const titleProgress = $("titleProgressText");
         const titleBusyIndicator = $("titleBusyIndicator");
         // Keep the last useful progress/result visible after polling finishes.
-        // Hiding this element here made the status disappear immediately after the worker responded.
+        // Keep the title status visible only while the refresh is active.
         if (titleBusyIndicator) titleBusyIndicator.hidden = true;
+        const titleProgress = $("titleProgressText");
+        if (titleProgress) titleProgress.hidden = true;
         setBusy(button, false);
       }
     }
