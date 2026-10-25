@@ -3,8 +3,8 @@
   "startedAt": "2026-10-25T16:57:04+00:00",
   "completedCount": 2,
   "totalSites": 19,
-  "currentSite": "https://www.visitgroningen.nl/nl/doen/evenementen",
-  "currentSiteIndex": 2,
+  "currentSite": "https://www.visitgroningen.nl/nl/doen/wandelen",
+  "currentSiteIndex": 3,
   "completedSites": [
     "https://groningen.uitloper.nu/",
     "https://www.visitgroningen.nl/nl/doen/evenementen"
@@ -2811,12 +2811,12 @@
     }
   ],
   "status": "running",
-  "siteStartedAt": "2026-10-25T16:57:09+00:00",
-  "siteElapsedSeconds": 6,
-  "sitePageCount": 2,
-  "lastSiteEventCount": 12,
-  "stage": "Website klaar; volgende website voorbereiden",
-  "lastUpdatedAt": "2026-10-25T16:57:12+00:00",
+  "siteStartedAt": "2026-10-25T16:57:16+00:00",
+  "siteElapsedSeconds": 0,
+  "sitePageCount": 0,
+  "lastSiteEventCount": 0,
+  "stage": "Websitepagina ophalen",
+  "lastUpdatedAt": "2026-10-25T16:57:16+00:00",
   "lastSiteNewEventCount": 12,
   "lastCompletedSite": "https://www.visitgroningen.nl/nl/doen/evenementen",
   "lastCompletedAt": "2026-10-25T16:57:15+00:00"
