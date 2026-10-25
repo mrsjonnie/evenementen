@@ -3622,15 +3622,24 @@
       "url": "https://denieuwekolk.nl/agenda",
       "status": "strategie",
       "rawText": "agenda-kaarten + datumregels (De Nieuwe Kolk)"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Pagina mislukt",
+      "date": "",
+      "url": "https://denieuwekolk.nl/agenda",
+      "status": "fout",
+      "rawText": "HTTPSConnectionPool(host='denieuwekolk.nl', port=443): Read timed out."
     }
   ],
   "status": "running",
   "siteStartedAt": "2026-10-25T14:40:07+00:00",
-  "siteElapsedSeconds": 1,
+  "siteElapsedSeconds": 3,
   "sitePageCount": 0,
   "lastSiteEventCount": 0,
   "stage": "Websitepagina ophalen",
-  "lastUpdatedAt": "2026-10-25T14:40:08+00:00",
+  "lastUpdatedAt": "2026-10-25T14:40:10+00:00",
   "lastSiteNewEventCount": 0,
   "lastCompletedSite": "https://www.socialdeal.nl/",
   "lastCompletedAt": "2026-10-25T14:40:06+00:00"
