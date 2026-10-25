@@ -1336,9 +1336,12 @@ def collect_event_links(html, page_url, site_url):
     is_visitgroningen = canonical_host(site_url) == "visitgroningen.nl"
     for anchor in soup.find_all("a", href=True):
         url = normalized_url(anchor.get("href"), page_url)
-        if not url or not same_host(url, site_url):
+        if not url or not (same_host(url, site_url) or (canonical_host(site_url) == "denieuwekolk.nl" and canonical_host(url) == "tickets.denieuwekolk.nl")):
             continue
         text = clean_text(anchor.get_text(" ", strip=True) or anchor.get("title") or anchor.get("aria-label"))
+        if canonical_host(site_url) == "denieuwekolk.nl" and canonical_host(url) == "tickets.denieuwekolk.nl" and re.search(r"/mtTicket/performance/\d+", urlparse(url).path, re.I):
+            scored.append((1200, url, text or "DNK ticket performance"))
+            continue
         # Martiniplaza event cards link to /nl/agenda/<slug>. Ignore all other
         # pages (magazine, navigation, contact forms) even if their text contains dates.
         if is_martiniplaza:
