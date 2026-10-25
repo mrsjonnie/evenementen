@@ -38,3 +38,6 @@ Website	https://www.visitgroningen.nl/nl/doen/wandelen	start	Start		https://www.
 Parser	https://www.visitgroningen.nl/nl/doen/wandelen	strategie	Scrapertype vastgesteld		https://www.visitgroningen.nl/nl/doen/wandelen	Visit Groningen agenda-/routekaarten
 Website	https://www.visitgroningen.nl/nl/doen/wandelen	fout	Pagina mislukt		https://www.visitgroningen.nl/nl/doen/wandelen	HTTPSConnectionPool(host='www.visitgroningen.nl', port=443): Read timed out.
 Website	https://www.visitgroningen.nl/nl/doen/wandelen	klaar	Klaar		https://www.visitgroningen.nl/nl/doen/wandelen	site 3/19: 0 unieke events in 2.98 sec
+Website	https://forum.nl/nl/agenda	start	Start		https://forum.nl/nl/agenda	site 4/19: max 5 events, max 2 seconden
+Parser	https://forum.nl/nl/agenda	strategie	Scrapertype vastgesteld		https://forum.nl/nl/agenda	universeel-eventkaarten
+Website	https://forum.nl/nl/agenda	klaar	Klaar		https://forum.nl/nl/agenda	site 4/19: 0 unieke events in 2.0 sec
