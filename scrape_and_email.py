@@ -847,7 +847,7 @@ def dedupe_events(events):
 def kultuuragenda_title_from_url(page_url):
     """Recover a readable activity title from Kultuuragenda detail slugs when page headings are generic."""
     path = urlparse(page_url).path
-    match = re.search(r"/agenda/\\d+/([^/?#]+)", path, re.I)
+    match = re.search(r"/agenda/\d+/([^/?#]+)", path, re.I)
     if not match:
         return ""
     slug = match.group(1).replace("-", " ").strip()
