@@ -1,6 +1,6 @@
 {
-  "requestedAt": "2026-10-25T09:46:01.397Z",
-  "trigger": "verify-full-scrape-after-kultuuragenda-parser-fix",
+  "requestedAt": "2026-10-25T10:16:34.167Z",
+  "trigger": "verify-biosagenda-and-per-site-new-event-limit",
   "region": "Groningen",
   "radius": "100",
   "category": "all",
@@ -9,7 +9,7 @@
   "dateTo": "",
   "minResults": "20",
   "maxEventsPerSite": "20",
-  "siteTimeLimitSeconds": "60",
+  "siteTimeLimitSeconds": "20",
   "sites": "[]",
   "providers": "{}",
   "serpApiLinks": "[]",
