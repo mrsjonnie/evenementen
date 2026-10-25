@@ -8,12 +8,284 @@
   "completedSites": [],
   "events": [],
   "siteResults": [],
-  "rawLog": [],
+  "rawLog": [
+    {
+      "source": "SerpAPI",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "Mistral analyse",
+      "date": "",
+      "url": "https://forum.nl/nl/agenda",
+      "status": "zoeken",
+      "rawText": "Startpagina wordt opgehaald en door Mistral op eventvelden geanalyseerd."
+    },
+    {
+      "source": "SerpAPI",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "Mistral fout",
+      "date": "",
+      "url": "https://forum.nl/nl/agenda",
+      "status": "status 429",
+      "rawText": "{\"object\":\"error\",\"message\":\"Rate limit exceeded\",\"type\":\"rate_limited\",\"param\":null,\"code\":\"1300\",\"raw_status_code\":429}"
+    },
+    {
+      "source": "SerpAPI",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "Mistral analyse",
+      "date": "",
+      "url": "https://www.spotgroningen.nl/programma/",
+      "status": "zoeken",
+      "rawText": "Startpagina wordt opgehaald en door Mistral op eventvelden geanalyseerd."
+    },
+    {
+      "source": "SerpAPI",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "Mistral fout",
+      "date": "",
+      "url": "https://www.spotgroningen.nl/programma/",
+      "status": "status 429",
+      "rawText": "{\"object\":\"error\",\"message\":\"Rate limit exceeded\",\"type\":\"rate_limited\",\"param\":null,\"code\":\"1300\",\"raw_status_code\":429}"
+    },
+    {
+      "source": "SerpAPI",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Mistral analyse",
+      "date": "",
+      "url": "https://www.vera-groningen.nl/",
+      "status": "zoeken",
+      "rawText": "Startpagina wordt opgehaald en door Mistral op eventvelden geanalyseerd."
+    },
+    {
+      "source": "SerpAPI",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Mistral fout",
+      "date": "",
+      "url": "https://www.vera-groningen.nl/",
+      "status": "status 429",
+      "rawText": "{\"object\":\"error\",\"message\":\"Rate limit exceeded\",\"type\":\"rate_limited\",\"param\":null,\"code\":\"1300\",\"raw_status_code\":429}"
+    },
+    {
+      "source": "SerpAPI",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "Mistral analyse",
+      "date": "",
+      "url": "https://groningen.uitloper.nu/",
+      "status": "zoeken",
+      "rawText": "Startpagina wordt opgehaald en door Mistral op eventvelden geanalyseerd."
+    },
+    {
+      "source": "SerpAPI",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "Mistral fout",
+      "date": "",
+      "url": "https://groningen.uitloper.nu/",
+      "status": "status 429",
+      "rawText": "{\"object\":\"error\",\"message\":\"Rate limit exceeded\",\"type\":\"rate_limited\",\"param\":null,\"code\":\"1300\",\"raw_status_code\":429}"
+    },
+    {
+      "source": "SerpAPI",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Mistral analyse",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "status": "zoeken",
+      "rawText": "Startpagina wordt opgehaald en door Mistral op eventvelden geanalyseerd."
+    },
+    {
+      "source": "SerpAPI",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Mistral fout",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "status": "status 429",
+      "rawText": "{\"object\":\"error\",\"message\":\"Rate limit exceeded\",\"type\":\"rate_limited\",\"param\":null,\"code\":\"1300\",\"raw_status_code\":429}"
+    },
+    {
+      "source": "SerpAPI",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Mistral analyse",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "status": "zoeken",
+      "rawText": "Startpagina wordt opgehaald en door Mistral op eventvelden geanalyseerd."
+    },
+    {
+      "source": "SerpAPI",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Mistral fout",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "status": "status 429",
+      "rawText": "{\"object\":\"error\",\"message\":\"Rate limit exceeded\",\"type\":\"rate_limited\",\"param\":null,\"code\":\"1300\",\"raw_status_code\":429}"
+    },
+    {
+      "source": "SerpAPI",
+      "site": "https://simplon.nl/",
+      "title": "Mistral analyse",
+      "date": "",
+      "url": "https://simplon.nl/",
+      "status": "zoeken",
+      "rawText": "Startpagina wordt opgehaald en door Mistral op eventvelden geanalyseerd."
+    },
+    {
+      "source": "SerpAPI",
+      "site": "https://simplon.nl/",
+      "title": "Mistral fout",
+      "date": "",
+      "url": "https://simplon.nl/",
+      "status": "status 429",
+      "rawText": "{\"object\":\"error\",\"message\":\"Rate limit exceeded\",\"type\":\"rate_limited\",\"param\":null,\"code\":\"1300\",\"raw_status_code\":429}"
+    },
+    {
+      "source": "SerpAPI",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Mistral analyse",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda",
+      "status": "zoeken",
+      "rawText": "Startpagina wordt opgehaald en door Mistral op eventvelden geanalyseerd."
+    },
+    {
+      "source": "SerpAPI",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Mistral fout",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda",
+      "status": "status 429",
+      "rawText": "{\"object\":\"error\",\"message\":\"Rate limit exceeded\",\"type\":\"rate_limited\",\"param\":null,\"code\":\"1300\",\"raw_status_code\":429}"
+    },
+    {
+      "source": "SerpAPI",
+      "site": "https://groningermuseum.nl/programma",
+      "title": "Mistral analyse",
+      "date": "",
+      "url": "https://groningermuseum.nl/programma",
+      "status": "zoeken",
+      "rawText": "Startpagina wordt opgehaald en door Mistral op eventvelden geanalyseerd."
+    },
+    {
+      "source": "SerpAPI",
+      "site": "https://groningermuseum.nl/programma",
+      "title": "Mistral fout",
+      "date": "",
+      "url": "https://groningermuseum.nl/programma",
+      "status": "status 429",
+      "rawText": "{\"object\":\"error\",\"message\":\"Rate limit exceeded\",\"type\":\"rate_limited\",\"param\":null,\"code\":\"1300\",\"raw_status_code\":429}"
+    },
+    {
+      "source": "SerpAPI",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Mistral analyse",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda",
+      "status": "zoeken",
+      "rawText": "Startpagina wordt opgehaald en door Mistral op eventvelden geanalyseerd."
+    },
+    {
+      "source": "SerpAPI",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Mistral fout",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda",
+      "status": "status 429",
+      "rawText": "{\"object\":\"error\",\"message\":\"Rate limit exceeded\",\"type\":\"rate_limited\",\"param\":null,\"code\":\"1300\",\"raw_status_code\":429}"
+    },
+    {
+      "source": "SerpAPI",
+      "site": "https://www.noorderzon.nl/programma",
+      "title": "Mistral analyse",
+      "date": "",
+      "url": "https://www.noorderzon.nl/programma",
+      "status": "zoeken",
+      "rawText": "Startpagina wordt opgehaald en door Mistral op eventvelden geanalyseerd."
+    },
+    {
+      "source": "SerpAPI",
+      "site": "https://www.noorderzon.nl/programma",
+      "title": "Mistral fout",
+      "date": "",
+      "url": "https://www.noorderzon.nl/programma",
+      "status": "status 429",
+      "rawText": "{\"object\":\"error\",\"message\":\"Rate limit exceeded\",\"type\":\"rate_limited\",\"param\":null,\"code\":\"1300\",\"raw_status_code\":429}"
+    },
+    {
+      "source": "SerpAPI",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Mistral analyse",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "status": "zoeken",
+      "rawText": "Startpagina wordt opgehaald en door Mistral op eventvelden geanalyseerd."
+    },
+    {
+      "source": "SerpAPI",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Mistral fout",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "status": "status 429",
+      "rawText": "{\"object\":\"error\",\"message\":\"Rate limit exceeded\",\"type\":\"rate_limited\",\"param\":null,\"code\":\"1300\",\"raw_status_code\":429}"
+    },
+    {
+      "source": "SerpAPI",
+      "site": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "title": "Mistral analyse",
+      "date": "",
+      "url": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "status": "zoeken",
+      "rawText": "Startpagina wordt opgehaald en door Mistral op eventvelden geanalyseerd."
+    },
+    {
+      "source": "SerpAPI",
+      "site": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "title": "Mistral fout",
+      "date": "",
+      "url": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "status": "status 429",
+      "rawText": "{\"object\":\"error\",\"message\":\"Rate limit exceeded\",\"type\":\"rate_limited\",\"param\":null,\"code\":\"1300\",\"raw_status_code\":429}"
+    },
+    {
+      "source": "SerpAPI",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Mistral analyse",
+      "date": "",
+      "url": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "status": "zoeken",
+      "rawText": "Startpagina wordt opgehaald en door Mistral op eventvelden geanalyseerd."
+    },
+    {
+      "source": "SerpAPI",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Mistral fout",
+      "date": "",
+      "url": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "status": "status 429",
+      "rawText": "{\"object\":\"error\",\"message\":\"Rate limit exceeded\",\"type\":\"rate_limited\",\"param\":null,\"code\":\"1300\",\"raw_status_code\":429}"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "Start",
+      "date": "",
+      "url": "https://groningen.uitloper.nu/",
+      "status": "start",
+      "rawText": "site 1/19: max 5 events, max 2 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://groningen.uitloper.nu/",
+      "status": "strategie",
+      "rawText": "uitloper-agenda"
+    }
+  ],
   "status": "running",
   "siteStartedAt": "2026-10-25T16:13:05+00:00",
-  "siteElapsedSeconds": 0,
+  "siteElapsedSeconds": 1,
   "sitePageCount": 0,
   "lastSiteEventCount": 0,
   "stage": "Websitepagina ophalen",
-  "lastUpdatedAt": "2026-10-25T16:13:05+00:00"
+  "lastUpdatedAt": "2026-10-25T16:13:06+00:00",
+  "lastSiteNewEventCount": 0
 }
