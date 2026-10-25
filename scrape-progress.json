@@ -14243,7 +14243,7 @@
       "rawText": "site 20/20: 20 unieke events in 0.92 sec"
     }
   ],
-  "status": "finishing",
+  "status": "completed",
   "siteStartedAt": "2026-10-25T18:58:59+00:00",
   "siteElapsedSeconds": 2,
   "sitePageCount": 1,
@@ -14252,5 +14252,6 @@
   "lastUpdatedAt": "2026-10-25T18:59:01+00:00",
   "lastSiteNewEventCount": 20,
   "lastCompletedSite": "https://www.pathe.nl/bioscoop/groningen",
-  "lastCompletedAt": "2026-10-25T18:59:01+00:00"
+  "lastCompletedAt": "2026-10-25T18:59:01+00:00",
+  "finishedAt": "2026-10-25T18:59:03+00:00"
 }
