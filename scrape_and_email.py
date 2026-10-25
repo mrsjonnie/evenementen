@@ -1439,7 +1439,7 @@ def start_urls_for_site(site_url):
     urls = [exact]
     if "ibood.com" in host:
         # The current Dutch storefront uses this path; the root redirects here.
-        urls.extend([urljoin(exact, "/nl/s-nl"), urljoin(exact, "/offers/nl/s-nl")])
+        urls.extend([urljoin(exact, "/s-nl"), urljoin(exact, "/offers/nl/s-nl")])
     if parsed.path in {"", "/"}:
         base = f"{parsed.scheme}://{parsed.netloc}"
         urls.extend(urljoin(base, path) for path in COMMON_PATHS_FOR_ROOT_SITES)
@@ -1902,7 +1902,7 @@ def extract_groupon_offers(html, page_url, site_url):
             if len(offers) >= MAX_EVENTS_PER_SITE:
                 add_raw("Parser", site_url, "Groupon-telling", "", page_url, "ok", f"{len(offers)} aanbiedingen; limiet {MAX_EVENTS_PER_SITE}")
                 return offers
-    add_raw("Parser", site_url, "Groupon-telling", "", page_url, "ok", f"{len(offers)} aanbiedingen gevonden; limiet {MAX_EVENTS_PER_SITE}")
+    add_raw("Parser", site_url, "Groupon-telling", "", page_url, "ok" if offers else "geen resultaten", f"{len(offers)} aanbiedingen gevonden; limiet {MAX_EVENTS_PER_SITE}; HTML {len(html)} tekens")
     return dedupe_events(offers)
 
 
@@ -1950,6 +1950,7 @@ def extract_ibood_offers(html, page_url, site_url):
             })
             if len(offers) >= MAX_EVENTS_PER_SITE:
                 return offers
+    add_raw("Parser", site_url, "iBOOD-telling", "", page_url, "ok" if offers else "geen resultaten", f"{len(offers)} aanbiedingen gevonden; limiet {MAX_EVENTS_PER_SITE}; HTML {len(html)} tekens")
     return offers
 
 
