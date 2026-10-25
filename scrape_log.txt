@@ -49,3 +49,7 @@ Website	https://simplon.nl/	start	Start		https://simplon.nl/	site 6/19: max 5 ev
 Parser	https://simplon.nl/	strategie	Scrapertype vastgesteld		https://simplon.nl/	compacte-agenda-kaarten
 Website	https://simplon.nl/	fout	Pagina mislukt		https://simplon.nl/programma/	HTTP 429
 Website	https://simplon.nl/	klaar	Klaar		https://simplon.nl/	site 6/19: 0 unieke events in 1.76 sec
+Website	https://www.vera-groningen.nl/	start	Start		https://www.vera-groningen.nl/	site 7/19: max 5 events, max 2 seconden
+Parser	https://www.vera-groningen.nl/	strategie	Scrapertype vastgesteld		https://www.vera-groningen.nl/	programma-kaarten
+Website	https://www.vera-groningen.nl/	ok	Pagina gelezen		https://www.vera-groningen.nl/programma/?category=all&history=0&lang=nl	74233 tekens HTML
+Website	https://www.vera-groningen.nl/	timeout	Site-time-out		https://www.vera-groningen.nl/	site overschreed de harde tijdslimiet van 2 seconden
