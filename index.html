@@ -1318,7 +1318,7 @@
   </div>
 
   <script>
-    const APP_VERSION = "2026.10.25.26";
+    const APP_VERSION = "2026.10.25.27";
     const DEFAULT_MAX_EVENTS_PER_SITE = 20;
     const DEFAULT_SITE_TIME_LIMIT_SECONDS = 20;
     const SCAN_SETTINGS_KEY = "eventScanSettingsV1";
@@ -2302,11 +2302,12 @@
       const siteStartedAt = Date.parse(progress.siteStartedAt || progress.lastUpdatedAt || progress.startedAt || "");
       const elapsedSeconds = Number.isFinite(siteStartedAt) ? Math.max(0, Math.floor((Date.now() - siteStartedAt) / 1000)) : (Number(progress.siteElapsedSeconds) || 0);
       const siteHits = Number(progress.lastSiteEventCount) || 0;
+      const siteNewHits = Number(progress.lastSiteNewEventCount) || 0;
       const pageCount = Number(progress.sitePageCount) || 0;
       if (titleProgress) {
         titleProgress.hidden = false;
-        titleProgress.textContent = `Zoeken… (${siteNumber}/${total}) (${siteLabel}) · ${stage} · ${elapsedSeconds}s · ${siteHits} gevonden`;
-        titleProgress.title = `Bezig met ${siteLabel}: ${stage}. ${elapsedSeconds} seconden verstreken; ${pageCount} pagina’s opgehaald; ${siteHits} resultaten voor deze website.`;
+        titleProgress.textContent = `Zoeken… (${siteNumber}/${total}) ${siteLabel} · ${stage} · ${elapsedSeconds}s · ${siteNewHits} nieuwe evenementen gevonden`;
+        titleProgress.title = `Bezig met ${siteLabel}: ${stage}. ${elapsedSeconds} seconden verstreken; ${pageCount} pagina’s opgehaald; ${siteHits} evenementen gevonden, waarvan ${siteNewHits} nieuw.`;
       }
     }
 
