@@ -639,30 +639,67 @@ async function enrichBodyWithSerpApi(env, body = {}) {
     });
   }
 
+  // Store AI work as functions, not already-running promises. The old code
+  // started every request while constructing the array, so the apparent batches
+  // did not actually limit concurrency and triggered provider-wide HTTP 429s.
   const aiJobs = [];
   if (chatGptEnabled(env, body)) {
-    priority.forEach((site) => aiJobs.push(chatGptEventsForSite(env, site, body).catch((error) => ({
-      events: [],
-      rawLog: [{ source: "ChatGPT", site, title: "ChatGPT mislukt", date: "", url: site, status: "fout", rawText: validateInput(error.message || "", 300) }]
-    }))));
+    priority.forEach((site) => aiJobs.push({
+      provider: "ChatGPT",
+      site,
+      run: () => chatGptEventsForSite(env, site, body)
+    }));
   }
   if (mistralEnabled(env, body)) {
-    priority.forEach((site) => aiJobs.push(mistralEventsForSite(env, site, body).catch((error) => ({
-      events: [],
-      rawLog: [{ source: "Mistral", site, title: "Mistral mislukt", date: "", url: site, status: "fout", rawText: validateInput(error.message || "", 300) }]
-    }))));
+    priority.forEach((site) => aiJobs.push({
+      provider: "Mistral",
+      site,
+      run: () => mistralEventsForSite(env, site, body)
+    }));
   }
   if (aiJobs.length) {
-    // Beperk gelijktijdige AI-verzoeken om pieken en HTTP 429-rate-limits te verminderen.
-    const aiResults = [];
+    const disabledProviders = new Set();
     for (let offset = 0; offset < aiJobs.length; offset += 3) {
-      const batch = await Promise.all(aiJobs.slice(offset, offset + 3));
-      aiResults.push(...batch);
+      const jobs = aiJobs.slice(offset, offset + 3);
+      const runnable = jobs.filter((job) => !disabledProviders.has(job.provider));
+      const skipped = jobs.filter((job) => disabledProviders.has(job.provider));
+
+      skipped.forEach((job) => {
+        aiRawLog.push({
+          source: job.provider,
+          site: job.site,
+          title: `${job.provider} overgeslagen`,
+          date: "",
+          url: job.site,
+          status: "overgeslagen",
+          rawText: "Deze AI-bron is na een HTTP 429 voor de rest van deze scan gepauzeerd om herhaalde rate-limitfouten te voorkomen."
+        });
+      });
+
+      const results = await Promise.all(runnable.map((job) => job.run().catch((error) => ({
+        events: [],
+        rawLog: [{
+          source: job.provider,
+          site: job.site,
+          title: `${job.provider} mislukt`,
+          date: "",
+          url: job.site,
+          status: "fout",
+          rawText: validateInput(error.message || "", 300)
+        }]
+      }))));
+
+      results.forEach((result, index) => {
+        const job = runnable[index];
+        aiRawLog.push(...result.rawLog);
+        aiEventCandidates.push(...result.events);
+        if (job.provider === "Mistral" && result.rawLog.some((row) =>
+          /(?:status\\s*429|rate.?limit|rate_limited)/i.test(`${row.status || ""} ${row.rawText || ""}`)
+        )) {
+          disabledProviders.add("Mistral");
+        }
+      });
     }
-    aiResults.forEach((result) => {
-      aiRawLog.push(...result.rawLog);
-      aiEventCandidates.push(...result.events);
-    });
   }
 
   const uniqueDiscovered = validSites(discovered, 200);
