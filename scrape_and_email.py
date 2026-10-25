@@ -1962,41 +1962,8 @@ def scrape_site(site_url, site_index=0, site_total=0, progress_callback=None):
         try:
             html, final_url = fetch_html(session, page_url, deadline)
             add_raw("Website", original_site, "Pagina gelezen", "", final_url, "ok", f"{len(html)} tekens HTML")
-            if canonical_host(normalized_site) == "zwolsetheaters.nl":
-                diagnostic_soup = BeautifulSoup(html, "html.parser")
-                script_info = [
-                    f"type={clean_text(script.get('type') or '')} src={clean_text(script.get('src') or '')} len={len(script.string or script.get_text() or '')}"
-                    for script in diagnostic_soup.find_all("script")
-                ]
-                add_raw("Diagnose", original_site, "Zwolse scripts", "", final_url, "diagnose", " | ".join(script_info[:12]))
-                anchor_info = [
-                    f"{clean_text(anchor.get_text(' ', strip=True))[:60]} => {clean_text(anchor.get('href') or '')[:140]}"
-                    for anchor in diagnostic_soup.find_all("a", href=True)
-                ]
-                add_raw("Diagnose", original_site, "Zwolse links", "", final_url, "diagnose", " | ".join(anchor_info[:18]))
-                embedded_json = [
-                    clean_text(script.string or script.get_text() or "")[:300]
-                    for script in diagnostic_soup.find_all("script")
-                    if "json" in clean_text(script.get("type") or "").lower() or "application/ld+json" in clean_text(script.get("type") or "").lower()
-                ]
-                add_raw("Diagnose", original_site, "Zwolse JSON", "", final_url, "diagnose", " | ".join(embedded_json[:4]))
-                for asset in [script.get("src") for script in diagnostic_soup.find_all("script", src=True) if any(name in script.get("src", "") for name in ("main.js", "helpers.js"))]:
-                    try:
-                        asset_url = normalized_url(asset, final_url)
-                        asset_response = session.get(asset_url, headers=REQUEST_HEADERS, timeout=remaining_timeout(deadline))
-                        asset_text = asset_response.text
-                        # Find likely API routes and request code rather than generic words in minified bundles.
-                        matches = []
-                        url_pattern = r"""["'`]((?:https?://|/)[^"'`\s]{1,180})["'`]"""
-                        for match in re.finditer(url_pattern, asset_text, re.I):
-                            candidate = match.group(1)
-                            if re.search(r"(?:api|graphql|agenda|programma|event|performance|voorstelling|show|calendar)", candidate, re.I):
-                                matches.append(candidate)
-                        request_pattern = r".{0,100}(?:baseURL|axios\.create|fetch\(|graphql|/api/|api/).{0,180}"
-                        matches.extend(match.group(0) for match in re.finditer(request_pattern, asset_text, re.I))
-                        add_raw("Diagnose", original_site, "Zwolse JS " + urlparse(asset_url).path.rsplit("/", 1)[-1], "", asset_url, "diagnose", " | ".join(list(dict.fromkeys(matches))[:18]))
-                    except Exception as asset_error:
-                        add_raw("Diagnose", original_site, "Zwolse JS fout", "", asset, "fout", str(asset_error))
+            # Avoid downloading unrelated JavaScript bundles; spend the site time budget on
+            # the actual programme page and linked event detail pages.
         except Exception as exc:
             add_raw("Website", original_site, "Pagina mislukt", "", page_url, "fout", str(exc))
             continue
@@ -2054,14 +2021,17 @@ def scrape_site(site_url, site_index=0, site_total=0, progress_callback=None):
             add_raw("Parser", original_site, "Visit Groningen detailstrategie", "", final_url, "strategie",
                     "Overzicht overslaan; alleen detail-URL's met /evenementen/<slug> verwerken")
         elif canonical_host(normalized_site) == "zwolsetheaters.nl":
-            # Zwolse's listing uses nested /programma/<season>/<slug> detail URLs
-            # and date text in the surrounding card, not reliable Event JSON-LD.
-            # Parse the listing cards directly, then crawl discovered detail pages.
-            page_events = extract_venue_agenda_events(html, final_url, normalized_site, "Website")
+            # The listing can contain structured Event data as well as nested
+            # /programma/<season>/<slug> detail links. Combine structured data and
+            # cards; linked detail pages are parsed separately below.
+            zwolse_soup = BeautifulSoup(html, "html.parser")
+            page_events = parse_jsonld_events(zwolse_soup, final_url, normalized_site, "Website")
+            page_events.extend(extract_venue_agenda_events(html, final_url, normalized_site, "Website"))
             if not page_events:
                 page_events = parse_page_events(html, final_url, normalized_site, "Website")
+            page_events = dedupe_events(page_events)
             add_raw("Parser", original_site, "Zwolse programma-parser", "", final_url, "strategie",
-                    "Programma-kaarten met datums + geneste detail-URL's; JSON-LD/generieke parser als fallback")
+                    f"JSON-LD + programma-kaarten + detailpagina's; {len(page_events)} items gevonden")
         elif canonical_host(normalized_site) == "simplon.nl":
             page_events = extract_venue_agenda_events(html, final_url, normalized_site, "Website")
         else:
