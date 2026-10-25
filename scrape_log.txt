@@ -57,3 +57,74 @@ Website	https://www.martiniplaza.nl/nl/agenda	start	Start		https://www.martinipl
 Parser	https://www.martiniplaza.nl/nl/agenda	strategie	Scrapertype vastgesteld		https://www.martiniplaza.nl/nl/agenda	agenda-kaarten
 Website	https://www.martiniplaza.nl/nl/agenda	ok	Pagina gelezen		https://www.martiniplaza.nl/nl/agenda	146630 tekens HTML
 Website	https://www.martiniplaza.nl/nl/agenda	timeout	Site-time-out		https://www.martiniplaza.nl/nl/agenda	site overschreed de harde tijdslimiet van 2 seconden
+Website	https://groningermuseum.nl/programma	start	Start		https://groningermuseum.nl/programma	site 9/19: max 5 events, max 2 seconden
+Parser	https://groningermuseum.nl/programma	strategie	Scrapertype vastgesteld		https://groningermuseum.nl/programma	universele tentoonstellings- en activiteitenparser
+Website	https://groningermuseum.nl/programma	ok	Pagina gelezen		https://groningermuseum.nl/programma	123932 tekens HTML
+Website	https://groningermuseum.nl/programma	event uit link	Nieuw licht – De Ploeg	2025-10-25	https://groningermuseum.nl/de-ploeg-nieuw-licht	25 okt 2025 - 31 dec 2028 EXHIBITION Nieuw licht – De Ploeg
+Website	https://groningermuseum.nl/programma	event uit link	Familietour Nieuw licht – De Ploeg	2025-10-25	https://groningermuseum.nl/familietour-nieuw-licht-de-ploeg	25 okt 2025 - 7 jan 2029 Elke dag EVENT Familietour Nieuw licht – De Ploeg
+Website	https://groningermuseum.nl/programma	event uit link	The Architect & the Housewife	2026-09-19	https://groningermuseum.nl/the-architect-and-the-housewife	19 sep 2026 - 9 mei 2027 EXHIBITION The Architect & the Housewife
+Website	https://groningermuseum.nl/programma	event uit link	Playing House	2026-09-19	https://groningermuseum.nl/playing-house	19 sep 2026 - 10 jan 2027 EXHIBITION Playing House
+Website	https://groningermuseum.nl/programma	event uit link	The Convent of Pleasure	2026-09-19	https://groningermuseum.nl/ani-schulze-the-convent-of-pleasure	19 sep 2026 - 9 mei 2027 EXHIBITION The Convent of Pleasure
+Website	https://groningermuseum.nl/programma	event uit link	Keramikos Carrier Bag	2026-09-19	https://groningermuseum.nl/keramikos-carrier-bag	19 sep 2026 - 10 jan 2027 EXHIBITION Keramikos Carrier Bag
+Website	https://groningermuseum.nl/programma	event uit datumblok	EXHIBITION Nieuw licht – De Ploeg	2028-12-01	https://groningermuseum.nl/programma	1 dec 2028 EXHIBITION Nieuw licht – De Ploeg
+Website	https://groningermuseum.nl/programma	event uit datumblok	Elke dag EVENT Familietour Nieuw licht – De Ploeg	2029-01-07	https://groningermuseum.nl/programma	7 jan 2029 Elke dag EVENT Familietour Nieuw licht – De Ploeg
+Website	https://groningermuseum.nl/programma	event uit datumblok	EXHIBITION The Architect & the Housewife	2027-05-09	https://groningermuseum.nl/programma	9 mei 2027 EXHIBITION The Architect & the Housewife
+Website	https://groningermuseum.nl/programma	event uit datumblok	EXHIBITION The Convent of Pleasure	2027-05-09	https://groningermuseum.nl/programma	9 mei 2027 EXHIBITION The Convent of Pleasure
+Website	https://groningermuseum.nl/programma	event uit kaart	Nieuw licht – De Ploeg	2025-10-25	https://groningermuseum.nl/programma	Programma | Groninger Museum Naar hoofdinhoud Naar navigatie Home Bezoek Programma Collectie Architectuur Over Menu NL Tickets Tentoonstellingen Educatie Activiteiten 25 okt 2025 - 31 dec 2028 EXHIBITION Nieuw licht – De Ploeg 25 okt 2025 - 7 jan 2029 Elke dag EVENT Familietour Nieuw licht – De Ploeg 19 sep 2026 - 9 mei 2027 EXHIBITION The Architect & the Housewife 19 sep 2026 - 10 jan 2027 EXHIBITION Playing House 1
+Website	https://groningermuseum.nl/programma	event uit kaart	Nieuw licht – De Ploeg	2025-10-25	https://groningermuseum.nl/programma	25 okt 2025 - 31 dec 2028 EXHIBITION Nieuw licht – De Ploeg
+Website	https://groningermuseum.nl/programma	event uit kaart	Familietour Nieuw licht – De Ploeg	2025-10-25	https://groningermuseum.nl/programma	25 okt 2025 - 7 jan 2029 Elke dag EVENT Familietour Nieuw licht – De Ploeg
+Website	https://groningermuseum.nl/programma	event uit kaart	The Architect & the Housewife	2026-09-19	https://groningermuseum.nl/programma	19 sep 2026 - 9 mei 2027 EXHIBITION The Architect & the Housewife
+Website	https://groningermuseum.nl/programma	event uit kaart	Playing House	2026-09-19	https://groningermuseum.nl/programma	19 sep 2026 - 10 jan 2027 EXHIBITION Playing House
+Website	https://groningermuseum.nl/programma	event uit kaart	The Convent of Pleasure	2026-09-19	https://groningermuseum.nl/programma	19 sep 2026 - 9 mei 2027 EXHIBITION The Convent of Pleasure
+Website	https://groningermuseum.nl/programma	event uit kaart	Keramikos Carrier Bag	2026-09-19	https://groningermuseum.nl/programma	19 sep 2026 - 10 jan 2027 EXHIBITION Keramikos Carrier Bag
+Website	https://groningermuseum.nl/programma	event uit tekstregel	EXHIBITION	2028-12-31	https://groningermuseum.nl/programma	- | 31 dec 2028 | EXHIBITION | Nieuw licht – De Ploeg | 25 okt 2025 | -
+Website	https://groningermuseum.nl/programma	event uit tekstregel	Nieuw licht – De Ploeg	2025-10-25	https://groningermuseum.nl/programma	Nieuw licht – De Ploeg | 25 okt 2025 | - | 7 jan 2029 | Elke dag | EVENT
+Website	https://groningermuseum.nl/programma	event uit tekstregel	Elke dag	2029-01-07	https://groningermuseum.nl/programma	- | 7 jan 2029 | Elke dag | EVENT | Familietour Nieuw licht – De Ploeg | 19 sep 2026
+Website	https://groningermuseum.nl/programma	event uit dagblok	Elke dag	2029-01-07	https://groningermuseum.nl/programma	Elke dag | EVENT | Familietour Nieuw licht – De Ploeg | 19 sep 2026 | -
+Website	https://groningermuseum.nl/programma	event uit tekstregel	Familietour Nieuw licht – De Ploeg	2026-09-19	https://groningermuseum.nl/programma	Familietour Nieuw licht – De Ploeg | 19 sep 2026 | - | 9 mei 2027 | EXHIBITION | The Architect & the Housewife
+Website	https://groningermuseum.nl/programma	event uit tekstregel	EXHIBITION	2027-05-09	https://groningermuseum.nl/programma	- | 9 mei 2027 | EXHIBITION | The Architect & the Housewife | 19 sep 2026 | -
+Website	https://groningermuseum.nl/programma	event uit tekstregel	The Architect & the Housewife	2026-09-19	https://groningermuseum.nl/programma	The Architect & the Housewife | 19 sep 2026 | - | 10 jan 2027 | EXHIBITION | Playing House
+Website	https://groningermuseum.nl/programma	event uit tekstregel	EXHIBITION	2027-01-10	https://groningermuseum.nl/programma	- | 10 jan 2027 | EXHIBITION | Playing House | 19 sep 2026 | -
+Website	https://groningermuseum.nl/programma	event uit tekstregel	Playing House	2026-09-19	https://groningermuseum.nl/programma	Playing House | 19 sep 2026 | - | 9 mei 2027 | EXHIBITION | The Convent of Pleasure
+Website	https://groningermuseum.nl/programma	event uit tekstregel	EXHIBITION	2027-05-09	https://groningermuseum.nl/programma	- | 9 mei 2027 | EXHIBITION | The Convent of Pleasure | 19 sep 2026 | -
+Website	https://groningermuseum.nl/programma	event uit tekstregel	The Convent of Pleasure	2026-09-19	https://groningermuseum.nl/programma	The Convent of Pleasure | 19 sep 2026 | - | 10 jan 2027 | EXHIBITION | Keramikos Carrier Bag
+Website	https://groningermuseum.nl/programma	event uit tekstregel	EXHIBITION	2027-01-10	https://groningermuseum.nl/programma	- | 10 jan 2027 | EXHIBITION | Keramikos Carrier Bag | Plan je bezoek | Toegankelijkheid
+Website	https://groningermuseum.nl/programma	event uit dagblok	Bezoekersvoorwaarden	2027-01-10	https://groningermuseum.nl/programma	Bezoekersvoorwaarden | Architectuur | Educatie | Schoolklassen & lesprogramma's | Groninger Museum Tour
+Website	https://groningermuseum.nl/programma	event uit dagblok	Architectuur	2027-01-10	https://groningermuseum.nl/programma	Architectuur | Educatie | Schoolklassen & lesprogramma's | Groninger Museum Tour | Juniorclub
+Website	https://groningermuseum.nl/programma	event uit dagblok	Educatie	2027-01-10	https://groningermuseum.nl/programma	Educatie | Schoolklassen & lesprogramma's | Groninger Museum Tour | Juniorclub | Vrienden
+Website	https://groningermuseum.nl/programma	event uit dagblok	Schoolklassen & lesprogramma's	2027-01-10	https://groningermuseum.nl/programma	Schoolklassen & lesprogramma's | Groninger Museum Tour | Juniorclub | Vrienden | Salon
+Website	https://groningermuseum.nl/programma	event uit dagblok	Groninger Museum Tour	2027-01-10	https://groningermuseum.nl/programma	Groninger Museum Tour | Juniorclub | Vrienden | Salon | Club
+Parser	https://groningermuseum.nl/programma	analyse	Pagina geteld		https://groningermuseum.nl/programma	jsonld:0, links:6, datumblokken:4, kaarten:7, regels:17, detail:0
+Website	https://groningermuseum.nl/programma	ok	Pagina geanalyseerd		https://groningermuseum.nl/programma	20 events/aanbiedingen op deze pagina
+Website	https://groningermuseum.nl/programma	detail-link gevonden	25 okt 2025 - 7 jan 2029 Elke dag EVENT Familietour Nieuw licht – De Ploeg		https://groningermuseum.nl/familietour-nieuw-licht-de-ploeg	25 okt 2025 - 7 jan 2029 Elke dag EVENT Familietour Nieuw licht – De Ploeg
+Website	https://groningermuseum.nl/programma	detail-link gevonden	19 sep 2026 - 9 mei 2027 EXHIBITION The Convent of Pleasure		https://groningermuseum.nl/ani-schulze-the-convent-of-pleasure	19 sep 2026 - 9 mei 2027 EXHIBITION The Convent of Pleasure
+Website	https://groningermuseum.nl/programma	detail-link gevonden	25 okt 2025 - 31 dec 2028 EXHIBITION Nieuw licht – De Ploeg		https://groningermuseum.nl/de-ploeg-nieuw-licht	25 okt 2025 - 31 dec 2028 EXHIBITION Nieuw licht – De Ploeg
+Website	https://groningermuseum.nl/programma	detail-link gevonden	19 sep 2026 - 10 jan 2027 EXHIBITION Keramikos Carrier Bag		https://groningermuseum.nl/keramikos-carrier-bag	19 sep 2026 - 10 jan 2027 EXHIBITION Keramikos Carrier Bag
+Website	https://groningermuseum.nl/programma	detail-link gevonden	19 sep 2026 - 10 jan 2027 EXHIBITION Playing House		https://groningermuseum.nl/playing-house	19 sep 2026 - 10 jan 2027 EXHIBITION Playing House
+Website	https://groningermuseum.nl/programma	detail-link gevonden	19 sep 2026 - 9 mei 2027 EXHIBITION The Architect & the Housewife		https://groningermuseum.nl/the-architect-and-the-housewife	19 sep 2026 - 9 mei 2027 EXHIBITION The Architect & the Housewife
+Website	https://groningermuseum.nl/programma	detail-link gevonden	Groninger Museum, naar de homepage		https://groningermuseum.nl/	Groninger Museum, naar de homepage
+Website	https://groningermuseum.nl/programma	detail-link gevonden	Groninger Museum Tour		https://groningermuseum.nl/groninger-museum-tour	Groninger Museum Tour
+Website	https://groningermuseum.nl/programma	detail-link gevonden	Architectuur		https://groningermuseum.nl/museum-gebouw	Architectuur
+Website	https://groningermuseum.nl/programma	detail-link gevonden	Educatie		https://groningermuseum.nl/nl-NL/programma?type=EDUCATION	Educatie
+Website	https://groningermuseum.nl/programma	detail-link gevonden	Tentoonstellingen		https://groningermuseum.nl/nl-NL/programma?type=EXHIBITION	Tentoonstellingen
+Website	https://groningermuseum.nl/programma	detail-link gevonden	Over		https://groningermuseum.nl/over-het-museum	Over
+Website	https://groningermuseum.nl/programma	detail-link gevonden	Naar hoofdinhoud		https://groningermuseum.nl/programma	Naar hoofdinhoud
+Website	https://groningermuseum.nl/programma	detail-link gevonden	Vrienden		https://groningermuseum.nl/vrienden-van-het-museum	Vrienden
+Website	https://groningermuseum.nl/programma	detail-link gevonden	Activiteiten		https://groningermuseum.nl/nl-NL/programma?type=EVENT	Activiteiten
+Website	https://groningermuseum.nl/programma	detail-link gevonden	Bezoekersvoorwaarden		https://groningermuseum.nl/bezoekersvoorwaarden	Bezoekersvoorwaarden
+Website	https://groningermuseum.nl/programma	detail-link gevonden	Club		https://groningermuseum.nl/club	Club
+Website	https://groningermuseum.nl/programma	detail-link gevonden	Collectie		https://groningermuseum.nl/collectie	Collectie
+Website	https://groningermuseum.nl/programma	detail-link gevonden	Educatie		https://groningermuseum.nl/educatie-en-participatie	Educatie
+Website	https://groningermuseum.nl/programma	detail-link gevonden	Juniorclub		https://groningermuseum.nl/juniorclub	Juniorclub
+Website	https://groningermuseum.nl/programma	detail-link gevonden	Colofon		https://groningermuseum.nl/nl-NL/colofon	Colofon
+Website	https://groningermuseum.nl/programma	detail-link gevonden	Organisatie		https://groningermuseum.nl/nl-NL/organisatie-zaken	Organisatie
+Website	https://groningermuseum.nl/programma	detail-link gevonden	Partners		https://groningermuseum.nl/nl-NL/partners	Partners
+Website	https://groningermuseum.nl/programma	detail-link gevonden	Vacatures & stages		https://groningermuseum.nl/nl-NL/vacatures-stages	Vacatures & stages
+Website	https://groningermuseum.nl/programma	detail-link gevonden	Zaalverhuur		https://groningermuseum.nl/nl-NL/zaalverhuur	Zaalverhuur
+Website	https://groningermuseum.nl/programma	detail-link gevonden	Partners		https://groningermuseum.nl/partners	Partners
+Website	https://groningermuseum.nl/programma	detail-link gevonden	Bezoek		https://groningermuseum.nl/plan-je-bezoek	Bezoek
+Website	https://groningermuseum.nl/programma	detail-link gevonden	Salon		https://groningermuseum.nl/salon	Salon
+Website	https://groningermuseum.nl/programma	detail-link gevonden	Schoolklassen & lesprogramma's		https://groningermuseum.nl/school-groepen-educatieve-programmas	Schoolklassen & lesprogramma's
+Website	https://groningermuseum.nl/programma	detail-link gevonden	Toegankelijkheid		https://groningermuseum.nl/toegankelijkheid	Toegankelijkheid
+Filter	https://groningermuseum.nl/programma	ok	Datumfilter toegepast	2026-10-25	https://groningermuseum.nl/programma	20 gevonden; 13 binnen 2026-10-25 t/m onbeperkt
+Website	https://groningermuseum.nl/programma	klaar	Klaar		https://groningermuseum.nl/programma	site 9/19: 0 unieke events in 2.02 sec
