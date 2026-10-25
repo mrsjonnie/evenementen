@@ -1,7 +1,7 @@
 {
   "runId": "2026-10-25T10:09:13+00:00",
   "startedAt": "2026-10-25T10:09:13+00:00",
-  "completedCount": 6,
+  "completedCount": 7,
   "totalSites": 18,
   "completedSites": [
     "https://groningen.uitloper.nu/",
@@ -9,7 +9,8 @@
     "https://www.visitgroningen.nl/nl/doen/wandelen",
     "https://forum.nl/nl/agenda",
     "https://www.spotgroningen.nl/programma/",
-    "https://simplon.nl/"
+    "https://simplon.nl/",
+    "https://www.vera-groningen.nl/"
   ],
   "events": [
     {
@@ -1877,76 +1878,6 @@
       "description": "Heartfelt Edinburgh indie rock",
       "cost": "",
       "image": "https://simplon.nl/wp-content/uploads/2026/02/wrest-c-Trash-Panda_Craig-Robertson-1-1600x900.jpg"
-    },
-    {
-      "date": "2026-12-18",
-      "time": "",
-      "title": "Tramhaus",
-      "type": "Concert",
-      "location": "VERA Groningen",
-      "locationLink": "",
-      "website": "https://www.vera-groningen.nl/?post_type=events&p=152859&lang=nl",
-      "source": "vera-groningen.nl",
-      "discoverySource": "Website",
-      "description": "FRIDAY SHOW Friday 18 December Tramhaus support Raw postpunk from Rotterdam In 2023 wonnen ze de VERA Poll, en ook in 2026 blijft deze band een vaste publieksfavoriet. Lees meer Koop ticket",
-      "cost": "",
-      "image": "https://www.vera-groningen.nl/wp/../vera/assets/img/logo-black.svg"
-    },
-    {
-      "date": "2027-02-15",
-      "time": "",
-      "title": "Madra Salach IRL",
-      "type": "Activiteit",
-      "location": "VERA Groningen",
-      "locationLink": "",
-      "website": "https://www.vera-groningen.nl/?post_type=events&p=154849&lang=nl",
-      "source": "vera-groningen.nl",
-      "discoverySource": "Website",
-      "description": "Monday 15 February Madra Salach IRL support Koop ticket",
-      "cost": "",
-      "image": "https://www.vera-groningen.nl/wp/../vera/assets/img/logo-black.svg"
-    },
-    {
-      "date": "2027-03-03",
-      "time": "",
-      "title": "BODEGA",
-      "type": "Concert",
-      "location": "VERA Groningen",
-      "locationLink": "",
-      "website": "https://www.vera-groningen.nl/?post_type=events&p=154770&lang=nl",
-      "source": "vera-groningen.nl",
-      "discoverySource": "Website",
-      "description": "Wednesday 3 March BODEGA USA support Snarky and energetic artrock De New Yorkse artrockband BODEGA werd in 2016 gevormd uit de resten van het... Lees meer Koop ticket",
-      "cost": "",
-      "image": "https://www.vera-groningen.nl/wp/../vera/assets/img/logo-black.svg"
-    },
-    {
-      "date": "2027-04-10",
-      "time": "",
-      "title": "Black Marble",
-      "type": "Concert",
-      "location": "VERA Groningen",
-      "locationLink": "",
-      "website": "https://www.vera-groningen.nl/?post_type=events&p=154962&lang=nl",
-      "source": "vera-groningen.nl",
-      "discoverySource": "Website",
-      "description": "Saturday 10 April Black Marble USA support Gloomy synthpop and hooky cold wave Black Marble is het project van Chris Stewart, waarin cold wave, minimal synth, postpunk... Lees meer Koop ticket",
-      "cost": "",
-      "image": "https://www.vera-groningen.nl/wp/../vera/assets/img/logo-black.svg"
-    },
-    {
-      "date": "2027-05-14",
-      "time": "",
-      "title": "Codeine",
-      "type": "Activiteit",
-      "location": "VERA Groningen",
-      "locationLink": "",
-      "website": "https://www.vera-groningen.nl/?post_type=events&p=155052&lang=nl",
-      "source": "vera-groningen.nl",
-      "discoverySource": "Website",
-      "description": "Friday 14 May Codeine USA support Early slowcore pioneers Weinig bands laten traagheid zo krachtig klinken als Codeine. Voor de vijfde keer staat... Lees meer Koop ticket",
-      "cost": "",
-      "image": "https://www.vera-groningen.nl/wp/../vera/assets/img/logo-black.svg"
     }
   ],
   "siteResults": [
@@ -1990,6 +1921,13 @@
       "count": 20,
       "newCount": 0,
       "durationSeconds": 3.89,
+      "timedOut": false
+    },
+    {
+      "site": "https://www.vera-groningen.nl/",
+      "count": 20,
+      "newCount": 0,
+      "durationSeconds": 4.35,
       "timedOut": false
     }
   ],
@@ -12797,7 +12735,7 @@
   ],
   "status": "running",
   "lastCompletedSite": "https://www.vera-groningen.nl/",
-  "lastSiteEventCount": 25,
+  "lastSiteEventCount": 20,
   "lastUpdatedAt": "2026-10-25T10:09:56+00:00",
-  "lastCompletedAt": "2026-10-25T10:09:52+00:00"
+  "lastCompletedAt": "2026-10-25T10:09:57+00:00"
 }
