@@ -1851,8 +1851,61 @@ def extract_filmvandaag_events(html, page_url, site_url, discovery_source="Websi
         event_url = normalized_url(anchor.get("href"), page_url) if anchor and anchor.get("href") else page_url
         if not same_host(event_url, site_url):
             event_url = page_url
-        current_day = TODAY
+        # FilmVandaag renders the city timetable as a row of day labels followed
+        # by a matching row of showtimes. Pair cells by column so later-day times
+        # do not accidentally inherit today's date.
         emitted = 0
+        table = card.find("table")
+        if table:
+            table_rows = table.find_all("tr")
+            day_row = None
+            for row in table_rows:
+                cells = row.find_all(["th", "td"], recursive=False)
+                labels = [clean_text(cell.get_text(" ", strip=True)).lower() for cell in cells]
+                if labels and any(re.match(r"^(vandaag|today|morgen|tomorrow|maandag|dinsdag|woensdag|donderdag|vrijdag|zaterdag|zondag|ma|di|wo|do|vr|za|zo)\b", label) for label in labels):
+                    day_row = labels
+                    continue
+                if day_row and cells:
+                    for column, cell in enumerate(cells):
+                        if column >= len(day_row):
+                            continue
+                        label_match = re.match(r"^(vandaag|today|morgen|tomorrow|maandag|dinsdag|woensdag|donderdag|vrijdag|zaterdag|zondag|ma|di|wo|do|vr|za|zo)\b", day_row[column])
+                        if not label_match:
+                            continue
+                        label = label_match.group(1)
+                        if label in {"vandaag", "today"}:
+                            show_day = TODAY
+                        elif label in {"morgen", "tomorrow"}:
+                            show_day = TODAY + timedelta(days=1)
+                        else:
+                            target_weekday = day_labels[label]
+                            offset = (target_weekday - TODAY.weekday()) % 7
+                            if offset == 0 and label not in {"ma", "di", "wo", "do", "vr", "za", "zo"}:
+                                offset = 7
+                            show_day = TODAY + timedelta(days=offset)
+                        for time_match in TIME_RE.finditer(cell.get_text(" ", strip=True)):
+                            time_value = time_match.group(0).replace(".", ":")
+                            key = (show_day.isoformat(), title.lower(), time_value)
+                            if key in seen:
+                                continue
+                            seen.add(key)
+                            event = normalize_event({
+                                "date": show_day.isoformat(), "time": time_value, "title": title,
+                                "type": "Film", "location": "Groningen", "website": event_url,
+                                "description": compact(clean_text(card.get_text(" ", strip=True)), 420),
+                                "image": first_image(card, page_url), "discoverySource": discovery_source,
+                            }, site_url)
+                            if event:
+                                events.append(event)
+                                add_raw(discovery_source, site_url, title, show_day.isoformat(), event_url, "FilmVandaag-vertoning", time_value)
+                                emitted += 1
+                                if len(events) >= MAX_EVENTS_PER_SITE:
+                                    add_raw("Parser", site_url, "FilmVandaag-vertoningen geteld", "", page_url, "gespecialiseerde parser", f"{len(events)} resultaten")
+                                    return dedupe_events(events)
+                    break
+        current_day = TODAY
+        if emitted:
+            continue
         for line in lines:
             normalized_line = clean_text(line).lower().strip(" :|")
             explicit_date = parse_date_text(line)
