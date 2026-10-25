@@ -2273,6 +2273,90 @@ def parse_feed_events(feed_text, feed_url, site_url):
     return dedupe_events(events)
 
 
+def extract_pathe_api_events(session, site_url, deadline):
+    """Best-effort Pathé NL API reader for dated special-event screenings."""
+    base = "https://www.pathe.nl/api"
+    cinema = "pathe-groningen"
+    headers = dict(REQUEST_HEADERS)
+    headers.update({"Accept": "application/json", "Accept-Language": "nl-NL,nl;q=0.9", "Referer": "https://www.pathe.nl/nl"})
+
+    def get_json(path):
+        if time.monotonic() >= deadline:
+            raise TimeoutError("Pathé API: tijdslimiet bereikt")
+        response = session.get(base + path, headers=headers, timeout=remaining_timeout(deadline), allow_redirects=True)
+        response.raise_for_status()
+        return response.json()
+
+    try:
+        payload = get_json("/shows?language=nl")
+        shows = payload.get("shows", payload) if isinstance(payload, dict) else payload
+        if isinstance(shows, dict):
+            shows = list(shows.values())
+        if not isinstance(shows, list):
+            add_raw("Pathé API", site_url, "Catalogusformaat onbekend", "", base + "/shows?language=nl", "diagnose", type(shows).__name__)
+            return []
+        cinema_slugs = set()
+        try:
+            cinema_payload = get_json(f"/cinema/{cinema}/shows?language=nl")
+            cinema_shows = cinema_payload.get("shows", {}) if isinstance(cinema_payload, dict) else {}
+            if isinstance(cinema_shows, dict):
+                cinema_slugs = set(cinema_shows)
+            elif isinstance(cinema_shows, list):
+                cinema_slugs = {clean_text(x.get("slug") if isinstance(x, dict) else x) for x in cinema_shows}
+        except Exception as exc:
+            add_raw("Pathé API", site_url, "Groningen-programma niet beschikbaar", "", base + f"/cinema/{cinema}/shows?language=nl", "waarschuwing", str(exc)[:250])
+
+        events, checked = [], 0
+        for show in shows:
+            if not isinstance(show, dict) or time.monotonic() >= deadline:
+                continue
+            slug = clean_text(show.get("slug") or show.get("id") or "")
+            title = clean_title(show.get("title") or show.get("name") or "")
+            if not slug or not title or not (show.get("isEventSpecial") or show.get("specialEvent")):
+                continue
+            if cinema_slugs and slug not in cinema_slugs:
+                continue
+            checked += 1
+            if checked > min(MAX_EVENTS_PER_SITE, 12):
+                break
+            try:
+                schedule = get_json(f"/show/{slug}/showtimes/{cinema}?language=nl")
+            except Exception as exc:
+                add_raw("Pathé API", site_url, title, "", base + f"/show/{slug}/showtimes/{cinema}?language=nl", "fout", str(exc)[:250])
+                continue
+            if not isinstance(schedule, dict):
+                continue
+            for day, sessions in schedule.items():
+                if not re.fullmatch(r"20[0-9]{2}-[0-9]{2}-[0-9]{2}", clean_text(day)) or not isinstance(sessions, list):
+                    continue
+                for screening in sessions:
+                    if not isinstance(screening, dict):
+                        continue
+                    show_time = clean_text(screening.get("time") or screening.get("startTime") or screening.get("start") or "")
+                    room = clean_text(screening.get("auditoriumName") or screening.get("auditorium") or screening.get("screen") or "")
+                    tags = screening.get("tags") or []
+                    tag_text = ", ".join(clean_text(t.get("name") if isinstance(t, dict) else t) for t in tags)
+                    description = compact(" | ".join(x for x in [clean_text(show.get("synopsis") or show.get("description") or ""), tag_text, room] if x), 420)
+                    event = normalize_event({
+                        "title": title, "date": day, "time": show_time,
+                        "type": classify_type(title + " " + tag_text + " " + description, site_url),
+                        "location": "Pathé Groningen" + (f", {room}" if room else ""),
+                        "website": f"https://www.pathe.nl/nl/films/{slug}",
+                        "description": description or "Speciale voorstelling bij Pathé Groningen.",
+                        "image": clean_text(show.get("posterPath") or ""),
+                        "discoverySource": "Pathé API",
+                    }, site_url)
+                    if event:
+                        events.append(event)
+        result = dedupe_events(events)
+        add_raw("Pathé API", site_url, "Specials verwerkt", "", base + "/shows?language=nl", "ok" if result else "geen hits",
+                f"{len(shows)} catalogusitems; {checked} speciale items gecontroleerd; {len(result)} gedateerde voorstellingen in Groningen")
+        return result
+    except Exception as exc:
+        add_raw("Pathé API", site_url, "API niet beschikbaar", "", base + "/shows?language=nl", "waarschuwing", str(exc)[:320])
+        return []
+
+
 def scrape_site(site_url, site_index=0, site_total=0, progress_callback=None, existing_event_keys=None):
     existing_event_keys = set(existing_event_keys or set())
     # Count only genuinely new events inside the requested date window toward this scan's cap.
@@ -2292,6 +2376,9 @@ def scrape_site(site_url, site_index=0, site_total=0, progress_callback=None, ex
     detail_links = []
     feed_urls = []
     timed_out = False
+
+    if canonical_host(normalized_site) == "pathe.nl":
+        events.extend(extract_pathe_api_events(session, original_site, deadline))
 
     progress = f"site {site_index}/{site_total}" if site_index and site_total else "site"
     add_raw("Website", original_site, "Start", "", normalized_site, "start", f"{progress}: max {MAX_EVENTS_PER_SITE} events, max {SITE_TIME_LIMIT_SECONDS} seconden")
