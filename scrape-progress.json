@@ -8,12 +8,31 @@
   "completedSites": [],
   "events": [],
   "siteResults": [],
-  "rawLog": [],
+  "rawLog": [
+    {
+      "source": "Website",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Start",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/programma",
+      "status": "start",
+      "rawText": "site 1/1: max 20 events, max 60 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/programma",
+      "status": "strategie",
+      "rawText": "JavaScript-agenda + API/chunk-detectie"
+    }
+  ],
   "status": "running",
   "siteStartedAt": "2026-10-25T11:01:01+00:00",
-  "siteElapsedSeconds": 0,
+  "siteElapsedSeconds": 1,
   "sitePageCount": 0,
   "lastSiteEventCount": 0,
   "stage": "Websitepagina ophalen",
-  "lastUpdatedAt": "2026-10-25T11:01:01+00:00"
+  "lastUpdatedAt": "2026-10-25T11:01:02+00:00"
 }
