@@ -774,15 +774,78 @@
       "url": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen",
       "status": "ok",
       "rawText": "0 events/aanbiedingen op deze pagina"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Lees meer",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen/eurosonic-noorderslag",
+      "status": "detail-link gevonden",
+      "rawText": "Lees meer"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Lees meer",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen/grasnapolsky",
+      "status": "detail-link gevonden",
+      "rawText": "Lees meer"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Lees meer",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen/hongerige-wolf",
+      "status": "detail-link gevonden",
+      "rawText": "Lees meer"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Lees meer",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen/koningsdag",
+      "status": "detail-link gevonden",
+      "rawText": "Lees meer"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Lees meer",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen/noorderzon",
+      "status": "detail-link gevonden",
+      "rawText": "Lees meer"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Lees meer",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen/paradigm",
+      "status": "detail-link gevonden",
+      "rawText": "Lees meer"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Lees meer",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen/terug-naar-het-begin-oud",
+      "status": "detail-link gevonden",
+      "rawText": "Lees meer"
     }
   ],
   "status": "running",
   "siteStartedAt": "2026-10-25T13:24:25+00:00",
-  "siteElapsedSeconds": 3,
+  "siteElapsedSeconds": 5,
   "sitePageCount": 1,
   "lastSiteEventCount": 0,
-  "stage": "Pagina gelezen; evenementen verwerken",
-  "lastUpdatedAt": "2026-10-25T13:24:28+00:00",
+  "stage": "Websitepagina ophalen",
+  "lastUpdatedAt": "2026-10-25T13:24:30+00:00",
   "lastSiteNewEventCount": 0,
   "lastCompletedSite": "https://groningen.uitloper.nu/",
   "lastCompletedAt": "2026-10-25T13:24:24+00:00"
