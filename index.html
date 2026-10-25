@@ -1318,7 +1318,7 @@
   </div>
 
   <script>
-    const APP_VERSION = "2026.10.25.23";
+    const APP_VERSION = "2026.10.25.24";
     const DEFAULT_MAX_EVENTS_PER_SITE = 20;
     const DEFAULT_SITE_TIME_LIMIT_SECONDS = 20;
     const SCAN_SETTINGS_KEY = "eventScanSettingsV1";
@@ -2287,6 +2287,14 @@
         return;
       }
       const site = cleanText(progress.currentSite || "");
+      if (!site) {
+        if (titleProgress) {
+          titleProgress.hidden = false;
+          titleProgress.textContent = `Zoeken… scraper starten (${completed}/${total} websites afgerond)`;
+          titleProgress.title = "De scraper is gestart maar heeft nog geen actieve website gepubliceerd."; 
+        }
+        return;
+      }
       const siteNumber = Math.min(total, Math.max(1, Number(progress.currentSiteIndex) || completed + 1));
       const newCount = events.filter(event => event.isNew || newEventKeys.has(eventDedupeKey(event))).length;
       const siteLabel = shortScrapeSiteName(site);
@@ -2426,11 +2434,11 @@
 
         try {
           const progress = await fetchScrapeProgress();
-          if (progress) {
+          if (progress && progress.runId && progress.runId !== options.previousProgressRunId) {
             latestProgress = progress;
-            // Update per-site diagnostics independently of event count. A site returning
-            // zero events or timing out must still refresh the website list immediately.
-            updateLiveScrapeSummary(progress, Boolean(progress.runId && progress.runId !== options.previousProgressRunId));
+            // Ignore the old progress snapshot from before this refresh. Otherwise it
+            // overwrites the startup label every second and the new site's name never appears.
+            updateLiveScrapeSummary(progress, true);
             options.progressStatus = cleanText(progress.status || "");
             options.progressEventCount = Array.isArray(progress.events) ? progress.events.length : 0;
             const siteResults = Array.isArray(progress.siteResults) ? progress.siteResults : null;
@@ -3272,7 +3280,7 @@
         const rateLimited = workerRows.some((row) => /429|rate.?limit|rate_limited/i.test(JSON.stringify(row)));
         const rateLimitNote = rateLimited ? " Een AI-/zoekbron meldt HTTP 429 (rate limit); die bron heeft tijdelijk te veel verzoeken ontvangen." : "";
         showStatus(`Verversverzoek geaccepteerd. ${prefix}${rateLimitNote} Ik controleer of events.json echt wordt bijgewerkt.`, "warn", { stop: true });
-        await waitForUpdatedEvents(previousSignature, previousKeys, foundCount, { intervalMs: 1000, maxAttempts: totalWaitSeconds, previousProgressRunId: previousProgress?.runId || "", lastProgressCount: 0, lastProgressSignature: "" });
+        await waitForUpdatedEvents(previousSignature, previousKeys, foundCount, { intervalMs: 1000, maxAttempts: 86400, previousProgressRunId: previousProgress?.runId || "", lastProgressCount: 0, lastProgressSignature: "" });
       } catch (error) {
         const prefix = Number.isFinite(foundCount) ? `${foundText(foundCount)} gevonden.` : "";
         const message = String(error?.message || error || "Onbekende fout");
@@ -3284,6 +3292,8 @@
       } finally {
         activeScanSites = new Set();
         renderSites(new Set(selectedSites));
+        const titleProgress = $("titleProgressText");
+        if (titleProgress) titleProgress.hidden = true;
         setBusy(button, false);
       }
     }
