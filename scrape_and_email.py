@@ -28,7 +28,7 @@ INPUT_AI_EVENTS_RAW = os.getenv("INPUT_AI_EVENTS", "[]").strip() or "[]"
 
 REQUEST_HEADERS = {
     # Use a normal browser signature: Groupon and iBOOD reject non-browser scraper user agents.
-    "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36",
+    "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36",
     "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
     "Accept-Language": "nl-NL,nl;q=0.9,en-US;q=0.8,en;q=0.7",
     "Cache-Control": "no-cache",
@@ -1553,6 +1553,18 @@ def fetch_html(session, url, deadline):
     if time.monotonic() >= deadline:
         raise TimeoutError("tijdslimiet bereikt")
     response = session.get(url, headers=REQUEST_HEADERS, timeout=remaining_timeout(deadline), allow_redirects=True)
+    if response.status_code == 403 and canonical_host(url) == "filmvandaag.nl" and time.monotonic() < deadline:
+        # FilmVandaag sometimes rejects a bare scripted navigation. Retry once with
+        # ordinary browser navigation headers before reporting the source as blocked.
+        retry_headers = dict(REQUEST_HEADERS)
+        retry_headers.update({
+            "Referer": "https://www.google.com/",
+            "Upgrade-Insecure-Requests": "1",
+            "Sec-Fetch-Dest": "document",
+            "Sec-Fetch-Mode": "navigate",
+            "Sec-Fetch-Site": "cross-site",
+        })
+        response = session.get(url, headers=retry_headers, timeout=remaining_timeout(deadline), allow_redirects=True)
     if response.status_code >= 400:
         raise requests.HTTPError(f"HTTP {response.status_code}")
     content_type = response.headers.get("content-type", "")
@@ -2371,6 +2383,13 @@ def scrape_site(site_url, site_index=0, site_total=0, progress_callback=None, ex
     for detail_url in detail_queue:
         # Eerst echte activiteitspagina's uitlezen; de overzichtskaarten bevatten vaak te weinig details.
         detail_path = urlparse(detail_url).path
+        if canonical_host(normalized_site) == "denieuwekolk.nl":
+            # Avoid ticket/login/order subdomains: they waste the per-site budget and
+            # are not event detail pages. Only follow De Nieuwe Kolk's own agenda URLs.
+            if canonical_host(detail_url) != "denieuwekolk.nl" or "/agenda/" not in detail_path.lower():
+                continue
+            if re.search(r"/(?:bestel|login|auth|mtticket|checkout)(?:/|$)", detail_path, re.I):
+                continue
         is_activity_detail = is_kultuuragenda and bool(re.search(r"/agenda/\d+/[^/?#]+", detail_path, re.I))
         is_visitgroningen_detail = is_visitgroningen and bool(re.search(r"/evenementen/[^/?#]+/?$", detail_path, re.I))
         if new_event_count(events) >= MAX_EVENTS_PER_SITE and not is_activity_detail and not is_visitgroningen_detail and "vera-groningen.nl" not in canonical_host(normalized_site):
