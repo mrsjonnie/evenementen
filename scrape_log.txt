@@ -88,3 +88,7 @@ Parser	https://www.zwolsetheaters.nl/programma	analyse	Pagina geteld		https://ww
 Parser	https://www.zwolsetheaters.nl/programma	strategie	Zwolse programma-parser		https://www.zwolsetheaters.nl/programma	Programma-kaarten met datums + geneste detail-URL's; JSON-LD/generieke parser als fallback
 Website	https://www.zwolsetheaters.nl/programma	ok	Pagina geanalyseerd		https://www.zwolsetheaters.nl/programma	0 events/aanbiedingen op deze pagina
 Website	https://www.zwolsetheaters.nl/programma	klaar	Klaar		https://www.zwolsetheaters.nl/programma	site 13/20: 0 unieke events in 3.71 sec
+Website	https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html	start	Start		https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html	site 14/20: max 5 events, max 2 seconden
+Parser	https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html	strategie	Scrapertype vastgesteld		https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html	bioscoopfilms en speeldata (BiosAgenda Groningen)
+Website	https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html	fout	Pagina mislukt		https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html	HTTP 403
+Website	https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html	klaar	Klaar		https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html	site 14/20: 0 unieke events in 1.18 sec
