@@ -1,7 +1,7 @@
 {
   "runId": "2026-10-25T18:56:08.114925+00:00-709e6c18",
   "startedAt": "2026-10-25T18:56:08+00:00",
-  "completedCount": 14,
+  "completedCount": 15,
   "totalSites": 20,
   "currentSite": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
   "currentSiteIndex": 15,
@@ -19,7 +19,8 @@
     "https://www.noorderzon.nl/programma",
     "https://www.concertgebouw.nl/concerten-en-tickets",
     "https://www.zwolsetheaters.nl/programma",
-    "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html"
+    "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+    "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817"
   ],
   "events": [
     {
@@ -1193,6 +1194,171 @@
       "isNew": true
     },
     {
+      "date": "2026-11-12",
+      "time": "19:00",
+      "title": "Tolhuistuin",
+      "type": "Dans",
+      "location": "Amsterdam",
+      "locationLink": "",
+      "website": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "source": "paradiso.nl",
+      "discoverySource": "Website",
+      "description": "Meer informatie staat op paradiso.nl.",
+      "cost": "",
+      "image": "",
+      "isNew": true
+    },
+    {
+      "date": "2026-11-12",
+      "time": "19:30",
+      "title": "Voorprogramma",
+      "type": "Activiteit",
+      "location": "Amsterdam",
+      "locationLink": "",
+      "website": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "source": "paradiso.nl",
+      "discoverySource": "Website",
+      "description": "Meer informatie staat op paradiso.nl.",
+      "cost": "",
+      "image": "",
+      "isNew": true
+    },
+    {
+      "date": "2026-11-12",
+      "time": "19:00",
+      "title": "Zaal open",
+      "type": "Activiteit",
+      "location": "Amsterdam",
+      "locationLink": "",
+      "website": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "source": "paradiso.nl",
+      "discoverySource": "Website",
+      "description": "Meer informatie staat op paradiso.nl.",
+      "cost": "",
+      "image": "",
+      "isNew": true
+    },
+    {
+      "date": "2026-11-12",
+      "time": "",
+      "title": "cultuur",
+      "type": "Concert",
+      "location": "Amsterdam",
+      "locationLink": "",
+      "website": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "source": "paradiso.nl",
+      "discoverySource": "Website",
+      "description": "Meer informatie staat op paradiso.nl.",
+      "cost": "",
+      "image": "",
+      "isNew": true
+    },
+    {
+      "date": "2026-11-12",
+      "time": "",
+      "title": "€ 17,50",
+      "type": "Concert",
+      "location": "Amsterdam",
+      "locationLink": "",
+      "website": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "source": "paradiso.nl",
+      "discoverySource": "Website",
+      "description": "Lidmaatschap niet verplicht is een opkomend muzikaal project dat bekendstaat om zijn energieke mix van post-punk, indie en elektronische invloeden. De groep ontstond in het Verenigd Koninkrijk en wist al snel aandacht te trekken met hun rauwe sound en dansbare ritmes. Hun muziek balanceert tussen donkere, atmosferische",
+      "cost": "",
+      "image": "",
+      "isNew": true
+    },
+    {
+      "date": "2026-11-13",
+      "time": "",
+      "title": "In Oedipus Craft Space",
+      "type": "Concert",
+      "location": "Amsterdam",
+      "locationLink": "",
+      "website": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "source": "paradiso.nl",
+      "discoverySource": "Website",
+      "description": "Meer informatie staat op paradiso.nl.",
+      "cost": "",
+      "image": "",
+      "isNew": true
+    },
+    {
+      "date": "2026-11-13",
+      "time": "",
+      "title": "In Paradiso",
+      "type": "Concert",
+      "location": "Amsterdam",
+      "locationLink": "",
+      "website": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "source": "paradiso.nl",
+      "discoverySource": "Website",
+      "description": "Meer informatie staat op paradiso.nl.",
+      "cost": "",
+      "image": "",
+      "isNew": true
+    },
+    {
+      "date": "2026-11-13",
+      "time": "",
+      "title": "Rachel Chinouriri",
+      "type": "Concert",
+      "location": "Amsterdam",
+      "locationLink": "",
+      "website": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "source": "paradiso.nl",
+      "discoverySource": "Website",
+      "description": "Meer informatie staat op paradiso.nl.",
+      "cost": "",
+      "image": "",
+      "isNew": true
+    },
+    {
+      "date": "2026-11-24",
+      "time": "",
+      "title": "In Paradiso",
+      "type": "Concert",
+      "location": "Amsterdam",
+      "locationLink": "",
+      "website": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "source": "paradiso.nl",
+      "discoverySource": "Website",
+      "description": "Meer informatie staat op paradiso.nl.",
+      "cost": "",
+      "image": "",
+      "isNew": true
+    },
+    {
+      "date": "2026-11-24",
+      "time": "",
+      "title": "In Tolhuistuin",
+      "type": "Concert",
+      "location": "Amsterdam",
+      "locationLink": "",
+      "website": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "source": "paradiso.nl",
+      "discoverySource": "Website",
+      "description": "Bella Poarch - Picnic At The Cemetery Tour",
+      "cost": "",
+      "image": "",
+      "isNew": true
+    },
+    {
+      "date": "2026-11-24",
+      "time": "",
+      "title": "Justin Nozuka",
+      "type": "Concert",
+      "location": "Amsterdam",
+      "locationLink": "",
+      "website": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "source": "paradiso.nl",
+      "discoverySource": "Website",
+      "description": "Meer informatie staat op paradiso.nl.",
+      "cost": "",
+      "image": "",
+      "isNew": true
+    },
+    {
       "date": "2026-11-25",
       "time": "11:00",
       "title": "Bekijk concert",
@@ -1203,6 +1369,51 @@
       "source": "concertgebouw.nl",
       "discoverySource": "Website",
       "description": "Meer informatie staat op concertgebouw.nl.",
+      "cost": "",
+      "image": "",
+      "isNew": true
+    },
+    {
+      "date": "2026-11-27",
+      "time": "",
+      "title": "In Paradiso",
+      "type": "Concert",
+      "location": "Amsterdam",
+      "locationLink": "",
+      "website": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "source": "paradiso.nl",
+      "discoverySource": "Website",
+      "description": "Meer informatie staat op paradiso.nl.",
+      "cost": "",
+      "image": "",
+      "isNew": true
+    },
+    {
+      "date": "2026-11-27",
+      "time": "",
+      "title": "In Parallel",
+      "type": "Concert",
+      "location": "Amsterdam",
+      "locationLink": "",
+      "website": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "source": "paradiso.nl",
+      "discoverySource": "Website",
+      "description": "Meer informatie staat op paradiso.nl.",
+      "cost": "",
+      "image": "",
+      "isNew": true
+    },
+    {
+      "date": "2026-11-27",
+      "time": "",
+      "title": "Yaeger",
+      "type": "Concert",
+      "location": "Amsterdam",
+      "locationLink": "",
+      "website": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "source": "paradiso.nl",
+      "discoverySource": "Website",
+      "description": "Meer informatie staat op paradiso.nl.",
       "cost": "",
       "image": "",
       "isNew": true
@@ -1225,6 +1436,21 @@
     {
       "date": "2026-11-29",
       "time": "",
+      "title": "In Paradiso",
+      "type": "Activiteit",
+      "location": "Amsterdam",
+      "locationLink": "",
+      "website": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "source": "paradiso.nl",
+      "discoverySource": "Website",
+      "description": "Voorheen Nacht van het Absurdisme",
+      "cost": "",
+      "image": "",
+      "isNew": true
+    },
+    {
+      "date": "2026-11-29",
+      "time": "",
       "title": "Ook iets voor u?",
       "type": "Concert",
       "location": "Kurt Elling & Jazz Orchestra of the Concertgebouw",
@@ -1233,6 +1459,21 @@
       "source": "concertgebouw.nl",
       "discoverySource": "Website",
       "description": "Kurt Elling & Jazz Orchestra of the Concertgebouw",
+      "cost": "",
+      "image": "",
+      "isNew": true
+    },
+    {
+      "date": "2026-11-29",
+      "time": "",
+      "title": "Voorheen Nacht van het Absurdisme",
+      "type": "Concert",
+      "location": "Amsterdam",
+      "locationLink": "",
+      "website": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "source": "paradiso.nl",
+      "discoverySource": "Website",
+      "description": "Meer informatie staat op paradiso.nl.",
       "cost": "",
       "image": "",
       "isNew": true
@@ -1263,6 +1504,36 @@
       "source": "concertgebouw.nl",
       "discoverySource": "Website",
       "description": "12e jaarlijkse Chanoekaconcert – Vrijheid! Kerstmatinee: Sing-Along met Loes Luca Overige informatie",
+      "cost": "",
+      "image": "",
+      "isNew": true
+    },
+    {
+      "date": "2026-12-06",
+      "time": "",
+      "title": "In Paradiso",
+      "type": "Concert",
+      "location": "Amsterdam",
+      "locationLink": "",
+      "website": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "source": "paradiso.nl",
+      "discoverySource": "Website",
+      "description": "Meer informatie staat op paradiso.nl.",
+      "cost": "",
+      "image": "",
+      "isNew": true
+    },
+    {
+      "date": "2026-12-08",
+      "time": "",
+      "title": "Clubnacht HAMDI In Parallel",
+      "type": "Activiteit",
+      "location": "Amsterdam",
+      "locationLink": "",
+      "website": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "source": "paradiso.nl",
+      "discoverySource": "Website",
+      "description": "Meer informatie staat op paradiso.nl.",
       "cost": "",
       "image": "",
       "isNew": true
@@ -1338,6 +1609,36 @@
       "source": "concertgebouw.nl",
       "discoverySource": "Website",
       "description": "Schilderijen van een tentoonstelling (ork. Ravel) Celloconcert nr. 1 in a, op. 33",
+      "cost": "",
+      "image": "",
+      "isNew": true
+    },
+    {
+      "date": "2026-12-18",
+      "time": "",
+      "title": "Clubnacht",
+      "type": "Concert",
+      "location": "Amsterdam",
+      "locationLink": "",
+      "website": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "source": "paradiso.nl",
+      "discoverySource": "Website",
+      "description": "Meer informatie staat op paradiso.nl.",
+      "cost": "",
+      "image": "",
+      "isNew": true
+    },
+    {
+      "date": "2026-12-18",
+      "time": "",
+      "title": "HAMDI",
+      "type": "Concert",
+      "location": "Amsterdam",
+      "locationLink": "",
+      "website": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "source": "paradiso.nl",
+      "discoverySource": "Website",
+      "description": "Meer informatie staat op paradiso.nl.",
       "cost": "",
       "image": "",
       "isNew": true
@@ -2281,1503 +2582,16 @@
       "newCount": 0,
       "durationSeconds": 1.5,
       "timedOut": false
+    },
+    {
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "count": 20,
+      "newCount": 20,
+      "durationSeconds": 2.5,
+      "timedOut": false
     }
   ],
   "rawLog": [
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "My Darling Clementine TakeRoot presents: Een meesterlijke mix van country, soul en americana",
-      "date": "2026-11-09",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "9 nov My Darling Clementine TakeRoot presents: Een meesterlijke mix van country, soul en americana"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Froukje + support: Jaïr Faria Dansbare Nederlandse altpop",
-      "date": "2026-11-09",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "9 nov Froukje + support: Jaïr Faria Dansbare Nederlandse altpop Uitverkocht"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Gotu Jim + support: Igor Melancholische mix van house, trap en emo",
-      "date": "2026-11-01",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "1 nov Gotu Jim + support: Igor Melancholische mix van house, trap en emo"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Isabèl Usher Nederlandstalige pop,",
-      "date": "2026-11-01",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "1 nov Isabèl Usher Nederlandstalige pop, hiphop en house met diepgaande teksten Uitverkocht"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "International Student LiedDuo Competition Finale Hét toonaangevende",
-      "date": "2026-11-01",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "1 nov International Student LiedDuo Competition Finale Hét toonaangevende concours voor liedduo’s (zang en piano)"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Triggerfinger Een nieuw tijdperk en sterker dan ooit!",
-      "date": "2026-11-02",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "2 nov Triggerfinger Een nieuw tijdperk en sterker dan ooit!"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Bert Visscher en het Noordpool Strijkkwartet Bert",
-      "date": "2026-11-02",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "2 nov Bert Visscher en het Noordpool Strijkkwartet Bert Visscher, 65 Dat Zou Je Niet Zeggen Idiote scènes, prachtige liedjes en absurde verhalen Uitverkocht"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Combattimento 300 jaar Vier Jaargetijden van Vivaldi",
-      "date": "2026-11-02",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "2 nov Combattimento 300 jaar Vier Jaargetijden van Vivaldi Een combinatie van de vier jaargetijden van Vivaldi en Durante"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Soweto Gospel Choir JOY Een",
-      "date": "2026-11-03",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "3 nov Soweto Gospel Choir JOY Een muzikale viering van harmonie, vrijheid en hoop"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "K-OTIC K-otic viert 25-jarig jubileum",
-      "date": "2026-11-03",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "3 nov K-OTIC K-otic viert 25-jarig jubileum"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Luka Bloom Originele singer-songwriter uit Ierland",
-      "date": "2026-11-04",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "4 nov Luka Bloom Originele singer-songwriter uit Ierland"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Claudia de Breij Oudejaarsconference 2026 Claudia de",
-      "date": "2026-11-04",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "4 nov Claudia de Breij Oudejaarsconference 2026 Claudia de Breij is terug met de officiële Oudejaarsconference! Uitverkocht"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Myrte Siebinga GELUKKIG MAAR “Het komisch talent van Siebinga is fenomenaal” ★★★★★ DvhN",
-      "date": "2026-11-05",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "5 nov Myrte Siebinga GELUKKIG MAAR “Het komisch talent van Siebinga is fenomenaal” ★★★★★ DvhN Geannuleerd"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Dutch Classical Talent: Hadewych van Gent SPOT Lunchbreak Multitalent versmelt cello met zang",
-      "date": "2026-11-05",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "5 nov Dutch Classical Talent: Hadewych van Gent SPOT Lunchbreak Multitalent versmelt cello met zang"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Claudia de Breij Oudejaarsconference 2026 Claudia de",
-      "date": "2026-11-06",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "6 nov Claudia de Breij Oudejaarsconference 2026 Claudia de Breij is terug met de officiële Oudejaarsconference! Uitverkocht"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Nederlands kamerkoor Vespers Rachmaninov Hemelse harmonie met het beste koor van Nederland",
-      "date": "2026-11-06",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "6 nov Nederlands kamerkoor Vespers Rachmaninov Hemelse harmonie met het beste koor van Nederland Laatste kaarten"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Noord Nederlands Orkest Anime in Concert Iconische animatiemuziek met orkest, koor en sopraan",
-      "date": "2026-11-06",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "6 nov Noord Nederlands Orkest Anime in Concert Iconische animatiemuziek met orkest, koor en sopraan"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Flemming + support: Jim Gardner Frisse, catchy Nederlandstalige pop",
-      "date": "2026-11-06",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "6 nov Flemming + support: Jim Gardner Frisse, catchy Nederlandstalige pop Uitverkocht"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Het Nationale",
-      "date": "2026-11-07",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "7 nov Het Nationale Theater Meeuw Het geploeter en de lol van twee generaties"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "JP Den Tex & Tineke Schoemaker Spelen met de Blues Twee iconen van de Nederlandse",
-      "date": "2026-11-07",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "7 nov JP Den Tex & Tineke Schoemaker Spelen met de Blues Twee iconen van de Nederlandse muziek ontmoeten elkaar in de blues"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Timebox Een ode aan",
-      "date": "2026-11-07",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "7 nov Timebox Een ode aan Britse klassiekers uit de periode 1964-1974 Uitverkocht"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Subterranean Street Society",
-      "date": "2026-11-07",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "7 nov Subterranean Street Society Rauwe folk-grunge met een poëtisch randje"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "The Veils + support: Anthonie Tonnon Alternatieve indierock met een vleugje folk",
-      "date": "2026-11-08",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "8 nov The Veils + support: Anthonie Tonnon Alternatieve indierock met een vleugje folk"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Nanoek Next to Normal Een eigentijdse pop-rockmusical met Willemijn Verkaik, Edwin Jonker e.a.",
-      "date": "2026-11-08",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "8 nov Nanoek Next to Normal Een eigentijdse pop-rockmusical met Willemijn Verkaik, Edwin Jonker e.a."
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "The Scene + support: Jan Douwe Kroeske Na tien jaar stilte is The Scene terug!",
-      "date": "2026-11-08",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "8 nov The Scene + support: Jan Douwe Kroeske Na tien jaar stilte is The Scene terug!"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Waylon Time Jumper Een diepe duik in de wereld van countrymuziek",
-      "date": "2026-11-09",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "9 nov Waylon Time Jumper Een diepe duik in de wereld van countrymuziek"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Joe Jackson",
-      "date": "2026-11-09",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "9 nov Joe Jackson Britse muzikant Joe Jackson keert terug naar Groningen Uitverkocht"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "David Linszen Striptease Van De Dood (reprise) Winnaar Neerlands Hoop",
-      "date": "2026-11-09",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "9 nov David Linszen Striptease Van De Dood (reprise) Winnaar Neerlands Hoop Laatste kaarten"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "NNO & Noordpool Orkest Radiohead, A",
-      "date": "2026-12-01",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "1 dec NNO & Noordpool Orkest Radiohead, A Jazz Symphony Radiohead in symfonische jazzvorm"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Theater Oostpool Romeo en Julia",
-      "date": "2026-12-01",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "1 dec Theater Oostpool Romeo en Julia Hedendaagse bewerking van eeuwenoude klassieker"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Jimmy Carr - Laughs funny Chambers Touring presents Spervuur van briljante oneliners en korte",
-      "date": "2026-12-01",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "1 dec Jimmy Carr - Laughs funny Chambers Touring presents Spervuur van briljante oneliners en korte verhalen Uitverkocht"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Luuk Weggemans Lach maar om mij (try-out)",
-      "date": "2026-12-02",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "2 dec Luuk Weggemans Lach maar om mij (try-out) Winnaar publieks- en persoonlijkheidsprijs Cameretten met pop-comedyshow Uitverkocht"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Maaike Ouboter Een reis door de tijd langs haar gehele oeuvre",
-      "date": "2026-12-02",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "2 dec Maaike Ouboter Een reis door de tijd langs haar gehele oeuvre"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Jimmy Carr - Laughs funny Chambers Touring presents Spervuur van briljante oneliners en korte",
-      "date": "2026-12-02",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "2 dec Jimmy Carr - Laughs funny Chambers Touring presents Spervuur van briljante oneliners en korte verhalen Uitverkocht Extra voorstelling"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "HAEVN + support: Alex Apolline Filmische, meeslepende melodieën en warme stemgeluiden",
-      "date": "2026-12-02",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "2 dec HAEVN + support: Alex Apolline Filmische, meeslepende melodieën en warme stemgeluiden"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Nederlands Blazers Ensemble & Duda Paiva Company",
-      "date": "2026-12-03",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "3 dec Nederlands Blazers Ensemble & Duda Paiva Company Adem van het woud Livemuziek en poppenspel over hoe mens en natuur met elkaar verbonden zijn"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Nederlands Dans",
-      "date": "2026-12-03",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "3 dec Nederlands Dans Theater 1 Out of the stillness NDT1 met Shechter en Carrizo: twee krachtige danssignaturen"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Joris Teepe presents: NYCTG Voor een kleine prijs genieten van topjazzmuzikanten",
-      "date": "2026-12-03",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "3 dec Joris Teepe presents: NYCTG Voor een kleine prijs genieten van topjazzmuzikanten"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Luuk Weggemans Lach maar om mij (try-out)",
-      "date": "2026-12-03",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "3 dec Luuk Weggemans Lach maar om mij (try-out) Winnaar publieks- en persoonlijkheidsprijs Cameretten met pop-comedyshow Uitverkocht"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "HAEVN + support: Alex Apolline Filmische, meeslepende melodieën en warme stemgeluiden",
-      "date": "2026-12-03",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "3 dec HAEVN + support: Alex Apolline Filmische, meeslepende melodieën en warme stemgeluiden Laatste kaarten"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Dawn Brothers & Friends presenteren 50 Years",
-      "date": "2026-12-04",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "4 dec Dawn Brothers & Friends presenteren 50 Years The Last Waltz Met o.a. Michelle David, Tim Knol, Cato van Dijck, Nico Dijkshoorn & Ian Siegal Uitverkocht"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Kelapa Muda Joenoes Polnaija, Tara Hetharia, Jefta Tanate Verbindende voorstelling vol",
-      "date": "2026-12-04",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "4 dec Kelapa Muda Joenoes Polnaija, Tara Hetharia, Jefta Tanate Verbindende voorstelling vol muziek, rituelen en beweging"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Gallowstreet support: Fata Morgana Brass met de energie van dance en electropop",
-      "date": "2026-12-04",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "4 dec Gallowstreet support: Fata Morgana Brass met de energie van dance en electropop"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Kingfishr + SUPPORT: Tadgh Nolan Meeslepende folkrock met",
-      "date": "2026-12-05",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "5 dec Kingfishr + SUPPORT: Tadgh Nolan Meeslepende folkrock met Ierse roots Uitverkocht"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Mythos: Ragnarok Comedy, chaos en de gevechten, samengesmolten tot een meesterwerk",
-      "date": "2026-12-05",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "5 dec Mythos: Ragnarok Comedy, chaos en de gevechten, samengesmolten tot een meesterwerk"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Emo Night Mainland Clubavond met je favoriete 00’s emo en poppunk!",
-      "date": "2026-12-05",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "5 dec Emo Night Mainland Clubavond met je favoriete 00’s emo en poppunk!"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Yentl & De Boer Rekhalzen",
-      "date": "2026-12-05",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "5 dec Yentl & De Boer Rekhalzen Winnaars Poelifinario Kleinkunst 2023 met programma vol prachtige, grappige liedjes Uitverkocht 14:30 uur"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Kingfishr + SUPPORT: Tadgh Nolan Meeslepende folkrock met",
-      "date": "2026-12-06",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "6 dec Kingfishr + SUPPORT: Tadgh Nolan Meeslepende folkrock met Ierse roots Uitverkocht"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Yentl & De Boer Rekhalzen",
-      "date": "2026-12-06",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "6 dec Yentl & De Boer Rekhalzen Winnaars Poelifinario Kleinkunst 2023 met programma vol prachtige, grappige liedjes Uitverkocht 20:15 uur"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Muireann Nic Amhlaoibh Band Folky Sunday Een avond",
-      "date": "2026-12-06",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "6 dec Muireann Nic Amhlaoibh Band Folky Sunday Een avond Ierse traditionele muziek, zang en dans op het allerhoogste niveau"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "SYML & Metropole Orkest Minimalistische indiepop clasht met orkestrale grandeur",
-      "date": "2026-12-06",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "6 dec SYML & Metropole Orkest Minimalistische indiepop clasht met orkestrale grandeur Laatste kaarten"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Andries Tunru & Stefan Hendrikx De nogal",
-      "date": "2026-12-07",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "7 dec Andries Tunru & Stefan Hendrikx De nogal hyperbijzondere Groningse Oudejaars-improvisatie-extravaganza 2026 Volledig geïmproviseerde Oudejaars-show"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Tineke Postma Group featuring Theo Bleckmann Topsaxofoniste",
-      "date": "2026-12-07",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "7 dec Tineke Postma Group featuring Theo Bleckmann Topsaxofoniste en grensverleggende zanger kruisen de degens"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Alain Clark Hoor de",
-      "date": "2026-12-07",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "7 dec Alain Clark Hoor de verhalen die schuilen achter Alain's muziek"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Anne & Bas De Natte Dromen Revue Dit keer is het hoogtepunt pas het begin!",
-      "date": "2026-12-08",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "8 dec Anne & Bas De Natte Dromen Revue Dit keer is het hoogtepunt pas het begin!"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Theater Oostpool The Drama Regisseur Florian Myjer",
-      "date": "2026-12-08",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "8 dec Theater Oostpool The Drama Regisseur Florian Myjer legt de Nederlandse klassenmaatschappij op het hakblok Uitverkocht"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Noord Nederlands Orkest Openbare repetitie Explosief orkestgeluid met Grieg en Prokofjev",
-      "date": "2026-12-08",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "8 dec Noord Nederlands Orkest Openbare repetitie Explosief orkestgeluid met Grieg en Prokofjev"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Marlijn Weerdenburg Geworteld Gloednieuw theaterconcert waarin Marlijn",
-      "date": "2026-12-09",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "9 dec Marlijn Weerdenburg Geworteld Gloednieuw theaterconcert waarin Marlijn op zoek gaat naar het fenomeen ‘thuis’"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Oersoep NITE & K.O.Brass Een passie voor de 21e eeuw",
-      "date": "2026-12-09",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "9 dec Oersoep NITE & K.O.Brass Een passie voor de 21e eeuw"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Holland Baroque & Les Itinérantes Noël Nomade",
-      "date": "2026-12-09",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "9 dec Holland Baroque & Les Itinérantes Noël Nomade Kerstprogramma waarin barok- en volksmuziek hand in hand gaan"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Van Dik Hout Nederpopinstituut dendert door!",
-      "date": "2026-12-01",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "1 dec Van Dik Hout Nederpopinstituut dendert door!"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Jörgen Raymann BIG YARI: Welkom thuis, waar niemand op je zit te wachten Raymann is terug!",
-      "date": "2026-12-01",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "1 dec Jörgen Raymann BIG YARI: Welkom thuis, waar niemand op je zit te wachten Raymann is terug!"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Lucinda Wessels",
-      "date": "2026-12-01",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "1 dec Lucinda Wessels | Timo Tembuyser | Nicole Beutler Projects FUTURE VOICES - Fluid Figures & Isle of Eros Nicole Beutler Projects presenteert twee makers van de toekomst"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Oersoep NITE & K.O.Brass Een passie voor de 21e eeuw",
-      "date": "2026-12-01",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "1 dec Oersoep NITE & K.O.Brass Een passie voor de 21e eeuw"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Alice in wonderland (8+) De Toneelmakerij Herkenbaar, grappig en... onweerstaanbaar wonderlijk",
-      "date": "2026-12-01",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "1 dec Alice in wonderland (8+) De Toneelmakerij Herkenbaar, grappig en... onweerstaanbaar wonderlijk"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Hiigo + support: MAYTE Een van de vaandeldragers van de moderne nederpop",
-      "date": "2026-12-02",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "2 dec Hiigo + support: MAYTE Een van de vaandeldragers van de moderne nederpop"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Anúna On a Cold Winter's Night Een warm en sereen klanktapijt van zuivere meerstemmigheid",
-      "date": "2026-12-02",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "2 dec Anúna On a Cold Winter's Night Een warm en sereen klanktapijt van zuivere meerstemmigheid"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Clean Pete's Kerstshow Over-the-top kerstshow met een bijzondere mix van kerstklassiekers",
-      "date": "2026-12-02",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "2 dec Clean Pete's Kerstshow Over-the-top kerstshow met een bijzondere mix van kerstklassiekers"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Hilde Vos TakeRoot presents: Een krachtige americana zangeres met een eigen geluid",
-      "date": "2026-12-02",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "2 dec Hilde Vos TakeRoot presents: Een krachtige americana zangeres met een eigen geluid"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Alle kinderen stinken (6+) Patrick Duijtshoff en",
-      "date": "2026-12-02",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "2 dec Alle kinderen stinken (6+) Patrick Duijtshoff en Judith van den Berg Een onwetenschappelijke voorstelling gebaseerd op ongefundeerde meningen"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "PIAF Suzan Seegers, Julia Berendse e.a. Een",
-      "date": "2026-12-03",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "3 dec PIAF Suzan Seegers, Julia Berendse e.a. Een nieuwe Nederlandse musical over het leven én de dood van een legende"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "De Niemanders Mix van",
-      "date": "2026-12-03",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "3 dec De Niemanders Mix van zangers, zangeressen, muziekstijlen en vele talen!"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Jan van Duikeren & Marcel Veenendaal Dear Son Twee",
-      "date": "2026-12-03",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "3 dec Jan van Duikeren & Marcel Veenendaal Dear Son Twee muzikale werelden komen samen in een gedeelde passie voor jazz"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Bach Collegium Japan Händels Messiah",
-      "date": "2026-12-03",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "3 dec Bach Collegium Japan Händels Messiah Wereldberoemd barokorkest brengt geliefd koorwerk uit de muziekgeschiedenis Wereldklasse"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Bureau Vergezicht & Romana Vrede Een groter",
-      "date": "2026-12-04",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "4 dec Bureau Vergezicht & Romana Vrede Een groter verhaal Een indringende en poëtische solo over hoe we naar de wereld kijken"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Dunja Jocic & Spellbound Contemporary Ballet Folk",
-      "date": "2026-12-04",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "4 dec Dunja Jocic & Spellbound Contemporary Ballet Folk Hypnotiserende dansvoorstelling over de verleiding van collectieve krachten"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Kamagurka Op zekere dag Absurde humor en onnavolgbare verbeeldingskracht",
-      "date": "2026-12-05",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "5 dec Kamagurka Op zekere dag Absurde humor en onnavolgbare verbeeldingskracht"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "De Belangelozen Via Rudolphi Producties",
-      "date": "2026-12-05",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "5 dec De Belangelozen Via Rudolphi Producties | Collectief T&T Armoede en vrijwilligerswerk, met scherpe humor en in herkenbare scènes belicht"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Maarten Heijmans & Xander Vrienten Wachtend op",
-      "date": "2026-12-06",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "6 dec Maarten Heijmans & Xander Vrienten Wachtend op de dood Levensliedjes tussen de Jordaan en de Mississippi"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Scapino Ballet Rotterdam La Mer Een visuele en",
-      "date": "2026-12-06",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "6 dec Scapino Ballet Rotterdam La Mer Een visuele en muzikale voorstelling over de kracht en kwetsbaarheid van de zee"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Árstíðir Eeuwenoude",
-      "date": "2026-12-07",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "7 dec Árstíðir Eeuwenoude IJslandse folksongs Uitverkocht"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Nikola Meeuwsen + support: Liam Nassereddine Soloconcert",
-      "date": "2026-12-07",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "7 dec Nikola Meeuwsen + support: Liam Nassereddine Soloconcert van de winnaar van het prestigieuze Koningin Elisabeth Concours"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Guido Weijers De oudejaarsconference 2026 Wat er ook gebeurt, humor is het medicijn",
-      "date": "2026-12-08",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "8 dec Guido Weijers De oudejaarsconference 2026 Wat er ook gebeurt, humor is het medicijn Laatste kaarten"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Bertolf - Bluefinger Volume 2. Kundige Nederlandse singer-songwriter en multi-instrumentalist",
-      "date": "2026-12-08",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "8 dec Bertolf - Bluefinger Volume 2. Kundige Nederlandse singer-songwriter en multi-instrumentalist"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Dylan LeBlanc + support: Barbara Forstner TakeRoot presents:",
-      "date": "2026-12-08",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "8 dec Dylan LeBlanc + support: Barbara Forstner TakeRoot presents: Muzikale coyote die altijd op het scherpst van de snede balanceert"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Noord Nederlands Orkest Kerstconcert: Bach's Weihnachtsoratorium Bachs",
-      "date": "2026-12-08",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "8 dec Noord Nederlands Orkest Kerstconcert: Bach's Weihnachtsoratorium Bachs Weihnachtsoratorium als ultieme kerstmuziek"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Denden Karadeniz, Zero Dance Theatre en AAO Ghosts \"",
-      "date": "2026-12-09",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "9 dec Denden Karadeniz, Zero Dance Theatre en AAO Ghosts \"Indrukwekkend totaalkunstwerk\" ★★★★ de Volkskrant"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "La Pegatina Onweerstaanbaar bruisende energie uit Catalonië",
-      "date": "2026-12-09",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "9 dec La Pegatina Onweerstaanbaar bruisende energie uit Catalonië"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Pippi en de Piraten (6+)",
-      "date": "2026-12-01",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "1 dec Pippi en de Piraten (6+) Theater Terra Avontuurlijke familiemusical boordevol humor en Pippipower Laatste kaarten"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Prins S. en De Geit + support:",
-      "date": "2026-12-02",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "2 dec Prins S. en De Geit + support: Zoef Dansbare beats, theatrale flair en Nederlandstalige absurditeit"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Sven & Matthijs The best of The Best of Sven & Matthijs komen met een nieuwe najaarstour",
-      "date": "2026-12-02",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "2 dec Sven & Matthijs The best of The Best of Sven & Matthijs komen met een nieuwe najaarstour"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Dolf Jansen Schaamteloos – Oudejaars 2026 Kolkende",
-      "date": "2026-12-02",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "2 dec Dolf Jansen Schaamteloos – Oudejaars 2026 Kolkende stand-up energie, poëzie, Grote Vragen voor het publiek en improvisatie Laatste kaarten"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Marcel Hensema Mijn Vrede Het kerstverhaal van Groningen exclusief in de Stadsschouwburg",
-      "date": "2026-12-03",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "3 dec Marcel Hensema Mijn Vrede Het kerstverhaal van Groningen exclusief in de Stadsschouwburg Laatste kaarten"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Marcel Hensema Mijn Vrede Het kerstverhaal van Groningen exclusief in de Stadsschouwburg",
-      "date": "2026-12-04",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "4 dec Marcel Hensema Mijn Vrede Het kerstverhaal van Groningen exclusief in de Stadsschouwburg"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Marcel Hensema Mijn Vrede Het kerstverhaal van Groningen exclusief in de Stadsschouwburg",
-      "date": "2026-12-05",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "5 dec Marcel Hensema Mijn Vrede Het kerstverhaal van Groningen exclusief in de Stadsschouwburg"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "K-POP DAY Varia World x SPOT Groningen: K-POP meet up",
-      "date": "2026-12-06",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "6 dec K-POP DAY Varia World x SPOT Groningen: K-POP meet up Muziek, merch, platen en ontmoeten in het teken van K-POP!"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Samar en de bange koning (8+) GEORGE",
-      "date": "2026-12-07",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "7 dec Samar en de bange koning (8+) GEORGE TOBAL PRODUCTIES & DE KRAKELING Sprookje over een koning die doodsbang is voor alles wat hem vreemd is"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "PACESHIFTERS play Nirvana Kink presents Voor de allerlaatste keer, PACESHIFTERS play Nirvana",
-      "date": "2026-12-07",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "7 dec PACESHIFTERS play Nirvana Kink presents Voor de allerlaatste keer, PACESHIFTERS play Nirvana"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Club Motion 16+ clubnacht Eerste editie in Groningen trapt af met New Wave editie",
-      "date": "2026-12-07",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "7 dec Club Motion 16+ clubnacht Eerste editie in Groningen trapt af met New Wave editie"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Grondtonen (9+) Het Houten Huis (try-out) Een",
-      "date": "2026-12-07",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "7 dec Grondtonen (9+) Het Houten Huis (try-out) Een mystieke familievoorstelling over verloren gaan in het bos"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "My First Festival (2-12 jaar) Het allerleukste festival voor de hele",
-      "date": "2026-12-08",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "8 dec My First Festival (2-12 jaar) Het allerleukste festival voor de hele familie"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Grondtonen (9+) Het Houten Huis (try-out) Een",
-      "date": "2026-12-09",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "9 dec Grondtonen (9+) Het Houten Huis (try-out) Een mystieke familievoorstelling over verloren gaan in het bos"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "40UP Big Bang Het jaar sluiten we traditiegetrouw af met een knaller!",
-      "date": "2026-12-09",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "9 dec 40UP Big Bang Het jaar sluiten we traditiegetrouw af met een knaller!"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Yora Rienstra, Vera Marijt e.a. Vrouwejaars 2026 De blik op 2026 door de ogen van vrouwen!",
-      "date": "2026-12-09",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "9 dec Yora Rienstra, Vera Marijt e.a. Vrouwejaars 2026 De blik op 2026 door de ogen van vrouwen!"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "New Cool Collective Een avond vol",
-      "date": "2026-12-09",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "9 dec New Cool Collective Een avond vol jazz, dance, latin, salsa en afrobeat"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Buurman & Buurman bouwen een feestje (4+)",
-      "date": "2027-01-02",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "2 jan Buurman & Buurman bouwen een feestje (4+) Polle Vrienten en Max Laros Gereedschap uit de schuur, slingers aan de kant en klussen maar Laatste kaarten"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Grondtonen (9+) Het Houten Huis (try-out) Een",
-      "date": "2027-01-02",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "2 jan Grondtonen (9+) Het Houten Huis (try-out) Een mystieke familievoorstelling over verloren gaan in het bos"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Noordpool Orkest Nieuwjaarsconcert: Future Is Now Een",
-      "date": "2027-01-02",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "2 jan Noordpool Orkest Nieuwjaarsconcert: Future Is Now Een muzikale start van het nieuwe jaar met het eigenzinnigste orkest van het noorden"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Joosen en De Jager Niks aan het",
-      "date": "2027-01-03",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "3 jan Joosen en De Jager Niks aan het handje \"Kandidaat erfgenaam Waardenberg en de Jong\" - Theaterkrant"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Amsterdam Sinfonietta & Huub van der Lubbe Breder dan",
-      "date": "2027-01-05",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "5 jan Amsterdam Sinfonietta & Huub van der Lubbe Breder dan klassiek Voormalig De Dijk-zanger keert solo terug bij orkest Uitverkocht"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "André Manuel De Eenzame Ziel Met zijn",
-      "date": "2027-01-06",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "6 jan André Manuel De Eenzame Ziel Met zijn 20ste soloprogramma bewijst André Manuel dat hij een blijvertje is"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Het Nationale",
-      "date": "2027-01-06",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "6 jan Het Nationale Theater Mefisto Het duivelse dilemma van een kunstenaar in oorlogstijd"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Noord Nederlands Orkest Hanzevast Nieuwjaarsconcert Feestelijke nieuwjaarsreis vol",
-      "date": "2027-01-07",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "7 jan Noord Nederlands Orkest Hanzevast Nieuwjaarsconcert Feestelijke nieuwjaarsreis vol opera en walsen"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "The James Brown Experience A tribute to the king of funk",
-      "date": "2027-01-07",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "7 jan The James Brown Experience A tribute to the king of funk"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "DeWolff Full Moon Ritual Elektrische southern bluesrock",
-      "date": "2027-01-08",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "8 jan DeWolff Full Moon Ritual Elektrische southern bluesrock Laatste kaarten"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Pinokkio (7+) Holland",
-      "date": "2027-01-08",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "8 jan Pinokkio (7+) Holland Opera, New European Ensemble & Cat Smits Company Fantasierijke en muzikale voorstelling vol zang, live-muziek en betoverende poppen"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": ") Hét Europese platform voor opkomend muzikaal talent",
-      "date": "2027-01-06",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "6 jan) Hét Europese platform voor opkomend muzikaal talent"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Minder telefoon, meer leven Thijs Launspach Hoe je afkickt van je smartphone",
-      "date": "2027-01-06",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "6 jan Minder telefoon, meer leven Thijs Launspach Hoe je afkickt van je smartphone"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Cursus Klassieke",
-      "date": "2027-01-08",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "8 jan Cursus Klassieke Muziek 3 De Romantiek Ga mee op een inspirerende reis door de muziekgeschiedenis!"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Novastar Novastar komt met intieme en pure voorstelling",
-      "date": "2027-01-09",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "9 jan Novastar Novastar komt met intieme en pure voorstelling"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Cursus Klassieke",
-      "date": "2027-01-09",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "9 jan Cursus Klassieke Muziek 3 De Romantiek Ga mee op een inspirerende reis door de muziekgeschiedenis!"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "De Verleiders Zoek Dekking! Gitzwarte komedie over",
-      "date": "2027-01-01",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "1 jan De Verleiders Zoek Dekking! Gitzwarte komedie over pensioenen, andere zekerheden en de prijs van zekerheid"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Noord Nederlands Orkest en Truls Mørk Sjostakovitsj",
-      "date": "2027-01-01",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "1 jan Noord Nederlands Orkest en Truls Mørk Sjostakovitsj Celloconcert 1 Een celloconcert met Oosterse sprookjes en scherpe randjes Wereldklasse"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Wim Helsen Welkom ongemak (reprise) Welkom in",
-      "date": "2027-01-02",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "2 jan Wim Helsen Welkom ongemak (reprise) Welkom in het absurdistische universum van een paranoïde geest"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Paskal Jakobsen BLØF frontman komt met intieme voorstelling en soloalbum",
-      "date": "2027-01-02",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "2 jan Paskal Jakobsen BLØF frontman komt met intieme voorstelling en soloalbum"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Pynarello Macho's Barok met spierballen: een battle tussen bravoure en breekbaarheid",
-      "date": "2027-01-03",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "3 jan Pynarello Macho's Barok met spierballen: een battle tussen bravoure en breekbaarheid"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Pink Project The Band The Story of Floyd Later Works Ode aan de",
-      "date": "2027-01-03",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "3 jan Pink Project The Band The Story of Floyd Later Works Ode aan de muzikale nalatenschap van Pink Floyd"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Echt Gebeurd op Tour! Mooie, bijzondere of grappige",
-      "date": "2027-01-03",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "3 jan Echt Gebeurd op Tour! Mooie, bijzondere of grappige verhalen met presentatie door Micha Wertheim Uitverkocht"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Man Glen Faria",
-      "date": "2027-01-04",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "4 jan Man Glen Faria | Theater Rotterdam | ZO! Gospel Choir | Priscilla Vaudelle Een rauw en persoonlijk theaterconcert van Glen Faria over leven tussen verwachtingen"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Nationaal Jeugdorkest Wintertournee met Liza Ferschtman",
-      "date": "2027-01-04",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "4 jan Nationaal Jeugdorkest Wintertournee met Liza Ferschtman Muziek van Britten, Sjostakovitsj en Prokofjev"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Cappella Amsterdam & Lavinia Meijer Glass 90",
-      "date": "2027-01-04",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "4 jan Cappella Amsterdam & Lavinia Meijer Glass 90 Muziek van Philip Glass, bewerkt voor harp en koor"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "ITA Ensemble Wuthering Heights Geen romantisch liefdesverhaal,",
-      "date": "2027-01-06",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "6 jan ITA Ensemble Wuthering Heights Geen romantisch liefdesverhaal, maar een blik op wat macht met mensen doet"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "David van Rosmalen Als ik jou was",
-      "date": "2027-01-06",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "6 jan David van Rosmalen Als ik jou was Intelligente mix van (woord)grappen, spoken word, pianoliedjes en nederhiphop"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "ITA Ensemble Wuthering Heights Geen romantisch liefdesverhaal,",
-      "date": "2027-01-07",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "7 jan ITA Ensemble Wuthering Heights Geen romantisch liefdesverhaal, maar een blik op wat macht met mensen doet"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "VanWyck Thin Places Indiefolk uit de hoofdstad",
-      "date": "2027-01-07",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "7 jan VanWyck Thin Places Indiefolk uit de hoofdstad"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Dutch Classical Talent: Fee Suzanne de Ruiter",
-      "date": "2027-01-07",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "7 jan Dutch Classical Talent: Fee Suzanne de Ruiter SPOT Lunchbreak Een van de rijzende sterren van het Nederlandse vocalistenlegioen"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Nhung Dam Legende van de witte slang",
-      "date": "2027-01-08",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "8 jan Nhung Dam Legende van de witte slang Wonderlijk muziektheater vol humor, ontroering, zelfspot en prachtige liedjes"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "VanderLinde + King Of The World + Ruben Hoeke Drie topacts uit de bluesrock op één avond",
-      "date": "2027-01-08",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "8 jan VanderLinde + King Of The World + Ruben Hoeke Drie topacts uit de bluesrock op één avond"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Toonkunstkoor Bekker en NNO Verdi's Requiem Dramatische dodenmis met",
-      "date": "2027-01-09",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "9 jan Toonkunstkoor Bekker en NNO Verdi's Requiem Dramatische dodenmis met opera-achtige kracht"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Young Gun Silver Fox an evening with Laid back jaren 70 westcoastpop met een vleugje eighties",
-      "date": "2027-01-09",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "9 jan Young Gun Silver Fox an evening with Laid back jaren 70 westcoastpop met een vleugje eighties"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Brodsky Quartet De Late kwartetten van Beethoven",
-      "date": "2027-01-09",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "9 jan Brodsky Quartet De Late kwartetten van Beethoven Duik een dag lang in zes van Beethovens beroemdste meesterwerken Wereldklasse"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Rayen Panday Grip Zelfspot, scherpe observaties en ontwapenende",
-      "date": "2027-01-01",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "1 jan Rayen Panday Grip Zelfspot, scherpe observaties en ontwapenende verhalen"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "februari Heather Nova Verbindende singer-songwriter",
-      "date": "2027-01-01",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "1 jan februari Heather Nova Verbindende singer-songwriter Laatste kaarten"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Maya Fridman, Elisabeth Hetherington e.a. Maya Fridman",
-      "date": "2027-02-01",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "1 feb Maya Fridman, Elisabeth Hetherington e.a. Maya Fridman & Voices Twee voorstellingen op één avond"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Richard Groenendijk Gelukkig heb je mij nog",
-      "date": "2027-02-01",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "1 feb Richard Groenendijk Gelukkig heb je mij nog Grof, subtiel, innemend, gevoelig, ernstig en bovenal oergeestig Uitverkocht"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Alex Ploeg Niks Persoonlijks (try-out) Vlijmscherpe grappen, persoonlijke",
-      "date": "2027-02-02",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "2 feb Alex Ploeg Niks Persoonlijks (try-out) Vlijmscherpe grappen, persoonlijke verhalen en meeslepende gitaarliedjes Uitverkocht"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Cabarestafette presenteert: NIEUW GELUID! De lekkerste lokroep uit de comedykelders",
-      "date": "2027-02-02",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "2 feb Cabarestafette presenteert: NIEUW GELUID! De lekkerste lokroep uit de comedykelders"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Marlene Bakker & Noordpool Orkest Marlene //",
-      "date": "2027-02-03",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "3 feb Marlene Bakker & Noordpool Orkest Marlene // Meldine Een magische muziekvoorstelling onder begeleiding van het Noordpool Orkest"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Alex Ploeg Niks Persoonlijks (try-out) Vlijmscherpe grappen, persoonlijke",
-      "date": "2027-02-03",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "3 feb Alex Ploeg Niks Persoonlijks (try-out) Vlijmscherpe grappen, persoonlijke verhalen en meeslepende gitaarliedjes Uitverkocht"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Noord Nederlands Orkest Tussen het orkest Een onvergetelijk en monumentaal pianoconcert",
-      "date": "2027-02-03",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "3 feb Noord Nederlands Orkest Tussen het orkest Een onvergetelijk en monumentaal pianoconcert"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Erik Bosgraaf & Cordevento Een van ’s werelds beste en avontuurlijkste blokfluitisten",
-      "date": "2027-02-03",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "3 feb Erik Bosgraaf & Cordevento Een van ’s werelds beste en avontuurlijkste blokfluitisten"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Remko Vrijdag Marko Maandag Een onvoorspelbare avond vol absurde wendingen",
-      "date": "2027-02-04",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "4 feb Remko Vrijdag Marko Maandag Een onvoorspelbare avond vol absurde wendingen"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Alex Ploeg Niks Persoonlijks (try-out) Vlijmscherpe grappen, persoonlijke",
-      "date": "2027-02-04",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "4 feb Alex Ploeg Niks Persoonlijks (try-out) Vlijmscherpe grappen, persoonlijke verhalen en meeslepende gitaarliedjes Uitverkocht"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "The Tallest Man on Earth Just Beyond",
-      "date": "2027-02-04",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "4 feb The Tallest Man on Earth Just Beyond Endless Mountain Zweedse folk muzikant komt met nieuw album"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Conny Janssen Danst Behind the Wall Meeslepende dansvoorstelling met livemuziek van Roufaida",
-      "date": "2027-02-05",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "5 feb Conny Janssen Danst Behind the Wall Meeslepende dansvoorstelling met livemuziek van Roufaida"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Noord Nederlands Orkest en Nikola Meeuwsen Rachmaninoff",
-      "date": "2027-02-05",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "5 feb Noord Nederlands Orkest en Nikola Meeuwsen Rachmaninoff & Sjostakovitsj Een onvergetelijk en monumentaal pianoconcert Wereldklasse"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Ruud Smulders RÜDSICHTSLOS Winnaar Poelifinario in de categorie Entertainment",
-      "date": "2027-02-05",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "5 feb Ruud Smulders RÜDSICHTSLOS Winnaar Poelifinario in de categorie Entertainment"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Erwin Nyhoff & The Prodigal Sons Bluesy",
-      "date": "2027-02-06",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "6 feb Erwin Nyhoff & The Prodigal Sons Bluesy Southern Rock met klassiekers van de band aangevuld met solowerk"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "FEUERENGEL- A Tribute To Rammstein Een vurige tributeband",
-      "date": "2027-02-06",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "6 feb FEUERENGEL- A Tribute To Rammstein Een vurige tributeband Laatste kaarten"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Om en Om en Om (1,5-3 jaar) Het Laagland Nog een keer!",
-      "date": "2027-02-06",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "6 feb Om en Om en Om (1,5-3 jaar) Het Laagland Nog een keer! Uitverkocht"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Om en Om en Om (1,5-3 jaar) Het Laagland Nog een keer!",
-      "date": "2027-02-07",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "7 feb Om en Om en Om (1,5-3 jaar) Het Laagland Nog een keer! Uitverkocht"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Swan Lake (6+) Introdans Geliefde klassieker in modern jasje voor de hele",
-      "date": "2027-02-07",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "7 feb Swan Lake (6+) Introdans Geliefde klassieker in modern jasje voor de hele familie"
-    },
-    {
-      "source": "Parser",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Pagina geteld",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "analyse",
-      "rawText": "jsonld:0, links:536, datumblokken:238, kaarten:134, regels:0, detail:0"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Pagina geanalyseerd",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "ok",
-      "rawText": "755 events/aanbiedingen op deze pagina"
-    },
-    {
-      "source": "Filter",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Datumfilter toegepast",
-      "date": "2026-10-25",
-      "url": "https://www.spotgroningen.nl/programma/",
-      "status": "ok",
-      "rawText": "755 gevonden; 752 binnen 2026-10-25 t/m onbeperkt"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Klaar",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/",
-      "status": "klaar",
-      "rawText": "site 5/20: 20 unieke events in 2.38 sec"
-    },
     {
       "source": "Website",
       "site": "https://simplon.nl/",
@@ -13083,16 +11897,1510 @@
       "url": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
       "status": "klaar",
       "rawText": "site 14/20: 0 unieke events in 1.5 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Start",
+      "date": "",
+      "url": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "status": "start",
+      "rawText": "site 15/20: max 20 events, max 20 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "status": "strategie",
+      "rawText": "universeel-jsonld-links-kaarten"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Pagina gelezen",
+      "date": "",
+      "url": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "status": "ok",
+      "rawText": "296555 tekens HTML"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Paradiso detailstrategie",
+      "date": "",
+      "url": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "status": "strategie",
+      "rawText": "Agenda-overzicht overslaan; alleen individuele /programma/<slug>/<id> pagina's verwerken"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Pagina geanalyseerd",
+      "date": "",
+      "url": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "status": "ok",
+      "rawText": "0 events/aanbiedingen op deze pagina"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "In Tolhuistuin - Club Zaal open : 19:00 , Voorprogramma : 19:30 , Hoofdprogramma : 20:30",
+      "date": "2026-11-02",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit datumblok",
+      "rawText": "2 november In Tolhuistuin - Club Zaal open : 19:00 , Voorprogramma : 19:30 , Hoofdprogramma : 20:30 Ticket € 17,50 Lidmaatschap niet verplicht Ticket € 17,50 Lidmaatschap niet verplicht Adult DVD is een opkomend muzikaal project dat bekendstaat om zijn energieke mix van post-punk, indie en elektronische invloeden. De groep ontstond in het Verenigd Koninkrijk en wist al snel aandacht te trekken met hun rauwe sound en"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Concert Naïssam Jalal In De Duif",
+      "date": "2027-03-01",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit datumblok",
+      "rawText": "1 maart Concert Naïssam Jalal In De Duif"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Concert Tramhaus In Paradiso",
+      "date": "2027-01-04",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit datumblok",
+      "rawText": "4 januari Concert Tramhaus In Paradiso"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Concert Ploegendienst In Paradiso",
+      "date": "2027-04-05",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit datumblok",
+      "rawText": "5 april Concert Ploegendienst In Paradiso"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Nieuws Halloween bij Paradiso",
+      "date": "2027-02-06",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit datumblok",
+      "rawText": "6 februari Nieuws Halloween bij Paradiso"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Clubnacht Jazzy + Dave Nunes, Emvae & Moxes In Parallel",
+      "date": "2027-02-02",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit datumblok",
+      "rawText": "2 februari Clubnacht Jazzy + Dave Nunes, Emvae & Moxes In Parallel"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Clubnacht HAMDI In Parallel",
+      "date": "2026-12-08",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit datumblok",
+      "rawText": "8 december Clubnacht HAMDI In Parallel"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Concert Yaeger In Paradiso",
+      "date": "2026-11-07",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit datumblok",
+      "rawText": "7 november Concert Yaeger In Paradiso"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Fair DRUK 2026 In Paradiso",
+      "date": "2027-03-06",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit datumblok",
+      "rawText": "6 maart Fair DRUK 2026 In Paradiso"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Performancekunst",
+      "date": "2026-11-09",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit datumblok",
+      "rawText": "9 november Performancekunst Net bevestigd Voorheen Nacht van het Absurdisme In Paradiso"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Paradiso Programme Programma Vandaag Speedy J presents",
+      "date": "2026-10-25",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit datumblok",
+      "rawText": "8 februari Paradiso Programme Programma Vandaag Speedy J presents STOOR Live - ADE 2026 In Paradiso Aanvang 16:00 Op datum Op maand Op locatie Op type"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Speedy J presents STOOR Live - ADE",
+      "date": "2027-10-05",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit datumblok",
+      "rawText": "5 okt Speedy J presents STOOR Live - ADE 2026 Analoge jamsessie met ongebreidelde electronica en videokunst 16:00 Antidoto ADE Dit programma is afgelast / Parallel Afgelast"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Backstage & Blik Vooruit 30 jaar backstage",
+      "date": "2027-10-06",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit datumblok",
+      "rawText": "6 okt Backstage & Blik Vooruit 30 jaar backstage & toekomstvisie in één rondleiding 17:00 Chanel Beads + urika's bedroom Het experimentele project van Shane Lavers dat de grens tussen analoog en digitaal vervaagt / Tolhuistuin 19:30 Natanya - THE ATTITUDE TOUR Mix van Y2K-pop, alternatieve r&b en poëtische storytelling uit Londen / Bitterzoet Uitverkocht"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Okvsho + experience Project van broers uit Zürich met roots in elektronische",
+      "date": "2027-10-07",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit datumblok",
+      "rawText": "7 okt Okvsho + experience Project van broers uit Zürich met roots in elektronische muziek en moderne jazz Uitverkocht Goldie Boutilier + Ugly Ozo Filmische pop 19:30 Stu Larsen + Tim Hart Liefdevolle folk ontstaan uit afzondering / Tolhuistuin 20:15 Yaro Mila Amsterdamse electropop artiest / Tolhuistuin 20:30 Jawdropped Opgewekte indie- en powerpop uit Los Angeles 22:00"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Girls In Hawaii + Blumi Waalse indieparel",
+      "date": "2027-10-08",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit datumblok",
+      "rawText": "8 okt Girls In Hawaii + Blumi Waalse indieparel / Tolhuistuin 19:30 Bel Cobain Eigenzinnige combinatie van jazz, soul en psychedelische art-pop 19:30 Ryan Beatty - Arms Over Armor Tour + girlsweetvoiced Veelzijdige singer-songwriter uit Los Angeles met nieuw album 19:30"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Marcoca Hypnotiserende mix van psychedelische surf en",
+      "date": "2027-10-09",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit datumblok",
+      "rawText": "9 okt Marcoca Hypnotiserende mix van psychedelische surf en jazz 19:30 Westside Cowboy + Wyatt Imponerende indierock uit Manchester / Tolhuistuin Wachtlijst Ella Eyre + Angelo Benson Britse singer-songwriter op het snijvlak van r&b, soul en pop / Zonnehuis Wachtlijst Cat Power Eigenzinnige singer-songwriter speelt 'The Greatest' integraal 20:30 Kabeaushé Explosieve popmuziek met invloeden uit hiphop en rock 22:00"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "London Calling Indie / alt / (post)punk festival voor spraakmakende nieuwe acts",
+      "date": "2027-10-01",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit datumblok",
+      "rawText": "1 okt London Calling Indie / alt / (post)punk festival voor spraakmakende nieuwe acts Uitverkocht London Calling - High Tea Middagprogramma van showcasefestival met o.a. Momo Boyd, Knats, Tokyo Tea Room en meer 13:00"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Adult DVD + Smudged",
+      "date": "2026-10-25",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit detailpagina",
+      "rawText": "Adult DVD | Paradiso Menu Search Zoeken 58 jaar concerten, clubnachten en cultuur Programma Mijn Paradiso Programma Nieuws Mijn tickets Bezoek Merchandise Over ons Lidmaatschap Archief Steun ons Werken bij Paradiso Contact Club Paradiso Indiestad Kosmos Paradiso Vinyl Club Sugar Mountain Super-Sonic Jazz Ticket to the Tropics Tones Paradiso TikTok Paradiso Instagram Paradiso Spotify Paradiso YouTube Gemeente Amsterda"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "€ 17,50",
+      "date": "2026-11-12",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit tekstregel",
+      "rawText": "Ticket € 17,50 | donderdag 12 november | In | Tolhuistuin | - Club | Zaal open"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Tolhuistuin",
+      "date": "2026-11-12",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit dagblok",
+      "rawText": "Tolhuistuin | - Club | Zaal open | : | 19:00"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Club",
+      "date": "2026-11-12",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit dagblok",
+      "rawText": "- Club | Zaal open | : | 19:00 | ,"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Zaal open",
+      "date": "2026-11-12",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit dagblok",
+      "rawText": "Zaal open | : | 19:00 | , | Voorprogramma"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Voorprogramma",
+      "date": "2026-11-12",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit dagblok",
+      "rawText": "Voorprogramma | : | 19:30 | , | Hoofdprogramma"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Hoofdprogramma",
+      "date": "2026-11-12",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit dagblok",
+      "rawText": "Hoofdprogramma | : | 20:30 | Ticket € 17,50 | Lidmaatschap niet verplicht"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Lidmaatschap niet verplicht",
+      "date": "2026-11-12",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit dagblok",
+      "rawText": "Lidmaatschap niet verplicht | Ticket € 17,50 | Lidmaatschap niet verplicht | Adult DVD | is een opkomend muzikaal project dat bekendstaat om zijn energieke mix van post-punk, indie en elektronische invloeden. De groep ontstond in het Verenigd Koninkrijk en wist al snel aandacht te trekken met hun rauwe sound en dansbare ritmes. Hun muziek balanceert tussen donkere, atmosferische klanken en aanstekelijke hooks. Afgelo"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "€ 17,50",
+      "date": "2026-11-12",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit dagblok",
+      "rawText": "Ticket € 17,50 | Lidmaatschap niet verplicht | Adult DVD | is een opkomend muzikaal project dat bekendstaat om zijn energieke mix van post-punk, indie en elektronische invloeden. De groep ontstond in het Verenigd Koninkrijk en wist al snel aandacht te trekken met hun rauwe sound en dansbare ritmes. Hun muziek balanceert tussen donkere, atmosferische klanken en aanstekelijke hooks. Afgelopen jaar tekenden ze bij Fat P"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Adult DVD",
+      "date": "2026-11-12",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit dagblok",
+      "rawText": "Adult DVD | is een opkomend muzikaal project dat bekendstaat om zijn energieke mix van post-punk, indie en elektronische invloeden. De groep ontstond in het Verenigd Koninkrijk en wist al snel aandacht te trekken met hun rauwe sound en dansbare ritmes. Hun muziek balanceert tussen donkere, atmosferische klanken en aanstekelijke hooks. Afgelopen jaar tekenden ze bij Fat Possum Records en hebben zich al snel weten te o"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Smudged",
+      "date": "2026-11-12",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit dagblok",
+      "rawText": "Smudged | Route naar Tolhuistuin | Tolhuistuin (voorheen Paradiso Noord) is gevestigd aan IJpromenade 2 in Amsterdam Noord. Vanaf Amsterdam Centraal kun je met de gratis veerpont naar de overkant, waar je na links af te hebben geslagen, tegen Tolhuistuin aanloopt. Voor clubnachten wordt de ingang aan de achterkant gebruikt (Buiksloterweg 5C), die te bereiken is via het Overhoeksplein. | Eten vooraf | Bij Tolhuistuin"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Route naar Tolhuistuin",
+      "date": "2026-11-12",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit dagblok",
+      "rawText": "Route naar Tolhuistuin | Tolhuistuin (voorheen Paradiso Noord) is gevestigd aan IJpromenade 2 in Amsterdam Noord. Vanaf Amsterdam Centraal kun je met de gratis veerpont naar de overkant, waar je na links af te hebben geslagen, tegen Tolhuistuin aanloopt. Voor clubnachten wordt de ingang aan de achterkant gebruikt (Buiksloterweg 5C), die te bereiken is via het Overhoeksplein. | Eten vooraf | Bij Tolhuistuin is het mog"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Paradiso",
+      "date": "2026-11-12",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit dagblok",
+      "rawText": "Paradiso | Paradiso | 58 jaar concerten, clubnachten en | cultuur | Concert"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "58 jaar concerten, clubnachten en",
+      "date": "2026-11-12",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit dagblok",
+      "rawText": "58 jaar concerten, clubnachten en | cultuur | Concert | Net bevestigd | Hot Chip"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "cultuur",
+      "date": "2026-11-12",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit dagblok",
+      "rawText": "cultuur | Concert | Net bevestigd | Hot Chip | In Paradiso"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Hot Chip",
+      "date": "2026-11-12",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit dagblok",
+      "rawText": "Hot Chip | In Paradiso | 1 maart | Concert | Naïssam Jalal"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "In Paradiso",
+      "date": "2026-11-12",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit dagblok",
+      "rawText": "In Paradiso | 1 maart | Concert | Naïssam Jalal | In De Duif"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "In Paradiso",
+      "date": "2027-03-01",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit tekstregel",
+      "rawText": "In Paradiso | 1 maart | Concert | Naïssam Jalal | In De Duif | 10 maart"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "In De Duif",
+      "date": "2027-03-10",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit tekstregel",
+      "rawText": "In De Duif | 10 maart | Clubnacht | Speedy J presents STOOR Live - ADE 2026 | In Paradiso | 25 oktober"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Clubnacht",
+      "date": "2027-03-10",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit dagblok",
+      "rawText": "Clubnacht | Speedy J presents STOOR Live - ADE 2026 | In Paradiso | 25 oktober | Concert"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Speedy J presents STOOR Live - ADE 2026",
+      "date": "2027-03-10",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit dagblok",
+      "rawText": "Speedy J presents STOOR Live - ADE 2026 | In Paradiso | 25 oktober | Concert | Net bevestigd"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "In Paradiso",
+      "date": "2027-03-10",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit dagblok",
+      "rawText": "In Paradiso | 25 oktober | Concert | Net bevestigd | Brooke Combe"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "In Paradiso",
+      "date": "2026-10-25",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit tekstregel",
+      "rawText": "In Paradiso | 25 oktober | Concert | Net bevestigd | Brooke Combe | In Paradiso"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Brooke Combe",
+      "date": "2026-10-25",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit dagblok",
+      "rawText": "Brooke Combe | In Paradiso | 25 maart | Concert | Net bevestigd"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "In Paradiso",
+      "date": "2026-10-25",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit dagblok",
+      "rawText": "In Paradiso | 25 maart | Concert | Net bevestigd | Omasta"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "In Paradiso",
+      "date": "2027-03-25",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit tekstregel",
+      "rawText": "In Paradiso | 25 maart | Concert | Net bevestigd | Omasta | In Paradiso"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Omasta",
+      "date": "2027-03-25",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit dagblok",
+      "rawText": "Omasta | In Paradiso | 17 februari | Concert | Net bevestigd"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "In Paradiso",
+      "date": "2027-03-25",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit dagblok",
+      "rawText": "In Paradiso | 17 februari | Concert | Net bevestigd | Gallowstreet Kids Edition"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "In Paradiso",
+      "date": "2027-02-17",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit tekstregel",
+      "rawText": "In Paradiso | 17 februari | Concert | Net bevestigd | Gallowstreet Kids Edition | In Paradiso"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Gallowstreet Kids Edition",
+      "date": "2027-02-17",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit dagblok",
+      "rawText": "Gallowstreet Kids Edition | In Paradiso | 24 januari | Concert | Tramhaus"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "In Paradiso",
+      "date": "2027-02-17",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit dagblok",
+      "rawText": "In Paradiso | 24 januari | Concert | Tramhaus | In Paradiso"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "In Paradiso",
+      "date": "2027-01-24",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit tekstregel",
+      "rawText": "In Paradiso | 24 januari | Concert | Tramhaus | In Paradiso | 20 februari"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Tramhaus",
+      "date": "2027-01-24",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit dagblok",
+      "rawText": "Tramhaus | In Paradiso | 20 februari | Concert | Net bevestigd"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "In Paradiso",
+      "date": "2027-01-24",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit dagblok",
+      "rawText": "In Paradiso | 20 februari | Concert | Net bevestigd | Mattiel"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "In Paradiso",
+      "date": "2027-02-20",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit tekstregel",
+      "rawText": "In Paradiso | 20 februari | Concert | Net bevestigd | Mattiel | In Bitterzoet"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Mattiel",
+      "date": "2027-02-20",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit dagblok",
+      "rawText": "Mattiel | In Bitterzoet | 18 mei | Concert | Net bevestigd"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "In Bitterzoet",
+      "date": "2027-02-20",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit dagblok",
+      "rawText": "In Bitterzoet | 18 mei | Concert | Net bevestigd | Pigeon"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "In Bitterzoet",
+      "date": "2027-05-18",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit tekstregel",
+      "rawText": "In Bitterzoet | 18 mei | Concert | Net bevestigd | Pigeon | In Tolhuistuin"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Pigeon",
+      "date": "2027-05-18",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit dagblok",
+      "rawText": "Pigeon | In Tolhuistuin | 15 april | Concert | Ploegendienst"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "In Tolhuistuin",
+      "date": "2027-05-18",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit dagblok",
+      "rawText": "In Tolhuistuin | 15 april | Concert | Ploegendienst | In Paradiso"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "In Tolhuistuin",
+      "date": "2027-04-15",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit tekstregel",
+      "rawText": "In Tolhuistuin | 15 april | Concert | Ploegendienst | In Paradiso | 7 november"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Ploegendienst",
+      "date": "2027-04-15",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit dagblok",
+      "rawText": "Ploegendienst | In Paradiso | 7 november | Concert | Net bevestigd"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "In Paradiso",
+      "date": "2027-04-15",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit dagblok",
+      "rawText": "In Paradiso | 7 november | Concert | Net bevestigd | Hazlett"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "In Paradiso",
+      "date": "2026-11-07",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit tekstregel",
+      "rawText": "In Paradiso | 7 november | Concert | Net bevestigd | Hazlett | In Paradiso"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Hazlett",
+      "date": "2026-11-07",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit dagblok",
+      "rawText": "Hazlett | In Paradiso | 12 maart | Concert | Net bevestigd"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "In Paradiso",
+      "date": "2026-11-07",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit dagblok",
+      "rawText": "In Paradiso | 12 maart | Concert | Net bevestigd | Madra Salach"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "In Paradiso",
+      "date": "2027-03-12",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit tekstregel",
+      "rawText": "In Paradiso | 12 maart | Concert | Net bevestigd | Madra Salach | In Paradiso"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "In Paradiso",
+      "date": "2027-02-16",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit tekstregel",
+      "rawText": "In Paradiso | 16 februari | Nieuws | Halloween bij Paradiso | 22 oktober | Concert"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Nieuws",
+      "date": "2027-02-16",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit dagblok",
+      "rawText": "Nieuws | Halloween bij Paradiso | 22 oktober | Concert | Net bevestigd"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Halloween bij Paradiso",
+      "date": "2027-02-16",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit dagblok",
+      "rawText": "Halloween bij Paradiso | 22 oktober | Concert | Net bevestigd | Ledbyher"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Halloween bij Paradiso",
+      "date": "2026-10-22",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit tekstregel",
+      "rawText": "Halloween bij Paradiso | 22 oktober | Concert | Net bevestigd | Ledbyher | In Paradiso"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Ledbyher",
+      "date": "2026-10-22",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit dagblok",
+      "rawText": "Ledbyher | In Paradiso | 6 december | Concert | Net bevestigd"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "In Paradiso",
+      "date": "2026-10-22",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit dagblok",
+      "rawText": "In Paradiso | 6 december | Concert | Net bevestigd | BINA."
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "In Paradiso",
+      "date": "2026-12-06",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit tekstregel",
+      "rawText": "In Paradiso | 6 december | Concert | Net bevestigd | BINA. | In Paradiso"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "In Paradiso",
+      "date": "2027-02-12",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit tekstregel",
+      "rawText": "In Paradiso | 12 februari | Clubnacht | Jazzy + Dave Nunes, Emvae & Moxes | In Parallel | 18 december"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "In Parallel",
+      "date": "2026-12-18",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit tekstregel",
+      "rawText": "In Parallel | 18 december | Clubnacht | HAMDI | In Parallel | 27 november"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Clubnacht",
+      "date": "2026-12-18",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit dagblok",
+      "rawText": "Clubnacht | HAMDI | In Parallel | 27 november | Concert"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "HAMDI",
+      "date": "2026-12-18",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit dagblok",
+      "rawText": "HAMDI | In Parallel | 27 november | Concert | Yaeger"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "In Parallel",
+      "date": "2026-12-18",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit dagblok",
+      "rawText": "In Parallel | 27 november | Concert | Yaeger | In Paradiso"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "In Parallel",
+      "date": "2026-11-27",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit tekstregel",
+      "rawText": "In Parallel | 27 november | Concert | Yaeger | In Paradiso | 24 november"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Yaeger",
+      "date": "2026-11-27",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit dagblok",
+      "rawText": "Yaeger | In Paradiso | 24 november | Concert | Net bevestigd"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "In Paradiso",
+      "date": "2026-11-27",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit dagblok",
+      "rawText": "In Paradiso | 24 november | Concert | Net bevestigd | Justin Nozuka"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "In Paradiso",
+      "date": "2026-11-24",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit tekstregel",
+      "rawText": "In Paradiso | 24 november | Concert | Net bevestigd | Justin Nozuka | In Tolhuistuin"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Justin Nozuka",
+      "date": "2026-11-24",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit dagblok",
+      "rawText": "Justin Nozuka | In Tolhuistuin | 28 februari | Concert | Net bevestigd"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "In Tolhuistuin",
+      "date": "2026-11-24",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit dagblok",
+      "rawText": "In Tolhuistuin | 28 februari | Concert | Net bevestigd | Bella Poarch - Picnic At The Cemetery Tour"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "In Tolhuistuin",
+      "date": "2027-02-28",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit tekstregel",
+      "rawText": "In Tolhuistuin | 28 februari | Concert | Net bevestigd | Bella Poarch - Picnic At The Cemetery Tour | In Tolhuistuin"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "In Tolhuistuin",
+      "date": "2027-03-16",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit tekstregel",
+      "rawText": "In Tolhuistuin | 16 maart | Fair | DRUK 2026 | In Paradiso | 29 november"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "In Paradiso",
+      "date": "2026-11-29",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit tekstregel",
+      "rawText": "In Paradiso | 29 november | Performancekunst | Net bevestigd | Voorheen Nacht van het Absurdisme | In Paradiso"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Voorheen Nacht van het Absurdisme",
+      "date": "2026-11-29",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit dagblok",
+      "rawText": "Voorheen Nacht van het Absurdisme | In Paradiso | 30 december | Concert | Net bevestigd"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "In Paradiso",
+      "date": "2026-11-29",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit dagblok",
+      "rawText": "In Paradiso | 30 december | Concert | Net bevestigd | Paradiso x Oedipus: RAY'S BDAY"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "In Paradiso",
+      "date": "2026-12-30",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit tekstregel",
+      "rawText": "In Paradiso | 30 december | Concert | Net bevestigd | Paradiso x Oedipus: RAY'S BDAY | In Oedipus Craft Space"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Paradiso x Oedipus: RAY'S BDAY",
+      "date": "2026-12-30",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit dagblok",
+      "rawText": "Paradiso x Oedipus: RAY'S BDAY | In Oedipus Craft Space | 13 november | Concert | Net bevestigd"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "In Oedipus Craft Space",
+      "date": "2026-12-30",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit dagblok",
+      "rawText": "In Oedipus Craft Space | 13 november | Concert | Net bevestigd | Rachel Chinouriri"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "In Oedipus Craft Space",
+      "date": "2026-11-13",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit tekstregel",
+      "rawText": "In Oedipus Craft Space | 13 november | Concert | Net bevestigd | Rachel Chinouriri | In Paradiso"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Rachel Chinouriri",
+      "date": "2026-11-13",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit dagblok",
+      "rawText": "Rachel Chinouriri | In Paradiso | 21 juni | Concert | Net bevestigd"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "In Paradiso",
+      "date": "2026-11-13",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit dagblok",
+      "rawText": "In Paradiso | 21 juni | Concert | Net bevestigd | Desinteresse"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "In Paradiso",
+      "date": "2027-06-21",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit tekstregel",
+      "rawText": "In Paradiso | 21 juni | Concert | Net bevestigd | Desinteresse | In Paradiso"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "In Paradiso",
+      "date": "2026-11-08",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit tekstregel",
+      "rawText": "In Paradiso | 8 november | Net bevestigd | Tommy Lefroy | In Tolhuistuin | 8 februari"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Tommy Lefroy",
+      "date": "2026-11-08",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit dagblok",
+      "rawText": "Tommy Lefroy | In Tolhuistuin | 8 februari | Paradiso Programme | Programma"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "In Tolhuistuin",
+      "date": "2026-11-08",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit dagblok",
+      "rawText": "In Tolhuistuin | 8 februari | Paradiso Programme | Programma | Vandaag"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "In Tolhuistuin",
+      "date": "2027-02-08",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit tekstregel",
+      "rawText": "In Tolhuistuin | 8 februari | Paradiso Programme | Programma | Vandaag | Speedy J presents STOOR Live - ADE 2026"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Paradiso Programme",
+      "date": "2027-02-08",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit dagblok",
+      "rawText": "Paradiso Programme | Programma | Vandaag | Speedy J presents STOOR Live - ADE 2026 | In Paradiso"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Speedy J presents STOOR Live - ADE 2026",
+      "date": "2026-10-25",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit tekstregel",
+      "rawText": "Programma | Vandaag | Speedy J presents STOOR Live - ADE 2026 | In Paradiso | Aanvang 16:00 | Op datum"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Speedy J presents STOOR Live - ADE 2026",
+      "date": "2026-10-25",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit dagblok",
+      "rawText": "Speedy J presents STOOR Live - ADE 2026 | In Paradiso | Aanvang 16:00 | Op datum | Op maand"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Aanvang 16:00",
+      "date": "2026-10-25",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit dagblok",
+      "rawText": "Aanvang 16:00 | Op datum | Op maand | Op locatie | Op type"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Op type",
+      "date": "2026-10-25",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit dagblok",
+      "rawText": "Op type | zo 25 okt | Speedy J presents STOOR Live - ADE 2026 | Analoge jamsessie met ongebreidelde electronica en videokunst | 16:00"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Op type",
+      "date": "2026-10-25",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit tekstregel",
+      "rawText": "Op type | zo 25 okt | Speedy J presents STOOR Live - ADE 2026 | Analoge jamsessie met ongebreidelde electronica en videokunst | 16:00 | Antidoto ADE"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Analoge jamsessie met ongebreidelde electronica en videokunst",
+      "date": "2026-10-25",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit dagblok",
+      "rawText": "Analoge jamsessie met ongebreidelde electronica en videokunst | 16:00 | Antidoto ADE | Dit programma is afgelast / Parallel | Afgelast"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Antidoto ADE",
+      "date": "2026-10-25",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit dagblok",
+      "rawText": "Antidoto ADE | Dit programma is afgelast / Parallel | Afgelast | ma 26 okt | Backstage & Blik Vooruit"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Dit programma is afgelast / Parallel",
+      "date": "2026-10-25",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit dagblok",
+      "rawText": "Dit programma is afgelast / Parallel | Afgelast | ma 26 okt | Backstage & Blik Vooruit | 30 jaar backstage & toekomstvisie in één rondleiding"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Afgelast",
+      "date": "2026-10-25",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit dagblok",
+      "rawText": "Afgelast | ma 26 okt | Backstage & Blik Vooruit | 30 jaar backstage & toekomstvisie in één rondleiding | 17:00"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Afgelast",
+      "date": "2026-10-26",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit tekstregel",
+      "rawText": "Afgelast | ma 26 okt | Backstage & Blik Vooruit | 30 jaar backstage & toekomstvisie in één rondleiding | 17:00 | Chanel Beads + urika's bedroom"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Backstage & Blik Vooruit",
+      "date": "2026-10-26",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit dagblok",
+      "rawText": "Backstage & Blik Vooruit | 30 jaar backstage & toekomstvisie in één rondleiding | 17:00 | Chanel Beads + urika's bedroom | Het experimentele project van Shane Lavers dat de grens tussen analoog en digitaal vervaagt / Tolhuistuin"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "30 jaar backstage & toekomstvisie in één rondleiding",
+      "date": "2026-10-26",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit dagblok",
+      "rawText": "30 jaar backstage & toekomstvisie in één rondleiding | 17:00 | Chanel Beads + urika's bedroom | Het experimentele project van Shane Lavers dat de grens tussen analoog en digitaal vervaagt / Tolhuistuin | 19:30"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Chanel Beads + urika's bedroom",
+      "date": "2026-10-26",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit dagblok",
+      "rawText": "Chanel Beads + urika's bedroom | Het experimentele project van Shane Lavers dat de grens tussen analoog en digitaal vervaagt / Tolhuistuin | 19:30 | Natanya - THE ATTITUDE TOUR | Mix van Y2K-pop, alternatieve r&b en poëtische storytelling uit Londen / Bitterzoet"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Het experimentele project van Shane Lavers dat de grens tussen analoog en digitaal vervaagt / Tolhuistuin",
+      "date": "2026-10-26",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit dagblok",
+      "rawText": "Het experimentele project van Shane Lavers dat de grens tussen analoog en digitaal vervaagt / Tolhuistuin | 19:30 | Natanya - THE ATTITUDE TOUR | Mix van Y2K-pop, alternatieve r&b en poëtische storytelling uit Londen / Bitterzoet | Uitverkocht"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Mix van Y2K-pop, alternatieve r&b en poëtische storytelling uit Londen / Bitterzoet",
+      "date": "2026-10-26",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit dagblok",
+      "rawText": "Mix van Y2K-pop, alternatieve r&b en poëtische storytelling uit Londen / Bitterzoet | Uitverkocht | di 27 okt | Okvsho + experience | Project van broers uit Zürich met roots in elektronische muziek en moderne jazz"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Okvsho + experience",
+      "date": "2026-10-27",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit tekstregel",
+      "rawText": "Uitverkocht | di 27 okt | Okvsho + experience | Project van broers uit Zürich met roots in elektronische muziek en moderne jazz | Uitverkocht | Goldie Boutilier + Ugly Ozo"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Okvsho + experience",
+      "date": "2026-10-27",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit dagblok",
+      "rawText": "Okvsho + experience | Project van broers uit Zürich met roots in elektronische muziek en moderne jazz | Uitverkocht | Goldie Boutilier + Ugly Ozo | Filmische pop"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Project van broers uit Zürich met roots in elektronische muziek en moderne jazz",
+      "date": "2026-10-27",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit dagblok",
+      "rawText": "Project van broers uit Zürich met roots in elektronische muziek en moderne jazz | Uitverkocht | Goldie Boutilier + Ugly Ozo | Filmische pop | 19:30"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Goldie Boutilier + Ugly Ozo",
+      "date": "2026-10-27",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit dagblok",
+      "rawText": "Goldie Boutilier + Ugly Ozo | Filmische pop | 19:30 | Stu Larsen + Tim Hart | Liefdevolle folk ontstaan uit afzondering / Tolhuistuin"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Filmische pop",
+      "date": "2026-10-27",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit dagblok",
+      "rawText": "Filmische pop | 19:30 | Stu Larsen + Tim Hart | Liefdevolle folk ontstaan uit afzondering / Tolhuistuin | 20:15"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Stu Larsen + Tim Hart",
+      "date": "2026-10-27",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit dagblok",
+      "rawText": "Stu Larsen + Tim Hart | Liefdevolle folk ontstaan uit afzondering / Tolhuistuin | 20:15 | Yaro Mila | Amsterdamse electropop artiest / Tolhuistuin"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Liefdevolle folk ontstaan uit afzondering / Tolhuistuin",
+      "date": "2026-10-27",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit dagblok",
+      "rawText": "Liefdevolle folk ontstaan uit afzondering / Tolhuistuin | 20:15 | Yaro Mila | Amsterdamse electropop artiest / Tolhuistuin | 20:30"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Yaro Mila",
+      "date": "2026-10-27",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit dagblok",
+      "rawText": "Yaro Mila | Amsterdamse electropop artiest / Tolhuistuin | 20:30 | Jawdropped | Opgewekte indie- en powerpop uit Los Angeles"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Amsterdamse electropop artiest / Tolhuistuin",
+      "date": "2026-10-27",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit dagblok",
+      "rawText": "Amsterdamse electropop artiest / Tolhuistuin | 20:30 | Jawdropped | Opgewekte indie- en powerpop uit Los Angeles | 22:00"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Jawdropped",
+      "date": "2026-10-27",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit dagblok",
+      "rawText": "Jawdropped | Opgewekte indie- en powerpop uit Los Angeles | 22:00 | wo 28 okt | Girls In Hawaii + Blumi"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Opgewekte indie- en powerpop uit Los Angeles",
+      "date": "2026-10-27",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit dagblok",
+      "rawText": "Opgewekte indie- en powerpop uit Los Angeles | 22:00 | wo 28 okt | Girls In Hawaii + Blumi | Waalse indieparel / Tolhuistuin"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Girls In Hawaii + Blumi",
+      "date": "2026-10-28",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit tekstregel",
+      "rawText": "22:00 | wo 28 okt | Girls In Hawaii + Blumi | Waalse indieparel / Tolhuistuin | 19:30 | Bel Cobain"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Girls In Hawaii + Blumi",
+      "date": "2026-10-28",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit dagblok",
+      "rawText": "Girls In Hawaii + Blumi | Waalse indieparel / Tolhuistuin | 19:30 | Bel Cobain | Eigenzinnige combinatie van jazz, soul en psychedelische art-pop"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Waalse indieparel / Tolhuistuin",
+      "date": "2026-10-28",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit dagblok",
+      "rawText": "Waalse indieparel / Tolhuistuin | 19:30 | Bel Cobain | Eigenzinnige combinatie van jazz, soul en psychedelische art-pop | 19:30"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Bel Cobain",
+      "date": "2026-10-28",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit dagblok",
+      "rawText": "Bel Cobain | Eigenzinnige combinatie van jazz, soul en psychedelische art-pop | 19:30 | Ryan Beatty - Arms Over Armor Tour + girlsweetvoiced | Veelzijdige singer-songwriter uit Los Angeles met nieuw album"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Eigenzinnige combinatie van jazz, soul en psychedelische art-pop",
+      "date": "2026-10-28",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit dagblok",
+      "rawText": "Eigenzinnige combinatie van jazz, soul en psychedelische art-pop | 19:30 | Ryan Beatty - Arms Over Armor Tour + girlsweetvoiced | Veelzijdige singer-songwriter uit Los Angeles met nieuw album | 19:30"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Ryan Beatty - Arms Over Armor Tour + girlsweetvoiced",
+      "date": "2026-10-28",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit dagblok",
+      "rawText": "Ryan Beatty - Arms Over Armor Tour + girlsweetvoiced | Veelzijdige singer-songwriter uit Los Angeles met nieuw album | 19:30 | do 29 okt | Marcoca"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Veelzijdige singer-songwriter uit Los Angeles met nieuw album",
+      "date": "2026-10-28",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit dagblok",
+      "rawText": "Veelzijdige singer-songwriter uit Los Angeles met nieuw album | 19:30 | do 29 okt | Marcoca | Hypnotiserende mix van psychedelische surf en jazz"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Marcoca",
+      "date": "2026-10-29",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit tekstregel",
+      "rawText": "19:30 | do 29 okt | Marcoca | Hypnotiserende mix van psychedelische surf en jazz | 19:30 | Westside Cowboy + Wyatt"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Marcoca",
+      "date": "2026-10-29",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit dagblok",
+      "rawText": "Marcoca | Hypnotiserende mix van psychedelische surf en jazz | 19:30 | Westside Cowboy + Wyatt | Imponerende indierock uit Manchester / Tolhuistuin"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Hypnotiserende mix van psychedelische surf en jazz",
+      "date": "2026-10-29",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit dagblok",
+      "rawText": "Hypnotiserende mix van psychedelische surf en jazz | 19:30 | Westside Cowboy + Wyatt | Imponerende indierock uit Manchester / Tolhuistuin | Wachtlijst"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Britse singer-songwriter op het snijvlak van r&b, soul en pop / Zonnehuis",
+      "date": "2026-10-29",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit dagblok",
+      "rawText": "Britse singer-songwriter op het snijvlak van r&b, soul en pop / Zonnehuis | Wachtlijst | Cat Power | Eigenzinnige singer-songwriter speelt 'The Greatest' integraal | 20:30"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Wachtlijst",
+      "date": "2026-10-29",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit dagblok",
+      "rawText": "Wachtlijst | Cat Power | Eigenzinnige singer-songwriter speelt 'The Greatest' integraal | 20:30 | Kabeaushé"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Cat Power",
+      "date": "2026-10-29",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit dagblok",
+      "rawText": "Cat Power | Eigenzinnige singer-songwriter speelt 'The Greatest' integraal | 20:30 | Kabeaushé | Explosieve popmuziek met invloeden uit hiphop en rock"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Eigenzinnige singer-songwriter speelt 'The Greatest' integraal",
+      "date": "2026-10-29",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit dagblok",
+      "rawText": "Eigenzinnige singer-songwriter speelt 'The Greatest' integraal | 20:30 | Kabeaushé | Explosieve popmuziek met invloeden uit hiphop en rock | 22:00"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Kabeaushé",
+      "date": "2026-10-29",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit dagblok",
+      "rawText": "Kabeaushé | Explosieve popmuziek met invloeden uit hiphop en rock | 22:00 | vr 30 okt | London Calling"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Explosieve popmuziek met invloeden uit hiphop en rock",
+      "date": "2026-10-29",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit dagblok",
+      "rawText": "Explosieve popmuziek met invloeden uit hiphop en rock | 22:00 | vr 30 okt | London Calling | Indie / alt / (post)punk festival voor spraakmakende nieuwe acts"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "London Calling",
+      "date": "2026-10-30",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit tekstregel",
+      "rawText": "22:00 | vr 30 okt | London Calling | Indie / alt / (post)punk festival voor spraakmakende nieuwe acts | Uitverkocht | Dan Whitlam + Zoë Love Smith + May"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "London Calling",
+      "date": "2026-10-30",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit dagblok",
+      "rawText": "London Calling | Indie / alt / (post)punk festival voor spraakmakende nieuwe acts | Uitverkocht | Dan Whitlam + Zoë Love Smith + May | Mix van spoken word en rap uit Londen / Zonnehuis"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Indie / alt / (post)punk festival voor spraakmakende nieuwe acts",
+      "date": "2026-10-30",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit dagblok",
+      "rawText": "Indie / alt / (post)punk festival voor spraakmakende nieuwe acts | Uitverkocht | Dan Whitlam + Zoë Love Smith + May | Mix van spoken word en rap uit Londen / Zonnehuis | Wachtlijst"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Mix van spoken word en rap uit Londen / Zonnehuis",
+      "date": "2026-10-30",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit dagblok",
+      "rawText": "Mix van spoken word en rap uit Londen / Zonnehuis | Wachtlijst | LC LATE - FRIDAY NIGHT | Ontdek nieuwe indiemuziek in de late uurtjes | 23:30"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Wachtlijst",
+      "date": "2026-10-30",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit dagblok",
+      "rawText": "Wachtlijst | LC LATE - FRIDAY NIGHT | Ontdek nieuwe indiemuziek in de late uurtjes | 23:30 | We Love 00s Halloween"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "LC LATE - FRIDAY NIGHT",
+      "date": "2026-10-30",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit dagblok",
+      "rawText": "LC LATE - FRIDAY NIGHT | Ontdek nieuwe indiemuziek in de late uurtjes | 23:30 | We Love 00s Halloween | Nostalgische clubnacht brengt je terug naar de noughties"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Ontdek nieuwe indiemuziek in de late uurtjes",
+      "date": "2026-10-30",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit dagblok",
+      "rawText": "Ontdek nieuwe indiemuziek in de late uurtjes | 23:30 | We Love 00s Halloween | Nostalgische clubnacht brengt je terug naar de noughties | 23:30"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "We Love 00s Halloween",
+      "date": "2026-10-30",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit dagblok",
+      "rawText": "We Love 00s Halloween | Nostalgische clubnacht brengt je terug naar de noughties | 23:30 | Fi Di Gyal Dem | Clubnacht met dancehall, soca and bouyon / Parallel"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Nostalgische clubnacht brengt je terug naar de noughties",
+      "date": "2026-10-30",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit dagblok",
+      "rawText": "Nostalgische clubnacht brengt je terug naar de noughties | 23:30 | Fi Di Gyal Dem | Clubnacht met dancehall, soca and bouyon / Parallel | 23:59"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Fi Di Gyal Dem",
+      "date": "2026-10-30",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit dagblok",
+      "rawText": "Fi Di Gyal Dem | Clubnacht met dancehall, soca and bouyon / Parallel | 23:59 | za 31 okt | London Calling"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Clubnacht met dancehall, soca and bouyon / Parallel",
+      "date": "2026-10-30",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit dagblok",
+      "rawText": "Clubnacht met dancehall, soca and bouyon / Parallel | 23:59 | za 31 okt | London Calling | Indie / alt / (post)punk festival voor spraakmakende nieuwe acts"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "London Calling",
+      "date": "2026-10-31",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit tekstregel",
+      "rawText": "23:59 | za 31 okt | London Calling | Indie / alt / (post)punk festival voor spraakmakende nieuwe acts | Uitverkocht | London Calling - High Tea"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "London Calling",
+      "date": "2026-10-31",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit dagblok",
+      "rawText": "London Calling | Indie / alt / (post)punk festival voor spraakmakende nieuwe acts | Uitverkocht | London Calling - High Tea | Middagprogramma van showcasefestival met o.a. Momo Boyd, Knats, Tokyo Tea Room en meer"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Indie / alt / (post)punk festival voor spraakmakende nieuwe acts",
+      "date": "2026-10-31",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit dagblok",
+      "rawText": "Indie / alt / (post)punk festival voor spraakmakende nieuwe acts | Uitverkocht | London Calling - High Tea | Middagprogramma van showcasefestival met o.a. Momo Boyd, Knats, Tokyo Tea Room en meer | 13:00"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "London Calling - High Tea",
+      "date": "2026-10-31",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit dagblok",
+      "rawText": "London Calling - High Tea | Middagprogramma van showcasefestival met o.a. Momo Boyd, Knats, Tokyo Tea Room en meer | 13:00"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Middagprogramma van showcasefestival met o.a. Momo Boyd, Knats, Tokyo Tea Room en meer",
+      "date": "2026-10-31",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "event uit dagblok",
+      "rawText": "Middagprogramma van showcasefestival met o.a. Momo Boyd, Knats, Tokyo Tea Room en meer | 13:00"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Pagina geteld",
+      "date": "",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "analyse",
+      "rawText": "jsonld:0, links:0, datumblokken:17, kaarten:0, regels:145, detail:1"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "ok",
+      "rawText": "142 extra events"
+    },
+    {
+      "source": "Filter",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Datumfilter toegepast",
+      "date": "2026-10-25",
+      "url": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "status": "ok",
+      "rawText": "142 gevonden; 139 binnen 2026-10-25 t/m onbeperkt"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "status": "klaar",
+      "rawText": "site 15/20: 20 unieke events in 2.5 sec"
     }
   ],
   "status": "running",
   "siteStartedAt": "2026-10-25T18:58:04+00:00",
-  "siteElapsedSeconds": 0,
-  "sitePageCount": 0,
-  "lastSiteEventCount": 0,
-  "stage": "Websitepagina ophalen",
-  "lastUpdatedAt": "2026-10-25T18:58:04+00:00",
-  "lastSiteNewEventCount": 0,
-  "lastCompletedSite": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
-  "lastCompletedAt": "2026-10-25T18:58:02+00:00"
+  "siteElapsedSeconds": 4,
+  "sitePageCount": 1,
+  "lastSiteEventCount": 20,
+  "stage": "Website klaar; volgende website voorbereiden",
+  "lastUpdatedAt": "2026-10-25T18:58:06+00:00",
+  "lastSiteNewEventCount": 20,
+  "lastCompletedSite": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+  "lastCompletedAt": "2026-10-25T18:58:08+00:00"
 }
