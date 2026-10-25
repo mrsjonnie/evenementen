@@ -3728,15 +3728,33 @@
       "url": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
       "status": "klaar",
       "rawText": "site 13/19: 0 unieke events in 1.2 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Start",
+      "date": "",
+      "url": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "status": "start",
+      "rawText": "site 14/19: max 5 events, max 2 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "status": "strategie",
+      "rawText": "universeel-jsonld-links-kaarten"
     }
   ],
   "status": "running",
   "siteStartedAt": "2026-10-25T16:14:02+00:00",
-  "siteElapsedSeconds": 0,
+  "siteElapsedSeconds": 1,
   "sitePageCount": 0,
   "lastSiteEventCount": 0,
   "stage": "Websitepagina ophalen",
-  "lastUpdatedAt": "2026-10-25T16:14:02+00:00",
+  "lastUpdatedAt": "2026-10-25T16:14:03+00:00",
   "lastSiteNewEventCount": 0,
   "lastCompletedSite": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
   "lastCompletedAt": "2026-10-25T16:14:00+00:00"
