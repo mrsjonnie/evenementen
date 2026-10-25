@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-25T10:04:03+00:00",
+  "updatedAt": "2026-10-25T10:08:53+00:00",
   "events": [
     {
       "date": "2026-10-25",
@@ -4009,126 +4009,126 @@
       "site": "https://groningen.uitloper.nu/",
       "count": 20,
       "newCount": 0,
-      "durationSeconds": 1.95,
+      "durationSeconds": 2.17,
       "timedOut": false
     },
     {
       "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
       "count": 20,
       "newCount": 0,
-      "durationSeconds": 4.32,
+      "durationSeconds": 5.96,
       "timedOut": false
     },
     {
       "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
       "count": 20,
       "newCount": 0,
-      "durationSeconds": 1.68,
+      "durationSeconds": 1.9,
       "timedOut": false
     },
     {
       "site": "https://forum.nl/nl/agenda",
       "count": 20,
       "newCount": 0,
-      "durationSeconds": 7.18,
+      "durationSeconds": 7.75,
       "timedOut": false
     },
     {
       "site": "https://www.spotgroningen.nl/programma/",
       "count": 20,
       "newCount": 0,
-      "durationSeconds": 2.82,
+      "durationSeconds": 4.03,
       "timedOut": false
     },
     {
       "site": "https://simplon.nl/",
       "count": 20,
       "newCount": 0,
-      "durationSeconds": 2.92,
+      "durationSeconds": 2.35,
       "timedOut": false
     },
     {
       "site": "https://www.vera-groningen.nl/",
       "count": 20,
       "newCount": 0,
-      "durationSeconds": 2.91,
+      "durationSeconds": 4.32,
       "timedOut": false
     },
     {
       "site": "https://www.martiniplaza.nl/nl/agenda",
       "count": 12,
       "newCount": 0,
-      "durationSeconds": 5.05,
+      "durationSeconds": 5.38,
       "timedOut": false
     },
     {
       "site": "https://www.groningermuseum.nl/en/now",
       "count": 0,
       "newCount": 0,
-      "durationSeconds": 0.9,
+      "durationSeconds": 2.74,
       "timedOut": false
     },
     {
       "site": "https://www.kultuuragenda.nl/agenda",
       "count": 20,
       "newCount": 0,
-      "durationSeconds": 6.28,
+      "durationSeconds": 5.64,
       "timedOut": false
     },
     {
       "site": "https://www.noorderzon.nl/programma",
       "count": 20,
       "newCount": 0,
-      "durationSeconds": 4.03,
+      "durationSeconds": 5.47,
       "timedOut": false
     },
     {
       "site": "https://www.concertgebouw.nl/concerten-en-tickets",
       "count": 20,
       "newCount": 0,
-      "durationSeconds": 2.91,
+      "durationSeconds": 3.31,
       "timedOut": false
     },
     {
       "site": "https://www.zwolsetheaters.nl/programma",
       "count": 0,
       "newCount": 0,
-      "durationSeconds": 5.88,
+      "durationSeconds": 6.81,
       "timedOut": false
     },
     {
       "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
       "count": 20,
       "newCount": 0,
-      "durationSeconds": 8.81,
+      "durationSeconds": 5.44,
       "timedOut": false
     },
     {
       "site": "https://www.vvvameland.nl/activiteiten-en-evenementen",
       "count": 20,
       "newCount": 0,
-      "durationSeconds": 7.74,
+      "durationSeconds": 9.64,
       "timedOut": false
     },
     {
       "site": "https://www.socialdeal.nl/",
       "count": 25,
       "newCount": 0,
-      "durationSeconds": 2.35,
+      "durationSeconds": 2.77,
       "timedOut": false
     },
     {
       "site": "https://www.groupon.nl/",
       "count": 0,
       "newCount": 0,
-      "durationSeconds": 0.42,
+      "durationSeconds": 0.17,
       "timedOut": false
     },
     {
       "site": "https://www.ibood.com/nl/",
       "count": 0,
       "newCount": 0,
-      "durationSeconds": 0.37,
+      "durationSeconds": 0.14,
       "timedOut": false
     }
   ],
@@ -4590,7 +4590,7 @@
       "date": "",
       "url": "https://groningen.uitloper.nu/",
       "status": "klaar",
-      "rawText": "site 1/18: 20 unieke events in 1.95 sec"
+      "rawText": "site 1/18: 20 unieke events in 2.17 sec"
     },
     {
       "source": "Website",
@@ -6552,7 +6552,7 @@
       "date": "",
       "url": "https://www.visitgroningen.nl/nl/doen/evenementen",
       "status": "klaar",
-      "rawText": "site 2/18: 20 unieke events in 4.32 sec"
+      "rawText": "site 2/18: 20 unieke events in 5.96 sec"
     },
     {
       "source": "Website",
@@ -6795,7 +6795,7 @@
       "date": "",
       "url": "https://www.visitgroningen.nl/nl/doen/wandelen",
       "status": "klaar",
-      "rawText": "site 3/18: 20 unieke events in 1.68 sec"
+      "rawText": "site 3/18: 20 unieke events in 1.9 sec"
     },
     {
       "source": "Website",
@@ -6822,7 +6822,7 @@
       "date": "",
       "url": "https://forum.nl/nl/agenda",
       "status": "ok",
-      "rawText": "175473 tekens HTML"
+      "rawText": "175575 tekens HTML"
     },
     {
       "source": "Parser",
@@ -7145,6 +7145,15 @@
       "title": "link",
       "date": "",
       "url": "https://forum.nl/nl/agenda/film/wicker?date=25-10-2026",
+      "status": "detail-link gevonden",
+      "rawText": ""
+    },
+    {
+      "source": "Website",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "link",
+      "date": "",
+      "url": "https://forum.nl/nl/agenda/film/wicker?date=26-10-2026",
       "status": "detail-link gevonden",
       "rawText": ""
     },
@@ -7554,15 +7563,6 @@
       "rawText": "Studie- en werkplekken"
     },
     {
-      "source": "Website",
-      "site": "https://forum.nl/nl/agenda",
-      "title": "Bibliotheekvestigingen",
-      "date": "",
-      "url": "https://forum.nl/nl/bibliotheek/vestigingen",
-      "status": "detail-link gevonden",
-      "rawText": "Bibliotheekvestigingen"
-    },
-    {
       "source": "RSS/Atom",
       "site": "https://forum.nl/nl/agenda",
       "title": "Feed mislukt",
@@ -7839,7 +7839,7 @@
       "date": "",
       "url": "https://forum.nl/nl/agenda",
       "status": "klaar",
-      "rawText": "site 4/18: 20 unieke events in 7.18 sec"
+      "rawText": "site 4/18: 20 unieke events in 7.75 sec"
     },
     {
       "source": "Website",
