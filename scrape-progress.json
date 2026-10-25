@@ -1,7 +1,7 @@
 {
   "runId": "2026-10-25T14:38:51.320222+00:00-2b89bca6",
   "startedAt": "2026-10-25T14:38:51+00:00",
-  "completedCount": 5,
+  "completedCount": 6,
   "totalSites": 20,
   "currentSite": "https://simplon.nl/",
   "currentSiteIndex": 6,
@@ -10,7 +10,8 @@
     "https://www.visitgroningen.nl/nl/doen/evenementen",
     "https://www.visitgroningen.nl/nl/doen/wandelen",
     "https://forum.nl/nl/agenda",
-    "https://www.spotgroningen.nl/programma/"
+    "https://www.spotgroningen.nl/programma/",
+    "https://simplon.nl/"
   ],
   "events": [],
   "siteResults": [
@@ -37,6 +38,13 @@
     },
     {
       "site": "https://www.spotgroningen.nl/programma/",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 2.0,
+      "timedOut": true
+    },
+    {
+      "site": "https://simplon.nl/",
       "count": 0,
       "newCount": 0,
       "durationSeconds": 2.0,
@@ -1321,16 +1329,34 @@
       "url": "https://simplon.nl/",
       "status": "strategie",
       "rawText": "compacte-agenda-kaarten"
+    },
+    {
+      "source": "Website",
+      "site": "https://simplon.nl/",
+      "title": "Pagina mislukt",
+      "date": "",
+      "url": "https://simplon.nl/programma/",
+      "status": "fout",
+      "rawText": "HTTPSConnectionPool(host='simplon.nl', port=443): Read timed out. (read timeout=1.0840104429999968)"
+    },
+    {
+      "source": "Website",
+      "site": "https://simplon.nl/",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://simplon.nl/",
+      "status": "klaar",
+      "rawText": "site 6/20: 0 unieke events in 2.0 sec"
     }
   ],
   "status": "running",
   "siteStartedAt": "2026-10-25T14:39:13+00:00",
-  "siteElapsedSeconds": 1,
+  "siteElapsedSeconds": 3,
   "sitePageCount": 0,
   "lastSiteEventCount": 0,
-  "stage": "Websitepagina ophalen",
+  "stage": "Website klaar; volgende website voorbereiden",
   "lastUpdatedAt": "2026-10-25T14:39:14+00:00",
   "lastSiteNewEventCount": 0,
-  "lastCompletedSite": "https://www.spotgroningen.nl/programma/",
-  "lastCompletedAt": "2026-10-25T14:39:12+00:00"
+  "lastCompletedSite": "https://simplon.nl/",
+  "lastCompletedAt": "2026-10-25T14:39:16+00:00"
 }
