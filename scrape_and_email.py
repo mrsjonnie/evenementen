@@ -2786,21 +2786,31 @@ def save_payload(events, archive, previous_all_keys):
 SCRAPE_PROGRESS_FILE = "scrape-progress.json"
 
 
-def publish_scrape_progress(progress):
-    """Publish live progress robustly even when another commit advances main."""
+def publish_scrape_progress(progress, include_data=False):
+    """Publish progress, and optionally the latest per-site event checkpoint."""
     progress_path = SCRAPE_PROGRESS_FILE
     backup_path = "/tmp/evenementen-scrape-progress.json"
+    data_backup_path = "/tmp/evenementen-events-checkpoint.json"
+    log_backup_path = "/tmp/evenementen-scrape-log-checkpoint.txt"
     with open(progress_path, "w", encoding="utf-8", newline="\n") as handle:
         json.dump(progress, handle, ensure_ascii=False, indent=2)
         handle.write("\n")
-    # Keep a copy outside the checkout so a reset after a rejected push cannot
-    # discard the latest progress snapshot.
+    # Keep copies outside the checkout so a rejected push/reset cannot discard
+    # the latest progress snapshot or the most recent completed-site checkpoint.
     with open(backup_path, "w", encoding="utf-8", newline="\n") as handle:
         json.dump(progress, handle, ensure_ascii=False, indent=2)
         handle.write("\n")
+    if include_data:
+        for source_path, backup in ((DATA_FILE, data_backup_path), (LOG_FILE, log_backup_path)):
+            if os.path.exists(source_path):
+                with open(source_path, "rb") as source, open(backup, "wb") as target:
+                    target.write(source.read())
     try:
         for attempt in range(1, 5):
-            staged = subprocess.run(["git", "add", progress_path], check=False, capture_output=True, text=True)
+            paths_to_stage = [progress_path]
+            if include_data:
+                paths_to_stage.extend([DATA_FILE, LOG_FILE])
+            staged = subprocess.run(["git", "add", *paths_to_stage], check=False, capture_output=True, text=True)
             if staged.returncode != 0:
                 print(f"Could not stage scrape progress: {(staged.stderr or staged.stdout)[:350]}")
                 return
@@ -2832,6 +2842,11 @@ def publish_scrape_progress(progress):
             with open(progress_path, "w", encoding="utf-8", newline="\n") as handle:
                 json.dump(latest_progress, handle, ensure_ascii=False, indent=2)
                 handle.write("\n")
+            if include_data:
+                for target_path, backup in ((DATA_FILE, data_backup_path), (LOG_FILE, log_backup_path)):
+                    if os.path.exists(backup):
+                        with open(backup, "rb") as source, open(target_path, "wb") as target:
+                            target.write(source.read())
         print("Could not publish scrape progress after 4 attempts.")
     except (FileNotFoundError, OSError, json.JSONDecodeError) as exc:
         print(f"Could not publish scrape progress: {exc}")
@@ -2923,7 +2938,11 @@ def main():
         progress["lastSiteEventCount"] = len(site_events)
         progress["lastSiteNewEventCount"] = sum(1 for event in site_events if event_key(event) not in previous_all_keys)
         progress["status"] = "running" if index < total_sites else "finishing"
-        publish_scrape_progress(progress)
+        # Publish events.json and scrape_log.txt at each completed-site boundary,
+        # alongside progress, so new discoveries survive a later timeout/failure.
+        checkpoint_events = dedupe_events([*previous_active, *all_events])
+        save_payload(checkpoint_events, previous_archive, previous_all_keys)
+        publish_scrape_progress(progress, include_data=True)
 
     scraped_events = dedupe_events(all_events)
     selected_hosts = {canonical_host(site) for site in sites if canonical_host(site)}
