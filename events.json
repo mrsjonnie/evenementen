@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-25T13:43:15+00:00",
+  "updatedAt": "2026-10-25T13:43:21+00:00",
   "events": [
     {
       "date": "2026-10-25",
@@ -11306,6 +11306,13 @@
       "newCount": 0,
       "durationSeconds": 2.48,
       "timedOut": true
+    },
+    {
+      "site": "https://www.vera-groningen.nl/",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 3.3,
+      "timedOut": true
     }
   ],
   "rawLog": [
@@ -22009,6 +22016,42 @@
       "url": "https://simplon.nl/",
       "status": "klaar",
       "rawText": "site 6/20: 0 unieke events in 2.48 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Start",
+      "date": "",
+      "url": "https://www.vera-groningen.nl/",
+      "status": "start",
+      "rawText": "site 7/20: max 5 events, max 2 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://www.vera-groningen.nl/",
+      "status": "strategie",
+      "rawText": "programma-kaarten"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Pagina mislukt",
+      "date": "",
+      "url": "https://www.vera-groningen.nl/programma/?category=all&history=0&lang=nl",
+      "status": "fout",
+      "rawText": "HTTPSConnectionPool(host='www.vera-groningen.nl', port=443): Read timed out. (read timeout=0.7906139150000087)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://www.vera-groningen.nl/",
+      "status": "klaar",
+      "rawText": "site 7/20: 0 unieke events in 3.3 sec"
     }
   ]
 }
