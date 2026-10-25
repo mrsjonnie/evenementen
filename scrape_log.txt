@@ -78,3 +78,7 @@ Website	https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html	sta
 Parser	https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html	strategie	Scrapertype vastgesteld		https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html	bioscoopfilms en speeldata (BiosAgenda Groningen)
 Website	https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html	fout	Pagina mislukt		https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html	HTTP 403
 Website	https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html	klaar	Klaar		https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html	site 13/19: 0 unieke events in 1.19 sec
+Website	https://www.paradiso.nl/landing/concertagenda-paradiso/2069817	start	Start		https://www.paradiso.nl/landing/concertagenda-paradiso/2069817	site 14/19: max 5 events, max 2 seconden
+Parser	https://www.paradiso.nl/landing/concertagenda-paradiso/2069817	strategie	Scrapertype vastgesteld		https://www.paradiso.nl/landing/concertagenda-paradiso/2069817	universeel-jsonld-links-kaarten
+Website	https://www.paradiso.nl/landing/concertagenda-paradiso/2069817	fout	Pagina mislukt		https://www.paradiso.nl/landing/concertagenda-paradiso/2069817	HTTPSConnectionPool(host='www.paradiso.nl', port=443): Read timed out. (read timeout=0.9235959979999961)
+Website	https://www.paradiso.nl/landing/concertagenda-paradiso/2069817	klaar	Klaar		https://www.paradiso.nl/landing/concertagenda-paradiso/2069817	site 14/19: 0 unieke events in 2.0 sec
