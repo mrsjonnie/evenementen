@@ -278,14 +278,23 @@
       "url": "https://groningen.uitloper.nu/",
       "status": "strategie",
       "rawText": "uitloper-agenda"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "Pagina mislukt",
+      "date": "",
+      "url": "https://groningen.uitloper.nu?date=1792929600",
+      "status": "fout",
+      "rawText": "HTTPSConnectionPool(host='groningen.uitloper.nu', port=443): Max retries exceeded with url: /?date=1792929600 (Caused by ConnectTimeoutError(<HTTPSConnection(host='groningen.uitloper.nu', port=443) at 0x76b9b9443ed0>, 'Connection to groningen.uitloper.nu timed out. (connect timeout=1.0098503969999797)'))"
     }
   ],
   "status": "running",
   "siteStartedAt": "2026-10-25T16:13:05+00:00",
-  "siteElapsedSeconds": 1,
+  "siteElapsedSeconds": 3,
   "sitePageCount": 0,
   "lastSiteEventCount": 0,
   "stage": "Websitepagina ophalen",
-  "lastUpdatedAt": "2026-10-25T16:13:06+00:00",
+  "lastUpdatedAt": "2026-10-25T16:13:08+00:00",
   "lastSiteNewEventCount": 0
 }
