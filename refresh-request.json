@@ -1,6 +1,6 @@
 {
-  "requestedAt": "2026-10-25T10:37:07.722Z",
-  "trigger": "verify-new-sites-biosagenda-groupon-ibood-museum-zwolse-20s",
+  "requestedAt": "2026-10-25T10:51:14.384Z",
+  "trigger": "verify-zwolsetheaters-denieuwekolk-filmvandaag-specialized-parsers",
   "region": "Groningen",
   "radius": "100",
   "category": "all",
@@ -10,7 +10,7 @@
   "minResults": "20",
   "maxEventsPerSite": "20",
   "siteTimeLimitSeconds": "20",
-  "sites": "[\"https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html\",\"https://www.groupon.nl/kortingsbonnen/gemeente-groningen\",\"https://www.ibood.com/s-nl\",\"https://groningermuseum.nl/programma\",\"https://www.zwolsetheaters.nl/programma\"]",
+  "sites": "[\"https://www.zwolsetheaters.nl/programma\",\"https://denieuwekolk.nl/agenda\",\"https://www.filmvandaag.nl/bioscoop\"]",
   "providers": "{}",
   "serpApiLinks": "[]",
   "serpApiRawLog": "[]",
