@@ -1,13 +1,14 @@
 {
   "runId": "2026-10-25T10:51:26+00:00",
   "startedAt": "2026-10-25T10:51:26+00:00",
-  "completedCount": 2,
+  "completedCount": 3,
   "totalSites": 3,
   "currentSite": "https://www.filmvandaag.nl/bioscoop",
   "currentSiteIndex": 3,
   "completedSites": [
     "https://www.zwolsetheaters.nl/programma",
-    "https://denieuwekolk.nl/agenda"
+    "https://denieuwekolk.nl/agenda",
+    "https://www.filmvandaag.nl/bioscoop"
   ],
   "events": [
     {
@@ -304,6 +305,13 @@
       "count": 20,
       "newCount": 0,
       "durationSeconds": 9.26,
+      "timedOut": false
+    },
+    {
+      "site": "https://www.filmvandaag.nl/bioscoop",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 1.54,
       "timedOut": false
     }
   ],
@@ -2548,15 +2556,33 @@
       "url": "https://www.filmvandaag.nl/bioscoop",
       "status": "strategie",
       "rawText": "bioscoopagenda Groningen (FilmVandaag)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.filmvandaag.nl/bioscoop",
+      "title": "Pagina mislukt",
+      "date": "",
+      "url": "https://www.filmvandaag.nl/filmladder/stad/80-groningen",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.filmvandaag.nl/bioscoop",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://www.filmvandaag.nl/bioscoop",
+      "status": "klaar",
+      "rawText": "site 3/3: 0 unieke events in 1.54 sec"
     }
   ],
-  "status": "running",
+  "status": "finishing",
   "siteStartedAt": "2026-10-25T10:51:49+00:00",
-  "siteElapsedSeconds": 2,
+  "siteElapsedSeconds": 3,
   "sitePageCount": 0,
   "lastSiteEventCount": 0,
-  "stage": "Websitepagina ophalen",
+  "stage": "Website klaar; volgende website voorbereiden",
   "lastUpdatedAt": "2026-10-25T10:51:51+00:00",
-  "lastCompletedSite": "https://denieuwekolk.nl/agenda",
-  "lastCompletedAt": "2026-10-25T10:51:48+00:00"
+  "lastCompletedSite": "https://www.filmvandaag.nl/bioscoop",
+  "lastCompletedAt": "2026-10-25T10:51:52+00:00"
 }
