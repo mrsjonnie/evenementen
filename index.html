@@ -1318,7 +1318,7 @@
   </div>
 
   <script>
-    const APP_VERSION = "2026.10.25.22";
+    const APP_VERSION = "2026.10.25.23";
     const DEFAULT_MAX_EVENTS_PER_SITE = 20;
     const DEFAULT_SITE_TIME_LIMIT_SECONDS = 20;
     const SCAN_SETTINGS_KEY = "eventScanSettingsV1";
@@ -2272,12 +2272,10 @@
       if (target) target.hidden = true;
       if (!progress || !progress.runId) return;
       if (!isCurrentRun) {
-        const siteTotal = Math.max(19, Number(progress.totalSites) || 19);
-        const siteLabel = shortScrapeSiteName("https://groningen.uitloper.nu/");
         if (titleProgress) {
           titleProgress.hidden = false;
-          titleProgress.textContent = `Zoeken.... (1/${siteTotal}) (${siteLabel}) · Websitepagina ophalen`;
-          titleProgress.title = "Nieuwe zoekactie gestart; de eerste website wordt opgehaald";
+          titleProgress.textContent = "Zoeken… scraper starten";
+          titleProgress.title = "De opdracht is verzonden. De naam van de eerste website verschijnt zodra de scraper zijn nieuwe voortgang heeft gepubliceerd.";
         }
         return;
       }
@@ -2398,7 +2396,7 @@
     }
 
     function foundText(count) {
-      if (!Number.isFinite(count)) return "Resultaat volgt";
+      if (!Number.isFinite(count)) return "Aantal nieuwe evenementen nog onbekend";
       return `${count} ${count === 1 ? "nieuw evenement" : "nieuwe evenementen"}`;
     }
 
@@ -3181,6 +3179,10 @@
 
     async function refreshEvents() {
       updateDateRange();
+      // Houd de titelstatus compact: sluit het details-paneel bij iedere nieuwe verversing.
+      const titlePanel = $("titlePanel");
+      if (titlePanel) titlePanel.classList.remove("open");
+      $("titleToggle")?.setAttribute("aria-expanded", "false");
       const button = $("refreshBtn");
       const previousSignature = eventSignature(events);
       const previousKeys = eventKeySet(events);
