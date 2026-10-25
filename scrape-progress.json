@@ -324,15 +324,24 @@
       "url": "https://www.visitgroningen.nl/nl/doen/evenementen",
       "status": "strategie",
       "rawText": "Visit Groningen agenda-/routekaarten"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Pagina mislukt",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "status": "fout",
+      "rawText": "HTTPSConnectionPool(host='www.visitgroningen.nl', port=443): Read timed out. (read timeout=0.9780305870000063)"
     }
   ],
   "status": "running",
   "siteStartedAt": "2026-10-25T16:13:10+00:00",
-  "siteElapsedSeconds": 1,
+  "siteElapsedSeconds": 3,
   "sitePageCount": 0,
   "lastSiteEventCount": 0,
   "stage": "Websitepagina ophalen",
-  "lastUpdatedAt": "2026-10-25T16:13:11+00:00",
+  "lastUpdatedAt": "2026-10-25T16:13:13+00:00",
   "lastSiteNewEventCount": 0,
   "lastCompletedSite": "https://groningen.uitloper.nu/",
   "lastCompletedAt": "2026-10-25T16:13:09+00:00"
