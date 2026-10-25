@@ -38,3 +38,7 @@ Website	https://www.visitgroningen.nl/nl/doen/wandelen	start	Start		https://www.
 Parser	https://www.visitgroningen.nl/nl/doen/wandelen	strategie	Scrapertype vastgesteld		https://www.visitgroningen.nl/nl/doen/wandelen	Visit Groningen agenda-/routekaarten
 Website	https://www.visitgroningen.nl/nl/doen/wandelen	ok	Pagina gelezen		https://www.visitgroningen.nl/nl/doen/wandelen	374114 tekens HTML
 Website	https://www.visitgroningen.nl/nl/doen/wandelen	timeout	Site-time-out		https://www.visitgroningen.nl/nl/doen/wandelen	site overschreed de harde tijdslimiet van 2 seconden
+Website	https://forum.nl/nl/agenda	start	Start		https://forum.nl/nl/agenda	site 4/19: max 5 events, max 2 seconden
+Parser	https://forum.nl/nl/agenda	strategie	Scrapertype vastgesteld		https://forum.nl/nl/agenda	universeel-eventkaarten
+Website	https://forum.nl/nl/agenda	fout	Pagina mislukt		https://forum.nl/nl/agenda	HTTPSConnectionPool(host='forum.nl', port=443): Read timed out.
+Website	https://forum.nl/nl/agenda	klaar	Klaar		https://forum.nl/nl/agenda	site 4/19: 0 unieke events in 2.0 sec
