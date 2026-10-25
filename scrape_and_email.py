@@ -1728,7 +1728,13 @@ def extract_biosagenda_events(html, page_url, site_url, discovery_source="Websit
             text = clean_text(" ".join(lines))
             if len(text) > 3200:
                 break
-            has_showtime = any(parse_date_text(line) and TIME_RE.search(line) for line in lines)
+            has_showtime = any(
+                parse_date_text(line) and (
+                    TIME_RE.search(line)
+                    or any(TIME_RE.search(next_line) for next_line in lines[line_index + 1:line_index + 3])
+                )
+                for line_index, line in enumerate(lines)
+            )
             if has_showtime:
                 card = parent
                 card_lines = lines
