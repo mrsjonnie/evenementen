@@ -2379,18 +2379,14 @@ def main():
         for row in RAW_DATA_ROWS
         if row.get("status") == "ok" and row.get("title") == "Pagina gelezen"
     }
-    # Keep data from unselected sites, and never erase a site's previous results when
-    # every request to that site failed (e.g. HTTP 403).
+    # Refresh adds newly discovered events instead of replacing the existing
+    # per-site collection. MAX_EVENTS_PER_SITE limits each new scan; it does not
+    # cap the total number of saved events for a site. Keep previous events unless
+    # the user explicitly requested clearing the archive/data.
     retained_previous = []
     if not INPUT_CLEAR_ARCHIVE:
-        for event in previous_all:
-            host = canonical_host(event.get("website", ""))
-            # Retain old data only when the selected source could not be fetched at all.
-            # A successful scrape with zero events in the selected date range must remove
-            # stale/historical events from that selected source instead of preserving them.
-            if host not in selected_hosts or (host in selected_hosts and host not in successful_hosts):
-                retained_previous.append(event)
-    active_events = dedupe_events([*scraped_events, *retained_previous])
+        retained_previous = list(previous_all)
+    active_events = dedupe_events([*retained_previous, *scraped_events])
     active_keys = {event_key(event) for event in active_events}
 
     if INPUT_CLEAR_ARCHIVE:
