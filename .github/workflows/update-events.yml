@@ -174,17 +174,34 @@ jobs:
       - name: Run scraper
         run: python scrape_and_email.py
 
-      - name: Commit updated files
+      - name: Commit and publish scraped files (retry on concurrent pushes)
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          # Progress commits may have advanced origin/main during this run. Reset the index
-          # to the latest remote commit while preserving the freshly generated working files.
-          # Do not rebase old scrape-progress.json commits: they can conflict with each other.
-          git fetch origin main
-          git reset origin/main
-          git add events.json scrape_log.txt scrape-progress.json
-          if ! git diff --cached --quiet; then
+
+          # Another workflow or a progress update can advance main between fetch and push.
+          # Retry from the latest remote commit while preserving the scraper's generated files.
+          for attempt in 1 2 3 4 5; do
+            echo "Publish attempt $attempt/5"
+            git fetch origin main
+            git reset --mixed origin/main
+            git add events.json scrape_log.txt scrape-progress.json
+
+            if git diff --cached --quiet; then
+              echo "No generated changes to publish."
+              exit 0
+            fi
+
             git commit -m "Publish scraped events and progress"
-          fi
-          git push origin HEAD:main
+
+            if git push origin HEAD:main; then
+              echo "Scraped files published successfully."
+              exit 0
+            fi
+
+            echo "Push rejected because main changed concurrently; retrying from latest origin/main."
+            sleep $((attempt * 2))
+          done
+
+          echo "::error::Could not publish scraper output after 5 attempts because main kept changing."
+          exit 1
