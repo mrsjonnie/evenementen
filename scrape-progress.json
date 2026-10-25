@@ -988,15 +988,42 @@
       "url": "https://forum.nl/nl/agenda",
       "status": "strategie",
       "rawText": "universeel-eventkaarten"
+    },
+    {
+      "source": "Website",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "Pagina gelezen",
+      "date": "",
+      "url": "https://forum.nl/nl/agenda",
+      "status": "ok",
+      "rawText": "174870 tekens HTML"
+    },
+    {
+      "source": "Parser",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "Forum detailstrategie",
+      "date": "",
+      "url": "https://forum.nl/nl/agenda",
+      "status": "strategie",
+      "rawText": "Overzicht overslaan; alleen /nl/agenda/<event> detailpagina's verwerken"
+    },
+    {
+      "source": "Website",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "Pagina geanalyseerd",
+      "date": "",
+      "url": "https://forum.nl/nl/agenda",
+      "status": "ok",
+      "rawText": "0 events/aanbiedingen op deze pagina"
     }
   ],
   "status": "running",
   "siteStartedAt": "2026-10-25T13:29:20+00:00",
-  "siteElapsedSeconds": 1,
-  "sitePageCount": 0,
+  "siteElapsedSeconds": 3,
+  "sitePageCount": 1,
   "lastSiteEventCount": 0,
-  "stage": "Websitepagina ophalen",
-  "lastUpdatedAt": "2026-10-25T13:29:21+00:00",
+  "stage": "Pagina gelezen; evenementen verwerken",
+  "lastUpdatedAt": "2026-10-25T13:29:23+00:00",
   "lastSiteNewEventCount": 0,
   "lastCompletedSite": "https://www.visitgroningen.nl/nl/doen/wandelen",
   "lastCompletedAt": "2026-10-25T13:29:19+00:00"
