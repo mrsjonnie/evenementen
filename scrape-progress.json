@@ -1,7 +1,7 @@
 {
   "runId": "2026-10-25T16:44:48.200890+00:00-61e091f2",
   "startedAt": "2026-10-25T16:44:48+00:00",
-  "completedCount": 18,
+  "completedCount": 19,
   "totalSites": 19,
   "currentSite": "https://www.pathe.nl/nl/bioscopen/pathe-groningen",
   "currentSiteIndex": 19,
@@ -23,7 +23,8 @@
     "https://www.vvvameland.nl/activiteiten-en-evenementen",
     "https://www.socialdeal.nl/",
     "https://denieuwekolk.nl/agenda",
-    "https://www.filmvandaag.nl/bioscoop"
+    "https://www.filmvandaag.nl/bioscoop",
+    "https://www.pathe.nl/nl/bioscopen/pathe-groningen"
   ],
   "events": [
     {
@@ -1054,6 +1055,13 @@
       "count": 0,
       "newCount": 0,
       "durationSeconds": 3.08,
+      "timedOut": false
+    },
+    {
+      "site": "https://www.pathe.nl/nl/bioscopen/pathe-groningen",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 1.38,
       "timedOut": false
     }
   ],
@@ -11859,14 +11867,14 @@
       "rawText": "do 5.11 Modern Figure + Nakûde Alternative rock & postpunk up TICKETS"
     }
   ],
-  "status": "running",
+  "status": "finishing",
   "siteStartedAt": "2026-10-25T16:46:46+00:00",
-  "siteElapsedSeconds": 1,
+  "siteElapsedSeconds": 2,
   "sitePageCount": 0,
   "lastSiteEventCount": 0,
-  "stage": "Websitepagina ophalen",
+  "stage": "Website klaar; volgende website voorbereiden",
   "lastUpdatedAt": "2026-10-25T16:46:47+00:00",
   "lastSiteNewEventCount": 0,
-  "lastCompletedSite": "https://www.filmvandaag.nl/bioscoop",
-  "lastCompletedAt": "2026-10-25T16:46:45+00:00"
+  "lastCompletedSite": "https://www.pathe.nl/nl/bioscopen/pathe-groningen",
+  "lastCompletedAt": "2026-10-25T16:46:48+00:00"
 }
