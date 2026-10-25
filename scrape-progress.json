@@ -1,7 +1,7 @@
 {
   "runId": "2026-10-25T14:38:51.320222+00:00-2b89bca6",
   "startedAt": "2026-10-25T14:38:51+00:00",
-  "completedCount": 16,
+  "completedCount": 17,
   "totalSites": 20,
   "currentSite": "https://www.socialdeal.nl/",
   "currentSiteIndex": 17,
@@ -21,7 +21,8 @@
     "https://www.zwolsetheaters.nl/programma",
     "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
     "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
-    "https://www.vvvameland.nl/activiteiten-en-evenementen"
+    "https://www.vvvameland.nl/activiteiten-en-evenementen",
+    "https://www.socialdeal.nl/"
   ],
   "events": [],
   "siteResults": [
@@ -128,6 +129,13 @@
       "count": 0,
       "newCount": 0,
       "durationSeconds": 2.0,
+      "timedOut": true
+    },
+    {
+      "site": "https://www.socialdeal.nl/",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 2.98,
       "timedOut": true
     }
   ],
@@ -3587,16 +3595,25 @@
       "url": "https://www.socialdeal.nl/dichtbij/groningen/",
       "status": "fout",
       "rawText": "HTTPSConnectionPool(host='www.socialdeal.nl', port=443): Read timed out. (read timeout=0.9150421630000096)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.socialdeal.nl/",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://www.socialdeal.nl/",
+      "status": "klaar",
+      "rawText": "site 17/20: 0 unieke events in 2.98 sec"
     }
   ],
   "status": "running",
   "siteStartedAt": "2026-10-25T14:40:02+00:00",
-  "siteElapsedSeconds": 3,
+  "siteElapsedSeconds": 4,
   "sitePageCount": 0,
   "lastSiteEventCount": 0,
-  "stage": "Websitepagina ophalen",
+  "stage": "Website klaar; volgende website voorbereiden",
   "lastUpdatedAt": "2026-10-25T14:40:05+00:00",
   "lastSiteNewEventCount": 0,
-  "lastCompletedSite": "https://www.vvvameland.nl/activiteiten-en-evenementen",
-  "lastCompletedAt": "2026-10-25T14:40:01+00:00"
+  "lastCompletedSite": "https://www.socialdeal.nl/",
+  "lastCompletedAt": "2026-10-25T14:40:06+00:00"
 }
