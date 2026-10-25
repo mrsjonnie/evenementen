@@ -40,7 +40,8 @@
       "discoverySource": "Website",
       "description": "Het Houten Huis | HIIIT \"Een van de beste voorstellingen van het jaar\" (★★★★★ Dagblad van het Noorden)",
       "cost": "",
-      "image": ""
+      "image": "",
+      "isNew": true
     },
     {
       "date": "2026-11-04",
@@ -54,7 +55,8 @@
       "discoverySource": "Website",
       "description": "Meer informatie staat op spotgroningen.nl.",
       "cost": "",
-      "image": ""
+      "image": "",
+      "isNew": true
     },
     {
       "date": "2026-11-04",
@@ -68,7 +70,8 @@
       "discoverySource": "Website",
       "description": "Eindspel (try-out) Hét comedytalent van 2026 (de Volkskrant)",
       "cost": "",
-      "image": "https://www.spotgroningen.nl/wp-content/uploads/2026/04/Marie-Koet-Eindspel-Anna-Perger-Nannie-Bronshoff-3-300-dpi-RGB-300x200.jpg"
+      "image": "https://www.spotgroningen.nl/wp-content/uploads/2026/04/Marie-Koet-Eindspel-Anna-Perger-Nannie-Bronshoff-3-300-dpi-RGB-300x200.jpg",
+      "isNew": true
     },
     {
       "date": "2026-11-04",
@@ -82,7 +85,8 @@
       "discoverySource": "Website",
       "description": "Meer informatie staat op spotgroningen.nl.",
       "cost": "",
-      "image": ""
+      "image": "",
+      "isNew": true
     },
     {
       "date": "2026-11-04",
@@ -96,7 +100,8 @@
       "discoverySource": "Website",
       "description": "Een passie voor de 21e eeuw Pynarello & Jochem Stavenuiter Maskers af! Mimespeler Jochem Stavenuiter zet Pynarello op z’n kop Eindspel (try-out) Hét comedytalent van 2026 (de Volkskrant)",
       "cost": "",
-      "image": "https://www.spotgroningen.nl/wp-content/uploads/2026/04/NITE_OERSOEP_16x9_SHOTBYHALIE-300x169.jpg"
+      "image": "https://www.spotgroningen.nl/wp-content/uploads/2026/04/NITE_OERSOEP_16x9_SHOTBYHALIE-300x169.jpg",
+      "isNew": true
     }
   ],
   "siteResults": [
@@ -11043,7 +11048,7 @@
       "rawText": "Saturday 31 October Push It Pushin Wood Soundsystem All Night Long Dansen | Ticket: €5,- | doors: 23:00 - 04:00 | start: 23:01 Koop ticket"
     }
   ],
-  "status": "finishing",
+  "status": "completed",
   "siteStartedAt": "2026-10-25T13:26:11+00:00",
   "siteElapsedSeconds": 3,
   "sitePageCount": 0,
@@ -11052,5 +11057,6 @@
   "lastUpdatedAt": "2026-10-25T13:26:13+00:00",
   "lastSiteNewEventCount": 0,
   "lastCompletedSite": "https://www.pathe.nl/nl/bioscopen/pathe-groningen",
-  "lastCompletedAt": "2026-10-25T13:26:14+00:00"
+  "lastCompletedAt": "2026-10-25T13:26:14+00:00",
+  "finishedAt": "2026-10-25T13:26:15+00:00"
 }
