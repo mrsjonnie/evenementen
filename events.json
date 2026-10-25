@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-25T16:08:43+00:00",
+  "updatedAt": "2026-10-25T16:08:47+00:00",
   "events": [
     {
       "date": "2027-01-10",
@@ -138,6 +138,13 @@
     },
     {
       "site": "https://www.kultuuragenda.nl/agenda",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 2.0,
+      "timedOut": true
+    },
+    {
+      "site": "https://www.noorderzon.nl/programma",
       "count": 0,
       "newCount": 0,
       "durationSeconds": 2.0,
@@ -756,6 +763,42 @@
       "url": "https://www.kultuuragenda.nl/agenda",
       "status": "klaar",
       "rawText": "site 10/19: 0 unieke events in 2.0 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.noorderzon.nl/programma",
+      "title": "Start",
+      "date": "",
+      "url": "https://www.noorderzon.nl/programma",
+      "status": "start",
+      "rawText": "site 11/19: max 5 events, max 2 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.noorderzon.nl/programma",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://www.noorderzon.nl/programma",
+      "status": "strategie",
+      "rawText": "universele programma- en detailpagina-parser"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.noorderzon.nl/programma",
+      "title": "Pagina mislukt",
+      "date": "",
+      "url": "https://www.noorderzon.nl/programma",
+      "status": "fout",
+      "rawText": "HTTPSConnectionPool(host='www.noorderzon.nl', port=443): Read timed out. (read timeout=0.841885130999998)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.noorderzon.nl/programma",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://www.noorderzon.nl/programma",
+      "status": "klaar",
+      "rawText": "site 11/19: 0 unieke events in 2.0 sec"
     }
   ]
 }
