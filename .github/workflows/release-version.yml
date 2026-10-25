@@ -6,6 +6,7 @@ on:
       - main
     paths:
       - index.html
+      - .github/workflows/release-version.yml
 
 permissions:
   contents: write
