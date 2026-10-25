@@ -30,3 +30,7 @@ Website	https://groningen.uitloper.nu/	start	Start		https://groningen.uitloper.n
 Parser	https://groningen.uitloper.nu/	strategie	Scrapertype vastgesteld		https://groningen.uitloper.nu/	uitloper-agenda
 Website	https://groningen.uitloper.nu/	fout	Pagina mislukt		https://groningen.uitloper.nu?date=1792929600	HTTPSConnectionPool(host='groningen.uitloper.nu', port=443): Read timed out. (read timeout=0.942160377999997)
 Website	https://groningen.uitloper.nu/	klaar	Klaar		https://groningen.uitloper.nu/	site 1/20: 0 unieke events in 3.06 sec
+Website	https://www.visitgroningen.nl/nl/doen/evenementen	start	Start		https://www.visitgroningen.nl/nl/doen/evenementen	site 2/20: max 5 events, max 2 seconden
+Parser	https://www.visitgroningen.nl/nl/doen/evenementen	strategie	Scrapertype vastgesteld		https://www.visitgroningen.nl/nl/doen/evenementen	Visit Groningen agenda-/routekaarten
+Website	https://www.visitgroningen.nl/nl/doen/evenementen	fout	Pagina mislukt		https://www.visitgroningen.nl/nl/doen/evenementen	HTTPSConnectionPool(host='www.visitgroningen.nl', port=443): Read timed out. (read timeout=0.8981345709999999)
+Website	https://www.visitgroningen.nl/nl/doen/evenementen	klaar	Klaar		https://www.visitgroningen.nl/nl/doen/evenementen	site 2/20: 0 unieke events in 3.19 sec
