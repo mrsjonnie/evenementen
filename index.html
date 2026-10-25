@@ -1318,7 +1318,7 @@
   </div>
 
   <script>
-    const APP_VERSION = "2026.10.25.24";
+    const APP_VERSION = "2026.10.25.25";
     const DEFAULT_MAX_EVENTS_PER_SITE = 20;
     const DEFAULT_SITE_TIME_LIMIT_SECONDS = 20;
     const SCAN_SETTINGS_KEY = "eventScanSettingsV1";
@@ -3238,8 +3238,17 @@
       const category = $("typeFilter").value === "all" ? "" : $("typeFilter").value;
       let previousProgress = null;
       try { previousProgress = await fetchScrapeProgress(); } catch {}
-      const totalWaitSeconds = scanSettings.siteTimeLimitSeconds * selectedSites.length;
-      showStatus(`Scrape voorbereiden: ${selectedSites.length} websites geselecteerd. Per website maximaal ${scanSettings.maxEventsPerSite} resultaten en ${scanSettings.siteTimeLimitSeconds} seconden. De totale controlelimiet is ${totalWaitSeconds} seconden (${Math.round(totalWaitSeconds / 60 * 10) / 10} min); voortgang wordt iedere seconde gecontroleerd.`, "warn");
+      const expectedScanSeconds = scanSettings.siteTimeLimitSeconds * selectedSites.length;
+      const totalWaitSeconds = Math.min(600, Math.max(120, expectedScanSeconds + 120));
+      const titleProgress = $("titleProgressText");
+      const titleBusyIndicator = $("titleBusyIndicator");
+      if (titleProgress) {
+        titleProgress.hidden = false;
+        titleProgress.textContent = `Zoeken… scraper starten (0/${selectedSites.length} websites afgerond)`;
+        titleProgress.title = "Verversverzoek wordt gestart. Daarna verschijnt hier de actieve website en de actuele stap."; 
+      }
+      if (titleBusyIndicator) titleBusyIndicator.hidden = false;
+      showStatus(`Scrape voorbereiden: ${selectedSites.length} websites geselecteerd; maximaal ${scanSettings.maxEventsPerSite} nieuwe resultaten per website en ${scanSettings.siteTimeLimitSeconds} seconden per website. Ik controleer de publicatie maximaal ${Math.round(totalWaitSeconds / 60 * 10) / 10} minuten (verwachte scantijd circa ${Math.round(expectedScanSeconds / 60 * 10) / 10} min); voortgang iedere seconde.`, "warn");
       const payload = {
         region: $("region").value.trim(),
         radius: radiusPayloadValue(),
@@ -3280,7 +3289,7 @@
         const rateLimited = workerRows.some((row) => /429|rate.?limit|rate_limited/i.test(JSON.stringify(row)));
         const rateLimitNote = rateLimited ? " Een AI-/zoekbron meldt HTTP 429 (rate limit); die bron heeft tijdelijk te veel verzoeken ontvangen." : "";
         showStatus(`Verversverzoek geaccepteerd. ${prefix}${rateLimitNote} Ik controleer of events.json echt wordt bijgewerkt.`, "warn", { stop: true });
-        await waitForUpdatedEvents(previousSignature, previousKeys, foundCount, { intervalMs: 1000, maxAttempts: 86400, previousProgressRunId: previousProgress?.runId || "", lastProgressCount: 0, lastProgressSignature: "" });
+        await waitForUpdatedEvents(previousSignature, previousKeys, foundCount, { intervalMs: 1000, maxAttempts: totalWaitSeconds, previousProgressRunId: previousProgress?.runId || "", lastProgressCount: 0, lastProgressSignature: "" });
       } catch (error) {
         const prefix = Number.isFinite(foundCount) ? `${foundText(foundCount)} gevonden.` : "";
         const message = String(error?.message || error || "Onbekende fout");
@@ -3293,7 +3302,9 @@
         activeScanSites = new Set();
         renderSites(new Set(selectedSites));
         const titleProgress = $("titleProgressText");
+        const titleBusyIndicator = $("titleBusyIndicator");
         if (titleProgress) titleProgress.hidden = true;
+        if (titleBusyIndicator) titleBusyIndicator.hidden = true;
         setBusy(button, false);
       }
     }
