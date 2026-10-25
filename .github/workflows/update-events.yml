@@ -132,7 +132,10 @@ jobs:
           values = dict(defaults)
           values.update(event.get("inputs") or {})
 
-          if os.path.exists("refresh-request.json"):
+          # Only a push triggered by refresh-request.json should read that file.
+          # A manual workflow_dispatch must use its own submitted inputs; otherwise
+          # a stale one-site diagnostic request silently overrides the full site list.
+          if os.environ.get("GITHUB_EVENT_NAME") == "push" and os.path.exists("refresh-request.json"):
               with open("refresh-request.json", encoding="utf-8") as handle:
                   request = json.load(handle)
               for key in defaults:
