@@ -1,7 +1,7 @@
 {
   "runId": "2026-10-25T16:44:48.200890+00:00-61e091f2",
   "startedAt": "2026-10-25T16:44:48+00:00",
-  "completedCount": 14,
+  "completedCount": 15,
   "totalSites": 19,
   "currentSite": "https://www.vvvameland.nl/activiteiten-en-evenementen",
   "currentSiteIndex": 15,
@@ -19,7 +19,8 @@
     "https://www.noorderzon.nl/programma",
     "https://www.concertgebouw.nl/concerten-en-tickets",
     "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
-    "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817"
+    "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+    "https://www.vvvameland.nl/activiteiten-en-evenementen"
   ],
   "events": [
     {
@@ -1022,6 +1023,13 @@
       "count": 0,
       "newCount": 0,
       "durationSeconds": 4,
+      "timedOut": true
+    },
+    {
+      "site": "https://www.vvvameland.nl/activiteiten-en-evenementen",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 4.0,
       "timedOut": true
     }
   ],
@@ -11829,12 +11837,12 @@
   ],
   "status": "running",
   "siteStartedAt": "2026-10-25T16:46:20+00:00",
-  "siteElapsedSeconds": 1,
+  "siteElapsedSeconds": 5,
   "sitePageCount": 0,
   "lastSiteEventCount": 0,
-  "stage": "Websitepagina ophalen",
+  "stage": "Website klaar; volgende website voorbereiden",
   "lastUpdatedAt": "2026-10-25T16:46:21+00:00",
   "lastSiteNewEventCount": 0,
-  "lastCompletedSite": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
-  "lastCompletedAt": "2026-10-25T16:46:18+00:00"
+  "lastCompletedSite": "https://www.vvvameland.nl/activiteiten-en-evenementen",
+  "lastCompletedAt": "2026-10-25T16:46:25+00:00"
 }
