@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-25T13:46:42+00:00",
+  "updatedAt": "2026-10-25T13:46:48+00:00",
   "events": [
     {
       "date": "2026-10-25",
@@ -11450,6 +11450,13 @@
       "count": 0,
       "newCount": 0,
       "durationSeconds": 2.47,
+      "timedOut": true
+    },
+    {
+      "site": "https://www.socialdeal.nl/",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 3.2,
       "timedOut": true
     }
   ],
