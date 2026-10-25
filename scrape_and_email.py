@@ -2220,6 +2220,95 @@ def extract_ibood_offers(html, page_url, site_url):
         })
         if len(offers) >= MAX_EVENTS_PER_SITE:
             break
+    # Modern iBOOD pages often render product cards without h1-h4 headings.
+    # Scan compact product/offer/article containers as a fallback and take the
+    # smallest useful card that contains a real iBOOD product URL and price.
+    if len(offers) < MAX_EVENTS_PER_SITE:
+        selectors = (
+            "[data-testid*='product']", "[data-testid*='offer']",
+            "[class*='product-card']", "[class*='productCard']",
+            "[class*='offer-card']", "[class*='deal-card']",
+            "article", "li",
+        )
+        for selector in selectors:
+            for node in soup.select(selector)[:500]:
+                if len(offers) >= MAX_EVENTS_PER_SITE:
+                    break
+                card_text = clean_text(node.get_text(" ", strip=True))
+                if len(card_text) < 25 or len(card_text) > 1800:
+                    continue
+                href = ""
+                for anchor in ([node] if getattr(node, "name", "") == "a" and node.get("href") else []) + node.find_all("a", href=True):
+                    candidate = normalized_url(anchor.get("href"), page_url)
+                    if candidate and canonical_host(candidate) == "ibood.com" and re.search(r"/(?:product|products|deal|offers|p)/|/s-nl/", urlparse(candidate).path, re.I):
+                        href = candidate
+                        break
+                if not href:
+                    continue
+                price = ibood_offer_price(card_text)
+                if not price:
+                    continue
+                title = node_title(node)
+                if not title or len(title) < 5 or re.search(r"\\b(voorwaarden|klantenservice|inloggen|mijn account|nieuwsbrief|alle deals|iBOOD)\\b", title, re.I):
+                    continue
+                key = href.lower().split("?")[0].rstrip("/")
+                if key in seen:
+                    continue
+                seen.add(key)
+                image_node = node.select_one("img[src], img[data-src], img[data-lazy-src]")
+                image = normalized_url((image_node.get("src") or image_node.get("data-src") or image_node.get("data-lazy-src")) if image_node else "", page_url)
+                offers.append({
+                    "date": TODAY.isoformat(), "time": "", "title": title,
+                    "type": "Aanbiedingen", "location": "Online", "locationLink": "",
+                    "website": href, "source": "iBOOD", "discoverySource": "Website",
+                    "description": compact(card_text.replace(title, "", 1), 320) or "Online aanbieding op iBOOD.",
+                    "cost": price, "image": image,
+                })
+            if len(offers) >= MAX_EVENTS_PER_SITE:
+                break
+
+    # Structured Product data is a final fallback for pages whose card markup
+    # changes but whose JSON-LD still exposes product names, URLs and offers.
+    if len(offers) < MAX_EVENTS_PER_SITE:
+        for script in soup.find_all("script", attrs={"type": re.compile("ld\\+json", re.I)}):
+            raw_json = script.string or script.get_text(" ", strip=True)
+            try:
+                data = json.loads(raw_json)
+            except (json.JSONDecodeError, TypeError):
+                continue
+            for product in jsonld_nodes(data):
+                types = product.get("@type", [])
+                types = [types] if isinstance(types, str) else types
+                if not any(str(kind).lower() == "product" for kind in types):
+                    continue
+                title = clean_title(product.get("name") or "")
+                href = normalized_url(product.get("url") or product.get("@id") or "", page_url)
+                offer_data = product.get("offers") or {}
+                if isinstance(offer_data, list):
+                    offer_data = next((item for item in offer_data if isinstance(item, dict)), {})
+                price_value = offer_data.get("price") or offer_data.get("lowPrice") or ""
+                currency = offer_data.get("priceCurrency") or "EUR"
+                if not title_is_usable(title) or canonical_host(href) != "ibood.com" or not price_value:
+                    continue
+                key = href.lower().split("?")[0].rstrip("/")
+                if key in seen:
+                    continue
+                seen.add(key)
+                try:
+                    price = f"€ {float(str(price_value).replace(',', '.')):,.2f}".replace(",", "X").replace(".", ",").replace("X", ".") if currency == "EUR" else f"{price_value} {currency}"
+                except (TypeError, ValueError):
+                    price = clean_text(price_value)
+                offers.append({
+                    "date": TODAY.isoformat(), "time": "", "title": title,
+                    "type": "Aanbiedingen", "location": "Online", "locationLink": "",
+                    "website": href, "source": "iBOOD", "discoverySource": "Website",
+                    "description": compact(product.get("description") or "Online aanbieding op iBOOD.", 320),
+                    "cost": price, "image": normalized_url(product.get("image") or "", page_url),
+                })
+                if len(offers) >= MAX_EVENTS_PER_SITE:
+                    break
+
+    offers = dedupe_events(offers)
     add_raw("Parser", site_url, "iBOOD-telling", "", page_url, "ok" if offers else "geen resultaten", f"{len(offers)} aanbiedingen gevonden; limiet {MAX_EVENTS_PER_SITE}; HTML {len(html)} tekens")
     return offers
 
