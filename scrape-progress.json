@@ -1,19 +1,1591 @@
 {
   "runId": "2026-10-25T18:03:32.693130+00:00-9ae2f9f8",
   "startedAt": "2026-10-25T18:03:32+00:00",
-  "completedCount": 0,
+  "completedCount": 1,
   "totalSites": 19,
   "currentSite": "https://groningen.uitloper.nu/",
   "currentSiteIndex": 1,
-  "completedSites": [],
-  "events": [],
-  "siteResults": [],
-  "rawLog": [],
+  "completedSites": [
+    "https://groningen.uitloper.nu/"
+  ],
+  "events": [
+    {
+      "date": "2026-10-26",
+      "time": "",
+      "title": "ubiquitousssssssssssssssssugar",
+      "type": "Activiteit",
+      "location": "VELD Collectief",
+      "locationLink": "",
+      "website": "https://groningen.uitloper.nu/kunst/ubiquitousssssssssssssssssugar",
+      "source": "groningen.uitloper.nu",
+      "discoverySource": "Website",
+      "description": "Met performances, proeverijen van Goblin Feast, Jonas…",
+      "cost": "",
+      "image": "https://groningen.uitloper.nu/images/smallthumb/files/2026/sign-usugar-insta-post1.jpg",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-27",
+      "time": "",
+      "title": "APPROP.",
+      "type": "Activiteit",
+      "location": "Gasten: Paul Kramer",
+      "locationLink": "",
+      "website": "https://groningen.uitloper.nu/kunst/approp",
+      "source": "groningen.uitloper.nu",
+      "discoverySource": "Website",
+      "description": "Met APPROP. presenteren ax710 en Jurjen Galema een…",
+      "cost": "",
+      "image": "https://groningen.uitloper.nu/images/smallthumb/files/screenshot-2026-10-22-at-15-32-25-02cfec1b199ffc656b2732f9886c0516e2c61bf4_500_375_1-jpg--jpeg-afbeelding-500---375-pixels-.png",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-27",
+      "time": "",
+      "title": "Aletta Jacobskamer",
+      "type": "Activiteit",
+      "location": "Masterminds. De Geschiedenis van de Groningse Universiteit",
+      "locationLink": "",
+      "website": "https://groningen.uitloper.nu/kunst/aletta-jacobskamer",
+      "source": "groningen.uitloper.nu",
+      "discoverySource": "Website",
+      "description": "In de kamer van dr. Aletta Jacobs, de eerste vrouwelijke…",
+      "cost": "",
+      "image": "https://groningen.uitloper.nu/images/smallthumb/files/2024/aletta-jacobs.jpg",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-27",
+      "time": "20:15",
+      "title": "Alma Quartet & Nicolas van Poucke",
+      "type": "Concert",
+      "location": "Jon Allen & The Luna Kings",
+      "locationLink": "",
+      "website": "https://groningen.uitloper.nu/muziek/alma-quartet-nicolas-van-poucke",
+      "source": "groningen.uitloper.nu",
+      "discoverySource": "Website",
+      "description": "Vijf topmusici nemen je mee van Beethovens diepgang…",
+      "cost": "",
+      "image": "https://groningen.uitloper.nu/images/smallthumb/files/screenshot-2026-09-29-at-14-30-38-img38159_orig-jpg--jpeg-afbeelding-533---800-pixels-.png",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-27",
+      "time": "20:00",
+      "title": "Anas Younes - On Anger & Fatigue",
+      "type": "Activiteit",
+      "location": "Grand Theatre",
+      "locationLink": "",
+      "website": "https://groningen.uitloper.nu/theater/anas-younes-on-anger-fatigue",
+      "source": "groningen.uitloper.nu",
+      "discoverySource": "Website",
+      "description": "Een lecture-performance die de politiek van waarheidsvertelling,…",
+      "cost": "",
+      "image": "https://groningen.uitloper.nu/images/smallthumb/files/screenshot-2026-09-30-at-13-54-30-anas-younes---on-anger---fatigue.png",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-27",
+      "time": "",
+      "title": "Anatomisch Theater",
+      "type": "Theater",
+      "location": "Aletta Jacobskamer",
+      "locationLink": "",
+      "website": "https://groningen.uitloper.nu/kunst/anatomisch-theater",
+      "source": "groningen.uitloper.nu",
+      "discoverySource": "Website",
+      "description": "In het anatomisch theater zijn zo’n 50 preparaten…",
+      "cost": "",
+      "image": "https://groningen.uitloper.nu/images/smallthumb/files/2024/universiteitsmuseum-anatomisch-theater-1.jpg",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-27",
+      "time": "",
+      "title": "Beklimming Martinitoren",
+      "type": "Activiteit",
+      "location": "Martinitoren",
+      "locationLink": "",
+      "website": "https://groningen.uitloper.nu/diversen/beklimming-martinitoren-1",
+      "source": "groningen.uitloper.nu",
+      "discoverySource": "Website",
+      "description": "Bezoekers kunnen op eigen gelegenheid naar boven lopen…",
+      "cost": "",
+      "image": "https://groningen.uitloper.nu/images/smallthumb/files/Logo/martinitoren.jpg",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-27",
+      "time": "14:45",
+      "title": "Depotrondleidingen: Lichaam & Geest",
+      "type": "Activiteit",
+      "location": "Groninger Archieven",
+      "locationLink": "",
+      "website": "https://groningen.uitloper.nu/diversen/depotrondleidingen-lichaam-geest",
+      "source": "groningen.uitloper.nu",
+      "discoverySource": "Website",
+      "description": "Tijdens een rondleiding nemen onze medewerkers je…",
+      "cost": "",
+      "image": "https://groningen.uitloper.nu/images/smallthumb/files/screenshot-2026-09-22-at-16-31-27-depotrondleidingen-lichaam---geest---groningerarchieven-nl.png",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-27",
+      "time": "",
+      "title": "Expositie Overwegend Vrouw (Glimmen)",
+      "type": "Expositie",
+      "location": "Dorpshuis De Groenenberg Glimmen",
+      "locationLink": "",
+      "website": "https://groningen.uitloper.nu/kunst/expositie-overwegend-vrouw-glimmen",
+      "source": "groningen.uitloper.nu",
+      "discoverySource": "Website",
+      "description": "Ingrid Veldscholten en Josephine Wortelboer exposeren…",
+      "cost": "",
+      "image": "https://groningen.uitloper.nu/images/smallthumb/files/588390_85879db5e716473c98c1bddf53e1a5ca-mv2.avif",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-27",
+      "time": "",
+      "title": "Figuranten",
+      "type": "Activiteit",
+      "location": "Galerie Noord",
+      "locationLink": "",
+      "website": "https://groningen.uitloper.nu/kunst/figuranten",
+      "source": "groningen.uitloper.nu",
+      "discoverySource": "Website",
+      "description": "Sievert Bodde toont zestien fictieve portretten, in…",
+      "cost": "",
+      "image": "https://groningen.uitloper.nu/images/smallthumb/files/screenshot-2026-10-22-at-14-58-43-sievert-bodde---galerie-noord.png",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-27",
+      "time": "",
+      "title": "GRID - Puin Hoop: herdruk van de jaren ’80",
+      "type": "Theater",
+      "location": "Anatomisch Theater",
+      "locationLink": "",
+      "website": "https://groningen.uitloper.nu/kunst/grid-puin-hoop-herdruk-van-de-jaren-%e2%80%9980",
+      "source": "groningen.uitloper.nu",
+      "discoverySource": "Website",
+      "description": "Een prikkelende expositie over vroeger, die verrassend…",
+      "cost": "",
+      "image": "https://groningen.uitloper.nu/images/smallthumb/files/puinhoop.jpg",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-27",
+      "time": "",
+      "title": "Gasten: Paul Kramer",
+      "type": "Expositie",
+      "location": "Atelier Henk Kraayenzank",
+      "locationLink": "",
+      "website": "https://groningen.uitloper.nu/kunst/gasten-paul-kramer",
+      "source": "groningen.uitloper.nu",
+      "discoverySource": "Website",
+      "description": "Duotentoonstelling met werken van Paul Kramer en Henk…",
+      "cost": "",
+      "image": "https://groningen.uitloper.nu/images/smallthumb/files/paul-kramer.jpg",
+      "isNew": true
+    }
+  ],
+  "siteResults": [
+    {
+      "site": "https://groningen.uitloper.nu/",
+      "count": 12,
+      "newCount": 12,
+      "durationSeconds": 2.32,
+      "timedOut": false
+    }
+  ],
+  "rawLog": [
+    {
+      "source": "Mistral",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "Mistral analyse",
+      "date": "",
+      "url": "https://forum.nl/nl/agenda",
+      "status": "zoeken",
+      "rawText": "Startpagina wordt opgehaald en door Mistral op eventvelden geanalyseerd."
+    },
+    {
+      "source": "Mistral",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "Mistral fout",
+      "date": "",
+      "url": "https://forum.nl/nl/agenda",
+      "status": "status 429",
+      "rawText": "{\"object\":\"error\",\"message\":\"Rate limit exceeded\",\"type\":\"rate_limited\",\"param\":null,\"code\":\"1300\",\"raw_status_code\":429}"
+    },
+    {
+      "source": "Mistral",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "Mistral analyse",
+      "date": "",
+      "url": "https://www.spotgroningen.nl/programma/",
+      "status": "zoeken",
+      "rawText": "Startpagina wordt opgehaald en door Mistral op eventvelden geanalyseerd."
+    },
+    {
+      "source": "Mistral",
+      "site": "https://www.spotgroningen.nl/programma/",
+      "title": "Mistral fout",
+      "date": "",
+      "url": "https://www.spotgroningen.nl/programma/",
+      "status": "status 429",
+      "rawText": "{\"object\":\"error\",\"message\":\"Rate limit exceeded\",\"type\":\"rate_limited\",\"param\":null,\"code\":\"1300\",\"raw_status_code\":429}"
+    },
+    {
+      "source": "Mistral",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Mistral analyse",
+      "date": "",
+      "url": "https://www.vera-groningen.nl/",
+      "status": "zoeken",
+      "rawText": "Startpagina wordt opgehaald en door Mistral op eventvelden geanalyseerd."
+    },
+    {
+      "source": "Mistral",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Mistral fout",
+      "date": "",
+      "url": "https://www.vera-groningen.nl/",
+      "status": "status 429",
+      "rawText": "{\"object\":\"error\",\"message\":\"Rate limit exceeded\",\"type\":\"rate_limited\",\"param\":null,\"code\":\"1300\",\"raw_status_code\":429}"
+    },
+    {
+      "source": "Mistral",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "Mistral overgeslagen",
+      "date": "",
+      "url": "https://groningen.uitloper.nu/",
+      "status": "overgeslagen",
+      "rawText": "Deze AI-bron is na een HTTP 429 voor de rest van deze scan gepauzeerd om herhaalde rate-limitfouten te voorkomen."
+    },
+    {
+      "source": "Mistral",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Mistral overgeslagen",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "status": "overgeslagen",
+      "rawText": "Deze AI-bron is na een HTTP 429 voor de rest van deze scan gepauzeerd om herhaalde rate-limitfouten te voorkomen."
+    },
+    {
+      "source": "Mistral",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Mistral overgeslagen",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "status": "overgeslagen",
+      "rawText": "Deze AI-bron is na een HTTP 429 voor de rest van deze scan gepauzeerd om herhaalde rate-limitfouten te voorkomen."
+    },
+    {
+      "source": "Mistral",
+      "site": "https://simplon.nl/",
+      "title": "Mistral overgeslagen",
+      "date": "",
+      "url": "https://simplon.nl/",
+      "status": "overgeslagen",
+      "rawText": "Deze AI-bron is na een HTTP 429 voor de rest van deze scan gepauzeerd om herhaalde rate-limitfouten te voorkomen."
+    },
+    {
+      "source": "Mistral",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Mistral overgeslagen",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda",
+      "status": "overgeslagen",
+      "rawText": "Deze AI-bron is na een HTTP 429 voor de rest van deze scan gepauzeerd om herhaalde rate-limitfouten te voorkomen."
+    },
+    {
+      "source": "Mistral",
+      "site": "https://groningermuseum.nl/programma",
+      "title": "Mistral overgeslagen",
+      "date": "",
+      "url": "https://groningermuseum.nl/programma",
+      "status": "overgeslagen",
+      "rawText": "Deze AI-bron is na een HTTP 429 voor de rest van deze scan gepauzeerd om herhaalde rate-limitfouten te voorkomen."
+    },
+    {
+      "source": "Mistral",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Mistral overgeslagen",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda",
+      "status": "overgeslagen",
+      "rawText": "Deze AI-bron is na een HTTP 429 voor de rest van deze scan gepauzeerd om herhaalde rate-limitfouten te voorkomen."
+    },
+    {
+      "source": "Mistral",
+      "site": "https://www.noorderzon.nl/programma",
+      "title": "Mistral overgeslagen",
+      "date": "",
+      "url": "https://www.noorderzon.nl/programma",
+      "status": "overgeslagen",
+      "rawText": "Deze AI-bron is na een HTTP 429 voor de rest van deze scan gepauzeerd om herhaalde rate-limitfouten te voorkomen."
+    },
+    {
+      "source": "Mistral",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Mistral overgeslagen",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "status": "overgeslagen",
+      "rawText": "Deze AI-bron is na een HTTP 429 voor de rest van deze scan gepauzeerd om herhaalde rate-limitfouten te voorkomen."
+    },
+    {
+      "source": "Mistral",
+      "site": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "title": "Mistral overgeslagen",
+      "date": "",
+      "url": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "status": "overgeslagen",
+      "rawText": "Deze AI-bron is na een HTTP 429 voor de rest van deze scan gepauzeerd om herhaalde rate-limitfouten te voorkomen."
+    },
+    {
+      "source": "Mistral",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Mistral overgeslagen",
+      "date": "",
+      "url": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "status": "overgeslagen",
+      "rawText": "Deze AI-bron is na een HTTP 429 voor de rest van deze scan gepauzeerd om herhaalde rate-limitfouten te voorkomen."
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "Start",
+      "date": "",
+      "url": "https://groningen.uitloper.nu/",
+      "status": "start",
+      "rawText": "site 1/19: max 12 events, max 4 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://groningen.uitloper.nu/",
+      "status": "strategie",
+      "rawText": "uitloper-agenda"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "Pagina gelezen",
+      "date": "",
+      "url": "https://groningen.uitloper.nu/?date=1792929600",
+      "status": "ok",
+      "rawText": "69586 tekens HTML"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "Angelo Kelly & Band",
+      "date": "2026-10-25",
+      "url": "https://groningen.uitloper.nu/muziek/angelo-kelly-band",
+      "status": "Uitloper agenda-item",
+      "rawText": "Angelo Kelly & Band 20:00 uur Tijdens de “Ready To Rock”-tour brengt Kelly nieuwe…"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "Lizz Wright",
+      "date": "2026-10-25",
+      "url": "https://groningen.uitloper.nu/muziek/lizz-wright",
+      "status": "Uitloper agenda-item",
+      "rawText": "Lizz Wright 20:30 uur Warme mix van gospel, jazz en soul."
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "VERA's Grunneger Zundag",
+      "date": "2026-10-25",
+      "url": "https://groningen.uitloper.nu/muziek/veras-grunneger-zundag",
+      "status": "Uitloper agenda-item",
+      "rawText": "VERA's Grunneger Zundag 15:30 uur Met STAD, Steernvanger en Olaf Vos."
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "Groningen Sax Fest",
+      "date": "2026-10-25",
+      "url": "https://groningen.uitloper.nu/muziek/groningen-sax-fest",
+      "status": "Uitloper agenda-item",
+      "rawText": "Groningen Sax Fest Een driedaags festival rond klassieke en hedendaagse…"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "Vieux",
+      "date": "2026-10-25",
+      "url": "https://groningen.uitloper.nu/muziek/vieux-8",
+      "status": "Uitloper agenda-item",
+      "rawText": "Vieux 16:30 uur Soul, disco."
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "Money & The Man",
+      "date": "2026-10-25",
+      "url": "https://groningen.uitloper.nu/muziek/money-the-man-3",
+      "status": "Uitloper agenda-item",
+      "rawText": "Money & The Man 20:00 uur Stevige riffs, dansbare grooves en gierende solo’s…"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "The Grand Pillow Society",
+      "date": "2026-10-25",
+      "url": "https://groningen.uitloper.nu/theater/the-grand-pillow-society-6",
+      "status": "Uitloper agenda-item",
+      "rawText": "The Grand Pillow Society 18:00 uur Kom langs voor een avond vol muziek en verhalen. Trek…"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "De Koe - HelloGoodbye",
+      "date": "2026-10-25",
+      "url": "https://groningen.uitloper.nu/theater/de-koe-hellogoodbye",
+      "status": "Uitloper agenda-item",
+      "rawText": "De Koe - HelloGoodbye 15:00 uur Eerste lezing van HelloGoodbye (2017). Het stuk van…"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "Thinking Hands",
+      "date": "2026-10-25",
+      "url": "https://groningen.uitloper.nu/kunst/thinking-hands",
+      "status": "Uitloper agenda-item",
+      "rawText": "Thinking Hands Een expositie over de kennis die in ons lichaam zit…"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "Nieuw Licht - De Ploeg",
+      "date": "2026-10-25",
+      "url": "https://groningen.uitloper.nu/kunst/nieuw-licht-%e2%80%93-de-ploeg",
+      "status": "Uitloper agenda-item",
+      "rawText": "Nieuw Licht - De Ploeg Een geheel vernieuwde presentatie van werken van De…"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "The Architect & The Housewife: Cleaning the House, Building the Future",
+      "date": "2026-10-25",
+      "url": "https://groningen.uitloper.nu/kunst/the-architect-the-housewife-cleaning-the-house-building-the-future",
+      "status": "Uitloper agenda-item",
+      "rawText": "The Architect & The Housewife: Cleaning the House, Building the Future De titel van deze tentoonstelling is ontleend aan…"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "Nieuw licht 1: Ani Schulze – The Convent of Pleasure",
+      "date": "2026-10-25",
+      "url": "https://groningen.uitloper.nu/kunst/nieuw-licht-1-ani-schulze-%e2%80%93-the-convent-of-pleasure",
+      "status": "Uitloper agenda-item",
+      "rawText": "Nieuw licht 1: Ani Schulze – The Convent of Pleasure Nieuw licht is een tentoonstellingsreeks waarin het…"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "Keramikos Carrier Bag",
+      "date": "2026-10-25",
+      "url": "https://groningen.uitloper.nu/kunst/keramikos-carrier-bag",
+      "status": "Uitloper agenda-item",
+      "rawText": "Keramikos Carrier Bag Naar aanleiding van onderzoek in Groningen kozen Matthew…"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "Theatraal",
+      "date": "2026-10-25",
+      "url": "https://groningen.uitloper.nu/kunst/theatraal",
+      "status": "Uitloper agenda-item",
+      "rawText": "Theatraal Voor het derde jaar op rij presenteert de Stadsgalerie…"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "ubiquitousssssssssssssssssugar",
+      "date": "2026-10-25",
+      "url": "https://groningen.uitloper.nu/kunst/ubiquitousssssssssssssssssugar",
+      "status": "Uitloper agenda-item",
+      "rawText": "ubiquitousssssssssssssssssugar Met performances, proeverijen van Goblin Feast, Jonas…"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "VELD Collectief",
+      "date": "2026-10-25",
+      "url": "https://groningen.uitloper.nu/kunst/veld-collectief",
+      "status": "Uitloper agenda-item",
+      "rawText": "VELD Collectief Wie in Groningen een suikerbiet langs de weg ziet…"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "Storyworld Spotlight: Asjemenou!",
+      "date": "2026-10-25",
+      "url": "https://groningen.uitloper.nu/kunst/storyworld-spotlight-asjemenou",
+      "status": "Uitloper agenda-item",
+      "rawText": "Storyworld Spotlight: Asjemenou! In 2026 bestaat de Nederlandse televisie 75 jaar…"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "Masterminds. De Geschiedenis van de Groningse Universiteit",
+      "date": "2026-10-25",
+      "url": "https://groningen.uitloper.nu/kunst/masterminds",
+      "status": "Uitloper agenda-item",
+      "rawText": "Masterminds. De Geschiedenis van de Groningse Universiteit Masterminds neemt je mee in de geschiedenis van de…"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "Aletta Jacobskamer",
+      "date": "2026-10-25",
+      "url": "https://groningen.uitloper.nu/kunst/aletta-jacobskamer",
+      "status": "Uitloper agenda-item",
+      "rawText": "Aletta Jacobskamer In de kamer van dr. Aletta Jacobs, de eerste vrouwelijke…"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "Anatomisch Theater",
+      "date": "2026-10-25",
+      "url": "https://groningen.uitloper.nu/kunst/anatomisch-theater",
+      "status": "Uitloper agenda-item",
+      "rawText": "Anatomisch Theater In het anatomisch theater zijn zo’n 50 preparaten…"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "GRID - Puin Hoop: herdruk van de jaren ’80",
+      "date": "2026-10-25",
+      "url": "https://groningen.uitloper.nu/kunst/grid-puin-hoop-herdruk-van-de-jaren-%e2%80%9980",
+      "status": "Uitloper agenda-item",
+      "rawText": "GRID - Puin Hoop: herdruk van de jaren ’80 Een prikkelende expositie over vroeger, die verrassend…"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "Kunstroutes",
+      "date": "2026-10-25",
+      "url": "https://groningen.uitloper.nu/kunst/kunstroutes",
+      "status": "Uitloper agenda-item",
+      "rawText": "Kunstroutes Kunst die je gezien moet hebben en kunst die je misschien…"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "The Wall #9",
+      "date": "2026-10-25",
+      "url": "https://groningen.uitloper.nu/kunst/the-wall-9",
+      "status": "Uitloper agenda-item",
+      "rawText": "The Wall #9 Kunstenaar Indira de Boer maakt een installatie van…"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "Otto Krol - Gevels, daken en luchten",
+      "date": "2026-10-25",
+      "url": "https://groningen.uitloper.nu/kunst/otto-krol-gevels-daken-en-luchten",
+      "status": "Uitloper agenda-item",
+      "rawText": "Otto Krol - Gevels, daken en luchten Na de stadsgezichten van de vorige expositie eind…"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "Otto Krol - Gevels, daken en luchten",
+      "date": "2026-10-25",
+      "url": "https://groningen.uitloper.nu/kunst/otto-krol-gevels-daken-en-luchten-1",
+      "status": "Uitloper agenda-item",
+      "rawText": "Otto Krol - Gevels, daken en luchten Na de stadsgezichten van de vorige expositie eind…"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "Kleur!",
+      "date": "2026-10-25",
+      "url": "https://groningen.uitloper.nu/kunst/kleur-3",
+      "status": "Uitloper agenda-item",
+      "rawText": "Kleur! Tien kunstenaars onderzoeken in de verschillende ruimtes…"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "APPROP.",
+      "date": "2026-10-25",
+      "url": "https://groningen.uitloper.nu/kunst/approp",
+      "status": "Uitloper agenda-item",
+      "rawText": "APPROP. Met APPROP. presenteren ax710 en Jurjen Galema een…"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "Beyond Reality",
+      "date": "2026-10-25",
+      "url": "https://groningen.uitloper.nu/kunst/beyond-reality",
+      "status": "Uitloper agenda-item",
+      "rawText": "Beyond Reality Exposanten Hedy Abeling, Wouter Berns en Bernard Divendal…"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "Gasten: Paul Kramer",
+      "date": "2026-10-25",
+      "url": "https://groningen.uitloper.nu/kunst/gasten-paul-kramer",
+      "status": "Uitloper agenda-item",
+      "rawText": "Gasten: Paul Kramer Duotentoonstelling met werken van Paul Kramer en Henk…"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "Figuranten",
+      "date": "2026-10-25",
+      "url": "https://groningen.uitloper.nu/kunst/figuranten",
+      "status": "Uitloper agenda-item",
+      "rawText": "Figuranten Sievert Bodde toont zestien fictieve portretten, in…"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "Permanente Expositie",
+      "date": "2026-10-25",
+      "url": "https://groningen.uitloper.nu/kunst/permanente-expositie",
+      "status": "Uitloper agenda-item",
+      "rawText": "Permanente Expositie De vaste tentoonstelling nodigt uit om kennis te nemen…"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "Marilyn",
+      "date": "2026-10-25",
+      "url": "https://groningen.uitloper.nu/kunst/marilyn",
+      "status": "Uitloper agenda-item",
+      "rawText": "Marilyn Deze expositie laat je de vrouw achter de mythe kennen;…"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "Schilderijen van Marrie Venderink",
+      "date": "2026-10-25",
+      "url": "https://groningen.uitloper.nu/kunst/schilderijen-vanmarrie-venderink",
+      "status": "Uitloper agenda-item",
+      "rawText": "Schilderijen van Marrie Venderink Expositie met schilderijen van Marrie Venderink …"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "Het Witte Vlag Project",
+      "date": "2026-10-25",
+      "url": "https://groningen.uitloper.nu/kunst/het-witte-vlag-project",
+      "status": "Uitloper agenda-item",
+      "rawText": "Het Witte Vlag Project Een groepstentoonstelling met dertien hedendaagse…"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "Into Nature: Haunted by Waters",
+      "date": "2026-10-25",
+      "url": "https://groningen.uitloper.nu/kunst/into-nature-haunted-by-waters",
+      "status": "Uitloper agenda-item",
+      "rawText": "Into Nature: Haunted by Waters Voor deze editie maken twaalf kunstenaars nieuw werk…"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "Lieuwe van Gogh",
+      "date": "2026-10-25",
+      "url": "https://groningen.uitloper.nu/kunst/lieuwe-van-gogh",
+      "status": "Uitloper agenda-item",
+      "rawText": "Lieuwe van Gogh De kleurrijke gevel van Metamorphose gemaakt door…"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "Expositie Overwegend Vrouw (Glimmen)",
+      "date": "2026-10-25",
+      "url": "https://groningen.uitloper.nu/kunst/expositie-overwegend-vrouw-glimmen",
+      "status": "Uitloper agenda-item",
+      "rawText": "Expositie Overwegend Vrouw (Glimmen) Ingrid Veldscholten en Josephine Wortelboer exposeren…"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "Het Witte Vlag Project",
+      "date": "2026-10-25",
+      "url": "https://groningen.uitloper.nu/kunst/het-witte-vlag-project-1",
+      "status": "Uitloper agenda-item",
+      "rawText": "Het Witte Vlag Project In een tijd waarin zekerheden luid klinken en identiteiten…"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "Beyond Reality",
+      "date": "2026-10-25",
+      "url": "https://groningen.uitloper.nu/kunst/beyond-reality-1",
+      "status": "Uitloper agenda-item",
+      "rawText": "Beyond Reality Drie exposanten scheppen hun eigen werkelijkheid van…"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "Playing House - kinderbiënnale",
+      "date": "2026-10-25",
+      "url": "https://groningen.uitloper.nu/jeugd/playing-house-kinderbiennale",
+      "status": "Uitloper agenda-item",
+      "rawText": "Playing House - kinderbiënnale Welke bewust of onbewust aangeleerde regels worden…"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "Storyworld spotlight: Super Mario 40 jaar",
+      "date": "2026-10-25",
+      "url": "https://groningen.uitloper.nu/jeugd/storyworld-spotlight-super-mario-40-jaar",
+      "status": "Uitloper agenda-item",
+      "rawText": "Storyworld spotlight: Super Mario 40 jaar Een reis door de tijd, langs de technische én creatieve…"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "Zindag",
+      "date": "2026-10-25",
+      "url": "https://groningen.uitloper.nu/diversen/zindag",
+      "status": "Uitloper agenda-item",
+      "rawText": "Zindag 10:30 uur Zindag is een zondagsbijeenkomst bedoeld voor mensen…"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "Depotrondleidingen: Lichaam & Geest",
+      "date": "2026-10-25",
+      "url": "https://groningen.uitloper.nu/diversen/depotrondleidingen-lichaam-geest",
+      "status": "Uitloper agenda-item",
+      "rawText": "Depotrondleidingen: Lichaam & Geest 14:45 uur Tijdens een rondleiding nemen onze medewerkers je…"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "Beklimming Martinitoren",
+      "date": "2026-10-25",
+      "url": "https://groningen.uitloper.nu/diversen/beklimming-martinitoren-1",
+      "status": "Uitloper agenda-item",
+      "rawText": "Beklimming Martinitoren Bezoekers kunnen op eigen gelegenheid naar boven lopen…"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "Pubquiz",
+      "date": "2026-10-25",
+      "url": "https://groningen.uitloper.nu/quizzen/pubquiz-18",
+      "status": "Uitloper agenda-item",
+      "rawText": "Pubquiz 19:00 uur De pubquiz is een triviantquiz die bestaat uit 8 rondes…"
+    },
+    {
+      "source": "Parser",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "Uitloper-dagpagina",
+      "date": "2026-10-25",
+      "url": "https://groningen.uitloper.nu/?date=1792929600",
+      "status": "gespecialiseerde parser",
+      "rawText": "45 agenda-items op 2026-10-25"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "Pagina geanalyseerd",
+      "date": "",
+      "url": "https://groningen.uitloper.nu/?date=1792929600",
+      "status": "ok",
+      "rawText": "42 events/aanbiedingen op deze pagina"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "Pagina gelezen",
+      "date": "",
+      "url": "https://groningen.uitloper.nu/?date=1793016000",
+      "status": "ok",
+      "rawText": "61102 tekens HTML"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "Nena",
+      "date": "2026-10-26",
+      "url": "https://groningen.uitloper.nu/muziek/nena-1",
+      "status": "Uitloper agenda-item",
+      "rawText": "Nena 20:00 uur Eén van de grootste zangeressen van de Duitse popcultuur…"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "Culture (ft Kenyatta Hill) & Cedric Myton",
+      "date": "2026-10-26",
+      "url": "https://groningen.uitloper.nu/muziek/culture-ft-kenyatta-hill-cedric-myton",
+      "status": "Uitloper agenda-item",
+      "rawText": "Culture (ft Kenyatta Hill) & Cedric Myton 20:30 uur Twee legendarische reggae-acts op één avond."
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "Open Jazz Session",
+      "date": "2026-10-26",
+      "url": "https://groningen.uitloper.nu/muziek/open-jazz-session-3",
+      "status": "Uitloper agenda-item",
+      "rawText": "Open Jazz Session 21:15 uur Iedere maandagavond gratis Jazz-avond! Samen improviseren,…"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "Open Mic Nait",
+      "date": "2026-10-26",
+      "url": "https://groningen.uitloper.nu/theater/open-mic-nait-14",
+      "status": "Uitloper agenda-item",
+      "rawText": "Open Mic Nait 20:00 uur Ontdek nieuwe comedians en nieuwe grappen tijdens…"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "Thinking Hands",
+      "date": "2026-10-26",
+      "url": "https://groningen.uitloper.nu/kunst/thinking-hands",
+      "status": "Uitloper agenda-item",
+      "rawText": "Thinking Hands Een expositie over de kennis die in ons lichaam zit…"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "Nieuw Licht - De Ploeg",
+      "date": "2026-10-26",
+      "url": "https://groningen.uitloper.nu/kunst/nieuw-licht-%e2%80%93-de-ploeg",
+      "status": "Uitloper agenda-item",
+      "rawText": "Nieuw Licht - De Ploeg Een geheel vernieuwde presentatie van werken van De…"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "Nieuw licht 1: Ani Schulze – The Convent of Pleasure",
+      "date": "2026-10-26",
+      "url": "https://groningen.uitloper.nu/kunst/nieuw-licht-1-ani-schulze-%e2%80%93-the-convent-of-pleasure",
+      "status": "Uitloper agenda-item",
+      "rawText": "Nieuw licht 1: Ani Schulze – The Convent of Pleasure Nieuw licht is een tentoonstellingsreeks waarin het…"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "Keramikos Carrier Bag",
+      "date": "2026-10-26",
+      "url": "https://groningen.uitloper.nu/kunst/keramikos-carrier-bag",
+      "status": "Uitloper agenda-item",
+      "rawText": "Keramikos Carrier Bag Naar aanleiding van onderzoek in Groningen kozen Matthew…"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "The Architect & The Housewife: Cleaning the House, Building the Future",
+      "date": "2026-10-26",
+      "url": "https://groningen.uitloper.nu/kunst/the-architect-the-housewife-cleaning-the-house-building-the-future",
+      "status": "Uitloper agenda-item",
+      "rawText": "The Architect & The Housewife: Cleaning the House, Building the Future De titel van deze tentoonstelling is ontleend aan…"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "Theatraal",
+      "date": "2026-10-26",
+      "url": "https://groningen.uitloper.nu/kunst/theatraal",
+      "status": "Uitloper agenda-item",
+      "rawText": "Theatraal Voor het derde jaar op rij presenteert de Stadsgalerie…"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "VELD Collectief",
+      "date": "2026-10-26",
+      "url": "https://groningen.uitloper.nu/kunst/veld-collectief",
+      "status": "Uitloper agenda-item",
+      "rawText": "VELD Collectief Wie in Groningen een suikerbiet langs de weg ziet…"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "ubiquitousssssssssssssssssugar",
+      "date": "2026-10-26",
+      "url": "https://groningen.uitloper.nu/kunst/ubiquitousssssssssssssssssugar",
+      "status": "Uitloper agenda-item",
+      "rawText": "ubiquitousssssssssssssssssugar Met performances, proeverijen van Goblin Feast, Jonas…"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "Storyworld Spotlight: Asjemenou!",
+      "date": "2026-10-26",
+      "url": "https://groningen.uitloper.nu/kunst/storyworld-spotlight-asjemenou",
+      "status": "Uitloper agenda-item",
+      "rawText": "Storyworld Spotlight: Asjemenou! In 2026 bestaat de Nederlandse televisie 75 jaar…"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "Masterminds. De Geschiedenis van de Groningse Universiteit",
+      "date": "2026-10-26",
+      "url": "https://groningen.uitloper.nu/kunst/masterminds",
+      "status": "Uitloper agenda-item",
+      "rawText": "Masterminds. De Geschiedenis van de Groningse Universiteit Masterminds neemt je mee in de geschiedenis van de…"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "Aletta Jacobskamer",
+      "date": "2026-10-26",
+      "url": "https://groningen.uitloper.nu/kunst/aletta-jacobskamer",
+      "status": "Uitloper agenda-item",
+      "rawText": "Aletta Jacobskamer In de kamer van dr. Aletta Jacobs, de eerste vrouwelijke…"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "Anatomisch Theater",
+      "date": "2026-10-26",
+      "url": "https://groningen.uitloper.nu/kunst/anatomisch-theater",
+      "status": "Uitloper agenda-item",
+      "rawText": "Anatomisch Theater In het anatomisch theater zijn zo’n 50 preparaten…"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "GRID - Puin Hoop: herdruk van de jaren ’80",
+      "date": "2026-10-26",
+      "url": "https://groningen.uitloper.nu/kunst/grid-puin-hoop-herdruk-van-de-jaren-%e2%80%9980",
+      "status": "Uitloper agenda-item",
+      "rawText": "GRID - Puin Hoop: herdruk van de jaren ’80 Een prikkelende expositie over vroeger, die verrassend…"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "Kunstroutes",
+      "date": "2026-10-26",
+      "url": "https://groningen.uitloper.nu/kunst/kunstroutes",
+      "status": "Uitloper agenda-item",
+      "rawText": "Kunstroutes Kunst die je gezien moet hebben en kunst die je misschien…"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "The Wall #9",
+      "date": "2026-10-26",
+      "url": "https://groningen.uitloper.nu/kunst/the-wall-9",
+      "status": "Uitloper agenda-item",
+      "rawText": "The Wall #9 Kunstenaar Indira de Boer maakt een installatie van…"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "Kleur!",
+      "date": "2026-10-26",
+      "url": "https://groningen.uitloper.nu/kunst/kleur-3",
+      "status": "Uitloper agenda-item",
+      "rawText": "Kleur! Tien kunstenaars onderzoeken in de verschillende ruimtes…"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "Otto Krol - Gevels, daken en luchten",
+      "date": "2026-10-26",
+      "url": "https://groningen.uitloper.nu/kunst/otto-krol-gevels-daken-en-luchten-1",
+      "status": "Uitloper agenda-item",
+      "rawText": "Otto Krol - Gevels, daken en luchten Na de stadsgezichten van de vorige expositie eind…"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "Otto Krol - Gevels, daken en luchten",
+      "date": "2026-10-26",
+      "url": "https://groningen.uitloper.nu/kunst/otto-krol-gevels-daken-en-luchten",
+      "status": "Uitloper agenda-item",
+      "rawText": "Otto Krol - Gevels, daken en luchten Na de stadsgezichten van de vorige expositie eind…"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "APPROP.",
+      "date": "2026-10-26",
+      "url": "https://groningen.uitloper.nu/kunst/approp",
+      "status": "Uitloper agenda-item",
+      "rawText": "APPROP. Met APPROP. presenteren ax710 en Jurjen Galema een…"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "Gasten: Paul Kramer",
+      "date": "2026-10-26",
+      "url": "https://groningen.uitloper.nu/kunst/gasten-paul-kramer",
+      "status": "Uitloper agenda-item",
+      "rawText": "Gasten: Paul Kramer Duotentoonstelling met werken van Paul Kramer en Henk…"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "Permanente Expositie",
+      "date": "2026-10-26",
+      "url": "https://groningen.uitloper.nu/kunst/permanente-expositie",
+      "status": "Uitloper agenda-item",
+      "rawText": "Permanente Expositie De vaste tentoonstelling nodigt uit om kennis te nemen…"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "Figuranten",
+      "date": "2026-10-26",
+      "url": "https://groningen.uitloper.nu/kunst/figuranten",
+      "status": "Uitloper agenda-item",
+      "rawText": "Figuranten Sievert Bodde toont zestien fictieve portretten, in…"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "Schilderijen van Marrie Venderink",
+      "date": "2026-10-26",
+      "url": "https://groningen.uitloper.nu/kunst/schilderijen-vanmarrie-venderink",
+      "status": "Uitloper agenda-item",
+      "rawText": "Schilderijen van Marrie Venderink Expositie met schilderijen van Marrie Venderink …"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "Het Witte Vlag Project",
+      "date": "2026-10-26",
+      "url": "https://groningen.uitloper.nu/kunst/het-witte-vlag-project",
+      "status": "Uitloper agenda-item",
+      "rawText": "Het Witte Vlag Project Een groepstentoonstelling met dertien hedendaagse…"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "Lieuwe van Gogh",
+      "date": "2026-10-26",
+      "url": "https://groningen.uitloper.nu/kunst/lieuwe-van-gogh",
+      "status": "Uitloper agenda-item",
+      "rawText": "Lieuwe van Gogh De kleurrijke gevel van Metamorphose gemaakt door…"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "Expositie Overwegend Vrouw (Glimmen)",
+      "date": "2026-10-26",
+      "url": "https://groningen.uitloper.nu/kunst/expositie-overwegend-vrouw-glimmen",
+      "status": "Uitloper agenda-item",
+      "rawText": "Expositie Overwegend Vrouw (Glimmen) Ingrid Veldscholten en Josephine Wortelboer exposeren…"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "Het Witte Vlag Project",
+      "date": "2026-10-26",
+      "url": "https://groningen.uitloper.nu/kunst/het-witte-vlag-project-1",
+      "status": "Uitloper agenda-item",
+      "rawText": "Het Witte Vlag Project In een tijd waarin zekerheden luid klinken en identiteiten…"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "Playing House - kinderbiënnale",
+      "date": "2026-10-26",
+      "url": "https://groningen.uitloper.nu/jeugd/playing-house-kinderbiennale",
+      "status": "Uitloper agenda-item",
+      "rawText": "Playing House - kinderbiënnale Welke bewust of onbewust aangeleerde regels worden…"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "Storyworld spotlight: Super Mario 40 jaar",
+      "date": "2026-10-26",
+      "url": "https://groningen.uitloper.nu/jeugd/storyworld-spotlight-super-mario-40-jaar",
+      "status": "Uitloper agenda-item",
+      "rawText": "Storyworld spotlight: Super Mario 40 jaar Een reis door de tijd, langs de technische én creatieve…"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "Depotrondleidingen: Lichaam & Geest",
+      "date": "2026-10-26",
+      "url": "https://groningen.uitloper.nu/diversen/depotrondleidingen-lichaam-geest",
+      "status": "Uitloper agenda-item",
+      "rawText": "Depotrondleidingen: Lichaam & Geest 14:45 uur Tijdens een rondleiding nemen onze medewerkers je…"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "Beklimming Martinitoren",
+      "date": "2026-10-26",
+      "url": "https://groningen.uitloper.nu/diversen/beklimming-martinitoren-1",
+      "status": "Uitloper agenda-item",
+      "rawText": "Beklimming Martinitoren Bezoekers kunnen op eigen gelegenheid naar boven lopen…"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "Azart - Come Make Art",
+      "date": "2026-10-26",
+      "url": "https://groningen.uitloper.nu/filmhuis/azart-come-make-art",
+      "status": "Uitloper agenda-item",
+      "rawText": "Azart - Come Make Art 20:30 uur De vrolijke en inspirerende documentaire Azart vertelt…"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "Pubquiz",
+      "date": "2026-10-26",
+      "url": "https://groningen.uitloper.nu/quizzen/pubquiz-fourth-monday-repeating-1",
+      "status": "Uitloper agenda-item",
+      "rawText": "Pubquiz 20:00 uur Elke vierde maandag van de maand. Teams van maximaal…"
+    },
+    {
+      "source": "Parser",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "Uitloper-dagpagina",
+      "date": "2026-10-26",
+      "url": "https://groningen.uitloper.nu/?date=1793016000",
+      "status": "gespecialiseerde parser",
+      "rawText": "37 agenda-items op 2026-10-26"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "Pagina geanalyseerd",
+      "date": "",
+      "url": "https://groningen.uitloper.nu/?date=1793016000",
+      "status": "ok",
+      "rawText": "35 events/aanbiedingen op deze pagina"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "Pagina gelezen",
+      "date": "",
+      "url": "https://groningen.uitloper.nu/?date=1793102400",
+      "status": "ok",
+      "rawText": "64251 tekens HTML"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "Nena",
+      "date": "2026-10-27",
+      "url": "https://groningen.uitloper.nu/muziek/nena-1",
+      "status": "Uitloper agenda-item",
+      "rawText": "Nena 20:00 uur Eén van de grootste zangeressen van de Duitse popcultuur…"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "Jon Allen & The Luna Kings",
+      "date": "2026-10-27",
+      "url": "https://groningen.uitloper.nu/muziek/jon-allen-the-luna-kings-2",
+      "status": "Uitloper agenda-item",
+      "rawText": "Jon Allen & The Luna Kings 20:00 uur Britse singer-songwriter mixt Americana met Folk rock…"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "Alma Quartet & Nicolas van Poucke",
+      "date": "2026-10-27",
+      "url": "https://groningen.uitloper.nu/muziek/alma-quartet-nicolas-van-poucke",
+      "status": "Uitloper agenda-item",
+      "rawText": "Alma Quartet & Nicolas van Poucke 20:15 uur Vijf topmusici nemen je mee van Beethovens diepgang…"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "Jethro Tull",
+      "date": "2026-10-27",
+      "url": "https://groningen.uitloper.nu/muziek/jethro-tull",
+      "status": "Uitloper agenda-item",
+      "rawText": "Jethro Tull 20:00 uur Het debuutalbum This Was verscheen in 1968. Na een…"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "JazzJam",
+      "date": "2026-10-27",
+      "url": "https://groningen.uitloper.nu/muziek/jazzjam-95",
+      "status": "Uitloper agenda-item",
+      "rawText": "JazzJam 21:00 uur Met Miquel Rodriguez (piano), Steve Zwanink (bas)…"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "Anas Younes - On Anger & Fatigue",
+      "date": "2026-10-27",
+      "url": "https://groningen.uitloper.nu/theater/anas-younes-on-anger-fatigue",
+      "status": "Uitloper agenda-item",
+      "rawText": "Anas Younes - On Anger & Fatigue 20:00 uur Een lecture-performance die de politiek van waarheidsvertelling,…"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "Hoe de vleesindustrie u inpakt",
+      "date": "2026-10-27",
+      "url": "https://groningen.uitloper.nu/theater/hoe-de-vleesindustrie-u-inpakt",
+      "status": "Uitloper agenda-item",
+      "rawText": "Hoe de vleesindustrie u inpakt 20:00 uur In dit theatercollege onderzoekt Teun van de Keuken…"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "Thinking Hands",
+      "date": "2026-10-27",
+      "url": "https://groningen.uitloper.nu/kunst/thinking-hands",
+      "status": "Uitloper agenda-item",
+      "rawText": "Thinking Hands Een expositie over de kennis die in ons lichaam zit…"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "Nieuw Licht - De Ploeg",
+      "date": "2026-10-27",
+      "url": "https://groningen.uitloper.nu/kunst/nieuw-licht-%e2%80%93-de-ploeg",
+      "status": "Uitloper agenda-item",
+      "rawText": "Nieuw Licht - De Ploeg Een geheel vernieuwde presentatie van werken van De…"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "The Architect & The Housewife: Cleaning the House, Building the Future",
+      "date": "2026-10-27",
+      "url": "https://groningen.uitloper.nu/kunst/the-architect-the-housewife-cleaning-the-house-building-the-future",
+      "status": "Uitloper agenda-item",
+      "rawText": "The Architect & The Housewife: Cleaning the House, Building the Future De titel van deze tentoonstelling is ontleend aan…"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "Nieuw licht 1: Ani Schulze – The Convent of Pleasure",
+      "date": "2026-10-27",
+      "url": "https://groningen.uitloper.nu/kunst/nieuw-licht-1-ani-schulze-%e2%80%93-the-convent-of-pleasure",
+      "status": "Uitloper agenda-item",
+      "rawText": "Nieuw licht 1: Ani Schulze – The Convent of Pleasure Nieuw licht is een tentoonstellingsreeks waarin het…"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "Keramikos Carrier Bag",
+      "date": "2026-10-27",
+      "url": "https://groningen.uitloper.nu/kunst/keramikos-carrier-bag",
+      "status": "Uitloper agenda-item",
+      "rawText": "Keramikos Carrier Bag Naar aanleiding van onderzoek in Groningen kozen Matthew…"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "Theatraal",
+      "date": "2026-10-27",
+      "url": "https://groningen.uitloper.nu/kunst/theatraal",
+      "status": "Uitloper agenda-item",
+      "rawText": "Theatraal Voor het derde jaar op rij presenteert de Stadsgalerie…"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "ubiquitousssssssssssssssssugar",
+      "date": "2026-10-27",
+      "url": "https://groningen.uitloper.nu/kunst/ubiquitousssssssssssssssssugar",
+      "status": "Uitloper agenda-item",
+      "rawText": "ubiquitousssssssssssssssssugar Met performances, proeverijen van Goblin Feast, Jonas…"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "VELD Collectief",
+      "date": "2026-10-27",
+      "url": "https://groningen.uitloper.nu/kunst/veld-collectief",
+      "status": "Uitloper agenda-item",
+      "rawText": "VELD Collectief Wie in Groningen een suikerbiet langs de weg ziet…"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "Storyworld Spotlight: Asjemenou!",
+      "date": "2026-10-27",
+      "url": "https://groningen.uitloper.nu/kunst/storyworld-spotlight-asjemenou",
+      "status": "Uitloper agenda-item",
+      "rawText": "Storyworld Spotlight: Asjemenou! In 2026 bestaat de Nederlandse televisie 75 jaar…"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "Masterminds. De Geschiedenis van de Groningse Universiteit",
+      "date": "2026-10-27",
+      "url": "https://groningen.uitloper.nu/kunst/masterminds",
+      "status": "Uitloper agenda-item",
+      "rawText": "Masterminds. De Geschiedenis van de Groningse Universiteit Masterminds neemt je mee in de geschiedenis van de…"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "Aletta Jacobskamer",
+      "date": "2026-10-27",
+      "url": "https://groningen.uitloper.nu/kunst/aletta-jacobskamer",
+      "status": "Uitloper agenda-item",
+      "rawText": "Aletta Jacobskamer In de kamer van dr. Aletta Jacobs, de eerste vrouwelijke…"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "Anatomisch Theater",
+      "date": "2026-10-27",
+      "url": "https://groningen.uitloper.nu/kunst/anatomisch-theater",
+      "status": "Uitloper agenda-item",
+      "rawText": "Anatomisch Theater In het anatomisch theater zijn zo’n 50 preparaten…"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "GRID - Puin Hoop: herdruk van de jaren ’80",
+      "date": "2026-10-27",
+      "url": "https://groningen.uitloper.nu/kunst/grid-puin-hoop-herdruk-van-de-jaren-%e2%80%9980",
+      "status": "Uitloper agenda-item",
+      "rawText": "GRID - Puin Hoop: herdruk van de jaren ’80 Een prikkelende expositie over vroeger, die verrassend…"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "Kunstroutes",
+      "date": "2026-10-27",
+      "url": "https://groningen.uitloper.nu/kunst/kunstroutes",
+      "status": "Uitloper agenda-item",
+      "rawText": "Kunstroutes Kunst die je gezien moet hebben en kunst die je misschien…"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "The Wall #9",
+      "date": "2026-10-27",
+      "url": "https://groningen.uitloper.nu/kunst/the-wall-9",
+      "status": "Uitloper agenda-item",
+      "rawText": "The Wall #9 Kunstenaar Indira de Boer maakt een installatie van…"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "Kleur!",
+      "date": "2026-10-27",
+      "url": "https://groningen.uitloper.nu/kunst/kleur-3",
+      "status": "Uitloper agenda-item",
+      "rawText": "Kleur! Tien kunstenaars onderzoeken in de verschillende ruimtes…"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "Otto Krol - Gevels, daken en luchten",
+      "date": "2026-10-27",
+      "url": "https://groningen.uitloper.nu/kunst/otto-krol-gevels-daken-en-luchten-1",
+      "status": "Uitloper agenda-item",
+      "rawText": "Otto Krol - Gevels, daken en luchten Na de stadsgezichten van de vorige expositie eind…"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "Otto Krol - Gevels, daken en luchten",
+      "date": "2026-10-27",
+      "url": "https://groningen.uitloper.nu/kunst/otto-krol-gevels-daken-en-luchten",
+      "status": "Uitloper agenda-item",
+      "rawText": "Otto Krol - Gevels, daken en luchten Na de stadsgezichten van de vorige expositie eind…"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "Gasten: Paul Kramer",
+      "date": "2026-10-27",
+      "url": "https://groningen.uitloper.nu/kunst/gasten-paul-kramer",
+      "status": "Uitloper agenda-item",
+      "rawText": "Gasten: Paul Kramer Duotentoonstelling met werken van Paul Kramer en Henk…"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "APPROP.",
+      "date": "2026-10-27",
+      "url": "https://groningen.uitloper.nu/kunst/approp",
+      "status": "Uitloper agenda-item",
+      "rawText": "APPROP. Met APPROP. presenteren ax710 en Jurjen Galema een…"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "Permanente Expositie",
+      "date": "2026-10-27",
+      "url": "https://groningen.uitloper.nu/kunst/permanente-expositie",
+      "status": "Uitloper agenda-item",
+      "rawText": "Permanente Expositie De vaste tentoonstelling nodigt uit om kennis te nemen…"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "Figuranten",
+      "date": "2026-10-27",
+      "url": "https://groningen.uitloper.nu/kunst/figuranten",
+      "status": "Uitloper agenda-item",
+      "rawText": "Figuranten Sievert Bodde toont zestien fictieve portretten, in…"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "Schilderijen van Marrie Venderink",
+      "date": "2026-10-27",
+      "url": "https://groningen.uitloper.nu/kunst/schilderijen-vanmarrie-venderink",
+      "status": "Uitloper agenda-item",
+      "rawText": "Schilderijen van Marrie Venderink Expositie met schilderijen van Marrie Venderink …"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "Het Witte Vlag Project",
+      "date": "2026-10-27",
+      "url": "https://groningen.uitloper.nu/kunst/het-witte-vlag-project",
+      "status": "Uitloper agenda-item",
+      "rawText": "Het Witte Vlag Project Een groepstentoonstelling met dertien hedendaagse…"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "Lieuwe van Gogh",
+      "date": "2026-10-27",
+      "url": "https://groningen.uitloper.nu/kunst/lieuwe-van-gogh",
+      "status": "Uitloper agenda-item",
+      "rawText": "Lieuwe van Gogh De kleurrijke gevel van Metamorphose gemaakt door…"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "Expositie Overwegend Vrouw (Glimmen)",
+      "date": "2026-10-27",
+      "url": "https://groningen.uitloper.nu/kunst/expositie-overwegend-vrouw-glimmen",
+      "status": "Uitloper agenda-item",
+      "rawText": "Expositie Overwegend Vrouw (Glimmen) Ingrid Veldscholten en Josephine Wortelboer exposeren…"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "Het Witte Vlag Project",
+      "date": "2026-10-27",
+      "url": "https://groningen.uitloper.nu/kunst/het-witte-vlag-project-1",
+      "status": "Uitloper agenda-item",
+      "rawText": "Het Witte Vlag Project In een tijd waarin zekerheden luid klinken en identiteiten…"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "Playing House - kinderbiënnale",
+      "date": "2026-10-27",
+      "url": "https://groningen.uitloper.nu/jeugd/playing-house-kinderbiennale",
+      "status": "Uitloper agenda-item",
+      "rawText": "Playing House - kinderbiënnale Welke bewust of onbewust aangeleerde regels worden…"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "Storyworld spotlight: Super Mario 40 jaar",
+      "date": "2026-10-27",
+      "url": "https://groningen.uitloper.nu/jeugd/storyworld-spotlight-super-mario-40-jaar",
+      "status": "Uitloper agenda-item",
+      "rawText": "Storyworld spotlight: Super Mario 40 jaar Een reis door de tijd, langs de technische én creatieve…"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "Trumps Amerika: chaos en gevaar?",
+      "date": "2026-10-27",
+      "url": "https://groningen.uitloper.nu/diversen/trumps-amerika-chaos-en-gevaar",
+      "status": "Uitloper agenda-item",
+      "rawText": "Trumps Amerika: chaos en gevaar? 20:15 uur Laila Frank, Anna van Zoest en Bob Deen analyseren…"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "Depotrondleidingen: Lichaam & Geest",
+      "date": "2026-10-27",
+      "url": "https://groningen.uitloper.nu/diversen/depotrondleidingen-lichaam-geest",
+      "status": "Uitloper agenda-item",
+      "rawText": "Depotrondleidingen: Lichaam & Geest 14:45 uur Tijdens een rondleiding nemen onze medewerkers je…"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "Beklimming Martinitoren",
+      "date": "2026-10-27",
+      "url": "https://groningen.uitloper.nu/diversen/beklimming-martinitoren-1",
+      "status": "Uitloper agenda-item",
+      "rawText": "Beklimming Martinitoren Bezoekers kunnen op eigen gelegenheid naar boven lopen…"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "Studium Generale: US Midterms",
+      "date": "2026-10-27",
+      "url": "https://groningen.uitloper.nu/diversen/studium-generale-us-midterms",
+      "status": "Uitloper agenda-item",
+      "rawText": "Studium Generale: US Midterms 20:30 uur In deze aflevering van 'Let's Ask' bespreekt Mark…"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "Zienema: The Fly",
+      "date": "2026-10-27",
+      "url": "https://groningen.uitloper.nu/filmhuis/zienema-the-fly",
+      "status": "Uitloper agenda-item",
+      "rawText": "Zienema: The Fly 20:30 uur Halloween-special, en de sfeer is dit jaar gory. Héél…"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "Pubquiz",
+      "date": "2026-10-27",
+      "url": "https://groningen.uitloper.nu/quizzen/pubquiz-fourth-monday-repeating-1",
+      "status": "Uitloper agenda-item",
+      "rawText": "Pubquiz 20:00 uur Elke vierde maandag van de maand. Teams van maximaal…"
+    },
+    {
+      "source": "Parser",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "Uitloper-dagpagina",
+      "date": "2026-10-27",
+      "url": "https://groningen.uitloper.nu/?date=1793102400",
+      "status": "gespecialiseerde parser",
+      "rawText": "42 agenda-items op 2026-10-27"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "Pagina geanalyseerd",
+      "date": "",
+      "url": "https://groningen.uitloper.nu/?date=1793102400",
+      "status": "ok",
+      "rawText": "40 events/aanbiedingen op deze pagina"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningen.uitloper.nu/",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://groningen.uitloper.nu/",
+      "status": "klaar",
+      "rawText": "site 1/19: 12 unieke events in 2.32 sec"
+    }
+  ],
   "status": "running",
   "siteStartedAt": "2026-10-25T18:03:33+00:00",
-  "siteElapsedSeconds": 0,
-  "sitePageCount": 0,
-  "lastSiteEventCount": 0,
-  "stage": "Websitepagina ophalen",
-  "lastUpdatedAt": "2026-10-25T18:03:33+00:00"
+  "siteElapsedSeconds": 4,
+  "sitePageCount": 3,
+  "lastSiteEventCount": 12,
+  "stage": "Website klaar; volgende website voorbereiden",
+  "lastUpdatedAt": "2026-10-25T18:03:37+00:00",
+  "lastSiteNewEventCount": 12,
+  "lastCompletedSite": "https://groningen.uitloper.nu/",
+  "lastCompletedAt": "2026-10-25T18:03:37+00:00"
 }
