@@ -2535,32 +2535,9 @@ def scrape_site(site_url, site_index=0, site_total=0, progress_callback=None, ex
                 ]
             detail_links.extend(found_links)
 
-    # Detail-first agenda's moeten eerst hun echte eventpagina's verwerken.
-    # Feed-endpoints kunnen traag zijn en anders de volledige site-begroting
-    # opgebruiken voordat Forum/Kultuuragenda/Paradiso/DNK/Visit Groningen
-    # ook maar één eventdetail heeft kunnen uitlezen.
-    if canonical_host(normalized_site) in {
-        "forum.nl", "kultuuragenda.nl", "paradiso.nl",
-        "denieuwekolk.nl", "visitgroningen.nl",
-    }:
-        feed_urls = []
-
-    # Verwerk gevonden openbare feeds rechtstreeks; dit vereist geen API-key of AI.
-    for feed_url in unique_urls(feed_urls):
-        if time.monotonic() >= deadline or new_event_count(events) >= MAX_EVENTS_PER_SITE:
-            break
-        try:
-            feed_response = session.get(feed_url, headers=REQUEST_HEADERS, timeout=remaining_timeout(deadline), allow_redirects=True)
-            if feed_response.status_code >= 400:
-                add_raw("RSS/Atom", original_site, "Feed mislukt", "", feed_url, "fout", f"HTTP {feed_response.status_code}")
-                continue
-            feed_events = parse_feed_events(feed_response.text, feed_response.url, normalized_site)
-            events.extend(feed_events)
-            add_raw("RSS/Atom", original_site, "Feed geanalyseerd", "", feed_response.url, "ok", f"{len(feed_events)} events uit openbare feed")
-            detail_links.extend(event.get("website", "") for event in feed_events)
-        except Exception as exc:
-            add_raw("RSS/Atom", original_site, "Feed mislukt", "", feed_url, "fout", str(exc))
-
+    # Eventdetailpagina's krijgen voorrang boven RSS/Atom: die feeds kunnen
+    # traag zijn en mogen de ingestelde zoektijd niet opsouperen voordat echte
+    # agenda-items zijn uitgelezen.
     serp_links = serpapi_links_for_site(normalized_site)
     for link in serp_links:
         add_raw("SerpAPI", original_site, "Detail-link", "", link, "ingepland", "SerpAPI-link wordt alleen als detailpagina gecontroleerd")
@@ -2686,6 +2663,22 @@ def scrape_site(site_url, site_index=0, site_total=0, progress_callback=None, ex
             add_raw(discovery_source, original_site, "Detailpagina geanalyseerd", "", final_url, "ok", f"{max(0, after - before)} extra events")
         except Exception as exc:
             add_raw(discovery_source, original_site, "Detailpagina mislukt", "", detail_url, "fout", str(exc))
+
+    # Verwerk openbare feeds pas nadat directe evenementdetailpagina's zijn
+    # geprobeerd. Als de tijd op is, blijven de al gevonden evenementen behouden.
+    for feed_url in unique_urls(feed_urls):
+        if time.monotonic() >= deadline or new_event_count(events) >= MAX_EVENTS_PER_SITE:
+            break
+        try:
+            feed_response = session.get(feed_url, headers=REQUEST_HEADERS, timeout=remaining_timeout(deadline), allow_redirects=True)
+            if feed_response.status_code >= 400:
+                add_raw("RSS/Atom", original_site, "Feed mislukt", "", feed_url, "fout", f"HTTP {feed_response.status_code}")
+                continue
+            feed_events = parse_feed_events(feed_response.text, feed_response.url, normalized_site)
+            events.extend(feed_events)
+            add_raw("RSS/Atom", original_site, "Feed geanalyseerd", "", feed_response.url, "ok", f"{len(feed_events)} events uit openbare feed")
+        except Exception as exc:
+            add_raw("RSS/Atom", original_site, "Feed mislukt", "", feed_url, "fout", str(exc))
 
     unique = dedupe_events(events)
     # Treat the selected start date as an inclusive lower bound. If no date was selected,
