@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-25T15:16:32+00:00",
+  "updatedAt": "2026-10-25T15:16:37+00:00",
   "events": [
     {
       "date": "2026-10-25",
@@ -11777,6 +11777,13 @@
       "newCount": 0,
       "durationSeconds": 2.02,
       "timedOut": true
+    },
+    {
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 2.0,
+      "timedOut": true
     }
   ],
   "rawLog": [
@@ -12949,6 +12956,42 @@
       "url": "https://groningermuseum.nl/programma",
       "status": "klaar",
       "rawText": "site 9/19: 0 unieke events in 2.02 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Start",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda",
+      "status": "start",
+      "rawText": "site 10/19: max 5 events, max 2 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda",
+      "status": "strategie",
+      "rawText": "universele detailpagina-parser (Kultuuragenda)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Pagina mislukt",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda",
+      "status": "fout",
+      "rawText": "HTTPSConnectionPool(host='www.kultuuragenda.nl', port=443): Read timed out. (read timeout=1.0686792869999948)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda",
+      "status": "klaar",
+      "rawText": "site 10/19: 0 unieke events in 2.0 sec"
     }
   ]
 }

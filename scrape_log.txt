@@ -128,3 +128,7 @@ Website	https://groningermuseum.nl/programma	detail-link gevonden	Schoolklassen 
 Website	https://groningermuseum.nl/programma	detail-link gevonden	Toegankelijkheid		https://groningermuseum.nl/toegankelijkheid	Toegankelijkheid
 Filter	https://groningermuseum.nl/programma	ok	Datumfilter toegepast	2026-10-25	https://groningermuseum.nl/programma	20 gevonden; 13 binnen 2026-10-25 t/m onbeperkt
 Website	https://groningermuseum.nl/programma	klaar	Klaar		https://groningermuseum.nl/programma	site 9/19: 0 unieke events in 2.02 sec
+Website	https://www.kultuuragenda.nl/agenda	start	Start		https://www.kultuuragenda.nl/agenda	site 10/19: max 5 events, max 2 seconden
+Parser	https://www.kultuuragenda.nl/agenda	strategie	Scrapertype vastgesteld		https://www.kultuuragenda.nl/agenda	universele detailpagina-parser (Kultuuragenda)
+Website	https://www.kultuuragenda.nl/agenda	fout	Pagina mislukt		https://www.kultuuragenda.nl/agenda	HTTPSConnectionPool(host='www.kultuuragenda.nl', port=443): Read timed out. (read timeout=1.0686792869999948)
+Website	https://www.kultuuragenda.nl/agenda	klaar	Klaar		https://www.kultuuragenda.nl/agenda	site 10/19: 0 unieke events in 2.0 sec
