@@ -2246,9 +2246,29 @@ def parse_feed_events(feed_text, feed_url, site_url):
 
 def scrape_site(site_url, site_index=0, site_total=0, progress_callback=None, existing_event_keys=None):
     existing_event_keys = set(existing_event_keys or set())
+    # Apply the requested date window while counting toward the per-scan cap.
+    # Otherwise old/out-of-range cards can consume the limit before valid events are found.
+    try:
+        scan_date_from = date.fromisoformat(INPUT_DATE_FROM[:10]) if INPUT_DATE_FROM else TODAY
+    except ValueError:
+        scan_date_from = TODAY
+    try:
+        scan_date_to = date.fromisoformat(INPUT_DATE_TO[:10]) if INPUT_DATE_TO and INPUT_DATE_TO[:10] != "9999-12-31" else None
+    except ValueError:
+        scan_date_to = None
+
+    def event_in_date_window(event):
+        try:
+            event_day = date.fromisoformat(str(event.get("date", ""))[:10])
+        except (TypeError, ValueError):
+            return False
+        return event_day >= scan_date_from and (scan_date_to is None or event_day <= scan_date_to)
 
     def new_event_count(candidates):
-        return sum(1 for event in dedupe_events(candidates) if event_key(event) not in existing_event_keys)
+        return sum(
+            1 for event in dedupe_events(candidates)
+            if event_key(event) not in existing_event_keys and event_in_date_window(event)
+        )
 
     original_site = clean_text(site_url)
     normalized_site = normalized_url(original_site)
@@ -2680,7 +2700,7 @@ def scrape_site(site_url, site_index=0, site_total=0, progress_callback=None, ex
         {
             "site": original_site,
             "count": len(unique),
-            "newCount": 0,
+            "newCount": len(unique),
             "durationSeconds": duration,
             "timedOut": timed_out,
         }
@@ -2746,15 +2766,11 @@ def save_payload(events, archive, previous_all_keys):
     for event in events:
         event["isNew"] = event_key(event) not in previous_all_keys
 
-    site_new_counts = {}
-    for event in events:
-        if event_key(event) in previous_all_keys:
-            continue
-        host = canonical_host(event.get("website", ""))
-        site_new_counts[host] = site_new_counts.get(host, 0) + 1
-
+    # SITE_RESULTS are recorded by the source site that discovered each event.
+    # Do not recount by event URL host here: ticket links can live on a different
+    # subdomain (for example tickets.example.org), which would incorrectly show 0.
     for result in SITE_RESULTS:
-        result["newCount"] = site_new_counts.get(canonical_host(result.get("site", "")), 0)
+        result["newCount"] = int(result.get("count") or 0)
 
     payload = {
         "schemaVersion": 2,
@@ -2887,6 +2903,11 @@ def main():
             add_raw("Website", site, "Site mislukt", "", site, "fout", str(exc))
             SITE_RESULTS.append({"site": site, "count": 0, "newCount": 0, "durationSeconds": 0, "timedOut": False})
         site_events = dedupe_events(all_events[before_count:])
+        # Keep the source site's result count accurate as soon as this site finishes;
+        # do not wait until the entire multi-site scan is saved.
+        if SITE_RESULTS and canonical_host(SITE_RESULTS[-1].get("site", "")) == canonical_host(site):
+            SITE_RESULTS[-1]["count"] = len(site_events)
+            SITE_RESULTS[-1]["newCount"] = len(site_events)
         progress["completedCount"] = index
         progress["lastCompletedSite"] = site
         progress["stage"] = "Website klaar; volgende website voorbereiden"
