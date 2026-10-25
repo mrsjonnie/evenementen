@@ -844,8 +844,35 @@ def dedupe_events(events):
     return sorted(by_key.values(), key=lambda item: (item.get("date", "9999-99-99"), item.get("title", "")))
 
 
+def kultuuragenda_title_from_url(page_url):
+    """Recover a readable activity title from Kultuuragenda detail slugs when page headings are generic."""
+    path = urlparse(page_url).path
+    match = re.search(r"/agenda/\\d+/([^/?#]+)", path, re.I)
+    if not match:
+        return ""
+    slug = match.group(1).replace("-", " ").strip()
+    if not slug:
+        return ""
+    # Kultuuragenda commonly encodes the series prefix as "classics-<film title>".
+    if slug.lower().startswith("classics "):
+        return "Classics: " + slug[len("classics "):].title()
+    return slug.title()
+
+
 def extract_detail_event(soup, page_url, site_url, discovery_source):
-    title = page_title(soup) or meta_content(soup, "og:title", "twitter:title")
+    host = canonical_host(site_url)
+    if host == "kultuuragenda.nl":
+        # Some detail pages expose a generic H1 (for example "Het"). Prefer social
+        # metadata/document title, and fall back to the event-specific URL slug.
+        title = meta_content(soup, "og:title", "twitter:title")
+        if not title and soup.title:
+            title = clean_title(soup.title.get_text(" ", strip=True))
+        if not title or not title_is_usable(title):
+            title = kultuuragenda_title_from_url(page_url)
+        if not title or not title_is_usable(title):
+            title = page_title(soup)
+    else:
+        title = page_title(soup) or meta_content(soup, "og:title", "twitter:title")
     description = meta_content(soup, "description", "og:description", "twitter:description")
     text = soup.get_text(" ", strip=True)
     raw = {
