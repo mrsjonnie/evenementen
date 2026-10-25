@@ -198,6 +198,7 @@ DEFAULT_LOCATIONS = {
     "paradiso.nl": "Paradiso Amsterdam",
     "vvvameland.nl": "Ameland",
     "biosagenda.nl": "Groningen",
+    "pathe.nl": "Pathé Groningen",
     "filmvandaag.nl": "Groningen",
     "denieuwekolk.nl": "De Nieuwe Kolk Assen",
 }
@@ -312,6 +313,8 @@ def detect_scraper_type(site_url):
         return "universele detailpagina-parser (Kultuuragenda)"
     if host == "noorderzon.nl":
         return "universele programma- en detailpagina-parser"
+    if host == "pathe.nl":
+        return "Pathé specials & evenementen (detailpagina’s)"
     if host == "biosagenda.nl":
         return "bioscoopfilms en speeldata (BiosAgenda Groningen)"
     if host == "filmvandaag.nl":
@@ -1474,6 +1477,14 @@ def start_urls_for_site(site_url):
             urljoin(base, "/kortingsbonnen/groningen"),
             urljoin(base, "/kortingsbonnen"),
             urljoin(base, "/"),
+        ])
+    if host == "pathe.nl":
+        # Pathé's current Dutch entry point redirects to /nl; /films also redirects there.
+        base = f"{parsed.scheme}://{parsed.netloc}"
+        return unique_urls([
+            urljoin(base, "/nl"),
+            urljoin(base, "/en/films"),
+            urljoin(base, "/nl/films"),
         ])
     if host == "simplon.nl":
         return [urljoin(exact, "/programma/")]
