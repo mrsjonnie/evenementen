@@ -1206,11 +1206,29 @@
       "url": "https://www.ibood.com/s-nl",
       "status": "klaar",
       "rawText": "site 3/5: 0 unieke events in 1.98 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningermuseum.nl/programma",
+      "title": "Start",
+      "date": "",
+      "url": "https://groningermuseum.nl/programma",
+      "status": "start",
+      "rawText": "site 4/5: max 20 events, max 20 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://groningermuseum.nl/programma",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://groningermuseum.nl/programma",
+      "status": "strategie",
+      "rawText": "universele tentoonstellings- en activiteitenparser"
     }
   ],
   "status": "running",
   "stage": "Websitepagina ophalen",
-  "lastUpdatedAt": "2026-10-25T10:44:21+00:00",
+  "lastUpdatedAt": "2026-10-25T10:44:22+00:00",
   "lastSiteEventCount": 0,
   "lastCompletedSite": "https://www.ibood.com/s-nl",
   "lastCompletedAt": "2026-10-25T10:44:20+00:00"
