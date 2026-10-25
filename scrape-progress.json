@@ -1,145 +1,16 @@
 {
   "runId": "2026-10-25T10:20:37+00:00",
   "startedAt": "2026-10-25T10:20:37+00:00",
-  "completedCount": 2,
+  "completedCount": 3,
   "totalSites": 19,
   "currentSite": "https://www.visitgroningen.nl/nl/doen/wandelen",
   "currentSiteIndex": 3,
   "completedSites": [
     "https://groningen.uitloper.nu/",
-    "https://www.visitgroningen.nl/nl/doen/evenementen"
+    "https://www.visitgroningen.nl/nl/doen/evenementen",
+    "https://www.visitgroningen.nl/nl/doen/wandelen"
   ],
   "events": [
-    {
-      "date": "2026-10-25",
-      "title": "Dit is Groningen",
-      "type": "Wandelen",
-      "location": "Groningen",
-      "website": "https://www.visitgroningen.nl/nl/ontdekken",
-      "description": "Terug Dit is Groningen Top 10 bezienswaardigheden In Groningen ligt het allemaal opvallend dicht bij elkaar. De levendigheid van de stad, de stilte van een hofje, de weidsheid van het ommeland en de sporen van een eeuwenoud verleden. Stad Provincie Waddenkust Natuurgebieden",
-      "cost": "Gratis",
-      "discoverySource": "Website"
-    },
-    {
-      "date": "2026-10-25",
-      "title": "Een dag op pad in Groningen stad",
-      "type": "Wandelen",
-      "location": "Groningen",
-      "website": "https://www.visitgroningen.nl/nl/blogs/een-dag-op-pad-in-groningen-stad",
-      "description": "Een dag op pad in Groningen stad",
-      "cost": "Gratis",
-      "discoverySource": "Website"
-    },
-    {
-      "date": "2026-10-25",
-      "title": "Een week in Stad en Ommeland",
-      "type": "Wandelen",
-      "location": "Groningen",
-      "website": "https://www.visitgroningen.nl/nl/blogs/een-week-in-stad-en-ommeland",
-      "description": "Een week in Stad en Ommeland",
-      "cost": "Gratis",
-      "discoverySource": "Website"
-    },
-    {
-      "date": "2026-10-25",
-      "title": "Eten & drinken",
-      "type": "Wandelen",
-      "location": "Groningen",
-      "website": "https://www.visitgroningen.nl/nl/doen/eten-en-drinken",
-      "description": "Eten & drinken",
-      "cost": "Gratis",
-      "discoverySource": "Website"
-    },
-    {
-      "date": "2026-10-25",
-      "title": "Fietsen",
-      "type": "Wandelen",
-      "location": "Groningen",
-      "website": "https://www.visitgroningen.nl/nl/doen/fietsen",
-      "description": "Fietsen",
-      "cost": "Gratis",
-      "discoverySource": "Website"
-    },
-    {
-      "date": "2026-10-25",
-      "title": "Lunchen in de stad",
-      "type": "Wandelen",
-      "location": "Groningen",
-      "website": "https://www.visitgroningen.nl/nl/blogs/lunchen-in-groningen",
-      "description": "Lunchen in de stad",
-      "cost": "Gratis",
-      "discoverySource": "Website"
-    },
-    {
-      "date": "2026-10-25",
-      "title": "Met kinderen",
-      "type": "Wandelen",
-      "location": "Groningen",
-      "website": "https://www.visitgroningen.nl/nl/doen/met-kinderen",
-      "description": "Met kinderen",
-      "cost": "Gratis",
-      "discoverySource": "Website"
-    },
-    {
-      "date": "2026-10-25",
-      "title": "Natuurgebieden",
-      "type": "Wandelen",
-      "location": "Groningen",
-      "website": "https://www.visitgroningen.nl/nl/ontdekken/natuur",
-      "description": "Natuurgebieden",
-      "cost": "Gratis",
-      "discoverySource": "Website"
-    },
-    {
-      "date": "2026-10-25",
-      "title": "Nieuwe winkels & horeca in de stad",
-      "type": "Wandelen",
-      "location": "Groningen",
-      "website": "https://www.visitgroningen.nl/nl/blogs/nieuwe-winkels-en-horeca-groningen",
-      "description": "Nieuwe winkels & horeca in de stad",
-      "cost": "Gratis",
-      "discoverySource": "Website"
-    },
-    {
-      "date": "2026-10-25",
-      "title": "Nu & nieuw",
-      "type": "Wandelen",
-      "location": "Groningen",
-      "website": "https://www.visitgroningen.nl/nl/nu-nieuw",
-      "description": "Terug Nu & nieuw Uitagenda Nieuwe winkels & horeca in de stad Oktober donkertemaand Het 10-jarig bestaan van Dark Sky Park Lauwersmeer staat in het teken van donker. Het is hoog tijd om de schoonheid van de duisternis te gaan ontdekken. Sunnemeerten",
-      "cost": "Gratis",
-      "discoverySource": "Website"
-    },
-    {
-      "date": "2026-10-25",
-      "title": "Overnachten",
-      "type": "Wandelen",
-      "location": "Groningen",
-      "website": "https://www.visitgroningen.nl/nl/doen/overnachten",
-      "description": "Overnachten",
-      "cost": "Gratis",
-      "discoverySource": "Website"
-    },
-    {
-      "date": "2026-10-25",
-      "title": "Provincie",
-      "type": "Wandelen",
-      "location": "Groningen",
-      "website": "https://www.visitgroningen.nl/nl/ontdekken/provincie",
-      "description": "Provincie",
-      "cost": "Gratis",
-      "discoverySource": "Website"
-    },
-    {
-      "date": "2026-10-25",
-      "title": "Reisideeën",
-      "type": "Wandelen",
-      "location": "Groningen",
-      "website": "https://www.visitgroningen.nl/nl/reisideeen",
-      "description": "Terug Reisideeën Een week in Stad en Ommeland Een dag op pad in Groningen stad Dagtripjes zonder auto De rijkdom van Groningen is haar veranderlijke landschap. Binnen een mum van tijd sta je vanuit de stad aan de Waddenzee, midden in het groen of bij een schattig wierdedorp. Lunchen in de stad Naar het museum",
-      "cost": "Gratis",
-      "discoverySource": "Website"
-    },
     {
       "date": "2026-10-25",
       "time": "",
@@ -170,16 +41,6 @@
     },
     {
       "date": "2026-10-25",
-      "title": "Stad",
-      "type": "Wandelen",
-      "location": "Groningen",
-      "website": "https://www.visitgroningen.nl/nl/ontdekken/stad",
-      "description": "Stad",
-      "cost": "Gratis",
-      "discoverySource": "Website"
-    },
-    {
-      "date": "2026-10-25",
       "time": "",
       "title": "Sunday Assembly",
       "type": "Activiteit",
@@ -191,16 +52,6 @@
       "description": "Sunday Assembly | Verwondering Sunday Assembly | Verwondering Voeg toe als favoriet Voeg toe als favoriet",
       "cost": "",
       "image": "https://assets.plaece.nl/thumb/TSsc9Am723mAqxTO15yMEgtXIP9z9lCItJE4teE5A7E/resizing_type:fit/width:500/height:0/gravity:sm/enlarge:0/aHR0cHM6Ly9hc3NldHMucGxhZWNlLm5sL29kcC1ncm9uaW5nZW4vaW1hZ2UvZTdhZDAxNTZjMzI5NjA4MTI2MDU2NDQwY2RiMjQ1ZGQ3Y2FjNDc5Yl8wMWExMjIxYi1hZTE4LTdmMzYtOWViOC05NmM5MDZhZWQzNjkuanBn.jpg"
-    },
-    {
-      "date": "2026-10-25",
-      "title": "Sunnemeerten",
-      "type": "Wandelen",
-      "location": "Groningen",
-      "website": "https://www.visitgroningen.nl/nl/blogs/sunnemeerten",
-      "description": "Sunnemeerten",
-      "cost": "Gratis",
-      "discoverySource": "Website"
     },
     {
       "date": "2026-10-25",
@@ -229,16 +80,6 @@
       "description": "Voeg toe als favoriet Voeg toe als favoriet",
       "cost": "",
       "image": "https://assets.plaece.nl/thumb/u98I5iFRm72vZD7nnGOUtJswlrV7sH6EC0tf9eSpYB4/resizing_type:fit/width:500/height:0/gravity:sm/enlarge:0/aHR0cHM6Ly9hc3NldHMucGxhZWNlLm5sL29kcC1ncm9uaW5nZW4vaW1hZ2UvNTRiNTQzNGJmOTkwNDBhZjI0ZjJlN2EwMzY1NmUwY2NlYTBkMzg4NF8wMWExNmI5OC04MTMxLTdiODQtYmI3YS1jMDQwYjk5MzE2OGUuanBn.jpg"
-    },
-    {
-      "date": "2026-10-25",
-      "title": "Theater, muziek en musea",
-      "type": "Wandelen",
-      "location": "Groningen",
-      "website": "https://www.visitgroningen.nl/nl/doen/cultuur",
-      "description": "Theater, muziek en musea",
-      "cost": "Gratis",
-      "discoverySource": "Website"
     },
     {
       "date": "2026-10-25",
@@ -284,16 +125,6 @@
     },
     {
       "date": "2026-10-25",
-      "title": "Uitagenda",
-      "type": "Wandelen",
-      "location": "Groningen",
-      "website": "https://www.visitgroningen.nl/nl/doen/uitgaan",
-      "description": "Uitagenda",
-      "cost": "Gratis",
-      "discoverySource": "Website"
-    },
-    {
-      "date": "2026-10-25",
       "time": "13:30",
       "title": "Voeg toe als favoriet",
       "type": "Activiteit",
@@ -305,16 +136,6 @@
       "description": "Ernst, Bobbie en de Rest (3+) | 13:30 uur Ernst, Bobbie en de Rest (3+) | 13:30 uur",
       "cost": "",
       "image": ""
-    },
-    {
-      "date": "2026-10-25",
-      "title": "Waddenkust",
-      "type": "Wandelen",
-      "location": "Groningen",
-      "website": "https://www.visitgroningen.nl/nl/plekken/wadden",
-      "description": "Waddenkust",
-      "cost": "Gratis",
-      "discoverySource": "Website"
     },
     {
       "date": "2026-10-25",
@@ -332,16 +153,6 @@
     },
     {
       "date": "2026-10-25",
-      "title": "Wat te doen",
-      "type": "Wandelen",
-      "location": "Groningen",
-      "website": "https://www.visitgroningen.nl/nl/doen",
-      "description": "Terug Wat te doen Bijzonder overnachten Overnachten was nog nooit zo leuk. Van slapen in een voormalige graanzolder van een molen tot overnachten in een iglo van stro: Groningen biedt voor ieder wat wils. Fietsen Wandelen Eten & drinken Winkelen Overnachten Met kinderen Theater, muziek en musea",
-      "cost": "Gratis",
-      "discoverySource": "Website"
-    },
-    {
-      "date": "2026-10-25",
       "time": "",
       "title": "Wat zoek je",
       "type": "Concert",
@@ -353,16 +164,6 @@
       "description": "Vind jouw bestemming In en om Groningen Afstand tot mijn locatie",
       "cost": "",
       "image": ""
-    },
-    {
-      "date": "2026-10-25",
-      "title": "Winkelen",
-      "type": "Wandelen",
-      "location": "Groningen",
-      "website": "https://www.visitgroningen.nl/nl/doen/shoppen",
-      "description": "Winkelen",
-      "cost": "Gratis",
-      "discoverySource": "Website"
     },
     {
       "date": "2026-10-25",
@@ -784,6 +585,13 @@
       "count": 20,
       "newCount": 0,
       "durationSeconds": 6.75,
+      "timedOut": false
+    },
+    {
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 7.37,
       "timedOut": false
     }
   ],
@@ -3838,11 +3646,65 @@
       "url": "https://www.visitgroningen.nl/nl/doen/wandelkaart-groningen",
       "status": "ok",
       "rawText": "0 events/aanbiedingen op deze pagina"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/feed",
+      "status": "fout",
+      "rawText": "HTTP 404"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/rss",
+      "status": "fout",
+      "rawText": "HTTP 404"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/rss.xml",
+      "status": "fout",
+      "rawText": "HTTP 404"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/feed.xml",
+      "status": "fout",
+      "rawText": "HTTP 404"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/events/feed/",
+      "status": "fout",
+      "rawText": "HTTP 404"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "status": "klaar",
+      "rawText": "site 3/19: 0 unieke events in 7.37 sec"
     }
   ],
   "status": "running",
   "lastUpdatedAt": "2026-10-25T10:20:56+00:00",
-  "lastSiteEventCount": 20,
-  "lastCompletedSite": "https://www.visitgroningen.nl/nl/doen/evenementen",
-  "lastCompletedAt": "2026-10-25T10:20:51+00:00"
+  "lastSiteEventCount": 0,
+  "lastCompletedSite": "https://www.visitgroningen.nl/nl/doen/wandelen",
+  "lastCompletedAt": "2026-10-25T10:21:01+00:00"
 }
