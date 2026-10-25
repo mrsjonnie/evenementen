@@ -461,3 +461,7 @@ Website	https://www.socialdeal.nl/	deal gevonden	Borrelplank + 3 wijnen of biere
 Parser	https://www.socialdeal.nl/	ok	Social Deal-telling		https://www.socialdeal.nl/dichtbij/groningen/	5 aanbiedingen gevonden (limiet 5)
 Website	https://www.socialdeal.nl/	ok	Pagina geanalyseerd		https://www.socialdeal.nl/dichtbij/groningen/	5 events/aanbiedingen op deze pagina
 Website	https://www.socialdeal.nl/	klaar	Klaar		https://www.socialdeal.nl/	site 16/19: 5 unieke events in 4.12 sec
+Website	https://denieuwekolk.nl/agenda	start	Start		https://denieuwekolk.nl/agenda	site 17/19: max 5 events, max 2 seconden
+Parser	https://denieuwekolk.nl/agenda	strategie	Scrapertype vastgesteld		https://denieuwekolk.nl/agenda	agenda-kaarten + datumregels (De Nieuwe Kolk)
+Website	https://denieuwekolk.nl/agenda	fout	Pagina mislukt		https://denieuwekolk.nl/agenda	HTTPSConnectionPool(host='denieuwekolk.nl', port=443): Read timed out. (read timeout=0.9874488739999947)
+Website	https://denieuwekolk.nl/agenda	klaar	Klaar		https://denieuwekolk.nl/agenda	site 17/19: 0 unieke events in 3.06 sec
