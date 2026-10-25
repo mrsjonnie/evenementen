@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-25T16:13:20+00:00",
+  "updatedAt": "2026-10-25T16:13:24+00:00",
   "events": [
     {
       "date": "2026-10-25",
@@ -154,6 +154,13 @@
       "count": 5,
       "newCount": 5,
       "durationSeconds": 3.5,
+      "timedOut": true
+    },
+    {
+      "site": "https://forum.nl/nl/agenda",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 2,
       "timedOut": true
     }
   ],
@@ -589,6 +596,51 @@
       "url": "https://www.visitgroningen.nl/nl/doen/wandelen",
       "status": "klaar",
       "rawText": "site 3/19: 5 unieke events in 3.5 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "Start",
+      "date": "",
+      "url": "https://forum.nl/nl/agenda",
+      "status": "start",
+      "rawText": "site 4/19: max 5 events, max 2 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://forum.nl/nl/agenda",
+      "status": "strategie",
+      "rawText": "universeel-eventkaarten"
+    },
+    {
+      "source": "Website",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "Pagina gelezen",
+      "date": "",
+      "url": "https://forum.nl/nl/agenda",
+      "status": "ok",
+      "rawText": "176297 tekens HTML"
+    },
+    {
+      "source": "Parser",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "Forum detailstrategie",
+      "date": "",
+      "url": "https://forum.nl/nl/agenda",
+      "status": "strategie",
+      "rawText": "Overzicht overslaan; alleen /nl/agenda/<event> detailpagina's verwerken"
+    },
+    {
+      "source": "Website",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "Site-time-out",
+      "date": "",
+      "url": "https://forum.nl/nl/agenda",
+      "status": "timeout",
+      "rawText": "site overschreed de harde tijdslimiet van 2 seconden"
     }
   ]
 }

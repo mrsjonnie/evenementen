@@ -46,3 +46,8 @@ Website	https://www.visitgroningen.nl/nl/doen/wandelen	wandelroute gevonden	Dit 
 Parser	https://www.visitgroningen.nl/nl/doen/wandelen	gespecialiseerde parser	Visit Groningen wandelroutes		https://www.visitgroningen.nl/nl/doen/wandelen	5 wandelroutes/activiteiten gevonden
 Website	https://www.visitgroningen.nl/nl/doen/wandelen	ok	Pagina geanalyseerd		https://www.visitgroningen.nl/nl/doen/wandelen	5 events/aanbiedingen op deze pagina
 Website	https://www.visitgroningen.nl/nl/doen/wandelen	klaar	Klaar		https://www.visitgroningen.nl/nl/doen/wandelen	site 3/19: 5 unieke events in 3.5 sec
+Website	https://forum.nl/nl/agenda	start	Start		https://forum.nl/nl/agenda	site 4/19: max 5 events, max 2 seconden
+Parser	https://forum.nl/nl/agenda	strategie	Scrapertype vastgesteld		https://forum.nl/nl/agenda	universeel-eventkaarten
+Website	https://forum.nl/nl/agenda	ok	Pagina gelezen		https://forum.nl/nl/agenda	176297 tekens HTML
+Parser	https://forum.nl/nl/agenda	strategie	Forum detailstrategie		https://forum.nl/nl/agenda	Overzicht overslaan; alleen /nl/agenda/<event> detailpagina's verwerken
+Website	https://forum.nl/nl/agenda	timeout	Site-time-out		https://forum.nl/nl/agenda	site overschreed de harde tijdslimiet van 2 seconden

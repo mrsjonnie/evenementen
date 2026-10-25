@@ -1,14 +1,15 @@
 {
   "runId": "2026-10-25T16:13:04.656609+00:00-97369fb4",
   "startedAt": "2026-10-25T16:13:04+00:00",
-  "completedCount": 3,
+  "completedCount": 4,
   "totalSites": 19,
   "currentSite": "https://forum.nl/nl/agenda",
   "currentSiteIndex": 4,
   "completedSites": [
     "https://groningen.uitloper.nu/",
     "https://www.visitgroningen.nl/nl/doen/evenementen",
-    "https://www.visitgroningen.nl/nl/doen/wandelen"
+    "https://www.visitgroningen.nl/nl/doen/wandelen",
+    "https://forum.nl/nl/agenda"
   ],
   "events": [
     {
@@ -87,6 +88,13 @@
       "count": 5,
       "newCount": 5,
       "durationSeconds": 3.5,
+      "timedOut": true
+    },
+    {
+      "site": "https://forum.nl/nl/agenda",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 2,
       "timedOut": true
     }
   ],
@@ -540,16 +548,43 @@
       "url": "https://forum.nl/nl/agenda",
       "status": "strategie",
       "rawText": "universeel-eventkaarten"
+    },
+    {
+      "source": "Website",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "Pagina gelezen",
+      "date": "",
+      "url": "https://forum.nl/nl/agenda",
+      "status": "ok",
+      "rawText": "176297 tekens HTML"
+    },
+    {
+      "source": "Parser",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "Forum detailstrategie",
+      "date": "",
+      "url": "https://forum.nl/nl/agenda",
+      "status": "strategie",
+      "rawText": "Overzicht overslaan; alleen /nl/agenda/<event> detailpagina's verwerken"
+    },
+    {
+      "source": "Website",
+      "site": "https://forum.nl/nl/agenda",
+      "title": "Site-time-out",
+      "date": "",
+      "url": "https://forum.nl/nl/agenda",
+      "status": "timeout",
+      "rawText": "site overschreed de harde tijdslimiet van 2 seconden"
     }
   ],
   "status": "running",
   "siteStartedAt": "2026-10-25T16:13:21+00:00",
-  "siteElapsedSeconds": 1,
+  "siteElapsedSeconds": 3,
   "sitePageCount": 0,
   "lastSiteEventCount": 0,
-  "stage": "Websitepagina ophalen",
+  "stage": "Website klaar; volgende website voorbereiden",
   "lastUpdatedAt": "2026-10-25T16:13:22+00:00",
   "lastSiteNewEventCount": 0,
-  "lastCompletedSite": "https://www.visitgroningen.nl/nl/doen/wandelen",
-  "lastCompletedAt": "2026-10-25T16:13:20+00:00"
+  "lastCompletedSite": "https://forum.nl/nl/agenda",
+  "lastCompletedAt": "2026-10-25T16:13:24+00:00"
 }
