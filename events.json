@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-25T16:58:39+00:00",
+  "updatedAt": "2026-10-25T16:58:45+00:00",
   "events": [
     {
       "date": "2026-10-25",
@@ -634,6 +634,21 @@
       "cost": "",
       "image": "https://groningen.uitloper.nu/images/smallthumb/files/screenshot-2026-10-22-at-14-58-43-sievert-bodde---galerie-noord.png",
       "isNew": false
+    },
+    {
+      "date": "2026-10-25",
+      "time": "",
+      "title": "Foto-expositie Verhalen van Verborgen Kracht",
+      "type": "Film",
+      "location": "doorzetten en groeien.",
+      "locationLink": "",
+      "website": "https://denieuwekolk.nl/bieb/agenda/fotoexpositie-verhalen-van-verborgen-kracht-10050486",
+      "source": "denieuwekolk.nl",
+      "discoverySource": "Website",
+      "description": "Ontdek de fotoexpositie Verhalen van Verborgen Kracht van Tara van Meeteren bij De Nieuwe Kolk in Assen. Laat je inspireren door bijzondere verhalen.",
+      "cost": "",
+      "image": "https://media.denieuwekolk.nl/01a15ea4-eb5e-77e5-936a-2ed887933bd2/portret-angelina-crop-cinematic?crop=1477%2C886%2C417%2C0&scale=1200&optimizer=image",
+      "isNew": true
     },
     {
       "date": "2026-10-25",
@@ -1276,6 +1291,21 @@
     },
     {
       "date": "2026-10-27",
+      "time": "18:45",
+      "title": "Alzheimercafé",
+      "type": "Film",
+      "location": "Bibliotheek Cursusruimte",
+      "locationLink": "",
+      "website": "https://denieuwekolk.nl/bieb/agenda/alzheimercafe-10044312",
+      "source": "denieuwekolk.nl",
+      "discoverySource": "Website",
+      "description": "Alzheimercafé: Muziek en dementie in De Nieuwe Kolk. Ontmoet elkaar en laat je inspireren in het culturele hart van Assen.",
+      "cost": "",
+      "image": "https://media.denieuwekolk.nl/019d2a5b-29ad-7de1-86cd-0a0f178225b5/alzheimer-cafe?crop=3840%2C2304%2C0%2C128&scale=1200&optimizer=image",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-27",
       "time": "",
       "title": "Donar Groningen – CSO Voluntari 2026",
       "type": "Activiteit",
@@ -1411,6 +1441,21 @@
     },
     {
       "date": "2026-10-28",
+      "time": "14:00",
+      "title": "Adviesplein",
+      "type": "Film",
+      "location": "zoals",
+      "locationLink": "",
+      "website": "https://denieuwekolk.nl/bieb/agenda/adviesplein",
+      "source": "denieuwekolk.nl",
+      "discoverySource": "Website",
+      "description": "Adviesplein & Ontmoetingsplein in De Nieuwe Kolk Assen. Inspiratie, ontmoeting en culturele activiteiten op één locatie.",
+      "cost": "Gratis",
+      "image": "https://media.denieuwekolk.nl/019b2b7f-587f-7995-b37c-718d7a6b8c75/dnk-adviesplein-3-12-2025-2?crop=3838%2C2303%2C0%2C118&scale=1200&optimizer=image",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-28",
       "time": "",
       "title": "Caravan Palace",
       "type": "Concert",
@@ -1438,6 +1483,21 @@
       "cost": "Gratis",
       "image": "https://d35w1qwxagl33g.cloudfront.net/production/_908x545_crop_center-center_none/lunchconcert-2025.png?stamp=2507301539&tag=sm",
       "isNew": false
+    },
+    {
+      "date": "2026-10-28",
+      "time": "19:00",
+      "title": "Het Vlucht Voorwaarts Praathuis",
+      "type": "Film",
+      "location": "Tigrinya of een andere taal willen leren zijn ook van harte welkom.",
+      "locationLink": "",
+      "website": "https://denieuwekolk.nl/bieb/agenda/het-vlucht-voorwaarts-praathuis",
+      "source": "denieuwekolk.nl",
+      "discoverySource": "Website",
+      "description": "Het Vlucht Voorwaarts Praathuis - Ontmoet elkaar en laat je inspireren in dit unieke cultuurhuis vol theater, bibliotheek en cinema.",
+      "cost": "gratis",
+      "image": "https://media.denieuwekolk.nl/019d7206-c8bf-73f7-bd04-02b315d7f6d0/bijeenkomst-vlucht-voorwaarts-praathuis?crop=3840%2C2304%2C0%2C128&scale=1200&optimizer=image",
+      "isNew": true
     },
     {
       "date": "2026-10-28",
@@ -3532,6 +3592,13 @@
       "count": 12,
       "newCount": 12,
       "durationSeconds": 7.41,
+      "timedOut": true
+    },
+    {
+      "site": "https://denieuwekolk.nl/agenda",
+      "count": 4,
+      "newCount": 4,
+      "durationSeconds": 4.0,
       "timedOut": true
     }
   ],
