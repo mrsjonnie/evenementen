@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-25T13:44:29+00:00",
+  "updatedAt": "2026-10-25T13:44:35+00:00",
   "events": [
     {
       "date": "2026-10-25",
@@ -11389,6 +11389,13 @@
       "count": 0,
       "newCount": 0,
       "durationSeconds": 3.29,
+      "timedOut": true
+    },
+    {
+      "site": "https://www.filmvandaag.nl/bioscoop",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 3.48,
       "timedOut": true
     }
   ],
