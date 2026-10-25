@@ -198,6 +198,7 @@ DEFAULT_LOCATIONS = {
     "paradiso.nl": "Paradiso Amsterdam",
     "vvvameland.nl": "Ameland",
     "biosagenda.nl": "Groningen",
+    "pathe.nl": "Pathé Groningen",
     "filmvandaag.nl": "Groningen",
     "denieuwekolk.nl": "De Nieuwe Kolk Assen",
 }
@@ -314,6 +315,8 @@ def detect_scraper_type(site_url):
         return "universele programma- en detailpagina-parser"
     if host == "biosagenda.nl":
         return "bioscoopfilms en speeldata (BiosAgenda Groningen)"
+    if host == "pathe.nl":
+        return "Pathé Groningen via BiosAgenda-speeltijden"
     if host == "filmvandaag.nl":
         return "bioscoopagenda Groningen (FilmVandaag)"
     if host == "denieuwekolk.nl":
@@ -1448,6 +1451,10 @@ def start_urls_for_site(site_url):
         return [urljoin(base, "/landing/concertagenda-paradiso/2069817")]
     if host == "spotgroningen.nl":
         return [urljoin(exact, "/programma")]
+    if host == "pathe.nl":
+        # The official Pathé programme is client-rendered. Use the dedicated Pathé Groningen
+        # cinema timetable on BiosAgenda as a stable server-rendered fallback with real dates/times.
+        return ["https://www.biosagenda.nl/films-bioscoop_path-groningen_128.html"]
     if host == "filmvandaag.nl":
         # /bioscoop is a generic landing page; try both canonical hosts for the Groningen film ladder.
         return unique_urls([
@@ -2445,6 +2452,12 @@ def scrape_site(site_url, site_index=0, site_total=0, progress_callback=None, ex
                 add_raw("Parser", original_site, "Groupon-kaarten zonder resultaat", "", final_url, "fallback", "Geen deals herkend; controleer HTTP-status, HTML en eventuele blokkade")
         elif canonical_host(normalized_site) == "biosagenda.nl":
             page_events = extract_biosagenda_events(html, final_url, normalized_site, "Website")
+        elif canonical_host(normalized_site) == "pathe.nl":
+            # Parse the dedicated Pathé Groningen listing; it contains film titles and dated showtimes.
+            page_events = extract_biosagenda_events(html, final_url, normalized_site, "Website")
+            add_raw("Diagnose", original_site, "Pathé-speeltijden", "", final_url, "fallback", f"{len(page_events)} filmvermeldingen met speeldata uit de Pathé Groningen-agenda")
+            if not page_events:
+                add_raw("Diagnose", original_site, "Pathé zonder resultaten", "", final_url, "fallback", f"Geen speeldata herkend; HTML {len(html)} tekens; controleer bronstructuur")
         elif canonical_host(normalized_site) == "filmvandaag.nl":
             page_events = extract_filmvandaag_events(html, final_url, normalized_site, "Website")
             if not page_events:
