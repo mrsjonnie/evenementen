@@ -261,7 +261,7 @@
       "rawText": "site 3/3: 0 unieke events in 3.14 sec"
     }
   ],
-  "status": "finishing",
+  "status": "completed",
   "siteStartedAt": "2026-10-25T18:14:29+00:00",
   "siteElapsedSeconds": 4,
   "sitePageCount": 0,
@@ -270,5 +270,6 @@
   "lastUpdatedAt": "2026-10-25T18:14:32+00:00",
   "lastSiteNewEventCount": 0,
   "lastCompletedSite": "https://www.filmvandaag.nl/bioscoop",
-  "lastCompletedAt": "2026-10-25T18:14:33+00:00"
+  "lastCompletedAt": "2026-10-25T18:14:33+00:00",
+  "finishedAt": "2026-10-25T18:14:35+00:00"
 }
