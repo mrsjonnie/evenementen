@@ -2486,9 +2486,14 @@
               const newTotal = Array.isArray(progress.events)
                 ? progress.events.filter(event => !previousKeys.has(eventDedupeKey(event))).length
                 : 0;
-              const newForSite = Array.isArray(progress.events)
-                ? progress.events.filter(event => hostFromUrl(event.website) === hostFromUrl(site) && !previousKeys.has(eventDedupeKey(event))).length
-                : 0;
+              const sourceResult = Array.isArray(progress.siteResults)
+                ? progress.siteResults.find(item => hostFromUrl(item.site || "") === hostFromUrl(site))
+                : null;
+              const newForSite = sourceResult && Number.isFinite(Number(sourceResult.newCount))
+                ? Number(sourceResult.newCount)
+                : (Array.isArray(progress.events)
+                  ? progress.events.filter(event => hostFromUrl(event.website) === hostFromUrl(site) && !previousKeys.has(eventDedupeKey(event))).length
+                  : 0);
               const detail = isSiteComplete
                 ? `Website gecontroleerd: ${site} (${completed}/${Number(progress.totalSites) || completed}) · ${newForSite} nieuwe evenementen van deze website; ${newTotal} nieuw totaal gevonden.`
                 : `Bezig met: ${site} · ${newTotal} nieuwe evenementen gevonden tot nu toe.`;
