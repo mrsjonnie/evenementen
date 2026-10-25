@@ -2160,15 +2160,42 @@
       "url": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
       "status": "strategie",
       "rawText": "universeel-jsonld-links-kaarten"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Pagina gelezen",
+      "date": "",
+      "url": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "status": "ok",
+      "rawText": "296555 tekens HTML"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Paradiso detailstrategie",
+      "date": "",
+      "url": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "status": "strategie",
+      "rawText": "Agenda-overzicht overslaan; alleen individuele /programma/<slug>/<id> pagina's verwerken"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Pagina geanalyseerd",
+      "date": "",
+      "url": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "status": "ok",
+      "rawText": "0 events/aanbiedingen op deze pagina"
     }
   ],
   "status": "running",
   "siteStartedAt": "2026-10-25T16:19:06+00:00",
-  "siteElapsedSeconds": 1,
-  "sitePageCount": 0,
+  "siteElapsedSeconds": 3,
+  "sitePageCount": 1,
   "lastSiteEventCount": 0,
-  "stage": "Websitepagina ophalen",
-  "lastUpdatedAt": "2026-10-25T16:19:07+00:00",
+  "stage": "Pagina gelezen; evenementen verwerken",
+  "lastUpdatedAt": "2026-10-25T16:19:09+00:00",
   "lastSiteNewEventCount": 0,
   "lastCompletedSite": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
   "lastCompletedAt": "2026-10-25T16:19:05+00:00"
