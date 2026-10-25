@@ -35,3 +35,7 @@ Parser	https://www.visitgroningen.nl/nl/doen/evenementen	strategie	Scrapertype v
 Website	https://www.visitgroningen.nl/nl/doen/evenementen	ok	Pagina gelezen		https://www.visitgroningen.nl/nl/doen/cultuur/evenementen	206720 tekens HTML
 Parser	https://www.visitgroningen.nl/nl/doen/evenementen	strategie	Visit Groningen detailstrategie		https://www.visitgroningen.nl/nl/doen/cultuur/evenementen	Overzicht overslaan; alleen detail-URL's met /evenementen/<slug> verwerken
 Website	https://www.visitgroningen.nl/nl/doen/evenementen	timeout	Site-time-out		https://www.visitgroningen.nl/nl/doen/evenementen	site overschreed de harde tijdslimiet van 2 seconden
+Website	https://www.visitgroningen.nl/nl/doen/wandelen	start	Start		https://www.visitgroningen.nl/nl/doen/wandelen	site 3/19: max 12 events, max 2 seconden
+Parser	https://www.visitgroningen.nl/nl/doen/wandelen	strategie	Scrapertype vastgesteld		https://www.visitgroningen.nl/nl/doen/wandelen	Visit Groningen agenda-/routekaarten
+Website	https://www.visitgroningen.nl/nl/doen/wandelen	ok	Pagina gelezen		https://www.visitgroningen.nl/nl/doen/wandelen	374114 tekens HTML
+Website	https://www.visitgroningen.nl/nl/doen/wandelen	timeout	Site-time-out		https://www.visitgroningen.nl/nl/doen/wandelen	site overschreed de harde tijdslimiet van 2 seconden
