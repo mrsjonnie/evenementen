@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-25T14:58:33+00:00",
+  "updatedAt": "2026-10-25T14:58:38+00:00",
   "events": [
     {
       "date": "2026-10-25",
@@ -11819,6 +11819,13 @@
       "newCount": 0,
       "durationSeconds": 2.0,
       "timedOut": true
+    },
+    {
+      "site": "https://www.socialdeal.nl/",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 3.09,
+      "timedOut": true
     }
   ],
   "rawLog": [
@@ -13477,6 +13484,42 @@
       "url": "https://www.vvvameland.nl/activiteiten-en-evenementen",
       "status": "klaar",
       "rawText": "site 16/20: 0 unieke events in 2.0 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.socialdeal.nl/",
+      "title": "Start",
+      "date": "",
+      "url": "https://www.socialdeal.nl/",
+      "status": "start",
+      "rawText": "site 17/20: max 5 events, max 2 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.socialdeal.nl/",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://www.socialdeal.nl/",
+      "status": "strategie",
+      "rawText": "Social Deal-aanbiedingen"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.socialdeal.nl/",
+      "title": "Pagina mislukt",
+      "date": "",
+      "url": "https://www.socialdeal.nl/dichtbij/groningen/",
+      "status": "fout",
+      "rawText": "HTTPSConnectionPool(host='www.socialdeal.nl', port=443): Read timed out. (read timeout=0.9332368169999938)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.socialdeal.nl/",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://www.socialdeal.nl/",
+      "status": "klaar",
+      "rawText": "site 17/20: 0 unieke events in 3.09 sec"
     }
   ]
 }
