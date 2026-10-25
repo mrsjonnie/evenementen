@@ -1749,6 +1749,24 @@
       "url": "https://www.vera-groningen.nl/",
       "status": "klaar",
       "rawText": "site 7/19: 0 unieke events in 2.9 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Start",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda",
+      "status": "start",
+      "rawText": "site 8/19: max 5 events, max 2 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda",
+      "status": "strategie",
+      "rawText": "agenda-kaarten"
     }
   ],
   "status": "running",
