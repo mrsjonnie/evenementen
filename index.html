@@ -169,8 +169,12 @@
     }
 
     .rawLogTableWrap {
+      height: min(38vh, 300px);
       max-height: 300px;
-      overflow: auto;
+      min-height: 90px;
+      overflow: auto !important;
+      overscroll-behavior: contain;
+      touch-action: pan-y;
       border-top: 1px solid rgba(255, 255, 255, .14);
     }
 
@@ -620,10 +624,13 @@
       padding: 4px 7px;
       width: calc(100vw - 32px);
       max-width: none;
+      height: auto;
       max-height: min(22vh, 160px);
-      overflow-x: hidden;
-      overflow-y: auto;
+      overflow-x: hidden !important;
+      overflow-y: auto !important;
       overscroll-behavior: contain;
+      touch-action: pan-y;
+      scrollbar-gutter: stable both-edges;
       box-sizing: border-box;
       font-size: .76rem;
       border-radius: var(--radius);
@@ -1365,7 +1372,7 @@
   </div>
 
   <script>
-    const APP_VERSION = "2026.10.25.46";
+    const APP_VERSION = "2026.10.25.47";
     const DEFAULT_MAX_EVENTS_PER_SITE = 20;
     const DEFAULT_SITE_TIME_LIMIT_SECONDS = 20;
     const SCAN_SETTINGS_KEY = "eventScanSettingsV1";
@@ -2504,10 +2511,11 @@
       const startedAt = Date.now();
       let latestProgress = null;
       for (let attempt = 1; attempt <= maxAttempts; attempt += 1) {
-        const elapsedSeconds = Math.floor((Date.now() - startedAt) / 1000);
-        const liveNewCount = events.filter(isNewEvent).length;
-        const liveExistingCount = Math.max(0, events.length - liveNewCount);
-        showStatus(`Publicatie controleren: ${elapsedSeconds}s verstreken; ${events.length} evenementen (${liveNewCount} nieuw, ${liveExistingCount} bestaand). Maximaal wachten: ${maxAttempts}s.`, "warn", { stop: true });
+        if (attempt === 1) {
+          const liveNewCount = events.filter(isNewEvent).length;
+          const liveExistingCount = Math.max(0, events.length - liveNewCount);
+          showStatus(`Publicatie controleren: ${events.length} evenementen (${liveNewCount} nieuw, ${liveExistingCount} bestaand). Ik controleer op nieuwe publicatie.`, "warn", { stop: true });
+        }
         const shouldContinue = await waitUnlessStopped(intervalMs);
         if (!shouldContinue) {
           if (!refreshAbortRequested) showStatus("Publicatiecontrole gestopt.", "warn");
@@ -2586,10 +2594,8 @@
               if (isSiteComplete) {
                 options.lastReportedCompletedCount = completed;
                 addLiveLog("Scraper", site, "Website afgerond", "klaar", detail);
-              } else {
-                addLiveLog("Scraper", site, "Pagina verwerkt", "bezig", detail);
+                showStatus(detail + " De scan gaat verder.", "ok", { stop: true });
               }
-              showStatus(detail + (isSiteComplete ? " De resultaten zijn direct zichtbaar; de scan gaat verder." : " De teller wordt bijgewerkt zodra nieuwe paginaresultaten binnenkomen."), "ok", { stop: true });
             }
             if (progress.status === "completed") {
               options.progressFinalizedRunId = progress.runId;
@@ -2816,6 +2822,8 @@
       updateSiteCount();
     }
     function renderRawLog() {
+      const wrap = $("rawLogTableWrap");
+      const previousScrollTop = wrap?.scrollTop || 0;
       const showSerpApi = Boolean($("provSerpAPI")?.checked);
       const showChatGpt = Boolean($("provOpenAI")?.checked);
       const showMistral = Boolean($("provMistral")?.checked);
@@ -2829,11 +2837,11 @@
         })
         .slice(0, 600);
       const summary = $("rawLogSummary");
-      const wrap = $("rawLogTableWrap");
       if (!summary || !wrap) return;
       summary.textContent = rows.length ? `Ruwe verversdata (${rows.length} regels, klik om te tonen/verbergen)` : "Ruwe verversdata (nog leeg)";
       if (!rows.length) {
         wrap.innerHTML = '<div class="routePanelText">Nog geen ruwe verversdata beschikbaar. Ververs de lijst om dit te vullen.</div>';
+        wrap.scrollTop = 0;
         return;
       }
 
@@ -2867,9 +2875,15 @@
           </tbody>
         </table>
       `;
+      wrap.scrollTop = previousScrollTop;
     }
 
     function addLiveLog(source, site, title, status, rawText = "", url = "") {
+      const key = [source, site, title, status, cleanText(rawText), url].join("|").toLowerCase();
+      const duplicateIndex = liveLogRows.findIndex((row) =>
+        [row.source, row.site, row.title, row.status, cleanText(row.rawText), row.url].join("|").toLowerCase() === key
+      );
+      if (duplicateIndex >= 0) return;
       liveLogRows.unshift({
         source,
         site,
@@ -2879,7 +2893,7 @@
         status,
         rawText
       });
-      liveLogRows = liveLogRows.slice(0, 240);
+      liveLogRows = liveLogRows.slice(0, 120);
       renderRawLog();
     }
 
