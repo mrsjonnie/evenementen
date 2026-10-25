@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-25T13:43:28+00:00",
+  "updatedAt": "2026-10-25T13:43:35+00:00",
   "events": [
     {
       "date": "2026-10-25",
@@ -11319,6 +11319,13 @@
       "count": 0,
       "newCount": 0,
       "durationSeconds": 3.76,
+      "timedOut": true
+    },
+    {
+      "site": "https://groningermuseum.nl/programma",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 3.73,
       "timedOut": true
     }
   ],
