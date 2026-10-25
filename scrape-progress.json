@@ -26,13 +26,202 @@
       "url": "https://www.zwolsetheaters.nl/programma",
       "status": "strategie",
       "rawText": "JavaScript-agenda + API/chunk-detectie"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Pagina gelezen",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/programma",
+      "status": "ok",
+      "rawText": "57947 tekens HTML"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Zwolse scripts",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/programma",
+      "status": "diagnose",
+      "rawText": "type= src= len=371 | type= src=/assets/js/chunk-vendors.main.js?v=L8F5KdDUVX9i4ON4PXhCti3ujgqHICgBWsZxug4CPgA len=0 | type= src=/assets/js/main.js?v=WgecduYVPp8i_9Rxhb1fyYhHd0tzmUbPgKM0R-XTk5A len=0 | type= src=/assets/js/helpers.js?v=HGrKdvmUXqEJb8FtU8ZsLaz1xOk0Jx-uSg48D1iyr6I len=0 | type=text/javascript src= len=373 | type= src=/scripts/contact-component.js?v=T0YxD1bwBCz0x5Tr6e1QJY0SeZgMP867CLiLKjc7BUI len=0 | typ"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Zwolse links",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/programma",
+      "status": "diagnose",
+      "rawText": ""
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Zwolse JSON",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/programma",
+      "status": "diagnose",
+      "rawText": ""
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Zwolse JS scan chunk-vendors.main.js",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/assets/js/chunk-vendors.main.js?v=L8F5KdDUVX9i4ON4PXhCti3ujgqHICgBWsZxug4CPgA",
+      "status": "diagnose",
+      "rawText": "geen API-route herkend; 384411 tekens;"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Zwolse agenda-chunk",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/assets/js/9760.936.js",
+      "status": "diagnose",
+      "rawText": "49199 tekens geladen"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Zwolse API-aanroep",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/assets/js/9760.936.js",
+      "status": "diagnose",
+      "rawText": "prototype.hasOwnProperty,enumerable:!1,writable:!0,configurable:!0});const l={url:s,method:s,data:s,baseURL:i,transformRequest:i,transformResponse:i,paramsSerializer:i,timeout:i,timeoutMessage:i,withCredentials:i,withXSRFToken:i,adapter:i,responseType:i,xsrfCookieName:i,xsrfHeaderName:i"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Zwolse API-aanroep",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/assets/js/9760.936.js",
+      "status": "diagnose",
+      "rawText": "Token\");const s=n(\"xsrfHeaderName\"),i=n(\"xsrfCookieName\");let a=n(\"headers\");const c=n(\"auth\"),l=n(\"baseURL\"),u=n(\"allowAbsoluteUrls\"),f=n(\"url\");if(t.headers=a=We.from(a),t.url=dt(cn(l,f,u,t),n(\"params\"),n(\"paramsSerializer\")),c){const t=Re.getSafeProp(c,\"username\")||\"\",n=Re.getSafePro"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Zwolse API-aanroep",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/assets/js/9760.936.js",
+      "status": "diagnose",
+      "rawText": "rls?t.allowAbsoluteUrls=this.defaults.allowAbsoluteUrls:t.allowAbsoluteUrls=!0),er.assertOptions(t,{baseUrl:tr.spelling(\"baseURL\"),withXsrfToken:tr.spelling(\"withXSRFToken\")},!0),t.method=(t.method||this.defaults.method||\"get\").toLowerCase();let s=o&&Re.merge(o.common,o[t.method]);o&&Re"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Zwolse API-aanroep",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/assets/js/9760.936.js",
+      "status": "diagnose",
+      "rawText": ",u=c.length;while(f<u)l=l.then(c[f++],c[f++]);return l}getUri(e){e=fn(this.defaults,e);const t=cn(e.baseURL,e.url,e.allowAbsoluteUrls,e);return dt(t,e.params,e.paramsSerializer)}}Re.forEach([\"delete\",\"get\",\"head\",\"options\"],function(e){nr.prototype[e]=function(t,n){return this.request(f"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Zwolse JS main.js #1",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/assets/js/main.js?v=WgecduYVPp8i_9Rxhb1fyYhHd0tzmUbPgKM0R-XTk5A",
+      "status": "diagnose",
+      "rawText": "g}])},[(0,o.RG)(e.$slots,\"default\")],2)}s(9838);var ge=s(8585);class fe{constructor(){(0,g.A)(this,\"baseUrl\",\"\"),(0,g.A)(this,\"client\",void 0),(0,g.A)(this,\"getClient\",async()=>{if(this.client)return this.client;const e=await Promise.all([s.e(9760),s.e(6183)]).then(s.bind(s,3110));retur"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Zwolse JS main.js #2",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/assets/js/main.js?v=WgecduYVPp8i_9Rxhb1fyYhHd0tzmUbPgKM0R-XTk5A",
+      "status": "diagnose",
+      "rawText": "n this.client=e.default.create({timeout:18e6}),this.client.defaults.baseURL=this.baseUrl,this.client}),(0,g.A)(this,\"getMockResponse\",(e,t)=>({status:e,statusText:\"\",data:t,headers:{},config:{}})),(0,g.A)(this,\"handleResponse\",e=>{const{apiLoading:t}=(0,K.E)(),{cameli"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Zwolse JS main.js #3",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/assets/js/main.js?v=WgecduYVPp8i_9Rxhb1fyYhHd0tzmUbPgKM0R-XTk5A",
+      "status": "diagnose",
+      "rawText": "chunk-context: ],\"./_BaseFormPage.vue\":[6334,[3192]],\"./_BaseFormUmbraco.vue\":[4661,[9760,1088]],\"./fields/_BaseCheckbox.vue\":[9143,[8868]],\"./fields/_BaseCheckboxList.vue\":[6181,[8216]],\"."
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Zwolse JS main.js #4",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/assets/js/main.js?v=WgecduYVPp8i_9Rxhb1fyYhHd0tzmUbPgKM0R-XTk5A",
+      "status": "diagnose",
+      "rawText": "chunk-context: ()=>{if(this.client)return this.client;const e=await Promise.all([s.e(9760),s.e(6183)]).then(s.bind(s,3110));return this.client=e.default.create({timeout:18e6}),this.client.d"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Zwolse JS main.js #5",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/assets/js/main.js?v=WgecduYVPp8i_9Rxhb1fyYhHd0tzmUbPgKM0R-XTk5A",
+      "status": "diagnose",
+      "rawText": "chunk-context: is.client)return this.client;const e=await Promise.all([s.e(9760),s.e(6183)]).then(s.bind(s,3110));return this.client=e.default.create({timeout:18e6}),this.client.defaults.ba"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Zwolse JS main.js #6",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/assets/js/main.js?v=WgecduYVPp8i_9Rxhb1fyYhHd0tzmUbPgKM0R-XTk5A",
+      "status": "diagnose",
+      "rawText": "chunk-context: ,[]))}}(),function(){s.u=function(e){return 9760===e?\"js/9760.936.js\":6183===e?\"js/lib/axios.85f.js\":9285===e?\"js/9285.557.js\":3041===e?\"js/3041.8f5.js\":7793===e?\"js/7793.cc2"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Zwolse JS scan helpers.js",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/assets/js/helpers.js?v=HGrKdvmUXqEJb8FtU8ZsLaz1xOk0Jx-uSg48D1iyr6I",
+      "status": "diagnose",
+      "rawText": "geen API-route herkend; 732 tekens;"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Agenda geanalyseerd",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/programma",
+      "status": "gespecialiseerde parser",
+      "rawText": "0 agenda-items gevonden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Pagina geteld",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/programma",
+      "status": "analyse",
+      "rawText": "jsonld:0, links:0, datumblokken:0, kaarten:0, regels:0, detail:0"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Zwolse programma-parser",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/programma",
+      "status": "strategie",
+      "rawText": "Programma-kaarten met datums + geneste detail-URL's; JSON-LD/generieke parser als fallback"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.zwolsetheaters.nl/programma",
+      "title": "Pagina geanalyseerd",
+      "date": "",
+      "url": "https://www.zwolsetheaters.nl/programma",
+      "status": "ok",
+      "rawText": "0 events/aanbiedingen op deze pagina"
     }
   ],
   "status": "running",
   "siteStartedAt": "2026-10-25T10:58:07+00:00",
-  "siteElapsedSeconds": 1,
-  "sitePageCount": 0,
+  "siteElapsedSeconds": 7,
+  "sitePageCount": 1,
   "lastSiteEventCount": 0,
-  "stage": "Websitepagina ophalen",
-  "lastUpdatedAt": "2026-10-25T10:58:08+00:00"
+  "stage": "Pagina gelezen; evenementen verwerken",
+  "lastUpdatedAt": "2026-10-25T10:58:14+00:00"
 }
