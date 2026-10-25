@@ -1,11 +1,12 @@
 {
   "runId": "2026-10-25T10:07:17+00:00",
   "startedAt": "2026-10-25T10:07:17+00:00",
-  "completedCount": 2,
+  "completedCount": 3,
   "totalSites": 18,
   "completedSites": [
     "https://groningen.uitloper.nu/",
-    "https://www.visitgroningen.nl/nl/doen/evenementen"
+    "https://www.visitgroningen.nl/nl/doen/evenementen",
+    "https://www.visitgroningen.nl/nl/doen/wandelen"
   ],
   "events": [
     {
@@ -782,6 +783,13 @@
       "count": 20,
       "newCount": 0,
       "durationSeconds": 5.96,
+      "timedOut": false
+    },
+    {
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "count": 20,
+      "newCount": 0,
+      "durationSeconds": 1.9,
       "timedOut": false
     }
   ],
@@ -3440,11 +3448,20 @@
       "url": "https://www.visitgroningen.nl/nl/doen/wandelen",
       "status": "ok",
       "rawText": "20 events/aanbiedingen op deze pagina"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "status": "klaar",
+      "rawText": "site 3/18: 20 unieke events in 1.9 sec"
     }
   ],
   "status": "running",
   "lastCompletedSite": "https://www.visitgroningen.nl/nl/doen/wandelen",
   "lastSiteEventCount": 20,
   "lastUpdatedAt": "2026-10-25T10:07:29+00:00",
-  "lastCompletedAt": "2026-10-25T10:07:27+00:00"
+  "lastCompletedAt": "2026-10-25T10:07:30+00:00"
 }
