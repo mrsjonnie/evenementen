@@ -2816,6 +2816,7 @@ def main():
             progress["currentSite"] = site
             progress["currentSiteIndex"] = index
             progress["lastSiteEventCount"] = len(dedupe_events(partial_events))
+            progress["lastSiteNewEventCount"] = sum(1 for event in dedupe_events(partial_events) if event_key(event) not in previous_all_keys)
             progress["siteElapsedSeconds"] = max(0, int((datetime.now(timezone.utc) - datetime.fromisoformat(progress["siteStartedAt"])).total_seconds()))
             progress["sitePageCount"] = sum(1 for row in RAW_DATA_ROWS if row.get("site") == site and row.get("title") == "Pagina gelezen")
             progress["lastUpdatedAt"] = datetime.now(timezone.utc).isoformat(timespec="seconds")
@@ -2839,6 +2840,7 @@ def main():
         progress["lastCompletedAt"] = datetime.now(timezone.utc).isoformat(timespec="seconds")
         progress["siteElapsedSeconds"] = max(0, int((datetime.now(timezone.utc) - datetime.fromisoformat(progress["siteStartedAt"])).total_seconds()))
         progress["lastSiteEventCount"] = len(site_events)
+        progress["lastSiteNewEventCount"] = sum(1 for event in site_events if event_key(event) not in previous_all_keys)
         progress["status"] = "running" if index < total_sites else "finishing"
         publish_scrape_progress(progress)
 
