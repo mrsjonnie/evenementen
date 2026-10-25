@@ -2226,9 +2226,7 @@ def scrape_site(site_url, site_index=0, site_total=0, progress_callback=None, ex
     is_kultuuragenda = "kultuuragenda.nl" in canonical_host(normalized_site)
     is_visitgroningen = canonical_host(normalized_site) == "visitgroningen.nl"
     visited = set()
-    for detail_index, detail_url in enumerate(detail_queue, start=1):
-        if progress_callback:
-            progress_callback(dedupe_events(events), stage=f"Evenementdetails controleren ({detail_index}/{len(detail_queue)})")
+    for detail_url in detail_queue:
         # Eerst echte activiteitspagina's uitlezen; de overzichtskaarten bevatten vaak te weinig details.
         detail_path = urlparse(detail_url).path
         is_activity_detail = is_kultuuragenda and bool(re.search(r"/agenda/\d+/[^/?#]+", detail_path, re.I))
