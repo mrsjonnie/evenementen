@@ -1,7 +1,7 @@
 {
   "runId": "2026-10-25T18:03:32.693130+00:00-9ae2f9f8",
   "startedAt": "2026-10-25T18:03:32+00:00",
-  "completedCount": 18,
+  "completedCount": 19,
   "totalSites": 19,
   "currentSite": "https://www.pathe.nl/nl/bioscopen/pathe-groningen",
   "currentSiteIndex": 19,
@@ -23,7 +23,8 @@
     "https://www.vvvameland.nl/activiteiten-en-evenementen",
     "https://www.socialdeal.nl/",
     "https://denieuwekolk.nl/agenda",
-    "https://www.filmvandaag.nl/bioscoop"
+    "https://www.filmvandaag.nl/bioscoop",
+    "https://www.pathe.nl/nl/bioscopen/pathe-groningen"
   ],
   "events": [
     {
@@ -1488,45 +1489,16 @@
       "newCount": 0,
       "durationSeconds": 0.35,
       "timedOut": false
+    },
+    {
+      "site": "https://www.pathe.nl/nl/bioscopen/pathe-groningen",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 0.05,
+      "timedOut": false
     }
   ],
   "rawLog": [
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Maarten Heijmans & Xander Vrienten Wachtend op",
-      "date": "2026-12-06",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "6 dec Maarten Heijmans & Xander Vrienten Wachtend op de dood Levensliedjes tussen de Jordaan en de Mississippi"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Scapino Ballet Rotterdam La Mer Een visuele en",
-      "date": "2026-12-06",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "6 dec Scapino Ballet Rotterdam La Mer Een visuele en muzikale voorstelling over de kracht en kwetsbaarheid van de zee"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Árstíðir Eeuwenoude",
-      "date": "2026-12-07",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "7 dec Árstíðir Eeuwenoude IJslandse folksongs Uitverkocht"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Nikola Meeuwsen + support: Liam Nassereddine Soloconcert",
-      "date": "2026-12-07",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "7 dec Nikola Meeuwsen + support: Liam Nassereddine Soloconcert van de winnaar van het prestigieuze Koningin Elisabeth Concours"
-    },
     {
       "source": "Website",
       "site": "https://www.spotgroningen.nl/programma/",
@@ -12290,16 +12262,52 @@
       "url": "https://www.filmvandaag.nl/bioscoop",
       "status": "klaar",
       "rawText": "site 18/19: 0 unieke events in 0.35 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.pathe.nl/nl/bioscopen/pathe-groningen",
+      "title": "Start",
+      "date": "",
+      "url": "https://www.pathe.nl/nl/bioscopen/pathe-groningen",
+      "status": "start",
+      "rawText": "site 19/19: max 12 events, max 4 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.pathe.nl/nl/bioscopen/pathe-groningen",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://www.pathe.nl/nl/bioscopen/pathe-groningen",
+      "status": "strategie",
+      "rawText": "Pathé Groningen via BiosAgenda-speeltijden"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.pathe.nl/nl/bioscopen/pathe-groningen",
+      "title": "Pagina mislukt",
+      "date": "",
+      "url": "https://www.biosagenda.nl/films-bioscoop_path-groningen_128.html",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.pathe.nl/nl/bioscopen/pathe-groningen",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://www.pathe.nl/nl/bioscopen/pathe-groningen",
+      "status": "klaar",
+      "rawText": "site 19/19: 0 unieke events in 0.05 sec"
     }
   ],
-  "status": "running",
+  "status": "finishing",
   "siteStartedAt": "2026-10-25T18:05:23+00:00",
-  "siteElapsedSeconds": 0,
+  "siteElapsedSeconds": 1,
   "sitePageCount": 0,
   "lastSiteEventCount": 0,
-  "stage": "Websitepagina ophalen",
-  "lastUpdatedAt": "2026-10-25T18:05:23+00:00",
+  "stage": "Website klaar; volgende website voorbereiden",
+  "lastUpdatedAt": "2026-10-25T18:05:24+00:00",
   "lastSiteNewEventCount": 0,
-  "lastCompletedSite": "https://www.filmvandaag.nl/bioscoop",
-  "lastCompletedAt": "2026-10-25T18:05:22+00:00"
+  "lastCompletedSite": "https://www.pathe.nl/nl/bioscopen/pathe-groningen",
+  "lastCompletedAt": "2026-10-25T18:05:24+00:00"
 }
