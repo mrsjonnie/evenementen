@@ -1,7 +1,7 @@
 {
   "runId": "2026-10-25T14:38:51.320222+00:00-2b89bca6",
   "startedAt": "2026-10-25T14:38:51+00:00",
-  "completedCount": 11,
+  "completedCount": 12,
   "totalSites": 20,
   "currentSite": "https://www.concertgebouw.nl/concerten-en-tickets",
   "currentSiteIndex": 12,
@@ -16,7 +16,8 @@
     "https://www.martiniplaza.nl/nl/agenda",
     "https://groningermuseum.nl/programma",
     "https://www.kultuuragenda.nl/agenda",
-    "https://www.noorderzon.nl/programma"
+    "https://www.noorderzon.nl/programma",
+    "https://www.concertgebouw.nl/concerten-en-tickets"
   ],
   "events": [],
   "siteResults": [
@@ -88,6 +89,13 @@
       "count": 0,
       "newCount": 0,
       "durationSeconds": 2.0,
+      "timedOut": true
+    },
+    {
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 2,
       "timedOut": true
     }
   ],
@@ -2422,16 +2430,97 @@
       "url": "https://www.concertgebouw.nl/concerten-en-tickets",
       "status": "strategie",
       "rawText": "universeel-jsonld-links-kaarten"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Pagina gelezen",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "status": "ok",
+      "rawText": "776934 tekens HTML"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "De Vijfde van Beethoven door het Concertgebouworkest",
+      "date": "2026-10-25",
+      "url": "https://www.concertgebouw.nl/concerten/45875725-de-vijfde-van-beethoven-door-het-concertgebouworkest",
+      "status": "agenda-kaart",
+      "rawText": "De Vijfde van Beethoven door het Concertgebouworkest 14:15 – 16:15 Grote Zaal v.a. € 20,00 met onder andere Beethoven Symfonie nr. 5 in c, op. 67 Mozart Pianoconcert nr. 25 in C, KV 503 Meer informatie Meer informatie zo 25 okt 2026 Bookmark Luisteren Bookmark"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Beethoven! Ronald Brautigam speelt o.a. de 'Pathétique' en 'Mondschein'",
+      "date": "2026-10-25",
+      "url": "https://www.concertgebouw.nl/concerten/37970583-beethoven-ronald-brautigam-speelt-o.a.-de-pathetique-en-mondschein",
+      "status": "agenda-kaart",
+      "rawText": "Beethoven! Ronald Brautigam speelt o.a. de 'Pathétique' en 'Mondschein' 14:15 – 16:20 Kleine Zaal v.a. € 35,00 met onder andere Beethoven Sonate nr. 14 in cis, op. 27, nr. 2 'Mondschein' Beethoven Sonate nr. 13 in Es, op. 27, nr. 1 'Quasi una fantasia' Meer informatie Meer informatie zo 25 okt 2026 Bookmark Luisteren Bookmark"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Popup Choir Taylor Swift: zing mee met Maarten Bos en Tijmen de Koning",
+      "date": "2026-10-26",
+      "url": "https://www.concertgebouw.nl/concerten/45959877-popup-choir-taylor-swift-zing-mee-met-maarten-bos-en-tijmen-de-koning",
+      "status": "agenda-kaart",
+      "rawText": "Popup Choir Taylor Swift: zing mee met Maarten Bos en Tijmen de Koning 20:15 – 22:30 Grote Zaal v.a. € 25,00 Informatie en bestellen Informatie en bestellen ma 26 okt 2026 Bookmark Bookmark"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Fresku & Metropole Orkest o.l.v. Simon Dobson",
+      "date": "2026-10-27",
+      "url": "https://www.concertgebouw.nl/concerten/43931216-fresku-metropole-orkest-o.l.v.-simon-dobson",
+      "status": "agenda-kaart",
+      "rawText": "Fresku & Metropole Orkest o.l.v. Simon Dobson 20:15 – 21:45 Grote Zaal v.a. € 29,00 Meer informatie Meer informatie Uitverkocht di 27 okt 2026 Bookmark Bookmark"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Spotlight op Lucie Horsch: barok met Altstaedt en Dunford",
+      "date": "2026-10-27",
+      "url": "https://www.concertgebouw.nl/concerten/41773095-spotlight-op-lucie-horsch-barok-met-altstaedt-en-dunford",
+      "status": "agenda-kaart",
+      "rawText": "Spotlight op Lucie Horsch: barok met Altstaedt en Dunford 20:15 – 22:10 Kleine Zaal v.a. € 29,00 met onder andere Vivaldi Triosonate in a, RV 86 Vivaldi Sonate in e, RV 40 Informatie en bestellen Informatie en bestellen Laatste kaarten di 27 okt 2026 Bookmark Bookmark"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Agenda-kaarten geteld",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "status": "gespecialiseerde parser",
+      "rawText": "5 resultaten"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Pagina geanalyseerd",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "status": "ok",
+      "rawText": "5 events/aanbiedingen op deze pagina"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Site-time-out",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "status": "timeout",
+      "rawText": "site overschreed de harde tijdslimiet van 2 seconden"
     }
   ],
   "status": "running",
   "siteStartedAt": "2026-10-25T14:39:40+00:00",
-  "siteElapsedSeconds": 1,
-  "sitePageCount": 0,
+  "siteElapsedSeconds": 3,
+  "sitePageCount": 1,
   "lastSiteEventCount": 0,
-  "stage": "Websitepagina ophalen",
-  "lastUpdatedAt": "2026-10-25T14:39:41+00:00",
+  "stage": "Website klaar; volgende website voorbereiden",
+  "lastUpdatedAt": "2026-10-25T14:39:43+00:00",
   "lastSiteNewEventCount": 0,
-  "lastCompletedSite": "https://www.noorderzon.nl/programma",
-  "lastCompletedAt": "2026-10-25T14:39:39+00:00"
+  "lastCompletedSite": "https://www.concertgebouw.nl/concerten-en-tickets",
+  "lastCompletedAt": "2026-10-25T14:39:43+00:00"
 }
