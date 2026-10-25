@@ -1,0 +1,45 @@
+name: Release website version
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - index.html
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Read website version
+        id: version
+        shell: bash
+        run: |
+          VERSION="$(sed -nE 's/.*const APP_VERSION = "([^"]+)".*/\1/p' index.html | head -n 1)"
+          if [ -z "$VERSION" ]; then
+            echo "::error::APP_VERSION was not found in index.html"
+            exit 1
+          fi
+          echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+          echo "tag=v$VERSION" >> "$GITHUB_OUTPUT"
+
+      - name: Create versioned GitHub release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          VERSION: ${{ steps.version.outputs.version }}
+          TAG: ${{ steps.version.outputs.tag }}
+        run: |
+          if gh release view "$TAG" >/dev/null 2>&1; then
+            echo "Release $TAG already exists; nothing to do."
+          else
+            gh release create "$TAG" \
+              --title "Evenementen rond Groningen $VERSION" \
+              --target main \
+              --notes "Websiteversie $VERSION. Automatisch aangemaakt bij publicatie van index.html."
+          fi
