@@ -1,7 +1,7 @@
 {
   "runId": "2026-10-26T21:56:08.566391+00:00-c5f503e0",
   "startedAt": "2026-10-26T21:56:08+00:00",
-  "completedCount": 5,
+  "completedCount": 6,
   "totalSites": 15,
   "currentSite": "https://www.vera-groningen.nl/",
   "currentSiteIndex": 6,
@@ -10,7 +10,8 @@
     "https://www.visitgroningen.nl/nl/doen/evenementen",
     "https://forum.nl/nl/agenda",
     "https://www.spotgroningen.nl/programma/",
-    "https://simplon.nl/"
+    "https://simplon.nl/",
+    "https://www.vera-groningen.nl/"
   ],
   "events": [
     {
@@ -2781,315 +2782,16 @@
       "newCount": 12,
       "durationSeconds": 4.65,
       "timedOut": false
+    },
+    {
+      "site": "https://www.vera-groningen.nl/",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 3.02,
+      "timedOut": false
     }
   ],
   "rawLog": [
-    {
-      "source": "ChatGPT",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "ChatGPT mislukt",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/",
-      "status": "fout",
-      "rawText": "Body has already been used. It can only be used once. Use tee() first if you need to read it twice."
-    },
-    {
-      "source": "ChatGPT",
-      "site": "https://www.vera-groningen.nl/",
-      "title": "ChatGPT mislukt",
-      "date": "",
-      "url": "https://www.vera-groningen.nl/",
-      "status": "fout",
-      "rawText": "Body has already been used. It can only be used once. Use tee() first if you need to read it twice."
-    },
-    {
-      "source": "ChatGPT",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "ChatGPT mislukt",
-      "date": "",
-      "url": "https://groningen.uitloper.nu/",
-      "status": "fout",
-      "rawText": "Body has already been used. It can only be used once. Use tee() first if you need to read it twice."
-    },
-    {
-      "source": "ChatGPT",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": "ChatGPT mislukt",
-      "date": "",
-      "url": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "status": "fout",
-      "rawText": "Body has already been used. It can only be used once. Use tee() first if you need to read it twice."
-    },
-    {
-      "source": "ChatGPT",
-      "site": "https://simplon.nl/",
-      "title": "ChatGPT mislukt",
-      "date": "",
-      "url": "https://simplon.nl/",
-      "status": "fout",
-      "rawText": "Body has already been used. It can only be used once. Use tee() first if you need to read it twice."
-    },
-    {
-      "source": "ChatGPT",
-      "site": "https://www.martiniplaza.nl/nl/agenda",
-      "title": "ChatGPT mislukt",
-      "date": "",
-      "url": "https://www.martiniplaza.nl/nl/agenda",
-      "status": "fout",
-      "rawText": "Body has already been used. It can only be used once. Use tee() first if you need to read it twice."
-    },
-    {
-      "source": "ChatGPT",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "ChatGPT mislukt",
-      "date": "",
-      "url": "https://groningermuseum.nl/programma",
-      "status": "fout",
-      "rawText": "Body has already been used. It can only be used once. Use tee() first if you need to read it twice."
-    },
-    {
-      "source": "ChatGPT",
-      "site": "https://www.kultuuragenda.nl/agenda",
-      "title": "ChatGPT mislukt",
-      "date": "",
-      "url": "https://www.kultuuragenda.nl/agenda",
-      "status": "fout",
-      "rawText": "Body has already been used. It can only be used once. Use tee() first if you need to read it twice."
-    },
-    {
-      "source": "ChatGPT",
-      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
-      "title": "ChatGPT mislukt",
-      "date": "",
-      "url": "https://www.concertgebouw.nl/concerten-en-tickets",
-      "status": "fout",
-      "rawText": "Body has already been used. It can only be used once. Use tee() first if you need to read it twice."
-    },
-    {
-      "source": "ChatGPT",
-      "site": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
-      "title": "ChatGPT mislukt",
-      "date": "",
-      "url": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
-      "status": "fout",
-      "rawText": "Body has already been used. It can only be used once. Use tee() first if you need to read it twice."
-    },
-    {
-      "source": "ChatGPT",
-      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
-      "title": "ChatGPT mislukt",
-      "date": "",
-      "url": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
-      "status": "fout",
-      "rawText": "Body has already been used. It can only be used once. Use tee() first if you need to read it twice."
-    },
-    {
-      "source": "ChatGPT",
-      "site": "https://www.socialdeal.nl/",
-      "title": "ChatGPT mislukt",
-      "date": "",
-      "url": "https://www.socialdeal.nl/",
-      "status": "fout",
-      "rawText": "Body has already been used. It can only be used once. Use tee() first if you need to read it twice."
-    },
-    {
-      "source": "ChatGPT",
-      "site": "https://www.ibood.com/s-nl",
-      "title": "ChatGPT mislukt",
-      "date": "",
-      "url": "https://www.ibood.com/s-nl",
-      "status": "fout",
-      "rawText": "Body has already been used. It can only be used once. Use tee() first if you need to read it twice."
-    },
-    {
-      "source": "Mistral",
-      "site": "https://forum.nl/nl/agenda",
-      "title": "Mistral fout",
-      "date": "",
-      "url": "https://forum.nl/nl/agenda",
-      "status": "status 429",
-      "rawText": "{\"object\":\"error\",\"message\":\"Rate limit exceeded\",\"type\":\"rate_limited\",\"param\":null,\"code\":\"1300\",\"raw_status_code\":429}"
-    },
-    {
-      "source": "Mistral",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Mistral overgeslagen",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/",
-      "status": "overgeslagen",
-      "rawText": "Deze AI-bron is na een HTTP 429 voor de rest van deze scan gepauzeerd om herhaalde rate-limitfouten te voorkomen."
-    },
-    {
-      "source": "Mistral",
-      "site": "https://www.vera-groningen.nl/",
-      "title": "Mistral overgeslagen",
-      "date": "",
-      "url": "https://www.vera-groningen.nl/",
-      "status": "overgeslagen",
-      "rawText": "Deze AI-bron is na een HTTP 429 voor de rest van deze scan gepauzeerd om herhaalde rate-limitfouten te voorkomen."
-    },
-    {
-      "source": "Mistral",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Mistral overgeslagen",
-      "date": "",
-      "url": "https://groningen.uitloper.nu/",
-      "status": "overgeslagen",
-      "rawText": "Deze AI-bron is na een HTTP 429 voor de rest van deze scan gepauzeerd om herhaalde rate-limitfouten te voorkomen."
-    },
-    {
-      "source": "Mistral",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": "Mistral overgeslagen",
-      "date": "",
-      "url": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "status": "overgeslagen",
-      "rawText": "Deze AI-bron is na een HTTP 429 voor de rest van deze scan gepauzeerd om herhaalde rate-limitfouten te voorkomen."
-    },
-    {
-      "source": "Mistral",
-      "site": "https://simplon.nl/",
-      "title": "Mistral overgeslagen",
-      "date": "",
-      "url": "https://simplon.nl/",
-      "status": "overgeslagen",
-      "rawText": "Deze AI-bron is na een HTTP 429 voor de rest van deze scan gepauzeerd om herhaalde rate-limitfouten te voorkomen."
-    },
-    {
-      "source": "Mistral",
-      "site": "https://www.martiniplaza.nl/nl/agenda",
-      "title": "Mistral overgeslagen",
-      "date": "",
-      "url": "https://www.martiniplaza.nl/nl/agenda",
-      "status": "overgeslagen",
-      "rawText": "Deze AI-bron is na een HTTP 429 voor de rest van deze scan gepauzeerd om herhaalde rate-limitfouten te voorkomen."
-    },
-    {
-      "source": "Mistral",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "Mistral overgeslagen",
-      "date": "",
-      "url": "https://groningermuseum.nl/programma",
-      "status": "overgeslagen",
-      "rawText": "Deze AI-bron is na een HTTP 429 voor de rest van deze scan gepauzeerd om herhaalde rate-limitfouten te voorkomen."
-    },
-    {
-      "source": "Mistral",
-      "site": "https://www.kultuuragenda.nl/agenda",
-      "title": "Mistral overgeslagen",
-      "date": "",
-      "url": "https://www.kultuuragenda.nl/agenda",
-      "status": "overgeslagen",
-      "rawText": "Deze AI-bron is na een HTTP 429 voor de rest van deze scan gepauzeerd om herhaalde rate-limitfouten te voorkomen."
-    },
-    {
-      "source": "Mistral",
-      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
-      "title": "Mistral overgeslagen",
-      "date": "",
-      "url": "https://www.concertgebouw.nl/concerten-en-tickets",
-      "status": "overgeslagen",
-      "rawText": "Deze AI-bron is na een HTTP 429 voor de rest van deze scan gepauzeerd om herhaalde rate-limitfouten te voorkomen."
-    },
-    {
-      "source": "Mistral",
-      "site": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
-      "title": "Mistral overgeslagen",
-      "date": "",
-      "url": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
-      "status": "overgeslagen",
-      "rawText": "Deze AI-bron is na een HTTP 429 voor de rest van deze scan gepauzeerd om herhaalde rate-limitfouten te voorkomen."
-    },
-    {
-      "source": "Mistral",
-      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
-      "title": "Mistral overgeslagen",
-      "date": "",
-      "url": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
-      "status": "overgeslagen",
-      "rawText": "Deze AI-bron is na een HTTP 429 voor de rest van deze scan gepauzeerd om herhaalde rate-limitfouten te voorkomen."
-    },
-    {
-      "source": "Mistral",
-      "site": "https://www.socialdeal.nl/",
-      "title": "Mistral overgeslagen",
-      "date": "",
-      "url": "https://www.socialdeal.nl/",
-      "status": "overgeslagen",
-      "rawText": "Deze AI-bron is na een HTTP 429 voor de rest van deze scan gepauzeerd om herhaalde rate-limitfouten te voorkomen."
-    },
-    {
-      "source": "Mistral",
-      "site": "https://www.ibood.com/s-nl",
-      "title": "Mistral overgeslagen",
-      "date": "",
-      "url": "https://www.ibood.com/s-nl",
-      "status": "overgeslagen",
-      "rawText": "Deze AI-bron is na een HTTP 429 voor de rest van deze scan gepauzeerd om herhaalde rate-limitfouten te voorkomen."
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Start",
-      "date": "",
-      "url": "https://groningen.uitloper.nu/",
-      "status": "start",
-      "rawText": "site 1/15: max 60 events, max 45 seconden"
-    },
-    {
-      "source": "Parser",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Scrapertype vastgesteld",
-      "date": "",
-      "url": "https://groningen.uitloper.nu/",
-      "status": "strategie",
-      "rawText": "uitloper-agenda"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Pagina gelezen",
-      "date": "",
-      "url": "https://groningen.uitloper.nu/?date=1793016000",
-      "status": "ok",
-      "rawText": "61102 tekens HTML"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Nena",
-      "date": "2026-10-26",
-      "url": "https://groningen.uitloper.nu/muziek/nena-1",
-      "status": "Uitloper agenda-item",
-      "rawText": "Nena 20:00 uur Eén van de grootste zangeressen van de Duitse popcultuur…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Culture (ft Kenyatta Hill) & Cedric Myton",
-      "date": "2026-10-26",
-      "url": "https://groningen.uitloper.nu/muziek/culture-ft-kenyatta-hill-cedric-myton",
-      "status": "Uitloper agenda-item",
-      "rawText": "Culture (ft Kenyatta Hill) & Cedric Myton 20:30 uur Twee legendarische reggae-acts op één avond."
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Open Jazz Session",
-      "date": "2026-10-26",
-      "url": "https://groningen.uitloper.nu/muziek/open-jazz-session-3",
-      "status": "Uitloper agenda-item",
-      "rawText": "Open Jazz Session 21:15 uur Iedere maandagavond gratis Jazz-avond! Samen improviseren,…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Open Mic Nait",
-      "date": "2026-10-26",
-      "url": "https://groningen.uitloper.nu/theater/open-mic-nait-14",
-      "status": "Uitloper agenda-item",
-      "rawText": "Open Mic Nait 20:00 uur Ontdek nieuwe comedians en nieuwe grappen tijdens…"
-    },
     {
       "source": "Website",
       "site": "https://groningen.uitloper.nu/",
@@ -13583,16 +13285,322 @@
       "url": "https://simplon.nl/",
       "status": "klaar",
       "rawText": "site 5/15: 12 unieke events in 4.65 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Start",
+      "date": "",
+      "url": "https://www.vera-groningen.nl/",
+      "status": "start",
+      "rawText": "site 6/15: max 60 events, max 45 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://www.vera-groningen.nl/",
+      "status": "strategie",
+      "rawText": "programma-kaarten"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Pagina gelezen",
+      "date": "",
+      "url": "https://www.vera-groningen.nl/programma/?category=all&history=0&lang=nl",
+      "status": "ok",
+      "rawText": "74016 tekens HTML"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "The Fly",
+      "date": "2026-10-27",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=154391&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Tuesday 27 October The Fly Sold out"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Ulrika Spacek UK Mood Bored",
+      "date": "2026-10-29",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=150560&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "CLUBKAARTSHOW Thursday 29 October Ulrika Spacek UK Mood Bored NL Mainstage | Ticket: €16,- | doors: 20:00 - 22:00 | start: 20:30 Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Kruidkoek & Joost Oomen NL Mesofauna GRN",
+      "date": "2026-10-30",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=151519&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Friday 30 October Kruidkoek & Joost Oomen NL Mesofauna GRN Mainstage | Ticket: €18,- | doors: 19:30 - 21:00 | start: 20:00 Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "WAVEGRAVE Elysium Graaf Griezel // Fladdermus // DJ Stefan",
+      "date": "2026-10-30",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=154134&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Friday 30 October WAVEGRAVE Elysium Graaf Griezel // Fladdermus // DJ Stefan Dansen | Ticket: €5,- | doors: 22:00 - 03:00 | start: 22:00 Sold out"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Los Pirañas COL",
+      "date": "2026-10-31",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=152556&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Saturday 31 October Los Pirañas COL Mainstage | Ticket: €13,- | doors: 21:00 - 22:00 | start: 21:30 Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "The Etters NL Human Toys",
+      "date": "2026-10-31",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=154548&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Saturday 31 October The Etters NL Human Toys FR Downstage | Ticket: €5,- | doors: 22:30 - 23:30 | start: 23:00 Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Push It Pushin Wood Soundsystem All Night Long",
+      "date": "2026-10-31",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=154197&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Saturday 31 October Push It Pushin Wood Soundsystem All Night Long Dansen | Ticket: €5,- | doors: 23:00 - 04:00 | start: 23:01 Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Angine De Poitrine CAN Gros Mené",
+      "date": "2026-11-01",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=151279&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "SOLD OUT Sunday 1 November Angine De Poitrine CAN Gros Mené CAN Mainstage | Ticket: €24,- | doors: 19:30 - 22:00 | start: 20:30 Sold out"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Pavements",
+      "date": "2026-11-03",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=154871&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Tuesday 3 November Pavements Zienema | Ticket: €6,- | doors: 20:00 - 20:30 | start: 20:30 Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Hippotraktor BEL OLTAS",
+      "date": "2026-11-04",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=152263&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Wednesday 4 November Hippotraktor BEL OLTAS NL Mainstage | Ticket: €17,- | doors: 20:00 - 22:00 | start: 20:30 Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Pyrex USA Traumatizer",
+      "date": "2026-11-05",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=154976&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "RAT RACE X DOWNSTAGE EXTRA Thursday 5 November Pyrex USA Traumatizer NL Downstage | Ticket: €7,50 | doors: 21:00 - 22:00 | start: 21:30 Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Temples UK PAUW",
+      "date": "2026-11-06",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=151534&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Friday 6 November Temples UK PAUW NL Mainstage | Ticket: €24,- | doors: 19:30 - 22:00 | start: 20:30 Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "The Homesick NL Rhizocorp",
+      "date": "2026-11-07",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=153264&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Saturday 7 November The Homesick NL Rhizocorp UK Mainstage | Ticket: €14,- | doors: 20:00 - 22:00 | start: 20:30 Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Nagusame GRN",
+      "date": "2026-11-07",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=154867&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Saturday 7 November Nagusame GRN Downstage | Ticket: €5,- | doors: 22:30 - 23:30 | start: 23:00 Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Club VERA Line-up TBA",
+      "date": "2026-11-07",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=155064&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Saturday 7 November Club VERA Line-up TBA Dansen | Ticket: €5,- | doors: 23:00 - 03:00 | start: 23:01 Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Mystery cult film",
+      "date": "2026-11-10",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=154880&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Tuesday 10 November Mystery cult film Zienema | Ticket: €6,- | doors: 20:00 - 20:30 | start: 20:30 Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Shearwater USA + Loma USA + Any Kind",
+      "date": "2026-11-11",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=152600&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Wednesday 11 November Shearwater USA + Loma USA + Any Kind USA Mainstage | Ticket: €16,- | doors: 20:00 - 22:00 | start: 20:30 Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Supersuckers USA The Frankie Turbos",
+      "date": "2026-11-12",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=153215&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Thursday 12 November Supersuckers USA The Frankie Turbos NL Mainstage | Ticket: €15,- | doors: 20:00 - 22:00 | start: 20:30 Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Nordic Giants UK L.O.E.",
+      "date": "2026-11-13",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=153185&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Friday 13 November Nordic Giants UK L.O.E. UK Mainstage | Ticket: €15,- | doors: 20:00 - 22:00 | start: 20:30 Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "DOODSESKADER BEL Eigen Risico GRN",
+      "date": "2026-11-14",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=153339&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Saturday 14 November DOODSESKADER BEL Eigen Risico GRN Mainstage | Ticket: €17,- | doors: 20:00 - 22:00 | start: 20:30 Koop ticket"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "VERA-agendapagina",
+      "date": "",
+      "url": "https://www.vera-groningen.nl/programma/?category=all&history=0&lang=nl",
+      "status": "gespecialiseerde parser",
+      "rawText": "20 VERA-agenda-items uit eventlinks"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Pagina geanalyseerd",
+      "date": "",
+      "url": "https://www.vera-groningen.nl/programma/?category=all&history=0&lang=nl",
+      "status": "ok",
+      "rawText": "20 events/aanbiedingen op deze pagina"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Pagina gelezen",
+      "date": "",
+      "url": "https://www.vera-groningen.nl/?lang=nl",
+      "status": "ok",
+      "rawText": "75325 tekens HTML"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Tramhaus",
+      "date": "2026-12-19",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=152866&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Saturday 19 December Tramhaus support Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "BODEGA",
+      "date": "2027-03-03",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=154770&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Wednesday 3 March BODEGA USA support Snarky and energetic artrock De New Yorkse artrockband BODEGA werd in 2016 gevormd uit de resten van het... Lees meer Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Madra Salach IRL",
+      "date": "2027-02-15",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=154849&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Monday 15 February Madra Salach IRL support Raw Irish folk Madra Salach (Iers voor ‘vuile hond’) is een zeskoppige band uit Dublin die traditionele Ierse folk meesleurt... Lees meer Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Codeine",
+      "date": "2027-05-14",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=155052&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Friday 14 May Codeine USA support Early slowcore pioneers Weinig bands laten traagheid zo krachtig klinken als Codeine. Voor de vijfde keer staat... Lees meer Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Black Marble",
+      "date": "2027-04-10",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=154962&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Saturday 10 April Black Marble USA support Gloomy synthpop and hooky cold wave Black Marble is het project van Chris Stewart, waarin cold wave, minimal synth, postpunk... Lees meer Koop ticket"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "VERA-agendapagina",
+      "date": "",
+      "url": "https://www.vera-groningen.nl/?lang=nl",
+      "status": "gespecialiseerde parser",
+      "rawText": "10 VERA-agenda-items uit eventlinks"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Pagina geanalyseerd",
+      "date": "",
+      "url": "https://www.vera-groningen.nl/?lang=nl",
+      "status": "ok",
+      "rawText": "10 events/aanbiedingen op deze pagina"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://www.vera-groningen.nl/",
+      "status": "klaar",
+      "rawText": "site 6/15: 0 unieke events in 3.02 sec"
     }
   ],
   "status": "running",
   "siteStartedAt": "2026-10-26T21:57:09+00:00",
-  "siteElapsedSeconds": 0,
-  "sitePageCount": 0,
+  "siteElapsedSeconds": 4,
+  "sitePageCount": 2,
   "lastSiteEventCount": 0,
-  "stage": "Websitepagina ophalen",
-  "lastUpdatedAt": "2026-10-26T21:57:09+00:00",
-  "lastSiteNewEventCount": 12,
-  "lastCompletedSite": "https://simplon.nl/",
-  "lastCompletedAt": "2026-10-26T21:57:07+00:00"
+  "stage": "Website klaar; volgende website voorbereiden",
+  "lastUpdatedAt": "2026-10-26T21:57:13+00:00",
+  "lastSiteNewEventCount": 0,
+  "lastCompletedSite": "https://www.vera-groningen.nl/",
+  "lastCompletedAt": "2026-10-26T21:57:13+00:00"
 }
