@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- Instellingen onderaan sidebar; paars; versie 2026.10.27.107. -->
+<!-- Instellingen onderaan sidebar; paars; versie 2026.10.27.108. -->
 <html lang="nl">
 <head>
   <meta charset="UTF-8">
@@ -4714,7 +4714,17 @@
       if (favoriteButton) {
         const key = favoriteButton.dataset.eventKey || favoriteButton.dataset.favoriteKey || "";
         const item = events.find(candidate => eventDedupeKey(candidate) === key);
-        if (item) toggleLocalFavorite(item);
+        if (item) {
+          toggleLocalFavorite(item);
+        } else {
+          const savedIndex = favoriteEvents.findIndex(saved => saved.key === key || saved.fallbackKey === key || saved.key === "event:" + key);
+          if (savedIndex >= 0) {
+            favoriteEvents.splice(savedIndex, 1);
+            saveLocalFavorites();
+            showStatus("Favoriet verwijderd uit je favorietenlijst. Het evenement zelf blijft ongemoeid.", "ok");
+            applyFilters();
+          }
+        }
         return;
       }
       const editButton = event.target.closest(".editEventBtn");
