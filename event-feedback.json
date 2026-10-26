@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-26T10:09:02.637Z",
+  "updatedAt": "2026-10-26T10:09:51.941Z",
   "feedback": [
     {
       "key": "2026-10-27|abonnement topmusici van eigen bodem",
@@ -550,6 +550,15 @@
         "type": "Expositie",
         "cost": "Zie website"
       }
+    },
+    {
+      "key": "2028-12-31|exhibition",
+      "vote": "bad",
+      "title": "EXHIBITION",
+      "date": "2028-12-31",
+      "website": "https://groningermuseum.nl/programma",
+      "url": "https://groningermuseum.nl/programma",
+      "updatedAt": "2026-10-26T10:09:51.941Z"
     }
   ]
 }
