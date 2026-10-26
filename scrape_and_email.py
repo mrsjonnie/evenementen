@@ -1494,10 +1494,10 @@ def extract_concertgebouw_detail_event(soup, page_url, site_url, discovery_sourc
 
     description = meta_content(soup, "description", "og:description", "twitter:description")
     image = first_image(soup, page_url)
-    room_match = re.search(r"\\b(Grote Zaal|Kleine Zaal|Koorzaal|Spiegelzaal|Recitalzaal)\\b", text, re.I)
+    room_match = re.search(r"\b(Grote Zaal|Kleine Zaal|Koorzaal|Spiegelzaal|Recitalzaal)\b", text, re.I)
     room = clean_text(room_match.group(1)) if room_match else ""
     location = f"{room}, Concertgebouw Amsterdam" if room else "Concertgebouw Amsterdam"
-    starting_price = re.search(r"\\bvanaf\\s*(?:€\\s*)?(\\d+(?:[,.]\\d{2})?)", text, re.I)
+    starting_price = re.search(r"\bvanaf\s*(?:€\s*)?(\d+(?:[,.]\d{2})?)", text, re.I)
     cost = f"vanaf € {starting_price.group(1).replace('.', ',')}" if starting_price else (first_price(text) or "Zie website")
     event = normalize_event({
         "date": date_value,
