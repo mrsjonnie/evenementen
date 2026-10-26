@@ -819,13 +819,13 @@ function normalizeDeleteTitle(value) {
   const weekdays = "monday|tuesday|wednesday|thursday|friday|saturday|sunday|maandag|dinsdag|woensdag|donderdag|vrijdag|zaterdag|zondag";
   let title = clean(value).toLowerCase();
   title = title.replace(new RegExp(`^(?:${weekdays})\\s+\\d{1,2}\\s+(?:${months})\\s+`, "i"), "");
-  title = title.split(/\\b(mainstage|downstage|zienema|dansen)\\b|\\bticket\\b|\\bdoors\\b|\\bstart\\b|\\bsold out\\b|\\bkoop ticket\\b/i)[0];
-  return title.replace(/\\b20\\d{2}\\b/g, "").replace(/^(concert|theater|film|bioscoop|markt|workshop|event|evenement):\\s*/i, "").replace(/[^a-z0-9]+/g, " ").trim();
+  title = title.split(/\b(mainstage|downstage|zienema|dansen)\b|\bticket\b|\bdoors\b|\bstart\b|\bsold out\b|\bkoop ticket\b/i)[0];
+  return title.replace(/\b20\d{2}\b/g, "").replace(/^(concert|theater|film|bioscoop|markt|workshop|event|evenement):\s*/i, "").replace(/[^a-z0-9]+/g, " ").trim();
 }
 
 function eventDeleteKey(event) {
   const title = normalizeDeleteTitle(event.title || "");
-  const website = clean(event.website || "").toLowerCase().replace(/\\/$/, "");
+  const website = clean(event.website || "").toLowerCase().replace(/\/$/, "");
   return `${event.date || ""}|${title}|${website}`;
 }
 function validEvent(event) {
