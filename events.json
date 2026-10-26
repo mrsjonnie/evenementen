@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-26T20:39:27+00:00",
+  "updatedAt": "2026-10-26T20:39:32+00:00",
   "events": [
     {
       "date": "2026-10-23",
@@ -5007,6 +5007,21 @@
       "isNew": true
     },
     {
+      "date": "2026-11-11",
+      "time": "20:30",
+      "title": "Shearwater USA + Loma USA + Any Kind",
+      "type": "Concert",
+      "location": "VERA Groningen",
+      "locationLink": "",
+      "website": "https://www.vera-groningen.nl/?post_type=events&p=152600&lang=nl",
+      "source": "vera-groningen.nl",
+      "discoverySource": "Website",
+      "description": "Wednesday 11 November Shearwater USA + Loma USA + Any Kind USA Mainstage | Ticket: €16,- | doors: 20:00 - 22:00 | start: 20:30 Koop ticket",
+      "cost": "",
+      "image": "https://www.vera-groningen.nl/wp/../vera/assets/img/logo-black.svg",
+      "isNew": true
+    },
+    {
       "date": "2026-11-12",
       "time": "",
       "title": "Jakop Ahlbom Company & ISH Dance Collective A Fine Mess",
@@ -5083,6 +5098,21 @@
     },
     {
       "date": "2026-11-12",
+      "time": "20:30",
+      "title": "Supersuckers USA The Frankie Turbos",
+      "type": "Concert",
+      "location": "VERA Groningen",
+      "locationLink": "",
+      "website": "https://www.vera-groningen.nl/?post_type=events&p=153215&lang=nl",
+      "source": "vera-groningen.nl",
+      "discoverySource": "Website",
+      "description": "Thursday 12 November Supersuckers USA The Frankie Turbos NL Mainstage | Ticket: €15,- | doors: 20:00 - 22:00 | start: 20:30 Koop ticket",
+      "cost": "",
+      "image": "https://www.vera-groningen.nl/wp/../vera/assets/img/logo-black.svg",
+      "isNew": true
+    },
+    {
+      "date": "2026-11-12",
       "time": "",
       "title": "The Black Atlantic Work In The Dark’ Tour 2026/2027",
       "type": "Activiteit",
@@ -5140,6 +5170,21 @@
       "cost": "",
       "image": "https://simplon.nl/wp-content/uploads/2026/05/No-Cigar-Press-shot-1-1200x853-1.jpeg",
       "isNew": false
+    },
+    {
+      "date": "2026-11-13",
+      "time": "20:30",
+      "title": "Nordic Giants UK L.O.E.",
+      "type": "Concert",
+      "location": "VERA Groningen",
+      "locationLink": "",
+      "website": "https://www.vera-groningen.nl/?post_type=events&p=153185&lang=nl",
+      "source": "vera-groningen.nl",
+      "discoverySource": "Website",
+      "description": "Friday 13 November Nordic Giants UK L.O.E. UK Mainstage | Ticket: €15,- | doors: 20:00 - 22:00 | start: 20:30 Koop ticket",
+      "cost": "",
+      "image": "https://www.vera-groningen.nl/wp/../vera/assets/img/logo-black.svg",
+      "isNew": true
     },
     {
       "date": "2026-11-13",
@@ -5260,6 +5305,21 @@
       "cost": "",
       "image": "https://simplon.nl/wp-content/uploads/2026/05/5-1600x900.jpg",
       "isNew": false
+    },
+    {
+      "date": "2026-11-14",
+      "time": "20:30",
+      "title": "DOODSESKADER BEL Eigen Risico GRN",
+      "type": "Concert",
+      "location": "VERA Groningen",
+      "locationLink": "",
+      "website": "https://www.vera-groningen.nl/?post_type=events&p=153339&lang=nl",
+      "source": "vera-groningen.nl",
+      "discoverySource": "Website",
+      "description": "Saturday 14 November DOODSESKADER BEL Eigen Risico GRN Mainstage | Ticket: €17,- | doors: 20:00 - 22:00 | start: 20:30 Koop ticket",
+      "cost": "",
+      "image": "https://www.vera-groningen.nl/wp/../vera/assets/img/logo-black.svg",
+      "isNew": true
     },
     {
       "date": "2026-11-14",
@@ -5787,6 +5847,21 @@
       "cost": "",
       "image": "https://www.vera-groningen.nl/wp/../vera/assets/img/logo-black.svg",
       "isNew": false
+    },
+    {
+      "date": "2026-12-19",
+      "time": "",
+      "title": "Tramhaus",
+      "type": "Activiteit",
+      "location": "VERA Groningen",
+      "locationLink": "",
+      "website": "https://www.vera-groningen.nl/?post_type=events&p=152866&lang=nl",
+      "source": "vera-groningen.nl",
+      "discoverySource": "Website",
+      "description": "Saturday 19 December Tramhaus support Koop ticket",
+      "cost": "",
+      "image": "https://www.vera-groningen.nl/wp/../vera/assets/img/logo-black.svg",
+      "isNew": true
     },
     {
       "date": "2026-12-31",
@@ -7204,6 +7279,13 @@
       "count": 40,
       "newCount": 40,
       "durationSeconds": 1.6,
+      "timedOut": false
+    },
+    {
+      "site": "https://www.vera-groningen.nl/",
+      "count": 5,
+      "newCount": 5,
+      "durationSeconds": 2.44,
       "timedOut": false
     }
   ],
@@ -17552,312 +17634,6 @@
     {
       "source": "Website",
       "site": "https://simplon.nl/",
-      "title": "Piter + Rupit",
-      "date": "2026-11-12",
-      "url": "https://simplon.nl/events/up-piter-rupit/",
-      "status": "venue-agenda kaart",
-      "rawText": "do 12.11 Piter + Rupit Warme singer-songwriter pop up TICKETS"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "Rijck",
-      "date": "2026-11-13",
-      "url": "https://simplon.nl/events/rijck-2026/",
-      "status": "venue-agenda kaart",
-      "rawText": "vr 13.11 Rijck Disruptieve hiphop met contrast concert TICKETS"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "NO CIGAR",
-      "date": "2026-11-13",
-      "url": "https://simplon.nl/events/no-cigar-2026/",
-      "status": "venue-agenda kaart",
-      "rawText": "vr 13.11 NO CIGAR Smooth indierock on psychedelics concert UITVERKOCHT"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "Bassface",
-      "date": "2026-11-14",
-      "url": "https://simplon.nl/events/bassface-november-2026/",
-      "status": "venue-agenda kaart",
-      "rawText": "za 14.11 Bassface SMG // Teej // Yannons // aotp dance TICKETS"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "dance",
-      "date": "2026-11-14",
-      "url": "https://simplon.nl/events/bassface-november-2026/",
-      "status": "venue-agenda kaart",
-      "rawText": "za 14.11 Bassface SMG // Teej // Yannons // aotp dance TICKETS"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "Big Sleep",
-      "date": "2026-11-14",
-      "url": "https://simplon.nl/events/big-sleep-2026/",
-      "status": "venue-agenda kaart",
-      "rawText": "za 14.11 Big Sleep Support: Stardog | dynamic Irish indierock concert UITVERKOCHT"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "Iskander Moon",
-      "date": "2026-11-18",
-      "url": "https://simplon.nl/events/iskander-moon-2026/",
-      "status": "venue-agenda kaart",
-      "rawText": "wo 18.11 Iskander Moon Folkpop with classical finesse concert TICKETS"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "Desire",
-      "date": "2026-11-20",
-      "url": "https://simplon.nl/events/desire-x-johnny-jewel/",
-      "status": "venue-agenda kaart",
-      "rawText": "vr 20.11 Desire Support: Johnny Jewel + Mothermary | An audiovisual disco noir experience concert TICKETS"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "TechNorth",
-      "date": "2026-11-21",
-      "url": "https://simplon.nl/events/technorth-november-2026/",
-      "status": "venue-agenda kaart",
-      "rawText": "za 21.11 TechNorth Doctor Juicy // Faris Hababa // Fran LF // Julan (Live) dance TICKETS"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "dance",
-      "date": "2026-11-21",
-      "url": "https://simplon.nl/events/technorth-november-2026/",
-      "status": "venue-agenda kaart",
-      "rawText": "za 21.11 TechNorth Doctor Juicy // Faris Hababa // Fran LF // Julan (Live) dance TICKETS"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "Mail for Sil + Brighid",
-      "date": "2026-11-26",
-      "url": "https://simplon.nl/events/up-mail-for-sil-brighid/",
-      "status": "venue-agenda kaart",
-      "rawText": "do 26.11 Mail for Sil + Brighid up TICKETS"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "NO BARRIER",
-      "date": "2026-11-27",
-      "url": "https://simplon.nl/events/no-barrier-november-2026/",
-      "status": "venue-agenda kaart",
-      "rawText": "vr 27.11 NO BARRIER XL Edition | Punk, Emo, Rock & Metalcore Party concert TICKETS"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "Wrest",
-      "date": "2026-11-27",
-      "url": "https://simplon.nl/events/wrest/",
-      "status": "venue-agenda kaart",
-      "rawText": "vr 27.11 Wrest Heartfelt Edinburgh indie rock concert UITVERKOCHT"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "2016 special",
-      "date": "2026-11-28",
-      "url": "https://simplon.nl/events/roodkopje-november-2026/",
-      "status": "venue-agenda kaart",
-      "rawText": "za 28.11 2016 special Roodkopje dance TICKETS"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "dance",
-      "date": "2026-11-28",
-      "url": "https://simplon.nl/events/roodkopje-november-2026/",
-      "status": "venue-agenda kaart",
-      "rawText": "za 28.11 2016 special Roodkopje dance TICKETS"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "Sondre Lerche",
-      "date": "2026-12-02",
-      "url": "https://simplon.nl/events/sondre-lechre/",
-      "status": "venue-agenda kaart",
-      "rawText": "wo 2.12 Sondre Lerche Catchy experimental pop concert TICKETS"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "Call It Off",
-      "date": "2026-12-04",
-      "url": "https://simplon.nl/events/call-it-off-taylor-swift-tribute/",
-      "status": "venue-agenda kaart",
-      "rawText": "vr 4.12 Call It Off Support: Biddy Early | Taylor Swift Tribute concert TICKETS"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "ZWARTEWATER",
-      "date": "2026-12-04",
-      "url": "https://simplon.nl/events/zwartewater-2026/",
-      "status": "venue-agenda kaart",
-      "rawText": "vr 4.12 ZWARTEWATER Spijkerharde Zwolse rap concert TICKETS"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "Lézard",
-      "date": "2026-12-05",
-      "url": "https://simplon.nl/events/lezard-2026/",
-      "status": "venue-agenda kaart",
-      "rawText": "za 5.12 Lézard A discopunk diorama concert TICKETS"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "Comedytunes Comedynight",
-      "date": "2026-12-09",
-      "url": "https://simplon.nl/events/comedy-tunes-9-12/",
-      "status": "venue-agenda kaart",
-      "rawText": "wo 9.12 Comedytunes Comedynight Jasper van der Veen // Jacob Adriani // Tim Alpherts // Meeuw Roovers concert TICKETS"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "Ciao Lucifer",
-      "date": "2026-12-10",
-      "url": "https://simplon.nl/events/ciao-lucifer-2026/",
-      "status": "venue-agenda kaart",
-      "rawText": "do 10.12 Ciao Lucifer Reality-escaping, uplifting indiepop concert TICKETS"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "10 jaar Kerst met Stippenlift",
-      "date": "2026-12-11",
-      "url": "https://simplon.nl/events/stippenlift-2026/",
-      "status": "venue-agenda kaart",
-      "rawText": "vr 11.12 10 jaar Kerst met Stippenlift Dé remedie tegen je winterdepressie concert TICKETS"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "stay away from dante!",
-      "date": "2026-12-16",
-      "url": "https://simplon.nl/events/stay-away-from-dante/",
-      "status": "venue-agenda kaart",
-      "rawText": "wo 16.12 stay away from dante! Een wereld vol verhalen, genres en verrassingen concert TICKETS"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "Tim Akkerman & The Ivy League",
-      "date": "2026-12-18",
-      "url": "https://simplon.nl/events/tim-akkerman-the-ivy-league-2026/",
-      "status": "venue-agenda kaart",
-      "rawText": "vr 18.12 Tim Akkerman & The Ivy League Intimate singer-songwriter pop concert TICKETS"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "Eva van Manen",
-      "date": "2027-01-08",
-      "url": "https://simplon.nl/events/eva-van-manen-2027/",
-      "status": "venue-agenda kaart",
-      "rawText": "vr 8.1 Eva van Manen Support: Luka | Een poëtische adempauze concert TICKETS"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "Alice Olsthoorn",
-      "date": "2027-01-09",
-      "url": "https://simplon.nl/events/alice-olsthoorn/",
-      "status": "venue-agenda kaart",
-      "rawText": "za 9.1 Alice Olsthoorn Aanstekelijke hyperpop meets club muziek concert TICKETS"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "Klezmagic",
-      "date": "2027-01-22",
-      "url": "https://simplon.nl/events/klezmagic/",
-      "status": "venue-agenda kaart",
-      "rawText": "vr 22.1 Klezmagic Energetic Balkan and Klezmer concert TICKETS"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "Starfish",
-      "date": "2027-02-05",
-      "url": "https://simplon.nl/events/starfish-3/",
-      "status": "venue-agenda kaart",
-      "rawText": "vr 5.2 Starfish Sun soaked mix of reggae pop and surf rock concert TICKETS"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "Yong Yello",
-      "date": "2027-02-12",
-      "url": "https://simplon.nl/events/yong-yello/",
-      "status": "venue-agenda kaart",
-      "rawText": "vr 12.2 Yong Yello Soulvolle en meeslepende Vlaamse hiphop concert TICKETS"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "VISION",
-      "date": "2027-02-13",
-      "url": "https://simplon.nl/events/vision-februari-2027/",
-      "status": "venue-agenda kaart",
-      "rawText": "za 13.2 VISION NOISIA + more tba dance UITVERKOCHT"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "dance",
-      "date": "2027-02-13",
-      "url": "https://simplon.nl/events/vision-februari-2027/",
-      "status": "venue-agenda kaart",
-      "rawText": "za 13.2 VISION NOISIA + more tba dance UITVERKOCHT"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "Comedytunes Comedynight",
-      "date": "2027-02-17",
-      "url": "https://simplon.nl/events/comedy-tunes-17-2/",
-      "status": "venue-agenda kaart",
-      "rawText": "wo 17.2 Comedytunes Comedynight Tim Kroezen // Gerrie Smits // Wilko Terwijn // Jacob Spoelstra concert TICKETS"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "The Skints",
-      "date": "2027-02-26",
-      "url": "https://simplon.nl/events/the-skints-2026/",
-      "status": "venue-agenda kaart",
-      "rawText": "vr 26.2 The Skints East-London Reggae concert TICKETS"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "Oh Voyage",
-      "date": "2027-02-26",
-      "url": "https://simplon.nl/events/oh-voyage-2026/",
-      "status": "venue-agenda kaart",
-      "rawText": "vr 26.2 Oh Voyage Anatolian psych dance concert TICKETS"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
       "title": "Aili & Orson",
       "date": "2027-02-28",
       "url": "https://simplon.nl/events/aili-orson/",
@@ -18007,6 +17783,312 @@
       "url": "https://simplon.nl/",
       "status": "klaar",
       "rawText": "site 5/15: 40 unieke events in 1.6 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Start",
+      "date": "",
+      "url": "https://www.vera-groningen.nl/",
+      "status": "start",
+      "rawText": "site 6/15: max 40 events, max 10 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://www.vera-groningen.nl/",
+      "status": "strategie",
+      "rawText": "programma-kaarten"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Pagina gelezen",
+      "date": "",
+      "url": "https://www.vera-groningen.nl/programma/?category=all&history=0&lang=nl",
+      "status": "ok",
+      "rawText": "74016 tekens HTML"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "The Fly",
+      "date": "2026-10-27",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=154391&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Tuesday 27 October The Fly Sold out"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Ulrika Spacek UK Mood Bored",
+      "date": "2026-10-29",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=150560&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "CLUBKAARTSHOW Thursday 29 October Ulrika Spacek UK Mood Bored NL Mainstage | Ticket: €16,- | doors: 20:00 - 22:00 | start: 20:30 Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Kruidkoek & Joost Oomen NL Mesofauna GRN",
+      "date": "2026-10-30",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=151519&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Friday 30 October Kruidkoek & Joost Oomen NL Mesofauna GRN Mainstage | Ticket: €18,- | doors: 19:30 - 21:00 | start: 20:00 Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "WAVEGRAVE Elysium Graaf Griezel // Fladdermus // DJ Stefan",
+      "date": "2026-10-30",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=154134&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Friday 30 October WAVEGRAVE Elysium Graaf Griezel // Fladdermus // DJ Stefan Dansen | Ticket: €5,- | doors: 22:00 - 03:00 | start: 22:00 Sold out"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Los Pirañas COL",
+      "date": "2026-10-31",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=152556&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Saturday 31 October Los Pirañas COL Mainstage | Ticket: €13,- | doors: 21:00 - 22:00 | start: 21:30 Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "The Etters NL Human Toys",
+      "date": "2026-10-31",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=154548&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Saturday 31 October The Etters NL Human Toys FR Downstage | Ticket: €5,- | doors: 22:30 - 23:30 | start: 23:00 Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Push It Pushin Wood Soundsystem All Night Long",
+      "date": "2026-10-31",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=154197&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Saturday 31 October Push It Pushin Wood Soundsystem All Night Long Dansen | Ticket: €5,- | doors: 23:00 - 04:00 | start: 23:01 Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Angine De Poitrine CAN Gros Mené",
+      "date": "2026-11-01",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=151279&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "SOLD OUT Sunday 1 November Angine De Poitrine CAN Gros Mené CAN Mainstage | Ticket: €24,- | doors: 19:30 - 22:00 | start: 20:30 Sold out"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Pavements",
+      "date": "2026-11-03",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=154871&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Tuesday 3 November Pavements Zienema | Ticket: €6,- | doors: 20:00 - 20:30 | start: 20:30 Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Hippotraktor BEL OLTAS",
+      "date": "2026-11-04",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=152263&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Wednesday 4 November Hippotraktor BEL OLTAS NL Mainstage | Ticket: €17,- | doors: 20:00 - 22:00 | start: 20:30 Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Pyrex USA Traumatizer",
+      "date": "2026-11-05",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=154976&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "RAT RACE X DOWNSTAGE EXTRA Thursday 5 November Pyrex USA Traumatizer NL Downstage | Ticket: €7,50 | doors: 21:00 - 22:00 | start: 21:30 Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Temples UK PAUW",
+      "date": "2026-11-06",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=151534&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Friday 6 November Temples UK PAUW NL Mainstage | Ticket: €24,- | doors: 19:30 - 22:00 | start: 20:30 Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "The Homesick NL Rhizocorp",
+      "date": "2026-11-07",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=153264&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Saturday 7 November The Homesick NL Rhizocorp UK Mainstage | Ticket: €14,- | doors: 20:00 - 22:00 | start: 20:30 Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Nagusame GRN",
+      "date": "2026-11-07",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=154867&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Saturday 7 November Nagusame GRN Downstage | Ticket: €5,- | doors: 22:30 - 23:30 | start: 23:00 Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Club VERA Line-up TBA",
+      "date": "2026-11-07",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=155064&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Saturday 7 November Club VERA Line-up TBA Dansen | Ticket: €5,- | doors: 23:00 - 03:00 | start: 23:01 Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Mystery cult film",
+      "date": "2026-11-10",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=154880&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Tuesday 10 November Mystery cult film Zienema | Ticket: €6,- | doors: 20:00 - 20:30 | start: 20:30 Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Shearwater USA + Loma USA + Any Kind",
+      "date": "2026-11-11",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=152600&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Wednesday 11 November Shearwater USA + Loma USA + Any Kind USA Mainstage | Ticket: €16,- | doors: 20:00 - 22:00 | start: 20:30 Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Supersuckers USA The Frankie Turbos",
+      "date": "2026-11-12",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=153215&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Thursday 12 November Supersuckers USA The Frankie Turbos NL Mainstage | Ticket: €15,- | doors: 20:00 - 22:00 | start: 20:30 Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Nordic Giants UK L.O.E.",
+      "date": "2026-11-13",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=153185&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Friday 13 November Nordic Giants UK L.O.E. UK Mainstage | Ticket: €15,- | doors: 20:00 - 22:00 | start: 20:30 Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "DOODSESKADER BEL Eigen Risico GRN",
+      "date": "2026-11-14",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=153339&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Saturday 14 November DOODSESKADER BEL Eigen Risico GRN Mainstage | Ticket: €17,- | doors: 20:00 - 22:00 | start: 20:30 Koop ticket"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "VERA-agendapagina",
+      "date": "",
+      "url": "https://www.vera-groningen.nl/programma/?category=all&history=0&lang=nl",
+      "status": "gespecialiseerde parser",
+      "rawText": "20 VERA-agenda-items uit eventlinks"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Pagina geanalyseerd",
+      "date": "",
+      "url": "https://www.vera-groningen.nl/programma/?category=all&history=0&lang=nl",
+      "status": "ok",
+      "rawText": "20 events/aanbiedingen op deze pagina"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Pagina gelezen",
+      "date": "",
+      "url": "https://www.vera-groningen.nl/?lang=nl",
+      "status": "ok",
+      "rawText": "75325 tekens HTML"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Tramhaus",
+      "date": "2026-12-19",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=152866&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Saturday 19 December Tramhaus support Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "BODEGA",
+      "date": "2027-03-03",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=154770&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Wednesday 3 March BODEGA USA support Snarky and energetic artrock De New Yorkse artrockband BODEGA werd in 2016 gevormd uit de resten van het... Lees meer Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Madra Salach IRL",
+      "date": "2027-02-15",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=154849&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Monday 15 February Madra Salach IRL support Raw Irish folk Madra Salach (Iers voor ‘vuile hond’) is een zeskoppige band uit Dublin die traditionele Ierse folk meesleurt... Lees meer Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Codeine",
+      "date": "2027-05-14",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=155052&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Friday 14 May Codeine USA support Early slowcore pioneers Weinig bands laten traagheid zo krachtig klinken als Codeine. Voor de vijfde keer staat... Lees meer Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Black Marble",
+      "date": "2027-04-10",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=154962&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Saturday 10 April Black Marble USA support Gloomy synthpop and hooky cold wave Black Marble is het project van Chris Stewart, waarin cold wave, minimal synth, postpunk... Lees meer Koop ticket"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "VERA-agendapagina",
+      "date": "",
+      "url": "https://www.vera-groningen.nl/?lang=nl",
+      "status": "gespecialiseerde parser",
+      "rawText": "10 VERA-agenda-items uit eventlinks"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Pagina geanalyseerd",
+      "date": "",
+      "url": "https://www.vera-groningen.nl/?lang=nl",
+      "status": "ok",
+      "rawText": "10 events/aanbiedingen op deze pagina"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://www.vera-groningen.nl/",
+      "status": "klaar",
+      "rawText": "site 6/15: 5 unieke events in 2.44 sec"
     }
   ]
 }
