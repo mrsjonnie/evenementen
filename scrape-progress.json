@@ -1,7 +1,7 @@
 {
   "runId": "2026-10-26T20:52:17.546226+00:00-f89eb25d",
   "startedAt": "2026-10-26T20:52:17+00:00",
-  "completedCount": 8,
+  "completedCount": 9,
   "totalSites": 15,
   "currentSite": "https://www.kultuuragenda.nl/agenda",
   "currentSiteIndex": 9,
@@ -13,7 +13,8 @@
     "https://simplon.nl/",
     "https://www.vera-groningen.nl/",
     "https://www.martiniplaza.nl/nl/agenda",
-    "https://groningermuseum.nl/programma"
+    "https://groningermuseum.nl/programma",
+    "https://www.kultuuragenda.nl/agenda"
   ],
   "events": [
     {
@@ -34,6 +35,96 @@
     },
     {
       "date": "2026-10-26",
+      "time": "20:50 - 23:04",
+      "title": "Classics: Akira",
+      "type": "Concert",
+      "location": "Groningen",
+      "locationLink": "",
+      "website": "https://www.kultuuragenda.nl/agenda/3669541755/classics-akira",
+      "source": "kultuuragenda.nl",
+      "discoverySource": "Website",
+      "description": "Herontdek de cult-klassieker in een prachtige 4K-restauratie. Twee jeugdvrienden worden in een dystopische toekomst de onderwereld van Neo-Tokyo ingezogen en moeten vechten om te overleven.",
+      "cost": "gratis",
+      "image": "https://assets.plaece.nl/thumb/VSG_lzaC0VrD5rcI5MtXRkGgF8U6dFIJ4t4BIkDn1_Q/resizing_type:fit/width:650/height:366/gravity:sm/aHR0cHM6Ly9hc3NldHMucGxhZWNlLm5sL29kcC1ncm9uaW5nZW4vaW1hZ2UvZWFhOTE4MzlhZjdmMTg2Mjk2MWRiZjc5NDlmODY1Y2JlZDA0YzIwN18wMWExNzU5NC1kNWM4LTcyMWQtOTBlYy04MWI4YmE2NmM0YmQuanBn.jpg",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-26",
+      "time": "12:20 - 15:09",
+      "title": "De Gaulle: Liberté",
+      "type": "Concert",
+      "location": "Groningen",
+      "locationLink": "",
+      "website": "https://www.kultuuragenda.nl/agenda/1691313909/de-gaulle-liberte",
+      "source": "kultuuragenda.nl",
+      "discoverySource": "Website",
+      "description": "Na Résistance wordt het verhaal van Charles de Gaulle voortgezet in Liberté, het tweede en afsluitende deel van het epische tweeluik onder regie van Antonin Baudry.",
+      "cost": "gratis",
+      "image": "https://assets.plaece.nl/thumb/zNZes5BkJWt9L8YZghbs5ENEBbjC_05SFg0YuFrhXm4/resizing_type:fit/width:650/height:366/gravity:sm/aHR0cHM6Ly9hc3NldHMucGxhZWNlLm5sL29kcC1ncm9uaW5nZW4vaW1hZ2UvNDU5ZGIwMGVkODFlMGFlYWZiOWRlMzNhM2FlMTFkMWQ2N2JlM2E2Nl8wMWExNzU5NC1hZjRkLTc5OWUtYjYwMy04NTc5MWVlMDAxYTguanBn.jpg",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-26",
+      "time": "17:00 - 19:19",
+      "title": "Digger",
+      "type": "Concert",
+      "location": "Groningen",
+      "locationLink": "",
+      "website": "https://www.kultuuragenda.nl/agenda/1453156530/digger",
+      "source": "kultuuragenda.nl",
+      "discoverySource": "Website",
+      "description": "Regisseur Alejandro González Iñárritu (Birdman, The Revenant) strikte Tom Cruise voor een comedy of catastrophic proportions. Het verhaal: de steenrijke oliebaron Digger Rockwell (Cruise) geeft de klimaatcrisis het laatste zetje door het ijs van Alaska kapot te boren.",
+      "cost": "gratis",
+      "image": "https://assets.plaece.nl/thumb/RLJDIcNo3YUBqm2Z3abumQqy0XKKYxpNafUuScY8q4Q/resizing_type:fit/width:650/height:366/gravity:sm/aHR0cHM6Ly9hc3NldHMucGxhZWNlLm5sL29kcC1ncm9uaW5nZW4vaW1hZ2UvMDg2Yjc0YTlhZWQxYjFiMTI4YmQ5OGE5YTY3Mjg0ZjFhYzA0M2E2ZV8wMWExNzU5NC1jODYxLTc2ZGEtOTkzOS02ZjQzYzkxOGQ4NjEuanBn.jpg",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-26",
+      "time": "12:30 - 14:00",
+      "title": "Docs: Naza",
+      "type": "Film",
+      "location": "Groningen",
+      "locationLink": "",
+      "website": "https://www.kultuuragenda.nl/agenda/3324146979/docs-naza",
+      "source": "kultuuragenda.nl",
+      "discoverySource": "Website",
+      "description": "Van de Israëlische makers Yuval Abraham en Rachel Szor, twee van de vier regisseurs achter de Oscarwinnende documentaire No Other Land, komt NAZA: een indringend onderzoek naar de oorlog in Gaza.",
+      "cost": "gratis",
+      "image": "https://assets.plaece.nl/thumb/useTprqEF-uDtQP17-rZuKgxXd_yqNr75Dc9flpLFi8/resizing_type:fit/width:650/height:366/gravity:sm/aHR0cHM6Ly9hc3NldHMucGxhZWNlLm5sL29kcC1ncm9uaW5nZW4vaW1hZ2UvNzcwY2YxMDE1NmJiYmQyNTBjZTg4OWYxNzM1MzcyNjRmMDBhNmI1NV8wMWExNzU5NC1iMjA5LTdhZGMtYjgwNy1lMjQ0NGQ5ZjU4ZWQucG5n.png",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-26",
+      "time": "12:10 - 13:58",
+      "title": "Docs: The Cycle of Love",
+      "type": "Documentaire",
+      "location": "Groningen",
+      "locationLink": "",
+      "website": "https://www.kultuuragenda.nl/agenda/922308090/docs-the-cycle-of-love",
+      "source": "kultuuragenda.nl",
+      "discoverySource": "Website",
+      "description": "In 1975 wordt een jonge Indiër PK verliefd op de Zweedse Lotta. Wanneer zij terugkeert naar huis, onderneemt hij een meer dan 10.000 kilometer lange fietstocht om haar terug te vinden.",
+      "cost": "gratis",
+      "image": "https://assets.plaece.nl/thumb/0ba167cwz5hjb_aUQwO40qwoW_YvGNuzgcdgpDDRA5w/resizing_type:fit/width:650/height:366/gravity:sm/aHR0cHM6Ly9hc3NldHMucGxhZWNlLm5sL29kcC1ncm9uaW5nZW4vaW1hZ2UvYWFjYTJlMDYzNjFiNDdjYjc4NThlYWU0MGNkZGUzNzhmOTM1NTE0M18wMWExNzU5NC1hOWYzLTcyYjQtYjA0Mi03MDkxYjFmNDBlMjkuanBn.jpg",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-26",
+      "time": "18:30 - 19:51",
+      "title": "Erupcja",
+      "type": "Film",
+      "location": "Groningen",
+      "locationLink": "",
+      "website": "https://www.kultuuragenda.nl/agenda/2155420288/erupcja",
+      "source": "kultuuragenda.nl",
+      "discoverySource": "Website",
+      "description": "Charli XCX zet een krachtige hoofdrol neer in een eigenzinnige film van regisseur Pete Ohs over de verschillen tussen toeval en het lot.",
+      "cost": "gratis",
+      "image": "https://assets.plaece.nl/thumb/wf72NaIT85QwO1FEA6WTfcVQf8-FyCdRrb9MF1DKti0/resizing_type:fit/width:650/height:366/gravity:sm/aHR0cHM6Ly9hc3NldHMucGxhZWNlLm5sL29kcC1ncm9uaW5nZW4vaW1hZ2UvNzBkNTZmOGQ3OTQ1ZGQ5M2YxNzI5YmMxNTVkNjhkZGE0YzVjMGY4ZF8wMWExNzU5NC1jZDdmLTc4MTYtYmRkNC01MjYzMGU2N2FlOTIuanBn.jpg",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-26",
       "time": "",
       "title": "Het gebouw zelf begon als een experiment,",
       "type": "Expositie",
@@ -49,6 +140,22 @@
     },
     {
       "date": "2026-10-26",
+      "time": "19:30",
+      "title": "Home 1",
+      "type": "Concert",
+      "location": "Locatie Museumplein 5a 9641 AD Veendam",
+      "locationLink": "",
+      "website": "https://www.kultuuragenda.nl/agenda/2203530167/home-1",
+      "source": "kultuuragenda.nl",
+      "discoverySource": "Website",
+      "description": "‘Home’ schetst de harde realiteit van een uiteengespatte emigratiedroom.",
+      "cost": "gratis",
+      "image": "https://assets.plaece.nl/thumb/HQH-mVa5-Pnsx841cWCE9Y5CQQqQfBVJCZ7UBjqP6PQ/resizing_type:fit/width:650/height:366/gravity:sm/aHR0cHM6Ly9hc3NldHMucGxhZWNlLm5sL29kcC1ncm9uaW5nZW4vaW1hZ2UvZGNhMWYwNjY1YWQ2OGIzNDdkMzI4MWEzNTZiNDExNWU3MzNlYmVlZV8wMWEwNmY1ZS0wYjcxLTdkMzUtOGNjOC1mYTkxYWQwZjM2ZGYuanBn.jpg",
+      "editedByUser": true,
+      "editedAt": "2026-10-26T11:52:25.100Z"
+    },
+    {
+      "date": "2026-10-26",
       "time": "",
       "title": "Kunst en design ontdekken",
       "type": "Theater",
@@ -60,6 +167,21 @@
       "description": "Groninger Museum Naar hoofdinhoud Naar navigatie Home Bezoek Programma Collectie Architectuur Over Menu NL O v e r h e t m u s e u m Over het museum Over de Collectie Educatie & participatie Steun het museum Pers H e t M u s e u m Groninger Museum is het grootste museum voor kunst en design in het noorden van Nederland",
       "cost": "",
       "image": "",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-26",
+      "time": "12:00 - 14:31",
+      "title": "L'Inconnue",
+      "type": "Film",
+      "location": "Groningen",
+      "locationLink": "",
+      "website": "https://www.kultuuragenda.nl/agenda/2840636300/l-inconnue",
+      "source": "kultuuragenda.nl",
+      "discoverySource": "Website",
+      "description": "Een intrigerende mix van psychologische thriller, mysterie en filosofisch drama. Met zijn totaal eigenzinnige film bevraagt regisseur Arthur Harari (Onoda) op surrealistische wijze identiteit, gender en empathie.",
+      "cost": "gratis",
+      "image": "https://assets.plaece.nl/thumb/agzJ5mHlYkgLpUP79qDZUUcB26vZJmgrYGBs8CFqV00/resizing_type:fit/width:650/height:366/gravity:sm/aHR0cHM6Ly9hc3NldHMucGxhZWNlLm5sL29kcC1ncm9uaW5nZW4vaW1hZ2UvNzdlN2QwOTY4Yjk0ZGRlZmRjNDg0MzYyODQwMmUxMjBjZjRhYTU4Y18wMWExNzU5NC1hNjE0LTdiZjUtYjE3ZS04ZjA1MDYxMTYxODguanBn.jpg",
       "isNew": true
     },
     {
@@ -109,6 +231,21 @@
     },
     {
       "date": "2026-10-26",
+      "time": "18:40 - 20:37",
+      "title": "National Theatre Live: The Misanthrope",
+      "type": "Concert",
+      "location": "Groningen",
+      "locationLink": "",
+      "website": "https://www.kultuuragenda.nl/agenda/3330398606/national-theatre-live-the-misanthrope",
+      "source": "kultuuragenda.nl",
+      "discoverySource": "Website",
+      "description": "Prijswinnares Sandra Oh (Killing Eve) speelt de titelrol in deze vlijmscherpe herinterpretatie van Molières klassieke zwarte komedie.",
+      "cost": "gratis",
+      "image": "https://assets.plaece.nl/thumb/84nQG2QtTtXZkOFzQYymSyu7SKCJ9wJMdIjxGuCiptM/resizing_type:fit/width:650/height:366/gravity:sm/aHR0cHM6Ly9hc3NldHMucGxhZWNlLm5sL29kcC1ncm9uaW5nZW4vaW1hZ2UvNjE1NmJmNjdhMWQ2ZjcwNTY5NDA4N2I0NTZkZjUyNGMyM2EwNTRjOV8wMWExNzU5NC1kMDFmLTdlNWItOTRhZi0zZDE1OTZhMWNkZjAuanBn.jpg",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-26",
       "time": "",
       "title": "O v e r h e t m u s e u m",
       "type": "Theater",
@@ -120,6 +257,81 @@
       "description": "Ontdek inspirerende tentoonstellingen, moderne kunst en verrassend design. Laat je verwonderen door kunst, cultuur en architectuur bij Groninger Museum in Groningen.",
       "cost": "",
       "image": "https://groninger-museum.stream.prepr.io/4dyqyyf8cr9a/w_1800/atelier-mendini-1990-1994-48-niet-in-groninger-museum.jpg",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-26",
+      "time": "16:15 - 18:05",
+      "title": "Pressure",
+      "type": "Concert",
+      "location": "Groningen",
+      "locationLink": "",
+      "website": "https://www.kultuuragenda.nl/agenda/831818211/pressure",
+      "source": "kultuuragenda.nl",
+      "discoverySource": "Website",
+      "description": "Het meeslepende, waargebeurde verhaal van de uitermate stressvolle 72 uur voorafgaand aan D-Day waarin keuzes gemaakt moeten worden die de loop van de geschiedenis volledig kunnen veranderen. Van de producenten van Oscar-winnaar Darkest Hour.",
+      "cost": "gratis",
+      "image": "https://assets.plaece.nl/thumb/WDrRD-h_kL28sX0RbxbwYffdazBP9dR7eLWQol36xzI/resizing_type:fit/width:650/height:366/gravity:sm/aHR0cHM6Ly9hc3NldHMucGxhZWNlLm5sL29kcC1ncm9uaW5nZW4vaW1hZ2UvZjdmYTUwMWI0NWZmNTFmNzJiOWM3YjYwYjFmM2M2ZDMyNzJmYjAwYl8wMWExNzU5NC1jNWUzLTczN2ItYmQ4My0zMmY2N2IxMGJlZTIuanBn.jpg",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-26",
+      "time": "15:00 - 17:25",
+      "title": "The Beloved",
+      "type": "Film",
+      "location": "Groningen",
+      "locationLink": "",
+      "website": "https://www.kultuuragenda.nl/agenda/3730283290/the-beloved-1",
+      "source": "kultuuragenda.nl",
+      "discoverySource": "Website",
+      "description": "Intens vader-dochterdrama van Oscar-genomineerd regisseur Rodrigo Sorogoyen. Als filmregisseur Esteban Martínez terugkeert naar Spanje, biedt hij zijn vervreemde dochter Emilia een hoofdrol aan.",
+      "cost": "gratis",
+      "image": "https://assets.plaece.nl/thumb/zpWyWUACahJoikYMOX7H_5OFBHLOS1CaGUGZr1E52o0/resizing_type:fit/width:650/height:366/gravity:sm/aHR0cHM6Ly9hc3NldHMucGxhZWNlLm5sL29kcC1ncm9uaW5nZW4vaW1hZ2UvYmM2YmZmZjY2MjA0YWFhYTczNTUzOTI5ODc1MmJhNDIxY2I5Y2NmYV8wMWExNzU5NC1iZDI3LTdlYTEtODYwMS0wZGEwY2U4NDI1YTYuanBn.jpg",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-26",
+      "time": "18:00 - 19:38",
+      "title": "Toutes Directions",
+      "type": "Film",
+      "location": "Groningen",
+      "locationLink": "",
+      "website": "https://www.kultuuragenda.nl/agenda/3096643998/toutes-directions",
+      "source": "kultuuragenda.nl",
+      "discoverySource": "Website",
+      "description": "Heerlijke coming-of-age over ouder worden en onverwachtse vriendschappen. Met prachtige muziek van Spinvis, die het Gouden Kalf voor Beste Muziek won.",
+      "cost": "gratis",
+      "image": "https://assets.plaece.nl/thumb/dWfdsGQxZegYSGHuQkwB8Yjp68CuxekobF7VHyyMIhs/resizing_type:fit/width:650/height:366/gravity:sm/aHR0cHM6Ly9hc3NldHMucGxhZWNlLm5sL29kcC1ncm9uaW5nZW4vaW1hZ2UvMGM5YmJlYzYwZGM2MzAyYTZjZjZiZTBhZTc2YmRlNzA4NmE0ZDFkM18wMWExNzU5NC1jYWYwLTc2NDctYjI5OS1iMTVjZDBhODM3MDEuanBn.jpg",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-26",
+      "time": "19:45 - 22:05",
+      "title": "Wildwood",
+      "type": "Concert",
+      "location": "Groningen",
+      "locationLink": "",
+      "website": "https://www.kultuuragenda.nl/agenda/1740715911/wildwood",
+      "source": "kultuuragenda.nl",
+      "discoverySource": "Website",
+      "description": "Een nieuw stop-motion avontuur van de makers van Coraline. Net buiten de stad Portland ligt de Onbegaanbare Wildernis, een verborgen woud waar menselijke buitenstaanders niet welkom zijn.",
+      "cost": "gratis",
+      "image": "https://assets.plaece.nl/thumb/NoD5OncEtHNWVUCFvjH6GUQHBD1dJfNscBdts4W-rgs/resizing_type:fit/width:650/height:366/gravity:sm/aHR0cHM6Ly9hc3NldHMucGxhZWNlLm5sL29kcC1ncm9uaW5nZW4vaW1hZ2UvNjc4NjY2OWVjMjljYTFlYzJjMjdlMTQ0YTZiZWZjZTM3YTk3YzcyNV8wMWExNzU5NC1kMzBhLTdhYTUtOGM1My01Mzc2OGFhODVmMmUuanBn.jpg",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-26",
+      "time": "13:30 - 15:30",
+      "title": "Youri",
+      "type": "Concert",
+      "location": "Groningen",
+      "locationLink": "",
+      "website": "https://www.kultuuragenda.nl/agenda/156742476/youri",
+      "source": "kultuuragenda.nl",
+      "discoverySource": "Website",
+      "description": "Wanneer journalist Jan Brokken de uit de Sovjet-Unie gevluchte, wereldberoemde concertpianist Youri Egorov interviewt, ontstaat een onverwachte maar hechte vriendschap. Prachtig tijdsbeeld van het roerige Amsterdam van de jaren tachtig en intiem portret van vriendschap.",
+      "cost": "gratis",
+      "image": "https://assets.plaece.nl/thumb/vSVPcKwLxq_Ix_63lY5jWUorh5RHwcVe5_GuE6PA4LQ/resizing_type:fit/width:650/height:366/gravity:sm/aHR0cHM6Ly9hc3NldHMucGxhZWNlLm5sL29kcC1ncm9uaW5nZW4vaW1hZ2UvMGZiNTY5NzQ3ZmZmNzQ0ZGM0MmVjYjQzYzZhMGRkM2M0YzE3YThmYl8wMWExNzU5NC1iNzdiLTdlZWItYTkyYy0xODU0NzQ1NTQ4YzcuanBn.jpg",
       "isNew": true
     },
     {
@@ -1268,6 +1480,21 @@
     },
     {
       "date": "2026-10-31",
+      "time": "10:00",
+      "title": "Playing House",
+      "type": "Concert",
+      "location": "Groningen",
+      "locationLink": "",
+      "website": "https://www.kultuuragenda.nl/agenda/2241509706/playing-house",
+      "source": "kultuuragenda.nl",
+      "discoverySource": "Website",
+      "description": "Bezoek de kindertentoonstelling tijdens Oktober Kindermaand!",
+      "cost": "gratis",
+      "image": "https://assets.plaece.nl/thumb/-9xSNajhle10kcfhbFnNfvYionyvgDcfqbxI2lo4Gdw/resizing_type:fit/width:650/height:366/gravity:sm/aHR0cHM6Ly9hc3NldHMucGxhZWNlLm5sL29kcC1ncm9uaW5nZW4vaW1hZ2UvZTgyYTMxYzUyMmJlMzJmZjVhZTkyNTI2NGE5ZWYyNDVjZGMxYmYwY18wMWExNmIyYi00NzZmLTdlYjYtOWMwZC1lMzNjNzkwMzQyYjMuanBn.jpg",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-31",
       "time": "23:01",
       "title": "Push It Pushin Wood Soundsystem All Night Long",
       "type": "Dans",
@@ -2105,6 +2332,21 @@
       "description": "MAN || CO & House of Nouws Heldhaftige dansvoorstelling over de kracht van samenwerken, humor en grootheidswaan",
       "cost": "",
       "image": "https://www.spotgroningen.nl/wp-content/uploads/2026/04/Danscollectief-MAN-II-CO-House-of-Nouws-Kracht-PATS-Sjoerd-Derine-1-300-dpi-RGB-300x200.jpg",
+      "isNew": true
+    },
+    {
+      "date": "2026-11-08",
+      "time": "12:00",
+      "title": "Otto Krol - Gevels, daken en luchten",
+      "type": "Concert",
+      "location": "Groningen",
+      "locationLink": "",
+      "website": "https://www.kultuuragenda.nl/agenda/990231819/otto-krol-gevels-daken-en-luchten",
+      "source": "kultuuragenda.nl",
+      "discoverySource": "Website",
+      "description": "Otto Krol - Gevels, daken en luchten | Kultuuragenda Groningen Ga naar de homepage Evenement aanmelden Kunsthandel Peter ter Braak naar Otto Krol - Gevels, daken en luchten naar Otto Krol - Gevels, daken en luchten van Otto Krol - Gevels, daken en luchten Peter ter Braak exposeert voor de derde keer sinds 2020 nieuwe w",
+      "cost": "Gratis",
+      "image": "https://assets.plaece.nl/thumb/QvzN24c7CHZ2a-pCstx6hnV6CKvupXfjMg3NbieEoF4/resizing_type:fit/width:650/height:366/gravity:sm/aHR0cHM6Ly9hc3NldHMucGxhZWNlLm5sL29kcC1ncm9uaW5nZW4vaW1hZ2UvZDQxYTQ2MTcwZjQyMjg5YWQxMzg2NGY1ZjE3MWQyNTk2NjM4MmZmOF8wMWExMThjOS0yMWE4LTcyOWItOTcwZC1jNGU5Njg4ZTVjYTcuanBn.jpg",
       "isNew": true
     },
     {
@@ -3233,6 +3475,21 @@
       "isNew": true
     },
     {
+      "date": "2027-01-10",
+      "time": "11:00 - 09:00",
+      "title": "Schoolplaten van weleer",
+      "type": "Concert",
+      "location": "Groningen",
+      "locationLink": "",
+      "website": "https://www.kultuuragenda.nl/agenda/975781605/schoolplaten-van-weleer",
+      "source": "kultuuragenda.nl",
+      "discoverySource": "Website",
+      "description": "Ga terug in de tijd bij De Groninger Zilverkamer! Ontdek 25 historische schoolplaten die vroeger in klaslokalen hingen. Bewonder de prachtige illustraties, ontdek de verhalen erachter en haal herinneringen op aan je eigen schooltijd.",
+      "cost": "gratis",
+      "image": "https://assets.plaece.nl/thumb/4WgrPPxuca-kHLkqsS1UUXafE5BVEn78-_UkYAh5unA/resizing_type:fit/width:650/height:366/gravity:sm/aHR0cHM6Ly9hc3NldHMucGxhZWNlLm5sL29kcC1ncm9uaW5nZW4vaW1hZ2UvemlsdmVya2FtZXJfMzA3MDA5MTg1Ny5qcGc.jpg",
+      "isNew": true
+    },
+    {
       "date": "2027-01-22",
       "time": "",
       "title": "Klezmagic",
@@ -3533,6 +3790,21 @@
       "isNew": true
     },
     {
+      "date": "2027-10-10",
+      "time": "11:00",
+      "title": "Het Witte Vlag Project",
+      "type": "Concert",
+      "location": "Groningen",
+      "locationLink": "",
+      "website": "https://www.kultuuragenda.nl/agenda/1148248983/het-witte-vlag-project-1",
+      "source": "kultuuragenda.nl",
+      "discoverySource": "Website",
+      "description": "Het Witte Vlag Project | Kultuuragenda Groningen Ga naar de homepage Evenement aanmelden naar Het Witte Vlag Project naar Het Witte Vlag Project van Het Witte Vlag Project Geen overgave, maar ruimte voor verbeelding zaterdag en zondag 11.00–17.00 uur zaterdag 10 oktober15.00 uur",
+      "cost": "Gratis",
+      "image": "https://assets.plaece.nl/thumb/Zi6l20xe4ABP1Pplaj6gg47bNMpAO_rX_1pDrv7Cd1E/resizing_type:fit/width:650/height:366/gravity:sm/aHR0cHM6Ly9hc3NldHMucGxhZWNlLm5sL29kcC1ncm9uaW5nZW4vaW1hZ2UvNmZjMDdiOTk4ZjkzMTM2NDFkMDg1MmIwM2ViOWMwMzQ4ZjMxMzAyYV8wMWEwNWEzMS05OTc3LTdkZjgtOWU0Yy01N2YwODMyZTQ3OTkuanBn.jpg",
+      "isNew": true
+    },
+    {
       "date": "2028-01-07",
       "time": "",
       "title": "Ontdek het programma M u s e",
@@ -3649,342 +3921,16 @@
       "newCount": 33,
       "durationSeconds": 5.47,
       "timedOut": false
+    },
+    {
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "count": 18,
+      "newCount": 18,
+      "durationSeconds": 9.33,
+      "timedOut": false
     }
   ],
   "rawLog": [
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Otto Krol - Gevels, daken en luchten",
-      "date": "2026-10-28",
-      "url": "https://groningen.uitloper.nu/kunst/otto-krol-gevels-daken-en-luchten-1",
-      "status": "Uitloper agenda-item",
-      "rawText": "Otto Krol - Gevels, daken en luchten Na de stadsgezichten van de vorige expositie eind…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Kleur!",
-      "date": "2026-10-28",
-      "url": "https://groningen.uitloper.nu/kunst/kleur-3",
-      "status": "Uitloper agenda-item",
-      "rawText": "Kleur! Tien kunstenaars onderzoeken in de verschillende ruimtes…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Kunstroutes",
-      "date": "2026-10-28",
-      "url": "https://groningen.uitloper.nu/kunst/kunstroutes",
-      "status": "Uitloper agenda-item",
-      "rawText": "Kunstroutes Kunst die je gezien moet hebben en kunst die je misschien…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "APPROP.",
-      "date": "2026-10-28",
-      "url": "https://groningen.uitloper.nu/kunst/approp",
-      "status": "Uitloper agenda-item",
-      "rawText": "APPROP. Met APPROP. presenteren ax710 en Jurjen Galema een…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Gasten: Paul Kramer",
-      "date": "2026-10-28",
-      "url": "https://groningen.uitloper.nu/kunst/gasten-paul-kramer",
-      "status": "Uitloper agenda-item",
-      "rawText": "Gasten: Paul Kramer Duotentoonstelling met werken van Paul Kramer en Henk…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Permanente Expositie",
-      "date": "2026-10-28",
-      "url": "https://groningen.uitloper.nu/kunst/permanente-expositie",
-      "status": "Uitloper agenda-item",
-      "rawText": "Permanente Expositie De vaste tentoonstelling nodigt uit om kennis te nemen…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Contrasten",
-      "date": "2026-10-28",
-      "url": "https://groningen.uitloper.nu/kunst/contrasten",
-      "status": "Uitloper agenda-item",
-      "rawText": "Contrasten Expositie met Beeldend Collectief Drenthe. Wo tm/…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Schilderijen van Marrie Venderink",
-      "date": "2026-10-28",
-      "url": "https://groningen.uitloper.nu/kunst/schilderijen-vanmarrie-venderink",
-      "status": "Uitloper agenda-item",
-      "rawText": "Schilderijen van Marrie Venderink Expositie met schilderijen van Marrie Venderink …"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Het Witte Vlag Project",
-      "date": "2026-10-28",
-      "url": "https://groningen.uitloper.nu/kunst/het-witte-vlag-project",
-      "status": "Uitloper agenda-item",
-      "rawText": "Het Witte Vlag Project Een groepstentoonstelling met dertien hedendaagse…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Lieuwe van Gogh",
-      "date": "2026-10-28",
-      "url": "https://groningen.uitloper.nu/kunst/lieuwe-van-gogh",
-      "status": "Uitloper agenda-item",
-      "rawText": "Lieuwe van Gogh De kleurrijke gevel van Metamorphose gemaakt door…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Expositie Overwegend Vrouw (Glimmen)",
-      "date": "2026-10-28",
-      "url": "https://groningen.uitloper.nu/kunst/expositie-overwegend-vrouw-glimmen",
-      "status": "Uitloper agenda-item",
-      "rawText": "Expositie Overwegend Vrouw (Glimmen) Ingrid Veldscholten en Josephine Wortelboer exposeren…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Het Witte Vlag Project",
-      "date": "2026-10-28",
-      "url": "https://groningen.uitloper.nu/kunst/het-witte-vlag-project-1",
-      "status": "Uitloper agenda-item",
-      "rawText": "Het Witte Vlag Project In een tijd waarin zekerheden luid klinken en identiteiten…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Playing House - kinderbiënnale",
-      "date": "2026-10-28",
-      "url": "https://groningen.uitloper.nu/jeugd/playing-house-kinderbiennale",
-      "status": "Uitloper agenda-item",
-      "rawText": "Playing House - kinderbiënnale Welke bewust of onbewust aangeleerde regels worden…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Storyworld spotlight: Super Mario 40 jaar",
-      "date": "2026-10-28",
-      "url": "https://groningen.uitloper.nu/jeugd/storyworld-spotlight-super-mario-40-jaar",
-      "status": "Uitloper agenda-item",
-      "rawText": "Storyworld spotlight: Super Mario 40 jaar Een reis door de tijd, langs de technische én creatieve…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Depotrondleidingen: Lichaam & Geest",
-      "date": "2026-10-28",
-      "url": "https://groningen.uitloper.nu/diversen/depotrondleidingen-lichaam-geest",
-      "status": "Uitloper agenda-item",
-      "rawText": "Depotrondleidingen: Lichaam & Geest 14:45 uur Tijdens een rondleiding nemen onze medewerkers je…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Beklimming Martinitoren",
-      "date": "2026-10-28",
-      "url": "https://groningen.uitloper.nu/diversen/beklimming-martinitoren-1",
-      "status": "Uitloper agenda-item",
-      "rawText": "Beklimming Martinitoren Bezoekers kunnen op eigen gelegenheid naar boven lopen…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Hoe lees ik een film?",
-      "date": "2026-10-28",
-      "url": "https://groningen.uitloper.nu/filmhuis/hoe-lees-ik-een-film-4",
-      "status": "Uitloper agenda-item",
-      "rawText": "Hoe lees ik een film? 18:50 uur Wat is de functie van de titel van een film? Welke…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Psychoanalyse & Film: All of Us Strangers",
-      "date": "2026-10-28",
-      "url": "https://groningen.uitloper.nu/filmhuis/psychoanalyse-film-all-of-us-strangers",
-      "status": "Uitloper agenda-item",
-      "rawText": "Psychoanalyse & Film: All of Us Strangers 20:00 uur Veertiger Adam woont afgezonderd in een bijna lege…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Pubquiz",
-      "date": "2026-10-28",
-      "url": "https://groningen.uitloper.nu/quizzen/pubquiz-17",
-      "status": "Uitloper agenda-item",
-      "rawText": "Pubquiz 20:00 uur De pubquiz is een triviantquiz die bestaat uit 8 rondes…"
-    },
-    {
-      "source": "Parser",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Uitloper-dagpagina",
-      "date": "2026-10-28",
-      "url": "https://groningen.uitloper.nu/?date=1793188800",
-      "status": "gespecialiseerde parser",
-      "rawText": "46 agenda-items op 2026-10-28"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Pagina geanalyseerd",
-      "date": "",
-      "url": "https://groningen.uitloper.nu/?date=1793188800",
-      "status": "ok",
-      "rawText": "44 events/aanbiedingen op deze pagina"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Klaar",
-      "date": "",
-      "url": "https://groningen.uitloper.nu/",
-      "status": "klaar",
-      "rawText": "site 1/15: 40 unieke events in 3.27 sec"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": "Start",
-      "date": "",
-      "url": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "status": "start",
-      "rawText": "site 2/15: max 40 events, max 20 seconden"
-    },
-    {
-      "source": "Parser",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": "Scrapertype vastgesteld",
-      "date": "",
-      "url": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "status": "strategie",
-      "rawText": "Visit Groningen agenda-/routekaarten"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": "Pagina gelezen",
-      "date": "",
-      "url": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen",
-      "status": "ok",
-      "rawText": "207288 tekens HTML"
-    },
-    {
-      "source": "Parser",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": "Visit Groningen detailstrategie",
-      "date": "",
-      "url": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen",
-      "status": "strategie",
-      "rawText": "Overzicht overslaan; alleen detail-URL's met /evenementen/<slug> verwerken"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": "Pagina geanalyseerd",
-      "date": "",
-      "url": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen",
-      "status": "ok",
-      "rawText": "0 events/aanbiedingen op deze pagina"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": "Pagina gelezen",
-      "date": "",
-      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
-      "status": "ok",
-      "rawText": "286192 tekens HTML"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": "Uit- en thuistips in Groningen",
-      "date": "2026-10-26",
-      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
-      "status": "event uit datumblok",
-      "rawText": "Uit- en thuistips in Groningen | Visit Groningen Ga naar inhoud Ga naar de homepage Terug Nu & nieuw Uitagenda Nieuwe winkels & horeca in de stad Oktober donkertemaand Het 10-jarig bestaan van Dark Sky Park Lauwersmeer staat in het teken van donker. Het is hoog tijd om de schoonheid van de duisternis te gaan ontdekken. Sunnemeerten Terug Dit is Groningen Top 10 bezienswaardigheden In Groningen ligt het allemaal opval"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": "en nog 3 dagen , Groningen Varia Voeg toe als favoriet Voeg toe als favoriet Nena Nena",
-      "date": "2026-11-02",
-      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
-      "status": "event uit datumblok",
-      "rawText": "2 november en nog 3 dagen , Groningen Varia Voeg toe als favoriet Voeg toe als favoriet Nena Nena"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": ", Groningen",
-      "date": "2027-10-06",
-      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
-      "status": "event uit datumblok",
-      "rawText": "6 oktober , Groningen Muziek overig Voeg toe als favoriet Voeg toe als favoriet Expositie Mijn Thuis Mijn Verhaal: ervaar de kracht van verhalen die verbinden Expositie Mijn Thuis Mijn Verhaal: ervaar de kracht van verhalen die verbinden t/m"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": ", Appingedam Tentoonstelling Voeg toe als favoriet",
-      "date": "2026-12-06",
-      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
-      "status": "event uit datumblok",
-      "rawText": "6 december , Appingedam Tentoonstelling Voeg toe als favoriet Voeg toe als favoriet Stadswandeling o.l.v. een stadsgids Stadswandeling o.l.v. een stadsgids t/m"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": ", Appingedam Rondleiding Voeg toe als favoriet",
-      "date": "2026-12-01",
-      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
-      "status": "event uit datumblok",
-      "rawText": "1 december , Appingedam Rondleiding Voeg toe als favoriet Voeg toe als favoriet Stadswandeling Puutje Stadswandeling Puutje t/m"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": ", Groningen Wandeltocht Voeg toe als favoriet",
-      "date": "2027-10-07",
-      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
-      "status": "event uit datumblok",
-      "rawText": "7 oktober 2027 , Groningen Wandeltocht Voeg toe als favoriet Voeg toe als favoriet Verhalenpad Appie en Flappie op Ewsum Verhalenpad Appie en Flappie op Ewsum t/m"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": ", Ezinge Tentoonstelling Voeg toe als favoriet",
-      "date": "2027-03-01",
-      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
-      "status": "event uit datumblok",
-      "rawText": "1 maart 2027 , Ezinge Tentoonstelling Voeg toe als favoriet Voeg toe als favoriet Duik in het zeehondenmysterie in het WEC Duik in het zeehondenmysterie in het WEC t/m"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": ", Zoutkamp Varia Voeg toe als favoriet",
-      "date": "2027-01-03",
-      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
-      "status": "event uit datumblok",
-      "rawText": "3 januari 2027 , Zoutkamp Varia Voeg toe als favoriet Voeg toe als favoriet Stromen van Verandering : de Hunsingosluis Stromen van Verandering : de Hunsingosluis t/m"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": ", Zoutkamp Tentoonstelling Voeg toe als favoriet",
-      "date": "2027-10-01",
-      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
-      "status": "event uit datumblok",
-      "rawText": "1 oktober , Zoutkamp Tentoonstelling Voeg toe als favoriet Voeg toe als favoriet Hooggeëerd bezoek. Koninklijke visites aan Groningen Hooggeëerd bezoek. Koninklijke visites aan Groningen t/m"
-    },
     {
       "source": "Website",
       "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
@@ -14451,16 +14397,349 @@
       "url": "https://groningermuseum.nl/programma",
       "status": "klaar",
       "rawText": "site 8/15: 33 unieke events in 5.47 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Start",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda",
+      "status": "start",
+      "rawText": "site 9/15: max 40 events, max 20 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda",
+      "status": "strategie",
+      "rawText": "universele detailpagina-parser (Kultuuragenda)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Pagina gelezen",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda",
+      "status": "ok",
+      "rawText": "153402 tekens HTML"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Kultuuragenda detailstrategie",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda",
+      "status": "strategie",
+      "rawText": "Overzicht overslaan; alleen echte /agenda/<id>/<slug> activiteitspagina’s verwerken"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Pagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda",
+      "status": "ok",
+      "rawText": "0 events/aanbiedingen op deze pagina"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/1088284512/the-social-reckoning",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/1148248983/het-witte-vlag-project-1",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/1249727087/nena-1",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/1453156530/digger",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/156742476/youri",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/1691313909/de-gaulle-liberte",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/1740715911/wildwood",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/2155420288/erupcja",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/2203530167/home-1",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/2241509706/playing-house",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/281413393/wicker",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/2840636300/l-inconnue",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/3022524326/sense-and-sensibility",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/3096643998/toutes-directions",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/3324146979/docs-naza",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/3330398606/national-theatre-live-the-misanthrope",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/3621902129/coward",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/3669541755/classics-akira",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/3730283290/the-beloved-1",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/4171063207/klik-tik-2026",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/831818211/pressure",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/922308090/docs-the-cycle-of-love",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/975781605/schoolplaten-van-weleer",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/990231819/otto-krol-gevels-daken-en-luchten",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/feed",
+      "status": "fout",
+      "rawText": "HTTP 404"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/rss",
+      "status": "fout",
+      "rawText": "HTTP 404"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/rss.xml",
+      "status": "fout",
+      "rawText": "HTTP 404"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/feed.xml",
+      "status": "fout",
+      "rawText": "HTTP 404"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/events/feed/",
+      "status": "fout",
+      "rawText": "HTTP 404"
+    },
+    {
+      "source": "Siteconfiguratie",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Evenement uitgesloten",
+      "date": "2026-10-26",
+      "url": "https://www.kultuuragenda.nl/agenda/1088284512/the-social-reckoning",
+      "status": "overgeslagen",
+      "rawText": "Voldoet aan een websitespecifieke uitsluiting"
+    },
+    {
+      "source": "Filter",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Datumfilter toegepast",
+      "date": "2026-10-26",
+      "url": "https://www.kultuuragenda.nl/agenda",
+      "status": "ok",
+      "rawText": "23 gevonden; 22 binnen 2026-10-26 t/m onbeperkt"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda",
+      "status": "klaar",
+      "rawText": "site 9/15: 18 unieke events in 9.33 sec"
     }
   ],
   "status": "running",
   "siteStartedAt": "2026-10-26T20:53:31+00:00",
-  "siteElapsedSeconds": 0,
-  "sitePageCount": 0,
-  "lastSiteEventCount": 0,
-  "stage": "Websitepagina ophalen",
-  "lastUpdatedAt": "2026-10-26T20:53:31+00:00",
-  "lastSiteNewEventCount": 33,
-  "lastCompletedSite": "https://groningermuseum.nl/programma",
-  "lastCompletedAt": "2026-10-26T20:53:29+00:00"
+  "siteElapsedSeconds": 11,
+  "sitePageCount": 1,
+  "lastSiteEventCount": 18,
+  "stage": "Website klaar; volgende website voorbereiden",
+  "lastUpdatedAt": "2026-10-26T20:53:33+00:00",
+  "lastSiteNewEventCount": 18,
+  "lastCompletedSite": "https://www.kultuuragenda.nl/agenda",
+  "lastCompletedAt": "2026-10-26T20:53:42+00:00"
 }
