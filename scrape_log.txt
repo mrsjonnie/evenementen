@@ -487,3 +487,148 @@ RSS/Atom	https://www.visitgroningen.nl/nl/doen/evenementen	fout	Feed mislukt		ht
 RSS/Atom	https://www.visitgroningen.nl/nl/doen/evenementen	fout	Feed mislukt		https://www.visitgroningen.nl/events/feed/	HTTP 404
 Filter	https://www.visitgroningen.nl/nl/doen/evenementen	ok	Datumfilter toegepast	2026-10-26	https://www.visitgroningen.nl/nl/doen/evenementen	8 gevonden; 3 binnen 2026-10-26 t/m onbeperkt
 Website	https://www.visitgroningen.nl/nl/doen/evenementen	klaar	Klaar		https://www.visitgroningen.nl/nl/doen/evenementen	site 2/15: 0 unieke events in 7.72 sec
+Website	https://forum.nl/nl/agenda	start	Start		https://forum.nl/nl/agenda	site 3/15: max 60 events, max 45 seconden
+Parser	https://forum.nl/nl/agenda	strategie	Scrapertype vastgesteld		https://forum.nl/nl/agenda	universeel-eventkaarten
+Website	https://forum.nl/nl/agenda	ok	Pagina gelezen		https://forum.nl/nl/agenda	175554 tekens HTML
+Parser	https://forum.nl/nl/agenda	strategie	Forum detailstrategie		https://forum.nl/nl/agenda	Overzicht overslaan; alleen /nl/agenda/<event> detailpagina's verwerken
+Website	https://forum.nl/nl/agenda	ok	Pagina geanalyseerd		https://forum.nl/nl/agenda	0 events/aanbiedingen op deze pagina
+Website	https://forum.nl/nl/agenda	detail-link gevonden	link		https://forum.nl/nl/agenda/film/breve-storia-damore?date=27-10-2026	
+Website	https://forum.nl/nl/agenda	detail-link gevonden	link		https://forum.nl/nl/agenda/film/coward?date=27-10-2026	
+Website	https://forum.nl/nl/agenda	detail-link gevonden	link		https://forum.nl/nl/agenda/film/digger?date=27-10-2026	
+Website	https://forum.nl/nl/agenda	detail-link gevonden	link		https://forum.nl/nl/agenda/film/docs-de-manager?date=27-10-2026	
+Website	https://forum.nl/nl/agenda	detail-link gevonden	link		https://forum.nl/nl/agenda/film/docs-imago?date=27-10-2026	
+Website	https://forum.nl/nl/agenda	detail-link gevonden	link		https://forum.nl/nl/agenda/film/docs-naza?date=27-10-2026	
+Website	https://forum.nl/nl/agenda	detail-link gevonden	link		https://forum.nl/nl/agenda/film/docs-the-cycle-of-love?date=27-10-2026	
+Website	https://forum.nl/nl/agenda	detail-link gevonden	link		https://forum.nl/nl/agenda/film/erupcja?date=27-10-2026	
+Website	https://forum.nl/nl/agenda	detail-link gevonden	link		https://forum.nl/nl/agenda/film/franz?date=27-10-2026	
+Website	https://forum.nl/nl/agenda	detail-link gevonden	link		https://forum.nl/nl/agenda/film/juste-une-illusion?date=27-10-2026	
+Website	https://forum.nl/nl/agenda	detail-link gevonden	link		https://forum.nl/nl/agenda/film/linconnue?date=27-10-2026	
+Website	https://forum.nl/nl/agenda	detail-link gevonden	link		https://forum.nl/nl/agenda/film/memoire-de-fille?date=27-10-2026	
+Website	https://forum.nl/nl/agenda	detail-link gevonden	link		https://forum.nl/nl/agenda/film/sense-and-sensibility?date=27-10-2026	
+Website	https://forum.nl/nl/agenda	detail-link gevonden	link		https://forum.nl/nl/agenda/film/teenage-sex-and-death-at-camp-miasma?date=27-10-2026	
+Website	https://forum.nl/nl/agenda	detail-link gevonden	link		https://forum.nl/nl/agenda/film/the-beloved?date=27-10-2026	
+Website	https://forum.nl/nl/agenda	detail-link gevonden	link		https://forum.nl/nl/agenda/film/the-kidnapping-of-a-president?date=27-10-2026	
+Website	https://forum.nl/nl/agenda	detail-link gevonden	link		https://forum.nl/nl/agenda/film/the-odyssey?date=27-10-2026	
+Website	https://forum.nl/nl/agenda	detail-link gevonden	link		https://forum.nl/nl/agenda/film/wicker?date=27-10-2026	
+Website	https://forum.nl/nl/agenda	detail-link gevonden	link		https://forum.nl/nl/agenda/film/youri?date=27-10-2026	
+Website	https://forum.nl/nl/agenda	detail-link gevonden	Storyworld		https://forum.nl/agenda/storyworld	Storyworld
+Website	https://forum.nl/nl/agenda	detail-link gevonden	Filmagenda		https://forum.nl/nl/film/filmagenda	Filmagenda
+Website	https://forum.nl/nl/agenda	detail-link gevonden	Filmfestivals		https://forum.nl/nl/film/filmfestivals	Filmfestivals
+Website	https://forum.nl/nl/agenda	detail-link gevonden	Filmseries & specials		https://forum.nl/nl/film/filmseries-specials	Filmseries & specials
+Website	https://forum.nl/nl/agenda	detail-link gevonden	IDFA		https://forum.nl/nl/film/idfa	IDFA
+Website	https://forum.nl/nl/agenda	detail-link gevonden	Kinderfilms		https://forum.nl/nl/film/kinderfilms	Kinderfilms
+Website	https://forum.nl/nl/agenda	detail-link gevonden	Nu te zien		https://forum.nl/nl/film/nu-te-zien	Nu te zien
+Website	https://forum.nl/nl/agenda	detail-link gevonden	Verwacht		https://forum.nl/nl/film/verwacht	Verwacht
+Website	https://forum.nl/nl/agenda	detail-link gevonden	link		https://forum.nl/nl/agenda/digihuis?date=27-10-2026	
+Website	https://forum.nl/nl/agenda	detail-link gevonden	link		https://forum.nl/nl/agenda/digihuis?date=28-10-2026	
+Website	https://forum.nl/nl/agenda	detail-link gevonden	link		https://forum.nl/nl/agenda/het-clubhuis?date=27-10-2026	
+Website	https://forum.nl/nl/agenda	detail-link gevonden	link		https://forum.nl/nl/agenda/hoe-brandveilig-is-jouw-studentenkamer?date=27-10-2026	
+Website	https://forum.nl/nl/agenda	detail-link gevonden	link		https://forum.nl/nl/agenda/informatieplein-lewenborg?date=27-10-2026	
+Website	https://forum.nl/nl/agenda	detail-link gevonden	link		https://forum.nl/nl/agenda/informatiepunt-digitale-overheid?date=27-10-2026	
+Website	https://forum.nl/nl/agenda	detail-link gevonden	link		https://forum.nl/nl/agenda/informatiepunt-digitale-overheid?date=28-10-2026	
+Website	https://forum.nl/nl/agenda	detail-link gevonden	link		https://forum.nl/nl/agenda/inlooppunt-steun-houk?date=27-10-2026	
+Website	https://forum.nl/nl/agenda	detail-link gevonden	link		https://forum.nl/nl/agenda/inloopspreekuur-eerste-hulp-bij-smartphone-tablet-laptop-en-computer?date=27-10-2026	
+Website	https://forum.nl/nl/agenda	detail-link gevonden	link		https://forum.nl/nl/agenda/inloopspreekuur-eerste-hulp-bij-smartphone-tablet-laptop-en-computer?date=28-10-2026	
+Website	https://forum.nl/nl/agenda	detail-link gevonden	link		https://forum.nl/nl/agenda/kleintje-koffie?date=27-10-2026	
+Website	https://forum.nl/nl/agenda	detail-link gevonden	link		https://forum.nl/nl/agenda/kleintje-koffie?date=28-10-2026	
+Website	https://forum.nl/nl/agenda	detail-link gevonden	link		https://forum.nl/nl/agenda/klik-tik?date=27-10-2026	
+Website	https://forum.nl/nl/agenda	detail-link gevonden	link		https://forum.nl/nl/agenda/klik-tik?date=28-10-2026	
+Website	https://forum.nl/nl/agenda	detail-link gevonden	link		https://forum.nl/nl/agenda/leesclub-makkelijk-lezen?date=27-10-2026	
+Website	https://forum.nl/nl/agenda	detail-link gevonden	link		https://forum.nl/nl/agenda/storyworld?date=27-10-2026	
+Website	https://forum.nl/nl/agenda	detail-link gevonden	link		https://forum.nl/nl/agenda/taalcafe?date=27-10-2026	
+Website	https://forum.nl/nl/agenda	detail-link gevonden	link		https://forum.nl/nl/agenda/taalcafe?date=28-10-2026	
+Website	https://forum.nl/nl/agenda	detail-link gevonden	link		https://forum.nl/nl/agenda/taalhuis?date=27-10-2026	
+Website	https://forum.nl/nl/agenda	detail-link gevonden	link		https://forum.nl/nl/agenda/taalhuis?date=28-10-2026	
+Website	https://forum.nl/nl/agenda	detail-link gevonden	link		https://forum.nl/nl/agenda/talks-events/teun-van-de-keuken-hoe-de-vleesindustrie-u-inpakt?date=27-10-2026	
+Website	https://forum.nl/nl/agenda	detail-link gevonden	link		https://forum.nl/nl/agenda/werkplaats-sunnemeerten?date=27-10-2026	
+Website	https://forum.nl/nl/agenda	detail-link gevonden	link		https://forum.nl/nl/agenda/workshop-welkom-online?date=28-10-2026	
+Website	https://forum.nl/nl/agenda	detail-link gevonden	Basisvaardigheden		https://forum.nl/nl/agenda?categorie=basisvaardigheden	Basisvaardigheden
+Website	https://forum.nl/nl/agenda	detail-link gevonden	Cursussen		https://forum.nl/nl/agenda?categorie=cursussen	Cursussen
+Website	https://forum.nl/nl/agenda	detail-link gevonden	Talks & Events		https://forum.nl/nl/agenda?categorie=talks-events	Talks & Events
+Website	https://forum.nl/nl/agenda	detail-link gevonden	Volgende pagina		https://forum.nl/nl/agenda?p=2	Volgende pagina
+Website	https://forum.nl/nl/agenda	detail-link gevonden	Archief		https://forum.nl/nl/expositie/archief	Archief
+Website	https://forum.nl/nl/agenda	detail-link gevonden	Installatie Stad		https://forum.nl/nl/expositie/stad	Installatie Stad
+Website	https://forum.nl/nl/agenda	detail-link gevonden	nl		https://forum.nl/nl/agenda	nl
+Website	https://forum.nl/nl/agenda	detail-link gevonden	Expositie		https://forum.nl/nl/agenda?categorie=expositie	Expositie
+Website	https://forum.nl/nl/agenda	detail-link gevonden	Film		https://forum.nl/nl/agenda?categorie=film	Film
+Website	https://forum.nl/nl/agenda	detail-link gevonden	Kids		https://forum.nl/nl/agenda?categorie=kids	Kids
+Website	https://forum.nl/nl/agenda	detail-link gevonden	1		https://forum.nl/nl/agenda?p=1	1
+Website	https://forum.nl/nl/agenda	detail-link gevonden	27		https://forum.nl/nl/agenda?p=27	27
+Website	https://forum.nl/nl/agenda	detail-link gevonden	3		https://forum.nl/nl/agenda?p=3	3
+Website	https://forum.nl/nl/agenda	detail-link gevonden	4		https://forum.nl/nl/agenda?p=4	4
+Website	https://forum.nl/nl/agenda	detail-link gevonden	5		https://forum.nl/nl/agenda?p=5	5
+Website	https://forum.nl/nl/agenda	detail-link gevonden	Kids		https://forum.nl/nl/bibliotheek/kids	Kids
+Website	https://forum.nl/nl/agenda	detail-link gevonden	Expositie		https://forum.nl/nl/expositie	Expositie
+Website	https://forum.nl/nl/agenda	detail-link gevonden	Film		https://forum.nl/nl/film	Film
+Website	https://forum.nl/nl/agenda	detail-link gevonden	Bibliotheek		https://forum.nl/nl/bibliotheek	Bibliotheek
+Website	https://forum.nl/nl/agenda	detail-link gevonden	Collectie		https://forum.nl/nl/bibliotheek/collectie	Collectie
+Website	https://forum.nl/nl/agenda	detail-link gevonden	Haal meer uit je abonnement		https://forum.nl/nl/bibliotheek/haal-meer-uit-je-abonnement	Haal meer uit je abonnement
+Website	https://forum.nl/nl/agenda	detail-link gevonden	Hulp- en spreekuren		https://forum.nl/nl/bibliotheek/hulp	Hulp- en spreekuren
+Website	https://forum.nl/nl/agenda	detail-link gevonden	Lid worden		https://forum.nl/nl/bibliotheek/lid-worden	Lid worden
+Website	https://forum.nl/nl/agenda	detail-link gevonden	Nederlands leren		https://forum.nl/nl/bibliotheek/nederlands-leren	Nederlands leren
+Website	https://forum.nl/nl/agenda	detail-link gevonden	Studie- en werkplekken		https://forum.nl/nl/bibliotheek/studie-werkplekken	Studie- en werkplekken
+Website	https://forum.nl/nl/agenda	detail-link gevonden	Bibliotheekvestigingen		https://forum.nl/nl/bibliotheek/vestigingen	Bibliotheekvestigingen
+Website	https://forum.nl/nl/agenda	detail-link gevonden	Informatie		https://forum.nl/nl/info	Informatie
+Website	https://forum.nl/nl/agenda	detail-link gevonden	Het Forum		https://forum.nl/nl/info/forum	Het Forum
+Website	https://forum.nl/nl/agenda	detail-link gevonden	Bibliotheek		https://forum.nl/nl/info/forum/bibliotheek	Bibliotheek
+Website	https://forum.nl/nl/agenda	detail-link gevonden	Horeca		https://forum.nl/nl/info/forum/horeca	Horeca
+Website	https://forum.nl/nl/agenda	detail-link gevonden	Huisregels		https://forum.nl/nl/info/huisregels	Huisregels
+Website	https://forum.nl/nl/agenda	detail-link gevonden	MVO		https://forum.nl/nl/info/mvo	MVO
+Website	https://forum.nl/nl/agenda	detail-link gevonden	Onderwijs		https://forum.nl/nl/info/onderwijs	Onderwijs
+Website	https://forum.nl/nl/agenda	detail-link gevonden	Vacatures & vrijwilligers		https://forum.nl/nl/info/vacatures-vrijwilligers	Vacatures & vrijwilligers
+Website	https://forum.nl/nl/agenda	detail-link gevonden	Verhuur & zakelijk		https://forum.nl/nl/info/verhuur-zakelijk	Verhuur & zakelijk
+Website	https://forum.nl/nl/agenda	detail-link gevonden	VERS		https://forum.nl/nl/info/vers	VERS
+Website	https://forum.nl/nl/agenda	detail-link gevonden	Jouw bezoek		https://forum.nl/nl/jouw-bezoek	Jouw bezoek
+Website	https://forum.nl/nl/agenda	detail-link gevonden	Openingstijden		https://forum.nl/nl/jouw-bezoek/openingstijden	Openingstijden
+Website	https://forum.nl/nl/agenda	detail-link gevonden	Route en parkeren		https://forum.nl/nl/jouw-bezoek/route-en-parkeren	Route en parkeren
+Website	https://forum.nl/nl/agenda	detail-link gevonden	Ticketinformatie		https://forum.nl/nl/jouw-bezoek/ticketinformatie	Ticketinformatie
+Website	https://forum.nl/nl/agenda	detail-link gevonden	Toegankelijkheid		https://forum.nl/nl/jouw-bezoek/toegankelijkheid	Toegankelijkheid
+Website	https://forum.nl/nl/agenda	detail-link gevonden	Wifi, internet en printen		https://forum.nl/nl/jouw-bezoek/wifi-printen	Wifi, internet en printen
+Website	https://forum.nl/nl/agenda	ok	Detailpagina geanalyseerd		https://forum.nl/nl/agenda/film/breve-storia-damore?date=27-10-2026	1 extra events
+Website	https://forum.nl/nl/agenda	ok	Detailpagina geanalyseerd		https://forum.nl/nl/agenda/film/coward?date=27-10-2026	1 extra events
+Website	https://forum.nl/nl/agenda	ok	Detailpagina geanalyseerd		https://forum.nl/nl/agenda/film/digger?date=27-10-2026	1 extra events
+Website	https://forum.nl/nl/agenda	ok	Detailpagina geanalyseerd		https://forum.nl/nl/agenda/film/docs-de-manager?date=27-10-2026	1 extra events
+Website	https://forum.nl/nl/agenda	ok	Detailpagina geanalyseerd		https://forum.nl/nl/agenda/film/docs-imago?date=27-10-2026	1 extra events
+Website	https://forum.nl/nl/agenda	ok	Detailpagina geanalyseerd		https://forum.nl/nl/agenda/film/docs-naza?date=27-10-2026	1 extra events
+Website	https://forum.nl/nl/agenda	ok	Detailpagina geanalyseerd		https://forum.nl/nl/agenda/film/docs-the-cycle-of-love?date=27-10-2026	1 extra events
+Website	https://forum.nl/nl/agenda	ok	Detailpagina geanalyseerd		https://forum.nl/nl/agenda/film/erupcja?date=27-10-2026	1 extra events
+Website	https://forum.nl/nl/agenda	ok	Detailpagina geanalyseerd		https://forum.nl/nl/agenda/film/franz?date=27-10-2026	1 extra events
+Website	https://forum.nl/nl/agenda	ok	Detailpagina geanalyseerd		https://forum.nl/nl/agenda/film/juste-une-illusion?date=27-10-2026	1 extra events
+Website	https://forum.nl/nl/agenda	ok	Detailpagina geanalyseerd		https://forum.nl/nl/agenda/film/linconnue?date=27-10-2026	1 extra events
+Website	https://forum.nl/nl/agenda	ok	Detailpagina geanalyseerd		https://forum.nl/nl/agenda/film/memoire-de-fille?date=27-10-2026	1 extra events
+Website	https://forum.nl/nl/agenda	ok	Detailpagina geanalyseerd		https://forum.nl/nl/agenda/film/sense-and-sensibility?date=27-10-2026	1 extra events
+Website	https://forum.nl/nl/agenda	ok	Detailpagina geanalyseerd		https://forum.nl/nl/agenda/film/teenage-sex-and-death-at-camp-miasma?date=27-10-2026	1 extra events
+Website	https://forum.nl/nl/agenda	ok	Detailpagina geanalyseerd		https://forum.nl/nl/agenda/film/the-beloved?date=27-10-2026	1 extra events
+Website	https://forum.nl/nl/agenda	ok	Detailpagina geanalyseerd		https://forum.nl/nl/agenda/film/the-kidnapping-of-a-president?date=27-10-2026	1 extra events
+Website	https://forum.nl/nl/agenda	ok	Detailpagina geanalyseerd		https://forum.nl/nl/agenda/film/the-odyssey?date=27-10-2026	1 extra events
+Website	https://forum.nl/nl/agenda	ok	Detailpagina geanalyseerd		https://forum.nl/nl/agenda/film/wicker?date=27-10-2026	1 extra events
+Website	https://forum.nl/nl/agenda	ok	Detailpagina geanalyseerd		https://forum.nl/nl/agenda/film/youri?date=27-10-2026	1 extra events
+Website	https://forum.nl/nl/agenda	ok	Detailpagina geanalyseerd		https://forum.nl/nl/agenda/storyworld	1 extra events
+Website	https://forum.nl/nl/agenda	ok	Detailpagina geanalyseerd		https://forum.nl/nl/agenda/digihuis?date=27-10-2026	1 extra events
+Website	https://forum.nl/nl/agenda	ok	Detailpagina geanalyseerd		https://forum.nl/nl/agenda/digihuis?date=28-10-2026	0 extra events
+Website	https://forum.nl/nl/agenda	ok	Detailpagina geanalyseerd		https://forum.nl/nl/agenda/het-clubhuis?date=27-10-2026	1 extra events
+Website	https://forum.nl/nl/agenda	ok	Detailpagina geanalyseerd		https://forum.nl/nl/agenda/hoe-brandveilig-is-jouw-studentenkamer?date=27-10-2026	1 extra events
+Website	https://forum.nl/nl/agenda	ok	Detailpagina geanalyseerd		https://forum.nl/nl/agenda/informatieplein-lewenborg?date=27-10-2026	1 extra events
+Website	https://forum.nl/nl/agenda	ok	Detailpagina geanalyseerd		https://forum.nl/nl/agenda/informatiepunt-digitale-overheid?date=27-10-2026	1 extra events
+Website	https://forum.nl/nl/agenda	ok	Detailpagina geanalyseerd		https://forum.nl/nl/agenda/informatiepunt-digitale-overheid?date=28-10-2026	0 extra events
+Website	https://forum.nl/nl/agenda	ok	Detailpagina geanalyseerd		https://forum.nl/nl/agenda/inlooppunt-steun-houk?date=27-10-2026	1 extra events
+Website	https://forum.nl/nl/agenda	ok	Detailpagina geanalyseerd		https://forum.nl/nl/agenda/inloopspreekuur-eerste-hulp-bij-smartphone-tablet-laptop-en-computer?date=27-10-2026	1 extra events
+Website	https://forum.nl/nl/agenda	ok	Detailpagina geanalyseerd		https://forum.nl/nl/agenda/inloopspreekuur-eerste-hulp-bij-smartphone-tablet-laptop-en-computer?date=28-10-2026	0 extra events
+Website	https://forum.nl/nl/agenda	ok	Detailpagina geanalyseerd		https://forum.nl/nl/agenda/kleintje-koffie?date=27-10-2026	1 extra events
+Website	https://forum.nl/nl/agenda	ok	Detailpagina geanalyseerd		https://forum.nl/nl/agenda/kleintje-koffie?date=28-10-2026	0 extra events
+Website	https://forum.nl/nl/agenda	ok	Detailpagina geanalyseerd		https://forum.nl/nl/agenda/klik-tik?date=27-10-2026	1 extra events
+Website	https://forum.nl/nl/agenda	ok	Detailpagina geanalyseerd		https://forum.nl/nl/agenda/klik-tik?date=28-10-2026	0 extra events
+Website	https://forum.nl/nl/agenda	ok	Detailpagina geanalyseerd		https://forum.nl/nl/agenda/leesclub-makkelijk-lezen?date=27-10-2026	1 extra events
+Website	https://forum.nl/nl/agenda	ok	Detailpagina geanalyseerd		https://forum.nl/nl/agenda/storyworld?date=27-10-2026	0 extra events
+Website	https://forum.nl/nl/agenda	ok	Detailpagina geanalyseerd		https://forum.nl/nl/agenda/taalcafe?date=27-10-2026	1 extra events
+Website	https://forum.nl/nl/agenda	ok	Detailpagina geanalyseerd		https://forum.nl/nl/agenda/taalcafe?date=28-10-2026	0 extra events
+Website	https://forum.nl/nl/agenda	ok	Detailpagina geanalyseerd		https://forum.nl/nl/agenda/taalhuis?date=27-10-2026	1 extra events
+Website	https://forum.nl/nl/agenda	ok	Detailpagina geanalyseerd		https://forum.nl/nl/agenda/taalhuis?date=28-10-2026	0 extra events
+Website	https://forum.nl/nl/agenda	ok	Detailpagina geanalyseerd		https://forum.nl/nl/agenda/werkplaats-sunnemeerten?date=27-10-2026	1 extra events
+Website	https://forum.nl/nl/agenda	ok	Detailpagina geanalyseerd		https://forum.nl/nl/agenda/workshop-welkom-online?date=28-10-2026	1 extra events
+RSS/Atom	https://forum.nl/nl/agenda	fout	Feed mislukt		https://forum.nl/feed	HTTP 404
+RSS/Atom	https://forum.nl/nl/agenda	fout	Feed mislukt		https://forum.nl/rss	HTTP 404
+RSS/Atom	https://forum.nl/nl/agenda	fout	Feed mislukt		https://forum.nl/rss.xml	HTTP 404
+RSS/Atom	https://forum.nl/nl/agenda	fout	Feed mislukt		https://forum.nl/feed.xml	HTTP 404
+RSS/Atom	https://forum.nl/nl/agenda	fout	Feed mislukt		https://forum.nl/events/feed/	HTTP 404
+Website	https://forum.nl/nl/agenda	klaar	Klaar		https://forum.nl/nl/agenda	site 3/15: 0 unieke events in 23.01 sec
