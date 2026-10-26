@@ -1,7 +1,7 @@
 {
   "runId": "2026-10-26T11:20:39.872729+00:00-9d8db956",
   "startedAt": "2026-10-26T11:20:39+00:00",
-  "completedCount": 17,
+  "completedCount": 18,
   "totalSites": 18,
   "currentSite": "https://denieuwekolk.nl/agenda",
   "currentSiteIndex": 18,
@@ -22,7 +22,8 @@
     "https://www.vvvameland.nl/activiteiten-en-evenementen",
     "https://www.socialdeal.nl/",
     "https://www.ibood.com/s-nl",
-    "https://www.pathe.nl/bioscoop/groningen"
+    "https://www.pathe.nl/bioscoop/groningen",
+    "https://denieuwekolk.nl/agenda"
   ],
   "events": [
     {
@@ -1907,6 +1908,21 @@
       "description": "Waalse indieparel / Tolhuistuin Eigenzinnige combinatie van jazz, soul en psychedelische art-pop",
       "cost": "",
       "image": "",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-28",
+      "time": "15:00",
+      "title": "Masker maken",
+      "type": "Film",
+      "location": "00",
+      "locationLink": "",
+      "website": "https://denieuwekolk.nl/bieb/agenda/masker-maken",
+      "source": "denieuwekolk.nl",
+      "discoverySource": "Website",
+      "description": "Maak je eigen masker in NXT Lab! Creatieve workshop voor kinderen vanaf 4 jaar in De Nieuwe Kolk, het culturele hart van Assen.",
+      "cost": "",
+      "image": "https://media.denieuwekolk.nl/019f69ab-f3ab-7c70-bacf-26fbb146395a/maskers?crop=1600%2C960%2C80%2C0&scale=1200&optimizer=image",
       "isNew": true
     },
     {
@@ -5734,153 +5750,16 @@
       "newCount": 0,
       "durationSeconds": 5.35,
       "timedOut": false
+    },
+    {
+      "site": "https://denieuwekolk.nl/agenda",
+      "count": 1,
+      "newCount": 1,
+      "durationSeconds": 11.55,
+      "timedOut": true
     }
   ],
   "rawLog": [
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Oscar Smit €472.000",
-      "date": "2027-03-17",
-      "url": "https://www.spotgroningen.nl/programma/oscar-smit/",
-      "status": "event uit link",
-      "rawText": "Oscar Smit €472.000 Oscar fileert op geestige wijze de overspannen woningmarkt wo 17 mrt"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Pokey Lafarge",
-      "date": "2027-03-18",
-      "url": "https://www.spotgroningen.nl/programma/pokey-lafarge-5/",
-      "status": "event uit link",
-      "rawText": "Pokey Lafarge Authentieke en tijdloze mix van blues, jazz, rock-’n-roll, country en soul do 18 mrt"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "De Warme Winkel R2D2_or_not_2B2",
-      "date": "2027-03-18",
-      "url": "https://www.spotgroningen.nl/programma/de-warme-winkel-9/",
-      "status": "event uit link",
-      "rawText": "De Warme Winkel R2D2_or_not_2B2 Mens, machine en meesterwerk in ontbinding do 18 mrt"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Orange Skyline",
-      "date": "2027-03-18",
-      "url": "https://www.spotgroningen.nl/programma/orange-skyline-4/",
-      "status": "event uit link",
-      "rawText": "Orange Skyline Snelgroeiende indierockband in een intieme setting do 18 mrt"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Isa Hoes, Edwin Jonker e.a. De Verbouwing",
-      "date": "2027-03-19",
-      "url": "https://www.spotgroningen.nl/programma/isa-hoes-edwin-jonker-e-a/",
-      "status": "event uit link",
-      "rawText": "Isa Hoes, Edwin Jonker e.a. De Verbouwing Naar het zinderende boek van Saskia Noort vr 19 mrt"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Somer Kamerorkest Mythische proporties in een aards formaat",
-      "date": "2027-03-19",
-      "url": "https://www.spotgroningen.nl/programma/somer-kamerorkest/",
-      "status": "event uit link",
-      "rawText": "Somer Kamerorkest Mythische proporties in een aards formaat Kamerorkest van the next generation speelt muziek van Somer, Wagner en Bruckner vr 19 mrt"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Stephanie Struijk",
-      "date": "2027-03-19",
-      "url": "https://www.spotgroningen.nl/programma/stephanie-struijk-7/",
-      "status": "event uit link",
-      "rawText": "Stephanie Struijk Nederlandse singer-songwriter komt met nieuwe voorstelling vr 19 mrt"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Noord Nederlands Orkest Matthäus Passion",
-      "date": "2027-03-20",
-      "url": "https://www.spotgroningen.nl/programma/noord-nederlands-orkest-238/",
-      "status": "event uit link",
-      "rawText": "Noord Nederlands Orkest Matthäus Passion Bachs Matthäus Passion met een unieke interpretatie za 20 mrt"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Lang Leve Annie M.G. Suzan Seegers Job Bovelander e.a.",
-      "date": "2027-03-20",
-      "url": "https://www.spotgroningen.nl/programma/lang-leve-annie-m-g/",
-      "status": "event uit link",
-      "rawText": "Lang Leve Annie M.G. Suzan Seegers Job Bovelander e.a. Eerbetoon aan de vrouw die Nederland leerde lachen, denken en voelen za 20 mrt"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Koka Kola Rivier (9+) De Toneelmakerij",
-      "date": "2027-03-21",
-      "url": "https://www.spotgroningen.nl/programma/koka-kola-rivier-9/",
-      "status": "event uit link",
-      "rawText": "Koka Kola Rivier (9+) De Toneelmakerij Meeslepende familievoorstelling over het verlangen naar de plek waar je vandaan komt zo 21 mrt"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Huub van der Lubbe en Jan Robijns NEEM HET LICHT",
-      "date": "2027-03-22",
-      "url": "https://www.spotgroningen.nl/programma/huub-van-der-lubbe-en-jan-robijns/",
-      "status": "event uit link",
-      "rawText": "Huub van der Lubbe en Jan Robijns NEEM HET LICHT Liedjes uit het rijke muzikale verhalen, nieuw werk, verhalen en anekdotes Uitverkocht ma 22 mrt"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Maartje en Kine DE BINGO SHOW",
-      "date": "2027-03-23",
-      "url": "https://www.spotgroningen.nl/programma/maartje-en-kine-2/",
-      "status": "event uit link",
-      "rawText": "Maartje en Kine DE BINGO SHOW De muzikaalste bingo show van Nederland di 23 mrt"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Van Vleuten en Van Muiswinkel Alles Onder Controle",
-      "date": "2027-03-23",
-      "url": "https://www.spotgroningen.nl/programma/van-vleuten-en-van-muiswinkel/",
-      "status": "event uit link",
-      "rawText": "Van Vleuten en Van Muiswinkel Alles Onder Controle Diederik van Vleuten en Erik van Muiswinkel maken hun langverwachte terugkeer di 23 mrt"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Van Vleuten en Van Muiswinkel Alles Onder Controle",
-      "date": "2027-03-24",
-      "url": "https://www.spotgroningen.nl/programma/van-vleuten-en-van-muiswinkel-2/",
-      "status": "event uit link",
-      "rawText": "Van Vleuten en Van Muiswinkel Alles Onder Controle Diederik van Vleuten en Erik van Muiswinkel maken hun langverwachte terugkeer wo 24 mrt"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Amsterdam Burlesque Revue Goddess Gracious",
-      "date": "2027-03-25",
-      "url": "https://www.spotgroningen.nl/programma/amsterdam-burlesque-revue/",
-      "status": "event uit link",
-      "rawText": "Amsterdam Burlesque Revue Goddess Gracious Een burlesque show vol mystiek en spannende symboliek do 25 mrt"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "The Monster Trilogy Toneel­schuur Producties",
-      "date": "2027-03-25",
-      "url": "https://www.spotgroningen.nl/programma/the-monster-trilogy/",
-      "status": "event uit link",
-      "rawText": "The Monster Trilogy Toneel­schuur Producties | De Nationale Opera | RIGHTABOUTNOW INC Wervelende theatertrip vol horror, humor en muziek do 25 mrt"
-    },
     {
       "source": "Website",
       "site": "https://www.spotgroningen.nl/programma/",
@@ -16536,16 +16415,160 @@
       "url": "https://www.pathe.nl/bioscoop/groningen",
       "status": "klaar",
       "rawText": "site 17/18: 0 unieke events in 5.35 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Start",
+      "date": "",
+      "url": "https://denieuwekolk.nl/agenda",
+      "status": "start",
+      "rawText": "site 18/18: max 40 events, max 10 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://denieuwekolk.nl/agenda",
+      "status": "strategie",
+      "rawText": "agenda-kaarten + datumregels (De Nieuwe Kolk)"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Pagina gelezen",
+      "date": "",
+      "url": "https://denieuwekolk.nl/agenda",
+      "status": "ok",
+      "rawText": "690112 tekens HTML"
+    },
+    {
+      "source": "Parser",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "De Nieuwe Kolk detailstrategie",
+      "date": "",
+      "url": "https://denieuwekolk.nl/agenda",
+      "status": "strategie",
+      "rawText": "Agenda gebruiken om detail-URL's te vinden; alleen de echte detailpagina als evenement verwerken"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Pagina geanalyseerd",
+      "date": "",
+      "url": "https://denieuwekolk.nl/agenda",
+      "status": "ok",
+      "rawText": "0 events/aanbiedingen op deze pagina"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Pagina gelezen",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda",
+      "status": "ok",
+      "rawText": "412501 tekens HTML"
+    },
+    {
+      "source": "Parser",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "De Nieuwe Kolk detailstrategie",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda",
+      "status": "strategie",
+      "rawText": "Agenda gebruiken om detail-URL's te vinden; alleen de echte detailpagina als evenement verwerken"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Pagina geanalyseerd",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda",
+      "status": "ok",
+      "rawText": "0 events/aanbiedingen op deze pagina"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda/adviesplein",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda/alzheimercafe-10044312",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda/fotoexpositie-verhalen-van-verborgen-kracht-10050486",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda/het-vlucht-voorwaarts-praathuis",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda/masker-maken",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "DNK-ticketpagina niet volledig herkend",
+      "date": "",
+      "url": "https://tickets.denieuwekolk.nl/mtTicket/performance/10370772",
+      "status": "diagnose",
+      "rawText": "titel=Kaartverkoop De Nieuwe Kolk; datums=2; tijden/ruimtes=0; tekst=Kaarten bestellen | Masker maken - NXT Lab (4+) - woensdag 28 oktober 2026 | Kaartverkoop De Nieuwe Kolk Titel en navigatie overslaan Kaartverkoop De Nieuwe Kolk en Masker maken NXT Lab (4+) woensdag 28 oktober 2026 15:00 (einde 16:00) DNK-NXT Log in om al je"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://tickets.denieuwekolk.nl/mtTicket/performance/10370772",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://denieuwekolk.nl/agenda",
+      "status": "klaar",
+      "rawText": "site 18/18: 1 unieke events in 11.55 sec"
     }
   ],
-  "status": "running",
+  "status": "finishing",
   "siteStartedAt": "2026-10-26T11:23:27+00:00",
-  "siteElapsedSeconds": 0,
-  "sitePageCount": 0,
-  "lastSiteEventCount": 0,
-  "stage": "Websitepagina ophalen",
-  "lastUpdatedAt": "2026-10-26T11:23:27+00:00",
-  "lastSiteNewEventCount": 0,
-  "lastCompletedSite": "https://www.pathe.nl/bioscoop/groningen",
-  "lastCompletedAt": "2026-10-26T11:23:25+00:00"
+  "siteElapsedSeconds": 13,
+  "sitePageCount": 2,
+  "lastSiteEventCount": 1,
+  "stage": "Website klaar; volgende website voorbereiden",
+  "lastUpdatedAt": "2026-10-26T11:23:32+00:00",
+  "lastSiteNewEventCount": 1,
+  "lastCompletedSite": "https://denieuwekolk.nl/agenda",
+  "lastCompletedAt": "2026-10-26T11:23:40+00:00"
 }
