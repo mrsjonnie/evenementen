@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-26T22:12:37.705Z",
+  "updatedAt": "2026-10-26T22:15:39.121Z",
   "sites": {
     "https://groningen.uitloper.nu/": {
       "methodology": "",
@@ -124,7 +124,13 @@
         "linkedin"
       ],
       "excludedUrls": [],
-      "adjustments": [],
+      "adjustments": [
+        {
+          "field": "location",
+          "find": "Bibliotheek",
+          "replace": "Forum Bibliotheek Groningen"
+        }
+      ],
       "eventUrlPatterns": [],
       "excludedUrlPatterns": []
     },
