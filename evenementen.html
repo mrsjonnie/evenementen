@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- Browser-local favorites, TicketSwap search en leesbare bewerkvelden, versie 2026.10.26.71. -->
+<!-- Favorieten, TicketSwap-filter en dubbelingsfeedback, versie 2026.10.26.72. -->
 <html lang="nl">
 <head>
   <meta charset="UTF-8">
@@ -1495,7 +1495,7 @@
   </div>
 
   <script>
-    const APP_VERSION = "2026.10.26.71";
+    const APP_VERSION = "2026.10.26.72";
     const STATUS_HISTORY_KEY = "evenementenStatusHistoryV1";
     const DISMISSED_SCRAPE_RUN_KEY = "evenementenDismissedScrapeRunV1";
     const DEFAULT_MAX_EVENTS_PER_SITE = 20;
@@ -3500,12 +3500,13 @@
             </div>
             <p class="desc">${escapeHtml(event.description || "Geen omschrijving beschikbaar.")}${sourceSuffix}</p>
             <div class="cardActions">
-              <button class="btn btnSecondary favoriteBtn ${favorite ? "isFavorite" : ""}" type="button" data-favorite-key="${escapeHtml(cardKey)}" aria-pressed="${favorite ? "true" : "false"}" title="${favorite ? "Verwijder uit favorieten" : "Bewaar lokaal als favoriet"}">${favorite ? "★ Favoriet" : "☆ Favoriet"}</button>
-              <a class="btn btnSecondary ticketSwapBtn" href="${escapeHtml(ticketSwapSearchUrl(event))}" target="_blank" rel="noopener noreferrer" title="Zoek dit evenement op TicketSwap">TicketSwap zoeken ↗</a>
               ${website ? `<a class="btn btnPrimary" href="${escapeHtml(website)}" target="_blank" rel="noopener noreferrer">Meer info</a>` : ""}
+              <button class="btn btnSecondary favoriteBtn ${favorite ? "isFavorite" : ""}" type="button" data-favorite-key="${escapeHtml(cardKey)}" aria-pressed="${favorite ? "true" : "false"}" title="${favorite ? "Verwijder uit favorieten" : "Bewaar lokaal als favoriet"}">${favorite ? "★ Favoriet" : "☆ Favoriet"}</button>
+              ${favorite ? `<a class="btn btnSecondary ticketSwapBtn" href="${escapeHtml(ticketSwapSearchUrl(event))}" target="_blank" rel="noopener noreferrer" title="Zoek dit evenement op TicketSwap">TicketSwap ↗</a>` : ""}
               ${route ? `<button class="btn btnSecondary routeToggle" type="button" data-route="${escapeHtml(routeId)}" data-destination="${escapeHtml(routeDestinationText)}" data-route-url="${escapeHtml(route)}">Route</button>` : ""}
               <button class="btn btnSecondary editEventBtn" type="button" data-event-key="${escapeHtml(cardKey)}" aria-expanded="false">Bewerken</button>
               <button class="btn btnSecondary goodEventBtn" type="button" data-event-key="${escapeHtml(cardKey)}" aria-label="Markeer als goede link" title="Goede link">👍 Goed</button>
+              <button class="btn btnSecondary duplicateEventBtn" type="button" data-event-key="${escapeHtml(cardKey)}" title="Verwijder dit evenement en leer de scraper dat dit een dubbeling is">Dubbel</button>
               <button class="btn btnDanger deleteEventBtn" type="button" data-event-key="${escapeHtml(cardKey)}">Verwijder</button>
               ${route && routeContext ? `<span class="routeInfo">${escapeHtml(routeContext)}</span>` : ""}
             </div>
@@ -4117,6 +4118,35 @@
       }
     }
 
+    async function markDuplicateEventByKey(key, button) {
+      const event = events.find((item) => eventDedupeKey(item) === key);
+      if (!event) return;
+      if (button) { button.disabled = true; button.textContent = "Verwerken…"; }
+      try {
+        const feedbackResponse = await fetch(`${WORKER_URL}/event-feedback`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            key,
+            title: event.title,
+            date: event.date,
+            website: event.website || "",
+            url: event.website || "",
+            vote: "duplicate"
+          })
+        });
+        const feedbackData = await feedbackResponse.json().catch(() => ({}));
+        if (!feedbackResponse.ok || feedbackData.ok === false) {
+          throw new Error(workerErrorMessage(feedbackData, "Dubbelingsfeedback opslaan is mislukt"));
+        }
+        await deleteEventByKey(key);
+        showStatus("Evenement verwijderd en als dubbeling gemeld. De scraper neemt deze feedback mee bij volgende scans.", "ok");
+      } catch (error) {
+        showStatus(`Dubbeling niet volledig verwerkt: ${cleanText(error.message || error)}`, "error");
+        if (button) { button.disabled = false; button.textContent = "Dubbel"; }
+      }
+    }
+
     async function deleteEventByKey(key) {
       const event = events.find((item) => eventDedupeKey(item) === key);
       if (!event) return;
@@ -4367,6 +4397,11 @@
       }
       const goodButton = event.target.closest(".goodEventBtn");
       if (goodButton) { saveEventVote(goodButton.dataset.eventKey || "", "good", goodButton); return; }
+      const duplicateButton = event.target.closest(".duplicateEventBtn");
+      if (duplicateButton) {
+        markDuplicateEventByKey(duplicateButton.dataset.eventKey || "", duplicateButton);
+        return;
+      }
       const deleteButton = event.target.closest(".deleteEventBtn");
       if (deleteButton) {
         deleteEventByKey(deleteButton.dataset.eventKey || "");
