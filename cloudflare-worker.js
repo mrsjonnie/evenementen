@@ -1173,7 +1173,14 @@ async function saveEventCorrection(env, target = {}) {
   const apply = (event) => {
     if (!sameEvent(event)) return event;
     updatedCount += 1;
-    return { ...event, title, date, location, type, cost, website: improvedUrl, editedByUser: true, editedAt: new Date().toISOString() };
+    const locationChanged = clean(event.location || "").toLowerCase() !== location.toLowerCase();
+    const corrected = { ...event, title, date, location, type, cost, website: improvedUrl, editedByUser: true, editedAt: new Date().toISOString() };
+    // Remove coordinates tied to the old scraped location so the corrected location is used after reload.
+    if (locationChanged) {
+      delete corrected.lat;
+      delete corrected.lon;
+    }
+    return corrected;
   };
   if (Array.isArray(data)) {
     data = data.map(apply);
