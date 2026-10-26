@@ -1,7 +1,7 @@
 {
   "runId": "2026-10-26T12:26:54.991401+00:00-25f487be",
   "startedAt": "2026-10-26T12:26:54+00:00",
-  "completedCount": 4,
+  "completedCount": 5,
   "totalSites": 18,
   "currentSite": "https://simplon.nl/",
   "currentSiteIndex": 5,
@@ -9,7 +9,8 @@
     "https://groningen.uitloper.nu/",
     "https://www.visitgroningen.nl/nl/doen/evenementen",
     "https://forum.nl/nl/agenda",
-    "https://www.spotgroningen.nl/programma/"
+    "https://www.spotgroningen.nl/programma/",
+    "https://simplon.nl/"
   ],
   "events": [
     {
@@ -2291,108 +2292,16 @@
       "newCount": 50,
       "durationSeconds": 5.68,
       "timedOut": false
+    },
+    {
+      "site": "https://simplon.nl/",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 4.23,
+      "timedOut": false
     }
   ],
   "rawLog": [
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Nieuw licht 1: Ani Schulze – The Convent of Pleasure",
-      "date": "2026-10-26",
-      "url": "https://groningen.uitloper.nu/kunst/nieuw-licht-1-ani-schulze-%e2%80%93-the-convent-of-pleasure",
-      "status": "Uitloper agenda-item",
-      "rawText": "Nieuw licht 1: Ani Schulze – The Convent of Pleasure Nieuw licht is een tentoonstellingsreeks waarin het…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Keramikos Carrier Bag",
-      "date": "2026-10-26",
-      "url": "https://groningen.uitloper.nu/kunst/keramikos-carrier-bag",
-      "status": "Uitloper agenda-item",
-      "rawText": "Keramikos Carrier Bag Naar aanleiding van onderzoek in Groningen kozen Matthew…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Theatraal",
-      "date": "2026-10-26",
-      "url": "https://groningen.uitloper.nu/kunst/theatraal",
-      "status": "Uitloper agenda-item",
-      "rawText": "Theatraal Voor het derde jaar op rij presenteert de Stadsgalerie…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "ubiquitousssssssssssssssssugar",
-      "date": "2026-10-26",
-      "url": "https://groningen.uitloper.nu/kunst/ubiquitousssssssssssssssssugar",
-      "status": "Uitloper agenda-item",
-      "rawText": "ubiquitousssssssssssssssssugar Met performances, proeverijen van Goblin Feast, Jonas…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "VELD Collectief",
-      "date": "2026-10-26",
-      "url": "https://groningen.uitloper.nu/kunst/veld-collectief",
-      "status": "Uitloper agenda-item",
-      "rawText": "VELD Collectief Wie in Groningen een suikerbiet langs de weg ziet…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Storyworld Spotlight: Asjemenou!",
-      "date": "2026-10-26",
-      "url": "https://groningen.uitloper.nu/kunst/storyworld-spotlight-asjemenou",
-      "status": "Uitloper agenda-item",
-      "rawText": "Storyworld Spotlight: Asjemenou! In 2026 bestaat de Nederlandse televisie 75 jaar…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Masterminds. De Geschiedenis van de Groningse Universiteit",
-      "date": "2026-10-26",
-      "url": "https://groningen.uitloper.nu/kunst/masterminds",
-      "status": "Uitloper agenda-item",
-      "rawText": "Masterminds. De Geschiedenis van de Groningse Universiteit Masterminds neemt je mee in de geschiedenis van de…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Aletta Jacobskamer",
-      "date": "2026-10-26",
-      "url": "https://groningen.uitloper.nu/kunst/aletta-jacobskamer",
-      "status": "Uitloper agenda-item",
-      "rawText": "Aletta Jacobskamer In de kamer van dr. Aletta Jacobs, de eerste vrouwelijke…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Anatomisch Theater",
-      "date": "2026-10-26",
-      "url": "https://groningen.uitloper.nu/kunst/anatomisch-theater",
-      "status": "Uitloper agenda-item",
-      "rawText": "Anatomisch Theater In het anatomisch theater zijn zo’n 50 preparaten…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "GRID - Puin Hoop: herdruk van de jaren ’80",
-      "date": "2026-10-26",
-      "url": "https://groningen.uitloper.nu/kunst/grid-puin-hoop-herdruk-van-de-jaren-%e2%80%9980",
-      "status": "Uitloper agenda-item",
-      "rawText": "GRID - Puin Hoop: herdruk van de jaren ’80 Een prikkelende expositie over vroeger, die verrassend…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Kunstroutes",
-      "date": "2026-10-26",
-      "url": "https://groningen.uitloper.nu/kunst/kunstroutes",
-      "status": "Uitloper agenda-item",
-      "rawText": "Kunstroutes Kunst die je gezien moet hebben en kunst die je misschien…"
-    },
     {
       "source": "Website",
       "site": "https://groningen.uitloper.nu/",
@@ -13093,16 +13002,115 @@
       "url": "https://www.spotgroningen.nl/programma/",
       "status": "klaar",
       "rawText": "site 4/18: 50 unieke events in 5.68 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://simplon.nl/",
+      "title": "Start",
+      "date": "",
+      "url": "https://simplon.nl/",
+      "status": "start",
+      "rawText": "site 5/18: max 50 events, max 10 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://simplon.nl/",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://simplon.nl/",
+      "status": "strategie",
+      "rawText": "compacte-agenda-kaarten"
+    },
+    {
+      "source": "Website",
+      "site": "https://simplon.nl/",
+      "title": "Pagina gelezen",
+      "date": "",
+      "url": "https://simplon.nl/programma/",
+      "status": "ok",
+      "rawText": "94996 tekens HTML"
+    },
+    {
+      "source": "Parser",
+      "site": "https://simplon.nl/",
+      "title": "Agenda geanalyseerd",
+      "date": "",
+      "url": "https://simplon.nl/programma/",
+      "status": "gespecialiseerde parser",
+      "rawText": "54 agenda-items gevonden"
+    },
+    {
+      "source": "Website",
+      "site": "https://simplon.nl/",
+      "title": "Pagina geanalyseerd",
+      "date": "",
+      "url": "https://simplon.nl/programma/",
+      "status": "ok",
+      "rawText": "51 events/aanbiedingen op deze pagina"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://simplon.nl/",
+      "title": "Feed geanalyseerd",
+      "date": "",
+      "url": "https://simplon.nl/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fsimplon.nl%2Fprogramma%2F&format=xml",
+      "status": "ok",
+      "rawText": "0 events uit openbare feed"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://simplon.nl/",
+      "title": "Feed geanalyseerd",
+      "date": "",
+      "url": "https://simplon.nl/feed/",
+      "status": "ok",
+      "rawText": "0 events uit openbare feed"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://simplon.nl/",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://simplon.nl/rss.xml",
+      "status": "fout",
+      "rawText": "HTTP 404"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://simplon.nl/",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://simplon.nl/feed.xml",
+      "status": "fout",
+      "rawText": "HTTP 404"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://simplon.nl/",
+      "title": "Feed geanalyseerd",
+      "date": "",
+      "url": "https://simplon.nl/events/feed/",
+      "status": "ok",
+      "rawText": "0 events uit openbare feed"
+    },
+    {
+      "source": "Website",
+      "site": "https://simplon.nl/",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://simplon.nl/",
+      "status": "klaar",
+      "rawText": "site 5/18: 0 unieke events in 4.23 sec"
     }
   ],
   "status": "running",
   "siteStartedAt": "2026-10-26T12:27:37+00:00",
-  "siteElapsedSeconds": 0,
-  "sitePageCount": 0,
+  "siteElapsedSeconds": 6,
+  "sitePageCount": 1,
   "lastSiteEventCount": 0,
-  "stage": "Websitepagina ophalen",
-  "lastUpdatedAt": "2026-10-26T12:27:37+00:00",
-  "lastSiteNewEventCount": 50,
-  "lastCompletedSite": "https://www.spotgroningen.nl/programma/",
-  "lastCompletedAt": "2026-10-26T12:27:35+00:00"
+  "stage": "Website klaar; volgende website voorbereiden",
+  "lastUpdatedAt": "2026-10-26T12:27:40+00:00",
+  "lastSiteNewEventCount": 0,
+  "lastCompletedSite": "https://simplon.nl/",
+  "lastCompletedAt": "2026-10-26T12:27:43+00:00"
 }
