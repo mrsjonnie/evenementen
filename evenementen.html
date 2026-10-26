@@ -1026,6 +1026,15 @@
     .eventEditForm input { width: 100%; min-width: 0; padding: 9px 10px; border: 1px solid var(--border, #cbd5e1); border-radius: 8px; background: var(--card, #fff); color: inherit; font: inherit; }
     .eventEditActions { display: flex; flex-wrap: wrap; gap: 8px; }
     .eventEditHelp { margin: 0; font-size: .82rem; opacity: .8; }
+    .favoriteToolbar {
+      display:flex; flex-wrap:wrap; align-items:center; gap:10px;
+      margin: 0 0 14px; padding: 10px 12px;
+      border:1px solid var(--line); border-radius:12px;
+      background:var(--panel);
+    }
+    .favoriteToolbar .muted { font-size:.88rem; }
+    .favoriteBtn.isFavorite { border-color:#eab308; color:#facc15; background:rgba(234,179,8,.12); }
+    .favoriteBtn { white-space:nowrap; }
     .cardActions {
       margin-top: auto;
       display: flex;
@@ -1430,6 +1439,10 @@
         <span id="liveScrapeSummary" class="liveScrapeSummary" aria-live="polite" hidden></span>
       </div>
 
+    <div class="favoriteToolbar" aria-label="Favorieten">
+      <button class="btn btnSecondary" id="showFavoritesBtn" type="button" aria-pressed="false">☆ Favorieten tonen</button>
+      <span class="muted" id="favoritesCount" aria-live="polite">0 favorieten opgeslagen in deze browser</span>
+    </div>
     <section class="grid" id="grid" aria-live="polite"></section>
 
     <nav class="pagination" id="pagination" aria-label="Paginering">
@@ -1464,7 +1477,7 @@
   </div>
 
   <script>
-    const APP_VERSION = "2026.10.26.69";
+    const APP_VERSION = "2026.10.26.70";
     const STATUS_HISTORY_KEY = "evenementenStatusHistoryV1";
     const DISMISSED_SCRAPE_RUN_KEY = "evenementenDismissedScrapeRunV1";
     const DEFAULT_MAX_EVENTS_PER_SITE = 20;
@@ -1564,6 +1577,9 @@
     let eventsJsonTotalCount = 0;
     let liveLogRows = [];
     let expandedEventKeys = new Set();
+    const FAVORITES_STORAGE_KEY = "evenementenLocalFavoritesV1";
+    let favoriteEvents = loadLocalFavorites();
+    let favoritesOnly = false;
     let collapsedEventTypes = new Set();
     let collapsedSourceGroups = new Set();
     let dynamicRegionCoord = null;
@@ -1939,6 +1955,66 @@
         .replace(/^(concert|theater|film|bioscoop|markt|workshop|event|evenement):\s*/i, "")
         .replace(/[^a-z0-9]+/g, " ")
         .trim();
+    }
+
+    function loadLocalFavorites() {
+      try {
+        const value = JSON.parse(localStorage.getItem(FAVORITES_STORAGE_KEY) || "[]");
+        return Array.isArray(value) ? value.filter(item => item && typeof item.key === "string") : [];
+      } catch (_) { return []; }
+    }
+
+    function favoriteEventKey(event) {
+      const url = safeUrl(event?.website, { website: true });
+      if (url) {
+        const normalized = url.replace(/[?#].*$/, "").replace(/\/$/, "").toLowerCase();
+        return "url:" + normalized;
+      }
+      return "event:" + eventDedupeKey(event);
+    }
+
+    function isFavoriteEvent(event) {
+      const key = favoriteEventKey(event);
+      return favoriteEvents.some(item => item.key === key || item.fallbackKey === eventDedupeKey(event));
+    }
+
+    function saveLocalFavorites() {
+      try {
+        localStorage.setItem(FAVORITES_STORAGE_KEY, JSON.stringify(favoriteEvents));
+        const count = $("favoritesCount");
+        if (count) count.textContent = favoriteEvents.length + (favoriteEvents.length === 1 ? " favoriet opgeslagen in deze browser" : " favorieten opgeslagen in deze browser");
+        return true;
+      } catch (_) {
+        showStatus("Favorieten konden niet lokaal worden opgeslagen. Controleer de browseropslaginstellingen.", "error");
+        return false;
+      }
+    }
+
+    function toggleLocalFavorite(event) {
+      const key = favoriteEventKey(event);
+      const existing = favoriteEvents.findIndex(item => item.key === key || item.fallbackKey === eventDedupeKey(event));
+      if (existing >= 0) {
+        favoriteEvents.splice(existing, 1);
+        showStatus("Favoriet verwijderd. De wijziging is alleen in deze browser opgeslagen.", "ok");
+      } else {
+        favoriteEvents.push({
+          key,
+          fallbackKey: eventDedupeKey(event),
+          title: cleanText(event.title || ""),
+          date: cleanText(event.date || ""),
+          location: cleanText(event.location || ""),
+          website: safeUrl(event.website, { website: true }),
+          savedAt: new Date().toISOString()
+        });
+        showStatus("Favoriet opgeslagen in deze browser; niet op de server.", "ok");
+      }
+      saveLocalFavorites();
+      applyFilters();
+    }
+
+    function ticketSwapSearchUrl(event) {
+      const query = [event.title, event.location, event.date].filter(Boolean).join(" ");
+      return "https://www.ticketswap.nl/search?query=" + encodeURIComponent(query);
     }
 
     function eventDedupeKey(event) {
@@ -3197,6 +3273,7 @@
       };
       let afterRadius = afterNew.filter(matchesRadius);
       let afterDate = afterRadius.filter(matchesDate);
+      const afterFavorites = favoritesOnly ? afterDate.filter(isFavoriteEvent) : afterDate;
 
       filterStats = {
         loaded: uniqueEvents.length,
@@ -3212,10 +3289,11 @@
         afterDate: afterDate.length,
         afterRadius: afterRadius.length,
         newCount: uniqueEvents.filter(isNewEvent).length,
-        shown: afterDate.length
+        afterFavorites: afterFavorites.length,
+        shown: afterFavorites.length
       };
 
-      filteredEvents = afterDate.sort((a, b) => {
+      filteredEvents = afterFavorites.sort((a, b) => {
         if (a.isPermanent && !b.isPermanent) return 1;
         if (!a.isPermanent && b.isPermanent) return -1;
         return String(a.date || "").localeCompare(String(b.date || ""));
@@ -3246,6 +3324,12 @@
 
     function render() {
       updateNewCount();
+      const favButton = $("showFavoritesBtn");
+      if (favButton) {
+        favButton.setAttribute("aria-pressed", String(favoritesOnly));
+        favButton.textContent = favoritesOnly ? "★ Alle evenementen tonen" : "☆ Favorieten tonen";
+      }
+      saveLocalFavorites();
       $("count").textContent = `${filteredEvents.length} ${filteredEvents.length === 1 ? "evenement" : "evenementen"}`;
       $("grid").classList.toggle("cardsCollapsed", cardsCollapsed);
 
@@ -3343,6 +3427,7 @@
       const website = safeUrl(event.website, { website: true });
       const cardKey = eventDedupeKey(event);
       const expanded = expandedEventKeys.has(cardKey);
+      const favorite = isFavoriteEvent(event);
       const route = routeUrl(event);
       const routeDestinationText = routeDestination(event);
       const routeContext = routeContextLabel(event);
@@ -3374,6 +3459,8 @@
             </div>
             <p class="desc">${escapeHtml(event.description || "Geen omschrijving beschikbaar.")}${sourceSuffix}</p>
             <div class="cardActions">
+              <button class="btn btnSecondary favoriteBtn ${favorite ? "isFavorite" : ""}" type="button" data-favorite-key="${escapeHtml(cardKey)}" aria-pressed="${favorite ? "true" : "false"}" title="${favorite ? "Verwijder uit favorieten" : "Bewaar lokaal als favoriet"}">${favorite ? "★ Favoriet" : "☆ Favoriet"}</button>
+              <a class="btn btnSecondary ticketSwapBtn" href="${escapeHtml(ticketSwapSearchUrl(event))}" target="_blank" rel="noopener noreferrer" title="Zoek dit evenement op TicketSwap">TicketSwap zoeken ↗</a>
               ${website ? `<a class="btn btnPrimary" href="${escapeHtml(website)}" target="_blank" rel="noopener noreferrer">Meer info</a>` : ""}
               ${route ? `<button class="btn btnSecondary routeToggle" type="button" data-route="${escapeHtml(routeId)}" data-destination="${escapeHtml(routeDestinationText)}" data-route-url="${escapeHtml(route)}">Route</button>` : ""}
               <button class="btn btnSecondary editEventBtn" type="button" data-event-key="${escapeHtml(cardKey)}" aria-expanded="false">Bewerken</button>
@@ -4202,7 +4289,19 @@
       const submitButton = form.querySelector(".saveEventEditBtn");
       if (submitButton) saveEventCorrectionForm(form, submitButton);
     });
+    $("showFavoritesBtn").addEventListener("click", () => {
+      favoritesOnly = !favoritesOnly;
+      currentPage = 1;
+      applyFilters();
+    });
     $("grid").addEventListener("click", (event) => {
+      const favoriteButton = event.target.closest(".favoriteBtn");
+      if (favoriteButton) {
+        const key = favoriteButton.dataset.eventKey || favoriteButton.dataset.favoriteKey || "";
+        const item = events.find(candidate => eventDedupeKey(candidate) === key);
+        if (item) toggleLocalFavorite(item);
+        return;
+      }
       const editButton = event.target.closest(".editEventBtn");
       if (editButton) {
         const card = editButton.closest(".card");
