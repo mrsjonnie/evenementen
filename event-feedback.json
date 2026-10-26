@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-26T22:20:06.218Z",
+  "updatedAt": "2026-10-26T22:21:08.561Z",
   "feedback": [
     {
       "key": "2026-10-27|abonnement topmusici van eigen bodem",
@@ -1386,6 +1386,32 @@
       "website": "https://www.vera-groningen.nl/?post_type=events&p=152556&lang=nl",
       "url": "https://www.vera-groningen.nl/?post_type=events&p=152556&lang=nl",
       "updatedAt": "2026-10-26T22:20:06.218Z"
+    },
+    {
+      "key": "2027-05-14|codeine|vera groningen",
+      "vote": "edit",
+      "title": "Codeine",
+      "date": "2027-05-14",
+      "website": "https://www.vera-groningen.nl/?post_type=events&p=155052&lang=nl",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=155052&lang=nl",
+      "updatedAt": "2026-10-26T22:21:08.561Z",
+      "originalTitle": "Codeine",
+      "originalDate": "2027-05-14",
+      "originalFields": {
+        "title": "Codeine",
+        "date": "2027-05-14",
+        "location": "VERA Groningen",
+        "type": "Activiteit",
+        "cost": ""
+      },
+      "corrections": {
+        "title": "Codeine",
+        "date": "2027-05-14",
+        "location": "VERA Groningen",
+        "type": "Concert",
+        "cost": "Zie website",
+        "website": "https://www.vera-groningen.nl/?post_type=events&p=155052&lang=nl"
+      }
     }
   ]
 }
