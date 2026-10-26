@@ -1153,12 +1153,16 @@ async function saveEventCorrection(env, target = {}) {
   const originalDate = clean(target.originalDate || target.date || "");
   const wantedUrl = clean(target.url || target.website || "").replace(/\/$/, "").toLowerCase();
   const wantedWebsite = clean(target.website || "").replace(/\/$/, "").toLowerCase();
+  const hostOf = (value) => {
+    try { return new URL(value).hostname.toLowerCase(); } catch (_) { return ""; }
+  };
+  const wantedHost = hostOf(wantedWebsite);
   const sameEvent = (event) => {
     const eventUrl = clean(event.website || "").replace(/\/$/, "").toLowerCase();
-    const sameUrl = wantedUrl && eventUrl === wantedUrl;
+    const sameUrl = Boolean(wantedUrl && eventUrl === wantedUrl);
     const sameOriginal = clean(event.title || "").toLowerCase() === originalTitle.toLowerCase()
       && clean(event.date || "") === originalDate
-      && (!wantedWebsite || eventUrl === wantedWebsite || new URL(eventUrl || wantedWebsite).hostname === new URL(wantedWebsite).hostname);
+      && (!wantedHost || eventUrl === wantedWebsite || hostOf(eventUrl) === wantedHost);
     return Boolean(sameUrl || sameOriginal);
   };
   let updatedCount = 0;
