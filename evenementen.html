@@ -1444,9 +1444,10 @@
               <span aria-hidden="true">v</span>
             </button>
             <div class="sitePanel">
-              <div class="sitePanelHeader">Mistral zoekt per aangevinkte website naar echte eventvelden. ChatGPT en SerpAPI kunnen apart worden aangezet om te vergelijken.</div>
+              <div class="sitePanelHeader">AI-bronnen zoeken per aangevinkte website naar controleerbare evenementvelden. API-sleutels worden veilig als GitHub Actions Secrets ingesteld.</div>
               <div class="siteList" id="providerList">
-                <label><input class="providerCheck" type="checkbox" id="provPerplexity" disabled> <span>Perplexity uit</span></label>
+                <label><input class="providerCheck" type="checkbox" id="provPerplexity"> <span>Perplexity (online zoeken)</span></label>
+                <label><input class="providerCheck" type="checkbox" id="provGemini"> <span>Google Gemini (Google Search)</span></label>
                 <label><input class="providerCheck" type="checkbox" id="provMistral"> <span>Mistral eventvelden</span></label>
                 <label><input class="providerCheck" type="checkbox" id="provOpenAI"> <span>ChatGPT eventvelden</span></label>
                 <label><input class="providerCheck" type="checkbox" id="provSerpAPI"> <span>SerpAPI eventvelden</span></label>
@@ -1555,7 +1556,7 @@
     </section>
   </div>
   <script>
-    const APP_VERSION = "2026.10.27.108";
+    const APP_VERSION = "2026.10.27.109";
     const STATUS_HISTORY_KEY = "evenementenStatusHistoryV1";
     const DISMISSED_SCRAPE_RUN_KEY = "evenementenDismissedScrapeRunV1";
     const DEFAULT_MAX_EVENTS_PER_SITE = 20;
@@ -1987,7 +1988,8 @@
 
     function providerSettings() {
       return {
-        perplexity: false,
+        perplexity: Boolean($("provPerplexity")?.checked),
+        gemini: Boolean($("provGemini")?.checked),
         mistral: Boolean($("provMistral")?.checked),
         openai: Boolean($("provOpenAI")?.checked),
         chatgpt: Boolean($("provOpenAI")?.checked),
@@ -4212,6 +4214,7 @@
       $("typeFilter").value = "all";
       $("newOnlyFilter").checked = false;
       $("provPerplexity").checked = false;
+      if ($("provGemini")) $("provGemini").checked = false;
       $("provMistral").checked = false;
       $("provOpenAI").checked = false;
       $("provSerpAPI").checked = false;
@@ -4560,7 +4563,9 @@
       applyScanSettings();
       const savedSources = loadSourceSelection();
       if (savedSources) {
-        $("provMistral").checked = Boolean(savedSources.providers?.mistral);
+        $("provPerplexity").checked = Boolean(savedSources.providers?.perplexity);
+      if ($("provGemini")) $("provGemini").checked = Boolean(savedSources.providers?.gemini);
+      $("provMistral").checked = Boolean(savedSources.providers?.mistral);
         $("provOpenAI").checked = Boolean(savedSources.providers?.openai);
         $("provSerpAPI").checked = Boolean(savedSources.providers?.serpapi);
       }
