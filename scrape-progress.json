@@ -1,7 +1,7 @@
 {
   "runId": "2026-10-26T09:44:56.889366+00:00-27747b20",
   "startedAt": "2026-10-26T09:44:56+00:00",
-  "completedCount": 18,
+  "completedCount": 19,
   "totalSites": 20,
   "currentSite": "https://denieuwekolk.nl/agenda",
   "currentSiteIndex": 19,
@@ -23,7 +23,8 @@
     "https://www.vvvameland.nl/activiteiten-en-evenementen",
     "https://www.socialdeal.nl/",
     "https://www.ibood.com/s-nl",
-    "https://www.pathe.nl/bioscoop/groningen"
+    "https://www.pathe.nl/bioscoop/groningen",
+    "https://denieuwekolk.nl/agenda"
   ],
   "events": [
     {
@@ -392,6 +393,21 @@
     {
       "date": "2026-10-26",
       "time": "",
+      "title": "Foto-expositie Verhalen van Verborgen Kracht",
+      "type": "Film",
+      "location": "doorzetten en groeien.",
+      "locationLink": "",
+      "website": "https://denieuwekolk.nl/bieb/agenda/fotoexpositie-verhalen-van-verborgen-kracht-10050486",
+      "source": "denieuwekolk.nl",
+      "discoverySource": "Website",
+      "description": "Ontdek de fotoexpositie Verhalen van Verborgen Kracht van Tara van Meeteren bij De Nieuwe Kolk in Assen. Laat je inspireren door bijzondere verhalen.",
+      "cost": "",
+      "image": "https://media.denieuwekolk.nl/01a15ea4-eb5e-77e5-936a-2ed887933bd2/portret-angelina-crop-cinematic?crop=1477%2C886%2C417%2C0&scale=1200&optimizer=image",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-26",
+      "time": "",
       "title": "GRID - Puin Hoop: herdruk van de jaren ’80",
       "type": "Theater",
       "location": "Anatomisch Theater",
@@ -704,6 +720,21 @@
     },
     {
       "date": "2026-10-27",
+      "time": "18:45",
+      "title": "Alzheimercafé",
+      "type": "Film",
+      "location": "Bibliotheek Cursusruimte",
+      "locationLink": "",
+      "website": "https://denieuwekolk.nl/bieb/agenda/alzheimercafe-10044312",
+      "source": "denieuwekolk.nl",
+      "discoverySource": "Website",
+      "description": "Alzheimercafé: Muziek en dementie in De Nieuwe Kolk. Ontmoet elkaar en laat je inspireren in het culturele hart van Assen.",
+      "cost": "",
+      "image": "https://media.denieuwekolk.nl/019d2a5b-29ad-7de1-86cd-0a0f178225b5/alzheimer-cafe?crop=3840%2C2304%2C0%2C128&scale=1200&optimizer=image",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-27",
       "time": "12:00",
       "title": "Breve storia d'amore",
       "type": "Film",
@@ -866,6 +897,21 @@
       "description": "Trumps Amerika: chaos en gevaar? met Laila Frank, Anna van Zoest en Bob Deen Een avond over macht en onzekerheid",
       "cost": "",
       "image": "https://www.spotgroningen.nl/wp-content/uploads/2026/04/Trumps-Amerika-Landscape-clean-300x169.jpg",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-28",
+      "time": "14:00",
+      "title": "Adviesplein",
+      "type": "Film",
+      "location": "zoals",
+      "locationLink": "",
+      "website": "https://denieuwekolk.nl/bieb/agenda/adviesplein",
+      "source": "denieuwekolk.nl",
+      "discoverySource": "Website",
+      "description": "Adviesplein & Ontmoetingsplein in De Nieuwe Kolk Assen. Inspiratie, ontmoeting en culturele activiteiten op één locatie.",
+      "cost": "Gratis",
+      "image": "https://media.denieuwekolk.nl/019b2b7f-587f-7995-b37c-718d7a6b8c75/dnk-adviesplein-3-12-2025-2?crop=3838%2C2303%2C0%2C118&scale=1200&optimizer=image",
       "isNew": true
     },
     {
@@ -2317,126 +2363,16 @@
       "newCount": 0,
       "durationSeconds": 2.82,
       "timedOut": false
+    },
+    {
+      "site": "https://denieuwekolk.nl/agenda",
+      "count": 3,
+      "newCount": 3,
+      "durationSeconds": 4.01,
+      "timedOut": true
     }
   ],
   "rawLog": [
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Nederlands Kamerkoor Waanzin!",
-      "date": "2027-03-13",
-      "url": "https://www.spotgroningen.nl/programma/nederlands-kamerkoor-14/",
-      "status": "event uit link",
-      "rawText": "Nederlands Kamerkoor Waanzin! Nederlands beste koor verkent de dunne lijn tussen gekte en genialiteit za 13 mrt"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Nederlandse Bachvereniging Matthäus Passion",
-      "date": "2027-03-14",
-      "url": "https://www.spotgroningen.nl/programma/nederlandse-bachvereniging-20/",
-      "status": "event uit link",
-      "rawText": "Nederlandse Bachvereniging Matthäus Passion Een van de indrukwekkendste verhalen ooit, verteld met ontroerende muziek en zang zo 14 mrt"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Het Goede Doel Altijd en Eeuwig Tour",
-      "date": "2027-03-14",
-      "url": "https://www.spotgroningen.nl/programma/het-goede-doel/",
-      "status": "event uit link",
-      "rawText": "Het Goede Doel Altijd en Eeuwig Tour Ze zijn terug! Uitverkocht zo 14 mrt"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "The Haunted Youth",
-      "date": "2027-03-15",
-      "url": "https://www.spotgroningen.nl/programma/the-haunted-youth/",
-      "status": "event uit link",
-      "rawText": "The Haunted Youth Emo synthbeladen indierock Uitverkocht ma 15 mrt"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Micha Wertheim Micha Wertheim voor iedereen (reprise)",
-      "date": "2027-03-15",
-      "url": "https://www.spotgroningen.nl/programma/micha-wertheim-15/",
-      "status": "event uit link",
-      "rawText": "Micha Wertheim Micha Wertheim voor iedereen (reprise) Micha Wertheim maakt, te laat, eindelijk een voorstelling speciaal voor iedereen ma 15 mrt"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Alvin Youngblood Hart",
-      "date": "2027-03-15",
-      "url": "https://www.spotgroningen.nl/programma/alvin-youngblood-hart/",
-      "status": "event uit link",
-      "rawText": "Alvin Youngblood Hart GRAMMY-winnende countryblues-gitarist ma 15 mrt"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Daan van der Hoeven Mensenmens (reprise)",
-      "date": "2027-03-16",
-      "url": "https://www.spotgroningen.nl/programma/daan-van-der-hoeven-2/",
-      "status": "event uit link",
-      "rawText": "Daan van der Hoeven Mensenmens (reprise) Weergaloze improvisaties en interacties met het publiek di 16 mrt"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Kim Karssen God is een snotje",
-      "date": "2027-03-16",
-      "url": "https://www.spotgroningen.nl/programma/kim-karssen-2/",
-      "status": "event uit link",
-      "rawText": "Kim Karssen God is een snotje Explosieve mix van cabaret, performance en fysieke uitbarstingen di 16 mrt"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "The Clarks feat. Rinus Gerritsen & Cesar Zuiderwijk",
-      "date": "2027-03-17",
-      "url": "https://www.spotgroningen.nl/programma/the-clarks-ft-rinus-gerritsen-cesar-zuiderwijk/",
-      "status": "event uit link",
-      "rawText": "The Clarks feat. Rinus Gerritsen & Cesar Zuiderwijk Eerbetoon aan Golden Earring wo 17 mrt"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Introdans KYLIAN",
-      "date": "2027-03-17",
-      "url": "https://www.spotgroningen.nl/programma/introdans-8/",
-      "status": "event uit link",
-      "rawText": "Introdans KYLIAN Introdans eert het kunstenaarschap van meesterchoreograaf Jirí Kylián wo 17 mrt"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Oscar Smit €472.000",
-      "date": "2027-03-17",
-      "url": "https://www.spotgroningen.nl/programma/oscar-smit/",
-      "status": "event uit link",
-      "rawText": "Oscar Smit €472.000 Oscar fileert op geestige wijze de overspannen woningmarkt wo 17 mrt"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Pokey Lafarge",
-      "date": "2027-03-18",
-      "url": "https://www.spotgroningen.nl/programma/pokey-lafarge-5/",
-      "status": "event uit link",
-      "rawText": "Pokey Lafarge Authentieke en tijdloze mix van blues, jazz, rock-’n-roll, country en soul do 18 mrt"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "De Warme Winkel R2D2_or_not_2B2",
-      "date": "2027-03-18",
-      "url": "https://www.spotgroningen.nl/programma/de-warme-winkel-9/",
-      "status": "event uit link",
-      "rawText": "De Warme Winkel R2D2_or_not_2B2 Mens, machine en meesterwerk in ontbinding do 18 mrt"
-    },
     {
       "source": "Website",
       "site": "https://www.spotgroningen.nl/programma/",
@@ -13119,16 +13055,133 @@
       "url": "https://www.pathe.nl/bioscoop/groningen",
       "status": "klaar",
       "rawText": "site 18/20: 0 unieke events in 2.82 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Start",
+      "date": "",
+      "url": "https://denieuwekolk.nl/agenda",
+      "status": "start",
+      "rawText": "site 19/20: max 12 events, max 4 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://denieuwekolk.nl/agenda",
+      "status": "strategie",
+      "rawText": "agenda-kaarten + datumregels (De Nieuwe Kolk)"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Pagina gelezen",
+      "date": "",
+      "url": "https://denieuwekolk.nl/agenda",
+      "status": "ok",
+      "rawText": "690112 tekens HTML"
+    },
+    {
+      "source": "Parser",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "De Nieuwe Kolk detailstrategie",
+      "date": "",
+      "url": "https://denieuwekolk.nl/agenda",
+      "status": "strategie",
+      "rawText": "Agenda gebruiken om detail-URL's te vinden; alleen de echte detailpagina als evenement verwerken"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Pagina geanalyseerd",
+      "date": "",
+      "url": "https://denieuwekolk.nl/agenda",
+      "status": "ok",
+      "rawText": "0 events/aanbiedingen op deze pagina"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Pagina gelezen",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda",
+      "status": "ok",
+      "rawText": "412489 tekens HTML"
+    },
+    {
+      "source": "Parser",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "De Nieuwe Kolk detailstrategie",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda",
+      "status": "strategie",
+      "rawText": "Agenda gebruiken om detail-URL's te vinden; alleen de echte detailpagina als evenement verwerken"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Pagina geanalyseerd",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda",
+      "status": "ok",
+      "rawText": "0 events/aanbiedingen op deze pagina"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda/adviesplein",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda/alzheimercafe-10044312",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda/fotoexpositie-verhalen-van-verborgen-kracht-10050486",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Detailpagina mislukt",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda/het-vlucht-voorwaarts-praathuis",
+      "status": "fout",
+      "rawText": "HTTPSConnectionPool(host='denieuwekolk.nl', port=443): Read timed out. (read timeout=0.1764970400000152)"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://denieuwekolk.nl/agenda",
+      "status": "klaar",
+      "rawText": "site 19/20: 3 unieke events in 4.01 sec"
     }
   ],
   "status": "running",
   "siteStartedAt": "2026-10-26T09:46:44+00:00",
-  "siteElapsedSeconds": 0,
-  "sitePageCount": 0,
-  "lastSiteEventCount": 0,
-  "stage": "Websitepagina ophalen",
-  "lastUpdatedAt": "2026-10-26T09:46:44+00:00",
-  "lastSiteNewEventCount": 0,
-  "lastCompletedSite": "https://www.pathe.nl/bioscoop/groningen",
-  "lastCompletedAt": "2026-10-26T09:46:42+00:00"
+  "siteElapsedSeconds": 5,
+  "sitePageCount": 2,
+  "lastSiteEventCount": 3,
+  "stage": "Website klaar; volgende website voorbereiden",
+  "lastUpdatedAt": "2026-10-26T09:46:47+00:00",
+  "lastSiteNewEventCount": 3,
+  "lastCompletedSite": "https://denieuwekolk.nl/agenda",
+  "lastCompletedAt": "2026-10-26T09:46:49+00:00"
 }
