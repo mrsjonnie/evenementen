@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-26T22:17:54.001Z",
+  "updatedAt": "2026-10-26T22:18:21.776Z",
   "feedback": [
     {
       "key": "2026-10-27|abonnement topmusici van eigen bodem",
@@ -1323,6 +1323,32 @@
         "type": "Concert",
         "cost": "Zie website",
         "website": "https://www.spotgroningen.nl/programma/flaire-2/"
+      }
+    },
+    {
+      "key": "2026-10-31|ghostbusters halloween experience spot",
+      "vote": "edit",
+      "title": "Ghostbusters Halloween Experience SPOT",
+      "date": "2026-10-31",
+      "website": "https://www.spotgroningen.nl/programma/ghostbusters-halloween-experience",
+      "url": "https://www.spotgroningen.nl/programma/ghostbusters-halloween-experience/",
+      "updatedAt": "2026-10-26T22:18:21.776Z",
+      "originalTitle": "Ghostbusters Halloween Experience SPOT",
+      "originalDate": "2026-10-31",
+      "originalFields": {
+        "title": "Ghostbusters Halloween Experience SPOT",
+        "date": "2026-10-31",
+        "location": "halloween en Ghostbusters op het grote scherm",
+        "type": "Concert",
+        "cost": ""
+      },
+      "corrections": {
+        "title": "Ghostbusters Halloween Experience SPOT",
+        "date": "2026-10-31",
+        "location": "SPOT/Stadsschouwburg, Turfsingel 86",
+        "type": "Concert",
+        "cost": "Zie website",
+        "website": "https://www.spotgroningen.nl/programma/ghostbusters-halloween-experience/"
       }
     }
   ]
