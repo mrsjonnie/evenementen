@@ -1515,7 +1515,7 @@
     </section>
   </div>
   <script>
-    const APP_VERSION = "2026.10.26.80";
+    const APP_VERSION = "2026.10.26.81";
     const STATUS_HISTORY_KEY = "evenementenStatusHistoryV1";
     const DISMISSED_SCRAPE_RUN_KEY = "evenementenDismissedScrapeRunV1";
     const DEFAULT_MAX_EVENTS_PER_SITE = 20;
@@ -4341,6 +4341,10 @@
         });
         const data = await response.json().catch(() => ({}));
         if (!response.ok) throw new Error(workerErrorMessage(data, "Verwijderen is mislukt"));
+        const removedCount = (Number(data.removedEvents) || 0) + (Number(data.removedArchive) || 0);
+        if (removedCount === 0) {
+          throw new Error(data.error || "De server heeft geen overeenkomstig evenement gevonden. Ververs de gegevens en probeer opnieuw.");
+        }
 
         events = events.filter((item) => eventDedupeKey(item) !== key);
         deletedEventKeys.add(key);
