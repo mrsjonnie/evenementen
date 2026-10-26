@@ -1,7 +1,7 @@
 {
   "runId": "2026-10-26T22:40:50.827517+00:00-e5599623",
   "startedAt": "2026-10-26T22:40:50+00:00",
-  "completedCount": 6,
+  "completedCount": 7,
   "totalSites": 15,
   "currentSite": "https://www.martiniplaza.nl/nl/agenda",
   "currentSiteIndex": 7,
@@ -11,7 +11,8 @@
     "https://forum.nl/nl/agenda",
     "https://www.spotgroningen.nl/programma/",
     "https://simplon.nl/",
-    "https://www.vera-groningen.nl/"
+    "https://www.vera-groningen.nl/",
+    "https://www.martiniplaza.nl/nl/agenda"
   ],
   "events": [
     {
@@ -1857,216 +1858,16 @@
       "newCount": 0,
       "durationSeconds": 5.58,
       "timedOut": false
+    },
+    {
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 5.58,
+      "timedOut": false
     }
   ],
   "rawLog": [
-    {
-      "source": "SerpAPI",
-      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
-      "title": "IJsland Groningen Tickets - SPOT De Oosterpoort",
-      "date": "",
-      "url": "https://concerts50.com/show/ijsland-in-groningen-tickets-oct-07-2026",
-      "status": "genegeerd",
-      "rawText": "Concert Info. Genre: Hip-Hop/Rap. Witness the IJsland concert in Groningen at SPOT De Oosterpoort on Wednesday, October 7, 2026, at 8:30 PM."
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
-      "title": "Events in Groningen",
-      "date": "",
-      "url": "https://www.outhere.guide/place/groningen/events",
-      "status": "genegeerd",
-      "rawText": "Events in Groningen · 1 Candlelight: The Best of Hans Zimmer Martinikerk 19 Nov at 19:00 19 Nov at 19:00 · 2 Candlelight: Disney Love Songs Martinikerk 23 Jan, 26 ..."
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
-      "title": "LÖNA Tickets Groningen (Het Concerthuis) on 10/8/2026 ...",
-      "date": "",
-      "url": "https://open.spotify.com/concert/2G842IxAHG9jjpGvP1hI27",
-      "status": "genegeerd",
-      "rawText": "Find tickets for LÖNA at Het Concerthuis in Groningen on 10/8/2026 at 10:00 PM."
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
-      "title": "Jesse Hoefnagels - Simplon, Groningen",
-      "date": "",
-      "url": "https://open.spotify.com/concert/5MMsMXcKgcDGD0QCA9c8Z7",
-      "status": "genegeerd",
-      "rawText": "Find tickets for Jesse Hoefnagels at Simplon in Groningen on 10/10/2026 at 8:45 PM."
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
-      "title": "Michael McGovern Tickets, Live at SPOT / De Oosterpoort, ...",
-      "date": "",
-      "url": "https://concerts.consequence.net/events/michael-mcgovern-at-spot-de-oosterpoort-on-2026-10-06-19-00",
-      "status": "genegeerd",
-      "rawText": "Experience Michael McGovern live at SPOT / De Oosterpoort in Groningen on Oct 06, 2026 07:00 PM. Find tickets and event details now through"
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
-      "title": "Nena Tickets Groningen (SPOT De Oosterpoort) on 10/27/ ...",
-      "date": "",
-      "url": "https://open.spotify.com/concert/2x6QQaa7WHOTXcYru14ruz",
-      "status": "genegeerd",
-      "rawText": "Find tickets for Nena at SPOT De Oosterpoort in Groningen on 10/27/2026 at 8:00 PM."
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
-      "title": "Bill Callahan @ SPOT Groningen",
-      "date": "",
-      "url": "https://www.bandsintown.com/e/1038120602-bill-callahan-at-spot-groningen?came_from=138&utm_medium=web&utm_source=venue_page&utm_campaign=event",
-      "status": "genegeerd",
-      "rawText": "Bill Callahan is coming to SPOT Groningen in Groningen on Oct 11, 2026. Find tickets and get exclusive concert information, all at Bandsintown."
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
-      "title": "Guus Meeuwis - Martiniplaza, Groningen",
-      "date": "",
-      "url": "https://open.spotify.com/concert/3FKZejqDJK5003AIxyg9TE",
-      "status": "genegeerd",
-      "rawText": "Find tickets for Guus Meeuwis at Martiniplaza in Groningen on 10/24/2026 at 8:30 PM."
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
-      "title": "Groningen, Netherlands Events, Calendar & Tickets",
-      "date": "",
-      "url": "https://www.eventbrite.co.uk/d/netherlands--groningen--85687059/events/",
-      "status": "genegeerd",
-      "rawText": "Looking for something to do in Groningen? Whether you're a local, new in town or just cruising through we've got loads of great tips and events."
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
-      "title": "Michael McGovern — 6.10.2026 De Oosterpoort",
-      "date": "",
-      "url": "https://festivaly.eu/en/michael-mcgovern-de-oosterpoort-groningen-2026",
-      "status": "genegeerd",
-      "rawText": "Information and tickets for the concert Michael McGovern, which is taking place on October 6, 2026 19:00 (De Oosterpoort, Groningen)."
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
-      "title": "Zoekopdracht 2/2",
-      "date": "",
-      "url": "",
-      "status": "zoeken",
-      "rawText": "site:www.concertgebouw.nl \"Groningen\" agenda programma evenement concert theater film 2026-10-26 9999-12-31"
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
-      "title": "SerpAPI timeout/fout",
-      "date": "",
-      "url": "",
-      "status": "fout",
-      "rawText": "The operation was aborted"
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
-      "title": "Zoekopdracht 1/2",
-      "date": "",
-      "url": "",
-      "status": "zoeken",
-      "rawText": "site:www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html films bioscoop bioscopen_groningen_58.html agenda programma evenement concert Groningen 2026-10-26 9999-12-31"
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
-      "title": "SerpAPI timeout/fout",
-      "date": "",
-      "url": "",
-      "status": "fout",
-      "rawText": "The operation was aborted"
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
-      "title": "Zoekopdracht 2/2",
-      "date": "",
-      "url": "",
-      "status": "zoeken",
-      "rawText": "site:www.biosagenda.nl \"Groningen\" agenda programma evenement concert theater film 2026-10-26 9999-12-31"
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
-      "title": "Zoekopdracht 1/2",
-      "date": "",
-      "url": "",
-      "status": "zoeken",
-      "rawText": "site:www.paradiso.nl/landing/concertagenda-paradiso/2069817 landing concertagenda paradiso 2069817 agenda programma evenement concert Groningen 2026-10-26 9999-12-31"
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
-      "title": "SerpAPI timeout/fout",
-      "date": "",
-      "url": "",
-      "status": "fout",
-      "rawText": "The operation was aborted"
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
-      "title": "Zoekopdracht 2/2",
-      "date": "",
-      "url": "",
-      "status": "zoeken",
-      "rawText": "site:www.paradiso.nl \"Groningen\" agenda programma evenement concert theater film 2026-10-26 9999-12-31"
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.socialdeal.nl/",
-      "title": "Zoekopdracht 1/2",
-      "date": "",
-      "url": "",
-      "status": "zoeken",
-      "rawText": "site:www.socialdeal.nl agenda programma agenda programma evenement concert Groningen 2026-10-26 9999-12-31"
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.socialdeal.nl/",
-      "title": "SerpAPI timeout/fout",
-      "date": "",
-      "url": "",
-      "status": "fout",
-      "rawText": "The operation was aborted"
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.socialdeal.nl/",
-      "title": "Zoekopdracht 2/2",
-      "date": "",
-      "url": "",
-      "status": "zoeken",
-      "rawText": "site:www.socialdeal.nl \"Groningen\" agenda programma evenement concert theater film 2026-10-26 9999-12-31"
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.ibood.com/s-nl",
-      "title": "Zoekopdracht 1/2",
-      "date": "",
-      "url": "",
-      "status": "zoeken",
-      "rawText": "site:www.ibood.com/s-nl s nl agenda programma evenement concert Groningen 2026-10-26 9999-12-31"
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.ibood.com/s-nl",
-      "title": "SerpAPI timeout/fout",
-      "date": "",
-      "url": "",
-      "status": "fout",
-      "rawText": "The operation was aborted"
-    },
     {
       "source": "SerpAPI",
       "site": "https://www.ibood.com/s-nl",
@@ -12659,16 +12460,223 @@
       "url": "https://www.vera-groningen.nl/",
       "status": "klaar",
       "rawText": "site 6/15: 0 unieke events in 5.58 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Start",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda",
+      "status": "start",
+      "rawText": "site 7/15: max 60 events, max 45 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda",
+      "status": "strategie",
+      "rawText": "agenda-kaarten"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Pagina gelezen",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda",
+      "status": "ok",
+      "rawText": "146630 tekens HTML"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Agenda geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda",
+      "status": "gespecialiseerde parser",
+      "rawText": "12 agenda-items gevonden"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Pagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda",
+      "status": "ok",
+      "rawText": "12 events/aanbiedingen op deze pagina"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/cats-het-meesterwerk",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/donar-groningen-cso-voluntari-2026",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/francis-van-broekhuizen",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/jethro-tull",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/juf-braaksel",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/promotiedagen-2026",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/rob-lamberti",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/tafkal-serieus-grappig-uitverkocht",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/taptoe-groningen-2026",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/the-bodyguard-de-musical-2027",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/the-dire-straits-experience",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/titanique",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/feed",
+      "status": "fout",
+      "rawText": "HTTP 404"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/rss",
+      "status": "fout",
+      "rawText": "HTTP 404"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/rss.xml",
+      "status": "fout",
+      "rawText": "HTTP 404"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/feed.xml",
+      "status": "fout",
+      "rawText": "HTTP 404"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/events/feed/",
+      "status": "fout",
+      "rawText": "HTTP 404"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda",
+      "status": "klaar",
+      "rawText": "site 7/15: 0 unieke events in 5.58 sec"
     }
   ],
   "status": "running",
   "siteStartedAt": "2026-10-26T22:42:23+00:00",
-  "siteElapsedSeconds": 0,
-  "sitePageCount": 0,
+  "siteElapsedSeconds": 7,
+  "sitePageCount": 1,
   "lastSiteEventCount": 0,
-  "stage": "Websitepagina ophalen",
-  "lastUpdatedAt": "2026-10-26T22:42:23+00:00",
+  "stage": "Website klaar; volgende website voorbereiden",
+  "lastUpdatedAt": "2026-10-26T22:42:26+00:00",
   "lastSiteNewEventCount": 0,
-  "lastCompletedSite": "https://www.vera-groningen.nl/",
-  "lastCompletedAt": "2026-10-26T22:42:21+00:00"
+  "lastCompletedSite": "https://www.martiniplaza.nl/nl/agenda",
+  "lastCompletedAt": "2026-10-26T22:42:30+00:00"
 }
