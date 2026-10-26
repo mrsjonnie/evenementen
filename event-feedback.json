@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-26T10:13:37.163Z",
+  "updatedAt": "2026-10-26T10:14:04.619Z",
   "feedback": [
     {
       "key": "2026-10-27|abonnement topmusici van eigen bodem",
@@ -585,6 +585,24 @@
         "location": "Martiniplaza Groningen",
         "type": "Theater",
         "cost": "€ 26,70"
+      }
+    },
+    {
+      "key": "2026-10-27|jethro tull",
+      "vote": "edit",
+      "title": "Jethro Tull",
+      "date": "2026-10-27",
+      "website": "https://www.martiniplaza.nl/nl/agenda/jethro-tull",
+      "url": "https://www.martiniplaza.nl/nl/agenda/jethro-tull",
+      "updatedAt": "2026-10-26T10:14:04.619Z",
+      "originalTitle": "Jethro Tull",
+      "originalDate": "2026-10-27",
+      "corrections": {
+        "title": "Jethro Tull",
+        "date": "2026-10-27",
+        "location": "Martiniplaza Groningen",
+        "type": "Concert",
+        "cost": "€ 57,20"
       }
     }
   ]
