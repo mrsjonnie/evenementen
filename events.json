@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-26T10:20:04+00:00",
+  "updatedAt": "2026-10-26T10:20:15+00:00",
   "events": [
     {
       "date": "2026-10-26",
@@ -31,6 +31,21 @@
       "cost": "",
       "image": "",
       "isNew": false
+    },
+    {
+      "date": "2026-10-26",
+      "time": "",
+      "title": "2 overnachtingen voor 2 + ontbijt + warme drank + gebak + 3-gangendiner in Oostkapelle",
+      "type": "Aanbiedingen",
+      "location": "Locatie niet vermeld",
+      "locationLink": "",
+      "website": "https://www.socialdeal.nl/deals/groningen/hotel-anno-nu-oostkapelle/voor-2-personen-2-overnachtingen-inclusief-ontbijt-warme-drank-met-gebak-3-gangendiner-en-gratis-parkeren-bij-hotel-anno-nu-in-oostkapelle-okt-2026-zeeland-groningen/",
+      "source": "socialdeal.nl",
+      "discoverySource": "Website",
+      "description": "37% New today hexagon hotel Hotel Anno Nu Oostkapelle 9.9 star 9.9 • 79 Oostkapelle Regulier €346 €219 Exclusief toeristenbelasting",
+      "cost": "",
+      "image": "https://media.socialdeal.nl/img/image-placeholder.jpg",
+      "isNew": true
     },
     {
       "date": "2026-10-26",
@@ -289,6 +304,36 @@
     },
     {
       "date": "2026-10-26",
+      "time": "",
+      "title": "Dagentree voor SpaWell",
+      "type": "Aanbiedingen",
+      "location": "Locatie niet vermeld",
+      "locationLink": "",
+      "website": "https://www.socialdeal.nl/deals/groningen/spawell/dagentree-voor-spawell-in-peize-geniet-van-de-saunas-en-diverse-baden-en-word-weer-zen-okt-2026-drenthe-groningen/",
+      "source": "socialdeal.nl",
+      "discoverySource": "Website",
+      "description": "35% hexagon wellness SpaWell Peize Regulier €43 €27 ,95",
+      "cost": "",
+      "image": "https://images.socialdeal.nl/deal/spawell-26092913335845.jpg",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-26",
+      "time": "",
+      "title": "Dagentree zwemparadijs Aqua Mundo Center Parcs De Huttenheugte",
+      "type": "Aanbiedingen",
+      "location": "Locatie niet vermeld",
+      "locationLink": "",
+      "website": "https://www.socialdeal.nl/deals/groningen/aqua-mundo-center-parcs-de-huttenheugte/beleef-een-spetterend-dagje-uit-met-entree-voor-het-zwemparadijs-aqua-mundo-in-center-parcs-de-huttenheugte-perfect-als-uitje-met-het-hele-gezin-okt-2026-drenthe-groningen/",
+      "source": "socialdeal.nl",
+      "discoverySource": "Website",
+      "description": "40% New today hexagon events Aqua Mundo Center Parcs De Huttenheugte 9.4 star 9.4 • 247 Dalen Regulier €35 €21",
+      "cost": "",
+      "image": "https://images.socialdeal.nl/deal/aqua-mundo-center-parcs-de-huttenheugte-26012715560234.jpg",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-26",
       "time": "12:20",
       "title": "De Gaulle: Liberté",
       "type": "Film",
@@ -528,6 +573,21 @@
       "description": "Natanya - THE ATTITUDE TOUR Mix van Y2K-pop, alternatieve r&b en poëtische storytelling uit Londen / Bitterzoet",
       "cost": "",
       "image": "",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-26",
+      "time": "",
+      "title": "High Tea, High Wine, High Beer of High Bubbles voor 2 bij Fletcher Hotels",
+      "type": "Aanbiedingen",
+      "location": "Paterswolde",
+      "locationLink": "",
+      "website": "https://www.socialdeal.nl/deals/groningen/fletcher-hotels/voor-2-personen-gezellige-high-tea-met-onbeperkt-thee-of-koffie-en-diverse-lekkernijen-of-high-wine-high-beer-of-high-bubbles-met-hapjes-in-een-van-de-fletcher-hotels-zoals-het-prachtige-familiehotel-paterswolde-jul-2026-groningen/",
+      "source": "socialdeal.nl",
+      "discoverySource": "Website",
+      "description": "41% hexagon food Fletcher Hotels Paterswolde (+ meerdere locaties) Regulier €55 €32 ,50",
+      "cost": "",
+      "image": "https://images.socialdeal.nl/deal/fletcher-hotels-24031413372857.jpg",
       "isNew": true
     },
     {
@@ -2779,99 +2839,16 @@
       "newCount": 0,
       "durationSeconds": 6.38,
       "timedOut": true
+    },
+    {
+      "site": "https://www.socialdeal.nl/",
+      "count": 4,
+      "newCount": 4,
+      "durationSeconds": 8.12,
+      "timedOut": true
     }
   ],
   "rawLog": [
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Alice in wonderland (8+) De Toneelmakerij Herkenbaar, grappig en... onweerstaanbaar wonderlijk",
-      "date": "2026-12-01",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "1 dec Alice in wonderland (8+) De Toneelmakerij Herkenbaar, grappig en... onweerstaanbaar wonderlijk"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Hiigo + support: MAYTE Een van de vaandeldragers van de moderne nederpop",
-      "date": "2026-12-02",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "2 dec Hiigo + support: MAYTE Een van de vaandeldragers van de moderne nederpop"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Anúna On a Cold Winter's Night Een warm en sereen klanktapijt van zuivere meerstemmigheid",
-      "date": "2026-12-02",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "2 dec Anúna On a Cold Winter's Night Een warm en sereen klanktapijt van zuivere meerstemmigheid"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Clean Pete's Kerstshow Over-the-top kerstshow met een bijzondere mix van kerstklassiekers",
-      "date": "2026-12-02",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "2 dec Clean Pete's Kerstshow Over-the-top kerstshow met een bijzondere mix van kerstklassiekers"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Hilde Vos TakeRoot presents: Een krachtige americana zangeres met een eigen geluid",
-      "date": "2026-12-02",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "2 dec Hilde Vos TakeRoot presents: Een krachtige americana zangeres met een eigen geluid"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Alle kinderen stinken (6+) Patrick Duijtshoff en",
-      "date": "2026-12-02",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "2 dec Alle kinderen stinken (6+) Patrick Duijtshoff en Judith van den Berg Een onwetenschappelijke voorstelling gebaseerd op ongefundeerde meningen"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "PIAF Suzan Seegers, Julia Berendse e.a. Een",
-      "date": "2026-12-03",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "3 dec PIAF Suzan Seegers, Julia Berendse e.a. Een nieuwe Nederlandse musical over het leven én de dood van een legende"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "De Niemanders Mix van",
-      "date": "2026-12-03",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "3 dec De Niemanders Mix van zangers, zangeressen, muziekstijlen en vele talen!"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Jan van Duikeren & Marcel Veenendaal Dear Son Twee",
-      "date": "2026-12-03",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "3 dec Jan van Duikeren & Marcel Veenendaal Dear Son Twee muzikale werelden komen samen in een gedeelde passie voor jazz"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Bach Collegium Japan Händels Messiah",
-      "date": "2026-12-03",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "3 dec Bach Collegium Japan Händels Messiah Wereldberoemd barokorkest brengt geliefd koorwerk uit de muziekgeschiedenis Wereldklasse"
-    },
     {
       "source": "Website",
       "site": "https://www.spotgroningen.nl/programma/",
@@ -13581,6 +13558,96 @@
       "url": "https://www.vvvameland.nl/activiteiten-en-evenementen",
       "status": "klaar",
       "rawText": "site 15/20: 0 unieke events in 6.38 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.socialdeal.nl/",
+      "title": "Start",
+      "date": "",
+      "url": "https://www.socialdeal.nl/",
+      "status": "start",
+      "rawText": "site 16/20: max 12 events, max 4 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.socialdeal.nl/",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://www.socialdeal.nl/",
+      "status": "strategie",
+      "rawText": "Social Deal-aanbiedingen"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.socialdeal.nl/",
+      "title": "Pagina gelezen",
+      "date": "",
+      "url": "https://www.socialdeal.nl/dichtbij/groningen/",
+      "status": "ok",
+      "rawText": "317644 tekens HTML"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.socialdeal.nl/",
+      "title": "Social Deal-telling",
+      "date": "",
+      "url": "https://www.socialdeal.nl/dichtbij/groningen/",
+      "status": "ok",
+      "rawText": "12 aanbiedingen gevonden (limiet 12)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.socialdeal.nl/",
+      "title": "Pagina geanalyseerd",
+      "date": "",
+      "url": "https://www.socialdeal.nl/dichtbij/groningen/",
+      "status": "ok",
+      "rawText": "12 events/aanbiedingen op deze pagina"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.socialdeal.nl/",
+      "title": "Pagina gelezen",
+      "date": "",
+      "url": "https://www.socialdeal.nl/ontdek/groningen/",
+      "status": "ok",
+      "rawText": "4939497 tekens HTML"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.socialdeal.nl/",
+      "title": "Social Deal-telling",
+      "date": "",
+      "url": "https://www.socialdeal.nl/ontdek/groningen/",
+      "status": "ok",
+      "rawText": "12 aanbiedingen gevonden (limiet 12)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.socialdeal.nl/",
+      "title": "Pagina geanalyseerd",
+      "date": "",
+      "url": "https://www.socialdeal.nl/ontdek/groningen/",
+      "status": "ok",
+      "rawText": "12 events/aanbiedingen op deze pagina"
+    },
+    {
+      "source": "Filter",
+      "site": "https://www.socialdeal.nl/",
+      "title": "Datumfilter toegepast",
+      "date": "2026-10-26",
+      "url": "https://www.socialdeal.nl/",
+      "status": "ok",
+      "rawText": "22 gevonden; 6 binnen 2026-10-26 t/m 2026-10-28"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.socialdeal.nl/",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://www.socialdeal.nl/",
+      "status": "klaar",
+      "rawText": "site 16/20: 4 unieke events in 8.12 sec"
     }
   ]
 }
