@@ -1146,6 +1146,64 @@ async function saveEventFeedback(env, target = {}, vote = "bad") {
   if (!saved.ok) throw new Error("Feedback opslaan mislukt: " + await saved.text());
   return { vote, feedbackCount: data.feedback.length };
 }
+async function learnSiteFieldAdjustments(env, siteUrl, originalFields, corrections, sourceUrl) {
+  const fields = ["title", "date", "location", "type", "cost"];
+  const additions = fields.map(field => ({
+    field,
+    find: clean(originalFields?.[field] || ""),
+    replace: clean(corrections?.[field] || "")
+  })).filter(rule => rule.find && rule.replace && rule.find !== rule.replace);
+  if (!additions.length) return { learned: 0 };
+  const getJsonFile = async path => {
+    const response = await githubFetch(env, "/contents/" + path + "?ref=main");
+    if (!response.ok) throw new Error(path + " niet leesbaar: status " + response.status);
+    const file = await response.json();
+    return { file, data: JSON.parse(decodeBase64(file.content || "")) };
+  };
+  const siteHost = value => { try { return new URL(value).hostname.toLowerCase().replace(/^www\./, ""); } catch (_) { return ""; } };
+  const host = siteHost(siteUrl);
+  const sitesResult = await getJsonFile("sites.json");
+  const activeSites = Array.isArray(sitesResult.data) ? sitesResult.data : [];
+  const candidates = activeSites.filter(site => siteHost(site) && siteHost(site) === host);
+  if (!candidates.length) return { learned: 0, reason: "Geen actieve bronwebsite gevonden voor deze host." };
+  const selected = candidates.sort((a,b) => {
+    const pa = (()=>{try{return new URL(a).pathname.length}catch{return 0}})();
+    const pb = (()=>{try{return new URL(b).pathname.length}catch{return 0}})();
+    return pb-pa;
+  })[0];
+  let lastConflict = "";
+  for (let attempt=1; attempt<=3; attempt++) {
+    const current = await getJsonFile("site-scraper-config.json");
+    const registry = current.data && typeof current.data === "object" ? current.data : { schemaVersion: 1, sites: {} };
+    if (!registry.sites || typeof registry.sites !== "object") registry.sites = {};
+    const config = registry.sites[selected] || { methodology:"", startUrls:[], exclusions:[], excludedUrls:[], adjustments:[] };
+    if (!Array.isArray(config.adjustments)) config.adjustments = [];
+    let learned = 0;
+    for (const rule of additions) {
+      const exists = config.adjustments.some(old => old.field === rule.field && clean(old.find).toLowerCase() === rule.find.toLowerCase() && String(old.replace || "") === rule.replace);
+      if (!exists) {
+        config.adjustments.push(rule);
+        learned++;
+      }
+    }
+    if (!learned) return { learned: 0, site: selected };
+    config.adjustments = config.adjustments.slice(-100);
+    registry.sites[selected] = config;
+    registry.updatedAt = new Date().toISOString();
+    const saved = await githubFetch(env, "/contents/site-scraper-config.json", { method:"PUT", body:JSON.stringify({
+      message:"Learn field corrections from edited event: " + clean(corrections?.title || "event").slice(0,80),
+      content:encodeBase64(JSON.stringify(registry,null,2)),
+      sha:current.file.sha,
+      branch:"main"
+    })});
+    if (saved.ok) return { learned, site:selected };
+    const details = await saved.text();
+    if (saved.status === 409) { lastConflict = details; continue; }
+    throw new Error("Automatische veldregel kon niet worden opgeslagen: " + validateInput(details,300));
+  }
+  throw new Error("site-scraper-config.json wijzigde gelijktijdig; veldregels niet opgeslagen. " + validateInput(lastConflict,200));
+}
+
 async function saveEventCorrection(env, target = {}) {
   const corrections = target.corrections || {};
   const title = clean(corrections.title || "");
@@ -1187,9 +1245,11 @@ async function saveEventCorrection(env, target = {}) {
     return Boolean(sameUrl || sameOriginal);
   };
   let updatedCount = 0;
+  let originalFields = null;
   const apply = (event) => {
     if (!sameEvent(event)) return event;
     updatedCount += 1;
+    if (!originalFields) originalFields = Object.fromEntries(["title","date","location","type","cost"].map(field => [field, clean(event[field] || "")]));
     const locationChanged = clean(event.location || "").toLowerCase() !== location.toLowerCase();
     const corrected = { ...event, title, date, location, type, cost, website: improvedUrl, editedByUser: true, editedAt: new Date().toISOString() };
     // Remove coordinates tied to the old scraped location so the corrected location is used after reload.
@@ -1221,10 +1281,14 @@ async function saveEventCorrection(env, target = {}) {
     date,
     originalTitle,
     originalDate,
+    originalFields: originalFields || {},
     corrections: { title, date, location, type, cost, website: improvedUrl },
     url: target.url || target.website
   }, "edit");
-  return { updatedCount, corrections: { title, date, location, type, cost, website: improvedUrl } };
+  let learnedRules = { learned: 0 };
+  try { learnedRules = await learnSiteFieldAdjustments(env, target.website, originalFields || {}, { title, date, location, type, cost }, improvedUrl); }
+  catch (error) { learnedRules = { learned: 0, warning: validateInput(error.message || String(error), 300) }; }
+  return { updatedCount, corrections: { title, date, location, type, cost, website: improvedUrl }, learnedRules };
 }
 async function deleteEventFromGithub(env, target = {}) {
   // Persist the rejection first so a concurrent scrape already knows this event is unwanted.
@@ -1696,7 +1760,7 @@ export default {
             startUrls: Array.isArray(old.startUrls) ? old.startUrls.map(value => validateInput(value, 500)).filter(value => /^https?:\/\//i.test(value) && sameHostUrl(value, site)).slice(0, 80) : [],
             exclusions: Array.isArray(old.exclusions) ? old.exclusions.map(value => validateInput(value, 120)).filter(Boolean).slice(0, 100) : [],
             excludedUrls: Array.isArray(old.excludedUrls) ? old.excludedUrls.map(value => validateInput(value, 500)).filter(Boolean).slice(0, 200) : [],
-            adjustments: Array.isArray(old.adjustments) ? old.adjustments.filter(item => item && ["title","description","location","type","cost","website"].includes(item.field)).map(item => ({ field: item.field, find: validateInput(item.find, 300), replace: validateInput(item.replace, 500) })).filter(item => item.find).slice(0, 100) : []
+            adjustments: Array.isArray(old.adjustments) ? old.adjustments.filter(item => item && ["title","date","description","location","type","cost","website"].includes(item.field)).map(item => ({ field: item.field, find: validateInput(item.find, 300), replace: validateInput(item.replace, 500) })).filter(item => item.find).slice(0, 100) : []
           };
         }
         const changed = JSON.stringify(cleaned) !== JSON.stringify(registry.sites || {});
@@ -1739,7 +1803,7 @@ export default {
           startUrls: Array.isArray(config.startUrls) ? config.startUrls.map(value => validateInput(value, 500)).filter(value => /^https?:\/\//i.test(value) && sameHostUrl(value, site)).slice(0, 80) : [],
           exclusions: Array.isArray(config.exclusions) ? config.exclusions.map(value => validateInput(value, 120)).filter(Boolean).slice(0, 100) : [],
           excludedUrls: Array.isArray(config.excludedUrls) ? config.excludedUrls.map(value => validateInput(value, 500)).filter(Boolean).slice(0, 200) : [],
-          adjustments: Array.isArray(config.adjustments) ? config.adjustments.filter(item => item && ["title","description","location","type","cost","website"].includes(item.field)).map(item => ({ field: item.field, find: validateInput(item.find, 300), replace: validateInput(item.replace, 500) })).filter(item => item.find).slice(0, 100) : []
+          adjustments: Array.isArray(config.adjustments) ? config.adjustments.filter(item => item && ["title","date","description","location","type","cost","website"].includes(item.field)).map(item => ({ field: item.field, find: validateInput(item.find, 300), replace: validateInput(item.replace, 500) })).filter(item => item.find).slice(0, 100) : []
         };
         const active = new Set(activeSites);
         for (const configuredSite of Object.keys(registry.sites)) if (!active.has(configuredSite)) delete registry.sites[configuredSite];
