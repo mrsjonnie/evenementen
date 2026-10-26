@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-26T21:58:12+00:00",
+  "updatedAt": "2026-10-26T21:58:17+00:00",
   "events": [
     {
       "date": "2026-10-26",
@@ -10539,54 +10539,16 @@
       "newCount": 0,
       "durationSeconds": 5.1,
       "timedOut": false
+    },
+    {
+      "site": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 1.58,
+      "timedOut": false
     }
   ],
   "rawLog": [
-    {
-      "source": "Website",
-      "site": "https://forum.nl/nl/agenda",
-      "title": "Detailpagina geanalyseerd",
-      "date": "",
-      "url": "https://forum.nl/nl/agenda/storyworld",
-      "status": "ok",
-      "rawText": "1 extra events"
-    },
-    {
-      "source": "Website",
-      "site": "https://forum.nl/nl/agenda",
-      "title": "Detailpagina geanalyseerd",
-      "date": "",
-      "url": "https://forum.nl/nl/agenda/digihuis?date=27-10-2026",
-      "status": "ok",
-      "rawText": "1 extra events"
-    },
-    {
-      "source": "Website",
-      "site": "https://forum.nl/nl/agenda",
-      "title": "Detailpagina geanalyseerd",
-      "date": "",
-      "url": "https://forum.nl/nl/agenda/digihuis?date=28-10-2026",
-      "status": "ok",
-      "rawText": "0 extra events"
-    },
-    {
-      "source": "Website",
-      "site": "https://forum.nl/nl/agenda",
-      "title": "Detailpagina geanalyseerd",
-      "date": "",
-      "url": "https://forum.nl/nl/agenda/film/breve-storia-damore?date=27-10-2026",
-      "status": "ok",
-      "rawText": "1 extra events"
-    },
-    {
-      "source": "Website",
-      "site": "https://forum.nl/nl/agenda",
-      "title": "Detailpagina geanalyseerd",
-      "date": "",
-      "url": "https://forum.nl/nl/agenda/film/coward?date=27-10-2026",
-      "status": "ok",
-      "rawText": "1 extra events"
-    },
     {
       "source": "Website",
       "site": "https://forum.nl/nl/agenda",
@@ -21341,6 +21303,51 @@
       "url": "https://www.concertgebouw.nl/concerten-en-tickets",
       "status": "klaar",
       "rawText": "site 10/15: 0 unieke events in 5.1 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "title": "Start",
+      "date": "",
+      "url": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "status": "start",
+      "rawText": "site 11/15: max 60 events, max 45 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "status": "strategie",
+      "rawText": "bioscoopfilms en speeldata (BiosAgenda Groningen)"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "title": "403-tekstproxy mislukt",
+      "date": "",
+      "url": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "status": "fout",
+      "rawText": "HTTPSConnectionPool(host='r.jina.ai', port=443): Read timed out. (read timeout=1.25)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "title": "Pagina mislukt",
+      "date": "",
+      "url": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "status": "klaar",
+      "rawText": "site 11/15: 0 unieke events in 1.58 sec"
     }
   ]
 }

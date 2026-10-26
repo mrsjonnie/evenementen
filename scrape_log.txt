@@ -1,8 +1,3 @@
-Website	https://forum.nl/nl/agenda	ok	Detailpagina geanalyseerd		https://forum.nl/nl/agenda/storyworld	1 extra events
-Website	https://forum.nl/nl/agenda	ok	Detailpagina geanalyseerd		https://forum.nl/nl/agenda/digihuis?date=27-10-2026	1 extra events
-Website	https://forum.nl/nl/agenda	ok	Detailpagina geanalyseerd		https://forum.nl/nl/agenda/digihuis?date=28-10-2026	0 extra events
-Website	https://forum.nl/nl/agenda	ok	Detailpagina geanalyseerd		https://forum.nl/nl/agenda/film/breve-storia-damore?date=27-10-2026	1 extra events
-Website	https://forum.nl/nl/agenda	ok	Detailpagina geanalyseerd		https://forum.nl/nl/agenda/film/coward?date=27-10-2026	1 extra events
 Website	https://forum.nl/nl/agenda	ok	Detailpagina geanalyseerd		https://forum.nl/nl/agenda/film/digger?date=27-10-2026	1 extra events
 Website	https://forum.nl/nl/agenda	ok	Detailpagina geanalyseerd		https://forum.nl/nl/agenda/film/docs-de-manager?date=27-10-2026	1 extra events
 Website	https://forum.nl/nl/agenda	ok	Detailpagina geanalyseerd		https://forum.nl/nl/agenda/film/docs-imago?date=27-10-2026	1 extra events
@@ -1198,3 +1193,8 @@ RSS/Atom	https://www.concertgebouw.nl/concerten-en-tickets	fout	Feed mislukt		ht
 RSS/Atom	https://www.concertgebouw.nl/concerten-en-tickets	fout	Feed mislukt		https://www.concertgebouw.nl/feed.xml	HTTP 404
 RSS/Atom	https://www.concertgebouw.nl/concerten-en-tickets	fout	Feed mislukt		https://www.concertgebouw.nl/events/feed/	HTTP 404
 Website	https://www.concertgebouw.nl/concerten-en-tickets	klaar	Klaar		https://www.concertgebouw.nl/concerten-en-tickets	site 10/15: 0 unieke events in 5.1 sec
+Website	https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html	start	Start		https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html	site 11/15: max 60 events, max 45 seconden
+Parser	https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html	strategie	Scrapertype vastgesteld		https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html	bioscoopfilms en speeldata (BiosAgenda Groningen)
+Diagnose	https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html	fout	403-tekstproxy mislukt		https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html	HTTPSConnectionPool(host='r.jina.ai', port=443): Read timed out. (read timeout=1.25)
+Website	https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html	fout	Pagina mislukt		https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html	HTTP 403
+Website	https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html	klaar	Klaar		https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html	site 11/15: 0 unieke events in 1.58 sec
