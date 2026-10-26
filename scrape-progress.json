@@ -1,7 +1,7 @@
 {
   "runId": "2026-10-26T11:43:58.524217+00:00-0c37897b",
   "startedAt": "2026-10-26T11:43:58+00:00",
-  "completedCount": 6,
+  "completedCount": 7,
   "totalSites": 16,
   "currentSite": "https://www.martiniplaza.nl/nl/agenda",
   "currentSiteIndex": 7,
@@ -11,7 +11,8 @@
     "https://forum.nl/nl/agenda",
     "https://www.spotgroningen.nl/programma/",
     "https://simplon.nl/",
-    "https://www.vera-groningen.nl/"
+    "https://www.vera-groningen.nl/",
+    "https://www.martiniplaza.nl/nl/agenda"
   ],
   "events": [
     {
@@ -132,225 +133,16 @@
       "newCount": 0,
       "durationSeconds": 2.32,
       "timedOut": false
+    },
+    {
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 5.49,
+      "timedOut": false
     }
   ],
   "rawLog": [
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Pagina gelezen",
-      "date": "",
-      "url": "https://groningen.uitloper.nu/?date=1793534400",
-      "status": "ok",
-      "rawText": "73653 tekens HTML"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Breabach",
-      "date": "2026-11-01",
-      "url": "https://groningen.uitloper.nu/muziek/breabach-1",
-      "status": "Uitloper agenda-item",
-      "rawText": "Breabach 20:30 uur De tradities van de Highlands en de westelijke Schotse…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Roël Calister Ensemble",
-      "date": "2026-11-01",
-      "url": "https://groningen.uitloper.nu/muziek/roel-calister-ensemble",
-      "status": "Uitloper agenda-item",
-      "rawText": "Roël Calister Ensemble 20:30 uur Krachtige verhalen komten tot leven door Afro-Curaçaose…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Angine De Poitrine",
-      "date": "2026-11-01",
-      "url": "https://groningen.uitloper.nu/muziek/angine-de-poitrine",
-      "status": "Uitloper agenda-item",
-      "rawText": "Angine De Poitrine 20:30 uur Uitverkocht. Als discipelen van de rockgoden van planeet…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Focus Vocaal",
-      "date": "2026-11-01",
-      "url": "https://groningen.uitloper.nu/muziek/focus-vocaal-1",
-      "status": "Uitloper agenda-item",
-      "rawText": "Focus Vocaal 16:30 uur Uitverkocht."
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Rebels of Rhythm",
-      "date": "2026-11-01",
-      "url": "https://groningen.uitloper.nu/muziek/rebels-of-rhythm-5",
-      "status": "Uitloper agenda-item",
-      "rawText": "Rebels of Rhythm 16:30 uur Funk, soul, blues, rock en americana."
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Cantatedienst",
-      "date": "2026-11-01",
-      "url": "https://groningen.uitloper.nu/muziek/cantatedienst-26",
-      "status": "Uitloper agenda-item",
-      "rawText": "Cantatedienst 17:00 uur Musicalische Exequien Heinrich Schütz Cantate Consort,…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Ian Siegal",
-      "date": "2026-11-01",
-      "url": "https://groningen.uitloper.nu/muziek/ian-siegal",
-      "status": "Uitloper agenda-item",
-      "rawText": "Ian Siegal 20:00 uur De Britse singer-songwriter en gitarist staat bekend…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Muzikale thema avond",
-      "date": "2026-11-01",
-      "url": "https://groningen.uitloper.nu/muziek/muzikale-thema-avond",
-      "status": "Uitloper agenda-item",
-      "rawText": "Muzikale thema avond 20:00 uur Chris Hooghuis nodigt een groot aantal muzikanten…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "EP-presentatie Anne Marie Zuidema",
-      "date": "2026-11-01",
-      "url": "https://groningen.uitloper.nu/muziek/ep-presentatie-anne-marie-zuidema",
-      "status": "Uitloper agenda-item",
-      "rawText": "EP-presentatie Anne Marie Zuidema 16:00 uur Een singer-songwriter uit Groningen met een hoorbare…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Bo Tarenskeen - Soekarno",
-      "date": "2026-11-01",
-      "url": "https://groningen.uitloper.nu/theater/bo-tarenskeen-soekarno",
-      "status": "Uitloper agenda-item",
-      "rawText": "Bo Tarenskeen - Soekarno 14:30 uur In deze nieuwe voorstelling van Bo Tarenskeen ontmoet…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Een avond met Bauke Mollema",
-      "date": "2026-11-01",
-      "url": "https://groningen.uitloper.nu/theater/een-avond-met-bauke-mollema",
-      "status": "Uitloper agenda-item",
-      "rawText": "Een avond met Bauke Mollema 20:15 uur Samen met Hidde en Thijs van wielren-podcast In De…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Every Brilliant Thing (Try-out)",
-      "date": "2026-11-01",
-      "url": "https://groningen.uitloper.nu/theater/every-brilliant-thing-try-out",
-      "status": "Uitloper agenda-item",
-      "rawText": "Every Brilliant Thing (Try-out) 20:15 uur Franka Krol wordt in haar monoloog begeleid door Jorden…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Thinking Hands",
-      "date": "2026-11-01",
-      "url": "https://groningen.uitloper.nu/kunst/thinking-hands",
-      "status": "Uitloper agenda-item",
-      "rawText": "Thinking Hands Een expositie over de kennis die in ons lichaam zit…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Nieuw Licht - De Ploeg",
-      "date": "2026-11-01",
-      "url": "https://groningen.uitloper.nu/kunst/nieuw-licht-%e2%80%93-de-ploeg",
-      "status": "Uitloper agenda-item",
-      "rawText": "Nieuw Licht - De Ploeg Een geheel vernieuwde presentatie van werken van De…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "The Architect & The Housewife: Cleaning the House, Building the Future",
-      "date": "2026-11-01",
-      "url": "https://groningen.uitloper.nu/kunst/the-architect-the-housewife-cleaning-the-house-building-the-future",
-      "status": "Uitloper agenda-item",
-      "rawText": "The Architect & The Housewife: Cleaning the House, Building the Future De titel van deze tentoonstelling is ontleend aan…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Nieuw licht 1: Ani Schulze – The Convent of Pleasure",
-      "date": "2026-11-01",
-      "url": "https://groningen.uitloper.nu/kunst/nieuw-licht-1-ani-schulze-%e2%80%93-the-convent-of-pleasure",
-      "status": "Uitloper agenda-item",
-      "rawText": "Nieuw licht 1: Ani Schulze – The Convent of Pleasure Nieuw licht is een tentoonstellingsreeks waarin het…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Keramikos Carrier Bag",
-      "date": "2026-11-01",
-      "url": "https://groningen.uitloper.nu/kunst/keramikos-carrier-bag",
-      "status": "Uitloper agenda-item",
-      "rawText": "Keramikos Carrier Bag Naar aanleiding van onderzoek in Groningen kozen Matthew…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Theatraal",
-      "date": "2026-11-01",
-      "url": "https://groningen.uitloper.nu/kunst/theatraal",
-      "status": "Uitloper agenda-item",
-      "rawText": "Theatraal Voor het derde jaar op rij presenteert de Stadsgalerie…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Storyworld Spotlight: Asjemenou!",
-      "date": "2026-11-01",
-      "url": "https://groningen.uitloper.nu/kunst/storyworld-spotlight-asjemenou",
-      "status": "Uitloper agenda-item",
-      "rawText": "Storyworld Spotlight: Asjemenou! In 2026 bestaat de Nederlandse televisie 75 jaar…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "ubiquitousssssssssssssssssugar",
-      "date": "2026-11-01",
-      "url": "https://groningen.uitloper.nu/kunst/ubiquitousssssssssssssssssugar",
-      "status": "Uitloper agenda-item",
-      "rawText": "ubiquitousssssssssssssssssugar Met performances, proeverijen van Goblin Feast, Jonas…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "VELD Collectief",
-      "date": "2026-11-01",
-      "url": "https://groningen.uitloper.nu/kunst/veld-collectief",
-      "status": "Uitloper agenda-item",
-      "rawText": "VELD Collectief Wie in Groningen een suikerbiet langs de weg ziet…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Masterminds. De Geschiedenis van de Groningse Universiteit",
-      "date": "2026-11-01",
-      "url": "https://groningen.uitloper.nu/kunst/masterminds",
-      "status": "Uitloper agenda-item",
-      "rawText": "Masterminds. De Geschiedenis van de Groningse Universiteit Masterminds neemt je mee in de geschiedenis van de…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Anatomisch Theater",
-      "date": "2026-11-01",
-      "url": "https://groningen.uitloper.nu/kunst/anatomisch-theater",
-      "status": "Uitloper agenda-item",
-      "rawText": "Anatomisch Theater In het anatomisch theater zijn zo’n 50 preparaten…"
-    },
     {
       "source": "Website",
       "site": "https://groningen.uitloper.nu/",
@@ -10934,16 +10726,232 @@
       "url": "https://www.vera-groningen.nl/",
       "status": "klaar",
       "rawText": "site 6/16: 0 unieke events in 2.32 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Start",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda",
+      "status": "start",
+      "rawText": "site 7/16: max 40 events, max 10 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda",
+      "status": "strategie",
+      "rawText": "agenda-kaarten"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Pagina gelezen",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda",
+      "status": "ok",
+      "rawText": "146630 tekens HTML"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Agenda geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda",
+      "status": "gespecialiseerde parser",
+      "rawText": "12 agenda-items gevonden"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Pagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda",
+      "status": "ok",
+      "rawText": "12 events/aanbiedingen op deze pagina"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/cats-het-meesterwerk",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/donar-groningen-cso-voluntari-2026",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/francis-van-broekhuizen",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/jethro-tull",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/juf-braaksel",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/promotiedagen-2026",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/rob-lamberti",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/tafkal-serieus-grappig-uitverkocht",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/taptoe-groningen-2026",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/the-bodyguard-de-musical-2027",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/the-dire-straits-experience",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/titanique",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/feed",
+      "status": "fout",
+      "rawText": "HTTP 404"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/rss",
+      "status": "fout",
+      "rawText": "HTTP 404"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/rss.xml",
+      "status": "fout",
+      "rawText": "HTTP 404"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/feed.xml",
+      "status": "fout",
+      "rawText": "HTTP 404"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/events/feed/",
+      "status": "fout",
+      "rawText": "HTTP 404"
+    },
+    {
+      "source": "Filter",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Datumfilter toegepast",
+      "date": "2026-10-26",
+      "url": "https://www.martiniplaza.nl/nl/agenda",
+      "status": "ok",
+      "rawText": "12 gevonden; 0 binnen 2026-10-26 t/m 2026-10-26"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda",
+      "status": "klaar",
+      "rawText": "site 7/16: 0 unieke events in 5.49 sec"
     }
   ],
   "status": "running",
   "siteStartedAt": "2026-10-26T11:45:08+00:00",
-  "siteElapsedSeconds": 0,
-  "sitePageCount": 0,
+  "siteElapsedSeconds": 7,
+  "sitePageCount": 1,
   "lastSiteEventCount": 0,
-  "stage": "Websitepagina ophalen",
-  "lastUpdatedAt": "2026-10-26T11:45:08+00:00",
+  "stage": "Website klaar; volgende website voorbereiden",
+  "lastUpdatedAt": "2026-10-26T11:45:11+00:00",
   "lastSiteNewEventCount": 0,
-  "lastCompletedSite": "https://www.vera-groningen.nl/",
-  "lastCompletedAt": "2026-10-26T11:45:06+00:00"
+  "lastCompletedSite": "https://www.martiniplaza.nl/nl/agenda",
+  "lastCompletedAt": "2026-10-26T11:45:15+00:00"
 }
