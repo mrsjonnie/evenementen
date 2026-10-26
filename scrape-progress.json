@@ -1,7 +1,7 @@
 {
   "runId": "2026-10-26T21:56:08.566391+00:00-c5f503e0",
   "startedAt": "2026-10-26T21:56:08+00:00",
-  "completedCount": 14,
+  "completedCount": 15,
   "totalSites": 15,
   "currentSite": "https://denieuwekolk.nl/agenda",
   "currentSiteIndex": 15,
@@ -19,7 +19,8 @@
     "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
     "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
     "https://www.socialdeal.nl/",
-    "https://www.ibood.com/s-nl"
+    "https://www.ibood.com/s-nl",
+    "https://denieuwekolk.nl/agenda"
   ],
   "events": [
     {
@@ -1087,6 +1088,21 @@
       "description": "Expositie met Beeldend Collectief Drenthe. Wo tm/…",
       "cost": "",
       "image": "https://groningen.uitloper.nu/images/smallthumb/files/screenshot-2026-10-22-at-15-06-55-flyeroktober26-jpg--jpeg-afbeelding-874---1240-pixels----geschaald--74--.png",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-29",
+      "time": "15:15",
+      "title": "Coyote vs. Acme",
+      "type": "Film",
+      "location": "Hans Somers, Florus van Rooijen, Joey Schalker, Thijs van Aken",
+      "locationLink": "",
+      "website": "https://denieuwekolk.nl/bios/agenda/coyote-vs-acme",
+      "source": "denieuwekolk.nl",
+      "discoverySource": "Website",
+      "description": "Bekijk Coyote vs. Acme NL bij De Nieuwe Kolk in Assen. Ontdek de film in het culturele hart van Assen en plan je bezoek aan de bioscoop.",
+      "cost": "",
+      "image": "https://media.denieuwekolk.nl/4ac390a3-a384-c3d4-fb18-c8c564554637/coyote-vs-acme-nl?crop=2825%2C1695%2C507%2C0&scale=1200&optimizer=image",
       "isNew": true
     },
     {
@@ -4940,423 +4956,16 @@
       "newCount": 0,
       "durationSeconds": 4.72,
       "timedOut": false
+    },
+    {
+      "site": "https://denieuwekolk.nl/agenda",
+      "count": 1,
+      "newCount": 1,
+      "durationSeconds": 45.3,
+      "timedOut": true
     }
   ],
   "rawLog": [
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Cock Robin (85-89) Tour 2027",
-      "date": "2027-05-19",
-      "url": "https://www.spotgroningen.nl/programma/cock-robin/",
-      "status": "event uit link",
-      "rawText": "Cock Robin (85-89) Tour 2027 Avond vol hits en verborgen parels uit de gloriedagen van de band! wo 19 mei"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Nederlands Dans Theater 2 A poem for the world",
-      "date": "2027-05-19",
-      "url": "https://www.spotgroningen.nl/programma/nederlands-dans-theater-2-7/",
-      "status": "event uit link",
-      "rawText": "Nederlands Dans Theater 2 A poem for the world Ode aan de speelsheid en de menselijkheid wo 19 mei"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Ivo Pogorelich",
-      "date": "2027-05-20",
-      "url": "https://www.spotgroningen.nl/programma/ivo-pogorelich/",
-      "status": "event uit link",
-      "rawText": "Ivo Pogorelich Barokke helderheid en romantische diepte door een eigenzinnige meester Wereldklasse do 20 mei"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Kasper van der Laan Ruim",
-      "date": "2027-05-20",
-      "url": "https://www.spotgroningen.nl/programma/kasper-van-der-laan-9/",
-      "status": "event uit link",
-      "rawText": "Kasper van der Laan Ruim Fascinerend, onvoorspelbaar en absurd grappig Uitverkocht do 20 mei"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Kasper van der Laan Ruim",
-      "date": "2027-05-21",
-      "url": "https://www.spotgroningen.nl/programma/kasper-van-der-laan-10/",
-      "status": "event uit link",
-      "rawText": "Kasper van der Laan Ruim Fascinerend, onvoorspelbaar en absurd grappig Uitverkocht vr 21 mei"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Thomas van Luyn Super Normaal",
-      "date": "2027-05-22",
-      "url": "https://www.spotgroningen.nl/programma/thomas-van-luyn-5/",
-      "status": "event uit link",
-      "rawText": "Thomas van Luyn Super Normaal Hoe raar is het om herkenbaar te zijn za 22 mei"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Thomas van Luyn Super Normaal",
-      "date": "2027-05-23",
-      "url": "https://www.spotgroningen.nl/programma/thomas-van-luyn-6/",
-      "status": "event uit link",
-      "rawText": "Thomas van Luyn Super Normaal Hoe raar is het om herkenbaar te zijn zo 23 mei"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Colin Blunstone support: Jesse Lynn Madera",
-      "date": "2027-05-24",
-      "url": "https://www.spotgroningen.nl/programma/colin-blunstone/",
-      "status": "event uit link",
-      "rawText": "Colin Blunstone support: Jesse Lynn Madera De kenmerkende stem achter o.a. The Zombies ma 24 mei"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Culture (ft Kenyatta Hill) & Cedric Myton",
-      "date": "2027-05-25",
-      "url": "https://www.spotgroningen.nl/programma/culture-ft-kenyatta-hill-cedric-myton/",
-      "status": "event uit link",
-      "rawText": "Culture (ft Kenyatta Hill) & Cedric Myton Twee legendarische reggae-acts op één avond di 25 mei"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Valentina Tóth Revue Revanche",
-      "date": "2027-05-26",
-      "url": "https://www.spotgroningen.nl/programma/valentina-toth-9/",
-      "status": "event uit link",
-      "rawText": "Valentina Tóth Revue Revanche Mix van opera, theater, musical, comedy, maatschappijkritiek en kleinkunst wo 26 mei"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Joris Teepe presents: NYCTG",
-      "date": "2027-05-26",
-      "url": "https://www.spotgroningen.nl/programma/joris-teepe-presents-nyctg-39/",
-      "status": "event uit link",
-      "rawText": "Joris Teepe presents: NYCTG Voor een kleine prijs genieten van topjazzmuzikanten wo 26 mei"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Coffee Break ism Prins Claus Conservatorium",
-      "date": "2027-05-27",
-      "url": "https://www.spotgroningen.nl/programma/coffee-break-ism-prins-claus-conservatorium-21/",
-      "status": "event uit link",
-      "rawText": "Coffee Break ism Prins Claus Conservatorium Trakteer jezelf op koffie en muziek van aanstormend talent op de donderdagochtend do 27 mei"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Het Nationale Theater Big Pharma",
-      "date": "2027-05-27",
-      "url": "https://www.spotgroningen.nl/programma/het-nationale-theater-eric-de-vroedt/",
-      "status": "event uit link",
-      "rawText": "Het Nationale Theater Big Pharma Voorstelling over de macht achter het medicijn do 27 mei"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Toneelgroep Maastricht De Erfenis",
-      "date": "2027-05-28",
-      "url": "https://www.spotgroningen.nl/programma/toneelgroep-maastricht-11/",
-      "status": "event uit link",
-      "rawText": "Toneelgroep Maastricht De Erfenis Tony Award-winnend familiedrama voor het eerst in Nederland te zien Voorstelling toegankelijk voor mensen met een visuele beperking vr 28 mei"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Magnificent Seven",
-      "date": "2027-05-29",
-      "url": "https://www.spotgroningen.nl/programma/magnificent-seven/",
-      "status": "event uit link",
-      "rawText": "Magnificent Seven Een supergroep van Nederlandse topgitaristen za 29 mei"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Sven Ratzke Kopfkino",
-      "date": "2027-05-30",
-      "url": "https://www.spotgroningen.nl/programma/sven-ratzke-4/",
-      "status": "event uit link",
-      "rawText": "Sven Ratzke Kopfkino Diva's en dromers komen tot leven in vaak persoonlijke verhalen en herinneringen zo 30 mei"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Bert Visscher, Martin van Waardenberg Sunshine Boys",
-      "date": "2027-06-01",
-      "url": "https://www.spotgroningen.nl/programma/bert-visscher-martin-van-waardenberg/",
-      "status": "event uit link",
-      "rawText": "Bert Visscher, Martin van Waardenberg Sunshine Boys Ontroerend meesterwerk met komische zwaargewichten di 1 jun"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Bert Visscher, Martin van Waardenberg Sunshine Boys",
-      "date": "2027-06-02",
-      "url": "https://www.spotgroningen.nl/programma/bert-visscher-martin-van-waardenberg-2/",
-      "status": "event uit link",
-      "rawText": "Bert Visscher, Martin van Waardenberg Sunshine Boys Ontroerend meesterwerk met komische zwaargewichten wo 2 jun"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Fabian Franciscus Is het leven al begonnen?",
-      "date": "2027-06-02",
-      "url": "https://www.spotgroningen.nl/programma/fabian-franciscus-4/",
-      "status": "event uit link",
-      "rawText": "Fabian Franciscus Is het leven al begonnen? Fabian Franciscus is terug! wo 2 jun"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Bert Visscher, Martin van Waardenberg Sunshine Boys",
-      "date": "2027-06-03",
-      "url": "https://www.spotgroningen.nl/programma/bert-visscher-martin-van-waardenberg-3/",
-      "status": "event uit link",
-      "rawText": "Bert Visscher, Martin van Waardenberg Sunshine Boys Ontroerend meesterwerk met komische zwaargewichten do 3 jun"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Opera Zuid Frau Luna",
-      "date": "2027-06-04",
-      "url": "https://www.spotgroningen.nl/programma/opera-zuid-11/",
-      "status": "event uit link",
-      "rawText": "Opera Zuid Frau Luna Onweerstaanbaar muziektheater van Steef de Jong en bewerking van Paulien Cornelisse vr 4 jun"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "BOUKE ROCKS ELVIS",
-      "date": "2027-06-04",
-      "url": "https://www.spotgroningen.nl/programma/bouke-rocks-elvis/",
-      "status": "event uit link",
-      "rawText": "BOUKE ROCKS ELVIS Bouke brengt the King met volle overtuiging tot leven vr 4 jun"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "The Kik Hertaalt The Beatles (1962-1966)",
-      "date": "2027-06-04",
-      "url": "https://www.spotgroningen.nl/programma/the-kik-9/",
-      "status": "event uit link",
-      "rawText": "The Kik Hertaalt The Beatles (1962-1966) Nederlandstalig eerbetoon aan de grootste band aller tijden vr 4 jun"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Alexis Ffrench",
-      "date": "2027-06-06",
-      "url": "https://www.spotgroningen.nl/programma/alexis-ffrench/",
-      "status": "event uit link",
-      "rawText": "Alexis Ffrench Pianomuziek waarin klassieke tradities en soulvolle melodieën samenkomen zo 6 jun"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Brand New Musical Kapsalon de musical",
-      "date": "2027-06-06",
-      "url": "https://www.spotgroningen.nl/programma/brand-new-musical/",
-      "status": "event uit link",
-      "rawText": "Brand New Musical Kapsalon de musical Swingende voorstelling met muzikale invloeden van Afro-beats, hiphop, gospel en pop zo 6 jun"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Orkest van de Achttiende Eeuw Beethoven 200",
-      "date": "2027-06-06",
-      "url": "https://www.spotgroningen.nl/programma/orkest-van-de-achttiende-eeuw-4/",
-      "status": "event uit link",
-      "rawText": "Orkest van de Achttiende Eeuw Beethoven 200 Twee publieksfavorieten van een groot muziekrevolutionair zo 6 jun"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Merijn Scholten Lemming (reprise)",
-      "date": "2027-06-07",
-      "url": "https://www.spotgroningen.nl/programma/merijn-scholten-10/",
-      "status": "event uit link",
-      "rawText": "Merijn Scholten Lemming (reprise) Channel je innerlijke schaap en laat je hoeden door Merijn! Uitverkocht ma 7 jun"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Merijn Scholten Lemming (reprise)",
-      "date": "2027-06-08",
-      "url": "https://www.spotgroningen.nl/programma/merijn-scholten-11/",
-      "status": "event uit link",
-      "rawText": "Merijn Scholten Lemming (reprise) Channel je innerlijke schaap en laat je hoeden door Merijn! Uitverkocht di 8 jun"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Merijn Scholten Lemming (reprise)",
-      "date": "2027-06-09",
-      "url": "https://www.spotgroningen.nl/programma/merijn-scholten-12/",
-      "status": "event uit link",
-      "rawText": "Merijn Scholten Lemming (reprise) Channel je innerlijke schaap en laat je hoeden door Merijn! Uitverkocht wo 9 jun"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "The Musical Box “And Then There Was Phil”",
-      "date": "2027-06-09",
-      "url": "https://www.spotgroningen.nl/programma/the-musical-box/",
-      "status": "event uit link",
-      "rawText": "The Musical Box “And Then There Was Phil” De beste Genesis tribute ter wereld wo 9 jun"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Het Zuidelijk Toneel Vondels Angels",
-      "date": "2027-06-10",
-      "url": "https://www.spotgroningen.nl/programma/het-zuidelijk-toneel-12/",
-      "status": "event uit link",
-      "rawText": "Het Zuidelijk Toneel Vondels Angels De dikke vette comeback van Lucifer do 10 jun"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Viggo Waas, Eddie B. Wahr & Kees van der Vooren Eigenlijk",
-      "date": "2027-06-10",
-      "url": "https://www.spotgroningen.nl/programma/viggo-waas-eddie-b-wahr-kees-van-der-vooren/",
-      "status": "event uit link",
-      "rawText": "Viggo Waas, Eddie B. Wahr & Kees van der Vooren Eigenlijk Viggo en Eddie moeten zich verantwoorden voor gedane uitspraken do 10 jun"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "GOOV Muziektheater Come From Away - Première",
-      "date": "2027-06-24",
-      "url": "https://www.spotgroningen.nl/programma/goov-muziektheater-19/",
-      "status": "event uit link",
-      "rawText": "GOOV Muziektheater Come From Away - Première Een hartverwarmende musical over veerkracht in tijden van crisis do 24 jun"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "GOOV Muziektheater Come From Away",
-      "date": "2027-06-25",
-      "url": "https://www.spotgroningen.nl/programma/goov-muziektheater-20/",
-      "status": "event uit link",
-      "rawText": "GOOV Muziektheater Come From Away Een hartverwarmende musical over veerkracht in tijden van crisis vr 25 jun"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "GOOV Muziektheater Come From Away - Matinee",
-      "date": "2027-06-26",
-      "url": "https://www.spotgroningen.nl/programma/goov-muziektheater-21/",
-      "status": "event uit link",
-      "rawText": "GOOV Muziektheater Come From Away - Matinee Een hartverwarmende musical over veerkracht in tijden van crisis za 26 jun"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "GOOV Muziektheater Come From Away",
-      "date": "2027-06-26",
-      "url": "https://www.spotgroningen.nl/programma/goov-muziektheater-22/",
-      "status": "event uit link",
-      "rawText": "GOOV Muziektheater Come From Away Een hartverwarmende musical over veerkracht in tijden van crisis za 26 jun"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Stef Bos",
-      "date": "2027-07-01",
-      "url": "https://www.spotgroningen.nl/programma/stef-bos-5/",
-      "status": "event uit link",
-      "rawText": "Stef Bos Zeer gewaardeerde Nederlandstalige singer-songwriter komt met band en nieuwe songs. Laatste kaarten do 1 jul"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "TOTO 50TH ANNIVERSARY TOUR",
-      "date": "2027-07-03",
-      "url": "https://www.spotgroningen.nl/programma/toto/",
-      "status": "event uit link",
-      "rawText": "TOTO 50TH ANNIVERSARY TOUR Jubileumtour brengt het repertoire van vijf decennia TOTO naar Groningen Net bevestigd za 3 jul"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Robbie Williams Let me entertain you!",
-      "date": "2027-07-10",
-      "url": "https://www.spotgroningen.nl/programma/robbie-williams/",
-      "status": "event uit link",
-      "rawText": "Robbie Williams Let me entertain you! Robbie Williams komt met Live 2027-tour naar Groningen Net bevestigd za 10 jul"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "TakeRoot presents Pas",
-      "date": "2027-07-31",
-      "url": "https://www.spotgroningen.nl/programma/abonnement-takeroot-presents/",
-      "status": "event uit link",
-      "rawText": "TakeRoot presents Pas Vijf concerten voor €70 za 31 jul"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Brabo Leone Sarah Janneh",
-      "date": "2027-09-08",
-      "url": "https://www.spotgroningen.nl/programma/brabo-leone/",
-      "status": "event uit link",
-      "rawText": "Brabo Leone Sarah Janneh Sarah Janneh neemt je mee op een muzikale zoektocht wo 8 sep"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Brabo Leone Sarah Janneh",
-      "date": "2027-09-09",
-      "url": "https://www.spotgroningen.nl/programma/brabo-leone-2/",
-      "status": "event uit link",
-      "rawText": "Brabo Leone Sarah Janneh Sarah Janneh neemt je mee op een muzikale zoektocht do 9 sep"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Brabo Leone Sarah Janneh",
-      "date": "2027-09-10",
-      "url": "https://www.spotgroningen.nl/programma/brabo-leone-3/",
-      "status": "event uit link",
-      "rawText": "Brabo Leone Sarah Janneh Sarah Janneh neemt je mee op een muzikale zoektocht vr 10 sep"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Brabo Leone Sarah Janneh",
-      "date": "2027-09-11",
-      "url": "https://www.spotgroningen.nl/programma/brabo-leone-4/",
-      "status": "event uit link",
-      "rawText": "Brabo Leone Sarah Janneh Sarah Janneh neemt je mee op een muzikale zoektocht za 11 sep"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Van der Laan & Woe Dinsdagmiddag",
-      "date": "2027-09-15",
-      "url": "https://www.spotgroningen.nl/programma/van-der-laan-woe-9/",
-      "status": "event uit link",
-      "rawText": "Van der Laan & Woe Dinsdagmiddag Theatershow waarin het krioelt van de grappen, scènes en muzikale acts Uitverkocht wo 15 sep"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Van der Laan & Woe Dinsdagmiddag",
-      "date": "2027-09-16",
-      "url": "https://www.spotgroningen.nl/programma/van-der-laan-woe-8/",
-      "status": "event uit link",
-      "rawText": "Van der Laan & Woe Dinsdagmiddag Theatershow waarin het krioelt van de grappen, scènes en muzikale acts Uitverkocht do 16 sep"
-    },
     {
       "source": "Website",
       "site": "https://www.spotgroningen.nl/programma/",
@@ -15742,16 +15351,430 @@
       "url": "https://www.ibood.com/s-nl",
       "status": "klaar",
       "rawText": "site 14/15: 0 unieke events in 4.72 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Start",
+      "date": "",
+      "url": "https://denieuwekolk.nl/agenda",
+      "status": "start",
+      "rawText": "site 15/15: max 60 events, max 45 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://denieuwekolk.nl/agenda",
+      "status": "strategie",
+      "rawText": "agenda-kaarten + datumregels (De Nieuwe Kolk)"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Pagina gelezen",
+      "date": "",
+      "url": "https://denieuwekolk.nl/agenda",
+      "status": "ok",
+      "rawText": "977459 tekens HTML"
+    },
+    {
+      "source": "Parser",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "De Nieuwe Kolk detailstrategie",
+      "date": "",
+      "url": "https://denieuwekolk.nl/agenda",
+      "status": "strategie",
+      "rawText": "Agenda gebruiken om detail-URL's te vinden; alleen de echte detailpagina als evenement verwerken"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Pagina geanalyseerd",
+      "date": "",
+      "url": "https://denieuwekolk.nl/agenda",
+      "status": "ok",
+      "rawText": "0 events/aanbiedingen op deze pagina"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Pagina gelezen",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda",
+      "status": "ok",
+      "rawText": "412501 tekens HTML"
+    },
+    {
+      "source": "Parser",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "De Nieuwe Kolk detailstrategie",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda",
+      "status": "strategie",
+      "rawText": "Agenda gebruiken om detail-URL's te vinden; alleen de echte detailpagina als evenement verwerken"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Pagina geanalyseerd",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda",
+      "status": "ok",
+      "rawText": "0 events/aanbiedingen op deze pagina"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda/adviesplein",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda/alzheimercafe-10044312",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda/fotoexpositie-verhalen-van-verborgen-kracht-10050486",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda/het-vlucht-voorwaarts-praathuis",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda/masker-maken",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "DNK-ticketpagina niet volledig herkend",
+      "date": "",
+      "url": "https://tickets.denieuwekolk.nl/mtTicket/performance/10370772",
+      "status": "diagnose",
+      "rawText": "titel=Kaartverkoop De Nieuwe Kolk; datums=2; tijden/ruimtes=0; tekst=Kaarten bestellen | Masker maken - NXT Lab (4+) - woensdag 28 oktober 2026 | Kaartverkoop De Nieuwe Kolk Titel en navigatie overslaan Kaartverkoop De Nieuwe Kolk en Masker maken NXT Lab (4+) woensdag 28 oktober 2026 15:00 (einde 16:00) DNK-NXT Log in om al je"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://tickets.denieuwekolk.nl/mtTicket/performance/10370772",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda/oefentafel-basisvaardigheden",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda/omgaan-met-stress-en-grenzen",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "DNK-ticketpagina niet volledig herkend",
+      "date": "",
+      "url": "https://tickets.denieuwekolk.nl/mtTicket/performance/10374346",
+      "status": "diagnose",
+      "rawText": "titel=Kaartverkoop De Nieuwe Kolk; datums=2; tijden/ruimtes=0; tekst=Kaarten bestellen | Omgaan met stress en grenzen - Maand van de Geschiedenis - donderdag 29 oktober 2026 | Kaartverkoop De Nieuwe Kolk Titel en navigatie overslaan Kaartverkoop De Nieuwe Kolk en Omgaan met stress en grenzen Maand van de Geschiedenis donderdag"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://tickets.denieuwekolk.nl/mtTicket/performance/10374346",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda/programmeren-met-lego-spike",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://tickets.denieuwekolk.nl/login/auth",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda/schrijfcafe",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda/taalcafe",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda/walvis",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "DNK-ticketpagina niet volledig herkend",
+      "date": "",
+      "url": "https://tickets.denieuwekolk.nl/mtTicket/performance/10359135",
+      "status": "diagnose",
+      "rawText": "titel=Kaartverkoop De Nieuwe Kolk; datums=2; tijden/ruimtes=0; tekst=Kaarten bestellen | WALvis - Vertelvoorstelling (2 t/m 7 jaar) - zaterdag 31 oktober 2026 | Kaartverkoop De Nieuwe Kolk Titel en navigatie overslaan Kaartverkoop De Nieuwe Kolk en Wachtlijst Om een voorstelling of concert op je wachtlijst te zetten, moet je in"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://tickets.denieuwekolk.nl/mtTicket/performance/10359135",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bios/agenda/23-brieven-van-vincent",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "DNK-ticketpagina niet volledig herkend",
+      "date": "",
+      "url": "https://tickets.denieuwekolk.nl/mtTicket/performance/10387791",
+      "status": "diagnose",
+      "rawText": "titel=Kaartverkoop De Nieuwe Kolk; datums=8; tijden/ruimtes=0; tekst=Kaarten bestellen | 23 Brieven van Vincent - dinsdag 27 oktober 2026 | Kaartverkoop De Nieuwe Kolk Titel en navigatie overslaan Kaartverkoop De Nieuwe Kolk en 23 Brieven van Vincent dinsdag 27 oktober 2026 18:45 (einde 20:45) Filmzaal 4 - andere datum en/of ti"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://tickets.denieuwekolk.nl/mtTicket/performance/10387791",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Kaartverkoop De Nieuwe Kolk",
+      "date": "2026-10-31",
+      "url": "https://tickets.denieuwekolk.nl/mtTicket/performance/10388761",
+      "status": "ticketpagina",
+      "rawText": "15:35; De Nieuwe Kolk Assen, Filmzaal 1"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://tickets.denieuwekolk.nl/mtTicket/performance/10388761",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "DNK-ticketpagina niet volledig herkend",
+      "date": "",
+      "url": "https://tickets.denieuwekolk.nl/mtTicket/performance/10388764",
+      "status": "diagnose",
+      "rawText": "titel=Kaartverkoop De Nieuwe Kolk; datums=8; tijden/ruimtes=0; tekst=Kaarten bestellen | 23 Brieven van Vincent - vrijdag 30 oktober 2026 | Kaartverkoop De Nieuwe Kolk Titel en navigatie overslaan Kaartverkoop De Nieuwe Kolk en 23 Brieven van Vincent vrijdag 30 oktober 2026 19:00 (einde 21:00) Filmzaal 3 - andere datum en/of ti"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://tickets.denieuwekolk.nl/mtTicket/performance/10388764",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bios/agenda/clayface",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "DNK-ticketpagina niet volledig herkend",
+      "date": "",
+      "url": "https://tickets.denieuwekolk.nl/mtTicket/performance/10388771",
+      "status": "diagnose",
+      "rawText": "titel=Kaartverkoop De Nieuwe Kolk; datums=7; tijden/ruimtes=0; tekst=Kaarten bestellen | Clayface (16 jr.) - vrijdag 30 oktober 2026 | Kaartverkoop De Nieuwe Kolk Titel en navigatie overslaan Kaartverkoop De Nieuwe Kolk en Clayface (16 jr.) vrijdag 30 oktober 2026 21:45 (einde 23:44) Filmzaal 5 - andere datum en/of tijd - donde"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://tickets.denieuwekolk.nl/mtTicket/performance/10388771",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "DNK-ticketpagina niet volledig herkend",
+      "date": "",
+      "url": "https://tickets.denieuwekolk.nl/mtTicket/performance/10387796",
+      "status": "diagnose",
+      "rawText": "titel=Kaartverkoop De Nieuwe Kolk; datums=3; tijden/ruimtes=0; tekst=Kaarten bestellen | Clayface (16 jr.) - woensdag 28 oktober 2026 | Kaartverkoop De Nieuwe Kolk Titel en navigatie overslaan Kaartverkoop De Nieuwe Kolk en Clayface (16 jr.) woensdag 28 oktober 2026 21:15 (einde 23:14) Filmzaal 2 - andere datum en/of tijd - din"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://tickets.denieuwekolk.nl/mtTicket/performance/10387796",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "DNK-ticketpagina niet volledig herkend",
+      "date": "",
+      "url": "https://tickets.denieuwekolk.nl/mtTicket/performance/10388770",
+      "status": "diagnose",
+      "rawText": "titel=Kaartverkoop De Nieuwe Kolk; datums=7; tijden/ruimtes=0; tekst=Kaarten bestellen | Clayface (16 jr.) - donderdag 29 oktober 2026 | Kaartverkoop De Nieuwe Kolk Titel en navigatie overslaan Kaartverkoop De Nieuwe Kolk en Clayface (16 jr.) donderdag 29 oktober 2026 21:10 (einde 23:09) Filmzaal 5 - andere datum en/of tijd - v"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://tickets.denieuwekolk.nl/mtTicket/performance/10388770",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "DNK-ticketpagina niet volledig herkend",
+      "date": "",
+      "url": "https://tickets.denieuwekolk.nl/mtTicket/performance/10387795",
+      "status": "diagnose",
+      "rawText": "titel=Kaartverkoop De Nieuwe Kolk; datums=3; tijden/ruimtes=0; tekst=Kaarten bestellen | Clayface (16 jr.) - dinsdag 27 oktober 2026 | Kaartverkoop De Nieuwe Kolk Titel en navigatie overslaan Kaartverkoop De Nieuwe Kolk en Clayface (16 jr.) dinsdag 27 oktober 2026 21:05 (einde 23:04) Filmzaal 2 - andere datum en/of tijd - woens"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://tickets.denieuwekolk.nl/mtTicket/performance/10387795",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bios/agenda/coyote-vs-acme",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Detailpagina mislukt",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bios/agenda/coyote-vs-acme/bestel/1830bbec-aed9-2a88-c430-49154458a852",
+      "status": "fout",
+      "rawText": "HTTPSConnectionPool(host='tickets.denieuwekolk.nl', port=443): Read timed out. (read timeout=1.2677313899999945)"
+    },
+    {
+      "source": "Filter",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Datumfilter toegepast",
+      "date": "2026-10-26",
+      "url": "https://denieuwekolk.nl/agenda",
+      "status": "ok",
+      "rawText": "15 gevonden; 13 binnen 2026-10-26 t/m onbeperkt"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://denieuwekolk.nl/agenda",
+      "status": "klaar",
+      "rawText": "site 15/15: 1 unieke events in 45.3 sec"
     }
   ],
-  "status": "running",
+  "status": "finishing",
   "siteStartedAt": "2026-10-26T21:58:58+00:00",
-  "siteElapsedSeconds": 0,
-  "sitePageCount": 0,
-  "lastSiteEventCount": 0,
-  "stage": "Websitepagina ophalen",
-  "lastUpdatedAt": "2026-10-26T21:58:58+00:00",
-  "lastSiteNewEventCount": 0,
-  "lastCompletedSite": "https://www.ibood.com/s-nl",
-  "lastCompletedAt": "2026-10-26T21:58:56+00:00"
+  "siteElapsedSeconds": 46,
+  "sitePageCount": 2,
+  "lastSiteEventCount": 1,
+  "stage": "Website klaar; volgende website voorbereiden",
+  "lastUpdatedAt": "2026-10-26T21:59:02+00:00",
+  "lastSiteNewEventCount": 1,
+  "lastCompletedSite": "https://denieuwekolk.nl/agenda",
+  "lastCompletedAt": "2026-10-26T21:59:44+00:00"
 }
