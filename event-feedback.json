@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-26T22:27:55.195Z",
+  "updatedAt": "2026-10-26T22:28:45.074Z",
   "feedback": [
     {
       "key": "2026-10-27|abonnement topmusici van eigen bodem",
@@ -1601,6 +1601,32 @@
       "website": "https://groningermuseum.nl/museum-gebouw",
       "url": "https://groningermuseum.nl/museum-gebouw",
       "updatedAt": "2026-10-26T22:27:55.195Z"
+    },
+    {
+      "key": "2029-01-07|kunstenaars wobbe alkema jan altink franciscus hermanus",
+      "vote": "edit",
+      "title": "Nieuw licht – De Ploeg",
+      "date": "2029-01-07",
+      "website": "https://groningermuseum.nl/de-ploeg-nieuw-licht",
+      "url": "https://groningermuseum.nl/de-ploeg-nieuw-licht",
+      "updatedAt": "2026-10-26T22:28:45.074Z",
+      "originalTitle": "Kunstenaars Wobbe Alkema Jan Altink Franciscus Hermanus",
+      "originalDate": "2029-01-07",
+      "originalFields": {
+        "title": "Kunstenaars Wobbe Alkema Jan Altink Franciscus Hermanus",
+        "date": "2029-01-07",
+        "location": "Groninger Museum",
+        "type": "Concert",
+        "cost": ""
+      },
+      "corrections": {
+        "title": "Nieuw licht – De Ploeg",
+        "date": "2029-01-07",
+        "location": "Groninger Museum",
+        "type": "Expositie",
+        "cost": "Zie website",
+        "website": "https://groningermuseum.nl/de-ploeg-nieuw-licht"
+      }
     }
   ]
 }
