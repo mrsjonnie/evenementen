@@ -866,6 +866,37 @@ def event_delete_key(event):
     return f"{event_key(event)}|{website}"
 
 
+FEEDBACK_FILE = "event-feedback.json"
+
+def load_event_feedback():
+    try:
+        with open(FEEDBACK_FILE, "r", encoding="utf-8") as handle:
+            data = json.load(handle)
+        return data.get("feedback", []) if isinstance(data, dict) and isinstance(data.get("feedback"), list) else []
+    except (OSError, json.JSONDecodeError):
+        return []
+
+
+EVENT_FEEDBACK = load_event_feedback()
+BAD_FEEDBACK = [item for item in EVENT_FEEDBACK if item.get("vote") == "bad"]
+GOOD_FEEDBACK = [item for item in EVENT_FEEDBACK if item.get("vote") == "good"]
+
+
+def feedback_identity(event):
+    return (clean_text(event.get("date", "")), clean_text(event.get("title", "")).lower(), normalized_url(event.get("website", "")).lower().rstrip("/"))
+
+
+def event_is_rejected(event):
+    day, title, site = feedback_identity(event)
+    for item in BAD_FEEDBACK:
+        bad_day = clean_text(item.get("date", ""))
+        bad_title = clean_text(item.get("title", "")).lower()
+        bad_site = normalized_url(item.get("website", "")).lower().rstrip("/")
+        if bad_day == day and bad_title == title and (not bad_site or bad_site == site):
+            return True
+    return False
+
+
 def event_score(event):
     score = 0
     discovery = clean_text(event.get("discoverySource") or "").lower()
@@ -883,13 +914,16 @@ def event_score(event):
         score += 2
     if event.get("location"):
         score += 2
+    day, title, site = feedback_identity(event)
+    if any(clean_text(item.get("date", "")) == day and clean_text(item.get("title", "")).lower() == title and normalized_url(item.get("website", "")).lower().rstrip("/") == site for item in GOOD_FEEDBACK):
+        score += 500  # Prefer the user-approved version when deduplicating candidates.
     return score
 
 
 def dedupe_events(events):
     by_key = {}
     for event in events:
-        if not event:
+        if not event or event_is_rejected(event):
             continue
         key = event_key(event)
         current = by_key.get(key)
