@@ -1,7 +1,7 @@
 {
   "runId": "2026-10-26T11:20:39.872729+00:00-9d8db956",
   "startedAt": "2026-10-26T11:20:39+00:00",
-  "completedCount": 7,
+  "completedCount": 8,
   "totalSites": 18,
   "currentSite": "https://www.martiniplaza.nl/nl/agenda",
   "currentSiteIndex": 8,
@@ -12,7 +12,8 @@
     "https://forum.nl/nl/agenda",
     "https://www.spotgroningen.nl/programma/",
     "https://simplon.nl/",
-    "https://www.vera-groningen.nl/"
+    "https://www.vera-groningen.nl/",
+    "https://www.martiniplaza.nl/nl/agenda"
   ],
   "events": [
     {
@@ -2607,6 +2608,13 @@
       "count": 13,
       "newCount": 13,
       "durationSeconds": 3.22,
+      "timedOut": false
+    },
+    {
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 5.34,
       "timedOut": false
     }
   ],
@@ -11659,429 +11667,6 @@
     {
       "source": "Website",
       "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Chef'Special Nog één keer in de oorspronkelijke bezetting zo 11 apr",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/chefspecial-7/",
-      "status": "detail-link gevonden",
-      "rawText": "Chef'Special Nog één keer in de oorspronkelijke bezetting zo 11 apr"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Choir! Choir! Choir! Presents: MAMMA MIA: An EPIC ABBA Sing-Along! Zing mee met ABBA's Greatest Hits! Net bevestigd wo 21 apr",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/choir-choir-choir-presents/",
-      "status": "detail-link gevonden",
-      "rawText": "Choir! Choir! Choir! Presents: MAMMA MIA: An EPIC ABBA Sing-Along! Zing mee met ABBA's Greatest Hits! Net bevestigd wo 21 apr"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Christian van Eijkelenburg Smalltalk Awkward gesprekjes, egoïstische mislukkelingen, gênante stiltes, theatrale betweters di 6 apr",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/christian-van-eijkelenburg-3/",
-      "status": "detail-link gevonden",
-      "rawText": "Christian van Eijkelenburg Smalltalk Awkward gesprekjes, egoïstische mislukkelingen, gênante stiltes, theatrale betweters di 6 apr"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Circus Treurdier Die Bloemkool (een moeilijke musical) Absurd verhaal over vermeende intelligentie en zogenaamde domheid wo 14 apr",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/circus-treurdier-9/",
-      "status": "detail-link gevonden",
-      "rawText": "Circus Treurdier Die Bloemkool (een moeilijke musical) Absurd verhaal over vermeende intelligentie en zogenaamde domheid wo 14 apr"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Claudia de Breij Oudejaarsconference 2026 Claudia de Breij is terug met de officiële Oudejaarsconference! Uitverkocht wo 25 nov",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/claudia-de-breij-16/",
-      "status": "detail-link gevonden",
-      "rawText": "Claudia de Breij Oudejaarsconference 2026 Claudia de Breij is terug met de officiële Oudejaarsconference! Uitverkocht wo 25 nov"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Claudia de Breij Oudejaarsconference 2026 Claudia de Breij is terug met de officiële Oudejaarsconference! Uitverkocht do 26 nov",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/claudia-de-breij-17/",
-      "status": "detail-link gevonden",
-      "rawText": "Claudia de Breij Oudejaarsconference 2026 Claudia de Breij is terug met de officiële Oudejaarsconference! Uitverkocht do 26 nov"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Clean Pete's Kerstshow Over-the-top kerstshow met een bijzondere mix van kerstklassiekers za 12 dec",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/clean-pete-kerstshow-2/",
-      "status": "detail-link gevonden",
-      "rawText": "Clean Pete's Kerstshow Over-the-top kerstshow met een bijzondere mix van kerstklassiekers za 12 dec"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Clean Pete Klassieke Revue met Thomas Beijer Clean Pete werpt een verfrissende blik op het klassieke repertoire do 15 apr",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/clean-pete-klassieke-revue-met-thomas-beijer/",
-      "status": "detail-link gevonden",
-      "rawText": "Clean Pete Klassieke Revue met Thomas Beijer Clean Pete werpt een verfrissende blik op het klassieke repertoire do 15 apr"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Clouseau Al meer dan veertig jaar een vaste waarde in de Nederlandstalige popmuziek Uitverkocht di 23 feb",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/clouseau-2/",
-      "status": "detail-link gevonden",
-      "rawText": "Clouseau Al meer dan veertig jaar een vaste waarde in de Nederlandstalige popmuziek Uitverkocht di 23 feb"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Clouseau Al meer dan veertig jaar een vaste waarde in de Nederlandstalige popmuziek Uitverkocht Net bevestigd ma 8 mrt",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/clouseau-3/",
-      "status": "detail-link gevonden",
-      "rawText": "Clouseau Al meer dan veertig jaar een vaste waarde in de Nederlandstalige popmuziek Uitverkocht Net bevestigd ma 8 mrt"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Club Lam Dolle Mina Humoristische, vurige performance over emancipatie, gelijkheid en liefde za 3 apr",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/club-lam-2/",
-      "status": "detail-link gevonden",
-      "rawText": "Club Lam Dolle Mina Humoristische, vurige performance over emancipatie, gelijkheid en liefde za 3 apr"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Club Motion 16+ clubnacht Eerste editie in Groningen trapt af met New Wave editie zo 27 dec",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/club-motion/",
-      "status": "detail-link gevonden",
-      "rawText": "Club Motion 16+ clubnacht Eerste editie in Groningen trapt af met New Wave editie zo 27 dec"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Cock Robin (85-89) Tour 2027 Avond vol hits en verborgen parels uit de gloriedagen van de band! wo 19 mei",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/cock-robin/",
-      "status": "detail-link gevonden",
-      "rawText": "Cock Robin (85-89) Tour 2027 Avond vol hits en verborgen parels uit de gloriedagen van de band! wo 19 mei"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Coffee Break ism Prins Claus Conservatorium Trakteer jezelf op koffie en muziek van aanstormend talent op de donderdagochtend do 21 jan",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/coffee-break-ism-prins-claus-conservatorium-17/",
-      "status": "detail-link gevonden",
-      "rawText": "Coffee Break ism Prins Claus Conservatorium Trakteer jezelf op koffie en muziek van aanstormend talent op de donderdagochtend do 21 jan"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Coffee Break ism Prins Claus Conservatorium Trakteer jezelf op koffie en muziek van aanstormend talent op de donderdagochtend do 18 feb",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/coffee-break-ism-prins-claus-conservatorium-18/",
-      "status": "detail-link gevonden",
-      "rawText": "Coffee Break ism Prins Claus Conservatorium Trakteer jezelf op koffie en muziek van aanstormend talent op de donderdagochtend do 18 feb"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Coffee Break ism Prins Claus Conservatorium Trakteer jezelf op koffie en muziek van aanstormend talent op de donderdagochtend do 4 mrt",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/coffee-break-ism-prins-claus-conservatorium-19/",
-      "status": "detail-link gevonden",
-      "rawText": "Coffee Break ism Prins Claus Conservatorium Trakteer jezelf op koffie en muziek van aanstormend talent op de donderdagochtend do 4 mrt"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Coffee Break ism Prins Claus Conservatorium Trakteer jezelf op koffie en muziek van aanstormend talent op de donderdagochtend do 13 mei",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/coffee-break-ism-prins-claus-conservatorium-20/",
-      "status": "detail-link gevonden",
-      "rawText": "Coffee Break ism Prins Claus Conservatorium Trakteer jezelf op koffie en muziek van aanstormend talent op de donderdagochtend do 13 mei"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Coffee Break ism Prins Claus Conservatorium Trakteer jezelf op koffie en muziek van aanstormend talent op de donderdagochtend do 27 mei",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/coffee-break-ism-prins-claus-conservatorium-21/",
-      "status": "detail-link gevonden",
-      "rawText": "Coffee Break ism Prins Claus Conservatorium Trakteer jezelf op koffie en muziek van aanstormend talent op de donderdagochtend do 27 mei"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Colin Blunstone support: Jesse Lynn Madera De kenmerkende stem achter o.a. The Zombies ma 24 mei",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/colin-blunstone/",
-      "status": "detail-link gevonden",
-      "rawText": "Colin Blunstone support: Jesse Lynn Madera De kenmerkende stem achter o.a. The Zombies ma 24 mei"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Combattimento 300 jaar Vier Jaargetijden van Vivaldi Een combinatie van de vier jaargetijden van Vivaldi en Durante ma 23 nov",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/combattimento-2/",
-      "status": "detail-link gevonden",
-      "rawText": "Combattimento 300 jaar Vier Jaargetijden van Vivaldi Een combinatie van de vier jaargetijden van Vivaldi en Durante ma 23 nov"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Compagnie Red, Yellow and Blue Katwijk “Een ijzersterk generatiedrama verpakt als hilarische sitcom.” ★★★★★ de Volkskrant Uitverkocht wo 10 feb",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/compagnie-red-yellow-and-blue-2/",
-      "status": "detail-link gevonden",
-      "rawText": "Compagnie Red, Yellow and Blue Katwijk “Een ijzersterk generatiedrama verpakt als hilarische sitcom.” ★★★★★ de Volkskrant Uitverkocht wo 10 feb"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Compagnie Red, Yellow and Blue Katwijk “Een ijzersterk generatiedrama verpakt als hilarische sitcom.” ★★★★★ de Volkskrant Uitverkocht do 11 feb",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/compagnie-red-yellow-and-blue/",
-      "status": "detail-link gevonden",
-      "rawText": "Compagnie Red, Yellow and Blue Katwijk “Een ijzersterk generatiedrama verpakt als hilarische sitcom.” ★★★★★ de Volkskrant Uitverkocht do 11 feb"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Conny Janssen Danst Behind the Wall Meeslepende dansvoorstelling met livemuziek van Roufaida vr 5 feb",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/conny-janssen-danst-9/",
-      "status": "detail-link gevonden",
-      "rawText": "Conny Janssen Danst Behind the Wall Meeslepende dansvoorstelling met livemuziek van Roufaida vr 5 feb"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Conor McLain Ierse singer-songwriter met persoonlijke pop- en folknummers Net bevestigd di 18 mei",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/conor-mclain/",
-      "status": "detail-link gevonden",
-      "rawText": "Conor McLain Ierse singer-songwriter met persoonlijke pop- en folknummers Net bevestigd di 18 mei"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "CONTRA (12+) WabiSabi | Het Houten Huis | HIIIT \"Een van de beste voorstellingen van het jaar\" (★★★★ Dagblad van het Noorden) di 9 feb",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/contra-12-2/",
-      "status": "detail-link gevonden",
-      "rawText": "CONTRA (12+) WabiSabi | Het Houten Huis | HIIIT \"Een van de beste voorstellingen van het jaar\" (★★★★ Dagblad van het Noorden) di 9 feb"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Contra (12+) WabiSabi | Het Houten Huis | HIIIT \"Een van de beste voorstellingen van het jaar\" (★★★★★ Dagblad van het Noorden) zo 15 nov",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/contra-12/",
-      "status": "detail-link gevonden",
-      "rawText": "Contra (12+) WabiSabi | Het Houten Huis | HIIIT \"Een van de beste voorstellingen van het jaar\" (★★★★★ Dagblad van het Noorden) zo 15 nov"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Culture (ft Kenyatta Hill) & Cedric Myton Twee legendarische reggae-acts op één avond di 25 mei",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/culture-ft-kenyatta-hill-cedric-myton/",
-      "status": "detail-link gevonden",
-      "rawText": "Culture (ft Kenyatta Hill) & Cedric Myton Twee legendarische reggae-acts op één avond di 25 mei"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Daan van der Hoeven Mensenmens (reprise) Weergaloze improvisaties en interacties met het publiek di 16 mrt",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/daan-van-der-hoeven-2/",
-      "status": "detail-link gevonden",
-      "rawText": "Daan van der Hoeven Mensenmens (reprise) Weergaloze improvisaties en interacties met het publiek di 16 mrt"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Daniel Arends High Class Bitch (reprise) Nadenken door je lachtranen heen Uitverkocht wo 31 mrt",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/daniel-arends-12/",
-      "status": "detail-link gevonden",
-      "rawText": "Daniel Arends High Class Bitch (reprise) Nadenken door je lachtranen heen Uitverkocht wo 31 mrt"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Daniel Arends Had ik maar nooit zo aardig gedaan (reprise) Twee shows op één avond Uitverkocht wo 31 mrt",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/daniel-arends-18/",
-      "status": "detail-link gevonden",
-      "rawText": "Daniel Arends Had ik maar nooit zo aardig gedaan (reprise) Twee shows op één avond Uitverkocht wo 31 mrt"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Daniel Arends High Class Bitch (reprise) Nadenken door je lachtranen heen Uitverkocht do 1 apr",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/daniel-arends-19/",
-      "status": "detail-link gevonden",
-      "rawText": "Daniel Arends High Class Bitch (reprise) Nadenken door je lachtranen heen Uitverkocht do 1 apr"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Daniel Arends Had ik maar nooit zo aardig gedaan (reprise) Twee shows op één avond Uitverkocht do 1 apr",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/daniel-arends-20/",
-      "status": "detail-link gevonden",
-      "rawText": "Daniel Arends Had ik maar nooit zo aardig gedaan (reprise) Twee shows op één avond Uitverkocht do 1 apr"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Daniel Norgren Zweedse folk, blues en soul met hypnotiserende grooves en uitwaaierende jams Net bevestigd za 17 apr",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/daniel-norgren-2027/",
-      "status": "detail-link gevonden",
-      "rawText": "Daniel Norgren Zweedse folk, blues en soul met hypnotiserende grooves en uitwaaierende jams Net bevestigd za 17 apr"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "David Linszen Striptease Van De Dood (reprise) Winnaar Neerlands Hoop Laatste kaarten ma 30 nov",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/david-linszen-2/",
-      "status": "detail-link gevonden",
-      "rawText": "David Linszen Striptease Van De Dood (reprise) Winnaar Neerlands Hoop Laatste kaarten ma 30 nov"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "David van Rosmalen Als ik jou was Intelligente mix van (woord)grappen, spoken word, pianoliedjes en nederhiphop wo 27 jan",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/david-van-rosmalen/",
-      "status": "detail-link gevonden",
-      "rawText": "David van Rosmalen Als ik jou was Intelligente mix van (woord)grappen, spoken word, pianoliedjes en nederhiphop wo 27 jan"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Davina Michelle Nederlandse popster tourt langs Europese zalen ma 29 mrt",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/davina-michelle-7/",
-      "status": "detail-link gevonden",
-      "rawText": "Davina Michelle Nederlandse popster tourt langs Europese zalen ma 29 mrt"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "De Belangelozen Via Rudolphi Producties | Collectief T&T Armoede en vrijwilligerswerk, met scherpe humor en in herkenbare scènes belicht wo 16 dec",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/de-belangelozen/",
-      "status": "detail-link gevonden",
-      "rawText": "De Belangelozen Via Rudolphi Producties | Collectief T&T Armoede en vrijwilligerswerk, met scherpe humor en in herkenbare scènes belicht wo 16 dec"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "De Broers van Arkel Zeg maar u Een avond vol droge humor, muzikale vondsten en onverwachte poëzie wo 10 feb",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/de-broers-van-arkel/",
-      "status": "detail-link gevonden",
-      "rawText": "De Broers van Arkel Zeg maar u Een avond vol droge humor, muzikale vondsten en onverwachte poëzie wo 10 feb"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "De Dansers Howling Road Een dansconcert over landen, loslaten en elkaar vasthouden vr 12 feb",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/de-dansers-5/",
-      "status": "detail-link gevonden",
-      "rawText": "De Dansers Howling Road Een dansconcert over landen, loslaten en elkaar vasthouden vr 12 feb"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "De musical zonder billen (4+) Jaski & Groenteman Een vrolijke familiemusical vol humor en liedjes ma 29 mrt",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/de-musical-zonder-billen-4/",
-      "status": "detail-link gevonden",
-      "rawText": "De musical zonder billen (4+) Jaski & Groenteman Een vrolijke familiemusical vol humor en liedjes ma 29 mrt"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "De Niemanders Mix van zangers, zangeressen, muziekstijlen en vele talen! zo 13 dec",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/de-niemanders/",
-      "status": "detail-link gevonden",
-      "rawText": "De Niemanders Mix van zangers, zangeressen, muziekstijlen en vele talen! zo 13 dec"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "De Verleiders Zoek Dekking! Gitzwarte komedie over pensioenen, andere zekerheden en de prijs van zekerheid wo 20 jan",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/de-verleiders-13/",
-      "status": "detail-link gevonden",
-      "rawText": "De Verleiders Zoek Dekking! Gitzwarte komedie over pensioenen, andere zekerheden en de prijs van zekerheid wo 20 jan"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "De Verleiders Zoek Dekking! Gitzwarte komedie over pensioenen, andere zekerheden en de prijs van zekerheid do 21 jan",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/de-verleiders-14/",
-      "status": "detail-link gevonden",
-      "rawText": "De Verleiders Zoek Dekking! Gitzwarte komedie over pensioenen, andere zekerheden en de prijs van zekerheid do 21 jan"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "De Warme Winkel R2D2_or_not_2B2 Mens, machine en meesterwerk in ontbinding do 18 mrt",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/de-warme-winkel-9/",
-      "status": "detail-link gevonden",
-      "rawText": "De Warme Winkel R2D2_or_not_2B2 Mens, machine en meesterwerk in ontbinding do 18 mrt"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Denden Karadeniz, Zero Dance Theatre en AAO Ghosts \"Indrukwekkend totaalkunstwerk\" ★★★★ de Volkskrant za 19 dec",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/denden-karadeniz-zero-dance-theatre-en-aao/",
-      "status": "detail-link gevonden",
-      "rawText": "Denden Karadeniz, Zero Dance Theatre en AAO Ghosts \"Indrukwekkend totaalkunstwerk\" ★★★★ de Volkskrant za 19 dec"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "DeWolff Full Moon Ritual Elektrische southern bluesrock Laatste kaarten vr 8 jan",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/dewolff-8/",
-      "status": "detail-link gevonden",
-      "rawText": "DeWolff Full Moon Ritual Elektrische southern bluesrock Laatste kaarten vr 8 jan"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Diggy Dex De Zoektocht Naar Geluk Op zoek naar de grote en kleine vragen van het leven Laatste kaarten za 7 nov",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/diggy-dex-4/",
-      "status": "detail-link gevonden",
-      "rawText": "Diggy Dex De Zoektocht Naar Geluk Op zoek naar de grote en kleine vragen van het leven Laatste kaarten za 7 nov"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
       "title": "Dolf Jansen Schaamteloos – Oudejaars 2026 Kolkende stand-up energie, poëzie, Grote Vragen voor het publiek en improvisatie Laatste kaarten wo 23 dec",
       "date": "",
       "url": "https://www.spotgroningen.nl/programma/dolf-jansen-16/",
@@ -13410,16 +12995,439 @@
       "url": "https://www.vera-groningen.nl/",
       "status": "klaar",
       "rawText": "site 7/18: 13 unieke events in 3.22 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Start",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda",
+      "status": "start",
+      "rawText": "site 8/18: max 40 events, max 10 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda",
+      "status": "strategie",
+      "rawText": "agenda-kaarten"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Pagina gelezen",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda",
+      "status": "ok",
+      "rawText": "146630 tekens HTML"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Donar Groningen – CSO Voluntari 2026",
+      "date": "2026-10-27",
+      "url": "https://www.martiniplaza.nl/nl/agenda/donar-groningen-cso-voluntari-2026",
+      "status": "venue-agenda kaart",
+      "rawText": "Sport Sport Donar Groningen – CSO Voluntari 2026 27 oktober"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Jethro Tull",
+      "date": "2026-10-27",
+      "url": "https://www.martiniplaza.nl/nl/agenda/jethro-tull",
+      "status": "venue-agenda kaart",
+      "rawText": "Muziek Theater Jethro Tull 27 oktober"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Rob Lamberti - A Celebration of GEORGE MICHAEL",
+      "date": "2026-10-28",
+      "url": "https://www.martiniplaza.nl/nl/agenda/rob-lamberti",
+      "status": "venue-agenda kaart",
+      "rawText": "Muziek Theater Rob Lamberti - A Celebration of GEORGE MICHAEL 28 oktober"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Francis van Broekhuizen - Tosca",
+      "date": "2026-10-30",
+      "url": "https://www.martiniplaza.nl/nl/agenda/francis-van-broekhuizen",
+      "status": "venue-agenda kaart",
+      "rawText": "Muziek Theater Francis van Broekhuizen - Tosca 30 oktober"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "The Dire Straits Experience - “The Long Highway 2026 Tour”",
+      "date": "2026-10-31",
+      "url": "https://www.martiniplaza.nl/nl/agenda/the-dire-straits-experience",
+      "status": "venue-agenda kaart",
+      "rawText": "Muziek Theater The Dire Straits Experience - “The Long Highway 2026 Tour” 31 oktober"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Juf Braaksel - De Musical",
+      "date": "2026-11-01",
+      "url": "https://www.martiniplaza.nl/nl/agenda/juf-braaksel",
+      "status": "venue-agenda kaart",
+      "rawText": "Familie Theater Juf Braaksel - De Musical 01 november"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Promotiedagen 2026",
+      "date": "2026-11-03",
+      "url": "https://www.martiniplaza.nl/nl/agenda/promotiedagen-2026",
+      "status": "venue-agenda kaart",
+      "rawText": "Beurs Event Promotiedagen 2026 03 november"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Promotiedagen 2026",
+      "date": "2026-11-04",
+      "url": "https://www.martiniplaza.nl/nl/agenda/promotiedagen-2026",
+      "status": "venue-agenda kaart",
+      "rawText": "Beurs Event Promotiedagen 2026 04 november"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "TAFKAL: SERIEUS GRAPPIG ( )",
+      "date": "2026-11-05",
+      "url": "https://www.martiniplaza.nl/nl/agenda/tafkal-serieus-grappig-uitverkocht",
+      "status": "venue-agenda kaart",
+      "rawText": "Cabaret Theater TAFKAL: SERIEUS GRAPPIG (UITVERKOCHT) 05 november"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "TAFKAL: SERIEUS GRAPPIG ( )",
+      "date": "2026-11-06",
+      "url": "https://www.martiniplaza.nl/nl/agenda/tafkal-serieus-grappig-uitverkocht",
+      "status": "venue-agenda kaart",
+      "rawText": "Cabaret Theater TAFKAL: SERIEUS GRAPPIG (UITVERKOCHT) 06 november"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Taptoe Groningen 2026",
+      "date": "2026-11-07",
+      "url": "https://www.martiniplaza.nl/nl/agenda/taptoe-groningen-2026",
+      "status": "venue-agenda kaart",
+      "rawText": "Muziek Muziek Taptoe Groningen 2026 07 november"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "TAFKAL: SERIEUS GRAPPIG ( )",
+      "date": "2026-11-07",
+      "url": "https://www.martiniplaza.nl/nl/agenda/tafkal-serieus-grappig-uitverkocht",
+      "status": "venue-agenda kaart",
+      "rawText": "Cabaret Theater TAFKAL: SERIEUS GRAPPIG (UITVERKOCHT) 07 november"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Agenda geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda",
+      "status": "gespecialiseerde parser",
+      "rawText": "12 agenda-items gevonden"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Pagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda",
+      "status": "ok",
+      "rawText": "12 events/aanbiedingen op deze pagina"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "link",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/cats-het-meesterwerk",
+      "status": "detail-link gevonden",
+      "rawText": ""
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Donar Groningen – CSO Voluntari 2026",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/donar-groningen-cso-voluntari-2026",
+      "status": "detail-link gevonden",
+      "rawText": "Donar Groningen – CSO Voluntari 2026"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Francis van Broekhuizen - Tosca",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/francis-van-broekhuizen",
+      "status": "detail-link gevonden",
+      "rawText": "Francis van Broekhuizen - Tosca"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Jethro Tull",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/jethro-tull",
+      "status": "detail-link gevonden",
+      "rawText": "Jethro Tull"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Juf Braaksel - De Musical",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/juf-braaksel",
+      "status": "detail-link gevonden",
+      "rawText": "Juf Braaksel - De Musical"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Promotiedagen 2026",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/promotiedagen-2026",
+      "status": "detail-link gevonden",
+      "rawText": "Promotiedagen 2026"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Rob Lamberti - A Celebration of GEORGE MICHAEL",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/rob-lamberti",
+      "status": "detail-link gevonden",
+      "rawText": "Rob Lamberti - A Celebration of GEORGE MICHAEL"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "TAFKAL: SERIEUS GRAPPIG (UITVERKOCHT)",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/tafkal-serieus-grappig-uitverkocht",
+      "status": "detail-link gevonden",
+      "rawText": "TAFKAL: SERIEUS GRAPPIG (UITVERKOCHT)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Taptoe Groningen 2026",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/taptoe-groningen-2026",
+      "status": "detail-link gevonden",
+      "rawText": "Taptoe Groningen 2026"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "link",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/the-bodyguard-de-musical-2027",
+      "status": "detail-link gevonden",
+      "rawText": ""
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "The Dire Straits Experience - “The Long Highway 2026 Tour”",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/the-dire-straits-experience",
+      "status": "detail-link gevonden",
+      "rawText": "The Dire Straits Experience - “The Long Highway 2026 Tour”"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "link",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/titanique",
+      "status": "detail-link gevonden",
+      "rawText": ""
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/cats-het-meesterwerk",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/donar-groningen-cso-voluntari-2026",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/francis-van-broekhuizen",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/jethro-tull",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/juf-braaksel",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/promotiedagen-2026",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/rob-lamberti",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/tafkal-serieus-grappig-uitverkocht",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/taptoe-groningen-2026",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/the-bodyguard-de-musical-2027",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/the-dire-straits-experience",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/titanique",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/feed",
+      "status": "fout",
+      "rawText": "HTTP 404"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/rss",
+      "status": "fout",
+      "rawText": "HTTP 404"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/rss.xml",
+      "status": "fout",
+      "rawText": "HTTP 404"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/feed.xml",
+      "status": "fout",
+      "rawText": "HTTP 404"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/events/feed/",
+      "status": "fout",
+      "rawText": "HTTP 404"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda",
+      "status": "klaar",
+      "rawText": "site 8/18: 0 unieke events in 5.34 sec"
     }
   ],
   "status": "running",
   "siteStartedAt": "2026-10-26T11:21:50+00:00",
-  "siteElapsedSeconds": 0,
-  "sitePageCount": 0,
+  "siteElapsedSeconds": 7,
+  "sitePageCount": 1,
   "lastSiteEventCount": 0,
-  "stage": "Websitepagina ophalen",
-  "lastUpdatedAt": "2026-10-26T11:21:50+00:00",
-  "lastSiteNewEventCount": 13,
-  "lastCompletedSite": "https://www.vera-groningen.nl/",
-  "lastCompletedAt": "2026-10-26T11:21:49+00:00"
+  "stage": "Website klaar; volgende website voorbereiden",
+  "lastUpdatedAt": "2026-10-26T11:21:52+00:00",
+  "lastSiteNewEventCount": 0,
+  "lastCompletedSite": "https://www.martiniplaza.nl/nl/agenda",
+  "lastCompletedAt": "2026-10-26T11:21:57+00:00"
 }
