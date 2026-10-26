@@ -38,7 +38,7 @@ on:
       siteTimeLimitSeconds:
         description: Maximale zoektijd per website in seconden
         required: false
-        default: '20'
+        default: '90'
       sites:
         description: Extra websites als JSON-lijst
         required: false
@@ -83,7 +83,7 @@ concurrency:
 jobs:
   scrape:
     runs-on: ubuntu-latest
-    timeout-minutes: 25
+    timeout-minutes: 75
 
     steps:
       - name: Checkout
