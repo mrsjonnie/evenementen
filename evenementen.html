@@ -1515,7 +1515,7 @@
     </section>
   </div>
   <script>
-    const APP_VERSION = "2026.10.26.92";
+    const APP_VERSION = "2026.10.26.93";
     const STATUS_HISTORY_KEY = "evenementenStatusHistoryV1";
     const DISMISSED_SCRAPE_RUN_KEY = "evenementenDismissedScrapeRunV1";
     const DEFAULT_MAX_EVENTS_PER_SITE = 20;
@@ -4369,6 +4369,24 @@
       addLiveLog("App", event.website || event.source || "", event.title, "verwijderen", "Kaart direct verborgen; serververzoek loopt");
 
       try {
+        // Eerst de bewuste verwijdering duurzaam registreren. De scraper gebruikt
+        // dit signaal bij volgende runs om hetzelfde evenement niet terug te zetten.
+        const feedbackResponse = await fetch(`${WORKER_URL}/event-feedback`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            key,
+            title: event.title,
+            date: event.date,
+            website: event.website || "",
+            url: event.website || "",
+            vote: "deleted"
+          })
+        });
+        const feedbackData = await feedbackResponse.json().catch(() => ({}));
+        if (!feedbackResponse.ok || feedbackData.ok === false) {
+          throw new Error(workerErrorMessage(feedbackData, "Verwijdervoorkeur kon niet worden opgeslagen; serververwijdering niet uitgevoerd"));
+        }
         const response = await fetch(`${WORKER_URL}/delete-event`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
