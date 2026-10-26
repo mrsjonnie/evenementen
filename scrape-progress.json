@@ -1,7 +1,7 @@
 {
   "runId": "2026-10-26T20:52:17.546226+00:00-f89eb25d",
   "startedAt": "2026-10-26T20:52:17+00:00",
-  "completedCount": 9,
+  "completedCount": 10,
   "totalSites": 15,
   "currentSite": "https://www.concertgebouw.nl/concerten-en-tickets",
   "currentSiteIndex": 10,
@@ -14,7 +14,8 @@
     "https://www.vera-groningen.nl/",
     "https://www.martiniplaza.nl/nl/agenda",
     "https://groningermuseum.nl/programma",
-    "https://www.kultuuragenda.nl/agenda"
+    "https://www.kultuuragenda.nl/agenda",
+    "https://www.concertgebouw.nl/concerten-en-tickets"
   ],
   "events": [
     {
@@ -261,6 +262,21 @@
     },
     {
       "date": "2026-10-26",
+      "time": "20:15",
+      "title": "Popup Choir Taylor Swift: zing mee met Maarten Bos en Tijmen de Koning",
+      "type": "Concert",
+      "location": "Concertgebouw Amsterdam",
+      "locationLink": "",
+      "website": "https://www.concertgebouw.nl/concerten/45959877-popup-choir-taylor-swift-zing-mee-met-maarten-bos-en-tijmen-de-koning",
+      "source": "concertgebouw.nl",
+      "discoverySource": "Website",
+      "description": "Informatie en bestellen Informatie en bestellen",
+      "cost": "",
+      "image": "https://d35w1qwxagl33g.cloudfront.net/production/_908x545_crop_center-center_none/Pop-up-Choir-c-Emma-Pot.jpg?stamp=2502211058&tag=sm",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-26",
       "time": "16:15 - 18:05",
       "title": "Pressure",
       "type": "Concert",
@@ -408,6 +424,22 @@
       "cost": "",
       "image": "https://groningen.uitloper.nu/images/smallthumb/files/screenshot-2026-10-22-at-14-58-43-sievert-bodde---galerie-noord.png",
       "isNew": true
+    },
+    {
+      "date": "2026-10-27",
+      "time": "20:15",
+      "title": "Fresku en het Metropole Orkest komen voor een uniek, avondvullend programma naar onze Grote Zaal! In",
+      "type": "Concert",
+      "location": "Grote Zaal, Concertgebouw, Amsterdam",
+      "locationLink": "",
+      "website": "https://www.concertgebouw.nl/concerten/43931216-fresku-metropole-orkest-o.l.v.-simon-dobson",
+      "source": "concertgebouw.nl",
+      "discoverySource": "Website",
+      "description": "Fresku & Metropole Orkest o.l.v. Simon Dobson 20:15 – 21:45 Grote Zaal v.a. € 29,00 Meer informatie Meer informatie Uitverkocht di 27 okt 2026 Bookmark Bookmark",
+      "cost": "Zie website",
+      "image": "https://d35w1qwxagl33g.cloudfront.net/production/_908x545_crop_center-center_none/Fresku-2-Metropole-Orkest-c-Rowan-Brugmans.png?stamp=2602021200&tag=sm",
+      "editedByUser": true,
+      "editedAt": "2026-10-26T09:32:38.891Z"
     },
     {
       "date": "2026-10-27",
@@ -768,6 +800,21 @@
       "description": "Expositie met schilderijen van Marrie Venderink …",
       "cost": "",
       "image": "https://groningen.uitloper.nu/images/smallthumb/files/04--onlanden-namiddag-november.jpg",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-27",
+      "time": "20:15",
+      "title": "Spotlight op Lucie Horsch: barok met Altstaedt en Dunford",
+      "type": "Concert",
+      "location": "Concertgebouw Amsterdam",
+      "locationLink": "",
+      "website": "https://www.concertgebouw.nl/concerten/41773095-spotlight-op-lucie-horsch-barok-met-altstaedt-en-dunford",
+      "source": "concertgebouw.nl",
+      "discoverySource": "Website",
+      "description": "Triosonate in a, RV 86 Sonate in e, RV 40 Informatie en bestellen Informatie en bestellen",
+      "cost": "",
+      "image": "https://d35w1qwxagl33g.cloudfront.net/production/_908x545_crop_center-center_none/Lucie-Horsch-c-Eduardus-Lee_2026-03-20-135629_hoaq.png?stamp=2603201456&tag=sm",
       "isNew": true
     },
     {
@@ -1147,6 +1194,36 @@
     },
     {
       "date": "2026-10-28",
+      "time": "12:30",
+      "title": "Gratis Lunchconcert: Nederlandse Fluit Academie",
+      "type": "Concert",
+      "location": "Concertgebouw Amsterdam",
+      "locationLink": "",
+      "website": "https://www.concertgebouw.nl/concerten/46012123-gratis-lunchconcert-nederlandse-fluit-academie",
+      "source": "concertgebouw.nl",
+      "discoverySource": "Website",
+      "description": "Gratis Lunchconcert: Nederlandse Fluit Academie 12:30 – 13:00 Kleine Zaal met onder andere Clark Within Offermans Luna y Sierra Meer informatie Meer informatie Uitverkocht wo 28 okt 2026 Bookmark Bookmark",
+      "cost": "Gratis",
+      "image": "https://d35w1qwxagl33g.cloudfront.net/production/_908x545_crop_center-center_none/lunchconcert-2025.png?stamp=2507301539&tag=sm",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-28",
+      "time": "20:15",
+      "title": "Klaus Mäkela dirigeert Mahler 7 bij het Concertgebouworkest",
+      "type": "Concert",
+      "location": "Concertgebouw Amsterdam",
+      "locationLink": "",
+      "website": "https://www.concertgebouw.nl/concerten/45881816-klaus-makela-dirigeert-mahler-7-bij-het-concertgebouworkest",
+      "source": "concertgebouw.nl",
+      "discoverySource": "Website",
+      "description": "Informatie en bestellen Informatie en bestellen",
+      "cost": "",
+      "image": "https://d35w1qwxagl33g.cloudfront.net/production/_908x545_crop_center-center_none/RCO-Klaus-Makela-c-Eduardus-Lee.png?stamp=2605221101&tag=sm",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-28",
       "time": "",
       "title": "Lisa Ostermann De Baas (reprise)",
       "type": "Activiteit",
@@ -1173,6 +1250,21 @@
       "description": "Nederlandse Bachvereniging Troostrijke muziek rond Allerzielen",
       "cost": "",
       "image": "https://www.spotgroningen.nl/wp-content/uploads/2026/04/Nederlandse-Bachvereniging-Allerzielen-CAMPAGNEBEELD-Eduardus-Lee_RGB-300-dpi-e1776081605280-300x297.jpg",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-28",
+      "time": "20:15",
+      "title": "Quatuor Arod speelt Bartók, Carlos Simon en Fanny Mendelssohn",
+      "type": "Concert",
+      "location": "Concertgebouw Amsterdam",
+      "locationLink": "",
+      "website": "https://www.concertgebouw.nl/concerten/37331019-quatuor-arod-speelt-bartok-carlos-simon-en-fanny-mendelssohn",
+      "source": "concertgebouw.nl",
+      "discoverySource": "Website",
+      "description": "Strijkkwartet in Es Warmth from Other Suns Informatie en bestellen Informatie en bestellen",
+      "cost": "",
+      "image": "https://d35w1qwxagl33g.cloudfront.net/production/_908x545_crop_center-center_none/Quatuor-Arod-©-Le-Philtre-Marc-de-Pierrefeu.png?stamp=2603200014&tag=sm",
       "isNew": true
     },
     {
@@ -1219,6 +1311,52 @@
       "description": "Vanwege een update is ons bibliotheeksysteem tijdelijk niet beschikbaar. Excuses voor het ongemak. Filmseries & specials Hulp- en spreekuren Bibliotheekvestigingen Haal meer uit je abonnement Studie- en werkplekken Wifi, internet en printen Verhuur & zakelijk Vacatures & vrijwilligers",
       "cost": "gratis",
       "image": "https://static.forum.nl/cache/workshop-welkom-online.28495/workshop-welkom-online-s1920x1080.jpg",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-28",
+      "time": "14:00",
+      "title": "Zing-Cirkel Concertgebouw",
+      "type": "Concert",
+      "location": "Concertgebouw Amsterdam",
+      "locationLink": "",
+      "website": "https://www.concertgebouw.nl/concerten/45913707-zing-cirkel-concertgebouw",
+      "source": "concertgebouw.nl",
+      "discoverySource": "Website",
+      "description": "Zing-Cirkel Concertgebouw 14:00 – 16:00 Spiegelzaal v.a. € 20,00 Meer informatie Meer informatie Uitverkocht wo 28 okt 2026 Bookmark Bookmark",
+      "cost": "",
+      "image": "https://d35w1qwxagl33g.cloudfront.net/production/_908x545_crop_center-center_none/Zing-Cirkel-Concertgebouw-c-Michael-Floor.jpg?stamp=2605120959&tag=sm",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-29",
+      "time": "20:15",
+      "title": "Academie van het Concertgebouworkest",
+      "type": "Concert",
+      "location": "Grote Zaal, Concertgebouw, Amsterdam",
+      "locationLink": "",
+      "website": "https://www.concertgebouw.nl/concerten/45881817-25-jaar-academie-concertgebouworkest",
+      "source": "concertgebouw.nl",
+      "discoverySource": "Website",
+      "description": "Symfonie nr. 3 in c, op. 78 'Orgelsymfonie' Concert voor klarinet en altviool in e, op. 88 Informatie en bestellen Informatie en bestellen",
+      "cost": "vanaf 20,00",
+      "image": "https://d35w1qwxagl33g.cloudfront.net/production/_908x545_crop_center-center_none/Makela-Rachlin-c-Milagro-Elstak.png?stamp=2605221057&tag=sm",
+      "editedByUser": true,
+      "editedAt": "2026-10-26T09:44:12.812Z"
+    },
+    {
+      "date": "2026-10-29",
+      "time": "20:15",
+      "title": "Aristo Sham speelt Brahms’ pianosonates",
+      "type": "Concert",
+      "location": "Concertgebouw Amsterdam",
+      "locationLink": "",
+      "website": "https://www.concertgebouw.nl/concerten/43425438-aristo-sham-speelt-brahms-pianosonates",
+      "source": "concertgebouw.nl",
+      "discoverySource": "Website",
+      "description": "Sonate nr. 3 in f, op. 5 Träumerei Kinderszenen, op. 15 Informatie en bestellen Informatie en bestellen",
+      "cost": "",
+      "image": "https://d35w1qwxagl33g.cloudfront.net/production/_908x545_crop_center-center_none/Aristo-Sham-c-Lisa-Marie_Mazzucco.png?stamp=2603192333&tag=sm",
       "isNew": true
     },
     {
@@ -1330,6 +1468,22 @@
     },
     {
       "date": "2026-10-30",
+      "time": "20:15",
+      "title": "Flat Earth Society: The Coltrane Mutations",
+      "type": "Concert",
+      "location": "Kleine Zaal, Concertbegouw, Amsterdam",
+      "locationLink": "",
+      "website": "https://www.concertgebouw.nl/concerten/43931217-flat-earth-society-the-coltrane-mutations",
+      "source": "concertgebouw.nl",
+      "discoverySource": "Website",
+      "description": "Informatie en bestellen Informatie en bestellen",
+      "cost": "Zie website",
+      "image": "https://d35w1qwxagl33g.cloudfront.net/production/_908x545_crop_center-center_none/The-Coltrane-Mutations-c-Phile-Deprez.jpg?stamp=2610211120&tag=sm",
+      "editedByUser": true,
+      "editedAt": "2026-10-26T11:54:40.506Z"
+    },
+    {
+      "date": "2026-10-30",
       "time": "",
       "title": "Floor Jansen + support: ISE",
       "type": "Concert",
@@ -1356,6 +1510,21 @@
       "description": "Meer informatie staat op martiniplaza.nl.",
       "cost": "",
       "image": "",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-30",
+      "time": "20:15",
+      "title": "Klaus Mäkela dirigeert Mahler 7 bij het Concertgebouworkest",
+      "type": "Concert",
+      "location": "Concertgebouw Amsterdam",
+      "locationLink": "",
+      "website": "https://www.concertgebouw.nl/concerten/45881818-klaus-makela-dirigeert-mahler-7-bij-het-concertgebouworkest",
+      "source": "concertgebouw.nl",
+      "discoverySource": "Website",
+      "description": "Informatie en bestellen Informatie en bestellen",
+      "cost": "",
+      "image": "https://d35w1qwxagl33g.cloudfront.net/production/_908x545_crop_center-center_none/RCO-Klaus-Makela-c-Eduardus-Lee.png?stamp=2605221101&tag=sm",
       "isNew": true
     },
     {
@@ -1465,6 +1634,21 @@
     },
     {
       "date": "2026-10-31",
+      "time": "20:15",
+      "title": "Meesters op de gitaar: Carlotta Dalia - van Bach tot Castelnuovo-Tedesco",
+      "type": "Concert",
+      "location": "Concertgebouw Amsterdam",
+      "locationLink": "",
+      "website": "https://www.concertgebouw.nl/concerten/37899480-meesters-op-de-gitaar-carlotta-dalia---van-bach-tot-castelnuovo-tedesco",
+      "source": "concertgebouw.nl",
+      "discoverySource": "Website",
+      "description": "Rossiniana V, op. 123 Castelnuovo-Tedesco Capriccio nr. 18, op. 195 Informatie en bestellen Informatie en bestellen",
+      "cost": "",
+      "image": "https://d35w1qwxagl33g.cloudfront.net/production/_908x545_crop_center-center_none/Carlotta-Dalia.png?stamp=2603200206&tag=sm",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-31",
       "time": "",
       "title": "Michael Prins Play With Fire Tour + support: DEHAZE",
       "type": "Activiteit",
@@ -1476,6 +1660,21 @@
       "description": "Play With Fire Tour + support: DEHAZE Singer-songwriter bekend van 'Close to You' komt met nieuw werk",
       "cost": "",
       "image": "https://www.spotgroningen.nl/wp-content/uploads/2026/02/Voorkeur-MichaelPrins_03A08359_WEB-e1772019752276-300x169.jpg",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-31",
+      "time": "14:15",
+      "title": "Oosterse klanken van Sheherazade & Darvishi",
+      "type": "Concert",
+      "location": "Concertgebouw Amsterdam",
+      "locationLink": "",
+      "website": "https://www.concertgebouw.nl/concerten/45743534-oosterse-klanken-van-sheherazade-darvishi",
+      "source": "concertgebouw.nl",
+      "discoverySource": "Website",
+      "description": "Sheherazade, op. 35 'Symfonische suite naar Duizend-en-een-nacht' Informatie en bestellen Informatie en bestellen",
+      "cost": "",
+      "image": "https://d35w1qwxagl33g.cloudfront.net/production/_908x545_crop_center-center_none/NTRZM-2026-10-31-Nicolas-Altstaedt-c-Marco-Borggreve_01-web.jpg?stamp=2603201335&tag=sm",
       "isNew": true
     },
     {
@@ -1506,6 +1705,21 @@
       "description": "Saturday 31 October Push It Pushin Wood Soundsystem All Night Long Dansen | Ticket: €5,- | doors: 23:00 - 04:00 | start: 23:01 Koop ticket",
       "cost": "",
       "image": "https://www.vera-groningen.nl/wp/../vera/assets/img/logo-black.svg",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-31",
+      "time": "20:15",
+      "title": "Stravinsky's Le sacre du printemps en Wynton Marsalis’ Celloconcert",
+      "type": "Concert",
+      "location": "Concertgebouw Amsterdam",
+      "locationLink": "",
+      "website": "https://www.concertgebouw.nl/concerten/45550450-stravinskys-le-sacre-du-printemps-en-wynton-marsalis-celloconcert",
+      "source": "concertgebouw.nl",
+      "discoverySource": "Website",
+      "description": "Le sacre du printemps, tableaux de la Russie païenne en deux parties, K 015 Informatie en bestellen Informatie en bestellen",
+      "cost": "",
+      "image": "https://d35w1qwxagl33g.cloudfront.net/production/_908x545_crop_center-center_none/26C44S-Hannu-Lintu-Marco-Borggreve-web.jpeg?stamp=2603191323&tag=sm",
       "isNew": true
     },
     {
@@ -3928,378 +4142,16 @@
       "newCount": 18,
       "durationSeconds": 9.33,
       "timedOut": false
+    },
+    {
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "count": 14,
+      "newCount": 14,
+      "durationSeconds": 4.78,
+      "timedOut": false
     }
   ],
   "rawLog": [
-    {
-      "source": "Website",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": ", Uithuizen Tentoonstelling Voeg toe als favoriet",
-      "date": "2026-12-01",
-      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
-      "status": "event uit datumblok",
-      "rawText": "1 december , Uithuizen Tentoonstelling Voeg toe als favoriet Voeg toe als favoriet Schoolplaten van weleer Schoolplaten van weleer t/m"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": ", Leens Tentoonstelling Voeg toe als favoriet",
-      "date": "2026-11-01",
-      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
-      "status": "event uit datumblok",
-      "rawText": "1 november , Leens Tentoonstelling Voeg toe als favoriet Voeg toe als favoriet Verken Eemsdelta met de E-chopper Verken Eemsdelta met de E-chopper t/m"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": ", Holwierde Excursie Voeg toe als favoriet",
-      "date": "2027-10-01",
-      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
-      "status": "event uit datumblok",
-      "rawText": "1 oktober , Holwierde Excursie Voeg toe als favoriet Voeg toe als favoriet de kunsthof presenteert een duo expositie van Jochem Hamstra en Dolf Verlinden de kunsthof presenteert een duo expositie van Jochem Hamstra en Dolf Verlinden t/m"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": ", Appingedam Varia Voeg toe als favoriet",
-      "date": "2026-12-03",
-      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
-      "status": "event uit datumblok",
-      "rawText": "3 december , Appingedam Varia Voeg toe als favoriet Voeg toe als favoriet Beleefroute De Graanrepubliek Beleefroute De Graanrepubliek t/m"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": ", Bad Nieuweschans Fietstocht Voeg toe als",
-      "date": "2028-08-09",
-      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
-      "status": "event uit datumblok",
-      "rawText": "9 augustus 2028 , Bad Nieuweschans Fietstocht Voeg toe als favoriet Voeg toe als favoriet Kajakken op het Oldambtmeer & een hapje, drankje, ijsje op ons terras – Strand Zuid, Blauwestad Kajakken op het Oldambtmeer & een hapje, drankje, ijsje op ons terras – Strand Zuid, Blauwestad t/m"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": ", Blauwestad Watersport Voeg toe als favoriet",
-      "date": "2027-10-01",
-      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
-      "status": "event uit datumblok",
-      "rawText": "1 oktober , Blauwestad Watersport Voeg toe als favoriet Voeg toe als favoriet Wadlopen vanuit Pieterburen Wadlopen vanuit Pieterburen t/m"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": ", Pieterburen Wandeltocht Voeg toe als favoriet",
-      "date": "2027-02-03",
-      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
-      "status": "event uit datumblok",
-      "rawText": "3 februari 2027 , Pieterburen Wandeltocht Voeg toe als favoriet Voeg toe als favoriet 100 jaar oude aquarellen van Kornelis Visser 100 jaar oude aquarellen van Kornelis Visser t/m"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": ", ROTTUM GN Tentoonstelling Voeg toe als",
-      "date": "2026-12-05",
-      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
-      "status": "event uit datumblok",
-      "rawText": "5 december , ROTTUM GN Tentoonstelling Voeg toe als favoriet Voeg toe als favoriet Suppen in Groningen Suppen in Groningen t/m"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": ", Winsum Buitensport Voeg toe als favoriet",
-      "date": "2027-10-01",
-      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
-      "status": "event uit datumblok",
-      "rawText": "1 oktober , Winsum Buitensport Voeg toe als favoriet Voeg toe als favoriet Boeren, arbeiders en ambachten Boeren, arbeiders en ambachten t/m"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": ", Wehe-Den Hoorn Tekenen en schilderen Voeg toe als favoriet Voeg toe als favoriet",
-      "date": "2026-11-01",
-      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
-      "status": "event uit datumblok",
-      "rawText": "1 november , Wehe-Den Hoorn Tekenen en schilderen Voeg toe als favoriet Voeg toe als favoriet Expositie CHAPEAU! Expositie CHAPEAU! t/m"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": ", Pieterburen Wandeltocht Voeg toe als favoriet",
-      "date": "2027-01-02",
-      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
-      "status": "event uit datumblok",
-      "rawText": "2 januari 2027 , Pieterburen Wandeltocht Voeg toe als favoriet Voeg toe als favoriet Huidige pagina 1 Ga naar pagina 2 Ga naar pagina 3 Ga naar pagina 4 Ga naar pagina 5 … Ga naar pagina 65 Ga naar de volgende pagina Mis niets uit Groningen Maandelijks de leukste tips voor Groningen in je inbox? Schrijf je hieronder in voor de Groningen nieuwsbrief Je e-mailadres Dit is Groningen Top 10 bezienswaardigheden De Stad Gr"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": "Uitagenda",
-      "date": "2026-10-26",
-      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
-      "status": "event uit detailpagina",
-      "rawText": "Uit- en thuistips in Groningen | Visit Groningen Ga naar inhoud Ga naar de homepage Terug Nu & nieuw Uitagenda Nieuwe winkels & horeca in de stad Oktober donkertemaand Het 10-jarig bestaan van Dark Sky Park Lauwersmeer staat in het teken van donker. Het is hoog tijd om de schoonheid van de duisternis te gaan ontdekken. Sunnemeerten Terug Dit is Groningen Top 10 bezienswaardigheden In Groningen ligt het allemaal opval"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": "Wanneer",
-      "date": "2026-10-26",
-      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
-      "status": "event uit tekstregel",
-      "rawText": "Wanneer | Vandaag | Morgen | Dit weekend | Kies datum | Thema"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": "Dit weekend",
-      "date": "2026-10-27",
-      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
-      "status": "event uit tekstregel",
-      "rawText": "Vandaag | Morgen | Dit weekend | Kies datum | Thema | Theater"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": "Dit weekend",
-      "date": "2026-10-27",
-      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
-      "status": "event uit dagblok",
-      "rawText": "Dit weekend | Kies datum | Thema | Theater | Actief"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": "Kies datum",
-      "date": "2026-10-27",
-      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
-      "status": "event uit dagblok",
-      "rawText": "Kies datum | Thema | Theater | Actief | Tentoonstelling"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": "Thema",
-      "date": "2026-10-27",
-      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
-      "status": "event uit dagblok",
-      "rawText": "Thema | Theater | Actief | Tentoonstelling | Festival"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": "Actief",
-      "date": "2026-10-27",
-      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
-      "status": "event uit dagblok",
-      "rawText": "Actief | Tentoonstelling | Festival | Beurs | Culinair"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": "Tentoonstelling",
-      "date": "2026-10-27",
-      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
-      "status": "event uit dagblok",
-      "rawText": "Tentoonstelling | Festival | Beurs | Culinair | Excursie"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": "Festival",
-      "date": "2026-10-27",
-      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
-      "status": "event uit dagblok",
-      "rawText": "Festival | Beurs | Culinair | Excursie | Tocht"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": "Culinair",
-      "date": "2026-10-27",
-      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
-      "status": "event uit dagblok",
-      "rawText": "Culinair | Excursie | Tocht | Sport | Cabaret"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": "Excursie",
-      "date": "2026-10-27",
-      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
-      "status": "event uit dagblok",
-      "rawText": "Excursie | Tocht | Sport | Cabaret | Markt"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": "Tocht",
-      "date": "2026-10-27",
-      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
-      "status": "event uit dagblok",
-      "rawText": "Tocht | Sport | Cabaret | Markt | Muziek"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": "Sport",
-      "date": "2026-10-27",
-      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
-      "status": "event uit dagblok",
-      "rawText": "Sport | Cabaret | Markt | Muziek | Kinderen"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": ", 2 november en nog 3 dagen",
-      "date": "2026-10-26",
-      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
-      "status": "event uit tekstregel",
-      "rawText": "Klik & Tik | 26 oktober, 2 november en nog 3 dagen | , Groningen | Varia | Voeg toe als favoriet | Voeg toe als favoriet"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": "Nena",
-      "date": "2026-10-27",
-      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
-      "status": "event uit dagblok",
-      "rawText": "Nena | Nena | maandag 26 oktober | , Groningen | Muziek overig"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": "Nena",
-      "date": "2026-10-26",
-      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
-      "status": "event uit tekstregel",
-      "rawText": "Nena | maandag 26 oktober | , Groningen | Muziek overig | Voeg toe als favoriet | Voeg toe als favoriet"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": ", Groningen",
-      "date": "2026-10-26",
-      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
-      "status": "event uit dagblok",
-      "rawText": ", Groningen | Muziek overig | Voeg toe als favoriet | Voeg toe als favoriet | Expositie Mijn Thuis Mijn Verhaal: ervaar de kracht van verhalen die verbinden"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": "Muziek overig",
-      "date": "2026-10-26",
-      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
-      "status": "event uit dagblok",
-      "rawText": "Muziek overig | Voeg toe als favoriet | Voeg toe als favoriet | Expositie Mijn Thuis Mijn Verhaal: ervaar de kracht van verhalen die verbinden | Expositie Mijn Thuis Mijn Verhaal: ervaar de kracht van verhalen die verbinden"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": "Voeg toe als favoriet",
-      "date": "2026-10-26",
-      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
-      "status": "event uit dagblok",
-      "rawText": "Voeg toe als favoriet | Voeg toe als favoriet | Expositie Mijn Thuis Mijn Verhaal: ervaar de kracht van verhalen die verbinden | Expositie Mijn Thuis Mijn Verhaal: ervaar de kracht van verhalen die verbinden | t/m 16 december"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": "Expositie Mijn Thuis Mijn Verhaal: ervaar de kracht van verhalen die verbinden",
-      "date": "2026-10-26",
-      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
-      "status": "event uit dagblok",
-      "rawText": "Expositie Mijn Thuis Mijn Verhaal: ervaar de kracht van verhalen die verbinden | Expositie Mijn Thuis Mijn Verhaal: ervaar de kracht van verhalen die verbinden | t/m 16 december | , Appingedam | Tentoonstelling"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": "Expositie Mijn Thuis Mijn Verhaal: ervaar de kracht van verhalen die verbinden",
-      "date": "2026-12-16",
-      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
-      "status": "event uit tekstregel",
-      "rawText": "Expositie Mijn Thuis Mijn Verhaal: ervaar de kracht van verhalen die verbinden | t/m 16 december | , Appingedam | Tentoonstelling | Voeg toe als favoriet | Voeg toe als favoriet"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": ", Appingedam",
-      "date": "2026-12-16",
-      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
-      "status": "event uit dagblok",
-      "rawText": ", Appingedam | Tentoonstelling | Voeg toe als favoriet | Voeg toe als favoriet | Stadswandeling o.l.v. een stadsgids"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": "Tentoonstelling",
-      "date": "2026-12-16",
-      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
-      "status": "event uit dagblok",
-      "rawText": "Tentoonstelling | Voeg toe als favoriet | Voeg toe als favoriet | Stadswandeling o.l.v. een stadsgids | Stadswandeling o.l.v. een stadsgids"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": "Stadswandeling o.l.v. een stadsgids",
-      "date": "2026-12-31",
-      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
-      "status": "event uit tekstregel",
-      "rawText": "Stadswandeling o.l.v. een stadsgids | t/m 31 december | , Appingedam | Rondleiding | Voeg toe als favoriet | Voeg toe als favoriet"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": "Stadswandeling Puutje",
-      "date": "2027-10-07",
-      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
-      "status": "event uit tekstregel",
-      "rawText": "Stadswandeling Puutje | t/m 7 oktober 2027 | , Groningen | Wandeltocht | Voeg toe als favoriet | Voeg toe als favoriet"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": "Verhalenpad Appie en Flappie op Ewsum",
-      "date": "2026-11-20",
-      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
-      "status": "event uit tekstregel",
-      "rawText": "Verhalenpad Appie en Flappie op Ewsum | t/m 20 november | , Middelstum | Met kinderen | Voeg toe als favoriet | Voeg toe als favoriet"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": "KIEK! buitenexpositie Maike van der Kooij",
-      "date": "2026-11-20",
-      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
-      "status": "event uit dagblok",
-      "rawText": "KIEK! buitenexpositie Maike van der Kooij | KIEK! buitenexpositie Maike van der Kooij | t/m 31 maart 2027 | , Ezinge | Tentoonstelling"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": "KIEK! buitenexpositie Maike van der Kooij",
-      "date": "2027-03-31",
-      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
-      "status": "event uit tekstregel",
-      "rawText": "KIEK! buitenexpositie Maike van der Kooij | t/m 31 maart 2027 | , Ezinge | Tentoonstelling | Voeg toe als favoriet | Voeg toe als favoriet"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": ", Ezinge",
-      "date": "2027-03-31",
-      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
-      "status": "event uit dagblok",
-      "rawText": ", Ezinge | Tentoonstelling | Voeg toe als favoriet | Voeg toe als favoriet | Duik in het zeehondenmysterie in het WEC"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": "Tentoonstelling",
-      "date": "2027-03-31",
-      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
-      "status": "event uit dagblok",
-      "rawText": "Tentoonstelling | Voeg toe als favoriet | Voeg toe als favoriet | Duik in het zeehondenmysterie in het WEC | Duik in het zeehondenmysterie in het WEC"
-    },
     {
       "source": "Website",
       "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
@@ -14730,16 +14582,385 @@
       "url": "https://www.kultuuragenda.nl/agenda",
       "status": "klaar",
       "rawText": "site 9/15: 18 unieke events in 9.33 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Start",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "status": "start",
+      "rawText": "site 10/15: max 40 events, max 20 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "status": "strategie",
+      "rawText": "universeel-jsonld-links-kaarten"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Pagina gelezen",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "status": "ok",
+      "rawText": "775447 tekens HTML"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Agenda-kaarten geteld",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "status": "gespecialiseerde parser",
+      "rawText": "15 resultaten"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Pagina geanalyseerd",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "status": "ok",
+      "rawText": "14 events/aanbiedingen op deze pagina"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Concertgebouw-datum niet herkend",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten/37331019-quatuor-arod-speelt-bartok-carlos-simon-en-fanny-mendelssohn",
+      "status": "diagnose",
+      "rawText": "Titel herkend, maar geen evenementdatum gevonden nabij de titel"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten/37331019-quatuor-arod-speelt-bartok-carlos-simon-en-fanny-mendelssohn",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Concertgebouw-datum niet herkend",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten/37899480-meesters-op-de-gitaar-carlotta-dalia---van-bach-tot-castelnuovo-tedesco",
+      "status": "diagnose",
+      "rawText": "Titel herkend, maar geen evenementdatum gevonden nabij de titel"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten/37899480-meesters-op-de-gitaar-carlotta-dalia---van-bach-tot-castelnuovo-tedesco",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Concertgebouw-datum niet herkend",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten/41773095-spotlight-op-lucie-horsch-barok-met-altstaedt-en-dunford",
+      "status": "diagnose",
+      "rawText": "Titel herkend, maar geen evenementdatum gevonden nabij de titel"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten/41773095-spotlight-op-lucie-horsch-barok-met-altstaedt-en-dunford",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Concertgebouw-datum niet herkend",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten/43425438-aristo-sham-speelt-brahms-pianosonates",
+      "status": "diagnose",
+      "rawText": "Titel herkend, maar geen evenementdatum gevonden nabij de titel"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten/43425438-aristo-sham-speelt-brahms-pianosonates",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Concertgebouw-datum niet herkend",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten/43931216-fresku-metropole-orkest-o.l.v.-simon-dobson",
+      "status": "diagnose",
+      "rawText": "Titel herkend, maar geen evenementdatum gevonden nabij de titel"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten/43931216-fresku-metropole-orkest-o.l.v.-simon-dobson",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Concertgebouw-datum niet herkend",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten/43931217-flat-earth-society-the-coltrane-mutations",
+      "status": "diagnose",
+      "rawText": "Titel herkend, maar geen evenementdatum gevonden nabij de titel"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten/43931217-flat-earth-society-the-coltrane-mutations",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Concertgebouw-datum niet herkend",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten/45550450-stravinskys-le-sacre-du-printemps-en-wynton-marsalis-celloconcert",
+      "status": "diagnose",
+      "rawText": "Titel herkend, maar geen evenementdatum gevonden nabij de titel"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten/45550450-stravinskys-le-sacre-du-printemps-en-wynton-marsalis-celloconcert",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Concertgebouw-datum niet herkend",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten/45743534-oosterse-klanken-van-sheherazade-darvishi",
+      "status": "diagnose",
+      "rawText": "Titel herkend, maar geen evenementdatum gevonden nabij de titel"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten/45743534-oosterse-klanken-van-sheherazade-darvishi",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Concertgebouw-datum niet herkend",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten/45881816-klaus-makela-dirigeert-mahler-7-bij-het-concertgebouworkest",
+      "status": "diagnose",
+      "rawText": "Titel herkend, maar geen evenementdatum gevonden nabij de titel"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten/45881816-klaus-makela-dirigeert-mahler-7-bij-het-concertgebouworkest",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Concertgebouw-datum niet herkend",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten/45881817-25-jaar-academie-concertgebouworkest",
+      "status": "diagnose",
+      "rawText": "Titel herkend, maar geen evenementdatum gevonden nabij de titel"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten/45881817-25-jaar-academie-concertgebouworkest",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Concertgebouw-datum niet herkend",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten/45881818-klaus-makela-dirigeert-mahler-7-bij-het-concertgebouworkest",
+      "status": "diagnose",
+      "rawText": "Titel herkend, maar geen evenementdatum gevonden nabij de titel"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten/45881818-klaus-makela-dirigeert-mahler-7-bij-het-concertgebouworkest",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Concertgebouw-datum niet herkend",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten/45913707-zing-cirkel-concertgebouw",
+      "status": "diagnose",
+      "rawText": "Titel herkend, maar geen evenementdatum gevonden nabij de titel"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten/45913707-zing-cirkel-concertgebouw",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Concertgebouw-datum niet herkend",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten/45913708-zing-cirkel-concertgebouw",
+      "status": "diagnose",
+      "rawText": "Titel herkend, maar geen evenementdatum gevonden nabij de titel"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten/45913708-zing-cirkel-concertgebouw",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Concertgebouw-datum niet herkend",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten/45959877-popup-choir-taylor-swift-zing-mee-met-maarten-bos-en-tijmen-de-koning",
+      "status": "diagnose",
+      "rawText": "Titel herkend, maar geen evenementdatum gevonden nabij de titel"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten/45959877-popup-choir-taylor-swift-zing-mee-met-maarten-bos-en-tijmen-de-koning",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Concertgebouw-datum niet herkend",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten/46012123-gratis-lunchconcert-nederlandse-fluit-academie",
+      "status": "diagnose",
+      "rawText": "Titel herkend, maar geen evenementdatum gevonden nabij de titel"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten/46012123-gratis-lunchconcert-nederlandse-fluit-academie",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/feed",
+      "status": "fout",
+      "rawText": "HTTP 404"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/rss",
+      "status": "fout",
+      "rawText": "HTTP 404"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/rss.xml",
+      "status": "fout",
+      "rawText": "HTTP 404"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/feed.xml",
+      "status": "fout",
+      "rawText": "HTTP 404"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/events/feed/",
+      "status": "fout",
+      "rawText": "HTTP 404"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "status": "klaar",
+      "rawText": "site 10/15: 14 unieke events in 4.78 sec"
     }
   ],
   "status": "running",
   "siteStartedAt": "2026-10-26T20:53:43+00:00",
-  "siteElapsedSeconds": 0,
-  "sitePageCount": 0,
-  "lastSiteEventCount": 0,
-  "stage": "Websitepagina ophalen",
-  "lastUpdatedAt": "2026-10-26T20:53:43+00:00",
-  "lastSiteNewEventCount": 18,
-  "lastCompletedSite": "https://www.kultuuragenda.nl/agenda",
-  "lastCompletedAt": "2026-10-26T20:53:42+00:00"
+  "siteElapsedSeconds": 6,
+  "sitePageCount": 1,
+  "lastSiteEventCount": 14,
+  "stage": "Website klaar; volgende website voorbereiden",
+  "lastUpdatedAt": "2026-10-26T20:53:46+00:00",
+  "lastSiteNewEventCount": 14,
+  "lastCompletedSite": "https://www.concertgebouw.nl/concerten-en-tickets",
+  "lastCompletedAt": "2026-10-26T20:53:49+00:00"
 }
