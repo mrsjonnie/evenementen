@@ -1,7 +1,7 @@
 {
   "runId": "2026-10-26T22:40:50.827517+00:00-e5599623",
   "startedAt": "2026-10-26T22:40:50+00:00",
-  "completedCount": 10,
+  "completedCount": 11,
   "totalSites": 15,
   "currentSite": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
   "currentSiteIndex": 11,
@@ -15,7 +15,8 @@
     "https://www.martiniplaza.nl/nl/agenda",
     "https://groningermuseum.nl/programma",
     "https://www.kultuuragenda.nl/agenda",
-    "https://www.concertgebouw.nl/concerten-en-tickets"
+    "https://www.concertgebouw.nl/concerten-en-tickets",
+    "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html"
   ],
   "events": [
     {
@@ -1904,207 +1905,16 @@
       "newCount": 1,
       "durationSeconds": 6.36,
       "timedOut": false
+    },
+    {
+      "site": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 8.73,
+      "timedOut": false
     }
   ],
   "rawLog": [
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "The Wall #9",
-      "date": "2026-10-27",
-      "url": "https://groningen.uitloper.nu/kunst/the-wall-9",
-      "status": "Uitloper agenda-item",
-      "rawText": "The Wall #9 Kunstenaar Indira de Boer maakt een installatie van…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Otto Krol - Gevels, daken en luchten",
-      "date": "2026-10-27",
-      "url": "https://groningen.uitloper.nu/kunst/otto-krol-gevels-daken-en-luchten-1",
-      "status": "Uitloper agenda-item",
-      "rawText": "Otto Krol - Gevels, daken en luchten Na de stadsgezichten van de vorige expositie eind…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Otto Krol - Gevels, daken en luchten",
-      "date": "2026-10-27",
-      "url": "https://groningen.uitloper.nu/kunst/otto-krol-gevels-daken-en-luchten",
-      "status": "Uitloper agenda-item",
-      "rawText": "Otto Krol - Gevels, daken en luchten Na de stadsgezichten van de vorige expositie eind…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Kleur!",
-      "date": "2026-10-27",
-      "url": "https://groningen.uitloper.nu/kunst/kleur-3",
-      "status": "Uitloper agenda-item",
-      "rawText": "Kleur! Tien kunstenaars onderzoeken in de verschillende ruimtes…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Gasten: Paul Kramer",
-      "date": "2026-10-27",
-      "url": "https://groningen.uitloper.nu/kunst/gasten-paul-kramer",
-      "status": "Uitloper agenda-item",
-      "rawText": "Gasten: Paul Kramer Duotentoonstelling met werken van Paul Kramer en Henk…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "APPROP.",
-      "date": "2026-10-27",
-      "url": "https://groningen.uitloper.nu/kunst/approp",
-      "status": "Uitloper agenda-item",
-      "rawText": "APPROP. Met APPROP. presenteren ax710 en Jurjen Galema een…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Permanente Expositie",
-      "date": "2026-10-27",
-      "url": "https://groningen.uitloper.nu/kunst/permanente-expositie",
-      "status": "Uitloper agenda-item",
-      "rawText": "Permanente Expositie De vaste tentoonstelling nodigt uit om kennis te nemen…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Figuranten",
-      "date": "2026-10-27",
-      "url": "https://groningen.uitloper.nu/kunst/figuranten",
-      "status": "Uitloper agenda-item",
-      "rawText": "Figuranten Sievert Bodde toont zestien fictieve portretten, in…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Schilderijen van Marrie Venderink",
-      "date": "2026-10-27",
-      "url": "https://groningen.uitloper.nu/kunst/schilderijen-vanmarrie-venderink",
-      "status": "Uitloper agenda-item",
-      "rawText": "Schilderijen van Marrie Venderink Expositie met schilderijen van Marrie Venderink …"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Het Witte Vlag Project",
-      "date": "2026-10-27",
-      "url": "https://groningen.uitloper.nu/kunst/het-witte-vlag-project",
-      "status": "Uitloper agenda-item",
-      "rawText": "Het Witte Vlag Project Een groepstentoonstelling met dertien hedendaagse…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Lieuwe van Gogh",
-      "date": "2026-10-27",
-      "url": "https://groningen.uitloper.nu/kunst/lieuwe-van-gogh",
-      "status": "Uitloper agenda-item",
-      "rawText": "Lieuwe van Gogh De kleurrijke gevel van Metamorphose gemaakt door…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Expositie Overwegend Vrouw (Glimmen)",
-      "date": "2026-10-27",
-      "url": "https://groningen.uitloper.nu/kunst/expositie-overwegend-vrouw-glimmen",
-      "status": "Uitloper agenda-item",
-      "rawText": "Expositie Overwegend Vrouw (Glimmen) Ingrid Veldscholten en Josephine Wortelboer exposeren…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Het Witte Vlag Project",
-      "date": "2026-10-27",
-      "url": "https://groningen.uitloper.nu/kunst/het-witte-vlag-project-1",
-      "status": "Uitloper agenda-item",
-      "rawText": "Het Witte Vlag Project In een tijd waarin zekerheden luid klinken en identiteiten…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Playing House - kinderbiënnale",
-      "date": "2026-10-27",
-      "url": "https://groningen.uitloper.nu/jeugd/playing-house-kinderbiennale",
-      "status": "Uitloper agenda-item",
-      "rawText": "Playing House - kinderbiënnale Welke bewust of onbewust aangeleerde regels worden…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Storyworld spotlight: Super Mario 40 jaar",
-      "date": "2026-10-27",
-      "url": "https://groningen.uitloper.nu/jeugd/storyworld-spotlight-super-mario-40-jaar",
-      "status": "Uitloper agenda-item",
-      "rawText": "Storyworld spotlight: Super Mario 40 jaar Een reis door de tijd, langs de technische én creatieve…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Trumps Amerika: chaos en gevaar?",
-      "date": "2026-10-27",
-      "url": "https://groningen.uitloper.nu/diversen/trumps-amerika-chaos-en-gevaar",
-      "status": "Uitloper agenda-item",
-      "rawText": "Trumps Amerika: chaos en gevaar? 20:15 uur Laila Frank, Anna van Zoest en Bob Deen analyseren…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Depotrondleidingen: Lichaam & Geest",
-      "date": "2026-10-27",
-      "url": "https://groningen.uitloper.nu/diversen/depotrondleidingen-lichaam-geest",
-      "status": "Uitloper agenda-item",
-      "rawText": "Depotrondleidingen: Lichaam & Geest 14:45 uur Tijdens een rondleiding nemen onze medewerkers je…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Beklimming Martinitoren",
-      "date": "2026-10-27",
-      "url": "https://groningen.uitloper.nu/diversen/beklimming-martinitoren-1",
-      "status": "Uitloper agenda-item",
-      "rawText": "Beklimming Martinitoren Bezoekers kunnen op eigen gelegenheid naar boven lopen…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Studium Generale: US Midterms",
-      "date": "2026-10-27",
-      "url": "https://groningen.uitloper.nu/diversen/studium-generale-us-midterms",
-      "status": "Uitloper agenda-item",
-      "rawText": "Studium Generale: US Midterms 20:30 uur In deze aflevering van 'Let's Ask' bespreekt Mark…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Zienema: The Fly",
-      "date": "2026-10-27",
-      "url": "https://groningen.uitloper.nu/filmhuis/zienema-the-fly",
-      "status": "Uitloper agenda-item",
-      "rawText": "Zienema: The Fly 20:30 uur Halloween-special, en de sfeer is dit jaar gory. Héél…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Pubquiz",
-      "date": "2026-10-27",
-      "url": "https://groningen.uitloper.nu/quizzen/pubquiz-fourth-monday-repeating-1",
-      "status": "Uitloper agenda-item",
-      "rawText": "Pubquiz 20:00 uur Elke vierde maandag van de maand. Teams van maximaal…"
-    },
-    {
-      "source": "Parser",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Uitloper-dagpagina",
-      "date": "2026-10-27",
-      "url": "https://groningen.uitloper.nu/?date=1793102400",
-      "status": "gespecialiseerde parser",
-      "rawText": "42 agenda-items op 2026-10-27"
-    },
     {
       "source": "Website",
       "site": "https://groningen.uitloper.nu/",
@@ -12706,16 +12516,214 @@
       "url": "https://www.concertgebouw.nl/concerten-en-tickets",
       "status": "klaar",
       "rawText": "site 10/15: 1 unieke events in 6.36 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "title": "Start",
+      "date": "",
+      "url": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "status": "start",
+      "rawText": "site 11/15: max 60 events, max 45 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "status": "strategie",
+      "rawText": "bioscoopfilms en speeldata (BiosAgenda Groningen)"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "title": "403-tekstproxy gebruikt",
+      "date": "",
+      "url": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "status": "fallback",
+      "rawText": "Bron gaf HTTP 403; tekstproxy leverde 55515 tekens: Title: Bioscoopagenda Groningen URL Source: http://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html Published Time: Mon, 26 Oct 2026 21:58:16 GMT Markdown Content: Bios"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "title": "Pagina gelezen",
+      "date": "",
+      "url": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "status": "ok",
+      "rawText": "67817 tekens HTML"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "title": "BiosAgenda speeldata",
+      "date": "",
+      "url": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "status": "gespecialiseerde parser",
+      "rawText": "0 filmvermeldingen met speeldata gevonden"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "title": "Pagina geanalyseerd",
+      "date": "",
+      "url": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "status": "ok",
+      "rawText": "0 events/aanbiedingen op deze pagina"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.biosagenda.nl/films-bioscoop-bioscopen_assen_15.html",
+      "title": "403-tekstproxy mislukt",
+      "date": "",
+      "url": "https://www.biosagenda.nl/films-bioscoop-bioscopen_assen_15.html",
+      "status": "fout",
+      "rawText": "HTTPSConnectionPool(host='r.jina.ai', port=443): Read timed out. (read timeout=1.25)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "title": "Detailpagina mislukt",
+      "date": "",
+      "url": "https://www.biosagenda.nl/films-bioscoop-bioscopen_assen_15.html",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.biosagenda.nl/films-bioscoop-bioscopen_hoogezand_73.html",
+      "title": "403-tekstproxy mislukt",
+      "date": "",
+      "url": "https://www.biosagenda.nl/films-bioscoop-bioscopen_hoogezand_73.html",
+      "status": "fout",
+      "rawText": "HTTPSConnectionPool(host='r.jina.ai', port=443): Read timed out. (read timeout=1.25)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "title": "Detailpagina mislukt",
+      "date": "",
+      "url": "https://www.biosagenda.nl/films-bioscoop-bioscopen_hoogezand_73.html",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.biosagenda.nl/films-bioscoop-bioscopen_leek_210.html",
+      "title": "403-tekstproxy mislukt",
+      "date": "",
+      "url": "https://www.biosagenda.nl/films-bioscoop-bioscopen_leek_210.html",
+      "status": "fout",
+      "rawText": "HTTPSConnectionPool(host='r.jina.ai', port=443): Read timed out. (read timeout=1.25)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "title": "Detailpagina mislukt",
+      "date": "",
+      "url": "https://www.biosagenda.nl/films-bioscoop-bioscopen_leek_210.html",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.biosagenda.nl/film_de-club-van-sinterklaas-film-paniek-in-het-pietendorp_46863.html",
+      "title": "403-tekstproxy mislukt",
+      "date": "",
+      "url": "https://www.biosagenda.nl/film_de-club-van-sinterklaas-film-paniek-in-het-pietendorp_46863.html",
+      "status": "fout",
+      "rawText": "HTTPSConnectionPool(host='r.jina.ai', port=443): Read timed out. (read timeout=1.25)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "title": "Detailpagina mislukt",
+      "date": "",
+      "url": "https://www.biosagenda.nl/film_de-club-van-sinterklaas-film-paniek-in-het-pietendorp_46863.html",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.biosagenda.nl/film_de-film-van-rutger%2C-thomas-en-paco-2_45898.html",
+      "title": "403-tekstproxy mislukt",
+      "date": "",
+      "url": "https://www.biosagenda.nl/film_de-film-van-rutger%2C-thomas-en-paco-2_45898.html",
+      "status": "fout",
+      "rawText": "HTTPSConnectionPool(host='r.jina.ai', port=443): Read timed out. (read timeout=1.25)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "title": "Detailpagina mislukt",
+      "date": "",
+      "url": "https://www.biosagenda.nl/film_de-film-van-rutger%2C-thomas-en-paco-2_45898.html",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://www.biosagenda.nl/feed",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://www.biosagenda.nl/rss",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://www.biosagenda.nl/rss.xml",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://www.biosagenda.nl/feed.xml",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://www.biosagenda.nl/events/feed/",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "status": "klaar",
+      "rawText": "site 11/15: 0 unieke events in 8.73 sec"
     }
   ],
   "status": "running",
   "siteStartedAt": "2026-10-26T22:43:03+00:00",
-  "siteElapsedSeconds": 0,
-  "sitePageCount": 0,
+  "siteElapsedSeconds": 10,
+  "sitePageCount": 1,
   "lastSiteEventCount": 0,
-  "stage": "Websitepagina ophalen",
-  "lastUpdatedAt": "2026-10-26T22:43:03+00:00",
-  "lastSiteNewEventCount": 1,
-  "lastCompletedSite": "https://www.concertgebouw.nl/concerten-en-tickets",
-  "lastCompletedAt": "2026-10-26T22:43:00+00:00"
+  "stage": "Website klaar; volgende website voorbereiden",
+  "lastUpdatedAt": "2026-10-26T22:43:05+00:00",
+  "lastSiteNewEventCount": 0,
+  "lastCompletedSite": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+  "lastCompletedAt": "2026-10-26T22:43:13+00:00"
 }
