@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- Websitebeheerknoppen buiten uitklapmenu; versie 2026.10.26.97. -->
+<!-- Instellingen onderaan sidebar; paars; versie 2026.10.26.98. -->
 <html lang="nl">
 <head>
   <meta charset="UTF-8">
@@ -698,10 +698,29 @@
       text-align: center;
     }
     .siteActions .siteSettingsButton {
-      background: #087f5b;
-      border: 1px solid #087f5b;
+      background: #7c3aed;
+      border: 1px solid #6d28d9;
       color: #fff;
       font-weight: 900;
+    }
+    .siteSettingsButton:hover { background:#6d28d9; border-color:#5b21b6; color:#fff; }
+    .siteSettingsButton:focus-visible { outline:3px solid #c4b5fd; outline-offset:2px; }
+    .sidebarSettingsFooter {
+      margin-top: 12px;
+      padding-top: 10px;
+      border-top: 1px solid var(--line);
+    }
+    .sidebarSettingsButton {
+      display:flex;
+      width:100%;
+      min-height:42px;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      background:#7c3aed;
+      border:1px solid #6d28d9;
+      color:#fff;
+      font-weight:900;
     }
     @media (max-width: 380px) { .siteActions { grid-template-columns: 1fr; } }
 
@@ -1444,7 +1463,6 @@
               <div class="sitePanelHeader">Selecteer websites om te scannen en filteren.</div>
               <div class="siteList" id="sitesList"></div>
               <div class="siteActions">
-                <a class="btn btnSecondary siteSettingsButton" href="./instellingen.html">⚙ Instellingen</a>
                 <button class="btn btnSecondary" id="allSitesBtn" type="button">Selecteer alles</button>
                 <button class="btn btnSecondary" id="noSitesBtn" type="button">Selecteer geen</button>
               </div>
@@ -1471,7 +1489,9 @@
         <button class="btn btnSecondary" id="refreshBtn" type="button" hidden>Ververs data</button>
         <button class="btn btnSecondary" id="resetBtn" type="button">Reset filter</button>
         <button class="btn btnDanger" id="deleteDataBtn" type="button">Verwijderen data</button>
-        <a class="btn btnSecondary" href="./instellingen.html" style="width:100%;text-align:center">⚙ Instellingen</a>
+      </div>
+      <div class="sidebarSettingsFooter">
+        <a class="btn siteSettingsButton sidebarSettingsButton" href="./instellingen.html">⚙ Instellingen</a>
       </div>
 
     </aside>
@@ -1534,7 +1554,7 @@
     </section>
   </div>
   <script>
-    const APP_VERSION = "2026.10.26.97";
+    const APP_VERSION = "2026.10.26.98";
     const STATUS_HISTORY_KEY = "evenementenStatusHistoryV1";
     const DISMISSED_SCRAPE_RUN_KEY = "evenementenDismissedScrapeRunV1";
     const DEFAULT_MAX_EVENTS_PER_SITE = 20;
