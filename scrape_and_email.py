@@ -16,6 +16,7 @@ from bs4 import BeautifulSoup
 DATA_FILE = "events.json"
 LOG_FILE = "scrape_log.txt"
 SITES_FILE = "sites.json"
+SITE_CONFIG_FILE = "site-scraper-config.json"
 
 INPUT_REGION = (os.getenv("INPUT_REGION", "Groningen").strip() or "Groningen")
 INPUT_SITES_RAW = (os.getenv("INPUT_SITES", "[]").strip() or "[]")
@@ -278,6 +279,53 @@ def canonical_host(value):
 
 def same_host(candidate, site_url):
     return bool(canonical_host(candidate) and canonical_host(candidate) == canonical_host(site_url))
+
+def site_config_for(site_url):
+    """Load the durable, per-site scraper rules maintained in site-scraper-config.json."""
+    try:
+        with open(SITE_CONFIG_FILE, "r", encoding="utf-8") as handle:
+            registry = json.load(handle)
+        configs = registry.get("sites", {}) if isinstance(registry, dict) else {}
+        if not isinstance(configs, dict):
+            return {}
+        if site_url in configs and isinstance(configs[site_url], dict):
+            return configs[site_url]
+        wanted_host = canonical_host(site_url)
+        for configured_url, config in configs.items():
+            if canonical_host(configured_url) == wanted_host and isinstance(config, dict):
+                return config
+    except (OSError, json.JSONDecodeError, TypeError):
+        pass
+    return {}
+
+
+def url_is_excluded(site_config, value):
+    text = clean_text(value).lower()
+    return any(clean_text(rule).lower() in text for rule in site_config.get("excludedUrls", []) if clean_text(rule))
+
+
+def event_matches_site_exclusion(site_config, event):
+    combined = " ".join(clean_text(event.get(field, "")) for field in ("title", "description", "website", "url")).lower()
+    if url_is_excluded(site_config, event.get("website", "") or event.get("url", "")):
+        return True
+    return any(clean_text(rule).lower() in combined for rule in site_config.get("exclusions", []) if clean_text(rule))
+
+
+def apply_site_adjustments(site_config, event):
+    adjusted = dict(event)
+    for rule in site_config.get("adjustments", []):
+        if not isinstance(rule, dict):
+            continue
+        field = clean_text(rule.get("field", ""))
+        find = clean_text(rule.get("find", ""))
+        replacement = str(rule.get("replace", ""))
+        if field not in {"title", "description", "location", "type", "cost", "website"} or not find:
+            continue
+        current = str(adjusted.get(field, "") or "")
+        adjusted[field] = re.sub(re.escape(find), lambda _: replacement, current, flags=re.I)
+    return adjusted
+
+
 
 
 def host_default_location(site_url):
@@ -2775,6 +2823,7 @@ def scrape_site(site_url, site_index=0, site_total=0, progress_callback=None, ex
 
     original_site = clean_text(site_url)
     normalized_site = normalized_url(original_site)
+    site_config = site_config_for(normalized_site)
     started = time.monotonic()
     deadline = started + SITE_TIME_LIMIT_SECONDS
     session = requests.Session()
@@ -2793,7 +2842,15 @@ def scrape_site(site_url, site_index=0, site_total=0, progress_callback=None, ex
         for source_name, count in event_source_counts(serpapi_events).items():
             add_raw(source_name, original_site, "Eventvelden gebruikt", "", normalized_site, "ok", f"{count} event-kandidaten direct uit {source_name}")
 
-    for page_url in start_urls_for_site(normalized_site):
+    configured_starts = [
+        normalized_url(value) for value in site_config.get("startUrls", [])
+        if normalized_url(value) and same_host(normalized_url(value), normalized_site)
+    ]
+    candidate_start_urls = list(dict.fromkeys(start_urls_for_site(normalized_site) + configured_starts))
+    for page_url in candidate_start_urls:
+        if url_is_excluded(site_config, page_url):
+            add_raw("Siteconfiguratie", original_site, "Start-URL uitgesloten", "", page_url, "overgeslagen", "URL staat in de websitespecifieke uitsluitingen")
+            continue
         if progress_callback:
             progress_callback(dedupe_events(events), stage="Websitepagina ophalen")
         if (new_event_count(events) >= MAX_EVENTS_PER_SITE and "vera-groningen.nl" not in canonical_host(normalized_site)) or time.monotonic() >= deadline:
@@ -3052,6 +3109,9 @@ def scrape_site(site_url, site_index=0, site_total=0, progress_callback=None, ex
     is_visitgroningen = canonical_host(normalized_site) == "visitgroningen.nl"
     visited = set()
     for detail_url in detail_queue:
+        if url_is_excluded(site_config, detail_url):
+            add_raw("Siteconfiguratie", original_site, "Detail-URL uitgesloten", "", detail_url, "overgeslagen", "URL staat in de websitespecifieke uitsluitingen")
+            continue
         # Eerst echte activiteitspagina's uitlezen; de overzichtskaarten bevatten vaak te weinig details.
         detail_path = urlparse(detail_url).path
         if canonical_host(normalized_site) == "denieuwekolk.nl":
@@ -3178,6 +3238,9 @@ def scrape_site(site_url, site_index=0, site_total=0, progress_callback=None, ex
     # Verwerk openbare feeds pas nadat directe evenementdetailpagina's zijn
     # geprobeerd. Als de tijd op is, blijven de al gevonden evenementen behouden.
     for feed_url in unique_urls(feed_urls):
+        if url_is_excluded(site_config, feed_url):
+            add_raw("Siteconfiguratie", original_site, "Feed-URL uitgesloten", "", feed_url, "overgeslagen", "URL staat in de websitespecifieke uitsluitingen")
+            continue
         if time.monotonic() >= deadline or new_event_count(events) >= MAX_EVENTS_PER_SITE:
             break
         try:
@@ -3205,7 +3268,10 @@ def scrape_site(site_url, site_index=0, site_total=0, progress_callback=None, ex
             continue
         if event_day < date_from or (date_to and event_day > date_to):
             continue
-        filtered.append(event)
+        if event_matches_site_exclusion(site_config, event):
+            add_raw("Siteconfiguratie", original_site, "Evenement uitgesloten", str(event.get("date", "")), event.get("website", normalized_site), "overgeslagen", "Voldoet aan een websitespecifieke uitsluiting")
+            continue
+        filtered.append(apply_site_adjustments(site_config, event))
     if before_date_filter != len(filtered):
         add_raw("Filter", original_site, "Datumfilter toegepast", date_from.isoformat(), normalized_site, "ok",
                 f"{before_date_filter} gevonden; {len(filtered)} binnen {date_from.isoformat()} t/m {date_to.isoformat() if date_to else 'onbeperkt'}")
