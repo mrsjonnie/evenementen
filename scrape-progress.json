@@ -1,14 +1,60 @@
 {
   "runId": "2026-10-26T09:44:56.889366+00:00-27747b20",
   "startedAt": "2026-10-26T09:44:56+00:00",
-  "completedCount": 1,
+  "completedCount": 2,
   "totalSites": 20,
   "currentSite": "https://www.visitgroningen.nl/nl/doen/evenementen",
   "currentSiteIndex": 2,
   "completedSites": [
-    "https://groningen.uitloper.nu/"
+    "https://groningen.uitloper.nu/",
+    "https://www.visitgroningen.nl/nl/doen/evenementen"
   ],
   "events": [
+    {
+      "date": "2026-10-26",
+      "time": "",
+      "title": ", 2 november en nog 3 dagen",
+      "type": "Activiteit",
+      "location": "2 november en nog 3 dagen",
+      "locationLink": "",
+      "website": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "source": "visitgroningen.nl",
+      "discoverySource": "Website",
+      "description": "Voeg toe als favoriet Voeg toe als favoriet",
+      "cost": "",
+      "image": "",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-26",
+      "time": "",
+      "title": ", 2 november en nog 3 dagen , Groningen",
+      "type": "Activiteit",
+      "location": "2 november en nog 3 dagen",
+      "locationLink": "",
+      "website": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "source": "visitgroningen.nl",
+      "discoverySource": "Website",
+      "description": "Meer informatie staat op visitgroningen.nl.",
+      "cost": "",
+      "image": "",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-26",
+      "time": "",
+      "title": ", Groningen",
+      "type": "Concert",
+      "location": "Groningen",
+      "locationLink": "",
+      "website": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "source": "visitgroningen.nl",
+      "discoverySource": "Website",
+      "description": "Voeg toe als favoriet Voeg toe als favoriet Expositie Mijn Thuis Mijn Verhaal: ervaar de kracht van verhalen die verbinden",
+      "cost": "",
+      "image": "",
+      "isNew": true
+    },
     {
       "date": "2026-10-26",
       "time": "",
@@ -117,6 +163,21 @@
     {
       "date": "2026-10-26",
       "time": "",
+      "title": "Expositie Mijn Thuis Mijn Verhaal: ervaar de kracht van verhalen die verbinden",
+      "type": "Expositie",
+      "location": "Appingedam",
+      "locationLink": "",
+      "website": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "source": "visitgroningen.nl",
+      "discoverySource": "Website",
+      "description": "Meer informatie staat op visitgroningen.nl.",
+      "cost": "",
+      "image": "",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-26",
+      "time": "",
       "title": "Expositie Overwegend Vrouw (Glimmen)",
       "type": "Expositie",
       "location": "Dorpshuis De Groenenberg Glimmen",
@@ -188,6 +249,126 @@
       "cost": "",
       "image": "https://groningen.uitloper.nu/images/smallthumb/files/whiteflag-notes-nr-1---karin-van-der-molen-arte-laguna-final.jpg",
       "isNew": true
+    },
+    {
+      "date": "2026-10-26",
+      "time": "",
+      "title": "Klik & Tik",
+      "type": "Activiteit",
+      "location": "2 november en nog 3 dagen",
+      "locationLink": "",
+      "website": "https://www.visitgroningen.nl/nl/doen/uitgaan/4171063207/klik-tik-2026",
+      "source": "visitgroningen.nl",
+      "discoverySource": "Website",
+      "description": "Voeg toe als favoriet Voeg toe als favoriet",
+      "cost": "",
+      "image": "https://assets.plaece.nl/thumb/aO9QmDTf6rcxX950xOQ750yV5msJgdaWPnPnz4RnSmc/resizing_type:fit/width:500/height:0/gravity:sm/enlarge:0/aHR0cHM6Ly9hc3NldHMucGxhZWNlLm5sL29kcC1ncm9uaW5nZW4vaW1hZ2UvZjM5YTJkNGNhYjA0NGNhNTU5MzI1ODUxMjJmNDhmOGM2NmNlMjE1MV8wMWExNzU5NC1iNDhmLTdjZmItODViZC03MzEyMmJiN2IxMTEuanBn.jpg",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-26",
+      "time": "",
+      "title": "Muziek overig",
+      "type": "Concert",
+      "location": "Groningen",
+      "locationLink": "",
+      "website": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "source": "visitgroningen.nl",
+      "discoverySource": "Website",
+      "description": "Voeg toe als favoriet Voeg toe als favoriet Expositie Mijn Thuis Mijn Verhaal: ervaar de kracht van verhalen die verbinden Expositie Mijn Thuis Mijn Verhaal: ervaar de kracht van verhalen die verbinden",
+      "cost": "",
+      "image": "",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-26",
+      "time": "",
+      "title": "Nena",
+      "type": "Concert",
+      "location": "Groningen",
+      "locationLink": "",
+      "website": "https://www.visitgroningen.nl/nl/doen/uitgaan/1249727087/nena-1",
+      "source": "visitgroningen.nl",
+      "discoverySource": "Website",
+      "description": "Voeg toe als favoriet Voeg toe als favoriet",
+      "cost": "",
+      "image": "https://assets.plaece.nl/thumb/LP9bX3BTQGJJ95ABkp7w0PvgiTVpkFa6NVQr6HB4JAI/resizing_type:fit/width:500/height:0/gravity:sm/enlarge:0/aHR0cHM6Ly9hc3NldHMucGxhZWNlLm5sL29kcC1ncm9uaW5nZW4vaW1hZ2UvOWEyMjc0ZGRmMGY0MWRkZjM1Y2Q1MTBiODQzYjgwOGY0ZmZjZTkzNl8wMWExM2NjNi1kZTEyLTc2ZDEtYTlhYy1iMzdiM2U3OGRkN2MuanBn.jpg",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-26",
+      "time": "",
+      "title": "Uit- en thuistips in Groningen",
+      "type": "Concert",
+      "location": "Groningen",
+      "locationLink": "",
+      "website": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "source": "visitgroningen.nl",
+      "discoverySource": "Website",
+      "description": "Visit Groningen Ga naar inhoud Ga naar de homepage Terug Nu & nieuw Uitagenda Nieuwe winkels & horeca in de stad Oktober donkertemaand Het 10-jarig bestaan van Dark Sky Park Lauwersmeer staat in het teken van donker. Het is hoog tijd om de schoonheid van de duisternis te gaan ontdekken. Sunnemeerten Terug Dit is Gronin",
+      "cost": "",
+      "image": "",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-26",
+      "time": "",
+      "title": "Uitagenda",
+      "type": "Concert",
+      "location": "Afstand tot mijn locatie",
+      "locationLink": "",
+      "website": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "source": "visitgroningen.nl",
+      "discoverySource": "Website",
+      "description": "Thuis en buitenshuis is er genoeg leuks te beleven in de provincie Groningen. Bekijk alle activiteiten en tips van de stad en de provincie.",
+      "cost": "",
+      "image": "https://www.visitgroningen.nl/build/assets/general/logo.29ee4cfdb1a1e9fa4a48.svg",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-26",
+      "time": "",
+      "title": "Voeg toe als favoriet",
+      "type": "Expositie",
+      "location": "Groningen",
+      "locationLink": "",
+      "website": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "source": "visitgroningen.nl",
+      "discoverySource": "Website",
+      "description": "Expositie Mijn Thuis Mijn Verhaal: ervaar de kracht van verhalen die verbinden Expositie Mijn Thuis Mijn Verhaal: ervaar de kracht van verhalen die verbinden",
+      "cost": "",
+      "image": "",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-26",
+      "time": "",
+      "title": "Wanneer",
+      "type": "Activiteit",
+      "location": "Groningen",
+      "locationLink": "",
+      "website": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "source": "visitgroningen.nl",
+      "discoverySource": "Website",
+      "description": "Meer informatie staat op visitgroningen.nl.",
+      "cost": "",
+      "image": "",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-26",
+      "time": "",
+      "title": "Wat zoek je",
+      "type": "Concert",
+      "location": "Afstand tot mijn locatie",
+      "locationLink": "",
+      "website": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "source": "visitgroningen.nl",
+      "discoverySource": "Website",
+      "description": "Vind jouw bestemming In en om Groningen Afstand tot mijn locatie",
+      "cost": "",
+      "image": "",
+      "isNew": true
     }
   ],
   "siteResults": [
@@ -196,6 +377,13 @@
       "count": 12,
       "newCount": 12,
       "durationSeconds": 1.64,
+      "timedOut": false
+    },
+    {
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "count": 12,
+      "newCount": 12,
+      "durationSeconds": 4.22,
       "timedOut": false
     }
   ],
@@ -739,16 +927,1672 @@
       "url": "https://groningen.uitloper.nu/",
       "status": "klaar",
       "rawText": "site 1/20: 12 unieke events in 1.64 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Start",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "status": "start",
+      "rawText": "site 2/20: max 12 events, max 4 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "status": "strategie",
+      "rawText": "Visit Groningen agenda-/routekaarten"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Pagina gelezen",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen",
+      "status": "ok",
+      "rawText": "207288 tekens HTML"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Visit Groningen detailstrategie",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen",
+      "status": "strategie",
+      "rawText": "Overzicht overslaan; alleen detail-URL's met /evenementen/<slug> verwerken"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Pagina geanalyseerd",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen",
+      "status": "ok",
+      "rawText": "0 events/aanbiedingen op deze pagina"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Lees meer",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen/eurosonic-noorderslag",
+      "status": "detail-link gevonden",
+      "rawText": "Lees meer"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Lees meer",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen/grasnapolsky",
+      "status": "detail-link gevonden",
+      "rawText": "Lees meer"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Lees meer",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen/hongerige-wolf",
+      "status": "detail-link gevonden",
+      "rawText": "Lees meer"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Lees meer",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen/koningsdag",
+      "status": "detail-link gevonden",
+      "rawText": "Lees meer"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Lees meer",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen/noorderzon",
+      "status": "detail-link gevonden",
+      "rawText": "Lees meer"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Lees meer",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen/paradigm",
+      "status": "detail-link gevonden",
+      "rawText": "Lees meer"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Lees meer",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen/terug-naar-het-begin-oud",
+      "status": "detail-link gevonden",
+      "rawText": "Lees meer"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Pagina gelezen",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "ok",
+      "rawText": "286192 tekens HTML"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Uit- en thuistips in Groningen",
+      "date": "2026-10-26",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit datumblok",
+      "rawText": "Uit- en thuistips in Groningen | Visit Groningen Ga naar inhoud Ga naar de homepage Terug Nu & nieuw Uitagenda Nieuwe winkels & horeca in de stad Oktober donkertemaand Het 10-jarig bestaan van Dark Sky Park Lauwersmeer staat in het teken van donker. Het is hoog tijd om de schoonheid van de duisternis te gaan ontdekken. Sunnemeerten Terug Dit is Groningen Top 10 bezienswaardigheden In Groningen ligt het allemaal opval"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "en nog 3 dagen , Groningen Varia Voeg toe als favoriet Voeg toe als favoriet Nena Nena",
+      "date": "2026-11-02",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit datumblok",
+      "rawText": "2 november en nog 3 dagen , Groningen Varia Voeg toe als favoriet Voeg toe als favoriet Nena Nena"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": ", Groningen",
+      "date": "2027-10-06",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit datumblok",
+      "rawText": "6 oktober , Groningen Muziek overig Voeg toe als favoriet Voeg toe als favoriet Expositie Mijn Thuis Mijn Verhaal: ervaar de kracht van verhalen die verbinden Expositie Mijn Thuis Mijn Verhaal: ervaar de kracht van verhalen die verbinden t/m"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": ", Appingedam Tentoonstelling Voeg toe als favoriet",
+      "date": "2026-12-06",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit datumblok",
+      "rawText": "6 december , Appingedam Tentoonstelling Voeg toe als favoriet Voeg toe als favoriet Stadswandeling o.l.v. een stadsgids Stadswandeling o.l.v. een stadsgids t/m"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": ", Appingedam Rondleiding Voeg toe als favoriet",
+      "date": "2026-12-01",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit datumblok",
+      "rawText": "1 december , Appingedam Rondleiding Voeg toe als favoriet Voeg toe als favoriet Stadswandeling Puutje Stadswandeling Puutje t/m"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": ", Groningen Wandeltocht Voeg toe als favoriet",
+      "date": "2027-10-07",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit datumblok",
+      "rawText": "7 oktober 2027 , Groningen Wandeltocht Voeg toe als favoriet Voeg toe als favoriet Verhalenpad Appie en Flappie op Ewsum Verhalenpad Appie en Flappie op Ewsum t/m"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": ", Ezinge Tentoonstelling Voeg toe als favoriet",
+      "date": "2027-03-01",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit datumblok",
+      "rawText": "1 maart 2027 , Ezinge Tentoonstelling Voeg toe als favoriet Voeg toe als favoriet Duik in het zeehondenmysterie in het WEC Duik in het zeehondenmysterie in het WEC t/m"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": ", Zoutkamp Varia Voeg toe als favoriet",
+      "date": "2027-01-03",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit datumblok",
+      "rawText": "3 januari 2027 , Zoutkamp Varia Voeg toe als favoriet Voeg toe als favoriet Stromen van Verandering : de Hunsingosluis Stromen van Verandering : de Hunsingosluis t/m"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": ", Zoutkamp Tentoonstelling Voeg toe als favoriet",
+      "date": "2027-10-01",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit datumblok",
+      "rawText": "1 oktober , Zoutkamp Tentoonstelling Voeg toe als favoriet Voeg toe als favoriet Hooggeëerd bezoek. Koninklijke visites aan Groningen Hooggeëerd bezoek. Koninklijke visites aan Groningen t/m"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": ", Uithuizen Tentoonstelling Voeg toe als favoriet",
+      "date": "2026-12-01",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit datumblok",
+      "rawText": "1 december , Uithuizen Tentoonstelling Voeg toe als favoriet Voeg toe als favoriet Schoolplaten van weleer Schoolplaten van weleer t/m"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": ", Leens Tentoonstelling Voeg toe als favoriet",
+      "date": "2026-11-01",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit datumblok",
+      "rawText": "1 november , Leens Tentoonstelling Voeg toe als favoriet Voeg toe als favoriet Verken Eemsdelta met de E-chopper Verken Eemsdelta met de E-chopper t/m"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": ", Holwierde Excursie Voeg toe als favoriet",
+      "date": "2027-10-01",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit datumblok",
+      "rawText": "1 oktober , Holwierde Excursie Voeg toe als favoriet Voeg toe als favoriet de kunsthof presenteert een duo expositie van Jochem Hamstra en Dolf Verlinden de kunsthof presenteert een duo expositie van Jochem Hamstra en Dolf Verlinden t/m"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": ", Appingedam Varia Voeg toe als favoriet",
+      "date": "2026-12-03",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit datumblok",
+      "rawText": "3 december , Appingedam Varia Voeg toe als favoriet Voeg toe als favoriet Beleefroute De Graanrepubliek Beleefroute De Graanrepubliek t/m"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": ", Bad Nieuweschans Fietstocht Voeg toe als",
+      "date": "2028-08-09",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit datumblok",
+      "rawText": "9 augustus 2028 , Bad Nieuweschans Fietstocht Voeg toe als favoriet Voeg toe als favoriet Kajakken op het Oldambtmeer & een hapje, drankje, ijsje op ons terras – Strand Zuid, Blauwestad Kajakken op het Oldambtmeer & een hapje, drankje, ijsje op ons terras – Strand Zuid, Blauwestad t/m"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": ", Blauwestad Watersport Voeg toe als favoriet",
+      "date": "2027-10-01",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit datumblok",
+      "rawText": "1 oktober , Blauwestad Watersport Voeg toe als favoriet Voeg toe als favoriet Wadlopen vanuit Pieterburen Wadlopen vanuit Pieterburen t/m"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": ", Pieterburen Wandeltocht Voeg toe als favoriet",
+      "date": "2027-02-03",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit datumblok",
+      "rawText": "3 februari 2027 , Pieterburen Wandeltocht Voeg toe als favoriet Voeg toe als favoriet 100 jaar oude aquarellen van Kornelis Visser 100 jaar oude aquarellen van Kornelis Visser t/m"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": ", ROTTUM GN Tentoonstelling Voeg toe als",
+      "date": "2026-12-05",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit datumblok",
+      "rawText": "5 december , ROTTUM GN Tentoonstelling Voeg toe als favoriet Voeg toe als favoriet Suppen in Groningen Suppen in Groningen t/m"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": ", Winsum Buitensport Voeg toe als favoriet",
+      "date": "2027-10-01",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit datumblok",
+      "rawText": "1 oktober , Winsum Buitensport Voeg toe als favoriet Voeg toe als favoriet Boeren, arbeiders en ambachten Boeren, arbeiders en ambachten t/m"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": ", Wehe-Den Hoorn Tekenen en schilderen Voeg toe als favoriet Voeg toe als favoriet",
+      "date": "2026-11-01",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit datumblok",
+      "rawText": "1 november , Wehe-Den Hoorn Tekenen en schilderen Voeg toe als favoriet Voeg toe als favoriet Expositie CHAPEAU! Expositie CHAPEAU! t/m"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": ", Pieterburen Wandeltocht Voeg toe als favoriet",
+      "date": "2027-01-02",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit datumblok",
+      "rawText": "2 januari 2027 , Pieterburen Wandeltocht Voeg toe als favoriet Voeg toe als favoriet Huidige pagina 1 Ga naar pagina 2 Ga naar pagina 3 Ga naar pagina 4 Ga naar pagina 5 … Ga naar pagina 65 Ga naar de volgende pagina Mis niets uit Groningen Maandelijks de leukste tips voor Groningen in je inbox? Schrijf je hieronder in voor de Groningen nieuwsbrief Je e-mailadres Dit is Groningen Top 10 bezienswaardigheden De Stad Gr"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Wat zoek je",
+      "date": "2026-10-26",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit kaart",
+      "rawText": "Wat zoek je Sluiten Wanneer Vandaag Morgen Dit weekend Kies datum Thema Theater Actief Tentoonstelling Festival Beurs Culinair Excursie Tocht Sport Cabaret Markt Muziek Kinderen Vind jouw bestemming Gebied Drentsche Aa Eemsdelta In en om Groningen Kust Groningen Lauwersmeer Midden Groningen Oldambt Veenkoloniën Waddenland Westerkwartier Westerwolde Zoek op trefwoord Zoek Wis filters Filter Sorteer op : Datum oplopend"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Klik & Tik",
+      "date": "2026-10-26",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan/4171063207/klik-tik-2026",
+      "status": "event uit kaart",
+      "rawText": "Klik & Tik Klik & Tik 26 oktober, 2 november en nog 3 dagen , Groningen Varia Voeg toe als favoriet Voeg toe als favoriet"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": ", 2 november en nog 3 dagen , Groningen",
+      "date": "2026-10-26",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit kaart",
+      "rawText": "26 oktober, 2 november en nog 3 dagen , Groningen"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Nena",
+      "date": "2026-10-26",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan/1249727087/nena-1",
+      "status": "event uit kaart",
+      "rawText": "Nena Nena maandag 26 oktober , Groningen Muziek overig Voeg toe als favoriet Voeg toe als favoriet"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": ", Groningen",
+      "date": "2026-10-26",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit kaart",
+      "rawText": "maandag 26 oktober , Groningen"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Expositie Mijn Thuis Mijn Verhaal: ervaar de kracht van verhalen die verbinden",
+      "date": "2026-12-16",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan/2153151271/expositie-mijn-thuis-mijn-verhaal-ervaar-de-kracht-van-verhalen-die-verbinden",
+      "status": "event uit kaart",
+      "rawText": "Expositie Mijn Thuis Mijn Verhaal: ervaar de kracht van verhalen die verbinden Expositie Mijn Thuis Mijn Verhaal: ervaar de kracht van verhalen die verbinden t/m 16 december , Appingedam Tentoonstelling Voeg toe als favoriet Voeg toe als favoriet"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "t/m 16 december , Appingedam",
+      "date": "2026-12-16",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit kaart",
+      "rawText": "t/m 16 december , Appingedam"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Stadswandeling o.l.v. een stadsgids",
+      "date": "2026-12-31",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan/2266544167/stadswandeling-appingedam-1",
+      "status": "event uit kaart",
+      "rawText": "Stadswandeling o.l.v. een stadsgids Stadswandeling o.l.v. een stadsgids t/m 31 december , Appingedam Rondleiding Voeg toe als favoriet Voeg toe als favoriet"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "t/m 31 december , Appingedam",
+      "date": "2026-12-31",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit kaart",
+      "rawText": "t/m 31 december , Appingedam"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Stadswandeling Puutje",
+      "date": "2027-10-07",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan/2259451487/stadswandeling-puutje",
+      "status": "event uit kaart",
+      "rawText": "Stadswandeling Puutje Stadswandeling Puutje t/m 7 oktober 2027 , Groningen Wandeltocht Voeg toe als favoriet Voeg toe als favoriet"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "t/m 7 oktober 2027 , Groningen",
+      "date": "2027-10-07",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit kaart",
+      "rawText": "t/m 7 oktober 2027 , Groningen"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Verhalenpad Appie en Flappie op Ewsum",
+      "date": "2026-11-20",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan/2386897567/verhalenpad-appie-en-flappie-op-ewsum",
+      "status": "event uit kaart",
+      "rawText": "Verhalenpad Appie en Flappie op Ewsum Verhalenpad Appie en Flappie op Ewsum t/m 20 november , Middelstum Met kinderen Voeg toe als favoriet Voeg toe als favoriet"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "t/m 20 november , Middelstum",
+      "date": "2026-11-20",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit kaart",
+      "rawText": "t/m 20 november , Middelstum"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "KIEK! buitenexpositie Maike van der Kooij",
+      "date": "2027-03-31",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan/317830194/kiek-buitenexpositie-maike-van-der-kooij",
+      "status": "event uit kaart",
+      "rawText": "KIEK! buitenexpositie Maike van der Kooij KIEK! buitenexpositie Maike van der Kooij t/m 31 maart 2027 , Ezinge Tentoonstelling Voeg toe als favoriet Voeg toe als favoriet"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "t/m 31 maart 2027 , Ezinge",
+      "date": "2027-03-31",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit kaart",
+      "rawText": "t/m 31 maart 2027 , Ezinge"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Duik in het zeehondenmysterie in het WEC",
+      "date": "2026-11-30",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan/2202731516/duik-in-het-zeehondenmysterie-in-het-wec",
+      "status": "event uit kaart",
+      "rawText": "Duik in het zeehondenmysterie in het WEC Duik in het zeehondenmysterie in het WEC t/m 30 november , Lauwersoog Met kinderen Voeg toe als favoriet Voeg toe als favoriet"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "t/m 30 november , Lauwersoog",
+      "date": "2026-11-30",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit kaart",
+      "rawText": "t/m 30 november , Lauwersoog"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Monniken en Langemannen",
+      "date": "2027-01-03",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan/99286370/monniken-en-langemannen",
+      "status": "event uit kaart",
+      "rawText": "Monniken en Langemannen Monniken en Langemannen t/m 3 januari 2027 , Zoutkamp Varia Voeg toe als favoriet Voeg toe als favoriet"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "t/m 3 januari 2027 , Zoutkamp",
+      "date": "2027-01-03",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit kaart",
+      "rawText": "t/m 3 januari 2027 , Zoutkamp"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Stromen van Verandering : de Hunsingosluis",
+      "date": "2026-10-31",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan/1068503466/stromen-van-verandering-de-hunsingosluis",
+      "status": "event uit kaart",
+      "rawText": "Stromen van Verandering : de Hunsingosluis Stromen van Verandering : de Hunsingosluis t/m 31 oktober , Zoutkamp Tentoonstelling Voeg toe als favoriet Voeg toe als favoriet"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "t/m 31 oktober , Zoutkamp",
+      "date": "2026-10-31",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit kaart",
+      "rawText": "t/m 31 oktober , Zoutkamp"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Hooggeëerd bezoek. Koninklijke visites aan Groningen",
+      "date": "2026-12-31",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan/980490798/hooggeeerd-bezoek-koninklijke-visites-aan-groningen",
+      "status": "event uit kaart",
+      "rawText": "Hooggeëerd bezoek. Koninklijke visites aan Groningen Hooggeëerd bezoek. Koninklijke visites aan Groningen t/m 31 december , Uithuizen Tentoonstelling Voeg toe als favoriet Voeg toe als favoriet"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "t/m 31 december , Uithuizen",
+      "date": "2026-12-31",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit kaart",
+      "rawText": "t/m 31 december , Uithuizen"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Schoolplaten van weleer",
+      "date": "2027-01-10",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan/975781605/schoolplaten-van-weleer",
+      "status": "event uit kaart",
+      "rawText": "Schoolplaten van weleer Schoolplaten van weleer t/m 10 januari 2027 , Appingedam Tentoonstelling Voeg toe als favoriet Voeg toe als favoriet"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "t/m 10 januari 2027 , Appingedam",
+      "date": "2027-01-10",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit kaart",
+      "rawText": "t/m 10 januari 2027 , Appingedam"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "De Groninger adel in de 19e eeuw",
+      "date": "2026-11-01",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan/3655565099/de-groninger-adel-in-de-19e-eeuw",
+      "status": "event uit kaart",
+      "rawText": "De Groninger adel in de 19e eeuw De Groninger adel in de 19e eeuw t/m 1 november , Leens Tentoonstelling Voeg toe als favoriet Voeg toe als favoriet"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "t/m 1 november , Leens",
+      "date": "2026-11-01",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit kaart",
+      "rawText": "t/m 1 november , Leens"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Verken Eemsdelta met de E-chopper",
+      "date": "2026-10-31",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan/1670509312/verken-eemsdelta-met-de-e-chopper",
+      "status": "event uit kaart",
+      "rawText": "Verken Eemsdelta met de E-chopper Verken Eemsdelta met de E-chopper t/m 31 oktober , Holwierde Excursie Voeg toe als favoriet Voeg toe als favoriet"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "t/m 31 oktober , Holwierde",
+      "date": "2026-10-31",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit kaart",
+      "rawText": "t/m 31 oktober , Holwierde"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "de kunsthof presenteert een duo expositie van Jochem Hamstra en Dolf Verlinden",
+      "date": "2026-12-13",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan/678316185/de-kunsthof-presenteert-een-duo-expositie-van-jochem-hamstra-en-dolf-verlinden",
+      "status": "event uit kaart",
+      "rawText": "de kunsthof presenteert een duo expositie van Jochem Hamstra en Dolf Verlinden de kunsthof presenteert een duo expositie van Jochem Hamstra en Dolf Verlinden t/m 13 december , Appingedam Varia Voeg toe als favoriet Voeg toe als favoriet"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "t/m 13 december , Appingedam",
+      "date": "2026-12-13",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit kaart",
+      "rawText": "t/m 13 december , Appingedam"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Beleefroute De Graanrepubliek",
+      "date": "2028-08-19",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan/3522024882/beleefroute-de-graanrepubliek",
+      "status": "event uit kaart",
+      "rawText": "Beleefroute De Graanrepubliek Beleefroute De Graanrepubliek t/m 19 augustus 2028 , Bad Nieuweschans Fietstocht Voeg toe als favoriet Voeg toe als favoriet"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "t/m 19 augustus 2028 , Bad Nieuweschans",
+      "date": "2028-08-19",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit kaart",
+      "rawText": "t/m 19 augustus 2028 , Bad Nieuweschans"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Kajakken op het Oldambtmeer & een hapje, drankje, ijsje op ons terras – Strand Zuid, Blauwestad",
+      "date": "2026-10-31",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan/3317548738/kayakken-op-oldambtmeer",
+      "status": "event uit kaart",
+      "rawText": "Kajakken op het Oldambtmeer & een hapje, drankje, ijsje op ons terras – Strand Zuid, Blauwestad Kajakken op het Oldambtmeer & een hapje, drankje, ijsje op ons terras – Strand Zuid, Blauwestad t/m 31 oktober , Blauwestad Watersport Voeg toe als favoriet Voeg toe als favoriet"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "t/m 31 oktober , Blauwestad",
+      "date": "2026-10-31",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit kaart",
+      "rawText": "t/m 31 oktober , Blauwestad"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Wadlopen vanuit Pieterburen",
+      "date": "2027-02-23",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan/3126888772/wadlopen-vanuit-pieterburen-2",
+      "status": "event uit kaart",
+      "rawText": "Wadlopen vanuit Pieterburen Wadlopen vanuit Pieterburen t/m 23 februari 2027 , Pieterburen Wandeltocht Voeg toe als favoriet Voeg toe als favoriet"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "t/m 23 februari 2027 , Pieterburen",
+      "date": "2027-02-23",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit kaart",
+      "rawText": "t/m 23 februari 2027 , Pieterburen"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "100 jaar oude aquarellen van Kornelis Visser",
+      "date": "2026-12-15",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan/2007274343/100-jaar-oude-aquarellen-van-kornelis-visser",
+      "status": "event uit kaart",
+      "rawText": "100 jaar oude aquarellen van Kornelis Visser 100 jaar oude aquarellen van Kornelis Visser t/m 15 december , ROTTUM GN Tentoonstelling Voeg toe als favoriet Voeg toe als favoriet"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "t/m 15 december , ROTTUM GN",
+      "date": "2026-12-15",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit kaart",
+      "rawText": "t/m 15 december , ROTTUM GN"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Suppen in Groningen",
+      "date": "2026-10-31",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan/3403303523/sup-verhuur",
+      "status": "event uit kaart",
+      "rawText": "Suppen in Groningen Suppen in Groningen t/m 31 oktober , Winsum Buitensport Voeg toe als favoriet Voeg toe als favoriet"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "t/m 31 oktober , Winsum",
+      "date": "2026-10-31",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit kaart",
+      "rawText": "t/m 31 oktober , Winsum"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Boeren, arbeiders en ambachten",
+      "date": "2026-11-01",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan/3383343724/boeren-arbeiders-en-ambachten",
+      "status": "event uit kaart",
+      "rawText": "Boeren, arbeiders en ambachten Boeren, arbeiders en ambachten t/m 1 november , Leens Tentoonstelling Voeg toe als favoriet Voeg toe als favoriet"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Atelierreeks tekenen & schilderen",
+      "date": "2026-11-11",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan/81415879/atelierreeks-tekenen-schilderen",
+      "status": "event uit kaart",
+      "rawText": "Atelierreeks tekenen & schilderen Atelierreeks tekenen & schilderen t/m 11 november , Wehe-Den Hoorn Tekenen en schilderen Voeg toe als favoriet Voeg toe als favoriet"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "t/m 11 november , Wehe-Den Hoorn",
+      "date": "2026-11-11",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit kaart",
+      "rawText": "t/m 11 november , Wehe-Den Hoorn"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Expositie CHAPEAU!",
+      "date": "2026-11-01",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan/938286599/expositie-chapeau",
+      "status": "event uit kaart",
+      "rawText": "Expositie CHAPEAU! Expositie CHAPEAU! t/m 1 november , Leens Tentoonstelling Voeg toe als favoriet Voeg toe als favoriet"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Wadlopen vanuit Pieterburen",
+      "date": "2027-01-02",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan/211243499/wadlopen-vanuit-pieterburen",
+      "status": "event uit kaart",
+      "rawText": "Wadlopen vanuit Pieterburen Wadlopen vanuit Pieterburen t/m 2 januari 2027 , Pieterburen Wandeltocht Voeg toe als favoriet Voeg toe als favoriet"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "t/m 2 januari 2027 , Pieterburen",
+      "date": "2027-01-02",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit kaart",
+      "rawText": "t/m 2 januari 2027 , Pieterburen"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Uitagenda",
+      "date": "2026-10-26",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit detailpagina",
+      "rawText": "Uit- en thuistips in Groningen | Visit Groningen Ga naar inhoud Ga naar de homepage Terug Nu & nieuw Uitagenda Nieuwe winkels & horeca in de stad Oktober donkertemaand Het 10-jarig bestaan van Dark Sky Park Lauwersmeer staat in het teken van donker. Het is hoog tijd om de schoonheid van de duisternis te gaan ontdekken. Sunnemeerten Terug Dit is Groningen Top 10 bezienswaardigheden In Groningen ligt het allemaal opval"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Wanneer",
+      "date": "2026-10-26",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit tekstregel",
+      "rawText": "Wanneer | Vandaag | Morgen | Dit weekend | Kies datum | Thema"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Dit weekend",
+      "date": "2026-10-27",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit tekstregel",
+      "rawText": "Vandaag | Morgen | Dit weekend | Kies datum | Thema | Theater"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Dit weekend",
+      "date": "2026-10-27",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit dagblok",
+      "rawText": "Dit weekend | Kies datum | Thema | Theater | Actief"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Kies datum",
+      "date": "2026-10-27",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit dagblok",
+      "rawText": "Kies datum | Thema | Theater | Actief | Tentoonstelling"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Thema",
+      "date": "2026-10-27",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit dagblok",
+      "rawText": "Thema | Theater | Actief | Tentoonstelling | Festival"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Actief",
+      "date": "2026-10-27",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit dagblok",
+      "rawText": "Actief | Tentoonstelling | Festival | Beurs | Culinair"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Tentoonstelling",
+      "date": "2026-10-27",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit dagblok",
+      "rawText": "Tentoonstelling | Festival | Beurs | Culinair | Excursie"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Festival",
+      "date": "2026-10-27",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit dagblok",
+      "rawText": "Festival | Beurs | Culinair | Excursie | Tocht"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Culinair",
+      "date": "2026-10-27",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit dagblok",
+      "rawText": "Culinair | Excursie | Tocht | Sport | Cabaret"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Excursie",
+      "date": "2026-10-27",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit dagblok",
+      "rawText": "Excursie | Tocht | Sport | Cabaret | Markt"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Tocht",
+      "date": "2026-10-27",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit dagblok",
+      "rawText": "Tocht | Sport | Cabaret | Markt | Muziek"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Sport",
+      "date": "2026-10-27",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit dagblok",
+      "rawText": "Sport | Cabaret | Markt | Muziek | Kinderen"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": ", 2 november en nog 3 dagen",
+      "date": "2026-10-26",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit tekstregel",
+      "rawText": "Klik & Tik | 26 oktober, 2 november en nog 3 dagen | , Groningen | Varia | Voeg toe als favoriet | Voeg toe als favoriet"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Nena",
+      "date": "2026-10-27",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit dagblok",
+      "rawText": "Nena | Nena | maandag 26 oktober | , Groningen | Muziek overig"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Nena",
+      "date": "2026-10-26",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit tekstregel",
+      "rawText": "Nena | maandag 26 oktober | , Groningen | Muziek overig | Voeg toe als favoriet | Voeg toe als favoriet"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": ", Groningen",
+      "date": "2026-10-26",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit dagblok",
+      "rawText": ", Groningen | Muziek overig | Voeg toe als favoriet | Voeg toe als favoriet | Expositie Mijn Thuis Mijn Verhaal: ervaar de kracht van verhalen die verbinden"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Muziek overig",
+      "date": "2026-10-26",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit dagblok",
+      "rawText": "Muziek overig | Voeg toe als favoriet | Voeg toe als favoriet | Expositie Mijn Thuis Mijn Verhaal: ervaar de kracht van verhalen die verbinden | Expositie Mijn Thuis Mijn Verhaal: ervaar de kracht van verhalen die verbinden"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Voeg toe als favoriet",
+      "date": "2026-10-26",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit dagblok",
+      "rawText": "Voeg toe als favoriet | Voeg toe als favoriet | Expositie Mijn Thuis Mijn Verhaal: ervaar de kracht van verhalen die verbinden | Expositie Mijn Thuis Mijn Verhaal: ervaar de kracht van verhalen die verbinden | t/m 16 december"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Expositie Mijn Thuis Mijn Verhaal: ervaar de kracht van verhalen die verbinden",
+      "date": "2026-10-26",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit dagblok",
+      "rawText": "Expositie Mijn Thuis Mijn Verhaal: ervaar de kracht van verhalen die verbinden | Expositie Mijn Thuis Mijn Verhaal: ervaar de kracht van verhalen die verbinden | t/m 16 december | , Appingedam | Tentoonstelling"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Expositie Mijn Thuis Mijn Verhaal: ervaar de kracht van verhalen die verbinden",
+      "date": "2026-12-16",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit tekstregel",
+      "rawText": "Expositie Mijn Thuis Mijn Verhaal: ervaar de kracht van verhalen die verbinden | t/m 16 december | , Appingedam | Tentoonstelling | Voeg toe als favoriet | Voeg toe als favoriet"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": ", Appingedam",
+      "date": "2026-12-16",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit dagblok",
+      "rawText": ", Appingedam | Tentoonstelling | Voeg toe als favoriet | Voeg toe als favoriet | Stadswandeling o.l.v. een stadsgids"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Tentoonstelling",
+      "date": "2026-12-16",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit dagblok",
+      "rawText": "Tentoonstelling | Voeg toe als favoriet | Voeg toe als favoriet | Stadswandeling o.l.v. een stadsgids | Stadswandeling o.l.v. een stadsgids"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Stadswandeling o.l.v. een stadsgids",
+      "date": "2026-12-31",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit tekstregel",
+      "rawText": "Stadswandeling o.l.v. een stadsgids | t/m 31 december | , Appingedam | Rondleiding | Voeg toe als favoriet | Voeg toe als favoriet"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Stadswandeling Puutje",
+      "date": "2027-10-07",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit tekstregel",
+      "rawText": "Stadswandeling Puutje | t/m 7 oktober 2027 | , Groningen | Wandeltocht | Voeg toe als favoriet | Voeg toe als favoriet"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Verhalenpad Appie en Flappie op Ewsum",
+      "date": "2026-11-20",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit tekstregel",
+      "rawText": "Verhalenpad Appie en Flappie op Ewsum | t/m 20 november | , Middelstum | Met kinderen | Voeg toe als favoriet | Voeg toe als favoriet"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "KIEK! buitenexpositie Maike van der Kooij",
+      "date": "2026-11-20",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit dagblok",
+      "rawText": "KIEK! buitenexpositie Maike van der Kooij | KIEK! buitenexpositie Maike van der Kooij | t/m 31 maart 2027 | , Ezinge | Tentoonstelling"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "KIEK! buitenexpositie Maike van der Kooij",
+      "date": "2027-03-31",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit tekstregel",
+      "rawText": "KIEK! buitenexpositie Maike van der Kooij | t/m 31 maart 2027 | , Ezinge | Tentoonstelling | Voeg toe als favoriet | Voeg toe als favoriet"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": ", Ezinge",
+      "date": "2027-03-31",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit dagblok",
+      "rawText": ", Ezinge | Tentoonstelling | Voeg toe als favoriet | Voeg toe als favoriet | Duik in het zeehondenmysterie in het WEC"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Tentoonstelling",
+      "date": "2027-03-31",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit dagblok",
+      "rawText": "Tentoonstelling | Voeg toe als favoriet | Voeg toe als favoriet | Duik in het zeehondenmysterie in het WEC | Duik in het zeehondenmysterie in het WEC"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Duik in het zeehondenmysterie in het WEC",
+      "date": "2026-11-30",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit tekstregel",
+      "rawText": "Duik in het zeehondenmysterie in het WEC | t/m 30 november | , Lauwersoog | Met kinderen | Voeg toe als favoriet | Voeg toe als favoriet"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Monniken en Langemannen",
+      "date": "2027-01-03",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit tekstregel",
+      "rawText": "Monniken en Langemannen | t/m 3 januari 2027 | , Zoutkamp | Varia | Voeg toe als favoriet | Voeg toe als favoriet"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Stromen van Verandering : de Hunsingosluis",
+      "date": "2027-01-03",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit dagblok",
+      "rawText": "Stromen van Verandering : de Hunsingosluis | Stromen van Verandering : de Hunsingosluis | t/m 31 oktober | , Zoutkamp | Tentoonstelling"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Stromen van Verandering : de Hunsingosluis",
+      "date": "2026-10-31",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit tekstregel",
+      "rawText": "Stromen van Verandering : de Hunsingosluis | t/m 31 oktober | , Zoutkamp | Tentoonstelling | Voeg toe als favoriet | Voeg toe als favoriet"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": ", Zoutkamp",
+      "date": "2026-10-31",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit dagblok",
+      "rawText": ", Zoutkamp | Tentoonstelling | Voeg toe als favoriet | Voeg toe als favoriet | Hooggeëerd bezoek. Koninklijke visites aan Groningen"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Tentoonstelling",
+      "date": "2026-10-31",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit dagblok",
+      "rawText": "Tentoonstelling | Voeg toe als favoriet | Voeg toe als favoriet | Hooggeëerd bezoek. Koninklijke visites aan Groningen | Hooggeëerd bezoek. Koninklijke visites aan Groningen"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Hooggeëerd bezoek. Koninklijke visites aan Groningen",
+      "date": "2026-10-31",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit dagblok",
+      "rawText": "Hooggeëerd bezoek. Koninklijke visites aan Groningen | Hooggeëerd bezoek. Koninklijke visites aan Groningen | t/m 31 december | , Uithuizen | Tentoonstelling"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Hooggeëerd bezoek. Koninklijke visites aan Groningen",
+      "date": "2026-12-31",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit tekstregel",
+      "rawText": "Hooggeëerd bezoek. Koninklijke visites aan Groningen | t/m 31 december | , Uithuizen | Tentoonstelling | Voeg toe als favoriet | Voeg toe als favoriet"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": ", Uithuizen",
+      "date": "2026-12-31",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit dagblok",
+      "rawText": ", Uithuizen | Tentoonstelling | Voeg toe als favoriet | Voeg toe als favoriet | Schoolplaten van weleer"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Tentoonstelling",
+      "date": "2026-12-31",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit dagblok",
+      "rawText": "Tentoonstelling | Voeg toe als favoriet | Voeg toe als favoriet | Schoolplaten van weleer | Schoolplaten van weleer"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Schoolplaten van weleer",
+      "date": "2026-12-31",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit dagblok",
+      "rawText": "Schoolplaten van weleer | Schoolplaten van weleer | t/m 10 januari 2027 | , Appingedam | Tentoonstelling"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Schoolplaten van weleer",
+      "date": "2027-01-10",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit tekstregel",
+      "rawText": "Schoolplaten van weleer | t/m 10 januari 2027 | , Appingedam | Tentoonstelling | Voeg toe als favoriet | Voeg toe als favoriet"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": ", Appingedam",
+      "date": "2027-01-10",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit dagblok",
+      "rawText": ", Appingedam | Tentoonstelling | Voeg toe als favoriet | Voeg toe als favoriet | De Groninger adel in de 19e eeuw"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Tentoonstelling",
+      "date": "2027-01-10",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit dagblok",
+      "rawText": "Tentoonstelling | Voeg toe als favoriet | Voeg toe als favoriet | De Groninger adel in de 19e eeuw | De Groninger adel in de 19e eeuw"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "De Groninger adel in de 19e eeuw",
+      "date": "2027-01-10",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit dagblok",
+      "rawText": "De Groninger adel in de 19e eeuw | De Groninger adel in de 19e eeuw | t/m 1 november | , Leens | Tentoonstelling"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "De Groninger adel in de 19e eeuw",
+      "date": "2026-11-01",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit tekstregel",
+      "rawText": "De Groninger adel in de 19e eeuw | t/m 1 november | , Leens | Tentoonstelling | Voeg toe als favoriet | Voeg toe als favoriet"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": ", Leens",
+      "date": "2026-11-01",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit dagblok",
+      "rawText": ", Leens | Tentoonstelling | Voeg toe als favoriet | Voeg toe als favoriet | Verken Eemsdelta met de E-chopper"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Tentoonstelling",
+      "date": "2026-11-01",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit dagblok",
+      "rawText": "Tentoonstelling | Voeg toe als favoriet | Voeg toe als favoriet | Verken Eemsdelta met de E-chopper | Verken Eemsdelta met de E-chopper"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Verken Eemsdelta met de E-chopper",
+      "date": "2026-10-31",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit tekstregel",
+      "rawText": "Verken Eemsdelta met de E-chopper | t/m 31 oktober | , Holwierde | Excursie | Voeg toe als favoriet | Voeg toe als favoriet"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": ", Holwierde",
+      "date": "2026-10-31",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit dagblok",
+      "rawText": ", Holwierde | Excursie | Voeg toe als favoriet | Voeg toe als favoriet | de kunsthof presenteert een duo expositie van Jochem Hamstra en Dolf Verlinden"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Excursie",
+      "date": "2026-10-31",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit dagblok",
+      "rawText": "Excursie | Voeg toe als favoriet | Voeg toe als favoriet | de kunsthof presenteert een duo expositie van Jochem Hamstra en Dolf Verlinden | de kunsthof presenteert een duo expositie van Jochem Hamstra en Dolf Verlinden"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Voeg toe als favoriet",
+      "date": "2026-10-31",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit dagblok",
+      "rawText": "Voeg toe als favoriet | Voeg toe als favoriet | de kunsthof presenteert een duo expositie van Jochem Hamstra en Dolf Verlinden | de kunsthof presenteert een duo expositie van Jochem Hamstra en Dolf Verlinden | t/m 13 december"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "de kunsthof presenteert een duo expositie van Jochem Hamstra en Dolf Verlinden",
+      "date": "2026-10-31",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit dagblok",
+      "rawText": "de kunsthof presenteert een duo expositie van Jochem Hamstra en Dolf Verlinden | de kunsthof presenteert een duo expositie van Jochem Hamstra en Dolf Verlinden | t/m 13 december | , Appingedam | Varia"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "de kunsthof presenteert een duo expositie van Jochem Hamstra en Dolf Verlinden",
+      "date": "2026-12-13",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit tekstregel",
+      "rawText": "de kunsthof presenteert een duo expositie van Jochem Hamstra en Dolf Verlinden | t/m 13 december | , Appingedam | Varia | Voeg toe als favoriet | Voeg toe als favoriet"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Beleefroute De Graanrepubliek",
+      "date": "2028-08-19",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit tekstregel",
+      "rawText": "Beleefroute De Graanrepubliek | t/m 19 augustus 2028 | , Bad Nieuweschans | Fietstocht | Voeg toe als favoriet | Voeg toe als favoriet"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Kajakken op het Oldambtmeer & een hapje, drankje, ijsje op ons terras – Strand Zuid, Blauwestad",
+      "date": "2026-10-31",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit tekstregel",
+      "rawText": "Kajakken op het Oldambtmeer & een hapje, drankje, ijsje op ons terras – Strand Zuid, Blauwestad | t/m 31 oktober | , Blauwestad | Watersport | Voeg toe als favoriet | Voeg toe als favoriet"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Wadlopen vanuit Pieterburen",
+      "date": "2027-02-23",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit tekstregel",
+      "rawText": "Wadlopen vanuit Pieterburen | t/m 23 februari 2027 | , Pieterburen | Wandeltocht | Voeg toe als favoriet | Voeg toe als favoriet"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "100 jaar oude aquarellen van Kornelis Visser",
+      "date": "2027-02-23",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit dagblok",
+      "rawText": "100 jaar oude aquarellen van Kornelis Visser | 100 jaar oude aquarellen van Kornelis Visser | t/m 15 december | , ROTTUM GN | Tentoonstelling"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "100 jaar oude aquarellen van Kornelis Visser",
+      "date": "2026-12-15",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit tekstregel",
+      "rawText": "100 jaar oude aquarellen van Kornelis Visser | t/m 15 december | , ROTTUM GN | Tentoonstelling | Voeg toe als favoriet | Voeg toe als favoriet"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": ", ROTTUM GN",
+      "date": "2026-12-15",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit dagblok",
+      "rawText": ", ROTTUM GN | Tentoonstelling | Voeg toe als favoriet | Voeg toe als favoriet | Suppen in Groningen"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Tentoonstelling",
+      "date": "2026-12-15",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit dagblok",
+      "rawText": "Tentoonstelling | Voeg toe als favoriet | Voeg toe als favoriet | Suppen in Groningen | Suppen in Groningen"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Suppen in Groningen",
+      "date": "2026-10-31",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit tekstregel",
+      "rawText": "Suppen in Groningen | t/m 31 oktober | , Winsum | Buitensport | Voeg toe als favoriet | Voeg toe als favoriet"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Boeren, arbeiders en ambachten",
+      "date": "2026-10-31",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit dagblok",
+      "rawText": "Boeren, arbeiders en ambachten | Boeren, arbeiders en ambachten | t/m 1 november | , Leens | Tentoonstelling"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Boeren, arbeiders en ambachten",
+      "date": "2026-11-01",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit tekstregel",
+      "rawText": "Boeren, arbeiders en ambachten | t/m 1 november | , Leens | Tentoonstelling | Voeg toe als favoriet | Voeg toe als favoriet"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Atelierreeks tekenen & schilderen",
+      "date": "2026-11-11",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit tekstregel",
+      "rawText": "Atelierreeks tekenen & schilderen | t/m 11 november | , Wehe-Den Hoorn | Tekenen en schilderen | Voeg toe als favoriet | Voeg toe als favoriet"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": ", Wehe-Den Hoorn",
+      "date": "2026-11-11",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit dagblok",
+      "rawText": ", Wehe-Den Hoorn | Tekenen en schilderen | Voeg toe als favoriet | Voeg toe als favoriet | Expositie CHAPEAU!"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Tekenen en schilderen",
+      "date": "2026-11-11",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit dagblok",
+      "rawText": "Tekenen en schilderen | Voeg toe als favoriet | Voeg toe als favoriet | Expositie CHAPEAU! | Expositie CHAPEAU!"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Voeg toe als favoriet",
+      "date": "2026-11-11",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit dagblok",
+      "rawText": "Voeg toe als favoriet | Voeg toe als favoriet | Expositie CHAPEAU! | Expositie CHAPEAU! | t/m 1 november"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Expositie CHAPEAU!",
+      "date": "2026-11-11",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit dagblok",
+      "rawText": "Expositie CHAPEAU! | Expositie CHAPEAU! | t/m 1 november | , Leens | Tentoonstelling"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Expositie CHAPEAU!",
+      "date": "2026-11-01",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit tekstregel",
+      "rawText": "Expositie CHAPEAU! | t/m 1 november | , Leens | Tentoonstelling | Voeg toe als favoriet | Voeg toe als favoriet"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Wadlopen vanuit Pieterburen",
+      "date": "2027-01-02",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit tekstregel",
+      "rawText": "Wadlopen vanuit Pieterburen | t/m 2 januari 2027 | , Pieterburen | Wandeltocht | Voeg toe als favoriet | Voeg toe als favoriet"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Eten en drinken",
+      "date": "2027-01-02",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit dagblok",
+      "rawText": "Eten en drinken | Winkelen | Bijzonder overnachten | Met kinderen | Theater, muziek en musea"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Winkelen",
+      "date": "2027-01-02",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit dagblok",
+      "rawText": "Winkelen | Bijzonder overnachten | Met kinderen | Theater, muziek en musea | Reisideeën"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Bijzonder overnachten",
+      "date": "2027-01-02",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit dagblok",
+      "rawText": "Bijzonder overnachten | Met kinderen | Theater, muziek en musea | Reisideeën | Een week in Stad en Ommeland"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Met kinderen",
+      "date": "2027-01-02",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit dagblok",
+      "rawText": "Met kinderen | Theater, muziek en musea | Reisideeën | Een week in Stad en Ommeland | 24 uur in Groningen stad"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Theater, muziek en musea",
+      "date": "2027-01-02",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit dagblok",
+      "rawText": "Theater, muziek en musea | Reisideeën | Een week in Stad en Ommeland | 24 uur in Groningen stad | Dagtripjes zonder auto"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Een week in Stad en Ommeland",
+      "date": "2027-01-02",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit dagblok",
+      "rawText": "Een week in Stad en Ommeland | 24 uur in Groningen stad | Dagtripjes zonder auto | Lunchen in de stad | Naar het museum"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "24 uur in Groningen stad",
+      "date": "2027-01-02",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit dagblok",
+      "rawText": "24 uur in Groningen stad | Dagtripjes zonder auto | Lunchen in de stad | Naar het museum | TOERISTISCHE INFORMATIE"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Dagtripjes zonder auto",
+      "date": "2027-01-02",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit dagblok",
+      "rawText": "Dagtripjes zonder auto | Lunchen in de stad | Naar het museum | TOERISTISCHE INFORMATIE | Groningen Store"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Lunchen in de stad",
+      "date": "2027-01-02",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit dagblok",
+      "rawText": "Lunchen in de stad | Naar het museum | TOERISTISCHE INFORMATIE | Groningen Store | Nieuwe Markt 1"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Naar het museum",
+      "date": "2027-01-02",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit dagblok",
+      "rawText": "Naar het museum | TOERISTISCHE INFORMATIE | Groningen Store | Nieuwe Markt 1 | (Forum Groningen)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "TOERISTISCHE INFORMATIE",
+      "date": "2027-01-02",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit dagblok",
+      "rawText": "TOERISTISCHE INFORMATIE | Groningen Store | Nieuwe Markt 1 | (Forum Groningen) | 9712 KN Groningen"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Groningen Store",
+      "date": "2027-01-02",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit dagblok",
+      "rawText": "Groningen Store | Nieuwe Markt 1 | (Forum Groningen) | 9712 KN Groningen | T. 050 3139741"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Nieuwe Markt 1",
+      "date": "2027-01-02",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit dagblok",
+      "rawText": "Nieuwe Markt 1 | (Forum Groningen) | 9712 KN Groningen | T. 050 3139741 | E."
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Colofon",
+      "date": "2027-01-02",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit dagblok",
+      "rawText": "Colofon | Toegankelijkheidsverklaring | Blogs | Evenement aanmelden | Voor ondernemers"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Toegankelijkheidsverklaring",
+      "date": "2027-01-02",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit dagblok",
+      "rawText": "Toegankelijkheidsverklaring | Blogs | Evenement aanmelden | Voor ondernemers | -"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Blogs",
+      "date": "2027-01-02",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit dagblok",
+      "rawText": "Blogs | Evenement aanmelden | Voor ondernemers | - | Cookie voorkeuren"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Evenement aanmelden",
+      "date": "2027-01-02",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "event uit dagblok",
+      "rawText": "Evenement aanmelden | Voor ondernemers | - | Cookie voorkeuren | Sluiten"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Pagina geteld",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "analyse",
+      "rawText": "jsonld:0, links:0, datumblokken:22, kaarten:49, regels:105, detail:1"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Pagina geanalyseerd",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "ok",
+      "rawText": "130 events/aanbiedingen op deze pagina"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Eurosonic Noorderslag",
+      "date": "2026-10-27",
+      "url": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen/eurosonic-noorderslag",
+      "status": "event uit datumblok",
+      "rawText": "Eurosonic Noorderslag | Visit Groningen Ga naar inhoud Ga naar de homepage Terug Nu & nieuw Uitagenda Nieuwe winkels & horeca in de stad Oktober donkertemaand Het 10-jarig bestaan van Dark Sky Park Lauwersmeer staat in het teken van donker. Het is hoog tijd om de schoonheid van de duisternis te gaan ontdekken. Sunnemeerten Terug Dit is Groningen Top 10 bezienswaardigheden In Groningen ligt het allemaal opvallend dich"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Eurosonic Noorderslag",
+      "date": "2026-10-27",
+      "url": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen/eurosonic-noorderslag",
+      "status": "event uit detailpagina",
+      "rawText": "Eurosonic Noorderslag | Visit Groningen Ga naar inhoud Ga naar de homepage Terug Nu & nieuw Uitagenda Nieuwe winkels & horeca in de stad Oktober donkertemaand Het 10-jarig bestaan van Dark Sky Park Lauwersmeer staat in het teken van donker. Het is hoog tijd om de schoonheid van de duisternis te gaan ontdekken. Sunnemeerten Terug Dit is Groningen Top 10 bezienswaardigheden In Groningen ligt het allemaal opvallend dich"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Al jaren en jaren opent dit muziekfestival",
+      "date": "2026-10-27",
+      "url": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen/eurosonic-noorderslag",
+      "status": "event uit tekstregel",
+      "rawText": "Voor jou én voor de profs | Al jaren en jaren opent dit muziekfestival in januari het popseizoen. Internationale bezoekers en agentschappen komen naar Groningen om te netwerken en talent te spotten. Hier zie je de bands die later in het jaar de zomerfestivals vullen. Hier hoor je muziek die straks op elke radiozender te horen zal zijn. Hier ben je bij kleinschalige concerten van de wereldsterren van morgen. Eurosonic"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Pagina geteld",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen/eurosonic-noorderslag",
+      "status": "analyse",
+      "rawText": "jsonld:0, links:0, datumblokken:1, kaarten:0, regels:1, detail:1"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen/eurosonic-noorderslag",
+      "status": "ok",
+      "rawText": "2 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "). Een weekend waarin mensen de donderdag",
+      "date": "2027-05-06",
+      "url": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen/grasnapolsky",
+      "status": "event uit datumblok",
+      "rawText": "6 mei). Een weekend waarin mensen de donderdag al vrij hebben, waardoor je op zondag rustig naar huis kunt zonder een extra dag vrij te hoeven nemen. Een moment waarop het festival eindelijk naar buiten kan. Ook financieel wordt het festival toegankelijker: de ticketprijzen zijn verlaagd, met een extra voordelig tarief voor jongeren tot en met 25 jaar. De nieuwe locatie Jarenlang vertelde Grasnapolsky verhalen op ple"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "(Hemelvaartweekend) Locatie: De voormalige suikerfabriek, Groningen Website:",
+      "date": "2026-05-06",
+      "url": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen/grasnapolsky",
+      "status": "event uit datumblok",
+      "rawText": "6 mei 2026 (Hemelvaartweekend) Locatie: De voormalige suikerfabriek, Groningen Website: www.grasnapolsky.nl Tickets: De Blind Passe-partouts zijn inmiddels uitverkocht. De verkoop van reguliere passe-partouts, dagkaarten en groepstickets is inmiddels gestart. Meer informatie Podcast Groninger Grond Onderweg naar Grasnapolsky? En meer weten over waar je naartoe gaat? Luister naar de podcastserie. Luister Ontdek ook Ev"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Grasnapolsky Festival 2026",
+      "date": "2027-05-16",
+      "url": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen/grasnapolsky",
+      "status": "event uit detailpagina",
+      "rawText": "Grasnapolsky Festival 2026 | Visit Groningen Ga naar inhoud Ga naar de homepage Terug Nu & nieuw Uitagenda Nieuwe winkels & horeca in de stad Oktober donkertemaand Het 10-jarig bestaan van Dark Sky Park Lauwersmeer staat in het teken van donker. Het is hoog tijd om de schoonheid van de duisternis te gaan ontdekken. Sunnemeerten Terug Dit is Groningen Top 10 bezienswaardigheden In Groningen ligt het allemaal opvallend"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Door naar Groningen stad te gaan wordt",
+      "date": "2027-05-16",
+      "url": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen/grasnapolsky",
+      "status": "event uit tekstregel",
+      "rawText": "Toegankelijker dan ooit | Door naar Groningen stad te gaan wordt het festival letterlijk toegankelijker. De locatie ligt op acht minuten fietsen van Groningen Centraal station. Geen pendelbussen meer, geen extra reistijd, geen extra kosten. Voor Groningers is er de mogelijkheid om thuis te slapen. Het festival vindt plaats in het Hemelvaartweekend (14, 15 & 16 mei). Een weekend waarin mensen de donderdag al vrij hebb"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Data: donderdag 14 t/m zaterdag 16 mei 2026 (Hemelvaartweekend)",
+      "date": "2026-05-16",
+      "url": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen/grasnapolsky",
+      "status": "event uit tekstregel",
+      "rawText": "Praktische info | Data: donderdag 14 t/m zaterdag 16 mei 2026 (Hemelvaartweekend) | Locatie: De voormalige suikerfabriek, Groningen | Website: | www.grasnapolsky.nl | Tickets: De Blind Passe-partouts zijn inmiddels uitverkocht. De verkoop van reguliere passe-partouts, dagkaarten en groepstickets is inmiddels gestart."
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Pagina geteld",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen/grasnapolsky",
+      "status": "analyse",
+      "rawText": "jsonld:0, links:0, datumblokken:2, kaarten:0, regels:2, detail:1"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen/grasnapolsky",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Detailpagina mislukt",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen/hongerige-wolf",
+      "status": "fout",
+      "rawText": "HTTPSConnectionPool(host='www.visitgroningen.nl', port=443): Read timed out. (read timeout=0.1560615599999977)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "status": "klaar",
+      "rawText": "site 2/20: 12 unieke events in 4.22 sec"
     }
   ],
   "status": "running",
   "siteStartedAt": "2026-10-26T09:45:02+00:00",
-  "siteElapsedSeconds": 0,
-  "sitePageCount": 0,
-  "lastSiteEventCount": 0,
-  "stage": "Websitepagina ophalen",
-  "lastUpdatedAt": "2026-10-26T09:45:02+00:00",
+  "siteElapsedSeconds": 5,
+  "sitePageCount": 2,
+  "lastSiteEventCount": 12,
+  "stage": "Website klaar; volgende website voorbereiden",
+  "lastUpdatedAt": "2026-10-26T09:45:05+00:00",
   "lastSiteNewEventCount": 12,
-  "lastCompletedSite": "https://groningen.uitloper.nu/",
-  "lastCompletedAt": "2026-10-26T09:45:00+00:00"
+  "lastCompletedSite": "https://www.visitgroningen.nl/nl/doen/evenementen",
+  "lastCompletedAt": "2026-10-26T09:45:07+00:00"
 }
