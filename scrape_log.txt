@@ -1,12 +1,3 @@
-SerpAPI	https://forum.nl/nl/agenda	zoeken	Zoekopdracht 1/2			site:forum.nl/nl/agenda nl agenda agenda programma evenement concert Groningen 2026-10-26 9999-12-31
-SerpAPI	https://forum.nl/nl/agenda	fout	SerpAPI timeout/fout			The operation was aborted
-SerpAPI	https://forum.nl/nl/agenda	zoeken	Zoekopdracht 2/2			site:forum.nl "Groningen" agenda programma evenement concert theater film 2026-10-26 9999-12-31
-SerpAPI	https://www.spotgroningen.nl/programma/	zoeken	Zoekopdracht 1/3			site:www.spotgroningen.nl/programma "26 okt" agenda programma SPOT Groningen
-SerpAPI	https://www.spotgroningen.nl/programma/	bruikbare link	The Soulful Sessions | 12 september 2025		https://www.spotgroningen.nl/programma/the-soulful-sessions-4/	The Soulful Sessions is terug! Het event voor de liefhebbers van soul music met DJ's en live optredens. Met muziek van oude soul legendes als James Brown, ...
-SerpAPI	https://www.spotgroningen.nl/programma/	genegeerd	#BINNENKORT bij SPOT! Welke concerten ga jij bezoeken?		https://www.instagram.com/reel/DVqIiZzFIfQ/	THE AGE OF GREED TOUR 26/27 22.9.26 - Raadhuis, Hilversum 16.10.26 - Festival Zeeuws Vlaanderen, Terneuzen 17.10.26 - Festival Common Ground, ...
-SerpAPI	https://www.spotgroningen.nl/programma/	genegeerd	Midnight Til Morning at SPOT De Oosterpoort (21 Oct 2026)		https://labs.songkick.com/concerts/42933881-midnight-til-morning-at-spot-de-oosterpoort	Tour name: Midnight Til Morning World Tour. Doors open: 20:00. Related upcoming events. The Zac Schulze Gang Concert Tickets - 2026 Tour ...
-SerpAPI	https://www.spotgroningen.nl/programma/	genegeerd	Kenyatta Hill e Cedric Myton em SPOT De Oosterpoort (26 ...		https://www.songkick.com/pt/concerts/43361134-kenyatta-hill-at-spot-de-oosterpoort	Compre ingressos, encontre informações sobre evento, local, show de abertura e avaliações para o próximo show de Kenyatta Hill e Cedric Myton em SPOT De ...
-SerpAPI	https://www.spotgroningen.nl/programma/	genegeerd	Mandé Sila in SPOT / De Oosterpoort op zondag 26 ...		https://www.podiuminfo.nl/concert/427642/Mande-Sila/SPOT-De-Oosterpoort/	ZO. 26 OKT. MANDÉ SILA Kleine zaal, 20:30 uur SPOT / De Oosterpoort, Groningen. 2025. Hoofdprogramma Mandé Sila. Concert heeft al plaatsgevonden. Let op! Dit ...
 SerpAPI	https://www.spotgroningen.nl/programma/	genegeerd	Orgel Vreten - SPOT De Oosterpoort, Groningen		https://open.spotify.com/concert/5Uqo1PllklOo690PhEeilI	Find tickets for Orgel Vreten at SPOT De Oosterpoort in Groningen on 10/21/2026 at 8:30 PM.
 SerpAPI	https://www.spotgroningen.nl/programma/	genegeerd	Bill Callahan Tickets Groningen (SPOT De Oosterpoort) on ...		https://open.spotify.com/concert/4rMUfjlY3YQkxUkCyGW4zm	To see more concerts by artists you love, browse all live events. Oct. 11. Bill Callahan. Sun, Oct 11. 8:00 PM. SPOT De Oosterpoort, Groningen.
 SerpAPI	https://www.spotgroningen.nl/programma/	genegeerd	Culture (ft Kenyatta Hill) & Cedric Myton Biljetter		https://me-ticket.com/sv/event/view/culture-ft-kenyatta-hill-cedric-myton	26 okt. 2026 20:30 (GMT +1). SPOT Theater De Oosterpoort Netherlands Groningen. 136 USD. Få biljetter. Banner. Du kanske också gillar. 21 October, 15:30, Wed ...
@@ -1147,20 +1138,6 @@ Website	https://www.spotgroningen.nl/programma/	klaar	Klaar		https://www.spotgro
 Website	https://simplon.nl/	start	Start		https://simplon.nl/	site 5/15: max 40 events, max 10 seconden
 Parser	https://simplon.nl/	strategie	Scrapertype vastgesteld		https://simplon.nl/	compacte-agenda-kaarten
 Website	https://simplon.nl/	ok	Pagina gelezen		https://simplon.nl/programma/	96145 tekens HTML
-Website	https://simplon.nl/	venue-agenda kaart	Aili & Orson	2027-02-28	https://simplon.nl/events/aili-orson/	zo 28.2 Aili & Orson Leftfield electronica mixed with Japanese 80s synthpop concert TICKETS
-Website	https://simplon.nl/	venue-agenda kaart	Kans	2027-03-05	https://simplon.nl/events/kans/	vr 5.3 Kans Warme, emotionele r&b en hiphop concert TICKETS
-Website	https://simplon.nl/	venue-agenda kaart	TAPE TOY	2027-03-06	https://simplon.nl/events/tape-toy-2027/	za 6.3 TAPE TOY Hyperactive grungepop and punky shoegaze concert TICKETS
-Website	https://simplon.nl/	venue-agenda kaart	Dominic Donner	2027-03-12	https://simplon.nl/events/dominic-donner/	vr 12.3 Dominic Donner Dark pop and melancholic electronica concert TICKETS
-Website	https://simplon.nl/	venue-agenda kaart	Politie Warnsveld	2027-03-19	https://simplon.nl/events/politie-warnsveld-2027/	vr 19.3 Politie Warnsveld Compromisloze skapunk concert UITVERKOCHT
-Website	https://simplon.nl/	venue-agenda kaart	McScallyfest	2027-03-20	https://simplon.nl/events/mcscallyfest-2027/	za 20.3 McScallyfest Minifestival en EP-release vol feestelijke folkpunk concert TICKETS
-Website	https://simplon.nl/	venue-agenda kaart	FIEP	2027-04-02	https://simplon.nl/events/fiep/	vr 2.4 FIEP Infectious, energetic indierock concert TICKETS
-Website	https://simplon.nl/	venue-agenda kaart	ÃO Mesmerising mix of Portuguese artpop and alternative Latin	2027-04-10	https://simplon.nl/events/ao/	za 10.4 ÃO Mesmerising mix of Portuguese artpop and alternative Latin concert TICKETS
-Website	https://simplon.nl/	venue-agenda kaart	Sven Cilliers	2027-04-10	https://simplon.nl/events/sven-cilliers-2027/	za 10.4 Sven Cilliers Intimate singer-songwriter pop concert TICKETS
-Website	https://simplon.nl/	venue-agenda kaart	Comedytunes Comedynight	2027-04-14	https://simplon.nl/events/comedy-tunes-14-4/	wo 14.4 Comedytunes Comedynight Ronald Smink // Joran Welling // Hermes Ahmadi // Jasper Nieuwenhuis concert TICKETS
-Website	https://simplon.nl/	venue-agenda kaart	Blackbird	2027-04-24	https://simplon.nl/events/blackbird-2027/	za 24.4 Blackbird Melodious vintage pop concert TICKETS
-Website	https://simplon.nl/	venue-agenda kaart	Josua Peter	2027-04-30	https://simplon.nl/events/josua-peter-2027/	vr 30.4 Josua Peter Dynamic indie folk and pop concert TICKETS
-Website	https://simplon.nl/	venue-agenda kaart	Nienke Leone	2027-05-14	https://simplon.nl/events/nienke-leone/	vr 14.5 Nienke Leone Eerlijke en catchy popliedjes concert TICKETS
-Website	https://simplon.nl/	venue-agenda kaart	Mood Bored	2027-05-28	https://simplon.nl/events/mood-bored-2027/	vr 28.5 Mood Bored Catchy and raw shoegaze mixed with catchy poppy hooks concert TICKETS
 Parser	https://simplon.nl/	gespecialiseerde parser	Agenda geanalyseerd		https://simplon.nl/programma/	55 agenda-items gevonden
 Website	https://simplon.nl/	ok	Pagina geanalyseerd		https://simplon.nl/programma/	52 events/aanbiedingen op deze pagina
 Website	https://simplon.nl/	klaar	Klaar		https://simplon.nl/	site 5/15: 40 unieke events in 1.6 sec
@@ -1198,3 +1175,26 @@ Website	https://www.vera-groningen.nl/	VERA agenda-item	Black Marble	2027-04-10	
 Parser	https://www.vera-groningen.nl/	gespecialiseerde parser	VERA-agendapagina		https://www.vera-groningen.nl/?lang=nl	10 VERA-agenda-items uit eventlinks
 Website	https://www.vera-groningen.nl/	ok	Pagina geanalyseerd		https://www.vera-groningen.nl/?lang=nl	10 events/aanbiedingen op deze pagina
 Website	https://www.vera-groningen.nl/	klaar	Klaar		https://www.vera-groningen.nl/	site 6/15: 5 unieke events in 2.44 sec
+Website	https://www.martiniplaza.nl/nl/agenda	start	Start		https://www.martiniplaza.nl/nl/agenda	site 7/15: max 40 events, max 10 seconden
+Parser	https://www.martiniplaza.nl/nl/agenda	strategie	Scrapertype vastgesteld		https://www.martiniplaza.nl/nl/agenda	agenda-kaarten
+Website	https://www.martiniplaza.nl/nl/agenda	ok	Pagina gelezen		https://www.martiniplaza.nl/nl/agenda	146630 tekens HTML
+Parser	https://www.martiniplaza.nl/nl/agenda	gespecialiseerde parser	Agenda geanalyseerd		https://www.martiniplaza.nl/nl/agenda	12 agenda-items gevonden
+Website	https://www.martiniplaza.nl/nl/agenda	ok	Pagina geanalyseerd		https://www.martiniplaza.nl/nl/agenda	12 events/aanbiedingen op deze pagina
+Website	https://www.martiniplaza.nl/nl/agenda	ok	Detailpagina geanalyseerd		https://www.martiniplaza.nl/nl/agenda/cats-het-meesterwerk	0 extra events
+Website	https://www.martiniplaza.nl/nl/agenda	ok	Detailpagina geanalyseerd		https://www.martiniplaza.nl/nl/agenda/donar-groningen-cso-voluntari-2026	0 extra events
+Website	https://www.martiniplaza.nl/nl/agenda	ok	Detailpagina geanalyseerd		https://www.martiniplaza.nl/nl/agenda/francis-van-broekhuizen	0 extra events
+Website	https://www.martiniplaza.nl/nl/agenda	ok	Detailpagina geanalyseerd		https://www.martiniplaza.nl/nl/agenda/jethro-tull	0 extra events
+Website	https://www.martiniplaza.nl/nl/agenda	ok	Detailpagina geanalyseerd		https://www.martiniplaza.nl/nl/agenda/juf-braaksel	0 extra events
+Website	https://www.martiniplaza.nl/nl/agenda	ok	Detailpagina geanalyseerd		https://www.martiniplaza.nl/nl/agenda/promotiedagen-2026	0 extra events
+Website	https://www.martiniplaza.nl/nl/agenda	ok	Detailpagina geanalyseerd		https://www.martiniplaza.nl/nl/agenda/rob-lamberti	0 extra events
+Website	https://www.martiniplaza.nl/nl/agenda	ok	Detailpagina geanalyseerd		https://www.martiniplaza.nl/nl/agenda/tafkal-serieus-grappig-uitverkocht	0 extra events
+Website	https://www.martiniplaza.nl/nl/agenda	ok	Detailpagina geanalyseerd		https://www.martiniplaza.nl/nl/agenda/taptoe-groningen-2026	0 extra events
+Website	https://www.martiniplaza.nl/nl/agenda	ok	Detailpagina geanalyseerd		https://www.martiniplaza.nl/nl/agenda/the-bodyguard-de-musical-2027	0 extra events
+Website	https://www.martiniplaza.nl/nl/agenda	ok	Detailpagina geanalyseerd		https://www.martiniplaza.nl/nl/agenda/the-dire-straits-experience	0 extra events
+Website	https://www.martiniplaza.nl/nl/agenda	ok	Detailpagina geanalyseerd		https://www.martiniplaza.nl/nl/agenda/titanique	0 extra events
+RSS/Atom	https://www.martiniplaza.nl/nl/agenda	fout	Feed mislukt		https://www.martiniplaza.nl/feed	HTTP 404
+RSS/Atom	https://www.martiniplaza.nl/nl/agenda	fout	Feed mislukt		https://www.martiniplaza.nl/rss	HTTP 404
+RSS/Atom	https://www.martiniplaza.nl/nl/agenda	fout	Feed mislukt		https://www.martiniplaza.nl/rss.xml	HTTP 404
+RSS/Atom	https://www.martiniplaza.nl/nl/agenda	fout	Feed mislukt		https://www.martiniplaza.nl/feed.xml	HTTP 404
+RSS/Atom	https://www.martiniplaza.nl/nl/agenda	fout	Feed mislukt		https://www.martiniplaza.nl/events/feed/	HTTP 404
+Website	https://www.martiniplaza.nl/nl/agenda	klaar	Klaar		https://www.martiniplaza.nl/nl/agenda	site 7/15: 2 unieke events in 4.87 sec

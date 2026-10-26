@@ -1,7 +1,7 @@
 {
   "runId": "2026-10-26T20:38:40.265695+00:00-419ba73d",
   "startedAt": "2026-10-26T20:38:40+00:00",
-  "completedCount": 6,
+  "completedCount": 7,
   "totalSites": 15,
   "currentSite": "https://www.martiniplaza.nl/nl/agenda",
   "currentSiteIndex": 7,
@@ -11,7 +11,8 @@
     "https://forum.nl/nl/agenda",
     "https://www.spotgroningen.nl/programma/",
     "https://simplon.nl/",
-    "https://www.vera-groningen.nl/"
+    "https://www.vera-groningen.nl/",
+    "https://www.martiniplaza.nl/nl/agenda"
   ],
   "events": [
     {
@@ -2016,6 +2017,21 @@
     {
       "date": "2026-11-07",
       "time": "",
+      "title": "TAFKAL: SERIEUS GRAPPIG ( )",
+      "type": "Theater",
+      "location": "Martiniplaza Groningen",
+      "locationLink": "",
+      "website": "https://www.martiniplaza.nl/nl/agenda/tafkal-serieus-grappig-uitverkocht",
+      "source": "martiniplaza.nl",
+      "discoverySource": "Website",
+      "description": "TAFKAL: SERIEUS GRAPPIG (UITVERKOCHT)",
+      "cost": "",
+      "image": "",
+      "isNew": true
+    },
+    {
+      "date": "2026-11-07",
+      "time": "",
       "title": "TakeRoot",
       "type": "Theater",
       "location": "American Aquarium en The Del Fuegos",
@@ -2026,6 +2042,21 @@
       "description": "28e editie van TakeRoot met o.a. Willow Avalon, American Aquarium en The Del Fuegos De Zoektocht Naar Geluk Op zoek naar de grote en kleine vragen van het leven Toneelschuurproducties/Koen Verheijden Rauw-komische voorstelling naar Frans Kellendonks spraakmakende roman",
       "cost": "",
       "image": "https://www.spotgroningen.nl/wp-content/uploads/2019/05/1024-x-512-TakeRoot-2025-B-300x150.jpg",
+      "isNew": true
+    },
+    {
+      "date": "2026-11-07",
+      "time": "",
+      "title": "Taptoe Groningen 2026",
+      "type": "Concert",
+      "location": "Martiniplaza Groningen",
+      "locationLink": "",
+      "website": "https://www.martiniplaza.nl/nl/agenda/taptoe-groningen-2026",
+      "source": "martiniplaza.nl",
+      "discoverySource": "Website",
+      "description": "Meer informatie staat op martiniplaza.nl.",
+      "cost": "",
+      "image": "",
       "isNew": true
     },
     {
@@ -2986,90 +3017,16 @@
       "newCount": 5,
       "durationSeconds": 2.44,
       "timedOut": false
+    },
+    {
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "count": 2,
+      "newCount": 2,
+      "durationSeconds": 4.87,
+      "timedOut": false
     }
   ],
   "rawLog": [
-    {
-      "source": "SerpAPI",
-      "site": "https://forum.nl/nl/agenda",
-      "title": "Zoekopdracht 1/2",
-      "date": "",
-      "url": "",
-      "status": "zoeken",
-      "rawText": "site:forum.nl/nl/agenda nl agenda agenda programma evenement concert Groningen 2026-10-26 9999-12-31"
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://forum.nl/nl/agenda",
-      "title": "SerpAPI timeout/fout",
-      "date": "",
-      "url": "",
-      "status": "fout",
-      "rawText": "The operation was aborted"
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://forum.nl/nl/agenda",
-      "title": "Zoekopdracht 2/2",
-      "date": "",
-      "url": "",
-      "status": "zoeken",
-      "rawText": "site:forum.nl \"Groningen\" agenda programma evenement concert theater film 2026-10-26 9999-12-31"
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Zoekopdracht 1/3",
-      "date": "",
-      "url": "",
-      "status": "zoeken",
-      "rawText": "site:www.spotgroningen.nl/programma \"26 okt\" agenda programma SPOT Groningen"
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "The Soulful Sessions | 12 september 2025",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/the-soulful-sessions-4/",
-      "status": "bruikbare link",
-      "rawText": "The Soulful Sessions is terug! Het event voor de liefhebbers van soul music met DJ's en live optredens. Met muziek van oude soul legendes als James Brown, ..."
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "#BINNENKORT bij SPOT! Welke concerten ga jij bezoeken?",
-      "date": "",
-      "url": "https://www.instagram.com/reel/DVqIiZzFIfQ/",
-      "status": "genegeerd",
-      "rawText": "THE AGE OF GREED TOUR 26/27 22.9.26 - Raadhuis, Hilversum 16.10.26 - Festival Zeeuws Vlaanderen, Terneuzen 17.10.26 - Festival Common Ground, ..."
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Midnight Til Morning at SPOT De Oosterpoort (21 Oct 2026)",
-      "date": "",
-      "url": "https://labs.songkick.com/concerts/42933881-midnight-til-morning-at-spot-de-oosterpoort",
-      "status": "genegeerd",
-      "rawText": "Tour name: Midnight Til Morning World Tour. Doors open: 20:00. Related upcoming events. The Zac Schulze Gang Concert Tickets - 2026 Tour ..."
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Kenyatta Hill e Cedric Myton em SPOT De Oosterpoort (26 ...",
-      "date": "",
-      "url": "https://www.songkick.com/pt/concerts/43361134-kenyatta-hill-at-spot-de-oosterpoort",
-      "status": "genegeerd",
-      "rawText": "Compre ingressos, encontre informações sobre evento, local, show de abertura e avaliações para o próximo show de Kenyatta Hill e Cedric Myton em SPOT De ..."
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Mandé Sila in SPOT / De Oosterpoort op zondag 26 ...",
-      "date": "",
-      "url": "https://www.podiuminfo.nl/concert/427642/Mande-Sila/SPOT-De-Oosterpoort/",
-      "status": "genegeerd",
-      "rawText": "ZO. 26 OKT. MANDÉ SILA Kleine zaal, 20:30 uur SPOT / De Oosterpoort, Groningen. 2025. Hoofdprogramma Mandé Sila. Concert heeft al plaatsgevonden. Let op! Dit ..."
-    },
     {
       "source": "SerpAPI",
       "site": "https://www.spotgroningen.nl/programma/",
@@ -13331,132 +13288,6 @@
       "rawText": "96145 tekens HTML"
     },
     {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "Aili & Orson",
-      "date": "2027-02-28",
-      "url": "https://simplon.nl/events/aili-orson/",
-      "status": "venue-agenda kaart",
-      "rawText": "zo 28.2 Aili & Orson Leftfield electronica mixed with Japanese 80s synthpop concert TICKETS"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "Kans",
-      "date": "2027-03-05",
-      "url": "https://simplon.nl/events/kans/",
-      "status": "venue-agenda kaart",
-      "rawText": "vr 5.3 Kans Warme, emotionele r&b en hiphop concert TICKETS"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "TAPE TOY",
-      "date": "2027-03-06",
-      "url": "https://simplon.nl/events/tape-toy-2027/",
-      "status": "venue-agenda kaart",
-      "rawText": "za 6.3 TAPE TOY Hyperactive grungepop and punky shoegaze concert TICKETS"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "Dominic Donner",
-      "date": "2027-03-12",
-      "url": "https://simplon.nl/events/dominic-donner/",
-      "status": "venue-agenda kaart",
-      "rawText": "vr 12.3 Dominic Donner Dark pop and melancholic electronica concert TICKETS"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "Politie Warnsveld",
-      "date": "2027-03-19",
-      "url": "https://simplon.nl/events/politie-warnsveld-2027/",
-      "status": "venue-agenda kaart",
-      "rawText": "vr 19.3 Politie Warnsveld Compromisloze skapunk concert UITVERKOCHT"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "McScallyfest",
-      "date": "2027-03-20",
-      "url": "https://simplon.nl/events/mcscallyfest-2027/",
-      "status": "venue-agenda kaart",
-      "rawText": "za 20.3 McScallyfest Minifestival en EP-release vol feestelijke folkpunk concert TICKETS"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "FIEP",
-      "date": "2027-04-02",
-      "url": "https://simplon.nl/events/fiep/",
-      "status": "venue-agenda kaart",
-      "rawText": "vr 2.4 FIEP Infectious, energetic indierock concert TICKETS"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "ÃO Mesmerising mix of Portuguese artpop and alternative Latin",
-      "date": "2027-04-10",
-      "url": "https://simplon.nl/events/ao/",
-      "status": "venue-agenda kaart",
-      "rawText": "za 10.4 ÃO Mesmerising mix of Portuguese artpop and alternative Latin concert TICKETS"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "Sven Cilliers",
-      "date": "2027-04-10",
-      "url": "https://simplon.nl/events/sven-cilliers-2027/",
-      "status": "venue-agenda kaart",
-      "rawText": "za 10.4 Sven Cilliers Intimate singer-songwriter pop concert TICKETS"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "Comedytunes Comedynight",
-      "date": "2027-04-14",
-      "url": "https://simplon.nl/events/comedy-tunes-14-4/",
-      "status": "venue-agenda kaart",
-      "rawText": "wo 14.4 Comedytunes Comedynight Ronald Smink // Joran Welling // Hermes Ahmadi // Jasper Nieuwenhuis concert TICKETS"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "Blackbird",
-      "date": "2027-04-24",
-      "url": "https://simplon.nl/events/blackbird-2027/",
-      "status": "venue-agenda kaart",
-      "rawText": "za 24.4 Blackbird Melodious vintage pop concert TICKETS"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "Josua Peter",
-      "date": "2027-04-30",
-      "url": "https://simplon.nl/events/josua-peter-2027/",
-      "status": "venue-agenda kaart",
-      "rawText": "vr 30.4 Josua Peter Dynamic indie folk and pop concert TICKETS"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "Nienke Leone",
-      "date": "2027-05-14",
-      "url": "https://simplon.nl/events/nienke-leone/",
-      "status": "venue-agenda kaart",
-      "rawText": "vr 14.5 Nienke Leone Eerlijke en catchy popliedjes concert TICKETS"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "Mood Bored",
-      "date": "2027-05-28",
-      "url": "https://simplon.nl/events/mood-bored-2027/",
-      "status": "venue-agenda kaart",
-      "rawText": "vr 28.5 Mood Bored Catchy and raw shoegaze mixed with catchy poppy hooks concert TICKETS"
-    },
-    {
       "source": "Parser",
       "site": "https://simplon.nl/",
       "title": "Agenda geanalyseerd",
@@ -13788,16 +13619,223 @@
       "url": "https://www.vera-groningen.nl/",
       "status": "klaar",
       "rawText": "site 6/15: 5 unieke events in 2.44 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Start",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda",
+      "status": "start",
+      "rawText": "site 7/15: max 40 events, max 10 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda",
+      "status": "strategie",
+      "rawText": "agenda-kaarten"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Pagina gelezen",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda",
+      "status": "ok",
+      "rawText": "146630 tekens HTML"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Agenda geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda",
+      "status": "gespecialiseerde parser",
+      "rawText": "12 agenda-items gevonden"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Pagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda",
+      "status": "ok",
+      "rawText": "12 events/aanbiedingen op deze pagina"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/cats-het-meesterwerk",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/donar-groningen-cso-voluntari-2026",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/francis-van-broekhuizen",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/jethro-tull",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/juf-braaksel",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/promotiedagen-2026",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/rob-lamberti",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/tafkal-serieus-grappig-uitverkocht",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/taptoe-groningen-2026",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/the-bodyguard-de-musical-2027",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/the-dire-straits-experience",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/titanique",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/feed",
+      "status": "fout",
+      "rawText": "HTTP 404"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/rss",
+      "status": "fout",
+      "rawText": "HTTP 404"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/rss.xml",
+      "status": "fout",
+      "rawText": "HTTP 404"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/feed.xml",
+      "status": "fout",
+      "rawText": "HTTP 404"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/events/feed/",
+      "status": "fout",
+      "rawText": "HTTP 404"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda",
+      "status": "klaar",
+      "rawText": "site 7/15: 2 unieke events in 4.87 sec"
     }
   ],
   "status": "running",
   "siteStartedAt": "2026-10-26T20:39:33+00:00",
-  "siteElapsedSeconds": 0,
-  "sitePageCount": 0,
-  "lastSiteEventCount": 0,
-  "stage": "Websitepagina ophalen",
-  "lastUpdatedAt": "2026-10-26T20:39:33+00:00",
-  "lastSiteNewEventCount": 5,
-  "lastCompletedSite": "https://www.vera-groningen.nl/",
-  "lastCompletedAt": "2026-10-26T20:39:32+00:00"
+  "siteElapsedSeconds": 7,
+  "sitePageCount": 1,
+  "lastSiteEventCount": 2,
+  "stage": "Website klaar; volgende website voorbereiden",
+  "lastUpdatedAt": "2026-10-26T20:39:36+00:00",
+  "lastSiteNewEventCount": 2,
+  "lastCompletedSite": "https://www.martiniplaza.nl/nl/agenda",
+  "lastCompletedAt": "2026-10-26T20:39:40+00:00"
 }
