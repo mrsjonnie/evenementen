@@ -1,15 +1,236 @@
 {
   "runId": "2026-10-26T11:20:39.872729+00:00-9d8db956",
   "startedAt": "2026-10-26T11:20:39+00:00",
-  "completedCount": 2,
+  "completedCount": 3,
   "totalSites": 18,
   "currentSite": "https://www.visitgroningen.nl/nl/doen/wandelen",
   "currentSiteIndex": 3,
   "completedSites": [
     "https://groningen.uitloper.nu/",
-    "https://www.visitgroningen.nl/nl/doen/evenementen"
+    "https://www.visitgroningen.nl/nl/doen/evenementen",
+    "https://www.visitgroningen.nl/nl/doen/wandelen"
   ],
   "events": [
+    {
+      "date": "2026-10-26",
+      "title": "Aandacht voor bekende Midden-Groninger: Aletta Jacobs",
+      "type": "Wandelen",
+      "location": "Groningen",
+      "website": "https://www.visitgroningen.nl/nl/blogs/aandacht-voor-bekende-midden-groninger-aletta-jacobs",
+      "description": "Aandacht voor bekende Midden-Groninger: Aletta Jacobs Aandacht voor bekende Midden-Groninger: Aletta Jacobs Wandelen Meer lezen over Aandacht voor bekende Midden-Groninger: Aletta Jacobs",
+      "cost": "Gratis",
+      "discoverySource": "Website",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-26",
+      "title": "Blotevoetenpad Opende",
+      "type": "Wandelen",
+      "location": "Groningen",
+      "website": "https://www.visitgroningen.nl/nl/doen/met-kinderen/blotevoetenpad-opende",
+      "description": "Blotevoetenpad Opende Blotevoetenpad Opende",
+      "cost": "Gratis",
+      "discoverySource": "Website",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-26",
+      "title": "De leukste pluktuinen van Groningen",
+      "type": "Wandelen",
+      "location": "Groningen",
+      "website": "https://www.visitgroningen.nl/nl/blogs/de-leukste-pluktuinen-van-groningen",
+      "description": "De leukste pluktuinen van Groningen De leukste pluktuinen van Groningen Wandelen Meer lezen over De leukste pluktuinen van Groningen",
+      "cost": "Gratis",
+      "discoverySource": "Website",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-26",
+      "title": "Een dag op pad in Groningen stad",
+      "type": "Wandelen",
+      "location": "Groningen",
+      "website": "https://www.visitgroningen.nl/nl/blogs/een-dag-op-pad-in-groningen-stad",
+      "description": "Een dag op pad in Groningen stad",
+      "cost": "Gratis",
+      "discoverySource": "Website",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-26",
+      "title": "Een week in Stad en Ommeland",
+      "type": "Wandelen",
+      "location": "Groningen",
+      "website": "https://www.visitgroningen.nl/nl/blogs/een-week-in-stad-en-ommeland",
+      "description": "Een week in Stad en Ommeland",
+      "cost": "Gratis",
+      "discoverySource": "Website",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-26",
+      "title": "Favorieten",
+      "type": "Wandelen",
+      "location": "Groningen",
+      "website": "https://www.visitgroningen.nl/nl/favorieten",
+      "description": "Favorieten",
+      "cost": "Gratis",
+      "discoverySource": "Website",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-26",
+      "title": "Gratis activiteiten in Groningen",
+      "type": "Wandelen",
+      "location": "Groningen",
+      "website": "https://www.visitgroningen.nl/nl/blogs/10-x-budgetactiviteiten",
+      "description": "Gratis activiteiten in Groningen Gratis activiteiten in Groningen Uitgaan Meer lezen over Gratis activiteiten in Groningen",
+      "cost": "Gratis",
+      "discoverySource": "Website",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-26",
+      "title": "In de voetsporen van Aletta Jacobs",
+      "type": "Wandelen",
+      "location": "Groningen",
+      "website": "https://www.visitgroningen.nl/nl/plekken/midden-groningen/aletta-jacobs",
+      "description": "In de voetsporen van Aletta Jacobs In de voetsporen van Aletta Jacobs",
+      "cost": "Gratis",
+      "discoverySource": "Website",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-26",
+      "title": "Lunchen in de stad",
+      "type": "Wandelen",
+      "location": "Groningen",
+      "website": "https://www.visitgroningen.nl/nl/blogs/lunchen-in-groningen",
+      "description": "Lunchen in de stad",
+      "cost": "Gratis",
+      "discoverySource": "Website",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-26",
+      "title": "Meer lezen over Aandacht voor bekende Midden-Groninger: Aletta Jacobs",
+      "type": "Wandelen",
+      "location": "Groningen",
+      "website": "https://www.visitgroningen.nl/nl/blogs/aandacht-voor-bekende-midden-groninger-aletta-jacobs",
+      "description": "Meer lezen over Aandacht voor bekende Midden-Groninger: Aletta Jacobs",
+      "cost": "Gratis",
+      "discoverySource": "Website",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-26",
+      "title": "Meer lezen over De leukste pluktuinen van Groningen",
+      "type": "Wandelen",
+      "location": "Groningen",
+      "website": "https://www.visitgroningen.nl/nl/blogs/de-leukste-pluktuinen-van-groningen",
+      "description": "Meer lezen over De leukste pluktuinen van Groningen",
+      "cost": "Gratis",
+      "discoverySource": "Website",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-26",
+      "title": "Meer lezen over Gratis activiteiten in Groningen",
+      "type": "Wandelen",
+      "location": "Groningen",
+      "website": "https://www.visitgroningen.nl/nl/blogs/10-x-budgetactiviteiten",
+      "description": "Meer lezen over Gratis activiteiten in Groningen",
+      "cost": "Gratis",
+      "discoverySource": "Website",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-26",
+      "title": "Meer lezen over Oktober donkertemaand",
+      "type": "Wandelen",
+      "location": "Groningen",
+      "website": "https://www.visitgroningen.nl/nl/blogs/nacht-van-de-nacht",
+      "description": "Meer lezen over Oktober donkertemaand",
+      "cost": "Gratis",
+      "discoverySource": "Website",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-26",
+      "title": "Meer lezen over Tour de Grunn",
+      "type": "Wandelen",
+      "location": "Groningen",
+      "website": "https://www.visitgroningen.nl/nl/blogs/tour-de-grunn",
+      "description": "Meer lezen over Tour de Grunn",
+      "cost": "Gratis",
+      "discoverySource": "Website",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-26",
+      "title": "Meer lezen over Zomerwandelingen in Groningen",
+      "type": "Wandelen",
+      "location": "Groningen",
+      "website": "https://www.visitgroningen.nl/nl/blogs/zomerwandelingen-in-groningen",
+      "description": "Meer lezen over Zomerwandelingen in Groningen",
+      "cost": "Gratis",
+      "discoverySource": "Website",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-26",
+      "title": "Met kinderen",
+      "type": "Wandelen",
+      "location": "Groningen",
+      "website": "https://www.visitgroningen.nl/nl/doen/met-kinderen",
+      "description": "Met kinderen",
+      "cost": "Gratis",
+      "discoverySource": "Website",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-26",
+      "title": "Naar het museum",
+      "type": "Wandelen",
+      "location": "Groningen",
+      "website": "https://www.visitgroningen.nl/nl/doen/cultuur/naar-het-museum",
+      "description": "Naar het museum",
+      "cost": "Gratis",
+      "discoverySource": "Website",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-26",
+      "title": "Oktober donkertemaand",
+      "type": "Wandelen",
+      "location": "Groningen",
+      "website": "https://www.visitgroningen.nl/nl/blogs/nacht-van-de-nacht",
+      "description": "Oktober donkertemaand Oktober donkertemaand Wandelen Meer lezen over Oktober donkertemaand Tour de Grunn Tour de Grunn Wandelen Meer lezen over Tour de Grunn Gratis activiteiten in Groningen Gratis activiteiten in Groningen Uitgaan Meer lezen over Gratis activiteiten in Groningen Zomerwandelingen in Groningen Zomerwandelingen in Groningen Wandelen Meer lezen over Zomerwandelingen in Groningen De leukste pluktuinen va",
+      "cost": "Gratis",
+      "discoverySource": "Website",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-26",
+      "title": "Op de kaart",
+      "type": "Wandelen",
+      "location": "Groningen",
+      "website": "https://www.visitgroningen.nl/nl/plekken/op-de-kaart",
+      "description": "Op de kaart",
+      "cost": "Gratis",
+      "discoverySource": "Website",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-26",
+      "title": "Overnachten",
+      "type": "Wandelen",
+      "location": "Groningen",
+      "website": "https://www.visitgroningen.nl/nl/doen/overnachten",
+      "description": "Overnachten",
+      "cost": "Gratis",
+      "discoverySource": "Website",
+      "isNew": true
+    },
     {
       "date": "2026-10-26",
       "time": "",
@@ -27,6 +248,17 @@
     },
     {
       "date": "2026-10-26",
+      "title": "Podwalk Winsum",
+      "type": "Wandelen",
+      "location": "Groningen",
+      "website": "https://www.visitgroningen.nl/nl/blogs/ontdek-het-moois-van-winsum",
+      "description": "Podwalk Winsum Podwalk Winsum",
+      "cost": "Gratis",
+      "discoverySource": "Website",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-26",
       "time": "20:00",
       "title": "Pubquiz",
       "type": "Activiteit",
@@ -38,6 +270,28 @@
       "description": "Elke vierde maandag van de maand. Teams van maximaal…",
       "cost": "",
       "image": "https://groningen.uitloper.nu/images/smallthumb/files/2023/singelier-voorgevel-facebook-foto-1.jpg",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-26",
+      "title": "Reisideeën",
+      "type": "Wandelen",
+      "location": "Groningen",
+      "website": "https://www.visitgroningen.nl/nl/reisideeen",
+      "description": "Terug Reisideeën Een week in Stad en Ommeland Een dag op pad in Groningen stad Dagtripjes zonder auto De rijkdom van Groningen is haar veranderlijke landschap. Binnen een mum van tijd sta je vanuit de stad aan de Waddenzee, midden in het groen of bij een schattig wierdedorp. Lunchen in de stad Naar het museum",
+      "cost": "Gratis",
+      "discoverySource": "Website",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-26",
+      "title": "Roegepad",
+      "type": "Wandelen",
+      "location": "Groningen",
+      "website": "https://www.visitgroningen.nl/nl/plekken/midden-groningen/t-roege-pad",
+      "description": "Roegepad Roegepad",
+      "cost": "Gratis",
+      "discoverySource": "Website",
       "isNew": true
     },
     {
@@ -117,6 +371,17 @@
     },
     {
       "date": "2026-10-26",
+      "title": "Theater, muziek en musea",
+      "type": "Wandelen",
+      "location": "Groningen",
+      "website": "https://www.visitgroningen.nl/nl/doen/cultuur",
+      "description": "Theater, muziek en musea",
+      "cost": "Gratis",
+      "discoverySource": "Website",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-26",
       "time": "",
       "title": "Theatraal",
       "type": "Activiteit",
@@ -147,6 +412,17 @@
     },
     {
       "date": "2026-10-26",
+      "title": "Tour de Grunn",
+      "type": "Wandelen",
+      "location": "Groningen",
+      "website": "https://www.visitgroningen.nl/nl/blogs/tour-de-grunn",
+      "description": "Tour de Grunn Tour de Grunn Wandelen Meer lezen over Tour de Grunn",
+      "cost": "Gratis",
+      "discoverySource": "Website",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-26",
       "time": "",
       "title": "VELD Collectief",
       "type": "Activiteit",
@@ -158,6 +434,39 @@
       "description": "Wie in Groningen een suikerbiet langs de weg ziet…",
       "cost": "",
       "image": "https://groningen.uitloper.nu/images/smallthumb/files/2026/0bc25e7408c135a06ea699b1f6b8c526a54ff2fe_500_375_1.jpeg",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-26",
+      "title": "Wandelen in Westerwolde",
+      "type": "Wandelen",
+      "location": "Groningen",
+      "website": "https://www.visitgroningen.nl/nl/plekken/westerwolde/wandelen-in-westerwolde",
+      "description": "Wandelen in Westerwolde Wandelen in Westerwolde",
+      "cost": "Gratis",
+      "discoverySource": "Website",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-26",
+      "title": "Winkelen",
+      "type": "Wandelen",
+      "location": "Groningen",
+      "website": "https://www.visitgroningen.nl/nl/doen/shoppen",
+      "description": "Winkelen",
+      "cost": "Gratis",
+      "discoverySource": "Website",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-26",
+      "title": "Zomerwandelingen in Groningen",
+      "type": "Wandelen",
+      "location": "Groningen",
+      "website": "https://www.visitgroningen.nl/nl/blogs/zomerwandelingen-in-groningen",
+      "description": "Zomerwandelingen in Groningen Zomerwandelingen in Groningen Wandelen Meer lezen over Zomerwandelingen in Groningen",
+      "cost": "Gratis",
+      "discoverySource": "Website",
       "isNew": true
     },
     {
@@ -624,6 +933,13 @@
       "count": 0,
       "newCount": 0,
       "durationSeconds": 10.31,
+      "timedOut": true
+    },
+    {
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "count": 28,
+      "newCount": 28,
+      "durationSeconds": 10.37,
       "timedOut": true
     }
   ],
@@ -2283,16 +2599,457 @@
       "url": "https://www.visitgroningen.nl/nl/doen/evenementen",
       "status": "klaar",
       "rawText": "site 2/18: 0 unieke events in 10.31 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Start",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "status": "start",
+      "rawText": "site 3/18: max 40 events, max 10 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "status": "strategie",
+      "rawText": "Visit Groningen agenda-/routekaarten"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Pagina gelezen",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "status": "ok",
+      "rawText": "374114 tekens HTML"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Pagina geteld",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "status": "analyse",
+      "rawText": "jsonld:0, links:0, datumblokken:0, kaarten:0, regels:0, detail:0"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Nu & nieuw",
+      "date": "2026-10-26",
+      "url": "https://www.visitgroningen.nl/nl/nu-nieuw",
+      "status": "wandelroute gevonden",
+      "rawText": "Terug Nu & nieuw Uitagenda Nieuwe winkels & horeca in de stad Oktober donkertemaand Het 10-jarig bestaan van Dark Sky Park Lauwersmeer staat in het teken van donker. Het is hoog tijd om de schoonheid van de duisternis te gaan ontdekken. Sunnemeerten"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Uitagenda",
+      "date": "2026-10-26",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "wandelroute gevonden",
+      "rawText": "Uitagenda"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Nieuwe winkels & horeca in de stad",
+      "date": "2026-10-26",
+      "url": "https://www.visitgroningen.nl/nl/blogs/nieuwe-winkels-en-horeca-groningen",
+      "status": "wandelroute gevonden",
+      "rawText": "Nieuwe winkels & horeca in de stad"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Sunnemeerten",
+      "date": "2026-10-26",
+      "url": "https://www.visitgroningen.nl/nl/blogs/sunnemeerten",
+      "status": "wandelroute gevonden",
+      "rawText": "Sunnemeerten"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Dit is Groningen",
+      "date": "2026-10-26",
+      "url": "https://www.visitgroningen.nl/nl/ontdekken",
+      "status": "wandelroute gevonden",
+      "rawText": "Terug Dit is Groningen Top 10 bezienswaardigheden In Groningen ligt het allemaal opvallend dicht bij elkaar. De levendigheid van de stad, de stilte van een hofje, de weidsheid van het ommeland en de sporen van een eeuwenoud verleden. Stad Provincie Waddenkust Natuurgebieden"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Stad",
+      "date": "2026-10-26",
+      "url": "https://www.visitgroningen.nl/nl/ontdekken/stad",
+      "status": "wandelroute gevonden",
+      "rawText": "Stad"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Provincie",
+      "date": "2026-10-26",
+      "url": "https://www.visitgroningen.nl/nl/ontdekken/provincie",
+      "status": "wandelroute gevonden",
+      "rawText": "Provincie"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Waddenkust",
+      "date": "2026-10-26",
+      "url": "https://www.visitgroningen.nl/nl/plekken/wadden",
+      "status": "wandelroute gevonden",
+      "rawText": "Waddenkust"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Natuurgebieden",
+      "date": "2026-10-26",
+      "url": "https://www.visitgroningen.nl/nl/ontdekken/natuur",
+      "status": "wandelroute gevonden",
+      "rawText": "Natuurgebieden"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Wat te doen",
+      "date": "2026-10-26",
+      "url": "https://www.visitgroningen.nl/nl/doen",
+      "status": "wandelroute gevonden",
+      "rawText": "Terug Wat te doen Bijzonder overnachten Overnachten was nog nooit zo leuk. Van slapen in een voormalige graanzolder van een molen tot overnachten in een iglo van stro: Groningen biedt voor ieder wat wils. Fietsen Wandelen Eten & drinken Winkelen Overnachten Met kinderen Theater, muziek en musea"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Fietsen",
+      "date": "2026-10-26",
+      "url": "https://www.visitgroningen.nl/nl/doen/fietsen",
+      "status": "wandelroute gevonden",
+      "rawText": "Fietsen"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Eten & drinken",
+      "date": "2026-10-26",
+      "url": "https://www.visitgroningen.nl/nl/doen/eten-en-drinken",
+      "status": "wandelroute gevonden",
+      "rawText": "Eten & drinken"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Winkelen",
+      "date": "2026-10-26",
+      "url": "https://www.visitgroningen.nl/nl/doen/shoppen",
+      "status": "wandelroute gevonden",
+      "rawText": "Winkelen"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Overnachten",
+      "date": "2026-10-26",
+      "url": "https://www.visitgroningen.nl/nl/doen/overnachten",
+      "status": "wandelroute gevonden",
+      "rawText": "Overnachten"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Met kinderen",
+      "date": "2026-10-26",
+      "url": "https://www.visitgroningen.nl/nl/doen/met-kinderen",
+      "status": "wandelroute gevonden",
+      "rawText": "Met kinderen"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Theater, muziek en musea",
+      "date": "2026-10-26",
+      "url": "https://www.visitgroningen.nl/nl/doen/cultuur",
+      "status": "wandelroute gevonden",
+      "rawText": "Theater, muziek en musea"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Reisideeën",
+      "date": "2026-10-26",
+      "url": "https://www.visitgroningen.nl/nl/reisideeen",
+      "status": "wandelroute gevonden",
+      "rawText": "Terug Reisideeën Een week in Stad en Ommeland Een dag op pad in Groningen stad Dagtripjes zonder auto De rijkdom van Groningen is haar veranderlijke landschap. Binnen een mum van tijd sta je vanuit de stad aan de Waddenzee, midden in het groen of bij een schattig wierdedorp. Lunchen in de stad Naar het museum"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Een week in Stad en Ommeland",
+      "date": "2026-10-26",
+      "url": "https://www.visitgroningen.nl/nl/blogs/een-week-in-stad-en-ommeland",
+      "status": "wandelroute gevonden",
+      "rawText": "Een week in Stad en Ommeland"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Een dag op pad in Groningen stad",
+      "date": "2026-10-26",
+      "url": "https://www.visitgroningen.nl/nl/blogs/een-dag-op-pad-in-groningen-stad",
+      "status": "wandelroute gevonden",
+      "rawText": "Een dag op pad in Groningen stad"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Lunchen in de stad",
+      "date": "2026-10-26",
+      "url": "https://www.visitgroningen.nl/nl/blogs/lunchen-in-groningen",
+      "status": "wandelroute gevonden",
+      "rawText": "Lunchen in de stad"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Naar het museum",
+      "date": "2026-10-26",
+      "url": "https://www.visitgroningen.nl/nl/doen/cultuur/naar-het-museum",
+      "status": "wandelroute gevonden",
+      "rawText": "Naar het museum"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Favorieten",
+      "date": "2026-10-26",
+      "url": "https://www.visitgroningen.nl/nl/favorieten",
+      "status": "wandelroute gevonden",
+      "rawText": "Favorieten"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Op de kaart",
+      "date": "2026-10-26",
+      "url": "https://www.visitgroningen.nl/nl/plekken/op-de-kaart",
+      "status": "wandelroute gevonden",
+      "rawText": "Op de kaart"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Roegepad",
+      "date": "2026-10-26",
+      "url": "https://www.visitgroningen.nl/nl/plekken/midden-groningen/t-roege-pad",
+      "status": "wandelroute gevonden",
+      "rawText": "Roegepad Roegepad"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Wandelen in Westerwolde",
+      "date": "2026-10-26",
+      "url": "https://www.visitgroningen.nl/nl/plekken/westerwolde/wandelen-in-westerwolde",
+      "status": "wandelroute gevonden",
+      "rawText": "Wandelen in Westerwolde Wandelen in Westerwolde"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Blotevoetenpad Opende",
+      "date": "2026-10-26",
+      "url": "https://www.visitgroningen.nl/nl/doen/met-kinderen/blotevoetenpad-opende",
+      "status": "wandelroute gevonden",
+      "rawText": "Blotevoetenpad Opende Blotevoetenpad Opende"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Podwalk Winsum",
+      "date": "2026-10-26",
+      "url": "https://www.visitgroningen.nl/nl/blogs/ontdek-het-moois-van-winsum",
+      "status": "wandelroute gevonden",
+      "rawText": "Podwalk Winsum Podwalk Winsum"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "In de voetsporen van Aletta Jacobs",
+      "date": "2026-10-26",
+      "url": "https://www.visitgroningen.nl/nl/plekken/midden-groningen/aletta-jacobs",
+      "status": "wandelroute gevonden",
+      "rawText": "In de voetsporen van Aletta Jacobs In de voetsporen van Aletta Jacobs"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Oktober donkertemaand",
+      "date": "2026-10-26",
+      "url": "https://www.visitgroningen.nl/nl/blogs/nacht-van-de-nacht",
+      "status": "wandelroute gevonden",
+      "rawText": "Oktober donkertemaand Oktober donkertemaand Wandelen Meer lezen over Oktober donkertemaand Tour de Grunn Tour de Grunn Wandelen Meer lezen over Tour de Grunn Gratis activiteiten in Groningen Gratis activiteiten in Groningen Uitgaan Meer lezen over Gratis activiteiten in Groningen Zomerwandelingen in Groningen Zomerwandelingen in Groningen Wandelen Meer lezen over Zomerwandelingen in Groningen De leukste pluktuinen va"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Meer lezen over Oktober donkertemaand",
+      "date": "2026-10-26",
+      "url": "https://www.visitgroningen.nl/nl/blogs/nacht-van-de-nacht",
+      "status": "wandelroute gevonden",
+      "rawText": "Meer lezen over Oktober donkertemaand"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Tour de Grunn",
+      "date": "2026-10-26",
+      "url": "https://www.visitgroningen.nl/nl/blogs/tour-de-grunn",
+      "status": "wandelroute gevonden",
+      "rawText": "Tour de Grunn Tour de Grunn Wandelen Meer lezen over Tour de Grunn"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Meer lezen over Tour de Grunn",
+      "date": "2026-10-26",
+      "url": "https://www.visitgroningen.nl/nl/blogs/tour-de-grunn",
+      "status": "wandelroute gevonden",
+      "rawText": "Meer lezen over Tour de Grunn"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Gratis activiteiten in Groningen",
+      "date": "2026-10-26",
+      "url": "https://www.visitgroningen.nl/nl/blogs/10-x-budgetactiviteiten",
+      "status": "wandelroute gevonden",
+      "rawText": "Gratis activiteiten in Groningen Gratis activiteiten in Groningen Uitgaan Meer lezen over Gratis activiteiten in Groningen"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Meer lezen over Gratis activiteiten in Groningen",
+      "date": "2026-10-26",
+      "url": "https://www.visitgroningen.nl/nl/blogs/10-x-budgetactiviteiten",
+      "status": "wandelroute gevonden",
+      "rawText": "Meer lezen over Gratis activiteiten in Groningen"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Zomerwandelingen in Groningen",
+      "date": "2026-10-26",
+      "url": "https://www.visitgroningen.nl/nl/blogs/zomerwandelingen-in-groningen",
+      "status": "wandelroute gevonden",
+      "rawText": "Zomerwandelingen in Groningen Zomerwandelingen in Groningen Wandelen Meer lezen over Zomerwandelingen in Groningen"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Meer lezen over Zomerwandelingen in Groningen",
+      "date": "2026-10-26",
+      "url": "https://www.visitgroningen.nl/nl/blogs/zomerwandelingen-in-groningen",
+      "status": "wandelroute gevonden",
+      "rawText": "Meer lezen over Zomerwandelingen in Groningen"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "De leukste pluktuinen van Groningen",
+      "date": "2026-10-26",
+      "url": "https://www.visitgroningen.nl/nl/blogs/de-leukste-pluktuinen-van-groningen",
+      "status": "wandelroute gevonden",
+      "rawText": "De leukste pluktuinen van Groningen De leukste pluktuinen van Groningen Wandelen Meer lezen over De leukste pluktuinen van Groningen"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Meer lezen over De leukste pluktuinen van Groningen",
+      "date": "2026-10-26",
+      "url": "https://www.visitgroningen.nl/nl/blogs/de-leukste-pluktuinen-van-groningen",
+      "status": "wandelroute gevonden",
+      "rawText": "Meer lezen over De leukste pluktuinen van Groningen"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Aandacht voor bekende Midden-Groninger: Aletta Jacobs",
+      "date": "2026-10-26",
+      "url": "https://www.visitgroningen.nl/nl/blogs/aandacht-voor-bekende-midden-groninger-aletta-jacobs",
+      "status": "wandelroute gevonden",
+      "rawText": "Aandacht voor bekende Midden-Groninger: Aletta Jacobs Aandacht voor bekende Midden-Groninger: Aletta Jacobs Wandelen Meer lezen over Aandacht voor bekende Midden-Groninger: Aletta Jacobs"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Meer lezen over Aandacht voor bekende Midden-Groninger: Aletta Jacobs",
+      "date": "2026-10-26",
+      "url": "https://www.visitgroningen.nl/nl/blogs/aandacht-voor-bekende-midden-groninger-aletta-jacobs",
+      "status": "wandelroute gevonden",
+      "rawText": "Meer lezen over Aandacht voor bekende Midden-Groninger: Aletta Jacobs"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Visit Groningen wandelroutes",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "status": "gespecialiseerde parser",
+      "rawText": "40 wandelroutes/activiteiten gevonden"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Pagina geanalyseerd",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "status": "ok",
+      "rawText": "40 events/aanbiedingen op deze pagina"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Pagina mislukt",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/wandelkaart-groningen",
+      "status": "fout",
+      "rawText": "HTTPSConnectionPool(host='www.visitgroningen.nl', port=443): Read timed out. (read timeout=7.0)"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/feed",
+      "status": "fout",
+      "rawText": "HTTPSConnectionPool(host='www.visitgroningen.nl', port=443): Read timed out. (read timeout=1.7003603629999873)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/wandelen",
+      "status": "klaar",
+      "rawText": "site 3/18: 28 unieke events in 10.37 sec"
     }
   ],
   "status": "running",
   "siteStartedAt": "2026-10-26T11:21:00+00:00",
-  "siteElapsedSeconds": 0,
-  "sitePageCount": 0,
-  "lastSiteEventCount": 0,
-  "stage": "Websitepagina ophalen",
-  "lastUpdatedAt": "2026-10-26T11:21:00+00:00",
-  "lastSiteNewEventCount": 0,
-  "lastCompletedSite": "https://www.visitgroningen.nl/nl/doen/evenementen",
-  "lastCompletedAt": "2026-10-26T11:20:58+00:00"
+  "siteElapsedSeconds": 12,
+  "sitePageCount": 1,
+  "lastSiteEventCount": 28,
+  "stage": "Website klaar; volgende website voorbereiden",
+  "lastUpdatedAt": "2026-10-26T11:21:03+00:00",
+  "lastSiteNewEventCount": 28,
+  "lastCompletedSite": "https://www.visitgroningen.nl/nl/doen/wandelen",
+  "lastCompletedAt": "2026-10-26T11:21:12+00:00"
 }
