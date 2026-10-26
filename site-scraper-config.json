@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-26T22:12:18.693Z",
+  "updatedAt": "2026-10-26T22:12:37.705Z",
   "sites": {
     "https://groningen.uitloper.nu/": {
       "methodology": "",
@@ -80,7 +80,8 @@
       ],
       "eventUrlPatterns": [
         "^/nl/doen/uitgaan/1249727087/[^/?#]+/?$",
-        "^/nl/doen/uitgaan/2259451487/[^/?#]+/?$"
+        "^/nl/doen/uitgaan/2259451487/[^/?#]+/?$",
+        "^/nl/doen/uitgaan/3522024882/[^/?#]+/?$"
       ],
       "excludedUrlPatterns": [
         "^/nl/doen/uitgaan/?$",
