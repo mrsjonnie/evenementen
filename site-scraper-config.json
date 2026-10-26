@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-26T22:24:35.272Z",
+  "updatedAt": "2026-10-26T22:25:11.504Z",
   "sites": {
     "https://groningen.uitloper.nu/": {
       "methodology": "",
@@ -258,7 +258,8 @@
       "excludedUrlPatterns": [
         "^/plan-je-bezoek/?$",
         "^/programma/?$",
-        "^/vrienden-van-het-museum/?$"
+        "^/vrienden-van-het-museum/?$",
+        "^/museum-gebouw/?$"
       ]
     },
     "https://www.kultuuragenda.nl/agenda": {
