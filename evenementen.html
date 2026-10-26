@@ -4139,7 +4139,8 @@
         if (!feedbackResponse.ok || feedbackData.ok === false) {
           throw new Error(workerErrorMessage(feedbackData, "Dubbelingsfeedback opslaan is mislukt"));
         }
-        await deleteEventByKey(key);
+        const removed = await deleteEventByKey(key);
+        if (!removed) throw new Error("De feedback is opgeslagen, maar verwijderen is mislukt. Probeer opnieuw.");
         showStatus("Evenement verwijderd en als dubbeling gemeld. De scraper neemt deze feedback mee bij volgende scans.", "ok");
       } catch (error) {
         showStatus(`Dubbeling niet volledig verwerkt: ${cleanText(error.message || error)}`, "error");
@@ -4182,8 +4183,10 @@
         showStatus(`Verwijderd uit overzicht en archief: ${cleanText(event.title)}.`, "ok");
         addLiveLog("App", event.website || event.source || "", event.title, "verwijderd", `${data.removedEvents || 0} actief, ${data.removedArchive || 0} archief`);
         setTimeout(hideStatus, 4000);
+        return true;
       } catch (error) {
         showStatus(`Verwijderen mislukt: ${error.message}`, "error");
+        return false;
       }
     }
 
