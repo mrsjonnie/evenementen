@@ -1236,7 +1236,7 @@ async function deleteEventFromGithub(env, target = {}) {
   const wantedKey = clean(target.key || "");
   const wantedTitle = normalizeDeleteTitle(target.title || "");
   const wantedDate = clean(target.date || "");
-  const wantedWebsite = clean(target.website || "").toLowerCase().replace(/\\/$/, "");
+  const wantedWebsite = clean(target.website || "").toLowerCase().replace(/\/$/, "");
   const shouldRemove = (event) => {
     const key = eventKey(event);
     const fullKey = eventDeleteKey(event);
@@ -1246,7 +1246,7 @@ async function deleteEventFromGithub(env, target = {}) {
     // Match the same canonical title/date key as the UI, even if source URLs or title decorations differ.
     if (sameDate && sameTitle) return true;
     const exactTitle = clean(target.title || "").toLowerCase() === clean(event.title || "").toLowerCase();
-    const sameWebsite = wantedWebsite && clean(event.website || "").toLowerCase().replace(/\\/$/, "") === wantedWebsite;
+    const sameWebsite = wantedWebsite && clean(event.website || "").toLowerCase().replace(/\/$/, "") === wantedWebsite;
     return Boolean(exactTitle && sameDate && (!wantedWebsite || sameWebsite));
   };
 
