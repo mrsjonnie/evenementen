@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-26T22:38:17.191Z",
+  "updatedAt": "2026-10-26T22:38:18.703Z",
   "sites": {
     "https://groningen.uitloper.nu/": {
       "methodology": "",
@@ -311,7 +311,9 @@
           "replace": "€ 13,00"
         }
       ],
-      "eventUrlPatterns": [],
+      "eventUrlPatterns": [
+        "^/agenda/3330398606/[^/?#]+/?$"
+      ],
       "excludedUrlPatterns": []
     },
     "https://www.noorderzon.nl/programma": {
