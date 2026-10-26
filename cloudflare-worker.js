@@ -1673,7 +1673,7 @@ export default {
         const active = new Set(activeSites.filter(site => typeof site === "string" && /^https?:\/\//i.test(site)));
         const cleaned = {};
         for (const site of active) {
-          const old = registry.sites[site] || {};
+          const old = registry.sites[site] || { exclusions: ["contact", "privacy", "cookie", "voorwaarden", "login", "account", "nieuwsbrief", "facebook", "instagram", "linkedin"] };
           cleaned[site] = {
             methodology: validateInput(old.methodology || "", 4000),
             startUrls: Array.isArray(old.startUrls) ? old.startUrls.map(value => validateInput(value, 500)).filter(value => /^https?:\/\//i.test(value) && sameHostUrl(value, site)).slice(0, 80) : [],
