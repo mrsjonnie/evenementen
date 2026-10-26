@@ -1937,8 +1937,9 @@
       (baseSites || []).forEach((site) => {
         const original = cleanText(site);
         const normalized = normalizeSiteInput(original);
-        const key = normalized.toLowerCase().replace(/\/$/, "");
-        if (original && normalized && !seen.has(key)) {
+        // Eén regel per hostname, niet één regel per agenda-pad.
+        const key = siteIdentityKey(normalized);
+        if (original && normalized && key && !seen.has(key)) {
           seen.add(key);
           merged.push(original);
         }
