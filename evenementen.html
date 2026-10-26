@@ -1515,7 +1515,7 @@
     </section>
   </div>
   <script>
-    const APP_VERSION = "2026.10.26.81";
+    const APP_VERSION = "2026.10.26.82";
     const STATUS_HISTORY_KEY = "evenementenStatusHistoryV1";
     const DISMISSED_SCRAPE_RUN_KEY = "evenementenDismissedScrapeRunV1";
     const DEFAULT_MAX_EVENTS_PER_SITE = 20;
@@ -2057,11 +2057,8 @@
     }
 
     function favoriteEventKey(event) {
-      const url = safeUrl(event?.website, { website: true });
-      if (url) {
-        const normalized = url.replace(/[?#].*$/, "").replace(/\/$/, "").toLowerCase();
-        return "url:" + normalized;
-      }
+      // A source URL may be shared by many events. Favorites must identify one event,
+      // not every event published by the same website.
       return "event:" + eventDedupeKey(event);
     }
 
