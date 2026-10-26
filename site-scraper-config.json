@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-26T22:11:51.427Z",
+  "updatedAt": "2026-10-26T22:12:00.492Z",
   "sites": {
     "https://groningen.uitloper.nu/": {
       "methodology": "",
@@ -77,7 +77,8 @@
         "^/nl/doen/uitgaan/1249727087/[^/?#]+/?$"
       ],
       "excludedUrlPatterns": [
-        "^/nl/doen/uitgaan/?$"
+        "^/nl/doen/uitgaan/?$",
+        "^/nl/doen/uitgaan/3317548738/kayakken-op-oldambtmeer/?$"
       ]
     },
     "https://www.visitgroningen.nl/nl/doen/wandelen": {
