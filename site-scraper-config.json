@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-26T22:05:11.078Z",
+  "updatedAt": "2026-10-26T22:06:44.997Z",
   "sites": {
     "https://groningen.uitloper.nu/": {
       "methodology": "",
@@ -18,7 +18,13 @@
         "linkedin"
       ],
       "excludedUrls": [],
-      "adjustments": [],
+      "adjustments": [
+        {
+          "field": "location",
+          "find": "Jon Allen & The Luna Kings",
+          "replace": "De Oosterpoort Trompsingel 27 9724 DA Groningen"
+        }
+      ],
       "eventUrlPatterns": [],
       "excludedUrlPatterns": []
     },
