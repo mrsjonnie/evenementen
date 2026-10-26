@@ -1,8 +1,3 @@
-SerpAPI	https://forum.nl/nl/agenda	zoeken	Zoekopdracht 1/2			site:forum.nl/nl/agenda nl agenda agenda programma evenement concert Groningen 2026-10-26 9999-12-31
-SerpAPI	https://forum.nl/nl/agenda	genegeerd	Indie & Alt Concerts in Groningen in 2026		https://www.songkick.com/metro-areas/31384-netherlands-groningen/2026/genre/indie-alternative	Find tickets to all live music, concerts, tour dates and festivals in and around Groningen. Currently there are 18 upcoming events. Filter by artist. All.
-SerpAPI	https://forum.nl/nl/agenda	genegeerd	Events in Groningen		https://www.outhere.guide/place/groningen/events	The best events in Groningen. Find concerts, festivals, theatre, cinema and more. 328 upcoming events across Concerts, Music Festival, Party, Cinema and more.
-SerpAPI	https://forum.nl/nl/agenda	genegeerd	Bill Callahan @ SPOT Groningen		https://www.bandsintown.com/e/1038120602-bill-callahan-at-spot-groningen?came_from=138&utm_medium=web&utm_source=venue_page&utm_campaign=event	Bill Callahan is coming to SPOT Groningen in Groningen on Oct 11, 2026. Find tickets and get exclusive concert information, all at Bandsintown.
-SerpAPI	https://forum.nl/nl/agenda	genegeerd	Caravan Palace, ZAYKA - SPOT De Oosterpoort, Groningen		https://open.spotify.com/concert/6A6yCZGzC69Teyn8S3ZH8B	Find tickets for Caravan Palace with ZAYKA at SPOT De Oosterpoort in Groningen on 10/28/2026 at 8:00 PM. more concerts by artists you love, browse all live ...
 SerpAPI	https://forum.nl/nl/agenda	genegeerd	Groningen, Netherlands Events, Calendar & Tickets		https://www.eventbrite.co.uk/d/netherlands--groningen--85687059/events/	Looking for something to do in Groningen? Whether you're a local, new in town or just cruising through we've got loads of great tips and events.
 SerpAPI	https://forum.nl/nl/agenda	genegeerd	Michael McGovern — 6.10.2026 De Oosterpoort		https://festivaly.eu/en/michael-mcgovern-de-oosterpoort-groningen-2026	Information and tickets for the concert Michael McGovern, which is taking place on October 6, 2026 19:00 (De Oosterpoort, Groningen).
 SerpAPI	https://forum.nl/nl/agenda	genegeerd	Groningen - Nederländerna | Konserter-Metal Kalender		https://se.concerts-metal.com/v-253__Groningen.html	Kommande evenemang ; Toody Cole And Her Band - Tour 2026. 31/08/2026 Vera, Groningen · Jenny Don't And The Spurs ; Black Stone Cherry - Tour 2026. 02/10/2026 De ...
@@ -1195,6 +1190,11 @@ Website	https://www.spotgroningen.nl/programma/	event uit datumblok	Nabil Daar i
 Website	https://www.spotgroningen.nl/programma/	event uit datumblok	Compagnie Red, Yellow and Blue Katwijk “Een	2027-02-09	https://www.spotgroningen.nl/programma	9 feb Compagnie Red, Yellow and Blue Katwijk “Een ijzersterk generatiedrama verpakt als hilarische sitcom.” ★★★★★ de Volkskrant Uitverkocht
 Parser	https://www.spotgroningen.nl/programma/	analyse	Pagina geteld		https://www.spotgroningen.nl/programma	jsonld:0, links:536, datumblokken:239, kaarten:134, regels:0, detail:0
 Website	https://www.spotgroningen.nl/programma/	ok	Pagina geanalyseerd		https://www.spotgroningen.nl/programma	526 events/aanbiedingen op deze pagina
-SerpAPI	https://www.spotgroningen.nl/programma/	ingepland	Detail-link		https://www.spotgroningen.nl/programma/the-soulful-sessions-4/	SerpAPI-link wordt alleen als detailpagina gecontroleerd
 Filter	https://www.spotgroningen.nl/programma/	ok	Datumfilter toegepast	2026-10-26	https://www.spotgroningen.nl/programma/	526 gevonden; 523 binnen 2026-10-26 t/m onbeperkt
 Website	https://www.spotgroningen.nl/programma/	klaar	Klaar		https://www.spotgroningen.nl/programma/	site 4/15: 40 unieke events in 6.84 sec
+Website	https://simplon.nl/	start	Start		https://simplon.nl/	site 5/15: max 40 events, max 10 seconden
+Parser	https://simplon.nl/	strategie	Scrapertype vastgesteld		https://simplon.nl/	compacte-agenda-kaarten
+Website	https://simplon.nl/	ok	Pagina gelezen		https://simplon.nl/programma/	96145 tekens HTML
+Parser	https://simplon.nl/	gespecialiseerde parser	Agenda geanalyseerd		https://simplon.nl/programma/	55 agenda-items gevonden
+Website	https://simplon.nl/	ok	Pagina geanalyseerd		https://simplon.nl/programma/	52 events/aanbiedingen op deze pagina
+Website	https://simplon.nl/	klaar	Klaar		https://simplon.nl/	site 5/15: 40 unieke events in 1.89 sec
