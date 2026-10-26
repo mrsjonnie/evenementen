@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-26T22:06:44.997Z",
+  "updatedAt": "2026-10-26T22:06:46.471Z",
   "sites": {
     "https://groningen.uitloper.nu/": {
       "methodology": "",
@@ -25,7 +25,9 @@
           "replace": "De Oosterpoort Trompsingel 27 9724 DA Groningen"
         }
       ],
-      "eventUrlPatterns": [],
+      "eventUrlPatterns": [
+        "^/muziek/[^/?#]+/?$"
+      ],
       "excludedUrlPatterns": []
     },
     "https://www.visitgroningen.nl/nl/doen/evenementen": {
