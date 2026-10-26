@@ -3480,6 +3480,122 @@ def publish_scrape_progress(progress, include_data=False):
 
 
 
+
+INPUT_PROVIDERS_RAW = (os.getenv("INPUT_PROVIDERS", "{}").strip() or "{}")
+
+def discover_selected_ai_events(site):
+    """Optional AI enrichment runs in GitHub Actions, not inside the Cloudflare Worker."""
+    try:
+        providers = json.loads(INPUT_PROVIDERS_RAW)
+        if not isinstance(providers, dict):
+            providers = {}
+    except (ValueError, TypeError):
+        providers = {}
+    enabled = [
+        ("Gemini", bool(providers.get("gemini")), os.getenv("GEMINI_API_KEY", "").strip()),
+        ("Perplexity", bool(providers.get("perplexity")), os.getenv("PERPLEXITY_API_KEY", "").strip()),
+        ("ChatGPT", bool(providers.get("chatgpt") or providers.get("openai")), (os.getenv("OPENAI_API_KEY", "") or os.getenv("CHATGPT_API_KEY", "")).strip()),
+        ("Mistral", bool(providers.get("mistral")), os.getenv("MISTRAL_API_KEY", "").strip()),
+    ]
+    active = [(name, key) for name, selected, key in enabled if selected and key]
+    if not active:
+        return []
+    try:
+        page = requests.get(site, headers=REQUEST_HEADERS, timeout=(5, 12))
+        page.raise_for_status()
+        soup = BeautifulSoup(page.text, "html.parser")
+        for node in soup(["script", "style", "nav", "footer", "header", "noscript"]):
+            node.decompose()
+        context = re.sub(r"\s+", " ", soup.get_text(" ", strip=True))[:10000]
+    except Exception as exc:
+        add_raw("AI", site, "Websitecontext niet beschikbaar", "", site, "overgeslagen", str(exc)[:250])
+        return []
+    prompt = (
+        "Find only verifiable future events published by this website. Website: " + site +
+        ". Today: " + date.today().isoformat() +
+        ". Return ONLY a JSON array of objects with fields title, date (YYYY-MM-DD), time, location, cost, "
+        "description, website, type. Max " + str(MAX_EVENTS_PER_SITE) +
+        " events. Do not invent details. Each event website must be a direct event page URL. If none, return []. "
+        "Website text: " + context
+    )
+    found = []
+    for provider, api_key in active:
+        try:
+            if provider == "Gemini":
+                response = requests.post(
+                    "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent",
+                    params={"key": api_key},
+                    json={"system_instruction":{"parts":[{"text":"Return valid JSON only. Use Google Search grounding to verify current event details."}]},
+                          "contents":[{"parts":[{"text":prompt}]}],
+                          "tools":[{"google_search":{}}],
+                          "generationConfig":{"temperature":0.1,"responseMimeType":"application/json"}},
+                    timeout=35)
+                response.raise_for_status()
+                payload = response.json()
+                candidates = payload.get("candidates", [])
+                output = "\n".join(part.get("text", "") for part in (candidates[0].get("content", {}).get("parts", []) if candidates else []))
+            elif provider == "Perplexity":
+                response = requests.post("https://api.perplexity.ai/chat/completions",
+                    headers={"Authorization":"Bearer " + api_key, "Content-Type":"application/json"},
+                    json={"model":"sonar","messages":[{"role":"system","content":"Return a valid JSON array only. Verify dates and event URLs; do not invent."},{"role":"user","content":prompt}],"temperature":0.1},
+                    timeout=35)
+                response.raise_for_status()
+                output = response.json().get("choices",[{}])[0].get("message",{}).get("content","")
+            elif provider == "ChatGPT":
+                response = requests.post("https://api.openai.com/v1/chat/completions",
+                    headers={"Authorization":"Bearer " + api_key, "Content-Type":"application/json"},
+                    json={"model":"gpt-4o-mini","messages":[{"role":"system","content":"Return a valid JSON array only. Verify dates and event URLs; do not invent."},{"role":"user","content":prompt}],"temperature":0.1},
+                    timeout=35)
+                response.raise_for_status()
+                output = response.json().get("choices",[{}])[0].get("message",{}).get("content","")
+            else:
+                response = requests.post("https://api.mistral.ai/v1/chat/completions",
+                    headers={"Authorization":"Bearer " + api_key, "Content-Type":"application/json"},
+                    json={"model":"mistral-small-latest","messages":[{"role":"system","content":"Return a valid JSON array only. Verify dates and event URLs; do not invent."},{"role":"user","content":prompt}],"temperature":0.1},
+                    timeout=35)
+                response.raise_for_status()
+                output = response.json().get("choices",[{}])[0].get("message",{}).get("content","")
+            output = str(output).strip()
+            fence = chr(96) * 3
+            if output.startswith(fence):
+                output = re.sub(r"^" + fence + r"(?:json)?\s*|\s*" + fence + r"$", "", output, flags=re.I)
+            try:
+                decoded = json.loads(output)
+            except ValueError:
+                match = re.search(r"\[[\s\S]*\]", output)
+                decoded = json.loads(match.group(0)) if match else []
+            if isinstance(decoded, dict):
+                decoded = decoded.get("events", [])
+            count = 0
+            for item in (decoded if isinstance(decoded, list) else [])[:MAX_EVENTS_PER_SITE]:
+                if not isinstance(item, dict):
+                    continue
+                title = clean_text(item.get("title", ""))
+                url = clean_text(item.get("website") or item.get("url") or "")
+                day = clean_text(item.get("date", ""))[:10]
+                if not title or not url.startswith(("https://", "http://")):
+                    continue
+                try:
+                    if date.fromisoformat(day) < TODAY:
+                        continue
+                except ValueError:
+                    continue
+                if canonical_host(url) != canonical_host(site) and not re.search(r"(agenda|event|programma|ticket|uitagenda)", url, re.I):
+                    continue
+                found.append({
+                    "title": title, "date": day, "time": clean_text(item.get("time", "")),
+                    "location": clean_text(item.get("location", "")), "cost": clean_text(item.get("cost", "Zie website")),
+                    "description": clean_text(item.get("description", ""))[:700], "website": url,
+                    "source": canonical_host(site), "type": clean_text(item.get("type", "evenement")) or "evenement",
+                    "discoverySource": provider
+                })
+                count += 1
+            add_raw(provider, site, "AI-evenementen gevonden", "", site, "ok", str(count) + " kandidaat/kandidaten")
+        except Exception as exc:
+            add_raw(provider, site, "AI-zoeklaag mislukt", "", site, "fout", str(exc)[:300])
+    return dedupe_events(found)[:MAX_EVENTS_PER_SITE]
+
+
 def main():
     import_serpapi_raw_log()
     sites = input_sites()
@@ -3548,6 +3664,10 @@ def main():
         # HTTP calls use the remaining time budget.
         try:
             all_events.extend(scrape_site(site, index, total_sites, progress_callback=publish_partial_site_progress, existing_event_keys=previous_all_keys))
+            ai_events = discover_selected_ai_events(site)
+            if ai_events:
+                all_events.extend(ai_events)
+                publish_partial_site_progress(ai_events, "AI-resultaten verwerken")
         except Exception as exc:
             add_raw("Website", site, "Site mislukt", "", site, "fout", str(exc))
             SITE_RESULTS.append({"site": site, "count": 0, "newCount": 0, "durationSeconds": 0, "timedOut": False})
