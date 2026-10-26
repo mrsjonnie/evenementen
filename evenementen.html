@@ -4270,7 +4270,7 @@
       // Fallback voorkomt dat een verwijderactie ooit zonder bevestiging doorgaat
       // als de aangepaste dialoog door een ontbrekend element niet beschikbaar is.
       if (!overlay || !titleNode || !messageNode || !proceedButton || !cancelButton) {
-        return Promise.resolve(window.confirm(title + "\\n\\n" + message));
+        return Promise.resolve(window.confirm(title + "\n\n" + message));
       }
       // Plaats de dialoog rechtstreeks onder body zodat een ouder element met
       // overflow/stacking-context de bevestiging niet kan verbergen.
