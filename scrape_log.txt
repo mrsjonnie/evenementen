@@ -1,40 +1,3 @@
-ChatGPT	https://groningen.uitloper.nu/	fout	ChatGPT mislukt		https://groningen.uitloper.nu/	Body has already been used. It can only be used once. Use tee() first if you need to read it twice.
-ChatGPT	https://www.visitgroningen.nl/nl/doen/evenementen	fout	ChatGPT mislukt		https://www.visitgroningen.nl/nl/doen/evenementen	Body has already been used. It can only be used once. Use tee() first if you need to read it twice.
-ChatGPT	https://simplon.nl/	fout	ChatGPT mislukt		https://simplon.nl/	Body has already been used. It can only be used once. Use tee() first if you need to read it twice.
-ChatGPT	https://www.martiniplaza.nl/nl/agenda	fout	ChatGPT mislukt		https://www.martiniplaza.nl/nl/agenda	Body has already been used. It can only be used once. Use tee() first if you need to read it twice.
-ChatGPT	https://groningermuseum.nl/programma	fout	ChatGPT mislukt		https://groningermuseum.nl/programma	Body has already been used. It can only be used once. Use tee() first if you need to read it twice.
-ChatGPT	https://www.kultuuragenda.nl/agenda	fout	ChatGPT mislukt		https://www.kultuuragenda.nl/agenda	Body has already been used. It can only be used once. Use tee() first if you need to read it twice.
-ChatGPT	https://www.concertgebouw.nl/concerten-en-tickets	fout	ChatGPT mislukt		https://www.concertgebouw.nl/concerten-en-tickets	Body has already been used. It can only be used once. Use tee() first if you need to read it twice.
-ChatGPT	https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html	fout	ChatGPT mislukt		https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html	Body has already been used. It can only be used once. Use tee() first if you need to read it twice.
-ChatGPT	https://www.paradiso.nl/landing/concertagenda-paradiso/2069817	fout	ChatGPT mislukt		https://www.paradiso.nl/landing/concertagenda-paradiso/2069817	Body has already been used. It can only be used once. Use tee() first if you need to read it twice.
-ChatGPT	https://www.socialdeal.nl/	fout	ChatGPT mislukt		https://www.socialdeal.nl/	Body has already been used. It can only be used once. Use tee() first if you need to read it twice.
-ChatGPT	https://www.ibood.com/s-nl	fout	ChatGPT mislukt		https://www.ibood.com/s-nl	Body has already been used. It can only be used once. Use tee() first if you need to read it twice.
-Mistral	https://forum.nl/nl/agenda	status 429	Mistral fout		https://forum.nl/nl/agenda	{"object":"error","message":"Rate limit exceeded","type":"rate_limited","param":null,"code":"1300","raw_status_code":429}
-Mistral	https://www.spotgroningen.nl/programma/	overgeslagen	Mistral overgeslagen		https://www.spotgroningen.nl/programma/	Deze AI-bron is na een HTTP 429 voor de rest van deze scan gepauzeerd om herhaalde rate-limitfouten te voorkomen.
-Mistral	https://www.vera-groningen.nl/	overgeslagen	Mistral overgeslagen		https://www.vera-groningen.nl/	Deze AI-bron is na een HTTP 429 voor de rest van deze scan gepauzeerd om herhaalde rate-limitfouten te voorkomen.
-Website	https://groningen.uitloper.nu/	start	Start		https://groningen.uitloper.nu/	site 1/15: max 60 events, max 45 seconden
-Parser	https://groningen.uitloper.nu/	strategie	Scrapertype vastgesteld		https://groningen.uitloper.nu/	uitloper-agenda
-Website	https://groningen.uitloper.nu/	ok	Pagina gelezen		https://groningen.uitloper.nu/?date=1793016000	61102 tekens HTML
-Website	https://groningen.uitloper.nu/	Uitloper agenda-item	Nena	2026-10-26	https://groningen.uitloper.nu/muziek/nena-1	Nena 20:00 uur Eén van de grootste zangeressen van de Duitse popcultuur…
-Website	https://groningen.uitloper.nu/	Uitloper agenda-item	Culture (ft Kenyatta Hill) & Cedric Myton	2026-10-26	https://groningen.uitloper.nu/muziek/culture-ft-kenyatta-hill-cedric-myton	Culture (ft Kenyatta Hill) & Cedric Myton 20:30 uur Twee legendarische reggae-acts op één avond.
-Website	https://groningen.uitloper.nu/	Uitloper agenda-item	Open Jazz Session	2026-10-26	https://groningen.uitloper.nu/muziek/open-jazz-session-3	Open Jazz Session 21:15 uur Iedere maandagavond gratis Jazz-avond! Samen improviseren,…
-Website	https://groningen.uitloper.nu/	Uitloper agenda-item	Open Mic Nait	2026-10-26	https://groningen.uitloper.nu/theater/open-mic-nait-14	Open Mic Nait 20:00 uur Ontdek nieuwe comedians en nieuwe grappen tijdens…
-Website	https://groningen.uitloper.nu/	Uitloper agenda-item	Thinking Hands	2026-10-26	https://groningen.uitloper.nu/kunst/thinking-hands	Thinking Hands Een expositie over de kennis die in ons lichaam zit…
-Website	https://groningen.uitloper.nu/	Uitloper agenda-item	Nieuw Licht - De Ploeg	2026-10-26	https://groningen.uitloper.nu/kunst/nieuw-licht-%e2%80%93-de-ploeg	Nieuw Licht - De Ploeg Een geheel vernieuwde presentatie van werken van De…
-Website	https://groningen.uitloper.nu/	Uitloper agenda-item	The Architect & The Housewife: Cleaning the House, Building the Future	2026-10-26	https://groningen.uitloper.nu/kunst/the-architect-the-housewife-cleaning-the-house-building-the-future	The Architect & The Housewife: Cleaning the House, Building the Future De titel van deze tentoonstelling is ontleend aan…
-Website	https://groningen.uitloper.nu/	Uitloper agenda-item	Nieuw licht 1: Ani Schulze – The Convent of Pleasure	2026-10-26	https://groningen.uitloper.nu/kunst/nieuw-licht-1-ani-schulze-%e2%80%93-the-convent-of-pleasure	Nieuw licht 1: Ani Schulze – The Convent of Pleasure Nieuw licht is een tentoonstellingsreeks waarin het…
-Website	https://groningen.uitloper.nu/	Uitloper agenda-item	Keramikos Carrier Bag	2026-10-26	https://groningen.uitloper.nu/kunst/keramikos-carrier-bag	Keramikos Carrier Bag Naar aanleiding van onderzoek in Groningen kozen Matthew…
-Website	https://groningen.uitloper.nu/	Uitloper agenda-item	Theatraal	2026-10-26	https://groningen.uitloper.nu/kunst/theatraal	Theatraal Voor het derde jaar op rij presenteert de Stadsgalerie…
-Website	https://groningen.uitloper.nu/	Uitloper agenda-item	ubiquitousssssssssssssssssugar	2026-10-26	https://groningen.uitloper.nu/kunst/ubiquitousssssssssssssssssugar	ubiquitousssssssssssssssssugar Met performances, proeverijen van Goblin Feast, Jonas…
-Website	https://groningen.uitloper.nu/	Uitloper agenda-item	VELD Collectief	2026-10-26	https://groningen.uitloper.nu/kunst/veld-collectief	VELD Collectief Wie in Groningen een suikerbiet langs de weg ziet…
-Website	https://groningen.uitloper.nu/	Uitloper agenda-item	Storyworld Spotlight: Asjemenou!	2026-10-26	https://groningen.uitloper.nu/kunst/storyworld-spotlight-asjemenou	Storyworld Spotlight: Asjemenou! In 2026 bestaat de Nederlandse televisie 75 jaar…
-Website	https://groningen.uitloper.nu/	Uitloper agenda-item	Masterminds. De Geschiedenis van de Groningse Universiteit	2026-10-26	https://groningen.uitloper.nu/kunst/masterminds	Masterminds. De Geschiedenis van de Groningse Universiteit Masterminds neemt je mee in de geschiedenis van de…
-Website	https://groningen.uitloper.nu/	Uitloper agenda-item	Aletta Jacobskamer	2026-10-26	https://groningen.uitloper.nu/kunst/aletta-jacobskamer	Aletta Jacobskamer In de kamer van dr. Aletta Jacobs, de eerste vrouwelijke…
-Website	https://groningen.uitloper.nu/	Uitloper agenda-item	Anatomisch Theater	2026-10-26	https://groningen.uitloper.nu/kunst/anatomisch-theater	Anatomisch Theater In het anatomisch theater zijn zo’n 50 preparaten…
-Website	https://groningen.uitloper.nu/	Uitloper agenda-item	GRID - Puin Hoop: herdruk van de jaren ’80	2026-10-26	https://groningen.uitloper.nu/kunst/grid-puin-hoop-herdruk-van-de-jaren-%e2%80%9980	GRID - Puin Hoop: herdruk van de jaren ’80 Een prikkelende expositie over vroeger, die verrassend…
-Website	https://groningen.uitloper.nu/	Uitloper agenda-item	Kunstroutes	2026-10-26	https://groningen.uitloper.nu/kunst/kunstroutes	Kunstroutes Kunst die je gezien moet hebben en kunst die je misschien…
-Website	https://groningen.uitloper.nu/	Uitloper agenda-item	The Wall #9	2026-10-26	https://groningen.uitloper.nu/kunst/the-wall-9	The Wall #9 Kunstenaar Indira de Boer maakt een installatie van…
-Website	https://groningen.uitloper.nu/	Uitloper agenda-item	Kleur!	2026-10-26	https://groningen.uitloper.nu/kunst/kleur-3	Kleur! Tien kunstenaars onderzoeken in de verschillende ruimtes…
 Website	https://groningen.uitloper.nu/	Uitloper agenda-item	Otto Krol - Gevels, daken en luchten	2026-10-26	https://groningen.uitloper.nu/kunst/otto-krol-gevels-daken-en-luchten	Otto Krol - Gevels, daken en luchten Na de stadsgezichten van de vorige expositie eind…
 Website	https://groningen.uitloper.nu/	Uitloper agenda-item	Otto Krol - Gevels, daken en luchten	2026-10-26	https://groningen.uitloper.nu/kunst/otto-krol-gevels-daken-en-luchten-1	Otto Krol - Gevels, daken en luchten Na de stadsgezichten van de vorige expositie eind…
 Website	https://groningen.uitloper.nu/	Uitloper agenda-item	APPROP.	2026-10-26	https://groningen.uitloper.nu/kunst/approp	APPROP. Met APPROP. presenteren ax710 en Jurjen Galema een…
@@ -1198,3 +1161,40 @@ Website	https://groningermuseum.nl/programma	start	Start		https://groningermuseu
 Parser	https://groningermuseum.nl/programma	strategie	Scrapertype vastgesteld		https://groningermuseum.nl/programma	universele tentoonstellings- en activiteitenparser
 Siteconfiguratie	https://groningermuseum.nl/programma	overgeslagen	Start-URL uitgesloten		https://groningermuseum.nl/programma	URL staat in de websitespecifieke uitsluitingen
 Website	https://groningermuseum.nl/programma	klaar	Klaar		https://groningermuseum.nl/programma	site 8/15: 0 unieke events in 0.0 sec
+Website	https://www.kultuuragenda.nl/agenda	start	Start		https://www.kultuuragenda.nl/agenda	site 9/15: max 60 events, max 45 seconden
+Parser	https://www.kultuuragenda.nl/agenda	strategie	Scrapertype vastgesteld		https://www.kultuuragenda.nl/agenda	universele detailpagina-parser (Kultuuragenda)
+Website	https://www.kultuuragenda.nl/agenda	ok	Pagina gelezen		https://www.kultuuragenda.nl/agenda	153402 tekens HTML
+Parser	https://www.kultuuragenda.nl/agenda	strategie	Kultuuragenda detailstrategie		https://www.kultuuragenda.nl/agenda	Overzicht overslaan; alleen echte /agenda/<id>/<slug> activiteitspagina’s verwerken
+Website	https://www.kultuuragenda.nl/agenda	ok	Pagina geanalyseerd		https://www.kultuuragenda.nl/agenda	0 events/aanbiedingen op deze pagina
+Website	https://www.kultuuragenda.nl/agenda	ok	Detailpagina geanalyseerd		https://www.kultuuragenda.nl/agenda/1088284512/the-social-reckoning	1 extra events
+Website	https://www.kultuuragenda.nl/agenda	ok	Detailpagina geanalyseerd		https://www.kultuuragenda.nl/agenda/1148248983/het-witte-vlag-project-1	1 extra events
+Website	https://www.kultuuragenda.nl/agenda	ok	Detailpagina geanalyseerd		https://www.kultuuragenda.nl/agenda/1249727087/nena-1	0 extra events
+Website	https://www.kultuuragenda.nl/agenda	ok	Detailpagina geanalyseerd		https://www.kultuuragenda.nl/agenda/1453156530/digger	1 extra events
+Website	https://www.kultuuragenda.nl/agenda	ok	Detailpagina geanalyseerd		https://www.kultuuragenda.nl/agenda/156742476/youri	1 extra events
+Website	https://www.kultuuragenda.nl/agenda	ok	Detailpagina geanalyseerd		https://www.kultuuragenda.nl/agenda/1691313909/de-gaulle-liberte	1 extra events
+Website	https://www.kultuuragenda.nl/agenda	ok	Detailpagina geanalyseerd		https://www.kultuuragenda.nl/agenda/1740715911/wildwood	1 extra events
+Website	https://www.kultuuragenda.nl/agenda	ok	Detailpagina geanalyseerd		https://www.kultuuragenda.nl/agenda/2155420288/erupcja	1 extra events
+Website	https://www.kultuuragenda.nl/agenda	ok	Detailpagina geanalyseerd		https://www.kultuuragenda.nl/agenda/2203530167/home-1	1 extra events
+Website	https://www.kultuuragenda.nl/agenda	ok	Detailpagina geanalyseerd		https://www.kultuuragenda.nl/agenda/2241509706/playing-house	1 extra events
+Website	https://www.kultuuragenda.nl/agenda	ok	Detailpagina geanalyseerd		https://www.kultuuragenda.nl/agenda/281413393/wicker	1 extra events
+Website	https://www.kultuuragenda.nl/agenda	ok	Detailpagina geanalyseerd		https://www.kultuuragenda.nl/agenda/2840636300/l-inconnue	1 extra events
+Website	https://www.kultuuragenda.nl/agenda	ok	Detailpagina geanalyseerd		https://www.kultuuragenda.nl/agenda/3022524326/sense-and-sensibility	1 extra events
+Website	https://www.kultuuragenda.nl/agenda	ok	Detailpagina geanalyseerd		https://www.kultuuragenda.nl/agenda/3096643998/toutes-directions	1 extra events
+Website	https://www.kultuuragenda.nl/agenda	ok	Detailpagina geanalyseerd		https://www.kultuuragenda.nl/agenda/3324146979/docs-naza	1 extra events
+Website	https://www.kultuuragenda.nl/agenda	ok	Detailpagina geanalyseerd		https://www.kultuuragenda.nl/agenda/3330398606/national-theatre-live-the-misanthrope	1 extra events
+Website	https://www.kultuuragenda.nl/agenda	ok	Detailpagina geanalyseerd		https://www.kultuuragenda.nl/agenda/3621902129/coward	1 extra events
+Website	https://www.kultuuragenda.nl/agenda	ok	Detailpagina geanalyseerd		https://www.kultuuragenda.nl/agenda/3669541755/classics-akira	1 extra events
+Website	https://www.kultuuragenda.nl/agenda	ok	Detailpagina geanalyseerd		https://www.kultuuragenda.nl/agenda/3730283290/the-beloved-1	1 extra events
+Website	https://www.kultuuragenda.nl/agenda	ok	Detailpagina geanalyseerd		https://www.kultuuragenda.nl/agenda/4171063207/klik-tik-2026	1 extra events
+Website	https://www.kultuuragenda.nl/agenda	ok	Detailpagina geanalyseerd		https://www.kultuuragenda.nl/agenda/831818211/pressure	1 extra events
+Website	https://www.kultuuragenda.nl/agenda	ok	Detailpagina geanalyseerd		https://www.kultuuragenda.nl/agenda/922308090/docs-the-cycle-of-love	1 extra events
+Website	https://www.kultuuragenda.nl/agenda	ok	Detailpagina geanalyseerd		https://www.kultuuragenda.nl/agenda/975781605/schoolplaten-van-weleer	1 extra events
+Website	https://www.kultuuragenda.nl/agenda	ok	Detailpagina geanalyseerd		https://www.kultuuragenda.nl/agenda/990231819/otto-krol-gevels-daken-en-luchten	1 extra events
+RSS/Atom	https://www.kultuuragenda.nl/agenda	fout	Feed mislukt		https://www.kultuuragenda.nl/feed	HTTP 404
+RSS/Atom	https://www.kultuuragenda.nl/agenda	fout	Feed mislukt		https://www.kultuuragenda.nl/rss	HTTP 404
+RSS/Atom	https://www.kultuuragenda.nl/agenda	fout	Feed mislukt		https://www.kultuuragenda.nl/rss.xml	HTTP 404
+RSS/Atom	https://www.kultuuragenda.nl/agenda	fout	Feed mislukt		https://www.kultuuragenda.nl/feed.xml	HTTP 404
+RSS/Atom	https://www.kultuuragenda.nl/agenda	fout	Feed mislukt		https://www.kultuuragenda.nl/events/feed/	HTTP 404
+Siteconfiguratie	https://www.kultuuragenda.nl/agenda	overgeslagen	Evenement uitgesloten	2026-10-26	https://www.kultuuragenda.nl/agenda/1088284512/the-social-reckoning	Voldoet aan een websitespecifieke uitsluiting
+Filter	https://www.kultuuragenda.nl/agenda	ok	Datumfilter toegepast	2026-10-26	https://www.kultuuragenda.nl/agenda	23 gevonden; 22 binnen 2026-10-26 t/m onbeperkt
+Website	https://www.kultuuragenda.nl/agenda	klaar	Klaar		https://www.kultuuragenda.nl/agenda	site 9/15: 0 unieke events in 9.63 sec

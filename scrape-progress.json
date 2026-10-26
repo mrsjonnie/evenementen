@@ -1,7 +1,7 @@
 {
   "runId": "2026-10-26T22:40:50.827517+00:00-e5599623",
   "startedAt": "2026-10-26T22:40:50+00:00",
-  "completedCount": 8,
+  "completedCount": 9,
   "totalSites": 15,
   "currentSite": "https://www.kultuuragenda.nl/agenda",
   "currentSiteIndex": 9,
@@ -13,7 +13,8 @@
     "https://simplon.nl/",
     "https://www.vera-groningen.nl/",
     "https://www.martiniplaza.nl/nl/agenda",
-    "https://groningermuseum.nl/programma"
+    "https://groningermuseum.nl/programma",
+    "https://www.kultuuragenda.nl/agenda"
   ],
   "events": [
     {
@@ -1873,342 +1874,16 @@
       "newCount": 0,
       "durationSeconds": 0.0,
       "timedOut": false
+    },
+    {
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 9.63,
+      "timedOut": false
     }
   ],
   "rawLog": [
-    {
-      "source": "ChatGPT",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "ChatGPT mislukt",
-      "date": "",
-      "url": "https://groningen.uitloper.nu/",
-      "status": "fout",
-      "rawText": "Body has already been used. It can only be used once. Use tee() first if you need to read it twice."
-    },
-    {
-      "source": "ChatGPT",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": "ChatGPT mislukt",
-      "date": "",
-      "url": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "status": "fout",
-      "rawText": "Body has already been used. It can only be used once. Use tee() first if you need to read it twice."
-    },
-    {
-      "source": "ChatGPT",
-      "site": "https://simplon.nl/",
-      "title": "ChatGPT mislukt",
-      "date": "",
-      "url": "https://simplon.nl/",
-      "status": "fout",
-      "rawText": "Body has already been used. It can only be used once. Use tee() first if you need to read it twice."
-    },
-    {
-      "source": "ChatGPT",
-      "site": "https://www.martiniplaza.nl/nl/agenda",
-      "title": "ChatGPT mislukt",
-      "date": "",
-      "url": "https://www.martiniplaza.nl/nl/agenda",
-      "status": "fout",
-      "rawText": "Body has already been used. It can only be used once. Use tee() first if you need to read it twice."
-    },
-    {
-      "source": "ChatGPT",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "ChatGPT mislukt",
-      "date": "",
-      "url": "https://groningermuseum.nl/programma",
-      "status": "fout",
-      "rawText": "Body has already been used. It can only be used once. Use tee() first if you need to read it twice."
-    },
-    {
-      "source": "ChatGPT",
-      "site": "https://www.kultuuragenda.nl/agenda",
-      "title": "ChatGPT mislukt",
-      "date": "",
-      "url": "https://www.kultuuragenda.nl/agenda",
-      "status": "fout",
-      "rawText": "Body has already been used. It can only be used once. Use tee() first if you need to read it twice."
-    },
-    {
-      "source": "ChatGPT",
-      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
-      "title": "ChatGPT mislukt",
-      "date": "",
-      "url": "https://www.concertgebouw.nl/concerten-en-tickets",
-      "status": "fout",
-      "rawText": "Body has already been used. It can only be used once. Use tee() first if you need to read it twice."
-    },
-    {
-      "source": "ChatGPT",
-      "site": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
-      "title": "ChatGPT mislukt",
-      "date": "",
-      "url": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
-      "status": "fout",
-      "rawText": "Body has already been used. It can only be used once. Use tee() first if you need to read it twice."
-    },
-    {
-      "source": "ChatGPT",
-      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
-      "title": "ChatGPT mislukt",
-      "date": "",
-      "url": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
-      "status": "fout",
-      "rawText": "Body has already been used. It can only be used once. Use tee() first if you need to read it twice."
-    },
-    {
-      "source": "ChatGPT",
-      "site": "https://www.socialdeal.nl/",
-      "title": "ChatGPT mislukt",
-      "date": "",
-      "url": "https://www.socialdeal.nl/",
-      "status": "fout",
-      "rawText": "Body has already been used. It can only be used once. Use tee() first if you need to read it twice."
-    },
-    {
-      "source": "ChatGPT",
-      "site": "https://www.ibood.com/s-nl",
-      "title": "ChatGPT mislukt",
-      "date": "",
-      "url": "https://www.ibood.com/s-nl",
-      "status": "fout",
-      "rawText": "Body has already been used. It can only be used once. Use tee() first if you need to read it twice."
-    },
-    {
-      "source": "Mistral",
-      "site": "https://forum.nl/nl/agenda",
-      "title": "Mistral fout",
-      "date": "",
-      "url": "https://forum.nl/nl/agenda",
-      "status": "status 429",
-      "rawText": "{\"object\":\"error\",\"message\":\"Rate limit exceeded\",\"type\":\"rate_limited\",\"param\":null,\"code\":\"1300\",\"raw_status_code\":429}"
-    },
-    {
-      "source": "Mistral",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Mistral overgeslagen",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/",
-      "status": "overgeslagen",
-      "rawText": "Deze AI-bron is na een HTTP 429 voor de rest van deze scan gepauzeerd om herhaalde rate-limitfouten te voorkomen."
-    },
-    {
-      "source": "Mistral",
-      "site": "https://www.vera-groningen.nl/",
-      "title": "Mistral overgeslagen",
-      "date": "",
-      "url": "https://www.vera-groningen.nl/",
-      "status": "overgeslagen",
-      "rawText": "Deze AI-bron is na een HTTP 429 voor de rest van deze scan gepauzeerd om herhaalde rate-limitfouten te voorkomen."
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Start",
-      "date": "",
-      "url": "https://groningen.uitloper.nu/",
-      "status": "start",
-      "rawText": "site 1/15: max 60 events, max 45 seconden"
-    },
-    {
-      "source": "Parser",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Scrapertype vastgesteld",
-      "date": "",
-      "url": "https://groningen.uitloper.nu/",
-      "status": "strategie",
-      "rawText": "uitloper-agenda"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Pagina gelezen",
-      "date": "",
-      "url": "https://groningen.uitloper.nu/?date=1793016000",
-      "status": "ok",
-      "rawText": "61102 tekens HTML"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Nena",
-      "date": "2026-10-26",
-      "url": "https://groningen.uitloper.nu/muziek/nena-1",
-      "status": "Uitloper agenda-item",
-      "rawText": "Nena 20:00 uur Eén van de grootste zangeressen van de Duitse popcultuur…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Culture (ft Kenyatta Hill) & Cedric Myton",
-      "date": "2026-10-26",
-      "url": "https://groningen.uitloper.nu/muziek/culture-ft-kenyatta-hill-cedric-myton",
-      "status": "Uitloper agenda-item",
-      "rawText": "Culture (ft Kenyatta Hill) & Cedric Myton 20:30 uur Twee legendarische reggae-acts op één avond."
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Open Jazz Session",
-      "date": "2026-10-26",
-      "url": "https://groningen.uitloper.nu/muziek/open-jazz-session-3",
-      "status": "Uitloper agenda-item",
-      "rawText": "Open Jazz Session 21:15 uur Iedere maandagavond gratis Jazz-avond! Samen improviseren,…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Open Mic Nait",
-      "date": "2026-10-26",
-      "url": "https://groningen.uitloper.nu/theater/open-mic-nait-14",
-      "status": "Uitloper agenda-item",
-      "rawText": "Open Mic Nait 20:00 uur Ontdek nieuwe comedians en nieuwe grappen tijdens…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Thinking Hands",
-      "date": "2026-10-26",
-      "url": "https://groningen.uitloper.nu/kunst/thinking-hands",
-      "status": "Uitloper agenda-item",
-      "rawText": "Thinking Hands Een expositie over de kennis die in ons lichaam zit…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Nieuw Licht - De Ploeg",
-      "date": "2026-10-26",
-      "url": "https://groningen.uitloper.nu/kunst/nieuw-licht-%e2%80%93-de-ploeg",
-      "status": "Uitloper agenda-item",
-      "rawText": "Nieuw Licht - De Ploeg Een geheel vernieuwde presentatie van werken van De…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "The Architect & The Housewife: Cleaning the House, Building the Future",
-      "date": "2026-10-26",
-      "url": "https://groningen.uitloper.nu/kunst/the-architect-the-housewife-cleaning-the-house-building-the-future",
-      "status": "Uitloper agenda-item",
-      "rawText": "The Architect & The Housewife: Cleaning the House, Building the Future De titel van deze tentoonstelling is ontleend aan…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Nieuw licht 1: Ani Schulze – The Convent of Pleasure",
-      "date": "2026-10-26",
-      "url": "https://groningen.uitloper.nu/kunst/nieuw-licht-1-ani-schulze-%e2%80%93-the-convent-of-pleasure",
-      "status": "Uitloper agenda-item",
-      "rawText": "Nieuw licht 1: Ani Schulze – The Convent of Pleasure Nieuw licht is een tentoonstellingsreeks waarin het…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Keramikos Carrier Bag",
-      "date": "2026-10-26",
-      "url": "https://groningen.uitloper.nu/kunst/keramikos-carrier-bag",
-      "status": "Uitloper agenda-item",
-      "rawText": "Keramikos Carrier Bag Naar aanleiding van onderzoek in Groningen kozen Matthew…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Theatraal",
-      "date": "2026-10-26",
-      "url": "https://groningen.uitloper.nu/kunst/theatraal",
-      "status": "Uitloper agenda-item",
-      "rawText": "Theatraal Voor het derde jaar op rij presenteert de Stadsgalerie…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "ubiquitousssssssssssssssssugar",
-      "date": "2026-10-26",
-      "url": "https://groningen.uitloper.nu/kunst/ubiquitousssssssssssssssssugar",
-      "status": "Uitloper agenda-item",
-      "rawText": "ubiquitousssssssssssssssssugar Met performances, proeverijen van Goblin Feast, Jonas…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "VELD Collectief",
-      "date": "2026-10-26",
-      "url": "https://groningen.uitloper.nu/kunst/veld-collectief",
-      "status": "Uitloper agenda-item",
-      "rawText": "VELD Collectief Wie in Groningen een suikerbiet langs de weg ziet…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Storyworld Spotlight: Asjemenou!",
-      "date": "2026-10-26",
-      "url": "https://groningen.uitloper.nu/kunst/storyworld-spotlight-asjemenou",
-      "status": "Uitloper agenda-item",
-      "rawText": "Storyworld Spotlight: Asjemenou! In 2026 bestaat de Nederlandse televisie 75 jaar…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Masterminds. De Geschiedenis van de Groningse Universiteit",
-      "date": "2026-10-26",
-      "url": "https://groningen.uitloper.nu/kunst/masterminds",
-      "status": "Uitloper agenda-item",
-      "rawText": "Masterminds. De Geschiedenis van de Groningse Universiteit Masterminds neemt je mee in de geschiedenis van de…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Aletta Jacobskamer",
-      "date": "2026-10-26",
-      "url": "https://groningen.uitloper.nu/kunst/aletta-jacobskamer",
-      "status": "Uitloper agenda-item",
-      "rawText": "Aletta Jacobskamer In de kamer van dr. Aletta Jacobs, de eerste vrouwelijke…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Anatomisch Theater",
-      "date": "2026-10-26",
-      "url": "https://groningen.uitloper.nu/kunst/anatomisch-theater",
-      "status": "Uitloper agenda-item",
-      "rawText": "Anatomisch Theater In het anatomisch theater zijn zo’n 50 preparaten…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "GRID - Puin Hoop: herdruk van de jaren ’80",
-      "date": "2026-10-26",
-      "url": "https://groningen.uitloper.nu/kunst/grid-puin-hoop-herdruk-van-de-jaren-%e2%80%9980",
-      "status": "Uitloper agenda-item",
-      "rawText": "GRID - Puin Hoop: herdruk van de jaren ’80 Een prikkelende expositie over vroeger, die verrassend…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Kunstroutes",
-      "date": "2026-10-26",
-      "url": "https://groningen.uitloper.nu/kunst/kunstroutes",
-      "status": "Uitloper agenda-item",
-      "rawText": "Kunstroutes Kunst die je gezien moet hebben en kunst die je misschien…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "The Wall #9",
-      "date": "2026-10-26",
-      "url": "https://groningen.uitloper.nu/kunst/the-wall-9",
-      "status": "Uitloper agenda-item",
-      "rawText": "The Wall #9 Kunstenaar Indira de Boer maakt een installatie van…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Kleur!",
-      "date": "2026-10-26",
-      "url": "https://groningen.uitloper.nu/kunst/kleur-3",
-      "status": "Uitloper agenda-item",
-      "rawText": "Kleur! Tien kunstenaars onderzoeken in de verschillende ruimtes…"
-    },
     {
       "source": "Website",
       "site": "https://groningen.uitloper.nu/",
@@ -12675,16 +12350,349 @@
       "url": "https://groningermuseum.nl/programma",
       "status": "klaar",
       "rawText": "site 8/15: 0 unieke events in 0.0 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Start",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda",
+      "status": "start",
+      "rawText": "site 9/15: max 60 events, max 45 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda",
+      "status": "strategie",
+      "rawText": "universele detailpagina-parser (Kultuuragenda)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Pagina gelezen",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda",
+      "status": "ok",
+      "rawText": "153402 tekens HTML"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Kultuuragenda detailstrategie",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda",
+      "status": "strategie",
+      "rawText": "Overzicht overslaan; alleen echte /agenda/<id>/<slug> activiteitspagina’s verwerken"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Pagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda",
+      "status": "ok",
+      "rawText": "0 events/aanbiedingen op deze pagina"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/1088284512/the-social-reckoning",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/1148248983/het-witte-vlag-project-1",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/1249727087/nena-1",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/1453156530/digger",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/156742476/youri",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/1691313909/de-gaulle-liberte",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/1740715911/wildwood",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/2155420288/erupcja",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/2203530167/home-1",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/2241509706/playing-house",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/281413393/wicker",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/2840636300/l-inconnue",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/3022524326/sense-and-sensibility",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/3096643998/toutes-directions",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/3324146979/docs-naza",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/3330398606/national-theatre-live-the-misanthrope",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/3621902129/coward",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/3669541755/classics-akira",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/3730283290/the-beloved-1",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/4171063207/klik-tik-2026",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/831818211/pressure",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/922308090/docs-the-cycle-of-love",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/975781605/schoolplaten-van-weleer",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/990231819/otto-krol-gevels-daken-en-luchten",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/feed",
+      "status": "fout",
+      "rawText": "HTTP 404"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/rss",
+      "status": "fout",
+      "rawText": "HTTP 404"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/rss.xml",
+      "status": "fout",
+      "rawText": "HTTP 404"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/feed.xml",
+      "status": "fout",
+      "rawText": "HTTP 404"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/events/feed/",
+      "status": "fout",
+      "rawText": "HTTP 404"
+    },
+    {
+      "source": "Siteconfiguratie",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Evenement uitgesloten",
+      "date": "2026-10-26",
+      "url": "https://www.kultuuragenda.nl/agenda/1088284512/the-social-reckoning",
+      "status": "overgeslagen",
+      "rawText": "Voldoet aan een websitespecifieke uitsluiting"
+    },
+    {
+      "source": "Filter",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Datumfilter toegepast",
+      "date": "2026-10-26",
+      "url": "https://www.kultuuragenda.nl/agenda",
+      "status": "ok",
+      "rawText": "23 gevonden; 22 binnen 2026-10-26 t/m onbeperkt"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda",
+      "status": "klaar",
+      "rawText": "site 9/15: 0 unieke events in 9.63 sec"
     }
   ],
   "status": "running",
   "siteStartedAt": "2026-10-26T22:42:38+00:00",
-  "siteElapsedSeconds": 0,
-  "sitePageCount": 0,
+  "siteElapsedSeconds": 11,
+  "sitePageCount": 1,
   "lastSiteEventCount": 0,
-  "stage": "Websitepagina ophalen",
-  "lastUpdatedAt": "2026-10-26T22:42:38+00:00",
+  "stage": "Website klaar; volgende website voorbereiden",
+  "lastUpdatedAt": "2026-10-26T22:42:40+00:00",
   "lastSiteNewEventCount": 0,
-  "lastCompletedSite": "https://groningermuseum.nl/programma",
-  "lastCompletedAt": "2026-10-26T22:42:35+00:00"
+  "lastCompletedSite": "https://www.kultuuragenda.nl/agenda",
+  "lastCompletedAt": "2026-10-26T22:42:49+00:00"
 }
