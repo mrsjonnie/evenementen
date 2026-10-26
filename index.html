@@ -74,7 +74,7 @@ button,input,select{font:inherit}button,.button{border:1px solid #48657c;border-
 <p class="url-help">Voeg een eigen website toe. Je kunt de link later verwijderen met ×; deze lijst blijft op dit apparaat bewaard.</p><div class="cards" id="customCards"></div><div class="empty" id="customEmpty">Nog geen eigen URL's toegevoegd.</div>
 </section>
 
-<footer>Startpagina · Weer voor Groningen · Versie 2026.10.26.83 · Alleen instellingen, eigen URL’s en openbare weergegevens worden lokaal in deze browser opgeslagen; Google-inhoud en AI-vragen worden niet door deze pagina opgeslagen.</footer>
+<footer>Startpagina · Weer voor Groningen · Versie 2026.10.26.84 · Alleen instellingen, eigen URL’s en openbare weergegevens worden lokaal in deze browser opgeslagen; Google-inhoud en AI-vragen worden niet door deze pagina opgeslagen.</footer>
 </main>
 <script>
 const $=id=>document.getElementById(id);
@@ -176,12 +176,10 @@ async function loadHeadlines(){
   return nodes.map(x=>({title:x.querySelector("title")?.textContent?.trim(),link:x.querySelector("link")?.textContent?.trim()||x.querySelector("link")?.getAttribute("href")||"",date:x.querySelector("pubDate")?.textContent?.trim()||x.querySelector("published")?.textContent?.trim()||x.querySelector("updated")?.textContent?.trim()||""})).filter(x=>x.title&&x.link).slice(0,5);
  };
  const fetchText=async url=>{
-  const controller=new AbortController();const timer=setTimeout(()=>controller.abort(),7000);
-  try{
-   for(const proxy of [u=>"https://api.allorigins.win/raw?url="+encodeURIComponent(u)+"&disableCache=true",u=>"https://corsproxy.io/?url="+encodeURIComponent(u)]){
-    try{const res=await fetch(proxy(url),{cache:"no-store",signal:controller.signal});if(res.ok){const txt=await res.text();if(txt&&txt.length>30)return txt}}catch(e){}
-   }
-  }finally{clearTimeout(timer)}
+  for(const proxy of [u=>"https://api.allorigins.win/raw?url="+encodeURIComponent(u)+"&disableCache=true",u=>"https://corsproxy.io/?url="+encodeURIComponent(u)]){
+   const controller=new AbortController();const timer=setTimeout(()=>controller.abort(),7000);
+   try{const res=await fetch(proxy(url),{cache:"no-store",signal:controller.signal});if(res.ok){const txt=await res.text();if(txt&&txt.length>30)return txt}}catch(e){}finally{clearTimeout(timer)}
+  }
   return "";
  };
  const fetchViaRss2Json=async url=>{
