@@ -3937,6 +3937,58 @@
         setTimeout(hideStatus, 3500);
       } catch (error) { showStatus(`Feedback opslaan mislukt: ${error.message}`, "error"); button.disabled = false; }
     }
+    async function saveEventCorrectionForm(form, submitButton) {
+      const key = form.dataset.eventKey || "";
+      const event = events.find((item) => eventDedupeKey(item) === key);
+      if (!event) {
+        showStatus("Dit evenement is niet meer in de huidige lijst gevonden. Vernieuw de pagina en probeer opnieuw.", "error");
+        return;
+      }
+      const values = Object.fromEntries(new FormData(form).entries());
+      const corrections = {
+        date: cleanText(values.date || ""),
+        title: cleanText(values.title || ""),
+        location: cleanText(values.location || ""),
+        type: cleanText(values.type || ""),
+        cost: cleanText(values.cost || "")
+      };
+      if (Object.values(corrections).some((value) => !value)) {
+        showStatus("Vul datum, titel, plaats, type en prijs in. Gebruik bijvoorbeeld 'Prijs onbekend' als de prijs niet bekend is.", "warn");
+        return;
+      }
+      submitButton.disabled = true;
+      submitButton.textContent = "Opslaan…";
+      try {
+        const response = await fetch(`${WORKER_URL}/event-edit`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            key,
+            title: event.title,
+            date: event.date,
+            originalTitle: event.title,
+            originalDate: event.date,
+            website: event.website || "",
+            url: event.website || "",
+            corrections
+          })
+        });
+        const data = await response.json().catch(() => ({}));
+        if (!response.ok || data.ok === false) throw new Error(workerErrorMessage(data, "Opslaan van evenementcorrectie is mislukt"));
+        Object.assign(event, corrections, { editedByUser: true, editedAt: new Date().toISOString() });
+        const nextKey = eventDedupeKey(event);
+        expandedEventKeys.delete(key);
+        expandedEventKeys.add(nextKey);
+        addLiveLog("Correctie", event.website || event.source || "", event.title, "velden aangepast", "Correcties opgeslagen en gekoppeld aan de website voor volgende scraper-runs");
+        showStatus("Evenement aangepast. De scraper past deze correcties bij volgende scans van deze website opnieuw toe.", "ok");
+        applyFilters();
+      } catch (error) {
+        showStatus(`Correctie niet opgeslagen: ${cleanText(error.message || error)}`, "error");
+        submitButton.disabled = false;
+        submitButton.textContent = "Opslaan en scraper leren";
+      }
+    }
+
     async function deleteEventByKey(key) {
       const event = events.find((item) => eventDedupeKey(item) === key);
       if (!event) return;
@@ -4143,7 +4195,36 @@
         restoreRunningScrapeProgress().catch(() => {});
       }
     });
+    $("grid").addEventListener("submit", (event) => {
+      const form = event.target.closest(".eventEditForm");
+      if (!form) return;
+      event.preventDefault();
+      const submitButton = form.querySelector(".saveEventEditBtn");
+      if (submitButton) saveEventCorrectionForm(form, submitButton);
+    });
     $("grid").addEventListener("click", (event) => {
+      const editButton = event.target.closest(".editEventBtn");
+      if (editButton) {
+        const card = editButton.closest(".card");
+        const form = card?.querySelector(".eventEditForm");
+        if (form) {
+          form.hidden = !form.hidden;
+          editButton.setAttribute("aria-expanded", String(!form.hidden));
+          editButton.textContent = form.hidden ? "Bewerken" : "Bewerken sluiten";
+        }
+        return;
+      }
+      const cancelEditButton = event.target.closest(".cancelEventEditBtn");
+      if (cancelEditButton) {
+        const form = cancelEditButton.closest(".eventEditForm");
+        if (form) {
+          form.hidden = true;
+          const card = form.closest(".card");
+          const toggle = card?.querySelector(".editEventBtn");
+          if (toggle) { toggle.setAttribute("aria-expanded", "false"); toggle.textContent = "Bewerken"; }
+        }
+        return;
+      }
       const goodButton = event.target.closest(".goodEventBtn");
       if (goodButton) { saveEventVote(goodButton.dataset.eventKey || "", "good", goodButton); return; }
       const deleteButton = event.target.closest(".deleteEventBtn");
