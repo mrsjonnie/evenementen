@@ -3257,6 +3257,8 @@
       if (discovery === "serpapi" && !$("provSerpAPI")?.checked) return false;
       if ((discovery === "chatgpt" || discovery === "openai") && !$("provOpenAI")?.checked) return false;
       if (discovery === "mistral" && !$("provMistral")?.checked) return false;
+      if (discovery === "perplexity" && !$("provPerplexity")?.checked) return false;
+      if (discovery === "gemini" && !$("provGemini")?.checked) return false;
       return true;
     }
 
@@ -3293,7 +3295,7 @@
         const activityLine = count === 1 ? "1 activiteit beschikbaar" : `${count} activiteiten beschikbaar`;
         return `<div class="siteRow"><label class="${count > 0 ? "siteFound" : ""}"><input class="siteCheck" type="checkbox" value="${escapeHtml(site)}"${selectedSites.has(site) ? " checked" : ""}><span class="sourceInfoWrap"><span title="${escapeHtml(shortUrl)}">${escapeHtml(shortUrl)} <span class="scraperTypeLabel">(${escapeHtml(scraperType)})</span><span class="siteActivityLine${count > 0 ? " hasEvents" : ""}">${count}</span>${badge}${isScanning ? '<span class="siteScanIcon" title="Bezig met zoeken naar nieuwe data" aria-label="Bezig met zoeken naar nieuwe data">⟳</span>' : ""}</span>${hasProblem ? `<button class="sourceInfo" type="button" aria-label="Scrape-informatie voor ${escapeHtml(site)}" aria-expanded="false" data-info-site="${escapeHtml(site)}">i</button>` : ""}${hasProblem ? `<span class="sourceInfoPopup" data-info-popup="${escapeHtml(site)}" hidden>${escapeHtml(diagnostic)}</span>` : ""}</span></label><button class="siteRemove" type="button" data-remove-site="${escapeHtml(site)}" aria-label="Verwijder ${escapeHtml(shortUrl)} uit de websitelijst" title="Verwijder website uit deze lijst">×</button></div>`;
       }).join("");
-      const aiRows = [["provMistral","Mistral AI"],["provOpenAI","ChatGPT / OpenAI"],["provSerpAPI","SerpAPI (webzoekbron)"]].map(([id,label]) => `<label><input class="aiSourceCheck" type="checkbox" data-provider="${id}"${$(id)?.checked ? " checked" : ""}> <span>${label}</span></label>`).join("");
+      const aiRows = [["provMistral","Mistral AI"],["provOpenAI","ChatGPT / OpenAI"],["provPerplexity","Perplexity"],["provGemini","Google Gemini"],["provSerpAPI","SerpAPI (webzoekbron)"]].map(([id,label]) => `<label><input class="aiSourceCheck" type="checkbox" data-provider="${id}"${$(id)?.checked ? " checked" : ""}> <span>${label}</span></label>`).join("");
       $("sitesList").innerHTML = siteRows + `<div class="sourceGroupLabel">AI- en zoekbronnen</div>` + aiRows;
       updateSiteCount();
     }
@@ -3309,6 +3311,8 @@
           if (source === "serpapi" && !showSerpApi) return false;
           if ((source === "chatgpt" || source === "openai") && !showChatGpt) return false;
           if (source === "mistral" && !showMistral) return false;
+      if (source === "perplexity" && !$("provPerplexity")?.checked) return false;
+      if (source === "gemini" && !$("provGemini")?.checked) return false;
           return true;
         })
         .slice(0, 600);
