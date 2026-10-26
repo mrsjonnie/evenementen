@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-26T22:05:09.696Z",
+  "updatedAt": "2026-10-26T22:05:11.078Z",
   "sites": {
     "https://groningen.uitloper.nu/": {
       "methodology": "",
@@ -300,7 +300,9 @@
           "replace": "Dans"
         }
       ],
-      "eventUrlPatterns": [],
+      "eventUrlPatterns": [
+        "^/programma/alewya/[^/?#]+/?$"
+      ],
       "excludedUrlPatterns": []
     },
     "https://www.vvvameland.nl/activiteiten-en-evenementen": {
