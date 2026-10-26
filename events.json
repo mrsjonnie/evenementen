@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-26T11:23:09+00:00",
+  "updatedAt": "2026-10-26T11:23:17+00:00",
   "events": [
     {
       "date": "2026-10-26",
@@ -8468,90 +8468,16 @@
       "newCount": 40,
       "durationSeconds": 10.38,
       "timedOut": false
+    },
+    {
+      "site": "https://www.ibood.com/s-nl",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 5.1,
+      "timedOut": false
     }
   ],
   "rawLog": [
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "The Surpriseshow Via Rudolphi Producties",
-      "date": "2027-03-10",
-      "url": "https://www.spotgroningen.nl/programma/the-surpriseshow/",
-      "status": "event uit link",
-      "rawText": "The Surpriseshow Via Rudolphi Producties | TOBAL | Nazanin Taheri Rauwe, ontroerende en humoristische solovoorstelling wo 10 mrt"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Dutch Classical Talent: Martin String Quartet SPOT Lunchbreak",
-      "date": "2027-03-11",
-      "url": "https://www.spotgroningen.nl/programma/dutch-classical-talent-martin-string-quartet/",
-      "status": "event uit link",
-      "rawText": "Dutch Classical Talent: Martin String Quartet SPOT Lunchbreak Een van de meest veelbelovende nieuwe Nederlandse strijkkwartetten do 11 mrt"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Noord Nederlands Orkest Beethoven 5",
-      "date": "2027-03-11",
-      "url": "https://www.spotgroningen.nl/programma/noord-nederlands-orkest-237/",
-      "status": "event uit link",
-      "rawText": "Noord Nederlands Orkest Beethoven 5 Een programma vol variatie: van alarmerend begin tot uitbundige finale do 11 mrt"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Nachtwacht NITE, Club Guy & Roni, HIIIT, Het Muziek",
-      "date": "2027-03-12",
-      "url": "https://www.spotgroningen.nl/programma/nachtwacht-6/",
-      "status": "event uit link",
-      "rawText": "Nachtwacht NITE, Club Guy & Roni, HIIIT, Het Muziek \"Nachtwacht grijpt vol naar je hart\" ★★★★★ de Volkskrant vr 12 mrt"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Theater Utrecht Woyzeck: In de TBS",
-      "date": "2027-03-12",
-      "url": "https://www.spotgroningen.nl/programma/theater-utrecht-9/",
-      "status": "event uit link",
-      "rawText": "Theater Utrecht Woyzeck: In de TBS Een onderzoek met tbs-patienten, medewerkers en professionele acteurs vr 12 mrt"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "André Kuipers & Kamerata Zuid",
-      "date": "2027-03-12",
-      "url": "https://www.spotgroningen.nl/programma/andre-kuipers-kamerata-zuid/",
-      "status": "event uit link",
-      "rawText": "André Kuipers & Kamerata Zuid Een muzikale ruimtereis vr 12 mrt"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Nederlands Kamerkoor Zingdag",
-      "date": "2027-03-13",
-      "url": "https://www.spotgroningen.nl/programma/nederlands-kamerkoor-16/",
-      "status": "event uit link",
-      "rawText": "Nederlands Kamerkoor Zingdag Amateurzangers en -koren krijgen les van professionals za 13 mrt"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Nachtwacht NITE, Club Guy & Roni, HIIIT, Het Muziek",
-      "date": "2027-03-13",
-      "url": "https://www.spotgroningen.nl/programma/nachtwacht-7/",
-      "status": "event uit link",
-      "rawText": "Nachtwacht NITE, Club Guy & Roni, HIIIT, Het Muziek \"Nachtwacht grijpt vol naar je hart\" ★★★★★ de Volkskrant za 13 mrt"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Nederlands Kamerkoor Waanzin!",
-      "date": "2027-03-13",
-      "url": "https://www.spotgroningen.nl/programma/nederlands-kamerkoor-14/",
-      "status": "event uit link",
-      "rawText": "Nederlands Kamerkoor Waanzin! Nederlands beste koor verkent de dunne lijn tussen gekte en genialiteit za 13 mrt"
-    },
     {
       "source": "Website",
       "site": "https://www.spotgroningen.nl/programma/",
@@ -19270,6 +19196,87 @@
       "url": "https://www.socialdeal.nl/",
       "status": "klaar",
       "rawText": "site 15/18: 40 unieke events in 10.38 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "Start",
+      "date": "",
+      "url": "https://www.ibood.com/s-nl",
+      "status": "start",
+      "rawText": "site 16/18: max 40 events, max 10 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://www.ibood.com/s-nl",
+      "status": "strategie",
+      "rawText": "aanbiedingen"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.ibood.com/offers/nl/s-nl",
+      "title": "403-tekstproxy mislukt",
+      "date": "",
+      "url": "https://www.ibood.com/offers/nl/s-nl",
+      "status": "fout",
+      "rawText": "HTTPSConnectionPool(host='r.jina.ai', port=443): Read timed out. (read timeout=1.25)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "Pagina mislukt",
+      "date": "",
+      "url": "https://www.ibood.com/offers/nl/s-nl",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.ibood.com/nl/s-nl",
+      "title": "403-tekstproxy mislukt",
+      "date": "",
+      "url": "https://www.ibood.com/nl/s-nl",
+      "status": "fout",
+      "rawText": "HTTPSConnectionPool(host='r.jina.ai', port=443): Read timed out. (read timeout=1.25)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "Pagina mislukt",
+      "date": "",
+      "url": "https://www.ibood.com/nl/s-nl",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "403-tekstproxy mislukt",
+      "date": "",
+      "url": "https://www.ibood.com/s-nl",
+      "status": "fout",
+      "rawText": "HTTPSConnectionPool(host='r.jina.ai', port=443): Read timed out. (read timeout=1.25)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "Pagina mislukt",
+      "date": "",
+      "url": "https://www.ibood.com/s-nl",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://www.ibood.com/s-nl",
+      "status": "klaar",
+      "rawText": "site 16/18: 0 unieke events in 5.1 sec"
     }
   ]
 }

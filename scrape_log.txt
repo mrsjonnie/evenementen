@@ -1,12 +1,3 @@
-Website	https://www.spotgroningen.nl/programma/	event uit link	The Surpriseshow Via Rudolphi Producties	2027-03-10	https://www.spotgroningen.nl/programma/the-surpriseshow/	The Surpriseshow Via Rudolphi Producties | TOBAL | Nazanin Taheri Rauwe, ontroerende en humoristische solovoorstelling wo 10 mrt
-Website	https://www.spotgroningen.nl/programma/	event uit link	Dutch Classical Talent: Martin String Quartet SPOT Lunchbreak	2027-03-11	https://www.spotgroningen.nl/programma/dutch-classical-talent-martin-string-quartet/	Dutch Classical Talent: Martin String Quartet SPOT Lunchbreak Een van de meest veelbelovende nieuwe Nederlandse strijkkwartetten do 11 mrt
-Website	https://www.spotgroningen.nl/programma/	event uit link	Noord Nederlands Orkest Beethoven 5	2027-03-11	https://www.spotgroningen.nl/programma/noord-nederlands-orkest-237/	Noord Nederlands Orkest Beethoven 5 Een programma vol variatie: van alarmerend begin tot uitbundige finale do 11 mrt
-Website	https://www.spotgroningen.nl/programma/	event uit link	Nachtwacht NITE, Club Guy & Roni, HIIIT, Het Muziek	2027-03-12	https://www.spotgroningen.nl/programma/nachtwacht-6/	Nachtwacht NITE, Club Guy & Roni, HIIIT, Het Muziek "Nachtwacht grijpt vol naar je hart" ★★★★★ de Volkskrant vr 12 mrt
-Website	https://www.spotgroningen.nl/programma/	event uit link	Theater Utrecht Woyzeck: In de TBS	2027-03-12	https://www.spotgroningen.nl/programma/theater-utrecht-9/	Theater Utrecht Woyzeck: In de TBS Een onderzoek met tbs-patienten, medewerkers en professionele acteurs vr 12 mrt
-Website	https://www.spotgroningen.nl/programma/	event uit link	André Kuipers & Kamerata Zuid	2027-03-12	https://www.spotgroningen.nl/programma/andre-kuipers-kamerata-zuid/	André Kuipers & Kamerata Zuid Een muzikale ruimtereis vr 12 mrt
-Website	https://www.spotgroningen.nl/programma/	event uit link	Nederlands Kamerkoor Zingdag	2027-03-13	https://www.spotgroningen.nl/programma/nederlands-kamerkoor-16/	Nederlands Kamerkoor Zingdag Amateurzangers en -koren krijgen les van professionals za 13 mrt
-Website	https://www.spotgroningen.nl/programma/	event uit link	Nachtwacht NITE, Club Guy & Roni, HIIIT, Het Muziek	2027-03-13	https://www.spotgroningen.nl/programma/nachtwacht-7/	Nachtwacht NITE, Club Guy & Roni, HIIIT, Het Muziek "Nachtwacht grijpt vol naar je hart" ★★★★★ de Volkskrant za 13 mrt
-Website	https://www.spotgroningen.nl/programma/	event uit link	Nederlands Kamerkoor Waanzin!	2027-03-13	https://www.spotgroningen.nl/programma/nederlands-kamerkoor-14/	Nederlands Kamerkoor Waanzin! Nederlands beste koor verkent de dunne lijn tussen gekte en genialiteit za 13 mrt
 Website	https://www.spotgroningen.nl/programma/	event uit link	Nederlandse Bachvereniging Matthäus Passion	2027-03-14	https://www.spotgroningen.nl/programma/nederlandse-bachvereniging-20/	Nederlandse Bachvereniging Matthäus Passion Een van de indrukwekkendste verhalen ooit, verteld met ontroerende muziek en zang zo 14 mrt
 Website	https://www.spotgroningen.nl/programma/	event uit link	Het Goede Doel Altijd en Eeuwig Tour	2027-03-14	https://www.spotgroningen.nl/programma/het-goede-doel/	Het Goede Doel Altijd en Eeuwig Tour Ze zijn terug! Uitverkocht zo 14 mrt
 Website	https://www.spotgroningen.nl/programma/	event uit link	The Haunted Youth	2027-03-15	https://www.spotgroningen.nl/programma/the-haunted-youth/	The Haunted Youth Emo synthbeladen indierock Uitverkocht ma 15 mrt
@@ -1198,3 +1189,12 @@ Website	https://www.socialdeal.nl/	ok	Pagina gelezen		https://www.socialdeal.nl/
 Parser	https://www.socialdeal.nl/	ok	Social Deal-telling		https://www.socialdeal.nl/ontdek/groningen/	40 aanbiedingen gevonden (limiet 40)
 Website	https://www.socialdeal.nl/	ok	Pagina geanalyseerd		https://www.socialdeal.nl/ontdek/groningen/	40 events/aanbiedingen op deze pagina
 Website	https://www.socialdeal.nl/	klaar	Klaar		https://www.socialdeal.nl/	site 15/18: 40 unieke events in 10.38 sec
+Website	https://www.ibood.com/s-nl	start	Start		https://www.ibood.com/s-nl	site 16/18: max 40 events, max 10 seconden
+Parser	https://www.ibood.com/s-nl	strategie	Scrapertype vastgesteld		https://www.ibood.com/s-nl	aanbiedingen
+Diagnose	https://www.ibood.com/offers/nl/s-nl	fout	403-tekstproxy mislukt		https://www.ibood.com/offers/nl/s-nl	HTTPSConnectionPool(host='r.jina.ai', port=443): Read timed out. (read timeout=1.25)
+Website	https://www.ibood.com/s-nl	fout	Pagina mislukt		https://www.ibood.com/offers/nl/s-nl	HTTP 403
+Diagnose	https://www.ibood.com/nl/s-nl	fout	403-tekstproxy mislukt		https://www.ibood.com/nl/s-nl	HTTPSConnectionPool(host='r.jina.ai', port=443): Read timed out. (read timeout=1.25)
+Website	https://www.ibood.com/s-nl	fout	Pagina mislukt		https://www.ibood.com/nl/s-nl	HTTP 403
+Diagnose	https://www.ibood.com/s-nl	fout	403-tekstproxy mislukt		https://www.ibood.com/s-nl	HTTPSConnectionPool(host='r.jina.ai', port=443): Read timed out. (read timeout=1.25)
+Website	https://www.ibood.com/s-nl	fout	Pagina mislukt		https://www.ibood.com/s-nl	HTTP 403
+Website	https://www.ibood.com/s-nl	klaar	Klaar		https://www.ibood.com/s-nl	site 16/18: 0 unieke events in 5.1 sec
