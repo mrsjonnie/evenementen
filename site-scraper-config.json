@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-26T22:15:40.809Z",
+  "updatedAt": "2026-10-26T22:17:55.642Z",
   "sites": {
     "https://groningen.uitloper.nu/": {
       "methodology": "",
@@ -152,7 +152,13 @@
         "linkedin"
       ],
       "excludedUrls": [],
-      "adjustments": [],
+      "adjustments": [
+        {
+          "field": "location",
+          "find": "ik heb een puber!’ LIVE",
+          "replace": "SPOT/De Oosterpoort, Kleine zaal / Trompsingel 27"
+        }
+      ],
       "eventUrlPatterns": [],
       "excludedUrlPatterns": []
     },
