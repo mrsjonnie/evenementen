@@ -3,8 +3,8 @@
   "startedAt": "2026-10-26T20:49:13+00:00",
   "completedCount": 2,
   "totalSites": 15,
-  "currentSite": "https://www.visitgroningen.nl/nl/doen/evenementen",
-  "currentSiteIndex": 2,
+  "currentSite": "https://forum.nl/nl/agenda",
+  "currentSiteIndex": 3,
   "completedSites": [
     "https://groningen.uitloper.nu/",
     "https://www.visitgroningen.nl/nl/doen/evenementen"
@@ -5206,12 +5206,12 @@
     }
   ],
   "status": "running",
-  "siteStartedAt": "2026-10-26T20:49:21+00:00",
-  "siteElapsedSeconds": 10,
-  "sitePageCount": 2,
-  "lastSiteEventCount": 40,
-  "stage": "Website klaar; volgende website voorbereiden",
-  "lastUpdatedAt": "2026-10-26T20:49:25+00:00",
+  "siteStartedAt": "2026-10-26T20:49:33+00:00",
+  "siteElapsedSeconds": 0,
+  "sitePageCount": 0,
+  "lastSiteEventCount": 0,
+  "stage": "Websitepagina ophalen",
+  "lastUpdatedAt": "2026-10-26T20:49:33+00:00",
   "lastSiteNewEventCount": 40,
   "lastCompletedSite": "https://www.visitgroningen.nl/nl/doen/evenementen",
   "lastCompletedAt": "2026-10-26T20:49:31+00:00"
