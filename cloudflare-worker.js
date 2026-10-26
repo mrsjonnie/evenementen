@@ -1142,7 +1142,11 @@ async function saveEventCorrection(env, target = {}) {
   const location = clean(corrections.location || "");
   const type = clean(corrections.type || "");
   const cost = clean(corrections.cost || "");
-  if (!title || !date || !target.website) throw new Error("Titel, datum en website zijn verplicht");
+  const improvedUrl = clean(corrections.website || target.website || "");
+  let parsedImprovedUrl;
+  try { parsedImprovedUrl = new URL(improvedUrl); } catch (_) { throw new Error("Vul een geldige verbeterde URL in"); }
+  if (!["http:", "https:"].includes(parsedImprovedUrl.protocol)) throw new Error("De URL moet beginnen met http:// of https://");
+  if (!title || !date || !target.website) throw new Error("Titel, datum en oorspronkelijke website zijn verplicht");
   if (!location || !type || !cost) throw new Error("Vul plaats, type en prijs in; gebruik bijvoorbeeld 'Onbekend' als de prijs niet bekend is");
 
   const response = await githubFetch(env, "/contents/events.json?ref=main");
@@ -1169,7 +1173,7 @@ async function saveEventCorrection(env, target = {}) {
   const apply = (event) => {
     if (!sameEvent(event)) return event;
     updatedCount += 1;
-    return { ...event, title, date, location, type, cost, editedByUser: true, editedAt: new Date().toISOString() };
+    return { ...event, title, date, location, type, cost, website: improvedUrl, editedByUser: true, editedAt: new Date().toISOString() };
   };
   if (Array.isArray(data)) {
     data = data.map(apply);
@@ -1193,10 +1197,10 @@ async function saveEventCorrection(env, target = {}) {
     date,
     originalTitle,
     originalDate,
-    corrections: { title, date, location, type, cost },
+    corrections: { title, date, location, type, cost, website: improvedUrl },
     url: target.url || target.website
   }, "edit");
-  return { updatedCount, corrections: { title, date, location, type, cost } };
+  return { updatedCount, corrections: { title, date, location, type, cost, website: improvedUrl } };
 }
 async function deleteEventFromGithub(env, target = {}) {
   await saveEventFeedback(env, target, "bad");
