@@ -1,7 +1,7 @@
 {
   "runId": "2026-10-26T20:49:13.970498+00:00-c337f0f6",
   "startedAt": "2026-10-26T20:49:13+00:00",
-  "completedCount": 14,
+  "completedCount": 15,
   "totalSites": 15,
   "currentSite": "https://denieuwekolk.nl/agenda",
   "currentSiteIndex": 15,
@@ -19,7 +19,8 @@
     "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
     "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
     "https://www.socialdeal.nl/",
-    "https://www.ibood.com/s-nl"
+    "https://www.ibood.com/s-nl",
+    "https://denieuwekolk.nl/agenda"
   ],
   "events": [
     {
@@ -495,6 +496,22 @@
     {
       "date": "2026-10-26",
       "time": "",
+      "title": "Foto-expositie Verhalen van Verborgen Kracht",
+      "type": "Expositie",
+      "location": "De Nieuwe Kolk Weiersstraat 1 9401 ET Assen",
+      "locationLink": "",
+      "website": "https://denieuwekolk.nl/bieb/agenda/fotoexpositie-verhalen-van-verborgen-kracht-10050486",
+      "source": "denieuwekolk.nl",
+      "discoverySource": "Website",
+      "description": "Ontdek de fotoexpositie Verhalen van Verborgen Kracht van Tara van Meeteren bij De Nieuwe Kolk in Assen. Laat je inspireren door bijzondere verhalen.",
+      "cost": "Zie website",
+      "image": "https://media.denieuwekolk.nl/01a15ea4-eb5e-77e5-936a-2ed887933bd2/portret-angelina-crop-cinematic?crop=1477%2C886%2C417%2C0&scale=1200&optimizer=image",
+      "editedByUser": true,
+      "editedAt": "2026-10-26T11:14:17.051Z"
+    },
+    {
+      "date": "2026-10-26",
+      "time": "",
       "title": "GRID - Puin Hoop: herdruk van de jaren ’80",
       "type": "Theater",
       "location": "Anatomisch Theater",
@@ -898,6 +915,21 @@
       "description": "Ontdek inspirerende tentoonstellingen, moderne kunst en verrassend design. Laat je verwonderen door kunst, cultuur en architectuur bij Groninger Museum in Groningen.",
       "cost": "",
       "image": "https://groninger-museum.stream.prepr.io/4dyqyyf8cr9a/w_1800/atelier-mendini-1990-1994-48-niet-in-groninger-museum.jpg",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-26",
+      "time": "20:00",
+      "title": "Omgaan met stress en grenzen",
+      "type": "Film",
+      "location": "00",
+      "locationLink": "",
+      "website": "https://denieuwekolk.nl/bieb/agenda/omgaan-met-stress-en-grenzen",
+      "source": "denieuwekolk.nl",
+      "discoverySource": "Website",
+      "description": "Omgaan met stress en grenzen · De Nieuwe Kolk Activiteiten & events Maand van de Geschiedenis Voel jij je vaak gehaast, overprikkeld of alsof je altijd \"aan\" staat? Dan ben je niet de enige. In het kader van de Maand van de Geschiedenis 2026, met als thema Lichaam & Geest, verzorgt burn-out preventiecoach Els Veltheer",
+      "cost": "",
+      "image": "https://media.denieuwekolk.nl/019db48d-3d03-7197-a158-e168c66eeb4c/stock-mentale-gezondheid?crop=3840%2C2304%2C0%2C128&scale=1200&optimizer=image",
       "isNew": true
     },
     {
@@ -1453,6 +1485,21 @@
       "description": "Alma Quartet & Nicolas van Poucke Beethoven, Schumann Vijf topmusici nemen je mee van Beethovens diepgang naar Schumanns romantiek",
       "cost": "",
       "image": "https://www.spotgroningen.nl/wp-content/uploads/2026/04/Alma-Quartet-Andreas-Terlaak-2-300-dpi-RGB-e1778073306161-300x137.jpg",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-27",
+      "time": "18:45",
+      "title": "Alzheimercafé",
+      "type": "Film",
+      "location": "Bibliotheek Cursusruimte",
+      "locationLink": "",
+      "website": "https://denieuwekolk.nl/bieb/agenda/alzheimercafe-10044312",
+      "source": "denieuwekolk.nl",
+      "discoverySource": "Website",
+      "description": "Alzheimercafé: Muziek en dementie in De Nieuwe Kolk. Ontmoet elkaar en laat je inspireren in het culturele hart van Assen.",
+      "cost": "",
+      "image": "https://media.denieuwekolk.nl/019d2a5b-29ad-7de1-86cd-0a0f178225b5/alzheimer-cafe?crop=3840%2C2304%2C0%2C128&scale=1200&optimizer=image",
       "isNew": true
     },
     {
@@ -2239,6 +2286,22 @@
     },
     {
       "date": "2026-10-28",
+      "time": "14:00",
+      "title": "Adviesplein",
+      "type": "Activiteit",
+      "location": "De Nieuwe Kolk Weiersstraat 1 9401 ET Assen",
+      "locationLink": "",
+      "website": "https://denieuwekolk.nl/bieb/agenda/adviesplein",
+      "source": "denieuwekolk.nl",
+      "discoverySource": "Website",
+      "description": "Adviesplein & Ontmoetingsplein in De Nieuwe Kolk Assen. Inspiratie, ontmoeting en culturele activiteiten op één locatie.",
+      "cost": "Gratis",
+      "image": "https://media.denieuwekolk.nl/019b2b7f-587f-7995-b37c-718d7a6b8c75/dnk-adviesplein-3-12-2025-2?crop=3838%2C2303%2C0%2C118&scale=1200&optimizer=image",
+      "editedByUser": true,
+      "editedAt": "2026-10-26T11:01:03.852Z"
+    },
+    {
+      "date": "2026-10-28",
       "time": "19:30",
       "title": "Bel Cobain",
       "type": "Concert",
@@ -2315,6 +2378,21 @@
     },
     {
       "date": "2026-10-28",
+      "time": "19:00",
+      "title": "Het Vlucht Voorwaarts Praathuis",
+      "type": "Film",
+      "location": "Tigrinya of een andere taal willen leren zijn ook van harte welkom.",
+      "locationLink": "",
+      "website": "https://denieuwekolk.nl/bieb/agenda/het-vlucht-voorwaarts-praathuis",
+      "source": "denieuwekolk.nl",
+      "discoverySource": "Website",
+      "description": "Het Vlucht Voorwaarts Praathuis - Ontmoet elkaar en laat je inspireren in dit unieke cultuurhuis vol theater, bibliotheek en cinema.",
+      "cost": "gratis",
+      "image": "https://media.denieuwekolk.nl/019d7206-c8bf-73f7-bd04-02b315d7f6d0/bijeenkomst-vlucht-voorwaarts-praathuis?crop=3840%2C2304%2C0%2C128&scale=1200&optimizer=image",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-28",
       "time": "20:15",
       "title": "Klaus Mäkela dirigeert Mahler 7 bij het Concertgebouworkest",
       "type": "Concert",
@@ -2345,6 +2423,21 @@
     },
     {
       "date": "2026-10-28",
+      "time": "15:00",
+      "title": "Masker maken",
+      "type": "Film",
+      "location": "00",
+      "locationLink": "",
+      "website": "https://denieuwekolk.nl/bieb/agenda/masker-maken",
+      "source": "denieuwekolk.nl",
+      "discoverySource": "Website",
+      "description": "Maak je eigen masker in NXT Lab! Creatieve workshop voor kinderen vanaf 4 jaar in De Nieuwe Kolk, het culturele hart van Assen.",
+      "cost": "",
+      "image": "https://media.denieuwekolk.nl/019f69ab-f3ab-7c70-bacf-26fbb146395a/maskers?crop=1600%2C960%2C80%2C0&scale=1200&optimizer=image",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-28",
       "time": "",
       "title": "Nederlandse Bachvereniging Allerzielen",
       "type": "Concert",
@@ -2356,6 +2449,21 @@
       "description": "Nederlandse Bachvereniging Troostrijke muziek rond Allerzielen",
       "cost": "",
       "image": "https://www.spotgroningen.nl/wp-content/uploads/2026/04/Nederlandse-Bachvereniging-Allerzielen-CAMPAGNEBEELD-Eduardus-Lee_RGB-300-dpi-e1776081605280-300x297.jpg",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-28",
+      "time": "14:00",
+      "title": "Oefentafel Basisvaardigheden",
+      "type": "Film",
+      "location": "films en events.",
+      "locationLink": "",
+      "website": "https://denieuwekolk.nl/bieb/agenda/oefentafel-basisvaardigheden",
+      "source": "denieuwekolk.nl",
+      "discoverySource": "Website",
+      "description": "Oefentafel Basisvaardigheden in De Nieuwe Kolk. Doe praktisch basisvaardigheden op in ons cultuurhuis in Assen. Kom inspireren en ontmoeten.",
+      "cost": "gratis",
+      "image": "https://media.denieuwekolk.nl/019fa7b8-180a-7491-a9a4-d18a9af79b2c/stock-oefentafel?crop=3840%2C2304%2C0%2C128&scale=1200&optimizer=image",
       "isNew": true
     },
     {
@@ -5523,189 +5631,16 @@
       "newCount": 0,
       "durationSeconds": 10.04,
       "timedOut": true
+    },
+    {
+      "site": "https://denieuwekolk.nl/agenda",
+      "count": 7,
+      "newCount": 7,
+      "durationSeconds": 10.11,
+      "timedOut": true
     }
   ],
   "rawLog": [
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Rayen Panday Grip",
-      "date": "2027-01-31",
-      "url": "https://www.spotgroningen.nl/programma/rayen-panday-4/",
-      "status": "event uit link",
-      "rawText": "Rayen Panday Grip Zelfspot, scherpe observaties en ontwapenende verhalen zo 31 jan"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Heather Nova",
-      "date": "2027-02-01",
-      "url": "https://www.spotgroningen.nl/programma/heather-nova-2/",
-      "status": "event uit link",
-      "rawText": "Heather Nova Verbindende singer-songwriter Laatste kaarten ma 1 feb"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Maya Fridman, Elisabeth Hetherington e.a. Maya Fridman & Voices",
-      "date": "2027-02-01",
-      "url": "https://www.spotgroningen.nl/programma/maya-fridman-elisabeth-hetherington-e-a/",
-      "status": "event uit link",
-      "rawText": "Maya Fridman, Elisabeth Hetherington e.a. Maya Fridman & Voices Twee voorstellingen op één avond ma 1 feb"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Richard Groenendijk Gelukkig heb je mij nog",
-      "date": "2027-02-02",
-      "url": "https://www.spotgroningen.nl/programma/richard-groenendijk-5/",
-      "status": "event uit link",
-      "rawText": "Richard Groenendijk Gelukkig heb je mij nog Grof, subtiel, innemend, gevoelig, ernstig en bovenal oergeestig Uitverkocht di 2 feb"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Alex Ploeg Niks Persoonlijks (try-out)",
-      "date": "2027-02-02",
-      "url": "https://www.spotgroningen.nl/programma/alex-ploeg-8/",
-      "status": "event uit link",
-      "rawText": "Alex Ploeg Niks Persoonlijks (try-out) Vlijmscherpe grappen, persoonlijke verhalen en meeslepende gitaarliedjes Uitverkocht di 2 feb"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Cabarestafette presenteert: NIEUW GELUID!",
-      "date": "2027-02-03",
-      "url": "https://www.spotgroningen.nl/programma/cabarestafette-presenteert/",
-      "status": "event uit link",
-      "rawText": "Cabarestafette presenteert: NIEUW GELUID! De lekkerste lokroep uit de comedykelders wo 3 feb"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Marlene Bakker & Noordpool Orkest Marlene // Meldine",
-      "date": "2027-02-03",
-      "url": "https://www.spotgroningen.nl/programma/marlene-bakker-noordpool-orkest/",
-      "status": "event uit link",
-      "rawText": "Marlene Bakker & Noordpool Orkest Marlene // Meldine Een magische muziekvoorstelling onder begeleiding van het Noordpool Orkest wo 3 feb"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Alex Ploeg Niks Persoonlijks (try-out)",
-      "date": "2027-02-03",
-      "url": "https://www.spotgroningen.nl/programma/alex-ploeg-9/",
-      "status": "event uit link",
-      "rawText": "Alex Ploeg Niks Persoonlijks (try-out) Vlijmscherpe grappen, persoonlijke verhalen en meeslepende gitaarliedjes Uitverkocht wo 3 feb"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Noord Nederlands Orkest Tussen het orkest",
-      "date": "2027-02-03",
-      "url": "https://www.spotgroningen.nl/programma/noord-nederlands-orkest-247/",
-      "status": "event uit link",
-      "rawText": "Noord Nederlands Orkest Tussen het orkest Een onvergetelijk en monumentaal pianoconcert wo 3 feb"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Erik Bosgraaf & Cordevento",
-      "date": "2027-02-04",
-      "url": "https://www.spotgroningen.nl/programma/erik-bosgraaf-cordevento/",
-      "status": "event uit link",
-      "rawText": "Erik Bosgraaf & Cordevento Een van ’s werelds beste en avontuurlijkste blokfluitisten do 4 feb"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Remko Vrijdag Marko Maandag",
-      "date": "2027-02-04",
-      "url": "https://www.spotgroningen.nl/programma/remko-vrijdag-2/",
-      "status": "event uit link",
-      "rawText": "Remko Vrijdag Marko Maandag Een onvoorspelbare avond vol absurde wendingen do 4 feb"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Alex Ploeg Niks Persoonlijks (try-out)",
-      "date": "2027-02-04",
-      "url": "https://www.spotgroningen.nl/programma/alex-ploeg-10/",
-      "status": "event uit link",
-      "rawText": "Alex Ploeg Niks Persoonlijks (try-out) Vlijmscherpe grappen, persoonlijke verhalen en meeslepende gitaarliedjes Uitverkocht do 4 feb"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "The Tallest Man on Earth Just Beyond Endless Mountain",
-      "date": "2027-02-05",
-      "url": "https://www.spotgroningen.nl/programma/the-tallest-man-on-earth-2/",
-      "status": "event uit link",
-      "rawText": "The Tallest Man on Earth Just Beyond Endless Mountain Zweedse folk muzikant komt met nieuw album vr 5 feb"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Conny Janssen Danst Behind the Wall",
-      "date": "2027-02-05",
-      "url": "https://www.spotgroningen.nl/programma/conny-janssen-danst-9/",
-      "status": "event uit link",
-      "rawText": "Conny Janssen Danst Behind the Wall Meeslepende dansvoorstelling met livemuziek van Roufaida vr 5 feb"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Noord Nederlands Orkest en Nikola Meeuwsen Rachmaninoff & Sjostakovitsj",
-      "date": "2027-02-05",
-      "url": "https://www.spotgroningen.nl/programma/noord-nederlands-orkest-225/",
-      "status": "event uit link",
-      "rawText": "Noord Nederlands Orkest en Nikola Meeuwsen Rachmaninoff & Sjostakovitsj Een onvergetelijk en monumentaal pianoconcert Wereldklasse vr 5 feb"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Ruud Smulders RÜDSICHTSLOS",
-      "date": "2027-02-06",
-      "url": "https://www.spotgroningen.nl/programma/ruud-smulders/",
-      "status": "event uit link",
-      "rawText": "Ruud Smulders RÜDSICHTSLOS Winnaar Poelifinario in de categorie Entertainment za 6 feb"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Erwin Nyhoff & The Prodigal Sons",
-      "date": "2027-02-06",
-      "url": "https://www.spotgroningen.nl/programma/erwin-nyhoff-the-prodigal-sons/",
-      "status": "event uit link",
-      "rawText": "Erwin Nyhoff & The Prodigal Sons Bluesy Southern Rock met klassiekers van de band aangevuld met solowerk za 6 feb"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "FEUERENGEL- A Tribute To Rammstein",
-      "date": "2027-02-06",
-      "url": "https://www.spotgroningen.nl/programma/feuerengel/",
-      "status": "event uit link",
-      "rawText": "FEUERENGEL- A Tribute To Rammstein Een vurige tributeband Laatste kaarten za 6 feb"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Om en Om en Om (1,5-3 jaar) Het Laagland",
-      "date": "2027-02-07",
-      "url": "https://www.spotgroningen.nl/programma/om-en-om-en-om-15-3-jaar/",
-      "status": "event uit link",
-      "rawText": "Om en Om en Om (1,5-3 jaar) Het Laagland Nog een keer! Uitverkocht zo 7 feb"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Om en Om en Om (1,5-3 jaar) Het Laagland",
-      "date": "2027-02-07",
-      "url": "https://www.spotgroningen.nl/programma/om-en-om-en-om-15-3-jaar-2/",
-      "status": "event uit link",
-      "rawText": "Om en Om en Om (1,5-3 jaar) Het Laagland Nog een keer! Uitverkocht zo 7 feb"
-    },
     {
       "source": "Website",
       "site": "https://www.spotgroningen.nl/programma/",
@@ -16325,16 +16260,196 @@
       "url": "https://www.ibood.com/s-nl",
       "status": "klaar",
       "rawText": "site 14/15: 0 unieke events in 10.04 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Start",
+      "date": "",
+      "url": "https://denieuwekolk.nl/agenda",
+      "status": "start",
+      "rawText": "site 15/15: max 40 events, max 10 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://denieuwekolk.nl/agenda",
+      "status": "strategie",
+      "rawText": "agenda-kaarten + datumregels (De Nieuwe Kolk)"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Pagina gelezen",
+      "date": "",
+      "url": "https://denieuwekolk.nl/agenda",
+      "status": "ok",
+      "rawText": "977459 tekens HTML"
+    },
+    {
+      "source": "Parser",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "De Nieuwe Kolk detailstrategie",
+      "date": "",
+      "url": "https://denieuwekolk.nl/agenda",
+      "status": "strategie",
+      "rawText": "Agenda gebruiken om detail-URL's te vinden; alleen de echte detailpagina als evenement verwerken"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Pagina geanalyseerd",
+      "date": "",
+      "url": "https://denieuwekolk.nl/agenda",
+      "status": "ok",
+      "rawText": "0 events/aanbiedingen op deze pagina"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Pagina gelezen",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda",
+      "status": "ok",
+      "rawText": "412501 tekens HTML"
+    },
+    {
+      "source": "Parser",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "De Nieuwe Kolk detailstrategie",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda",
+      "status": "strategie",
+      "rawText": "Agenda gebruiken om detail-URL's te vinden; alleen de echte detailpagina als evenement verwerken"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Pagina geanalyseerd",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda",
+      "status": "ok",
+      "rawText": "0 events/aanbiedingen op deze pagina"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda/adviesplein",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda/alzheimercafe-10044312",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda/fotoexpositie-verhalen-van-verborgen-kracht-10050486",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda/het-vlucht-voorwaarts-praathuis",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda/masker-maken",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "DNK-ticketpagina niet volledig herkend",
+      "date": "",
+      "url": "https://tickets.denieuwekolk.nl/mtTicket/performance/10370772",
+      "status": "diagnose",
+      "rawText": "titel=Kaartverkoop De Nieuwe Kolk; datums=2; tijden/ruimtes=0; tekst=Kaarten bestellen | Masker maken - NXT Lab (4+) - woensdag 28 oktober 2026 | Kaartverkoop De Nieuwe Kolk Titel en navigatie overslaan Kaartverkoop De Nieuwe Kolk en Masker maken NXT Lab (4+) woensdag 28 oktober 2026 15:00 (einde 16:00) DNK-NXT Log in om al je"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://tickets.denieuwekolk.nl/mtTicket/performance/10370772",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda/oefentafel-basisvaardigheden",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda/omgaan-met-stress-en-grenzen",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "DNK-ticketpagina niet volledig herkend",
+      "date": "",
+      "url": "https://tickets.denieuwekolk.nl/mtTicket/performance/10374346",
+      "status": "diagnose",
+      "rawText": "titel=Kaartverkoop De Nieuwe Kolk; datums=2; tijden/ruimtes=0; tekst=Kaarten bestellen | Omgaan met stress en grenzen - Maand van de Geschiedenis - donderdag 29 oktober 2026 | Kaartverkoop De Nieuwe Kolk Titel en navigatie overslaan Kaartverkoop De Nieuwe Kolk en Omgaan met stress en grenzen Maand van de Geschiedenis donderdag"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://tickets.denieuwekolk.nl/mtTicket/performance/10374346",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://denieuwekolk.nl/agenda",
+      "status": "klaar",
+      "rawText": "site 15/15: 7 unieke events in 10.11 sec"
     }
   ],
-  "status": "running",
+  "status": "finishing",
   "siteStartedAt": "2026-10-26T20:51:45+00:00",
-  "siteElapsedSeconds": 0,
-  "sitePageCount": 0,
-  "lastSiteEventCount": 0,
-  "stage": "Websitepagina ophalen",
-  "lastUpdatedAt": "2026-10-26T20:51:45+00:00",
-  "lastSiteNewEventCount": 0,
-  "lastCompletedSite": "https://www.ibood.com/s-nl",
-  "lastCompletedAt": "2026-10-26T20:51:43+00:00"
+  "siteElapsedSeconds": 12,
+  "sitePageCount": 2,
+  "lastSiteEventCount": 7,
+  "stage": "Website klaar; volgende website voorbereiden",
+  "lastUpdatedAt": "2026-10-26T20:51:51+00:00",
+  "lastSiteNewEventCount": 7,
+  "lastCompletedSite": "https://denieuwekolk.nl/agenda",
+  "lastCompletedAt": "2026-10-26T20:51:57+00:00"
 }
