@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-26T22:07:30.734Z",
+  "updatedAt": "2026-10-26T22:10:25.898Z",
   "sites": {
     "https://groningen.uitloper.nu/": {
       "methodology": "",
@@ -53,7 +53,9 @@
       "excludedUrls": [],
       "adjustments": [],
       "eventUrlPatterns": [],
-      "excludedUrlPatterns": []
+      "excludedUrlPatterns": [
+        "^/nl/doen/uitgaan/?$"
+      ]
     },
     "https://www.visitgroningen.nl/nl/doen/wandelen": {
       "methodology": "",
