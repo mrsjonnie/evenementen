@@ -1,7 +1,7 @@
 {
   "runId": "2026-10-26T21:56:08.566391+00:00-c5f503e0",
   "startedAt": "2026-10-26T21:56:08+00:00",
-  "completedCount": 9,
+  "completedCount": 10,
   "totalSites": 15,
   "currentSite": "https://www.concertgebouw.nl/concerten-en-tickets",
   "currentSiteIndex": 10,
@@ -14,7 +14,8 @@
     "https://www.vera-groningen.nl/",
     "https://www.martiniplaza.nl/nl/agenda",
     "https://groningermuseum.nl/programma",
-    "https://www.kultuuragenda.nl/agenda"
+    "https://www.kultuuragenda.nl/agenda",
+    "https://www.concertgebouw.nl/concerten-en-tickets"
   ],
   "events": [
     {
@@ -3428,378 +3429,16 @@
       "newCount": 0,
       "durationSeconds": 17.29,
       "timedOut": false
+    },
+    {
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 5.1,
+      "timedOut": false
     }
   ],
   "rawLog": [
-    {
-      "source": "Parser",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": "Pagina geteld",
-      "date": "",
-      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
-      "status": "analyse",
-      "rawText": "jsonld:0, links:0, datumblokken:22, kaarten:49, regels:105, detail:1"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": "Pagina geanalyseerd",
-      "date": "",
-      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
-      "status": "ok",
-      "rawText": "126 events/aanbiedingen op deze pagina"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": "Eurosonic Noorderslag",
-      "date": "2026-10-27",
-      "url": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen/eurosonic-noorderslag",
-      "status": "event uit datumblok",
-      "rawText": "Eurosonic Noorderslag | Visit Groningen Ga naar inhoud Ga naar de homepage Terug Nu & nieuw Uitagenda Nieuwe winkels & horeca in de stad Oktober donkertemaand Het 10-jarig bestaan van Dark Sky Park Lauwersmeer staat in het teken van donker. Het is hoog tijd om de schoonheid van de duisternis te gaan ontdekken. Sunnemeerten Terug Dit is Groningen Top 10 bezienswaardigheden In Groningen ligt het allemaal opvallend dich"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": "Eurosonic Noorderslag",
-      "date": "2026-10-27",
-      "url": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen/eurosonic-noorderslag",
-      "status": "event uit detailpagina",
-      "rawText": "Eurosonic Noorderslag | Visit Groningen Ga naar inhoud Ga naar de homepage Terug Nu & nieuw Uitagenda Nieuwe winkels & horeca in de stad Oktober donkertemaand Het 10-jarig bestaan van Dark Sky Park Lauwersmeer staat in het teken van donker. Het is hoog tijd om de schoonheid van de duisternis te gaan ontdekken. Sunnemeerten Terug Dit is Groningen Top 10 bezienswaardigheden In Groningen ligt het allemaal opvallend dich"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": "Al jaren en jaren opent dit muziekfestival",
-      "date": "2026-10-27",
-      "url": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen/eurosonic-noorderslag",
-      "status": "event uit tekstregel",
-      "rawText": "Voor jou én voor de profs | Al jaren en jaren opent dit muziekfestival in januari het popseizoen. Internationale bezoekers en agentschappen komen naar Groningen om te netwerken en talent te spotten. Hier zie je de bands die later in het jaar de zomerfestivals vullen. Hier hoor je muziek die straks op elke radiozender te horen zal zijn. Hier ben je bij kleinschalige concerten van de wereldsterren van morgen. Eurosonic"
-    },
-    {
-      "source": "Parser",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": "Pagina geteld",
-      "date": "",
-      "url": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen/eurosonic-noorderslag",
-      "status": "analyse",
-      "rawText": "jsonld:0, links:0, datumblokken:1, kaarten:0, regels:1, detail:1"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": "Detailpagina geanalyseerd",
-      "date": "",
-      "url": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen/eurosonic-noorderslag",
-      "status": "ok",
-      "rawText": "2 extra events"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": "). Een weekend waarin mensen de donderdag",
-      "date": "2027-05-06",
-      "url": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen/grasnapolsky",
-      "status": "event uit datumblok",
-      "rawText": "6 mei). Een weekend waarin mensen de donderdag al vrij hebben, waardoor je op zondag rustig naar huis kunt zonder een extra dag vrij te hoeven nemen. Een moment waarop het festival eindelijk naar buiten kan. Ook financieel wordt het festival toegankelijker: de ticketprijzen zijn verlaagd, met een extra voordelig tarief voor jongeren tot en met 25 jaar. De nieuwe locatie Jarenlang vertelde Grasnapolsky verhalen op ple"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": "(Hemelvaartweekend) Locatie: De voormalige suikerfabriek, Groningen Website:",
-      "date": "2026-05-06",
-      "url": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen/grasnapolsky",
-      "status": "event uit datumblok",
-      "rawText": "6 mei 2026 (Hemelvaartweekend) Locatie: De voormalige suikerfabriek, Groningen Website: www.grasnapolsky.nl Tickets: De Blind Passe-partouts zijn inmiddels uitverkocht. De verkoop van reguliere passe-partouts, dagkaarten en groepstickets is inmiddels gestart. Meer informatie Podcast Groninger Grond Onderweg naar Grasnapolsky? En meer weten over waar je naartoe gaat? Luister naar de podcastserie. Luister Ontdek ook Ev"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": "Grasnapolsky Festival 2026",
-      "date": "2027-05-16",
-      "url": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen/grasnapolsky",
-      "status": "event uit detailpagina",
-      "rawText": "Grasnapolsky Festival 2026 | Visit Groningen Ga naar inhoud Ga naar de homepage Terug Nu & nieuw Uitagenda Nieuwe winkels & horeca in de stad Oktober donkertemaand Het 10-jarig bestaan van Dark Sky Park Lauwersmeer staat in het teken van donker. Het is hoog tijd om de schoonheid van de duisternis te gaan ontdekken. Sunnemeerten Terug Dit is Groningen Top 10 bezienswaardigheden In Groningen ligt het allemaal opvallend"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": "Door naar Groningen stad te gaan wordt",
-      "date": "2027-05-16",
-      "url": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen/grasnapolsky",
-      "status": "event uit tekstregel",
-      "rawText": "Toegankelijker dan ooit | Door naar Groningen stad te gaan wordt het festival letterlijk toegankelijker. De locatie ligt op acht minuten fietsen van Groningen Centraal station. Geen pendelbussen meer, geen extra reistijd, geen extra kosten. Voor Groningers is er de mogelijkheid om thuis te slapen. Het festival vindt plaats in het Hemelvaartweekend (14, 15 & 16 mei). Een weekend waarin mensen de donderdag al vrij hebb"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": "Data: donderdag 14 t/m zaterdag 16 mei 2026 (Hemelvaartweekend)",
-      "date": "2026-05-16",
-      "url": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen/grasnapolsky",
-      "status": "event uit tekstregel",
-      "rawText": "Praktische info | Data: donderdag 14 t/m zaterdag 16 mei 2026 (Hemelvaartweekend) | Locatie: De voormalige suikerfabriek, Groningen | Website: | www.grasnapolsky.nl | Tickets: De Blind Passe-partouts zijn inmiddels uitverkocht. De verkoop van reguliere passe-partouts, dagkaarten en groepstickets is inmiddels gestart."
-    },
-    {
-      "source": "Parser",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": "Pagina geteld",
-      "date": "",
-      "url": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen/grasnapolsky",
-      "status": "analyse",
-      "rawText": "jsonld:0, links:0, datumblokken:2, kaarten:0, regels:2, detail:1"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": "Detailpagina geanalyseerd",
-      "date": "",
-      "url": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen/grasnapolsky",
-      "status": "ok",
-      "rawText": "1 extra events"
-    },
-    {
-      "source": "Parser",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": "Pagina geteld",
-      "date": "",
-      "url": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen/hongerige-wolf",
-      "status": "analyse",
-      "rawText": "jsonld:0, links:0, datumblokken:0, kaarten:0, regels:0, detail:0"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": "Detailpagina geanalyseerd",
-      "date": "",
-      "url": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen/hongerige-wolf",
-      "status": "ok",
-      "rawText": "0 extra events"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": "Detailpagina mislukt",
-      "date": "",
-      "url": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen/koningsdag",
-      "status": "fout",
-      "rawText": "HTTP 404"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": "Noorderzon",
-      "date": "2026-08-20",
-      "url": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen/noorderzon",
-      "status": "event uit detailpagina",
-      "rawText": "Noorderzon Performing Arts Festival | Visit Groningen Ga naar inhoud Ga naar de homepage Terug Nu & nieuw Uitagenda Nieuwe winkels & horeca in de stad Oktober donkertemaand Het 10-jarig bestaan van Dark Sky Park Lauwersmeer staat in het teken van donker. Het is hoog tijd om de schoonheid van de duisternis te gaan ontdekken. Sunnemeerten Terug Dit is Groningen Top 10 bezienswaardigheden In Groningen ligt het allemaal"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": "Elf dagen lang is festival Noorderzon het",
-      "date": "2026-08-20",
-      "url": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen/noorderzon",
-      "status": "event uit tekstregel",
-      "rawText": "Achter elke boom iets nieuws | Elf dagen lang is festival Noorderzon het hoogtepunt van de culturele zomer in Groningen. Van 20 t/m 30 augustus 2026 strijkt een bonte verzameling podiumartiesten en kunstenaars neer in het sfeervolle Noorderplantsoen. Noorderzon staat voor een feestelijke start van het culturele seizoen en een knallend einde van de zomervakantie. | Voorstellingen en foodtrucks | Vrijwel iedereen heeft"
-    },
-    {
-      "source": "Parser",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": "Pagina geteld",
-      "date": "",
-      "url": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen/noorderzon",
-      "status": "analyse",
-      "rawText": "jsonld:0, links:0, datumblokken:0, kaarten:0, regels:1, detail:1"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": "Detailpagina geanalyseerd",
-      "date": "",
-      "url": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen/noorderzon",
-      "status": "ok",
-      "rawText": "2 extra events"
-    },
-    {
-      "source": "Parser",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": "Pagina geteld",
-      "date": "",
-      "url": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen/paradigm",
-      "status": "analyse",
-      "rawText": "jsonld:0, links:0, datumblokken:0, kaarten:0, regels:0, detail:0"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": "Detailpagina geanalyseerd",
-      "date": "",
-      "url": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen/paradigm",
-      "status": "ok",
-      "rawText": "0 extra events"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": "laten de wierden en het erfgoed zich voor de 17e keer bezingen en bespelen. Of je nu van goede",
-      "date": "2026-05-01",
-      "url": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen/terug-naar-het-begin",
-      "status": "event uit datumblok",
-      "rawText": "1 mei 2026 laten de wierden en het erfgoed zich voor de 17e keer bezingen en bespelen. Of je nu van goede muziek, sprekend theater, bijzondere verhalen of lokale kunst houdt: Terug naar het begin brengt je méér. Het is een uniek weekend in een uniek landschap. Weids, lokaal en toch van ons allemaal. Ga mee op ontdekkingstocht Tijdens Terug naar het begin ontdek je steengoede artiesten in kerkjes vol verhalen. Het zij"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": "Terug naar het begin",
-      "date": "2026-05-31",
-      "url": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen/terug-naar-het-begin",
-      "status": "event uit detailpagina",
-      "rawText": "Terug naar het Begin | Visit Groningen Ga naar inhoud Ga naar de homepage Terug Nu & nieuw Uitagenda Nieuwe winkels & horeca in de stad Oktober donkertemaand Het 10-jarig bestaan van Dark Sky Park Lauwersmeer staat in het teken van donker. Het is hoog tijd om de schoonheid van de duisternis te gaan ontdekken. Sunnemeerten Terug Dit is Groningen Top 10 bezienswaardigheden In Groningen ligt het allemaal opvallend dicht"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": "Op 29, 30 en 31 mei 2026",
-      "date": "2026-05-31",
-      "url": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen/terug-naar-het-begin",
-      "status": "event uit tekstregel",
-      "rawText": "Praktische informatie | Op 29, 30 en 31 mei 2026 laten de wierden en het erfgoed zich voor de 17e keer bezingen en bespelen. Of je nu van goede muziek, sprekend theater, bijzondere verhalen of lokale kunst houdt: Terug naar het begin brengt je méér. Het is een uniek weekend in een uniek landschap. Weids, lokaal en toch van ons allemaal. | Ga mee op ontdekkingstocht | Tijdens Terug naar het begin ontdek je steengoede"
-    },
-    {
-      "source": "Parser",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": "Pagina geteld",
-      "date": "",
-      "url": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen/terug-naar-het-begin",
-      "status": "analyse",
-      "rawText": "jsonld:0, links:0, datumblokken:1, kaarten:0, regels:1, detail:1"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": "Detailpagina geanalyseerd",
-      "date": "",
-      "url": "https://www.visitgroningen.nl/nl/doen/cultuur/evenementen/terug-naar-het-begin",
-      "status": "ok",
-      "rawText": "3 extra events"
-    },
-    {
-      "source": "RSS/Atom",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": "Feed mislukt",
-      "date": "",
-      "url": "https://www.visitgroningen.nl/feed",
-      "status": "fout",
-      "rawText": "HTTP 404"
-    },
-    {
-      "source": "RSS/Atom",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": "Feed mislukt",
-      "date": "",
-      "url": "https://www.visitgroningen.nl/rss",
-      "status": "fout",
-      "rawText": "HTTP 404"
-    },
-    {
-      "source": "RSS/Atom",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": "Feed mislukt",
-      "date": "",
-      "url": "https://www.visitgroningen.nl/rss.xml",
-      "status": "fout",
-      "rawText": "HTTP 404"
-    },
-    {
-      "source": "RSS/Atom",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": "Feed mislukt",
-      "date": "",
-      "url": "https://www.visitgroningen.nl/feed.xml",
-      "status": "fout",
-      "rawText": "HTTP 404"
-    },
-    {
-      "source": "RSS/Atom",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": "Feed mislukt",
-      "date": "",
-      "url": "https://www.visitgroningen.nl/events/feed/",
-      "status": "fout",
-      "rawText": "HTTP 404"
-    },
-    {
-      "source": "Siteconfiguratie",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": "Evenement uitgesloten",
-      "date": "2027-01-02",
-      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
-      "status": "overgeslagen",
-      "rawText": "Voldoet aan een websitespecifieke uitsluiting"
-    },
-    {
-      "source": "Filter",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": "Datumfilter toegepast",
-      "date": "2026-10-26",
-      "url": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "status": "ok",
-      "rawText": "134 gevonden; 128 binnen 2026-10-26 t/m onbeperkt"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": "Klaar",
-      "date": "",
-      "url": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "status": "klaar",
-      "rawText": "site 2/15: 47 unieke events in 13.88 sec"
-    },
-    {
-      "source": "Website",
-      "site": "https://forum.nl/nl/agenda",
-      "title": "Start",
-      "date": "",
-      "url": "https://forum.nl/nl/agenda",
-      "status": "start",
-      "rawText": "site 3/15: max 60 events, max 45 seconden"
-    },
-    {
-      "source": "Parser",
-      "site": "https://forum.nl/nl/agenda",
-      "title": "Scrapertype vastgesteld",
-      "date": "",
-      "url": "https://forum.nl/nl/agenda",
-      "status": "strategie",
-      "rawText": "universeel-eventkaarten"
-    },
-    {
-      "source": "Website",
-      "site": "https://forum.nl/nl/agenda",
-      "title": "Pagina gelezen",
-      "date": "",
-      "url": "https://forum.nl/nl/agenda",
-      "status": "ok",
-      "rawText": "175554 tekens HTML"
-    },
-    {
-      "source": "Parser",
-      "site": "https://forum.nl/nl/agenda",
-      "title": "Forum detailstrategie",
-      "date": "",
-      "url": "https://forum.nl/nl/agenda",
-      "status": "strategie",
-      "rawText": "Overzicht overslaan; alleen /nl/agenda/<event> detailpagina's verwerken"
-    },
-    {
-      "source": "Website",
-      "site": "https://forum.nl/nl/agenda",
-      "title": "Pagina geanalyseerd",
-      "date": "",
-      "url": "https://forum.nl/nl/agenda",
-      "status": "ok",
-      "rawText": "0 events/aanbiedingen op deze pagina"
-    },
     {
       "source": "Website",
       "site": "https://forum.nl/nl/agenda",
@@ -14230,16 +13869,385 @@
       "url": "https://www.kultuuragenda.nl/agenda",
       "status": "klaar",
       "rawText": "site 9/15: 0 unieke events in 17.29 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Start",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "status": "start",
+      "rawText": "site 10/15: max 60 events, max 45 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "status": "strategie",
+      "rawText": "universeel-jsonld-links-kaarten"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Pagina gelezen",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "status": "ok",
+      "rawText": "775402 tekens HTML"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Agenda-kaarten geteld",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "status": "gespecialiseerde parser",
+      "rawText": "15 resultaten"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Pagina geanalyseerd",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "status": "ok",
+      "rawText": "14 events/aanbiedingen op deze pagina"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Concertgebouw-datum niet herkend",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten/37331019-quatuor-arod-speelt-bartok-carlos-simon-en-fanny-mendelssohn",
+      "status": "diagnose",
+      "rawText": "Titel herkend, maar geen evenementdatum gevonden nabij de titel"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten/37331019-quatuor-arod-speelt-bartok-carlos-simon-en-fanny-mendelssohn",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Concertgebouw-datum niet herkend",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten/37899480-meesters-op-de-gitaar-carlotta-dalia---van-bach-tot-castelnuovo-tedesco",
+      "status": "diagnose",
+      "rawText": "Titel herkend, maar geen evenementdatum gevonden nabij de titel"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten/37899480-meesters-op-de-gitaar-carlotta-dalia---van-bach-tot-castelnuovo-tedesco",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Concertgebouw-datum niet herkend",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten/41773095-spotlight-op-lucie-horsch-barok-met-altstaedt-en-dunford",
+      "status": "diagnose",
+      "rawText": "Titel herkend, maar geen evenementdatum gevonden nabij de titel"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten/41773095-spotlight-op-lucie-horsch-barok-met-altstaedt-en-dunford",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Concertgebouw-datum niet herkend",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten/43425438-aristo-sham-speelt-brahms-pianosonates",
+      "status": "diagnose",
+      "rawText": "Titel herkend, maar geen evenementdatum gevonden nabij de titel"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten/43425438-aristo-sham-speelt-brahms-pianosonates",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Concertgebouw-datum niet herkend",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten/43931216-fresku-metropole-orkest-o.l.v.-simon-dobson",
+      "status": "diagnose",
+      "rawText": "Titel herkend, maar geen evenementdatum gevonden nabij de titel"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten/43931216-fresku-metropole-orkest-o.l.v.-simon-dobson",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Concertgebouw-datum niet herkend",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten/43931217-flat-earth-society-the-coltrane-mutations",
+      "status": "diagnose",
+      "rawText": "Titel herkend, maar geen evenementdatum gevonden nabij de titel"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten/43931217-flat-earth-society-the-coltrane-mutations",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Concertgebouw-datum niet herkend",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten/45550450-stravinskys-le-sacre-du-printemps-en-wynton-marsalis-celloconcert",
+      "status": "diagnose",
+      "rawText": "Titel herkend, maar geen evenementdatum gevonden nabij de titel"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten/45550450-stravinskys-le-sacre-du-printemps-en-wynton-marsalis-celloconcert",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Concertgebouw-datum niet herkend",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten/45743534-oosterse-klanken-van-sheherazade-darvishi",
+      "status": "diagnose",
+      "rawText": "Titel herkend, maar geen evenementdatum gevonden nabij de titel"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten/45743534-oosterse-klanken-van-sheherazade-darvishi",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Concertgebouw-datum niet herkend",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten/45881816-klaus-makela-dirigeert-mahler-7-bij-het-concertgebouworkest",
+      "status": "diagnose",
+      "rawText": "Titel herkend, maar geen evenementdatum gevonden nabij de titel"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten/45881816-klaus-makela-dirigeert-mahler-7-bij-het-concertgebouworkest",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Concertgebouw-datum niet herkend",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten/45881817-25-jaar-academie-concertgebouworkest",
+      "status": "diagnose",
+      "rawText": "Titel herkend, maar geen evenementdatum gevonden nabij de titel"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten/45881817-25-jaar-academie-concertgebouworkest",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Concertgebouw-datum niet herkend",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten/45881818-klaus-makela-dirigeert-mahler-7-bij-het-concertgebouworkest",
+      "status": "diagnose",
+      "rawText": "Titel herkend, maar geen evenementdatum gevonden nabij de titel"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten/45881818-klaus-makela-dirigeert-mahler-7-bij-het-concertgebouworkest",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Concertgebouw-datum niet herkend",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten/45913707-zing-cirkel-concertgebouw",
+      "status": "diagnose",
+      "rawText": "Titel herkend, maar geen evenementdatum gevonden nabij de titel"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten/45913707-zing-cirkel-concertgebouw",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Concertgebouw-datum niet herkend",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten/45913708-zing-cirkel-concertgebouw",
+      "status": "diagnose",
+      "rawText": "Titel herkend, maar geen evenementdatum gevonden nabij de titel"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten/45913708-zing-cirkel-concertgebouw",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Concertgebouw-datum niet herkend",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten/45959877-popup-choir-taylor-swift-zing-mee-met-maarten-bos-en-tijmen-de-koning",
+      "status": "diagnose",
+      "rawText": "Titel herkend, maar geen evenementdatum gevonden nabij de titel"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten/45959877-popup-choir-taylor-swift-zing-mee-met-maarten-bos-en-tijmen-de-koning",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Concertgebouw-datum niet herkend",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten/46012123-gratis-lunchconcert-nederlandse-fluit-academie",
+      "status": "diagnose",
+      "rawText": "Titel herkend, maar geen evenementdatum gevonden nabij de titel"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten/46012123-gratis-lunchconcert-nederlandse-fluit-academie",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/feed",
+      "status": "fout",
+      "rawText": "HTTP 404"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/rss",
+      "status": "fout",
+      "rawText": "HTTP 404"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/rss.xml",
+      "status": "fout",
+      "rawText": "HTTP 404"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/feed.xml",
+      "status": "fout",
+      "rawText": "HTTP 404"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/events/feed/",
+      "status": "fout",
+      "rawText": "HTTP 404"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "status": "klaar",
+      "rawText": "site 10/15: 0 unieke events in 5.1 sec"
     }
   ],
   "status": "running",
   "siteStartedAt": "2026-10-26T21:58:05+00:00",
-  "siteElapsedSeconds": 0,
-  "sitePageCount": 0,
+  "siteElapsedSeconds": 7,
+  "sitePageCount": 1,
   "lastSiteEventCount": 0,
-  "stage": "Websitepagina ophalen",
-  "lastUpdatedAt": "2026-10-26T21:58:05+00:00",
+  "stage": "Website klaar; volgende website voorbereiden",
+  "lastUpdatedAt": "2026-10-26T21:58:08+00:00",
   "lastSiteNewEventCount": 0,
-  "lastCompletedSite": "https://www.kultuuragenda.nl/agenda",
-  "lastCompletedAt": "2026-10-26T21:58:02+00:00"
+  "lastCompletedSite": "https://www.concertgebouw.nl/concerten-en-tickets",
+  "lastCompletedAt": "2026-10-26T21:58:12+00:00"
 }
