@@ -1,14 +1,3 @@
-SerpAPI	https://simplon.nl/	genegeerd	Groningen - Nederländerna | Konserter-Metal Kalender		https://se.concerts-metal.com/v-253__Groningen.html	Kommande evenemang ; Toody Cole And Her Band - Tour 2026. 31/08/2026 Vera, Groningen · Jenny Don't And The Spurs ; Black Stone Cherry - Tour 2026. 02/10/2026 De ...
-SerpAPI	https://simplon.nl/	genegeerd	Best Performances in Groningen October 2026		https://allevents.in/groningen/performances--october	ABBA is happening on Fri 30 Oct 2026 from 9:15 PM onwards at Martinikerk, Groningen; Floor Jansen in Groningen is happening on Fri 30 Oct 2026 from 8:00 PM ...
-SerpAPI	https://simplon.nl/	genegeerd	Groningen Events Calendar 2026		https://allevents.in/groningen/calendar	Explore all the happening events in Groningen in 2026 with us that best suit your interest. Theatre tickets, comedy festival, music classes or any adventure ...
-SerpAPI	https://simplon.nl/	genegeerd	All events in Groningen - Netherlands		https://allevents.in/groningen	Discover the best things to do & events in Groningen. Explore concerts, meetups, open mics, art shows, music events and a lot more.
-SerpAPI	https://simplon.nl/	genegeerd	Music in Groningen 2026 | Tickets & Lineup		https://festscanner.com/groningen/music	Music & Party in Groningen · Grandmaster Flash · Judith Hill · Treasure - Bruno Mars Tribute · Meltdown Groningen · Fresku & Metropole Orkest · Levi.
-SerpAPI	https://simplon.nl/	genegeerd	Top 2000 Live - Listen to the Music Groningen Tickets		https://www.stubhub.com/uy/listen-to-the-music-groningen-tickets-12-29-2026/event/160894682/	Top 2000 Live - Listen to the Music · oct. 11. dom. Bill Callahan. 20:00 SPOT Theater De Oosterpoort · oct. 13. mar. Young the Giant. 20:00 SPOT ...
-SerpAPI	https://simplon.nl/	zoeken	Zoekopdracht 2/2			site:simplon.nl "Groningen" agenda programma evenement concert theater film 2026-10-26 9999-12-31
-SerpAPI	https://simplon.nl/	fout	SerpAPI timeout/fout			The operation was aborted
-SerpAPI	https://www.martiniplaza.nl/nl/agenda	zoeken	Zoekopdracht 1/2			site:www.martiniplaza.nl/nl/agenda nl agenda agenda programma evenement concert Groningen 2026-10-26 9999-12-31
-SerpAPI	https://www.martiniplaza.nl/nl/agenda	fout	SerpAPI timeout/fout			The operation was aborted
-SerpAPI	https://www.martiniplaza.nl/nl/agenda	zoeken	Zoekopdracht 2/2			site:www.martiniplaza.nl "Groningen" agenda programma evenement concert theater film 2026-10-26 9999-12-31
 SerpAPI	https://www.martiniplaza.nl/nl/agenda	genegeerd	Aaron Lee Tasjan - A-Theater, Groningen		https://open.spotify.com/concert/70g0y174mdMz8OLedbqsFw	Find tickets for Aaron Lee Tasjan at A-Theater in Groningen on 8/30/2026 at 8:30 PM.
 SerpAPI	https://www.martiniplaza.nl/nl/agenda	genegeerd	Archive		https://www.grandtheatregroningen.nl/en/programma/archief	Part of the Groningen Chamber Music Festival 2025. te gast · kindervoorstelling ... Negendaags festival met theater, performance, dans en meer in Groningen.
 SerpAPI	https://www.martiniplaza.nl/nl/agenda	genegeerd	Michael McGovern — 6.10.2026 De Oosterpoort		https://festivaly.eu/en/michael-mcgovern-de-oosterpoort-groningen-2026	Information and tickets for the concert Michael McGovern, which is taking place on October 6, 2026 19:00 (De Oosterpoort, Groningen).
@@ -1198,3 +1187,14 @@ Parser	https://www.spotgroningen.nl/programma/	analyse	Pagina geteld		https://ww
 Website	https://www.spotgroningen.nl/programma/	ok	Pagina geanalyseerd		https://www.spotgroningen.nl/programma	526 events/aanbiedingen op deze pagina
 Filter	https://www.spotgroningen.nl/programma/	ok	Datumfilter toegepast	2026-10-26	https://www.spotgroningen.nl/programma/	526 gevonden; 523 binnen 2026-10-26 t/m onbeperkt
 Website	https://www.spotgroningen.nl/programma/	klaar	Klaar		https://www.spotgroningen.nl/programma/	site 4/15: 60 unieke events in 15.25 sec
+Website	https://simplon.nl/	start	Start		https://simplon.nl/	site 5/15: max 60 events, max 45 seconden
+Parser	https://simplon.nl/	strategie	Scrapertype vastgesteld		https://simplon.nl/	compacte-agenda-kaarten
+Website	https://simplon.nl/	ok	Pagina gelezen		https://simplon.nl/programma/	96145 tekens HTML
+Parser	https://simplon.nl/	gespecialiseerde parser	Agenda geanalyseerd		https://simplon.nl/programma/	55 agenda-items gevonden
+Website	https://simplon.nl/	ok	Pagina geanalyseerd		https://simplon.nl/programma/	52 events/aanbiedingen op deze pagina
+RSS/Atom	https://simplon.nl/	ok	Feed geanalyseerd		https://simplon.nl/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fsimplon.nl%2Fprogramma%2F&format=xml	0 events uit openbare feed
+RSS/Atom	https://simplon.nl/	ok	Feed geanalyseerd		https://simplon.nl/feed/	0 events uit openbare feed
+RSS/Atom	https://simplon.nl/	fout	Feed mislukt		https://simplon.nl/rss.xml	HTTP 404
+RSS/Atom	https://simplon.nl/	fout	Feed mislukt		https://simplon.nl/feed.xml	HTTP 404
+RSS/Atom	https://simplon.nl/	ok	Feed geanalyseerd		https://simplon.nl/events/feed/	0 events uit openbare feed
+Website	https://simplon.nl/	klaar	Klaar		https://simplon.nl/	site 5/15: 0 unieke events in 5.03 sec

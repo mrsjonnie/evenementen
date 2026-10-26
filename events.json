@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-26T22:42:03+00:00",
+  "updatedAt": "2026-10-26T22:42:12+00:00",
   "events": [
     {
       "date": "2026-10-26",
@@ -10570,108 +10570,16 @@
       "newCount": 60,
       "durationSeconds": 15.25,
       "timedOut": false
+    },
+    {
+      "site": "https://simplon.nl/",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 5.03,
+      "timedOut": false
     }
   ],
   "rawLog": [
-    {
-      "source": "SerpAPI",
-      "site": "https://simplon.nl/",
-      "title": "Groningen - Nederländerna | Konserter-Metal Kalender",
-      "date": "",
-      "url": "https://se.concerts-metal.com/v-253__Groningen.html",
-      "status": "genegeerd",
-      "rawText": "Kommande evenemang ; Toody Cole And Her Band - Tour 2026. 31/08/2026 Vera, Groningen · Jenny Don't And The Spurs ; Black Stone Cherry - Tour 2026. 02/10/2026 De ..."
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://simplon.nl/",
-      "title": "Best Performances in Groningen October 2026",
-      "date": "",
-      "url": "https://allevents.in/groningen/performances--october",
-      "status": "genegeerd",
-      "rawText": "ABBA is happening on Fri 30 Oct 2026 from 9:15 PM onwards at Martinikerk, Groningen; Floor Jansen in Groningen is happening on Fri 30 Oct 2026 from 8:00 PM ..."
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://simplon.nl/",
-      "title": "Groningen Events Calendar 2026",
-      "date": "",
-      "url": "https://allevents.in/groningen/calendar",
-      "status": "genegeerd",
-      "rawText": "Explore all the happening events in Groningen in 2026 with us that best suit your interest. Theatre tickets, comedy festival, music classes or any adventure ..."
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://simplon.nl/",
-      "title": "All events in Groningen - Netherlands",
-      "date": "",
-      "url": "https://allevents.in/groningen",
-      "status": "genegeerd",
-      "rawText": "Discover the best things to do & events in Groningen. Explore concerts, meetups, open mics, art shows, music events and a lot more."
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://simplon.nl/",
-      "title": "Music in Groningen 2026 | Tickets & Lineup",
-      "date": "",
-      "url": "https://festscanner.com/groningen/music",
-      "status": "genegeerd",
-      "rawText": "Music & Party in Groningen · Grandmaster Flash · Judith Hill · Treasure - Bruno Mars Tribute · Meltdown Groningen · Fresku & Metropole Orkest · Levi."
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://simplon.nl/",
-      "title": "Top 2000 Live - Listen to the Music Groningen Tickets",
-      "date": "",
-      "url": "https://www.stubhub.com/uy/listen-to-the-music-groningen-tickets-12-29-2026/event/160894682/",
-      "status": "genegeerd",
-      "rawText": "Top 2000 Live - Listen to the Music · oct. 11. dom. Bill Callahan. 20:00 SPOT Theater De Oosterpoort · oct. 13. mar. Young the Giant. 20:00 SPOT ..."
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://simplon.nl/",
-      "title": "Zoekopdracht 2/2",
-      "date": "",
-      "url": "",
-      "status": "zoeken",
-      "rawText": "site:simplon.nl \"Groningen\" agenda programma evenement concert theater film 2026-10-26 9999-12-31"
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://simplon.nl/",
-      "title": "SerpAPI timeout/fout",
-      "date": "",
-      "url": "",
-      "status": "fout",
-      "rawText": "The operation was aborted"
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.martiniplaza.nl/nl/agenda",
-      "title": "Zoekopdracht 1/2",
-      "date": "",
-      "url": "",
-      "status": "zoeken",
-      "rawText": "site:www.martiniplaza.nl/nl/agenda nl agenda agenda programma evenement concert Groningen 2026-10-26 9999-12-31"
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.martiniplaza.nl/nl/agenda",
-      "title": "SerpAPI timeout/fout",
-      "date": "",
-      "url": "",
-      "status": "fout",
-      "rawText": "The operation was aborted"
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.martiniplaza.nl/nl/agenda",
-      "title": "Zoekopdracht 2/2",
-      "date": "",
-      "url": "",
-      "status": "zoeken",
-      "rawText": "site:www.martiniplaza.nl \"Groningen\" agenda programma evenement concert theater film 2026-10-26 9999-12-31"
-    },
     {
       "source": "SerpAPI",
       "site": "https://www.martiniplaza.nl/nl/agenda",
@@ -21372,6 +21280,105 @@
       "url": "https://www.spotgroningen.nl/programma/",
       "status": "klaar",
       "rawText": "site 4/15: 60 unieke events in 15.25 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://simplon.nl/",
+      "title": "Start",
+      "date": "",
+      "url": "https://simplon.nl/",
+      "status": "start",
+      "rawText": "site 5/15: max 60 events, max 45 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://simplon.nl/",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://simplon.nl/",
+      "status": "strategie",
+      "rawText": "compacte-agenda-kaarten"
+    },
+    {
+      "source": "Website",
+      "site": "https://simplon.nl/",
+      "title": "Pagina gelezen",
+      "date": "",
+      "url": "https://simplon.nl/programma/",
+      "status": "ok",
+      "rawText": "96145 tekens HTML"
+    },
+    {
+      "source": "Parser",
+      "site": "https://simplon.nl/",
+      "title": "Agenda geanalyseerd",
+      "date": "",
+      "url": "https://simplon.nl/programma/",
+      "status": "gespecialiseerde parser",
+      "rawText": "55 agenda-items gevonden"
+    },
+    {
+      "source": "Website",
+      "site": "https://simplon.nl/",
+      "title": "Pagina geanalyseerd",
+      "date": "",
+      "url": "https://simplon.nl/programma/",
+      "status": "ok",
+      "rawText": "52 events/aanbiedingen op deze pagina"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://simplon.nl/",
+      "title": "Feed geanalyseerd",
+      "date": "",
+      "url": "https://simplon.nl/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fsimplon.nl%2Fprogramma%2F&format=xml",
+      "status": "ok",
+      "rawText": "0 events uit openbare feed"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://simplon.nl/",
+      "title": "Feed geanalyseerd",
+      "date": "",
+      "url": "https://simplon.nl/feed/",
+      "status": "ok",
+      "rawText": "0 events uit openbare feed"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://simplon.nl/",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://simplon.nl/rss.xml",
+      "status": "fout",
+      "rawText": "HTTP 404"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://simplon.nl/",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://simplon.nl/feed.xml",
+      "status": "fout",
+      "rawText": "HTTP 404"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://simplon.nl/",
+      "title": "Feed geanalyseerd",
+      "date": "",
+      "url": "https://simplon.nl/events/feed/",
+      "status": "ok",
+      "rawText": "0 events uit openbare feed"
+    },
+    {
+      "source": "Website",
+      "site": "https://simplon.nl/",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://simplon.nl/",
+      "status": "klaar",
+      "rawText": "site 5/15: 0 unieke events in 5.03 sec"
     }
   ]
 }
