@@ -1,7 +1,7 @@
 {
   "runId": "2026-10-26T09:44:56.889366+00:00-27747b20",
   "startedAt": "2026-10-26T09:44:56+00:00",
-  "completedCount": 12,
+  "completedCount": 13,
   "totalSites": 20,
   "currentSite": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
   "currentSiteIndex": 13,
@@ -17,7 +17,8 @@
     "https://groningermuseum.nl/programma",
     "https://www.kultuuragenda.nl/agenda",
     "https://www.noorderzon.nl/programma",
-    "https://www.concertgebouw.nl/concerten-en-tickets"
+    "https://www.concertgebouw.nl/concerten-en-tickets",
+    "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html"
   ],
   "events": [
     {
@@ -2014,54 +2015,16 @@
       "newCount": 12,
       "durationSeconds": 1.94,
       "timedOut": false
+    },
+    {
+      "site": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 1.4,
+      "timedOut": false
     }
   ],
   "rawLog": [
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Prins Panter (8+) Sonnevanck en DIEHELEDING",
-      "date": "2027-02-27",
-      "url": "https://www.spotgroningen.nl/programma/prins-panter-8/",
-      "status": "event uit link",
-      "rawText": "Prins Panter (8+) Sonnevanck en DIEHELEDING Reis mee door het magische en overweldigend kleurrijke Panterland za 27 feb"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Wende Er Is Nog Tijd",
-      "date": "2027-02-27",
-      "url": "https://www.spotgroningen.nl/programma/wende-8/",
-      "status": "event uit link",
-      "rawText": "Wende Er Is Nog Tijd Beweegt al ruim twintig jaar tussen pop, chanson, theater en performance za 27 feb"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Roxeanne Hazes ...Met Heimwee",
-      "date": "2027-02-27",
-      "url": "https://www.spotgroningen.nl/programma/roxeanne-hazes-5/",
-      "status": "event uit link",
-      "rawText": "Roxeanne Hazes ...Met Heimwee Dochter Dre komt met nieuw album en theatershow za 27 feb"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Jeroens Clan JUK",
-      "date": "2027-03-01",
-      "url": "https://www.spotgroningen.nl/programma/jeroens-clan-3/",
-      "status": "event uit link",
-      "rawText": "Jeroens Clan JUK Muzikaal, slim, scherp, kwetsbaar en bovenal retegrappig zapcabaret ma 1 mrt"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Nachtwacht NITE, Club Guy & Roni, HIIIT, Het Muziek",
-      "date": "2027-03-02",
-      "url": "https://www.spotgroningen.nl/programma/nachtwacht/",
-      "status": "event uit link",
-      "rawText": "Nachtwacht NITE, Club Guy & Roni, HIIIT, Het Muziek \"Nachtwacht grijpt vol naar je hart\" ★★★★★ de Volkskrant di 2 mrt"
-    },
     {
       "source": "Website",
       "site": "https://www.spotgroningen.nl/programma/",
@@ -12816,16 +12779,61 @@
       "url": "https://www.concertgebouw.nl/concerten-en-tickets",
       "status": "klaar",
       "rawText": "site 12/20: 12 unieke events in 1.94 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "title": "Start",
+      "date": "",
+      "url": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "status": "start",
+      "rawText": "site 13/20: max 12 events, max 4 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "status": "strategie",
+      "rawText": "bioscoopfilms en speeldata (BiosAgenda Groningen)"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "title": "403-tekstproxy mislukt",
+      "date": "",
+      "url": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "status": "fout",
+      "rawText": "HTTPSConnectionPool(host='r.jina.ai', port=443): Read timed out. (read timeout=1.25)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "title": "Pagina mislukt",
+      "date": "",
+      "url": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "status": "klaar",
+      "rawText": "site 13/20: 0 unieke events in 1.4 sec"
     }
   ],
   "status": "running",
   "siteStartedAt": "2026-10-26T09:46:09+00:00",
-  "siteElapsedSeconds": 0,
+  "siteElapsedSeconds": 2,
   "sitePageCount": 0,
   "lastSiteEventCount": 0,
-  "stage": "Websitepagina ophalen",
-  "lastUpdatedAt": "2026-10-26T09:46:09+00:00",
-  "lastSiteNewEventCount": 12,
-  "lastCompletedSite": "https://www.concertgebouw.nl/concerten-en-tickets",
-  "lastCompletedAt": "2026-10-26T09:46:07+00:00"
+  "stage": "Website klaar; volgende website voorbereiden",
+  "lastUpdatedAt": "2026-10-26T09:46:10+00:00",
+  "lastSiteNewEventCount": 0,
+  "lastCompletedSite": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+  "lastCompletedAt": "2026-10-26T09:46:11+00:00"
 }
