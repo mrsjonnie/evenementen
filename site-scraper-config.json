@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-26T22:22:14.311Z",
+  "updatedAt": "2026-10-26T22:22:30.326Z",
   "sites": {
     "https://groningen.uitloper.nu/": {
       "methodology": "",
@@ -256,7 +256,8 @@
       "adjustments": [],
       "eventUrlPatterns": [],
       "excludedUrlPatterns": [
-        "^/plan-je-bezoek/?$"
+        "^/plan-je-bezoek/?$",
+        "^/programma/?$"
       ]
     },
     "https://www.kultuuragenda.nl/agenda": {
