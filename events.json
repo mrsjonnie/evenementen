@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-26T11:22:07+00:00",
+  "updatedAt": "2026-10-26T11:22:20+00:00",
   "events": [
     {
       "date": "2026-10-26",
@@ -767,6 +767,21 @@
     },
     {
       "date": "2026-10-26",
+      "time": "19:30",
+      "title": "Home 1",
+      "type": "Concert",
+      "location": "Groningen",
+      "locationLink": "",
+      "website": "https://www.kultuuragenda.nl/agenda/2203530167/home-1",
+      "source": "kultuuragenda.nl",
+      "discoverySource": "Website",
+      "description": "‘Home’ schetst de harde realiteit van een uiteengespatte emigratiedroom.",
+      "cost": "gratis",
+      "image": "https://assets.plaece.nl/thumb/HQH-mVa5-Pnsx841cWCE9Y5CQQqQfBVJCZ7UBjqP6PQ/resizing_type:fit/width:650/height:366/gravity:sm/aHR0cHM6Ly9hc3NldHMucGxhZWNlLm5sL29kcC1ncm9uaW5nZW4vaW1hZ2UvZGNhMWYwNjY1YWQ2OGIzNDdkMzI4MWEzNTZiNDExNWU3MzNlYmVlZV8wMWEwNmY1ZS0wYjcxLTdkMzUtOGNjOC1mYTkxYWQwZjM2ZGYuanBn.jpg",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-26",
       "title": "In de voetsporen van Aletta Jacobs",
       "type": "Wandelen",
       "location": "Groningen",
@@ -886,6 +901,21 @@
       "cost": "",
       "image": "https://groningen.uitloper.nu/images/smallthumb/files/2022/dc963a7aa69486861578ed73fd213fd7a64bd3f0.jpg",
       "isNew": false
+    },
+    {
+      "date": "2026-10-26",
+      "time": "12:00 - 14:31",
+      "title": "L'Inconnue",
+      "type": "Film",
+      "location": "Groningen",
+      "locationLink": "",
+      "website": "https://www.kultuuragenda.nl/agenda/2840636300/l-inconnue",
+      "source": "kultuuragenda.nl",
+      "discoverySource": "Website",
+      "description": "Een intrigerende mix van psychologische thriller, mysterie en filosofisch drama. Met zijn totaal eigenzinnige film bevraagt regisseur Arthur Harari (Onoda) op surrealistische wijze identiteit, gender en empathie.",
+      "cost": "gratis",
+      "image": "https://assets.plaece.nl/thumb/agzJ5mHlYkgLpUP79qDZUUcB26vZJmgrYGBs8CFqV00/resizing_type:fit/width:650/height:366/gravity:sm/aHR0cHM6Ly9hc3NldHMucGxhZWNlLm5sL29kcC1ncm9uaW5nZW4vaW1hZ2UvNzdlN2QwOTY4Yjk0ZGRlZmRjNDg0MzYyODQwMmUxMjBjZjRhYTU4Y18wMWExNzU5NC1hNjE0LTdiZjUtYjE3ZS04ZjA1MDYxMTYxODguanBn.jpg",
+      "isNew": true
     },
     {
       "date": "2026-10-26",
@@ -3313,6 +3343,21 @@
       "description": "Play With Fire Tour + support: DEHAZE Singer-songwriter bekend van 'Close to You' komt met nieuw werk",
       "cost": "",
       "image": "https://www.spotgroningen.nl/wp-content/uploads/2026/02/Voorkeur-MichaelPrins_03A08359_WEB-e1772019752276-300x169.jpg",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-31",
+      "time": "10:00",
+      "title": "Playing House",
+      "type": "Concert",
+      "location": "Groningen",
+      "locationLink": "",
+      "website": "https://www.kultuuragenda.nl/agenda/2241509706/playing-house",
+      "source": "kultuuragenda.nl",
+      "discoverySource": "Website",
+      "description": "Bezoek de kindertentoonstelling tijdens Oktober Kindermaand!",
+      "cost": "gratis",
+      "image": "https://assets.plaece.nl/thumb/-9xSNajhle10kcfhbFnNfvYionyvgDcfqbxI2lo4Gdw/resizing_type:fit/width:650/height:366/gravity:sm/aHR0cHM6Ly9hc3NldHMucGxhZWNlLm5sL29kcC1ncm9uaW5nZW4vaW1hZ2UvZTgyYTMxYzUyMmJlMzJmZjVhZTkyNTI2NGE5ZWYyNDVjZGMxYmYwY18wMWExNmIyYi00NzZmLTdlYjYtOWMwZC1lMzNjNzkwMzQyYjMuanBn.jpg",
       "isNew": true
     },
     {
@@ -5979,198 +6024,16 @@
       "newCount": 40,
       "durationSeconds": 6.78,
       "timedOut": false
+    },
+    {
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "count": 9,
+      "newCount": 9,
+      "durationSeconds": 10.05,
+      "timedOut": true
     }
   ],
   "rawLog": [
-    {
-      "source": "SerpAPI",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Diagnostic Accuracy of the FRAIL Scale, Groningen Frailty ...",
-      "date": "",
-      "url": "https://pubmed.ncbi.nlm.nih.gov/38332716/",
-      "status": "genegeerd",
-      "rawText": "The FRAIL scale comprising 5 self-assessed items is a suitable tool for interview older adults for early frailty detection in community settings; ..."
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "FORREST SHERMAN vs JAGER vs GRONINGEN",
-      "date": "",
-      "url": "https://www.reddit.com/r/WorldOfWarships/comments/1kcxsha/forrest_sherman_vs_jager_vs_groningen/",
-      "status": "genegeerd",
-      "rawText": "I am very close to Forrest Sherman and secondly to Jager, but i see Groningen also, so fun wise which one? PS i am doing a lot better in main ..."
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Ultimate GRONINGEN Travel Guide - The Netherlands",
-      "date": "",
-      "url": "https://www.youtube.com/watch?v=qtN3sM08eyo",
-      "status": "genegeerd",
-      "rawText": "In the Groningen Travel Guide, you'll get the best tips on how to travel to the city, from historic buildings to the top museums and ..."
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Groningen Growth and Development Centre",
-      "date": "",
-      "url": "https://www.rug.nl/ggdc/?lang=en",
-      "status": "genegeerd",
-      "rawText": "Welcome to the Groningen Growth and Development Centre (GGDC). The GGDC is a platform for research on economic growth and development."
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "How Groningen invented a cycling template for cities all ...",
-      "date": "",
-      "url": "https://www.theguardian.com/cities/2015/jul/29/how-groningen-invented-a-cycling-template-for-cities-all-over-the-world",
-      "status": "genegeerd",
-      "rawText": "Motorists woke up one mid-70s morning to find new one-way streets made direct crosstown journeys impossible by car."
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Nicole Van Groningen - Internal Medicine Physician",
-      "date": "",
-      "url": "https://www.linkedin.com/in/nicole-van-groningen-0911b2105",
-      "status": "genegeerd",
-      "rawText": "I am currently working as both a hospitalist and primary care physician, both on a per diem basis. I graduated with an MD from the UCLA David Geffen School ..."
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Zoekopdracht 2/3",
-      "date": "",
-      "url": "",
-      "status": "zoeken",
-      "rawText": "site:www.spotgroningen.nl/programma programma agenda programma evenement concert Groningen 2026-10-26 9999-12-31"
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Zoekopdracht 3/3",
-      "date": "",
-      "url": "",
-      "status": "zoeken",
-      "rawText": "site:www.spotgroningen.nl \"Groningen\" agenda programma evenement concert theater film 2026-10-26 9999-12-31"
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "SerpAPI timeout/fout",
-      "date": "",
-      "url": "",
-      "status": "fout",
-      "rawText": "The operation was aborted"
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.vera-groningen.nl/",
-      "title": "Zoekopdracht 1/2",
-      "date": "",
-      "url": "",
-      "status": "zoeken",
-      "rawText": "site:www.vera-groningen.nl agenda programma agenda programma evenement concert Groningen 2026-10-26 9999-12-31"
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.vera-groningen.nl/",
-      "title": "Zoekopdracht 2/2",
-      "date": "",
-      "url": "",
-      "status": "zoeken",
-      "rawText": "site:www.vera-groningen.nl \"Groningen\" agenda programma evenement concert theater film 2026-10-26 9999-12-31"
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.vera-groningen.nl/",
-      "title": "SerpAPI timeout/fout",
-      "date": "",
-      "url": "",
-      "status": "fout",
-      "rawText": "The operation was aborted"
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Zoekopdracht 1/2",
-      "date": "",
-      "url": "",
-      "status": "zoeken",
-      "rawText": "site:groningen.uitloper.nu agenda programma agenda programma evenement concert Groningen 2026-10-26 9999-12-31"
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Zoekopdracht 2/2",
-      "date": "",
-      "url": "",
-      "status": "zoeken",
-      "rawText": "site:groningen.uitloper.nu \"Groningen\" agenda programma evenement concert theater film 2026-10-26 9999-12-31"
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "SerpAPI timeout/fout",
-      "date": "",
-      "url": "",
-      "status": "fout",
-      "rawText": "The operation was aborted"
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": "Zoekopdracht 1/2",
-      "date": "",
-      "url": "",
-      "status": "zoeken",
-      "rawText": "site:www.visitgroningen.nl/nl/doen/evenementen nl doen evenementen agenda programma evenement concert Groningen 2026-10-26 9999-12-31"
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": "Zoekopdracht 2/2",
-      "date": "",
-      "url": "",
-      "status": "zoeken",
-      "rawText": "site:www.visitgroningen.nl \"Groningen\" agenda programma evenement concert theater film 2026-10-26 9999-12-31"
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": "SerpAPI timeout/fout",
-      "date": "",
-      "url": "",
-      "status": "fout",
-      "rawText": "The operation was aborted"
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
-      "title": "Zoekopdracht 1/2",
-      "date": "",
-      "url": "",
-      "status": "zoeken",
-      "rawText": "site:www.visitgroningen.nl/nl/doen/wandelen nl doen wandelen agenda programma evenement concert Groningen 2026-10-26 9999-12-31"
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
-      "title": "https://link.thehuddle.nl/10626/events/107257",
-      "date": "",
-      "url": "https://link.thehuddle.nl/10626/events/107257",
-      "status": "genegeerd",
-      "rawText": "No information is available for this page."
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
-      "title": "Jan van Duikeren & Marcel Veenendaal Koncert",
-      "date": "",
-      "url": "https://festivaly.eu/jan-van-duikeren-marcel-veenendaal-de-oosterpoort-groningen-2026",
-      "status": "genegeerd",
-      "rawText": "Informace, program a vstupenky na koncert Jan van Duikeren & Marcel Veenendaal, který se koná 13.12.2026 20:30 (De Oosterpoort, Groningen)."
-    },
     {
       "source": "SerpAPI",
       "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
@@ -16781,6 +16644,195 @@
       "url": "https://groningermuseum.nl/programma",
       "status": "klaar",
       "rawText": "site 9/18: 40 unieke events in 6.78 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Start",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda",
+      "status": "start",
+      "rawText": "site 10/18: max 40 events, max 10 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda",
+      "status": "strategie",
+      "rawText": "universele detailpagina-parser (Kultuuragenda)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Pagina gelezen",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda",
+      "status": "ok",
+      "rawText": "153402 tekens HTML"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Kultuuragenda detailstrategie",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda",
+      "status": "strategie",
+      "rawText": "Overzicht overslaan; alleen echte /agenda/<id>/<slug> activiteitspagina’s verwerken"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Pagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda",
+      "status": "ok",
+      "rawText": "0 events/aanbiedingen op deze pagina"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/1088284512/the-social-reckoning",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/1148248983/het-witte-vlag-project-1",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/1249727087/nena-1",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/1453156530/digger",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/156742476/youri",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/1691313909/de-gaulle-liberte",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/1740715911/wildwood",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/2155420288/erupcja",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/2203530167/home-1",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/2241509706/playing-house",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/281413393/wicker",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/2840636300/l-inconnue",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/3022524326/sense-and-sensibility",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/3096643998/toutes-directions",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Detailpagina mislukt",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/3324146979/docs-naza",
+      "status": "fout",
+      "rawText": "HTTPSConnectionPool(host='www.kultuuragenda.nl', port=443): Read timed out. (read timeout=0.29371193900004755)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda",
+      "status": "klaar",
+      "rawText": "site 10/18: 9 unieke events in 10.05 sec"
     }
   ]
 }
