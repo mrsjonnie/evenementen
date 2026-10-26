@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-26T22:43:55+00:00",
+  "updatedAt": "2026-10-26T22:44:16+00:00",
   "events": [
     {
       "date": "2026-10-26",
@@ -11535,423 +11535,16 @@
       "newCount": 0,
       "durationSeconds": 23.9,
       "timedOut": false
+    },
+    {
+      "site": "https://www.ibood.com/s-nl",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 17.07,
+      "timedOut": false
     }
   ],
   "rawLog": [
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "GRRR... ik ben een boze Dino! (4+) Lil Ones",
-      "date": "2027-04-11",
-      "url": "https://www.spotgroningen.nl/programma/grrr-ik-ben-een-boze-dino-4/",
-      "status": "event uit link",
-      "rawText": "GRRR... ik ben een boze Dino! (4+) Lil Ones | Top Notch Muzikale en vrolijke familievoorstelling zo 11 apr"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Chef'Special",
-      "date": "2027-04-11",
-      "url": "https://www.spotgroningen.nl/programma/chefspecial-7/",
-      "status": "event uit link",
-      "rawText": "Chef'Special Nog één keer in de oorspronkelijke bezetting zo 11 apr"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Lieven Scheire Robots",
-      "date": "2027-04-11",
-      "url": "https://www.spotgroningen.nl/programma/lieven-scheire-2/",
-      "status": "event uit link",
-      "rawText": "Lieven Scheire Robots Machines in mensenvorm zo 11 apr"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Kees Prins YESTERDAY",
-      "date": "2027-04-13",
-      "url": "https://www.spotgroningen.nl/programma/kees-prins/",
-      "status": "event uit link",
-      "rawText": "Kees Prins YESTERDAY Kees Prins vertelt verhalen van een wonderlijke jeugd di 13 apr"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Circus Treurdier Die Bloemkool (een moeilijke musical)",
-      "date": "2027-04-14",
-      "url": "https://www.spotgroningen.nl/programma/circus-treurdier-9/",
-      "status": "event uit link",
-      "rawText": "Circus Treurdier Die Bloemkool (een moeilijke musical) Absurd verhaal over vermeende intelligentie en zogenaamde domheid wo 14 apr"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Kim Wilde",
-      "date": "2027-04-14",
-      "url": "https://www.spotgroningen.nl/programma/kim-wilde-4/",
-      "status": "event uit link",
-      "rawText": "Kim Wilde 80’s-icoon met hits die nog altijd moeiteloos overeind staan wo 14 apr"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Wina Ricardo Wina's wereld",
-      "date": "2027-04-14",
-      "url": "https://www.spotgroningen.nl/programma/wina-ricardo/",
-      "status": "event uit link",
-      "rawText": "Wina Ricardo Wina's wereld Uitgeroepen door de Volkskrant én het AD tot comedytalent van 2026 wo 14 apr"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Clean Pete Klassieke Revue met Thomas Beijer",
-      "date": "2027-04-15",
-      "url": "https://www.spotgroningen.nl/programma/clean-pete-klassieke-revue-met-thomas-beijer/",
-      "status": "event uit link",
-      "rawText": "Clean Pete Klassieke Revue met Thomas Beijer Clean Pete werpt een verfrissende blik op het klassieke repertoire do 15 apr"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Grondtonen Het Houten Huis",
-      "date": "2027-04-15",
-      "url": "https://www.spotgroningen.nl/programma/grondtonen-9-8/",
-      "status": "event uit link",
-      "rawText": "Grondtonen Het Houten Huis Een mystieke voorstelling over verloren gaan in het bos do 15 apr"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Noord Nederlands Orkest Game Music in Concert",
-      "date": "2027-04-15",
-      "url": "https://www.spotgroningen.nl/programma/noord-nederlands-orkest-243/",
-      "status": "event uit link",
-      "rawText": "Noord Nederlands Orkest Game Music in Concert Iconische gamemuziek live met symfonieorkest do 15 apr"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Orkater",
-      "date": "2027-04-16",
-      "url": "https://www.spotgroningen.nl/programma/orkater-de-nieuwkomers-4/",
-      "status": "event uit link",
-      "rawText": "Orkater | De Nieuwkomers Dolorosa Een muzikale zoektocht over de weg naar vergeving vr 16 apr"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Hooverphonic feat. Noémie Wolfs 30 Year Anniversary",
-      "date": "2027-04-16",
-      "url": "https://www.spotgroningen.nl/programma/hooverphonic/",
-      "status": "event uit link",
-      "rawText": "Hooverphonic feat. Noémie Wolfs 30 Year Anniversary Een mix van triphop, pop en psychedelische invloeden vr 16 apr"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "JOB Dutchtuber & Billy The Kit ECHTE VRIENDEN de tour",
-      "date": "2027-04-17",
-      "url": "https://www.spotgroningen.nl/programma/job-dutchtuber-billy-the-kit/",
-      "status": "event uit link",
-      "rawText": "JOB Dutchtuber & Billy The Kit ECHTE VRIENDEN de tour Een energieke liveshow vol beats, vriendschap en feest voor jong en oud! za 17 apr"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Barokopera Amsterdam The Indian Queen",
-      "date": "2027-04-17",
-      "url": "https://www.spotgroningen.nl/programma/barokopera-amsterdam-8/",
-      "status": "event uit link",
-      "rawText": "Barokopera Amsterdam The Indian Queen Purcells barokmuziek verweven met migratieverhalen en klanken uit Zuid-Amerika za 17 apr"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Daniel Norgren",
-      "date": "2027-04-17",
-      "url": "https://www.spotgroningen.nl/programma/daniel-norgren-2027/",
-      "status": "event uit link",
-      "rawText": "Daniel Norgren Zweedse folk, blues en soul met hypnotiserende grooves en uitwaaierende jams Net bevestigd za 17 apr"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Theatergroep Waark De wichter van Champ Clark",
-      "date": "2027-04-18",
-      "url": "https://www.spotgroningen.nl/programma/theatergroep-waark-3/",
-      "status": "event uit link",
-      "rawText": "Theatergroep Waark De wichter van Champ Clark Meeslepend muziektheater over Groningse verhaal zo 18 apr"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Fuse & Kinan Azmeh FREE",
-      "date": "2027-04-18",
-      "url": "https://www.spotgroningen.nl/programma/fuse-kinan-azmeh/",
-      "status": "event uit link",
-      "rawText": "Fuse & Kinan Azmeh FREE Een muzikaal avontuur waarin hoop, herinnering en verbondenheid centraal staan zo 18 apr"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "ORBI The Age of Greed",
-      "date": "2027-04-20",
-      "url": "https://www.spotgroningen.nl/programma/orbi/",
-      "status": "event uit link",
-      "rawText": "ORBI The Age of Greed Een verrassende mix van rock, klassieke muziek, metal en een vleugje blues di 20 apr"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Choir! Choir! Choir! Presents: MAMMA MIA: An EPIC ABBA Sing-Along!",
-      "date": "2027-04-21",
-      "url": "https://www.spotgroningen.nl/programma/choir-choir-choir-presents/",
-      "status": "event uit link",
-      "rawText": "Choir! Choir! Choir! Presents: MAMMA MIA: An EPIC ABBA Sing-Along! Zing mee met ABBA's Greatest Hits! Net bevestigd wo 21 apr"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Het Nationale Theater Richard III",
-      "date": "2027-04-22",
-      "url": "https://www.spotgroningen.nl/programma/het-nationale-theater-32/",
-      "status": "event uit link",
-      "rawText": "Het Nationale Theater Richard III Een vlijmscherpe bewerking van Shakespeares klassieker do 22 apr"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Joris Teepe presents: NYCTG",
-      "date": "2027-04-22",
-      "url": "https://www.spotgroningen.nl/programma/joris-teepe-presents-nyctg-38/",
-      "status": "event uit link",
-      "rawText": "Joris Teepe presents: NYCTG Voor een kleine prijs genieten van topjazzmuzikanten do 22 apr"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "The Elvis Concert",
-      "date": "2027-04-22",
-      "url": "https://www.spotgroningen.nl/programma/the-elvis-concert-2/",
-      "status": "event uit link",
-      "rawText": "The Elvis Concert The King is back in the building! do 22 apr"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "De Veenfabriek Frankenstein",
-      "date": "2027-04-23",
-      "url": "https://www.spotgroningen.nl/programma/veenfabriek/",
-      "status": "event uit link",
-      "rawText": "De Veenfabriek Frankenstein Muzikale steampunk-horrortrip over scheppingsdrang en het creëren van monsters vr 23 apr"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Yentl en de Boer De dagen",
-      "date": "2027-04-23",
-      "url": "https://www.spotgroningen.nl/programma/yentl-en-de-boer-6/",
-      "status": "event uit link",
-      "rawText": "Yentl en de Boer De dagen Winnaar Poelifinario in de categorie Kleinkunst vr 23 apr"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Jelka van Houten & Sanne Wallis de Vries LIFT",
-      "date": "2027-04-24",
-      "url": "https://www.spotgroningen.nl/programma/jelka-van-houten-sanne-wallis-de-vries/",
-      "status": "event uit link",
-      "rawText": "Jelka van Houten & Sanne Wallis de Vries LIFT Herinneringen, onbegrip, gemiste afslagen en confronterende kruispunten za 24 apr"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Noord Nederlands Orkest Beethoven 9",
-      "date": "2027-04-24",
-      "url": "https://www.spotgroningen.nl/programma/noord-nederlands-orkest-241/",
-      "status": "event uit link",
-      "rawText": "Noord Nederlands Orkest Beethoven 9 Beethovens Negende Symfonie: een krachtig symbool van vrijheid za 24 apr"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Matt Simons",
-      "date": "2027-04-28",
-      "url": "https://www.spotgroningen.nl/programma/matt-simons-4/",
-      "status": "event uit link",
-      "rawText": "Matt Simons Melancholische en optimistische muziek, gebracht met zachte stem wo 28 apr"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Kikker is Kikker (3+) Theater Terra",
-      "date": "2027-04-29",
-      "url": "https://www.spotgroningen.nl/programma/kikker-is-kikker-3/",
-      "status": "event uit link",
-      "rawText": "Kikker is Kikker (3+) Theater Terra Hartverwarmende familievoorstelling vol muziek en humor do 29 apr"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Freek de Jonge Wisten wij veel",
-      "date": "2027-04-30",
-      "url": "https://www.spotgroningen.nl/programma/freek-de-jonge-10/",
-      "status": "event uit link",
-      "rawText": "Freek de Jonge Wisten wij veel Lichtvoetig waar het kan, scherp waar het moet en altijd persoonlijk vr 30 apr"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Rhythm & Blues Night",
-      "date": "2027-05-01",
-      "url": "https://www.spotgroningen.nl/events/rhythm-blues-night/",
-      "status": "event uit link",
-      "rawText": "Rhythm & Blues Night De 35e editie van het jaarlijkse festival in De Oosterpoort! za 1 mei"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Karsu Theatertour 2027",
-      "date": "2027-05-01",
-      "url": "https://www.spotgroningen.nl/programma/karsu-5/",
-      "status": "event uit link",
-      "rawText": "Karsu Theatertour 2027 Nederlands-Turkse rasartiest komt met theatertour za 1 mei"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Weg Ermee (5-12jr) Wir War",
-      "date": "2027-05-02",
-      "url": "https://www.spotgroningen.nl/programma/weg-ermee-5-12jr/",
-      "status": "event uit link",
-      "rawText": "Weg Ermee (5-12jr) Wir War Een circustheatervoorstelling waarin afval de show steelt zo 2 mei"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Rundfunk Wagyu",
-      "date": "2027-05-06",
-      "url": "https://www.spotgroningen.nl/programma/rundfunk-10/",
-      "status": "event uit link",
-      "rawText": "Rundfunk Wagyu Gekissebis, geginnegap, geblabla, de ganse rambam Uitverkocht do 6 mei"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Rundfunk Wagyu",
-      "date": "2027-05-07",
-      "url": "https://www.spotgroningen.nl/programma/rundfunk-11/",
-      "status": "event uit link",
-      "rawText": "Rundfunk Wagyu Gekissebis, geginnegap, geblabla, de ganse rambam Uitverkocht vr 7 mei"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Theater Utrecht THE SCREAM",
-      "date": "2027-05-08",
-      "url": "https://www.spotgroningen.nl/programma/theater-utrecht-floor-houwink-ten-cate/",
-      "status": "event uit link",
-      "rawText": "Theater Utrecht THE SCREAM Een krachtig pleidooi voor zelfbeschikking za 8 mei"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "First Time Flyers",
-      "date": "2027-05-08",
-      "url": "https://www.spotgroningen.nl/programma/first-time-flyers/",
-      "status": "event uit link",
-      "rawText": "First Time Flyers Oprechte countrymuziek met catchy hooks za 8 mei"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "JOHNNY DELAWARE ON GOD'S TIME",
-      "date": "2027-05-08",
-      "url": "https://www.spotgroningen.nl/programma/johnny-delaware/",
-      "status": "event uit link",
-      "rawText": "JOHNNY DELAWARE ON GOD'S TIME TakeRoot presents: dromerige indie-folk met poëtische teksten Net bevestigd za 8 mei"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Stereo MC's",
-      "date": "2027-05-08",
-      "url": "https://www.spotgroningen.nl/programma/stereo-mcs/",
-      "status": "event uit link",
-      "rawText": "Stereo MC's Een groovy mix van hiphop, funk en elektronische beats za 8 mei"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Andries Tunru Ravot (reprise)",
-      "date": "2027-05-10",
-      "url": "https://www.spotgroningen.nl/programma/andries-tunru-4/",
-      "status": "event uit link",
-      "rawText": "Andries Tunru Ravot (reprise) Met scherpe grappen, verbluffende improvisaties en zelfs een vleugje acrobatiek ma 10 mei"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Theater Oostpool The Nether",
-      "date": "2027-05-11",
-      "url": "https://www.spotgroningen.nl/programma/theater-oostpool-19/",
-      "status": "event uit link",
-      "rawText": "Theater Oostpool The Nether Log in op je donkerste fantasie di 11 mei"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Prentenboekjesfestival Over een kleine mol die...(2+)",
-      "date": "2027-05-12",
-      "url": "https://www.spotgroningen.nl/programma/prentenboekjesfestival-3/",
-      "status": "event uit link",
-      "rawText": "Prentenboekjesfestival Over een kleine mol die...(2+) Hilarische slapstick wo 12 mei"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Prentenboekjesfestival Over een kleine mol die...(2+)",
-      "date": "2027-05-12",
-      "url": "https://www.spotgroningen.nl/programma/prentenboekjesfestival-2/",
-      "status": "event uit link",
-      "rawText": "Prentenboekjesfestival Over een kleine mol die...(2+) Hilarische slapstick wo 12 mei"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Prentenboekjesfestival De Gruffalo (2+)",
-      "date": "2027-05-12",
-      "url": "https://www.spotgroningen.nl/programma/prentenboekjesfestival/",
-      "status": "event uit link",
-      "rawText": "Prentenboekjesfestival De Gruffalo (2+) Meesterlijke verhaal over een muis die oog in oog staat met zijn eigen verzinsel wo 12 mei"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Noord Nederlands Orkest NNO x De Kast",
-      "date": "2027-05-12",
-      "url": "https://www.spotgroningen.nl/programma/noord-nederlands-orkest-242/",
-      "status": "event uit link",
-      "rawText": "Noord Nederlands Orkest NNO x De Kast Popklassiekers van De Kast in symfonisch jasje wo 12 mei"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Martijn Crins Kooiapen (try-out)",
-      "date": "2027-05-12",
-      "url": "https://www.spotgroningen.nl/programma/martijn-crins-2/",
-      "status": "event uit link",
-      "rawText": "Martijn Crins Kooiapen (try-out) Try-outen. Testen, spelen, klooien, klieren. Apenkooien wo 12 mei"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Coffee Break ism Prins Claus Conservatorium",
-      "date": "2027-05-13",
-      "url": "https://www.spotgroningen.nl/programma/coffee-break-ism-prins-claus-conservatorium-20/",
-      "status": "event uit link",
-      "rawText": "Coffee Break ism Prins Claus Conservatorium Trakteer jezelf op koffie en muziek van aanstormend talent op de donderdagochtend do 13 mei"
-    },
     {
       "source": "Website",
       "site": "https://www.spotgroningen.nl/programma/",
@@ -22337,6 +21930,420 @@
       "url": "https://www.socialdeal.nl/",
       "status": "klaar",
       "rawText": "site 13/15: 0 unieke events in 23.9 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "Start",
+      "date": "",
+      "url": "https://www.ibood.com/s-nl",
+      "status": "start",
+      "rawText": "site 14/15: max 60 events, max 45 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://www.ibood.com/s-nl",
+      "status": "strategie",
+      "rawText": "aanbiedingen"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.ibood.com/offers/nl/s-nl",
+      "title": "403-tekstproxy gebruikt",
+      "date": "",
+      "url": "https://www.ibood.com/offers/nl/s-nl",
+      "status": "fallback",
+      "rawText": "Bron gaf HTTP 403; tekstproxy leverde 17405 tekens: Title: iBOOD.com: dé beste aanbiedingen, acties & deal van de dag URL Source: http://www.ibood.com/offers/nl/s-nl Published Time: Tue, 17 Mar 2026 16:05:26 GMT Markdown Content: ##"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "Pagina gelezen",
+      "date": "",
+      "url": "https://www.ibood.com/offers/nl/s-nl",
+      "status": "ok",
+      "rawText": "20435 tekens HTML"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "iBOOD-telling",
+      "date": "",
+      "url": "https://www.ibood.com/offers/nl/s-nl",
+      "status": "geen resultaten",
+      "rawText": "0 aanbiedingen gevonden; limiet 60; HTML 20435 tekens"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "iBOOD zonder aanbiedingen",
+      "date": "",
+      "url": "https://www.ibood.com/offers/nl/s-nl",
+      "status": "fallback",
+      "rawText": "Geen productkaarten herkend; HTML 20435 tekens; pagina /offers/nl/s-nl"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "Pagina geanalyseerd",
+      "date": "",
+      "url": "https://www.ibood.com/offers/nl/s-nl",
+      "status": "ok",
+      "rawText": "0 events/aanbiedingen op deze pagina"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.ibood.com/nl/s-nl",
+      "title": "403-tekstproxy mislukt",
+      "date": "",
+      "url": "https://www.ibood.com/nl/s-nl",
+      "status": "fout",
+      "rawText": "HTTPSConnectionPool(host='r.jina.ai', port=443): Read timed out. (read timeout=1.25)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "Pagina mislukt",
+      "date": "",
+      "url": "https://www.ibood.com/nl/s-nl",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "403-tekstproxy gebruikt",
+      "date": "",
+      "url": "https://www.ibood.com/s-nl",
+      "status": "fallback",
+      "rawText": "Bron gaf HTTP 403; tekstproxy leverde 17298 tekens: Title: iBOOD.com: dé beste aanbiedingen, acties & deal van de dag URL Source: http://www.ibood.com/s-nl Published Time: Tue, 17 Mar 2026 16:05:26 GMT Markdown Content: ## [Delsey B"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "Pagina gelezen",
+      "date": "",
+      "url": "https://www.ibood.com/s-nl",
+      "status": "ok",
+      "rawText": "20328 tekens HTML"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "iBOOD-telling",
+      "date": "",
+      "url": "https://www.ibood.com/s-nl",
+      "status": "geen resultaten",
+      "rawText": "0 aanbiedingen gevonden; limiet 60; HTML 20328 tekens"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "iBOOD zonder aanbiedingen",
+      "date": "",
+      "url": "https://www.ibood.com/s-nl",
+      "status": "fallback",
+      "rawText": "Geen productkaarten herkend; HTML 20328 tekens; pagina /s-nl"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "Pagina geanalyseerd",
+      "date": "",
+      "url": "https://www.ibood.com/s-nl",
+      "status": "ok",
+      "rawText": "0 events/aanbiedingen op deze pagina"
+    },
+    {
+      "source": "Diagnose",
+      "site": "http://www.ibood.com/offers/nl/s-nl",
+      "title": "403-tekstproxy gebruikt",
+      "date": "",
+      "url": "http://www.ibood.com/offers/nl/s-nl",
+      "status": "fallback",
+      "rawText": "Bron gaf HTTP 403; tekstproxy leverde 17405 tekens: Title: iBOOD.com: dé beste aanbiedingen, acties & deal van de dag URL Source: http://www.ibood.com/offers/nl/s-nl Published Time: Tue, 17 Mar 2026 16:05:26 GMT Markdown Content: ##"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "Published Time: Tue, 17 Mar 2026 16:05:26 GMT",
+      "date": "2026-03-17",
+      "url": "http://www.ibood.com/offers/nl/s-nl",
+      "status": "event uit tekstregel",
+      "rawText": "URL Source: http://www.ibood.com/offers/nl/s-nl | Published Time: Tue, 17 Mar 2026 16:05:26 GMT | Markdown Content: | Delsey Bekijk alle 29 deals | VirtuFit | VirtuFit TR500i Loopband | 2026 Model"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "Nog 1 dag",
+      "date": "2026-10-26",
+      "url": "http://www.ibood.com/offers/nl/s-nl",
+      "status": "event uit tekstregel",
+      "rawText": "Nog 1 dag | Populaire categorieën vandaag | Populaire merken vandaag"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "Pagina geteld",
+      "date": "",
+      "url": "http://www.ibood.com/offers/nl/s-nl",
+      "status": "analyse",
+      "rawText": "jsonld:0, links:0, datumblokken:0, kaarten:0, regels:2, detail:0"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "http://www.ibood.com/offers/nl/s-nl",
+      "status": "ok",
+      "rawText": "2 extra events"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.ibood.com/nl/s-nl/b/audiolab/f58b9bac-91db-5c2f-8e38-b83d15bad1d7",
+      "title": "403-tekstproxy mislukt",
+      "date": "",
+      "url": "https://www.ibood.com/nl/s-nl/b/audiolab/f58b9bac-91db-5c2f-8e38-b83d15bad1d7",
+      "status": "fout",
+      "rawText": "HTTPSConnectionPool(host='r.jina.ai', port=443): Read timed out. (read timeout=1.25)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "Detailpagina mislukt",
+      "date": "",
+      "url": "https://www.ibood.com/nl/s-nl/b/audiolab/f58b9bac-91db-5c2f-8e38-b83d15bad1d7",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.ibood.com/nl/s-nl/b/columbia/5f0ce9cd-63f2-5848-80c4-5da01f910498",
+      "title": "403-tekstproxy mislukt",
+      "date": "",
+      "url": "https://www.ibood.com/nl/s-nl/b/columbia/5f0ce9cd-63f2-5848-80c4-5da01f910498",
+      "status": "fout",
+      "rawText": "HTTPSConnectionPool(host='r.jina.ai', port=443): Read timed out. (read timeout=1.25)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "Detailpagina mislukt",
+      "date": "",
+      "url": "https://www.ibood.com/nl/s-nl/b/columbia/5f0ce9cd-63f2-5848-80c4-5da01f910498",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.ibood.com/nl/s-nl/b/delsey/525343d2-a6ee-5766-b94a-9cde3e7b743e?ibx_origin=h&ibx_tag=brandTile",
+      "title": "403-tekstproxy mislukt",
+      "date": "",
+      "url": "https://www.ibood.com/nl/s-nl/b/delsey/525343d2-a6ee-5766-b94a-9cde3e7b743e?ibx_origin=h&ibx_tag=brandTile",
+      "status": "fout",
+      "rawText": "HTTPSConnectionPool(host='r.jina.ai', port=443): Read timed out. (read timeout=1.25)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "Detailpagina mislukt",
+      "date": "",
+      "url": "https://www.ibood.com/nl/s-nl/b/delsey/525343d2-a6ee-5766-b94a-9cde3e7b743e?ibx_origin=h&ibx_tag=brandTile",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.ibood.com/nl/s-nl/b/dutchbone/c5301137-06eb-5bc0-9d00-6d95ace22fa6",
+      "title": "403-tekstproxy mislukt",
+      "date": "",
+      "url": "https://www.ibood.com/nl/s-nl/b/dutchbone/c5301137-06eb-5bc0-9d00-6d95ace22fa6",
+      "status": "fout",
+      "rawText": "HTTPSConnectionPool(host='r.jina.ai', port=443): Read timed out. (read timeout=1.25)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "Detailpagina mislukt",
+      "date": "",
+      "url": "https://www.ibood.com/nl/s-nl/b/dutchbone/c5301137-06eb-5bc0-9d00-6d95ace22fa6",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.ibood.com/nl/s-nl/b/lifenaxx/656d4a33-e013-40ad-8a8a-8a8bad9d5944",
+      "title": "403-tekstproxy mislukt",
+      "date": "",
+      "url": "https://www.ibood.com/nl/s-nl/b/lifenaxx/656d4a33-e013-40ad-8a8a-8a8bad9d5944",
+      "status": "fout",
+      "rawText": "HTTPSConnectionPool(host='r.jina.ai', port=443): Read timed out. (read timeout=1.25)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "Detailpagina mislukt",
+      "date": "",
+      "url": "https://www.ibood.com/nl/s-nl/b/lifenaxx/656d4a33-e013-40ad-8a8a-8a8bad9d5944",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.ibood.com/nl/s-nl/b/lucovitaal/621885b0-f26c-5004-bc8f-542a070ef545?ibx_origin=h&ibx_tag=brandTile",
+      "title": "403-tekstproxy mislukt",
+      "date": "",
+      "url": "https://www.ibood.com/nl/s-nl/b/lucovitaal/621885b0-f26c-5004-bc8f-542a070ef545?ibx_origin=h&ibx_tag=brandTile",
+      "status": "fout",
+      "rawText": "HTTPSConnectionPool(host='r.jina.ai', port=443): Read timed out. (read timeout=1.25)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "Detailpagina mislukt",
+      "date": "",
+      "url": "https://www.ibood.com/nl/s-nl/b/lucovitaal/621885b0-f26c-5004-bc8f-542a070ef545?ibx_origin=h&ibx_tag=brandTile",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.ibood.com/nl/s-nl/b/mooddi/343afe38-3c0f-4126-ad68-dcb0140b9ca0",
+      "title": "403-tekstproxy mislukt",
+      "date": "",
+      "url": "https://www.ibood.com/nl/s-nl/b/mooddi/343afe38-3c0f-4126-ad68-dcb0140b9ca0",
+      "status": "fout",
+      "rawText": "HTTPSConnectionPool(host='r.jina.ai', port=443): Read timed out. (read timeout=1.25)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "Detailpagina mislukt",
+      "date": "",
+      "url": "https://www.ibood.com/nl/s-nl/b/mooddi/343afe38-3c0f-4126-ad68-dcb0140b9ca0",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.ibood.com/nl/s-nl/b/sage/8019f444-243c-51dd-b24f-c030fc99aa0a",
+      "title": "403-tekstproxy mislukt",
+      "date": "",
+      "url": "https://www.ibood.com/nl/s-nl/b/sage/8019f444-243c-51dd-b24f-c030fc99aa0a",
+      "status": "fout",
+      "rawText": "HTTPSConnectionPool(host='r.jina.ai', port=443): Read timed out. (read timeout=1.25)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "Detailpagina mislukt",
+      "date": "",
+      "url": "https://www.ibood.com/nl/s-nl/b/sage/8019f444-243c-51dd-b24f-c030fc99aa0a",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.ibood.com/nl/s-nl/b/trio/c20640a1-47f7-50d6-8fb4-6f3a3ab283d1",
+      "title": "403-tekstproxy mislukt",
+      "date": "",
+      "url": "https://www.ibood.com/nl/s-nl/b/trio/c20640a1-47f7-50d6-8fb4-6f3a3ab283d1",
+      "status": "fout",
+      "rawText": "HTTPSConnectionPool(host='r.jina.ai', port=443): Read timed out. (read timeout=1.25)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "Detailpagina mislukt",
+      "date": "",
+      "url": "https://www.ibood.com/nl/s-nl/b/trio/c20640a1-47f7-50d6-8fb4-6f3a3ab283d1",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "Pagina geteld",
+      "date": "",
+      "url": "http://www.ibood.com/s-nl",
+      "status": "analyse",
+      "rawText": "jsonld:0, links:0, datumblokken:0, kaarten:0, regels:0, detail:0"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "http://www.ibood.com/s-nl",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://www.ibood.com/feed",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://www.ibood.com/rss",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://www.ibood.com/rss.xml",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://www.ibood.com/feed.xml",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://www.ibood.com/events/feed/",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "Filter",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "Datumfilter toegepast",
+      "date": "2026-10-26",
+      "url": "https://www.ibood.com/s-nl",
+      "status": "ok",
+      "rawText": "2 gevonden; 1 binnen 2026-10-26 t/m onbeperkt"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://www.ibood.com/s-nl",
+      "status": "klaar",
+      "rawText": "site 14/15: 0 unieke events in 17.07 sec"
     }
   ]
 }
