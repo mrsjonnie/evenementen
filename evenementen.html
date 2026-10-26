@@ -681,12 +681,29 @@
     .customSiteAdder .status { margin-top:7px; max-width:none; }
 
     .siteActions {
-      display: flex;
-      gap: 8px;
+      display: grid;
+      grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr) minmax(0, .9fr);
+      gap: 6px;
       padding: 8px;
       border-top: 1px solid var(--line);
       background: #101925;
     }
+    .siteActions .btn {
+      min-width: 0;
+      min-height: 36px;
+      padding: 5px 6px;
+      font-size: .72rem;
+      line-height: 1.15;
+      white-space: normal;
+      text-align: center;
+    }
+    .siteActions .siteSettingsButton {
+      background: #087f5b;
+      border: 1px solid #087f5b;
+      color: #fff;
+      font-weight: 900;
+    }
+    @media (max-width: 380px) { .siteActions { grid-template-columns: 1fr; } }
 
     .status {
       display: block;
@@ -1349,7 +1366,6 @@
   <main>
     <div class="pageLayout" id="pageLayout">
     <aside class="toolbar filterSidebar" id="filterSidebar" aria-label="Filters">
-      <a class="btn btnSecondary" href="./instellingen.html" style="display:flex;justify-content:center;width:100%;margin-bottom:12px;background:#087f5b;border-color:#087f5b;color:#fff;font-weight:900">⚙ Instellingen scraper</a>
       <div class="sidebarViewButtons" aria-label="Weergave">
         <button class="btn btnSecondary" id="collapseTypesBtn" type="button">Types uitklappen</button>
         <button class="btn btnSecondary" id="collapseSourcesBtn" type="button">Bron uitklappen</button>
@@ -1428,8 +1444,9 @@
               <div class="sitePanelHeader">Selecteer websites om te scannen en filteren.</div>
               <div class="siteList" id="sitesList"></div>
               <div class="siteActions">
-                <button class="btn btnSecondary" id="allSitesBtn" type="button">Alles</button>
-                <button class="btn btnSecondary" id="noSitesBtn" type="button">Geen</button>
+                <a class="btn btnSecondary siteSettingsButton" href="./instellingen.html">⚙ Instellingen</a>
+                <button class="btn btnSecondary" id="allSitesBtn" type="button">Selecteer alles</button>
+                <button class="btn btnSecondary" id="noSitesBtn" type="button">Selecteer geen</button>
               </div>
             </div>
           </div>
@@ -1517,7 +1534,7 @@
     </section>
   </div>
   <script>
-    const APP_VERSION = "2026.10.26.95";
+    const APP_VERSION = "2026.10.26.96";
     const STATUS_HISTORY_KEY = "evenementenStatusHistoryV1";
     const DISMISSED_SCRAPE_RUN_KEY = "evenementenDismissedScrapeRunV1";
     const DEFAULT_MAX_EVENTS_PER_SITE = 20;
