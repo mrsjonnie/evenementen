@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-26T10:19:07+00:00",
+  "updatedAt": "2026-10-26T10:19:14+00:00",
   "events": [
     {
       "date": "2026-10-26",
@@ -2363,6 +2363,13 @@
       "newCount": 0,
       "durationSeconds": 2.29,
       "timedOut": false
+    },
+    {
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 4.03,
+      "timedOut": true
     }
   ],
   "rawLog": [
@@ -11205,321 +11212,6 @@
       "rawText": "9 feb Compagnie Red, Yellow and Blue Katwijk “Een ijzersterk generatiedrama verpakt als hilarische sitcom.” ★★★★★ de Volkskrant Uitverkocht"
     },
     {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Breabach Folky Sunday",
-      "date": "2026-11-01",
-      "url": "https://www.spotgroningen.nl/programma/breabach-2/",
-      "status": "event uit kaart",
-      "rawText": "Breabach Folky Sunday Een avondje Schotse folk op z’n allerbest! zo 1 nov"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Roël Calister Ensemble The Work of Songs",
-      "date": "2026-11-01",
-      "url": "https://www.spotgroningen.nl/programma/roel-calister-ensemble/",
-      "status": "event uit kaart",
-      "rawText": "Roël Calister Ensemble The Work of Songs Krachtige verhalen komten tot leven door Afro-Curaçaose ritmes en melodieën zo 1 nov"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Fresku & Metropole Orkest Hand op mijn hart",
-      "date": "2026-11-02",
-      "url": "https://www.spotgroningen.nl/programma/metropole-orkest-fresku/",
-      "status": "event uit kaart",
-      "rawText": "Fresku & Metropole Orkest Hand op mijn hart Nieuwe muziek en herbewerkingen van Fresku-tracks Uitverkocht ma 2 nov The Fatal Flowers Seven Days To Remember Legendarische Nederlandse gitaarrock met new wave en Amerikaanse invloeden. ma 2 nov Plien & Bianca Harrekidee! (reprise) Een onvergetelijke stoet aan hilarische figuren Uitverkocht ma 2 nov"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "The Fatal Flowers Seven Days To Remember",
-      "date": "2026-11-02",
-      "url": "https://www.spotgroningen.nl/programma/the-fatal-flowers-2/",
-      "status": "event uit kaart",
-      "rawText": "The Fatal Flowers Seven Days To Remember Legendarische Nederlandse gitaarrock met new wave en Amerikaanse invloeden. ma 2 nov"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Plien & Bianca Harrekidee! (reprise)",
-      "date": "2026-11-02",
-      "url": "https://www.spotgroningen.nl/programma/plien-bianca-8/",
-      "status": "event uit kaart",
-      "rawText": "Plien & Bianca Harrekidee! (reprise) Een onvergetelijke stoet aan hilarische figuren Uitverkocht ma 2 nov"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Plien & Bianca Harrekidee! (reprise)",
-      "date": "2026-11-03",
-      "url": "https://www.spotgroningen.nl/programma/plien-bianca-9/",
-      "status": "event uit kaart",
-      "rawText": "Plien & Bianca Harrekidee! (reprise) Een onvergetelijke stoet aan hilarische figuren Uitverkocht di 3 nov"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Oersoep NITE & K.O.Brass",
-      "date": "2026-11-04",
-      "url": "https://www.spotgroningen.nl/programma/nite-52/",
-      "status": "event uit kaart",
-      "rawText": "Oersoep NITE & K.O.Brass \"Het spel is magistraal, de muziek fantastisch, het podiumbeeld scherp” – DvhN wo 4 nov Pynarello & Jochem Stavenuiter Pulcinella Maskers af! Mimespeler Jochem Stavenuiter zet Pynarello op z’n kop wo 4 nov Marie Koet Eindspel (try-out) Hét comedytalent van 2026 (de Volkskrant) Geannuleerd wo 4 nov"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Pynarello & Jochem Stavenuiter Pulcinella",
-      "date": "2026-11-04",
-      "url": "https://www.spotgroningen.nl/programma/pynarello-jochem-stavenuiter/",
-      "status": "event uit kaart",
-      "rawText": "Pynarello & Jochem Stavenuiter Pulcinella Maskers af! Mimespeler Jochem Stavenuiter zet Pynarello op z’n kop wo 4 nov"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Marie Koet Eindspel (try-out)",
-      "date": "2026-11-04",
-      "url": "https://www.spotgroningen.nl/programma/marie-koet/",
-      "status": "event uit kaart",
-      "rawText": "Marie Koet Eindspel (try-out) Hét comedytalent van 2026 (de Volkskrant) Geannuleerd wo 4 nov"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Aqueerius Beyond the Ball",
-      "date": "2026-11-05",
-      "url": "https://www.spotgroningen.nl/programma/aqueerius/",
-      "status": "event uit kaart",
-      "rawText": "Aqueerius Beyond the Ball “Een barok-wave parel vol lef, liefde en licht” - ★★★★★ Musicalsites do 5 nov Jip Smit Motherland III: The Return of Katinka Nerdy fantasytheater, fysieke komedie en vette satire do 5 nov Noord Nederlands Orkest Sjostakovitsj 2 & Brahms 3 Het NNO en NNCK zorgen samen voor contrasterende werelden do 5 nov Oersoep NITE & K.O.Brass \"Het spel is magistraal, de muziek fantastisch, het podiumbeeld"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Jip Smit Motherland III: The Return of Katinka",
-      "date": "2026-11-05",
-      "url": "https://www.spotgroningen.nl/programma/jip-smit/",
-      "status": "event uit kaart",
-      "rawText": "Jip Smit Motherland III: The Return of Katinka Nerdy fantasytheater, fysieke komedie en vette satire do 5 nov"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Noord Nederlands Orkest Sjostakovitsj 2 & Brahms 3",
-      "date": "2026-11-05",
-      "url": "https://www.spotgroningen.nl/programma/noord-nederlands-orkest-229/",
-      "status": "event uit kaart",
-      "rawText": "Noord Nederlands Orkest Sjostakovitsj 2 & Brahms 3 Het NNO en NNCK zorgen samen voor contrasterende werelden do 5 nov"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Oersoep NITE & K.O.Brass",
-      "date": "2026-11-05",
-      "url": "https://www.spotgroningen.nl/programma/nite-51/",
-      "status": "event uit kaart",
-      "rawText": "Oersoep NITE & K.O.Brass \"Het spel is magistraal, de muziek fantastisch, het podiumbeeld scherp” – DvhN do 5 nov"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Marie Koet Eindspel (try-out)",
-      "date": "2026-11-05",
-      "url": "https://www.spotgroningen.nl/programma/marie-koet-2/",
-      "status": "event uit kaart",
-      "rawText": "Marie Koet Eindspel (try-out) Hét comedytalent van 2026 (de Volkskrant) Geannuleerd do 5 nov"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Pieter Savenberg",
-      "date": "2026-11-05",
-      "url": "https://www.spotgroningen.nl/programma/pieter-savenberg/",
-      "status": "event uit kaart",
-      "rawText": "Pieter Savenberg Neoklassieke soundscapes in de prachtige kerk Ambitus do 5 nov"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Oersoep NITE & K.O.Brass",
-      "date": "2026-11-06",
-      "url": "https://www.spotgroningen.nl/programma/nite-50/",
-      "status": "event uit kaart",
-      "rawText": "Oersoep NITE & K.O.Brass \"Het spel is magistraal, de muziek fantastisch, het podiumbeeld scherp” – DvhN vr 6 nov"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "TakeRoot",
-      "date": "2026-11-07",
-      "url": "https://www.spotgroningen.nl/events/takeroot/",
-      "status": "event uit kaart",
-      "rawText": "TakeRoot 28e editie van TakeRoot met o.a. Willow Avalon, American Aquarium en The Del Fuegos za 7 nov Diggy Dex De Zoektocht Naar Geluk Op zoek naar de grote en kleine vragen van het leven Laatste kaarten za 7 nov Toneelschuurproducties/Koen Verheijden Mystiek lichaam Rauw-komische voorstelling naar Frans Kellendonks spraakmakende roman Laatste kaarten za 7 nov"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Diggy Dex De Zoektocht Naar Geluk",
-      "date": "2026-11-07",
-      "url": "https://www.spotgroningen.nl/programma/diggy-dex-4/",
-      "status": "event uit kaart",
-      "rawText": "Diggy Dex De Zoektocht Naar Geluk Op zoek naar de grote en kleine vragen van het leven Laatste kaarten za 7 nov"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Toneelschuurproducties/Koen Verheijden Mystiek lichaam",
-      "date": "2026-11-07",
-      "url": "https://www.spotgroningen.nl/programma/toneelschuurproducties-koen-verheijden/",
-      "status": "event uit kaart",
-      "rawText": "Toneelschuurproducties/Koen Verheijden Mystiek lichaam Rauw-komische voorstelling naar Frans Kellendonks spraakmakende roman Laatste kaarten za 7 nov"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Mus & kapitein Kwaadbaard (8+) Sterke Verhalen",
-      "date": "2026-11-08",
-      "url": "https://www.spotgroningen.nl/programma/mus-kapitein-kwaadbaard-8/",
-      "status": "event uit kaart",
-      "rawText": "Mus & kapitein Kwaadbaard (8+) Sterke Verhalen Muzikaal, vindingrijk en spannend zo 8 nov Kracht PATS (6+) MAN || CO & House of Nouws Heldhaftige dansvoorstelling over de kracht van samenwerken, humor en grootheidswaan zo 8 nov Mus & Kapitein Kwaadbaard (8+) Sterke Verhalen Muzikaal, vindingrijk en spannend zo 8 nov Macy Gray The Trouble With The Truth Tour Een onweerstaanbare mix van soul, r&b en funk zo 8 nov"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Kracht PATS (6+) MAN",
-      "date": "2026-11-08",
-      "url": "https://www.spotgroningen.nl/programma/kracht-pats-6/",
-      "status": "event uit kaart",
-      "rawText": "Kracht PATS (6+) MAN || CO & House of Nouws Heldhaftige dansvoorstelling over de kracht van samenwerken, humor en grootheidswaan zo 8 nov"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Mus & Kapitein Kwaadbaard (8+) Sterke Verhalen",
-      "date": "2026-11-08",
-      "url": "https://www.spotgroningen.nl/programma/mus-kapitein-kwaadbaard-8-2/",
-      "status": "event uit kaart",
-      "rawText": "Mus & Kapitein Kwaadbaard (8+) Sterke Verhalen Muzikaal, vindingrijk en spannend zo 8 nov"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Macy Gray The Trouble With The Truth Tour",
-      "date": "2026-11-08",
-      "url": "https://www.spotgroningen.nl/programma/macy-gray/",
-      "status": "event uit kaart",
-      "rawText": "Macy Gray The Trouble With The Truth Tour Een onweerstaanbare mix van soul, r&b en funk zo 8 nov"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Caro Returning to Innocence",
-      "date": "2026-11-09",
-      "url": "https://www.spotgroningen.nl/programma/caro/",
-      "status": "event uit kaart",
-      "rawText": "Caro Returning to Innocence Rauw, sensueel, gelaagd ma 9 nov Simone Lamsma & Jonathan Fournel Internationaal vermaarde topvioliste en Franse sterpianist Wereldklasse ma 9 nov"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Simone Lamsma & Jonathan Fournel",
-      "date": "2026-11-09",
-      "url": "https://www.spotgroningen.nl/programma/simone-lamsma-jonathan-fournel/",
-      "status": "event uit kaart",
-      "rawText": "Simone Lamsma & Jonathan Fournel Internationaal vermaarde topvioliste en Franse sterpianist Wereldklasse ma 9 nov"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Cursus Klassieke Muziek 2 De Klassieken",
-      "date": "2026-11-10",
-      "url": "https://www.spotgroningen.nl/programma/klassieke-muziek-2-de-klassieken/",
-      "status": "event uit kaart",
-      "rawText": "Cursus Klassieke Muziek 2 De Klassieken Ga mee op een inspirerende reis door de muziekgeschiedenis! di 10 nov Gavin James and his band Intens, puur en met een stem die keer op keer voor kippenvel zorgt Uitverkocht di 10 nov Tangarine Running in the Family II Een muzikale avond vol verrassingen en muzikale verbroedering di 10 nov"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Gavin James and his band",
-      "date": "2026-11-10",
-      "url": "https://www.spotgroningen.nl/programma/gavin-james-2/",
-      "status": "event uit kaart",
-      "rawText": "Gavin James and his band Intens, puur en met een stem die keer op keer voor kippenvel zorgt Uitverkocht di 10 nov"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Tangarine Running in the Family II",
-      "date": "2026-11-10",
-      "url": "https://www.spotgroningen.nl/programma/tangarine-7/",
-      "status": "event uit kaart",
-      "rawText": "Tangarine Running in the Family II Een muzikale avond vol verrassingen en muzikale verbroedering di 10 nov"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Noord Nederlands Orkest Openbare repetitie",
-      "date": "2026-11-11",
-      "url": "https://www.spotgroningen.nl/programma/noord-nederlands-orkest-244/",
-      "status": "event uit kaart",
-      "rawText": "Noord Nederlands Orkest Openbare repetitie Iconische filmmuziek klinkt live in de concertzaal wo 11 nov Cursus Klassieke Muziek 2 De Klassieken Ga mee op een inspirerende reis door de muziekgeschiedenis! wo 11 nov Jakop Ahlbom Company & ISH Dance Collective A Fine Mess \"Een hilarische voorstelling\" ★★★★ de Volkskrant wo 11 nov Eva Eikhout Het Leven Is Kort, Net Als Ik! Energiek theatercollege vol humor, zelfspot en e"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Cursus Klassieke Muziek 2 De Klassieken",
-      "date": "2026-11-11",
-      "url": "https://www.spotgroningen.nl/programma/klassieke-muziek-2-de-klassieken-2/",
-      "status": "event uit kaart",
-      "rawText": "Cursus Klassieke Muziek 2 De Klassieken Ga mee op een inspirerende reis door de muziekgeschiedenis! wo 11 nov"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Jakop Ahlbom Company & ISH Dance Collective A Fine Mess",
-      "date": "2026-11-11",
-      "url": "https://www.spotgroningen.nl/programma/jakop-ahlbom-company-ish-dance-collective/",
-      "status": "event uit kaart",
-      "rawText": "Jakop Ahlbom Company & ISH Dance Collective A Fine Mess \"Een hilarische voorstelling\" ★★★★ de Volkskrant wo 11 nov"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Eva Eikhout Het Leven Is Kort, Net Als Ik!",
-      "date": "2026-11-11",
-      "url": "https://www.spotgroningen.nl/programma/eva-eikhout/",
-      "status": "event uit kaart",
-      "rawText": "Eva Eikhout Het Leven Is Kort, Net Als Ik! Energiek theatercollege vol humor, zelfspot en een verfrissende kijk op het leven wo 11 nov"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Iris Hond & Kamerata Zuid spelen Einaudi (Reprise)",
-      "date": "2026-11-11",
-      "url": "https://www.spotgroningen.nl/programma/iris-hond-kamerata-zuid-2/",
-      "status": "event uit kaart",
-      "rawText": "Iris Hond & Kamerata Zuid spelen Einaudi (Reprise) Iris Hond en Kamerata Zuid buigen zich over Italiaans pianofenomeen wo 11 nov"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Niall McCabe",
-      "date": "2026-11-11",
-      "url": "https://www.spotgroningen.nl/programma/niall-mccabe/",
-      "status": "event uit kaart",
-      "rawText": "Niall McCabe Een karakteristieke mix van moderne Ierse folk en americana wo 11 nov"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Tina Dico Live 2026",
-      "date": "2026-11-12",
-      "url": "https://www.spotgroningen.nl/programma/tina-dico/",
-      "status": "event uit kaart",
-      "rawText": "Tina Dico Live 2026 Scandinavische singer-songwriter brengt nieuw album do 12 nov Jakop Ahlbom Company & ISH Dance Collective A Fine Mess \"Een hilarische voorstelling\" ★★★★ de Volkskrant do 12 nov Noord Nederlands Orkest Symfonische Soundtracks Iconische filmmuziek klinkt live in de concertzaal do 12 nov Roufaida Coming Up For Air Akoestische bewerking van doorbraakalbum do 12 nov The Black Atlantic Work In The Dark’"
-    },
-    {
       "source": "Parser",
       "site": "https://www.spotgroningen.nl/programma/",
       "title": "Pagina geteld",
@@ -11536,114 +11228,6 @@
       "url": "https://www.spotgroningen.nl/programma",
       "status": "ok",
       "rawText": "526 events/aanbiedingen op deze pagina"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Masterpiece Festival: Stravinsky Le Sacre du Printemps Festival waarbij je een klassiek meesterwerk van A tot Z leert kennen za 16 okt",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/events/masterpiece/",
-      "status": "detail-link gevonden",
-      "rawText": "Masterpiece Festival: Stravinsky Le Sacre du Printemps Festival waarbij je een klassiek meesterwerk van A tot Z leert kennen za 16 okt"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Rhythm & Blues Night De 35e editie van het jaarlijkse festival in De Oosterpoort! za 1 mei",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/events/rhythm-blues-night/",
-      "status": "detail-link gevonden",
-      "rawText": "Rhythm & Blues Night De 35e editie van het jaarlijkse festival in De Oosterpoort! za 1 mei"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "10CC and another bloody greatest hits tour 2027 Britse popband met tijdloze hits Net bevestigd zo 14 nov",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/10cc-5/",
-      "status": "detail-link gevonden",
-      "rawText": "10CC and another bloody greatest hits tour 2027 Britse popband met tijdloze hits Net bevestigd zo 14 nov"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Die 12 Cellisten der Berliner Philharmoniker Een fascinerende reis door celloland met twaalf Berlijnse topcellisten Wereldklasse do 29 okt",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/12-cellisten-der-berliner-philharmoniker/",
-      "status": "detail-link gevonden",
-      "rawText": "Die 12 Cellisten der Berliner Philharmoniker Een fascinerende reis door celloland met twaalf Berlijnse topcellisten Wereldklasse do 29 okt"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "40UP Big Bang Het jaar sluiten we traditiegetrouw af met een knaller! di 29 dec",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/40up-big-bang-6/",
-      "status": "detail-link gevonden",
-      "rawText": "40UP Big Bang Het jaar sluiten we traditiegetrouw af met een knaller! di 29 dec"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Aaf en Lies Over de liefde (reprise) Prachtige verhalen en prangende liefdesproblemen Laatste kaarten ma 26 okt",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/aaf-en-lies/",
-      "status": "detail-link gevonden",
-      "rawText": "Aaf en Lies Over de liefde (reprise) Prachtige verhalen en prangende liefdesproblemen Laatste kaarten ma 26 okt"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Abonnement Noord Nederlands Orkest Solisten Geniet met dit abonnement met concerten van het Noord Nederlands Orkest do 19 nov",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/abonnement-nno/",
-      "status": "detail-link gevonden",
-      "rawText": "Abonnement Noord Nederlands Orkest Solisten Geniet met dit abonnement met concerten van het Noord Nederlands Orkest do 19 nov"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "TakeRoot presents Pas Vijf concerten voor €70 za 31 jul",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/abonnement-takeroot-presents/",
-      "status": "detail-link gevonden",
-      "rawText": "TakeRoot presents Pas Vijf concerten voor €70 za 31 jul"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Abonnement Topmusici van eigen bodem Geniet met dit abonnement van Nederlandse topmusici in De Oosterpoort di 27 okt",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/abonnement-topmusici/",
-      "status": "detail-link gevonden",
-      "rawText": "Abonnement Topmusici van eigen bodem Geniet met dit abonnement van Nederlandse topmusici in De Oosterpoort di 27 okt"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Alain Clark Hoor de verhalen die schuilen achter Alain's muziek di 8 dec",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/alain-clark-2/",
-      "status": "detail-link gevonden",
-      "rawText": "Alain Clark Hoor de verhalen die schuilen achter Alain's muziek di 8 dec"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Alcest support: Agriculture Grondleggers van het blackgaze-genre vr 2 apr",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/alcest/",
-      "status": "detail-link gevonden",
-      "rawText": "Alcest support: Agriculture Grondleggers van het blackgaze-genre vr 2 apr"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Alex Ploeg Niks Persoonlijks (try-out) Vlijmscherpe grappen, persoonlijke verhalen en meeslepende gitaarliedjes Uitverkocht do 4 feb",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/alex-ploeg-10/",
-      "status": "detail-link gevonden",
-      "rawText": "Alex Ploeg Niks Persoonlijks (try-out) Vlijmscherpe grappen, persoonlijke verhalen en meeslepende gitaarliedjes Uitverkocht do 4 feb"
     },
     {
       "source": "Website",
@@ -13165,6 +12749,429 @@
       "url": "https://www.vera-groningen.nl/",
       "status": "klaar",
       "rawText": "site 7/20: 0 unieke events in 2.29 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Start",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda",
+      "status": "start",
+      "rawText": "site 8/20: max 12 events, max 4 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda",
+      "status": "strategie",
+      "rawText": "agenda-kaarten"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Pagina gelezen",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda",
+      "status": "ok",
+      "rawText": "146630 tekens HTML"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Donar Groningen – CSO Voluntari 2026",
+      "date": "2026-10-27",
+      "url": "https://www.martiniplaza.nl/nl/agenda/donar-groningen-cso-voluntari-2026",
+      "status": "venue-agenda kaart",
+      "rawText": "Sport Sport Donar Groningen – CSO Voluntari 2026 27 oktober"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Jethro Tull",
+      "date": "2026-10-27",
+      "url": "https://www.martiniplaza.nl/nl/agenda/jethro-tull",
+      "status": "venue-agenda kaart",
+      "rawText": "Muziek Theater Jethro Tull 27 oktober"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Rob Lamberti - A Celebration of GEORGE MICHAEL",
+      "date": "2026-10-28",
+      "url": "https://www.martiniplaza.nl/nl/agenda/rob-lamberti",
+      "status": "venue-agenda kaart",
+      "rawText": "Muziek Theater Rob Lamberti - A Celebration of GEORGE MICHAEL 28 oktober"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Francis van Broekhuizen - Tosca",
+      "date": "2026-10-30",
+      "url": "https://www.martiniplaza.nl/nl/agenda/francis-van-broekhuizen",
+      "status": "venue-agenda kaart",
+      "rawText": "Muziek Theater Francis van Broekhuizen - Tosca 30 oktober"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "The Dire Straits Experience - “The Long Highway 2026 Tour”",
+      "date": "2026-10-31",
+      "url": "https://www.martiniplaza.nl/nl/agenda/the-dire-straits-experience",
+      "status": "venue-agenda kaart",
+      "rawText": "Muziek Theater The Dire Straits Experience - “The Long Highway 2026 Tour” 31 oktober"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Juf Braaksel - De Musical",
+      "date": "2026-11-01",
+      "url": "https://www.martiniplaza.nl/nl/agenda/juf-braaksel",
+      "status": "venue-agenda kaart",
+      "rawText": "Familie Theater Juf Braaksel - De Musical 01 november"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Promotiedagen 2026",
+      "date": "2026-11-03",
+      "url": "https://www.martiniplaza.nl/nl/agenda/promotiedagen-2026",
+      "status": "venue-agenda kaart",
+      "rawText": "Beurs Event Promotiedagen 2026 03 november"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Promotiedagen 2026",
+      "date": "2026-11-04",
+      "url": "https://www.martiniplaza.nl/nl/agenda/promotiedagen-2026",
+      "status": "venue-agenda kaart",
+      "rawText": "Beurs Event Promotiedagen 2026 04 november"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "TAFKAL: SERIEUS GRAPPIG ( )",
+      "date": "2026-11-05",
+      "url": "https://www.martiniplaza.nl/nl/agenda/tafkal-serieus-grappig-uitverkocht",
+      "status": "venue-agenda kaart",
+      "rawText": "Cabaret Theater TAFKAL: SERIEUS GRAPPIG (UITVERKOCHT) 05 november"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "TAFKAL: SERIEUS GRAPPIG ( )",
+      "date": "2026-11-06",
+      "url": "https://www.martiniplaza.nl/nl/agenda/tafkal-serieus-grappig-uitverkocht",
+      "status": "venue-agenda kaart",
+      "rawText": "Cabaret Theater TAFKAL: SERIEUS GRAPPIG (UITVERKOCHT) 06 november"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Taptoe Groningen 2026",
+      "date": "2026-11-07",
+      "url": "https://www.martiniplaza.nl/nl/agenda/taptoe-groningen-2026",
+      "status": "venue-agenda kaart",
+      "rawText": "Muziek Muziek Taptoe Groningen 2026 07 november"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "TAFKAL: SERIEUS GRAPPIG ( )",
+      "date": "2026-11-07",
+      "url": "https://www.martiniplaza.nl/nl/agenda/tafkal-serieus-grappig-uitverkocht",
+      "status": "venue-agenda kaart",
+      "rawText": "Cabaret Theater TAFKAL: SERIEUS GRAPPIG (UITVERKOCHT) 07 november"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Agenda geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda",
+      "status": "gespecialiseerde parser",
+      "rawText": "12 agenda-items gevonden"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Pagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda",
+      "status": "ok",
+      "rawText": "12 events/aanbiedingen op deze pagina"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "link",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/cats-het-meesterwerk",
+      "status": "detail-link gevonden",
+      "rawText": ""
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Donar Groningen – CSO Voluntari 2026",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/donar-groningen-cso-voluntari-2026",
+      "status": "detail-link gevonden",
+      "rawText": "Donar Groningen – CSO Voluntari 2026"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Francis van Broekhuizen - Tosca",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/francis-van-broekhuizen",
+      "status": "detail-link gevonden",
+      "rawText": "Francis van Broekhuizen - Tosca"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Jethro Tull",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/jethro-tull",
+      "status": "detail-link gevonden",
+      "rawText": "Jethro Tull"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Juf Braaksel - De Musical",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/juf-braaksel",
+      "status": "detail-link gevonden",
+      "rawText": "Juf Braaksel - De Musical"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Promotiedagen 2026",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/promotiedagen-2026",
+      "status": "detail-link gevonden",
+      "rawText": "Promotiedagen 2026"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Rob Lamberti - A Celebration of GEORGE MICHAEL",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/rob-lamberti",
+      "status": "detail-link gevonden",
+      "rawText": "Rob Lamberti - A Celebration of GEORGE MICHAEL"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "TAFKAL: SERIEUS GRAPPIG (UITVERKOCHT)",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/tafkal-serieus-grappig-uitverkocht",
+      "status": "detail-link gevonden",
+      "rawText": "TAFKAL: SERIEUS GRAPPIG (UITVERKOCHT)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Taptoe Groningen 2026",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/taptoe-groningen-2026",
+      "status": "detail-link gevonden",
+      "rawText": "Taptoe Groningen 2026"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "link",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/the-bodyguard-de-musical-2027",
+      "status": "detail-link gevonden",
+      "rawText": ""
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "The Dire Straits Experience - “The Long Highway 2026 Tour”",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/the-dire-straits-experience",
+      "status": "detail-link gevonden",
+      "rawText": "The Dire Straits Experience - “The Long Highway 2026 Tour”"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "link",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/titanique",
+      "status": "detail-link gevonden",
+      "rawText": ""
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/cats-het-meesterwerk",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/donar-groningen-cso-voluntari-2026",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/francis-van-broekhuizen",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/jethro-tull",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/juf-braaksel",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/promotiedagen-2026",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/rob-lamberti",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/tafkal-serieus-grappig-uitverkocht",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/taptoe-groningen-2026",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/the-bodyguard-de-musical-2027",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/the-dire-straits-experience",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/titanique",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/feed",
+      "status": "fout",
+      "rawText": "HTTP 404"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/rss",
+      "status": "fout",
+      "rawText": "HTTP 404"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/rss.xml",
+      "status": "fout",
+      "rawText": "HTTP 404"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/feed.xml",
+      "status": "fout",
+      "rawText": "HTTPSConnectionPool(host='www.martiniplaza.nl', port=443): Read timed out. (read timeout=0.05)"
+    },
+    {
+      "source": "Filter",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Datumfilter toegepast",
+      "date": "2026-10-26",
+      "url": "https://www.martiniplaza.nl/nl/agenda",
+      "status": "ok",
+      "rawText": "12 gevonden; 3 binnen 2026-10-26 t/m 2026-10-28"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda",
+      "status": "klaar",
+      "rawText": "site 8/20: 0 unieke events in 4.03 sec"
     }
   ]
 }
