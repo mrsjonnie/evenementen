@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-26T21:26:59.646Z",
+  "updatedAt": "2026-10-26T21:57:47.928Z",
   "sites": {
     "https://groningen.uitloper.nu/": {
       "methodology": "",
@@ -18,7 +18,9 @@
         "linkedin"
       ],
       "excludedUrls": [],
-      "adjustments": []
+      "adjustments": [],
+      "eventUrlPatterns": [],
+      "excludedUrlPatterns": []
     },
     "https://www.visitgroningen.nl/nl/doen/evenementen": {
       "methodology": "",
@@ -36,7 +38,9 @@
         "linkedin"
       ],
       "excludedUrls": [],
-      "adjustments": []
+      "adjustments": [],
+      "eventUrlPatterns": [],
+      "excludedUrlPatterns": []
     },
     "https://www.visitgroningen.nl/nl/doen/wandelen": {
       "methodology": "",
@@ -54,7 +58,9 @@
         "linkedin"
       ],
       "excludedUrls": [],
-      "adjustments": []
+      "adjustments": [],
+      "eventUrlPatterns": [],
+      "excludedUrlPatterns": []
     },
     "https://forum.nl/nl/agenda": {
       "methodology": "",
@@ -72,7 +78,9 @@
         "linkedin"
       ],
       "excludedUrls": [],
-      "adjustments": []
+      "adjustments": [],
+      "eventUrlPatterns": [],
+      "excludedUrlPatterns": []
     },
     "https://www.spotgroningen.nl/programma/": {
       "methodology": "",
@@ -90,7 +98,9 @@
         "linkedin"
       ],
       "excludedUrls": [],
-      "adjustments": []
+      "adjustments": [],
+      "eventUrlPatterns": [],
+      "excludedUrlPatterns": []
     },
     "https://simplon.nl/": {
       "methodology": "",
@@ -108,7 +118,9 @@
         "linkedin"
       ],
       "excludedUrls": [],
-      "adjustments": []
+      "adjustments": [],
+      "eventUrlPatterns": [],
+      "excludedUrlPatterns": []
     },
     "https://www.vera-groningen.nl/": {
       "methodology": "",
@@ -126,7 +138,9 @@
         "linkedin"
       ],
       "excludedUrls": [],
-      "adjustments": []
+      "adjustments": [],
+      "eventUrlPatterns": [],
+      "excludedUrlPatterns": []
     },
     "https://www.martiniplaza.nl/nl/agenda": {
       "methodology": "",
@@ -144,7 +158,9 @@
         "linkedin"
       ],
       "excludedUrls": [],
-      "adjustments": []
+      "adjustments": [],
+      "eventUrlPatterns": [],
+      "excludedUrlPatterns": []
     },
     "https://groningermuseum.nl/programma": {
       "methodology": "",
@@ -162,7 +178,9 @@
         "linkedin"
       ],
       "excludedUrls": [],
-      "adjustments": []
+      "adjustments": [],
+      "eventUrlPatterns": [],
+      "excludedUrlPatterns": []
     },
     "https://www.kultuuragenda.nl/agenda": {
       "methodology": "",
@@ -180,7 +198,9 @@
         "linkedin"
       ],
       "excludedUrls": [],
-      "adjustments": []
+      "adjustments": [],
+      "eventUrlPatterns": [],
+      "excludedUrlPatterns": []
     },
     "https://www.noorderzon.nl/programma": {
       "methodology": "",
@@ -198,7 +218,9 @@
         "linkedin"
       ],
       "excludedUrls": [],
-      "adjustments": []
+      "adjustments": [],
+      "eventUrlPatterns": [],
+      "excludedUrlPatterns": []
     },
     "https://www.concertgebouw.nl/concerten-en-tickets": {
       "methodology": "",
@@ -216,7 +238,9 @@
         "linkedin"
       ],
       "excludedUrls": [],
-      "adjustments": []
+      "adjustments": [],
+      "eventUrlPatterns": [],
+      "excludedUrlPatterns": []
     },
     "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html": {
       "methodology": "",
@@ -234,7 +258,9 @@
         "linkedin"
       ],
       "excludedUrls": [],
-      "adjustments": []
+      "adjustments": [],
+      "eventUrlPatterns": [],
+      "excludedUrlPatterns": []
     },
     "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817": {
       "methodology": "",
@@ -252,7 +278,9 @@
         "linkedin"
       ],
       "excludedUrls": [],
-      "adjustments": []
+      "adjustments": [],
+      "eventUrlPatterns": [],
+      "excludedUrlPatterns": []
     },
     "https://www.vvvameland.nl/activiteiten-en-evenementen": {
       "methodology": "",
@@ -270,7 +298,9 @@
         "linkedin"
       ],
       "excludedUrls": [],
-      "adjustments": []
+      "adjustments": [],
+      "eventUrlPatterns": [],
+      "excludedUrlPatterns": []
     },
     "https://www.socialdeal.nl/": {
       "methodology": "",
@@ -288,7 +318,9 @@
         "linkedin"
       ],
       "excludedUrls": [],
-      "adjustments": []
+      "adjustments": [],
+      "eventUrlPatterns": [],
+      "excludedUrlPatterns": []
     },
     "https://www.groupon.nl/kortingsbonnen/gemeente-groningen": {
       "methodology": "",
@@ -306,7 +338,9 @@
         "linkedin"
       ],
       "excludedUrls": [],
-      "adjustments": []
+      "adjustments": [],
+      "eventUrlPatterns": [],
+      "excludedUrlPatterns": []
     },
     "https://www.ibood.com/s-nl": {
       "methodology": "",
@@ -324,7 +358,9 @@
         "linkedin"
       ],
       "excludedUrls": [],
-      "adjustments": []
+      "adjustments": [],
+      "eventUrlPatterns": [],
+      "excludedUrlPatterns": []
     }
   }
 }
