@@ -1,7 +1,7 @@
 {
   "runId": "2026-10-26T09:44:56.889366+00:00-27747b20",
   "startedAt": "2026-10-26T09:44:56+00:00",
-  "completedCount": 19,
+  "completedCount": 20,
   "totalSites": 20,
   "currentSite": "https://www.filmvandaag.nl/bioscoop",
   "currentSiteIndex": 20,
@@ -24,7 +24,8 @@
     "https://www.socialdeal.nl/",
     "https://www.ibood.com/s-nl",
     "https://www.pathe.nl/bioscoop/groningen",
-    "https://denieuwekolk.nl/agenda"
+    "https://denieuwekolk.nl/agenda",
+    "https://www.filmvandaag.nl/bioscoop"
   ],
   "events": [
     {
@@ -2370,72 +2371,16 @@
       "newCount": 3,
       "durationSeconds": 4.01,
       "timedOut": true
+    },
+    {
+      "site": "https://www.filmvandaag.nl/bioscoop",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 2.84,
+      "timedOut": false
     }
   ],
   "rawLog": [
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Orange Skyline",
-      "date": "2027-03-18",
-      "url": "https://www.spotgroningen.nl/programma/orange-skyline-4/",
-      "status": "event uit link",
-      "rawText": "Orange Skyline Snelgroeiende indierockband in een intieme setting do 18 mrt"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Isa Hoes, Edwin Jonker e.a. De Verbouwing",
-      "date": "2027-03-19",
-      "url": "https://www.spotgroningen.nl/programma/isa-hoes-edwin-jonker-e-a/",
-      "status": "event uit link",
-      "rawText": "Isa Hoes, Edwin Jonker e.a. De Verbouwing Naar het zinderende boek van Saskia Noort vr 19 mrt"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Somer Kamerorkest Mythische proporties in een aards formaat",
-      "date": "2027-03-19",
-      "url": "https://www.spotgroningen.nl/programma/somer-kamerorkest/",
-      "status": "event uit link",
-      "rawText": "Somer Kamerorkest Mythische proporties in een aards formaat Kamerorkest van the next generation speelt muziek van Somer, Wagner en Bruckner vr 19 mrt"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Stephanie Struijk",
-      "date": "2027-03-19",
-      "url": "https://www.spotgroningen.nl/programma/stephanie-struijk-7/",
-      "status": "event uit link",
-      "rawText": "Stephanie Struijk Nederlandse singer-songwriter komt met nieuwe voorstelling vr 19 mrt"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Noord Nederlands Orkest Matthäus Passion",
-      "date": "2027-03-20",
-      "url": "https://www.spotgroningen.nl/programma/noord-nederlands-orkest-238/",
-      "status": "event uit link",
-      "rawText": "Noord Nederlands Orkest Matthäus Passion Bachs Matthäus Passion met een unieke interpretatie za 20 mrt"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Lang Leve Annie M.G. Suzan Seegers Job Bovelander e.a.",
-      "date": "2027-03-20",
-      "url": "https://www.spotgroningen.nl/programma/lang-leve-annie-m-g/",
-      "status": "event uit link",
-      "rawText": "Lang Leve Annie M.G. Suzan Seegers Job Bovelander e.a. Eerbetoon aan de vrouw die Nederland leerde lachen, denken en voelen za 20 mrt"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Koka Kola Rivier (9+) De Toneelmakerij",
-      "date": "2027-03-21",
-      "url": "https://www.spotgroningen.nl/programma/koka-kola-rivier-9/",
-      "status": "event uit link",
-      "rawText": "Koka Kola Rivier (9+) De Toneelmakerij Meeslepende familievoorstelling over het verlangen naar de plek waar je vandaan komt zo 21 mrt"
-    },
     {
       "source": "Website",
       "site": "https://www.spotgroningen.nl/programma/",
@@ -13172,16 +13117,79 @@
       "url": "https://denieuwekolk.nl/agenda",
       "status": "klaar",
       "rawText": "site 19/20: 3 unieke events in 4.01 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.filmvandaag.nl/bioscoop",
+      "title": "Start",
+      "date": "",
+      "url": "https://www.filmvandaag.nl/bioscoop",
+      "status": "start",
+      "rawText": "site 20/20: max 12 events, max 4 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.filmvandaag.nl/bioscoop",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://www.filmvandaag.nl/bioscoop",
+      "status": "strategie",
+      "rawText": "bioscoopagenda Groningen (FilmVandaag)"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.filmvandaag.nl/filmladder/stad/80-groningen",
+      "title": "403-tekstproxy mislukt",
+      "date": "",
+      "url": "https://www.filmvandaag.nl/filmladder/stad/80-groningen",
+      "status": "fout",
+      "rawText": "HTTPSConnectionPool(host='r.jina.ai', port=443): Read timed out. (read timeout=1.25)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.filmvandaag.nl/bioscoop",
+      "title": "Pagina mislukt",
+      "date": "",
+      "url": "https://www.filmvandaag.nl/filmladder/stad/80-groningen",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://filmvandaag.nl/filmladder/stad/80-groningen",
+      "title": "403-tekstproxy mislukt",
+      "date": "",
+      "url": "https://filmvandaag.nl/filmladder/stad/80-groningen",
+      "status": "fout",
+      "rawText": "HTTPSConnectionPool(host='r.jina.ai', port=443): Read timed out. (read timeout=1.25)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.filmvandaag.nl/bioscoop",
+      "title": "Pagina mislukt",
+      "date": "",
+      "url": "https://filmvandaag.nl/filmladder/stad/80-groningen",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.filmvandaag.nl/bioscoop",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://www.filmvandaag.nl/bioscoop",
+      "status": "klaar",
+      "rawText": "site 20/20: 0 unieke events in 2.84 sec"
     }
   ],
-  "status": "running",
+  "status": "finishing",
   "siteStartedAt": "2026-10-26T09:46:50+00:00",
-  "siteElapsedSeconds": 0,
+  "siteElapsedSeconds": 6,
   "sitePageCount": 0,
   "lastSiteEventCount": 0,
-  "stage": "Websitepagina ophalen",
-  "lastUpdatedAt": "2026-10-26T09:46:50+00:00",
-  "lastSiteNewEventCount": 3,
-  "lastCompletedSite": "https://denieuwekolk.nl/agenda",
-  "lastCompletedAt": "2026-10-26T09:46:49+00:00"
+  "stage": "Website klaar; volgende website voorbereiden",
+  "lastUpdatedAt": "2026-10-26T09:46:54+00:00",
+  "lastSiteNewEventCount": 0,
+  "lastCompletedSite": "https://www.filmvandaag.nl/bioscoop",
+  "lastCompletedAt": "2026-10-26T09:46:56+00:00"
 }
