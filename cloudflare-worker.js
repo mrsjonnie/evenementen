@@ -1111,41 +1111,30 @@ async function saveEventsToGithub(env, foundEvents, options = {}) {
 }
 
 async function saveEventFeedback(env, target = {}, vote = "bad") {
-  const response = await githubFetch(env, "/contents/event-feedback.json?ref=main");
-  let sha = null;
-  let data = { schemaVersion: 1, updatedAt: new Date().toISOString(), feedback: [] };
-  if (response.ok) { const file = await response.json(); sha = file.sha; try { data = JSON.parse(decodeBase64(file.content)); } catch (_) {} }
-  else if (response.status !== 404) throw new Error("Feedbackbestand niet leesbaar: status " + response.status);
-  if (!Array.isArray(data.feedback)) data.feedback = [];
   const title = clean(target.title || ""), date = clean(target.date || ""), website = clean(target.website || "").replace(/\/$/, ""), key = clean(target.key || ""), url = clean(target.url || target.website || "");
   const identity = key || [date, title.toLowerCase(), website.toLowerCase()].join("|");
-  // Bewaar dubbelmelding en definitieve verwijdering apart; de tweede actie overschrijft de eerste niet.
-  const feedbackKey = ["duplicate", "deleted"].includes(vote) ? `${identity}::${vote}` : identity;
+  const feedbackKey = ["duplicate", "deleted"].includes(vote) ? identity + "::" + vote : identity;
   const now = new Date().toISOString();
-  const index = data.feedback.findIndex(item => (item.key || [item.date, String(item.title || "").toLowerCase(), String(item.website || "").toLowerCase().replace(/\/$/, "")].join("|")) === feedbackKey);
-  const record = {
-    key: feedbackKey, vote, title, date, website, url, updatedAt: now,
-    ...(vote === "edit" ? {
-      originalTitle: clean(target.originalTitle || title),
-      originalDate: clean(target.originalDate || date),
-      originalFields: target.originalFields && typeof target.originalFields === "object" ? Object.fromEntries(["title","date","location","type","cost"].map(field => [field, clean(target.originalFields[field] || "")])) : {},
-      corrections: {
-        title: clean(target.corrections?.title || title),
-        date: clean(target.corrections?.date || date),
-        location: clean(target.corrections?.location || ""),
-        type: clean(target.corrections?.type || ""),
-        cost: clean(target.corrections?.cost || ""),
-        website: clean(target.corrections?.website || url || website || "")
-      }
-    } : {})
-  };
-  if (index >= 0) data.feedback[index] = record; else data.feedback.push(record);
-  data.schemaVersion = 1; data.updatedAt = now;
-  const payload = { message: "Event link feedback: " + vote + " - " + (title || key || "event"), content: encodeBase64(JSON.stringify(data, null, 2)), branch: "main" };
-  if (sha) payload.sha = sha;
-  const saved = await githubFetch(env, "/contents/event-feedback.json", { method: "PUT", body: JSON.stringify(payload) });
-  if (!saved.ok) throw new Error("Feedback opslaan mislukt: " + await saved.text());
-  return { vote, feedbackCount: data.feedback.length };
+  const record = { key: feedbackKey, vote, title, date, website, url, updatedAt: now, ...(vote === "edit" ? { originalTitle: clean(target.originalTitle || title), originalDate: clean(target.originalDate || date), originalFields: target.originalFields && typeof target.originalFields === "object" ? Object.fromEntries(["title","date","location","type","cost"].map(field => [field, clean(target.originalFields[field] || "")])) : {}, corrections: { title: clean(target.corrections?.title || title), date: clean(target.corrections?.date || date), location: clean(target.corrections?.location || ""), type: clean(target.corrections?.type || ""), cost: clean(target.corrections?.cost || ""), website: clean(target.corrections?.website || url || website || "") } } : {}) };
+  let lastConflict = "";
+  for (let attempt = 1; attempt <= 5; attempt += 1) {
+    const response = await githubFetch(env, "/contents/event-feedback.json?ref=main");
+    let sha = null; let data = { schemaVersion: 1, updatedAt: now, feedback: [] };
+    if (response.ok) { const file = await response.json(); sha = file.sha; try { data = JSON.parse(decodeBase64(file.content || "")); } catch (_) { throw new Error("event-feedback.json bevat ongeldige JSON"); } }
+    else if (response.status !== 404) throw new Error("Feedbackbestand niet leesbaar: status " + response.status);
+    if (!Array.isArray(data.feedback)) data.feedback = [];
+    const index = data.feedback.findIndex(item => String(item.key || "") === feedbackKey);
+    if (index >= 0) data.feedback[index] = record; else data.feedback.push(record);
+    data.schemaVersion = 1; data.updatedAt = now;
+    const payload = { message: "Event link feedback: " + vote + " - " + (title || key || "event"), content: encodeBase64(JSON.stringify(data, null, 2)), branch: "main" };
+    if (sha) payload.sha = sha;
+    const saved = await githubFetch(env, "/contents/event-feedback.json", { method: "PUT", body: JSON.stringify(payload) });
+    if (saved.ok) return { vote, feedbackCount: data.feedback.length, retries: attempt - 1 };
+    const details = await saved.text();
+    if (saved.status === 409) { lastConflict = details; continue; }
+    throw new Error("Feedback opslaan mislukt: " + details);
+  }
+  throw new Error("Feedbackbestand bleef wijzigen tijdens vijf opslagpogingen. Probeer opnieuw. " + validateInput(lastConflict, 250));
 }
 async function learnEventUrlPattern(env, siteUrl, eventUrl, rejected = false) {
   let parsed;
@@ -1790,6 +1779,7 @@ export default {
       try {
         const body = await request.json().catch(() => ({}));
         const requestedSite = validateInput(body.site, 500);
+        const hostOf = (value) => { try { return new URL(value).hostname.toLowerCase().replace(/^www\\./, ""); } catch (_) { return ""; } };
         const requestedHost = hostOf(requestedSite);
         if (!requestedHost) return json({ ok: false, error: "Ongeldige website-URL." }, 400);
 
