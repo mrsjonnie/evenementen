@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- Favorieten, dubbelingsfeedback en URL-bewerking, versie 2026.10.26.73. -->
+<!-- Favorieten, dubbelingsfeedback en URL-bewerking, versie 2026.10.26.74. -->
 <html lang="nl">
 <head>
   <meta charset="UTF-8">
@@ -4112,7 +4112,13 @@
         });
         const data = await response.json().catch(() => ({}));
         if (!response.ok || data.ok === false) throw new Error(workerErrorMessage(data, "Opslaan van evenementcorrectie is mislukt"));
+        const locationChanged = cleanText(event.location || "").toLowerCase() !== corrections.location.toLowerCase();
         Object.assign(event, corrections, { website: corrections.website, editedByUser: true, editedAt: new Date().toISOString() });
+        // Coordinates from the scraped/original location must not override the user's corrected place.
+        if (locationChanged) {
+          delete event.lat;
+          delete event.lon;
+        }
         const nextKey = eventDedupeKey(event);
         expandedEventKeys.delete(key);
         expandedEventKeys.add(nextKey);
