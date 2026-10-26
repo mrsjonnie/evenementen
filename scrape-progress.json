@@ -1,7 +1,7 @@
 {
   "runId": "2026-10-26T11:43:58.524217+00:00-0c37897b",
   "startedAt": "2026-10-26T11:43:58+00:00",
-  "completedCount": 13,
+  "completedCount": 14,
   "totalSites": 16,
   "currentSite": "https://www.socialdeal.nl/",
   "currentSiteIndex": 14,
@@ -18,7 +18,8 @@
     "https://www.concertgebouw.nl/concerten-en-tickets",
     "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
     "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
-    "https://www.vvvameland.nl/activiteiten-en-evenementen"
+    "https://www.vvvameland.nl/activiteiten-en-evenementen",
+    "https://www.socialdeal.nl/"
   ],
   "events": [
     {
@@ -413,126 +414,16 @@
       "newCount": 0,
       "durationSeconds": 10.67,
       "timedOut": true
+    },
+    {
+      "site": "https://www.socialdeal.nl/",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 12.53,
+      "timedOut": true
     }
   ],
   "rawLog": [
-    {
-      "source": "Website",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "Detailpagina mislukt",
-      "date": "",
-      "url": "https://groningermuseum.nl/nl-NL/organisatie-zaken",
-      "status": "fout",
-      "rawText": "HTTPSConnectionPool(host='groningermuseum.nl', port=443): Read timed out. (read timeout=0.09558176800001661)"
-    },
-    {
-      "source": "Filter",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "Datumfilter toegepast",
-      "date": "2026-10-26",
-      "url": "https://groningermuseum.nl/programma",
-      "status": "ok",
-      "rawText": "80 gevonden; 6 binnen 2026-10-26 t/m 2026-10-26"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "Klaar",
-      "date": "",
-      "url": "https://groningermuseum.nl/programma",
-      "status": "klaar",
-      "rawText": "site 8/16: 0 unieke events in 10.21 sec"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.kultuuragenda.nl/agenda",
-      "title": "Start",
-      "date": "",
-      "url": "https://www.kultuuragenda.nl/agenda",
-      "status": "start",
-      "rawText": "site 9/16: max 40 events, max 10 seconden"
-    },
-    {
-      "source": "Parser",
-      "site": "https://www.kultuuragenda.nl/agenda",
-      "title": "Scrapertype vastgesteld",
-      "date": "",
-      "url": "https://www.kultuuragenda.nl/agenda",
-      "status": "strategie",
-      "rawText": "universele detailpagina-parser (Kultuuragenda)"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.kultuuragenda.nl/agenda",
-      "title": "Pagina gelezen",
-      "date": "",
-      "url": "https://www.kultuuragenda.nl/agenda",
-      "status": "ok",
-      "rawText": "153402 tekens HTML"
-    },
-    {
-      "source": "Parser",
-      "site": "https://www.kultuuragenda.nl/agenda",
-      "title": "Kultuuragenda detailstrategie",
-      "date": "",
-      "url": "https://www.kultuuragenda.nl/agenda",
-      "status": "strategie",
-      "rawText": "Overzicht overslaan; alleen echte /agenda/<id>/<slug> activiteitspagina’s verwerken"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.kultuuragenda.nl/agenda",
-      "title": "Pagina geanalyseerd",
-      "date": "",
-      "url": "https://www.kultuuragenda.nl/agenda",
-      "status": "ok",
-      "rawText": "0 events/aanbiedingen op deze pagina"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.kultuuragenda.nl/agenda",
-      "title": "Detailpagina geanalyseerd",
-      "date": "",
-      "url": "https://www.kultuuragenda.nl/agenda/1088284512/the-social-reckoning",
-      "status": "ok",
-      "rawText": "1 extra events"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.kultuuragenda.nl/agenda",
-      "title": "Detailpagina geanalyseerd",
-      "date": "",
-      "url": "https://www.kultuuragenda.nl/agenda/1148248983/het-witte-vlag-project-1",
-      "status": "ok",
-      "rawText": "1 extra events"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.kultuuragenda.nl/agenda",
-      "title": "Detailpagina geanalyseerd",
-      "date": "",
-      "url": "https://www.kultuuragenda.nl/agenda/1249727087/nena-1",
-      "status": "ok",
-      "rawText": "0 extra events"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.kultuuragenda.nl/agenda",
-      "title": "Detailpagina geanalyseerd",
-      "date": "",
-      "url": "https://www.kultuuragenda.nl/agenda/1453156530/digger",
-      "status": "ok",
-      "rawText": "1 extra events"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.kultuuragenda.nl/agenda",
-      "title": "Detailpagina geanalyseerd",
-      "date": "",
-      "url": "https://www.kultuuragenda.nl/agenda/156742476/youri",
-      "status": "ok",
-      "rawText": "1 extra events"
-    },
     {
       "source": "Website",
       "site": "https://www.kultuuragenda.nl/agenda",
@@ -11215,16 +11106,133 @@
       "url": "https://www.vvvameland.nl/activiteiten-en-evenementen",
       "status": "klaar",
       "rawText": "site 13/16: 0 unieke events in 10.67 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.socialdeal.nl/",
+      "title": "Start",
+      "date": "",
+      "url": "https://www.socialdeal.nl/",
+      "status": "start",
+      "rawText": "site 14/16: max 40 events, max 10 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.socialdeal.nl/",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://www.socialdeal.nl/",
+      "status": "strategie",
+      "rawText": "Social Deal-aanbiedingen"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.socialdeal.nl/",
+      "title": "Pagina gelezen",
+      "date": "",
+      "url": "https://www.socialdeal.nl/dichtbij/groningen/",
+      "status": "ok",
+      "rawText": "317644 tekens HTML"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.socialdeal.nl/",
+      "title": "Social Deal-telling",
+      "date": "",
+      "url": "https://www.socialdeal.nl/dichtbij/groningen/",
+      "status": "ok",
+      "rawText": "25 aanbiedingen gevonden (limiet 40)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.socialdeal.nl/",
+      "title": "Pagina geanalyseerd",
+      "date": "",
+      "url": "https://www.socialdeal.nl/dichtbij/groningen/",
+      "status": "ok",
+      "rawText": "25 events/aanbiedingen op deze pagina"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.socialdeal.nl/",
+      "title": "Pagina gelezen",
+      "date": "",
+      "url": "https://www.socialdeal.nl/ontdek/groningen/",
+      "status": "ok",
+      "rawText": "4944757 tekens HTML"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.socialdeal.nl/",
+      "title": "Social Deal-telling",
+      "date": "",
+      "url": "https://www.socialdeal.nl/ontdek/groningen/",
+      "status": "ok",
+      "rawText": "40 aanbiedingen gevonden (limiet 40)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.socialdeal.nl/",
+      "title": "Pagina geanalyseerd",
+      "date": "",
+      "url": "https://www.socialdeal.nl/ontdek/groningen/",
+      "status": "ok",
+      "rawText": "40 events/aanbiedingen op deze pagina"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.socialdeal.nl/",
+      "title": "Pagina gelezen",
+      "date": "",
+      "url": "https://www.socialdeal.nl/deals/groningen/",
+      "status": "ok",
+      "rawText": "4944754 tekens HTML"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.socialdeal.nl/",
+      "title": "Social Deal-telling",
+      "date": "",
+      "url": "https://www.socialdeal.nl/deals/groningen/",
+      "status": "ok",
+      "rawText": "40 aanbiedingen gevonden (limiet 40)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.socialdeal.nl/",
+      "title": "Pagina geanalyseerd",
+      "date": "",
+      "url": "https://www.socialdeal.nl/deals/groningen/",
+      "status": "ok",
+      "rawText": "40 events/aanbiedingen op deze pagina"
+    },
+    {
+      "source": "Filter",
+      "site": "https://www.socialdeal.nl/",
+      "title": "Datumfilter toegepast",
+      "date": "2026-10-26",
+      "url": "https://www.socialdeal.nl/",
+      "status": "ok",
+      "rawText": "59 gevonden; 11 binnen 2026-10-26 t/m 2026-10-26"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.socialdeal.nl/",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://www.socialdeal.nl/",
+      "status": "klaar",
+      "rawText": "site 14/16: 0 unieke events in 12.53 sec"
     }
   ],
   "status": "running",
   "siteStartedAt": "2026-10-26T11:46:39+00:00",
-  "siteElapsedSeconds": 0,
-  "sitePageCount": 0,
+  "siteElapsedSeconds": 13,
+  "sitePageCount": 3,
   "lastSiteEventCount": 0,
-  "stage": "Websitepagina ophalen",
-  "lastUpdatedAt": "2026-10-26T11:46:39+00:00",
+  "stage": "Website klaar; volgende website voorbereiden",
+  "lastUpdatedAt": "2026-10-26T11:46:52+00:00",
   "lastSiteNewEventCount": 0,
-  "lastCompletedSite": "https://www.vvvameland.nl/activiteiten-en-evenementen",
-  "lastCompletedAt": "2026-10-26T11:46:37+00:00"
+  "lastCompletedSite": "https://www.socialdeal.nl/",
+  "lastCompletedAt": "2026-10-26T11:46:52+00:00"
 }
