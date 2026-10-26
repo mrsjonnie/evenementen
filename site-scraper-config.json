@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-26T22:12:00.492Z",
+  "updatedAt": "2026-10-26T22:12:17.364Z",
   "sites": {
     "https://groningen.uitloper.nu/": {
       "methodology": "",
@@ -71,6 +71,11 @@
           "field": "type",
           "find": "Activiteit",
           "replace": "Concert"
+        },
+        {
+          "field": "type",
+          "find": "Activiteit",
+          "replace": "Wandelen"
         }
       ],
       "eventUrlPatterns": [
