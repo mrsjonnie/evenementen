@@ -1119,10 +1119,12 @@ async function saveEventFeedback(env, target = {}, vote = "bad") {
   if (!Array.isArray(data.feedback)) data.feedback = [];
   const title = clean(target.title || ""), date = clean(target.date || ""), website = clean(target.website || "").replace(/\/$/, ""), key = clean(target.key || ""), url = clean(target.url || target.website || "");
   const identity = key || [date, title.toLowerCase(), website.toLowerCase()].join("|");
+  // Bewaar dubbelmelding en definitieve verwijdering apart; de tweede actie overschrijft de eerste niet.
+  const feedbackKey = ["duplicate", "deleted"].includes(vote) ? `${identity}::${vote}` : identity;
   const now = new Date().toISOString();
-  const index = data.feedback.findIndex(item => (item.key || [item.date, String(item.title || "").toLowerCase(), String(item.website || "").toLowerCase().replace(/\/$/, "")].join("|")) === identity);
+  const index = data.feedback.findIndex(item => (item.key || [item.date, String(item.title || "").toLowerCase(), String(item.website || "").toLowerCase().replace(/\/$/, "")].join("|")) === feedbackKey);
   const record = {
-    key: identity, vote, title, date, website, url, updatedAt: now,
+    key: feedbackKey, vote, title, date, website, url, updatedAt: now,
     ...(vote === "edit" ? {
       originalTitle: clean(target.originalTitle || title),
       originalDate: clean(target.originalDate || date),
@@ -1131,7 +1133,8 @@ async function saveEventFeedback(env, target = {}, vote = "bad") {
         date: clean(target.corrections?.date || date),
         location: clean(target.corrections?.location || ""),
         type: clean(target.corrections?.type || ""),
-        cost: clean(target.corrections?.cost || "")
+        cost: clean(target.corrections?.cost || ""),
+        website: clean(target.corrections?.website || url || website || "")
       }
     } : {})
   };
