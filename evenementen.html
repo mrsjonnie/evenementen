@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- Compacte evenemententelling en filteruitsplitsing in de header, versie 2026.10.25.66. -->
+<!-- Compacte evenemententelling en filteruitsplitsing in de header, versie 2026.10.26.67. -->
 <html lang="nl">
 <head>
   <meta charset="UTF-8">
@@ -3356,6 +3356,7 @@
             <div class="cardActions">
               ${website ? `<a class="btn btnPrimary" href="${escapeHtml(website)}" target="_blank" rel="noopener noreferrer">Meer info</a>` : ""}
               ${route ? `<button class="btn btnSecondary routeToggle" type="button" data-route="${escapeHtml(routeId)}" data-destination="${escapeHtml(routeDestinationText)}" data-route-url="${escapeHtml(route)}">Route</button>` : ""}
+              <button class="btn btnSecondary goodEventBtn" type="button" data-event-key="${escapeHtml(cardKey)}" aria-label="Markeer als goede link" title="Goede link">👍 Goed</button>
               <button class="btn btnDanger deleteEventBtn" type="button" data-event-key="${escapeHtml(cardKey)}">Verwijder</button>
               ${route && routeContext ? `<span class="routeInfo">${escapeHtml(routeContext)}</span>` : ""}
             </div>
@@ -3835,6 +3836,21 @@
       render();
     }
 
+    async function saveEventVote(key, vote, button) {
+      const event = events.find((item) => eventDedupeKey(item) === key);
+      if (!event) return;
+      button.disabled = true;
+      try {
+        const response = await fetch(`${WORKER_URL}/event-feedback`, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ key, vote, title: event.title, date: event.date, website: event.website || event.source || "", url: event.website || "" }) });
+        const data = await response.json().catch(() => ({}));
+        if (!response.ok) throw new Error(workerErrorMessage(data, "Feedback opslaan mislukt"));
+        button.textContent = vote === "good" ? "👍 Goede link ✓" : "👎 Slechte link ✓";
+        button.classList.add("feedbackSaved");
+        addLiveLog("Feedback", event.website || event.source || "", event.title, vote === "good" ? "goede link" : "slechte link", "Feedback opgeslagen voor volgende scraper-runs");
+        showStatus("Bedankt. Je feedback wordt meegenomen bij volgende scraper-runs.", "ok");
+        setTimeout(hideStatus, 3500);
+      } catch (error) { showStatus(`Feedback opslaan mislukt: ${error.message}`, "error"); button.disabled = false; }
+    }
     async function deleteEventByKey(key) {
       const event = events.find((item) => eventDedupeKey(item) === key);
       if (!event) return;
@@ -4044,6 +4060,8 @@
       }
     });
     $("grid").addEventListener("click", (event) => {
+      const goodButton = event.target.closest(".goodEventBtn");
+      if (goodButton) { saveEventVote(goodButton.dataset.eventKey || "", "good", goodButton); return; }
       const deleteButton = event.target.closest(".deleteEventBtn");
       if (deleteButton) {
         deleteEventByKey(deleteButton.dataset.eventKey || "");
