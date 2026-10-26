@@ -1,7 +1,7 @@
 {
   "runId": "2026-10-26T09:44:56.889366+00:00-27747b20",
   "startedAt": "2026-10-26T09:44:56+00:00",
-  "completedCount": 11,
+  "completedCount": 12,
   "totalSites": 20,
   "currentSite": "https://www.concertgebouw.nl/concerten-en-tickets",
   "currentSiteIndex": 12,
@@ -16,7 +16,8 @@
     "https://www.martiniplaza.nl/nl/agenda",
     "https://groningermuseum.nl/programma",
     "https://www.kultuuragenda.nl/agenda",
-    "https://www.noorderzon.nl/programma"
+    "https://www.noorderzon.nl/programma",
+    "https://www.concertgebouw.nl/concerten-en-tickets"
   ],
   "events": [
     {
@@ -492,6 +493,21 @@
     },
     {
       "date": "2026-10-26",
+      "time": "20:15",
+      "title": "Popup Choir Taylor Swift: zing mee met Maarten Bos en Tijmen de Koning",
+      "type": "Concert",
+      "location": "Concertgebouw Amsterdam",
+      "locationLink": "",
+      "website": "https://www.concertgebouw.nl/concerten/45959877-popup-choir-taylor-swift-zing-mee-met-maarten-bos-en-tijmen-de-koning",
+      "source": "concertgebouw.nl",
+      "discoverySource": "Website",
+      "description": "Informatie en bestellen Informatie en bestellen",
+      "cost": "",
+      "image": "https://d35w1qwxagl33g.cloudfront.net/production/_908x545_crop_center-center_none/Pop-up-Choir-c-Emma-Pot.jpg?stamp=2502211058&tag=sm",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-26",
       "title": "Provincie",
       "type": "Wandelen",
       "location": "Groningen",
@@ -697,6 +713,22 @@
     },
     {
       "date": "2026-10-27",
+      "time": "20:15",
+      "title": "Fresku en het Metropole Orkest komen voor een uniek, avondvullend programma naar onze Grote Zaal! In",
+      "type": "Concert",
+      "location": "Grote Zaal, Concertgebouw, Amsterdam",
+      "locationLink": "",
+      "website": "https://www.concertgebouw.nl/concerten/43931216-fresku-metropole-orkest-o.l.v.-simon-dobson",
+      "source": "concertgebouw.nl",
+      "discoverySource": "Website",
+      "description": "Fresku & Metropole Orkest o.l.v. Simon Dobson 20:15 – 21:45 Grote Zaal v.a. € 29,00 Meer informatie Meer informatie Uitverkocht di 27 okt 2026 Bookmark Bookmark",
+      "cost": "Zie website",
+      "image": "https://d35w1qwxagl33g.cloudfront.net/production/_908x545_crop_center-center_none/Fresku-2-Metropole-Orkest-c-Rowan-Brugmans.png?stamp=2602021200&tag=sm",
+      "editedByUser": true,
+      "editedAt": "2026-10-26T09:32:38.891Z"
+    },
+    {
+      "date": "2026-10-27",
       "time": "",
       "title": "Jethro Tull",
       "type": "Concert",
@@ -738,6 +770,21 @@
       "description": "Eén van de grootste zangeressen van de Duitse popcultuur",
       "cost": "",
       "image": "https://www.spotgroningen.nl/wp-content/uploads/2026/03/NENA26_FB-Event-250909-300x157.jpg",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-27",
+      "time": "20:15",
+      "title": "Spotlight op Lucie Horsch: barok met Altstaedt en Dunford",
+      "type": "Concert",
+      "location": "Concertgebouw Amsterdam",
+      "locationLink": "",
+      "website": "https://www.concertgebouw.nl/concerten/41773095-spotlight-op-lucie-horsch-barok-met-altstaedt-en-dunford",
+      "source": "concertgebouw.nl",
+      "discoverySource": "Website",
+      "description": "Triosonate in a, RV 86 Sonate in e, RV 40 Informatie en bestellen Informatie en bestellen",
+      "cost": "",
+      "image": "https://d35w1qwxagl33g.cloudfront.net/production/_908x545_crop_center-center_none/Lucie-Horsch-c-Eduardus-Lee_2026-03-20-135629_hoaq.png?stamp=2603201456&tag=sm",
       "isNew": true
     },
     {
@@ -802,6 +849,36 @@
     },
     {
       "date": "2026-10-28",
+      "time": "12:30",
+      "title": "Gratis Lunchconcert: Nederlandse Fluit Academie",
+      "type": "Concert",
+      "location": "Concertgebouw Amsterdam",
+      "locationLink": "",
+      "website": "https://www.concertgebouw.nl/concerten/46012123-gratis-lunchconcert-nederlandse-fluit-academie",
+      "source": "concertgebouw.nl",
+      "discoverySource": "Website",
+      "description": "Gratis Lunchconcert: Nederlandse Fluit Academie 12:30 – 13:00 Kleine Zaal met onder andere Clark Within Offermans Luna y Sierra Meer informatie Meer informatie Uitverkocht wo 28 okt 2026 Bookmark Bookmark",
+      "cost": "Gratis",
+      "image": "https://d35w1qwxagl33g.cloudfront.net/production/_908x545_crop_center-center_none/lunchconcert-2025.png?stamp=2507301539&tag=sm",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-28",
+      "time": "20:15",
+      "title": "Klaus Mäkela dirigeert Mahler 7 bij het Concertgebouworkest",
+      "type": "Concert",
+      "location": "Concertgebouw Amsterdam",
+      "locationLink": "",
+      "website": "https://www.concertgebouw.nl/concerten/45881816-klaus-makela-dirigeert-mahler-7-bij-het-concertgebouworkest",
+      "source": "concertgebouw.nl",
+      "discoverySource": "Website",
+      "description": "Informatie en bestellen Informatie en bestellen",
+      "cost": "",
+      "image": "https://d35w1qwxagl33g.cloudfront.net/production/_908x545_crop_center-center_none/RCO-Klaus-Makela-c-Eduardus-Lee.png?stamp=2605221101&tag=sm",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-28",
       "time": "",
       "title": "Lisa Ostermann De Baas (reprise)",
       "type": "Activiteit",
@@ -832,6 +909,21 @@
     },
     {
       "date": "2026-10-28",
+      "time": "20:15",
+      "title": "Quatuor Arod speelt Bartók, Carlos Simon en Fanny Mendelssohn",
+      "type": "Concert",
+      "location": "Concertgebouw Amsterdam",
+      "locationLink": "",
+      "website": "https://www.concertgebouw.nl/concerten/37331019-quatuor-arod-speelt-bartok-carlos-simon-en-fanny-mendelssohn",
+      "source": "concertgebouw.nl",
+      "discoverySource": "Website",
+      "description": "Strijkkwartet in Es Warmth from Other Suns Informatie en bestellen Informatie en bestellen",
+      "cost": "",
+      "image": "https://d35w1qwxagl33g.cloudfront.net/production/_908x545_crop_center-center_none/Quatuor-Arod-©-Le-Philtre-Marc-de-Pierrefeu.png?stamp=2603200014&tag=sm",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-28",
       "time": "",
       "title": "Rob Lamberti - A Celebration of GEORGE MICHAEL",
       "type": "Concert",
@@ -858,6 +950,52 @@
       "description": "+ support: Tim Hart Australische singer-songwriter en moderne troubadour",
       "cost": "",
       "image": "https://www.spotgroningen.nl/wp-content/uploads/2026/02/b451aedb_Press-Shot-Image-by-Stu-Larsen-51-e1771847513215-300x185.jpg",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-28",
+      "time": "11:00",
+      "title": "Zing-Cirkel Concertgebouw",
+      "type": "Concert",
+      "location": "Concertgebouw Amsterdam",
+      "locationLink": "",
+      "website": "https://www.concertgebouw.nl/concerten/45913708-zing-cirkel-concertgebouw",
+      "source": "concertgebouw.nl",
+      "discoverySource": "Website",
+      "description": "Zing-Cirkel Concertgebouw 11:00 – 13:00 Spiegelzaal v.a. € 20,00 Meer informatie Meer informatie Uitverkocht wo 28 okt 2026 Bookmark Bookmark",
+      "cost": "",
+      "image": "https://d35w1qwxagl33g.cloudfront.net/production/_908x545_crop_center-center_none/Zing-Cirkel-Concertgebouw-c-Michael-Floor.jpg?stamp=2605120959&tag=sm",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-29",
+      "time": "20:15",
+      "title": "Academie van het Concertgebouworkest",
+      "type": "Concert",
+      "location": "Grote Zaal, Concertgebouw, Amsterdam",
+      "locationLink": "",
+      "website": "https://www.concertgebouw.nl/concerten/45881817-25-jaar-academie-concertgebouworkest",
+      "source": "concertgebouw.nl",
+      "discoverySource": "Website",
+      "description": "Symfonie nr. 3 in c, op. 78 'Orgelsymfonie' Concert voor klarinet en altviool in e, op. 88 Informatie en bestellen Informatie en bestellen",
+      "cost": "vanaf 20,00",
+      "image": "https://d35w1qwxagl33g.cloudfront.net/production/_908x545_crop_center-center_none/Makela-Rachlin-c-Milagro-Elstak.png?stamp=2605221057&tag=sm",
+      "editedByUser": true,
+      "editedAt": "2026-10-26T09:44:12.812Z"
+    },
+    {
+      "date": "2026-10-29",
+      "time": "20:15",
+      "title": "Aristo Sham speelt Brahms’ pianosonates",
+      "type": "Concert",
+      "location": "Concertgebouw Amsterdam",
+      "locationLink": "",
+      "website": "https://www.concertgebouw.nl/concerten/43425438-aristo-sham-speelt-brahms-pianosonates",
+      "source": "concertgebouw.nl",
+      "discoverySource": "Website",
+      "description": "Sonate nr. 3 in f, op. 5 Träumerei Kinderszenen, op. 15 Informatie en bestellen Informatie en bestellen",
+      "cost": "",
+      "image": "https://d35w1qwxagl33g.cloudfront.net/production/_908x545_crop_center-center_none/Aristo-Sham-c-Lisa-Marie_Mazzucco.png?stamp=2603192333&tag=sm",
       "isNew": true
     },
     {
@@ -938,6 +1076,21 @@
     },
     {
       "date": "2026-10-30",
+      "time": "20:15",
+      "title": "Flat Earth Society: The Coltrane Mutations",
+      "type": "Concert",
+      "location": "Concertgebouw Amsterdam",
+      "locationLink": "",
+      "website": "https://www.concertgebouw.nl/concerten/43931217-flat-earth-society-the-coltrane-mutations",
+      "source": "concertgebouw.nl",
+      "discoverySource": "Website",
+      "description": "Informatie en bestellen Informatie en bestellen",
+      "cost": "",
+      "image": "https://d35w1qwxagl33g.cloudfront.net/production/_908x545_crop_center-center_none/The-Coltrane-Mutations-c-Phile-Deprez.jpg?stamp=2610211120&tag=sm",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-30",
       "time": "",
       "title": "Francis van Broekhuizen - Tosca",
       "type": "Concert",
@@ -949,6 +1102,21 @@
       "description": "Meer informatie staat op martiniplaza.nl.",
       "cost": "",
       "image": "",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-30",
+      "time": "20:15",
+      "title": "Klaus Mäkela dirigeert Mahler 7 bij het Concertgebouworkest",
+      "type": "Concert",
+      "location": "Concertgebouw Amsterdam",
+      "locationLink": "",
+      "website": "https://www.concertgebouw.nl/concerten/45881818-klaus-makela-dirigeert-mahler-7-bij-het-concertgebouworkest",
+      "source": "concertgebouw.nl",
+      "discoverySource": "Website",
+      "description": "Informatie en bestellen Informatie en bestellen",
+      "cost": "",
+      "image": "https://d35w1qwxagl33g.cloudfront.net/production/_908x545_crop_center-center_none/RCO-Klaus-Makela-c-Eduardus-Lee.png?stamp=2605221101&tag=sm",
       "isNew": true
     },
     {
@@ -1369,6 +1537,21 @@
       "description": "Folkpop with classical finesse",
       "cost": "",
       "image": "https://simplon.nl/wp-content/uploads/2026/05/Eventbanner-c-Luc-Gommers-1600x900.jpg",
+      "isNew": true
+    },
+    {
+      "date": "2026-12-02",
+      "time": "",
+      "title": "Iván Fischer leidt Stravinsky's Vuurvogel bij het Concertgebouworkest",
+      "type": "Concert",
+      "location": "Concertgebouw Amsterdam",
+      "locationLink": "",
+      "website": "https://www.concertgebouw.nl/concerten/45889153-ivan-fischer-leidt-stravinskys-vuurvogel-bij-het-concertgebouworkest",
+      "source": "concertgebouw.nl",
+      "discoverySource": "Website",
+      "description": "Der Silbersee (concertversie) Suite 'De vuurvogel'",
+      "cost": "",
+      "image": "https://d35w1qwxagl33g.cloudfront.net/production/_908x545_crop_center-center_none/RCO-Fischer-Midzomernachtsdroom-c-Eduardus-Lee.png?stamp=2604281345&tag=sm",
       "isNew": true
     },
     {
@@ -1824,405 +2007,16 @@
       "newCount": 12,
       "durationSeconds": 6.51,
       "timedOut": false
+    },
+    {
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "count": 12,
+      "newCount": 12,
+      "durationSeconds": 1.94,
+      "timedOut": false
     }
   ],
   "rawLog": [
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Bazart",
-      "date": "2027-02-13",
-      "url": "https://www.spotgroningen.nl/programma/bazart-2/",
-      "status": "event uit link",
-      "rawText": "Bazart Belgische popsensatie na tien jaar nog steeds sterker dan ooit za 13 feb"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "DeRondedeRoo/Feikes Huis Please don't make love to me, I'm exhausted",
-      "date": "2027-02-13",
-      "url": "https://www.spotgroningen.nl/programma/derondederoo-feikes-huis/",
-      "status": "event uit link",
-      "rawText": "DeRondedeRoo/Feikes Huis Please don't make love to me, I'm exhausted Een humoristische, ontroerende trip vol herkenning en vervreemding za 13 feb"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Saman Amini's Integratieplan #2 Alles is Perspectief",
-      "date": "2027-02-13",
-      "url": "https://www.spotgroningen.nl/programma/saman-aminis-integratieplan2/",
-      "status": "event uit link",
-      "rawText": "Saman Amini's Integratieplan #2 Alles is Perspectief Saman ontregelt met scherpe grappen, persoonlijke verhalen en meeslepende muziek za 13 feb"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "The Dirty Daddies Let The Good Times Roll",
-      "date": "2027-02-13",
-      "url": "https://www.spotgroningen.nl/programma/the-dirty-daddies-5/",
-      "status": "event uit link",
-      "rawText": "The Dirty Daddies Let The Good Times Roll Een rollercoaster van feestvreugde en ontembare energie Laatste kaarten za 13 feb"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Kölner Akademie Stabat Mater",
-      "date": "2027-02-14",
-      "url": "https://www.spotgroningen.nl/programma/kolner-akademie/",
-      "status": "event uit link",
-      "rawText": "Kölner Akademie Stabat Mater Pergolesi’s Stabat Mater en Salve Regina: zacht, helder en recht naar het hart zo 14 feb"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Tarja Frisson Live 2027",
-      "date": "2027-02-15",
-      "url": "https://www.spotgroningen.nl/programma/tarja/",
-      "status": "event uit link",
-      "rawText": "Tarja Frisson Live 2027 Invloedrijke stem binnen symfonische en heavy metal ma 15 feb"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Amsterdam Sinfonietta & ISH Dance Collective Till Death Do Us Part (or Not)",
-      "date": "2027-02-15",
-      "url": "https://www.spotgroningen.nl/programma/amsterdam-sinfonietta-ish-dance-collective-2/",
-      "status": "event uit link",
-      "rawText": "Amsterdam Sinfonietta & ISH Dance Collective Till Death Do Us Part (or Not) Humoristisch verhaal verpakt in strijkersmuziek en acrobatische dans ma 15 feb"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Joris Teepe presents: NYCTG",
-      "date": "2027-02-15",
-      "url": "https://www.spotgroningen.nl/programma/joris-teepe-presents-nyctg-40/",
-      "status": "event uit link",
-      "rawText": "Joris Teepe presents: NYCTG Voor een kleine prijs genieten van topjazzmuzikanten ma 15 feb"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Naar het front in Oekraïne Tommy Wieringa en Jaap Scholten",
-      "date": "2027-02-16",
-      "url": "https://www.spotgroningen.nl/programma/naar-het-front-in-oekraine/",
-      "status": "event uit link",
-      "rawText": "Naar het front in Oekraïne Tommy Wieringa en Jaap Scholten 5 jaar oorlog en onverzettelijkheid di 16 feb"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Nederlands Saxofoon Octet & Karin Strobos",
-      "date": "2027-02-16",
-      "url": "https://www.spotgroningen.nl/programma/nederlands-saxofoon-octet-karin-strobos/",
-      "status": "event uit link",
-      "rawText": "Nederlands Saxofoon Octet & Karin Strobos Een gloednieuwe bewerking van Piazzolla’s beroemde tango-opera di 16 feb"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Yorick van Norden Abbey Road: The Beatles, Pink Floyd en ik",
-      "date": "2027-02-16",
-      "url": "https://www.spotgroningen.nl/programma/yorick-van-norden/",
-      "status": "event uit link",
-      "rawText": "Yorick van Norden Abbey Road: The Beatles, Pink Floyd en ik Nederlandse singer-songwriter met hart voor de sixties di 16 feb"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Noord Nederlands Orkest Openbare repetitie",
-      "date": "2027-02-17",
-      "url": "https://www.spotgroningen.nl/programma/noord-nederlands-orkest-248/",
-      "status": "event uit link",
-      "rawText": "Noord Nederlands Orkest Openbare repetitie Sprookjesachtige klanken en lyriek in Dvořáks Achtste Symfonie wo 17 feb"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Debby Gerritsen, Eveline Stallaart en Ronald Giphart Over de liefde - de theatershow",
-      "date": "2027-02-17",
-      "url": "https://www.spotgroningen.nl/programma/debby-gerritsen/",
-      "status": "event uit link",
-      "rawText": "Debby Gerritsen, Eveline Stallaart en Ronald Giphart Over de liefde - de theatershow Avond vol inzichten, herkenning, humor en ongemak wo 17 feb"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Gavin Reijnders Jazzebelle",
-      "date": "2027-02-17",
-      "url": "https://www.spotgroningen.nl/programma/gavin-reijnders-2/",
-      "status": "event uit link",
-      "rawText": "Gavin Reijnders Jazzebelle Muzikale avond vol plezier met een gezonde dosis zelfspot en ouderwetse glamour wo 17 feb"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Josh Ritter An Evening with Josh Ritter (Solo)",
-      "date": "2027-02-17",
-      "url": "https://www.spotgroningen.nl/programma/josh-ritter/",
-      "status": "event uit link",
-      "rawText": "Josh Ritter An Evening with Josh Ritter (Solo) Singer-songwriter met verhalende folk en americana wo 17 feb"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Teun van den Elzen Ze moesten eens weten (try-out)",
-      "date": "2027-02-17",
-      "url": "https://www.spotgroningen.nl/programma/teun-van-den-elzen-6/",
-      "status": "event uit link",
-      "rawText": "Teun van den Elzen Ze moesten eens weten (try-out) Winnaar Neerlands Hoop Uitverkocht wo 17 feb"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Coffee Break ism Prins Claus Conservatorium",
-      "date": "2027-02-18",
-      "url": "https://www.spotgroningen.nl/programma/coffee-break-ism-prins-claus-conservatorium-18/",
-      "status": "event uit link",
-      "rawText": "Coffee Break ism Prins Claus Conservatorium Trakteer jezelf op koffie en muziek van aanstormend talent op de donderdagochtend do 18 feb"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Ruben Hillen",
-      "date": "2027-02-18",
-      "url": "https://www.spotgroningen.nl/programma/ruben-hillen/",
-      "status": "event uit link",
-      "rawText": "Ruben Hillen The Voice-winnaar doet de podia aan Laatste kaarten do 18 feb"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Noord Nederlands Orkest en Arabella Steinbacher Dvorák 8",
-      "date": "2027-02-18",
-      "url": "https://www.spotgroningen.nl/programma/noord-nederlands-orkest-226/",
-      "status": "event uit link",
-      "rawText": "Noord Nederlands Orkest en Arabella Steinbacher Dvorák 8 Sprookjesachtige klanken en lyriek in Dvořáks Achtste Symfonie Wereldklasse do 18 feb"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "The Current Club Guy & Roni, Boris Acket en HIIIT",
-      "date": "2027-02-18",
-      "url": "https://www.spotgroningen.nl/programma/the-current/",
-      "status": "event uit link",
-      "rawText": "The Current Club Guy & Roni, Boris Acket en HIIIT Waar de nacht je meeneemt en niet meer loslaat do 18 feb"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Teun van den Elzen Ze moesten eens weten (try-out)",
-      "date": "2027-02-18",
-      "url": "https://www.spotgroningen.nl/programma/teun-van-den-elzen-7/",
-      "status": "event uit link",
-      "rawText": "Teun van den Elzen Ze moesten eens weten (try-out) Winnaar Neerlands Hoop Uitverkocht do 18 feb"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "VroegZat",
-      "date": "2027-02-19",
-      "url": "https://www.spotgroningen.nl/programma/vroegzat-11/",
-      "status": "event uit link",
-      "rawText": "VroegZat Een clubfeest dat het nachtleven terugbrengt naar de avond vr 19 feb"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "The Current Club Guy & Roni, Boris Acket en HIIIT",
-      "date": "2027-02-19",
-      "url": "https://www.spotgroningen.nl/programma/the-current-3/",
-      "status": "event uit link",
-      "rawText": "The Current Club Guy & Roni, Boris Acket en HIIIT Waar de nacht je meeneemt en niet meer loslaat vr 19 feb"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Omasta",
-      "date": "2027-02-19",
-      "url": "https://www.spotgroningen.nl/programma/omasta/",
-      "status": "event uit link",
-      "rawText": "Omasta Jazz met de grooves van hiphop Net bevestigd vr 19 feb"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "The Glamrocks Henkjan Smits & The Glamrocks",
-      "date": "2027-02-19",
-      "url": "https://www.spotgroningen.nl/programma/the-glamrocks/",
-      "status": "event uit link",
-      "rawText": "The Glamrocks Henkjan Smits & The Glamrocks Topmuzikanten geven uitbundig feestje rond de onvergetelijke glamrock-periode vr 19 feb"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Grondtonen (9+) Het Houten Huis",
-      "date": "2027-02-20",
-      "url": "https://www.spotgroningen.nl/programma/grondtonen-9-5/",
-      "status": "event uit link",
-      "rawText": "Grondtonen (9+) Het Houten Huis Een mystieke familievoorstelling over verloren gaan in het bos za 20 feb"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Grondtonen (9+) Het Houten Huis",
-      "date": "2027-02-20",
-      "url": "https://www.spotgroningen.nl/programma/grondtonen-9-6/",
-      "status": "event uit link",
-      "rawText": "Grondtonen (9+) Het Houten Huis Een mystieke familievoorstelling over verloren gaan in het bos za 20 feb"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "The Current Club Guy & Roni, Boris Acket en HIIIT",
-      "date": "2027-02-20",
-      "url": "https://www.spotgroningen.nl/programma/the-current-2/",
-      "status": "event uit link",
-      "rawText": "The Current Club Guy & Roni, Boris Acket en HIIIT Waar de nacht je meeneemt en niet meer loslaat za 20 feb"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Jesper Lindell & The Brunnsvick Sounds",
-      "date": "2027-02-20",
-      "url": "https://www.spotgroningen.nl/programma/jesper-lindell-the-brunnsvick-sounds/",
-      "status": "event uit link",
-      "rawText": "Jesper Lindell & The Brunnsvick Sounds TakeRoot presents: Mix van soul, southern rock en americana za 20 feb"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Grondtonen (9+) Het Houten Huis",
-      "date": "2027-02-21",
-      "url": "https://www.spotgroningen.nl/programma/grondtonen-9-7/",
-      "status": "event uit link",
-      "rawText": "Grondtonen (9+) Het Houten Huis Een mystieke familievoorstelling over verloren gaan in het bos zo 21 feb"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Ruth Jacott",
-      "date": "2027-02-21",
-      "url": "https://www.spotgroningen.nl/programma/ruth-jacott/",
-      "status": "event uit link",
-      "rawText": "Ruth Jacott Na zeven jaar keert Ruth Jacott eindelijk terug naar het theater! zo 21 feb"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "POPS OF THE TOP (3+) Maas theater en dans",
-      "date": "2027-02-22",
-      "url": "https://www.spotgroningen.nl/programma/pops-of-the-top-3/",
-      "status": "event uit link",
-      "rawText": "POPS OF THE TOP (3+) Maas theater en dans Beeldend, humoristisch en muzikaal optreden met veel potentiële hits en gedoe ma 22 feb"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Junior Company",
-      "date": "2027-02-22",
-      "url": "https://www.spotgroningen.nl/programma/junior-company-het-nationale-ballet/",
-      "status": "event uit link",
-      "rawText": "Junior Company | Het Nationale Ballet Ballet Vibes Bestaande topwerken en de beloftes voor de toekomst in sprankelend dansprogramma ma 22 feb"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Loreena McKennitt The Mask & Mirror - 30th anniversary Tour",
-      "date": "2027-02-22",
-      "url": "https://www.spotgroningen.nl/programma/loreena-mckennitt/",
-      "status": "event uit link",
-      "rawText": "Loreena McKennitt The Mask & Mirror - 30th anniversary Tour Karakteristieke mix van Keltische folk en wereldmuziek ma 22 feb"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Clouseau",
-      "date": "2027-02-23",
-      "url": "https://www.spotgroningen.nl/programma/clouseau-2/",
-      "status": "event uit link",
-      "rawText": "Clouseau Al meer dan veertig jaar een vaste waarde in de Nederlandstalige popmuziek Uitverkocht di 23 feb"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Evi Hanssen Bloedheet & Tranen",
-      "date": "2027-02-23",
-      "url": "https://www.spotgroningen.nl/programma/evi-hanssen/",
-      "status": "event uit link",
-      "rawText": "Evi Hanssen Bloedheet & Tranen De overgang zonder onzin di 23 feb"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Kakkmaddafakka",
-      "date": "2027-02-24",
-      "url": "https://www.spotgroningen.nl/programma/kakkmaddafakka-2/",
-      "status": "event uit link",
-      "rawText": "Kakkmaddafakka Energieke mix van indiepop, funk, rock, disco en jazz wo 24 feb"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Zuidpool ALKIBIADES",
-      "date": "2027-02-24",
-      "url": "https://www.spotgroningen.nl/programma/zuidpool/",
-      "status": "event uit link",
-      "rawText": "Zuidpool ALKIBIADES Actrice Sofie Decleir geeft gestalte aan Griekenlands meest omstreden politicus wo 24 feb"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Be Bach (5+) Ton Meijer",
-      "date": "2027-02-25",
-      "url": "https://www.spotgroningen.nl/programma/be-bach-5/",
-      "status": "event uit link",
-      "rawText": "Be Bach (5+) Ton Meijer Interactieve, supertoegankelijke voorstelling waarin elk kind zich Bach waant do 25 feb"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "YIN YIN",
-      "date": "2027-02-25",
-      "url": "https://www.spotgroningen.nl/programma/yin-yin/",
-      "status": "event uit link",
-      "rawText": "YIN YIN Aanstekelijke mix van disco, funk, psychedelica en Zuidoost-Aziatische invloeden do 25 feb"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "The Classic Rock Show",
-      "date": "2027-02-25",
-      "url": "https://www.spotgroningen.nl/programma/the-classic-rock-show/",
-      "status": "event uit link",
-      "rawText": "The Classic Rock Show Het allerbeste van classic rockmuziek do 25 feb"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Amble",
-      "date": "2027-02-26",
-      "url": "https://www.spotgroningen.nl/programma/amble/",
-      "status": "event uit link",
-      "rawText": "Amble Eigentijdse akoestische folk Uitverkocht vr 26 feb"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Nina van Tongeren / Theater Bellevue Teckel",
-      "date": "2027-02-26",
-      "url": "https://www.spotgroningen.nl/programma/nina-van-tongeren-theater-bellevue/",
-      "status": "event uit link",
-      "rawText": "Nina van Tongeren / Theater Bellevue Teckel Hoe vertel je een verhaal waar niemand naar wil luisteren? vr 26 feb"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Bert Hadders",
-      "date": "2027-02-26",
-      "url": "https://www.spotgroningen.nl/programma/bert-hadders/",
-      "status": "event uit link",
-      "rawText": "Bert Hadders Een centimeter roest is maar een millimeter staal vr 26 feb"
-    },
     {
       "source": "Website",
       "site": "https://www.spotgroningen.nl/programma/",
@@ -12626,16 +12420,412 @@
       "url": "https://www.noorderzon.nl/programma",
       "status": "klaar",
       "rawText": "site 11/20: 12 unieke events in 6.51 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Start",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "status": "start",
+      "rawText": "site 12/20: max 12 events, max 4 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "status": "strategie",
+      "rawText": "universeel-jsonld-links-kaarten"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Pagina gelezen",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "status": "ok",
+      "rawText": "774069 tekens HTML"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Agenda-kaarten geteld",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "status": "gespecialiseerde parser",
+      "rawText": "12 resultaten"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Pagina geanalyseerd",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "status": "ok",
+      "rawText": "11 events/aanbiedingen op deze pagina"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Iván Fischer leidt Stravinsky's Vuurvogel bij het Concertgebouworkest",
+      "date": "2026-12-02",
+      "url": "https://www.concertgebouw.nl/concerten/45889153-ivan-fischer-leidt-stravinskys-vuurvogel-bij-het-concertgebouworkest",
+      "status": "event uit link",
+      "rawText": "wo 2 dec 2026 Iván Fischer leidt Stravinsky's Vuurvogel bij het Concertgebouworkest met onder andere Weill Der Silbersee (concertversie) Stravinsky Suite 'De vuurvogel'"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Fabio Luisi en het Concertgebouworkest met Brahms' Symfonie nr. 2",
+      "date": "2026-12-09",
+      "url": "https://www.concertgebouw.nl/concerten/45889150-fabio-luisi-en-het-concertgebouworkest-met-brahms-symfonie-nr.-2",
+      "status": "event uit link",
+      "rawText": "wo 9 dec 2026 Fabio Luisi en het Concertgebouworkest met Brahms' Symfonie nr. 2 met onder andere Brahms Symfonie nr. 2 in D, op. 73 Henze Il Vitalino raddoppiato"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Concertgebouworkest Essentials: Brahms' Symfonie nr. 2",
+      "date": "2026-12-12",
+      "url": "https://www.concertgebouw.nl/concerten/45889234-concertgebouworkest-essentials-brahms-symfonie-nr.-2",
+      "status": "event uit link",
+      "rawText": "za 12 dec 2026 Concertgebouworkest Essentials: Brahms' Symfonie nr. 2 Brahms Symfonie nr. 2 in D, op. 73"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Saint-Saëns door Sheku Kanneh-Mason en het Concertgebouworkest",
+      "date": "2026-12-17",
+      "url": "https://www.concertgebouw.nl/concerten/45889233-saint-saens-door-sheku-kanneh-mason-en-het-concertgebouworkest",
+      "status": "event uit link",
+      "rawText": "do 17 dec 2026 Saint-Saëns door Sheku Kanneh-Mason en het Concertgebouworkest met onder andere Moesorgski Schilderijen van een tentoonstelling (ork. Ravel) Saint-Saëns Celloconcert nr. 1 in a, op. 33"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "25 jaar Academie Concertgebouworkest",
+      "date": "2027-10-09",
+      "url": "https://www.concertgebouw.nl/concerten/45881817-25-jaar-academie-concertgebouworkest",
+      "status": "event uit datumblok",
+      "rawText": "9 okt 25 jaar Academie Concertgebouworkest Uitverkocht Uitverkocht 25 jaar Academie Concertgebouworkest Musici Alumni van Concertgebouworkest Young Alumni van de Academie van het Concertgebouworkest Klaus Mäkelä dirigent Aurel Dawidiuk dirigent Carlos Ferreira klarinet Santa Vižine altviool Bekijk alle musici Werken Grieg Peer Gynt, Suite nr. 1, op. 46 Bruch Concert voor klarinet en altviool in e, op. 88 Saint-Saëns"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Iván Fischer leidt Stravinsky's Vuurvogel bij het",
+      "date": "2026-12-02",
+      "url": "https://www.concertgebouw.nl/concerten/45881817-25-jaar-academie-concertgebouworkest",
+      "status": "event uit datumblok",
+      "rawText": "2 dec 2026 Iván Fischer leidt Stravinsky's Vuurvogel bij het Concertgebouworkest met onder andere Weill Der Silbersee (concertversie) Stravinsky Suite 'De vuurvogel'"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Fabio Luisi en het Concertgebouworkest met Brahms'",
+      "date": "2026-12-09",
+      "url": "https://www.concertgebouw.nl/concerten/45881817-25-jaar-academie-concertgebouworkest",
+      "status": "event uit datumblok",
+      "rawText": "9 dec 2026 Fabio Luisi en het Concertgebouworkest met Brahms' Symfonie nr. 2 met onder andere Brahms Symfonie nr. 2 in D, op. 73 Henze Il Vitalino raddoppiato"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Concertgebouworkest Essentials: Brahms' Symfonie nr. 2 Brahms Symfonie nr. 2 in D, op. 73",
+      "date": "2026-12-02",
+      "url": "https://www.concertgebouw.nl/concerten/45881817-25-jaar-academie-concertgebouworkest",
+      "status": "event uit datumblok",
+      "rawText": "2 dec 2026 Concertgebouworkest Essentials: Brahms' Symfonie nr. 2 Brahms Symfonie nr. 2 in D, op. 73"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Saint-Saëns door Sheku Kanneh-Mason en het Concertgebouworkest",
+      "date": "2026-12-07",
+      "url": "https://www.concertgebouw.nl/concerten/45881817-25-jaar-academie-concertgebouworkest",
+      "status": "event uit datumblok",
+      "rawText": "7 dec 2026 Saint-Saëns door Sheku Kanneh-Mason en het Concertgebouworkest met onder andere Moesorgski Schilderijen van een tentoonstelling (ork. Ravel) Saint-Saëns Celloconcert nr. 1 in a, op. 33 Overige informatie Veelgestelde vragen Verhuur Pers Info Concertvrienden en Entrée Maandblad Preludium Route & Parkeren Over ons Organisatie Vacatures Contact Veelgestelde vragen Verhuur Pers Concertvrienden en Entrée Maandb"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "25 jaar Academie Concertgebouworkest",
+      "date": "2026-10-29",
+      "url": "https://www.concertgebouw.nl/concerten/45881817-25-jaar-academie-concertgebouworkest",
+      "status": "event uit detailpagina",
+      "rawText": "25 jaar Academie Concertgebouworkest - Concertgebouw - Nederlands Naar hoofdcontent Concertagenda Concerten Concertagenda Bekijk onze veelzijdige concertagenda Keuzehulp Wij helpen u kiezen! Jong publiek Met korting naar de mooiste concerten VriendenLoterij ZomerConcerten Het Zondagochtend Concert Familieconcerten Hemelbestormers Reflecties op Europa Series Uw bezoek Kaartverkoop Over het bestellen van kaarten Route"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "25 jaar Academie Concertgebouworkest",
+      "date": "2026-10-29",
+      "url": "https://www.concertgebouw.nl/concerten/45881817-25-jaar-academie-concertgebouworkest",
+      "status": "event uit tekstregel",
+      "rawText": "25 jaar Academie Concertgebouworkest | do 29 okt 2026 | 20:15 | – | 22:40 | Grote Zaal"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "vanaf 20,00",
+      "date": "2026-10-29",
+      "url": "https://www.concertgebouw.nl/concerten/45881817-25-jaar-academie-concertgebouworkest",
+      "status": "event uit dagblok",
+      "rawText": "vanaf 20,00 | Uitverkocht | Uitverkocht | Bookmark | Bewaar dit concert"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Bookmark",
+      "date": "2026-10-29",
+      "url": "https://www.concertgebouw.nl/concerten/45881817-25-jaar-academie-concertgebouworkest",
+      "status": "event uit dagblok",
+      "rawText": "Bookmark | Bewaar dit concert | do 29 okt 2026 | 20:15 | –"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Bewaar dit concert",
+      "date": "2026-10-29",
+      "url": "https://www.concertgebouw.nl/concerten/45881817-25-jaar-academie-concertgebouworkest",
+      "status": "event uit dagblok",
+      "rawText": "Bewaar dit concert | do 29 okt 2026 | 20:15 | – | 22:40"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Bewaar dit concert",
+      "date": "2026-10-29",
+      "url": "https://www.concertgebouw.nl/concerten/45881817-25-jaar-academie-concertgebouworkest",
+      "status": "event uit tekstregel",
+      "rawText": "Bewaar dit concert | do 29 okt 2026 | 20:15 | – | 22:40 | Grote Zaal"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Werken",
+      "date": "2026-10-29",
+      "url": "https://www.concertgebouw.nl/concerten/45881817-25-jaar-academie-concertgebouworkest",
+      "status": "event uit dagblok",
+      "rawText": "Werken | Grieg | Peer Gynt, Suite nr. 1, op. 46 | Bruch | Concert voor klarinet en altviool in e, op. 88"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Grieg",
+      "date": "2026-10-29",
+      "url": "https://www.concertgebouw.nl/concerten/45881817-25-jaar-academie-concertgebouworkest",
+      "status": "event uit dagblok",
+      "rawText": "Grieg | Peer Gynt, Suite nr. 1, op. 46 | Bruch | Concert voor klarinet en altviool in e, op. 88 | Saint-Saëns"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Peer Gynt, Suite nr. 1, op. 46",
+      "date": "2026-10-29",
+      "url": "https://www.concertgebouw.nl/concerten/45881817-25-jaar-academie-concertgebouworkest",
+      "status": "event uit dagblok",
+      "rawText": "Peer Gynt, Suite nr. 1, op. 46 | Bruch | Concert voor klarinet en altviool in e, op. 88 | Saint-Saëns | Symfonie nr. 3 in c, op. 78 'Orgelsymfonie'"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Bruch",
+      "date": "2026-10-29",
+      "url": "https://www.concertgebouw.nl/concerten/45881817-25-jaar-academie-concertgebouworkest",
+      "status": "event uit dagblok",
+      "rawText": "Bruch | Concert voor klarinet en altviool in e, op. 88 | Saint-Saëns | Symfonie nr. 3 in c, op. 78 'Orgelsymfonie' | Dit concert heeft een pauze"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Concert voor klarinet en altviool in e, op. 88",
+      "date": "2026-10-29",
+      "url": "https://www.concertgebouw.nl/concerten/45881817-25-jaar-academie-concertgebouworkest",
+      "status": "event uit dagblok",
+      "rawText": "Concert voor klarinet en altviool in e, op. 88 | Saint-Saëns | Symfonie nr. 3 in c, op. 78 'Orgelsymfonie' | Dit concert heeft een pauze | Het orkest viert het 25ste seizoen van de Academie van het Concertgebouworkest! Klaus Mäkelä leidt een orkest van (voormalige) academisten, met hoofdrollen voor voormalig associate conductor Aurel Dawidiuk (als dirigent én als organist), soloklarinettist Carlos Ferreira en soloalt"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Saint-Saëns",
+      "date": "2026-10-29",
+      "url": "https://www.concertgebouw.nl/concerten/45881817-25-jaar-academie-concertgebouworkest",
+      "status": "event uit dagblok",
+      "rawText": "Saint-Saëns | Symfonie nr. 3 in c, op. 78 'Orgelsymfonie' | Dit concert heeft een pauze | Het orkest viert het 25ste seizoen van de Academie van het Concertgebouworkest! Klaus Mäkelä leidt een orkest van (voormalige) academisten, met hoofdrollen voor voormalig associate conductor Aurel Dawidiuk (als dirigent én als organist), soloklarinettist Carlos Ferreira en soloaltist Santa Vižine. | Academie van het Concertgebou"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Symfonie nr. 3 in c, op. 78 'Orgelsymfonie'",
+      "date": "2026-10-29",
+      "url": "https://www.concertgebouw.nl/concerten/45881817-25-jaar-academie-concertgebouworkest",
+      "status": "event uit dagblok",
+      "rawText": "Symfonie nr. 3 in c, op. 78 'Orgelsymfonie' | Dit concert heeft een pauze | Het orkest viert het 25ste seizoen van de Academie van het Concertgebouworkest! Klaus Mäkelä leidt een orkest van (voormalige) academisten, met hoofdrollen voor voormalig associate conductor Aurel Dawidiuk (als dirigent én als organist), soloklarinettist Carlos Ferreira en soloaltist Santa Vižine. | Academie van het Concertgebouworkest | Al 2"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Dit concert heeft een pauze",
+      "date": "2026-10-29",
+      "url": "https://www.concertgebouw.nl/concerten/45881817-25-jaar-academie-concertgebouworkest",
+      "status": "event uit dagblok",
+      "rawText": "Dit concert heeft een pauze | Het orkest viert het 25ste seizoen van de Academie van het Concertgebouworkest! Klaus Mäkelä leidt een orkest van (voormalige) academisten, met hoofdrollen voor voormalig associate conductor Aurel Dawidiuk (als dirigent én als organist), soloklarinettist Carlos Ferreira en soloaltist Santa Vižine. | Academie van het Concertgebouworkest | Al 25 jaar leidt de orkestacademie van het Concert"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Academie van het Concertgebouworkest",
+      "date": "2026-10-29",
+      "url": "https://www.concertgebouw.nl/concerten/45881817-25-jaar-academie-concertgebouworkest",
+      "status": "event uit dagblok",
+      "rawText": "Academie van het Concertgebouworkest | Al 25 jaar leidt de orkestacademie van het Concertgebouworkest talentvolle jonge musici op. De Academie van het Concertgebouworkest is inmiddels een internationaal gerenommeerd opleidingsinstituut. De andere programma's voor talentontwikkeling maakten het compleet: het jeugdorkest Concertgebouworkest Young, de Ammodo Masterclass voor jonge dirigenten (beide om de twee jaar) en h"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": ". En twee oud-academisten die het geschopt hebben tot aanvoerder in het Concertgebouworkest soleren samen in Bruchs",
+      "date": "2026-10-29",
+      "url": "https://www.concertgebouw.nl/concerten/45881817-25-jaar-academie-concertgebouworkest",
+      "status": "event uit dagblok",
+      "rawText": ". En twee oud-academisten die het geschopt hebben tot aanvoerder in het Concertgebouworkest soleren samen in Bruchs | Dubbelconcert | voor klarinet en altviool! | Jubileumconcert | Met dit jubileumconcert benadrukt het orkest zowel het succes van de Academie als het belang van talentontwikkelingsprogramma's – niet alleen voor het Concertgebouworkest zelf, maar voor de hele klassieke muziekwereld. Dit concert is meer"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Dubbelconcert",
+      "date": "2026-10-29",
+      "url": "https://www.concertgebouw.nl/concerten/45881817-25-jaar-academie-concertgebouworkest",
+      "status": "event uit dagblok",
+      "rawText": "Dubbelconcert | voor klarinet en altviool! | Jubileumconcert | Met dit jubileumconcert benadrukt het orkest zowel het succes van de Academie als het belang van talentontwikkelingsprogramma's – niet alleen voor het Concertgebouworkest zelf, maar voor de hele klassieke muziekwereld. Dit concert is meer dan een jubileum: het is een viering van 25 jaar talentontwikkeling bij het Concertgebouworkest en van een gezonde toe"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "voor klarinet en altviool!",
+      "date": "2026-10-29",
+      "url": "https://www.concertgebouw.nl/concerten/45881817-25-jaar-academie-concertgebouworkest",
+      "status": "event uit dagblok",
+      "rawText": "voor klarinet en altviool! | Jubileumconcert | Met dit jubileumconcert benadrukt het orkest zowel het succes van de Academie als het belang van talentontwikkelingsprogramma's – niet alleen voor het Concertgebouworkest zelf, maar voor de hele klassieke muziekwereld. Dit concert is meer dan een jubileum: het is een viering van 25 jaar talentontwikkeling bij het Concertgebouworkest en van een gezonde toekomst van de sym"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Jubileumconcert",
+      "date": "2026-10-29",
+      "url": "https://www.concertgebouw.nl/concerten/45881817-25-jaar-academie-concertgebouworkest",
+      "status": "event uit dagblok",
+      "rawText": "Jubileumconcert | Met dit jubileumconcert benadrukt het orkest zowel het succes van de Academie als het belang van talentontwikkelingsprogramma's – niet alleen voor het Concertgebouworkest zelf, maar voor de hele klassieke muziekwereld. Dit concert is meer dan een jubileum: het is een viering van 25 jaar talentontwikkeling bij het Concertgebouworkest en van een gezonde toekomst van de symfonische muziek. | Lees meer"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Ook iets voor u?",
+      "date": "2026-12-02",
+      "url": "https://www.concertgebouw.nl/concerten/45881817-25-jaar-academie-concertgebouworkest",
+      "status": "event uit tekstregel",
+      "rawText": "Ook iets voor u? | wo 2 dec 2026 | Iván Fischer leidt Stravinsky's Vuurvogel bij het Concertgebouworkest | met onder andere | Weill | Der Silbersee (concertversie)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Suite 'De vuurvogel'",
+      "date": "2026-12-09",
+      "url": "https://www.concertgebouw.nl/concerten/45881817-25-jaar-academie-concertgebouworkest",
+      "status": "event uit tekstregel",
+      "rawText": "Suite 'De vuurvogel' | wo 9 dec 2026 | Fabio Luisi en het Concertgebouworkest met Brahms' Symfonie nr. 2 | met onder andere | Brahms | Symfonie nr. 2 in D, op. 73"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Il Vitalino raddoppiato",
+      "date": "2026-12-12",
+      "url": "https://www.concertgebouw.nl/concerten/45881817-25-jaar-academie-concertgebouworkest",
+      "status": "event uit tekstregel",
+      "rawText": "Il Vitalino raddoppiato | za 12 dec 2026 | Concertgebouworkest Essentials: Brahms' Symfonie nr. 2 | Brahms | Symfonie nr. 2 in D, op. 73 | do 17 dec 2026"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Symfonie nr. 2 in D, op. 73",
+      "date": "2026-12-17",
+      "url": "https://www.concertgebouw.nl/concerten/45881817-25-jaar-academie-concertgebouworkest",
+      "status": "event uit tekstregel",
+      "rawText": "Symfonie nr. 2 in D, op. 73 | do 17 dec 2026 | Saint-Saëns door Sheku Kanneh-Mason en het Concertgebouworkest | met onder andere | Moesorgski | Schilderijen van een tentoonstelling (ork. Ravel)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Saint-Saëns door Sheku Kanneh-Mason en het Concertgebouworkest",
+      "date": "2026-12-17",
+      "url": "https://www.concertgebouw.nl/concerten/45881817-25-jaar-academie-concertgebouworkest",
+      "status": "event uit dagblok",
+      "rawText": "Saint-Saëns door Sheku Kanneh-Mason en het Concertgebouworkest | met onder andere | Moesorgski | Schilderijen van een tentoonstelling (ork. Ravel) | Saint-Saëns"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "met onder andere",
+      "date": "2026-12-17",
+      "url": "https://www.concertgebouw.nl/concerten/45881817-25-jaar-academie-concertgebouworkest",
+      "status": "event uit dagblok",
+      "rawText": "met onder andere | Moesorgski | Schilderijen van een tentoonstelling (ork. Ravel) | Saint-Saëns | Celloconcert nr. 1 in a, op. 33"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Moesorgski",
+      "date": "2026-12-17",
+      "url": "https://www.concertgebouw.nl/concerten/45881817-25-jaar-academie-concertgebouworkest",
+      "status": "event uit dagblok",
+      "rawText": "Moesorgski | Schilderijen van een tentoonstelling (ork. Ravel) | Saint-Saëns | Celloconcert nr. 1 in a, op. 33 | Overige informatie"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Schilderijen van een tentoonstelling (ork. Ravel)",
+      "date": "2026-12-17",
+      "url": "https://www.concertgebouw.nl/concerten/45881817-25-jaar-academie-concertgebouworkest",
+      "status": "event uit dagblok",
+      "rawText": "Schilderijen van een tentoonstelling (ork. Ravel) | Saint-Saëns | Celloconcert nr. 1 in a, op. 33 | Overige informatie | Veelgestelde vragen"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Pagina geteld",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten/45881817-25-jaar-academie-concertgebouworkest",
+      "status": "analyse",
+      "rawText": "jsonld:0, links:4, datumblokken:5, kaarten:15, regels:30, detail:1"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten/45881817-25-jaar-academie-concertgebouworkest",
+      "status": "ok",
+      "rawText": "4 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "status": "klaar",
+      "rawText": "site 12/20: 12 unieke events in 1.94 sec"
     }
   ],
   "status": "running",
   "siteStartedAt": "2026-10-26T09:46:04+00:00",
-  "siteElapsedSeconds": 0,
-  "sitePageCount": 0,
-  "lastSiteEventCount": 0,
-  "stage": "Websitepagina ophalen",
-  "lastUpdatedAt": "2026-10-26T09:46:04+00:00",
+  "siteElapsedSeconds": 3,
+  "sitePageCount": 1,
+  "lastSiteEventCount": 12,
+  "stage": "Website klaar; volgende website voorbereiden",
+  "lastUpdatedAt": "2026-10-26T09:46:07+00:00",
   "lastSiteNewEventCount": 12,
-  "lastCompletedSite": "https://www.noorderzon.nl/programma",
-  "lastCompletedAt": "2026-10-26T09:46:03+00:00"
+  "lastCompletedSite": "https://www.concertgebouw.nl/concerten-en-tickets",
+  "lastCompletedAt": "2026-10-26T09:46:07+00:00"
 }
