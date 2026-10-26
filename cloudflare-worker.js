@@ -1770,7 +1770,7 @@ export default {
       try {
         const body = await request.json().catch(() => ({}));
         const requestedSite = validateInput(body.site, 500);
-        const hostOf = (value) => { try { return new URL(value).hostname.toLowerCase().replace(/^www\\./, ""); } catch (_) { return ""; } };
+        const hostOf = (value) => { try { return new URL(value).hostname.toLowerCase().replace(/^www\./, ""); } catch (_) { return ""; } };
         const requestedHost = hostOf(requestedSite);
         if (!requestedHost) return json({ ok: false, error: "Ongeldige website-URL." }, 400);
 
