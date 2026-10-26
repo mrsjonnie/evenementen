@@ -1349,6 +1349,7 @@
   <main>
     <div class="pageLayout" id="pageLayout">
     <aside class="toolbar filterSidebar" id="filterSidebar" aria-label="Filters">
+      <a class="btn btnSecondary" href="./instellingen.html" style="display:flex;justify-content:center;width:100%;margin-bottom:12px;background:#087f5b;border-color:#087f5b;color:#fff;font-weight:900">⚙ Instellingen scraper</a>
       <div class="sidebarViewButtons" aria-label="Weergave">
         <button class="btn btnSecondary" id="collapseTypesBtn" type="button">Types uitklappen</button>
         <button class="btn btnSecondary" id="collapseSourcesBtn" type="button">Bron uitklappen</button>
@@ -1516,7 +1517,7 @@
     </section>
   </div>
   <script>
-    const APP_VERSION = "2026.10.26.94";
+    const APP_VERSION = "2026.10.26.95";
     const STATUS_HISTORY_KEY = "evenementenStatusHistoryV1";
     const DISMISSED_SCRAPE_RUN_KEY = "evenementenDismissedScrapeRunV1";
     const DEFAULT_MAX_EVENTS_PER_SITE = 20;
@@ -4230,13 +4231,28 @@
         });
         const data = await response.json().catch(() => ({}));
         if (!response.ok || data.ok === false) throw new Error(workerErrorMessage(data, "Opslaan van evenementcorrectie is mislukt"));
-        const locationChanged = cleanText(event.location || "").toLowerCase() !== corrections.location.toLowerCase();
-        Object.assign(event, corrections, { website: corrections.website, editedByUser: true, editedAt: new Date().toISOString() });
-        // Coordinates from the scraped/original location must not override the user's corrected place.
-        if (locationChanged) {
-          delete event.lat;
-          delete event.lon;
+        const originalEvent = { ...event };
+        const locationChanged = cleanText(originalEvent.location || "").toLowerCase() !== corrections.location.toLowerCase();
+        const originalUrl = cleanText(originalEvent.website || "").replace(/\/$/, "").toLowerCase();
+        const originalTitle = cleanText(originalEvent.title || "").toLowerCase();
+        const originalDate = cleanText(originalEvent.date || "");
+        const originalHost = (() => { try { return new URL(originalEvent.website).hostname.toLowerCase(); } catch (_) { return ""; } })();
+        // Werk alle kopieën/duplicaten van hetzelfde bron-evenement bij. Anders
+        // kan deduplicatie bij opnieuw renderen nog de oude titel laten zien.
+        for (const candidate of events) {
+          const candidateUrl = cleanText(candidate.website || "").replace(/\/$/, "").toLowerCase();
+          const candidateHost = (() => { try { return new URL(candidate.website).hostname.toLowerCase(); } catch (_) { return ""; } })();
+          const sameUrl = Boolean(originalUrl && candidateUrl === originalUrl);
+          const sameOriginal = cleanText(candidate.title || "").toLowerCase() === originalTitle
+            && cleanText(candidate.date || "") === originalDate
+            && (!originalHost || candidateHost === originalHost);
+          if (candidate === event || sameUrl || sameOriginal) {
+            Object.assign(candidate, corrections, { website: corrections.website, editedByUser: true, editedAt: new Date().toISOString() });
+            if (locationChanged) { delete candidate.lat; delete candidate.lon; }
+          }
         }
+        Object.assign(event, corrections, { website: corrections.website, editedByUser: true, editedAt: new Date().toISOString() });
+        if (locationChanged) { delete event.lat; delete event.lon; }
         // Als het actieve zoekwoord na een titelwijziging niet meer voorkomt in
         // de bijgewerkte kaart, wis alleen die zoekterm zodat het evenement zichtbaar blijft.
         const activeQuery = cleanText($("search").value || "").toLowerCase();
