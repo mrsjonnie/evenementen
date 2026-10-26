@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-26T22:10:25.898Z",
+  "updatedAt": "2026-10-26T22:11:50.028Z",
   "sites": {
     "https://groningen.uitloper.nu/": {
       "methodology": "",
@@ -51,7 +51,28 @@
         "linkedin"
       ],
       "excludedUrls": [],
-      "adjustments": [],
+      "adjustments": [
+        {
+          "field": "title",
+          "find": ", 2 november en nog 3 dagen",
+          "replace": "Nena"
+        },
+        {
+          "field": "date",
+          "find": "2026-10-26",
+          "replace": "2026-10-27"
+        },
+        {
+          "field": "location",
+          "find": "2 november en nog 3 dagen",
+          "replace": "SPOT/De Oosterpoort Trompsingel 27 9724 DA Groningen"
+        },
+        {
+          "field": "type",
+          "find": "Activiteit",
+          "replace": "Concert"
+        }
+      ],
       "eventUrlPatterns": [],
       "excludedUrlPatterns": [
         "^/nl/doen/uitgaan/?$"
