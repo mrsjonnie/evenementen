@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- Verwijderde evenementen direct optimistisch uit het overzicht halen, versie 2026.10.26.90. -->
+<!-- Verwijderde evenementen direct lokaal verbergen en Concertgebouw-detailparser, versie 2026.10.26.91. -->
 <html lang="nl">
 <head>
   <meta charset="UTF-8">
@@ -1515,7 +1515,7 @@
     </section>
   </div>
   <script>
-    const APP_VERSION = "2026.10.26.90";
+    const APP_VERSION = "2026.10.26.91";
     const STATUS_HISTORY_KEY = "evenementenStatusHistoryV1";
     const DISMISSED_SCRAPE_RUN_KEY = "evenementenDismissedScrapeRunV1";
     const DEFAULT_MAX_EVENTS_PER_SITE = 20;
@@ -4348,13 +4348,18 @@
       const event = events.find((item) => eventDedupeKey(item) === key);
       if (!event) return false;
 
-      // Optimistisch verwijderen: haal de kaart direct uit de zichtbare lijst,
-      // terwijl de server op de achtergrond de permanente verwijdering verwerkt.
+      // Verberg de kaart direct en bewaar de lokale tombstone vóór de netwerkactie.
+      // Zo springt de regel niet terug in beeld als de Worker traag is of faalt.
+      deletedEventKeys.add(key);
+      saveStoredSet(DELETED_EVENTS_KEY, deletedEventKeys);
       events = events.filter((item) => eventDedupeKey(item) !== key);
       expandedEventKeys.delete(key);
+      newEventKeys.delete(key);
+      saveStoredSet(NEW_EVENTS_KEY, newEventKeys);
+      saveStoredSet(KNOWN_EVENTS_KEY, eventKeySet(events));
       applyFilters();
       renderSites(checkedSites());
-      showStatus(`Verwijderen van “${cleanText(event.title)}”…`, "info");
+      showStatus(`“${cleanText(event.title)}” direct uit dit overzicht verborgen; definitieve verwijdering wordt verwerkt…`, "info");
       addLiveLog("App", event.website || event.source || "", event.title, "verwijderen", "Kaart direct verborgen; serververzoek loopt");
 
       try {
@@ -4392,13 +4397,10 @@
         setTimeout(hideStatus, 4000);
         return true;
       } catch (error) {
-        // Als de server de verwijdering afwijst, zet het evenement meteen terug
-        // zodat de lokale weergave geen onjuiste permanente verwijdering suggereert.
-        if (!events.some((item) => eventDedupeKey(item) === key)) events.push(event);
-        applyFilters();
-        renderSites(checkedSites());
-        showStatus(`Verwijderen mislukt; evenement teruggezet: ${cleanText(error.message || error)}`, "error");
-        addLiveLog("App", event.website || event.source || "", event.title, "verwijderen mislukt", cleanText(error.message || error));
+        // Laat de regel verborgen; toon expliciet dat alleen de lokale lijst is
+        // aangepast en dat de serververwijdering nog niet bevestigd is.
+        showStatus(`Lokaal verborgen, maar niet definitief van de server verwijderd: ${cleanText(error.message || error)}. Controleer de Worker en probeer later opnieuw.`, "error");
+        addLiveLog("App", event.website || event.source || "", event.title, "serververwijdering mislukt", cleanText(error.message || error));
         return false;
       }
     }
