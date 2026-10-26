@@ -6,7 +6,7 @@ set -euo pipefail
 rm -rf public
 mkdir -p public
 
-cp index.html evenementen.html events.json sites.json scrape-progress.json public/
+cp index.html evenementen.html restaurants.html events.json sites.json scrape-progress.json public/
 cp _headers public/_headers
 
 echo "Cloudflare Pages output prepared:"
