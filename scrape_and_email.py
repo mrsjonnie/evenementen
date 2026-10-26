@@ -982,7 +982,7 @@ def event_score(event):
     discovery = clean_text(event.get("discoverySource") or "").lower()
     if discovery == "website":
         score += 100
-    elif discovery in {"mistral", "chatgpt", "openai", "serpapi"}:
+    elif discovery in {"mistral", "chatgpt", "openai", "serpapi", "gemini", "perplexity"}:
         score += 10
     if event.get("website"):
         score += 10
