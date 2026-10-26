@@ -1,7 +1,7 @@
 {
   "runId": "2026-10-26T20:38:40.265695+00:00-419ba73d",
   "startedAt": "2026-10-26T20:38:40+00:00",
-  "completedCount": 10,
+  "completedCount": 11,
   "totalSites": 15,
   "currentSite": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
   "currentSiteIndex": 11,
@@ -15,7 +15,8 @@
     "https://www.martiniplaza.nl/nl/agenda",
     "https://groningermuseum.nl/programma",
     "https://www.kultuuragenda.nl/agenda",
-    "https://www.concertgebouw.nl/concerten-en-tickets"
+    "https://www.concertgebouw.nl/concerten-en-tickets",
+    "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html"
   ],
   "events": [
     {
@@ -3892,54 +3893,16 @@
       "newCount": 14,
       "durationSeconds": 5.54,
       "timedOut": false
+    },
+    {
+      "site": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 1.54,
+      "timedOut": false
     }
   ],
   "rawLog": [
-    {
-      "source": "Website",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": "Dit weekend",
-      "date": "2026-10-27",
-      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
-      "status": "event uit dagblok",
-      "rawText": "Dit weekend | Kies datum | Thema | Theater | Actief"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": "Kies datum",
-      "date": "2026-10-27",
-      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
-      "status": "event uit dagblok",
-      "rawText": "Kies datum | Thema | Theater | Actief | Tentoonstelling"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": "Thema",
-      "date": "2026-10-27",
-      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
-      "status": "event uit dagblok",
-      "rawText": "Thema | Theater | Actief | Tentoonstelling | Festival"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": "Actief",
-      "date": "2026-10-27",
-      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
-      "status": "event uit dagblok",
-      "rawText": "Actief | Tentoonstelling | Festival | Beurs | Culinair"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": "Tentoonstelling",
-      "date": "2026-10-27",
-      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
-      "status": "event uit dagblok",
-      "rawText": "Tentoonstelling | Festival | Beurs | Culinair | Excursie"
-    },
     {
       "source": "Website",
       "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
@@ -14694,16 +14657,61 @@
       "url": "https://www.concertgebouw.nl/concerten-en-tickets",
       "status": "klaar",
       "rawText": "site 10/15: 14 unieke events in 5.54 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "title": "Start",
+      "date": "",
+      "url": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "status": "start",
+      "rawText": "site 11/15: max 40 events, max 10 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "status": "strategie",
+      "rawText": "bioscoopfilms en speeldata (BiosAgenda Groningen)"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "title": "403-tekstproxy mislukt",
+      "date": "",
+      "url": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "status": "fout",
+      "rawText": "HTTPSConnectionPool(host='r.jina.ai', port=443): Read timed out. (read timeout=1.25)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "title": "Pagina mislukt",
+      "date": "",
+      "url": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "status": "klaar",
+      "rawText": "site 11/15: 0 unieke events in 1.54 sec"
     }
   ],
   "status": "running",
   "siteStartedAt": "2026-10-26T20:40:15+00:00",
-  "siteElapsedSeconds": 0,
+  "siteElapsedSeconds": 3,
   "sitePageCount": 0,
   "lastSiteEventCount": 0,
-  "stage": "Websitepagina ophalen",
-  "lastUpdatedAt": "2026-10-26T20:40:15+00:00",
-  "lastSiteNewEventCount": 14,
-  "lastCompletedSite": "https://www.concertgebouw.nl/concerten-en-tickets",
-  "lastCompletedAt": "2026-10-26T20:40:12+00:00"
+  "stage": "Website klaar; volgende website voorbereiden",
+  "lastUpdatedAt": "2026-10-26T20:40:16+00:00",
+  "lastSiteNewEventCount": 0,
+  "lastCompletedSite": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+  "lastCompletedAt": "2026-10-26T20:40:18+00:00"
 }
