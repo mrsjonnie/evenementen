@@ -917,6 +917,10 @@ def event_score(event):
     day, title, site = feedback_identity(event)
     if any(clean_text(item.get("date", "")) == day and clean_text(item.get("title", "")).lower() == title and normalized_url(item.get("website", "")).lower().rstrip("/") == site for item in GOOD_FEEDBACK):
         score += 500  # Prefer the user-approved version when deduplicating candidates.
+    host = canonical_host(event.get("website", ""))
+    site_good = sum(1 for item in GOOD_FEEDBACK if canonical_host(item.get("website", "")) == host)
+    site_bad = sum(1 for item in BAD_FEEDBACK if canonical_host(item.get("website", "")) == host)
+    score += max(-40, min(40, (site_good - site_bad) * 8))  # Learn source quality gradually, without disabling a site after one bad link.
     return score
 
 
