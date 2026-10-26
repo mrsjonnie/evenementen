@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-26T10:57:42.943Z",
+  "updatedAt": "2026-10-26T11:01:03.852Z",
   "feedback": [
     {
       "key": "2026-10-27|abonnement topmusici van eigen bodem",
@@ -630,6 +630,24 @@
         "location": "Gedempte Zuiderdiep 78, 9711 HL, Groningen",
         "type": "Concert",
         "cost": "Zie website"
+      }
+    },
+    {
+      "key": "2026-10-28|adviesplein",
+      "vote": "edit",
+      "title": "Adviesplein",
+      "date": "2026-10-28",
+      "website": "https://denieuwekolk.nl/bieb/agenda/adviesplein",
+      "url": "https://denieuwekolk.nl/bieb/agenda/adviesplein",
+      "updatedAt": "2026-10-26T11:01:03.852Z",
+      "originalTitle": "Adviesplein",
+      "originalDate": "2026-10-28",
+      "corrections": {
+        "title": "Adviesplein",
+        "date": "2026-10-28",
+        "location": "De Nieuwe Kolk Weiersstraat 1 9401 ET Assen",
+        "type": "Activiteit",
+        "cost": "Gratis"
       }
     }
   ]
