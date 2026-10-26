@@ -3,11 +3,17 @@
   "startedAt": "2026-10-26T23:42:03+00:00",
   "completedCount": 0,
   "totalSites": 1,
-  "currentSite": "",
-  "currentSiteIndex": 0,
+  "currentSite": "https://kinepolis.nl/?complex=WGRN&select_theater=WGRN&main_section=films",
+  "currentSiteIndex": 1,
   "completedSites": [],
   "events": [],
   "siteResults": [],
   "rawLog": [],
-  "status": "running"
+  "status": "running",
+  "siteStartedAt": "2026-10-26T23:42:04+00:00",
+  "siteElapsedSeconds": 0,
+  "sitePageCount": 0,
+  "lastSiteEventCount": 0,
+  "stage": "Websitepagina ophalen",
+  "lastUpdatedAt": "2026-10-26T23:42:04+00:00"
 }
