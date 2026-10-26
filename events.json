@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-26T11:46:53+00:00",
+  "updatedAt": "2026-10-26T11:47:06+00:00",
   "events": [
     {
       "date": "2026-10-26",
@@ -8763,270 +8763,16 @@
       "newCount": 0,
       "durationSeconds": 12.53,
       "timedOut": true
+    },
+    {
+      "site": "https://www.ibood.com/s-nl",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 10.03,
+      "timedOut": true
     }
   ],
   "rawLog": [
-    {
-      "source": "Website",
-      "site": "https://www.kultuuragenda.nl/agenda",
-      "title": "Detailpagina geanalyseerd",
-      "date": "",
-      "url": "https://www.kultuuragenda.nl/agenda/1691313909/de-gaulle-liberte",
-      "status": "ok",
-      "rawText": "1 extra events"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.kultuuragenda.nl/agenda",
-      "title": "Detailpagina geanalyseerd",
-      "date": "",
-      "url": "https://www.kultuuragenda.nl/agenda/1740715911/wildwood",
-      "status": "ok",
-      "rawText": "1 extra events"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.kultuuragenda.nl/agenda",
-      "title": "Detailpagina geanalyseerd",
-      "date": "",
-      "url": "https://www.kultuuragenda.nl/agenda/2155420288/erupcja",
-      "status": "ok",
-      "rawText": "1 extra events"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.kultuuragenda.nl/agenda",
-      "title": "Detailpagina geanalyseerd",
-      "date": "",
-      "url": "https://www.kultuuragenda.nl/agenda/2203530167/home-1",
-      "status": "ok",
-      "rawText": "1 extra events"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.kultuuragenda.nl/agenda",
-      "title": "Detailpagina geanalyseerd",
-      "date": "",
-      "url": "https://www.kultuuragenda.nl/agenda/2241509706/playing-house",
-      "status": "ok",
-      "rawText": "1 extra events"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.kultuuragenda.nl/agenda",
-      "title": "Detailpagina mislukt",
-      "date": "",
-      "url": "https://www.kultuuragenda.nl/agenda/281413393/wicker",
-      "status": "fout",
-      "rawText": "HTTPSConnectionPool(host='www.kultuuragenda.nl', port=443): Read timed out. (read timeout=0.41347822800000245)"
-    },
-    {
-      "source": "Filter",
-      "site": "https://www.kultuuragenda.nl/agenda",
-      "title": "Datumfilter toegepast",
-      "date": "2026-10-26",
-      "url": "https://www.kultuuragenda.nl/agenda",
-      "status": "ok",
-      "rawText": "9 gevonden; 7 binnen 2026-10-26 t/m 2026-10-26"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.kultuuragenda.nl/agenda",
-      "title": "Klaar",
-      "date": "",
-      "url": "https://www.kultuuragenda.nl/agenda",
-      "status": "klaar",
-      "rawText": "site 9/16: 0 unieke events in 10.02 sec"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
-      "title": "Start",
-      "date": "",
-      "url": "https://www.concertgebouw.nl/concerten-en-tickets",
-      "status": "start",
-      "rawText": "site 10/16: max 40 events, max 10 seconden"
-    },
-    {
-      "source": "Parser",
-      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
-      "title": "Scrapertype vastgesteld",
-      "date": "",
-      "url": "https://www.concertgebouw.nl/concerten-en-tickets",
-      "status": "strategie",
-      "rawText": "universeel-jsonld-links-kaarten"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
-      "title": "Pagina gelezen",
-      "date": "",
-      "url": "https://www.concertgebouw.nl/concerten-en-tickets",
-      "status": "ok",
-      "rawText": "774040 tekens HTML"
-    },
-    {
-      "source": "Parser",
-      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
-      "title": "Agenda-kaarten geteld",
-      "date": "",
-      "url": "https://www.concertgebouw.nl/concerten-en-tickets",
-      "status": "gespecialiseerde parser",
-      "rawText": "15 resultaten"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
-      "title": "Pagina geanalyseerd",
-      "date": "",
-      "url": "https://www.concertgebouw.nl/concerten-en-tickets",
-      "status": "ok",
-      "rawText": "14 events/aanbiedingen op deze pagina"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
-      "title": "Iván Fischer leidt Stravinsky's Vuurvogel bij het Concertgebouworkest",
-      "date": "2026-12-02",
-      "url": "https://www.concertgebouw.nl/concerten/45889153-ivan-fischer-leidt-stravinskys-vuurvogel-bij-het-concertgebouworkest",
-      "status": "event uit link",
-      "rawText": "wo 2 dec 2026 Iván Fischer leidt Stravinsky's Vuurvogel bij het Concertgebouworkest met onder andere Weill Der Silbersee (concertversie) Stravinsky Suite 'De vuurvogel'"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
-      "title": "Fabio Luisi en het Concertgebouworkest met Brahms' Symfonie nr. 2",
-      "date": "2026-12-09",
-      "url": "https://www.concertgebouw.nl/concerten/45889150-fabio-luisi-en-het-concertgebouworkest-met-brahms-symfonie-nr.-2",
-      "status": "event uit link",
-      "rawText": "wo 9 dec 2026 Fabio Luisi en het Concertgebouworkest met Brahms' Symfonie nr. 2 met onder andere Brahms Symfonie nr. 2 in D, op. 73 Henze Il Vitalino raddoppiato"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
-      "title": "Concertgebouworkest Essentials: Brahms' Symfonie nr. 2",
-      "date": "2026-12-12",
-      "url": "https://www.concertgebouw.nl/concerten/45889234-concertgebouworkest-essentials-brahms-symfonie-nr.-2",
-      "status": "event uit link",
-      "rawText": "za 12 dec 2026 Concertgebouworkest Essentials: Brahms' Symfonie nr. 2 Brahms Symfonie nr. 2 in D, op. 73"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
-      "title": "Saint-Saëns door Sheku Kanneh-Mason en het Concertgebouworkest",
-      "date": "2026-12-17",
-      "url": "https://www.concertgebouw.nl/concerten/45889233-saint-saens-door-sheku-kanneh-mason-en-het-concertgebouworkest",
-      "status": "event uit link",
-      "rawText": "do 17 dec 2026 Saint-Saëns door Sheku Kanneh-Mason en het Concertgebouworkest met onder andere Moesorgski Schilderijen van een tentoonstelling (ork. Ravel) Saint-Saëns Celloconcert nr. 1 in a, op. 33"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
-      "title": "25 jaar Academie Concertgebouworkest Bestel kaarten Bestel",
-      "date": "2027-10-09",
-      "url": "https://www.concertgebouw.nl/concerten/45881817-25-jaar-academie-concertgebouworkest",
-      "status": "event uit datumblok",
-      "rawText": "9 okt 25 jaar Academie Concertgebouworkest Bestel kaarten Bestel kaarten 25 jaar Academie Concertgebouworkest Musici Alumni van Concertgebouworkest Young Alumni van de Academie van het Concertgebouworkest Klaus Mäkelä dirigent Aurel Dawidiuk dirigent Carlos Ferreira klarinet Santa Vižine altviool Bekijk alle musici Werken Grieg Peer Gynt, Suite nr. 1, op. 46 Bruch Concert voor klarinet en altviool in e, op. 88 Saint-"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
-      "title": "Iván Fischer leidt Stravinsky's Vuurvogel bij het",
-      "date": "2026-12-02",
-      "url": "https://www.concertgebouw.nl/concerten/45881817-25-jaar-academie-concertgebouworkest",
-      "status": "event uit datumblok",
-      "rawText": "2 dec 2026 Iván Fischer leidt Stravinsky's Vuurvogel bij het Concertgebouworkest met onder andere Weill Der Silbersee (concertversie) Stravinsky Suite 'De vuurvogel'"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
-      "title": "Fabio Luisi en het Concertgebouworkest met Brahms'",
-      "date": "2026-12-09",
-      "url": "https://www.concertgebouw.nl/concerten/45881817-25-jaar-academie-concertgebouworkest",
-      "status": "event uit datumblok",
-      "rawText": "9 dec 2026 Fabio Luisi en het Concertgebouworkest met Brahms' Symfonie nr. 2 met onder andere Brahms Symfonie nr. 2 in D, op. 73 Henze Il Vitalino raddoppiato"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
-      "title": "Concertgebouworkest Essentials: Brahms' Symfonie nr. 2 Brahms Symfonie nr. 2 in D, op. 73",
-      "date": "2026-12-02",
-      "url": "https://www.concertgebouw.nl/concerten/45881817-25-jaar-academie-concertgebouworkest",
-      "status": "event uit datumblok",
-      "rawText": "2 dec 2026 Concertgebouworkest Essentials: Brahms' Symfonie nr. 2 Brahms Symfonie nr. 2 in D, op. 73"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
-      "title": "Saint-Saëns door Sheku Kanneh-Mason en het Concertgebouworkest",
-      "date": "2026-12-07",
-      "url": "https://www.concertgebouw.nl/concerten/45881817-25-jaar-academie-concertgebouworkest",
-      "status": "event uit datumblok",
-      "rawText": "7 dec 2026 Saint-Saëns door Sheku Kanneh-Mason en het Concertgebouworkest met onder andere Moesorgski Schilderijen van een tentoonstelling (ork. Ravel) Saint-Saëns Celloconcert nr. 1 in a, op. 33 Overige informatie Veelgestelde vragen Verhuur Pers Info Concertvrienden en Entrée Maandblad Preludium Route & Parkeren Over ons Organisatie Vacatures Contact Veelgestelde vragen Verhuur Pers Concertvrienden en Entrée Maandb"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
-      "title": "25 jaar Academie Concertgebouworkest",
-      "date": "2026-10-29",
-      "url": "https://www.concertgebouw.nl/concerten/45881817-25-jaar-academie-concertgebouworkest",
-      "status": "event uit detailpagina",
-      "rawText": "25 jaar Academie Concertgebouworkest - Concertgebouw - Nederlands Naar hoofdcontent Concertagenda Concerten Concertagenda Bekijk onze veelzijdige concertagenda Keuzehulp Wij helpen u kiezen! Jong publiek Met korting naar de mooiste concerten VriendenLoterij ZomerConcerten Het Zondagochtend Concert Familieconcerten Hemelbestormers Reflecties op Europa Series Uw bezoek Kaartverkoop Over het bestellen van kaarten Route"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
-      "title": "25 jaar Academie Concertgebouworkest",
-      "date": "2026-10-29",
-      "url": "https://www.concertgebouw.nl/concerten/45881817-25-jaar-academie-concertgebouworkest",
-      "status": "event uit tekstregel",
-      "rawText": "25 jaar Academie Concertgebouworkest | do 29 okt 2026 | 20:15 | – | 22:40 | Grote Zaal"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
-      "title": "vanaf 20,00",
-      "date": "2026-10-29",
-      "url": "https://www.concertgebouw.nl/concerten/45881817-25-jaar-academie-concertgebouworkest",
-      "status": "event uit dagblok",
-      "rawText": "vanaf 20,00 | Bestel kaarten | Bestel kaarten | Bookmark | Bewaar dit concert"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
-      "title": "Bestel kaarten",
-      "date": "2026-10-29",
-      "url": "https://www.concertgebouw.nl/concerten/45881817-25-jaar-academie-concertgebouworkest",
-      "status": "event uit dagblok",
-      "rawText": "Bestel kaarten | Bestel kaarten | Bookmark | Bewaar dit concert | Laatste kaarten"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
-      "title": "Bookmark",
-      "date": "2026-10-29",
-      "url": "https://www.concertgebouw.nl/concerten/45881817-25-jaar-academie-concertgebouworkest",
-      "status": "event uit dagblok",
-      "rawText": "Bookmark | Bewaar dit concert | Laatste kaarten | do 29 okt 2026 | 20:15"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
-      "title": "Bewaar dit concert",
-      "date": "2026-10-29",
-      "url": "https://www.concertgebouw.nl/concerten/45881817-25-jaar-academie-concertgebouworkest",
-      "status": "event uit dagblok",
-      "rawText": "Bewaar dit concert | Laatste kaarten | do 29 okt 2026 | 20:15 | –"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
-      "title": "Werken",
-      "date": "2026-10-29",
-      "url": "https://www.concertgebouw.nl/concerten/45881817-25-jaar-academie-concertgebouworkest",
-      "status": "event uit dagblok",
-      "rawText": "Werken | Grieg | Peer Gynt, Suite nr. 1, op. 46 | Bruch | Concert voor klarinet en altviool in e, op. 88"
-    },
     {
       "source": "Website",
       "site": "https://www.concertgebouw.nl/concerten-en-tickets",
@@ -19565,6 +19311,267 @@
       "url": "https://www.socialdeal.nl/",
       "status": "klaar",
       "rawText": "site 14/16: 0 unieke events in 12.53 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "Start",
+      "date": "",
+      "url": "https://www.ibood.com/s-nl",
+      "status": "start",
+      "rawText": "site 15/16: max 40 events, max 10 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://www.ibood.com/s-nl",
+      "status": "strategie",
+      "rawText": "aanbiedingen"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.ibood.com/offers/nl/s-nl",
+      "title": "403-tekstproxy mislukt",
+      "date": "",
+      "url": "https://www.ibood.com/offers/nl/s-nl",
+      "status": "fout",
+      "rawText": "HTTPSConnectionPool(host='r.jina.ai', port=443): Read timed out. (read timeout=1.25)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "Pagina mislukt",
+      "date": "",
+      "url": "https://www.ibood.com/offers/nl/s-nl",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.ibood.com/nl/s-nl",
+      "title": "403-tekstproxy gebruikt",
+      "date": "",
+      "url": "https://www.ibood.com/nl/s-nl",
+      "status": "fallback",
+      "rawText": "Bron gaf HTTP 403; tekstproxy leverde 34825 tekens: Title: iBOOD.com: dé beste aanbiedingen, acties & deal van de dag URL Source: http://www.ibood.com/nl/s-nl Published Time: Tue, 17 Mar 2026 16:05:26 GMT Markdown Content: ## [Delse"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "Pagina gelezen",
+      "date": "",
+      "url": "https://www.ibood.com/nl/s-nl",
+      "status": "ok",
+      "rawText": "41950 tekens HTML"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "iBOOD-telling",
+      "date": "",
+      "url": "https://www.ibood.com/nl/s-nl",
+      "status": "geen resultaten",
+      "rawText": "0 aanbiedingen gevonden; limiet 40; HTML 41950 tekens"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "iBOOD zonder aanbiedingen",
+      "date": "",
+      "url": "https://www.ibood.com/nl/s-nl",
+      "status": "fallback",
+      "rawText": "Geen productkaarten herkend; HTML 41950 tekens; pagina /nl/s-nl"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "Pagina geanalyseerd",
+      "date": "",
+      "url": "https://www.ibood.com/nl/s-nl",
+      "status": "ok",
+      "rawText": "0 events/aanbiedingen op deze pagina"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "403-tekstproxy gebruikt",
+      "date": "",
+      "url": "https://www.ibood.com/s-nl",
+      "status": "fallback",
+      "rawText": "Bron gaf HTTP 403; tekstproxy leverde 254 tekens: Title: URL Source: http://www.ibood.com/s-nl Warning: This page maybe not yet fully loaded, consider explicitly specify a timeout. Warning: This is a cached snapshot of the origina"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "Pagina gelezen",
+      "date": "",
+      "url": "https://www.ibood.com/s-nl",
+      "status": "ok",
+      "rawText": "310 tekens HTML"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "iBOOD-telling",
+      "date": "",
+      "url": "https://www.ibood.com/s-nl",
+      "status": "geen resultaten",
+      "rawText": "0 aanbiedingen gevonden; limiet 40; HTML 310 tekens"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "iBOOD zonder aanbiedingen",
+      "date": "",
+      "url": "https://www.ibood.com/s-nl",
+      "status": "fallback",
+      "rawText": "Geen productkaarten herkend; HTML 310 tekens; pagina /s-nl"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "Pagina geanalyseerd",
+      "date": "",
+      "url": "https://www.ibood.com/s-nl",
+      "status": "ok",
+      "rawText": "0 events/aanbiedingen op deze pagina"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "Pagina geteld",
+      "date": "",
+      "url": "http://www.ibood.com/nl/s-nl",
+      "status": "analyse",
+      "rawText": "jsonld:0, links:0, datumblokken:0, kaarten:0, regels:0, detail:0"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "http://www.ibood.com/nl/s-nl",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.ibood.com/nl/s-nl/b/apple/fdd49684-29ac-59d6-adef-6536bdeecf47",
+      "title": "403-tekstproxy mislukt",
+      "date": "",
+      "url": "https://www.ibood.com/nl/s-nl/b/apple/fdd49684-29ac-59d6-adef-6536bdeecf47",
+      "status": "fout",
+      "rawText": "HTTPSConnectionPool(host='r.jina.ai', port=443): Read timed out. (read timeout=1.25)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "Detailpagina mislukt",
+      "date": "",
+      "url": "https://www.ibood.com/nl/s-nl/b/apple/fdd49684-29ac-59d6-adef-6536bdeecf47",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.ibood.com/nl/s-nl/b/ariel/a6417b7d-11b0-5d3e-9d70-7fb742b40af2",
+      "title": "403-tekstproxy mislukt",
+      "date": "",
+      "url": "https://www.ibood.com/nl/s-nl/b/ariel/a6417b7d-11b0-5d3e-9d70-7fb742b40af2",
+      "status": "fout",
+      "rawText": "HTTPSConnectionPool(host='r.jina.ai', port=443): Read timed out. (read timeout=1.25)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "Detailpagina mislukt",
+      "date": "",
+      "url": "https://www.ibood.com/nl/s-nl/b/ariel/a6417b7d-11b0-5d3e-9d70-7fb742b40af2",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.ibood.com/nl/s-nl/b/audiolab/f58b9bac-91db-5c2f-8e38-b83d15bad1d7",
+      "title": "403-tekstproxy mislukt",
+      "date": "",
+      "url": "https://www.ibood.com/nl/s-nl/b/audiolab/f58b9bac-91db-5c2f-8e38-b83d15bad1d7",
+      "status": "fout",
+      "rawText": "HTTPSConnectionPool(host='r.jina.ai', port=443): Read timed out. (read timeout=1.25)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "Detailpagina mislukt",
+      "date": "",
+      "url": "https://www.ibood.com/nl/s-nl/b/audiolab/f58b9bac-91db-5c2f-8e38-b83d15bad1d7",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.ibood.com/nl/s-nl/b/bissell/53f1732e-f71d-5105-9fd3-cb7f31787ab6",
+      "title": "403-tekstproxy mislukt",
+      "date": "",
+      "url": "https://www.ibood.com/nl/s-nl/b/bissell/53f1732e-f71d-5105-9fd3-cb7f31787ab6",
+      "status": "fout",
+      "rawText": "HTTPSConnectionPool(host='r.jina.ai', port=443): Read timed out. (read timeout=1.25)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "Detailpagina mislukt",
+      "date": "",
+      "url": "https://www.ibood.com/nl/s-nl/b/bissell/53f1732e-f71d-5105-9fd3-cb7f31787ab6",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.ibood.com/nl/s-nl/b/bushnell/69e9bdcd-682f-5357-aef5-df6585b0071e",
+      "title": "403-tekstproxy mislukt",
+      "date": "",
+      "url": "https://www.ibood.com/nl/s-nl/b/bushnell/69e9bdcd-682f-5357-aef5-df6585b0071e",
+      "status": "fout",
+      "rawText": "HTTPSConnectionPool(host='r.jina.ai', port=443): Read timed out. (read timeout=1.25)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "Detailpagina mislukt",
+      "date": "",
+      "url": "https://www.ibood.com/nl/s-nl/b/bushnell/69e9bdcd-682f-5357-aef5-df6585b0071e",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.ibood.com/nl/s-nl/b/columbia/5f0ce9cd-63f2-5848-80c4-5da01f910498",
+      "title": "403-tekstproxy mislukt",
+      "date": "",
+      "url": "https://www.ibood.com/nl/s-nl/b/columbia/5f0ce9cd-63f2-5848-80c4-5da01f910498",
+      "status": "fout",
+      "rawText": "HTTPSConnectionPool(host='r.jina.ai', port=443): Read timed out. (read timeout=0.6810800610000172)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "Detailpagina mislukt",
+      "date": "",
+      "url": "https://www.ibood.com/nl/s-nl/b/columbia/5f0ce9cd-63f2-5848-80c4-5da01f910498",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://www.ibood.com/s-nl",
+      "status": "klaar",
+      "rawText": "site 15/16: 0 unieke events in 10.03 sec"
     }
   ]
 }
