@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-26T22:36:35.852Z",
+  "updatedAt": "2026-10-26T22:38:15.417Z",
   "feedback": [
     {
       "key": "2026-10-27|abonnement topmusici van eigen bodem",
@@ -1978,6 +1978,32 @@
       "website": "https://groningermuseum.nl/programma?type=EDUCATION",
       "url": "https://groningermuseum.nl/programma?type=EDUCATION",
       "updatedAt": "2026-10-26T22:36:35.852Z"
+    },
+    {
+      "key": "2026-10-26|national theatre live the misanthrope",
+      "vote": "edit",
+      "title": "National Theatre Live: The Misanthrope",
+      "date": "2026-10-26",
+      "website": "https://www.kultuuragenda.nl/agenda/3330398606/national-theatre-live-the-misanthrope",
+      "url": "https://www.kultuuragenda.nl/agenda/3330398606/national-theatre-live-the-misanthrope",
+      "updatedAt": "2026-10-26T22:38:15.417Z",
+      "originalTitle": "National Theatre Live: The Misanthrope",
+      "originalDate": "2026-10-26",
+      "originalFields": {
+        "title": "National Theatre Live: The Misanthrope",
+        "date": "2026-10-26",
+        "location": "Groningen",
+        "type": "Concert",
+        "cost": "gratis"
+      },
+      "corrections": {
+        "title": "National Theatre Live: The Misanthrope",
+        "date": "2026-10-26",
+        "location": "Locatie Nieuwe Markt 1 9712 KJ Groningen",
+        "type": "Film",
+        "cost": "€ 13,00",
+        "website": "https://www.kultuuragenda.nl/agenda/3330398606/national-theatre-live-the-misanthrope"
+      }
     }
   ]
 }
