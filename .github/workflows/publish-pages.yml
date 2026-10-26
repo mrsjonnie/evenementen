@@ -1,4 +1,4 @@
-name: Publish website
+name: Publish website (automatic version deployment)
 
 on:
   push:
