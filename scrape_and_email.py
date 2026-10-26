@@ -884,7 +884,7 @@ def load_event_feedback():
 
 
 EVENT_FEEDBACK = load_event_feedback()
-BAD_FEEDBACK = [item for item in EVENT_FEEDBACK if item.get("vote") in {"bad", "duplicate"}]
+BAD_FEEDBACK = [item for item in EVENT_FEEDBACK if item.get("vote") in {"bad", "duplicate", "deleted"}]
 GOOD_FEEDBACK = [item for item in EVENT_FEEDBACK if item.get("vote") == "good"]
 
 
