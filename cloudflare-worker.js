@@ -1660,7 +1660,10 @@ export default {
         if (response.status === 404) return json({ ok: true, feedback: [] }, 200);
         if (!response.ok) throw new Error("Feedbackbestand niet leesbaar: status " + response.status);
         const file = await response.json();
-        const data = JSON.parse(decodeBase64(file.content));
+        let decoded;
+        try { decoded = decodeBase64(file.content || ""); } catch (_) { throw new Error("Feedbackbestand kan niet worden gedecodeerd"); }
+        let data;
+        try { data = JSON.parse(decoded); } catch (_) { throw new Error("event-feedback.json is leeg of bevat ongeldige JSON"); }
         return json({ ok: true, updatedAt: data.updatedAt || null, feedback: Array.isArray(data.feedback) ? data.feedback : [] }, 200);
       } catch (e) { return json({ error: "Logica-regels konden niet worden geladen", details: e.message }, 500); }
     }
