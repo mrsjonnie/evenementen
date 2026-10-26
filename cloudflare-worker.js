@@ -1227,27 +1227,8 @@ async function saveEventCorrection(env, target = {}) {
   return { updatedCount, corrections: { title, date, location, type, cost, website: improvedUrl } };
 }
 async function deleteEventFromGithub(env, target = {}) {
+  // Persist the rejection first so a concurrent scrape already knows this event is unwanted.
   await saveEventFeedback(env, target, "deleted");
-  let existing = { events: [], archive: [], siteResults: [], rawLog: [] };
-  let sha = null;
-  const getResponse = await githubFetch(env, "/contents/events.json?ref=main");
-  if (!getResponse.ok) throw new Error(`events.json niet gevonden: status ${getResponse.status}`);
-
-  const file = await getResponse.json();
-  sha = file.sha;
-  const decodedText = decodeBase64(file.content || "");
-  if (!decodedText.trim()) throw new Error("events.json is leeg; herstel eerst de evenementdata voordat je verwijdert.");
-  let decoded;
-  try { decoded = JSON.parse(decodedText); } catch (_) { throw new Error("events.json bevat ongeldige JSON; verwijderen afgebroken om gegevensverlies te voorkomen."); }
-  if (!Array.isArray(decoded) && (!decoded || (!Array.isArray(decoded.events) && !Array.isArray(decoded.archive)))) {
-    throw new Error("events.json heeft een onbekende structuur; verwijderen afgebroken om gegevensverlies te voorkomen.");
-  }
-  if (Array.isArray(decoded)) existing.events = decoded;
-  if (decoded && Array.isArray(decoded.events)) existing.events = decoded.events;
-  if (decoded && Array.isArray(decoded.archive)) existing.archive = decoded.archive;
-  if (decoded && Array.isArray(decoded.siteResults)) existing.siteResults = decoded.siteResults;
-  if (decoded && Array.isArray(decoded.rawLog)) existing.rawLog = decoded.rawLog;
-
   const wantedKey = clean(target.key || "");
   const wantedTitle = normalizeDeleteTitle(target.title || "");
   const wantedDate = clean(target.date || "");
@@ -1258,42 +1239,63 @@ async function deleteEventFromGithub(env, target = {}) {
     if (wantedKey && (key === wantedKey || fullKey === wantedKey)) return true;
     const sameDate = wantedDate && clean(event.date || "") === wantedDate;
     const sameTitle = wantedTitle && normalizeDeleteTitle(event.title || "") === wantedTitle;
-    // Match the same canonical title/date key as the UI, even if source URLs or title decorations differ.
     if (sameDate && sameTitle) return true;
     const exactTitle = clean(target.title || "").toLowerCase() === clean(event.title || "").toLowerCase();
     const sameWebsite = wantedWebsite && clean(event.website || "").toLowerCase().replace(/\/$/, "") === wantedWebsite;
     return Boolean(exactTitle && sameDate && (!wantedWebsite || sameWebsite));
   };
 
-  const events = existing.events.filter((event) => !shouldRemove(event));
-  const archive = existing.archive.filter((event) => !shouldRemove(event));
-  const removedEvents = existing.events.length - events.length;
-  const removedArchive = existing.archive.length - archive.length;
-  if (removedEvents + removedArchive === 0) {
-    throw new Error("Geen overeenkomstig evenement gevonden in events.json. Ververs de gegevens en probeer opnieuw.");
+  // A scrape may update events.json between GET and PUT. On GitHub HTTP 409,
+  // re-read the newest file and re-apply the deletion instead of losing it.
+  let lastConflict = "";
+  for (let attempt = 1; attempt <= 4; attempt += 1) {
+    const getResponse = await githubFetch(env, "/contents/events.json?ref=main");
+    if (!getResponse.ok) throw new Error(`events.json niet gevonden: status ${getResponse.status}`);
+    const file = await getResponse.json();
+    const decodedText = decodeBase64(file.content || "");
+    if (!decodedText.trim()) throw new Error("events.json is leeg; herstel eerst de evenementdata voordat je verwijdert.");
+    let decoded;
+    try { decoded = JSON.parse(decodedText); } catch (_) { throw new Error("events.json bevat ongeldige JSON; verwijderen afgebroken om gegevensverlies te voorkomen."); }
+    if (!Array.isArray(decoded) && (!decoded || (!Array.isArray(decoded.events) && !Array.isArray(decoded.archive)))) {
+      throw new Error("events.json heeft een onbekende structuur; verwijderen afgebroken om gegevensverlies te voorkomen.");
+    }
+    const existing = {
+      events: Array.isArray(decoded) ? decoded : (Array.isArray(decoded.events) ? decoded.events : []),
+      archive: Array.isArray(decoded?.archive) ? decoded.archive : [],
+      siteResults: Array.isArray(decoded?.siteResults) ? decoded.siteResults : [],
+      rawLog: Array.isArray(decoded?.rawLog) ? decoded.rawLog : []
+    };
+    const events = existing.events.filter((event) => !shouldRemove(event));
+    const archive = existing.archive.filter((event) => !shouldRemove(event));
+    const removedEvents = existing.events.length - events.length;
+    const removedArchive = existing.archive.length - archive.length;
+    if (removedEvents + removedArchive === 0) {
+      throw new Error("Geen overeenkomstig evenement gevonden in events.json. De afkeuring is wel opgeslagen zodat de scraper het evenement voortaan kan overslaan.");
+    }
+    const payload = {
+      schemaVersion: 2,
+      updatedAt: new Date().toISOString(),
+      events, archive,
+      siteResults: existing.siteResults,
+      rawLog: existing.rawLog
+    };
+    const putResponse = await githubFetch(env, "/contents/events.json", {
+      method: "PUT",
+      body: JSON.stringify({
+        message: `Delete event ${clean(target.title || target.key || "item")}`,
+        content: encodeBase64(JSON.stringify(payload, null, 2)),
+        sha: file.sha,
+        branch: "main"
+      })
+    });
+    if (putResponse.ok) {
+      return { removedEvents, removedArchive, remainingEvents: events.length, remainingArchive: archive.length, retries: attempt - 1 };
+    }
+    const details = await putResponse.text();
+    if (putResponse.status === 409) { lastConflict = details; continue; }
+    throw new Error(details);
   }
-
-  const payload = {
-    schemaVersion: 2,
-    updatedAt: new Date().toISOString(),
-    events,
-    archive,
-    siteResults: existing.siteResults,
-    rawLog: existing.rawLog
-  };
-
-  const putResponse = await githubFetch(env, "/contents/events.json", {
-    method: "PUT",
-    body: JSON.stringify({
-      message: `Delete event ${clean(target.title || target.key || "item")}`,
-      content: encodeBase64(JSON.stringify(payload, null, 2)),
-      sha,
-      branch: "main"
-    })
-  });
-
-  if (!putResponse.ok) throw new Error(await putResponse.text());
-  return { removedEvents, removedArchive, remainingEvents: events.length, remainingArchive: archive.length };
+  throw new Error("events.json veranderde tijdens vier verwijderpogingen door een gelijktijdige scraper-update. De afkeuring is bewaard; probeer definitief verwijderen opnieuw. " + validateInput(lastConflict, 250));
 }
 
 function workflowInputs(body, overrides = {}) {
