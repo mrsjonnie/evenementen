@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-26T22:33:39.646Z",
+  "updatedAt": "2026-10-26T22:33:48.920Z",
   "sites": {
     "https://groningen.uitloper.nu/": {
       "methodology": "",
@@ -274,7 +274,8 @@
         "^/vrienden-van-het-museum/?$",
         "^/museum-gebouw/?$",
         "^/over-het-museum/?$",
-        "^/?$"
+        "^/?$",
+        "^/the-architect-and-the-housewife/?$"
       ]
     },
     "https://www.kultuuragenda.nl/agenda": {
