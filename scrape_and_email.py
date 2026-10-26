@@ -3498,6 +3498,9 @@ def discover_selected_ai_events(site):
         ("Mistral", bool(providers.get("mistral")), os.getenv("MISTRAL_API_KEY", "").strip()),
     ]
     active = [(name, key) for name, selected, key in enabled if selected and key]
+    for name, selected, key in enabled:
+        if selected and not key:
+            add_raw(name, site, "API-sleutel ontbreekt", "", site, "overgeslagen", "Voeg de bijbehorende API-sleutel toe als GitHub Actions Secret om deze AI-bron te gebruiken.")
     if not active:
         return []
     try:
