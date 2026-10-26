@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-26T12:29:02+00:00",
+  "updatedAt": "2026-10-26T12:29:07+00:00",
   "events": [
     {
       "date": "2026-10-26",
@@ -16197,54 +16197,16 @@
       "newCount": 0,
       "durationSeconds": 8.7,
       "timedOut": false
+    },
+    {
+      "site": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 1.6,
+      "timedOut": false
     }
   ],
   "rawLog": [
-    {
-      "source": "Website",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "Matthew Lutz-Kinoy & Natsuko Uchino",
-      "date": "2026-09-19",
-      "url": "https://groningermuseum.nl/",
-      "status": "event uit tekstregel",
-      "rawText": "Matthew Lutz-Kinoy & Natsuko Uchino | 19 september 2026 – 10 januari 2027 | Nieuw licht – De Ploeg | 25 oktober 2025 – 7 januari 2028 | Ontdek het programma | M"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "Nieuw licht – De Ploeg",
-      "date": "2025-10-25",
-      "url": "https://groningermuseum.nl/",
-      "status": "event uit tekstregel",
-      "rawText": "Nieuw licht – De Ploeg | 25 oktober 2025 – 7 januari 2028 | Ontdek het programma | M | u | s"
-    },
-    {
-      "source": "Parser",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "Pagina geteld",
-      "date": "",
-      "url": "https://groningermuseum.nl/",
-      "status": "analyse",
-      "rawText": "jsonld:0, links:5, datumblokken:3, kaarten:5, regels:5, detail:1"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "Detailpagina geanalyseerd",
-      "date": "",
-      "url": "https://groningermuseum.nl/",
-      "status": "ok",
-      "rawText": "8 extra events"
-    },
-    {
-      "source": "Parser",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "Pagina geteld",
-      "date": "",
-      "url": "https://groningermuseum.nl/groninger-museum-tour",
-      "status": "analyse",
-      "rawText": "jsonld:0, links:0, datumblokken:0, kaarten:0, regels:0, detail:0"
-    },
     {
       "source": "Website",
       "site": "https://groningermuseum.nl/programma",
@@ -26999,6 +26961,51 @@
       "url": "https://www.zwolsetheaters.nl/programma",
       "status": "klaar",
       "rawText": "site 12/18: 0 unieke events in 8.7 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "title": "Start",
+      "date": "",
+      "url": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "status": "start",
+      "rawText": "site 13/18: max 50 events, max 10 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "status": "strategie",
+      "rawText": "bioscoopfilms en speeldata (BiosAgenda Groningen)"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "title": "403-tekstproxy mislukt",
+      "date": "",
+      "url": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "status": "fout",
+      "rawText": "HTTPSConnectionPool(host='r.jina.ai', port=443): Read timed out. (read timeout=1.25)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "title": "Pagina mislukt",
+      "date": "",
+      "url": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "status": "klaar",
+      "rawText": "site 13/18: 0 unieke events in 1.6 sec"
     }
   ]
 }
