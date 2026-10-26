@@ -1128,6 +1128,7 @@ async function saveEventFeedback(env, target = {}, vote = "bad") {
     ...(vote === "edit" ? {
       originalTitle: clean(target.originalTitle || title),
       originalDate: clean(target.originalDate || date),
+      originalFields: target.originalFields && typeof target.originalFields === "object" ? Object.fromEntries(["title","date","location","type","cost"].map(field => [field, clean(target.originalFields[field] || "")])) : {},
       corrections: {
         title: clean(target.corrections?.title || title),
         date: clean(target.corrections?.date || date),
@@ -1146,6 +1147,54 @@ async function saveEventFeedback(env, target = {}, vote = "bad") {
   if (!saved.ok) throw new Error("Feedback opslaan mislukt: " + await saved.text());
   return { vote, feedbackCount: data.feedback.length };
 }
+async function learnEventUrlPattern(env, siteUrl, eventUrl, rejected = false) {
+  let parsed;
+  try { parsed = new URL(eventUrl); } catch (_) { return { learned: 0 }; }
+  const hostOf = value => { try { return new URL(value).hostname.toLowerCase().replace(/^www\./, ""); } catch (_) { return ""; } };
+  if (hostOf(siteUrl) !== hostOf(eventUrl)) return { learned: 0, reason: "Event-URL hoort niet bij de bronhost." };
+  const path = parsed.pathname || "/";
+  // A rejected item is excluded by its exact path. An approved/corrected item
+  // teaches the general detail-page shape, replacing only its final slug.
+  const escapeRegex = value => value.replace(/[.*+?^${}()|[\]\\]/g, "\\async function learnSiteFieldAdjustments(env, siteUrl, originalFields, corrections, sourceUrl) {");
+  const segments = path.split("/").filter(Boolean);
+  const pattern = rejected
+    ? "^" + escapeRegex(path).replace(/\/$/, "") + "/?$"
+    : "^/" + (segments.length > 1 ? segments.slice(0,-1).map(escapeRegex).join("/") + "/" : "") + "[^/?#]+/?$";
+  const property = rejected ? "excludedUrlPatterns" : "eventUrlPatterns";
+  const getFile = async name => {
+    const response = await githubFetch(env, "/contents/" + name + "?ref=main");
+    if (!response.ok) throw new Error(name + " niet leesbaar: status " + response.status);
+    const file = await response.json();
+    return { file, data: JSON.parse(decodeBase64(file.content || "")) };
+  };
+  const sitesResult = await getFile("sites.json");
+  const sites = Array.isArray(sitesResult.data) ? sitesResult.data : [];
+  const candidates = sites.filter(site => hostOf(site) === hostOf(siteUrl));
+  if (!candidates.length) return { learned: 0 };
+  const selected = candidates.sort((a,b) => { try{return new URL(b).pathname.length-new URL(a).pathname.length}catch{return 0} })[0];
+  for (let attempt=1; attempt<=3; attempt++) {
+    const current = await getFile("site-scraper-config.json");
+    const registry = current.data && typeof current.data === "object" ? current.data : {schemaVersion:1,sites:{}};
+    if (!registry.sites || typeof registry.sites !== "object") registry.sites = {};
+    const config = registry.sites[selected] || {methodology:"",startUrls:[],exclusions:[],excludedUrls:[],adjustments:[],eventUrlPatterns:[],excludedUrlPatterns:[]};
+    if (!Array.isArray(config[property])) config[property] = [];
+    const learned = !config[property].includes(pattern);
+    if (!learned) return { learned: 0, pattern, site: selected };
+    config[property].push(pattern);
+    config[property] = config[property].slice(rejected ? -200 : -100);
+    registry.sites[selected] = config;
+    registry.updatedAt = new Date().toISOString();
+    const saved = await githubFetch(env, "/contents/site-scraper-config.json", {method:"PUT",body:JSON.stringify({
+      message:(rejected?"Learn rejected event URL pattern: ":"Learn approved event URL pattern: ")+parsed.pathname.slice(0,80),
+      content:encodeBase64(JSON.stringify(registry,null,2)),sha:current.file.sha,branch:"main"
+    })});
+    if (saved.ok) return { learned: 1, pattern, site: selected, property };
+    if (saved.status === 409) continue;
+    throw new Error("URL-patroon kon niet worden opgeslagen: "+validateInput(await saved.text(),300));
+  }
+  throw new Error("URL-patroon niet opgeslagen: configuratie veranderde gelijktijdig.");
+}
+
 async function learnSiteFieldAdjustments(env, siteUrl, originalFields, corrections, sourceUrl) {
   const fields = ["title", "date", "location", "type", "cost"];
   const additions = fields.map(field => ({
@@ -1286,13 +1335,15 @@ async function saveEventCorrection(env, target = {}) {
     url: target.url || target.website
   }, "edit");
   let learnedRules = { learned: 0 };
-  try { learnedRules = await learnSiteFieldAdjustments(env, target.website, originalFields || {}, { title, date, location, type, cost }, improvedUrl); }
-  catch (error) { learnedRules = { learned: 0, warning: validateInput(error.message || String(error), 300) }; }
+  try { learnedRules = await learnSiteFieldAdjustments(env, target.website, originalFields || {}, { title, date, location, type, cost }, improvedUrl); learnedRules.urlPattern = await learnEventUrlPattern(env, target.website, improvedUrl, false); }
+  catch (error) { learnedRules = { ...learnedRules, warning: validateInput(error.message || String(error), 300) }; }
   return { updatedCount, corrections: { title, date, location, type, cost, website: improvedUrl }, learnedRules };
 }
 async function deleteEventFromGithub(env, target = {}) {
   // Persist the rejection first so a concurrent scrape already knows this event is unwanted.
   await saveEventFeedback(env, target, "deleted");
+  let learnedUrlPattern = { learned: 0 };
+  try { learnedUrlPattern = await learnEventUrlPattern(env, target.website || target.url || "", target.url || target.website || "", true); } catch (_) {}
   const wantedKey = clean(target.key || "");
   const wantedTitle = normalizeDeleteTitle(target.title || "");
   const wantedDate = clean(target.date || "");
@@ -1353,7 +1404,7 @@ async function deleteEventFromGithub(env, target = {}) {
       })
     });
     if (putResponse.ok) {
-      return { removedEvents, removedArchive, remainingEvents: events.length, remainingArchive: archive.length, retries: attempt - 1 };
+      return { removedEvents, removedArchive, remainingEvents: events.length, remainingArchive: archive.length, retries: attempt - 1, learnedUrlPattern };
     }
     const details = await putResponse.text();
     if (putResponse.status === 409) { lastConflict = details; continue; }
@@ -1760,7 +1811,7 @@ export default {
             startUrls: Array.isArray(old.startUrls) ? old.startUrls.map(value => validateInput(value, 500)).filter(value => /^https?:\/\//i.test(value) && sameHostUrl(value, site)).slice(0, 80) : [],
             exclusions: Array.isArray(old.exclusions) ? old.exclusions.map(value => validateInput(value, 120)).filter(Boolean).slice(0, 100) : [],
             excludedUrls: Array.isArray(old.excludedUrls) ? old.excludedUrls.map(value => validateInput(value, 500)).filter(Boolean).slice(0, 200) : [],
-            adjustments: Array.isArray(old.adjustments) ? old.adjustments.filter(item => item && ["title","date","description","location","type","cost","website"].includes(item.field)).map(item => ({ field: item.field, find: validateInput(item.find, 300), replace: validateInput(item.replace, 500) })).filter(item => item.find).slice(0, 100) : []
+            adjustments: Array.isArray(old.adjustments) ? old.adjustments.filter(item => item && ["title","date","description","location","type","cost","website"].includes(item.field)).map(item => ({ field: item.field, find: validateInput(item.find, 300), replace: validateInput(item.replace, 500) })).filter(item => item.find).slice(0, 100) : [], eventUrlPatterns: Array.isArray(old.eventUrlPatterns) ? old.eventUrlPatterns.map(value => validateInput(value, 500)).filter(Boolean).slice(0, 100) : [], excludedUrlPatterns: Array.isArray(old.excludedUrlPatterns) ? old.excludedUrlPatterns.map(value => validateInput(value, 500)).filter(Boolean).slice(0, 200) : []
           };
         }
         const changed = JSON.stringify(cleaned) !== JSON.stringify(registry.sites || {});
@@ -1803,7 +1854,7 @@ export default {
           startUrls: Array.isArray(config.startUrls) ? config.startUrls.map(value => validateInput(value, 500)).filter(value => /^https?:\/\//i.test(value) && sameHostUrl(value, site)).slice(0, 80) : [],
           exclusions: Array.isArray(config.exclusions) ? config.exclusions.map(value => validateInput(value, 120)).filter(Boolean).slice(0, 100) : [],
           excludedUrls: Array.isArray(config.excludedUrls) ? config.excludedUrls.map(value => validateInput(value, 500)).filter(Boolean).slice(0, 200) : [],
-          adjustments: Array.isArray(config.adjustments) ? config.adjustments.filter(item => item && ["title","date","description","location","type","cost","website"].includes(item.field)).map(item => ({ field: item.field, find: validateInput(item.find, 300), replace: validateInput(item.replace, 500) })).filter(item => item.find).slice(0, 100) : []
+          adjustments: Array.isArray(config.adjustments) ? config.adjustments.filter(item => item && ["title","date","description","location","type","cost","website"].includes(item.field)).map(item => ({ field: item.field, find: validateInput(item.find, 300), replace: validateInput(item.replace, 500) })).filter(item => item.find).slice(0, 100) : [], eventUrlPatterns: Array.isArray(config.eventUrlPatterns) ? config.eventUrlPatterns.map(value => validateInput(value, 500)).filter(Boolean).slice(0, 100) : [], excludedUrlPatterns: Array.isArray(config.excludedUrlPatterns) ? config.excludedUrlPatterns.map(value => validateInput(value, 500)).filter(Boolean).slice(0, 200) : []
         };
         const active = new Set(activeSites);
         for (const configuredSite of Object.keys(registry.sites)) if (!active.has(configuredSite)) delete registry.sites[configuredSite];
