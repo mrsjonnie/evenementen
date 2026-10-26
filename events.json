@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-26T11:22:20+00:00",
+  "updatedAt": "2026-10-26T11:22:31+00:00",
   "events": [
     {
       "date": "2026-10-26",
@@ -2778,6 +2778,21 @@
     },
     {
       "date": "2026-10-28",
+      "time": "11:00",
+      "title": "Bekijk concert",
+      "type": "Concert",
+      "location": "Concertgebouw Amsterdam",
+      "locationLink": "",
+      "website": "https://www.concertgebouw.nl/concerten/45913707-zing-cirkel-concertgebouw",
+      "source": "concertgebouw.nl",
+      "discoverySource": "Website",
+      "description": "Meer informatie staat op concertgebouw.nl.",
+      "cost": "",
+      "image": "",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-28",
       "time": "",
       "title": "Bestel kaarten",
       "type": "Concert",
@@ -2805,6 +2820,21 @@
       "cost": "",
       "image": "",
       "isNew": false
+    },
+    {
+      "date": "2026-10-28",
+      "time": "",
+      "title": "Bookmark",
+      "type": "Concert",
+      "location": "Concertgebouw Amsterdam",
+      "locationLink": "",
+      "website": "https://www.concertgebouw.nl/concerten/45913707-zing-cirkel-concertgebouw",
+      "source": "concertgebouw.nl",
+      "discoverySource": "Website",
+      "description": "Bewaar dit concert",
+      "cost": "",
+      "image": "",
+      "isNew": true
     },
     {
       "date": "2026-10-28",
@@ -3025,6 +3055,21 @@
       "isNew": false
     },
     {
+      "date": "2026-10-28",
+      "time": "",
+      "title": "zang",
+      "type": "Concert",
+      "location": "Zing-Cirkel Concertgebouw vindt plaats op de volgende data:",
+      "locationLink": "",
+      "website": "https://www.concertgebouw.nl/concerten/45913707-zing-cirkel-concertgebouw",
+      "source": "concertgebouw.nl",
+      "discoverySource": "Website",
+      "description": "Dit concert heeft geen pauze Kracht en vreugde door samen te zingen: workshops voor mensen met geheugenproblemen of uitdagingen in het brein én hun mantelzorgers. Tijdens inspirerende sessies gaat Maartje de Lint samen met ongeveer 25 senioren en hun mantelzorgers zingen.",
+      "cost": "",
+      "image": "",
+      "isNew": true
+    },
+    {
       "date": "2026-10-29",
       "time": "20:15",
       "title": "Academie van het Concertgebouworkest",
@@ -3138,6 +3183,81 @@
     {
       "date": "2026-10-30",
       "time": "",
+      "title": "Bekijk alle musici",
+      "type": "Concert",
+      "location": "de iconische muzikant die in 2026 honderd geworden zou zijn. Eerbetoon",
+      "locationLink": "",
+      "website": "https://www.concertgebouw.nl/concerten/43931217-flat-earth-society-the-coltrane-mutations",
+      "source": "concertgebouw.nl",
+      "discoverySource": "Website",
+      "description": "Dit concert heeft geen pauze Het Flat Earth Society Orchestra (FES) vertegenwoordigt wereldwijd de Belgische eigenzinnigheid. Vanavond doen ze dat in een uniek eerbetoon aan John Coltrane, de iconische muzikant die in 2026 honderd geworden zou zijn. Eerbetoon The Coltrane Mutations",
+      "cost": "",
+      "image": "",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-30",
+      "time": "",
+      "title": "Bekijk ook de pagina met",
+      "type": "Film",
+      "location": "Concertgebouw Amsterdam",
+      "locationLink": "",
+      "website": "https://www.concertgebouw.nl/concerten/43931217-flat-earth-society-the-coltrane-mutations",
+      "source": "concertgebouw.nl",
+      "discoverySource": "Website",
+      "description": "informatie over versterkte concerten Flat Earth Society Orchestra Het Flat Earth Society Orchestra (FES) combineert op harmonieuze wijze levendig surrealisme met gepolijste vaardigheid en verlegt daarmee voortdurend de grenzen van de Belgische creativiteit. Als wereldwijde vertegenwoordiger van de unieke Belgische eige",
+      "cost": "",
+      "image": "",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-30",
+      "time": "20:15",
+      "title": "Bestel kaarten",
+      "type": "Concert",
+      "location": "Concertgebouw Amsterdam",
+      "locationLink": "",
+      "website": "https://www.concertgebouw.nl/concerten/43931217-flat-earth-society-the-coltrane-mutations",
+      "source": "concertgebouw.nl",
+      "discoverySource": "Website",
+      "description": "Bewaar dit concert",
+      "cost": "",
+      "image": "",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-30",
+      "time": "",
+      "title": "Bewaar dit concert",
+      "type": "Concert",
+      "location": "Concertgebouw Amsterdam",
+      "locationLink": "",
+      "website": "https://www.concertgebouw.nl/concerten/43931217-flat-earth-society-the-coltrane-mutations",
+      "source": "concertgebouw.nl",
+      "discoverySource": "Website",
+      "description": "Flat Earth Society: The Coltrane Mutations Flat Earth Society: The Coltrane Mutations",
+      "cost": "",
+      "image": "",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-30",
+      "time": "20:15",
+      "title": "Bookmark",
+      "type": "Concert",
+      "location": "Concertgebouw Amsterdam",
+      "locationLink": "",
+      "website": "https://www.concertgebouw.nl/concerten/43931217-flat-earth-society-the-coltrane-mutations",
+      "source": "concertgebouw.nl",
+      "discoverySource": "Website",
+      "description": "Bewaar dit concert",
+      "cost": "",
+      "image": "",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-30",
+      "time": "",
       "title": "Chicco",
       "type": "Concert",
       "location": "Simplon Groningen",
@@ -3153,6 +3273,21 @@
     {
       "date": "2026-10-30",
       "time": "",
+      "title": "Dit concert heeft geen pauze",
+      "type": "Concert",
+      "location": "de iconische muzikant die in 2026 honderd geworden zou zijn. Eerbetoon",
+      "locationLink": "",
+      "website": "https://www.concertgebouw.nl/concerten/43931217-flat-earth-society-the-coltrane-mutations",
+      "source": "concertgebouw.nl",
+      "discoverySource": "Website",
+      "description": "Het Flat Earth Society Orchestra (FES) vertegenwoordigt wereldwijd de Belgische eigenzinnigheid. Vanavond doen ze dat in een uniek eerbetoon aan John Coltrane, de iconische muzikant die in 2026 honderd geworden zou zijn. Eerbetoon The Coltrane Mutations is typisch FES: uniek, scherpzinnig en onverschrokken. Met eigen a",
+      "cost": "",
+      "image": "",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-30",
+      "time": "",
       "title": "Flaire Support: Djeezie & IDA",
       "type": "Concert",
       "location": "ik heb een puber!’ LIVE",
@@ -3163,6 +3298,21 @@
       "description": "Support: Djeezie & IDA Dansbare synthpop met elektronische invloeden Metalicoon en succesvolle soloartiest brengt krachtige persoonlijke show Kluun en Yvanka van der Zwaan Best of….’Help, ik heb een puber!’ LIVE Hilarische, herkenbare en ontroerende puberverhalen na 100 podcastafleveringen",
       "cost": "",
       "image": "https://www.spotgroningen.nl/wp-content/uploads/2026/03/Flaire-Presspic-PREF-lores-225x300.jpg",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-30",
+      "time": "",
+      "title": "Flat Earth Society Orchestra",
+      "type": "Film",
+      "location": "Concertgebouw Amsterdam",
+      "locationLink": "",
+      "website": "https://www.concertgebouw.nl/concerten/43931217-flat-earth-society-the-coltrane-mutations",
+      "source": "concertgebouw.nl",
+      "discoverySource": "Website",
+      "description": "Het Flat Earth Society Orchestra (FES) combineert op harmonieuze wijze levendig surrealisme met gepolijste vaardigheid en verlegt daarmee voortdurend de grenzen van de Belgische creativiteit. Als wereldwijde vertegenwoordiger van de unieke Belgische eigenzinnigheid heeft FES onvergetelijke indrukken achtergelaten met o",
+      "cost": "",
+      "image": "",
       "isNew": true
     },
     {
@@ -3227,6 +3377,21 @@
     },
     {
       "date": "2026-10-30",
+      "time": "20:15",
+      "title": "Kleine Zaal",
+      "type": "Concert",
+      "location": "Kleine Zaal",
+      "locationLink": "",
+      "website": "https://www.concertgebouw.nl/concerten/43931217-flat-earth-society-the-coltrane-mutations",
+      "source": "concertgebouw.nl",
+      "discoverySource": "Website",
+      "description": "Bewaar dit concert",
+      "cost": "",
+      "image": "",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-30",
       "time": "",
       "title": "Kluun en Yvanka van der Zwaan Best of….’Help, ik heb een puber!’ LIVE",
       "type": "Activiteit",
@@ -3257,6 +3422,21 @@
     },
     {
       "date": "2026-10-30",
+      "time": "",
+      "title": "Rob Banken",
+      "type": "Concert",
+      "location": "basklarinet",
+      "locationLink": "",
+      "website": "https://www.concertgebouw.nl/concerten/43931217-flat-earth-society-the-coltrane-mutations",
+      "source": "concertgebouw.nl",
+      "discoverySource": "Website",
+      "description": "klarinet, basklarinet Bekijk alle musici Dit concert heeft geen pauze Het Flat Earth Society Orchestra (FES) vertegenwoordigt wereldwijd de Belgische eigenzinnigheid. Vanavond doen ze dat in een uniek eerbetoon aan John Coltrane, de iconische muzikant die in 2026 honderd geworden zou zijn. Eerbetoon",
+      "cost": "",
+      "image": "",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-30",
       "time": "22:00",
       "title": "WAVEGRAVE Elysium Graaf Griezel // Fladdermus // DJ Stefan",
       "type": "Dans",
@@ -3269,6 +3449,81 @@
       "cost": "",
       "image": "https://www.vera-groningen.nl/wp/../vera/assets/img/logo-black.svg",
       "isNew": false
+    },
+    {
+      "date": "2026-10-30",
+      "time": "",
+      "title": "informatie over versterkte concerten",
+      "type": "Film",
+      "location": "Concertgebouw Amsterdam",
+      "locationLink": "",
+      "website": "https://www.concertgebouw.nl/concerten/43931217-flat-earth-society-the-coltrane-mutations",
+      "source": "concertgebouw.nl",
+      "discoverySource": "Website",
+      "description": "Flat Earth Society Orchestra Het Flat Earth Society Orchestra (FES) combineert op harmonieuze wijze levendig surrealisme met gepolijste vaardigheid en verlegt daarmee voortdurend de grenzen van de Belgische creativiteit. Als wereldwijde vertegenwoordiger van de unieke Belgische eigenzinnigheid heeft FES onvergetelijke",
+      "cost": "",
+      "image": "",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-30",
+      "time": "",
+      "title": "klarinet, basklarinet",
+      "type": "Concert",
+      "location": "basklarinet",
+      "locationLink": "",
+      "website": "https://www.concertgebouw.nl/concerten/43931217-flat-earth-society-the-coltrane-mutations",
+      "source": "concertgebouw.nl",
+      "discoverySource": "Website",
+      "description": "Bekijk alle musici Dit concert heeft geen pauze Het Flat Earth Society Orchestra (FES) vertegenwoordigt wereldwijd de Belgische eigenzinnigheid. Vanavond doen ze dat in een uniek eerbetoon aan John Coltrane, de iconische muzikant die in 2026 honderd geworden zou zijn. Eerbetoon",
+      "cost": "",
+      "image": "",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-30",
+      "time": "",
+      "title": "tenorsaxofoon",
+      "type": "Concert",
+      "location": "basklarinet",
+      "locationLink": "",
+      "website": "https://www.concertgebouw.nl/concerten/43931217-flat-earth-society-the-coltrane-mutations",
+      "source": "concertgebouw.nl",
+      "discoverySource": "Website",
+      "description": "klarinet, basklarinet Bekijk alle musici Dit concert heeft geen pauze",
+      "cost": "",
+      "image": "",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-30",
+      "time": "",
+      "title": "vanaf 19,00",
+      "type": "Concert",
+      "location": "00",
+      "locationLink": "",
+      "website": "https://www.concertgebouw.nl/concerten/43931217-flat-earth-society-the-coltrane-mutations",
+      "source": "concertgebouw.nl",
+      "discoverySource": "Website",
+      "description": "Bewaar dit concert",
+      "cost": "",
+      "image": "",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-30",
+      "time": "",
+      "title": "vr 30 okt Flat Earth Society: The Coltrane Mutations",
+      "type": "Concert",
+      "location": "Concertgebouw Amsterdam",
+      "locationLink": "",
+      "website": "https://www.concertgebouw.nl/concerten/43931217-flat-earth-society-the-coltrane-mutations",
+      "source": "concertgebouw.nl",
+      "discoverySource": "Website",
+      "description": "Flat Earth Society: The Coltrane Mutations",
+      "cost": "",
+      "image": "",
+      "isNew": true
     },
     {
       "date": "2026-10-31",
@@ -3332,6 +3587,21 @@
     },
     {
       "date": "2026-10-31",
+      "time": "20:15",
+      "title": "Meesters op de gitaar: Carlotta Dalia - van Bach tot Castelnuovo-Tedesco",
+      "type": "Concert",
+      "location": "Concertgebouw Amsterdam",
+      "locationLink": "",
+      "website": "https://www.concertgebouw.nl/concerten/37899480-meesters-op-de-gitaar-carlotta-dalia---van-bach-tot-castelnuovo-tedesco",
+      "source": "concertgebouw.nl",
+      "discoverySource": "Website",
+      "description": "Rossiniana V, op. 123 Castelnuovo-Tedesco Capriccio nr. 18, op. 195 Informatie en bestellen Informatie en bestellen",
+      "cost": "",
+      "image": "https://d35w1qwxagl33g.cloudfront.net/production/_908x545_crop_center-center_none/Carlotta-Dalia.png?stamp=2603200206&tag=sm",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-31",
       "time": "",
       "title": "Michael Prins Play With Fire Tour + support: DEHAZE",
       "type": "Activiteit",
@@ -3343,6 +3613,21 @@
       "description": "Play With Fire Tour + support: DEHAZE Singer-songwriter bekend van 'Close to You' komt met nieuw werk",
       "cost": "",
       "image": "https://www.spotgroningen.nl/wp-content/uploads/2026/02/Voorkeur-MichaelPrins_03A08359_WEB-e1772019752276-300x169.jpg",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-31",
+      "time": "14:15",
+      "title": "Oosterse klanken van Sheherazade & Darvishi",
+      "type": "Concert",
+      "location": "Concertgebouw Amsterdam",
+      "locationLink": "",
+      "website": "https://www.concertgebouw.nl/concerten/45743534-oosterse-klanken-van-sheherazade-darvishi",
+      "source": "concertgebouw.nl",
+      "discoverySource": "Website",
+      "description": "Sheherazade, op. 35 'Symfonische suite naar Duizend-en-een-nacht' Informatie en bestellen Informatie en bestellen",
+      "cost": "",
+      "image": "https://d35w1qwxagl33g.cloudfront.net/production/_908x545_crop_center-center_none/NTRZM-2026-10-31-Nicolas-Altstaedt-c-Marco-Borggreve_01-web.jpg?stamp=2603201335&tag=sm",
       "isNew": true
     },
     {
@@ -3374,6 +3659,21 @@
       "cost": "",
       "image": "https://www.vera-groningen.nl/wp/../vera/assets/img/logo-black.svg",
       "isNew": false
+    },
+    {
+      "date": "2026-10-31",
+      "time": "20:15",
+      "title": "Stravinsky's Le sacre du printemps en Wynton Marsalis’ Celloconcert",
+      "type": "Concert",
+      "location": "Concertgebouw Amsterdam",
+      "locationLink": "",
+      "website": "https://www.concertgebouw.nl/concerten/45550450-stravinskys-le-sacre-du-printemps-en-wynton-marsalis-celloconcert",
+      "source": "concertgebouw.nl",
+      "discoverySource": "Website",
+      "description": "Le sacre du printemps, tableaux de la Russie païenne en deux parties, K 015 Informatie en bestellen Informatie en bestellen",
+      "cost": "",
+      "image": "https://d35w1qwxagl33g.cloudfront.net/production/_908x545_crop_center-center_none/26C44S-Hannu-Lintu-Marco-Borggreve-web.jpeg?stamp=2603191323&tag=sm",
+      "isNew": true
     },
     {
       "date": "2026-10-31",
@@ -4175,6 +4475,21 @@
     {
       "date": "2026-11-09",
       "time": "",
+      "title": "Ben Folds",
+      "type": "Concert",
+      "location": "Concertgebouw Amsterdam",
+      "locationLink": "",
+      "website": "https://www.concertgebouw.nl/concerten/45913707-zing-cirkel-concertgebouw",
+      "source": "concertgebouw.nl",
+      "discoverySource": "Website",
+      "description": "Meer informatie staat op concertgebouw.nl.",
+      "cost": "",
+      "image": "",
+      "isNew": true
+    },
+    {
+      "date": "2026-11-09",
+      "time": "",
       "title": "Caro Returning to Innocence",
       "type": "Activiteit",
       "location": "sensueel, gelaagd",
@@ -4518,6 +4833,21 @@
       "isNew": true
     },
     {
+      "date": "2026-11-25",
+      "time": "11:00",
+      "title": "Bekijk concert",
+      "type": "Concert",
+      "location": "Concertgebouw Amsterdam",
+      "locationLink": "",
+      "website": "https://www.concertgebouw.nl/concerten/45913706-zing-cirkel-concertgebouw",
+      "source": "concertgebouw.nl",
+      "discoverySource": "Website",
+      "description": "Meer informatie staat op concertgebouw.nl.",
+      "cost": "",
+      "image": "",
+      "isNew": true
+    },
+    {
       "date": "2026-11-26",
       "time": "",
       "title": "Mail for Sil + Brighid",
@@ -4713,6 +5043,21 @@
       "isNew": true
     },
     {
+      "date": "2026-11-29",
+      "time": "",
+      "title": "Ben Folds",
+      "type": "Concert",
+      "location": "Concertgebouw Amsterdam",
+      "locationLink": "",
+      "website": "https://www.concertgebouw.nl/concerten/38886334-ben-folds",
+      "source": "concertgebouw.nl",
+      "discoverySource": "Website",
+      "description": "Meer informatie staat op concertgebouw.nl.",
+      "cost": "",
+      "image": "https://d35w1qwxagl33g.cloudfront.net/production/_908x545_crop_center-center_none/Ben-Folds-Portrait-Primary-Press-Shot.png?stamp=2511280951&tag=sm",
+      "isNew": true
+    },
+    {
       "date": "2026-12-02",
       "time": "",
       "title": "Iván Fischer leidt Stravinsky's Vuurvogel bij het Concertgebouworkest",
@@ -4775,6 +5120,51 @@
     {
       "date": "2026-12-05",
       "time": "",
+      "title": "12e jaarlijkse Chanoekaconcert – Vrijheid!",
+      "type": "Concert",
+      "location": "Concertgebouw Amsterdam",
+      "locationLink": "",
+      "website": "https://www.concertgebouw.nl/concerten/46013085-12e-jaarlijkse-chanoekaconcert---vrijheid",
+      "source": "concertgebouw.nl",
+      "discoverySource": "Website",
+      "description": "Meer informatie staat op concertgebouw.nl.",
+      "cost": "",
+      "image": "https://d35w1qwxagl33g.cloudfront.net/production/_908x545_crop_center-center_none/Jewish-Amsterdam-Chember-Ensemble-c-DPhoto-Dirk-Spits.jpg?stamp=2607081141&tag=sm",
+      "isNew": true
+    },
+    {
+      "date": "2026-12-05",
+      "time": "",
+      "title": "Kurt Elling &",
+      "type": "Concert",
+      "location": "Concertgebouw Amsterdam",
+      "locationLink": "",
+      "website": "https://www.concertgebouw.nl/concerten/45913707-zing-cirkel-concertgebouw",
+      "source": "concertgebouw.nl",
+      "discoverySource": "Website",
+      "description": "Jazz Orchestra of the Concertgebouw",
+      "cost": "",
+      "image": "",
+      "isNew": true
+    },
+    {
+      "date": "2026-12-05",
+      "time": "",
+      "title": "Kurt Elling & Jazz Orchestra of the Concertgebouw",
+      "type": "Concert",
+      "location": "Kurt Elling & Jazz Orchestra of the Concertgebouw",
+      "locationLink": "",
+      "website": "https://www.concertgebouw.nl/concerten/45913707-zing-cirkel-concertgebouw",
+      "source": "concertgebouw.nl",
+      "discoverySource": "Website",
+      "description": "12e jaarlijkse Chanoekaconcert – Vrijheid! Kerstmatinee: Sing-Along met Loes Luca Overige informatie",
+      "cost": "",
+      "image": "",
+      "isNew": true
+    },
+    {
+      "date": "2026-12-05",
+      "time": "",
       "title": "Lézard",
       "type": "Concert",
       "location": "Simplon Groningen",
@@ -4800,6 +5190,21 @@
       "description": "Jasper van der Veen // Jacob Adriani // Tim Alpherts // Meeuw Roovers",
       "cost": "",
       "image": "https://simplon.nl/wp-content/uploads/2026/06/1280x800_DEC2026_v01.jpg",
+      "isNew": true
+    },
+    {
+      "date": "2026-12-09",
+      "time": "",
+      "title": "Kerstmatinee: Sing-Along met Loes Luca Overige informatie",
+      "type": "Concert",
+      "location": "Concertgebouw Amsterdam",
+      "locationLink": "",
+      "website": "https://www.concertgebouw.nl/concerten/45913707-zing-cirkel-concertgebouw",
+      "source": "concertgebouw.nl",
+      "discoverySource": "Website",
+      "description": "Veelgestelde vragen Verhuur Pers Info Concertvrienden en Entrée Maandblad Preludium Route & Parkeren Over ons Organisatie Vacatures Contact Veelgestelde vragen Verhuur Pers Concertvrienden en Entrée Maandblad Preludium Route & Parkeren Organisatie Vacatures Contact Volg ons Geluidsfragmenten mogelijk gemaakt door Class",
+      "cost": "",
+      "image": "",
       "isNew": true
     },
     {
@@ -4830,6 +5235,36 @@
       "description": "Dé remedie tegen je winterdepressie",
       "cost": "",
       "image": "https://simplon.nl/wp-content/uploads/2026/05/sl-kersttour-2026-a3-bg-1600x900.png",
+      "isNew": true
+    },
+    {
+      "date": "2026-12-15",
+      "time": "",
+      "title": "Ben Folds",
+      "type": "Concert",
+      "location": "Kurt Elling & Jazz Orchestra of the Concertgebouw",
+      "locationLink": "",
+      "website": "https://www.concertgebouw.nl/concerten/45913707-zing-cirkel-concertgebouw",
+      "source": "concertgebouw.nl",
+      "discoverySource": "Website",
+      "description": "Kurt Elling & Jazz Orchestra of the Concertgebouw 12e jaarlijkse Chanoekaconcert – Vrijheid!",
+      "cost": "",
+      "image": "",
+      "isNew": true
+    },
+    {
+      "date": "2026-12-15",
+      "time": "",
+      "title": "Kurt Elling & Jazz Orchestra of the Concertgebouw",
+      "type": "Concert",
+      "location": "Kurt Elling & Jazz Orchestra of the Concertgebouw",
+      "locationLink": "",
+      "website": "https://www.concertgebouw.nl/concerten/43931229-kurt-elling-jazz-orchestra-of-the-concertgebouw",
+      "source": "concertgebouw.nl",
+      "discoverySource": "Website",
+      "description": "Meer informatie staat op concertgebouw.nl.",
+      "cost": "",
+      "image": "https://d35w1qwxagl33g.cloudfront.net/production/_908x545_crop_center-center_none/Kurt-Elling-c-Anna-Webber.png?stamp=2602271123&tag=sm",
       "isNew": true
     },
     {
@@ -4865,6 +5300,36 @@
     {
       "date": "2026-12-19",
       "time": "",
+      "title": "12e jaarlijkse Chanoekaconcert – Vrijheid!",
+      "type": "Concert",
+      "location": "Concertgebouw Amsterdam",
+      "locationLink": "",
+      "website": "https://www.concertgebouw.nl/concerten/45913707-zing-cirkel-concertgebouw",
+      "source": "concertgebouw.nl",
+      "discoverySource": "Website",
+      "description": "Kerstmatinee: Sing-Along met Loes Luca Overige informatie Veelgestelde vragen",
+      "cost": "",
+      "image": "",
+      "isNew": true
+    },
+    {
+      "date": "2026-12-19",
+      "time": "",
+      "title": "Kerstmatinee: Sing-Along met Loes Luca",
+      "type": "Concert",
+      "location": "Concertgebouw Amsterdam",
+      "locationLink": "",
+      "website": "https://www.concertgebouw.nl/concerten/43931230-kerstmatinee-sing-along-met-loes-luca",
+      "source": "concertgebouw.nl",
+      "discoverySource": "Website",
+      "description": "Meer informatie staat op concertgebouw.nl.",
+      "cost": "",
+      "image": "https://d35w1qwxagl33g.cloudfront.net/production/_908x545_crop_center-center_none/loes-luca-sing-along.png?stamp=2610131429&tag=sm",
+      "isNew": true
+    },
+    {
+      "date": "2026-12-19",
+      "time": "",
       "title": "Tramhaus",
       "type": "Concert",
       "location": "VERA Groningen",
@@ -4875,6 +5340,21 @@
       "description": "SATURDAY SHOW Saturday 19 December Tramhaus support Raw postpunk from Rotterdam In 2023 wonnen ze de VERA Poll, en ook in 2026 blijft deze band een vaste publieksfavoriet. Lees meer Koop ticket",
       "cost": "",
       "image": "https://www.vera-groningen.nl/wp/../vera/assets/img/logo-black.svg",
+      "isNew": true
+    },
+    {
+      "date": "2026-12-23",
+      "time": "11:00",
+      "title": "Bekijk concert",
+      "type": "Concert",
+      "location": "Concertgebouw Amsterdam",
+      "locationLink": "",
+      "website": "https://www.concertgebouw.nl/concerten/45913704-zing-cirkel-concertgebouw",
+      "source": "concertgebouw.nl",
+      "discoverySource": "Website",
+      "description": "Meer informatie staat op concertgebouw.nl.",
+      "cost": "",
+      "image": "",
       "isNew": true
     },
     {
@@ -5013,6 +5493,21 @@
       "isNew": true
     },
     {
+      "date": "2027-01-20",
+      "time": "11:00",
+      "title": "Bekijk concert",
+      "type": "Concert",
+      "location": "Concertgebouw Amsterdam",
+      "locationLink": "",
+      "website": "https://www.concertgebouw.nl/concerten/45913702-zing-cirkel-concertgebouw",
+      "source": "concertgebouw.nl",
+      "discoverySource": "Website",
+      "description": "Meer informatie staat op concertgebouw.nl.",
+      "cost": "",
+      "image": "",
+      "isNew": true
+    },
+    {
       "date": "2027-01-22",
       "time": "",
       "title": "Klezmagic",
@@ -5115,6 +5610,21 @@
       "description": "Monday 15 February Madra Salach IRL support Koop ticket",
       "cost": "",
       "image": "https://www.vera-groningen.nl/wp/../vera/assets/img/logo-black.svg",
+      "isNew": true
+    },
+    {
+      "date": "2027-02-17",
+      "time": "11:00",
+      "title": "Bekijk concert",
+      "type": "Concert",
+      "location": "Concertgebouw Amsterdam",
+      "locationLink": "",
+      "website": "https://www.concertgebouw.nl/concerten/45913700-zing-cirkel-concertgebouw",
+      "source": "concertgebouw.nl",
+      "discoverySource": "Website",
+      "description": "Meer informatie staat op concertgebouw.nl.",
+      "cost": "",
+      "image": "",
       "isNew": true
     },
     {
@@ -5235,6 +5745,21 @@
       "description": "Dark pop and melancholic electronica",
       "cost": "",
       "image": "https://simplon.nl/wp-content/uploads/2026/09/Dominic-Donner-kleiner-1320x900.png",
+      "isNew": true
+    },
+    {
+      "date": "2027-03-17",
+      "time": "11:00",
+      "title": "Bekijk concert",
+      "type": "Concert",
+      "location": "Concertgebouw Amsterdam",
+      "locationLink": "",
+      "website": "https://www.concertgebouw.nl/concerten/45913697-zing-cirkel-concertgebouw",
+      "source": "concertgebouw.nl",
+      "discoverySource": "Website",
+      "description": "Meer informatie staat op concertgebouw.nl.",
+      "cost": "",
+      "image": "",
       "isNew": true
     },
     {
@@ -5448,6 +5973,21 @@
       "isNew": true
     },
     {
+      "date": "2027-04-21",
+      "time": "11:00",
+      "title": "Bekijk concert",
+      "type": "Concert",
+      "location": "Concertgebouw Amsterdam",
+      "locationLink": "",
+      "website": "https://www.concertgebouw.nl/concerten/45913696-zing-cirkel-concertgebouw",
+      "source": "concertgebouw.nl",
+      "discoverySource": "Website",
+      "description": "Meer informatie staat op concertgebouw.nl.",
+      "cost": "",
+      "image": "",
+      "isNew": true
+    },
+    {
       "date": "2027-04-24",
       "time": "",
       "title": "Blackbird",
@@ -5600,6 +6140,21 @@
       "isNew": true
     },
     {
+      "date": "2027-05-09",
+      "time": "10:50",
+      "title": "Tijdschema ochtendsessies: 10.50 uur deuren open 11.00-11.30 uur koffie/thee 11.30-12.30 uur",
+      "type": "Concert",
+      "location": "Concertgebouw Amsterdam",
+      "locationLink": "",
+      "website": "https://www.concertgebouw.nl/concerten/45913707-zing-cirkel-concertgebouw",
+      "source": "concertgebouw.nl",
+      "discoverySource": "Website",
+      "description": "workshop 12.30-13.00 uur koffie/thee Tijdschema middagsessies: 13.50 uur deuren open 14.00-14.30 uur koffie/thee 14.30-15.30 uur workshop 15.30-16.00 uur koffie/thee Let op: zowel de deelnemer als de mantelzorger heeft een toegangskaart nodig. Genre Vocaal, Overig Onderdeel van serie Zing-Cirkel Concertgebouw - middag",
+      "cost": "",
+      "image": "",
+      "isNew": true
+    },
+    {
       "date": "2027-05-14",
       "time": "",
       "title": "Codeine",
@@ -5627,6 +6182,51 @@
       "description": "Eerlijke en catchy popliedjes",
       "cost": "",
       "image": "https://simplon.nl/wp-content/uploads/2026/09/persfoto-3-nienke-leone-rubydijt-1600x900.jpg",
+      "isNew": true
+    },
+    {
+      "date": "2027-05-19",
+      "time": "14:00",
+      "title": "Bekijk alle data",
+      "type": "Concert",
+      "location": "Concertgebouw Amsterdam",
+      "locationLink": "",
+      "website": "https://www.concertgebouw.nl/concerten/45913707-zing-cirkel-concertgebouw",
+      "source": "concertgebouw.nl",
+      "discoverySource": "Website",
+      "description": "Meer informatie staat op concertgebouw.nl.",
+      "cost": "",
+      "image": "",
+      "isNew": true
+    },
+    {
+      "date": "2027-05-19",
+      "time": "11:00",
+      "title": "Bekijk concert",
+      "type": "Concert",
+      "location": "Concertgebouw Amsterdam",
+      "locationLink": "",
+      "website": "https://www.concertgebouw.nl/concerten/45913694-zing-cirkel-concertgebouw",
+      "source": "concertgebouw.nl",
+      "discoverySource": "Website",
+      "description": "Meer informatie staat op concertgebouw.nl.",
+      "cost": "",
+      "image": "",
+      "isNew": true
+    },
+    {
+      "date": "2027-05-19",
+      "time": "13:50",
+      "title": "Tijdschema middagsessies:",
+      "type": "Concert",
+      "location": "Concertgebouw Amsterdam",
+      "locationLink": "",
+      "website": "https://www.concertgebouw.nl/concerten/45913707-zing-cirkel-concertgebouw",
+      "source": "concertgebouw.nl",
+      "discoverySource": "Website",
+      "description": "13.50 uur deuren open 14.00-14.30 uur koffie/thee 14.30-15.30 uur workshop 15.30-16.00 uur koffie/thee",
+      "cost": "",
+      "image": "",
       "isNew": true
     },
     {
@@ -6031,1089 +6631,16 @@
       "newCount": 9,
       "durationSeconds": 10.05,
       "timedOut": true
+    },
+    {
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "count": 40,
+      "newCount": 40,
+      "durationSeconds": 8.17,
+      "timedOut": false
     }
   ],
   "rawLog": [
-    {
-      "source": "SerpAPI",
-      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
-      "title": "Ontdek de klanken van het Hogeland",
-      "date": "",
-      "url": "https://tevoetonline.nl/nieuws/ontdek-de-klanken-van-het-hogeland",
-      "status": "genegeerd",
-      "rawText": "Het evenement is uitgegroeid tot dé jaarlijkse ontdekkingstocht door Groningen waarbij alle zintuigen worden geprikkeld. Bovendien gaan ..."
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
-      "title": "Popronde Groningen 2026",
-      "date": "",
-      "url": "https://www.nieuwemensenlerenkennen.nl/popronde-groningen-2026-264538",
-      "status": "genegeerd",
-      "rawText": "Popronde Groningen 2026. Groningen - Groningen 40 - 65 jaar €. Woodstock festival in Zyfflich (Dld) vr 4 jun | Zyfflich, Dld | 8 - 12 | 40 - 65 jr | 19.00 - 1. ..."
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
-      "title": "Groningen, Nederland Evenementen, kalender en tickets",
-      "date": "",
-      "url": "https://www.eventbrite.be/d/netherlands--groningen/events/",
-      "status": "genegeerd",
-      "rawText": "Bekijk de nieuwste evenementen in Groningen. Of je er nu al lang of nog maar net woont, of op doorreis bent, er is geen gebrek aan unieke dingen om te doen."
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
-      "title": "Music in Concert",
-      "date": "",
-      "url": "https://stayingroningen.com/events/music-in-concert",
-      "status": "genegeerd",
-      "rawText": "Met onder meer muziek van Frank Sinatra, Annie M.G. Schmidt en muziek uit de musicals Miss Saigon, Les Misérables en The Lion King, belooft dit een waar ..."
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
-      "title": "Urban Walk",
-      "date": "",
-      "url": "https://discovergroningen.com/event/urban-walk/",
-      "status": "genegeerd",
-      "rawText": "Op zondag 21 november kun je meewandelen met de Urban Walk: een unieke stadswandeling langs en door de onontdekte highlights van Groningen."
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
-      "title": "Tim Knol & The Wandering Hearts Koncert",
-      "date": "",
-      "url": "https://festivaly.eu/tim-knol-the-wandering-hearts-de-oosterpoort-groningen-2026",
-      "status": "genegeerd",
-      "rawText": "Informace, program a vstupenky na koncert Tim Knol & The Wandering Hearts, který se koná 4.10.2026 20:30 (De Oosterpoort, Groningen)."
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
-      "title": "Schnitgerfestival: wandelconcert",
-      "date": "",
-      "url": "https://www.groningenorgelland.nl/nieuw/event/schnitgerfestival-wandelconcert/",
-      "status": "genegeerd",
-      "rawText": "Wandelconcert met Erwin Wiersinga op het Martiniorgel en Leonore Lub op het Akerk-orgel. Aanvullende informatie. Toegang - € (standaard) 27.50."
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
-      "title": "https://gemeenteraad.groningen.nl/Evenement/2026/05/03",
-      "date": "",
-      "url": "https://gemeenteraad.groningen.nl/Evenement/2026/05/03",
-      "status": "genegeerd",
-      "rawText": "No information is available for this page."
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
-      "title": "Zoekopdracht 2/2",
-      "date": "",
-      "url": "",
-      "status": "zoeken",
-      "rawText": "site:www.visitgroningen.nl \"Groningen\" agenda programma evenement concert theater film 2026-10-26 9999-12-31"
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
-      "title": "SerpAPI timeout/fout",
-      "date": "",
-      "url": "",
-      "status": "fout",
-      "rawText": "The operation was aborted"
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://simplon.nl/",
-      "title": "Zoekopdracht 1/2",
-      "date": "",
-      "url": "",
-      "status": "zoeken",
-      "rawText": "site:simplon.nl agenda programma agenda programma evenement concert Groningen 2026-10-26 9999-12-31"
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://simplon.nl/",
-      "title": "SerpAPI timeout/fout",
-      "date": "",
-      "url": "",
-      "status": "fout",
-      "rawText": "The operation was aborted"
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://simplon.nl/",
-      "title": "Zoekopdracht 2/2",
-      "date": "",
-      "url": "",
-      "status": "zoeken",
-      "rawText": "site:simplon.nl \"Groningen\" agenda programma evenement concert theater film 2026-10-26 9999-12-31"
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.martiniplaza.nl/nl/agenda",
-      "title": "Zoekopdracht 1/2",
-      "date": "",
-      "url": "",
-      "status": "zoeken",
-      "rawText": "site:www.martiniplaza.nl/nl/agenda nl agenda agenda programma evenement concert Groningen 2026-10-26 9999-12-31"
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.martiniplaza.nl/nl/agenda",
-      "title": "SerpAPI timeout/fout",
-      "date": "",
-      "url": "",
-      "status": "fout",
-      "rawText": "The operation was aborted"
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.martiniplaza.nl/nl/agenda",
-      "title": "Zoekopdracht 2/2",
-      "date": "",
-      "url": "",
-      "status": "zoeken",
-      "rawText": "site:www.martiniplaza.nl \"Groningen\" agenda programma evenement concert theater film 2026-10-26 9999-12-31"
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "Zoekopdracht 1/2",
-      "date": "",
-      "url": "",
-      "status": "zoeken",
-      "rawText": "site:groningermuseum.nl/programma programma agenda programma evenement concert Groningen 2026-10-26 9999-12-31"
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "SerpAPI timeout/fout",
-      "date": "",
-      "url": "",
-      "status": "fout",
-      "rawText": "The operation was aborted"
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "Zoekopdracht 2/2",
-      "date": "",
-      "url": "",
-      "status": "zoeken",
-      "rawText": "site:groningermuseum.nl \"Groningen\" agenda programma evenement concert theater film 2026-10-26 9999-12-31"
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.kultuuragenda.nl/agenda",
-      "title": "Zoekopdracht 1/2",
-      "date": "",
-      "url": "",
-      "status": "zoeken",
-      "rawText": "site:www.kultuuragenda.nl/agenda agenda agenda programma evenement concert Groningen 2026-10-26 9999-12-31"
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.kultuuragenda.nl/agenda",
-      "title": "SerpAPI timeout/fout",
-      "date": "",
-      "url": "",
-      "status": "fout",
-      "rawText": "The operation was aborted"
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.kultuuragenda.nl/agenda",
-      "title": "Zoekopdracht 2/2",
-      "date": "",
-      "url": "",
-      "status": "zoeken",
-      "rawText": "site:www.kultuuragenda.nl \"Groningen\" agenda programma evenement concert theater film 2026-10-26 9999-12-31"
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
-      "title": "Zoekopdracht 1/2",
-      "date": "",
-      "url": "",
-      "status": "zoeken",
-      "rawText": "site:www.concertgebouw.nl/concerten-en-tickets concerten en tickets agenda programma evenement concert Groningen 2026-10-26 9999-12-31"
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
-      "title": "SerpAPI timeout/fout",
-      "date": "",
-      "url": "",
-      "status": "fout",
-      "rawText": "The operation was aborted"
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
-      "title": "Zoekopdracht 2/2",
-      "date": "",
-      "url": "",
-      "status": "zoeken",
-      "rawText": "site:www.concertgebouw.nl \"Groningen\" agenda programma evenement concert theater film 2026-10-26 9999-12-31"
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
-      "title": "Zoekopdracht 1/2",
-      "date": "",
-      "url": "",
-      "status": "zoeken",
-      "rawText": "site:www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html films bioscoop bioscopen_groningen_58.html agenda programma evenement concert Groningen 2026-10-26 9999-12-31"
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
-      "title": "SerpAPI timeout/fout",
-      "date": "",
-      "url": "",
-      "status": "fout",
-      "rawText": "The operation was aborted"
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
-      "title": "Zoekopdracht 2/2",
-      "date": "",
-      "url": "",
-      "status": "zoeken",
-      "rawText": "site:www.biosagenda.nl \"Groningen\" agenda programma evenement concert theater film 2026-10-26 9999-12-31"
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
-      "title": "Zoekopdracht 1/2",
-      "date": "",
-      "url": "",
-      "status": "zoeken",
-      "rawText": "site:www.paradiso.nl/landing/concertagenda-paradiso/2069817 landing concertagenda paradiso 2069817 agenda programma evenement concert Groningen 2026-10-26 9999-12-31"
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
-      "title": "SerpAPI timeout/fout",
-      "date": "",
-      "url": "",
-      "status": "fout",
-      "rawText": "The operation was aborted"
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
-      "title": "Zoekopdracht 2/2",
-      "date": "",
-      "url": "",
-      "status": "zoeken",
-      "rawText": "site:www.paradiso.nl \"Groningen\" agenda programma evenement concert theater film 2026-10-26 9999-12-31"
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.vvvameland.nl/activiteiten-en-evenementen",
-      "title": "Zoekopdracht 1/2",
-      "date": "",
-      "url": "",
-      "status": "zoeken",
-      "rawText": "site:www.vvvameland.nl/activiteiten-en-evenementen activiteiten en evenementen agenda programma evenement concert Groningen 2026-10-26 9999-12-31"
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.vvvameland.nl/activiteiten-en-evenementen",
-      "title": "SerpAPI timeout/fout",
-      "date": "",
-      "url": "",
-      "status": "fout",
-      "rawText": "The operation was aborted"
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.vvvameland.nl/activiteiten-en-evenementen",
-      "title": "Zoekopdracht 2/2",
-      "date": "",
-      "url": "",
-      "status": "zoeken",
-      "rawText": "site:www.vvvameland.nl \"Groningen\" agenda programma evenement concert theater film 2026-10-26 9999-12-31"
-    },
-    {
-      "source": "ChatGPT",
-      "site": "https://forum.nl/nl/agenda",
-      "title": "ChatGPT mislukt",
-      "date": "",
-      "url": "https://forum.nl/nl/agenda",
-      "status": "fout",
-      "rawText": "Body has already been used. It can only be used once. Use tee() first if you need to read it twice."
-    },
-    {
-      "source": "ChatGPT",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "ChatGPT mislukt",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/",
-      "status": "fout",
-      "rawText": "Body has already been used. It can only be used once. Use tee() first if you need to read it twice."
-    },
-    {
-      "source": "ChatGPT",
-      "site": "https://www.vera-groningen.nl/",
-      "title": "ChatGPT mislukt",
-      "date": "",
-      "url": "https://www.vera-groningen.nl/",
-      "status": "fout",
-      "rawText": "Body has already been used. It can only be used once. Use tee() first if you need to read it twice."
-    },
-    {
-      "source": "ChatGPT",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "ChatGPT mislukt",
-      "date": "",
-      "url": "https://groningen.uitloper.nu/",
-      "status": "fout",
-      "rawText": "Body has already been used. It can only be used once. Use tee() first if you need to read it twice."
-    },
-    {
-      "source": "ChatGPT",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": "ChatGPT mislukt",
-      "date": "",
-      "url": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "status": "fout",
-      "rawText": "Body has already been used. It can only be used once. Use tee() first if you need to read it twice."
-    },
-    {
-      "source": "ChatGPT",
-      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
-      "title": "ChatGPT mislukt",
-      "date": "",
-      "url": "https://www.visitgroningen.nl/nl/doen/wandelen",
-      "status": "fout",
-      "rawText": "Body has already been used. It can only be used once. Use tee() first if you need to read it twice."
-    },
-    {
-      "source": "ChatGPT",
-      "site": "https://simplon.nl/",
-      "title": "ChatGPT mislukt",
-      "date": "",
-      "url": "https://simplon.nl/",
-      "status": "fout",
-      "rawText": "Body has already been used. It can only be used once. Use tee() first if you need to read it twice."
-    },
-    {
-      "source": "ChatGPT",
-      "site": "https://www.martiniplaza.nl/nl/agenda",
-      "title": "ChatGPT mislukt",
-      "date": "",
-      "url": "https://www.martiniplaza.nl/nl/agenda",
-      "status": "fout",
-      "rawText": "Body has already been used. It can only be used once. Use tee() first if you need to read it twice."
-    },
-    {
-      "source": "ChatGPT",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "ChatGPT mislukt",
-      "date": "",
-      "url": "https://groningermuseum.nl/programma",
-      "status": "fout",
-      "rawText": "Body has already been used. It can only be used once. Use tee() first if you need to read it twice."
-    },
-    {
-      "source": "ChatGPT",
-      "site": "https://www.kultuuragenda.nl/agenda",
-      "title": "ChatGPT mislukt",
-      "date": "",
-      "url": "https://www.kultuuragenda.nl/agenda",
-      "status": "fout",
-      "rawText": "Body has already been used. It can only be used once. Use tee() first if you need to read it twice."
-    },
-    {
-      "source": "ChatGPT",
-      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
-      "title": "ChatGPT mislukt",
-      "date": "",
-      "url": "https://www.concertgebouw.nl/concerten-en-tickets",
-      "status": "fout",
-      "rawText": "Body has already been used. It can only be used once. Use tee() first if you need to read it twice."
-    },
-    {
-      "source": "ChatGPT",
-      "site": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
-      "title": "ChatGPT mislukt",
-      "date": "",
-      "url": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
-      "status": "fout",
-      "rawText": "Body has already been used. It can only be used once. Use tee() first if you need to read it twice."
-    },
-    {
-      "source": "ChatGPT",
-      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
-      "title": "ChatGPT mislukt",
-      "date": "",
-      "url": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
-      "status": "fout",
-      "rawText": "Body has already been used. It can only be used once. Use tee() first if you need to read it twice."
-    },
-    {
-      "source": "ChatGPT",
-      "site": "https://www.vvvameland.nl/activiteiten-en-evenementen",
-      "title": "ChatGPT mislukt",
-      "date": "",
-      "url": "https://www.vvvameland.nl/activiteiten-en-evenementen",
-      "status": "fout",
-      "rawText": "Body has already been used. It can only be used once. Use tee() first if you need to read it twice."
-    },
-    {
-      "source": "Mistral",
-      "site": "https://forum.nl/nl/agenda",
-      "title": "Mistral fout",
-      "date": "",
-      "url": "https://forum.nl/nl/agenda",
-      "status": "status 429",
-      "rawText": "{\"object\":\"error\",\"message\":\"Rate limit exceeded\",\"type\":\"rate_limited\",\"param\":null,\"code\":\"1300\",\"raw_status_code\":429}"
-    },
-    {
-      "source": "Mistral",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Mistral overgeslagen",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/",
-      "status": "overgeslagen",
-      "rawText": "Deze AI-bron is na een HTTP 429 voor de rest van deze scan gepauzeerd om herhaalde rate-limitfouten te voorkomen."
-    },
-    {
-      "source": "Mistral",
-      "site": "https://www.vera-groningen.nl/",
-      "title": "Mistral overgeslagen",
-      "date": "",
-      "url": "https://www.vera-groningen.nl/",
-      "status": "overgeslagen",
-      "rawText": "Deze AI-bron is na een HTTP 429 voor de rest van deze scan gepauzeerd om herhaalde rate-limitfouten te voorkomen."
-    },
-    {
-      "source": "Mistral",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Mistral overgeslagen",
-      "date": "",
-      "url": "https://groningen.uitloper.nu/",
-      "status": "overgeslagen",
-      "rawText": "Deze AI-bron is na een HTTP 429 voor de rest van deze scan gepauzeerd om herhaalde rate-limitfouten te voorkomen."
-    },
-    {
-      "source": "Mistral",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": "Mistral overgeslagen",
-      "date": "",
-      "url": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "status": "overgeslagen",
-      "rawText": "Deze AI-bron is na een HTTP 429 voor de rest van deze scan gepauzeerd om herhaalde rate-limitfouten te voorkomen."
-    },
-    {
-      "source": "Mistral",
-      "site": "https://www.visitgroningen.nl/nl/doen/wandelen",
-      "title": "Mistral overgeslagen",
-      "date": "",
-      "url": "https://www.visitgroningen.nl/nl/doen/wandelen",
-      "status": "overgeslagen",
-      "rawText": "Deze AI-bron is na een HTTP 429 voor de rest van deze scan gepauzeerd om herhaalde rate-limitfouten te voorkomen."
-    },
-    {
-      "source": "Mistral",
-      "site": "https://simplon.nl/",
-      "title": "Mistral overgeslagen",
-      "date": "",
-      "url": "https://simplon.nl/",
-      "status": "overgeslagen",
-      "rawText": "Deze AI-bron is na een HTTP 429 voor de rest van deze scan gepauzeerd om herhaalde rate-limitfouten te voorkomen."
-    },
-    {
-      "source": "Mistral",
-      "site": "https://www.martiniplaza.nl/nl/agenda",
-      "title": "Mistral overgeslagen",
-      "date": "",
-      "url": "https://www.martiniplaza.nl/nl/agenda",
-      "status": "overgeslagen",
-      "rawText": "Deze AI-bron is na een HTTP 429 voor de rest van deze scan gepauzeerd om herhaalde rate-limitfouten te voorkomen."
-    },
-    {
-      "source": "Mistral",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "Mistral overgeslagen",
-      "date": "",
-      "url": "https://groningermuseum.nl/programma",
-      "status": "overgeslagen",
-      "rawText": "Deze AI-bron is na een HTTP 429 voor de rest van deze scan gepauzeerd om herhaalde rate-limitfouten te voorkomen."
-    },
-    {
-      "source": "Mistral",
-      "site": "https://www.kultuuragenda.nl/agenda",
-      "title": "Mistral overgeslagen",
-      "date": "",
-      "url": "https://www.kultuuragenda.nl/agenda",
-      "status": "overgeslagen",
-      "rawText": "Deze AI-bron is na een HTTP 429 voor de rest van deze scan gepauzeerd om herhaalde rate-limitfouten te voorkomen."
-    },
-    {
-      "source": "Mistral",
-      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
-      "title": "Mistral overgeslagen",
-      "date": "",
-      "url": "https://www.concertgebouw.nl/concerten-en-tickets",
-      "status": "overgeslagen",
-      "rawText": "Deze AI-bron is na een HTTP 429 voor de rest van deze scan gepauzeerd om herhaalde rate-limitfouten te voorkomen."
-    },
-    {
-      "source": "Mistral",
-      "site": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
-      "title": "Mistral overgeslagen",
-      "date": "",
-      "url": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
-      "status": "overgeslagen",
-      "rawText": "Deze AI-bron is na een HTTP 429 voor de rest van deze scan gepauzeerd om herhaalde rate-limitfouten te voorkomen."
-    },
-    {
-      "source": "Mistral",
-      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
-      "title": "Mistral overgeslagen",
-      "date": "",
-      "url": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
-      "status": "overgeslagen",
-      "rawText": "Deze AI-bron is na een HTTP 429 voor de rest van deze scan gepauzeerd om herhaalde rate-limitfouten te voorkomen."
-    },
-    {
-      "source": "Mistral",
-      "site": "https://www.vvvameland.nl/activiteiten-en-evenementen",
-      "title": "Mistral overgeslagen",
-      "date": "",
-      "url": "https://www.vvvameland.nl/activiteiten-en-evenementen",
-      "status": "overgeslagen",
-      "rawText": "Deze AI-bron is na een HTTP 429 voor de rest van deze scan gepauzeerd om herhaalde rate-limitfouten te voorkomen."
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Start",
-      "date": "",
-      "url": "https://groningen.uitloper.nu/",
-      "status": "start",
-      "rawText": "site 1/18: max 40 events, max 10 seconden"
-    },
-    {
-      "source": "Parser",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Scrapertype vastgesteld",
-      "date": "",
-      "url": "https://groningen.uitloper.nu/",
-      "status": "strategie",
-      "rawText": "uitloper-agenda"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Pagina gelezen",
-      "date": "",
-      "url": "https://groningen.uitloper.nu/?date=1793016000",
-      "status": "ok",
-      "rawText": "61102 tekens HTML"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Nena",
-      "date": "2026-10-26",
-      "url": "https://groningen.uitloper.nu/muziek/nena-1",
-      "status": "Uitloper agenda-item",
-      "rawText": "Nena 20:00 uur Eén van de grootste zangeressen van de Duitse popcultuur…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Culture (ft Kenyatta Hill) & Cedric Myton",
-      "date": "2026-10-26",
-      "url": "https://groningen.uitloper.nu/muziek/culture-ft-kenyatta-hill-cedric-myton",
-      "status": "Uitloper agenda-item",
-      "rawText": "Culture (ft Kenyatta Hill) & Cedric Myton 20:30 uur Twee legendarische reggae-acts op één avond."
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Open Jazz Session",
-      "date": "2026-10-26",
-      "url": "https://groningen.uitloper.nu/muziek/open-jazz-session-3",
-      "status": "Uitloper agenda-item",
-      "rawText": "Open Jazz Session 21:15 uur Iedere maandagavond gratis Jazz-avond! Samen improviseren,…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Open Mic Nait",
-      "date": "2026-10-26",
-      "url": "https://groningen.uitloper.nu/theater/open-mic-nait-14",
-      "status": "Uitloper agenda-item",
-      "rawText": "Open Mic Nait 20:00 uur Ontdek nieuwe comedians en nieuwe grappen tijdens…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Thinking Hands",
-      "date": "2026-10-26",
-      "url": "https://groningen.uitloper.nu/kunst/thinking-hands",
-      "status": "Uitloper agenda-item",
-      "rawText": "Thinking Hands Een expositie over de kennis die in ons lichaam zit…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Nieuw Licht - De Ploeg",
-      "date": "2026-10-26",
-      "url": "https://groningen.uitloper.nu/kunst/nieuw-licht-%e2%80%93-de-ploeg",
-      "status": "Uitloper agenda-item",
-      "rawText": "Nieuw Licht - De Ploeg Een geheel vernieuwde presentatie van werken van De…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "The Architect & The Housewife: Cleaning the House, Building the Future",
-      "date": "2026-10-26",
-      "url": "https://groningen.uitloper.nu/kunst/the-architect-the-housewife-cleaning-the-house-building-the-future",
-      "status": "Uitloper agenda-item",
-      "rawText": "The Architect & The Housewife: Cleaning the House, Building the Future De titel van deze tentoonstelling is ontleend aan…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Nieuw licht 1: Ani Schulze – The Convent of Pleasure",
-      "date": "2026-10-26",
-      "url": "https://groningen.uitloper.nu/kunst/nieuw-licht-1-ani-schulze-%e2%80%93-the-convent-of-pleasure",
-      "status": "Uitloper agenda-item",
-      "rawText": "Nieuw licht 1: Ani Schulze – The Convent of Pleasure Nieuw licht is een tentoonstellingsreeks waarin het…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Keramikos Carrier Bag",
-      "date": "2026-10-26",
-      "url": "https://groningen.uitloper.nu/kunst/keramikos-carrier-bag",
-      "status": "Uitloper agenda-item",
-      "rawText": "Keramikos Carrier Bag Naar aanleiding van onderzoek in Groningen kozen Matthew…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Theatraal",
-      "date": "2026-10-26",
-      "url": "https://groningen.uitloper.nu/kunst/theatraal",
-      "status": "Uitloper agenda-item",
-      "rawText": "Theatraal Voor het derde jaar op rij presenteert de Stadsgalerie…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "ubiquitousssssssssssssssssugar",
-      "date": "2026-10-26",
-      "url": "https://groningen.uitloper.nu/kunst/ubiquitousssssssssssssssssugar",
-      "status": "Uitloper agenda-item",
-      "rawText": "ubiquitousssssssssssssssssugar Met performances, proeverijen van Goblin Feast, Jonas…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "VELD Collectief",
-      "date": "2026-10-26",
-      "url": "https://groningen.uitloper.nu/kunst/veld-collectief",
-      "status": "Uitloper agenda-item",
-      "rawText": "VELD Collectief Wie in Groningen een suikerbiet langs de weg ziet…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Storyworld Spotlight: Asjemenou!",
-      "date": "2026-10-26",
-      "url": "https://groningen.uitloper.nu/kunst/storyworld-spotlight-asjemenou",
-      "status": "Uitloper agenda-item",
-      "rawText": "Storyworld Spotlight: Asjemenou! In 2026 bestaat de Nederlandse televisie 75 jaar…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Masterminds. De Geschiedenis van de Groningse Universiteit",
-      "date": "2026-10-26",
-      "url": "https://groningen.uitloper.nu/kunst/masterminds",
-      "status": "Uitloper agenda-item",
-      "rawText": "Masterminds. De Geschiedenis van de Groningse Universiteit Masterminds neemt je mee in de geschiedenis van de…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Anatomisch Theater",
-      "date": "2026-10-26",
-      "url": "https://groningen.uitloper.nu/kunst/anatomisch-theater",
-      "status": "Uitloper agenda-item",
-      "rawText": "Anatomisch Theater In het anatomisch theater zijn zo’n 50 preparaten…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Aletta Jacobskamer",
-      "date": "2026-10-26",
-      "url": "https://groningen.uitloper.nu/kunst/aletta-jacobskamer",
-      "status": "Uitloper agenda-item",
-      "rawText": "Aletta Jacobskamer In de kamer van dr. Aletta Jacobs, de eerste vrouwelijke…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "GRID - Puin Hoop: herdruk van de jaren ’80",
-      "date": "2026-10-26",
-      "url": "https://groningen.uitloper.nu/kunst/grid-puin-hoop-herdruk-van-de-jaren-%e2%80%9980",
-      "status": "Uitloper agenda-item",
-      "rawText": "GRID - Puin Hoop: herdruk van de jaren ’80 Een prikkelende expositie over vroeger, die verrassend…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Kunstroutes",
-      "date": "2026-10-26",
-      "url": "https://groningen.uitloper.nu/kunst/kunstroutes",
-      "status": "Uitloper agenda-item",
-      "rawText": "Kunstroutes Kunst die je gezien moet hebben en kunst die je misschien…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "The Wall #9",
-      "date": "2026-10-26",
-      "url": "https://groningen.uitloper.nu/kunst/the-wall-9",
-      "status": "Uitloper agenda-item",
-      "rawText": "The Wall #9 Kunstenaar Indira de Boer maakt een installatie van…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Otto Krol - Gevels, daken en luchten",
-      "date": "2026-10-26",
-      "url": "https://groningen.uitloper.nu/kunst/otto-krol-gevels-daken-en-luchten",
-      "status": "Uitloper agenda-item",
-      "rawText": "Otto Krol - Gevels, daken en luchten Na de stadsgezichten van de vorige expositie eind…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Otto Krol - Gevels, daken en luchten",
-      "date": "2026-10-26",
-      "url": "https://groningen.uitloper.nu/kunst/otto-krol-gevels-daken-en-luchten-1",
-      "status": "Uitloper agenda-item",
-      "rawText": "Otto Krol - Gevels, daken en luchten Na de stadsgezichten van de vorige expositie eind…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Kleur!",
-      "date": "2026-10-26",
-      "url": "https://groningen.uitloper.nu/kunst/kleur-3",
-      "status": "Uitloper agenda-item",
-      "rawText": "Kleur! Tien kunstenaars onderzoeken in de verschillende ruimtes…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "APPROP.",
-      "date": "2026-10-26",
-      "url": "https://groningen.uitloper.nu/kunst/approp",
-      "status": "Uitloper agenda-item",
-      "rawText": "APPROP. Met APPROP. presenteren ax710 en Jurjen Galema een…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Gasten: Paul Kramer",
-      "date": "2026-10-26",
-      "url": "https://groningen.uitloper.nu/kunst/gasten-paul-kramer",
-      "status": "Uitloper agenda-item",
-      "rawText": "Gasten: Paul Kramer Duotentoonstelling met werken van Paul Kramer en Henk…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Permanente Expositie",
-      "date": "2026-10-26",
-      "url": "https://groningen.uitloper.nu/kunst/permanente-expositie",
-      "status": "Uitloper agenda-item",
-      "rawText": "Permanente Expositie De vaste tentoonstelling nodigt uit om kennis te nemen…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Figuranten",
-      "date": "2026-10-26",
-      "url": "https://groningen.uitloper.nu/kunst/figuranten",
-      "status": "Uitloper agenda-item",
-      "rawText": "Figuranten Sievert Bodde toont zestien fictieve portretten, in…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Schilderijen van Marrie Venderink",
-      "date": "2026-10-26",
-      "url": "https://groningen.uitloper.nu/kunst/schilderijen-vanmarrie-venderink",
-      "status": "Uitloper agenda-item",
-      "rawText": "Schilderijen van Marrie Venderink Expositie met schilderijen van Marrie Venderink …"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Het Witte Vlag Project",
-      "date": "2026-10-26",
-      "url": "https://groningen.uitloper.nu/kunst/het-witte-vlag-project",
-      "status": "Uitloper agenda-item",
-      "rawText": "Het Witte Vlag Project Een groepstentoonstelling met dertien hedendaagse…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Lieuwe van Gogh",
-      "date": "2026-10-26",
-      "url": "https://groningen.uitloper.nu/kunst/lieuwe-van-gogh",
-      "status": "Uitloper agenda-item",
-      "rawText": "Lieuwe van Gogh De kleurrijke gevel van Metamorphose gemaakt door…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Expositie Overwegend Vrouw (Glimmen)",
-      "date": "2026-10-26",
-      "url": "https://groningen.uitloper.nu/kunst/expositie-overwegend-vrouw-glimmen",
-      "status": "Uitloper agenda-item",
-      "rawText": "Expositie Overwegend Vrouw (Glimmen) Ingrid Veldscholten en Josephine Wortelboer exposeren…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Het Witte Vlag Project",
-      "date": "2026-10-26",
-      "url": "https://groningen.uitloper.nu/kunst/het-witte-vlag-project-1",
-      "status": "Uitloper agenda-item",
-      "rawText": "Het Witte Vlag Project In een tijd waarin zekerheden luid klinken en identiteiten…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Playing House - kinderbiënnale",
-      "date": "2026-10-26",
-      "url": "https://groningen.uitloper.nu/jeugd/playing-house-kinderbiennale",
-      "status": "Uitloper agenda-item",
-      "rawText": "Playing House - kinderbiënnale Welke bewust of onbewust aangeleerde regels worden…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Storyworld spotlight: Super Mario 40 jaar",
-      "date": "2026-10-26",
-      "url": "https://groningen.uitloper.nu/jeugd/storyworld-spotlight-super-mario-40-jaar",
-      "status": "Uitloper agenda-item",
-      "rawText": "Storyworld spotlight: Super Mario 40 jaar Een reis door de tijd, langs de technische én creatieve…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Depotrondleidingen: Lichaam & Geest",
-      "date": "2026-10-26",
-      "url": "https://groningen.uitloper.nu/diversen/depotrondleidingen-lichaam-geest",
-      "status": "Uitloper agenda-item",
-      "rawText": "Depotrondleidingen: Lichaam & Geest 14:45 uur Tijdens een rondleiding nemen onze medewerkers je…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Beklimming Martinitoren",
-      "date": "2026-10-26",
-      "url": "https://groningen.uitloper.nu/diversen/beklimming-martinitoren-1",
-      "status": "Uitloper agenda-item",
-      "rawText": "Beklimming Martinitoren Bezoekers kunnen op eigen gelegenheid naar boven lopen…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Azart - Come Make Art",
-      "date": "2026-10-26",
-      "url": "https://groningen.uitloper.nu/filmhuis/azart-come-make-art",
-      "status": "Uitloper agenda-item",
-      "rawText": "Azart - Come Make Art 20:30 uur De vrolijke en inspirerende documentaire Azart vertelt…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Pubquiz",
-      "date": "2026-10-26",
-      "url": "https://groningen.uitloper.nu/quizzen/pubquiz-fourth-monday-repeating-1",
-      "status": "Uitloper agenda-item",
-      "rawText": "Pubquiz 20:00 uur Elke vierde maandag van de maand. Teams van maximaal…"
-    },
-    {
-      "source": "Parser",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Uitloper-dagpagina",
-      "date": "2026-10-26",
-      "url": "https://groningen.uitloper.nu/?date=1793016000",
-      "status": "gespecialiseerde parser",
-      "rawText": "37 agenda-items op 2026-10-26"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Pagina geanalyseerd",
-      "date": "",
-      "url": "https://groningen.uitloper.nu/?date=1793016000",
-      "status": "ok",
-      "rawText": "35 events/aanbiedingen op deze pagina"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Pagina gelezen",
-      "date": "",
-      "url": "https://groningen.uitloper.nu/?date=1793102400",
-      "status": "ok",
-      "rawText": "64251 tekens HTML"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Nena",
-      "date": "2026-10-27",
-      "url": "https://groningen.uitloper.nu/muziek/nena-1",
-      "status": "Uitloper agenda-item",
-      "rawText": "Nena 20:00 uur Eén van de grootste zangeressen van de Duitse popcultuur…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Jon Allen & The Luna Kings",
-      "date": "2026-10-27",
-      "url": "https://groningen.uitloper.nu/muziek/jon-allen-the-luna-kings-2",
-      "status": "Uitloper agenda-item",
-      "rawText": "Jon Allen & The Luna Kings 20:00 uur Britse singer-songwriter mixt Americana met Folk rock…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Alma Quartet & Nicolas van Poucke",
-      "date": "2026-10-27",
-      "url": "https://groningen.uitloper.nu/muziek/alma-quartet-nicolas-van-poucke",
-      "status": "Uitloper agenda-item",
-      "rawText": "Alma Quartet & Nicolas van Poucke 20:15 uur Vijf topmusici nemen je mee van Beethovens diepgang…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Jethro Tull",
-      "date": "2026-10-27",
-      "url": "https://groningen.uitloper.nu/muziek/jethro-tull",
-      "status": "Uitloper agenda-item",
-      "rawText": "Jethro Tull 20:00 uur Het debuutalbum This Was verscheen in 1968. Na een…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "JazzJam",
-      "date": "2026-10-27",
-      "url": "https://groningen.uitloper.nu/muziek/jazzjam-95",
-      "status": "Uitloper agenda-item",
-      "rawText": "JazzJam 21:00 uur Met Miquel Rodriguez (piano), Steve Zwanink (bas)…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Anas Younes - On Anger & Fatigue",
-      "date": "2026-10-27",
-      "url": "https://groningen.uitloper.nu/theater/anas-younes-on-anger-fatigue",
-      "status": "Uitloper agenda-item",
-      "rawText": "Anas Younes - On Anger & Fatigue 20:00 uur Een lecture-performance die de politiek van waarheidsvertelling,…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Hoe de vleesindustrie u inpakt",
-      "date": "2026-10-27",
-      "url": "https://groningen.uitloper.nu/theater/hoe-de-vleesindustrie-u-inpakt",
-      "status": "Uitloper agenda-item",
-      "rawText": "Hoe de vleesindustrie u inpakt 20:00 uur In dit theatercollege onderzoekt Teun van de Keuken…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Thinking Hands",
-      "date": "2026-10-27",
-      "url": "https://groningen.uitloper.nu/kunst/thinking-hands",
-      "status": "Uitloper agenda-item",
-      "rawText": "Thinking Hands Een expositie over de kennis die in ons lichaam zit…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Nieuw Licht - De Ploeg",
-      "date": "2026-10-27",
-      "url": "https://groningen.uitloper.nu/kunst/nieuw-licht-%e2%80%93-de-ploeg",
-      "status": "Uitloper agenda-item",
-      "rawText": "Nieuw Licht - De Ploeg Een geheel vernieuwde presentatie van werken van De…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "The Architect & The Housewife: Cleaning the House, Building the Future",
-      "date": "2026-10-27",
-      "url": "https://groningen.uitloper.nu/kunst/the-architect-the-housewife-cleaning-the-house-building-the-future",
-      "status": "Uitloper agenda-item",
-      "rawText": "The Architect & The Housewife: Cleaning the House, Building the Future De titel van deze tentoonstelling is ontleend aan…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Nieuw licht 1: Ani Schulze – The Convent of Pleasure",
-      "date": "2026-10-27",
-      "url": "https://groningen.uitloper.nu/kunst/nieuw-licht-1-ani-schulze-%e2%80%93-the-convent-of-pleasure",
-      "status": "Uitloper agenda-item",
-      "rawText": "Nieuw licht 1: Ani Schulze – The Convent of Pleasure Nieuw licht is een tentoonstellingsreeks waarin het…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Keramikos Carrier Bag",
-      "date": "2026-10-27",
-      "url": "https://groningen.uitloper.nu/kunst/keramikos-carrier-bag",
-      "status": "Uitloper agenda-item",
-      "rawText": "Keramikos Carrier Bag Naar aanleiding van onderzoek in Groningen kozen Matthew…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Theatraal",
-      "date": "2026-10-27",
-      "url": "https://groningen.uitloper.nu/kunst/theatraal",
-      "status": "Uitloper agenda-item",
-      "rawText": "Theatraal Voor het derde jaar op rij presenteert de Stadsgalerie…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "ubiquitousssssssssssssssssugar",
-      "date": "2026-10-27",
-      "url": "https://groningen.uitloper.nu/kunst/ubiquitousssssssssssssssssugar",
-      "status": "Uitloper agenda-item",
-      "rawText": "ubiquitousssssssssssssssssugar Met performances, proeverijen van Goblin Feast, Jonas…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "VELD Collectief",
-      "date": "2026-10-27",
-      "url": "https://groningen.uitloper.nu/kunst/veld-collectief",
-      "status": "Uitloper agenda-item",
-      "rawText": "VELD Collectief Wie in Groningen een suikerbiet langs de weg ziet…"
-    },
     {
       "source": "Website",
       "site": "https://groningen.uitloper.nu/",
@@ -16833,6 +16360,1086 @@
       "url": "https://www.kultuuragenda.nl/agenda",
       "status": "klaar",
       "rawText": "site 10/18: 9 unieke events in 10.05 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Start",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "status": "start",
+      "rawText": "site 11/18: max 40 events, max 10 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "status": "strategie",
+      "rawText": "universeel-jsonld-links-kaarten"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Pagina gelezen",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "status": "ok",
+      "rawText": "774011 tekens HTML"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Agenda-kaarten geteld",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "status": "gespecialiseerde parser",
+      "rawText": "15 resultaten"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Pagina geanalyseerd",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "status": "ok",
+      "rawText": "14 events/aanbiedingen op deze pagina"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Detailpagina mislukt",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten/45881817-25-jaar-academie-concertgebouworkest",
+      "status": "fout",
+      "rawText": "HTTP 502"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Detailpagina mislukt",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten/43931216-fresku-metropole-orkest-o.l.v.-simon-dobson",
+      "status": "fout",
+      "rawText": "HTTP 502"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Ben Folds",
+      "date": "2026-11-29",
+      "url": "https://www.concertgebouw.nl/concerten/38886334-ben-folds",
+      "status": "event uit link",
+      "rawText": "zo 29 nov 2026 Ben Folds"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Kurt Elling & Jazz Orchestra of the Concertgebouw",
+      "date": "2026-12-15",
+      "url": "https://www.concertgebouw.nl/concerten/43931229-kurt-elling-jazz-orchestra-of-the-concertgebouw",
+      "status": "event uit link",
+      "rawText": "di 15 dec 2026 Kurt Elling & Jazz Orchestra of the Concertgebouw"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "12e jaarlijkse Chanoekaconcert – Vrijheid!",
+      "date": "2026-12-05",
+      "url": "https://www.concertgebouw.nl/concerten/46013085-12e-jaarlijkse-chanoekaconcert---vrijheid",
+      "status": "event uit link",
+      "rawText": "za 5 dec 2026 12e jaarlijkse Chanoekaconcert – Vrijheid!"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Kerstmatinee: Sing-Along met Loes Luca",
+      "date": "2026-12-19",
+      "url": "https://www.concertgebouw.nl/concerten/43931230-kerstmatinee-sing-along-met-loes-luca",
+      "status": "event uit link",
+      "rawText": "za 19 dec 2026 Kerstmatinee: Sing-Along met Loes Luca"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Zing-Cirkel Concertgebouw Bestel kaarten Bestel kaarten Zing-Cirkel",
+      "date": "2027-10-08",
+      "url": "https://www.concertgebouw.nl/concerten/45913707-zing-cirkel-concertgebouw",
+      "status": "event uit datumblok",
+      "rawText": "8 okt Zing-Cirkel Concertgebouw Bestel kaarten Bestel kaarten Zing-Cirkel Concertgebouw Musici Maartje de Lint zang Dit concert heeft geen pauze Kracht en vreugde door samen te zingen: workshops voor mensen met geheugenproblemen of uitdagingen in het brein én hun mantelzorgers. Tijdens inspirerende sessies gaat Maartje de Lint samen met ongeveer 25 senioren en hun mantelzorgers zingen. Zing-Cirkel Concertgebouw is ee"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Tijdschema ochtendsessies: 10.50 uur deuren open 11.00-11.30 uur koffie/thee 11.30-12.30 uur",
+      "date": "2027-05-09",
+      "url": "https://www.concertgebouw.nl/concerten/45913707-zing-cirkel-concertgebouw",
+      "status": "event uit datumblok",
+      "rawText": "9 mei 2027 Tijdschema ochtendsessies: 10.50 uur deuren open 11.00-11.30 uur koffie/thee 11.30-12.30 uur workshop 12.30-13.00 uur koffie/thee Tijdschema middagsessies: 13.50 uur deuren open 14.00-14.30 uur koffie/thee 14.30-15.30 uur workshop 15.30-16.00 uur koffie/thee Let op: zowel de deelnemer als de mantelzorger heeft een toegangskaart nodig. Lees meer Genre Vocaal, Overig Onderdeel van serie Zing-Cirkel Concertge"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Ben Folds",
+      "date": "2026-11-09",
+      "url": "https://www.concertgebouw.nl/concerten/45913707-zing-cirkel-concertgebouw",
+      "status": "event uit datumblok",
+      "rawText": "9 nov 2026 Ben Folds"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Kurt Elling &",
+      "date": "2026-12-05",
+      "url": "https://www.concertgebouw.nl/concerten/45913707-zing-cirkel-concertgebouw",
+      "status": "event uit datumblok",
+      "rawText": "5 dec 2026 Kurt Elling & Jazz Orchestra of the Concertgebouw"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "12e jaarlijkse Chanoekaconcert – Vrijheid!",
+      "date": "2026-12-05",
+      "url": "https://www.concertgebouw.nl/concerten/45913707-zing-cirkel-concertgebouw",
+      "status": "event uit datumblok",
+      "rawText": "5 dec 2026 12e jaarlijkse Chanoekaconcert – Vrijheid!"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Kerstmatinee: Sing-Along met Loes Luca Overige informatie",
+      "date": "2026-12-09",
+      "url": "https://www.concertgebouw.nl/concerten/45913707-zing-cirkel-concertgebouw",
+      "status": "event uit datumblok",
+      "rawText": "9 dec 2026 Kerstmatinee: Sing-Along met Loes Luca Overige informatie Veelgestelde vragen Verhuur Pers Info Concertvrienden en Entrée Maandblad Preludium Route & Parkeren Over ons Organisatie Vacatures Contact Veelgestelde vragen Verhuur Pers Concertvrienden en Entrée Maandblad Preludium Route & Parkeren Organisatie Vacatures Contact Volg ons Geluidsfragmenten mogelijk gemaakt door ClassicsToGo Disclaimer Privacy Cook"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Zing-Cirkel Concertgebouw",
+      "date": "2026-10-28",
+      "url": "https://www.concertgebouw.nl/concerten/45913707-zing-cirkel-concertgebouw",
+      "status": "event uit detailpagina",
+      "rawText": "Zing-Cirkel Concertgebouw - Concertgebouw - Nederlands Naar hoofdcontent Concertagenda Concerten Concertagenda Bekijk onze veelzijdige concertagenda Keuzehulp Wij helpen u kiezen! Jong publiek Met korting naar de mooiste concerten VriendenLoterij ZomerConcerten Het Zondagochtend Concert Familieconcerten Hemelbestormers Reflecties op Europa Series Uw bezoek Kaartverkoop Over het bestellen van kaarten Route & Parkeren"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Zing-Cirkel Concertgebouw",
+      "date": "2026-10-28",
+      "url": "https://www.concertgebouw.nl/concerten/45913707-zing-cirkel-concertgebouw",
+      "status": "event uit tekstregel",
+      "rawText": "Zing-Cirkel Concertgebouw | wo 28 okt 2026 | 14:00 | – | 16:00 | Spiegelzaal"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "vanaf 20,00",
+      "date": "2026-10-28",
+      "url": "https://www.concertgebouw.nl/concerten/45913707-zing-cirkel-concertgebouw",
+      "status": "event uit dagblok",
+      "rawText": "vanaf 20,00 | Bestel kaarten | Bestel kaarten | Bookmark | Bewaar dit concert"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Bestel kaarten",
+      "date": "2026-10-28",
+      "url": "https://www.concertgebouw.nl/concerten/45913707-zing-cirkel-concertgebouw",
+      "status": "event uit dagblok",
+      "rawText": "Bestel kaarten | Bestel kaarten | Bookmark | Bewaar dit concert | Laatste kaarten"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Bookmark",
+      "date": "2026-10-28",
+      "url": "https://www.concertgebouw.nl/concerten/45913707-zing-cirkel-concertgebouw",
+      "status": "event uit dagblok",
+      "rawText": "Bookmark | Bewaar dit concert | Laatste kaarten | Andere data | wo 28 okt 2026"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Bewaar dit concert",
+      "date": "2026-10-28",
+      "url": "https://www.concertgebouw.nl/concerten/45913707-zing-cirkel-concertgebouw",
+      "status": "event uit dagblok",
+      "rawText": "Bewaar dit concert | Laatste kaarten | Andere data | wo 28 okt 2026 | 11:00"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Andere data",
+      "date": "2026-10-28",
+      "url": "https://www.concertgebouw.nl/concerten/45913707-zing-cirkel-concertgebouw",
+      "status": "event uit dagblok",
+      "rawText": "Andere data | wo 28 okt 2026 | 11:00 | Uitverkocht | Bekijk concert"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Andere data",
+      "date": "2026-10-28",
+      "url": "https://www.concertgebouw.nl/concerten/45913707-zing-cirkel-concertgebouw",
+      "status": "event uit tekstregel",
+      "rawText": "Andere data | wo 28 okt 2026 | 11:00 | Uitverkocht | Bekijk concert | wo 25 nov 2026"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Bekijk concert",
+      "date": "2026-10-28",
+      "url": "https://www.concertgebouw.nl/concerten/45913707-zing-cirkel-concertgebouw",
+      "status": "event uit dagblok",
+      "rawText": "Bekijk concert | wo 25 nov 2026 | 11:00 | Bekijk concert | wo 25 nov 2026"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Bekijk concert",
+      "date": "2026-11-25",
+      "url": "https://www.concertgebouw.nl/concerten/45913707-zing-cirkel-concertgebouw",
+      "status": "event uit tekstregel",
+      "rawText": "Bekijk concert | wo 25 nov 2026 | 11:00 | Bekijk concert | wo 25 nov 2026 | 14:00"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Bekijk concert",
+      "date": "2026-11-25",
+      "url": "https://www.concertgebouw.nl/concerten/45913707-zing-cirkel-concertgebouw",
+      "status": "event uit dagblok",
+      "rawText": "Bekijk concert | wo 25 nov 2026 | 14:00 | Laatste kaarten | Bekijk concert"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Bekijk concert",
+      "date": "2026-12-23",
+      "url": "https://www.concertgebouw.nl/concerten/45913707-zing-cirkel-concertgebouw",
+      "status": "event uit tekstregel",
+      "rawText": "Bekijk concert | wo 23 dec 2026 | 11:00 | Bekijk concert | wo 23 dec 2026 | 14:00"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Bekijk concert",
+      "date": "2026-12-23",
+      "url": "https://www.concertgebouw.nl/concerten/45913707-zing-cirkel-concertgebouw",
+      "status": "event uit dagblok",
+      "rawText": "Bekijk concert | wo 23 dec 2026 | 14:00 | Bekijk concert | wo 20 jan 2027"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Bekijk concert",
+      "date": "2027-01-20",
+      "url": "https://www.concertgebouw.nl/concerten/45913707-zing-cirkel-concertgebouw",
+      "status": "event uit tekstregel",
+      "rawText": "Bekijk concert | wo 20 jan 2027 | 11:00 | Bekijk concert | wo 20 jan 2027 | 14:00"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Bekijk concert",
+      "date": "2027-01-20",
+      "url": "https://www.concertgebouw.nl/concerten/45913707-zing-cirkel-concertgebouw",
+      "status": "event uit dagblok",
+      "rawText": "Bekijk concert | wo 20 jan 2027 | 14:00 | Bekijk concert | wo 17 feb 2027"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Bekijk concert",
+      "date": "2027-02-17",
+      "url": "https://www.concertgebouw.nl/concerten/45913707-zing-cirkel-concertgebouw",
+      "status": "event uit tekstregel",
+      "rawText": "Bekijk concert | wo 17 feb 2027 | 11:00 | Bekijk concert | wo 17 feb 2027 | 14:00"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Bekijk concert",
+      "date": "2027-02-17",
+      "url": "https://www.concertgebouw.nl/concerten/45913707-zing-cirkel-concertgebouw",
+      "status": "event uit dagblok",
+      "rawText": "Bekijk concert | wo 17 feb 2027 | 14:00 | Bekijk concert | wo 17 mrt 2027"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Bekijk concert",
+      "date": "2027-03-17",
+      "url": "https://www.concertgebouw.nl/concerten/45913707-zing-cirkel-concertgebouw",
+      "status": "event uit tekstregel",
+      "rawText": "Bekijk concert | wo 17 mrt 2027 | 11:00 | Bekijk concert | wo 17 mrt 2027 | 14:00"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Bekijk concert",
+      "date": "2027-03-17",
+      "url": "https://www.concertgebouw.nl/concerten/45913707-zing-cirkel-concertgebouw",
+      "status": "event uit dagblok",
+      "rawText": "Bekijk concert | wo 17 mrt 2027 | 14:00 | Bekijk concert | wo 21 apr 2027"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Bekijk concert",
+      "date": "2027-04-21",
+      "url": "https://www.concertgebouw.nl/concerten/45913707-zing-cirkel-concertgebouw",
+      "status": "event uit tekstregel",
+      "rawText": "Bekijk concert | wo 21 apr 2027 | 11:00 | Bekijk concert | wo 21 apr 2027 | 14:00"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Bekijk concert",
+      "date": "2027-04-21",
+      "url": "https://www.concertgebouw.nl/concerten/45913707-zing-cirkel-concertgebouw",
+      "status": "event uit dagblok",
+      "rawText": "Bekijk concert | wo 21 apr 2027 | 14:00 | Bekijk concert | wo 19 mei 2027"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Bekijk concert",
+      "date": "2027-05-19",
+      "url": "https://www.concertgebouw.nl/concerten/45913707-zing-cirkel-concertgebouw",
+      "status": "event uit tekstregel",
+      "rawText": "Bekijk concert | wo 19 mei 2027 | 11:00 | Bekijk concert | wo 19 mei 2027 | 14:00"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Bekijk concert",
+      "date": "2027-05-19",
+      "url": "https://www.concertgebouw.nl/concerten/45913707-zing-cirkel-concertgebouw",
+      "status": "event uit dagblok",
+      "rawText": "Bekijk concert | wo 19 mei 2027 | 14:00 | Bekijk concert | Bekijk alle data"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Bekijk alle data",
+      "date": "2027-05-19",
+      "url": "https://www.concertgebouw.nl/concerten/45913707-zing-cirkel-concertgebouw",
+      "status": "event uit dagblok",
+      "rawText": "Bekijk alle data | wo 28 okt 2026 | 14:00 | – | 16:00"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Bekijk alle data",
+      "date": "2026-10-28",
+      "url": "https://www.concertgebouw.nl/concerten/45913707-zing-cirkel-concertgebouw",
+      "status": "event uit tekstregel",
+      "rawText": "Bekijk alle data | wo 28 okt 2026 | 14:00 | – | 16:00 | Spiegelzaal"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Zing-Cirkel Concertgebouw",
+      "date": "2026-10-28",
+      "url": "https://www.concertgebouw.nl/concerten/45913707-zing-cirkel-concertgebouw",
+      "status": "event uit dagblok",
+      "rawText": "Zing-Cirkel Concertgebouw | Musici | Maartje de Lint | zang | Dit concert heeft geen pauze"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Musici",
+      "date": "2026-10-28",
+      "url": "https://www.concertgebouw.nl/concerten/45913707-zing-cirkel-concertgebouw",
+      "status": "event uit dagblok",
+      "rawText": "Musici | Maartje de Lint | zang | Dit concert heeft geen pauze | Kracht en vreugde door samen te zingen: workshops voor mensen met geheugenproblemen of uitdagingen in het brein én hun mantelzorgers. Tijdens inspirerende sessies gaat Maartje de Lint samen met ongeveer 25 senioren en hun mantelzorgers zingen."
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Maartje de Lint",
+      "date": "2026-10-28",
+      "url": "https://www.concertgebouw.nl/concerten/45913707-zing-cirkel-concertgebouw",
+      "status": "event uit dagblok",
+      "rawText": "Maartje de Lint | zang | Dit concert heeft geen pauze | Kracht en vreugde door samen te zingen: workshops voor mensen met geheugenproblemen of uitdagingen in het brein én hun mantelzorgers. Tijdens inspirerende sessies gaat Maartje de Lint samen met ongeveer 25 senioren en hun mantelzorgers zingen. | Zing-Cirkel Concertgebouw is een inspirerende ontmoetingsplek in Het Concertgebouw. Omdat ook Het Concertgebouw het he"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "zang",
+      "date": "2026-10-28",
+      "url": "https://www.concertgebouw.nl/concerten/45913707-zing-cirkel-concertgebouw",
+      "status": "event uit dagblok",
+      "rawText": "zang | Dit concert heeft geen pauze | Kracht en vreugde door samen te zingen: workshops voor mensen met geheugenproblemen of uitdagingen in het brein én hun mantelzorgers. Tijdens inspirerende sessies gaat Maartje de Lint samen met ongeveer 25 senioren en hun mantelzorgers zingen. | Zing-Cirkel Concertgebouw is een inspirerende ontmoetingsplek in Het Concertgebouw. Omdat ook Het Concertgebouw het heel belangrijk vind"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Dit concert heeft geen pauze",
+      "date": "2026-10-28",
+      "url": "https://www.concertgebouw.nl/concerten/45913707-zing-cirkel-concertgebouw",
+      "status": "event uit dagblok",
+      "rawText": "Dit concert heeft geen pauze | Kracht en vreugde door samen te zingen: workshops voor mensen met geheugenproblemen of uitdagingen in het brein én hun mantelzorgers. Tijdens inspirerende sessies gaat Maartje de Lint samen met ongeveer 25 senioren en hun mantelzorgers zingen. | Zing-Cirkel Concertgebouw is een inspirerende ontmoetingsplek in Het Concertgebouw. Omdat ook Het Concertgebouw het heel belangrijk vindt dat i"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Zing-Cirkel Concertgebouw vindt plaats op de volgende data:",
+      "date": "2026-10-28",
+      "url": "https://www.concertgebouw.nl/concerten/45913707-zing-cirkel-concertgebouw",
+      "status": "event uit tekstregel",
+      "rawText": "Zing-Cirkel Concertgebouw vindt plaats op de volgende data: | Woensdag 28 oktober 2026 | Woensdag 25 november 2026 | Woensdag 23 december 2026 | Woensdag 20 januari 2027 | Woensdag 17 februari 2027"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Tijdschema ochtendsessies:",
+      "date": "2027-05-19",
+      "url": "https://www.concertgebouw.nl/concerten/45913707-zing-cirkel-concertgebouw",
+      "status": "event uit tekstregel",
+      "rawText": "Woensdag 21 april 2027 | Woensdag 19 mei 2027 | Tijdschema ochtendsessies: | 10.50 uur deuren open | 11.00-11.30 uur koffie/thee | 11.30-12.30 uur workshop"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Tijdschema ochtendsessies:",
+      "date": "2027-05-19",
+      "url": "https://www.concertgebouw.nl/concerten/45913707-zing-cirkel-concertgebouw",
+      "status": "event uit dagblok",
+      "rawText": "Tijdschema ochtendsessies: | 10.50 uur deuren open | 11.00-11.30 uur koffie/thee | 11.30-12.30 uur workshop | 12.30-13.00 uur koffie/thee"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Tijdschema middagsessies:",
+      "date": "2027-05-19",
+      "url": "https://www.concertgebouw.nl/concerten/45913707-zing-cirkel-concertgebouw",
+      "status": "event uit dagblok",
+      "rawText": "Tijdschema middagsessies: | 13.50 uur deuren open | 14.00-14.30 uur koffie/thee | 14.30-15.30 uur workshop | 15.30-16.00 uur koffie/thee"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Ook iets voor u?",
+      "date": "2026-11-29",
+      "url": "https://www.concertgebouw.nl/concerten/45913707-zing-cirkel-concertgebouw",
+      "status": "event uit tekstregel",
+      "rawText": "Ook iets voor u? | zo 29 nov 2026 | Ben Folds | di 15 dec 2026 | Kurt Elling & Jazz Orchestra of the Concertgebouw | za 5 dec 2026"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Ben Folds",
+      "date": "2026-12-15",
+      "url": "https://www.concertgebouw.nl/concerten/45913707-zing-cirkel-concertgebouw",
+      "status": "event uit tekstregel",
+      "rawText": "Ben Folds | di 15 dec 2026 | Kurt Elling & Jazz Orchestra of the Concertgebouw | za 5 dec 2026 | 12e jaarlijkse Chanoekaconcert – Vrijheid! | za 19 dec 2026"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Kurt Elling & Jazz Orchestra of the Concertgebouw",
+      "date": "2026-12-05",
+      "url": "https://www.concertgebouw.nl/concerten/45913707-zing-cirkel-concertgebouw",
+      "status": "event uit tekstregel",
+      "rawText": "Kurt Elling & Jazz Orchestra of the Concertgebouw | za 5 dec 2026 | 12e jaarlijkse Chanoekaconcert – Vrijheid! | za 19 dec 2026 | Kerstmatinee: Sing-Along met Loes Luca | Overige informatie"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "12e jaarlijkse Chanoekaconcert – Vrijheid!",
+      "date": "2026-12-19",
+      "url": "https://www.concertgebouw.nl/concerten/45913707-zing-cirkel-concertgebouw",
+      "status": "event uit tekstregel",
+      "rawText": "12e jaarlijkse Chanoekaconcert – Vrijheid! | za 19 dec 2026 | Kerstmatinee: Sing-Along met Loes Luca | Overige informatie | Veelgestelde vragen | Verhuur"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Pagina geteld",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten/45913707-zing-cirkel-concertgebouw",
+      "status": "analyse",
+      "rawText": "jsonld:0, links:4, datumblokken:6, kaarten:45, regels:89, detail:1"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten/45913707-zing-cirkel-concertgebouw",
+      "status": "ok",
+      "rawText": "33 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Zing-Cirkel Concertgebouw",
+      "date": "2027-10-08",
+      "url": "https://www.concertgebouw.nl/concerten/45913708-zing-cirkel-concertgebouw",
+      "status": "event uit datumblok",
+      "rawText": "8 okt Zing-Cirkel Concertgebouw Uitverkocht Uitverkocht Zing-Cirkel Concertgebouw Musici Maartje de Lint zang Dit concert heeft geen pauze Kracht en vreugde door samen te zingen: workshops voor mensen met geheugenproblemen of uitdagingen in het brein én hun mantelzorgers. Tijdens inspirerende sessies gaat Maartje de Lint samen met ongeveer 25 senioren en hun mantelzorgers zingen. Zing-Cirkel Concertgebouw is een insp"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Tijdschema ochtendsessies: 10.50 uur deuren open 11.00-11.30 uur koffie/thee 11.30-12.30 uur",
+      "date": "2027-05-09",
+      "url": "https://www.concertgebouw.nl/concerten/45913708-zing-cirkel-concertgebouw",
+      "status": "event uit datumblok",
+      "rawText": "9 mei 2027 Tijdschema ochtendsessies: 10.50 uur deuren open 11.00-11.30 uur koffie/thee 11.30-12.30 uur workshop 12.30-13.00 uur koffie/thee Tijdschema middagsessies: 13.50 uur deuren open 14.00-14.30 uur koffie/thee 14.30-15.30 uur workshop 15.30-16.00 uur koffie/thee Let op: zowel de deelnemer als de mantelzorger heeft een toegangskaart nodig. Lees meer Genre Vocaal, Overig Onderdeel van serie Zing-Cirkel Concertge"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Ben Folds",
+      "date": "2026-11-09",
+      "url": "https://www.concertgebouw.nl/concerten/45913708-zing-cirkel-concertgebouw",
+      "status": "event uit datumblok",
+      "rawText": "9 nov 2026 Ben Folds"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Kurt Elling &",
+      "date": "2026-12-05",
+      "url": "https://www.concertgebouw.nl/concerten/45913708-zing-cirkel-concertgebouw",
+      "status": "event uit datumblok",
+      "rawText": "5 dec 2026 Kurt Elling & Jazz Orchestra of the Concertgebouw"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "12e jaarlijkse Chanoekaconcert – Vrijheid!",
+      "date": "2026-12-05",
+      "url": "https://www.concertgebouw.nl/concerten/45913708-zing-cirkel-concertgebouw",
+      "status": "event uit datumblok",
+      "rawText": "5 dec 2026 12e jaarlijkse Chanoekaconcert – Vrijheid!"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Kerstmatinee: Sing-Along met Loes Luca Overige informatie",
+      "date": "2026-12-09",
+      "url": "https://www.concertgebouw.nl/concerten/45913708-zing-cirkel-concertgebouw",
+      "status": "event uit datumblok",
+      "rawText": "9 dec 2026 Kerstmatinee: Sing-Along met Loes Luca Overige informatie Veelgestelde vragen Verhuur Pers Info Concertvrienden en Entrée Maandblad Preludium Route & Parkeren Over ons Organisatie Vacatures Contact Veelgestelde vragen Verhuur Pers Concertvrienden en Entrée Maandblad Preludium Route & Parkeren Organisatie Vacatures Contact Volg ons Geluidsfragmenten mogelijk gemaakt door ClassicsToGo Disclaimer Privacy Cook"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Zing-Cirkel Concertgebouw",
+      "date": "2026-10-28",
+      "url": "https://www.concertgebouw.nl/concerten/45913708-zing-cirkel-concertgebouw",
+      "status": "event uit detailpagina",
+      "rawText": "Zing-Cirkel Concertgebouw - Concertgebouw - Nederlands Naar hoofdcontent Concertagenda Concerten Concertagenda Bekijk onze veelzijdige concertagenda Keuzehulp Wij helpen u kiezen! Jong publiek Met korting naar de mooiste concerten VriendenLoterij ZomerConcerten Het Zondagochtend Concert Familieconcerten Hemelbestormers Reflecties op Europa Series Uw bezoek Kaartverkoop Over het bestellen van kaarten Route & Parkeren"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Zing-Cirkel Concertgebouw",
+      "date": "2026-10-28",
+      "url": "https://www.concertgebouw.nl/concerten/45913708-zing-cirkel-concertgebouw",
+      "status": "event uit tekstregel",
+      "rawText": "Zing-Cirkel Concertgebouw | wo 28 okt 2026 | 11:00 | – | 13:00 | Spiegelzaal"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "vanaf 20,00",
+      "date": "2026-10-28",
+      "url": "https://www.concertgebouw.nl/concerten/45913708-zing-cirkel-concertgebouw",
+      "status": "event uit dagblok",
+      "rawText": "vanaf 20,00 | Uitverkocht | Uitverkocht | Bookmark | Bewaar dit concert"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Bookmark",
+      "date": "2026-10-28",
+      "url": "https://www.concertgebouw.nl/concerten/45913708-zing-cirkel-concertgebouw",
+      "status": "event uit dagblok",
+      "rawText": "Bookmark | Bewaar dit concert | Andere data | wo 28 okt 2026 | 14:00"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Bewaar dit concert",
+      "date": "2026-10-28",
+      "url": "https://www.concertgebouw.nl/concerten/45913708-zing-cirkel-concertgebouw",
+      "status": "event uit dagblok",
+      "rawText": "Bewaar dit concert | Andere data | wo 28 okt 2026 | 14:00 | Laatste kaarten"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Andere data",
+      "date": "2026-10-28",
+      "url": "https://www.concertgebouw.nl/concerten/45913708-zing-cirkel-concertgebouw",
+      "status": "event uit dagblok",
+      "rawText": "Andere data | wo 28 okt 2026 | 14:00 | Laatste kaarten | Bekijk concert"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Andere data",
+      "date": "2026-10-28",
+      "url": "https://www.concertgebouw.nl/concerten/45913708-zing-cirkel-concertgebouw",
+      "status": "event uit tekstregel",
+      "rawText": "Andere data | wo 28 okt 2026 | 14:00 | Laatste kaarten | Bekijk concert | wo 25 nov 2026"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Bekijk concert",
+      "date": "2026-10-28",
+      "url": "https://www.concertgebouw.nl/concerten/45913708-zing-cirkel-concertgebouw",
+      "status": "event uit dagblok",
+      "rawText": "Bekijk concert | wo 25 nov 2026 | 11:00 | Bekijk concert | wo 25 nov 2026"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Bekijk concert",
+      "date": "2026-11-25",
+      "url": "https://www.concertgebouw.nl/concerten/45913708-zing-cirkel-concertgebouw",
+      "status": "event uit tekstregel",
+      "rawText": "Bekijk concert | wo 25 nov 2026 | 11:00 | Bekijk concert | wo 25 nov 2026 | 14:00"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Bekijk concert",
+      "date": "2026-11-25",
+      "url": "https://www.concertgebouw.nl/concerten/45913708-zing-cirkel-concertgebouw",
+      "status": "event uit dagblok",
+      "rawText": "Bekijk concert | wo 25 nov 2026 | 14:00 | Laatste kaarten | Bekijk concert"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Bekijk concert",
+      "date": "2026-12-23",
+      "url": "https://www.concertgebouw.nl/concerten/45913708-zing-cirkel-concertgebouw",
+      "status": "event uit tekstregel",
+      "rawText": "Bekijk concert | wo 23 dec 2026 | 11:00 | Bekijk concert | wo 23 dec 2026 | 14:00"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Bekijk concert",
+      "date": "2026-12-23",
+      "url": "https://www.concertgebouw.nl/concerten/45913708-zing-cirkel-concertgebouw",
+      "status": "event uit dagblok",
+      "rawText": "Bekijk concert | wo 23 dec 2026 | 14:00 | Bekijk concert | wo 20 jan 2027"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Bekijk concert",
+      "date": "2027-01-20",
+      "url": "https://www.concertgebouw.nl/concerten/45913708-zing-cirkel-concertgebouw",
+      "status": "event uit tekstregel",
+      "rawText": "Bekijk concert | wo 20 jan 2027 | 11:00 | Bekijk concert | wo 20 jan 2027 | 14:00"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Bekijk concert",
+      "date": "2027-01-20",
+      "url": "https://www.concertgebouw.nl/concerten/45913708-zing-cirkel-concertgebouw",
+      "status": "event uit dagblok",
+      "rawText": "Bekijk concert | wo 20 jan 2027 | 14:00 | Bekijk concert | wo 17 feb 2027"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Bekijk concert",
+      "date": "2027-02-17",
+      "url": "https://www.concertgebouw.nl/concerten/45913708-zing-cirkel-concertgebouw",
+      "status": "event uit tekstregel",
+      "rawText": "Bekijk concert | wo 17 feb 2027 | 11:00 | Bekijk concert | wo 17 feb 2027 | 14:00"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Bekijk concert",
+      "date": "2027-02-17",
+      "url": "https://www.concertgebouw.nl/concerten/45913708-zing-cirkel-concertgebouw",
+      "status": "event uit dagblok",
+      "rawText": "Bekijk concert | wo 17 feb 2027 | 14:00 | Bekijk concert | wo 17 mrt 2027"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Bekijk concert",
+      "date": "2027-03-17",
+      "url": "https://www.concertgebouw.nl/concerten/45913708-zing-cirkel-concertgebouw",
+      "status": "event uit tekstregel",
+      "rawText": "Bekijk concert | wo 17 mrt 2027 | 11:00 | Bekijk concert | wo 17 mrt 2027 | 14:00"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Bekijk concert",
+      "date": "2027-03-17",
+      "url": "https://www.concertgebouw.nl/concerten/45913708-zing-cirkel-concertgebouw",
+      "status": "event uit dagblok",
+      "rawText": "Bekijk concert | wo 17 mrt 2027 | 14:00 | Bekijk concert | wo 21 apr 2027"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Bekijk concert",
+      "date": "2027-04-21",
+      "url": "https://www.concertgebouw.nl/concerten/45913708-zing-cirkel-concertgebouw",
+      "status": "event uit tekstregel",
+      "rawText": "Bekijk concert | wo 21 apr 2027 | 11:00 | Bekijk concert | wo 21 apr 2027 | 14:00"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Bekijk concert",
+      "date": "2027-04-21",
+      "url": "https://www.concertgebouw.nl/concerten/45913708-zing-cirkel-concertgebouw",
+      "status": "event uit dagblok",
+      "rawText": "Bekijk concert | wo 21 apr 2027 | 14:00 | Bekijk concert | wo 19 mei 2027"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Bekijk concert",
+      "date": "2027-05-19",
+      "url": "https://www.concertgebouw.nl/concerten/45913708-zing-cirkel-concertgebouw",
+      "status": "event uit tekstregel",
+      "rawText": "Bekijk concert | wo 19 mei 2027 | 11:00 | Bekijk concert | wo 19 mei 2027 | 14:00"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Bekijk concert",
+      "date": "2027-05-19",
+      "url": "https://www.concertgebouw.nl/concerten/45913708-zing-cirkel-concertgebouw",
+      "status": "event uit dagblok",
+      "rawText": "Bekijk concert | wo 19 mei 2027 | 14:00 | Bekijk concert | Bekijk alle data"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Bekijk alle data",
+      "date": "2027-05-19",
+      "url": "https://www.concertgebouw.nl/concerten/45913708-zing-cirkel-concertgebouw",
+      "status": "event uit dagblok",
+      "rawText": "Bekijk alle data | wo 28 okt 2026 | 11:00 | – | 13:00"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Bekijk alle data",
+      "date": "2026-10-28",
+      "url": "https://www.concertgebouw.nl/concerten/45913708-zing-cirkel-concertgebouw",
+      "status": "event uit tekstregel",
+      "rawText": "Bekijk alle data | wo 28 okt 2026 | 11:00 | – | 13:00 | Spiegelzaal"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Zing-Cirkel Concertgebouw",
+      "date": "2026-10-28",
+      "url": "https://www.concertgebouw.nl/concerten/45913708-zing-cirkel-concertgebouw",
+      "status": "event uit dagblok",
+      "rawText": "Zing-Cirkel Concertgebouw | Musici | Maartje de Lint | zang | Dit concert heeft geen pauze"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Musici",
+      "date": "2026-10-28",
+      "url": "https://www.concertgebouw.nl/concerten/45913708-zing-cirkel-concertgebouw",
+      "status": "event uit dagblok",
+      "rawText": "Musici | Maartje de Lint | zang | Dit concert heeft geen pauze | Kracht en vreugde door samen te zingen: workshops voor mensen met geheugenproblemen of uitdagingen in het brein én hun mantelzorgers. Tijdens inspirerende sessies gaat Maartje de Lint samen met ongeveer 25 senioren en hun mantelzorgers zingen."
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Maartje de Lint",
+      "date": "2026-10-28",
+      "url": "https://www.concertgebouw.nl/concerten/45913708-zing-cirkel-concertgebouw",
+      "status": "event uit dagblok",
+      "rawText": "Maartje de Lint | zang | Dit concert heeft geen pauze | Kracht en vreugde door samen te zingen: workshops voor mensen met geheugenproblemen of uitdagingen in het brein én hun mantelzorgers. Tijdens inspirerende sessies gaat Maartje de Lint samen met ongeveer 25 senioren en hun mantelzorgers zingen. | Zing-Cirkel Concertgebouw is een inspirerende ontmoetingsplek in Het Concertgebouw. Omdat ook Het Concertgebouw het he"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "zang",
+      "date": "2026-10-28",
+      "url": "https://www.concertgebouw.nl/concerten/45913708-zing-cirkel-concertgebouw",
+      "status": "event uit dagblok",
+      "rawText": "zang | Dit concert heeft geen pauze | Kracht en vreugde door samen te zingen: workshops voor mensen met geheugenproblemen of uitdagingen in het brein én hun mantelzorgers. Tijdens inspirerende sessies gaat Maartje de Lint samen met ongeveer 25 senioren en hun mantelzorgers zingen. | Zing-Cirkel Concertgebouw is een inspirerende ontmoetingsplek in Het Concertgebouw. Omdat ook Het Concertgebouw het heel belangrijk vind"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Dit concert heeft geen pauze",
+      "date": "2026-10-28",
+      "url": "https://www.concertgebouw.nl/concerten/45913708-zing-cirkel-concertgebouw",
+      "status": "event uit dagblok",
+      "rawText": "Dit concert heeft geen pauze | Kracht en vreugde door samen te zingen: workshops voor mensen met geheugenproblemen of uitdagingen in het brein én hun mantelzorgers. Tijdens inspirerende sessies gaat Maartje de Lint samen met ongeveer 25 senioren en hun mantelzorgers zingen. | Zing-Cirkel Concertgebouw is een inspirerende ontmoetingsplek in Het Concertgebouw. Omdat ook Het Concertgebouw het heel belangrijk vindt dat i"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Zing-Cirkel Concertgebouw vindt plaats op de volgende data:",
+      "date": "2026-10-28",
+      "url": "https://www.concertgebouw.nl/concerten/45913708-zing-cirkel-concertgebouw",
+      "status": "event uit tekstregel",
+      "rawText": "Zing-Cirkel Concertgebouw vindt plaats op de volgende data: | Woensdag 28 oktober 2026 | Woensdag 25 november 2026 | Woensdag 23 december 2026 | Woensdag 20 januari 2027 | Woensdag 17 februari 2027"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Tijdschema ochtendsessies:",
+      "date": "2027-05-19",
+      "url": "https://www.concertgebouw.nl/concerten/45913708-zing-cirkel-concertgebouw",
+      "status": "event uit tekstregel",
+      "rawText": "Woensdag 21 april 2027 | Woensdag 19 mei 2027 | Tijdschema ochtendsessies: | 10.50 uur deuren open | 11.00-11.30 uur koffie/thee | 11.30-12.30 uur workshop"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Tijdschema ochtendsessies:",
+      "date": "2027-05-19",
+      "url": "https://www.concertgebouw.nl/concerten/45913708-zing-cirkel-concertgebouw",
+      "status": "event uit dagblok",
+      "rawText": "Tijdschema ochtendsessies: | 10.50 uur deuren open | 11.00-11.30 uur koffie/thee | 11.30-12.30 uur workshop | 12.30-13.00 uur koffie/thee"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Tijdschema middagsessies:",
+      "date": "2027-05-19",
+      "url": "https://www.concertgebouw.nl/concerten/45913708-zing-cirkel-concertgebouw",
+      "status": "event uit dagblok",
+      "rawText": "Tijdschema middagsessies: | 13.50 uur deuren open | 14.00-14.30 uur koffie/thee | 14.30-15.30 uur workshop | 15.30-16.00 uur koffie/thee"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Ook iets voor u?",
+      "date": "2026-11-29",
+      "url": "https://www.concertgebouw.nl/concerten/45913708-zing-cirkel-concertgebouw",
+      "status": "event uit tekstregel",
+      "rawText": "Ook iets voor u? | zo 29 nov 2026 | Ben Folds | di 15 dec 2026 | Kurt Elling & Jazz Orchestra of the Concertgebouw | za 5 dec 2026"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Ben Folds",
+      "date": "2026-12-15",
+      "url": "https://www.concertgebouw.nl/concerten/45913708-zing-cirkel-concertgebouw",
+      "status": "event uit tekstregel",
+      "rawText": "Ben Folds | di 15 dec 2026 | Kurt Elling & Jazz Orchestra of the Concertgebouw | za 5 dec 2026 | 12e jaarlijkse Chanoekaconcert – Vrijheid! | za 19 dec 2026"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Kurt Elling & Jazz Orchestra of the Concertgebouw",
+      "date": "2026-12-05",
+      "url": "https://www.concertgebouw.nl/concerten/45913708-zing-cirkel-concertgebouw",
+      "status": "event uit tekstregel",
+      "rawText": "Kurt Elling & Jazz Orchestra of the Concertgebouw | za 5 dec 2026 | 12e jaarlijkse Chanoekaconcert – Vrijheid! | za 19 dec 2026 | Kerstmatinee: Sing-Along met Loes Luca | Overige informatie"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "12e jaarlijkse Chanoekaconcert – Vrijheid!",
+      "date": "2026-12-19",
+      "url": "https://www.concertgebouw.nl/concerten/45913708-zing-cirkel-concertgebouw",
+      "status": "event uit tekstregel",
+      "rawText": "12e jaarlijkse Chanoekaconcert – Vrijheid! | za 19 dec 2026 | Kerstmatinee: Sing-Along met Loes Luca | Overige informatie | Veelgestelde vragen | Verhuur"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Pagina geteld",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten/45913708-zing-cirkel-concertgebouw",
+      "status": "analyse",
+      "rawText": "jsonld:0, links:4, datumblokken:6, kaarten:45, regels:85, detail:1"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten/45913708-zing-cirkel-concertgebouw",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Flat Earth Society: The Coltrane Mutations",
+      "date": "2026-10-30",
+      "url": "https://www.concertgebouw.nl/concerten/43931217-flat-earth-society-the-coltrane-mutations",
+      "status": "event uit detailpagina",
+      "rawText": "Flat Earth Society: The Coltrane Mutations - Concertgebouw - Nederlands Naar hoofdcontent Concertagenda Concerten Concertagenda Bekijk onze veelzijdige concertagenda Keuzehulp Wij helpen u kiezen! Jong publiek Met korting naar de mooiste concerten VriendenLoterij ZomerConcerten Het Zondagochtend Concert Familieconcerten Hemelbestormers Reflecties op Europa Series Uw bezoek Kaartverkoop Over het bestellen van kaarten"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Flat Earth Society: The Coltrane Mutations",
+      "date": "2026-10-30",
+      "url": "https://www.concertgebouw.nl/concerten/43931217-flat-earth-society-the-coltrane-mutations",
+      "status": "event uit tekstregel",
+      "rawText": "Flat Earth Society: The Coltrane Mutations | vr 30 okt 2026 | 20:15 | – | 22:00 | Kleine Zaal"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "vanaf 19,00",
+      "date": "2026-10-30",
+      "url": "https://www.concertgebouw.nl/concerten/43931217-flat-earth-society-the-coltrane-mutations",
+      "status": "event uit dagblok",
+      "rawText": "vanaf 19,00 | Bestel kaarten | Bestel kaarten | Bookmark | Bewaar dit concert"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Bestel kaarten",
+      "date": "2026-10-30",
+      "url": "https://www.concertgebouw.nl/concerten/43931217-flat-earth-society-the-coltrane-mutations",
+      "status": "event uit dagblok",
+      "rawText": "Bestel kaarten | Bestel kaarten | Bookmark | Bewaar dit concert | vr 30 okt 2026"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Bookmark",
+      "date": "2026-10-30",
+      "url": "https://www.concertgebouw.nl/concerten/43931217-flat-earth-society-the-coltrane-mutations",
+      "status": "event uit dagblok",
+      "rawText": "Bookmark | Bewaar dit concert | vr 30 okt 2026 | 20:15 | –"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Bewaar dit concert",
+      "date": "2026-10-30",
+      "url": "https://www.concertgebouw.nl/concerten/43931217-flat-earth-society-the-coltrane-mutations",
+      "status": "event uit dagblok",
+      "rawText": "Bewaar dit concert | vr 30 okt 2026 | 20:15 | – | 22:00"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Bewaar dit concert",
+      "date": "2026-10-30",
+      "url": "https://www.concertgebouw.nl/concerten/43931217-flat-earth-society-the-coltrane-mutations",
+      "status": "event uit tekstregel",
+      "rawText": "Bewaar dit concert | vr 30 okt 2026 | 20:15 | – | 22:00 | Kleine Zaal"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "tenorsaxofoon",
+      "date": "2026-10-30",
+      "url": "https://www.concertgebouw.nl/concerten/43931217-flat-earth-society-the-coltrane-mutations",
+      "status": "event uit dagblok",
+      "rawText": "tenorsaxofoon | Rob Banken | klarinet, basklarinet | Bekijk alle musici | Dit concert heeft geen pauze"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Rob Banken",
+      "date": "2026-10-30",
+      "url": "https://www.concertgebouw.nl/concerten/43931217-flat-earth-society-the-coltrane-mutations",
+      "status": "event uit dagblok",
+      "rawText": "Rob Banken | klarinet, basklarinet | Bekijk alle musici | Dit concert heeft geen pauze | Het Flat Earth Society Orchestra (FES) vertegenwoordigt wereldwijd de Belgische eigenzinnigheid. Vanavond doen ze dat in een uniek eerbetoon aan John Coltrane, de iconische muzikant die in 2026 honderd geworden zou zijn. Eerbetoon"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "klarinet, basklarinet",
+      "date": "2026-10-30",
+      "url": "https://www.concertgebouw.nl/concerten/43931217-flat-earth-society-the-coltrane-mutations",
+      "status": "event uit dagblok",
+      "rawText": "klarinet, basklarinet | Bekijk alle musici | Dit concert heeft geen pauze | Het Flat Earth Society Orchestra (FES) vertegenwoordigt wereldwijd de Belgische eigenzinnigheid. Vanavond doen ze dat in een uniek eerbetoon aan John Coltrane, de iconische muzikant die in 2026 honderd geworden zou zijn. Eerbetoon | The Coltrane Mutations"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Bekijk alle musici",
+      "date": "2026-10-30",
+      "url": "https://www.concertgebouw.nl/concerten/43931217-flat-earth-society-the-coltrane-mutations",
+      "status": "event uit dagblok",
+      "rawText": "Bekijk alle musici | Dit concert heeft geen pauze | Het Flat Earth Society Orchestra (FES) vertegenwoordigt wereldwijd de Belgische eigenzinnigheid. Vanavond doen ze dat in een uniek eerbetoon aan John Coltrane, de iconische muzikant die in 2026 honderd geworden zou zijn. Eerbetoon | The Coltrane Mutations | is typisch FES: uniek, scherpzinnig en onverschrokken. Met eigen arrangementen en interpretaties van Coltrane-"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Dit concert heeft geen pauze",
+      "date": "2026-10-30",
+      "url": "https://www.concertgebouw.nl/concerten/43931217-flat-earth-society-the-coltrane-mutations",
+      "status": "event uit dagblok",
+      "rawText": "Dit concert heeft geen pauze | Het Flat Earth Society Orchestra (FES) vertegenwoordigt wereldwijd de Belgische eigenzinnigheid. Vanavond doen ze dat in een uniek eerbetoon aan John Coltrane, de iconische muzikant die in 2026 honderd geworden zou zijn. Eerbetoon | The Coltrane Mutations | is typisch FES: uniek, scherpzinnig en onverschrokken. Met eigen arrangementen en interpretaties van Coltrane-klassiekers, plus vol"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Bekijk ook de pagina met",
+      "date": "2026-10-30",
+      "url": "https://www.concertgebouw.nl/concerten/43931217-flat-earth-society-the-coltrane-mutations",
+      "status": "event uit dagblok",
+      "rawText": "Bekijk ook de pagina met | informatie over versterkte concerten | . | Flat Earth Society Orchestra | Het Flat Earth Society Orchestra (FES) combineert op harmonieuze wijze levendig surrealisme met gepolijste vaardigheid en verlegt daarmee voortdurend de grenzen van de Belgische creativiteit. Als wereldwijde vertegenwoordiger van de unieke Belgische eigenzinnigheid heeft FES onvergetelijke indrukken achtergelaten met"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "informatie over versterkte concerten",
+      "date": "2026-10-30",
+      "url": "https://www.concertgebouw.nl/concerten/43931217-flat-earth-society-the-coltrane-mutations",
+      "status": "event uit dagblok",
+      "rawText": "informatie over versterkte concerten | . | Flat Earth Society Orchestra | Het Flat Earth Society Orchestra (FES) combineert op harmonieuze wijze levendig surrealisme met gepolijste vaardigheid en verlegt daarmee voortdurend de grenzen van de Belgische creativiteit. Als wereldwijde vertegenwoordiger van de unieke Belgische eigenzinnigheid heeft FES onvergetelijke indrukken achtergelaten met optredens over de hele were"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Flat Earth Society Orchestra",
+      "date": "2026-10-30",
+      "url": "https://www.concertgebouw.nl/concerten/43931217-flat-earth-society-the-coltrane-mutations",
+      "status": "event uit dagblok",
+      "rawText": "Flat Earth Society Orchestra | Het Flat Earth Society Orchestra (FES) combineert op harmonieuze wijze levendig surrealisme met gepolijste vaardigheid en verlegt daarmee voortdurend de grenzen van de Belgische creativiteit. Als wereldwijde vertegenwoordiger van de unieke Belgische eigenzinnigheid heeft FES onvergetelijke indrukken achtergelaten met optredens over de hele wereld. Componist, rietblazer, producer en band"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Pagina geteld",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten/43931217-flat-earth-society-the-coltrane-mutations",
+      "status": "analyse",
+      "rawText": "jsonld:0, links:0, datumblokken:0, kaarten:7, regels:21, detail:1"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten/43931217-flat-earth-society-the-coltrane-mutations",
+      "status": "ok",
+      "rawText": "14 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "status": "klaar",
+      "rawText": "site 11/18: 40 unieke events in 8.17 sec"
     }
   ]
 }
