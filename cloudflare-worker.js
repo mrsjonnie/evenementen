@@ -1160,7 +1160,13 @@ async function saveEventCorrection(env, target = {}) {
   const response = await githubFetch(env, "/contents/events.json?ref=main");
   if (!response.ok) throw new Error("events.json niet leesbaar: status " + response.status);
   const file = await response.json();
-  let data = JSON.parse(decodeBase64(file.content));
+  const decodedEvents = decodeBase64(file.content || "");
+  if (!decodedEvents.trim()) throw new Error("events.json is leeg; herstel eerst de evenementdata voordat je een correctie opslaat.");
+  let data;
+  try { data = JSON.parse(decodedEvents); } catch (_) { throw new Error("events.json bevat ongeldige JSON; correctie afgebroken om gegevensverlies te voorkomen."); }
+  if (!Array.isArray(data) && (!data || (!Array.isArray(data.events) && !Array.isArray(data.archive)))) {
+    throw new Error("events.json heeft een onbekende structuur; correctie afgebroken om gegevensverlies te voorkomen.");
+  }
   const originalTitle = clean(target.originalTitle || target.title || "");
   const originalDate = clean(target.originalDate || target.date || "");
   const wantedUrl = clean(target.url || target.website || "").replace(/\/$/, "").toLowerCase();
@@ -1218,7 +1224,7 @@ async function saveEventCorrection(env, target = {}) {
   return { updatedCount, corrections: { title, date, location, type, cost, website: improvedUrl } };
 }
 async function deleteEventFromGithub(env, target = {}) {
-  await saveEventFeedback(env, target, "bad");
+  await saveEventFeedback(env, target, "deleted");
   let existing = { events: [], archive: [], siteResults: [], rawLog: [] };
   let sha = null;
   const getResponse = await githubFetch(env, "/contents/events.json?ref=main");
@@ -1226,7 +1232,13 @@ async function deleteEventFromGithub(env, target = {}) {
 
   const file = await getResponse.json();
   sha = file.sha;
-  const decoded = JSON.parse(decodeBase64(file.content));
+  const decodedText = decodeBase64(file.content || "");
+  if (!decodedText.trim()) throw new Error("events.json is leeg; herstel eerst de evenementdata voordat je verwijdert.");
+  let decoded;
+  try { decoded = JSON.parse(decodedText); } catch (_) { throw new Error("events.json bevat ongeldige JSON; verwijderen afgebroken om gegevensverlies te voorkomen."); }
+  if (!Array.isArray(decoded) && (!decoded || (!Array.isArray(decoded.events) && !Array.isArray(decoded.archive)))) {
+    throw new Error("events.json heeft een onbekende structuur; verwijderen afgebroken om gegevensverlies te voorkomen.");
+  }
   if (Array.isArray(decoded)) existing.events = decoded;
   if (decoded && Array.isArray(decoded.events)) existing.events = decoded.events;
   if (decoded && Array.isArray(decoded.archive)) existing.archive = decoded.archive;
