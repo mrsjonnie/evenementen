@@ -1,7 +1,7 @@
 {
   "runId": "2026-10-26T11:43:58.524217+00:00-0c37897b",
   "startedAt": "2026-10-26T11:43:58+00:00",
-  "completedCount": 4,
+  "completedCount": 5,
   "totalSites": 16,
   "currentSite": "https://simplon.nl/",
   "currentSiteIndex": 5,
@@ -9,7 +9,8 @@
     "https://groningen.uitloper.nu/",
     "https://www.visitgroningen.nl/nl/doen/evenementen",
     "https://forum.nl/nl/agenda",
-    "https://www.spotgroningen.nl/programma/"
+    "https://www.spotgroningen.nl/programma/",
+    "https://simplon.nl/"
   ],
   "events": [
     {
@@ -116,117 +117,16 @@
       "newCount": 4,
       "durationSeconds": 11.63,
       "timedOut": true
+    },
+    {
+      "site": "https://simplon.nl/",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 4.71,
+      "timedOut": false
     }
   ],
   "rawLog": [
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Push it",
-      "date": "2026-10-31",
-      "url": "https://groningen.uitloper.nu/party/push-it-28",
-      "status": "Uitloper agenda-item",
-      "rawText": "Push it 23:00 uur Push It is dé groovy dansnacht in VERA waar muziek…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Halloween party",
-      "date": "2026-10-31",
-      "url": "https://groningen.uitloper.nu/party/halloween-party-6",
-      "status": "Uitloper agenda-item",
-      "rawText": "Halloween party 19:00 uur We vieren Halloween met griezels, spoken, heksen en…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Dorothy’s Halloween Party",
-      "date": "2026-10-31",
-      "url": "https://groningen.uitloper.nu/party/dorothy%e2%80%99s-halloween-party",
-      "status": "Uitloper agenda-item",
-      "rawText": "Dorothy’s Halloween Party 21:00 uur Het beruchte Halloween feest met Dorothy's House Queens…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Havana Halloween Edition",
-      "date": "2026-10-31",
-      "url": "https://groningen.uitloper.nu/party/havana-halloween-edition",
-      "status": "Uitloper agenda-item",
-      "rawText": "Havana Halloween Edition 23:00 uur Line up: Valsbezig, Dior, Latu en nog veel meer. …"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "HALLOWEEN CLUB NIGHT",
-      "date": "2026-10-31",
-      "url": "https://groningen.uitloper.nu/party/halloween-club-night",
-      "status": "Uitloper agenda-item",
-      "rawText": "HALLOWEEN CLUB NIGHT 23:00 uur Trek je beste Halloween-outfit uit de kast, verzamel…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Halloween",
-      "date": "2026-10-31",
-      "url": "https://groningen.uitloper.nu/party/halloween-5",
-      "status": "Uitloper agenda-item",
-      "rawText": "Halloween 16:00 uur Op de Main Stage zorgt Stapjeskamer voor house, hard…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Ghostbusters Halloween Experience",
-      "date": "2026-10-31",
-      "url": "https://groningen.uitloper.nu/theater/ghostbusters-halloween-experience",
-      "status": "Uitloper agenda-item",
-      "rawText": "Ghostbusters Halloween Experience 15:00 uur Samen met spoken, monsters, heksen, zombies en Ghostbusters…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Every Brilliant Thing (Try-out)",
-      "date": "2026-10-31",
-      "url": "https://groningen.uitloper.nu/theater/every-brilliant-thing-try-out",
-      "status": "Uitloper agenda-item",
-      "rawText": "Every Brilliant Thing (Try-out) 20:15 uur Franka Krol wordt in haar monoloog begeleid door Jorden…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Thinking Hands",
-      "date": "2026-10-31",
-      "url": "https://groningen.uitloper.nu/kunst/thinking-hands",
-      "status": "Uitloper agenda-item",
-      "rawText": "Thinking Hands Een expositie over de kennis die in ons lichaam zit…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Nieuw Licht - De Ploeg",
-      "date": "2026-10-31",
-      "url": "https://groningen.uitloper.nu/kunst/nieuw-licht-%e2%80%93-de-ploeg",
-      "status": "Uitloper agenda-item",
-      "rawText": "Nieuw Licht - De Ploeg Een geheel vernieuwde presentatie van werken van De…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Nieuw licht 1: Ani Schulze – The Convent of Pleasure",
-      "date": "2026-10-31",
-      "url": "https://groningen.uitloper.nu/kunst/nieuw-licht-1-ani-schulze-%e2%80%93-the-convent-of-pleasure",
-      "status": "Uitloper agenda-item",
-      "rawText": "Nieuw licht 1: Ani Schulze – The Convent of Pleasure Nieuw licht is een tentoonstellingsreeks waarin het…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Keramikos Carrier Bag",
-      "date": "2026-10-31",
-      "url": "https://groningen.uitloper.nu/kunst/keramikos-carrier-bag",
-      "status": "Uitloper agenda-item",
-      "rawText": "Keramikos Carrier Bag Naar aanleiding van onderzoek in Groningen kozen Matthew…"
-    },
     {
       "source": "Website",
       "site": "https://groningen.uitloper.nu/",
@@ -10918,16 +10818,124 @@
       "url": "https://www.spotgroningen.nl/programma/",
       "status": "klaar",
       "rawText": "site 4/16: 4 unieke events in 11.63 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://simplon.nl/",
+      "title": "Start",
+      "date": "",
+      "url": "https://simplon.nl/",
+      "status": "start",
+      "rawText": "site 5/16: max 40 events, max 10 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://simplon.nl/",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://simplon.nl/",
+      "status": "strategie",
+      "rawText": "compacte-agenda-kaarten"
+    },
+    {
+      "source": "Website",
+      "site": "https://simplon.nl/",
+      "title": "Pagina gelezen",
+      "date": "",
+      "url": "https://simplon.nl/programma/",
+      "status": "ok",
+      "rawText": "94996 tekens HTML"
+    },
+    {
+      "source": "Parser",
+      "site": "https://simplon.nl/",
+      "title": "Agenda geanalyseerd",
+      "date": "",
+      "url": "https://simplon.nl/programma/",
+      "status": "gespecialiseerde parser",
+      "rawText": "54 agenda-items gevonden"
+    },
+    {
+      "source": "Website",
+      "site": "https://simplon.nl/",
+      "title": "Pagina geanalyseerd",
+      "date": "",
+      "url": "https://simplon.nl/programma/",
+      "status": "ok",
+      "rawText": "51 events/aanbiedingen op deze pagina"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://simplon.nl/",
+      "title": "Feed geanalyseerd",
+      "date": "",
+      "url": "https://simplon.nl/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fsimplon.nl%2Fprogramma%2F&format=xml",
+      "status": "ok",
+      "rawText": "0 events uit openbare feed"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://simplon.nl/",
+      "title": "Feed geanalyseerd",
+      "date": "",
+      "url": "https://simplon.nl/feed/",
+      "status": "ok",
+      "rawText": "0 events uit openbare feed"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://simplon.nl/",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://simplon.nl/rss.xml",
+      "status": "fout",
+      "rawText": "HTTP 404"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://simplon.nl/",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://simplon.nl/feed.xml",
+      "status": "fout",
+      "rawText": "HTTP 404"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://simplon.nl/",
+      "title": "Feed geanalyseerd",
+      "date": "",
+      "url": "https://simplon.nl/events/feed/",
+      "status": "ok",
+      "rawText": "0 events uit openbare feed"
+    },
+    {
+      "source": "Filter",
+      "site": "https://simplon.nl/",
+      "title": "Datumfilter toegepast",
+      "date": "2026-10-26",
+      "url": "https://simplon.nl/",
+      "status": "ok",
+      "rawText": "51 gevonden; 0 binnen 2026-10-26 t/m 2026-10-26"
+    },
+    {
+      "source": "Website",
+      "site": "https://simplon.nl/",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://simplon.nl/",
+      "status": "klaar",
+      "rawText": "site 5/16: 0 unieke events in 4.71 sec"
     }
   ],
   "status": "running",
   "siteStartedAt": "2026-10-26T11:44:55+00:00",
-  "siteElapsedSeconds": 0,
-  "sitePageCount": 0,
+  "siteElapsedSeconds": 6,
+  "sitePageCount": 1,
   "lastSiteEventCount": 0,
-  "stage": "Websitepagina ophalen",
-  "lastUpdatedAt": "2026-10-26T11:44:55+00:00",
-  "lastSiteNewEventCount": 4,
-  "lastCompletedSite": "https://www.spotgroningen.nl/programma/",
-  "lastCompletedAt": "2026-10-26T11:44:53+00:00"
+  "stage": "Website klaar; volgende website voorbereiden",
+  "lastUpdatedAt": "2026-10-26T11:44:58+00:00",
+  "lastSiteNewEventCount": 0,
+  "lastCompletedSite": "https://simplon.nl/",
+  "lastCompletedAt": "2026-10-26T11:45:01+00:00"
 }
