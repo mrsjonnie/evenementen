@@ -74,9 +74,9 @@ function renderSiteLogic(){
  const sites=selected==="all"?activeSites:activeSites.filter(site=>site===selected);
  $("siteLogic").innerHTML=sites.length?sites.map(site=>{
   let special="Geen afzonderlijke HTML-parserregel gevonden; de algemene HTML/JSON-LD/linkherkenning wordt gebruikt.";
-  if(/spotgroningen\\.nl/i.test(site)) special="Bekende uitzondering: de SerpAPI-zoeklaag voegt extra zoektermen voor SPOT Groningen toe, inclusief de datum wanneer die is opgegeven.";
-  if(/paradiso\\.nl/i.test(site)) special="Bekende uitzondering: bij JSON-LD-evenementen van Paradiso wordt de locatie standaard als Amsterdam weergegeven.";
-  if(/socialdeal\\.nl|groupon\\.nl|ibood\\.com/i.test(site)) special="Bekende uitzondering: de AI-normalisatie herkent deze domeinen als aanbiedingssites. De datum- en titelcontrole blijft van toepassing.";
+  if(/spotgroningen\.nl/i.test(site)) special="Bekende uitzondering: de SerpAPI-zoeklaag voegt extra zoektermen voor SPOT Groningen toe, inclusief de datum wanneer die is opgegeven.";
+  if(/paradiso\.nl/i.test(site)) special="Bekende uitzondering: bij JSON-LD-evenementen van Paradiso wordt de locatie standaard als Amsterdam weergegeven.";
+  if(/socialdeal\.nl|groupon\.nl|ibood\.com/i.test(site)) special="Bekende uitzondering: de AI-normalisatie herkent deze domeinen als aanbiedingssites. De datum- en titelcontrole blijft van toepassing.";
   const host=hostOf(site);
   return '<article class="rule"><div><span class="pill">'+esc(host||site)+'</span><h3>'+esc(site)+'</h3><p><strong>Pagina’s die worden geprobeerd:</strong> de opgegeven URL plus algemene agenda-paden op hetzelfde domein (onder meer agenda, programma, evenementen, activiteiten en events).</p><p><strong>Algemene uitsluitingen:</strong> contact-, privacy-, cookie-, voorwaarden-, login-, account-, nieuwsbrief- en sociale-mediapagina’s; ook links buiten het brondomein worden afgewezen.</p><p><strong>Herkenning:</strong> JSON-LD, evenementachtige tekstblokken en gevonden detailpagina’s. De algemene limiet van de HTML-scraper is maximaal 40 gevonden kandidaten per site vóór deduplicatie.</p><p><strong>Bekende websitespecifieke logica:</strong> '+esc(special)+'</p></div></article>';
  }).join(""):'<div class="empty">Geen actieve websites gevonden in sites.json.</div>';
