@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-26T22:43:26+00:00",
+  "updatedAt": "2026-10-26T22:43:55+00:00",
   "events": [
     {
       "date": "2026-10-26",
@@ -11528,162 +11528,16 @@
       "newCount": 60,
       "durationSeconds": 8.11,
       "timedOut": false
+    },
+    {
+      "site": "https://www.socialdeal.nl/",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 23.9,
+      "timedOut": false
     }
   ],
   "rawLog": [
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Ronald Brautigam & Christian Poltéra",
-      "date": "2027-04-06",
-      "url": "https://www.spotgroningen.nl/programma/ronald-brautigam-christian-poltera/",
-      "status": "event uit link",
-      "rawText": "Ronald Brautigam & Christian Poltéra Drie cellosonates en een pianosonate van Beethoven di 6 apr"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Noord Nederlands Orkest Openbare repetitie",
-      "date": "2027-04-07",
-      "url": "https://www.spotgroningen.nl/programma/noord-nederlands-orkest-249/",
-      "status": "event uit link",
-      "rawText": "Noord Nederlands Orkest Openbare repetitie Een pianostuk vol lichte en dans-achtige momenten wo 7 apr"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Ilse Warringa, Theo Maassen e.a. RATATATATA!",
-      "date": "2027-04-07",
-      "url": "https://www.spotgroningen.nl/programma/ilse-warringa-theo-maassen-etc/",
-      "status": "event uit link",
-      "rawText": "Ilse Warringa, Theo Maassen e.a. RATATATATA! Een topcast in bloedvorm wo 7 apr"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Alex Roeka OP DRIFT",
-      "date": "2027-04-07",
-      "url": "https://www.spotgroningen.nl/programma/alex-roeka-4/",
-      "status": "event uit link",
-      "rawText": "Alex Roeka OP DRIFT Zijn nieuwe theaterprogramma, geïnspireerd door dertig jaar onderweg-zijn wo 7 apr"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Zoë Livay",
-      "date": "2027-04-08",
-      "url": "https://www.spotgroningen.nl/programma/zoe-livay/",
-      "status": "event uit link",
-      "rawText": "Zoë Livay Nederlandstalige pop vol persoonlijke verhalen, kwetsbaarheid en een krachtige stem do 8 apr"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Bureau Vergezicht Een stukje naar de mensen toe",
-      "date": "2027-04-08",
-      "url": "https://www.spotgroningen.nl/programma/bureau-vergezicht/",
-      "status": "event uit link",
-      "rawText": "Bureau Vergezicht Een stukje naar de mensen toe “Een magisch cadeautje aan haar publiek.” (NRC ★★★★) do 8 apr"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Ilse Warringa, Theo Maassen e.a. RATATATATA!",
-      "date": "2027-04-08",
-      "url": "https://www.spotgroningen.nl/programma/ilse-warringa-theo-maassen-etc-2/",
-      "status": "event uit link",
-      "rawText": "Ilse Warringa, Theo Maassen e.a. RATATATATA! Een topcast in bloedvorm do 8 apr"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Sietepè",
-      "date": "2027-04-08",
-      "url": "https://www.spotgroningen.nl/programma/sietepe/",
-      "status": "event uit link",
-      "rawText": "Sietepè Drie gitaristen slaan de handen ineen do 8 apr"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Martijn Koning Overprikkeld",
-      "date": "2027-04-09",
-      "url": "https://www.spotgroningen.nl/programma/martijn-koning-8/",
-      "status": "event uit link",
-      "rawText": "Martijn Koning Overprikkeld Lachen geeft headspace! Wees welkom! vr 9 apr"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Noord Nederlands Orkest en Dejan Lazic Brahms & Schumann",
-      "date": "2027-04-09",
-      "url": "https://www.spotgroningen.nl/programma/noord-nederlands-orkest-227/",
-      "status": "event uit link",
-      "rawText": "Noord Nederlands Orkest en Dejan Lazic Brahms & Schumann Een pianostuk vol lichte en dans-achtige momenten Wereldklasse vr 9 apr"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Kraak & Smaak (LIVE)",
-      "date": "2027-04-09",
-      "url": "https://www.spotgroningen.nl/programma/kraak-smaak/",
-      "status": "event uit link",
-      "rawText": "Kraak & Smaak (LIVE) Internationaal geroemde elektronische disco-, funk- en indie-act uit Leiden vr 9 apr"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Chef'Special",
-      "date": "2027-04-10",
-      "url": "https://www.spotgroningen.nl/programma/chefspecial-6/",
-      "status": "event uit link",
-      "rawText": "Chef'Special Nog één keer in de oorspronkelijke bezetting Uitverkocht za 10 apr"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Ilse DeLange",
-      "date": "2027-04-10",
-      "url": "https://www.spotgroningen.nl/programma/ilse-delange-6/",
-      "status": "event uit link",
-      "rawText": "Ilse DeLange Hoogtepunten aangevuld met nieuw repertoire en persoonlijke verhalen za 10 apr"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Jim Gardner",
-      "date": "2027-04-10",
-      "url": "https://www.spotgroningen.nl/programma/jim-gardner/",
-      "status": "event uit link",
-      "rawText": "Jim Gardner Oprechte popmuziek vol emotie, sterke melodieën en persoonlijke verhalen za 10 apr"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Nederlands Blazers Ensemble Strauss en Schönberg",
-      "date": "2027-04-10",
-      "url": "https://www.spotgroningen.nl/programma/nederlands-blazers-ensemble-13/",
-      "status": "event uit link",
-      "rawText": "Nederlands Blazers Ensemble Strauss en Schönberg Blazers buigen zich over de liefde: van romantisch verlangen tot harde werkelijkheid za 10 apr"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Theater Rotterdam Mary Jane",
-      "date": "2027-04-10",
-      "url": "https://www.spotgroningen.nl/programma/theater-rotterdam-13/",
-      "status": "event uit link",
-      "rawText": "Theater Rotterdam Mary Jane Liefdevol portret over veerkracht, onvoorwaardelijke zorg en medemenselijkheid za 10 apr"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "GRRR... ik ben een boze Dino! (4+) Lil Ones",
-      "date": "2027-04-11",
-      "url": "https://www.spotgroningen.nl/programma/grrr-ik-ben-een-boze-dino-4-2/",
-      "status": "event uit link",
-      "rawText": "GRRR... ik ben een boze Dino! (4+) Lil Ones | Top Notch Muzikale en vrolijke familievoorstelling zo 11 apr"
-    },
     {
       "source": "Website",
       "site": "https://www.spotgroningen.nl/programma/",
@@ -22330,6 +22184,159 @@
       "url": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
       "status": "klaar",
       "rawText": "site 12/15: 60 unieke events in 8.11 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.socialdeal.nl/",
+      "title": "Start",
+      "date": "",
+      "url": "https://www.socialdeal.nl/",
+      "status": "start",
+      "rawText": "site 13/15: max 60 events, max 45 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.socialdeal.nl/",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://www.socialdeal.nl/",
+      "status": "strategie",
+      "rawText": "Social Deal-aanbiedingen"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.socialdeal.nl/",
+      "title": "Pagina gelezen",
+      "date": "",
+      "url": "https://www.socialdeal.nl/dichtbij/groningen/",
+      "status": "ok",
+      "rawText": "317677 tekens HTML"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.socialdeal.nl/",
+      "title": "Social Deal-telling",
+      "date": "",
+      "url": "https://www.socialdeal.nl/dichtbij/groningen/",
+      "status": "ok",
+      "rawText": "25 aanbiedingen gevonden (limiet 60)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.socialdeal.nl/",
+      "title": "Pagina geanalyseerd",
+      "date": "",
+      "url": "https://www.socialdeal.nl/dichtbij/groningen/",
+      "status": "ok",
+      "rawText": "25 events/aanbiedingen op deze pagina"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.socialdeal.nl/",
+      "title": "Pagina gelezen",
+      "date": "",
+      "url": "https://www.socialdeal.nl/ontdek/groningen/",
+      "status": "ok",
+      "rawText": "4939489 tekens HTML"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.socialdeal.nl/",
+      "title": "Social Deal-telling",
+      "date": "",
+      "url": "https://www.socialdeal.nl/ontdek/groningen/",
+      "status": "ok",
+      "rawText": "60 aanbiedingen gevonden (limiet 60)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.socialdeal.nl/",
+      "title": "Pagina geanalyseerd",
+      "date": "",
+      "url": "https://www.socialdeal.nl/ontdek/groningen/",
+      "status": "ok",
+      "rawText": "60 events/aanbiedingen op deze pagina"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.socialdeal.nl/",
+      "title": "Pagina gelezen",
+      "date": "",
+      "url": "https://www.socialdeal.nl/deals/groningen/",
+      "status": "ok",
+      "rawText": "4939486 tekens HTML"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.socialdeal.nl/",
+      "title": "Social Deal-telling",
+      "date": "",
+      "url": "https://www.socialdeal.nl/deals/groningen/",
+      "status": "ok",
+      "rawText": "60 aanbiedingen gevonden (limiet 60)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.socialdeal.nl/",
+      "title": "Pagina geanalyseerd",
+      "date": "",
+      "url": "https://www.socialdeal.nl/deals/groningen/",
+      "status": "ok",
+      "rawText": "60 events/aanbiedingen op deze pagina"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://www.socialdeal.nl/",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://www.socialdeal.nl/feed",
+      "status": "fout",
+      "rawText": "HTTP 404"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://www.socialdeal.nl/",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://www.socialdeal.nl/rss",
+      "status": "fout",
+      "rawText": "HTTP 404"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://www.socialdeal.nl/",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://www.socialdeal.nl/rss.xml",
+      "status": "fout",
+      "rawText": "HTTP 404"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://www.socialdeal.nl/",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://www.socialdeal.nl/feed.xml",
+      "status": "fout",
+      "rawText": "HTTP 404"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://www.socialdeal.nl/",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://www.socialdeal.nl/events/feed/",
+      "status": "fout",
+      "rawText": "HTTP 404"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.socialdeal.nl/",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://www.socialdeal.nl/",
+      "status": "klaar",
+      "rawText": "site 13/15: 0 unieke events in 23.9 sec"
     }
   ]
 }
