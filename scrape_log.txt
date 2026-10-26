@@ -1,12 +1,3 @@
-Website	https://www.spotgroningen.nl/programma/	event uit link	DOX The Desire Club	2027-03-08	https://www.spotgroningen.nl/programma/dox-4/	DOX The Desire Club Een rauwe, humoristische en zintuiglijke zoektocht naar identiteit en vrijheid ma 8 mrt
-Website	https://www.spotgroningen.nl/programma/	event uit link	Clouseau	2027-03-08	https://www.spotgroningen.nl/programma/clouseau-3/	Clouseau Al meer dan veertig jaar een vaste waarde in de Nederlandstalige popmuziek Uitverkocht Net bevestigd ma 8 mrt
-Website	https://www.spotgroningen.nl/programma/	event uit link	Nachtwacht NITE, Club Guy & Roni, HIIIT, Het Muziek	2027-03-09	https://www.spotgroningen.nl/programma/nachtwacht-8/	Nachtwacht NITE, Club Guy & Roni, HIIIT, Het Muziek "Nachtwacht grijpt vol naar je hart" ★★★★★ de Volkskrant di 9 mrt
-Website	https://www.spotgroningen.nl/programma/	event uit link	Cursus Klassieke Muziek 4 De 20e eeuw	2027-03-09	https://www.spotgroningen.nl/programma/klassieke-muziek-4-de-20e-eeuw/	Cursus Klassieke Muziek 4 De 20e eeuw Ga mee op een inspirerende reis door de muziekgeschiedenis! di 9 mrt
-Website	https://www.spotgroningen.nl/programma/	event uit link	Cursus Klassieke Muziek 4 De 20e eeuw	2027-03-10	https://www.spotgroningen.nl/programma/klassieke-muziek-4-de-20e-eeuw-2/	Cursus Klassieke Muziek 4 De 20e eeuw Ga mee op een inspirerende reis door de muziekgeschiedenis! wo 10 mrt
-Website	https://www.spotgroningen.nl/programma/	event uit link	Nachtwacht NITE, Club Guy & Roni, HIIIT, Het Muziek	2027-03-10	https://www.spotgroningen.nl/programma/nachtwacht-5/	Nachtwacht NITE, Club Guy & Roni, HIIIT, Het Muziek "Nachtwacht grijpt vol naar je hart" ★★★★★ de Volkskrant wo 10 mrt
-Website	https://www.spotgroningen.nl/programma/	event uit link	Kirill Gerstein	2027-03-10	https://www.spotgroningen.nl/programma/kirill-gerstein/	Kirill Gerstein Van Mendelssohn tot Liszt: fris, direct en verrassend toegankelijk Wereldklasse wo 10 mrt
-Website	https://www.spotgroningen.nl/programma/	event uit link	Ronald Snijders Leven met humor	2027-03-10	https://www.spotgroningen.nl/programma/ronald-snijders-6/	Ronald Snijders Leven met humor Absurd, talig en droog, soms op de rand van melig wo 10 mrt
-Website	https://www.spotgroningen.nl/programma/	event uit link	The Surpriseshow Via Rudolphi Producties	2027-03-10	https://www.spotgroningen.nl/programma/the-surpriseshow/	The Surpriseshow Via Rudolphi Producties | TOBAL | Nazanin Taheri Rauwe, ontroerende en humoristische solovoorstelling wo 10 mrt
 Website	https://www.spotgroningen.nl/programma/	event uit link	Dutch Classical Talent: Martin String Quartet SPOT Lunchbreak	2027-03-11	https://www.spotgroningen.nl/programma/dutch-classical-talent-martin-string-quartet/	Dutch Classical Talent: Martin String Quartet SPOT Lunchbreak Een van de meest veelbelovende nieuwe Nederlandse strijkkwartetten do 11 mrt
 Website	https://www.spotgroningen.nl/programma/	event uit link	Noord Nederlands Orkest Beethoven 5	2027-03-11	https://www.spotgroningen.nl/programma/noord-nederlands-orkest-237/	Noord Nederlands Orkest Beethoven 5 Een programma vol variatie: van alarmerend begin tot uitbundige finale do 11 mrt
 Website	https://www.spotgroningen.nl/programma/	event uit link	Nachtwacht NITE, Club Guy & Roni, HIIIT, Het Muziek	2027-03-12	https://www.spotgroningen.nl/programma/nachtwacht-6/	Nachtwacht NITE, Club Guy & Roni, HIIIT, Het Muziek "Nachtwacht grijpt vol naar je hart" ★★★★★ de Volkskrant vr 12 mrt
@@ -1198,3 +1189,12 @@ Website	https://www.socialdeal.nl/	ok	Pagina gelezen		https://www.socialdeal.nl/
 Parser	https://www.socialdeal.nl/	ok	Social Deal-telling		https://www.socialdeal.nl/dichtbij/groningen/	12 aanbiedingen gevonden (limiet 12)
 Website	https://www.socialdeal.nl/	ok	Pagina geanalyseerd		https://www.socialdeal.nl/dichtbij/groningen/	12 events/aanbiedingen op deze pagina
 Website	https://www.socialdeal.nl/	klaar	Klaar		https://www.socialdeal.nl/	site 16/20: 12 unieke events in 1.65 sec
+Website	https://www.ibood.com/s-nl	start	Start		https://www.ibood.com/s-nl	site 17/20: max 12 events, max 4 seconden
+Parser	https://www.ibood.com/s-nl	strategie	Scrapertype vastgesteld		https://www.ibood.com/s-nl	aanbiedingen
+Diagnose	https://www.ibood.com/offers/nl/s-nl	fout	403-tekstproxy mislukt		https://www.ibood.com/offers/nl/s-nl	HTTPSConnectionPool(host='r.jina.ai', port=443): Read timed out. (read timeout=1.25)
+Website	https://www.ibood.com/s-nl	fout	Pagina mislukt		https://www.ibood.com/offers/nl/s-nl	HTTP 403
+Diagnose	https://www.ibood.com/nl/s-nl	fout	403-tekstproxy mislukt		https://www.ibood.com/nl/s-nl	HTTPSConnectionPool(host='r.jina.ai', port=443): Read timed out. (read timeout=1.25)
+Website	https://www.ibood.com/s-nl	fout	Pagina mislukt		https://www.ibood.com/nl/s-nl	HTTP 403
+Diagnose	https://www.ibood.com/s-nl	fout	403-tekstproxy mislukt		https://www.ibood.com/s-nl	HTTPSConnectionPool(host='r.jina.ai', port=443): Read timed out. (read timeout=0.9848111039999878)
+Website	https://www.ibood.com/s-nl	fout	Pagina mislukt		https://www.ibood.com/s-nl	HTTP 403
+Website	https://www.ibood.com/s-nl	klaar	Klaar		https://www.ibood.com/s-nl	site 17/20: 0 unieke events in 4.02 sec

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-26T09:46:30+00:00",
+  "updatedAt": "2026-10-26T09:46:37+00:00",
   "events": [
     {
       "date": "2026-10-26",
@@ -2283,90 +2283,16 @@
       "newCount": 12,
       "durationSeconds": 1.65,
       "timedOut": false
+    },
+    {
+      "site": "https://www.ibood.com/s-nl",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 4.02,
+      "timedOut": true
     }
   ],
   "rawLog": [
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "DOX The Desire Club",
-      "date": "2027-03-08",
-      "url": "https://www.spotgroningen.nl/programma/dox-4/",
-      "status": "event uit link",
-      "rawText": "DOX The Desire Club Een rauwe, humoristische en zintuiglijke zoektocht naar identiteit en vrijheid ma 8 mrt"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Clouseau",
-      "date": "2027-03-08",
-      "url": "https://www.spotgroningen.nl/programma/clouseau-3/",
-      "status": "event uit link",
-      "rawText": "Clouseau Al meer dan veertig jaar een vaste waarde in de Nederlandstalige popmuziek Uitverkocht Net bevestigd ma 8 mrt"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Nachtwacht NITE, Club Guy & Roni, HIIIT, Het Muziek",
-      "date": "2027-03-09",
-      "url": "https://www.spotgroningen.nl/programma/nachtwacht-8/",
-      "status": "event uit link",
-      "rawText": "Nachtwacht NITE, Club Guy & Roni, HIIIT, Het Muziek \"Nachtwacht grijpt vol naar je hart\" ★★★★★ de Volkskrant di 9 mrt"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Cursus Klassieke Muziek 4 De 20e eeuw",
-      "date": "2027-03-09",
-      "url": "https://www.spotgroningen.nl/programma/klassieke-muziek-4-de-20e-eeuw/",
-      "status": "event uit link",
-      "rawText": "Cursus Klassieke Muziek 4 De 20e eeuw Ga mee op een inspirerende reis door de muziekgeschiedenis! di 9 mrt"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Cursus Klassieke Muziek 4 De 20e eeuw",
-      "date": "2027-03-10",
-      "url": "https://www.spotgroningen.nl/programma/klassieke-muziek-4-de-20e-eeuw-2/",
-      "status": "event uit link",
-      "rawText": "Cursus Klassieke Muziek 4 De 20e eeuw Ga mee op een inspirerende reis door de muziekgeschiedenis! wo 10 mrt"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Nachtwacht NITE, Club Guy & Roni, HIIIT, Het Muziek",
-      "date": "2027-03-10",
-      "url": "https://www.spotgroningen.nl/programma/nachtwacht-5/",
-      "status": "event uit link",
-      "rawText": "Nachtwacht NITE, Club Guy & Roni, HIIIT, Het Muziek \"Nachtwacht grijpt vol naar je hart\" ★★★★★ de Volkskrant wo 10 mrt"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Kirill Gerstein",
-      "date": "2027-03-10",
-      "url": "https://www.spotgroningen.nl/programma/kirill-gerstein/",
-      "status": "event uit link",
-      "rawText": "Kirill Gerstein Van Mendelssohn tot Liszt: fris, direct en verrassend toegankelijk Wereldklasse wo 10 mrt"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Ronald Snijders Leven met humor",
-      "date": "2027-03-10",
-      "url": "https://www.spotgroningen.nl/programma/ronald-snijders-6/",
-      "status": "event uit link",
-      "rawText": "Ronald Snijders Leven met humor Absurd, talig en droog, soms op de rand van melig wo 10 mrt"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "The Surpriseshow Via Rudolphi Producties",
-      "date": "2027-03-10",
-      "url": "https://www.spotgroningen.nl/programma/the-surpriseshow/",
-      "status": "event uit link",
-      "rawText": "The Surpriseshow Via Rudolphi Producties | TOBAL | Nazanin Taheri Rauwe, ontroerende en humoristische solovoorstelling wo 10 mrt"
-    },
     {
       "source": "Website",
       "site": "https://www.spotgroningen.nl/programma/",
@@ -13085,6 +13011,87 @@
       "url": "https://www.socialdeal.nl/",
       "status": "klaar",
       "rawText": "site 16/20: 12 unieke events in 1.65 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "Start",
+      "date": "",
+      "url": "https://www.ibood.com/s-nl",
+      "status": "start",
+      "rawText": "site 17/20: max 12 events, max 4 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://www.ibood.com/s-nl",
+      "status": "strategie",
+      "rawText": "aanbiedingen"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.ibood.com/offers/nl/s-nl",
+      "title": "403-tekstproxy mislukt",
+      "date": "",
+      "url": "https://www.ibood.com/offers/nl/s-nl",
+      "status": "fout",
+      "rawText": "HTTPSConnectionPool(host='r.jina.ai', port=443): Read timed out. (read timeout=1.25)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "Pagina mislukt",
+      "date": "",
+      "url": "https://www.ibood.com/offers/nl/s-nl",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.ibood.com/nl/s-nl",
+      "title": "403-tekstproxy mislukt",
+      "date": "",
+      "url": "https://www.ibood.com/nl/s-nl",
+      "status": "fout",
+      "rawText": "HTTPSConnectionPool(host='r.jina.ai', port=443): Read timed out. (read timeout=1.25)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "Pagina mislukt",
+      "date": "",
+      "url": "https://www.ibood.com/nl/s-nl",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "403-tekstproxy mislukt",
+      "date": "",
+      "url": "https://www.ibood.com/s-nl",
+      "status": "fout",
+      "rawText": "HTTPSConnectionPool(host='r.jina.ai', port=443): Read timed out. (read timeout=0.9848111039999878)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "Pagina mislukt",
+      "date": "",
+      "url": "https://www.ibood.com/s-nl",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://www.ibood.com/s-nl",
+      "status": "klaar",
+      "rawText": "site 17/20: 0 unieke events in 4.02 sec"
     }
   ]
 }
