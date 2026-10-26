@@ -2003,6 +2003,9 @@
           title: cleanText(event.title || ""),
           date: cleanText(event.date || ""),
           location: cleanText(event.location || ""),
+          type: cleanText(event.type || ""),
+          cost: cleanText(event.cost || ""),
+          description: cleanText(event.description || ""),
           website: safeUrl(event.website, { website: true }),
           savedAt: new Date().toISOString()
         });
@@ -3273,7 +3276,27 @@
       };
       let afterRadius = afterNew.filter(matchesRadius);
       let afterDate = afterRadius.filter(matchesDate);
-      const afterFavorites = favoritesOnly ? afterDate.filter(isFavoriteEvent) : afterDate;
+      let afterFavorites = afterDate;
+      if (favoritesOnly) {
+        // Favorieten negeren de normale datum/plaats/type-filters en blijven zichtbaar
+        // als het oorspronkelijke evenement later uit de scraperdata verdwijnt.
+        const currentFavorites = uniqueEvents.filter(isFavoriteEvent);
+        const snapshots = favoriteEvents
+          .filter(saved => !currentFavorites.some(item =>
+            favoriteEventKey(item) === saved.key || eventDedupeKey(item) === saved.fallbackKey
+          ))
+          .map(saved => ({
+            title: saved.title || "Opgeslagen favoriet",
+            date: saved.date || "",
+            location: saved.location || "",
+            website: saved.website || "",
+            type: saved.type || "Favoriet",
+            cost: saved.cost || "Zie website",
+            description: saved.description || "Lokaal bewaarde favoriet; niet meer in de actuele scraperresultaten gevonden.",
+            source: "Lokale favoriet"
+          }));
+        afterFavorites = [...currentFavorites, ...snapshots];
+      }
 
       filterStats = {
         loaded: uniqueEvents.length,
