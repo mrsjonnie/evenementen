@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-26T09:46:18+00:00",
+  "updatedAt": "2026-10-26T09:46:26+00:00",
   "events": [
     {
       "date": "2026-10-26",
@@ -1630,6 +1630,81 @@
       "isNew": true
     },
     {
+      "date": "2027-03-01",
+      "time": "",
+      "title": "Appartementen",
+      "type": "Activiteit",
+      "location": "Ameland",
+      "locationLink": "",
+      "website": "https://www.vvvameland.nl/overnachten/appartementen",
+      "source": "vvvameland.nl",
+      "discoverySource": "Website",
+      "description": "Overzicht Appartementen Appartementen Buren 6 personen of meer Appartementen Nes 6 personen of meer Appartementen Ballum Appartementen Hollum 6 personen of meer",
+      "cost": "",
+      "image": "",
+      "isNew": true
+    },
+    {
+      "date": "2027-04-01",
+      "time": "",
+      "title": "Last-minutes",
+      "type": "Activiteit",
+      "location": "Ameland",
+      "locationLink": "",
+      "website": "https://www.vvvameland.nl/overnachten",
+      "source": "vvvameland.nl",
+      "discoverySource": "Website",
+      "description": "Overzicht Overnachten Overzicht Vakantiehuizen Vakantiehuizen Duingebied tussen Nes en Buren Vakantiehuizen Nes 7 of meer pers. Vakantiehuizen Ballum 7 of meer personen Vakantiehuizen Hollum 7 of meer personen Vakantiehuizen Buren 7 of meer personen Overzicht Appartementen",
+      "cost": "",
+      "image": "",
+      "isNew": true
+    },
+    {
+      "date": "2027-04-01",
+      "time": "",
+      "title": "Overnachten",
+      "type": "Activiteit",
+      "location": "Ameland",
+      "locationLink": "",
+      "website": "https://www.vvvameland.nl/overnachten",
+      "source": "vvvameland.nl",
+      "discoverySource": "Website",
+      "description": "Overzicht Overnachten Overzicht Vakantiehuizen Vakantiehuizen Duingebied tussen Nes en Buren Vakantiehuizen Nes 7 of meer pers. Vakantiehuizen Ballum 7 of meer personen Vakantiehuizen Hollum 7 of meer personen Vakantiehuizen Buren 7 of meer personen Overzicht Appartementen",
+      "cost": "",
+      "image": "",
+      "isNew": true
+    },
+    {
+      "date": "2027-04-01",
+      "time": "",
+      "title": "Vakantiehuizen",
+      "type": "Activiteit",
+      "location": "Ameland",
+      "locationLink": "",
+      "website": "https://www.vvvameland.nl/overnachten/vakantiehuizen",
+      "source": "vvvameland.nl",
+      "discoverySource": "Website",
+      "description": "Overzicht Vakantiehuizen Vakantiehuizen Duingebied tussen Nes en Buren Vakantiehuizen Nes 7 of meer pers. Vakantiehuizen Ballum 7 of meer personen Vakantiehuizen Hollum 7 of meer personen Vakantiehuizen Buren 7 of meer personen",
+      "cost": "",
+      "image": "",
+      "isNew": true
+    },
+    {
+      "date": "2027-04-01",
+      "time": "",
+      "title": "Vakantiehuizen Duingebied tussen Nes en Buren",
+      "type": "Activiteit",
+      "location": "Ameland",
+      "locationLink": "",
+      "website": "https://www.vvvameland.nl/overnachten/vakantiehuizen",
+      "source": "vvvameland.nl",
+      "discoverySource": "Website",
+      "description": "Overzicht Vakantiehuizen Vakantiehuizen Nes 7 of meer pers. Vakantiehuizen Ballum 7 of meer personen Vakantiehuizen Hollum 7 of meer personen Vakantiehuizen Buren 7 of meer personen",
+      "cost": "",
+      "image": "",
+      "isNew": true
+    },
+    {
       "date": "2027-05-09",
       "time": "",
       "title": "EXHIBITION",
@@ -2014,63 +2089,16 @@
       "newCount": 0,
       "durationSeconds": 4.01,
       "timedOut": true
+    },
+    {
+      "site": "https://www.vvvameland.nl/activiteiten-en-evenementen",
+      "count": 5,
+      "newCount": 5,
+      "durationSeconds": 5.55,
+      "timedOut": true
     }
   ],
   "rawLog": [
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Nachtwacht NITE, Club Guy & Roni, HIIIT, Het Muziek",
-      "date": "2027-03-05",
-      "url": "https://www.spotgroningen.nl/programma/nachtwacht-2/",
-      "status": "event uit link",
-      "rawText": "Nachtwacht NITE, Club Guy & Roni, HIIIT, Het Muziek \"Nachtwacht grijpt vol naar je hart\" ★★★★★ de Volkskrant vr 5 mrt"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Personal Trainer",
-      "date": "2027-03-05",
-      "url": "https://www.spotgroningen.nl/programma/personal-trainer/",
-      "status": "event uit link",
-      "rawText": "Personal Trainer Speelse indierock vol energie vr 5 mrt"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Estonian Philharmonic Chamber Choir",
-      "date": "2027-03-05",
-      "url": "https://www.spotgroningen.nl/programma/estonian-philharmonic-chamber-choir-3/",
-      "status": "event uit link",
-      "rawText": "Estonian Philharmonic Chamber Choir Van een twintigste-eeuws meesterwerk tot springlevende Estse traditie Wereldklasse vr 5 mrt"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Vrije Keuze Abonnement Stel zelf je ideale klassieke abonnement samen",
-      "date": "2027-03-05",
-      "url": "https://www.spotgroningen.nl/programma/vrije-keuze-abonnement/",
-      "status": "event uit link",
-      "rawText": "Vrije Keuze Abonnement Stel zelf je ideale klassieke abonnement samen Geniet met dit vrije keuze abonnement van geselecteerd aanbod vr 5 mrt"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Kamelot + support CYHRA / Dark Asylum World Tour",
-      "date": "2027-03-06",
-      "url": "https://www.spotgroningen.nl/programma/kamelot/",
-      "status": "event uit link",
-      "rawText": "Kamelot + support CYHRA / Dark Asylum World Tour Amerikaanse metalgiganten behoren al decennialang tot de top van de symfonische metal za 6 mrt"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Nachtwacht NITE, Club Guy & Roni, HIIIT, Het Muziek",
-      "date": "2027-03-06",
-      "url": "https://www.spotgroningen.nl/programma/nachtwacht-4/",
-      "status": "event uit link",
-      "rawText": "Nachtwacht NITE, Club Guy & Roni, HIIIT, Het Muziek \"Nachtwacht grijpt vol naar je hart\" ★★★★★ de Volkskrant za 6 mrt"
-    },
     {
       "source": "Website",
       "site": "https://www.spotgroningen.nl/programma/",
@@ -12816,6 +12844,60 @@
       "url": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
       "status": "klaar",
       "rawText": "site 14/20: 0 unieke events in 4.01 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vvvameland.nl/activiteiten-en-evenementen",
+      "title": "Start",
+      "date": "",
+      "url": "https://www.vvvameland.nl/activiteiten-en-evenementen",
+      "status": "start",
+      "rawText": "site 15/20: max 12 events, max 4 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.vvvameland.nl/activiteiten-en-evenementen",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://www.vvvameland.nl/activiteiten-en-evenementen",
+      "status": "strategie",
+      "rawText": "universeel-jsonld-links-kaarten"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vvvameland.nl/activiteiten-en-evenementen",
+      "title": "Pagina gelezen",
+      "date": "",
+      "url": "https://www.vvvameland.nl/activiteiten-en-evenementen",
+      "status": "ok",
+      "rawText": "2826869 tekens HTML"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.vvvameland.nl/activiteiten-en-evenementen",
+      "title": "Agenda-kaarten geteld",
+      "date": "",
+      "url": "https://www.vvvameland.nl/activiteiten-en-evenementen",
+      "status": "gespecialiseerde parser",
+      "rawText": "12 resultaten"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vvvameland.nl/activiteiten-en-evenementen",
+      "title": "Pagina geanalyseerd",
+      "date": "",
+      "url": "https://www.vvvameland.nl/activiteiten-en-evenementen",
+      "status": "ok",
+      "rawText": "5 events/aanbiedingen op deze pagina"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vvvameland.nl/activiteiten-en-evenementen",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://www.vvvameland.nl/activiteiten-en-evenementen",
+      "status": "klaar",
+      "rawText": "site 15/20: 5 unieke events in 5.55 sec"
     }
   ]
 }
