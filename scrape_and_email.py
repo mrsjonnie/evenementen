@@ -821,9 +821,15 @@ def normalize_event(raw, site_url):
 
     raw_location = clean_text(raw.get("location") or "")
     location_unknown = not raw_location or re.fullmatch(r"(?:locatie\s+)?(?:onbekend|unknown|n/?a|-)", raw_location, re.I)
-    if canonical_host(site_url).endswith("paradiso.nl"):
+    host = canonical_host(site_url)
+    title_key = re.sub(r"[^a-z0-9]+", " ", title.lower()).strip()
+    if host == "spotgroningen.nl" and "jon allen the luna kings" in title_key:
+        # SPOT's listing teaser sometimes yields an abonnement description as
+        # the venue. This event is at De Oosterpoort, Binnenzaal.
+        location = "SPOT/De Oosterpoort, Binnenzaal / Trompsingel 27"
+    elif host.endswith("paradiso.nl"):
         location = "Amsterdam"
-    elif "concertgebouw.nl" in canonical_host(site_url) and location_unknown:
+    elif "concertgebouw.nl" in host and location_unknown:
         location = "Concertgebouw Amsterdam"
     elif (canonical_host(site_url).endswith("hedon.nl") or canonical_host(site_url).endswith("zwolsetheaters.nl")) and location_unknown:
         location = "Hedon Zwolle"
