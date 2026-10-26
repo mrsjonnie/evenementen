@@ -1113,7 +1113,20 @@ async function saveEventFeedback(env, target = {}, vote = "bad") {
   const identity = key || [date, title.toLowerCase(), website.toLowerCase()].join("|");
   const now = new Date().toISOString();
   const index = data.feedback.findIndex(item => (item.key || [item.date, String(item.title || "").toLowerCase(), String(item.website || "").toLowerCase().replace(/\/$/, "")].join("|")) === identity);
-  const record = { key: identity, vote, title, date, website, url, updatedAt: now };
+  const record = {
+    key: identity, vote, title, date, website, url, updatedAt: now,
+    ...(vote === "edit" ? {
+      originalTitle: clean(target.originalTitle || title),
+      originalDate: clean(target.originalDate || date),
+      corrections: {
+        title: clean(target.corrections?.title || title),
+        date: clean(target.corrections?.date || date),
+        location: clean(target.corrections?.location || ""),
+        type: clean(target.corrections?.type || ""),
+        cost: clean(target.corrections?.cost || "")
+      }
+    } : {})
+  };
   if (index >= 0) data.feedback[index] = record; else data.feedback.push(record);
   data.schemaVersion = 1; data.updatedAt = now;
   const payload = { message: "Event link feedback: " + vote + " - " + (title || key || "event"), content: encodeBase64(JSON.stringify(data, null, 2)), branch: "main" };
@@ -1121,6 +1134,65 @@ async function saveEventFeedback(env, target = {}, vote = "bad") {
   const saved = await githubFetch(env, "/contents/event-feedback.json", { method: "PUT", body: JSON.stringify(payload) });
   if (!saved.ok) throw new Error("Feedback opslaan mislukt: " + await saved.text());
   return { vote, feedbackCount: data.feedback.length };
+}
+async function saveEventCorrection(env, target = {}) {
+  const corrections = target.corrections || {};
+  const title = clean(corrections.title || "");
+  const date = clean(corrections.date || "");
+  const location = clean(corrections.location || "");
+  const type = clean(corrections.type || "");
+  const cost = clean(corrections.cost || "");
+  if (!title || !date || !target.website) throw new Error("Titel, datum en website zijn verplicht");
+  if (!location || !type || !cost) throw new Error("Vul plaats, type en prijs in; gebruik bijvoorbeeld 'Onbekend' als de prijs niet bekend is");
+
+  const response = await githubFetch(env, "/contents/events.json?ref=main");
+  if (!response.ok) throw new Error("events.json niet leesbaar: status " + response.status);
+  const file = await response.json();
+  const data = JSON.parse(decodeBase64(file.content));
+  const originalTitle = clean(target.originalTitle || target.title || "");
+  const originalDate = clean(target.originalDate || target.date || "");
+  const wantedUrl = clean(target.url || target.website || "").replace(/\/$/, "").toLowerCase();
+  const wantedWebsite = clean(target.website || "").replace(/\/$/, "").toLowerCase();
+  const sameEvent = (event) => {
+    const eventUrl = clean(event.website || "").replace(/\/$/, "").toLowerCase();
+    const sameUrl = wantedUrl && eventUrl === wantedUrl;
+    const sameOriginal = clean(event.title || "").toLowerCase() === originalTitle.toLowerCase()
+      && clean(event.date || "") === originalDate
+      && (!wantedWebsite || eventUrl === wantedWebsite || new URL(eventUrl || wantedWebsite).hostname === new URL(wantedWebsite).hostname);
+    return Boolean(sameUrl || sameOriginal);
+  };
+  let updatedCount = 0;
+  const apply = (event) => {
+    if (!sameEvent(event)) return event;
+    updatedCount += 1;
+    return { ...event, title, date, location, type, cost, editedByUser: true, editedAt: new Date().toISOString() };
+  };
+  if (Array.isArray(data)) {
+    data = data.map(apply);
+  } else {
+    if (Array.isArray(data.events)) data.events = data.events.map(apply);
+    if (Array.isArray(data.archive)) data.archive = data.archive.map(apply);
+  }
+  if (!updatedCount) throw new Error("Het evenement is niet teruggevonden in events.json; vernieuw de pagina en probeer opnieuw");
+  const payload = {
+    message: "Correct event fields: " + title,
+    content: encodeBase64(JSON.stringify(data, null, 2)),
+    sha: file.sha,
+    branch: "main"
+  };
+  const saved = await githubFetch(env, "/contents/events.json", { method: "PUT", body: JSON.stringify(payload) });
+  if (!saved.ok) throw new Error("Bijgewerkte evenementdata opslaan mislukt: " + await saved.text());
+
+  await saveEventFeedback(env, {
+    ...target,
+    title,
+    date,
+    originalTitle,
+    originalDate,
+    corrections: { title, date, location, type, cost },
+    url: target.url || target.website
+  }, "edit");
+  return { updatedCount, corrections: { title, date, location, type, cost } };
 }
 async function deleteEventFromGithub(env, target = {}) {
   await saveEventFeedback(env, target, "bad");
@@ -1560,6 +1632,16 @@ export default {
         const result = await saveEventFeedback(env, body, body.vote === "good" ? "good" : "bad");
         return json({ ok: true, ...result }, 200);
       } catch (e) { return json({ error: "Feedback opslaan mislukt", details: e.message }, 500); }
+    }
+    if (path === "/event-edit" && request.method === "POST") {
+      try {
+        const body = await request.json().catch(() => ({}));
+        if (!body || !body.website || !body.corrections) return json({ error: "Website en aangepaste velden zijn verplicht" }, 400);
+        const result = await saveEventCorrection(env, body);
+        return json({ ok: true, ...result }, 200);
+      } catch (e) {
+        return json({ error: "Evenement aanpassen mislukt", details: e.message }, 500);
+      }
     }
     if (path === "/delete-event" && request.method === "POST") {
       try {
