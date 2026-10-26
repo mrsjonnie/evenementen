@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-26T11:52:25.100Z",
+  "updatedAt": "2026-10-26T11:54:40.506Z",
   "feedback": [
     {
       "key": "2026-10-27|abonnement topmusici van eigen bodem",
@@ -855,6 +855,24 @@
         "location": "Locatie Museumplein 5a 9641 AD Veendam",
         "type": "Concert",
         "cost": "gratis"
+      }
+    },
+    {
+      "key": "2026-10-30|bekijk ook de pagina met",
+      "vote": "edit",
+      "title": "Flat Earth Society: The Coltrane Mutations",
+      "date": "2026-10-30",
+      "website": "https://www.concertgebouw.nl/concerten/43931217-flat-earth-society-the-coltrane-mutations",
+      "url": "https://www.concertgebouw.nl/concerten/43931217-flat-earth-society-the-coltrane-mutations",
+      "updatedAt": "2026-10-26T11:54:40.506Z",
+      "originalTitle": "Bekijk ook de pagina met",
+      "originalDate": "2026-10-30",
+      "corrections": {
+        "title": "Flat Earth Society: The Coltrane Mutations",
+        "date": "2026-10-30",
+        "location": "Kleine Zaal, Concertbegouw, Amsterdam",
+        "type": "Concert",
+        "cost": "Zie website"
       }
     }
   ]
