@@ -1,7 +1,7 @@
 {
   "runId": "2026-10-26T11:20:39.872729+00:00-9d8db956",
   "startedAt": "2026-10-26T11:20:39+00:00",
-  "completedCount": 16,
+  "completedCount": 17,
   "totalSites": 18,
   "currentSite": "https://www.pathe.nl/bioscoop/groningen",
   "currentSiteIndex": 17,
@@ -21,7 +21,8 @@
     "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
     "https://www.vvvameland.nl/activiteiten-en-evenementen",
     "https://www.socialdeal.nl/",
-    "https://www.ibood.com/s-nl"
+    "https://www.ibood.com/s-nl",
+    "https://www.pathe.nl/bioscoop/groningen"
   ],
   "events": [
     {
@@ -5726,90 +5727,16 @@
       "newCount": 0,
       "durationSeconds": 5.1,
       "timedOut": false
+    },
+    {
+      "site": "https://www.pathe.nl/bioscoop/groningen",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 5.35,
+      "timedOut": false
     }
   ],
   "rawLog": [
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Nederlandse Bachvereniging Matthäus Passion",
-      "date": "2027-03-14",
-      "url": "https://www.spotgroningen.nl/programma/nederlandse-bachvereniging-20/",
-      "status": "event uit link",
-      "rawText": "Nederlandse Bachvereniging Matthäus Passion Een van de indrukwekkendste verhalen ooit, verteld met ontroerende muziek en zang zo 14 mrt"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Het Goede Doel Altijd en Eeuwig Tour",
-      "date": "2027-03-14",
-      "url": "https://www.spotgroningen.nl/programma/het-goede-doel/",
-      "status": "event uit link",
-      "rawText": "Het Goede Doel Altijd en Eeuwig Tour Ze zijn terug! Uitverkocht zo 14 mrt"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "The Haunted Youth",
-      "date": "2027-03-15",
-      "url": "https://www.spotgroningen.nl/programma/the-haunted-youth/",
-      "status": "event uit link",
-      "rawText": "The Haunted Youth Emo synthbeladen indierock Uitverkocht ma 15 mrt"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Micha Wertheim Micha Wertheim voor iedereen (reprise)",
-      "date": "2027-03-15",
-      "url": "https://www.spotgroningen.nl/programma/micha-wertheim-15/",
-      "status": "event uit link",
-      "rawText": "Micha Wertheim Micha Wertheim voor iedereen (reprise) Micha Wertheim maakt, te laat, eindelijk een voorstelling speciaal voor iedereen ma 15 mrt"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Alvin Youngblood Hart",
-      "date": "2027-03-15",
-      "url": "https://www.spotgroningen.nl/programma/alvin-youngblood-hart/",
-      "status": "event uit link",
-      "rawText": "Alvin Youngblood Hart GRAMMY-winnende countryblues-gitarist ma 15 mrt"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Daan van der Hoeven Mensenmens (reprise)",
-      "date": "2027-03-16",
-      "url": "https://www.spotgroningen.nl/programma/daan-van-der-hoeven-2/",
-      "status": "event uit link",
-      "rawText": "Daan van der Hoeven Mensenmens (reprise) Weergaloze improvisaties en interacties met het publiek di 16 mrt"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Kim Karssen God is een snotje",
-      "date": "2027-03-16",
-      "url": "https://www.spotgroningen.nl/programma/kim-karssen-2/",
-      "status": "event uit link",
-      "rawText": "Kim Karssen God is een snotje Explosieve mix van cabaret, performance en fysieke uitbarstingen di 16 mrt"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "The Clarks feat. Rinus Gerritsen & Cesar Zuiderwijk",
-      "date": "2027-03-17",
-      "url": "https://www.spotgroningen.nl/programma/the-clarks-ft-rinus-gerritsen-cesar-zuiderwijk/",
-      "status": "event uit link",
-      "rawText": "The Clarks feat. Rinus Gerritsen & Cesar Zuiderwijk Eerbetoon aan Golden Earring wo 17 mrt"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Introdans KYLIAN",
-      "date": "2027-03-17",
-      "url": "https://www.spotgroningen.nl/programma/introdans-8/",
-      "status": "event uit link",
-      "rawText": "Introdans KYLIAN Introdans eert het kunstenaarschap van meesterchoreograaf Jirí Kylián wo 17 mrt"
-    },
     {
       "source": "Website",
       "site": "https://www.spotgroningen.nl/programma/",
@@ -16528,16 +16455,97 @@
       "url": "https://www.ibood.com/s-nl",
       "status": "klaar",
       "rawText": "site 16/18: 0 unieke events in 5.1 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.pathe.nl/bioscoop/groningen",
+      "title": "Start",
+      "date": "",
+      "url": "https://www.pathe.nl/bioscoop/groningen",
+      "status": "start",
+      "rawText": "site 17/18: max 40 events, max 10 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.pathe.nl/bioscoop/groningen",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://www.pathe.nl/bioscoop/groningen",
+      "status": "strategie",
+      "rawText": "Pathé Groningen via BiosAgenda-speeltijden"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.biosagenda.nl/films-bioscoop_path-groningen_128.html",
+      "title": "403-tekstproxy mislukt",
+      "date": "",
+      "url": "https://www.biosagenda.nl/films-bioscoop_path-groningen_128.html",
+      "status": "fout",
+      "rawText": "HTTPSConnectionPool(host='r.jina.ai', port=443): Read timed out. (read timeout=1.25)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.pathe.nl/bioscoop/groningen",
+      "title": "Pagina mislukt",
+      "date": "",
+      "url": "https://www.biosagenda.nl/films-bioscoop_path-groningen_128.html",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.pathe.nl/bioscoop/groningen",
+      "title": "403-tekstproxy mislukt",
+      "date": "",
+      "url": "https://www.pathe.nl/bioscoop/groningen",
+      "status": "fout",
+      "rawText": "HTTPSConnectionPool(host='r.jina.ai', port=443): Read timed out. (read timeout=1.25)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.pathe.nl/bioscoop/groningen",
+      "title": "Pagina mislukt",
+      "date": "",
+      "url": "https://www.pathe.nl/bioscoop/groningen",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.pathe.nl/nl/bioscopen/pathe-groningen",
+      "title": "403-tekstproxy mislukt",
+      "date": "",
+      "url": "https://www.pathe.nl/nl/bioscopen/pathe-groningen",
+      "status": "fout",
+      "rawText": "HTTPSConnectionPool(host='r.jina.ai', port=443): Read timed out. (read timeout=1.25)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.pathe.nl/bioscoop/groningen",
+      "title": "Pagina mislukt",
+      "date": "",
+      "url": "https://www.pathe.nl/nl/bioscopen/pathe-groningen",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.pathe.nl/bioscoop/groningen",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://www.pathe.nl/bioscoop/groningen",
+      "status": "klaar",
+      "rawText": "site 17/18: 0 unieke events in 5.35 sec"
     }
   ],
   "status": "running",
   "siteStartedAt": "2026-10-26T11:23:18+00:00",
-  "siteElapsedSeconds": 0,
+  "siteElapsedSeconds": 7,
   "sitePageCount": 0,
   "lastSiteEventCount": 0,
-  "stage": "Websitepagina ophalen",
-  "lastUpdatedAt": "2026-10-26T11:23:18+00:00",
+  "stage": "Website klaar; volgende website voorbereiden",
+  "lastUpdatedAt": "2026-10-26T11:23:23+00:00",
   "lastSiteNewEventCount": 0,
-  "lastCompletedSite": "https://www.ibood.com/s-nl",
-  "lastCompletedAt": "2026-10-26T11:23:17+00:00"
+  "lastCompletedSite": "https://www.pathe.nl/bioscoop/groningen",
+  "lastCompletedAt": "2026-10-26T11:23:25+00:00"
 }
