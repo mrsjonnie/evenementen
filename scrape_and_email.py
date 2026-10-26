@@ -319,7 +319,7 @@ def apply_site_adjustments(site_config, event):
         field = clean_text(rule.get("field", ""))
         find = clean_text(rule.get("find", ""))
         replacement = str(rule.get("replace", ""))
-        if field not in {"title", "description", "location", "type", "cost", "website"} or not find:
+        if field not in {"title", "date", "description", "location", "type", "cost", "website"} or not find:
             continue
         current = str(adjusted.get(field, "") or "")
         adjusted[field] = re.sub(re.escape(find), lambda _: replacement, current, flags=re.I)
