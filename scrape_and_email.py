@@ -47,7 +47,7 @@ def env_int(name, default, minimum, maximum):
 
 
 MAX_EVENTS_PER_SITE = env_int("INPUT_MAX_EVENTS_PER_SITE", 20, 1, 100)
-SITE_TIME_LIMIT_SECONDS = env_int("INPUT_SITE_TIME_LIMIT_SECONDS", 20, 1, 60)
+SITE_TIME_LIMIT_SECONDS = env_int("INPUT_SITE_TIME_LIMIT_SECONDS", 90, 1, 180)
 MAX_RAW_ROWS = 1200
 TODAY = date.today()
 try:
