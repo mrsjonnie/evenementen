@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Instellingen scraper · Evenementen</title>
+<style>
+:root{color-scheme:dark;--bg:#0e141b;--surface:#151f2b;--line:#2d4054;--ink:#edf5ff;--muted:#9db0c5;--primary:#53b6d2;--danger:#ff8d80;--good:#72d6a1;--warn:#f0bd62}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 Inter,"Segoe UI",Arial,sans-serif}
+main{max-width:1200px;margin:auto;padding:24px 18px 50px}.top{display:flex;gap:14px;align-items:center;justify-content:space-between;flex-wrap:wrap}.back,.btn{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;border:1px solid var(--line);border-radius:8px;padding:9px 13px;color:var(--ink);background:#1d2a38;font-weight:750;cursor:pointer}.back{color:var(--primary)}h1{font-size:clamp(1.7rem,4vw,2.5rem);margin:18px 0 5px}p{color:var(--muted)}.summary{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0}.stat{border:1px solid var(--line);background:var(--surface);padding:10px 14px;border-radius:10px}.toolbar{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0}.toolbar input,.toolbar select{background:#101925;color:var(--ink);border:1px solid var(--line);border-radius:8px;padding:10px;min-height:42px}.toolbar input{flex:1;min-width:220px}.section{margin:24px 0}.section h2{font-size:1.25rem}.list{display:grid;gap:12px}.rule{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:15px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:start}.rule h3{margin:0 0 5px;font-size:1rem;overflow-wrap:anywhere}.meta{color:var(--muted);font-size:.88rem;overflow-wrap:anywhere}.pill{display:inline-block;border-radius:999px;padding:3px 8px;font-size:.78rem;font-weight:800;background:#263545;margin:0 5px 5px 0}.pill.bad,.pill.deleted,.pill.duplicate{color:var(--danger)}.pill.edit{color:var(--warn)}.pill.good{color:var(--good)}.rule a{color:var(--primary);overflow-wrap:anywhere}.remove{background:#311b19;border-color:#6b3a34;color:var(--danger);white-space:nowrap}.empty,.status{padding:16px;border:1px dashed var(--line);border-radius:10px;color:var(--muted)}.status[hidden]{display:none}.small{font-size:.88rem;color:var(--muted)}@media(max-width:620px){.rule{grid-template-columns:1fr}.remove{width:100%}}
+</style>
+</head>
+<body><main>
+<div class="top"><a class="back" href="./evenementen.html">← Terug naar evenementen</a><span id="updated" class="small">Logica-regels laden…</span></div>
+<h1>Instellingen scraper</h1>
+<p>Bekijk de opgeslagen feedback en correcties die de scraper bij volgende zoekacties gebruikt. Verwijder een regel alleen als deze ongewenst is; verwijderde feedback wordt dan niet langer als leerregel toegepast.</p>
+<div class="summary"><div class="stat"><strong id="total">—</strong><br><span class="small">Totaal regels</span></div><div class="stat"><strong id="excluded">—</strong><br><span class="small">Negatieve / uitgesloten feedback</span></div><div class="stat"><strong id="corrected">—</strong><br><span class="small">Correcties</span></div></div>
+<div id="status" class="status" role="status">Opgeslagen regels worden opgehaald…</div>
+<div class="toolbar"><input id="search" type="search" placeholder="Zoek op website, titel, veld of URL…" aria-label="Regels filteren"><select id="kind" aria-label="Filter op regeltype"><option value="all">Alle regeltypen</option><option value="bad">Slechte link / uitsluiting</option><option value="deleted">Verwijderd</option><option value="duplicate">Duplicaat</option><option value="edit">Correctie</option><option value="good">Goedgekeurd</option></select><button class="btn" id="reload">Opnieuw laden</button></div>
+<section class="section"><h2>Per-website logica en uitgesloten pagina’s</h2><div class="list" id="rules"></div></section>
+<p class="small">Deze pagina toont opgeslagen feedbackregels uit event-feedback.json. Technische parserregels die rechtstreeks in de scraper-code staan, zijn niet automatisch als afzonderlijke bewerkbare regels beschikbaar.</p>
+</main>
+<script>
+const WORKER_URL="https://evenementen-refresh.mrsjonnie.workers.dev";
+let allRules=[];
+const $=id=>document.getElementById(id);
+const esc=value=>String(value??"").replace(/[&<>"']/g,ch=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[ch]));
+const kindName=value=>({bad:"Slechte link / uitsluiten",deleted:"Verwijderd",duplicate:"Duplicaat",edit:"Correctie",good:"Goedgekeurd"}[value]||"Feedback");
+function ruleFields(item){const c=item.corrections||{};return Object.entries(c).filter(([,v])=>String(v||"").trim()).map(([k,v])=>k+": "+v).join(" · ")}
+function render(){
+ const q=$("search").value.trim().toLowerCase(),kind=$("kind").value;
+ const items=allRules.filter(x=>(kind==="all"||x.vote===kind)&&(!q||[x.title,x.website,x.url,x.date,x.key,ruleFields(x)].join(" ").toLowerCase().includes(q)));
+ $("rules").innerHTML=items.length?items.map(item=>{
+  const vote=String(item.vote||"bad"),url=item.url||item.website||"";
+  const exclusion=["bad","deleted","duplicate"].includes(vote);
+  return '<article class="rule"><div><span class="pill '+esc(vote)+'">'+esc(kindName(vote))+'</span><h3>'+esc(item.title||"(zonder titel)")+'</h3><div class="meta">Datum: '+esc(item.date||"onbekend")+' · Laatst bijgewerkt: '+esc(item.updatedAt?new Date(item.updatedAt).toLocaleString("nl-NL"):"onbekend")+'</div><p class="meta">Website: '+esc(item.website||"onbekend")+'</p>'+(url?'<p><a href="'+esc(url)+'" target="_blank" rel="noopener noreferrer">'+esc(url)+'</a></p>':"")+(ruleFields(item)?'<p><strong>Opgeslagen veldcorrecties:</strong><br>'+esc(ruleFields(item))+'</p>':"")+(exclusion?'<p class="small">Deze feedback wordt als negatieve feedback/uitsluiting behandeld.</p>':"")+'</div><button class="btn remove" data-key="'+esc(item.key||"")+'">Regel verwijderen</button></article>';
+ }).join(""):'<div class="empty">Geen regels gevonden met deze filters.</div>';
+ $("total").textContent=allRules.length;
+ $("excluded").textContent=allRules.filter(x=>["bad","deleted","duplicate"].includes(x.vote)).length;
+ $("corrected").textContent=allRules.filter(x=>x.vote==="edit").length;
+}
+async function load(){
+ $("status").hidden=false;$("status").textContent="Opgeslagen regels laden…";
+ try{const r=await fetch(WORKER_URL+"/event-feedback",{cache:"no-store"});const data=await r.json();if(!r.ok||!data.ok)throw new Error(data.details||data.error||"Onbekende fout");allRules=Array.isArray(data.feedback)?data.feedback:[];$("updated").textContent=data.updatedAt?"Bestand bijgewerkt: "+new Date(data.updatedAt).toLocaleString("nl-NL"):"Feedbackbestand geladen";$("status").textContent=allRules.length?allRules.length+" opgeslagen regels geladen.":"Er zijn nog geen opgeslagen feedbackregels.";render()}
+ catch(e){$("status").textContent="Kon regels niet laden: "+e.message+" Controleer of de Worker is bijgewerkt en bereikbaar is.";allRules=[];render()}
+}
+$("rules").addEventListener("click",async e=>{
+ const btn=e.target.closest("button[data-key]");if(!btn)return;
+ const key=btn.dataset.key;if(!key)return;
+ const item=allRules.find(x=>String(x.key||"")===key);
+ if(!confirm('Weet je zeker dat je deze regel wilt verwijderen?\n\n'+(item?.title||key)+'\n'+(item?.website||"")))return;
+ btn.disabled=true;btn.textContent="Verwijderen…";
+ try{const r=await fetch(WORKER_URL+"/event-feedback-delete",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({key})});const data=await r.json();if(!r.ok||!data.ok)throw new Error(data.details||data.error||"Verwijderen mislukt");allRules=allRules.filter(x=>String(x.key||"")!==key);$("status").textContent="Regel verwijderd. De volgende scraper-run haalt deze feedbackregel niet meer op.";render()}
+ catch(err){alert("Regel verwijderen mislukt: "+err.message);btn.disabled=false;btn.textContent="Regel verwijderen"}
+});
+$("search").addEventListener("input",render);$("kind").addEventListener("change",render);$("reload").addEventListener("click",load);load();
+</script></body></html>
