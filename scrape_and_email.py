@@ -1035,6 +1035,99 @@ def extract_detail_event(soup, page_url, site_url, discovery_source):
     return normalize_event(raw, site_url)
 
 
+def extract_concertgebouw_detail_events(soup, page_url, site_url, discovery_source="Website"):
+    """Parse one Concertgebouw concert detail page without mistaking footer dates for show dates."""
+    if canonical_host(site_url) != "concertgebouw.nl":
+        return []
+
+    # Structured Event data is the most reliable source when the site provides it.
+    structured = parse_jsonld_events(soup, page_url, site_url, discovery_source)
+    if structured:
+        return structured
+
+    title = ""
+    for heading in soup.find_all(["h1", "h2"]):
+        candidate = clean_title(heading.get_text(" ", strip=True))
+        if title_is_usable(candidate):
+            title = candidate
+            break
+    if not title:
+        title = clean_title(meta_content(soup, "og:title", "twitter:title"))
+    if not title:
+        title = page_title(soup)
+    if not title_is_usable(title):
+        add_raw(discovery_source, site_url, "Concertgebouw-detail zonder titel", "", page_url, "diagnose",
+                "Geen bruikbare H1/og:title gevonden")
+        return []
+
+    date_value = ""
+    time_value = ""
+    # Prefer event-specific datetime attributes; article publication dates are deliberately excluded.
+    for node in soup.select("time[datetime], [itemprop='startDate'], meta[property='event:start_time'], meta[itemprop='startDate']"):
+        value = clean_text(node.get("datetime") or node.get("content") or "")
+        parsed = parse_date_text(value)
+        if parsed:
+            date_value = parsed
+            time_value = first_time(value) or time_value
+            break
+
+    lines = split_lines(soup)
+    title_index = next((i for i, line in enumerate(lines) if title.lower() in line.lower()), 0)
+    nearby_lines = lines[max(0, title_index - 2): min(len(lines), title_index + 18)]
+    if not date_value:
+        # On Concertgebouw detail pages, the concert date is close to the H1;
+        # dates in the footer/newsletter are much farther away.
+        candidates = []
+        for i, line in enumerate(nearby_lines):
+            parsed = parse_date_text(line)
+            if parsed:
+                has_time = bool(TIME_RE.search(line))
+                candidates.append((0 if has_time else 1, i, parsed, line))
+        if candidates:
+            _, _, date_value, date_line = sorted(candidates, key=lambda item: (item[0], item[1]))[0]
+            time_value = first_time(date_line) or time_value
+
+    if not date_value:
+        add_raw(discovery_source, site_url, "Concertgebouw-datum niet herkend", "", page_url, "diagnose",
+                "Titel herkend, maar geen evenementdatum gevonden nabij de titel")
+        return []
+
+    nearby_text = " ".join(nearby_lines)
+    if not time_value:
+        time_value = first_time(nearby_text) or ""
+    location = "Concertgebouw Amsterdam"
+    for line in nearby_lines:
+        if re.search(r"\b(kleine zaal|grote zaal|recitalzaal|koorzaal|concertgebouw)\b", line, re.I):
+            cleaned = clean_text(re.sub(r"^plaats\s*:?\s*", "", line, flags=re.I))
+            if 3 <= len(cleaned) <= 100 and not re.search(r"\b(bestel|informatie|tickets?|prijs|datum)\b", cleaned, re.I):
+                if "concertgebouw" not in cleaned.lower() and "zaal" not in cleaned.lower():
+                    cleaned += ", Concertgebouw Amsterdam"
+                location = cleaned
+                break
+
+    description = meta_content(soup, "description", "og:description", "twitter:description")
+    raw = {
+        "date": date_value,
+        "title": title,
+        "type": "Concert",
+        "location": location,
+        "website": page_url,
+        "description": description or description_from_lines(nearby_lines, title),
+        "image": first_image(soup, page_url),
+        "time": time_value,
+        "cost": "Zie website",
+        "discoverySource": discovery_source,
+    }
+    event = normalize_event(raw, site_url)
+    if event:
+        add_raw(discovery_source, site_url, event["title"], event["date"], page_url, "Concertgebouw-detail",
+                f"Datum {event['date']}; tijd {event.get('time') or 'onbekend'}; locatie {event.get('location')}")
+        return [event]
+    add_raw(discovery_source, site_url, "Concertgebouw-detail ongeldig", date_value, page_url, "diagnose",
+            "Datum/titel gevonden maar normalisatie heeft het evenement afgewezen")
+    return []
+
+
 def extract_anchor_events(soup, page_url, site_url, discovery_source):
     events = []
     for anchor in soup.find_all("a", href=True):
@@ -3068,6 +3161,11 @@ def scrape_site(site_url, site_index=0, site_total=0, progress_callback=None, ex
                 detail_soup = BeautifulSoup(html, "html.parser")
                 detail_event = extract_detail_event(detail_soup, final_url, normalized_site, discovery_source)
                 detail_events = [detail_event] if detail_event else []
+            elif canonical_host(normalized_site) == "concertgebouw.nl" and is_concertgebouw_detail:
+                # Concert detail pages need title-adjacent date extraction; the generic
+                # parser can otherwise return no hit or use a date from unrelated page text.
+                detail_soup = BeautifulSoup(html, "html.parser")
+                detail_events = extract_concertgebouw_detail_events(detail_soup, final_url, normalized_site, discovery_source)
             else:
                 detail_events = parse_page_events(html, final_url, normalized_site, discovery_source)
             before = len(dedupe_events(events))
