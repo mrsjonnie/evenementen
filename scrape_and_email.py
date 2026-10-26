@@ -673,7 +673,7 @@ def event_from_jsonld(item, page_url, site_url, discovery_source):
 
 def parse_jsonld_events(soup, page_url, site_url, discovery_source):
     events = []
-    for script in soup.find_all("script", attrs={"type": re.compile("ld\\+json", re.I)}):
+    for script in soup.find_all("script", attrs={"type": re.compile("ld\+json", re.I)}):
         text = script.string or script.get_text(" ", strip=True)
         if not text:
             continue
@@ -1422,7 +1422,7 @@ def extract_concertgebouw_detail_event(soup, page_url, site_url, discovery_sourc
     if canonical_host(site_url) != "concertgebouw.nl":
         return None
     path = urlparse(page_url).path
-    if not re.search(r"^/concerten/\\d+-[^/?#]+/?$", path, re.I):
+    if not re.search(r"^/concerten/\d+-[^/?#]+/?$", path, re.I):
         return None
 
     # Prefer the page's H1; social/document titles often append venue/brand labels.
@@ -1453,7 +1453,7 @@ def extract_concertgebouw_detail_event(soup, page_url, site_url, discovery_sourc
             for child in value:
                 inspect_jsonld(child)
 
-    for script in soup.find_all("script", attrs={"type": re.compile(r"ld\\+json", re.I)}):
+    for script in soup.find_all("script", attrs={"type": re.compile(r"ld\+json", re.I)}):
         try:
             inspect_jsonld(json.loads(script.string or script.get_text() or ""))
         except (ValueError, TypeError):
@@ -2536,7 +2536,7 @@ def extract_ibood_offers(html, page_url, site_url):
     # Structured Product data is a final fallback for pages whose card markup
     # changes but whose JSON-LD still exposes product names, URLs and offers.
     if len(offers) < MAX_EVENTS_PER_SITE:
-        for script in soup.find_all("script", attrs={"type": re.compile("ld\\+json", re.I)}):
+        for script in soup.find_all("script", attrs={"type": re.compile("ld\+json", re.I)}):
             raw_json = script.string or script.get_text(" ", strip=True)
             try:
                 data = json.loads(raw_json)
