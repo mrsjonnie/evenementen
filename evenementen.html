@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- Compacte evenemententelling en filteruitsplitsing in de header, versie 2026.10.26.68. -->
+<!-- Event field editing and scraper correction learning, versie 2026.10.26.69. -->
 <html lang="nl">
 <head>
   <meta charset="UTF-8">
@@ -1009,6 +1009,23 @@
       font-weight: 650;
     }
 
+    .eventEditForm {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 12px;
+      margin-top: 14px;
+      padding: 14px;
+      border: 1px solid var(--border, #cbd5e1);
+      border-radius: 12px;
+      background: var(--surface, rgba(127,127,127,.06));
+    }
+    .eventEditForm[hidden] { display: none !important; }
+    .eventEditHeading, .eventEditHelp, .eventEditActions { grid-column: 1 / -1; }
+    .eventEditHeading { font-weight: 700; }
+    .eventEditForm label { display: flex; flex-direction: column; gap: 5px; font-size: .9rem; font-weight: 600; }
+    .eventEditForm input { width: 100%; min-width: 0; padding: 9px 10px; border: 1px solid var(--border, #cbd5e1); border-radius: 8px; background: var(--card, #fff); color: inherit; font: inherit; }
+    .eventEditActions { display: flex; flex-wrap: wrap; gap: 8px; }
+    .eventEditHelp { margin: 0; font-size: .82rem; opacity: .8; }
     .cardActions {
       margin-top: auto;
       display: flex;
@@ -1447,7 +1464,7 @@
   </div>
 
   <script>
-    const APP_VERSION = "2026.10.26.68";
+    const APP_VERSION = "2026.10.26.69";
     const STATUS_HISTORY_KEY = "evenementenStatusHistoryV1";
     const DISMISSED_SCRAPE_RUN_KEY = "evenementenDismissedScrapeRunV1";
     const DEFAULT_MAX_EVENTS_PER_SITE = 20;
@@ -3359,10 +3376,24 @@
             <div class="cardActions">
               ${website ? `<a class="btn btnPrimary" href="${escapeHtml(website)}" target="_blank" rel="noopener noreferrer">Meer info</a>` : ""}
               ${route ? `<button class="btn btnSecondary routeToggle" type="button" data-route="${escapeHtml(routeId)}" data-destination="${escapeHtml(routeDestinationText)}" data-route-url="${escapeHtml(route)}">Route</button>` : ""}
+              <button class="btn btnSecondary editEventBtn" type="button" data-event-key="${escapeHtml(cardKey)}" aria-expanded="false">Bewerken</button>
               <button class="btn btnSecondary goodEventBtn" type="button" data-event-key="${escapeHtml(cardKey)}" aria-label="Markeer als goede link" title="Goede link">👍 Goed</button>
               <button class="btn btnDanger deleteEventBtn" type="button" data-event-key="${escapeHtml(cardKey)}">Verwijder</button>
               ${route && routeContext ? `<span class="routeInfo">${escapeHtml(routeContext)}</span>` : ""}
             </div>
+            <form class="eventEditForm" data-event-key="${escapeHtml(cardKey)}" hidden>
+              <div class="eventEditHeading">Evenementgegevens corrigeren</div>
+              <label>Datum<input name="date" type="date" required value="${escapeHtml(String(event.date || "").slice(0, 10))}"></label>
+              <label>Titel<input name="title" type="text" required maxlength="240" value="${escapeHtml(event.title || "")}"></label>
+              <label>Plaats<input name="location" type="text" required maxlength="240" value="${escapeHtml(event.location || "")}"></label>
+              <label>Type<input name="type" type="text" required maxlength="100" value="${escapeHtml(event.type || "")}"></label>
+              <label>Prijs<input name="cost" type="text" required maxlength="100" value="${escapeHtml(event.cost || "Zie website")}"></label>
+              <div class="eventEditActions">
+                <button class="btn btnPrimary saveEventEditBtn" type="submit">Opslaan en scraper leren</button>
+                <button class="btn btnSecondary cancelEventEditBtn" type="button">Annuleren</button>
+              </div>
+              <p class="eventEditHelp">De correcties worden opgeslagen bij deze website en bij volgende scans op deze evenementpagina toegepast.</p>
+            </form>
             ${route ? `<div class="routePanel" id="${escapeHtml(routeId)}"></div>` : ""}
           </div>
         </article>
