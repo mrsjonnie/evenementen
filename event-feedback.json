@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-26T09:23:37.738Z",
+  "updatedAt": "2026-10-26T09:27:50.818Z",
   "feedback": [
     {
       "key": "2026-10-27|abonnement topmusici van eigen bodem",
@@ -109,6 +109,15 @@
         "type": "Dans",
         "cost": "Zie website"
       }
+    },
+    {
+      "key": "2026-10-27|dit concert heeft geen pauze",
+      "vote": "bad",
+      "title": "Dit concert heeft geen pauze",
+      "date": "2026-10-27",
+      "website": "https://www.concertgebouw.nl/concerten/43931216-fresku-metropole-orkest-o.l.v.-simon-dobson",
+      "url": "https://www.concertgebouw.nl/concerten/43931216-fresku-metropole-orkest-o.l.v.-simon-dobson",
+      "updatedAt": "2026-10-26T09:27:50.818Z"
     }
   ]
 }
