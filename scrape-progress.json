@@ -3,11 +3,17 @@
   "startedAt": "2026-10-26T22:34:53+00:00",
   "completedCount": 0,
   "totalSites": 1,
-  "currentSite": "",
-  "currentSiteIndex": 0,
+  "currentSite": "https://groningermuseum.nl/programma",
+  "currentSiteIndex": 1,
   "completedSites": [],
   "events": [],
   "siteResults": [],
   "rawLog": [],
-  "status": "running"
+  "status": "running",
+  "siteStartedAt": "2026-10-26T22:34:55+00:00",
+  "siteElapsedSeconds": 0,
+  "sitePageCount": 0,
+  "lastSiteEventCount": 0,
+  "stage": "Websitepagina ophalen",
+  "lastUpdatedAt": "2026-10-26T22:34:55+00:00"
 }
