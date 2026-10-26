@@ -301,7 +301,33 @@ def site_config_for(site_url):
 
 def url_is_excluded(site_config, value):
     text = clean_text(value).lower()
-    return any(clean_text(rule).lower() in text for rule in site_config.get("excludedUrls", []) if clean_text(rule))
+    if any(clean_text(rule).lower() in text for rule in site_config.get("excludedUrls", []) if clean_text(rule)):
+        return True
+    try:
+        path = urlparse(value).path or "/"
+    except Exception:
+        path = str(value or "")
+    for pattern in site_config.get("excludedUrlPatterns", []):
+        try:
+            if re.search(str(pattern), path, re.I):
+                return True
+        except re.error:
+            continue
+    return False
+
+
+def url_is_known_event_url(site_config, value):
+    try:
+        path = urlparse(value).path or "/"
+    except Exception:
+        path = str(value or "")
+    for pattern in site_config.get("eventUrlPatterns", []):
+        try:
+            if re.search(str(pattern), path, re.I):
+                return True
+        except re.error:
+            continue
+    return False
 
 
 def event_matches_site_exclusion(site_config, event):
@@ -1719,6 +1745,7 @@ def link_score(anchor, url, text):
 
 def collect_event_links(html, page_url, site_url):
     soup = BeautifulSoup(html, "html.parser")
+    site_config = site_config_for(normalized_url(site_url) or site_url)
     scored = []
     is_kultuuragenda = "kultuuragenda.nl" in canonical_host(site_url)
     is_martiniplaza = canonical_host(site_url) == "martiniplaza.nl"
@@ -1726,6 +1753,8 @@ def collect_event_links(html, page_url, site_url):
     for anchor in soup.find_all("a", href=True):
         url = normalized_url(anchor.get("href"), page_url)
         if not url or not (same_host(url, site_url) or (canonical_host(site_url) == "denieuwekolk.nl" and canonical_host(url) == "tickets.denieuwekolk.nl")):
+            continue
+        if url_is_excluded(site_config, url):
             continue
         text = clean_text(anchor.get_text(" ", strip=True) or anchor.get("title") or anchor.get("aria-label"))
         if canonical_host(site_url) == "denieuwekolk.nl" and canonical_host(url) == "tickets.denieuwekolk.nl" and re.search(r"/mtTicket/performance/\d+", urlparse(url).path, re.I):
@@ -1755,6 +1784,8 @@ def collect_event_links(html, page_url, site_url):
         if is_kultuuragenda and urlparse(url).path.rstrip("/") == "/agenda":
             continue
         score = link_score(anchor, url, text)
+        if url_is_known_event_url(site_config, url):
+            score += 250
         if score > 0:
             scored.append((score, url, text))
     scored.sort(key=lambda item: (-item[0], item[1]))
