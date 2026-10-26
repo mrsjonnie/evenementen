@@ -3215,17 +3215,13 @@
             const filterParts = [];
       if (filterStats.afterDeleted !== filterStats.loaded) filterParts.push(`verwijderd:${filterStats.afterDeleted}`);
       
-      if (filterStats.afterProviders !== filterStats.afterSites) filterParts.push(`bron:${filterStats.afterProviders}`);
-      if (filterStats.afterQuery !== filterStats.afterProviders) filterParts.push(`zoektekst:${filterStats.afterQuery}`);
-      if (filterStats.afterType !== filterStats.afterQuery) filterParts.push(`type:${filterStats.afterType}`);
-      if (filterStats.afterNew !== filterStats.afterType) filterParts.push(`New:${filterStats.afterNew}`);
-      if (filterStats.afterRadius !== filterStats.afterNew) filterParts.push(`plaats:${filterStats.afterRadius}`);
-      if (filterStats.afterDate !== filterStats.afterRadius) filterParts.push(`periode:${filterStats.afterDate}`);
       if (filterStats.afterSites !== filterStats.afterDeleted) filterParts.push(`websites:${filterStats.afterSites}`);
       if (filterStats.afterProviders !== filterStats.afterSites) filterParts.push(`bronnen:${filterStats.afterProviders}`);
-      if (filterStats.afterType !== filterStats.afterQuery) filterParts.push(`type:${filterStats.afterType}`);
       if (filterStats.afterQuery !== filterStats.afterProviders) filterParts.push(`zoektekst:${filterStats.afterQuery}`);
+      if (filterStats.afterType !== filterStats.afterQuery) filterParts.push(`type:${filterStats.afterType}`);
       if (filterStats.afterNew !== filterStats.afterType) filterParts.push(`nieuw:${filterStats.afterNew}`);
+      if (filterStats.afterRadius !== filterStats.afterNew) filterParts.push(`plaats:${filterStats.afterRadius}`);
+      if (filterStats.afterDate !== filterStats.afterRadius) filterParts.push(`periode:${filterStats.afterDate}`);
 
       const eventsText = `(Totaal:${filterStats.loaded} - na filters: ${filterParts.join(", ")})`;
       target.textContent = eventsText;
