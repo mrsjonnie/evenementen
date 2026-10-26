@@ -3890,6 +3890,9 @@
       activeScanSites = new Set(selectedSites);
       renderSites(new Set(selectedSites));
       resetLiveLog();
+      lastProgressStatusSignature = "";
+      showStatus("Scraper gestart. Websitevolgorde: " + selectedSites.map((site, index) => (index + 1) + ". " + shortScrapeSiteName(site)).join(" → ") + ". Elke website wordt afzonderlijk onderzocht; maximaal " + scanSettings.siteTimeLimitSeconds + " seconden per website.", "warn");
+      selectedSites.forEach((site, index) => showStatus("In wachtrij " + (index + 1) + "/" + selectedSites.length + ": " + shortScrapeSiteName(site) + ".", ""));
       addLiveLog("App", selectedSites.join(", "), "Verversing gestart", "start", `${scanSettings.maxEventsPerSite} events/site, ${scanSettings.siteTimeLimitSeconds} sec/site`);
       if ($("provSerpAPI").checked) {
         addLiveLog("SerpAPI", selectedSites.join(", "), "Extra zoeklaag gestart", "zoeken", "SerpAPI zoekt per geselecteerde website naar eventvelden en agenda-links.");
