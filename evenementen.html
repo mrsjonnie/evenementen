@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- Instellingen onderaan sidebar; paars; versie 2026.10.26.104. -->
+<!-- Instellingen onderaan sidebar; paars; versie 2026.10.26.105. -->
 <html lang="nl">
 <head>
   <meta charset="UTF-8">
@@ -1628,12 +1628,10 @@
       "https://www.kultuuragenda.nl/agenda",
       "https://www.noorderzon.nl/programma",
       "https://www.concertgebouw.nl/concerten-en-tickets",
-      "https://www.zwolsetheaters.nl/programma",
       "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
       "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
       "https://www.vvvameland.nl/activiteiten-en-evenementen",
       "https://www.socialdeal.nl/",
-      "https://www.groupon.nl/kortingsbonnen/gemeente-groningen",
       "https://www.ibood.com/s-nl"
     ];
 
@@ -1809,10 +1807,22 @@
       const host = hostFromUrl(site);
       const confirmed = await askClearConfirmation(
         "Website verwijderen?",
-        `Weet je zeker dat je ${host} uit de lijst met bronnen wilt verwijderen? Alle reeds gevonden evenementen van deze bron worden ook verborgen en de bron wordt in deze browser niet meer gescand. Je kunt de bron later opnieuw toevoegen.`,
+        `Weet je zeker dat je ${host} overal uit de actieve bronnenlijst en scraperinstellingen wilt verwijderen? De bron wordt voor alle gebruikers uit de actieve lijst gehaald. Je kunt de bron later opnieuw toevoegen.`,
         "Bron en evenementen verwijderen"
       );
       if (!confirmed) return;
+      try {
+        const response = await fetch(`${WORKER_URL}/remove-site`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ site })
+        });
+        const result = await response.json().catch(() => ({}));
+        if (!response.ok || !result.ok) throw new Error(result.details || result.error || `HTTP ${response.status}`);
+      } catch (error) {
+        showStatus(`Website niet globaal verwijderd: ${cleanText(error.message || error)}. De lijst is ongewijzigd; controleer of de scraper-Worker is bijgewerkt.`, "error");
+        return;
+      }
       sites = sites.filter((candidate) => siteIdentityKey(candidate) !== key);
       saveCustomSites(loadCustomSites().filter((candidate) => siteIdentityKey(candidate) !== key));
       const removed = loadRemovedSiteKeys();
@@ -1826,7 +1836,7 @@
       renderSites(selected);
       saveSourceSelection();
       applyFilters();
-      showStatus(`${host} verwijderd. De bijbehorende evenementen zijn uit deze browserlijst gehaald en deze bron wordt bij volgende verversingen overgeslagen.`, "ok");
+      showStatus(`${host} globaal verwijderd uit de actieve bronnenlijst en scraperinstellingen.`, "ok");
     }
 
     function saveCustomSites(values) {
