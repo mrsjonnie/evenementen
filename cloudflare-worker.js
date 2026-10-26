@@ -1102,7 +1102,28 @@ async function saveEventsToGithub(env, foundEvents, options = {}) {
   return { saved: merged.length, added: foundEvents.length };
 }
 
+async function saveEventFeedback(env, target = {}, vote = "bad") {
+  const response = await githubFetch(env, "/contents/event-feedback.json?ref=main");
+  let sha = null;
+  let data = { schemaVersion: 1, updatedAt: new Date().toISOString(), feedback: [] };
+  if (response.ok) { const file = await response.json(); sha = file.sha; try { data = JSON.parse(decodeBase64(file.content)); } catch (_) {} }
+  else if (response.status !== 404) throw new Error("Feedbackbestand niet leesbaar: status " + response.status);
+  if (!Array.isArray(data.feedback)) data.feedback = [];
+  const title = clean(target.title || ""), date = clean(target.date || ""), website = clean(target.website || "").replace(/\/$/, ""), key = clean(target.key || ""), url = clean(target.url || target.website || "");
+  const identity = key || [date, title.toLowerCase(), website.toLowerCase()].join("|");
+  const now = new Date().toISOString();
+  const index = data.feedback.findIndex(item => (item.key || [item.date, String(item.title || "").toLowerCase(), String(item.website || "").toLowerCase().replace(/\/$/, "")].join("|")) === identity);
+  const record = { key: identity, vote, title, date, website, url, updatedAt: now };
+  if (index >= 0) data.feedback[index] = record; else data.feedback.push(record);
+  data.schemaVersion = 1; data.updatedAt = now;
+  const payload = { message: "Event link feedback: " + vote + " - " + (title || key || "event"), content: encodeBase64(JSON.stringify(data, null, 2)), branch: "main" };
+  if (sha) payload.sha = sha;
+  const saved = await githubFetch(env, "/contents/event-feedback.json", { method: "PUT", body: JSON.stringify(payload) });
+  if (!saved.ok) throw new Error("Feedback opslaan mislukt: " + await saved.text());
+  return { vote, feedbackCount: data.feedback.length };
+}
 async function deleteEventFromGithub(env, target = {}) {
+  await saveEventFeedback(env, target, "bad");
   let existing = { events: [], archive: [], siteResults: [], rawLog: [] };
   let sha = null;
   const getResponse = await githubFetch(env, "/contents/events.json?ref=main");
@@ -1451,6 +1472,14 @@ export default {
       }
     }
 
+    if (path === "/event-feedback" && request.method === "POST") {
+      try {
+        const body = await request.json().catch(() => ({}));
+        if (!body || !body.title || !body.date || !body.website) return json({ error: "Titel, datum en website zijn verplicht" }, 400);
+        const result = await saveEventFeedback(env, body, body.vote === "good" ? "good" : "bad");
+        return json({ ok: true, ...result }, 200);
+      } catch (e) { return json({ error: "Feedback opslaan mislukt", details: e.message }, 500); }
+    }
     if (path === "/delete-event" && request.method === "POST") {
       try {
         const body = await request.json().catch(() => ({}));
