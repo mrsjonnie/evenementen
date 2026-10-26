@@ -1,7 +1,7 @@
 {
   "runId": "2026-10-26T10:18:21.355935+00:00-b5bdaddd",
   "startedAt": "2026-10-26T10:18:21+00:00",
-  "completedCount": 17,
+  "completedCount": 18,
   "totalSites": 20,
   "currentSite": "https://www.pathe.nl/bioscoop/groningen",
   "currentSiteIndex": 18,
@@ -22,9 +22,25 @@
     "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
     "https://www.vvvameland.nl/activiteiten-en-evenementen",
     "https://www.socialdeal.nl/",
-    "https://www.ibood.com/s-nl"
+    "https://www.ibood.com/s-nl",
+    "https://www.pathe.nl/bioscoop/groningen"
   ],
   "events": [
+    {
+      "date": "2026-10-26",
+      "time": "18:30",
+      "title": ", Gedempte Zuiderdiep 78, 9711 HL, Groningen",
+      "type": "Activiteit",
+      "location": "Gedempte Zuiderdiep 78, 9711 HL, Groningen",
+      "locationLink": "",
+      "website": "https://www.biosagenda.nl/films-bioscoop_path-groningen_128.html",
+      "source": "biosagenda.nl",
+      "discoverySource": "Website",
+      "description": "Speelduur: 1 uur 41 minuten",
+      "cost": "",
+      "image": "",
+      "isNew": true
+    },
     {
       "date": "2026-10-26",
       "time": "",
@@ -38,6 +54,21 @@
       "description": "37% New today hexagon hotel Hotel Anno Nu Oostkapelle 9.9 star 9.9 • 79 Oostkapelle Regulier €346 €219 Exclusief toeristenbelasting",
       "cost": "",
       "image": "https://media.socialdeal.nl/img/image-placeholder.jpg",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-26",
+      "time": "",
+      "title": "2026",
+      "type": "Concert",
+      "location": "Pathé Groningen",
+      "locationLink": "",
+      "website": "https://www.biosagenda.nl/films-bioscoop_path-groningen_128.html",
+      "source": "biosagenda.nl",
+      "discoverySource": "Website",
+      "description": "BTS brengt zijn Arirang-wereldtournee naar Buenos Aires, waar het concert rechtstreeks wordt uitgezonden naar bioscopen over de hele wereld.",
+      "cost": "",
+      "image": "",
       "isNew": true
     },
     {
@@ -113,6 +144,21 @@
       "description": "Adult DVD geeft op donderdag 12 november 2026 een optreden in Tolhuistuin, Amsterdam.",
       "cost": "gratis",
       "image": "https://assets.paradiso.nl/images/transforms/event/_1200x630_crop_center-center_none/4e75e901_ADULT-DVD-PRESS-PHOTOS-NOV25-DEVONC-12-1.jpg",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-26",
+      "time": "",
+      "title": "BTS brengt zijn Arirang-wereldtournee naar Buenos Aires, waar het concert rechtstreeks wordt uitgezonden naar bioscopen over de hele wereld.",
+      "type": "Concert",
+      "location": "Gedempte Zuiderdiep 78, 9711 HL, Groningen",
+      "locationLink": "",
+      "website": "https://www.biosagenda.nl/films-bioscoop_path-groningen_128.html",
+      "source": "biosagenda.nl",
+      "discoverySource": "Website",
+      "description": ", Gedempte Zuiderdiep 78, 9711 HL, Groningen Speelduur: 3 uur 15 minuten",
+      "cost": "",
+      "image": "",
       "isNew": true
     },
     {
@@ -313,6 +359,21 @@
     {
       "date": "2026-10-26",
       "time": "",
+      "title": "Met: BTS",
+      "type": "Concert",
+      "location": "Gedempte Zuiderdiep 78, 9711 HL, Groningen",
+      "locationLink": "",
+      "website": "https://www.biosagenda.nl/films-bioscoop_path-groningen_128.html",
+      "source": "biosagenda.nl",
+      "discoverySource": "Website",
+      "description": "BTS brengt zijn Arirang-wereldtournee naar Buenos Aires, waar het concert rechtstreeks wordt uitgezonden naar bioscopen over de hele wereld. , Gedempte Zuiderdiep 78, 9711 HL, Groningen",
+      "cost": "",
+      "image": "",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-26",
+      "time": "",
       "title": "Mix van Y2K-pop, alternatieve r&b en poëtische storytelling uit Londen / Bitterzoet",
       "type": "Concert",
       "location": "Amsterdam",
@@ -432,6 +493,21 @@
     },
     {
       "date": "2026-10-26",
+      "time": "18:30",
+      "title": "Pathé Groningen",
+      "type": "Activiteit",
+      "location": "Gedempte Zuiderdiep 78, 9711 HL, Groningen",
+      "locationLink": "",
+      "website": "https://www.biosagenda.nl/films-bioscoop_path-groningen_128.html",
+      "source": "biosagenda.nl",
+      "discoverySource": "Website",
+      "description": ", Gedempte Zuiderdiep 78, 9711 HL, Groningen Speelduur: 1 uur 41 minuten",
+      "cost": "",
+      "image": "",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-26",
       "time": "",
       "title": "Permanente Expositie",
       "type": "Expositie",
@@ -443,6 +519,111 @@
       "description": "De vaste tentoonstelling nodigt uit om kennis te nemen…",
       "cost": "",
       "image": "https://groningen.uitloper.nu/images/smallthumb/files/2022/2f2d36_b5592b61c4b6477ba5f35b17869a5f87-mv2.webp",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-26",
+      "time": "09:46",
+      "title": "Published Time: Mon, 26 Oct 2026 09:46:41 GMT",
+      "type": "Film",
+      "location": "26 Oct 2026 09:46:41 GMT",
+      "locationLink": "",
+      "website": "https://www.biosagenda.nl/films-bioscoop_path-groningen_128.html",
+      "source": "biosagenda.nl",
+      "discoverySource": "Website",
+      "description": "URL Source: http://www.biosagenda.nl/films-bioscoop_path-groningen_128.html Bioscoop Pathé Groningen . Alle films, tijden en tickets in Pathé Groningen. Films, aanvangstijden, informatie. en abonneer je op onze nieuwsbrief.",
+      "cost": "",
+      "image": "",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-26",
+      "time": "",
+      "title": "Regie: Jungjae Ha",
+      "type": "Concert",
+      "location": "Pathé Groningen",
+      "locationLink": "",
+      "website": "https://www.biosagenda.nl/films-bioscoop_path-groningen_128.html",
+      "source": "biosagenda.nl",
+      "discoverySource": "Website",
+      "description": "BTS brengt zijn Arirang-wereldtournee naar Buenos Aires, waar het concert rechtstreeks wordt uitgezonden naar bioscopen over de hele wereld.",
+      "cost": "",
+      "image": "",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-26",
+      "time": "22:00",
+      "title": "Speelduur: 1 uur 29 minuten",
+      "type": "Activiteit",
+      "location": "Pathé Groningen",
+      "locationLink": "",
+      "website": "https://www.biosagenda.nl/films-bioscoop_path-groningen_128.html",
+      "source": "biosagenda.nl",
+      "discoverySource": "Website",
+      "description": "Meer informatie staat op biosagenda.nl.",
+      "cost": "",
+      "image": "",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-26",
+      "time": "18:30",
+      "title": "Speelduur: 1 uur 41 minuten",
+      "type": "Activiteit",
+      "location": "Pathé Groningen",
+      "locationLink": "",
+      "website": "https://www.biosagenda.nl/films-bioscoop_path-groningen_128.html",
+      "source": "biosagenda.nl",
+      "discoverySource": "Website",
+      "description": "Meer informatie staat op biosagenda.nl.",
+      "cost": "",
+      "image": "",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-26",
+      "time": "21:20",
+      "title": "Speelduur: 1 uur 43 minuten",
+      "type": "Activiteit",
+      "location": "Pathé Groningen",
+      "locationLink": "",
+      "website": "https://www.biosagenda.nl/films-bioscoop_path-groningen_128.html",
+      "source": "biosagenda.nl",
+      "discoverySource": "Website",
+      "description": "Meer informatie staat op biosagenda.nl.",
+      "cost": "",
+      "image": "",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-26",
+      "time": "19:00",
+      "title": "Speelduur: 1 uur 46 minuten",
+      "type": "Activiteit",
+      "location": "Pathé Groningen",
+      "locationLink": "",
+      "website": "https://www.biosagenda.nl/films-bioscoop_path-groningen_128.html",
+      "source": "biosagenda.nl",
+      "discoverySource": "Website",
+      "description": "Meer informatie staat op biosagenda.nl.",
+      "cost": "",
+      "image": "",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-26",
+      "time": "14:45",
+      "title": "Speelduur: 3 uur 15 minuten",
+      "type": "Activiteit",
+      "location": "Pathé Groningen",
+      "locationLink": "",
+      "website": "https://www.biosagenda.nl/films-bioscoop_path-groningen_128.html",
+      "source": "biosagenda.nl",
+      "discoverySource": "Website",
+      "description": "Meer informatie staat op biosagenda.nl.",
+      "cost": "",
+      "image": "",
       "isNew": true
     },
     {
@@ -895,792 +1076,16 @@
       "newCount": 0,
       "durationSeconds": 4.0,
       "timedOut": true
+    },
+    {
+      "site": "https://www.pathe.nl/bioscoop/groningen",
+      "count": 12,
+      "newCount": 12,
+      "durationSeconds": 1.74,
+      "timedOut": false
     }
   ],
   "rawLog": [
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Marcel Hensema Mijn Vrede Het kerstverhaal van Groningen exclusief in de Stadsschouwburg",
-      "date": "2026-12-04",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "4 dec Marcel Hensema Mijn Vrede Het kerstverhaal van Groningen exclusief in de Stadsschouwburg"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Marcel Hensema Mijn Vrede Het kerstverhaal van Groningen exclusief in de Stadsschouwburg",
-      "date": "2026-12-05",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "5 dec Marcel Hensema Mijn Vrede Het kerstverhaal van Groningen exclusief in de Stadsschouwburg"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "K-POP DAY Varia World x SPOT Groningen: K-POP meet up",
-      "date": "2026-12-06",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "6 dec K-POP DAY Varia World x SPOT Groningen: K-POP meet up Muziek, merch, platen en ontmoeten in het teken van K-POP!"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Samar en de bange koning (8+) GEORGE",
-      "date": "2026-12-07",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "7 dec Samar en de bange koning (8+) GEORGE TOBAL PRODUCTIES & DE KRAKELING Sprookje over een koning die doodsbang is voor alles wat hem vreemd is"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "PACESHIFTERS play Nirvana Kink presents Voor de allerlaatste keer, PACESHIFTERS play Nirvana",
-      "date": "2026-12-07",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "7 dec PACESHIFTERS play Nirvana Kink presents Voor de allerlaatste keer, PACESHIFTERS play Nirvana"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Club Motion 16+ clubnacht Eerste editie in Groningen trapt af met New Wave editie",
-      "date": "2026-12-07",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "7 dec Club Motion 16+ clubnacht Eerste editie in Groningen trapt af met New Wave editie"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Grondtonen (9+) Het Houten Huis (try-out) Een",
-      "date": "2026-12-07",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "7 dec Grondtonen (9+) Het Houten Huis (try-out) Een mystieke familievoorstelling over verloren gaan in het bos"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "My First Festival (2-12 jaar) Het allerleukste festival voor de hele",
-      "date": "2026-12-08",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "8 dec My First Festival (2-12 jaar) Het allerleukste festival voor de hele familie"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Grondtonen (9+) Het Houten Huis (try-out) Een",
-      "date": "2026-12-09",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "9 dec Grondtonen (9+) Het Houten Huis (try-out) Een mystieke familievoorstelling over verloren gaan in het bos"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "40UP Big Bang Het jaar sluiten we traditiegetrouw af met een knaller!",
-      "date": "2026-12-09",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "9 dec 40UP Big Bang Het jaar sluiten we traditiegetrouw af met een knaller!"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Yora Rienstra, Vera Marijt e.a. Vrouwejaars 2026 De blik op 2026 door de ogen van vrouwen!",
-      "date": "2026-12-09",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "9 dec Yora Rienstra, Vera Marijt e.a. Vrouwejaars 2026 De blik op 2026 door de ogen van vrouwen!"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "New Cool Collective Een avond vol",
-      "date": "2026-12-09",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "9 dec New Cool Collective Een avond vol jazz, dance, latin, salsa en afrobeat"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Buurman & Buurman bouwen een feestje (4+)",
-      "date": "2027-01-02",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "2 jan Buurman & Buurman bouwen een feestje (4+) Polle Vrienten en Max Laros Gereedschap uit de schuur, slingers aan de kant en klussen maar Laatste kaarten"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Grondtonen (9+) Het Houten Huis (try-out) Een",
-      "date": "2027-01-02",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "2 jan Grondtonen (9+) Het Houten Huis (try-out) Een mystieke familievoorstelling over verloren gaan in het bos"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Noordpool Orkest Nieuwjaarsconcert: Future Is Now Een",
-      "date": "2027-01-02",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "2 jan Noordpool Orkest Nieuwjaarsconcert: Future Is Now Een muzikale start van het nieuwe jaar met het eigenzinnigste orkest van het noorden"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Joosen en De Jager Niks aan het",
-      "date": "2027-01-03",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "3 jan Joosen en De Jager Niks aan het handje \"Kandidaat erfgenaam Waardenberg en de Jong\" - Theaterkrant"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Amsterdam Sinfonietta & Huub van der Lubbe Breder dan",
-      "date": "2027-01-05",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "5 jan Amsterdam Sinfonietta & Huub van der Lubbe Breder dan klassiek Voormalig De Dijk-zanger keert solo terug bij orkest Uitverkocht"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "André Manuel De Eenzame Ziel Met zijn",
-      "date": "2027-01-06",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "6 jan André Manuel De Eenzame Ziel Met zijn 20ste soloprogramma bewijst André Manuel dat hij een blijvertje is"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Het Nationale",
-      "date": "2027-01-06",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "6 jan Het Nationale Theater Mefisto Het duivelse dilemma van een kunstenaar in oorlogstijd"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Noord Nederlands Orkest Hanzevast Nieuwjaarsconcert Feestelijke nieuwjaarsreis vol",
-      "date": "2027-01-07",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "7 jan Noord Nederlands Orkest Hanzevast Nieuwjaarsconcert Feestelijke nieuwjaarsreis vol opera en walsen"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "The James Brown Experience A tribute to the king of funk",
-      "date": "2027-01-07",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "7 jan The James Brown Experience A tribute to the king of funk"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "DeWolff Full Moon Ritual Elektrische southern bluesrock",
-      "date": "2027-01-08",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "8 jan DeWolff Full Moon Ritual Elektrische southern bluesrock Laatste kaarten"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Pinokkio (7+) Holland",
-      "date": "2027-01-08",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "8 jan Pinokkio (7+) Holland Opera, New European Ensemble & Cat Smits Company Fantasierijke en muzikale voorstelling vol zang, live-muziek en betoverende poppen"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": ") Hét Europese platform voor opkomend muzikaal talent",
-      "date": "2027-01-06",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "6 jan) Hét Europese platform voor opkomend muzikaal talent"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Minder telefoon, meer leven Thijs Launspach Hoe je afkickt van je smartphone",
-      "date": "2027-01-06",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "6 jan Minder telefoon, meer leven Thijs Launspach Hoe je afkickt van je smartphone"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Cursus Klassieke",
-      "date": "2027-01-08",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "8 jan Cursus Klassieke Muziek 3 De Romantiek Ga mee op een inspirerende reis door de muziekgeschiedenis!"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Novastar Novastar komt met intieme en pure voorstelling",
-      "date": "2027-01-09",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "9 jan Novastar Novastar komt met intieme en pure voorstelling"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Cursus Klassieke",
-      "date": "2027-01-09",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "9 jan Cursus Klassieke Muziek 3 De Romantiek Ga mee op een inspirerende reis door de muziekgeschiedenis!"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "De Verleiders Zoek Dekking! Gitzwarte komedie over",
-      "date": "2027-01-01",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "1 jan De Verleiders Zoek Dekking! Gitzwarte komedie over pensioenen, andere zekerheden en de prijs van zekerheid"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Noord Nederlands Orkest en Truls Mørk Sjostakovitsj",
-      "date": "2027-01-01",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "1 jan Noord Nederlands Orkest en Truls Mørk Sjostakovitsj Celloconcert 1 Een celloconcert met Oosterse sprookjes en scherpe randjes Wereldklasse"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Wim Helsen Welkom ongemak (reprise) Welkom in",
-      "date": "2027-01-02",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "2 jan Wim Helsen Welkom ongemak (reprise) Welkom in het absurdistische universum van een paranoïde geest"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Paskal Jakobsen BLØF frontman komt met intieme voorstelling en soloalbum",
-      "date": "2027-01-02",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "2 jan Paskal Jakobsen BLØF frontman komt met intieme voorstelling en soloalbum"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Pynarello Macho's Barok met spierballen: een battle tussen bravoure en breekbaarheid",
-      "date": "2027-01-03",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "3 jan Pynarello Macho's Barok met spierballen: een battle tussen bravoure en breekbaarheid"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Pink Project The Band The Story of Floyd Later Works Ode aan de",
-      "date": "2027-01-03",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "3 jan Pink Project The Band The Story of Floyd Later Works Ode aan de muzikale nalatenschap van Pink Floyd"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Echt Gebeurd op Tour! Mooie, bijzondere of grappige",
-      "date": "2027-01-03",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "3 jan Echt Gebeurd op Tour! Mooie, bijzondere of grappige verhalen met presentatie door Micha Wertheim Uitverkocht"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Man Glen Faria",
-      "date": "2027-01-04",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "4 jan Man Glen Faria | Theater Rotterdam | ZO! Gospel Choir | Priscilla Vaudelle Een rauw en persoonlijk theaterconcert van Glen Faria over leven tussen verwachtingen"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Nationaal Jeugdorkest Wintertournee met Liza Ferschtman",
-      "date": "2027-01-04",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "4 jan Nationaal Jeugdorkest Wintertournee met Liza Ferschtman Muziek van Britten, Sjostakovitsj en Prokofjev"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Cappella Amsterdam & Lavinia Meijer Glass 90",
-      "date": "2027-01-04",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "4 jan Cappella Amsterdam & Lavinia Meijer Glass 90 Muziek van Philip Glass, bewerkt voor harp en koor"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "ITA Ensemble Wuthering Heights Geen romantisch liefdesverhaal,",
-      "date": "2027-01-06",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "6 jan ITA Ensemble Wuthering Heights Geen romantisch liefdesverhaal, maar een blik op wat macht met mensen doet"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "David van Rosmalen Als ik jou was",
-      "date": "2027-01-06",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "6 jan David van Rosmalen Als ik jou was Intelligente mix van (woord)grappen, spoken word, pianoliedjes en nederhiphop"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "ITA Ensemble Wuthering Heights Geen romantisch liefdesverhaal,",
-      "date": "2027-01-07",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "7 jan ITA Ensemble Wuthering Heights Geen romantisch liefdesverhaal, maar een blik op wat macht met mensen doet"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "VanWyck Thin Places Indiefolk uit de hoofdstad",
-      "date": "2027-01-07",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "7 jan VanWyck Thin Places Indiefolk uit de hoofdstad"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Dutch Classical Talent: Fee Suzanne de Ruiter",
-      "date": "2027-01-07",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "7 jan Dutch Classical Talent: Fee Suzanne de Ruiter SPOT Lunchbreak Een van de rijzende sterren van het Nederlandse vocalistenlegioen"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Nhung Dam Legende van de witte slang",
-      "date": "2027-01-08",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "8 jan Nhung Dam Legende van de witte slang Wonderlijk muziektheater vol humor, ontroering, zelfspot en prachtige liedjes"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "VanderLinde + King Of The World + Ruben Hoeke Drie topacts uit de bluesrock op één avond",
-      "date": "2027-01-08",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "8 jan VanderLinde + King Of The World + Ruben Hoeke Drie topacts uit de bluesrock op één avond"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Toonkunstkoor Bekker en NNO Verdi's Requiem Dramatische dodenmis met",
-      "date": "2027-01-09",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "9 jan Toonkunstkoor Bekker en NNO Verdi's Requiem Dramatische dodenmis met opera-achtige kracht"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Young Gun Silver Fox an evening with Laid back jaren 70 westcoastpop met een vleugje eighties",
-      "date": "2027-01-09",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "9 jan Young Gun Silver Fox an evening with Laid back jaren 70 westcoastpop met een vleugje eighties"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Brodsky Quartet De Late kwartetten van Beethoven",
-      "date": "2027-01-09",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "9 jan Brodsky Quartet De Late kwartetten van Beethoven Duik een dag lang in zes van Beethovens beroemdste meesterwerken Wereldklasse"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Rayen Panday Grip Zelfspot, scherpe observaties en ontwapenende",
-      "date": "2027-01-01",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "1 jan Rayen Panday Grip Zelfspot, scherpe observaties en ontwapenende verhalen"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "februari Heather Nova Verbindende singer-songwriter",
-      "date": "2027-01-01",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "1 jan februari Heather Nova Verbindende singer-songwriter Laatste kaarten"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Maya Fridman, Elisabeth Hetherington e.a. Maya Fridman",
-      "date": "2027-02-01",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "1 feb Maya Fridman, Elisabeth Hetherington e.a. Maya Fridman & Voices Twee voorstellingen op één avond"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Richard Groenendijk Gelukkig heb je mij nog",
-      "date": "2027-02-01",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "1 feb Richard Groenendijk Gelukkig heb je mij nog Grof, subtiel, innemend, gevoelig, ernstig en bovenal oergeestig Uitverkocht"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Alex Ploeg Niks Persoonlijks (try-out) Vlijmscherpe grappen, persoonlijke",
-      "date": "2027-02-02",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "2 feb Alex Ploeg Niks Persoonlijks (try-out) Vlijmscherpe grappen, persoonlijke verhalen en meeslepende gitaarliedjes Uitverkocht"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Cabarestafette presenteert: NIEUW GELUID! De lekkerste lokroep uit de comedykelders",
-      "date": "2027-02-02",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "2 feb Cabarestafette presenteert: NIEUW GELUID! De lekkerste lokroep uit de comedykelders"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Marlene Bakker & Noordpool Orkest Marlene //",
-      "date": "2027-02-03",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "3 feb Marlene Bakker & Noordpool Orkest Marlene // Meldine Een magische muziekvoorstelling onder begeleiding van het Noordpool Orkest"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Alex Ploeg Niks Persoonlijks (try-out) Vlijmscherpe grappen, persoonlijke",
-      "date": "2027-02-03",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "3 feb Alex Ploeg Niks Persoonlijks (try-out) Vlijmscherpe grappen, persoonlijke verhalen en meeslepende gitaarliedjes Uitverkocht"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Noord Nederlands Orkest Tussen het orkest Een onvergetelijk en monumentaal pianoconcert",
-      "date": "2027-02-03",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "3 feb Noord Nederlands Orkest Tussen het orkest Een onvergetelijk en monumentaal pianoconcert"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Erik Bosgraaf & Cordevento Een van ’s werelds beste en avontuurlijkste blokfluitisten",
-      "date": "2027-02-03",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "3 feb Erik Bosgraaf & Cordevento Een van ’s werelds beste en avontuurlijkste blokfluitisten"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Remko Vrijdag Marko Maandag Een onvoorspelbare avond vol absurde wendingen",
-      "date": "2027-02-04",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "4 feb Remko Vrijdag Marko Maandag Een onvoorspelbare avond vol absurde wendingen"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Alex Ploeg Niks Persoonlijks (try-out) Vlijmscherpe grappen, persoonlijke",
-      "date": "2027-02-04",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "4 feb Alex Ploeg Niks Persoonlijks (try-out) Vlijmscherpe grappen, persoonlijke verhalen en meeslepende gitaarliedjes Uitverkocht"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "The Tallest Man on Earth Just Beyond",
-      "date": "2027-02-04",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "4 feb The Tallest Man on Earth Just Beyond Endless Mountain Zweedse folk muzikant komt met nieuw album"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Conny Janssen Danst Behind the Wall Meeslepende dansvoorstelling met livemuziek van Roufaida",
-      "date": "2027-02-05",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "5 feb Conny Janssen Danst Behind the Wall Meeslepende dansvoorstelling met livemuziek van Roufaida"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Noord Nederlands Orkest en Nikola Meeuwsen Rachmaninoff",
-      "date": "2027-02-05",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "5 feb Noord Nederlands Orkest en Nikola Meeuwsen Rachmaninoff & Sjostakovitsj Een onvergetelijk en monumentaal pianoconcert Wereldklasse"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Ruud Smulders RÜDSICHTSLOS Winnaar Poelifinario in de categorie Entertainment",
-      "date": "2027-02-05",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "5 feb Ruud Smulders RÜDSICHTSLOS Winnaar Poelifinario in de categorie Entertainment"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Erwin Nyhoff & The Prodigal Sons Bluesy",
-      "date": "2027-02-06",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "6 feb Erwin Nyhoff & The Prodigal Sons Bluesy Southern Rock met klassiekers van de band aangevuld met solowerk"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "FEUERENGEL- A Tribute To Rammstein Een vurige tributeband",
-      "date": "2027-02-06",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "6 feb FEUERENGEL- A Tribute To Rammstein Een vurige tributeband Laatste kaarten"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Om en Om en Om (1,5-3 jaar) Het Laagland Nog een keer!",
-      "date": "2027-02-06",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "6 feb Om en Om en Om (1,5-3 jaar) Het Laagland Nog een keer! Uitverkocht"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Om en Om en Om (1,5-3 jaar) Het Laagland Nog een keer!",
-      "date": "2027-02-07",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "7 feb Om en Om en Om (1,5-3 jaar) Het Laagland Nog een keer! Uitverkocht"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Swan Lake (6+) Introdans Geliefde klassieker in modern jasje voor de hele",
-      "date": "2027-02-07",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "7 feb Swan Lake (6+) Introdans Geliefde klassieker in modern jasje voor de hele familie"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "CONTRA (12+) WabiSabi",
-      "date": "2027-02-08",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "8 feb CONTRA (12+) WabiSabi | Het Houten Huis | HIIIT \"Een van de beste voorstellingen van het jaar\" (★★★★ Dagblad van het Noorden)"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Nabil Daar is hij weer! Mix van komische typetjes en",
-      "date": "2027-02-09",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "9 feb Nabil Daar is hij weer! Mix van komische typetjes en muzikale verrassingen"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Compagnie Red, Yellow and Blue Katwijk “Een",
-      "date": "2027-02-09",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "9 feb Compagnie Red, Yellow and Blue Katwijk “Een ijzersterk generatiedrama verpakt als hilarische sitcom.” ★★★★★ de Volkskrant Uitverkocht"
-    },
-    {
-      "source": "Parser",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Pagina geteld",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "analyse",
-      "rawText": "jsonld:0, links:536, datumblokken:239, kaarten:134, regels:0, detail:0"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Pagina geanalyseerd",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "ok",
-      "rawText": "526 events/aanbiedingen op deze pagina"
-    },
-    {
-      "source": "Filter",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Datumfilter toegepast",
-      "date": "2026-10-26",
-      "url": "https://www.spotgroningen.nl/programma/",
-      "status": "ok",
-      "rawText": "526 gevonden; 10 binnen 2026-10-26 t/m 2026-10-28"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Klaar",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/",
-      "status": "klaar",
-      "rawText": "site 5/20: 1 unieke events in 5.86 sec"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "Start",
-      "date": "",
-      "url": "https://simplon.nl/",
-      "status": "start",
-      "rawText": "site 6/20: max 12 events, max 4 seconden"
-    },
-    {
-      "source": "Parser",
-      "site": "https://simplon.nl/",
-      "title": "Scrapertype vastgesteld",
-      "date": "",
-      "url": "https://simplon.nl/",
-      "status": "strategie",
-      "rawText": "compacte-agenda-kaarten"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "Pagina gelezen",
-      "date": "",
-      "url": "https://simplon.nl/programma/",
-      "status": "ok",
-      "rawText": "94996 tekens HTML"
-    },
-    {
-      "source": "Parser",
-      "site": "https://simplon.nl/",
-      "title": "Agenda geanalyseerd",
-      "date": "",
-      "url": "https://simplon.nl/programma/",
-      "status": "gespecialiseerde parser",
-      "rawText": "54 agenda-items gevonden"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "Pagina geanalyseerd",
-      "date": "",
-      "url": "https://simplon.nl/programma/",
-      "status": "ok",
-      "rawText": "51 events/aanbiedingen op deze pagina"
-    },
-    {
-      "source": "RSS/Atom",
-      "site": "https://simplon.nl/",
-      "title": "Feed geanalyseerd",
-      "date": "",
-      "url": "https://simplon.nl/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fsimplon.nl%2Fprogramma%2F&format=xml",
-      "status": "ok",
-      "rawText": "0 events uit openbare feed"
-    },
-    {
-      "source": "RSS/Atom",
-      "site": "https://simplon.nl/",
-      "title": "Feed geanalyseerd",
-      "date": "",
-      "url": "https://simplon.nl/feed/",
-      "status": "ok",
-      "rawText": "0 events uit openbare feed"
-    },
-    {
-      "source": "RSS/Atom",
-      "site": "https://simplon.nl/",
-      "title": "Feed mislukt",
-      "date": "",
-      "url": "https://simplon.nl/rss.xml",
-      "status": "fout",
-      "rawText": "HTTP 404"
-    },
-    {
-      "source": "Filter",
-      "site": "https://simplon.nl/",
-      "title": "Datumfilter toegepast",
-      "date": "2026-10-26",
-      "url": "https://simplon.nl/",
-      "status": "ok",
-      "rawText": "51 gevonden; 0 binnen 2026-10-26 t/m 2026-10-28"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "Klaar",
-      "date": "",
-      "url": "https://simplon.nl/",
-      "status": "klaar",
-      "rawText": "site 6/20: 0 unieke events in 4.06 sec"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.vera-groningen.nl/",
-      "title": "Start",
-      "date": "",
-      "url": "https://www.vera-groningen.nl/",
-      "status": "start",
-      "rawText": "site 7/20: max 12 events, max 4 seconden"
-    },
     {
       "source": "Parser",
       "site": "https://www.vera-groningen.nl/",
@@ -11697,16 +11102,799 @@
       "url": "https://www.ibood.com/s-nl",
       "status": "klaar",
       "rawText": "site 17/20: 0 unieke events in 4.0 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.pathe.nl/bioscoop/groningen",
+      "title": "Start",
+      "date": "",
+      "url": "https://www.pathe.nl/bioscoop/groningen",
+      "status": "start",
+      "rawText": "site 18/20: max 12 events, max 4 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.pathe.nl/bioscoop/groningen",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://www.pathe.nl/bioscoop/groningen",
+      "status": "strategie",
+      "rawText": "Pathé Groningen via BiosAgenda-speeltijden"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.biosagenda.nl/films-bioscoop_path-groningen_128.html",
+      "title": "403-tekstproxy gebruikt",
+      "date": "",
+      "url": "https://www.biosagenda.nl/films-bioscoop_path-groningen_128.html",
+      "status": "fallback",
+      "rawText": "Bron gaf HTTP 403; tekstproxy leverde 36000 tekens: Title: Bioscoop Pathé Groningen - films, tijden, tickets, informatie URL Source: http://www.biosagenda.nl/films-bioscoop_path-groningen_128.html Published Time: Mon, 26 Oct 2026 09"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.pathe.nl/bioscoop/groningen",
+      "title": "Pagina gelezen",
+      "date": "",
+      "url": "https://www.biosagenda.nl/films-bioscoop_path-groningen_128.html",
+      "status": "ok",
+      "rawText": "44428 tekens HTML"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.pathe.nl/bioscoop/groningen",
+      "title": "BiosAgenda speeldata",
+      "date": "",
+      "url": "https://www.biosagenda.nl/films-bioscoop_path-groningen_128.html",
+      "status": "gespecialiseerde parser",
+      "rawText": "0 filmvermeldingen met speeldata gevonden"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.pathe.nl/bioscoop/groningen",
+      "title": "te zien in de Nederlandse filmtheaters en bioscopen. ..",
+      "date": "2027-10-02",
+      "url": "https://www.biosagenda.nl/films-bioscoop_path-groningen_128.html",
+      "status": "event uit datumblok",
+      "rawText": "2 oktober te zien in de Nederlandse filmtheaters en bioscopen. ..lees meer Pathé Groningen , Gedempte Zuiderdiep 78, 9711 HL, Groningen Speelduur: 1 uur 45 minuten"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.pathe.nl/bioscoop/groningen",
+      "title": ". Het festival spreidt meer dan honderd",
+      "date": "2027-10-08",
+      "url": "https://www.biosagenda.nl/films-bioscoop_path-groningen_128.html",
+      "status": "event uit datumblok",
+      "rawText": "8 oktober. Het festival spreidt meer dan honderd langspeelfilms, kortfilms, concerten en gesprekken over zalen in Gent. Ook de festivalvertoningen van Coward en de On Tour-vertoningen van La Gradiva raken aan de reguliere bioscoopagenda."
+    },
+    {
+      "source": "Website",
+      "site": "https://www.pathe.nl/bioscoop/groningen",
+      "title": "Published Time: Mon, 26 Oct 2026 09:46:41 GMT",
+      "date": "2026-10-26",
+      "url": "https://www.biosagenda.nl/films-bioscoop_path-groningen_128.html",
+      "status": "event uit tekstregel",
+      "rawText": "URL Source: http://www.biosagenda.nl/films-bioscoop_path-groningen_128.html | Published Time: Mon, 26 Oct 2026 09:46:41 GMT | Markdown Content: | Bioscoop Pathé Groningen . Alle films, tijden en tickets in Pathé Groningen. Films, aanvangstijden, informatie. | Blijf in contact! | en abonneer je op onze nieuwsbrief."
+    },
+    {
+      "source": "Website",
+      "site": "https://www.pathe.nl/bioscoop/groningen",
+      "title": "In de eigenzinnige fabel Wicker leeft aan",
+      "date": "2026-10-22",
+      "url": "https://www.biosagenda.nl/films-bioscoop_path-groningen_128.html",
+      "status": "event uit tekstregel",
+      "rawText": "Met: Alexander Skarsgård, Olivia Colman, Richard E. Grant | In de eigenzinnige fabel Wicker leeft aan de rand van een vissersdorp een vissersvrouw (Olivia Colman): vrijgezel, meurend en het mikpunt van spot. Wanneer ze genoeg heeft van haar bekrompen dorpsgenoten, bestelt ze bij de plaatselijke mandenvlechter (Peter Dinklage), de ideale echtgenoot van riet. Tot haar verbazing blijkt deze bijzondere rieten man (Alexan"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.pathe.nl/bioscoop/groningen",
+      "title": "Speelduur: 1 uur 45 minuten",
+      "date": "2026-10-25",
+      "url": "https://www.biosagenda.nl/films-bioscoop_path-groningen_128.html",
+      "status": "event uit tekstregel",
+      "rawText": "Speelduur: 1 uur 45 minuten | zo 25 okt | 20:15 | --- | ma 26 okt | 16:30"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.pathe.nl/bioscoop/groningen",
+      "title": "Pathé Groningen",
+      "date": "2026-10-28",
+      "url": "https://www.biosagenda.nl/films-bioscoop_path-groningen_128.html",
+      "status": "event uit dagblok",
+      "rawText": "Pathé Groningen | , Gedempte Zuiderdiep 78, 9711 HL, Groningen | Speelduur: 1 uur 44 minuten | zo 25 okt | 11:30"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.pathe.nl/bioscoop/groningen",
+      "title": ", Gedempte Zuiderdiep 78, 9711 HL, Groningen",
+      "date": "2026-10-28",
+      "url": "https://www.biosagenda.nl/films-bioscoop_path-groningen_128.html",
+      "status": "event uit dagblok",
+      "rawText": ", Gedempte Zuiderdiep 78, 9711 HL, Groningen | Speelduur: 1 uur 44 minuten | zo 25 okt | 11:30 | 16:15"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.pathe.nl/bioscoop/groningen",
+      "title": "Speelduur: 1 uur 44 minuten",
+      "date": "2026-10-28",
+      "url": "https://www.biosagenda.nl/films-bioscoop_path-groningen_128.html",
+      "status": "event uit dagblok",
+      "rawText": "Speelduur: 1 uur 44 minuten | zo 25 okt | 11:30 | 16:15 | 20:30"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.pathe.nl/bioscoop/groningen",
+      "title": "Speelduur: 1 uur 44 minuten",
+      "date": "2026-10-25",
+      "url": "https://www.biosagenda.nl/films-bioscoop_path-groningen_128.html",
+      "status": "event uit tekstregel",
+      "rawText": "Speelduur: 1 uur 44 minuten | zo 25 okt | 11:30 | 16:15 | 20:30 | ---"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.pathe.nl/bioscoop/groningen",
+      "title": "Speelduur: 1 uur 57 minuten",
+      "date": "2026-10-28",
+      "url": "https://www.biosagenda.nl/films-bioscoop_path-groningen_128.html",
+      "status": "event uit dagblok",
+      "rawText": "Speelduur: 1 uur 57 minuten | zo 25 okt | 14:30 | 18:40 | ---"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.pathe.nl/bioscoop/groningen",
+      "title": "Speelduur: 1 uur 57 minuten",
+      "date": "2026-10-25",
+      "url": "https://www.biosagenda.nl/films-bioscoop_path-groningen_128.html",
+      "status": "event uit tekstregel",
+      "rawText": "Speelduur: 1 uur 57 minuten | zo 25 okt | 14:30 | 18:40 | --- | ma 26 okt"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.pathe.nl/bioscoop/groningen",
+      "title": "Speelduur: 1 uur 59 minuten",
+      "date": "2026-10-28",
+      "url": "https://www.biosagenda.nl/films-bioscoop_path-groningen_128.html",
+      "status": "event uit dagblok",
+      "rawText": "Speelduur: 1 uur 59 minuten | zo 25 okt | 16:20 | 20:50 | ---"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.pathe.nl/bioscoop/groningen",
+      "title": "Speelduur: 1 uur 59 minuten",
+      "date": "2026-10-25",
+      "url": "https://www.biosagenda.nl/films-bioscoop_path-groningen_128.html",
+      "status": "event uit tekstregel",
+      "rawText": "Speelduur: 1 uur 59 minuten | zo 25 okt | 16:20 | 20:50 | --- | ma 26 okt"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.pathe.nl/bioscoop/groningen",
+      "title": "Speelduur: 1 uur 46 minuten",
+      "date": "2026-10-28",
+      "url": "https://www.biosagenda.nl/films-bioscoop_path-groningen_128.html",
+      "status": "event uit dagblok",
+      "rawText": "Speelduur: 1 uur 46 minuten | zo 25 okt | 18:00 | --- | ma 26 okt"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.pathe.nl/bioscoop/groningen",
+      "title": "Speelduur: 1 uur 46 minuten",
+      "date": "2026-10-25",
+      "url": "https://www.biosagenda.nl/films-bioscoop_path-groningen_128.html",
+      "status": "event uit tekstregel",
+      "rawText": "Speelduur: 1 uur 46 minuten | zo 25 okt | 18:00 | --- | ma 26 okt | 11:45"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.pathe.nl/bioscoop/groningen",
+      "title": "Speelduur: 1 uur 20 minuten",
+      "date": "2026-10-28",
+      "url": "https://www.biosagenda.nl/films-bioscoop_path-groningen_128.html",
+      "status": "event uit dagblok",
+      "rawText": "Speelduur: 1 uur 20 minuten | zo 25 okt | 14:10 | 19:30 | ---"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.pathe.nl/bioscoop/groningen",
+      "title": "Speelduur: 1 uur 20 minuten",
+      "date": "2026-10-25",
+      "url": "https://www.biosagenda.nl/films-bioscoop_path-groningen_128.html",
+      "status": "event uit tekstregel",
+      "rawText": "Speelduur: 1 uur 20 minuten | zo 25 okt | 14:10 | 19:30 | --- | ma 26 okt"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.pathe.nl/bioscoop/groningen",
+      "title": "Speelduur: 1 uur 34 minuten",
+      "date": "2026-10-28",
+      "url": "https://www.biosagenda.nl/films-bioscoop_path-groningen_128.html",
+      "status": "event uit dagblok",
+      "rawText": "Speelduur: 1 uur 34 minuten | zo 25 okt | 17:10 | 21:50 | ---"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.pathe.nl/bioscoop/groningen",
+      "title": "Speelduur: 1 uur 34 minuten",
+      "date": "2026-10-25",
+      "url": "https://www.biosagenda.nl/films-bioscoop_path-groningen_128.html",
+      "status": "event uit tekstregel",
+      "rawText": "Speelduur: 1 uur 34 minuten | zo 25 okt | 17:10 | 21:50 | --- | ma 26 okt"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.pathe.nl/bioscoop/groningen",
+      "title": ", Gedempte Zuiderdiep 78, 9711 HL, Groningen",
+      "date": "2026-10-25",
+      "url": "https://www.biosagenda.nl/films-bioscoop_path-groningen_128.html",
+      "status": "event uit tekstregel",
+      "rawText": ", Gedempte Zuiderdiep 78, 9711 HL, Groningen | zo 25 okt | 15:30 | 18:10 | 21:00 | ---"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.pathe.nl/bioscoop/groningen",
+      "title": "Speelduur: 2 uur 53 minuten",
+      "date": "2026-10-28",
+      "url": "https://www.biosagenda.nl/films-bioscoop_path-groningen_128.html",
+      "status": "event uit dagblok",
+      "rawText": "Speelduur: 2 uur 53 minuten | zo 25 okt | 19:45 | --- | ma 26 okt"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.pathe.nl/bioscoop/groningen",
+      "title": "Speelduur: 2 uur 53 minuten",
+      "date": "2026-10-25",
+      "url": "https://www.biosagenda.nl/films-bioscoop_path-groningen_128.html",
+      "status": "event uit tekstregel",
+      "rawText": "Speelduur: 2 uur 53 minuten | zo 25 okt | 19:45 | --- | ma 26 okt | 14:20"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.pathe.nl/bioscoop/groningen",
+      "title": "Speelduur: 1 uur 19 minuten",
+      "date": "2026-10-28",
+      "url": "https://www.biosagenda.nl/films-bioscoop_path-groningen_128.html",
+      "status": "event uit dagblok",
+      "rawText": "Speelduur: 1 uur 19 minuten | zo 25 okt | 10:15 13:15 | 15:00 | ---"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.pathe.nl/bioscoop/groningen",
+      "title": "Speelduur: 1 uur 19 minuten",
+      "date": "2026-10-25",
+      "url": "https://www.biosagenda.nl/films-bioscoop_path-groningen_128.html",
+      "status": "event uit tekstregel",
+      "rawText": "Speelduur: 1 uur 19 minuten | zo 25 okt | 10:15 13:15 | 15:00 | --- | ma 26 okt"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.pathe.nl/bioscoop/groningen",
+      "title": "Speelduur: 2 uur 9 minuten",
+      "date": "2026-10-28",
+      "url": "https://www.biosagenda.nl/films-bioscoop_path-groningen_128.html",
+      "status": "event uit dagblok",
+      "rawText": "Speelduur: 2 uur 9 minuten | zo 25 okt | 17:15 | --- | ma 26 okt"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.pathe.nl/bioscoop/groningen",
+      "title": "Speelduur: 2 uur 9 minuten",
+      "date": "2026-10-25",
+      "url": "https://www.biosagenda.nl/films-bioscoop_path-groningen_128.html",
+      "status": "event uit tekstregel",
+      "rawText": "Speelduur: 2 uur 9 minuten | zo 25 okt | 17:15 | --- | ma 26 okt | 12:50"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.pathe.nl/bioscoop/groningen",
+      "title": "Speelduur: 2 uur 25 minuten",
+      "date": "2026-10-28",
+      "url": "https://www.biosagenda.nl/films-bioscoop_path-groningen_128.html",
+      "status": "event uit dagblok",
+      "rawText": "Speelduur: 2 uur 25 minuten | zo 25 okt | 14:00 | --- | ma 26 okt"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.pathe.nl/bioscoop/groningen",
+      "title": "Speelduur: 2 uur 25 minuten",
+      "date": "2026-10-25",
+      "url": "https://www.biosagenda.nl/films-bioscoop_path-groningen_128.html",
+      "status": "event uit tekstregel",
+      "rawText": "Speelduur: 2 uur 25 minuten | zo 25 okt | 14:00 | --- | ma 26 okt | 15:45"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.pathe.nl/bioscoop/groningen",
+      "title": "Speelduur: 1 uur 18 minuten",
+      "date": "2026-10-28",
+      "url": "https://www.biosagenda.nl/films-bioscoop_path-groningen_128.html",
+      "status": "event uit dagblok",
+      "rawText": "Speelduur: 1 uur 18 minuten | zo 25 okt | 11:15 12:20 | 14:20 | ---"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.pathe.nl/bioscoop/groningen",
+      "title": "Speelduur: 1 uur 18 minuten",
+      "date": "2026-10-25",
+      "url": "https://www.biosagenda.nl/films-bioscoop_path-groningen_128.html",
+      "status": "event uit tekstregel",
+      "rawText": "Speelduur: 1 uur 18 minuten | zo 25 okt | 11:15 12:20 | 14:20 | --- | ma 26 okt"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.pathe.nl/bioscoop/groningen",
+      "title": "Speelduur: 1 uur 41 minuten",
+      "date": "2026-10-28",
+      "url": "https://www.biosagenda.nl/films-bioscoop_path-groningen_128.html",
+      "status": "event uit dagblok",
+      "rawText": "Speelduur: 1 uur 41 minuten | zo 25 okt | 21:20 | --- | ma 26 okt"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.pathe.nl/bioscoop/groningen",
+      "title": "Speelduur: 1 uur 41 minuten",
+      "date": "2026-10-25",
+      "url": "https://www.biosagenda.nl/films-bioscoop_path-groningen_128.html",
+      "status": "event uit tekstregel",
+      "rawText": "Speelduur: 1 uur 41 minuten | zo 25 okt | 21:20 | --- | ma 26 okt | 21:30"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.pathe.nl/bioscoop/groningen",
+      "title": "Pathé Groningen",
+      "date": "2026-10-26",
+      "url": "https://www.biosagenda.nl/films-bioscoop_path-groningen_128.html",
+      "status": "event uit dagblok",
+      "rawText": "Pathé Groningen | , Gedempte Zuiderdiep 78, 9711 HL, Groningen | Speelduur: 1 uur 41 minuten | zo 25 okt | 18:30"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.pathe.nl/bioscoop/groningen",
+      "title": ", Gedempte Zuiderdiep 78, 9711 HL, Groningen",
+      "date": "2026-10-26",
+      "url": "https://www.biosagenda.nl/films-bioscoop_path-groningen_128.html",
+      "status": "event uit dagblok",
+      "rawText": ", Gedempte Zuiderdiep 78, 9711 HL, Groningen | Speelduur: 1 uur 41 minuten | zo 25 okt | 18:30 | ---"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.pathe.nl/bioscoop/groningen",
+      "title": "Speelduur: 1 uur 41 minuten",
+      "date": "2026-10-26",
+      "url": "https://www.biosagenda.nl/films-bioscoop_path-groningen_128.html",
+      "status": "event uit dagblok",
+      "rawText": "Speelduur: 1 uur 41 minuten | zo 25 okt | 18:30 | --- | wo 28 okt"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.pathe.nl/bioscoop/groningen",
+      "title": "Animatie, Kinderfilm, Muziekfilm, 2026",
+      "date": "2026-10-28",
+      "url": "https://www.biosagenda.nl/films-bioscoop_path-groningen_128.html",
+      "status": "event uit dagblok",
+      "rawText": "Animatie, Kinderfilm, Muziekfilm, 2026 | Bumba en zijn circusvriendjes nodigen de allerkleinsten uit om mee te zingen, dansen en muziek te maken tijdens een vrolijk bioscoopavontuur. | ..lees meer | Pathé Groningen | , Gedempte Zuiderdiep 78, 9711 HL, Groningen"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.pathe.nl/bioscoop/groningen",
+      "title": "Speelduur: 1 uur 49 minuten",
+      "date": "2026-10-28",
+      "url": "https://www.biosagenda.nl/films-bioscoop_path-groningen_128.html",
+      "status": "event uit dagblok",
+      "rawText": "Speelduur: 1 uur 49 minuten | zo 25 okt | 10:15 12:50 | --- | wo 28 okt"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.pathe.nl/bioscoop/groningen",
+      "title": "Speelduur: 1 uur 49 minuten",
+      "date": "2026-10-25",
+      "url": "https://www.biosagenda.nl/films-bioscoop_path-groningen_128.html",
+      "status": "event uit tekstregel",
+      "rawText": "Speelduur: 1 uur 49 minuten | zo 25 okt | 10:15 12:50 | --- | wo 28 okt | 12:50"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.pathe.nl/bioscoop/groningen",
+      "title": ", Gedempte Zuiderdiep 78, 9711 HL, Groningen",
+      "date": "2026-10-26",
+      "url": "https://www.biosagenda.nl/films-bioscoop_path-groningen_128.html",
+      "status": "event uit tekstregel",
+      "rawText": ", Gedempte Zuiderdiep 78, 9711 HL, Groningen | ma 26 okt | 18:00 | --- | di 27 okt | 15:45"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.pathe.nl/bioscoop/groningen",
+      "title": "Speelduur: 1 uur 29 minuten",
+      "date": "2026-10-28",
+      "url": "https://www.biosagenda.nl/films-bioscoop_path-groningen_128.html",
+      "status": "event uit dagblok",
+      "rawText": "Speelduur: 1 uur 29 minuten | ma 26 okt | 22:00 | --- | di 27 okt"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.pathe.nl/bioscoop/groningen",
+      "title": "Speelduur: 1 uur 29 minuten",
+      "date": "2026-10-26",
+      "url": "https://www.biosagenda.nl/films-bioscoop_path-groningen_128.html",
+      "status": "event uit tekstregel",
+      "rawText": "Speelduur: 1 uur 29 minuten | ma 26 okt | 22:00 | --- | di 27 okt | 22:00"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.pathe.nl/bioscoop/groningen",
+      "title": "Speelduur: 1 uur 26 minuten",
+      "date": "2026-10-28",
+      "url": "https://www.biosagenda.nl/films-bioscoop_path-groningen_128.html",
+      "status": "event uit dagblok",
+      "rawText": "Speelduur: 1 uur 26 minuten | zo 25 okt | 10:20 12:00 | --- | wo 28 okt"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.pathe.nl/bioscoop/groningen",
+      "title": "Speelduur: 1 uur 26 minuten",
+      "date": "2026-10-25",
+      "url": "https://www.biosagenda.nl/films-bioscoop_path-groningen_128.html",
+      "status": "event uit tekstregel",
+      "rawText": "Speelduur: 1 uur 26 minuten | zo 25 okt | 10:20 12:00 | --- | wo 28 okt | 11:45"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.pathe.nl/bioscoop/groningen",
+      "title": "Speelduur: 1 uur 21 minuten",
+      "date": "2026-10-28",
+      "url": "https://www.biosagenda.nl/films-bioscoop_path-groningen_128.html",
+      "status": "event uit dagblok",
+      "rawText": "Speelduur: 1 uur 21 minuten | zo 25 okt | 10:15 12:30 | --- | wo 28 okt"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.pathe.nl/bioscoop/groningen",
+      "title": "Speelduur: 1 uur 21 minuten",
+      "date": "2026-10-25",
+      "url": "https://www.biosagenda.nl/films-bioscoop_path-groningen_128.html",
+      "status": "event uit tekstregel",
+      "rawText": "Speelduur: 1 uur 21 minuten | zo 25 okt | 10:15 12:30 | --- | wo 28 okt | 13:30"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.pathe.nl/bioscoop/groningen",
+      "title": "Speelduur: 2 uur 7 minuten",
+      "date": "2026-10-28",
+      "url": "https://www.biosagenda.nl/films-bioscoop_path-groningen_128.html",
+      "status": "event uit dagblok",
+      "rawText": "Speelduur: 2 uur 7 minuten | zo 25 okt | 19:00 | --- | Actie, Animatie, Avontuur, 2026"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.pathe.nl/bioscoop/groningen",
+      "title": "Speelduur: 2 uur 7 minuten",
+      "date": "2026-10-25",
+      "url": "https://www.biosagenda.nl/films-bioscoop_path-groningen_128.html",
+      "status": "event uit tekstregel",
+      "rawText": "Speelduur: 2 uur 7 minuten | zo 25 okt | 19:00 | --- | Actie, Animatie, Avontuur, 2026 | Regie: Cal Brunker"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.pathe.nl/bioscoop/groningen",
+      "title": "Pathé Groningen",
+      "date": "2026-10-25",
+      "url": "https://www.biosagenda.nl/films-bioscoop_path-groningen_128.html",
+      "status": "event uit dagblok",
+      "rawText": "Pathé Groningen | , Gedempte Zuiderdiep 78, 9711 HL, Groningen | Speelduur: 1 uur 29 minuten | zo 25 okt | 12:15"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.pathe.nl/bioscoop/groningen",
+      "title": ", Gedempte Zuiderdiep 78, 9711 HL, Groningen",
+      "date": "2026-10-25",
+      "url": "https://www.biosagenda.nl/films-bioscoop_path-groningen_128.html",
+      "status": "event uit dagblok",
+      "rawText": ", Gedempte Zuiderdiep 78, 9711 HL, Groningen | Speelduur: 1 uur 29 minuten | zo 25 okt | 12:15 | ---"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.pathe.nl/bioscoop/groningen",
+      "title": "Speelduur: 1 uur 29 minuten",
+      "date": "2026-10-25",
+      "url": "https://www.biosagenda.nl/films-bioscoop_path-groningen_128.html",
+      "status": "event uit dagblok",
+      "rawText": "Speelduur: 1 uur 29 minuten | zo 25 okt | 12:15 | --- | wo 28 okt"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.pathe.nl/bioscoop/groningen",
+      "title": "Speelduur: 1 uur 29 minuten",
+      "date": "2026-10-25",
+      "url": "https://www.biosagenda.nl/films-bioscoop_path-groningen_128.html",
+      "status": "event uit tekstregel",
+      "rawText": "Speelduur: 1 uur 29 minuten | zo 25 okt | 12:15 | --- | wo 28 okt | 12:40"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.pathe.nl/bioscoop/groningen",
+      "title": "g,a",
+      "date": "2026-10-25",
+      "url": "https://www.biosagenda.nl/films-bioscoop_path-groningen_128.html",
+      "status": "event uit dagblok",
+      "rawText": "g,a | Animatie, Avontuur, Komedie, 2026 | Regie: Pierre Coffin | Met: Pierre Coffin | De Minions slaan de handen ineen voor een monsterfilm en trekken eropuit om de engste wezens ter wereld te vinden als talent voor de film."
+    },
+    {
+      "source": "Website",
+      "site": "https://www.pathe.nl/bioscoop/groningen",
+      "title": "Animatie, Avontuur, Komedie, 2026",
+      "date": "2026-10-25",
+      "url": "https://www.biosagenda.nl/films-bioscoop_path-groningen_128.html",
+      "status": "event uit dagblok",
+      "rawText": "Animatie, Avontuur, Komedie, 2026 | Regie: Pierre Coffin | Met: Pierre Coffin | De Minions slaan de handen ineen voor een monsterfilm en trekken eropuit om de engste wezens ter wereld te vinden als talent voor de film. | ..lees meer"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.pathe.nl/bioscoop/groningen",
+      "title": "Regie: Pierre Coffin",
+      "date": "2026-10-25",
+      "url": "https://www.biosagenda.nl/films-bioscoop_path-groningen_128.html",
+      "status": "event uit dagblok",
+      "rawText": "Regie: Pierre Coffin | Met: Pierre Coffin | De Minions slaan de handen ineen voor een monsterfilm en trekken eropuit om de engste wezens ter wereld te vinden als talent voor de film. | ..lees meer | Pathé Groningen"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.pathe.nl/bioscoop/groningen",
+      "title": "Met: Pierre Coffin",
+      "date": "2026-10-25",
+      "url": "https://www.biosagenda.nl/films-bioscoop_path-groningen_128.html",
+      "status": "event uit dagblok",
+      "rawText": "Met: Pierre Coffin | De Minions slaan de handen ineen voor een monsterfilm en trekken eropuit om de engste wezens ter wereld te vinden als talent voor de film. | ..lees meer | Pathé Groningen | , Gedempte Zuiderdiep 78, 9711 HL, Groningen"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.pathe.nl/bioscoop/groningen",
+      "title": "De Minions slaan de handen ineen voor een monsterfilm en trekken eropuit om de engste wezens ter wereld te vinden als talent voor de film.",
+      "date": "2026-10-25",
+      "url": "https://www.biosagenda.nl/films-bioscoop_path-groningen_128.html",
+      "status": "event uit dagblok",
+      "rawText": "De Minions slaan de handen ineen voor een monsterfilm en trekken eropuit om de engste wezens ter wereld te vinden als talent voor de film. | ..lees meer | Pathé Groningen | , Gedempte Zuiderdiep 78, 9711 HL, Groningen | Speelduur: 1 uur 30 minuten"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.pathe.nl/bioscoop/groningen",
+      "title": "Speelduur: 1 uur 30 minuten",
+      "date": "2026-10-25",
+      "url": "https://www.biosagenda.nl/films-bioscoop_path-groningen_128.html",
+      "status": "event uit dagblok",
+      "rawText": "Speelduur: 1 uur 30 minuten | zo 25 okt | 10:30 12:45 | --- | Animatie, Avontuur, Komedie, 2026"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.pathe.nl/bioscoop/groningen",
+      "title": "Speelduur: 1 uur 30 minuten",
+      "date": "2026-10-25",
+      "url": "https://www.biosagenda.nl/films-bioscoop_path-groningen_128.html",
+      "status": "event uit tekstregel",
+      "rawText": "Speelduur: 1 uur 30 minuten | zo 25 okt | 10:30 12:45 | --- | Animatie, Avontuur, Komedie, 2026 | Regie: Dave Green"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.pathe.nl/bioscoop/groningen",
+      "title": "Speelduur: 1 uur 43 minuten",
+      "date": "2026-10-25",
+      "url": "https://www.biosagenda.nl/films-bioscoop_path-groningen_128.html",
+      "status": "event uit dagblok",
+      "rawText": "Speelduur: 1 uur 43 minuten | ma 26 okt | 21:20 | --- | wo 28 okt"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.pathe.nl/bioscoop/groningen",
+      "title": "Speelduur: 1 uur 43 minuten",
+      "date": "2026-10-26",
+      "url": "https://www.biosagenda.nl/films-bioscoop_path-groningen_128.html",
+      "status": "event uit tekstregel",
+      "rawText": "Speelduur: 1 uur 43 minuten | ma 26 okt | 21:20 | --- | wo 28 okt | 21:00"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.pathe.nl/bioscoop/groningen",
+      "title": "Speelduur: 1 uur 53 minuten",
+      "date": "2026-10-28",
+      "url": "https://www.biosagenda.nl/films-bioscoop_path-groningen_128.html",
+      "status": "event uit dagblok",
+      "rawText": "Speelduur: 1 uur 53 minuten | di 27 okt | 18:10 | --- | Drama, Komedie, 2026"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.pathe.nl/bioscoop/groningen",
+      "title": "Speelduur: 1 uur 53 minuten",
+      "date": "2026-10-27",
+      "url": "https://www.biosagenda.nl/films-bioscoop_path-groningen_128.html",
+      "status": "event uit tekstregel",
+      "rawText": "Speelduur: 1 uur 53 minuten | di 27 okt | 18:10 | --- | Drama, Komedie, 2026 | Regie: George Jaques"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.pathe.nl/bioscoop/groningen",
+      "title": "Pathé Groningen",
+      "date": "2026-10-27",
+      "url": "https://www.biosagenda.nl/films-bioscoop_path-groningen_128.html",
+      "status": "event uit dagblok",
+      "rawText": "Pathé Groningen | , Gedempte Zuiderdiep 78, 9711 HL, Groningen | Speelduur: 1 uur 46 minuten | ma 26 okt | 19:00"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.pathe.nl/bioscoop/groningen",
+      "title": ", Gedempte Zuiderdiep 78, 9711 HL, Groningen",
+      "date": "2026-10-27",
+      "url": "https://www.biosagenda.nl/films-bioscoop_path-groningen_128.html",
+      "status": "event uit dagblok",
+      "rawText": ", Gedempte Zuiderdiep 78, 9711 HL, Groningen | Speelduur: 1 uur 46 minuten | ma 26 okt | 19:00 | ---"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.pathe.nl/bioscoop/groningen",
+      "title": "Speelduur: 1 uur 46 minuten",
+      "date": "2026-10-27",
+      "url": "https://www.biosagenda.nl/films-bioscoop_path-groningen_128.html",
+      "status": "event uit dagblok",
+      "rawText": "Speelduur: 1 uur 46 minuten | ma 26 okt | 19:00 | --- | 2026"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.pathe.nl/bioscoop/groningen",
+      "title": "Speelduur: 1 uur 46 minuten",
+      "date": "2026-10-26",
+      "url": "https://www.biosagenda.nl/films-bioscoop_path-groningen_128.html",
+      "status": "event uit tekstregel",
+      "rawText": "Speelduur: 1 uur 46 minuten | ma 26 okt | 19:00 | --- | 2026 | Regie: Jungjae Ha"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.pathe.nl/bioscoop/groningen",
+      "title": "2026",
+      "date": "2026-10-26",
+      "url": "https://www.biosagenda.nl/films-bioscoop_path-groningen_128.html",
+      "status": "event uit dagblok",
+      "rawText": "2026 | Regie: Jungjae Ha | Met: BTS | BTS brengt zijn Arirang-wereldtournee naar Buenos Aires, waar het concert rechtstreeks wordt uitgezonden naar bioscopen over de hele wereld. | ..lees meer"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.pathe.nl/bioscoop/groningen",
+      "title": "Regie: Jungjae Ha",
+      "date": "2026-10-26",
+      "url": "https://www.biosagenda.nl/films-bioscoop_path-groningen_128.html",
+      "status": "event uit dagblok",
+      "rawText": "Regie: Jungjae Ha | Met: BTS | BTS brengt zijn Arirang-wereldtournee naar Buenos Aires, waar het concert rechtstreeks wordt uitgezonden naar bioscopen over de hele wereld. | ..lees meer | Pathé Groningen"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.pathe.nl/bioscoop/groningen",
+      "title": "Met: BTS",
+      "date": "2026-10-26",
+      "url": "https://www.biosagenda.nl/films-bioscoop_path-groningen_128.html",
+      "status": "event uit dagblok",
+      "rawText": "Met: BTS | BTS brengt zijn Arirang-wereldtournee naar Buenos Aires, waar het concert rechtstreeks wordt uitgezonden naar bioscopen over de hele wereld. | ..lees meer | Pathé Groningen | , Gedempte Zuiderdiep 78, 9711 HL, Groningen"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.pathe.nl/bioscoop/groningen",
+      "title": "BTS brengt zijn Arirang-wereldtournee naar Buenos Aires, waar het concert rechtstreeks wordt uitgezonden naar bioscopen over de hele wereld.",
+      "date": "2026-10-26",
+      "url": "https://www.biosagenda.nl/films-bioscoop_path-groningen_128.html",
+      "status": "event uit dagblok",
+      "rawText": "BTS brengt zijn Arirang-wereldtournee naar Buenos Aires, waar het concert rechtstreeks wordt uitgezonden naar bioscopen over de hele wereld. | ..lees meer | Pathé Groningen | , Gedempte Zuiderdiep 78, 9711 HL, Groningen | Speelduur: 3 uur 15 minuten"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.pathe.nl/bioscoop/groningen",
+      "title": "Speelduur: 3 uur 15 minuten",
+      "date": "2026-10-26",
+      "url": "https://www.biosagenda.nl/films-bioscoop_path-groningen_128.html",
+      "status": "event uit dagblok",
+      "rawText": "Speelduur: 3 uur 15 minuten | zo 25 okt | 14:45 | --- | 1970"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.pathe.nl/bioscoop/groningen",
+      "title": "Speelduur: 3 uur 15 minuten",
+      "date": "2026-10-25",
+      "url": "https://www.biosagenda.nl/films-bioscoop_path-groningen_128.html",
+      "status": "event uit tekstregel",
+      "rawText": "Speelduur: 3 uur 15 minuten | zo 25 okt | 14:45 | --- | 1970 | De officieren Guglielmo en Fernando zijn verloofd met de zusters Fiordiligi en Dorabella. Alles gaat goed, totdat de voogd van de zusters een weddenschap afsluit met de heren over de trouw van de dames."
+    },
+    {
+      "source": "Website",
+      "site": "https://www.pathe.nl/bioscoop/groningen",
+      "title": "Speelduur: 2 uur 39 minuten",
+      "date": "2026-10-25",
+      "url": "https://www.biosagenda.nl/films-bioscoop_path-groningen_128.html",
+      "status": "event uit dagblok",
+      "rawText": "Speelduur: 2 uur 39 minuten | zo 25 okt | 11:00 | --- | Legendarische klassieker herbeleven op het grote doek als Sneak Preview."
+    },
+    {
+      "source": "Website",
+      "site": "https://www.pathe.nl/bioscoop/groningen",
+      "title": "Speelduur: 2 uur 39 minuten",
+      "date": "2026-10-25",
+      "url": "https://www.biosagenda.nl/films-bioscoop_path-groningen_128.html",
+      "status": "event uit tekstregel",
+      "rawText": "Speelduur: 2 uur 39 minuten | zo 25 okt | 11:00 | --- | Legendarische klassieker herbeleven op het grote doek als Sneak Preview. | ..lees meer"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.pathe.nl/bioscoop/groningen",
+      "title": ", Gedempte Zuiderdiep 78, 9711 HL, Groningen",
+      "date": "2026-10-27",
+      "url": "https://www.biosagenda.nl/films-bioscoop_path-groningen_128.html",
+      "status": "event uit tekstregel",
+      "rawText": ", Gedempte Zuiderdiep 78, 9711 HL, Groningen | di 27 okt | 20:30 | --- | De bioscoopprogramma's in Nederland lopen van donderdag tot en met woensdag. De programma's van de nieuwe speelweek worden uiterlijk dinsdag bekend gemaakt. | Film Fest Gent zet Belgische bioscoopa.."
+    },
+    {
+      "source": "Website",
+      "site": "https://www.pathe.nl/bioscoop/groningen",
+      "title": "Film Fest Gent zet Belgische bioscoopa..",
+      "date": "2026-10-27",
+      "url": "https://www.biosagenda.nl/films-bioscoop_path-groningen_128.html",
+      "status": "event uit dagblok",
+      "rawText": "Film Fest Gent zet Belgische bioscoopa.. | 12-10 Film Fest Gent loopt nog tot en met 18 oktober. Het festival spreidt meer dan honderd langspeelfilms, kortfilms, concerten en gesprekken over zalen in Gent. Ook de festivalvertoningen van Coward en de On Tour-vertoningen van La Gradiva raken aan de reguliere bioscoopagenda."
+    },
+    {
+      "source": "Website",
+      "site": "https://www.pathe.nl/bioscoop/groningen",
+      "title": "12-10 Film Fest Gent loopt nog tot",
+      "date": "2026-10-18",
+      "url": "https://www.biosagenda.nl/films-bioscoop_path-groningen_128.html",
+      "status": "event uit tekstregel",
+      "rawText": "Film Fest Gent zet Belgische bioscoopa.. | 12-10 Film Fest Gent loopt nog tot en met 18 oktober. Het festival spreidt meer dan honderd langspeelfilms, kortfilms, concerten en gesprekken over zalen in Gent. Ook de festivalvertoningen van Coward en de On Tour-vertoningen van La Gradiva raken aan de reguliere bioscoopagenda."
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.pathe.nl/bioscoop/groningen",
+      "title": "Pagina geteld",
+      "date": "",
+      "url": "https://www.biosagenda.nl/films-bioscoop_path-groningen_128.html",
+      "status": "analyse",
+      "rawText": "jsonld:0, links:0, datumblokken:2, kaarten:0, regels:141, detail:0"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.pathe.nl/bioscoop/groningen",
+      "title": "Pathé-speeltijden",
+      "date": "",
+      "url": "https://www.biosagenda.nl/films-bioscoop_path-groningen_128.html",
+      "status": "fallback",
+      "rawText": "71 filmvermeldingen herkend; HTML 44428 tekens; pagina /films-bioscoop_path-groningen_128.html"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.pathe.nl/bioscoop/groningen",
+      "title": "Pagina geanalyseerd",
+      "date": "",
+      "url": "https://www.biosagenda.nl/films-bioscoop_path-groningen_128.html",
+      "status": "ok",
+      "rawText": "71 events/aanbiedingen op deze pagina"
+    },
+    {
+      "source": "Filter",
+      "site": "https://www.pathe.nl/bioscoop/groningen",
+      "title": "Datumfilter toegepast",
+      "date": "2026-10-26",
+      "url": "https://www.pathe.nl/bioscoop/groningen",
+      "status": "ok",
+      "rawText": "71 gevonden; 38 binnen 2026-10-26 t/m 2026-10-28"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.pathe.nl/bioscoop/groningen",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://www.pathe.nl/bioscoop/groningen",
+      "status": "klaar",
+      "rawText": "site 18/20: 12 unieke events in 1.74 sec"
     }
   ],
   "status": "running",
   "siteStartedAt": "2026-10-26T10:20:23+00:00",
-  "siteElapsedSeconds": 0,
-  "sitePageCount": 0,
-  "lastSiteEventCount": 0,
-  "stage": "Websitepagina ophalen",
-  "lastUpdatedAt": "2026-10-26T10:20:23+00:00",
-  "lastSiteNewEventCount": 0,
-  "lastCompletedSite": "https://www.ibood.com/s-nl",
-  "lastCompletedAt": "2026-10-26T10:20:21+00:00"
+  "siteElapsedSeconds": 3,
+  "sitePageCount": 1,
+  "lastSiteEventCount": 12,
+  "stage": "Website klaar; volgende website voorbereiden",
+  "lastUpdatedAt": "2026-10-26T10:20:26+00:00",
+  "lastSiteNewEventCount": 12,
+  "lastCompletedSite": "https://www.pathe.nl/bioscoop/groningen",
+  "lastCompletedAt": "2026-10-26T10:20:26+00:00"
 }
