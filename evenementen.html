@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- Favorieten, dubbelingsfeedback, URL-bewerking en zichtbaarheid na titelcorrectie, versie 2026.10.26.77. -->
+<!-- Bronwebsitegroepen normaliseren om dubbele bronregels te voorkomen, versie 2026.10.26.78. -->
 <html lang="nl">
 <head>
   <meta charset="UTF-8">
@@ -1515,7 +1515,7 @@
     </section>
   </div>
   <script>
-    const APP_VERSION = "2026.10.26.77";
+    const APP_VERSION = "2026.10.26.78";
     const STATUS_HISTORY_KEY = "evenementenStatusHistoryV1";
     const DISMISSED_SCRAPE_RUN_KEY = "evenementenDismissedScrapeRunV1";
     const DEFAULT_MAX_EVENTS_PER_SITE = 20;
@@ -1737,7 +1737,16 @@
     }
 
     function siteIdentityKey(site) {
-      return normalizeSiteInput(site).toLowerCase().replace(/\/$/, "");
+      const normalized = normalizeSiteInput(site);
+      if (!normalized) return "";
+      try {
+        const url = new URL(normalized);
+        // Websitebeheer toont één bron per hostname, ook als verschillende paden
+        // van dezelfde website zijn toegevoegd.
+        return url.hostname.toLowerCase().replace(/^www\./, "");
+      } catch {
+        return normalized.toLowerCase().replace(/\/$/, "");
+      }
     }
 
     function loadRemovedSiteKeys() {
@@ -3471,12 +3480,22 @@
 
     function eventSourceLabel(event) {
       const source = cleanText(event.source || "");
-      if (source && !/^(manual|onbekend|bron onbekend)$/i.test(source)) return source;
+      if (source && !/^(manual|onbekend|bron onbekend)$/i.test(source)) {
+        // Normaliseer host-/URL-varianten zodat www, protocol en hoofdletters
+        // geen afzonderlijke bronregels opleveren.
+        const sourceHost = hostFromUrl(source);
+        if (sourceHost) return sourceHost;
+        return source.toLowerCase()
+          .replace(/^www\./i, "")
+          .replace(/\s+/g, " ")
+          .replace(/[\s./]+$/g, "")
+          .trim();
+      }
 
       const website = safeUrl(event.website, { website: true });
       if (!website) return "";
       try {
-        return new URL(website).hostname.replace(/^www\./, "");
+        return new URL(website).hostname.toLowerCase().replace(/^www\./, "");
       } catch {
         return "";
       }
