@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-26T09:43:32.285Z",
+  "updatedAt": "2026-10-26T09:44:12.812Z",
   "feedback": [
     {
       "key": "2026-10-27|abonnement topmusici van eigen bodem",
@@ -342,6 +342,24 @@
         "location": "Grote Zaal, Concertgebouw, Amsterdam",
         "type": "Concert",
         "cost": "Zie website"
+      }
+    },
+    {
+      "key": "2026-10-29|academie van het concertgebouworkest",
+      "vote": "edit",
+      "title": "Academie van het Concertgebouworkest",
+      "date": "2026-10-29",
+      "website": "https://www.concertgebouw.nl/concerten/45881817-25-jaar-academie-concertgebouworkest",
+      "url": "https://www.concertgebouw.nl/concerten/45881817-25-jaar-academie-concertgebouworkest",
+      "updatedAt": "2026-10-26T09:44:12.812Z",
+      "originalTitle": "Academie van het Concertgebouworkest",
+      "originalDate": "2026-10-29",
+      "corrections": {
+        "title": "Academie van het Concertgebouworkest",
+        "date": "2026-10-29",
+        "location": "Grote Zaal, Concertgebouw, Amsterdam",
+        "type": "Concert",
+        "cost": "vanaf 20,00"
       }
     }
   ]
