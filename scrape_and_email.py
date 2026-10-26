@@ -966,6 +966,8 @@ def apply_event_corrections(event):
             corrected["type"] = clean_text(corrections["type"])
         if corrections.get("cost"):
             corrected["cost"] = clean_text(corrections["cost"])
+        if corrections.get("website"):
+            corrected["website"] = normalized_url(corrections["website"])
         corrected["editedByUser"] = True
         corrected["editedAt"] = item.get("updatedAt", "")
         return corrected
