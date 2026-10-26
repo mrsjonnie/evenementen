@@ -2786,6 +2786,18 @@
         return;
       }
       const site = cleanText(progress.currentSite || "");
+      const progressLogSignature = [progress.runId, status, progress.currentSiteIndex || 0, site, progress.stage || "", completed].join("|");
+      if (progressLogSignature !== lastProgressStatusSignature) {
+        lastProgressStatusSignature = progressLogSignature;
+        if (status === "running" || status === "finishing") {
+          const details = site
+            ? "Website " + (Number(progress.currentSiteIndex) || completed + 1) + "/" + total + ": " + shortScrapeSiteName(site) + " — " + cleanText(progress.stage || "onderzoek gestart") + "; " + (Number(progress.sitePageCount) || 0) + " pagina’s gelezen, " + (Number(progress.lastSiteEventCount) || 0) + " hits tot nu toe."
+            : "Scraper actief: voorbereiding; " + completed + "/" + total + " websites afgerond.";
+          showStatus(details, site ? "" : "warn");
+        } else if (status === "completed") {
+          showStatus("Scraper afgerond: " + Math.min(completed, total) + "/" + total + " websites verwerkt.", "ok");
+        }
+      }
       if (!site) {
         if (titleProgress) {
           titleProgress.hidden = false;
