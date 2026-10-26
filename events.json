@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-26T11:45:29+00:00",
+  "updatedAt": "2026-10-26T11:45:43+00:00",
   "events": [
     {
       "date": "2026-10-26",
@@ -8496,171 +8496,16 @@
       "newCount": 0,
       "durationSeconds": 10.21,
       "timedOut": true
+    },
+    {
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 10.02,
+      "timedOut": true
     }
   ],
   "rawLog": [
-    {
-      "source": "Website",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": "Boeren, arbeiders en ambachten",
-      "date": "2026-10-31",
-      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
-      "status": "event uit dagblok",
-      "rawText": "Boeren, arbeiders en ambachten | Boeren, arbeiders en ambachten | t/m 1 november | , Leens | Tentoonstelling"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": "Boeren, arbeiders en ambachten",
-      "date": "2026-11-01",
-      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
-      "status": "event uit tekstregel",
-      "rawText": "Boeren, arbeiders en ambachten | t/m 1 november | , Leens | Tentoonstelling | Voeg toe als favoriet | Voeg toe als favoriet"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": "Atelierreeks tekenen & schilderen",
-      "date": "2026-11-11",
-      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
-      "status": "event uit tekstregel",
-      "rawText": "Atelierreeks tekenen & schilderen | t/m 11 november | , Wehe-Den Hoorn | Tekenen en schilderen | Voeg toe als favoriet | Voeg toe als favoriet"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": ", Wehe-Den Hoorn",
-      "date": "2026-11-11",
-      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
-      "status": "event uit dagblok",
-      "rawText": ", Wehe-Den Hoorn | Tekenen en schilderen | Voeg toe als favoriet | Voeg toe als favoriet | Expositie CHAPEAU!"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": "Tekenen en schilderen",
-      "date": "2026-11-11",
-      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
-      "status": "event uit dagblok",
-      "rawText": "Tekenen en schilderen | Voeg toe als favoriet | Voeg toe als favoriet | Expositie CHAPEAU! | Expositie CHAPEAU!"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": "Voeg toe als favoriet",
-      "date": "2026-11-11",
-      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
-      "status": "event uit dagblok",
-      "rawText": "Voeg toe als favoriet | Voeg toe als favoriet | Expositie CHAPEAU! | Expositie CHAPEAU! | t/m 1 november"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": "Expositie CHAPEAU!",
-      "date": "2026-11-11",
-      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
-      "status": "event uit dagblok",
-      "rawText": "Expositie CHAPEAU! | Expositie CHAPEAU! | t/m 1 november | , Leens | Tentoonstelling"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": "Expositie CHAPEAU!",
-      "date": "2026-11-01",
-      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
-      "status": "event uit tekstregel",
-      "rawText": "Expositie CHAPEAU! | t/m 1 november | , Leens | Tentoonstelling | Voeg toe als favoriet | Voeg toe als favoriet"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": "Wadlopen vanuit Pieterburen",
-      "date": "2027-01-02",
-      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
-      "status": "event uit tekstregel",
-      "rawText": "Wadlopen vanuit Pieterburen | t/m 2 januari 2027 | , Pieterburen | Wandeltocht | Voeg toe als favoriet | Voeg toe als favoriet"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": "Eten en drinken",
-      "date": "2027-01-02",
-      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
-      "status": "event uit dagblok",
-      "rawText": "Eten en drinken | Winkelen | Bijzonder overnachten | Met kinderen | Theater, muziek en musea"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": "Winkelen",
-      "date": "2027-01-02",
-      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
-      "status": "event uit dagblok",
-      "rawText": "Winkelen | Bijzonder overnachten | Met kinderen | Theater, muziek en musea | Reisideeën"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": "Bijzonder overnachten",
-      "date": "2027-01-02",
-      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
-      "status": "event uit dagblok",
-      "rawText": "Bijzonder overnachten | Met kinderen | Theater, muziek en musea | Reisideeën | Een week in Stad en Ommeland"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": "Met kinderen",
-      "date": "2027-01-02",
-      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
-      "status": "event uit dagblok",
-      "rawText": "Met kinderen | Theater, muziek en musea | Reisideeën | Een week in Stad en Ommeland | 24 uur in Groningen stad"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": "Theater, muziek en musea",
-      "date": "2027-01-02",
-      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
-      "status": "event uit dagblok",
-      "rawText": "Theater, muziek en musea | Reisideeën | Een week in Stad en Ommeland | 24 uur in Groningen stad | Dagtripjes zonder auto"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": "Een week in Stad en Ommeland",
-      "date": "2027-01-02",
-      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
-      "status": "event uit dagblok",
-      "rawText": "Een week in Stad en Ommeland | 24 uur in Groningen stad | Dagtripjes zonder auto | Lunchen in de stad | Naar het museum"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": "24 uur in Groningen stad",
-      "date": "2027-01-02",
-      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
-      "status": "event uit dagblok",
-      "rawText": "24 uur in Groningen stad | Dagtripjes zonder auto | Lunchen in de stad | Naar het museum | TOERISTISCHE INFORMATIE"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": "Dagtripjes zonder auto",
-      "date": "2027-01-02",
-      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
-      "status": "event uit dagblok",
-      "rawText": "Dagtripjes zonder auto | Lunchen in de stad | Naar het museum | TOERISTISCHE INFORMATIE | Groningen Store"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": "Lunchen in de stad",
-      "date": "2027-01-02",
-      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
-      "status": "event uit dagblok",
-      "rawText": "Lunchen in de stad | Naar het museum | TOERISTISCHE INFORMATIE | Groningen Store | Nieuwe Markt 1"
-    },
     {
       "source": "Website",
       "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
@@ -19298,6 +19143,168 @@
       "url": "https://groningermuseum.nl/programma",
       "status": "klaar",
       "rawText": "site 8/16: 0 unieke events in 10.21 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Start",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda",
+      "status": "start",
+      "rawText": "site 9/16: max 40 events, max 10 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda",
+      "status": "strategie",
+      "rawText": "universele detailpagina-parser (Kultuuragenda)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Pagina gelezen",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda",
+      "status": "ok",
+      "rawText": "153402 tekens HTML"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Kultuuragenda detailstrategie",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda",
+      "status": "strategie",
+      "rawText": "Overzicht overslaan; alleen echte /agenda/<id>/<slug> activiteitspagina’s verwerken"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Pagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda",
+      "status": "ok",
+      "rawText": "0 events/aanbiedingen op deze pagina"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/1088284512/the-social-reckoning",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/1148248983/het-witte-vlag-project-1",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/1249727087/nena-1",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/1453156530/digger",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/156742476/youri",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/1691313909/de-gaulle-liberte",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/1740715911/wildwood",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/2155420288/erupcja",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/2203530167/home-1",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/2241509706/playing-house",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Detailpagina mislukt",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/281413393/wicker",
+      "status": "fout",
+      "rawText": "HTTPSConnectionPool(host='www.kultuuragenda.nl', port=443): Read timed out. (read timeout=0.41347822800000245)"
+    },
+    {
+      "source": "Filter",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Datumfilter toegepast",
+      "date": "2026-10-26",
+      "url": "https://www.kultuuragenda.nl/agenda",
+      "status": "ok",
+      "rawText": "9 gevonden; 7 binnen 2026-10-26 t/m 2026-10-26"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda",
+      "status": "klaar",
+      "rawText": "site 9/16: 0 unieke events in 10.02 sec"
     }
   ]
 }
