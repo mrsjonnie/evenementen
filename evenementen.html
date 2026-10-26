@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- Bronwebsitegroepen normaliseren om dubbele bronregels te voorkomen, versie 2026.10.26.79. -->
+<!-- Bevestigingsdialoog robuuster gemaakt en evenementcorrecties direct in overzicht renderen, versie 2026.10.26.83. -->
 <html lang="nl">
 <head>
   <meta charset="UTF-8">
@@ -1515,7 +1515,7 @@
     </section>
   </div>
   <script>
-    const APP_VERSION = "2026.10.26.82";
+    const APP_VERSION = "2026.10.26.83";
     const STATUS_HISTORY_KEY = "evenementenStatusHistoryV1";
     const DISMISSED_SCRAPE_RUN_KEY = "evenementenDismissedScrapeRunV1";
     const DEFAULT_MAX_EVENTS_PER_SITE = 20;
@@ -4249,6 +4249,9 @@
         showStatus(clearedObsoleteQuery
           ? "Evenement opgeslagen. De oude zoekterm is gewist zodat de gewijzigde titel zichtbaar blijft; je kunt daarna opnieuw zoeken."
           : "Evenement en verbeterde URL opgeslagen. De scraper past deze correcties bij volgende scans opnieuw toe.", "ok");
+        // Direct opnieuw filteren en renderen: de gewijzigde velden staan meteen
+        // in de evenementkaart, zonder handmatig verversen van de pagina.
+        currentPage = 1;
         applyFilters();
       } catch (error) {
         showStatus(`Correctie niet opgeslagen: ${cleanText(error.message || error)}`, "error");
@@ -4260,16 +4263,36 @@
     let confirmActionResolver = null;
     function confirmEventAction({ title, message, confirmLabel = "Ja, doorgaan" }) {
       const overlay = $("confirmOverlay");
-      $("confirmTitle").textContent = title;
-      $("confirmMessage").textContent = message;
-      $("confirmProceed").textContent = confirmLabel;
+      const titleNode = $("confirmTitle");
+      const messageNode = $("confirmMessage");
+      const proceedButton = $("confirmProceed");
+      const cancelButton = $("confirmCancel");
+      // Fallback voorkomt dat een verwijderactie ooit zonder bevestiging doorgaat
+      // als de aangepaste dialoog door een ontbrekend element niet beschikbaar is.
+      if (!overlay || !titleNode || !messageNode || !proceedButton || !cancelButton) {
+        return Promise.resolve(window.confirm(title + "\\n\\n" + message));
+      }
+      // Plaats de dialoog rechtstreeks onder body zodat een ouder element met
+      // overflow/stacking-context de bevestiging niet kan verbergen.
+      if (overlay.parentElement !== document.body) document.body.appendChild(overlay);
+      titleNode.textContent = title;
+      messageNode.textContent = message;
+      proceedButton.textContent = confirmLabel;
       overlay.hidden = false;
-      $("confirmCancel").focus();
-      return new Promise((resolve) => { confirmActionResolver = resolve; });
+      overlay.setAttribute("aria-hidden", "false");
+      overlay.style.display = "grid";
+      return new Promise((resolve) => {
+        confirmActionResolver = resolve;
+        cancelButton.focus();
+      });
     }
     function closeEventConfirm(accepted) {
       const overlay = $("confirmOverlay");
-      overlay.hidden = true;
+      if (overlay) {
+        overlay.hidden = true;
+        overlay.setAttribute("aria-hidden", "true");
+        overlay.style.display = "none";
+      }
       if (confirmActionResolver) {
         const resolve = confirmActionResolver;
         confirmActionResolver = null;
