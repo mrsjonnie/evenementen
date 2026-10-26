@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-26T11:47:06+00:00",
+  "updatedAt": "2026-10-26T11:47:20+00:00",
   "events": [
     {
       "date": "2026-10-26",
@@ -1663,6 +1663,21 @@
       "cost": "Gratis",
       "discoverySource": "Website",
       "isNew": false
+    },
+    {
+      "date": "2026-10-26",
+      "time": "20:00",
+      "title": "Omgaan met stress en grenzen",
+      "type": "Film",
+      "location": "00",
+      "locationLink": "",
+      "website": "https://denieuwekolk.nl/bieb/agenda/omgaan-met-stress-en-grenzen",
+      "source": "denieuwekolk.nl",
+      "discoverySource": "Website",
+      "description": "Omgaan met stress en grenzen · De Nieuwe Kolk Activiteiten & events Maand van de Geschiedenis Voel jij je vaak gehaast, overprikkeld of alsof je altijd \"aan\" staat? Dan ben je niet de enige. In het kader van de Maand van de Geschiedenis 2026, met als thema Lichaam & Geest, verzorgt burn-out preventiecoach Els Veltheer",
+      "cost": "",
+      "image": "https://media.denieuwekolk.nl/019db48d-3d03-7197-a158-e168c66eeb4c/stock-mentale-gezondheid?crop=3840%2C2304%2C0%2C128&scale=1200&optimizer=image",
+      "isNew": true
     },
     {
       "date": "2026-10-26",
@@ -8770,225 +8785,16 @@
       "newCount": 0,
       "durationSeconds": 10.03,
       "timedOut": true
+    },
+    {
+      "site": "https://denieuwekolk.nl/agenda",
+      "count": 1,
+      "newCount": 1,
+      "durationSeconds": 10.02,
+      "timedOut": true
     }
   ],
   "rawLog": [
-    {
-      "source": "Website",
-      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
-      "title": "Grieg",
-      "date": "2026-10-29",
-      "url": "https://www.concertgebouw.nl/concerten/45881817-25-jaar-academie-concertgebouworkest",
-      "status": "event uit dagblok",
-      "rawText": "Grieg | Peer Gynt, Suite nr. 1, op. 46 | Bruch | Concert voor klarinet en altviool in e, op. 88 | Saint-Saëns"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
-      "title": "Peer Gynt, Suite nr. 1, op. 46",
-      "date": "2026-10-29",
-      "url": "https://www.concertgebouw.nl/concerten/45881817-25-jaar-academie-concertgebouworkest",
-      "status": "event uit dagblok",
-      "rawText": "Peer Gynt, Suite nr. 1, op. 46 | Bruch | Concert voor klarinet en altviool in e, op. 88 | Saint-Saëns | Symfonie nr. 3 in c, op. 78 'Orgelsymfonie'"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
-      "title": "Bruch",
-      "date": "2026-10-29",
-      "url": "https://www.concertgebouw.nl/concerten/45881817-25-jaar-academie-concertgebouworkest",
-      "status": "event uit dagblok",
-      "rawText": "Bruch | Concert voor klarinet en altviool in e, op. 88 | Saint-Saëns | Symfonie nr. 3 in c, op. 78 'Orgelsymfonie' | Dit concert heeft een pauze"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
-      "title": "Concert voor klarinet en altviool in e, op. 88",
-      "date": "2026-10-29",
-      "url": "https://www.concertgebouw.nl/concerten/45881817-25-jaar-academie-concertgebouworkest",
-      "status": "event uit dagblok",
-      "rawText": "Concert voor klarinet en altviool in e, op. 88 | Saint-Saëns | Symfonie nr. 3 in c, op. 78 'Orgelsymfonie' | Dit concert heeft een pauze | Het orkest viert het 25ste seizoen van de Academie van het Concertgebouworkest! Klaus Mäkelä leidt een orkest van (voormalige) academisten, met hoofdrollen voor voormalig associate conductor Aurel Dawidiuk (als dirigent én als organist), soloklarinettist Carlos Ferreira en soloalt"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
-      "title": "Saint-Saëns",
-      "date": "2026-10-29",
-      "url": "https://www.concertgebouw.nl/concerten/45881817-25-jaar-academie-concertgebouworkest",
-      "status": "event uit dagblok",
-      "rawText": "Saint-Saëns | Symfonie nr. 3 in c, op. 78 'Orgelsymfonie' | Dit concert heeft een pauze | Het orkest viert het 25ste seizoen van de Academie van het Concertgebouworkest! Klaus Mäkelä leidt een orkest van (voormalige) academisten, met hoofdrollen voor voormalig associate conductor Aurel Dawidiuk (als dirigent én als organist), soloklarinettist Carlos Ferreira en soloaltist Santa Vižine. | Academie van het Concertgebou"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
-      "title": "Symfonie nr. 3 in c, op. 78 'Orgelsymfonie'",
-      "date": "2026-10-29",
-      "url": "https://www.concertgebouw.nl/concerten/45881817-25-jaar-academie-concertgebouworkest",
-      "status": "event uit dagblok",
-      "rawText": "Symfonie nr. 3 in c, op. 78 'Orgelsymfonie' | Dit concert heeft een pauze | Het orkest viert het 25ste seizoen van de Academie van het Concertgebouworkest! Klaus Mäkelä leidt een orkest van (voormalige) academisten, met hoofdrollen voor voormalig associate conductor Aurel Dawidiuk (als dirigent én als organist), soloklarinettist Carlos Ferreira en soloaltist Santa Vižine. | Academie van het Concertgebouworkest | Al 2"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
-      "title": "Dit concert heeft een pauze",
-      "date": "2026-10-29",
-      "url": "https://www.concertgebouw.nl/concerten/45881817-25-jaar-academie-concertgebouworkest",
-      "status": "event uit dagblok",
-      "rawText": "Dit concert heeft een pauze | Het orkest viert het 25ste seizoen van de Academie van het Concertgebouworkest! Klaus Mäkelä leidt een orkest van (voormalige) academisten, met hoofdrollen voor voormalig associate conductor Aurel Dawidiuk (als dirigent én als organist), soloklarinettist Carlos Ferreira en soloaltist Santa Vižine. | Academie van het Concertgebouworkest | Al 25 jaar leidt de orkestacademie van het Concert"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
-      "title": "Academie van het Concertgebouworkest",
-      "date": "2026-10-29",
-      "url": "https://www.concertgebouw.nl/concerten/45881817-25-jaar-academie-concertgebouworkest",
-      "status": "event uit dagblok",
-      "rawText": "Academie van het Concertgebouworkest | Al 25 jaar leidt de orkestacademie van het Concertgebouworkest talentvolle jonge musici op. De Academie van het Concertgebouworkest is inmiddels een internationaal gerenommeerd opleidingsinstituut. De andere programma's voor talentontwikkeling maakten het compleet: het jeugdorkest Concertgebouworkest Young, de Ammodo Masterclass voor jonge dirigenten (beide om de twee jaar) en h"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
-      "title": ". En twee oud-academisten die het geschopt hebben tot aanvoerder in het Concertgebouworkest soleren samen in Bruchs",
-      "date": "2026-10-29",
-      "url": "https://www.concertgebouw.nl/concerten/45881817-25-jaar-academie-concertgebouworkest",
-      "status": "event uit dagblok",
-      "rawText": ". En twee oud-academisten die het geschopt hebben tot aanvoerder in het Concertgebouworkest soleren samen in Bruchs | Dubbelconcert | voor klarinet en altviool! | Jubileumconcert | Met dit jubileumconcert benadrukt het orkest zowel het succes van de Academie als het belang van talentontwikkelingsprogramma's – niet alleen voor het Concertgebouworkest zelf, maar voor de hele klassieke muziekwereld. Dit concert is meer"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
-      "title": "Dubbelconcert",
-      "date": "2026-10-29",
-      "url": "https://www.concertgebouw.nl/concerten/45881817-25-jaar-academie-concertgebouworkest",
-      "status": "event uit dagblok",
-      "rawText": "Dubbelconcert | voor klarinet en altviool! | Jubileumconcert | Met dit jubileumconcert benadrukt het orkest zowel het succes van de Academie als het belang van talentontwikkelingsprogramma's – niet alleen voor het Concertgebouworkest zelf, maar voor de hele klassieke muziekwereld. Dit concert is meer dan een jubileum: het is een viering van 25 jaar talentontwikkeling bij het Concertgebouworkest en van een gezonde toe"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
-      "title": "voor klarinet en altviool!",
-      "date": "2026-10-29",
-      "url": "https://www.concertgebouw.nl/concerten/45881817-25-jaar-academie-concertgebouworkest",
-      "status": "event uit dagblok",
-      "rawText": "voor klarinet en altviool! | Jubileumconcert | Met dit jubileumconcert benadrukt het orkest zowel het succes van de Academie als het belang van talentontwikkelingsprogramma's – niet alleen voor het Concertgebouworkest zelf, maar voor de hele klassieke muziekwereld. Dit concert is meer dan een jubileum: het is een viering van 25 jaar talentontwikkeling bij het Concertgebouworkest en van een gezonde toekomst van de sym"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
-      "title": "Jubileumconcert",
-      "date": "2026-10-29",
-      "url": "https://www.concertgebouw.nl/concerten/45881817-25-jaar-academie-concertgebouworkest",
-      "status": "event uit dagblok",
-      "rawText": "Jubileumconcert | Met dit jubileumconcert benadrukt het orkest zowel het succes van de Academie als het belang van talentontwikkelingsprogramma's – niet alleen voor het Concertgebouworkest zelf, maar voor de hele klassieke muziekwereld. Dit concert is meer dan een jubileum: het is een viering van 25 jaar talentontwikkeling bij het Concertgebouworkest en van een gezonde toekomst van de symfonische muziek. | Lees meer"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
-      "title": "Ook iets voor u?",
-      "date": "2026-12-02",
-      "url": "https://www.concertgebouw.nl/concerten/45881817-25-jaar-academie-concertgebouworkest",
-      "status": "event uit tekstregel",
-      "rawText": "Ook iets voor u? | wo 2 dec 2026 | Iván Fischer leidt Stravinsky's Vuurvogel bij het Concertgebouworkest | met onder andere | Weill | Der Silbersee (concertversie)"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
-      "title": "Suite 'De vuurvogel'",
-      "date": "2026-12-09",
-      "url": "https://www.concertgebouw.nl/concerten/45881817-25-jaar-academie-concertgebouworkest",
-      "status": "event uit tekstregel",
-      "rawText": "Suite 'De vuurvogel' | wo 9 dec 2026 | Fabio Luisi en het Concertgebouworkest met Brahms' Symfonie nr. 2 | met onder andere | Brahms | Symfonie nr. 2 in D, op. 73"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
-      "title": "Il Vitalino raddoppiato",
-      "date": "2026-12-12",
-      "url": "https://www.concertgebouw.nl/concerten/45881817-25-jaar-academie-concertgebouworkest",
-      "status": "event uit tekstregel",
-      "rawText": "Il Vitalino raddoppiato | za 12 dec 2026 | Concertgebouworkest Essentials: Brahms' Symfonie nr. 2 | Brahms | Symfonie nr. 2 in D, op. 73 | do 17 dec 2026"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
-      "title": "Symfonie nr. 2 in D, op. 73",
-      "date": "2026-12-17",
-      "url": "https://www.concertgebouw.nl/concerten/45881817-25-jaar-academie-concertgebouworkest",
-      "status": "event uit tekstregel",
-      "rawText": "Symfonie nr. 2 in D, op. 73 | do 17 dec 2026 | Saint-Saëns door Sheku Kanneh-Mason en het Concertgebouworkest | met onder andere | Moesorgski | Schilderijen van een tentoonstelling (ork. Ravel)"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
-      "title": "Saint-Saëns door Sheku Kanneh-Mason en het Concertgebouworkest",
-      "date": "2026-12-17",
-      "url": "https://www.concertgebouw.nl/concerten/45881817-25-jaar-academie-concertgebouworkest",
-      "status": "event uit dagblok",
-      "rawText": "Saint-Saëns door Sheku Kanneh-Mason en het Concertgebouworkest | met onder andere | Moesorgski | Schilderijen van een tentoonstelling (ork. Ravel) | Saint-Saëns"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
-      "title": "met onder andere",
-      "date": "2026-12-17",
-      "url": "https://www.concertgebouw.nl/concerten/45881817-25-jaar-academie-concertgebouworkest",
-      "status": "event uit dagblok",
-      "rawText": "met onder andere | Moesorgski | Schilderijen van een tentoonstelling (ork. Ravel) | Saint-Saëns | Celloconcert nr. 1 in a, op. 33"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
-      "title": "Moesorgski",
-      "date": "2026-12-17",
-      "url": "https://www.concertgebouw.nl/concerten/45881817-25-jaar-academie-concertgebouworkest",
-      "status": "event uit dagblok",
-      "rawText": "Moesorgski | Schilderijen van een tentoonstelling (ork. Ravel) | Saint-Saëns | Celloconcert nr. 1 in a, op. 33 | Overige informatie"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
-      "title": "Schilderijen van een tentoonstelling (ork. Ravel)",
-      "date": "2026-12-17",
-      "url": "https://www.concertgebouw.nl/concerten/45881817-25-jaar-academie-concertgebouworkest",
-      "status": "event uit dagblok",
-      "rawText": "Schilderijen van een tentoonstelling (ork. Ravel) | Saint-Saëns | Celloconcert nr. 1 in a, op. 33 | Overige informatie | Veelgestelde vragen"
-    },
-    {
-      "source": "Parser",
-      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
-      "title": "Pagina geteld",
-      "date": "",
-      "url": "https://www.concertgebouw.nl/concerten/45881817-25-jaar-academie-concertgebouworkest",
-      "status": "analyse",
-      "rawText": "jsonld:0, links:4, datumblokken:5, kaarten:15, regels:33, detail:1"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
-      "title": "Detailpagina geanalyseerd",
-      "date": "",
-      "url": "https://www.concertgebouw.nl/concerten/45881817-25-jaar-academie-concertgebouworkest",
-      "status": "ok",
-      "rawText": "4 extra events"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
-      "title": "Kurt Elling & Jazz Orchestra of the Concertgebouw",
-      "date": "2026-12-15",
-      "url": "https://www.concertgebouw.nl/concerten/43931229-kurt-elling-jazz-orchestra-of-the-concertgebouw",
-      "status": "event uit link",
-      "rawText": "di 15 dec 2026 Kurt Elling & Jazz Orchestra of the Concertgebouw"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
-      "title": "Ben Folds",
-      "date": "2026-11-29",
-      "url": "https://www.concertgebouw.nl/concerten/38886334-ben-folds",
-      "status": "event uit link",
-      "rawText": "zo 29 nov 2026 Ben Folds"
-    },
     {
       "source": "Website",
       "site": "https://www.concertgebouw.nl/concerten-en-tickets",
@@ -19572,6 +19378,222 @@
       "url": "https://www.ibood.com/s-nl",
       "status": "klaar",
       "rawText": "site 15/16: 0 unieke events in 10.03 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Start",
+      "date": "",
+      "url": "https://denieuwekolk.nl/agenda",
+      "status": "start",
+      "rawText": "site 16/16: max 40 events, max 10 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://denieuwekolk.nl/agenda",
+      "status": "strategie",
+      "rawText": "agenda-kaarten + datumregels (De Nieuwe Kolk)"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Pagina gelezen",
+      "date": "",
+      "url": "https://denieuwekolk.nl/agenda",
+      "status": "ok",
+      "rawText": "690112 tekens HTML"
+    },
+    {
+      "source": "Parser",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "De Nieuwe Kolk detailstrategie",
+      "date": "",
+      "url": "https://denieuwekolk.nl/agenda",
+      "status": "strategie",
+      "rawText": "Agenda gebruiken om detail-URL's te vinden; alleen de echte detailpagina als evenement verwerken"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Pagina geanalyseerd",
+      "date": "",
+      "url": "https://denieuwekolk.nl/agenda",
+      "status": "ok",
+      "rawText": "0 events/aanbiedingen op deze pagina"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Pagina gelezen",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda",
+      "status": "ok",
+      "rawText": "412501 tekens HTML"
+    },
+    {
+      "source": "Parser",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "De Nieuwe Kolk detailstrategie",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda",
+      "status": "strategie",
+      "rawText": "Agenda gebruiken om detail-URL's te vinden; alleen de echte detailpagina als evenement verwerken"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Pagina geanalyseerd",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda",
+      "status": "ok",
+      "rawText": "0 events/aanbiedingen op deze pagina"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda/adviesplein",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda/alzheimercafe-10044312",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda/fotoexpositie-verhalen-van-verborgen-kracht-10050486",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda/het-vlucht-voorwaarts-praathuis",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda/masker-maken",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "DNK-ticketpagina niet volledig herkend",
+      "date": "",
+      "url": "https://tickets.denieuwekolk.nl/mtTicket/performance/10370772",
+      "status": "diagnose",
+      "rawText": "titel=Kaartverkoop De Nieuwe Kolk; datums=2; tijden/ruimtes=0; tekst=Kaarten bestellen | Masker maken - NXT Lab (4+) - woensdag 28 oktober 2026 | Kaartverkoop De Nieuwe Kolk Titel en navigatie overslaan Kaartverkoop De Nieuwe Kolk en Masker maken NXT Lab (4+) woensdag 28 oktober 2026 15:00 (einde 16:00) DNK-NXT Log in om al je"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://tickets.denieuwekolk.nl/mtTicket/performance/10370772",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda/oefentafel-basisvaardigheden",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda/omgaan-met-stress-en-grenzen",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "DNK-ticketpagina niet volledig herkend",
+      "date": "",
+      "url": "https://tickets.denieuwekolk.nl/mtTicket/performance/10374346",
+      "status": "diagnose",
+      "rawText": "titel=Kaartverkoop De Nieuwe Kolk; datums=2; tijden/ruimtes=0; tekst=Kaarten bestellen | Omgaan met stress en grenzen - Maand van de Geschiedenis - donderdag 29 oktober 2026 | Kaartverkoop De Nieuwe Kolk Titel en navigatie overslaan Kaartverkoop De Nieuwe Kolk en Omgaan met stress en grenzen Maand van de Geschiedenis donderdag"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://tickets.denieuwekolk.nl/mtTicket/performance/10374346",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda/programmeren-met-lego-spike",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://tickets.denieuwekolk.nl/login/auth",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Detailpagina mislukt",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda/schrijfcafe",
+      "status": "fout",
+      "rawText": "HTTPSConnectionPool(host='denieuwekolk.nl', port=443): Read timed out. (read timeout=0.19834770899998944)"
+    },
+    {
+      "source": "Filter",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Datumfilter toegepast",
+      "date": "2026-10-26",
+      "url": "https://denieuwekolk.nl/agenda",
+      "status": "ok",
+      "rawText": "8 gevonden; 2 binnen 2026-10-26 t/m 2026-10-26"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://denieuwekolk.nl/agenda",
+      "status": "klaar",
+      "rawText": "site 16/16: 1 unieke events in 10.02 sec"
     }
   ]
 }
