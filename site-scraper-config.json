@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-26T22:01:44.657Z",
+  "updatedAt": "2026-10-26T22:05:09.696Z",
   "sites": {
     "https://groningen.uitloper.nu/": {
       "methodology": "",
@@ -278,7 +278,28 @@
         "linkedin"
       ],
       "excludedUrls": [],
-      "adjustments": [],
+      "adjustments": [
+        {
+          "field": "title",
+          "find": "Aanvang 17:00",
+          "replace": "Alewya"
+        },
+        {
+          "field": "date",
+          "find": "2026-10-26",
+          "replace": "2026-10-30"
+        },
+        {
+          "field": "location",
+          "find": "Amsterdam",
+          "replace": "Bitterzoet, Amsterdam"
+        },
+        {
+          "field": "type",
+          "find": "Activiteit",
+          "replace": "Dans"
+        }
+      ],
       "eventUrlPatterns": [],
       "excludedUrlPatterns": []
     },
