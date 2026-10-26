@@ -16103,7 +16103,7 @@
       "rawText": "site 15/15: 11 unieke events in 10.03 sec"
     }
   ],
-  "status": "finishing",
+  "status": "completed",
   "siteStartedAt": "2026-10-26T20:40:52+00:00",
   "siteElapsedSeconds": 11,
   "sitePageCount": 2,
@@ -16112,5 +16112,6 @@
   "lastUpdatedAt": "2026-10-26T20:40:56+00:00",
   "lastSiteNewEventCount": 11,
   "lastCompletedSite": "https://denieuwekolk.nl/agenda",
-  "lastCompletedAt": "2026-10-26T20:41:03+00:00"
+  "lastCompletedAt": "2026-10-26T20:41:03+00:00",
+  "finishedAt": "2026-10-26T20:41:06+00:00"
 }
