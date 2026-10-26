@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- Favorieten, TicketSwap-filter en dubbelingsfeedback, versie 2026.10.26.72. -->
+<!-- Favorieten, dubbelingsfeedback en URL-bewerking, versie 2026.10.26.73. -->
 <html lang="nl">
 <head>
   <meta charset="UTF-8">
@@ -1495,7 +1495,7 @@
   </div>
 
   <script>
-    const APP_VERSION = "2026.10.26.72";
+    const APP_VERSION = "2026.10.26.73";
     const STATUS_HISTORY_KEY = "evenementenStatusHistoryV1";
     const DISMISSED_SCRAPE_RUN_KEY = "evenementenDismissedScrapeRunV1";
     const DEFAULT_MAX_EVENTS_PER_SITE = 20;
@@ -3517,6 +3517,7 @@
               <label>Plaats<input name="location" type="text" required maxlength="240" value="${escapeHtml(event.location || "")}"></label>
               <label>Type<input name="type" type="text" required maxlength="100" value="${escapeHtml(event.type || "")}"></label>
               <label>Prijs<input name="cost" type="text" required maxlength="100" value="${escapeHtml(event.cost || "Zie website")}"></label>
+              <label>Verbeterde URL<input name="website" type="url" required maxlength="2000" placeholder="https://..." value="${escapeHtml(event.website || "")}"></label>
               <div class="eventEditActions">
                 <button class="btn btnPrimary saveEventEditBtn" type="submit">Opslaan en scraper leren</button>
                 <button class="btn btnSecondary cancelEventEditBtn" type="button">Annuleren</button>
@@ -4079,12 +4080,19 @@
         title: cleanText(values.title || ""),
         location: cleanText(values.location || ""),
         type: cleanText(values.type || ""),
-        cost: cleanText(values.cost || "")
+        cost: cleanText(values.cost || ""),
+        website: cleanText(values.website || "")
       };
       if (Object.values(corrections).some((value) => !value)) {
         showStatus("Vul datum, titel, plaats, type en prijs in. Gebruik bijvoorbeeld 'Prijs onbekend' als de prijs niet bekend is.", "warn");
         return;
       }
+      const correctedUrl = safeUrl(corrections.website, { website: true });
+      if (!correctedUrl) {
+        showStatus("Vul een geldige verbeterde URL in, inclusief https://.", "warn");
+        return;
+      }
+      corrections.website = correctedUrl;
       submitButton.disabled = true;
       submitButton.textContent = "Opslaan…";
       try {
@@ -4104,12 +4112,12 @@
         });
         const data = await response.json().catch(() => ({}));
         if (!response.ok || data.ok === false) throw new Error(workerErrorMessage(data, "Opslaan van evenementcorrectie is mislukt"));
-        Object.assign(event, corrections, { editedByUser: true, editedAt: new Date().toISOString() });
+        Object.assign(event, corrections, { website: corrections.website, editedByUser: true, editedAt: new Date().toISOString() });
         const nextKey = eventDedupeKey(event);
         expandedEventKeys.delete(key);
         expandedEventKeys.add(nextKey);
-        addLiveLog("Correctie", event.website || event.source || "", event.title, "velden aangepast", "Correcties opgeslagen en gekoppeld aan de website voor volgende scraper-runs");
-        showStatus("Evenement aangepast. De scraper past deze correcties bij volgende scans van deze website opnieuw toe.", "ok");
+        addLiveLog("Correctie", event.website || event.source || "", event.title, "velden aangepast", "Correcties inclusief URL opgeslagen voor volgende scraper-runs");
+        showStatus("Evenement en verbeterde URL opgeslagen. De scraper past deze correcties bij volgende scans opnieuw toe.", "ok");
         applyFilters();
       } catch (error) {
         showStatus(`Correctie niet opgeslagen: ${cleanText(error.message || error)}`, "error");
