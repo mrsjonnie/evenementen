@@ -1970,8 +1970,14 @@ export default {
       try {
         const body = await request.json().catch(() => ({}));
         if (!body || !body.title || !body.date || !body.website) return json({ error: "Titel, datum en website zijn verplicht" }, 400);
-        const result = await saveEventFeedback(env, body, ["good", "duplicate", "deleted"].includes(body.vote) ? body.vote : "bad");
-        return json({ ok: true, ...result }, 200);
+        const vote = ["good", "duplicate", "deleted"].includes(body.vote) ? body.vote : "bad";
+        const result = await saveEventFeedback(env, body, vote);
+        let learnedUrlPattern = { learned: 0 };
+        if (vote === "good" && (body.url || body.website)) {
+          try { learnedUrlPattern = await learnEventUrlPattern(env, body.website || body.url, body.url || body.website, false); }
+          catch (error) { learnedUrlPattern = { learned: 0, warning: validateInput(error.message || String(error), 240) }; }
+        }
+        return json({ ok: true, ...result, learnedUrlPattern }, 200);
       } catch (e) { return json({ error: "Feedback opslaan mislukt", details: e.message }, 500); }
     }
     if (path === "/event-edit" && request.method === "POST") {
