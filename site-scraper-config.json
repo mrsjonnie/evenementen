@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-26T22:38:18.703Z",
+  "updatedAt": "2026-10-26T23:09:12.128Z",
   "sites": {
     "https://groningen.uitloper.nu/": {
       "methodology": "",
@@ -85,7 +85,8 @@
       ],
       "excludedUrlPatterns": [
         "^/nl/doen/uitgaan/?$",
-        "^/nl/doen/uitgaan/3317548738/kayakken-op-oldambtmeer/?$"
+        "^/nl/doen/uitgaan/3317548738/kayakken-op-oldambtmeer/?$",
+        "^/nl/doen/cultuur/evenementen/eurosonic-noorderslag/?$"
       ]
     },
     "https://www.visitgroningen.nl/nl/doen/wandelen": {
