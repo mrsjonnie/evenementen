@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-26T23:09:30.903Z",
+  "updatedAt": "2026-10-26T23:38:29.836Z",
   "feedback": [
     {
       "key": "2026-10-27|abonnement topmusici van eigen bodem",
@@ -2040,6 +2040,32 @@
       "website": "https://www.visitgroningen.nl/nl/doen/uitgaan/1249727087/nena-1",
       "url": "https://www.visitgroningen.nl/nl/doen/uitgaan/1249727087/nena-1",
       "updatedAt": "2026-10-26T23:09:30.903Z"
+    },
+    {
+      "key": "2026-10-26|wildwood|groningen",
+      "vote": "edit",
+      "title": "Wildwood",
+      "date": "2026-10-26",
+      "website": "https://www.kultuuragenda.nl/agenda/1740715911/wildwood",
+      "url": "https://www.kultuuragenda.nl/agenda/1740715911/wildwood",
+      "updatedAt": "2026-10-26T23:38:29.836Z",
+      "originalTitle": "Wildwood",
+      "originalDate": "2026-10-26",
+      "originalFields": {
+        "title": "Wildwood",
+        "date": "2026-10-26",
+        "location": "Groningen",
+        "type": "Concert",
+        "cost": "gratis"
+      },
+      "corrections": {
+        "title": "Wildwood",
+        "date": "2026-10-26",
+        "location": "Nieuwe Markt 1 9712 KJ Groningen",
+        "type": "Film",
+        "cost": "gratis",
+        "website": "https://www.kultuuragenda.nl/agenda/1740715911/wildwood"
+      }
     }
   ]
 }
