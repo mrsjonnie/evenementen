@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-26T22:28:46.754Z",
+  "updatedAt": "2026-10-26T22:28:48.117Z",
   "sites": {
     "https://groningen.uitloper.nu/": {
       "methodology": "",
@@ -265,7 +265,9 @@
           "replace": "Expositie"
         }
       ],
-      "eventUrlPatterns": [],
+      "eventUrlPatterns": [
+        "^/[^/?#]+/?$"
+      ],
       "excludedUrlPatterns": [
         "^/plan-je-bezoek/?$",
         "^/programma/?$",
