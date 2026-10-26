@@ -1,9 +1,3 @@
-SerpAPI	https://simplon.nl/	genegeerd	Groningen, Nederland Evenementen, kalender en tickets		https://www.eventbrite.be/d/netherlands--groningen/events/	Bekijk de nieuwste evenementen in Groningen. Of je er nu al lang of nog maar net woont, of op doorreis bent, er is geen gebrek aan unieke dingen om te doen.
-SerpAPI	https://simplon.nl/	genegeerd	het IFFR in Groningen gaat weer beginnen! Meer dan 50 films ...		https://www.facebook.com/forumgroningen/videos/-internationale-premi%C3%A8res-grensverleggende-cinema-en-unieke-docus-het-iffr-in-gr/1635896247771182/	Internationale premières, grensverleggende cinema en unieke docu's: het IFFR in Groningen gaat weer beginnen! Meer dan 50 films in 5 dagen!
-SerpAPI	https://simplon.nl/	genegeerd	Archief theater voorstellingen in Groningen - April 2026		https://www.theater.nl/archief/groningen?date=4	Archief theater voorstellingen in Groningen - April 2026. ... Tickets via Theater.nl 40% voordeel. Klassieke concerten - € 49. Toon info. Chanson concert.
-SerpAPI	https://simplon.nl/	genegeerd	Verlopen voorstellingen en concerten in Groningen, bekijk ...		https://www.theater.nl/archief/groningen?date=7	Verlopen voorstellingen en concerten in Groningen in het archief van Theater.nl. Bekijk wat er speelde, met informatie en recensies.
-SerpAPI	https://simplon.nl/	genegeerd	Archief theater voorstellingen in Groningen - May 2026		https://www.theater.nl/archief/groningen?date=5&start=2	Archief theater voorstellingen in Groningen - May 2026. ... Geniet van de allermooiste filmmuziek door een live orkest bij het, met scènes uit de films op het ...
-SerpAPI	https://simplon.nl/	genegeerd	Concerten in Groningen - Tourspider		https://www.tourspider.nl/nl/steden/groningen	Alle aankomende concerten, festivals en live shows in Groningen. Bekijk de agenda en bewaar de shows waar je heen gaat.
 SerpAPI	https://simplon.nl/	genegeerd	Archief show voorstellingen in Groningen maart		https://www.theater.nl/archief/show/groningen?date=3	Archief show voorstellingen in Groningen maart ; Stoornis of my life. Een wervelende, ontwapenende en verfrissend eerlijke musicalcomedy. ; Stoornis of my life.
 SerpAPI	https://www.martiniplaza.nl/nl/agenda	zoeken	Zoekopdracht 1/2			site:www.martiniplaza.nl/nl/agenda nl agenda agenda programma evenement concert Groningen 2026-10-26 9999-12-31
 SerpAPI	https://www.martiniplaza.nl/nl/agenda	genegeerd	Indie & Alt Concerts in Groningen in 2026		https://www.songkick.com/metro-areas/31384-netherlands-groningen/2026/genre/indie-alternative	Find tickets to all live music, concerts, tour dates and festivals in and around Groningen. Currently there are 18 upcoming events. Filter by artist. All.
@@ -1198,3 +1192,9 @@ Parser	https://www.spotgroningen.nl/programma/	analyse	Pagina geteld		https://ww
 Website	https://www.spotgroningen.nl/programma/	ok	Pagina geanalyseerd		https://www.spotgroningen.nl/programma	526 events/aanbiedingen op deze pagina
 Filter	https://www.spotgroningen.nl/programma/	ok	Datumfilter toegepast	2026-10-26	https://www.spotgroningen.nl/programma/	526 gevonden; 523 binnen 2026-10-26 t/m onbeperkt
 Website	https://www.spotgroningen.nl/programma/	klaar	Klaar		https://www.spotgroningen.nl/programma/	site 4/15: 40 unieke events in 6.34 sec
+Website	https://simplon.nl/	start	Start		https://simplon.nl/	site 5/15: max 40 events, max 20 seconden
+Parser	https://simplon.nl/	strategie	Scrapertype vastgesteld		https://simplon.nl/	compacte-agenda-kaarten
+Website	https://simplon.nl/	ok	Pagina gelezen		https://simplon.nl/programma/	96145 tekens HTML
+Parser	https://simplon.nl/	gespecialiseerde parser	Agenda geanalyseerd		https://simplon.nl/programma/	55 agenda-items gevonden
+Website	https://simplon.nl/	ok	Pagina geanalyseerd		https://simplon.nl/programma/	52 events/aanbiedingen op deze pagina
+Website	https://simplon.nl/	klaar	Klaar		https://simplon.nl/	site 5/15: 40 unieke events in 1.54 sec
