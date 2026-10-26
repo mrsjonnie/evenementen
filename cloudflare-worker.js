@@ -1493,46 +1493,37 @@ async function upsertRefreshRequest(env, body, overrides = {}, dispatchFailure =
 }
 
 async function startRefresh(env, body, overrides = {}) {
-  const enriched = await enrichBodyWithSerpApi(env, body || {});
-  const refreshBody = enriched.body;
+  // Keep the Worker request small: per-site SerpAPI/AI fan-out can exhaust
+  // Cloudflare's subrequest budget before the GitHub Actions scrape is dispatched.
+  // Website scraping and merging run in GitHub Actions; optional discovery data
+  // can still be passed in explicitly by the caller.
+  const refreshBody = body || {};
   const inputs = workflowInputs(refreshBody, overrides);
   const dispatch = await dispatchWorkflow(env, inputs);
   if (dispatch.ok) {
     return {
-      ok: true,
-      method: "workflow_dispatch",
-      workflowFile: dispatch.workflowFile,
-      serpApiAddedCount: enriched.serpApiAddedCount,
-      serpApiRawCount: enriched.serpApiRawCount,
-      serpApiRawLog: enriched.serpApiRawLog || [],
-      serpApiEventsCount: enriched.serpApiEventsCount || 0,
-      aiRawCount: enriched.aiRawCount || 0,
-      aiRawLog: enriched.aiRawLog || [],
-      aiEventsCount: enriched.aiEventsCount || 0
+      ok: true, method: "workflow_dispatch", workflowFile: dispatch.workflowFile,
+      serpApiAddedCount: validSites(refreshBody.serpApiLinks, 200).length,
+      serpApiRawCount: Array.isArray(refreshBody.serpApiRawLog) ? refreshBody.serpApiRawLog.length : 0,
+      serpApiRawLog: Array.isArray(refreshBody.serpApiRawLog) ? refreshBody.serpApiRawLog.slice(0, 260) : [],
+      serpApiEventsCount: Array.isArray(refreshBody.serpApiEvents) ? refreshBody.serpApiEvents.length : 0,
+      aiRawCount: 0, aiRawLog: [], aiEventsCount: Array.isArray(refreshBody.aiEvents) ? refreshBody.aiEvents.length : 0,
+      discoveryNote: "Worker gebruikt geen parallelle AI/SerpAPI-discovery; de scrape is veilig naar GitHub Actions doorgestuurd."
     };
   }
-
   const fallback = await upsertRefreshRequest(env, refreshBody, overrides, dispatch);
   if (fallback.ok) {
     return {
-      ok: true,
-      method: "refresh_request",
-      dispatchFailure: dispatch,
-      serpApiAddedCount: enriched.serpApiAddedCount,
-      serpApiRawCount: enriched.serpApiRawCount,
-      serpApiRawLog: enriched.serpApiRawLog || [],
-      serpApiEventsCount: enriched.serpApiEventsCount || 0,
-      aiRawCount: enriched.aiRawCount || 0,
-      aiRawLog: enriched.aiRawLog || [],
-      aiEventsCount: enriched.aiEventsCount || 0
+      ok: true, method: "refresh_request", dispatchFailure: dispatch,
+      serpApiAddedCount: validSites(refreshBody.serpApiLinks, 200).length,
+      serpApiRawCount: Array.isArray(refreshBody.serpApiRawLog) ? refreshBody.serpApiRawLog.length : 0,
+      serpApiRawLog: Array.isArray(refreshBody.serpApiRawLog) ? refreshBody.serpApiRawLog.slice(0, 260) : [],
+      serpApiEventsCount: Array.isArray(refreshBody.serpApiEvents) ? refreshBody.serpApiEvents.length : 0,
+      aiRawCount: 0, aiRawLog: [], aiEventsCount: Array.isArray(refreshBody.aiEvents) ? refreshBody.aiEvents.length : 0,
+      discoveryNote: "Worker gebruikt geen parallelle AI/SerpAPI-discovery; de scrape is veilig via refresh-request doorgestuurd."
     };
   }
-
-  return {
-    ok: false,
-    status: fallback.status || dispatch.status,
-    details: `Workflow dispatch: ${dispatch.details || dispatch.status}. Refresh-request fallback: ${fallback.details || fallback.status}`
-  };
+  return { ok: false, status: fallback.status || dispatch.status, details: `Workflow dispatch: ${dispatch.details || dispatch.status}. Refresh-request fallback: ${fallback.details || fallback.status}` };
 }
 
 function weatherCodeLabel(code) {
