@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-26T10:20:15+00:00",
+  "updatedAt": "2026-10-26T10:20:21+00:00",
   "events": [
     {
       "date": "2026-10-26",
@@ -2846,180 +2846,16 @@
       "newCount": 4,
       "durationSeconds": 8.12,
       "timedOut": true
+    },
+    {
+      "site": "https://www.ibood.com/s-nl",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 4.0,
+      "timedOut": true
     }
   ],
   "rawLog": [
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Bureau Vergezicht & Romana Vrede Een groter",
-      "date": "2026-12-04",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "4 dec Bureau Vergezicht & Romana Vrede Een groter verhaal Een indringende en poëtische solo over hoe we naar de wereld kijken"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Dunja Jocic & Spellbound Contemporary Ballet Folk",
-      "date": "2026-12-04",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "4 dec Dunja Jocic & Spellbound Contemporary Ballet Folk Hypnotiserende dansvoorstelling over de verleiding van collectieve krachten"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Kamagurka Op zekere dag Absurde humor en onnavolgbare verbeeldingskracht",
-      "date": "2026-12-05",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "5 dec Kamagurka Op zekere dag Absurde humor en onnavolgbare verbeeldingskracht"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "De Belangelozen Via Rudolphi Producties",
-      "date": "2026-12-05",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "5 dec De Belangelozen Via Rudolphi Producties | Collectief T&T Armoede en vrijwilligerswerk, met scherpe humor en in herkenbare scènes belicht"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Maarten Heijmans & Xander Vrienten Wachtend op",
-      "date": "2026-12-06",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "6 dec Maarten Heijmans & Xander Vrienten Wachtend op de dood Levensliedjes tussen de Jordaan en de Mississippi"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Scapino Ballet Rotterdam La Mer Een visuele en",
-      "date": "2026-12-06",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "6 dec Scapino Ballet Rotterdam La Mer Een visuele en muzikale voorstelling over de kracht en kwetsbaarheid van de zee"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Árstíðir Eeuwenoude",
-      "date": "2026-12-07",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "7 dec Árstíðir Eeuwenoude IJslandse folksongs Uitverkocht"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Nikola Meeuwsen + support: Liam Nassereddine Soloconcert",
-      "date": "2026-12-07",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "7 dec Nikola Meeuwsen + support: Liam Nassereddine Soloconcert van de winnaar van het prestigieuze Koningin Elisabeth Concours"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Guido Weijers De oudejaarsconference 2026 Wat er ook gebeurt, humor is het medicijn",
-      "date": "2026-12-08",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "8 dec Guido Weijers De oudejaarsconference 2026 Wat er ook gebeurt, humor is het medicijn Laatste kaarten"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Bertolf - Bluefinger Volume 2. Kundige Nederlandse singer-songwriter en multi-instrumentalist",
-      "date": "2026-12-08",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "8 dec Bertolf - Bluefinger Volume 2. Kundige Nederlandse singer-songwriter en multi-instrumentalist"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Dylan LeBlanc + support: Barbara Forstner TakeRoot presents:",
-      "date": "2026-12-08",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "8 dec Dylan LeBlanc + support: Barbara Forstner TakeRoot presents: Muzikale coyote die altijd op het scherpst van de snede balanceert"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Noord Nederlands Orkest Kerstconcert: Bach's Weihnachtsoratorium Bachs",
-      "date": "2026-12-08",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "8 dec Noord Nederlands Orkest Kerstconcert: Bach's Weihnachtsoratorium Bachs Weihnachtsoratorium als ultieme kerstmuziek"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Denden Karadeniz, Zero Dance Theatre en AAO Ghosts \"",
-      "date": "2026-12-09",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "9 dec Denden Karadeniz, Zero Dance Theatre en AAO Ghosts \"Indrukwekkend totaalkunstwerk\" ★★★★ de Volkskrant"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "La Pegatina Onweerstaanbaar bruisende energie uit Catalonië",
-      "date": "2026-12-09",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "9 dec La Pegatina Onweerstaanbaar bruisende energie uit Catalonië"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Pippi en de Piraten (6+)",
-      "date": "2026-12-01",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "1 dec Pippi en de Piraten (6+) Theater Terra Avontuurlijke familiemusical boordevol humor en Pippipower Laatste kaarten"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Prins S. en De Geit + support:",
-      "date": "2026-12-02",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "2 dec Prins S. en De Geit + support: Zoef Dansbare beats, theatrale flair en Nederlandstalige absurditeit"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Sven & Matthijs The best of The Best of Sven & Matthijs komen met een nieuwe najaarstour",
-      "date": "2026-12-02",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "2 dec Sven & Matthijs The best of The Best of Sven & Matthijs komen met een nieuwe najaarstour"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Dolf Jansen Schaamteloos – Oudejaars 2026 Kolkende",
-      "date": "2026-12-02",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "2 dec Dolf Jansen Schaamteloos – Oudejaars 2026 Kolkende stand-up energie, poëzie, Grote Vragen voor het publiek en improvisatie Laatste kaarten"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Marcel Hensema Mijn Vrede Het kerstverhaal van Groningen exclusief in de Stadsschouwburg",
-      "date": "2026-12-03",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "3 dec Marcel Hensema Mijn Vrede Het kerstverhaal van Groningen exclusief in de Stadsschouwburg Laatste kaarten"
-    },
     {
       "source": "Website",
       "site": "https://www.spotgroningen.nl/programma/",
@@ -13648,6 +13484,177 @@
       "url": "https://www.socialdeal.nl/",
       "status": "klaar",
       "rawText": "site 16/20: 4 unieke events in 8.12 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "Start",
+      "date": "",
+      "url": "https://www.ibood.com/s-nl",
+      "status": "start",
+      "rawText": "site 17/20: max 12 events, max 4 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://www.ibood.com/s-nl",
+      "status": "strategie",
+      "rawText": "aanbiedingen"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.ibood.com/offers/nl/s-nl",
+      "title": "403-tekstproxy mislukt",
+      "date": "",
+      "url": "https://www.ibood.com/offers/nl/s-nl",
+      "status": "fout",
+      "rawText": "HTTPSConnectionPool(host='r.jina.ai', port=443): Read timed out. (read timeout=1.25)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "Pagina mislukt",
+      "date": "",
+      "url": "https://www.ibood.com/offers/nl/s-nl",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.ibood.com/nl/s-nl",
+      "title": "403-tekstproxy gebruikt",
+      "date": "",
+      "url": "https://www.ibood.com/nl/s-nl",
+      "status": "fallback",
+      "rawText": "Bron gaf HTTP 403; tekstproxy leverde 33917 tekens: Title: iBOOD.com: dé beste aanbiedingen, acties & deal van de dag URL Source: http://www.ibood.com/nl/s-nl Published Time: Tue, 17 Mar 2026 16:05:26 GMT Markdown Content: ## [Delse"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "Pagina gelezen",
+      "date": "",
+      "url": "https://www.ibood.com/nl/s-nl",
+      "status": "ok",
+      "rawText": "41030 tekens HTML"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "iBOOD-telling",
+      "date": "",
+      "url": "https://www.ibood.com/nl/s-nl",
+      "status": "geen resultaten",
+      "rawText": "0 aanbiedingen gevonden; limiet 12; HTML 41030 tekens"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "iBOOD zonder aanbiedingen",
+      "date": "",
+      "url": "https://www.ibood.com/nl/s-nl",
+      "status": "fallback",
+      "rawText": "Geen productkaarten herkend; HTML 41030 tekens; pagina /nl/s-nl"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "Pagina geanalyseerd",
+      "date": "",
+      "url": "https://www.ibood.com/nl/s-nl",
+      "status": "ok",
+      "rawText": "0 events/aanbiedingen op deze pagina"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "403-tekstproxy gebruikt",
+      "date": "",
+      "url": "https://www.ibood.com/s-nl",
+      "status": "fallback",
+      "rawText": "Bron gaf HTTP 403; tekstproxy leverde 33854 tekens: Title: iBOOD.com: dé beste aanbiedingen, acties & deal van de dag URL Source: http://www.ibood.com/s-nl Published Time: Tue, 17 Mar 2026 16:05:26 GMT Markdown Content: ## [Delsey B"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "Pagina gelezen",
+      "date": "",
+      "url": "https://www.ibood.com/s-nl",
+      "status": "ok",
+      "rawText": "40967 tekens HTML"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "iBOOD-telling",
+      "date": "",
+      "url": "https://www.ibood.com/s-nl",
+      "status": "geen resultaten",
+      "rawText": "0 aanbiedingen gevonden; limiet 12; HTML 40967 tekens"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "iBOOD zonder aanbiedingen",
+      "date": "",
+      "url": "https://www.ibood.com/s-nl",
+      "status": "fallback",
+      "rawText": "Geen productkaarten herkend; HTML 40967 tekens; pagina /s-nl"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "Pagina geanalyseerd",
+      "date": "",
+      "url": "https://www.ibood.com/s-nl",
+      "status": "ok",
+      "rawText": "0 events/aanbiedingen op deze pagina"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "Pagina geteld",
+      "date": "",
+      "url": "http://www.ibood.com/nl/s-nl",
+      "status": "analyse",
+      "rawText": "jsonld:0, links:0, datumblokken:0, kaarten:0, regels:0, detail:0"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "http://www.ibood.com/nl/s-nl",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.ibood.com/nl/s-nl/b/apple/fdd49684-29ac-59d6-adef-6536bdeecf47",
+      "title": "403-tekstproxy mislukt",
+      "date": "",
+      "url": "https://www.ibood.com/nl/s-nl/b/apple/fdd49684-29ac-59d6-adef-6536bdeecf47",
+      "status": "fout",
+      "rawText": "HTTPSConnectionPool(host='r.jina.ai', port=443): Read timed out. (read timeout=0.8004323060000047)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "Detailpagina mislukt",
+      "date": "",
+      "url": "https://www.ibood.com/nl/s-nl/b/apple/fdd49684-29ac-59d6-adef-6536bdeecf47",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://www.ibood.com/s-nl",
+      "status": "klaar",
+      "rawText": "site 17/20: 0 unieke events in 4.0 sec"
     }
   ]
 }
