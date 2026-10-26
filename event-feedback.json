@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-26T22:15:55.654Z",
+  "updatedAt": "2026-10-26T22:16:32.981Z",
   "feedback": [
     {
       "key": "2026-10-27|abonnement topmusici van eigen bodem",
@@ -1253,6 +1253,32 @@
         "type": "Film",
         "cost": "Zie website",
         "website": "https://forum.nl/nl/agenda/film/sense-and-sensibility?date=27-10-2026"
+      }
+    },
+    {
+      "key": "2026-10-26|coward|bibliotheek",
+      "vote": "edit",
+      "title": "Coward",
+      "date": "2026-10-26",
+      "website": "https://forum.nl/nl/agenda/film/coward?date=27-10-2026",
+      "url": "https://forum.nl/nl/agenda/film/coward?date=27-10-2026",
+      "updatedAt": "2026-10-26T22:16:32.981Z",
+      "originalTitle": "Coward",
+      "originalDate": "2026-10-26",
+      "originalFields": {
+        "title": "Coward",
+        "date": "2026-10-26",
+        "location": "Bibliotheek",
+        "type": "Film",
+        "cost": ""
+      },
+      "corrections": {
+        "title": "Coward",
+        "date": "2026-10-26",
+        "location": "Forum Bibliotheek Groningen",
+        "type": "Film",
+        "cost": "Zie website",
+        "website": "https://forum.nl/nl/agenda/film/coward?date=27-10-2026"
       }
     }
   ]
