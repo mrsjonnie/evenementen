@@ -29,11 +29,11 @@ function renderStringList(id,arr,placeholder,kind){const el=$(id);el.innerHTML=a
 function feedbackBelongsToSite(item,site){
  try{
   const target=new URL(item.website||item.url||"");const currentUrl=new URL(site);
-  const host=url=>url.hostname.replace(/^www\\./i,"").toLowerCase();
+  const host=url=>url.hostname.replace(/^www[.]/i,"").toLowerCase();
   if(host(target)!==host(currentUrl))return false;
   const sameHostSites=activeSites.filter(x=>{try{return host(new URL(x))===host(currentUrl)}catch{return false}});
   if(sameHostSites.length===1)return true;
-  const matches=sameHostSites.map(x=>({site:x,path:new URL(x).pathname.replace(/\\/$/,"")})).filter(x=>!x.path||target.pathname===x.path||target.pathname.startsWith(x.path+"/")).sort((a,b)=>b.path.length-a.path.length);
+  const matches=sameHostSites.map(x=>({site:x,path:new URL(x).pathname.replace(/[/]$/,"")})).filter(x=>!x.path||target.pathname===x.path||target.pathname.startsWith(x.path+"/")).sort((a,b)=>b.path.length-a.path.length);
   return matches.length?matches[0].site===site:target.pathname===currentUrl.pathname;
  }catch{return false}
 }
