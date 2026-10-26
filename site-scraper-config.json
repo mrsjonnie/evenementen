@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-26T22:15:39.121Z",
+  "updatedAt": "2026-10-26T22:15:40.809Z",
   "sites": {
     "https://groningen.uitloper.nu/": {
       "methodology": "",
@@ -131,7 +131,9 @@
           "replace": "Forum Bibliotheek Groningen"
         }
       ],
-      "eventUrlPatterns": [],
+      "eventUrlPatterns": [
+        "^/nl/agenda/film/[^/?#]+/?$"
+      ],
       "excludedUrlPatterns": []
     },
     "https://www.spotgroningen.nl/programma/": {
