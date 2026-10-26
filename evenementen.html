@@ -1515,7 +1515,7 @@
     </section>
   </div>
   <script>
-    const APP_VERSION = "2026.10.26.79";
+    const APP_VERSION = "2026.10.26.80";
     const STATUS_HISTORY_KEY = "evenementenStatusHistoryV1";
     const DISMISSED_SCRAPE_RUN_KEY = "evenementenDismissedScrapeRunV1";
     const DEFAULT_MAX_EVENTS_PER_SITE = 20;
@@ -1528,6 +1528,7 @@
     const WORKER_URL = "https://evenementen-refresh.mrsjonnie.workers.dev";
     const PER_PAGE_KEY = "evenementenPerPage";
     const PERIOD_PREFERENCE_KEY = "evenementenLastPeriodV1";
+    const FILTER_PREFERENCE_KEY = "evenementenLastFiltersV1";
     const PERIOD_MODES = new Set(["today", "tomorrow", "specificDay", "always", "thisWeekend", "nextWeekend", "alwaysFromToday", "threeDays", "week"]);
     let eventsPerPage = 96;
     const typeImages = {
@@ -1768,8 +1769,8 @@
       const host = hostFromUrl(site);
       const confirmed = await askClearConfirmation(
         "Website verwijderen?",
-        `Weet je zeker dat je ${host} uit de lijst met websites wilt verwijderen? De website wordt in deze browser verborgen en kan later opnieuw worden toegevoegd.`,
-        "Website verwijderen"
+        `Weet je zeker dat je ${host} uit de lijst met bronnen wilt verwijderen? Alle reeds gevonden evenementen van deze bron worden ook verborgen en de bron wordt in deze browser niet meer gescand. Je kunt de bron later opnieuw toevoegen.`,
+        "Bron en evenementen verwijderen"
       );
       if (!confirmed) return;
       sites = sites.filter((candidate) => siteIdentityKey(candidate) !== key);
@@ -1777,12 +1778,15 @@
       const removed = loadRemovedSiteKeys();
       removed.add(key);
       saveRemovedSiteKeys(removed);
+      events = events.filter((event) => !eventBelongsToRemovedSite(event, removed));
+      newEventKeys = new Set([...newEventKeys].filter((eventKey) => events.some((item) => eventDedupeKey(item) === eventKey)));
+      saveStoredSet(NEW_EVENTS_KEY, newEventKeys);
       const selected = new Set([...document.querySelectorAll(".siteCheck:checked")].map((check) => check.value));
       selected.delete(site);
       renderSites(selected);
       saveSourceSelection();
       applyFilters();
-      showStatus(`${host} verwijderd uit de websitelijst in deze browser. Je kunt de website later opnieuw toevoegen via ‘Toevoegen URL’.`, "ok");
+      showStatus(`${host} verwijderd. De bijbehorende evenementen zijn uit deze browserlijst gehaald en deze bron wordt bij volgende verversingen overgeslagen.`, "ok");
     }
 
     function saveCustomSites(values) {
@@ -1806,6 +1810,34 @@
         serpapi: Boolean($("provSerpAPI")?.checked)
       };
       try { localStorage.setItem(SOURCE_SELECTION_KEY, JSON.stringify({ selectedSites, providers })); } catch {}
+    }
+
+    function saveFilterPreference() {
+      try {
+        localStorage.setItem(FILTER_PREFERENCE_KEY, JSON.stringify({
+          search: $("search")?.value || "",
+          region: $("region")?.value || "Groningen",
+          radius: $("radius")?.value ?? "100",
+          type: $("typeFilter")?.value || "all",
+          periodMode: $("periodMode")?.value || "threeDays",
+          dateSingle: $("dateSingle")?.value || formatDate(new Date()),
+          newOnly: Boolean($("newOnlyFilter")?.checked)
+        }));
+      } catch {}
+    }
+
+    function restoreFilterPreference() {
+      try {
+        const saved = JSON.parse(localStorage.getItem(FILTER_PREFERENCE_KEY) || "null");
+        if (!saved || typeof saved !== "object") return false;
+        if (typeof saved.search === "string") $("search").value = saved.search;
+        if (typeof saved.region === "string" && saved.region.trim()) $("region").value = saved.region;
+        if (saved.radius !== undefined && saved.radius !== null) $("radius").value = String(saved.radius);
+        if (typeof saved.periodMode === "string" && PERIOD_MODES.has(saved.periodMode)) $("periodMode").value = saved.periodMode;
+        if (typeof saved.dateSingle === "string" && /^\d{4}-\d{2}-\d{2}$/.test(saved.dateSingle)) $("dateSingle").value = saved.dateSingle;
+        $("newOnlyFilter").checked = Boolean(saved.newOnly);
+        return true;
+      } catch { return false; }
     }
 
     function setCustomSiteStatus(message, kind = "warn") {
@@ -1951,12 +1983,22 @@
       return new Set((items || []).map(eventDedupeKey));
     }
 
+    function eventBelongsToRemovedSite(event, removedKeys = loadRemovedSiteKeys()) {
+      if (!event || !removedKeys?.size) return false;
+      const candidates = [event.website, event.locationLink, event.source]
+        .map((value) => hostFromUrl(value) || cleanText(value).toLowerCase().replace(/^www\./, "").replace(/\/$/, ""))
+        .filter(Boolean);
+      return candidates.some((host) => removedKeys.has(host) ||
+        [...removedKeys].some((removedHost) => host.endsWith(`.${removedHost}`) || removedHost.endsWith(`.${host}`)));
+    }
+
     function mergeVerifiedEvents(items) {
       const merged = dedupeEvents(items || []).map((event) => {
         const host = hostFromUrl(event.website);
         return /(^|\.)(socialdeal\.nl|groupon\.nl|ibood\.com)$/.test(host) ? { ...event, type: "Aanbiedingen" } : event;
       });
-      return merged.filter((event) => !deletedEventKeys.has(eventDedupeKey(event)));
+      const removedSites = loadRemovedSiteKeys();
+      return merged.filter((event) => !deletedEventKeys.has(eventDedupeKey(event)) && !eventBelongsToRemovedSite(event, removedSites));
     }
     function isNewEvent(event) {
       return Boolean(event?.isNew || event?.new || newEventKeys.has(eventDedupeKey(event)));
@@ -3323,6 +3365,7 @@
     function applyFilters() {
       updateDateRange();
       savePeriodPreference();
+      saveFilterPreference();
       fillTypes();
 
       const query = $("search").value.trim().toLowerCase();
@@ -4596,12 +4639,14 @@
     $("allSitesBtn").addEventListener("click", () => {
       document.querySelectorAll(".siteCheck, .aiSourceCheck").forEach((check) => { check.checked = true; });
       document.querySelectorAll(".aiSourceCheck").forEach((check) => { const target = $(check.dataset.provider); if (target) target.checked = true; });
+      saveSourceSelection();
       updateSiteCount();
       applyFilters();
     });
     $("noSitesBtn").addEventListener("click", () => {
       document.querySelectorAll(".siteCheck, .aiSourceCheck").forEach((check) => { check.checked = false; });
       document.querySelectorAll(".aiSourceCheck").forEach((check) => { const target = $(check.dataset.provider); if (target) target.checked = false; });
+      saveSourceSelection();
       updateSiteCount();
       applyFilters();
     });
@@ -4792,6 +4837,7 @@
     $("dateSingle").value = today;
     $("periodMode").value = "threeDays";
     restorePeriodPreference();
+    restoreFilterPreference();
     updateDateRange();
     const savedPerPage = Number(localStorage.getItem(PER_PAGE_KEY));
     eventsPerPage = savedPerPage && savedPerPage !== 96 && [12, 18, 24, 48, 500].includes(savedPerPage) ? savedPerPage : 500;
