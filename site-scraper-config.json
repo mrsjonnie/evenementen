@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-26T22:11:50.028Z",
+  "updatedAt": "2026-10-26T22:11:51.427Z",
   "sites": {
     "https://groningen.uitloper.nu/": {
       "methodology": "",
@@ -73,7 +73,9 @@
           "replace": "Concert"
         }
       ],
-      "eventUrlPatterns": [],
+      "eventUrlPatterns": [
+        "^/nl/doen/uitgaan/1249727087/[^/?#]+/?$"
+      ],
       "excludedUrlPatterns": [
         "^/nl/doen/uitgaan/?$"
       ]
