@@ -3239,9 +3239,11 @@
         return;
       }
 
-      const pageCount = Math.max(1, Math.ceil(filteredEvents.length / eventsPerPage));
+      // Bereken paginering uitsluitend over de huidige gefilterde lijst, nooit over events.json-totaal.
+      const effectivePerPage = Math.max(1, Math.min(eventsPerPage, filteredEvents.length));
+      const pageCount = Math.max(1, Math.ceil(filteredEvents.length / effectivePerPage));
       currentPage = Math.min(currentPage, pageCount);
-      const visible = filteredEvents.slice((currentPage - 1) * eventsPerPage, currentPage * eventsPerPage);
+      const visible = filteredEvents.slice((currentPage - 1) * effectivePerPage, currentPage * effectivePerPage);
       updateFilterBreakdown(pageCount, visible.length);
 
       $("grid").innerHTML = renderGroupedEvents(visible);
