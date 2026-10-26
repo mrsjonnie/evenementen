@@ -1,7 +1,7 @@
 {
   "runId": "2026-10-26T09:44:56.889366+00:00-27747b20",
   "startedAt": "2026-10-26T09:44:56+00:00",
-  "completedCount": 9,
+  "completedCount": 10,
   "totalSites": 20,
   "currentSite": "https://www.kultuuragenda.nl/agenda",
   "currentSiteIndex": 10,
@@ -14,7 +14,8 @@
     "https://simplon.nl/",
     "https://www.vera-groningen.nl/",
     "https://www.martiniplaza.nl/nl/agenda",
-    "https://groningermuseum.nl/programma"
+    "https://groningermuseum.nl/programma",
+    "https://www.kultuuragenda.nl/agenda"
   ],
   "events": [
     {
@@ -453,17 +454,17 @@
     },
     {
       "date": "2026-10-26",
-      "time": "",
+      "time": "20:00",
       "title": "Nena",
       "type": "Concert",
-      "location": "SPOT Groningen",
+      "location": "Groningen",
       "locationLink": "",
-      "website": "https://www.spotgroningen.nl/programma/nena-2-26/",
-      "source": "spotgroningen.nl",
+      "website": "https://www.kultuuragenda.nl/agenda/1249727087/nena-1",
+      "source": "kultuuragenda.nl",
       "discoverySource": "Website",
-      "description": "Eén van de grootste zangeressen van de Duitse popcultuur Over de liefde (reprise) Prachtige verhalen en prangende liefdesproblemen",
-      "cost": "",
-      "image": "https://www.spotgroningen.nl/wp-content/uploads/2026/03/NENA26_FB-Event-250909-300x157.jpg",
+      "description": "Eén van de grootste zangeressen van de Duitse popcultuur",
+      "cost": "gratis",
+      "image": "https://assets.plaece.nl/thumb/ZOHSiPx1vO8PjIP7qWu-71RL15QuGp53LzLtjMS3hjQ/resizing_type:fit/width:650/height:366/gravity:sm/aHR0cHM6Ly9hc3NldHMucGxhZWNlLm5sL29kcC1ncm9uaW5nZW4vaW1hZ2UvOWEyMjc0ZGRmMGY0MWRkZjM1Y2Q1MTBiODQzYjgwOGY0ZmZjZTkzNl8wMWExM2NjNi1kZTEyLTc2ZDEtYTlhYy1iMzdiM2U3OGRkN2MuanBn.jpg",
       "isNew": true
     },
     {
@@ -519,6 +520,21 @@
       "description": "Sunnemeerten",
       "cost": "Gratis",
       "discoverySource": "Website",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-26",
+      "time": "21:00 - 23:03",
+      "title": "The Social Reckoning",
+      "type": "Film",
+      "location": "Groningen",
+      "locationLink": "",
+      "website": "https://www.kultuuragenda.nl/agenda/1088284512/the-social-reckoning",
+      "source": "kultuuragenda.nl",
+      "discoverySource": "Website",
+      "description": "Een jonge Facebook-ingenieur schakelt de hulp in van The Wall Street Journal voor een gevaarlijke reis die uiteindelijk de best bewaarde geheimen van het sociale netwerk aan het licht brengt. Perfecte opvolger van de film The Social Network.",
+      "cost": "gratis",
+      "image": "https://assets.plaece.nl/thumb/YCQHipfdzsnb_EHtfvZgnG7HwK2s1DIrUfzsBCPHrso/resizing_type:fit/width:650/height:366/gravity:sm/aHR0cHM6Ly9hc3NldHMucGxhZWNlLm5sL29kcC1ncm9uaW5nZW4vaW1hZ2UvNjM0YTI0ZWU0NmRiOTNkNDFmNmQ1MDBmOTM0NWM2NGI5NzBhODRhN18wMWExNzU5NC1kOGFhLTc2OTAtYWQ0Ni1lODNkOGY4YjYzN2MuanBn.jpg",
       "isNew": true
     },
     {
@@ -1490,6 +1506,21 @@
       "isNew": true
     },
     {
+      "date": "2027-10-10",
+      "time": "11:00",
+      "title": "Het Witte Vlag Project",
+      "type": "Concert",
+      "location": "Groningen",
+      "locationLink": "",
+      "website": "https://www.kultuuragenda.nl/agenda/1148248983/het-witte-vlag-project-1",
+      "source": "kultuuragenda.nl",
+      "discoverySource": "Website",
+      "description": "Het Witte Vlag Project | Kultuuragenda Groningen Ga naar de homepage Evenement aanmelden naar Het Witte Vlag Project naar Het Witte Vlag Project van Het Witte Vlag Project Geen overgave, maar ruimte voor verbeelding zaterdag en zondag 11.00–17.00 uur zaterdag 10 oktober15.00 uur",
+      "cost": "Gratis",
+      "image": "https://assets.plaece.nl/thumb/Zi6l20xe4ABP1Pplaj6gg47bNMpAO_rX_1pDrv7Cd1E/resizing_type:fit/width:650/height:366/gravity:sm/aHR0cHM6Ly9hc3NldHMucGxhZWNlLm5sL29kcC1ncm9uaW5nZW4vaW1hZ2UvNmZjMDdiOTk4ZjkzMTM2NDFkMDg1MmIwM2ViOWMwMzQ4ZjMxMzAyYV8wMWEwNWEzMS05OTc3LTdkZjgtOWU0Yy01N2YwODMyZTQ3OTkuanBn.jpg",
+      "isNew": true
+    },
+    {
       "date": "2028-12-01",
       "time": "",
       "title": "EXHIBITION Nieuw licht – De Ploeg",
@@ -1598,6 +1629,13 @@
       "newCount": 12,
       "durationSeconds": 1.03,
       "timedOut": false
+    },
+    {
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "count": 3,
+      "newCount": 3,
+      "durationSeconds": 4.01,
+      "timedOut": true
     }
   ],
   "rawLog": [
@@ -10494,168 +10532,6 @@
       "rawText": "526 events/aanbiedingen op deze pagina"
     },
     {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Cappella Amsterdam & Lavinia Meijer Glass 90 Muziek van Philip Glass, bewerkt voor harp en koor di 26 jan",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/cappella-amsterdam-lavinia-meijer/",
-      "status": "detail-link gevonden",
-      "rawText": "Cappella Amsterdam & Lavinia Meijer Glass 90 Muziek van Philip Glass, bewerkt voor harp en koor di 26 jan"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Caravan Palace Mixt moderne elektronische muziek met jazz en de vibe van de jaren twintig wo 28 okt",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/caravan-palace/",
-      "status": "detail-link gevonden",
-      "rawText": "Caravan Palace Mixt moderne elektronische muziek met jazz en de vibe van de jaren twintig wo 28 okt"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Caro Returning to Innocence Rauw, sensueel, gelaagd ma 9 nov",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/caro/",
-      "status": "detail-link gevonden",
-      "rawText": "Caro Returning to Innocence Rauw, sensueel, gelaagd ma 9 nov"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Chef'Special Nog één keer in de oorspronkelijke bezetting Uitverkocht za 10 apr",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/chefspecial-6/",
-      "status": "detail-link gevonden",
-      "rawText": "Chef'Special Nog één keer in de oorspronkelijke bezetting Uitverkocht za 10 apr"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Chef'Special Nog één keer in de oorspronkelijke bezetting zo 11 apr",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/chefspecial-7/",
-      "status": "detail-link gevonden",
-      "rawText": "Chef'Special Nog één keer in de oorspronkelijke bezetting zo 11 apr"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Choir! Choir! Choir! Presents: MAMMA MIA: An EPIC ABBA Sing-Along! Zing mee met ABBA's Greatest Hits! Net bevestigd wo 21 apr",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/choir-choir-choir-presents/",
-      "status": "detail-link gevonden",
-      "rawText": "Choir! Choir! Choir! Presents: MAMMA MIA: An EPIC ABBA Sing-Along! Zing mee met ABBA's Greatest Hits! Net bevestigd wo 21 apr"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Christian van Eijkelenburg Smalltalk Awkward gesprekjes, egoïstische mislukkelingen, gênante stiltes, theatrale betweters di 6 apr",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/christian-van-eijkelenburg-3/",
-      "status": "detail-link gevonden",
-      "rawText": "Christian van Eijkelenburg Smalltalk Awkward gesprekjes, egoïstische mislukkelingen, gênante stiltes, theatrale betweters di 6 apr"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Circus Treurdier Die Bloemkool (een moeilijke musical) Absurd verhaal over vermeende intelligentie en zogenaamde domheid wo 14 apr",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/circus-treurdier-9/",
-      "status": "detail-link gevonden",
-      "rawText": "Circus Treurdier Die Bloemkool (een moeilijke musical) Absurd verhaal over vermeende intelligentie en zogenaamde domheid wo 14 apr"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Claudia de Breij Oudejaarsconference 2026 Claudia de Breij is terug met de officiële Oudejaarsconference! Uitverkocht wo 25 nov",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/claudia-de-breij-16/",
-      "status": "detail-link gevonden",
-      "rawText": "Claudia de Breij Oudejaarsconference 2026 Claudia de Breij is terug met de officiële Oudejaarsconference! Uitverkocht wo 25 nov"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Claudia de Breij Oudejaarsconference 2026 Claudia de Breij is terug met de officiële Oudejaarsconference! Uitverkocht do 26 nov",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/claudia-de-breij-17/",
-      "status": "detail-link gevonden",
-      "rawText": "Claudia de Breij Oudejaarsconference 2026 Claudia de Breij is terug met de officiële Oudejaarsconference! Uitverkocht do 26 nov"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Clean Pete's Kerstshow Over-the-top kerstshow met een bijzondere mix van kerstklassiekers za 12 dec",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/clean-pete-kerstshow-2/",
-      "status": "detail-link gevonden",
-      "rawText": "Clean Pete's Kerstshow Over-the-top kerstshow met een bijzondere mix van kerstklassiekers za 12 dec"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Clean Pete Klassieke Revue met Thomas Beijer Clean Pete werpt een verfrissende blik op het klassieke repertoire do 15 apr",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/clean-pete-klassieke-revue-met-thomas-beijer/",
-      "status": "detail-link gevonden",
-      "rawText": "Clean Pete Klassieke Revue met Thomas Beijer Clean Pete werpt een verfrissende blik op het klassieke repertoire do 15 apr"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Clouseau Al meer dan veertig jaar een vaste waarde in de Nederlandstalige popmuziek Uitverkocht di 23 feb",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/clouseau-2/",
-      "status": "detail-link gevonden",
-      "rawText": "Clouseau Al meer dan veertig jaar een vaste waarde in de Nederlandstalige popmuziek Uitverkocht di 23 feb"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Clouseau Al meer dan veertig jaar een vaste waarde in de Nederlandstalige popmuziek Uitverkocht Net bevestigd ma 8 mrt",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/clouseau-3/",
-      "status": "detail-link gevonden",
-      "rawText": "Clouseau Al meer dan veertig jaar een vaste waarde in de Nederlandstalige popmuziek Uitverkocht Net bevestigd ma 8 mrt"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Club Lam Dolle Mina Humoristische, vurige performance over emancipatie, gelijkheid en liefde za 3 apr",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/club-lam-2/",
-      "status": "detail-link gevonden",
-      "rawText": "Club Lam Dolle Mina Humoristische, vurige performance over emancipatie, gelijkheid en liefde za 3 apr"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Club Motion 16+ clubnacht Eerste editie in Groningen trapt af met New Wave editie zo 27 dec",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/club-motion/",
-      "status": "detail-link gevonden",
-      "rawText": "Club Motion 16+ clubnacht Eerste editie in Groningen trapt af met New Wave editie zo 27 dec"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Cock Robin (85-89) Tour 2027 Avond vol hits en verborgen parels uit de gloriedagen van de band! wo 19 mei",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/cock-robin/",
-      "status": "detail-link gevonden",
-      "rawText": "Cock Robin (85-89) Tour 2027 Avond vol hits en verborgen parels uit de gloriedagen van de band! wo 19 mei"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Coffee Break ism Prins Claus Conservatorium Trakteer jezelf op koffie en muziek van aanstormend talent op de donderdagochtend do 21 jan",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/coffee-break-ism-prins-claus-conservatorium-17/",
-      "status": "detail-link gevonden",
-      "rawText": "Coffee Break ism Prins Claus Conservatorium Trakteer jezelf op koffie en muziek van aanstormend talent op de donderdagochtend do 21 jan"
-    },
-    {
       "source": "Filter",
       "site": "https://www.spotgroningen.nl/programma/",
       "title": "Datumfilter toegepast",
@@ -10699,186 +10575,6 @@
       "url": "https://simplon.nl/programma/",
       "status": "ok",
       "rawText": "94996 tekens HTML"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "Godfried + Nina Bailey",
-      "date": "2026-10-29",
-      "url": "https://simplon.nl/events/godfried-nina-bailey/",
-      "status": "venue-agenda kaart",
-      "rawText": "do 29.10 Godfried + Nina Bailey Warme indie en pop up TICKETS"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "Chicco",
-      "date": "2026-10-30",
-      "url": "https://simplon.nl/events/chicco/",
-      "status": "venue-agenda kaart",
-      "rawText": "vr 30.10 Chicco Gezellige hedendaagse Nederlandse volk concert TICKETS"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "Lostboyshawty",
-      "date": "2026-10-31",
-      "url": "https://simplon.nl/events/lostboyshawty-2026/",
-      "status": "venue-agenda kaart",
-      "rawText": "za 31.10 Lostboyshawty Support: Lil Timmie | Opvallende hiphop, trap en R&B concert TICKETS"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "Modern Figure + Nakûde",
-      "date": "2026-11-05",
-      "url": "https://simplon.nl/events/modern-figure-nakude/",
-      "status": "venue-agenda kaart",
-      "rawText": "do 5.11 Modern Figure + Nakûde Alternative rock & postpunk up TICKETS"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "Queen's Pleasure",
-      "date": "2026-11-06",
-      "url": "https://simplon.nl/events/queens-pleasure-2026/",
-      "status": "venue-agenda kaart",
-      "rawText": "vr 6.11 Queen's Pleasure Energetic indierock concert TICKETS"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "Good Times",
-      "date": "2026-11-07",
-      "url": "https://simplon.nl/events/good-times-november-2026/",
-      "status": "venue-agenda kaart",
-      "rawText": "za 7.11 Good Times Avond vol 80, 90 en 00s throwbacks en gezelligheid dance TICKETS"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "dance",
-      "date": "2026-11-07",
-      "url": "https://simplon.nl/events/good-times-november-2026/",
-      "status": "venue-agenda kaart",
-      "rawText": "za 7.11 Good Times Avond vol 80, 90 en 00s throwbacks en gezelligheid dance TICKETS"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "Piter + Rupit",
-      "date": "2026-11-12",
-      "url": "https://simplon.nl/events/up-piter-rupit/",
-      "status": "venue-agenda kaart",
-      "rawText": "do 12.11 Piter + Rupit Warme singer-songwriter pop up TICKETS"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "Rijck",
-      "date": "2026-11-13",
-      "url": "https://simplon.nl/events/rijck-2026/",
-      "status": "venue-agenda kaart",
-      "rawText": "vr 13.11 Rijck Disruptieve hiphop met contrast concert TICKETS"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "NO CIGAR",
-      "date": "2026-11-13",
-      "url": "https://simplon.nl/events/no-cigar-2026/",
-      "status": "venue-agenda kaart",
-      "rawText": "vr 13.11 NO CIGAR Smooth indierock on psychedelics concert UITVERKOCHT"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "Bassface",
-      "date": "2026-11-14",
-      "url": "https://simplon.nl/events/bassface-november-2026/",
-      "status": "venue-agenda kaart",
-      "rawText": "za 14.11 Bassface SMG // Teej // Yannons // aotp dance TICKETS"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "dance",
-      "date": "2026-11-14",
-      "url": "https://simplon.nl/events/bassface-november-2026/",
-      "status": "venue-agenda kaart",
-      "rawText": "za 14.11 Bassface SMG // Teej // Yannons // aotp dance TICKETS"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "Big Sleep",
-      "date": "2026-11-14",
-      "url": "https://simplon.nl/events/big-sleep-2026/",
-      "status": "venue-agenda kaart",
-      "rawText": "za 14.11 Big Sleep Support: Stardog | dynamic Irish indierock concert UITVERKOCHT"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "Iskander Moon",
-      "date": "2026-11-18",
-      "url": "https://simplon.nl/events/iskander-moon-2026/",
-      "status": "venue-agenda kaart",
-      "rawText": "wo 18.11 Iskander Moon Folkpop with classical finesse concert TICKETS"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "Desire",
-      "date": "2026-11-20",
-      "url": "https://simplon.nl/events/desire-x-johnny-jewel/",
-      "status": "venue-agenda kaart",
-      "rawText": "vr 20.11 Desire Support: Johnny Jewel + Mothermary | An audiovisual disco noir experience concert TICKETS"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "TechNorth",
-      "date": "2026-11-21",
-      "url": "https://simplon.nl/events/technorth-november-2026/",
-      "status": "venue-agenda kaart",
-      "rawText": "za 21.11 TechNorth Doctor Juicy // Faris Hababa // Fran LF // Julan (Live) dance TICKETS"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "dance",
-      "date": "2026-11-21",
-      "url": "https://simplon.nl/events/technorth-november-2026/",
-      "status": "venue-agenda kaart",
-      "rawText": "za 21.11 TechNorth Doctor Juicy // Faris Hababa // Fran LF // Julan (Live) dance TICKETS"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "Mail for Sil + Brighid",
-      "date": "2026-11-26",
-      "url": "https://simplon.nl/events/up-mail-for-sil-brighid/",
-      "status": "venue-agenda kaart",
-      "rawText": "do 26.11 Mail for Sil + Brighid up TICKETS"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "NO BARRIER",
-      "date": "2026-11-27",
-      "url": "https://simplon.nl/events/no-barrier-november-2026/",
-      "status": "venue-agenda kaart",
-      "rawText": "vr 27.11 NO BARRIER XL Edition | Punk, Emo, Rock & Metalcore Party concert TICKETS"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "Wrest",
-      "date": "2026-11-27",
-      "url": "https://simplon.nl/events/wrest/",
-      "status": "venue-agenda kaart",
-      "rawText": "vr 27.11 Wrest Heartfelt Edinburgh indie rock concert UITVERKOCHT"
     },
     {
       "source": "Website",
@@ -12400,16 +12096,358 @@
       "url": "https://groningermuseum.nl/programma",
       "status": "klaar",
       "rawText": "site 9/20: 12 unieke events in 1.03 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Start",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda",
+      "status": "start",
+      "rawText": "site 10/20: max 12 events, max 4 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda",
+      "status": "strategie",
+      "rawText": "universele detailpagina-parser (Kultuuragenda)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Pagina gelezen",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda",
+      "status": "ok",
+      "rawText": "153402 tekens HTML"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Kultuuragenda detailstrategie",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda",
+      "status": "strategie",
+      "rawText": "Overzicht overslaan; alleen echte /agenda/<id>/<slug> activiteitspagina’s verwerken"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Pagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda",
+      "status": "ok",
+      "rawText": "0 events/aanbiedingen op deze pagina"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "The Social Reckoning",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/1088284512/the-social-reckoning",
+      "status": "detail-link gevonden",
+      "rawText": "The Social Reckoning"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Het Witte Vlag Project",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/1148248983/het-witte-vlag-project-1",
+      "status": "detail-link gevonden",
+      "rawText": "Het Witte Vlag Project"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Nena",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/1249727087/nena-1",
+      "status": "detail-link gevonden",
+      "rawText": "Nena"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Digger",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/1453156530/digger",
+      "status": "detail-link gevonden",
+      "rawText": "Digger"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Youri",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/156742476/youri",
+      "status": "detail-link gevonden",
+      "rawText": "Youri"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "De Gaulle: Liberté",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/1691313909/de-gaulle-liberte",
+      "status": "detail-link gevonden",
+      "rawText": "De Gaulle: Liberté"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Wildwood",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/1740715911/wildwood",
+      "status": "detail-link gevonden",
+      "rawText": "Wildwood"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Erupcja",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/2155420288/erupcja",
+      "status": "detail-link gevonden",
+      "rawText": "Erupcja"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Home",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/2203530167/home-1",
+      "status": "detail-link gevonden",
+      "rawText": "Home"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Playing House",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/2241509706/playing-house",
+      "status": "detail-link gevonden",
+      "rawText": "Playing House"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Wicker",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/281413393/wicker",
+      "status": "detail-link gevonden",
+      "rawText": "Wicker"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "L'Inconnue",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/2840636300/l-inconnue",
+      "status": "detail-link gevonden",
+      "rawText": "L'Inconnue"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Sense and Sensibility",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/3022524326/sense-and-sensibility",
+      "status": "detail-link gevonden",
+      "rawText": "Sense and Sensibility"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Toutes Directions",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/3096643998/toutes-directions",
+      "status": "detail-link gevonden",
+      "rawText": "Toutes Directions"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Docs: Naza",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/3324146979/docs-naza",
+      "status": "detail-link gevonden",
+      "rawText": "Docs: Naza"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "National Theatre Live: The Misanthrope",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/3330398606/national-theatre-live-the-misanthrope",
+      "status": "detail-link gevonden",
+      "rawText": "National Theatre Live: The Misanthrope"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Coward",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/3621902129/coward",
+      "status": "detail-link gevonden",
+      "rawText": "Coward"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Classics: Akira",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/3669541755/classics-akira",
+      "status": "detail-link gevonden",
+      "rawText": "Classics: Akira"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "The Beloved",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/3730283290/the-beloved-1",
+      "status": "detail-link gevonden",
+      "rawText": "The Beloved"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Klik & Tik",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/4171063207/klik-tik-2026",
+      "status": "detail-link gevonden",
+      "rawText": "Klik & Tik"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Pressure",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/831818211/pressure",
+      "status": "detail-link gevonden",
+      "rawText": "Pressure"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Docs: The Cycle of Love",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/922308090/docs-the-cycle-of-love",
+      "status": "detail-link gevonden",
+      "rawText": "Docs: The Cycle of Love"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Schoolplaten van weleer",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/975781605/schoolplaten-van-weleer",
+      "status": "detail-link gevonden",
+      "rawText": "Schoolplaten van weleer"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Otto Krol - Gevels, daken en luchten",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/990231819/otto-krol-gevels-daken-en-luchten",
+      "status": "detail-link gevonden",
+      "rawText": "Otto Krol - Gevels, daken en luchten"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Evenement aanmelden",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/eventaanmeldformulier",
+      "status": "detail-link gevonden",
+      "rawText": "Evenement aanmelden"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Meld jouw activiteit aan",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/odp-submit",
+      "status": "detail-link gevonden",
+      "rawText": "Meld jouw activiteit aan"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Ga naar de homepage",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/",
+      "status": "detail-link gevonden",
+      "rawText": "Ga naar de homepage"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Plaatsingsvoorwaarden",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/plaatsingsvoorwaarden",
+      "status": "detail-link gevonden",
+      "rawText": "Plaatsingsvoorwaarden"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/1088284512/the-social-reckoning",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/1148248983/het-witte-vlag-project-1",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/1249727087/nena-1",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Detailpagina mislukt",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/1453156530/digger",
+      "status": "fout",
+      "rawText": "HTTPSConnectionPool(host='www.kultuuragenda.nl', port=443): Read timed out. (read timeout=0.2850764749999968)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda",
+      "status": "klaar",
+      "rawText": "site 10/20: 3 unieke events in 4.01 sec"
     }
   ],
   "status": "running",
   "siteStartedAt": "2026-10-26T09:45:48+00:00",
-  "siteElapsedSeconds": 0,
-  "sitePageCount": 0,
-  "lastSiteEventCount": 0,
-  "stage": "Websitepagina ophalen",
-  "lastUpdatedAt": "2026-10-26T09:45:48+00:00",
-  "lastSiteNewEventCount": 12,
-  "lastCompletedSite": "https://groningermuseum.nl/programma",
-  "lastCompletedAt": "2026-10-26T09:45:47+00:00"
+  "siteElapsedSeconds": 6,
+  "sitePageCount": 1,
+  "lastSiteEventCount": 3,
+  "stage": "Website klaar; volgende website voorbereiden",
+  "lastUpdatedAt": "2026-10-26T09:45:50+00:00",
+  "lastSiteNewEventCount": 3,
+  "lastCompletedSite": "https://www.kultuuragenda.nl/agenda",
+  "lastCompletedAt": "2026-10-26T09:45:54+00:00"
 }
