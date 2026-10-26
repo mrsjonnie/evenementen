@@ -1,7 +1,7 @@
 {
   "runId": "2026-10-26T20:49:13.970498+00:00-c337f0f6",
   "startedAt": "2026-10-26T20:49:13+00:00",
-  "completedCount": 10,
+  "completedCount": 11,
   "totalSites": 15,
   "currentSite": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
   "currentSiteIndex": 11,
@@ -15,7 +15,8 @@
     "https://www.martiniplaza.nl/nl/agenda",
     "https://groningermuseum.nl/programma",
     "https://www.kultuuragenda.nl/agenda",
-    "https://www.concertgebouw.nl/concerten-en-tickets"
+    "https://www.concertgebouw.nl/concerten-en-tickets",
+    "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html"
   ],
   "events": [
     {
@@ -4288,198 +4289,16 @@
       "newCount": 14,
       "durationSeconds": 6.35,
       "timedOut": false
+    },
+    {
+      "site": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 10.03,
+      "timedOut": true
     }
   ],
   "rawLog": [
-    {
-      "source": "Website",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": "Wanneer",
-      "date": "2026-10-26",
-      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
-      "status": "event uit tekstregel",
-      "rawText": "Wanneer | Vandaag | Morgen | Dit weekend | Kies datum | Thema"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": "Dit weekend",
-      "date": "2026-10-27",
-      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
-      "status": "event uit tekstregel",
-      "rawText": "Vandaag | Morgen | Dit weekend | Kies datum | Thema | Theater"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": "Dit weekend",
-      "date": "2026-10-27",
-      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
-      "status": "event uit dagblok",
-      "rawText": "Dit weekend | Kies datum | Thema | Theater | Actief"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": "Kies datum",
-      "date": "2026-10-27",
-      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
-      "status": "event uit dagblok",
-      "rawText": "Kies datum | Thema | Theater | Actief | Tentoonstelling"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": "Thema",
-      "date": "2026-10-27",
-      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
-      "status": "event uit dagblok",
-      "rawText": "Thema | Theater | Actief | Tentoonstelling | Festival"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": "Actief",
-      "date": "2026-10-27",
-      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
-      "status": "event uit dagblok",
-      "rawText": "Actief | Tentoonstelling | Festival | Beurs | Culinair"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": "Tentoonstelling",
-      "date": "2026-10-27",
-      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
-      "status": "event uit dagblok",
-      "rawText": "Tentoonstelling | Festival | Beurs | Culinair | Excursie"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": "Festival",
-      "date": "2026-10-27",
-      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
-      "status": "event uit dagblok",
-      "rawText": "Festival | Beurs | Culinair | Excursie | Tocht"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": "Culinair",
-      "date": "2026-10-27",
-      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
-      "status": "event uit dagblok",
-      "rawText": "Culinair | Excursie | Tocht | Sport | Cabaret"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": "Excursie",
-      "date": "2026-10-27",
-      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
-      "status": "event uit dagblok",
-      "rawText": "Excursie | Tocht | Sport | Cabaret | Markt"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": "Tocht",
-      "date": "2026-10-27",
-      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
-      "status": "event uit dagblok",
-      "rawText": "Tocht | Sport | Cabaret | Markt | Muziek"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": "Sport",
-      "date": "2026-10-27",
-      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
-      "status": "event uit dagblok",
-      "rawText": "Sport | Cabaret | Markt | Muziek | Kinderen"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": ", 2 november en nog 3 dagen",
-      "date": "2026-10-26",
-      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
-      "status": "event uit tekstregel",
-      "rawText": "Klik & Tik | 26 oktober, 2 november en nog 3 dagen | , Groningen | Varia | Voeg toe als favoriet | Voeg toe als favoriet"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": "Nena",
-      "date": "2026-10-27",
-      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
-      "status": "event uit dagblok",
-      "rawText": "Nena | Nena | maandag 26 oktober | , Groningen | Muziek overig"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": "Nena",
-      "date": "2026-10-26",
-      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
-      "status": "event uit tekstregel",
-      "rawText": "Nena | maandag 26 oktober | , Groningen | Muziek overig | Voeg toe als favoriet | Voeg toe als favoriet"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": ", Groningen",
-      "date": "2026-10-26",
-      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
-      "status": "event uit dagblok",
-      "rawText": ", Groningen | Muziek overig | Voeg toe als favoriet | Voeg toe als favoriet | Expositie Mijn Thuis Mijn Verhaal: ervaar de kracht van verhalen die verbinden"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": "Muziek overig",
-      "date": "2026-10-26",
-      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
-      "status": "event uit dagblok",
-      "rawText": "Muziek overig | Voeg toe als favoriet | Voeg toe als favoriet | Expositie Mijn Thuis Mijn Verhaal: ervaar de kracht van verhalen die verbinden | Expositie Mijn Thuis Mijn Verhaal: ervaar de kracht van verhalen die verbinden"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": "Voeg toe als favoriet",
-      "date": "2026-10-26",
-      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
-      "status": "event uit dagblok",
-      "rawText": "Voeg toe als favoriet | Voeg toe als favoriet | Expositie Mijn Thuis Mijn Verhaal: ervaar de kracht van verhalen die verbinden | Expositie Mijn Thuis Mijn Verhaal: ervaar de kracht van verhalen die verbinden | t/m 16 december"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": "Expositie Mijn Thuis Mijn Verhaal: ervaar de kracht van verhalen die verbinden",
-      "date": "2026-10-26",
-      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
-      "status": "event uit dagblok",
-      "rawText": "Expositie Mijn Thuis Mijn Verhaal: ervaar de kracht van verhalen die verbinden | Expositie Mijn Thuis Mijn Verhaal: ervaar de kracht van verhalen die verbinden | t/m 16 december | , Appingedam | Tentoonstelling"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": "Expositie Mijn Thuis Mijn Verhaal: ervaar de kracht van verhalen die verbinden",
-      "date": "2026-12-16",
-      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
-      "status": "event uit tekstregel",
-      "rawText": "Expositie Mijn Thuis Mijn Verhaal: ervaar de kracht van verhalen die verbinden | t/m 16 december | , Appingedam | Tentoonstelling | Voeg toe als favoriet | Voeg toe als favoriet"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
-      "title": ", Appingedam",
-      "date": "2026-12-16",
-      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
-      "status": "event uit dagblok",
-      "rawText": ", Appingedam | Tentoonstelling | Voeg toe als favoriet | Voeg toe als favoriet | Stadswandeling o.l.v. een stadsgids"
-    },
     {
       "source": "Website",
       "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
@@ -15090,16 +14909,205 @@
       "url": "https://www.concertgebouw.nl/concerten-en-tickets",
       "status": "klaar",
       "rawText": "site 10/15: 14 unieke events in 6.35 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "title": "Start",
+      "date": "",
+      "url": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "status": "start",
+      "rawText": "site 11/15: max 40 events, max 10 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "status": "strategie",
+      "rawText": "bioscoopfilms en speeldata (BiosAgenda Groningen)"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "title": "403-tekstproxy gebruikt",
+      "date": "",
+      "url": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "status": "fallback",
+      "rawText": "Bron gaf HTTP 403; tekstproxy leverde 87864 tekens: Title: Bioscoopagenda Groningen URL Source: http://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html Markdown Content: compleet & ongebonden sinds 1995 WEEK 43 22-10 t/m"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "title": "Pagina gelezen",
+      "date": "",
+      "url": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "status": "ok",
+      "rawText": "105396 tekens HTML"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "title": "BiosAgenda speeldata",
+      "date": "",
+      "url": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "status": "gespecialiseerde parser",
+      "rawText": "0 filmvermeldingen met speeldata gevonden"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "title": "Pagina geanalyseerd",
+      "date": "",
+      "url": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "status": "ok",
+      "rawText": "0 events/aanbiedingen op deze pagina"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.biosagenda.nl/nieuws_bioscoopje-pakken-of-thuis-op-de-bank-kijken_10205.html",
+      "title": "403-tekstproxy mislukt",
+      "date": "",
+      "url": "https://www.biosagenda.nl/nieuws_bioscoopje-pakken-of-thuis-op-de-bank-kijken_10205.html",
+      "status": "fout",
+      "rawText": "HTTPSConnectionPool(host='r.jina.ai', port=443): Read timed out. (read timeout=1.25)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "title": "Detailpagina mislukt",
+      "date": "",
+      "url": "https://www.biosagenda.nl/nieuws_bioscoopje-pakken-of-thuis-op-de-bank-kijken_10205.html",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.biosagenda.nl/nieuws_film-fest-gent-zet-belgische-bioscoopagenda-tijdelijk-naar-zijn-hand_10204.html",
+      "title": "403-tekstproxy mislukt",
+      "date": "",
+      "url": "https://www.biosagenda.nl/nieuws_film-fest-gent-zet-belgische-bioscoopagenda-tijdelijk-naar-zijn-hand_10204.html",
+      "status": "fout",
+      "rawText": "HTTPSConnectionPool(host='r.jina.ai', port=443): Read timed out. (read timeout=1.25)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "title": "Detailpagina mislukt",
+      "date": "",
+      "url": "https://www.biosagenda.nl/nieuws_film-fest-gent-zet-belgische-bioscoopagenda-tijdelijk-naar-zijn-hand_10204.html",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.biosagenda.nl/nieuws_matrix-5-wat-blijft-er-over-van-de-wereld-van-de-wachowski-s_10195.html",
+      "title": "403-tekstproxy mislukt",
+      "date": "",
+      "url": "https://www.biosagenda.nl/nieuws_matrix-5-wat-blijft-er-over-van-de-wereld-van-de-wachowski-s_10195.html",
+      "status": "fout",
+      "rawText": "HTTPSConnectionPool(host='r.jina.ai', port=443): Read timed out. (read timeout=1.25)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "title": "Detailpagina mislukt",
+      "date": "",
+      "url": "https://www.biosagenda.nl/nieuws_matrix-5-wat-blijft-er-over-van-de-wereld-van-de-wachowski-s_10195.html",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.biosagenda.nl/nieuws_met-je-kindje-naar-de-bioscoop_10206.html",
+      "title": "403-tekstproxy mislukt",
+      "date": "",
+      "url": "https://www.biosagenda.nl/nieuws_met-je-kindje-naar-de-bioscoop_10206.html",
+      "status": "fout",
+      "rawText": "HTTPSConnectionPool(host='r.jina.ai', port=443): Read timed out. (read timeout=1.25)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "title": "Detailpagina mislukt",
+      "date": "",
+      "url": "https://www.biosagenda.nl/nieuws_met-je-kindje-naar-de-bioscoop_10206.html",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.biosagenda.nl/nieuws_bioscopen-onderbraken-vertoningen-van-naza-rond-7-oktober_10202.html",
+      "title": "403-tekstproxy mislukt",
+      "date": "",
+      "url": "https://www.biosagenda.nl/nieuws_bioscopen-onderbraken-vertoningen-van-naza-rond-7-oktober_10202.html",
+      "status": "fout",
+      "rawText": "HTTPSConnectionPool(host='r.jina.ai', port=443): Read timed out. (read timeout=1.25)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "title": "Detailpagina mislukt",
+      "date": "",
+      "url": "https://www.biosagenda.nl/nieuws_bioscopen-onderbraken-vertoningen-van-naza-rond-7-oktober_10202.html",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.biosagenda.nl/3dfilms",
+      "title": "403-tekstproxy mislukt",
+      "date": "",
+      "url": "https://www.biosagenda.nl/3dfilms",
+      "status": "fout",
+      "rawText": "HTTPSConnectionPool(host='r.jina.ai', port=443): Read timed out. (read timeout=1.25)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "title": "Detailpagina mislukt",
+      "date": "",
+      "url": "https://www.biosagenda.nl/3dfilms",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.biosagenda.nl/film_de-club-van-sinterklaas-film-paniek-in-het-pietendorp_46863.html",
+      "title": "403-tekstproxy mislukt",
+      "date": "",
+      "url": "https://www.biosagenda.nl/film_de-club-van-sinterklaas-film-paniek-in-het-pietendorp_46863.html",
+      "status": "fout",
+      "rawText": "HTTPSConnectionPool(host='r.jina.ai', port=443): Read timed out. (read timeout=0.6573670770000035)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "title": "Detailpagina mislukt",
+      "date": "",
+      "url": "https://www.biosagenda.nl/film_de-club-van-sinterklaas-film-paniek-in-het-pietendorp_46863.html",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "status": "klaar",
+      "rawText": "site 11/15: 0 unieke events in 10.03 sec"
     }
   ],
   "status": "running",
   "siteStartedAt": "2026-10-26T20:50:56+00:00",
-  "siteElapsedSeconds": 0,
-  "sitePageCount": 0,
+  "siteElapsedSeconds": 12,
+  "sitePageCount": 1,
   "lastSiteEventCount": 0,
-  "stage": "Websitepagina ophalen",
-  "lastUpdatedAt": "2026-10-26T20:50:56+00:00",
-  "lastSiteNewEventCount": 14,
-  "lastCompletedSite": "https://www.concertgebouw.nl/concerten-en-tickets",
-  "lastCompletedAt": "2026-10-26T20:50:55+00:00"
+  "stage": "Website klaar; volgende website voorbereiden",
+  "lastUpdatedAt": "2026-10-26T20:50:59+00:00",
+  "lastSiteNewEventCount": 0,
+  "lastCompletedSite": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+  "lastCompletedAt": "2026-10-26T20:51:08+00:00"
 }
