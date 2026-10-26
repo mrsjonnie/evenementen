@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-26T21:57:47.928Z",
+  "updatedAt": "2026-10-26T22:01:44.657Z",
   "sites": {
     "https://groningen.uitloper.nu/": {
       "methodology": "",
@@ -303,26 +303,6 @@
       "excludedUrlPatterns": []
     },
     "https://www.socialdeal.nl/": {
-      "methodology": "",
-      "startUrls": [],
-      "exclusions": [
-        "contact",
-        "privacy",
-        "cookie",
-        "voorwaarden",
-        "login",
-        "account",
-        "nieuwsbrief",
-        "facebook",
-        "instagram",
-        "linkedin"
-      ],
-      "excludedUrls": [],
-      "adjustments": [],
-      "eventUrlPatterns": [],
-      "excludedUrlPatterns": []
-    },
-    "https://www.groupon.nl/kortingsbonnen/gemeente-groningen": {
       "methodology": "",
       "startUrls": [],
       "exclusions": [
