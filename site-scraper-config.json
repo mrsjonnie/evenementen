@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-26T23:09:12.128Z",
+  "updatedAt": "2026-10-26T23:38:31.857Z",
   "sites": {
     "https://groningen.uitloper.nu/": {
       "methodology": "",
@@ -310,6 +310,11 @@
           "field": "cost",
           "find": "gratis",
           "replace": "€ 13,00"
+        },
+        {
+          "field": "location",
+          "find": "Groningen",
+          "replace": "Nieuwe Markt 1 9712 KJ Groningen"
         }
       ],
       "eventUrlPatterns": [
