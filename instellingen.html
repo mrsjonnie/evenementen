@@ -7,7 +7,7 @@
 <style>
 :root{color-scheme:dark;--bg:#0e141b;--surface:#151f2b;--line:#2d4054;--ink:#edf5ff;--muted:#9db0c5;--primary:#53b6d2;--danger:#ff8d80;--good:#72d6a1;--warn:#f0bd62}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 Inter,"Segoe UI",Arial,sans-serif}
-main{max-width:1200px;margin:auto;padding:24px 18px 50px}.top{display:flex;gap:14px;align-items:center;justify-content:space-between;flex-wrap:wrap}.back,.btn{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;border:1px solid var(--line);border-radius:8px;padding:9px 13px;color:var(--ink);background:#1d2a38;font-weight:750;cursor:pointer}.back{color:var(--primary)}h1{font-size:clamp(1.7rem,4vw,2.5rem);margin:18px 0 5px}p{color:var(--muted)}.summary{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0}.stat{border:1px solid var(--line);background:var(--surface);padding:10px 14px;border-radius:10px}.toolbar{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0}.toolbar input,.toolbar select{background:#101925;color:var(--ink);border:1px solid var(--line);border-radius:8px;padding:10px;min-height:42px}.toolbar input{flex:1;min-width:220px}.section{margin:24px 0}.section h2{font-size:1.25rem}.list{display:grid;gap:12px}.rule{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:15px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:start}.rule h3{margin:0 0 5px;font-size:1rem;overflow-wrap:anywhere}.meta{color:var(--muted);font-size:.88rem;overflow-wrap:anywhere}.pill{display:inline-block;border-radius:999px;padding:3px 8px;font-size:.78rem;font-weight:800;background:#263545;margin:0 5px 5px 0}.pill.bad,.pill.deleted,.pill.duplicate{color:var(--danger)}.pill.edit{color:var(--warn)}.pill.good{color:var(--good)}.rule a{color:var(--primary);overflow-wrap:anywhere}.remove{background:#311b19;border-color:#6b3a34;color:var(--danger);white-space:nowrap}.empty,.status{padding:16px;border:1px dashed var(--line);border-radius:10px;color:var(--muted)}.status[hidden]{display:none}.small{font-size:.88rem;color:var(--muted)}@media(max-width:620px){.rule{grid-template-columns:1fr}.remove{width:100%}}
+main{max-width:1200px;margin:auto;padding:24px 18px 50px}.top{display:flex;gap:14px;align-items:center;justify-content:space-between;flex-wrap:wrap}.back,.btn{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;border:1px solid var(--line);border-radius:8px;padding:9px 13px;color:var(--ink);background:#1d2a38;font-weight:750;cursor:pointer}.back{color:var(--primary)}h1{font-size:clamp(1.7rem,4vw,2.5rem);margin:18px 0 5px}p{color:var(--muted)}.summary{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0}.stat{border:1px solid var(--line);background:var(--surface);padding:10px 14px;border-radius:10px}.toolbar{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0}.toolbar input,.toolbar select{background:#101925;color:var(--ink);border:1px solid var(--line);border-radius:8px;padding:10px;min-height:42px}.toolbar input{flex:1;min-width:220px}.sourceFilter{display:flex;flex-direction:column;gap:5px;min-width:min(100%,260px);color:var(--muted);font-size:.85rem;font-weight:750}.sourceFilter select{min-width:240px}.section{margin:24px 0}.section h2{font-size:1.25rem}.list{display:grid;gap:12px}.rule{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:15px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:start}.rule h3{margin:0 0 5px;font-size:1rem;overflow-wrap:anywhere}.meta{color:var(--muted);font-size:.88rem;overflow-wrap:anywhere}.pill{display:inline-block;border-radius:999px;padding:3px 8px;font-size:.78rem;font-weight:800;background:#263545;margin:0 5px 5px 0}.pill.bad,.pill.deleted,.pill.duplicate{color:var(--danger)}.pill.edit{color:var(--warn)}.pill.good{color:var(--good)}.rule a{color:var(--primary);overflow-wrap:anywhere}.remove{background:#311b19;border-color:#6b3a34;color:var(--danger);white-space:nowrap}.empty,.status{padding:16px;border:1px dashed var(--line);border-radius:10px;color:var(--muted)}.status[hidden]{display:none}.small{font-size:.88rem;color:var(--muted)}@media(max-width:620px){.rule{grid-template-columns:1fr}.remove{width:100%}}
 </style>
 </head>
 <body><main>
@@ -16,20 +16,44 @@ main{max-width:1200px;margin:auto;padding:24px 18px 50px}.top{display:flex;gap:1
 <p>Bekijk de opgeslagen feedback en correcties die de scraper bij volgende zoekacties gebruikt. Verwijder een regel alleen als deze ongewenst is; verwijderde feedback wordt dan niet langer als leerregel toegepast.</p>
 <div class="summary"><div class="stat"><strong id="total">—</strong><br><span class="small">Totaal regels</span></div><div class="stat"><strong id="excluded">—</strong><br><span class="small">Negatieve / uitgesloten feedback</span></div><div class="stat"><strong id="corrected">—</strong><br><span class="small">Correcties</span></div></div>
 <div id="status" class="status" role="status">Opgeslagen regels worden opgehaald…</div>
-<div class="toolbar"><input id="search" type="search" placeholder="Zoek op website, titel, veld of URL…" aria-label="Regels filteren"><select id="kind" aria-label="Filter op regeltype"><option value="all">Alle regeltypen</option><option value="bad">Slechte link / uitsluiting</option><option value="deleted">Verwijderd</option><option value="duplicate">Duplicaat</option><option value="edit">Correctie</option><option value="good">Goedgekeurd</option></select><button class="btn" id="reload">Opnieuw laden</button></div>
+<div class="toolbar">
+<label class="sourceFilter">Actieve scrapewebsite
+<select id="siteFilter" aria-label="Filter op actieve scrapewebsite"><option value="all">Alle actieve websites</option></select>
+</label>
+<input id="search" type="search" placeholder="Zoek op titel, veld of URL…" aria-label="Regels filteren">
+<select id="kind" aria-label="Filter op regeltype"><option value="all">Alle regeltypen</option><option value="bad">Slechte link / uitsluiting</option><option value="deleted">Verwijderd</option><option value="duplicate">Duplicaat</option><option value="edit">Correctie</option><option value="good">Goedgekeurd</option></select><button class="btn" id="reload">Opnieuw laden</button></div>
+<div class="status" id="logicInfo">Universele scraperlogica geldt voor alle websites. Website-specifieke uitzonderingen en correcties worden hieronder getoond zodra de opgeslagen feedbackregels beschikbaar zijn.</div>
 <section class="section"><h2>Per-website logica en uitgesloten pagina’s</h2><div class="list" id="rules"></div></section>
 <p class="small">Deze pagina toont opgeslagen feedbackregels uit event-feedback.json. Technische parserregels die rechtstreeks in de scraper-code staan, zijn niet automatisch als afzonderlijke bewerkbare regels beschikbaar.</p>
 </main>
 <script>
 const WORKER_URL="https://evenementen-refresh.mrsjonnie.workers.dev";
 let allRules=[];
+let activeSites=[];
 const $=id=>document.getElementById(id);
+const hostOf=value=>{try{return new URL(String(value||"")).hostname.toLowerCase().replace("www.","")}catch{return ""}};
+async function readResponseJson(response,label){
+ const raw=await response.text();
+ if(!raw.trim())throw new Error(label+": Worker gaf een leeg antwoord (HTTP "+response.status+"). Controleer of de Worker-deployment is bijgewerkt.");
+ try{return JSON.parse(raw)}catch{throw new Error(label+": Worker gaf geen geldige JSON terug (HTTP "+response.status+").")}
+}
+async function loadSites(){
+ try{
+  const response=await fetch("./sites.json",{cache:"no-store"});
+  if(!response.ok)throw new Error("sites.json HTTP "+response.status);
+  const data=await response.json();
+  activeSites=Array.isArray(data)?[...new Set(data.filter(x=>typeof x==="string"&&x.startsWith("http")))]:[];
+  const select=$("siteFilter");
+  select.innerHTML='<option value="all">Alle actieve websites ('+activeSites.length+')</option>'+activeSites.map(site=>'<option value="'+esc(site)+'">'+esc(site.replace("https://","").replace("http://",""))+'</option>').join("");
+ }catch(error){$("logicInfo").textContent="De actieve websites konden niet uit sites.json worden geladen: "+error.message+"; je kunt nog steeds alle opgeslagen feedback bekijken."}
+}
 const esc=value=>String(value??"").replace(/[&<>"']/g,ch=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[ch]));
 const kindName=value=>({bad:"Slechte link / uitsluiten",deleted:"Verwijderd",duplicate:"Duplicaat",edit:"Correctie",good:"Goedgekeurd"}[value]||"Feedback");
 function ruleFields(item){const c=item.corrections||{};return Object.entries(c).filter(([,v])=>String(v||"").trim()).map(([k,v])=>k+": "+v).join(" · ")}
 function render(){
- const q=$("search").value.trim().toLowerCase(),kind=$("kind").value;
- const items=allRules.filter(x=>(kind==="all"||x.vote===kind)&&(!q||[x.title,x.website,x.url,x.date,x.key,ruleFields(x)].join(" ").toLowerCase().includes(q)));
+ const q=$("search").value.trim().toLowerCase(),kind=$("kind").value,selectedSite=$("siteFilter").value;
+ const selectedHost=selectedSite==="all"?"":hostOf(selectedSite);
+ const items=allRules.filter(x=>(kind==="all"||x.vote===kind)&&(!selectedHost||hostOf(x.website||x.url)===selectedHost)&&(!q||[x.title,x.website,x.url,x.date,x.key,ruleFields(x)].join(" ").toLowerCase().includes(q)));
  $("rules").innerHTML=items.length?items.map(item=>{
   const vote=String(item.vote||"bad"),url=item.url||item.website||"";
   const exclusion=["bad","deleted","duplicate"].includes(vote);
@@ -41,7 +65,7 @@ function render(){
 }
 async function load(){
  $("status").hidden=false;$("status").textContent="Opgeslagen regels laden…";
- try{const r=await fetch(WORKER_URL+"/event-feedback",{cache:"no-store"});const data=await r.json();if(!r.ok||!data.ok)throw new Error(data.details||data.error||"Onbekende fout");allRules=Array.isArray(data.feedback)?data.feedback:[];$("updated").textContent=data.updatedAt?"Bestand bijgewerkt: "+new Date(data.updatedAt).toLocaleString("nl-NL"):"Feedbackbestand geladen";$("status").textContent=allRules.length?allRules.length+" opgeslagen regels geladen.":"Er zijn nog geen opgeslagen feedbackregels.";render()}
+ try{const r=await fetch(WORKER_URL+"/event-feedback",{cache:"no-store"});const data=await readResponseJson(r,"Feedback laden mislukt");if(!r.ok||!data.ok)throw new Error(data.details||data.error||"Onbekende fout");allRules=Array.isArray(data.feedback)?data.feedback:[];$("updated").textContent=data.updatedAt?"Bestand bijgewerkt: "+new Date(data.updatedAt).toLocaleString("nl-NL"):"Feedbackbestand geladen";$("status").textContent=allRules.length?allRules.length+" opgeslagen regels geladen.":"Er zijn nog geen opgeslagen feedbackregels.";render()}
  catch(e){$("status").textContent="Kon regels niet laden: "+e.message+" Controleer of de Worker is bijgewerkt en bereikbaar is.";allRules=[];render()}
 }
 $("rules").addEventListener("click",async e=>{
@@ -50,8 +74,8 @@ $("rules").addEventListener("click",async e=>{
  const item=allRules.find(x=>String(x.key||"")===key);
  if(!confirm('Weet je zeker dat je deze regel wilt verwijderen?\n\n'+(item?.title||key)+'\n'+(item?.website||"")))return;
  btn.disabled=true;btn.textContent="Verwijderen…";
- try{const r=await fetch(WORKER_URL+"/event-feedback-delete",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({key})});const data=await r.json();if(!r.ok||!data.ok)throw new Error(data.details||data.error||"Verwijderen mislukt");allRules=allRules.filter(x=>String(x.key||"")!==key);$("status").textContent="Regel verwijderd. De volgende scraper-run haalt deze feedbackregel niet meer op.";render()}
+ try{const r=await fetch(WORKER_URL+"/event-feedback-delete",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({key})});const data=await readResponseJson(r,"Regel verwijderen mislukt");if(!r.ok||!data.ok)throw new Error(data.details||data.error||"Verwijderen mislukt");allRules=allRules.filter(x=>String(x.key||"")!==key);$("status").textContent="Regel verwijderd. De volgende scraper-run haalt deze feedbackregel niet meer op.";render()}
  catch(err){alert("Regel verwijderen mislukt: "+err.message);btn.disabled=false;btn.textContent="Regel verwijderen"}
 });
-$("search").addEventListener("input",render);$("kind").addEventListener("change",render);$("reload").addEventListener("click",load);load();
+$("search").addEventListener("input",render);$("kind").addEventListener("change",render);$("siteFilter").addEventListener("change",render);$("reload").addEventListener("click",load);loadSites();load();
 </script></body></html>
