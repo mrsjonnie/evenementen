@@ -1,7 +1,7 @@
 {
   "runId": "2026-10-26T10:18:21.355935+00:00-b5bdaddd",
   "startedAt": "2026-10-26T10:18:21+00:00",
-  "completedCount": 12,
+  "completedCount": 13,
   "totalSites": 20,
   "currentSite": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
   "currentSiteIndex": 13,
@@ -17,7 +17,8 @@
     "https://groningermuseum.nl/programma",
     "https://www.kultuuragenda.nl/agenda",
     "https://www.noorderzon.nl/programma",
-    "https://www.concertgebouw.nl/concerten-en-tickets"
+    "https://www.concertgebouw.nl/concerten-en-tickets",
+    "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html"
   ],
   "events": [
     {
@@ -615,126 +616,16 @@
       "newCount": 12,
       "durationSeconds": 3.48,
       "timedOut": false
+    },
+    {
+      "site": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 4.01,
+      "timedOut": true
     }
   ],
   "rawLog": [
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Cameretten Finalistentournee 60e editie",
-      "date": "2027-05-18",
-      "url": "https://www.spotgroningen.nl/programma/cameretten-2/",
-      "status": "event uit link",
-      "rawText": "Cameretten Finalistentournee 60e editie di 18 mei"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Cock Robin (85-89) Tour 2027",
-      "date": "2027-05-19",
-      "url": "https://www.spotgroningen.nl/programma/cock-robin/",
-      "status": "event uit link",
-      "rawText": "Cock Robin (85-89) Tour 2027 Avond vol hits en verborgen parels uit de gloriedagen van de band! wo 19 mei"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Nederlands Dans Theater 2 A poem for the world",
-      "date": "2027-05-19",
-      "url": "https://www.spotgroningen.nl/programma/nederlands-dans-theater-2-7/",
-      "status": "event uit link",
-      "rawText": "Nederlands Dans Theater 2 A poem for the world Ode aan de speelsheid en de menselijkheid wo 19 mei"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Ivo Pogorelich",
-      "date": "2027-05-20",
-      "url": "https://www.spotgroningen.nl/programma/ivo-pogorelich/",
-      "status": "event uit link",
-      "rawText": "Ivo Pogorelich Barokke helderheid en romantische diepte door een eigenzinnige meester Wereldklasse do 20 mei"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Kasper van der Laan Ruim",
-      "date": "2027-05-20",
-      "url": "https://www.spotgroningen.nl/programma/kasper-van-der-laan-9/",
-      "status": "event uit link",
-      "rawText": "Kasper van der Laan Ruim Fascinerend, onvoorspelbaar en absurd grappig Uitverkocht do 20 mei"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Kasper van der Laan Ruim",
-      "date": "2027-05-21",
-      "url": "https://www.spotgroningen.nl/programma/kasper-van-der-laan-10/",
-      "status": "event uit link",
-      "rawText": "Kasper van der Laan Ruim Fascinerend, onvoorspelbaar en absurd grappig Uitverkocht vr 21 mei"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Thomas van Luyn Super Normaal",
-      "date": "2027-05-22",
-      "url": "https://www.spotgroningen.nl/programma/thomas-van-luyn-5/",
-      "status": "event uit link",
-      "rawText": "Thomas van Luyn Super Normaal Hoe raar is het om herkenbaar te zijn za 22 mei"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Thomas van Luyn Super Normaal",
-      "date": "2027-05-23",
-      "url": "https://www.spotgroningen.nl/programma/thomas-van-luyn-6/",
-      "status": "event uit link",
-      "rawText": "Thomas van Luyn Super Normaal Hoe raar is het om herkenbaar te zijn zo 23 mei"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Colin Blunstone support: Jesse Lynn Madera",
-      "date": "2027-05-24",
-      "url": "https://www.spotgroningen.nl/programma/colin-blunstone/",
-      "status": "event uit link",
-      "rawText": "Colin Blunstone support: Jesse Lynn Madera De kenmerkende stem achter o.a. The Zombies Net bevestigd ma 24 mei"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Culture (ft Kenyatta Hill) & Cedric Myton",
-      "date": "2027-05-25",
-      "url": "https://www.spotgroningen.nl/programma/culture-ft-kenyatta-hill-cedric-myton/",
-      "status": "event uit link",
-      "rawText": "Culture (ft Kenyatta Hill) & Cedric Myton Twee legendarische reggae-acts op één avond di 25 mei"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Valentina Tóth Revue Revanche",
-      "date": "2027-05-26",
-      "url": "https://www.spotgroningen.nl/programma/valentina-toth-9/",
-      "status": "event uit link",
-      "rawText": "Valentina Tóth Revue Revanche Mix van opera, theater, musical, comedy, maatschappijkritiek en kleinkunst wo 26 mei"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Joris Teepe presents: NYCTG",
-      "date": "2027-05-26",
-      "url": "https://www.spotgroningen.nl/programma/joris-teepe-presents-nyctg-39/",
-      "status": "event uit link",
-      "rawText": "Joris Teepe presents: NYCTG Voor een kleine prijs genieten van topjazzmuzikanten wo 26 mei"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Coffee Break ism Prins Claus Conservatorium",
-      "date": "2027-05-27",
-      "url": "https://www.spotgroningen.nl/programma/coffee-break-ism-prins-claus-conservatorium-21/",
-      "status": "event uit link",
-      "rawText": "Coffee Break ism Prins Claus Conservatorium Trakteer jezelf op koffie en muziek van aanstormend talent op de donderdagochtend do 27 mei"
-    },
     {
       "source": "Website",
       "site": "https://www.spotgroningen.nl/programma/",
@@ -11417,16 +11308,133 @@
       "url": "https://www.concertgebouw.nl/concerten-en-tickets",
       "status": "klaar",
       "rawText": "site 12/20: 12 unieke events in 3.48 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "title": "Start",
+      "date": "",
+      "url": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "status": "start",
+      "rawText": "site 13/20: max 12 events, max 4 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "status": "strategie",
+      "rawText": "bioscoopfilms en speeldata (BiosAgenda Groningen)"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "title": "403-tekstproxy gebruikt",
+      "date": "",
+      "url": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "status": "fallback",
+      "rawText": "Bron gaf HTTP 403; tekstproxy leverde 64320 tekens: Title: Bioscoopagenda Groningen URL Source: http://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html Published Time: Mon, 26 Oct 2026 09:46:11 GMT Markdown Content: Bios"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "title": "Pagina gelezen",
+      "date": "",
+      "url": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "status": "ok",
+      "rawText": "79368 tekens HTML"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "title": "BiosAgenda speeldata",
+      "date": "",
+      "url": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "status": "gespecialiseerde parser",
+      "rawText": "0 filmvermeldingen met speeldata gevonden"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "title": "Pagina geanalyseerd",
+      "date": "",
+      "url": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "status": "ok",
+      "rawText": "0 events/aanbiedingen op deze pagina"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.biosagenda.nl/films-bioscoop-bioscopen_assen_15.html",
+      "title": "403-tekstproxy mislukt",
+      "date": "",
+      "url": "https://www.biosagenda.nl/films-bioscoop-bioscopen_assen_15.html",
+      "status": "fout",
+      "rawText": "HTTPSConnectionPool(host='r.jina.ai', port=443): Read timed out. (read timeout=1.25)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "title": "Detailpagina mislukt",
+      "date": "",
+      "url": "https://www.biosagenda.nl/films-bioscoop-bioscopen_assen_15.html",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.biosagenda.nl/films-bioscoop-bioscopen_hoogezand_73.html",
+      "title": "403-tekstproxy mislukt",
+      "date": "",
+      "url": "https://www.biosagenda.nl/films-bioscoop-bioscopen_hoogezand_73.html",
+      "status": "fout",
+      "rawText": "HTTPSConnectionPool(host='r.jina.ai', port=443): Read timed out. (read timeout=1.25)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "title": "Detailpagina mislukt",
+      "date": "",
+      "url": "https://www.biosagenda.nl/films-bioscoop-bioscopen_hoogezand_73.html",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.biosagenda.nl/films-bioscoop-bioscopen_leek_210.html",
+      "title": "403-tekstproxy mislukt",
+      "date": "",
+      "url": "https://www.biosagenda.nl/films-bioscoop-bioscopen_leek_210.html",
+      "status": "fout",
+      "rawText": "HTTPSConnectionPool(host='r.jina.ai', port=443): Read timed out. (read timeout=0.10209393400000977)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "title": "Detailpagina mislukt",
+      "date": "",
+      "url": "https://www.biosagenda.nl/films-bioscoop-bioscopen_leek_210.html",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "status": "klaar",
+      "rawText": "site 13/20: 0 unieke events in 4.01 sec"
     }
   ],
   "status": "running",
   "siteStartedAt": "2026-10-26T10:19:45+00:00",
-  "siteElapsedSeconds": 0,
-  "sitePageCount": 0,
+  "siteElapsedSeconds": 5,
+  "sitePageCount": 1,
   "lastSiteEventCount": 0,
-  "stage": "Websitepagina ophalen",
-  "lastUpdatedAt": "2026-10-26T10:19:45+00:00",
-  "lastSiteNewEventCount": 12,
-  "lastCompletedSite": "https://www.concertgebouw.nl/concerten-en-tickets",
-  "lastCompletedAt": "2026-10-26T10:19:44+00:00"
+  "stage": "Website klaar; volgende website voorbereiden",
+  "lastUpdatedAt": "2026-10-26T10:19:48+00:00",
+  "lastSiteNewEventCount": 0,
+  "lastCompletedSite": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+  "lastCompletedAt": "2026-10-26T10:19:50+00:00"
 }
