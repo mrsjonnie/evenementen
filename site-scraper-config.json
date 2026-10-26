@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-26T22:33:48.920Z",
+  "updatedAt": "2026-10-26T22:38:17.191Z",
   "sites": {
     "https://groningen.uitloper.nu/": {
       "methodology": "",
@@ -294,7 +294,23 @@
         "linkedin"
       ],
       "excludedUrls": [],
-      "adjustments": [],
+      "adjustments": [
+        {
+          "field": "location",
+          "find": "Groningen",
+          "replace": "Locatie Nieuwe Markt 1 9712 KJ Groningen"
+        },
+        {
+          "field": "type",
+          "find": "Concert",
+          "replace": "Film"
+        },
+        {
+          "field": "cost",
+          "find": "gratis",
+          "replace": "€ 13,00"
+        }
+      ],
       "eventUrlPatterns": [],
       "excludedUrlPatterns": []
     },
