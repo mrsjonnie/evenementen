@@ -1014,6 +1014,7 @@ def apply_event_corrections(event):
             corrected["type"] = clean_text(corrections["type"])
         if corrections.get("cost"):
             corrected["cost"] = clean_text(corrections["cost"])
+        # Bewaar ook de gecorrigeerde bron-URL bij volgende scans.
         if corrections.get("website"):
             corrected["website"] = normalized_url(corrections["website"])
         corrected["editedByUser"] = True
