@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-26T22:21:10.297Z",
+  "updatedAt": "2026-10-26T22:21:11.932Z",
   "sites": {
     "https://groningen.uitloper.nu/": {
       "methodology": "",
@@ -212,7 +212,9 @@
           "replace": "Concert"
         }
       ],
-      "eventUrlPatterns": [],
+      "eventUrlPatterns": [
+        "^/[^/?#]+/?$"
+      ],
       "excludedUrlPatterns": []
     },
     "https://www.martiniplaza.nl/nl/agenda": {
