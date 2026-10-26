@@ -930,10 +930,55 @@ def event_score(event):
     return score
 
 
+def apply_event_corrections(event):
+    """Reapply user-approved field corrections to the same event/site on future scraper runs."""
+    if not isinstance(event, dict):
+        return event
+    website = normalized_url(event.get("website", "")).lower().rstrip("/")
+    host = canonical_host(website)
+    title = clean_text(event.get("title", "")).lower()
+    day = clean_text(event.get("date", ""))
+    for item in EVENT_FEEDBACK:
+        if item.get("vote") != "edit":
+            continue
+        corrections = item.get("corrections") or {}
+        correction_url = normalized_url(item.get("url") or item.get("website") or "").lower().rstrip("/")
+        correction_host = canonical_host(item.get("website") or item.get("url") or "")
+        original_title = clean_text(item.get("originalTitle") or item.get("title") or "").lower()
+        original_date = clean_text(item.get("originalDate") or item.get("date") or "")
+        exact_url = bool(correction_url and website and correction_url == website)
+        same_original = bool(
+            host and host == correction_host
+            and original_title and title == original_title
+            and (not original_date or day == original_date)
+        )
+        if not (exact_url or same_original):
+            continue
+        corrected = dict(event)
+        if corrections.get("title"):
+            corrected["title"] = clean_title(corrections["title"])
+        if corrections.get("date"):
+            corrected_date = parse_date_text(corrections["date"])
+            corrected["date"] = corrected_date or clean_text(corrections["date"])
+        if corrections.get("location"):
+            corrected["location"] = clean_text(corrections["location"])
+        if corrections.get("type"):
+            corrected["type"] = clean_text(corrections["type"])
+        if corrections.get("cost"):
+            corrected["cost"] = clean_text(corrections["cost"])
+        corrected["editedByUser"] = True
+        corrected["editedAt"] = item.get("updatedAt", "")
+        return corrected
+    return event
+
+
 def dedupe_events(events):
     by_key = {}
     for event in events:
-        if not event or event_is_rejected(event):
+        if not event:
+            continue
+        event = apply_event_corrections(event)
+        if event_is_rejected(event):
             continue
         key = event_key(event)
         current = by_key.get(key)
