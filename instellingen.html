@@ -11,7 +11,7 @@ main{max-width:1200px;margin:auto;padding:24px 18px 50px}.top{display:flex;gap:1
 </style>
 </head>
 <body><main>
-<div class="top"><a class="back" href="./evenementen.html">← Terug naar evenementen</a><span id="updated" class="small">Logica-regels laden…</span></div>
+<div class="top"><a class="back" href="./evenementen.html">← Terug naar evenementen</a><span id="updated" class="small">Scraperlogica uit de code</span></div>
 <h1>Instellingen scraper</h1>
 <p>Bekijk de opgeslagen feedback en correcties die de scraper bij volgende zoekacties gebruikt. Verwijder een regel alleen als deze ongewenst is; verwijderde feedback wordt dan niet langer als leerregel toegepast.</p>
 <div class="summary"><div class="stat"><strong id="total">—</strong><br><span class="small">Totaal regels</span></div><div class="stat"><strong id="excluded">—</strong><br><span class="small">Negatieve / uitgesloten feedback</span></div><div class="stat"><strong id="corrected">—</strong><br><span class="small">Correcties</span></div></div>
@@ -22,9 +22,27 @@ main{max-width:1200px;margin:auto;padding:24px 18px 50px}.top{display:flex;gap:1
 </label>
 <input id="search" type="search" placeholder="Zoek op titel, veld of URL…" aria-label="Regels filteren">
 <select id="kind" aria-label="Filter op regeltype"><option value="all">Alle regeltypen</option><option value="bad">Slechte link / uitsluiting</option><option value="deleted">Verwijderd</option><option value="duplicate">Duplicaat</option><option value="edit">Correctie</option><option value="good">Goedgekeurd</option></select><button class="btn" id="reload">Opnieuw laden</button></div>
-<div class="status" id="logicInfo">Universele scraperlogica geldt voor alle websites. Website-specifieke uitzonderingen en correcties worden hieronder getoond zodra de opgeslagen feedbackregels beschikbaar zijn.</div>
-<section class="section"><h2>Per-website logica en uitgesloten pagina’s</h2><div class="list" id="rules"></div></section>
-<p class="small">Deze pagina toont opgeslagen feedbackregels uit event-feedback.json. Technische parserregels die rechtstreeks in de scraper-code staan, zijn niet automatisch als afzonderlijke bewerkbare regels beschikbaar.</p>
+<div class="status" id="logicInfo">De algemene regels zijn hieronder beschreven. Het laden van opgeslagen feedback is een aparte functie; als de Worker niet bereikbaar is, blijft deze uitleg beschikbaar.</div>
+<section class="section">
+<h2>Zo werkt de scraper in gewone taal</h2>
+<p>Dit is de logica die daadwerkelijk in de huidige scraper-code staat. Deze uitleg blijft zichtbaar, ook als de Worker tijdelijk geen feedbackbestand kan laden.</p>
+<div class="list">
+<article class="rule"><div><span class="pill good">Stap 1 · Startpagina’s</span><h3>Waar zoekt hij?</h3><p>Per geselecteerde website opent de scraper de opgegeven URL en probeert daarnaast veelgebruikte agenda-adressen op hetzelfde domein, zoals <code>/agenda</code>, <code>/evenementen</code>, <code>/programma</code>, <code>/activiteiten</code> en <code>/events</code>. Niet iedere website gebruikt al deze paden; sommige kunnen dus niets opleveren.</p></div></article>
+<article class="rule"><div><span class="pill good">Stap 2 · Evenementen herkennen</span><h3>Welke informatie wordt gelezen?</h3><p>Eerst zoekt hij gestructureerde evenementgegevens (JSON-LD). Daarnaast probeert hij evenementachtige tekstblokken en links naar detailpagina’s te herkennen. Per website wordt maximaal een beperkte set start- en detailpagina’s onderzocht.</p></div></article>
+<article class="rule"><div><span class="pill good">Stap 3 · Pagina’s uitsluiten</span><h3>Wat wordt overgeslagen?</h3><p>Links met woorden als <code>contact</code>, <code>privacy</code>, <code>cookie</code>, <code>voorwaarden</code>, <code>login</code>, <code>account</code>, <code>nieuwsbrief</code> en sociale-media-links worden als ongeschikt behandeld. Kandidaten waarvan de evenementlink niet op hetzelfde domein staat als de bronwebsite worden afgewezen.</p></div></article>
+<article class="rule"><div><span class="pill good">Stap 4 · Datum en titel controleren</span><h3>Wanneer telt iets als evenement?</h3><p>De scraper probeert een datum te herkennen en verwerpt lege of te korte titels en algemene titels zoals ‘agenda’, ‘programma’, ‘tickets’ en ‘contact’. AI-resultaten moeten onder andere een datum, titel en link op hetzelfde domein bevatten. De uitkomst is niet gegarandeerd foutloos; controleer twijfelgevallen.</p></div></article>
+<article class="rule"><div><span class="pill edit">Stap 5 · Aanvullende zoekbronnen</span><h3>SerpAPI en AI</h3><p>Als een zoekprovider is ingeschakeld én de bijbehorende API-instelling aanwezig is, kan de scraper ook zoekresultaten van SerpAPI, ChatGPT of Mistral verwerken. De selectie en limieten van die zoeklaag verschillen van de gewone HTML-scraper.</p></div></article>
+<article class="rule"><div><span class="pill edit">Stap 6 · Feedback en correcties</span><h3>Wat leert hij van aanpassen of verwijderen?</h3><p>Correcties en feedback worden in <code>event-feedback.json</code> opgeslagen. De huidige code slaat deze feedback op, maar dat betekent niet automatisch dat alle regels als volwaardige, domeinspecifieke parserinstellingen op volgende runs worden toegepast. Deze pagina maakt dat onderscheid expliciet.</p></div></article>
+</div>
+</section>
+<section class="section"><h2>Logica per actieve website</h2>
+<p>De lijst hieronder wordt gevuld vanuit <code>sites.json</code>. Voor iedere website toont de pagina de gedeelde regels en eventuele bekende uitzondering in de code. Een afzonderlijke parserregel wordt alleen als websitespecifiek getoond wanneer die echt in de code bestaat.</p>
+<div class="list" id="siteLogic"></div>
+</section>
+<section class="section"><h2>Opgeslagen feedback, correcties en uitgesloten evenementen</h2>
+<p>Deze regels zijn gebruikersfeedback bij concrete evenementen. Ze zijn niet hetzelfde als technische regels die bepalen welke pagina’s de scraper bezoekt.</p>
+<div class="list" id="rules"></div></section>
+<p class="small">Technische logica hierboven is afkomstig uit de scraper-code. Opgeslagen feedback wordt apart getoond en kan alleen worden beheerd als de Worker bereikbaar is.</p>
 </main>
 <script>
 const WORKER_URL="https://evenementen-refresh.mrsjonnie.workers.dev";
@@ -45,11 +63,24 @@ async function loadSites(){
   activeSites=Array.isArray(data)?[...new Set(data.filter(x=>typeof x==="string"&&x.startsWith("http")))]:[];
   const select=$("siteFilter");
   select.innerHTML='<option value="all">Alle actieve websites ('+activeSites.length+')</option>'+activeSites.map(site=>'<option value="'+esc(site)+'">'+esc(site.replace("https://","").replace("http://",""))+'</option>').join("");
+  renderSiteLogic();
  }catch(error){$("logicInfo").textContent="De actieve websites konden niet uit sites.json worden geladen: "+error.message+"; je kunt nog steeds alle opgeslagen feedback bekijken."}
 }
 const esc=value=>String(value??"").replace(/[&<>"']/g,ch=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[ch]));
 const kindName=value=>({bad:"Slechte link / uitsluiten",deleted:"Verwijderd",duplicate:"Duplicaat",edit:"Correctie",good:"Goedgekeurd"}[value]||"Feedback");
 function ruleFields(item){const c=item.corrections||{};return Object.entries(c).filter(([,v])=>String(v||"").trim()).map(([k,v])=>k+": "+v).join(" · ")}
+function renderSiteLogic(){
+ const selected=$("siteFilter")?.value||"all";
+ const sites=selected==="all"?activeSites:activeSites.filter(site=>site===selected);
+ $("siteLogic").innerHTML=sites.length?sites.map(site=>{
+  let special="Geen afzonderlijke HTML-parserregel gevonden; de algemene HTML/JSON-LD/linkherkenning wordt gebruikt.";
+  if(/spotgroningen\\.nl/i.test(site)) special="Bekende uitzondering: de SerpAPI-zoeklaag voegt extra zoektermen voor SPOT Groningen toe, inclusief de datum wanneer die is opgegeven.";
+  if(/paradiso\\.nl/i.test(site)) special="Bekende uitzondering: bij JSON-LD-evenementen van Paradiso wordt de locatie standaard als Amsterdam weergegeven.";
+  if(/socialdeal\\.nl|groupon\\.nl|ibood\\.com/i.test(site)) special="Bekende uitzondering: de AI-normalisatie herkent deze domeinen als aanbiedingssites. De datum- en titelcontrole blijft van toepassing.";
+  const host=hostOf(site);
+  return '<article class="rule"><div><span class="pill">'+esc(host||site)+'</span><h3>'+esc(site)+'</h3><p><strong>Pagina’s die worden geprobeerd:</strong> de opgegeven URL plus algemene agenda-paden op hetzelfde domein (onder meer agenda, programma, evenementen, activiteiten en events).</p><p><strong>Algemene uitsluitingen:</strong> contact-, privacy-, cookie-, voorwaarden-, login-, account-, nieuwsbrief- en sociale-mediapagina’s; ook links buiten het brondomein worden afgewezen.</p><p><strong>Herkenning:</strong> JSON-LD, evenementachtige tekstblokken en gevonden detailpagina’s. De algemene limiet van de HTML-scraper is maximaal 40 gevonden kandidaten per site vóór deduplicatie.</p><p><strong>Bekende websitespecifieke logica:</strong> '+esc(special)+'</p></div></article>';
+ }).join(""):'<div class="empty">Geen actieve websites gevonden in sites.json.</div>';
+}
 function render(){
  const q=$("search").value.trim().toLowerCase(),kind=$("kind").value,selectedSite=$("siteFilter").value;
  const selectedHost=selectedSite==="all"?"":hostOf(selectedSite);
@@ -66,7 +97,7 @@ function render(){
 async function load(){
  $("status").hidden=false;$("status").textContent="Opgeslagen regels laden…";
  try{const r=await fetch(WORKER_URL+"/event-feedback",{cache:"no-store"});const data=await readResponseJson(r,"Feedback laden mislukt");if(!r.ok||!data.ok)throw new Error(data.details||data.error||"Onbekende fout");allRules=Array.isArray(data.feedback)?data.feedback:[];$("updated").textContent=data.updatedAt?"Bestand bijgewerkt: "+new Date(data.updatedAt).toLocaleString("nl-NL"):"Feedbackbestand geladen";$("status").textContent=allRules.length?allRules.length+" opgeslagen regels geladen.":"Er zijn nog geen opgeslagen feedbackregels.";render()}
- catch(e){$("status").textContent="Kon regels niet laden: "+e.message+" Controleer of de Worker is bijgewerkt en bereikbaar is.";allRules=[];render()}
+ catch(e){$("status").textContent="Opgeslagen feedback kon niet worden geladen: "+e.message+" De scraperlogica hierboven blijft zichtbaar, maar feedbackregels kunnen pas worden beheerd als de Worker werkt.";allRules=[];render()}
 }
 $("rules").addEventListener("click",async e=>{
  const btn=e.target.closest("button[data-key]");if(!btn)return;
@@ -77,5 +108,5 @@ $("rules").addEventListener("click",async e=>{
  try{const r=await fetch(WORKER_URL+"/event-feedback-delete",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({key})});const data=await readResponseJson(r,"Regel verwijderen mislukt");if(!r.ok||!data.ok)throw new Error(data.details||data.error||"Verwijderen mislukt");allRules=allRules.filter(x=>String(x.key||"")!==key);$("status").textContent="Regel verwijderd. De volgende scraper-run haalt deze feedbackregel niet meer op.";render()}
  catch(err){alert("Regel verwijderen mislukt: "+err.message);btn.disabled=false;btn.textContent="Regel verwijderen"}
 });
-$("search").addEventListener("input",render);$("kind").addEventListener("change",render);$("siteFilter").addEventListener("change",render);$("reload").addEventListener("click",load);loadSites();load();
+$("search").addEventListener("input",render);$("kind").addEventListener("change",render);$("siteFilter").addEventListener("change",()=>{render();renderSiteLogic()});$("reload").addEventListener("click",load);loadSites();load();
 </script></body></html>
