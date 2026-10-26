@@ -1155,7 +1155,7 @@ async function learnEventUrlPattern(env, siteUrl, eventUrl, rejected = false) {
   const path = parsed.pathname || "/";
   // A rejected item is excluded by its exact path. An approved/corrected item
   // teaches the general detail-page shape, replacing only its final slug.
-  const escapeRegex = value => value.split("").map(ch => ".^$*+?()[]{}|\\\\".includes(ch) ? "\\\\" + ch : ch).join("");
+  const escapeRegex = value => value.split("").map(ch => ".^$*+?()[]{}|".includes(ch) ? "\\" + ch : ch).join("");
   const segments = path.split("/").filter(Boolean);
   const pattern = rejected
     ? "^" + escapeRegex(path).replace(/\/$/, "") + "/?$"
