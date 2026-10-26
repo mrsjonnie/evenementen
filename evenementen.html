@@ -1515,7 +1515,7 @@
     </section>
   </div>
   <script>
-    const APP_VERSION = "2026.10.26.75";
+    const APP_VERSION = "2026.10.26.76";
     const STATUS_HISTORY_KEY = "evenementenStatusHistoryV1";
     const DISMISSED_SCRAPE_RUN_KEY = "evenementenDismissedScrapeRunV1";
     const DEFAULT_MAX_EVENTS_PER_SITE = 20;
@@ -1527,6 +1527,8 @@
     const SPOT_ONLY_SITE = "https://www.spotgroningen.nl/programma/";
     const WORKER_URL = "https://evenementen-refresh.mrsjonnie.workers.dev";
     const PER_PAGE_KEY = "evenementenPerPage";
+    const PERIOD_PREFERENCE_KEY = "evenementenLastPeriodV1";
+    const PERIOD_MODES = new Set(["today", "tomorrow", "specificDay", "always", "thisWeekend", "nextWeekend", "alwaysFromToday", "threeDays", "week"]);
     let eventsPerPage = 96;
     const typeImages = {
       film: "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=900&q=80",
@@ -2387,6 +2389,26 @@
       const sunday = new Date(saturday);
       sunday.setDate(saturday.getDate() + 1);
       return { from: formatDate(saturday), to: formatDate(sunday) };
+    }
+
+    function savePeriodPreference() {
+      try {
+        const mode = $("periodMode")?.value;
+        const date = $("dateSingle")?.value || formatDate(new Date());
+        if (PERIOD_MODES.has(mode)) localStorage.setItem(PERIOD_PREFERENCE_KEY, JSON.stringify({ mode, date }));
+      } catch {}
+    }
+
+    function restorePeriodPreference() {
+      try {
+        const raw = localStorage.getItem(PERIOD_PREFERENCE_KEY);
+        if (!raw) return false;
+        const saved = JSON.parse(raw);
+        if (!saved || !PERIOD_MODES.has(saved.mode)) return false;
+        $("periodMode").value = saved.mode;
+        if (typeof saved.date === "string" && /^\d{4}-\d{2}-\d{2}$/.test(saved.date)) $("dateSingle").value = saved.date;
+        return true;
+      } catch { return false; }
     }
 
     function updateDateRange() {
@@ -3278,6 +3300,7 @@
 
     function applyFilters() {
       updateDateRange();
+      savePeriodPreference();
       fillTypes();
 
       const query = $("search").value.trim().toLowerCase();
@@ -4726,8 +4749,8 @@
     setSidebarOpen(true);
     $("dateSingle").value = today;
     $("periodMode").value = "threeDays";
-    dateFrom = today;
-    dateTo = addDays(today, 2);
+    restorePeriodPreference();
+    updateDateRange();
     const savedPerPage = Number(localStorage.getItem(PER_PAGE_KEY));
     eventsPerPage = savedPerPage && savedPerPage !== 96 && [12, 18, 24, 48, 500].includes(savedPerPage) ? savedPerPage : 500;
     $("perPageSelect").value = String(eventsPerPage);
