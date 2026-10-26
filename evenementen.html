@@ -468,8 +468,18 @@
     .btnPrimary { background: var(--primary); color: #fff; }
     .btnPrimary:hover { background: var(--primary-dark); }
     .btnSecondary { background: var(--surface-soft); color: var(--primary-dark); }
-    .btnDanger { background: #311b19; color: var(--danger); border: 1px solid #6b3a34; }
+    .btnDanger, .duplicateEventBtn { background: #311b19; color: var(--danger); border: 1px solid #6b3a34; }
+    .btnDanger:hover, .duplicateEventBtn:hover { background: #48201e; border-color: #a34d43; }
     .btn[disabled] { opacity: .58; cursor: not-allowed; }
+    .confirmOverlay { position: fixed; inset: 0; z-index: 10000; display: grid; place-items: center; padding: 18px; background: rgba(4, 9, 15, .78); backdrop-filter: blur(4px); }
+    .confirmOverlay[hidden] { display: none !important; }
+    .confirmDialog { width: min(100%, 460px); padding: 22px; border: 1px solid #45576a; border-radius: 16px; background: #172330; color: #f3f6fa; box-shadow: 0 24px 80px rgba(0,0,0,.48); }
+    .confirmDialog h2 { margin: 0 0 10px; font-size: 1.2rem; }
+    .confirmDialog p { margin: 0; color: #d0d9e4; line-height: 1.55; white-space: pre-line; overflow-wrap: anywhere; }
+    .confirmDialogActions { display: flex; justify-content: flex-end; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
+    .confirmDialogActions button { min-height: 42px; padding: 9px 14px; border-radius: 9px; font-weight: 800; cursor: pointer; }
+    .confirmCancel { border: 1px solid #526174; background: #263545; color: #f3f6fa; }
+    .confirmProceed { border: 1px solid #a34d43; background: #5a211e; color: #fff; }
 
     .secondRow {
       display: flex;
@@ -1380,8 +1390,8 @@
             <option value="always">Altijd</option>
             <option value="thisWeekend">Dit weekend</option>
             <option value="nextWeekend">Volgend weekend</option>
-            <option value="alwaysFromToday">Altijd vanaf vandaag</option>
-            <option value="threeDays" selected>Vandaag +2 dagen (3 dagen)</option>
+            <option value="alwaysFromToday">Startdatum en toekomstig</option>
+            <option value="threeDays" selected>Startdatum +2 dagen</option>
             <option value="week">Startdatum +7 dagen</option>
           </select>
         </div>
@@ -1494,8 +1504,18 @@
     </div>
   </div>
 
+  <div id="confirmOverlay" class="confirmOverlay" hidden>
+    <section class="confirmDialog" role="alertdialog" aria-modal="true" aria-labelledby="confirmTitle" aria-describedby="confirmMessage">
+      <h2 id="confirmTitle">Weet je het zeker?</h2>
+      <p id="confirmMessage"></p>
+      <div class="confirmDialogActions">
+        <button id="confirmCancel" class="confirmCancel" type="button">Annuleren</button>
+        <button id="confirmProceed" class="confirmProceed" type="button">Ja, doorgaan</button>
+      </div>
+    </section>
+  </div>
   <script>
-    const APP_VERSION = "2026.10.26.73";
+    const APP_VERSION = "2026.10.26.75";
     const STATUS_HISTORY_KEY = "evenementenStatusHistoryV1";
     const DISMISSED_SCRAPE_RUN_KEY = "evenementenDismissedScrapeRunV1";
     const DEFAULT_MAX_EVENTS_PER_SITE = 20;
@@ -4004,7 +4024,7 @@
       $("search").value = "";
       $("region").value = "Groningen";
       $("radius").value = "100";
-      $("periodMode").value = "always";
+      $("periodMode").value = "threeDays";
       $("typeFilter").value = "all";
       $("newOnlyFilter").checked = false;
       $("provPerplexity").checked = false;
@@ -4132,9 +4152,43 @@
       }
     }
 
+    let confirmActionResolver = null;
+    function confirmEventAction({ title, message, confirmLabel = "Ja, doorgaan" }) {
+      const overlay = $("confirmOverlay");
+      $("confirmTitle").textContent = title;
+      $("confirmMessage").textContent = message;
+      $("confirmProceed").textContent = confirmLabel;
+      overlay.hidden = false;
+      $("confirmCancel").focus();
+      return new Promise((resolve) => { confirmActionResolver = resolve; });
+    }
+    function closeEventConfirm(accepted) {
+      const overlay = $("confirmOverlay");
+      overlay.hidden = true;
+      if (confirmActionResolver) {
+        const resolve = confirmActionResolver;
+        confirmActionResolver = null;
+        resolve(accepted);
+      }
+    }
+    $("confirmCancel").addEventListener("click", () => closeEventConfirm(false));
+    $("confirmProceed").addEventListener("click", () => closeEventConfirm(true));
+    $("confirmOverlay").addEventListener("click", (event) => {
+      if (event.target === $("confirmOverlay")) closeEventConfirm(false);
+    });
+    document.addEventListener("keydown", (event) => {
+      if (!$("confirmOverlay").hidden && event.key === "Escape") closeEventConfirm(false);
+    });
+
     async function markDuplicateEventByKey(key, button) {
       const event = events.find((item) => eventDedupeKey(item) === key);
       if (!event) return;
+      const accepted = await confirmEventAction({
+        title: "Evenement als dubbel markeren?",
+        message: `“${cleanText(event.title)}” wordt uit het overzicht én archief verwijderd. De scraper krijgt bovendien een melding dat dit een dubbeling is en zal het evenement bij volgende scans proberen te weren. Deze actie heeft invloed op toekomstige resultaten. Doorgaan?`,
+        confirmLabel: "Ja, als dubbel markeren"
+      });
+      if (!accepted) return;
       if (button) { button.disabled = true; button.textContent = "Verwerken…"; }
       try {
         const feedbackResponse = await fetch(`${WORKER_URL}/event-feedback`, {
@@ -4421,7 +4475,14 @@
       }
       const deleteButton = event.target.closest(".deleteEventBtn");
       if (deleteButton) {
-        deleteEventByKey(deleteButton.dataset.eventKey || "");
+        const key = deleteButton.dataset.eventKey || "";
+        const item = events.find((candidate) => eventDedupeKey(candidate) === key);
+        if (!item) return;
+        confirmEventAction({
+          title: "Evenement definitief verwijderen?",
+          message: `“${cleanText(item.title)}” wordt uit het overzicht én archief verwijderd. Anders dan bij ‘Dubbel’ wordt er geen melding aan de scraper gegeven dat het evenement een duplicaat is. Je kunt dit niet met één klik ongedaan maken. Wil je doorgaan?`,
+          confirmLabel: "Ja, verwijderen"
+        }).then((accepted) => { if (accepted) deleteEventByKey(key); });
         return;
       }
       const sourceToggle = event.target.closest("[data-source-toggle]");
@@ -4664,7 +4725,7 @@
     const today = formatDate(new Date());
     setSidebarOpen(true);
     $("dateSingle").value = today;
-    $("periodMode").value = "alwaysFromToday";
+    $("periodMode").value = "threeDays";
     dateFrom = today;
     dateTo = addDays(today, 2);
     const savedPerPage = Number(localStorage.getItem(PER_PAGE_KEY));
