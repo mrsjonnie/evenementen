@@ -1,7 +1,7 @@
 {
   "runId": "2026-10-26T12:26:54.991401+00:00-25f487be",
   "startedAt": "2026-10-26T12:26:54+00:00",
-  "completedCount": 17,
+  "completedCount": 18,
   "totalSites": 18,
   "currentSite": "https://www.pathe.nl/bioscoop/groningen",
   "currentSiteIndex": 18,
@@ -22,7 +22,8 @@
     "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
     "https://www.socialdeal.nl/",
     "https://www.groupon.nl/kortingsbonnen/gemeente-groningen",
-    "https://www.ibood.com/s-nl"
+    "https://www.ibood.com/s-nl",
+    "https://www.pathe.nl/bioscoop/groningen"
   ],
   "events": [
     {
@@ -4796,81 +4797,16 @@
       "newCount": 0,
       "durationSeconds": 10.06,
       "timedOut": true
+    },
+    {
+      "site": "https://www.pathe.nl/bioscoop/groningen",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 4.31,
+      "timedOut": false
     }
   ],
   "rawLog": [
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Afrikaanse grooves vol zomerenergie. Lees verder Meer",
-      "date": "2027-08-08",
-      "url": "https://www.noorderzon.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "8 aug Afrikaanse grooves vol zomerenergie. Lees verder Meer informatie over Biki Baya In Good Spirit Programma soort Muziek Concert op Callisto Datum range"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Kleine, intieme momenten uit het alledaagse leven.",
-      "date": "2027-08-09",
-      "url": "https://www.noorderzon.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "9 aug Kleine, intieme momenten uit het alledaagse leven. Lees verder Meer informatie over In Good Spirit tante hans Programma soort Containers \"ik wilde met het duingras praten\" Datum range 20 -"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Kom jezelf nestelen in een web van",
-      "date": "2027-08-04",
-      "url": "https://www.noorderzon.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "4 aug Kom jezelf nestelen in een web van muziek, tekst en beeld over een bus naar de kust, tuttigheid en populaire poëzie voor mensen van jouw leeftijd . Lees verder Meer informatie over tante hans Schout bij Nacht Programma soort Containers PENIS MONOLOGEN Datum range 20 -"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Een zeecontainer vol lulverhalen. Lees verder Meer",
-      "date": "2027-08-04",
-      "url": "https://www.noorderzon.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "4 aug Een zeecontainer vol lulverhalen. Lees verder Meer informatie over Schout bij Nacht Het Kanaal Programma soort Containers TKKHRR - de stem van het bos Datum range 20 -"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Een muzikale bosbeleving! Lees verder Meer informatie",
-      "date": "2027-08-04",
-      "url": "https://www.noorderzon.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "4 aug Een muzikale bosbeleving! Lees verder Meer informatie over Het Kanaal DWAAS Programma soort Containers De Troostprijs Datum range 20 -"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Verlies jezelf in de nacht en laat",
-      "date": "2027-08-04",
-      "url": "https://www.noorderzon.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "4 aug Verlies jezelf in de nacht en laat haar je dagelijkse zorgen dragen. Lees verder Meer informatie over DWAAS Nico van der Wijk, Annegeerte Aandewiel & Jorrit Boonstra Programma soort Containers Gerrit Rebridge Datum range 20 -"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Een energieke en humorvolle voorstelling over twee",
-      "date": "2027-08-04",
-      "url": "https://www.noorderzon.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "4 aug Een energieke en humorvolle voorstelling over twee actievoerders die het heft in eigen hand nemen. Lees verder Meer informatie over Nico van der Wijk, Annegeerte Aandewiel & Jorrit Boonstra Zeevonk Records Programma soort Containers Zeevonk Records Presents Datum range 20 -"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Heeft u ergens last van? Dan bent",
-      "date": "2027-08-04",
-      "url": "https://www.noorderzon.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "4 aug Heeft u ergens last van? Dan bent u mogelijk geschikt voor deze voorstelling. Lees verder Meer informatie over Ellemieke Meijers Weird Youth Programma soort Muziek Concert op Callisto Datum range"
-    },
     {
       "source": "Website",
       "site": "https://www.noorderzon.nl/programma",
@@ -15598,16 +15534,88 @@
       "url": "https://www.ibood.com/s-nl",
       "status": "klaar",
       "rawText": "site 17/18: 0 unieke events in 10.06 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.pathe.nl/bioscoop/groningen",
+      "title": "Start",
+      "date": "",
+      "url": "https://www.pathe.nl/bioscoop/groningen",
+      "status": "start",
+      "rawText": "site 18/18: max 50 events, max 10 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.pathe.nl/bioscoop/groningen",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://www.pathe.nl/bioscoop/groningen",
+      "status": "strategie",
+      "rawText": "Pathé Groningen via BiosAgenda-speeltijden"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.biosagenda.nl/films-bioscoop_path-groningen_128.html",
+      "title": "403-tekstproxy mislukt",
+      "date": "",
+      "url": "https://www.biosagenda.nl/films-bioscoop_path-groningen_128.html",
+      "status": "fout",
+      "rawText": "HTTPSConnectionPool(host='r.jina.ai', port=443): Read timed out. (read timeout=1.25)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.pathe.nl/bioscoop/groningen",
+      "title": "Pagina mislukt",
+      "date": "",
+      "url": "https://www.biosagenda.nl/films-bioscoop_path-groningen_128.html",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.pathe.nl/bioscoop/groningen",
+      "title": "Pagina mislukt",
+      "date": "",
+      "url": "https://www.pathe.nl/bioscoop/groningen",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.pathe.nl/nl/bioscopen/pathe-groningen",
+      "title": "403-tekstproxy mislukt",
+      "date": "",
+      "url": "https://www.pathe.nl/nl/bioscopen/pathe-groningen",
+      "status": "fout",
+      "rawText": "HTTPSConnectionPool(host='r.jina.ai', port=443): Read timed out. (read timeout=1.25)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.pathe.nl/bioscoop/groningen",
+      "title": "Pagina mislukt",
+      "date": "",
+      "url": "https://www.pathe.nl/nl/bioscopen/pathe-groningen",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.pathe.nl/bioscoop/groningen",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://www.pathe.nl/bioscoop/groningen",
+      "status": "klaar",
+      "rawText": "site 18/18: 0 unieke events in 4.31 sec"
     }
   ],
-  "status": "running",
+  "status": "finishing",
   "siteStartedAt": "2026-10-26T12:29:49+00:00",
-  "siteElapsedSeconds": 0,
+  "siteElapsedSeconds": 6,
   "sitePageCount": 0,
   "lastSiteEventCount": 0,
-  "stage": "Websitepagina ophalen",
-  "lastUpdatedAt": "2026-10-26T12:29:49+00:00",
+  "stage": "Website klaar; volgende website voorbereiden",
+  "lastUpdatedAt": "2026-10-26T12:29:53+00:00",
   "lastSiteNewEventCount": 0,
-  "lastCompletedSite": "https://www.ibood.com/s-nl",
-  "lastCompletedAt": "2026-10-26T12:29:47+00:00"
+  "lastCompletedSite": "https://www.pathe.nl/bioscoop/groningen",
+  "lastCompletedAt": "2026-10-26T12:29:55+00:00"
 }
