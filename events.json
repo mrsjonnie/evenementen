@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-26T12:00:39+00:00",
+  "updatedAt": "2026-10-26T12:00:53+00:00",
   "events": [
     {
       "date": "2026-10-26",
@@ -11550,6 +11550,51 @@
       "isNew": false
     },
     {
+      "date": "2027-09-09",
+      "time": "",
+      "title": "2-gangenlunch en/of wandelarrangement bij Zuskes",
+      "type": "Aanbiedingen",
+      "location": "Marum",
+      "locationLink": "",
+      "website": "https://www.socialdeal.nl/deals/groningen/zuskes/geniet-van-een-heerlijke-2-gangenlunch-met-diverse-broodjes-naar-keuze-bij-zuskes-eventueel-inclusief-wandelarrangement-met-zoete-lekkernij-en-een-warme-drank-naar-keuze-aug-2026-drenthe-groningen/",
+      "source": "socialdeal.nl",
+      "discoverySource": "Website",
+      "description": "37% hexagon food Zuskes 9.9 star 9.9 • 167 Marum Regulier €15 ,70 €9 ,95",
+      "cost": "",
+      "image": "https://media.socialdeal.nl/img/image-placeholder.jpg",
+      "isNew": true
+    },
+    {
+      "date": "2027-09-09",
+      "time": "",
+      "title": "3-gangen keuzediner bij Feithhuis in hartje Groningen",
+      "type": "Aanbiedingen",
+      "location": "Groningen",
+      "locationLink": "",
+      "website": "https://www.socialdeal.nl/deals/groningen/feithhuis/geniet-van-een-heerlijk-3-gangen-keuzediner-bij-feithhuis-in-hartje-groningen-start-bijvoorbeeld-met-verrukkelijke-rundertartaar-smeuige-saffraan-risotto-en-sluit-af-met-een-verfrissende-citroencake-jul-2026-groningen/",
+      "source": "socialdeal.nl",
+      "discoverySource": "Website",
+      "description": "38% hexagon food Feithhuis 9.9 star Perfect • 112 beoordelingen Groningen 1 min. directions_walk Regulier €44 ,50 €27 ,50",
+      "cost": "",
+      "image": "https://images.socialdeal.nl/img/image-placeholder.jpg",
+      "isNew": true
+    },
+    {
+      "date": "2027-09-09",
+      "time": "",
+      "title": "Permanente make-up naar keuze",
+      "type": "Aanbiedingen",
+      "location": "Groningen",
+      "locationLink": "",
+      "website": "https://www.socialdeal.nl/deals/groningen/buy-yourself-flowers/geniet-van-een-prachtige-uitstraling-met-permanente-make-up-naar-keuze-bij-buy-yourself-flowers-keuze-uit-eyeliner-powerombre-brows-en-lip-blush-okt-2026-groningen/",
+      "source": "socialdeal.nl",
+      "discoverySource": "Website",
+      "description": "65% hexagon wellness Buy Yourself Flowers 9.9 star 9.9 • 4 Groningen Regulier €255 €89",
+      "cost": "",
+      "image": "https://media.socialdeal.nl/img/image-placeholder.jpg",
+      "isNew": true
+    },
+    {
       "date": "2027-09-25",
       "time": "21:45",
       "title": "64 films in Breda deze week",
@@ -12295,99 +12340,16 @@
       "newCount": 40,
       "durationSeconds": 11.14,
       "timedOut": false
+    },
+    {
+      "site": "https://www.socialdeal.nl/",
+      "count": 3,
+      "newCount": 3,
+      "durationSeconds": 10.15,
+      "timedOut": true
     }
   ],
   "rawLog": [
-    {
-      "source": "Website",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "Playing House. Een kunstbiënnale met kinderen en jongeren",
-      "date": "2026-09-19",
-      "url": "https://groningermuseum.nl/nl-NL/playing-house",
-      "status": "event uit link",
-      "rawText": "Playing House. Een kunstbiënnale met kinderen en jongeren 19 september 2026 – 10 januari 2027"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "The Convent of Pleasure",
-      "date": "2026-09-19",
-      "url": "https://groningermuseum.nl/nl-NL/ani-schulze-the-convent-of-pleasure",
-      "status": "event uit link",
-      "rawText": "The Convent of Pleasure Nieuw Licht 1: Ani Schulze 19 september 2026 – 9 mei 2027"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "Keramikos Carrier Bag",
-      "date": "2026-09-19",
-      "url": "https://groningermuseum.nl/nl-NL/keramikos-carrier-bag",
-      "status": "event uit link",
-      "rawText": "Keramikos Carrier Bag Matthew Lutz-Kinoy & Natsuko Uchino 19 september 2026 – 10 januari 2027"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "Nieuw licht – De Ploeg",
-      "date": "2025-10-25",
-      "url": "https://groningermuseum.nl/nl-NL/de-ploeg-nieuw-licht",
-      "status": "event uit link",
-      "rawText": "Nieuw licht – De Ploeg 25 oktober 2025 – 7 januari 2028"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "Playing House. Een kunstbiënnale met kinderen en jongeren",
-      "date": "2027-05-09",
-      "url": "https://groningermuseum.nl/",
-      "status": "event uit datumblok",
-      "rawText": "9 mei 2027 Playing House. Een kunstbiënnale met kinderen en jongeren"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "Keramikos Carrier Bag Matthew Lutz-Kinoy & Natsuko Uchino",
-      "date": "2027-05-09",
-      "url": "https://groningermuseum.nl/",
-      "status": "event uit datumblok",
-      "rawText": "9 mei 2027 Keramikos Carrier Bag Matthew Lutz-Kinoy & Natsuko Uchino"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "Ontdek het programma M u s e",
-      "date": "2028-01-07",
-      "url": "https://groningermuseum.nl/",
-      "status": "event uit datumblok",
-      "rawText": "7 januari 2028 Ontdek het programma M u s e u m g e b o u w Ontdek het museum I n o n z e c o l l e c t i e Jacqueline Kennedy Warhol, Andy Verzamelen Songs from the Compost: Mutating Bodies, Imploding Stars Budvytytė, Eglė Verzamelen Overwambuis (Groningen) onbekend Verzamelen Hellis Lamsweerde, Inez van Verzamelen Jonge vrouw met stroobundel Schwartze, Therese Verzamelen Playing kung fu in the park (uit de serie: T"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "Kunst en design",
-      "date": "2026-09-19",
-      "url": "https://groningermuseum.nl/",
-      "status": "event uit detailpagina",
-      "rawText": "Kunst en design | Groninger Museum Naar hoofdinhoud Naar navigatie Home Bezoek Programma Collectie Architectuur Over Menu NL Tickets Moge kunst de toekomst regisseren Moge kunst de toekomst regisseren Moge kunst de toekomst regisseren Moge kunst de toekomst regisseren Moge kunst de toekomst regisseren Moge kunst de toekomst regisseren Moge kunst de toekomst regisseren Moge kunst de toekomst regisseren Moge kunst de t"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "The Architect & the Housewife: Cleaning the House, Building the Future",
-      "date": "2026-09-19",
-      "url": "https://groningermuseum.nl/",
-      "status": "event uit tekstregel",
-      "rawText": "The Architect & the Housewife: Cleaning the House, Building the Future | 19 september 2026 – 9 mei 2027 | Playing House. Een kunstbiënnale met kinderen en jongeren | 19 september 2026 – 10 januari 2027 | The Convent of Pleasure | Nieuw Licht 1: Ani Schulze"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "Playing House. Een kunstbiënnale met kinderen en jongeren",
-      "date": "2026-09-19",
-      "url": "https://groningermuseum.nl/",
-      "status": "event uit tekstregel",
-      "rawText": "Playing House. Een kunstbiënnale met kinderen en jongeren | 19 september 2026 – 10 januari 2027 | The Convent of Pleasure | Nieuw Licht 1: Ani Schulze | 19 september 2026 – 9 mei 2027 | Keramikos Carrier Bag"
-    },
     {
       "source": "Website",
       "site": "https://groningermuseum.nl/programma",
@@ -23097,6 +23059,96 @@
       "url": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
       "status": "klaar",
       "rawText": "site 12/15: 40 unieke events in 11.14 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.socialdeal.nl/",
+      "title": "Start",
+      "date": "",
+      "url": "https://www.socialdeal.nl/",
+      "status": "start",
+      "rawText": "site 13/15: max 40 events, max 10 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.socialdeal.nl/",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://www.socialdeal.nl/",
+      "status": "strategie",
+      "rawText": "Social Deal-aanbiedingen"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.socialdeal.nl/",
+      "title": "Pagina gelezen",
+      "date": "",
+      "url": "https://www.socialdeal.nl/dichtbij/groningen/",
+      "status": "ok",
+      "rawText": "317644 tekens HTML"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.socialdeal.nl/",
+      "title": "Social Deal-telling",
+      "date": "",
+      "url": "https://www.socialdeal.nl/dichtbij/groningen/",
+      "status": "ok",
+      "rawText": "25 aanbiedingen gevonden (limiet 40)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.socialdeal.nl/",
+      "title": "Pagina geanalyseerd",
+      "date": "",
+      "url": "https://www.socialdeal.nl/dichtbij/groningen/",
+      "status": "ok",
+      "rawText": "25 events/aanbiedingen op deze pagina"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.socialdeal.nl/",
+      "title": "Pagina gelezen",
+      "date": "",
+      "url": "https://www.socialdeal.nl/ontdek/groningen/",
+      "status": "ok",
+      "rawText": "4944757 tekens HTML"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.socialdeal.nl/",
+      "title": "Social Deal-telling",
+      "date": "",
+      "url": "https://www.socialdeal.nl/ontdek/groningen/",
+      "status": "ok",
+      "rawText": "40 aanbiedingen gevonden (limiet 40)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.socialdeal.nl/",
+      "title": "Pagina geanalyseerd",
+      "date": "",
+      "url": "https://www.socialdeal.nl/ontdek/groningen/",
+      "status": "ok",
+      "rawText": "40 events/aanbiedingen op deze pagina"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.socialdeal.nl/",
+      "title": "Pagina mislukt",
+      "date": "",
+      "url": "https://www.socialdeal.nl/deals/groningen/",
+      "status": "fout",
+      "rawText": "HTTPSConnectionPool(host='www.socialdeal.nl', port=443): Read timed out. (read timeout=0.05)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.socialdeal.nl/",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://www.socialdeal.nl/",
+      "status": "klaar",
+      "rawText": "site 13/15: 3 unieke events in 10.15 sec"
     }
   ]
 }
