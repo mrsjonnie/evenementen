@@ -1,7 +1,7 @@
 {
   "runId": "2026-10-26T10:18:21.355935+00:00-b5bdaddd",
   "startedAt": "2026-10-26T10:18:21+00:00",
-  "completedCount": 14,
+  "completedCount": 15,
   "totalSites": 20,
   "currentSite": "https://www.vvvameland.nl/activiteiten-en-evenementen",
   "currentSiteIndex": 15,
@@ -19,7 +19,8 @@
     "https://www.noorderzon.nl/programma",
     "https://www.concertgebouw.nl/concerten-en-tickets",
     "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
-    "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817"
+    "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+    "https://www.vvvameland.nl/activiteiten-en-evenementen"
   ],
   "events": [
     {
@@ -811,72 +812,16 @@
       "newCount": 12,
       "durationSeconds": 2.28,
       "timedOut": false
+    },
+    {
+      "site": "https://www.vvvameland.nl/activiteiten-en-evenementen",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 6.38,
+      "timedOut": true
     }
   ],
   "rawLog": [
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Marlijn Weerdenburg Geworteld Gloednieuw theaterconcert waarin Marlijn",
-      "date": "2026-12-09",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "9 dec Marlijn Weerdenburg Geworteld Gloednieuw theaterconcert waarin Marlijn op zoek gaat naar het fenomeen ‘thuis’"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Oersoep NITE & K.O.Brass \"Het spel is magistraal, de",
-      "date": "2026-12-09",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "9 dec Oersoep NITE & K.O.Brass \"Het spel is magistraal, de muziek fantastisch, het podiumbeeld scherp” – DvhN"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Holland Baroque & Les Itinérantes Noël Nomade",
-      "date": "2026-12-09",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "9 dec Holland Baroque & Les Itinérantes Noël Nomade Kerstprogramma waarin barok- en volksmuziek hand in hand gaan"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Van Dik Hout Nederpopinstituut dendert door!",
-      "date": "2026-12-01",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "1 dec Van Dik Hout Nederpopinstituut dendert door!"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Jörgen Raymann BIG YARI: Welkom thuis, waar niemand op je zit te wachten Raymann is terug!",
-      "date": "2026-12-01",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "1 dec Jörgen Raymann BIG YARI: Welkom thuis, waar niemand op je zit te wachten Raymann is terug!"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Lucinda Wessels",
-      "date": "2026-12-01",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "1 dec Lucinda Wessels | Timo Tembuyser | Nicole Beutler Projects FUTURE VOICES - Fluid Figures & Isle of Eros Nicole Beutler Projects presenteert twee makers van de toekomst"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Oersoep NITE & K.O.Brass \"Het spel is magistraal, de",
-      "date": "2026-12-01",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "1 dec Oersoep NITE & K.O.Brass \"Het spel is magistraal, de muziek fantastisch, het podiumbeeld scherp” – DvhN"
-    },
     {
       "source": "Website",
       "site": "https://www.spotgroningen.nl/programma/",
@@ -11613,16 +11558,79 @@
       "url": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
       "status": "klaar",
       "rawText": "site 14/20: 12 unieke events in 2.28 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vvvameland.nl/activiteiten-en-evenementen",
+      "title": "Start",
+      "date": "",
+      "url": "https://www.vvvameland.nl/activiteiten-en-evenementen",
+      "status": "start",
+      "rawText": "site 15/20: max 12 events, max 4 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.vvvameland.nl/activiteiten-en-evenementen",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://www.vvvameland.nl/activiteiten-en-evenementen",
+      "status": "strategie",
+      "rawText": "universeel-jsonld-links-kaarten"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vvvameland.nl/activiteiten-en-evenementen",
+      "title": "Pagina gelezen",
+      "date": "",
+      "url": "https://www.vvvameland.nl/activiteiten-en-evenementen",
+      "status": "ok",
+      "rawText": "2826869 tekens HTML"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.vvvameland.nl/activiteiten-en-evenementen",
+      "title": "Agenda-kaarten geteld",
+      "date": "",
+      "url": "https://www.vvvameland.nl/activiteiten-en-evenementen",
+      "status": "gespecialiseerde parser",
+      "rawText": "12 resultaten"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vvvameland.nl/activiteiten-en-evenementen",
+      "title": "Pagina geanalyseerd",
+      "date": "",
+      "url": "https://www.vvvameland.nl/activiteiten-en-evenementen",
+      "status": "ok",
+      "rawText": "5 events/aanbiedingen op deze pagina"
+    },
+    {
+      "source": "Filter",
+      "site": "https://www.vvvameland.nl/activiteiten-en-evenementen",
+      "title": "Datumfilter toegepast",
+      "date": "2026-10-26",
+      "url": "https://www.vvvameland.nl/activiteiten-en-evenementen",
+      "status": "ok",
+      "rawText": "5 gevonden; 0 binnen 2026-10-26 t/m 2026-10-28"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vvvameland.nl/activiteiten-en-evenementen",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://www.vvvameland.nl/activiteiten-en-evenementen",
+      "status": "klaar",
+      "rawText": "site 15/20: 0 unieke events in 6.38 sec"
     }
   ],
   "status": "running",
   "siteStartedAt": "2026-10-26T10:19:56+00:00",
-  "siteElapsedSeconds": 0,
-  "sitePageCount": 0,
+  "siteElapsedSeconds": 8,
+  "sitePageCount": 1,
   "lastSiteEventCount": 0,
-  "stage": "Websitepagina ophalen",
-  "lastUpdatedAt": "2026-10-26T10:19:56+00:00",
-  "lastSiteNewEventCount": 12,
-  "lastCompletedSite": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
-  "lastCompletedAt": "2026-10-26T10:19:55+00:00"
+  "stage": "Website klaar; volgende website voorbereiden",
+  "lastUpdatedAt": "2026-10-26T10:20:02+00:00",
+  "lastSiteNewEventCount": 0,
+  "lastCompletedSite": "https://www.vvvameland.nl/activiteiten-en-evenementen",
+  "lastCompletedAt": "2026-10-26T10:20:04+00:00"
 }
