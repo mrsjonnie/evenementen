@@ -1417,6 +1417,96 @@ def extract_venue_agenda_events(html, page_url, site_url, discovery_source):
     return dedupe_events(events)
 
 
+def extract_concertgebouw_detail_event(soup, page_url, site_url, discovery_source):
+    """Parse one official Concertgebouw concert detail page, preferring Event metadata."""
+    if canonical_host(site_url) != "concertgebouw.nl":
+        return None
+    path = urlparse(page_url).path
+    if not re.search(r"^/concerten/\\d+-[^/?#]+/?$", path, re.I):
+        return None
+
+    # Prefer the page's H1; social/document titles often append venue/brand labels.
+    heading = soup.find("h1")
+    title = clean_title(heading.get_text(" ", strip=True) if heading else "")
+    if not title_is_usable(title):
+        title = clean_title(meta_content(soup, "og:title", "twitter:title"))
+    if not title_is_usable(title):
+        title = page_title(soup)
+    if not title_is_usable(title):
+        return None
+
+    structured_date = ""
+    structured_time = ""
+    def inspect_jsonld(value):
+        nonlocal structured_date, structured_time
+        if isinstance(value, dict):
+            event_type = value.get("@type", "")
+            event_types = event_type if isinstance(event_type, list) else [event_type]
+            if any("event" in str(item).lower() for item in event_types):
+                start = clean_text(value.get("startDate") or value.get("startdate") or "")
+                if start and not structured_date:
+                    structured_date = parse_date_text(start)
+                    structured_time = first_time(start)
+            for child in value.values():
+                inspect_jsonld(child)
+        elif isinstance(value, list):
+            for child in value:
+                inspect_jsonld(child)
+
+    for script in soup.find_all("script", attrs={"type": re.compile(r"ld\\+json", re.I)}):
+        try:
+            inspect_jsonld(json.loads(script.string or script.get_text() or ""))
+        except (ValueError, TypeError):
+            continue
+
+    text = soup.get_text(" ", strip=True)
+    # Use metadata and date-bearing elements before scanning the full page text,
+    # where footer/newsletter dates can otherwise be mistaken for the concert date.
+    date_value = (
+        structured_date
+        or parse_date_text(meta_content(soup, "event:start_time", "event:start_date", "startDate"))
+    )
+    if not date_value:
+        for node in soup.select("time[datetime], [itemprop='startDate'], [data-start-date]"):
+            candidate = clean_text(node.get("datetime") or node.get("content") or node.get("data-start-date") or node.get_text(" ", strip=True))
+            date_value = parse_date_text(candidate)
+            if date_value:
+                if not structured_time:
+                    structured_time = first_time(candidate)
+                break
+    if not date_value:
+        # Prefer the first date close to the event heading, not an arbitrary footer date.
+        heading_text = clean_text(heading.parent.get_text(" ", strip=True) if heading and heading.parent else "")
+        date_value = parse_date_text(heading_text)
+    if not date_value:
+        date_value = parse_date_text(text)
+    if not date_value:
+        add_raw("Parser", site_url, title, "", page_url, "Concertgebouw detail overgeslagen",
+                "Geen betrouwbare concertdatum gevonden op detailpagina")
+        return None
+
+    description = meta_content(soup, "description", "og:description", "twitter:description")
+    image = first_image(soup, page_url)
+    event = normalize_event({
+        "date": date_value,
+        "time": structured_time or first_time(text),
+        "title": title,
+        "type": "Concert",
+        # Ignore Google Maps destination coordinates; the venue is the actual location.
+        "location": "Concertgebouw Amsterdam",
+        "website": page_url,
+        "description": description or description_from_lines(split_lines(soup)[:100], title),
+        "image": image,
+        "cost": "Zie website",
+        "discoverySource": discovery_source,
+    }, site_url)
+    if event:
+        event["location"] = "Concertgebouw Amsterdam"
+        add_raw(discovery_source, site_url, event["title"], event["date"], page_url,
+                "Concertgebouw detailpagina", f"Datum {event['date']}; tijd {event.get('time') or 'onbekend'}")
+    return event
+
+
 def parse_page_events(html, page_url, site_url, discovery_source):
     soup = BeautifulSoup(html, "html.parser")
     events = []
@@ -1432,6 +1522,10 @@ def parse_page_events(html, page_url, site_url, discovery_source):
     if detail:
         events.append(detail)
         add_raw(discovery_source, site_url, detail["title"], detail["date"], detail["website"], "event uit detailpagina", soup.get_text(" ", strip=True)[:420])
+    concertgebouw_detail = extract_concertgebouw_detail_event(soup, page_url, site_url, discovery_source)
+    if concertgebouw_detail:
+        # The specialized result has cleaner title/date/location fields and wins deduplication.
+        events.append(concertgebouw_detail)
     line_events = extract_line_events(soup, page_url, site_url, discovery_source)
     events.extend(line_events)
     add_raw(
@@ -1489,6 +1583,11 @@ def collect_event_links(html, page_url, site_url):
         if is_visitgroningen:
             if re.search(r"/evenementen/[^/?#]+/?$", urlparse(url).path, re.I):
                 scored.append((1000, url, text))
+            continue
+        # Concertgebouw: de daadwerkelijke concerten hebben een unieke /concerten/<id>-<slug>-URL.
+        if canonical_host(site_url) == "concertgebouw.nl":
+            if re.search(r"^/concerten/\d+-[^/?#]+/?$", urlparse(url).path, re.I):
+                scored.append((1200, url, text))
             continue
         # Prioriteer echte detailpagina's; /agenda zelf is alleen de overzichtspagina.
         if is_kultuuragenda and re.search(r"/agenda/\d+/[^/?#]+", url, re.I):
@@ -2855,7 +2954,8 @@ def scrape_site(site_url, site_index=0, site_total=0, progress_callback=None, ex
                 continue
         is_activity_detail = is_kultuuragenda and bool(re.search(r"/agenda/\d+/[^/?#]+", detail_path, re.I))
         is_visitgroningen_detail = is_visitgroningen and bool(re.search(r"/evenementen/[^/?#]+/?$", detail_path, re.I))
-        if new_event_count(events) >= MAX_EVENTS_PER_SITE and not is_activity_detail and not is_visitgroningen_detail and "vera-groningen.nl" not in canonical_host(normalized_site):
+        is_concertgebouw_detail = canonical_host(normalized_site) == "concertgebouw.nl" and bool(re.search(r"^/concerten/\d+-[^/?#]+/?$", detail_path, re.I))
+        if new_event_count(events) >= MAX_EVENTS_PER_SITE and not is_activity_detail and not is_visitgroningen_detail and not is_concertgebouw_detail and "vera-groningen.nl" not in canonical_host(normalized_site):
             break
         if is_kultuuragenda and not is_activity_detail:
             continue
