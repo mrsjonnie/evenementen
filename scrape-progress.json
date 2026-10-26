@@ -1,7 +1,7 @@
 {
   "runId": "2026-10-26T20:52:17.546226+00:00-f89eb25d",
   "startedAt": "2026-10-26T20:52:17+00:00",
-  "completedCount": 14,
+  "completedCount": 15,
   "totalSites": 15,
   "currentSite": "https://denieuwekolk.nl/agenda",
   "currentSiteIndex": 15,
@@ -19,7 +19,8 @@
     "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
     "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
     "https://www.socialdeal.nl/",
-    "https://www.ibood.com/s-nl"
+    "https://www.ibood.com/s-nl",
+    "https://denieuwekolk.nl/agenda"
   ],
   "events": [
     {
@@ -449,6 +450,22 @@
     {
       "date": "2026-10-26",
       "time": "",
+      "title": "Foto-expositie Verhalen van Verborgen Kracht",
+      "type": "Expositie",
+      "location": "De Nieuwe Kolk Weiersstraat 1 9401 ET Assen",
+      "locationLink": "",
+      "website": "https://denieuwekolk.nl/bieb/agenda/fotoexpositie-verhalen-van-verborgen-kracht-10050486",
+      "source": "denieuwekolk.nl",
+      "discoverySource": "Website",
+      "description": "Ontdek de fotoexpositie Verhalen van Verborgen Kracht van Tara van Meeteren bij De Nieuwe Kolk in Assen. Laat je inspireren door bijzondere verhalen.",
+      "cost": "Zie website",
+      "image": "https://media.denieuwekolk.nl/01a15ea4-eb5e-77e5-936a-2ed887933bd2/portret-angelina-crop-cinematic?crop=1477%2C886%2C417%2C0&scale=1200&optimizer=image",
+      "editedByUser": true,
+      "editedAt": "2026-10-26T11:14:17.051Z"
+    },
+    {
+      "date": "2026-10-26",
+      "time": "",
       "title": "Het gebouw zelf begon als een experiment,",
       "type": "Expositie",
       "location": "1994, Photo: John Stoel",
@@ -685,6 +702,21 @@
       "description": "Ontdek inspirerende tentoonstellingen, moderne kunst en verrassend design. Laat je verwonderen door kunst, cultuur en architectuur bij Groninger Museum in Groningen.",
       "cost": "",
       "image": "https://groninger-museum.stream.prepr.io/4dyqyyf8cr9a/w_1800/atelier-mendini-1990-1994-48-niet-in-groninger-museum.jpg",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-26",
+      "time": "20:00",
+      "title": "Omgaan met stress en grenzen",
+      "type": "Film",
+      "location": "00",
+      "locationLink": "",
+      "website": "https://denieuwekolk.nl/bieb/agenda/omgaan-met-stress-en-grenzen",
+      "source": "denieuwekolk.nl",
+      "discoverySource": "Website",
+      "description": "Omgaan met stress en grenzen · De Nieuwe Kolk Activiteiten & events Maand van de Geschiedenis Voel jij je vaak gehaast, overprikkeld of alsof je altijd \"aan\" staat? Dan ben je niet de enige. In het kader van de Maand van de Geschiedenis 2026, met als thema Lichaam & Geest, verzorgt burn-out preventiecoach Els Veltheer",
+      "cost": "",
+      "image": "https://media.denieuwekolk.nl/019db48d-3d03-7197-a158-e168c66eeb4c/stock-mentale-gezondheid?crop=3840%2C2304%2C0%2C128&scale=1200&optimizer=image",
       "isNew": true
     },
     {
@@ -1225,6 +1257,21 @@
       "description": "Alma Quartet & Nicolas van Poucke Beethoven, Schumann Vijf topmusici nemen je mee van Beethovens diepgang naar Schumanns romantiek",
       "cost": "",
       "image": "https://www.spotgroningen.nl/wp-content/uploads/2026/04/Alma-Quartet-Andreas-Terlaak-2-300-dpi-RGB-e1778073306161-300x137.jpg",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-27",
+      "time": "18:45",
+      "title": "Alzheimercafé",
+      "type": "Film",
+      "location": "Bibliotheek Cursusruimte",
+      "locationLink": "",
+      "website": "https://denieuwekolk.nl/bieb/agenda/alzheimercafe-10044312",
+      "source": "denieuwekolk.nl",
+      "discoverySource": "Website",
+      "description": "Alzheimercafé: Muziek en dementie in De Nieuwe Kolk. Ontmoet elkaar en laat je inspireren in het culturele hart van Assen.",
+      "cost": "",
+      "image": "https://media.denieuwekolk.nl/019d2a5b-29ad-7de1-86cd-0a0f178225b5/alzheimer-cafe?crop=3840%2C2304%2C0%2C128&scale=1200&optimizer=image",
       "isNew": true
     },
     {
@@ -2191,6 +2238,22 @@
     },
     {
       "date": "2026-10-28",
+      "time": "14:00",
+      "title": "Adviesplein",
+      "type": "Activiteit",
+      "location": "De Nieuwe Kolk Weiersstraat 1 9401 ET Assen",
+      "locationLink": "",
+      "website": "https://denieuwekolk.nl/bieb/agenda/adviesplein",
+      "source": "denieuwekolk.nl",
+      "discoverySource": "Website",
+      "description": "Adviesplein & Ontmoetingsplein in De Nieuwe Kolk Assen. Inspiratie, ontmoeting en culturele activiteiten op één locatie.",
+      "cost": "Gratis",
+      "image": "https://media.denieuwekolk.nl/019b2b7f-587f-7995-b37c-718d7a6b8c75/dnk-adviesplein-3-12-2025-2?crop=3838%2C2303%2C0%2C118&scale=1200&optimizer=image",
+      "editedByUser": true,
+      "editedAt": "2026-10-26T11:01:03.852Z"
+    },
+    {
+      "date": "2026-10-28",
       "time": "",
       "title": "Aletta Jacobskamer",
       "type": "Theater",
@@ -2431,6 +2494,21 @@
     },
     {
       "date": "2026-10-28",
+      "time": "19:00",
+      "title": "Het Vlucht Voorwaarts Praathuis",
+      "type": "Film",
+      "location": "Tigrinya of een andere taal willen leren zijn ook van harte welkom.",
+      "locationLink": "",
+      "website": "https://denieuwekolk.nl/bieb/agenda/het-vlucht-voorwaarts-praathuis",
+      "source": "denieuwekolk.nl",
+      "discoverySource": "Website",
+      "description": "Het Vlucht Voorwaarts Praathuis - Ontmoet elkaar en laat je inspireren in dit unieke cultuurhuis vol theater, bibliotheek en cinema.",
+      "cost": "gratis",
+      "image": "https://media.denieuwekolk.nl/019d7206-c8bf-73f7-bd04-02b315d7f6d0/bijeenkomst-vlucht-voorwaarts-praathuis?crop=3840%2C2304%2C0%2C128&scale=1200&optimizer=image",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-28",
       "time": "19:30",
       "title": "Kinepolis Groningen",
       "type": "Activiteit",
@@ -2476,6 +2554,21 @@
     },
     {
       "date": "2026-10-28",
+      "time": "15:00",
+      "title": "Masker maken",
+      "type": "Film",
+      "location": "00",
+      "locationLink": "",
+      "website": "https://denieuwekolk.nl/bieb/agenda/masker-maken",
+      "source": "denieuwekolk.nl",
+      "discoverySource": "Website",
+      "description": "Maak je eigen masker in NXT Lab! Creatieve workshop voor kinderen vanaf 4 jaar in De Nieuwe Kolk, het culturele hart van Assen.",
+      "cost": "",
+      "image": "https://media.denieuwekolk.nl/019f69ab-f3ab-7c70-bacf-26fbb146395a/maskers?crop=1600%2C960%2C80%2C0&scale=1200&optimizer=image",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-28",
       "time": "",
       "title": "Met: Pierre Coffin",
       "type": "Film",
@@ -2502,6 +2595,21 @@
       "description": "Nederlandse Bachvereniging Troostrijke muziek rond Allerzielen",
       "cost": "",
       "image": "https://www.spotgroningen.nl/wp-content/uploads/2026/04/Nederlandse-Bachvereniging-Allerzielen-CAMPAGNEBEELD-Eduardus-Lee_RGB-300-dpi-e1776081605280-300x297.jpg",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-28",
+      "time": "14:00",
+      "title": "Oefentafel Basisvaardigheden",
+      "type": "Film",
+      "location": "films en events.",
+      "locationLink": "",
+      "website": "https://denieuwekolk.nl/bieb/agenda/oefentafel-basisvaardigheden",
+      "source": "denieuwekolk.nl",
+      "discoverySource": "Website",
+      "description": "Oefentafel Basisvaardigheden in De Nieuwe Kolk. Doe praktisch basisvaardigheden op in ons cultuurhuis in Assen. Kom inspireren en ontmoeten.",
+      "cost": "gratis",
+      "image": "https://media.denieuwekolk.nl/019fa7b8-180a-7491-a9a4-d18a9af79b2c/stock-oefentafel?crop=3840%2C2304%2C0%2C128&scale=1200&optimizer=image",
       "isNew": true
     },
     {
@@ -2824,6 +2932,21 @@
     },
     {
       "date": "2026-10-29",
+      "time": "10:00",
+      "title": "Taalcafé",
+      "type": "Film",
+      "location": "films en events.",
+      "locationLink": "",
+      "website": "https://denieuwekolk.nl/bieb/agenda/taalcafe",
+      "source": "denieuwekolk.nl",
+      "discoverySource": "Website",
+      "description": "Taalcafe · De Nieuwe Kolk Activiteiten & events Wil je oefenen met het spreken van Nederlands? Kom dan naar het Taalcafé in De Nieuwe Kolk. In groepjes worden alledaagse zaken besproken. Van het weer tot politiek. Je kunt aansluiten bij een groep van je eigen niveau.",
+      "cost": "",
+      "image": "https://media.denieuwekolk.nl/019b2c39-e4fe-7f4c-a028-62e0dec5c9e8/mjj-20240213-dnkbeeldbank-103?crop=3838%2C2303%2C2%2C257&scale=1200&optimizer=image",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-29",
       "time": "",
       "title": "Toneelgroep Maastricht Bijna een leven",
       "type": "Theater",
@@ -3051,6 +3174,36 @@
     },
     {
       "date": "2026-10-30",
+      "time": "15:30",
+      "title": "Programmeren met Lego Spike",
+      "type": "Film",
+      "location": "films en events.",
+      "locationLink": "",
+      "website": "https://denieuwekolk.nl/bieb/agenda/programmeren-met-lego-spike",
+      "source": "denieuwekolk.nl",
+      "discoverySource": "Website",
+      "description": "Programmeren met Lego Spike in NXT Lab voor kinderen vanaf 7 jaar. Ontdek robotica en coderen bij De Nieuwe Kolk in Assen.",
+      "cost": "",
+      "image": "https://media.denieuwekolk.nl/019f69ab-f3ab-7bd9-9240-5e1c98d5048b/lego-spike?crop=1600%2C960%2C80%2C0&scale=1200&optimizer=image",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-30",
+      "time": "15:00 - 17:30",
+      "title": "Schrijfcafé",
+      "type": "Film",
+      "location": "schrijf en laat je inspireren",
+      "locationLink": "",
+      "website": "https://denieuwekolk.nl/bieb/agenda/schrijfcafe",
+      "source": "denieuwekolk.nl",
+      "discoverySource": "Website",
+      "description": "Schrijfcafé in De Nieuwe Kolk: ontmoet elkaar, schrijf en laat je inspireren. Bezoek ons cultuurhuis in Assen voor creatief schrijven en inspiratie.",
+      "cost": "gratis",
+      "image": "https://media.denieuwekolk.nl/019f45ce-3a6c-713e-ad79-594725bb439e/schrijfcafe?crop=3840%2C2304%2C0%2C136&scale=1200&optimizer=image",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-30",
       "time": "22:00",
       "title": "WAVEGRAVE Elysium Graaf Griezel // Fladdermus // DJ Stefan",
       "type": "Dans",
@@ -3077,6 +3230,21 @@
       "description": "Ghostbusters Halloween Experience SPOT | X YUSUF BOSS | De Wijk De Wereld Dans, halloween en Ghostbusters op het grote scherm Brutale Nederlandse elektropop Play With Fire Tour + support: DEHAZE Singer-songwriter bekend van 'Close to You' komt met nieuw werk Southern soul met invloeden uit Stax, Motown en de Nashville-",
       "cost": "",
       "image": "https://www.spotgroningen.nl/wp-content/uploads/2026/09/Spookhuis_SSB_NielsKnelis-0002-2972-300x200.jpg",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-31",
+      "time": "15:35",
+      "title": "Kaartverkoop De Nieuwe Kolk",
+      "type": "Film",
+      "location": "De Nieuwe Kolk Assen, Filmzaal 1",
+      "locationLink": "",
+      "website": "https://tickets.denieuwekolk.nl/mtTicket/performance/10388761",
+      "source": "tickets.denieuwekolk.nl",
+      "discoverySource": "Website",
+      "description": "Voorstelling in Filmzaal 1, De Nieuwe Kolk Assen.",
+      "cost": "",
+      "image": "",
       "isNew": true
     },
     {
@@ -3257,6 +3425,21 @@
       "description": "Southern soul met invloeden uit Stax, Motown en de Nashville-songwriterstraditie",
       "cost": "",
       "image": "https://www.spotgroningen.nl/wp-content/uploads/2025/12/MELTDOWN-approved-2_646-270-300x200.jpg",
+      "isNew": true
+    },
+    {
+      "date": "2026-10-31",
+      "time": "11:00",
+      "title": "WALvis",
+      "type": "Film",
+      "location": "gebaseerd op het prentenboek",
+      "locationLink": "",
+      "website": "https://denieuwekolk.nl/bieb/agenda/walvis",
+      "source": "denieuwekolk.nl",
+      "discoverySource": "Website",
+      "description": "WALvis - Vertelvoorstelling voor kinderen (2-7 jaar). Laat je meenemen in een magisch verhaal vol wonder en avontuur in De Nieuwe Kolk.",
+      "cost": "",
+      "image": "https://media.denieuwekolk.nl/019df891-7e6b-7744-8d6c-d6ad9ddac725/walvis-landschap-kopie?crop=2400%2C1440%2C0%2C0&scale=1200&optimizer=image",
       "isNew": true
     },
     {
@@ -6089,315 +6272,16 @@
       "newCount": 7,
       "durationSeconds": 20.07,
       "timedOut": true
+    },
+    {
+      "site": "https://denieuwekolk.nl/agenda",
+      "count": 12,
+      "newCount": 12,
+      "durationSeconds": 20.23,
+      "timedOut": true
     }
   ],
   "rawLog": [
-    {
-      "source": "Website",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "The Architect & the Housewife",
-      "date": "2026-09-19",
-      "url": "https://groningermuseum.nl/programma",
-      "status": "event uit tekstregel",
-      "rawText": "The Architect & the Housewife | 19 sep 2026 | - | 10 jan 2027 | EXHIBITION | Playing House"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "EXHIBITION",
-      "date": "2027-01-10",
-      "url": "https://groningermuseum.nl/programma",
-      "status": "event uit tekstregel",
-      "rawText": "- | 10 jan 2027 | EXHIBITION | Playing House | 19 sep 2026 | -"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "Playing House",
-      "date": "2026-09-19",
-      "url": "https://groningermuseum.nl/programma",
-      "status": "event uit tekstregel",
-      "rawText": "Playing House | 19 sep 2026 | - | 9 mei 2027 | EXHIBITION | The Convent of Pleasure"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "The Convent of Pleasure",
-      "date": "2026-09-19",
-      "url": "https://groningermuseum.nl/programma",
-      "status": "event uit tekstregel",
-      "rawText": "The Convent of Pleasure | 19 sep 2026 | - | 10 jan 2027 | EXHIBITION | Keramikos Carrier Bag"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "Bezoekersvoorwaarden",
-      "date": "2027-01-10",
-      "url": "https://groningermuseum.nl/programma",
-      "status": "event uit dagblok",
-      "rawText": "Bezoekersvoorwaarden | Architectuur | Educatie | Schoolklassen & lesprogramma's | Groninger Museum Tour"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "Architectuur",
-      "date": "2027-01-10",
-      "url": "https://groningermuseum.nl/programma",
-      "status": "event uit dagblok",
-      "rawText": "Architectuur | Educatie | Schoolklassen & lesprogramma's | Groninger Museum Tour | Juniorclub"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "Educatie",
-      "date": "2027-01-10",
-      "url": "https://groningermuseum.nl/programma",
-      "status": "event uit dagblok",
-      "rawText": "Educatie | Schoolklassen & lesprogramma's | Groninger Museum Tour | Juniorclub | Vrienden"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "Schoolklassen & lesprogramma's",
-      "date": "2027-01-10",
-      "url": "https://groningermuseum.nl/programma",
-      "status": "event uit dagblok",
-      "rawText": "Schoolklassen & lesprogramma's | Groninger Museum Tour | Juniorclub | Vrienden | Salon"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "Groninger Museum Tour",
-      "date": "2027-01-10",
-      "url": "https://groningermuseum.nl/programma",
-      "status": "event uit dagblok",
-      "rawText": "Groninger Museum Tour | Juniorclub | Vrienden | Salon | Club"
-    },
-    {
-      "source": "Parser",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "Pagina geteld",
-      "date": "",
-      "url": "https://groningermuseum.nl/programma",
-      "status": "analyse",
-      "rawText": "jsonld:0, links:6, datumblokken:4, kaarten:7, regels:17, detail:0"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "Pagina geanalyseerd",
-      "date": "",
-      "url": "https://groningermuseum.nl/programma",
-      "status": "ok",
-      "rawText": "7 events/aanbiedingen op deze pagina"
-    },
-    {
-      "source": "Parser",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "Pagina geteld",
-      "date": "",
-      "url": "https://groningermuseum.nl/familietour-nieuw-licht-de-ploeg",
-      "status": "analyse",
-      "rawText": "jsonld:0, links:0, datumblokken:0, kaarten:0, regels:0, detail:0"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "Detailpagina geanalyseerd",
-      "date": "",
-      "url": "https://groningermuseum.nl/familietour-nieuw-licht-de-ploeg",
-      "status": "ok",
-      "rawText": "0 extra events"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "OVER DE TENTOONSTELLING Wat is ervoor nodig",
-      "date": "2027-05-09",
-      "url": "https://groningermuseum.nl/ani-schulze-the-convent-of-pleasure",
-      "status": "event uit datumblok",
-      "rawText": "9 mei 2027 OVER DE TENTOONSTELLING Wat is ervoor nodig om een leven op te bouwen op je eigen voorwaarden?'Nieuw licht 1: Ani Schulze – The Convent of Pleasure' stelt die vraag. ‘Nieuw licht’ is een tentoonstellingsreeks waarin Groninger Museum kunstenaars uitnodigt om een nieuw licht te werpen op de collectie van werken van De Ploeg, de avant-gardistische kunstenaarsvereniging uit Groningen. Thematische verwantschap,"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "T h e C o n v e n t o f P l e a s u r e",
-      "date": "2026-09-19",
-      "url": "https://groningermuseum.nl/ani-schulze-the-convent-of-pleasure",
-      "status": "event uit detailpagina",
-      "rawText": "Groninger Museum Naar hoofdinhoud Naar navigatie Home Bezoek Programma Collectie Architectuur Over Menu NL Tickets T h e C o n v e n t o f P l e a s u r e N i e u w l i c h t 1 : A n i S c h u l z e Ani Schulze, The Convent of Pleasure - Episode 4: Harlequin’s Arrival, Video Still, 2026 Ani Schulze, The Convent of Pleasure - Episode 4: Harlequin’s Arrival, Video Still, 2026 19 september 2026 – 9 mei 2027 OVER DE TENT"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "Ani Schulze, The Convent of Pleasure - Episode 4: Harlequin’s Arrival, Video Still, 2026",
-      "date": "2026-09-19",
-      "url": "https://groningermuseum.nl/ani-schulze-the-convent-of-pleasure",
-      "status": "event uit tekstregel",
-      "rawText": "Ani Schulze, The Convent of Pleasure - Episode 4: Harlequin’s Arrival, Video Still, 2026 | 19 september 2026 – 9 mei 2027 | OVER DE TENTOONSTELLING | Wat is ervoor nodig om een leven op te bouwen op je eigen voorwaarden?'Nieuw licht 1: Ani Schulze – The Convent of Pleasure' stelt die vraag. | ‘Nieuw licht’ is een tentoonstellingsreeks waarin Groninger Museum kunstenaars uitnodigt om een nieuw licht te werpen op de co"
-    },
-    {
-      "source": "Parser",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "Pagina geteld",
-      "date": "",
-      "url": "https://groningermuseum.nl/ani-schulze-the-convent-of-pleasure",
-      "status": "analyse",
-      "rawText": "jsonld:0, links:0, datumblokken:1, kaarten:0, regels:1, detail:1"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "Detailpagina geanalyseerd",
-      "date": "",
-      "url": "https://groningermuseum.nl/ani-schulze-the-convent-of-pleasure",
-      "status": "ok",
-      "rawText": "3 extra events"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "Kunstenaars Wobbe Alkema Jan Altink Franciscus Hermanus",
-      "date": "2029-01-07",
-      "url": "https://groningermuseum.nl/de-ploeg-nieuw-licht",
-      "status": "event uit datumblok",
-      "rawText": "7 januari 2029 Kunstenaars Wobbe Alkema Jan Altink Franciscus Hermanus Bach Johan Dijkstra Otto Eerelman Johan Faber Alida van Houten Job Hansen Jozef Israëls Jan Gerrit Jordens Ernst Ludwig Kirchner Ekke Kleima Arnold Willem Kort George Martens Henk Melgers Hendrik Willem Mesdag Geesje Mesdag-van Calcar Sientje Mesdag-van Houten Alida Pott Willem Frederik Reinders Willem Sandberg Willem Valk Dirk de Vries Lam Hendri"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "N i e u w l i c h t – D e P l o e g",
-      "date": "2025-10-25",
-      "url": "https://groningermuseum.nl/de-ploeg-nieuw-licht",
-      "status": "event uit detailpagina",
-      "rawText": "Groninger Museum Naar hoofdinhoud Naar navigatie Home Bezoek Programma Collectie Architectuur Over Menu NL Tickets N i e u w l i c h t – D e P l o e g Jan Wiegers, Interieur Bohémien, 1925 25 oktober 2025 – 7 januari 2029 Kunstenaars Wobbe Alkema Jan Altink Franciscus Hermanus Bach Johan Dijkstra Otto Eerelman Johan Faber Alida van Houten Job Hansen Jozef Israëls Jan Gerrit Jordens Ernst Ludwig Kirchner Ekke Kleima A"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "Jan Wiegers, Interieur Bohémien, 1925",
-      "date": "2025-10-25",
-      "url": "https://groningermuseum.nl/de-ploeg-nieuw-licht",
-      "status": "event uit tekstregel",
-      "rawText": "Jan Wiegers, Interieur Bohémien, 1925 | 25 oktober 2025 – 7 januari 2029 | Kunstenaars | Wobbe Alkema | Jan Altink | Franciscus Hermanus Bach"
-    },
-    {
-      "source": "Parser",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "Pagina geteld",
-      "date": "",
-      "url": "https://groningermuseum.nl/de-ploeg-nieuw-licht",
-      "status": "analyse",
-      "rawText": "jsonld:0, links:0, datumblokken:1, kaarten:0, regels:1, detail:1"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "Detailpagina geanalyseerd",
-      "date": "",
-      "url": "https://groningermuseum.nl/de-ploeg-nieuw-licht",
-      "status": "ok",
-      "rawText": "3 extra events"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "K e r a m i k o s C a r r i e r B a g",
-      "date": "2026-09-19",
-      "url": "https://groningermuseum.nl/keramikos-carrier-bag",
-      "status": "event uit detailpagina",
-      "rawText": "Groninger Museum Naar hoofdinhoud Naar navigatie Home Bezoek Programma Collectie Architectuur Over Menu NL Tickets K e r a m i k o s C a r r i e r B a g M a t t h e w L u t z - K i n o y & N a t s u k o U c h i n o Matthew Lutz-Kinoy and Natsuko Uchino during the installation of Keramikos 2 in Foreign Figs for Florence, Dingum at Villa Romana, Florence, 2012 Courtesy of the artists Photo by Dingum Matthew Lutz-Kinoy"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "Photo by Paul Hennebelle",
-      "date": "2026-09-19",
-      "url": "https://groningermuseum.nl/keramikos-carrier-bag",
-      "status": "event uit tekstregel",
-      "rawText": "Photo by Paul Hennebelle | 19 September 2026 – 10 Januari 2027 | OVER DE TENTOONSTELLING | Deze tentoonstelling viert de aankoop van ‘Keramikos 2’ door Groninger Museum, een gezamenlijk project van Matthew Lutz-Kinoy en Natsuko Uchino, bestaande uit meer dan 300 keramische serviesstukken en bijbehorende tafelkleden. De serviesstukken en tafelkleden, die tijdens “traveling dinner parties” als tafel- en eetgerei diende"
-    },
-    {
-      "source": "Parser",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "Pagina geteld",
-      "date": "",
-      "url": "https://groningermuseum.nl/keramikos-carrier-bag",
-      "status": "analyse",
-      "rawText": "jsonld:0, links:0, datumblokken:0, kaarten:0, regels:1, detail:1"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "Detailpagina geanalyseerd",
-      "date": "",
-      "url": "https://groningermuseum.nl/keramikos-carrier-bag",
-      "status": "ok",
-      "rawText": "2 extra events"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "P l a y i n g H o u s e",
-      "date": "2026-09-19",
-      "url": "https://groningermuseum.nl/playing-house",
-      "status": "event uit detailpagina",
-      "rawText": "Groninger Museum Naar hoofdinhoud Naar navigatie Home Bezoek Programma Collectie Architectuur Over Menu NL Tickets P l a y i n g H o u s e E e n k u n s t b i ë n n a l e m e t k i n d e r e n e n j o n g e r e n Mercedes Azpilicueta, CaccHho CucchhA, De Appel Amsterdam, 2025, Photo: Sander van Wettum. Eva Koťátková, The Dream Machine is Asleep, Kunsthal Charlottenborg, 2019 , Photo: David Stjernholm. Courtesy o"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "Petrit Halilaj, Abetare (Giacometti's Firedogs), 2025.",
-      "date": "2026-09-19",
-      "url": "https://groningermuseum.nl/playing-house",
-      "status": "event uit tekstregel",
-      "rawText": "Petrit Halilaj, Abetare (Giacometti's Firedogs), 2025. | 19 September 2026 – 10 Januari 2027 | Kunstenaars | Mercedes Azpilicueta | afra eisma | Petrit Halilaj"
-    },
-    {
-      "source": "Parser",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "Pagina geteld",
-      "date": "",
-      "url": "https://groningermuseum.nl/playing-house",
-      "status": "analyse",
-      "rawText": "jsonld:0, links:0, datumblokken:0, kaarten:0, regels:1, detail:1"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "Detailpagina geanalyseerd",
-      "date": "",
-      "url": "https://groningermuseum.nl/playing-house",
-      "status": "ok",
-      "rawText": "2 extra events"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "Kunstenaars Sol Calero Maurice van Es Núria",
-      "date": "2027-05-09",
-      "url": "https://groningermuseum.nl/the-architect-and-the-housewife",
-      "status": "event uit datumblok",
-      "rawText": "9 Mei 2027 Kunstenaars Sol Calero Maurice van Es Núria Fuster Zaha Hadid Alison Knowles Adam Linder Matthew Lutz-Kinoy & Natsuko Uchino Alessandro Mendini Michael Pfrommer Joanna Piotrowska Alida Pott Margaret Raspé Katie Schwab & Simon Worthington sophie serber Frances Stark Kathrin Sonntag Pamela Phatsimo Sunstrum Vivian Suter Mierle Laderman Ukeles Evelyn Taocheng Wang Nicole Wermers Elisabeth Wild OVER DE TENTOON"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "T h e A r c h i t e c t & t h e H o u s e w i f e",
-      "date": "2026-09-19",
-      "url": "https://groningermuseum.nl/the-architect-and-the-housewife",
-      "status": "event uit detailpagina",
-      "rawText": "Groninger Museum Naar hoofdinhoud Naar navigatie Home Bezoek Programma Collectie Architectuur Over Menu NL Tickets T h e A r c h i t e c t & t h e H o u s e w i f e C l e a n i n g t h e H o u s e , B u i l d i n g t h e F u t u r e Alessandro Mendini, Tea & coffee piazza, 1983, Photo: Groninger Museum; Photo John Stoel Nicole Wermers, Reclining Female #2, 2022 © Nicole Wermers. Courtesy of the artist and Herald St,"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "Kunstenaars",
-      "date": "2026-09-19",
-      "url": "https://groningermuseum.nl/the-architect-and-the-housewife",
-      "status": "event uit tekstregel",
-      "rawText": "Sol Calero, \"La Escuela del Sur\", 2015, Photo: Roberto Ruiz, Courtesy of Sol Calero, Berlin and Centro de Arte Dos de Mayo (CA2M), Móstoles, Madrid and ChertLüdde, Berlin | 19 September 2026 – 9 Mei 2027 | Kunstenaars | Sol Calero | Maurice van Es | Núria Fuster"
-    },
     {
       "source": "Parser",
       "site": "https://groningermuseum.nl/programma",
@@ -16891,16 +16775,322 @@
       "url": "https://www.ibood.com/s-nl",
       "status": "klaar",
       "rawText": "site 14/15: 7 unieke events in 20.07 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Start",
+      "date": "",
+      "url": "https://denieuwekolk.nl/agenda",
+      "status": "start",
+      "rawText": "site 15/15: max 40 events, max 20 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://denieuwekolk.nl/agenda",
+      "status": "strategie",
+      "rawText": "agenda-kaarten + datumregels (De Nieuwe Kolk)"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Pagina gelezen",
+      "date": "",
+      "url": "https://denieuwekolk.nl/agenda",
+      "status": "ok",
+      "rawText": "977447 tekens HTML"
+    },
+    {
+      "source": "Parser",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "De Nieuwe Kolk detailstrategie",
+      "date": "",
+      "url": "https://denieuwekolk.nl/agenda",
+      "status": "strategie",
+      "rawText": "Agenda gebruiken om detail-URL's te vinden; alleen de echte detailpagina als evenement verwerken"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Pagina geanalyseerd",
+      "date": "",
+      "url": "https://denieuwekolk.nl/agenda",
+      "status": "ok",
+      "rawText": "0 events/aanbiedingen op deze pagina"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Pagina gelezen",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda",
+      "status": "ok",
+      "rawText": "412489 tekens HTML"
+    },
+    {
+      "source": "Parser",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "De Nieuwe Kolk detailstrategie",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda",
+      "status": "strategie",
+      "rawText": "Agenda gebruiken om detail-URL's te vinden; alleen de echte detailpagina als evenement verwerken"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Pagina geanalyseerd",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda",
+      "status": "ok",
+      "rawText": "0 events/aanbiedingen op deze pagina"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda/adviesplein",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda/alzheimercafe-10044312",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda/fotoexpositie-verhalen-van-verborgen-kracht-10050486",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda/het-vlucht-voorwaarts-praathuis",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda/masker-maken",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "DNK-ticketpagina niet volledig herkend",
+      "date": "",
+      "url": "https://tickets.denieuwekolk.nl/mtTicket/performance/10370772",
+      "status": "diagnose",
+      "rawText": "titel=Kaartverkoop De Nieuwe Kolk; datums=2; tijden/ruimtes=0; tekst=Kaarten bestellen | Masker maken - NXT Lab (4+) - woensdag 28 oktober 2026 | Kaartverkoop De Nieuwe Kolk Titel en navigatie overslaan Kaartverkoop De Nieuwe Kolk en Masker maken NXT Lab (4+) woensdag 28 oktober 2026 15:00 (einde 16:00) DNK-NXT Log in om al je"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://tickets.denieuwekolk.nl/mtTicket/performance/10370772",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda/oefentafel-basisvaardigheden",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda/omgaan-met-stress-en-grenzen",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "DNK-ticketpagina niet volledig herkend",
+      "date": "",
+      "url": "https://tickets.denieuwekolk.nl/mtTicket/performance/10374346",
+      "status": "diagnose",
+      "rawText": "titel=Kaartverkoop De Nieuwe Kolk; datums=2; tijden/ruimtes=0; tekst=Kaarten bestellen | Omgaan met stress en grenzen - Maand van de Geschiedenis - donderdag 29 oktober 2026 | Kaartverkoop De Nieuwe Kolk Titel en navigatie overslaan Kaartverkoop De Nieuwe Kolk en Omgaan met stress en grenzen Maand van de Geschiedenis donderdag"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://tickets.denieuwekolk.nl/mtTicket/performance/10374346",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda/programmeren-met-lego-spike",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://tickets.denieuwekolk.nl/login/auth",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda/schrijfcafe",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda/taalcafe",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda/walvis",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "DNK-ticketpagina niet volledig herkend",
+      "date": "",
+      "url": "https://tickets.denieuwekolk.nl/mtTicket/performance/10359135",
+      "status": "diagnose",
+      "rawText": "titel=Kaartverkoop De Nieuwe Kolk; datums=2; tijden/ruimtes=0; tekst=Kaarten bestellen | WALvis - Vertelvoorstelling (2 t/m 7 jaar) - zaterdag 31 oktober 2026 | Kaartverkoop De Nieuwe Kolk Titel en navigatie overslaan Kaartverkoop De Nieuwe Kolk en Wachtlijst Om een voorstelling of concert op je wachtlijst te zetten, moet je in"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://tickets.denieuwekolk.nl/mtTicket/performance/10359135",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bios/agenda/23-brieven-van-vincent",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "DNK-ticketpagina niet volledig herkend",
+      "date": "",
+      "url": "https://tickets.denieuwekolk.nl/mtTicket/performance/10387791",
+      "status": "diagnose",
+      "rawText": "titel=Kaartverkoop De Nieuwe Kolk; datums=8; tijden/ruimtes=0; tekst=Kaarten bestellen | 23 Brieven van Vincent - dinsdag 27 oktober 2026 | Kaartverkoop De Nieuwe Kolk Titel en navigatie overslaan Kaartverkoop De Nieuwe Kolk en 23 Brieven van Vincent dinsdag 27 oktober 2026 18:45 (einde 20:45) Filmzaal 4 - andere datum en/of ti"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://tickets.denieuwekolk.nl/mtTicket/performance/10387791",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Kaartverkoop De Nieuwe Kolk",
+      "date": "2026-10-31",
+      "url": "https://tickets.denieuwekolk.nl/mtTicket/performance/10388761",
+      "status": "ticketpagina",
+      "rawText": "15:35; De Nieuwe Kolk Assen, Filmzaal 1"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://tickets.denieuwekolk.nl/mtTicket/performance/10388761",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Detailpagina mislukt",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bios/agenda/23-brieven-van-vincent/bestel/f5091ed0-7506-6fe7-7423-25c0e4f432a8",
+      "status": "fout",
+      "rawText": "HTTPSConnectionPool(host='tickets.denieuwekolk.nl', port=443): Read timed out. (read timeout=1.9810543119999977)"
+    },
+    {
+      "source": "Filter",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Datumfilter toegepast",
+      "date": "2026-10-26",
+      "url": "https://denieuwekolk.nl/agenda",
+      "status": "ok",
+      "rawText": "13 gevonden; 12 binnen 2026-10-26 t/m onbeperkt"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://denieuwekolk.nl/agenda",
+      "status": "klaar",
+      "rawText": "site 15/15: 12 unieke events in 20.23 sec"
     }
   ],
-  "status": "running",
+  "status": "finishing",
   "siteStartedAt": "2026-10-26T20:54:53+00:00",
-  "siteElapsedSeconds": 0,
-  "sitePageCount": 0,
-  "lastSiteEventCount": 0,
-  "stage": "Websitepagina ophalen",
-  "lastUpdatedAt": "2026-10-26T20:54:53+00:00",
-  "lastSiteNewEventCount": 7,
-  "lastCompletedSite": "https://www.ibood.com/s-nl",
-  "lastCompletedAt": "2026-10-26T20:54:52+00:00"
+  "siteElapsedSeconds": 22,
+  "sitePageCount": 2,
+  "lastSiteEventCount": 12,
+  "stage": "Website klaar; volgende website voorbereiden",
+  "lastUpdatedAt": "2026-10-26T20:54:58+00:00",
+  "lastSiteNewEventCount": 12,
+  "lastCompletedSite": "https://denieuwekolk.nl/agenda",
+  "lastCompletedAt": "2026-10-26T20:55:15+00:00"
 }
