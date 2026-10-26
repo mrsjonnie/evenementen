@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-26T10:09:58.182Z",
+  "updatedAt": "2026-10-26T10:13:37.163Z",
   "feedback": [
     {
       "key": "2026-10-27|abonnement topmusici van eigen bodem",
@@ -568,6 +568,24 @@
       "website": "https://groningermuseum.nl/programma",
       "url": "https://groningermuseum.nl/programma",
       "updatedAt": "2026-10-26T10:09:58.182Z"
+    },
+    {
+      "key": "2026-11-01|juf braaksel de musical",
+      "vote": "edit",
+      "title": "Juf Braaksel - De Musical",
+      "date": "2026-11-01",
+      "website": "https://www.martiniplaza.nl/nl/agenda/juf-braaksel",
+      "url": "https://www.martiniplaza.nl/nl/agenda/juf-braaksel",
+      "updatedAt": "2026-10-26T10:13:37.163Z",
+      "originalTitle": "Juf Braaksel - De Musical",
+      "originalDate": "2026-11-01",
+      "corrections": {
+        "title": "Juf Braaksel - De Musical",
+        "date": "2026-11-01",
+        "location": "Martiniplaza Groningen",
+        "type": "Theater",
+        "cost": "€ 26,70"
+      }
     }
   ]
 }
