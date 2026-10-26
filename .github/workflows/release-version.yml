@@ -8,6 +8,9 @@ on:
       - index.html
       - evenementen.html
       - restaurants.html
+      - instellingen.html
+      - cloudflare-build.sh
+      - cloudflare-worker.js
       - .github/workflows/release-version.yml
 
 permissions:
