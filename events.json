@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-26T12:29:29+00:00",
+  "updatedAt": "2026-10-26T12:29:34+00:00",
   "events": [
     {
       "date": "2026-10-26",
@@ -17118,72 +17118,16 @@
       "newCount": 10,
       "durationSeconds": 12.18,
       "timedOut": true
+    },
+    {
+      "site": "https://www.groupon.nl/kortingsbonnen/gemeente-groningen",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 1.23,
+      "timedOut": false
     }
   ],
   "rawLog": [
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Waarom kunnen we niet stoppen met luisteren naar true crime",
-      "date": "2027-08-05",
-      "url": "https://www.noorderzon.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "5 aug Waarom kunnen we niet stoppen met luisteren naar true crime-verhalen? Lees verder Meer informatie over Waarom we allemaal naar true crime luisteren Afhakers & nieuwsmijders Programma soort &Society Dagblad van het Noorden x Noorderzon Datum range"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder Meer informatie over Mentale gezondheid",
-      "date": "2027-08-05",
-      "url": "https://www.noorderzon.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "5 aug Lees verder Meer informatie over Mentale gezondheid met Louis Vanhaverbeke & Wilbert van de Kamp Women beyond the norm with Susie Wang, Magda Szpecht & Friederike Schubert Programma soort &Society Shifting grounds i.s.m. Arts in Society/RUG Datum range"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Wat gebeurt er als vrouwen hun verhaal",
-      "date": "2027-08-06",
-      "url": "https://www.noorderzon.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "6 aug Wat gebeurt er als vrouwen hun verhaal terugpakken? Lees verder Meer informatie over Women beyond the norm with Susie Wang, Magda Szpecht & Friederike Schubert Hidden systems with Ant Hampton, Marco Mendonça & Thijs Lijster Programma soort &Society Shifting grounds i.s.m. Arts in Society/RUG Datum range"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder Meer informatie over Hidden systems",
-      "date": "2027-08-04",
-      "url": "https://www.noorderzon.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "4 aug Lees verder Meer informatie over Hidden systems with Ant Hampton, Marco Mendonça & Thijs Lijster Who gets heard? with Dead Centre, Andy Field & Alice Lagaay Programma soort &Society Shifting grounds i.s.m. Arts in Society/RUG Datum range"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder Meer informatie over Who gets",
-      "date": "2027-08-01",
-      "url": "https://www.noorderzon.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "1 aug Lees verder Meer informatie over Who gets heard? with Dead Centre, Andy Field & Alice Lagaay Als je denkt (dat je alles gehad hebt) begint de filosofie Programma soort &Literaturia Filosofie is makkelijker als je denkt i.s.m. Filosofie Magazine Datum range"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Coen Simon spreekt met Frank Meester over",
-      "date": "2027-08-03",
-      "url": "https://www.noorderzon.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "3 aug Coen Simon spreekt met Frank Meester over zijn nieuwste boek. Lees verder Meer informatie over Als je denkt (dat je alles gehad hebt) begint de filosofie De Filosofische Estafette Programma soort &Literaturia Filosofie is makkelijker als je denkt i.s.m. Filosofie Magazine Datum range"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Filosofen in gesprek met acht gasten over",
-      "date": "2027-08-03",
-      "url": "https://www.noorderzon.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "3 aug Filosofen in gesprek met acht gasten over de grote vragen van nu. Lees verder Meer informatie over De Filosofische Estafette Dichter bij de waarheid met Ellen Deckwitz Programma soort &Literaturia Filosofie is makkelijker als je denkt i.s.m. Filosofie Magazine Datum range"
-    },
     {
       "source": "Website",
       "site": "https://www.noorderzon.nl/programma",
@@ -27920,6 +27864,69 @@
       "url": "https://www.socialdeal.nl/",
       "status": "klaar",
       "rawText": "site 15/18: 10 unieke events in 12.18 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.groupon.nl/kortingsbonnen/gemeente-groningen",
+      "title": "Start",
+      "date": "",
+      "url": "https://www.groupon.nl/kortingsbonnen/gemeente-groningen",
+      "status": "start",
+      "rawText": "site 16/18: max 50 events, max 10 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.groupon.nl/kortingsbonnen/gemeente-groningen",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://www.groupon.nl/kortingsbonnen/gemeente-groningen",
+      "status": "strategie",
+      "rawText": "aanbiedingen"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.groupon.nl/kortingsbonnen/gemeente-groningen",
+      "title": "Pagina mislukt",
+      "date": "",
+      "url": "https://www.groupon.nl/kortingsbonnen/gemeente-groningen",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.groupon.nl/kortingsbonnen/gemeente-groningen",
+      "title": "Pagina mislukt",
+      "date": "",
+      "url": "https://www.groupon.nl/kortingsbonnen/groningen",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.groupon.nl/kortingsbonnen/gemeente-groningen",
+      "title": "Pagina mislukt",
+      "date": "",
+      "url": "https://www.groupon.nl/kortingsbonnen",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.groupon.nl/kortingsbonnen/gemeente-groningen",
+      "title": "Pagina mislukt",
+      "date": "",
+      "url": "https://www.groupon.nl/",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.groupon.nl/kortingsbonnen/gemeente-groningen",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://www.groupon.nl/kortingsbonnen/gemeente-groningen",
+      "status": "klaar",
+      "rawText": "site 16/18: 0 unieke events in 1.23 sec"
     }
   ]
 }
