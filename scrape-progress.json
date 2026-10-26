@@ -1,7 +1,7 @@
 {
   "runId": "2026-10-26T12:26:54.991401+00:00-25f487be",
   "startedAt": "2026-10-26T12:26:54+00:00",
-  "completedCount": 5,
+  "completedCount": 6,
   "totalSites": 18,
   "currentSite": "https://www.vera-groningen.nl/",
   "currentSiteIndex": 6,
@@ -10,7 +10,8 @@
     "https://www.visitgroningen.nl/nl/doen/evenementen",
     "https://forum.nl/nl/agenda",
     "https://www.spotgroningen.nl/programma/",
-    "https://simplon.nl/"
+    "https://simplon.nl/",
+    "https://www.vera-groningen.nl/"
   ],
   "events": [
     {
@@ -2299,315 +2300,16 @@
       "newCount": 0,
       "durationSeconds": 4.23,
       "timedOut": false
+    },
+    {
+      "site": "https://www.vera-groningen.nl/",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 2.39,
+      "timedOut": false
     }
   ],
   "rawLog": [
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "The Wall #9",
-      "date": "2026-10-26",
-      "url": "https://groningen.uitloper.nu/kunst/the-wall-9",
-      "status": "Uitloper agenda-item",
-      "rawText": "The Wall #9 Kunstenaar Indira de Boer maakt een installatie van…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Kleur!",
-      "date": "2026-10-26",
-      "url": "https://groningen.uitloper.nu/kunst/kleur-3",
-      "status": "Uitloper agenda-item",
-      "rawText": "Kleur! Tien kunstenaars onderzoeken in de verschillende ruimtes…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Otto Krol - Gevels, daken en luchten",
-      "date": "2026-10-26",
-      "url": "https://groningen.uitloper.nu/kunst/otto-krol-gevels-daken-en-luchten",
-      "status": "Uitloper agenda-item",
-      "rawText": "Otto Krol - Gevels, daken en luchten Na de stadsgezichten van de vorige expositie eind…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Otto Krol - Gevels, daken en luchten",
-      "date": "2026-10-26",
-      "url": "https://groningen.uitloper.nu/kunst/otto-krol-gevels-daken-en-luchten-1",
-      "status": "Uitloper agenda-item",
-      "rawText": "Otto Krol - Gevels, daken en luchten Na de stadsgezichten van de vorige expositie eind…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "APPROP.",
-      "date": "2026-10-26",
-      "url": "https://groningen.uitloper.nu/kunst/approp",
-      "status": "Uitloper agenda-item",
-      "rawText": "APPROP. Met APPROP. presenteren ax710 en Jurjen Galema een…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Gasten: Paul Kramer",
-      "date": "2026-10-26",
-      "url": "https://groningen.uitloper.nu/kunst/gasten-paul-kramer",
-      "status": "Uitloper agenda-item",
-      "rawText": "Gasten: Paul Kramer Duotentoonstelling met werken van Paul Kramer en Henk…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Permanente Expositie",
-      "date": "2026-10-26",
-      "url": "https://groningen.uitloper.nu/kunst/permanente-expositie",
-      "status": "Uitloper agenda-item",
-      "rawText": "Permanente Expositie De vaste tentoonstelling nodigt uit om kennis te nemen…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Figuranten",
-      "date": "2026-10-26",
-      "url": "https://groningen.uitloper.nu/kunst/figuranten",
-      "status": "Uitloper agenda-item",
-      "rawText": "Figuranten Sievert Bodde toont zestien fictieve portretten, in…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Schilderijen van Marrie Venderink",
-      "date": "2026-10-26",
-      "url": "https://groningen.uitloper.nu/kunst/schilderijen-vanmarrie-venderink",
-      "status": "Uitloper agenda-item",
-      "rawText": "Schilderijen van Marrie Venderink Expositie met schilderijen van Marrie Venderink …"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Het Witte Vlag Project",
-      "date": "2026-10-26",
-      "url": "https://groningen.uitloper.nu/kunst/het-witte-vlag-project",
-      "status": "Uitloper agenda-item",
-      "rawText": "Het Witte Vlag Project Een groepstentoonstelling met dertien hedendaagse…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Lieuwe van Gogh",
-      "date": "2026-10-26",
-      "url": "https://groningen.uitloper.nu/kunst/lieuwe-van-gogh",
-      "status": "Uitloper agenda-item",
-      "rawText": "Lieuwe van Gogh De kleurrijke gevel van Metamorphose gemaakt door…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Expositie Overwegend Vrouw (Glimmen)",
-      "date": "2026-10-26",
-      "url": "https://groningen.uitloper.nu/kunst/expositie-overwegend-vrouw-glimmen",
-      "status": "Uitloper agenda-item",
-      "rawText": "Expositie Overwegend Vrouw (Glimmen) Ingrid Veldscholten en Josephine Wortelboer exposeren…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Het Witte Vlag Project",
-      "date": "2026-10-26",
-      "url": "https://groningen.uitloper.nu/kunst/het-witte-vlag-project-1",
-      "status": "Uitloper agenda-item",
-      "rawText": "Het Witte Vlag Project In een tijd waarin zekerheden luid klinken en identiteiten…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Playing House - kinderbiënnale",
-      "date": "2026-10-26",
-      "url": "https://groningen.uitloper.nu/jeugd/playing-house-kinderbiennale",
-      "status": "Uitloper agenda-item",
-      "rawText": "Playing House - kinderbiënnale Welke bewust of onbewust aangeleerde regels worden…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Storyworld spotlight: Super Mario 40 jaar",
-      "date": "2026-10-26",
-      "url": "https://groningen.uitloper.nu/jeugd/storyworld-spotlight-super-mario-40-jaar",
-      "status": "Uitloper agenda-item",
-      "rawText": "Storyworld spotlight: Super Mario 40 jaar Een reis door de tijd, langs de technische én creatieve…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Depotrondleidingen: Lichaam & Geest",
-      "date": "2026-10-26",
-      "url": "https://groningen.uitloper.nu/diversen/depotrondleidingen-lichaam-geest",
-      "status": "Uitloper agenda-item",
-      "rawText": "Depotrondleidingen: Lichaam & Geest 14:45 uur Tijdens een rondleiding nemen onze medewerkers je…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Beklimming Martinitoren",
-      "date": "2026-10-26",
-      "url": "https://groningen.uitloper.nu/diversen/beklimming-martinitoren-1",
-      "status": "Uitloper agenda-item",
-      "rawText": "Beklimming Martinitoren Bezoekers kunnen op eigen gelegenheid naar boven lopen…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Azart - Come Make Art",
-      "date": "2026-10-26",
-      "url": "https://groningen.uitloper.nu/filmhuis/azart-come-make-art",
-      "status": "Uitloper agenda-item",
-      "rawText": "Azart - Come Make Art 20:30 uur De vrolijke en inspirerende documentaire Azart vertelt…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Pubquiz",
-      "date": "2026-10-26",
-      "url": "https://groningen.uitloper.nu/quizzen/pubquiz-fourth-monday-repeating-1",
-      "status": "Uitloper agenda-item",
-      "rawText": "Pubquiz 20:00 uur Elke vierde maandag van de maand. Teams van maximaal…"
-    },
-    {
-      "source": "Parser",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Uitloper-dagpagina",
-      "date": "2026-10-26",
-      "url": "https://groningen.uitloper.nu/?date=1793016000",
-      "status": "gespecialiseerde parser",
-      "rawText": "37 agenda-items op 2026-10-26"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Pagina geanalyseerd",
-      "date": "",
-      "url": "https://groningen.uitloper.nu/?date=1793016000",
-      "status": "ok",
-      "rawText": "35 events/aanbiedingen op deze pagina"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Pagina gelezen",
-      "date": "",
-      "url": "https://groningen.uitloper.nu/?date=1793102400",
-      "status": "ok",
-      "rawText": "64251 tekens HTML"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Nena",
-      "date": "2026-10-27",
-      "url": "https://groningen.uitloper.nu/muziek/nena-1",
-      "status": "Uitloper agenda-item",
-      "rawText": "Nena 20:00 uur Eén van de grootste zangeressen van de Duitse popcultuur…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Jon Allen & The Luna Kings",
-      "date": "2026-10-27",
-      "url": "https://groningen.uitloper.nu/muziek/jon-allen-the-luna-kings-2",
-      "status": "Uitloper agenda-item",
-      "rawText": "Jon Allen & The Luna Kings 20:00 uur Britse singer-songwriter mixt Americana met Folk rock…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Alma Quartet & Nicolas van Poucke",
-      "date": "2026-10-27",
-      "url": "https://groningen.uitloper.nu/muziek/alma-quartet-nicolas-van-poucke",
-      "status": "Uitloper agenda-item",
-      "rawText": "Alma Quartet & Nicolas van Poucke 20:15 uur Vijf topmusici nemen je mee van Beethovens diepgang…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Jethro Tull",
-      "date": "2026-10-27",
-      "url": "https://groningen.uitloper.nu/muziek/jethro-tull",
-      "status": "Uitloper agenda-item",
-      "rawText": "Jethro Tull 20:00 uur Het debuutalbum This Was verscheen in 1968. Na een…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "JazzJam",
-      "date": "2026-10-27",
-      "url": "https://groningen.uitloper.nu/muziek/jazzjam-95",
-      "status": "Uitloper agenda-item",
-      "rawText": "JazzJam 21:00 uur Met Miquel Rodriguez (piano), Steve Zwanink (bas)…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Anas Younes - On Anger & Fatigue",
-      "date": "2026-10-27",
-      "url": "https://groningen.uitloper.nu/theater/anas-younes-on-anger-fatigue",
-      "status": "Uitloper agenda-item",
-      "rawText": "Anas Younes - On Anger & Fatigue 20:00 uur Een lecture-performance die de politiek van waarheidsvertelling,…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Hoe de vleesindustrie u inpakt",
-      "date": "2026-10-27",
-      "url": "https://groningen.uitloper.nu/theater/hoe-de-vleesindustrie-u-inpakt",
-      "status": "Uitloper agenda-item",
-      "rawText": "Hoe de vleesindustrie u inpakt 20:00 uur In dit theatercollege onderzoekt Teun van de Keuken…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Thinking Hands",
-      "date": "2026-10-27",
-      "url": "https://groningen.uitloper.nu/kunst/thinking-hands",
-      "status": "Uitloper agenda-item",
-      "rawText": "Thinking Hands Een expositie over de kennis die in ons lichaam zit…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Nieuw Licht - De Ploeg",
-      "date": "2026-10-27",
-      "url": "https://groningen.uitloper.nu/kunst/nieuw-licht-%e2%80%93-de-ploeg",
-      "status": "Uitloper agenda-item",
-      "rawText": "Nieuw Licht - De Ploeg Een geheel vernieuwde presentatie van werken van De…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "The Architect & The Housewife: Cleaning the House, Building the Future",
-      "date": "2026-10-27",
-      "url": "https://groningen.uitloper.nu/kunst/the-architect-the-housewife-cleaning-the-house-building-the-future",
-      "status": "Uitloper agenda-item",
-      "rawText": "The Architect & The Housewife: Cleaning the House, Building the Future De titel van deze tentoonstelling is ontleend aan…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Nieuw licht 1: Ani Schulze – The Convent of Pleasure",
-      "date": "2026-10-27",
-      "url": "https://groningen.uitloper.nu/kunst/nieuw-licht-1-ani-schulze-%e2%80%93-the-convent-of-pleasure",
-      "status": "Uitloper agenda-item",
-      "rawText": "Nieuw licht 1: Ani Schulze – The Convent of Pleasure Nieuw licht is een tentoonstellingsreeks waarin het…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Keramikos Carrier Bag",
-      "date": "2026-10-27",
-      "url": "https://groningen.uitloper.nu/kunst/keramikos-carrier-bag",
-      "status": "Uitloper agenda-item",
-      "rawText": "Keramikos Carrier Bag Naar aanleiding van onderzoek in Groningen kozen Matthew…"
-    },
     {
       "source": "Website",
       "site": "https://groningen.uitloper.nu/",
@@ -13101,16 +12803,322 @@
       "url": "https://simplon.nl/",
       "status": "klaar",
       "rawText": "site 5/18: 0 unieke events in 4.23 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Start",
+      "date": "",
+      "url": "https://www.vera-groningen.nl/",
+      "status": "start",
+      "rawText": "site 6/18: max 50 events, max 10 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://www.vera-groningen.nl/",
+      "status": "strategie",
+      "rawText": "programma-kaarten"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Pagina gelezen",
+      "date": "",
+      "url": "https://www.vera-groningen.nl/programma/?category=all&history=0&lang=nl",
+      "status": "ok",
+      "rawText": "74016 tekens HTML"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "The Fly",
+      "date": "2026-10-27",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=154391&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Tuesday 27 October The Fly Sold out"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Ulrika Spacek UK Mood Bored",
+      "date": "2026-10-29",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=150560&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "CLUBKAARTSHOW Thursday 29 October Ulrika Spacek UK Mood Bored NL Mainstage | Ticket: €16,- | doors: 20:00 - 22:00 | start: 20:30 Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Kruidkoek & Joost Oomen NL Mesofauna GRN",
+      "date": "2026-10-30",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=151519&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Friday 30 October Kruidkoek & Joost Oomen NL Mesofauna GRN Mainstage | Ticket: €18,- | doors: 19:30 - 21:00 | start: 20:00 Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "WAVEGRAVE Elysium Graaf Griezel // Fladdermus // DJ Stefan",
+      "date": "2026-10-30",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=154134&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Friday 30 October WAVEGRAVE Elysium Graaf Griezel // Fladdermus // DJ Stefan Dansen | Ticket: €5,- | doors: 22:00 - 03:00 | start: 22:00 Sold out"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Los Pirañas COL",
+      "date": "2026-10-31",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=152556&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Saturday 31 October Los Pirañas COL Mainstage | Ticket: €13,- | doors: 21:00 - 22:00 | start: 21:30 Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "The Etters NL Human Toys",
+      "date": "2026-10-31",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=154548&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Saturday 31 October The Etters NL Human Toys FR Downstage | Ticket: €5,- | doors: 22:30 - 23:30 | start: 23:00 Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Push It Pushin Wood Soundsystem All Night Long",
+      "date": "2026-10-31",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=154197&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Saturday 31 October Push It Pushin Wood Soundsystem All Night Long Dansen | Ticket: €5,- | doors: 23:00 - 04:00 | start: 23:01 Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Angine De Poitrine CAN Gros Mené",
+      "date": "2026-11-01",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=151279&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "SOLD OUT Sunday 1 November Angine De Poitrine CAN Gros Mené CAN Mainstage | Ticket: €24,- | doors: 19:30 - 22:00 | start: 20:30 Sold out"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Pavements",
+      "date": "2026-11-03",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=154871&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Tuesday 3 November Pavements Zienema | Ticket: €6,- | doors: 20:00 - 20:30 | start: 20:30 Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Hippotraktor BEL OLTAS",
+      "date": "2026-11-04",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=152263&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Wednesday 4 November Hippotraktor BEL OLTAS NL Mainstage | Ticket: €17,- | doors: 20:00 - 22:00 | start: 20:30 Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Pyrex USA Traumatizer",
+      "date": "2026-11-05",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=154976&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "RAT RACE X DOWNSTAGE EXTRA Thursday 5 November Pyrex USA Traumatizer NL Downstage | Ticket: €7,50 | doors: 21:00 - 22:00 | start: 21:30 Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Temples UK PAUW",
+      "date": "2026-11-06",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=151534&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Friday 6 November Temples UK PAUW NL Mainstage | Ticket: €24,- | doors: 19:30 - 22:00 | start: 20:30 Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "The Homesick NL Rhizocorp",
+      "date": "2026-11-07",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=153264&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Saturday 7 November The Homesick NL Rhizocorp UK Mainstage | Ticket: €14,- | doors: 20:00 - 22:00 | start: 20:30 Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Nagusame GRN",
+      "date": "2026-11-07",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=154867&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Saturday 7 November Nagusame GRN Downstage | Ticket: €5,- | doors: 22:30 - 23:30 | start: 23:00 Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Club VERA Line-up TBA",
+      "date": "2026-11-07",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=155064&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Saturday 7 November Club VERA Line-up TBA Dansen | Ticket: €5,- | doors: 23:00 - 03:00 | start: 23:01 Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Mystery cult film",
+      "date": "2026-11-10",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=154880&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Tuesday 10 November Mystery cult film Zienema | Ticket: €6,- | doors: 20:00 - 20:30 | start: 20:30 Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Shearwater USA + Loma USA + Any Kind",
+      "date": "2026-11-11",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=152600&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Wednesday 11 November Shearwater USA + Loma USA + Any Kind USA Mainstage | Ticket: €16,- | doors: 20:00 - 22:00 | start: 20:30 Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Supersuckers USA The Frankie Turbos",
+      "date": "2026-11-12",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=153215&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Thursday 12 November Supersuckers USA The Frankie Turbos NL Mainstage | Ticket: €15,- | doors: 20:00 - 22:00 | start: 20:30 Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Nordic Giants UK L.O.E.",
+      "date": "2026-11-13",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=153185&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Friday 13 November Nordic Giants UK L.O.E. UK Mainstage | Ticket: €15,- | doors: 20:00 - 22:00 | start: 20:30 Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "DOODSESKADER BEL Eigen Risico GRN",
+      "date": "2026-11-14",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=153339&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Saturday 14 November DOODSESKADER BEL Eigen Risico GRN Mainstage | Ticket: €17,- | doors: 20:00 - 22:00 | start: 20:30 Koop ticket"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "VERA-agendapagina",
+      "date": "",
+      "url": "https://www.vera-groningen.nl/programma/?category=all&history=0&lang=nl",
+      "status": "gespecialiseerde parser",
+      "rawText": "20 VERA-agenda-items uit eventlinks"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Pagina geanalyseerd",
+      "date": "",
+      "url": "https://www.vera-groningen.nl/programma/?category=all&history=0&lang=nl",
+      "status": "ok",
+      "rawText": "20 events/aanbiedingen op deze pagina"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Pagina gelezen",
+      "date": "",
+      "url": "https://www.vera-groningen.nl/?lang=nl",
+      "status": "ok",
+      "rawText": "75325 tekens HTML"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Tramhaus",
+      "date": "2026-12-19",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=152866&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Saturday 19 December Tramhaus support Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "BODEGA",
+      "date": "2027-03-03",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=154770&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Wednesday 3 March BODEGA USA support Snarky and energetic artrock De New Yorkse artrockband BODEGA werd in 2016 gevormd uit de resten van het... Lees meer Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Madra Salach IRL",
+      "date": "2027-02-15",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=154849&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Monday 15 February Madra Salach IRL support Raw Irish folk Madra Salach (Iers voor ‘vuile hond’) is een zeskoppige band uit Dublin die traditionele Ierse folk meesleurt... Lees meer Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Codeine",
+      "date": "2027-05-14",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=155052&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Friday 14 May Codeine USA support Early slowcore pioneers Weinig bands laten traagheid zo krachtig klinken als Codeine. Voor de vijfde keer staat... Lees meer Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Black Marble",
+      "date": "2027-04-10",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=154962&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Saturday 10 April Black Marble USA support Gloomy synthpop and hooky cold wave Black Marble is het project van Chris Stewart, waarin cold wave, minimal synth, postpunk... Lees meer Koop ticket"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "VERA-agendapagina",
+      "date": "",
+      "url": "https://www.vera-groningen.nl/?lang=nl",
+      "status": "gespecialiseerde parser",
+      "rawText": "10 VERA-agenda-items uit eventlinks"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Pagina geanalyseerd",
+      "date": "",
+      "url": "https://www.vera-groningen.nl/?lang=nl",
+      "status": "ok",
+      "rawText": "10 events/aanbiedingen op deze pagina"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://www.vera-groningen.nl/",
+      "status": "klaar",
+      "rawText": "site 6/18: 0 unieke events in 2.39 sec"
     }
   ],
   "status": "running",
   "siteStartedAt": "2026-10-26T12:27:45+00:00",
-  "siteElapsedSeconds": 0,
-  "sitePageCount": 0,
+  "siteElapsedSeconds": 4,
+  "sitePageCount": 2,
   "lastSiteEventCount": 0,
-  "stage": "Websitepagina ophalen",
-  "lastUpdatedAt": "2026-10-26T12:27:45+00:00",
+  "stage": "Website klaar; volgende website voorbereiden",
+  "lastUpdatedAt": "2026-10-26T12:27:49+00:00",
   "lastSiteNewEventCount": 0,
-  "lastCompletedSite": "https://simplon.nl/",
-  "lastCompletedAt": "2026-10-26T12:27:43+00:00"
+  "lastCompletedSite": "https://www.vera-groningen.nl/",
+  "lastCompletedAt": "2026-10-26T12:27:49+00:00"
 }
