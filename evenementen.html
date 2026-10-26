@@ -3442,6 +3442,21 @@
       return `<div class="weatherDays">${rows.join("")}</div>`;
     }
 
+    function weatherDescription(code) {
+      const value = Number(code);
+      if (value === 0) return "Helder";
+      if (value === 1) return "Overwegend helder";
+      if (value === 2) return "Gedeeltelijk bewolkt";
+      if (value === 3) return "Bewolkt";
+      if ([45, 48].includes(value)) return "Mist";
+      if ([51, 53, 55].includes(value)) return "Motregen";
+      if ([56, 57, 66, 67].includes(value)) return "IJzel";
+      if ([61, 63, 65, 80, 81, 82].includes(value)) return "Regen/buien";
+      if ([71, 73, 75, 77, 85, 86].includes(value)) return "Sneeuw";
+      if ([95, 96, 99].includes(value)) return "Onweer";
+      return "Weerbeeld onbekend";
+    }
+
     async function loadWeather() {
       const region = $("region").value.trim();
       if (!region || !dateFrom || !dateTo) {
@@ -3450,13 +3465,60 @@
       }
 
       try {
-        const forecastFrom = formatDate(new Date());
-        const forecastTo = addDays(forecastFrom, 6);
-        const url = `${WORKER_URL}/weather?region=${encodeURIComponent(region)}&from=${forecastFrom}&to=${forecastTo}`;
-        const response = await fetch(url, { cache: "no-store" });
-        if (!response.ok) throw new Error("Weer niet beschikbaar");
-        const data = await response.json();
-        if (!data || !data.ok) throw new Error("Weer niet beschikbaar");
+        const geocodeUrl = new URL("https://geocoding-api.open-meteo.com/v1/search");
+        geocodeUrl.searchParams.set("name", region);
+        geocodeUrl.searchParams.set("count", "10");
+        geocodeUrl.searchParams.set("language", "nl");
+        geocodeUrl.searchParams.set("format", "json");
+        const geocodeResponse = await fetch(geocodeUrl.toString(), { cache: "no-store" });
+        if (!geocodeResponse.ok) throw new Error("Plaats niet gevonden voor het weer");
+        const geocode = await geocodeResponse.json();
+        const places = Array.isArray(geocode.results) ? geocode.results : [];
+        const place = places.find((item) => String(item.country_code || "").toUpperCase() === "NL") || places[0];
+        if (!place) throw new Error("Geen weerlocatie gevonden");
+        const forecastUrl = new URL("https://api.open-meteo.com/v1/forecast");
+        forecastUrl.searchParams.set("latitude", String(place.latitude));
+        forecastUrl.searchParams.set("longitude", String(place.longitude));
+        forecastUrl.searchParams.set("daily", "weather_code,temperature_2m_max,temperature_2m_min,precipitation_sum,precipitation_probability_max,wind_speed_10m_max,uv_index_max");
+        forecastUrl.searchParams.set("hourly", "precipitation_probability,precipitation,temperature_2m,weather_code");
+        forecastUrl.searchParams.set("forecast_days", "7");
+        forecastUrl.searchParams.set("timezone", "Europe/Amsterdam");
+        const forecastResponse = await fetch(forecastUrl.toString(), { cache: "no-store" });
+        if (!forecastResponse.ok) throw new Error("Actuele weersverwachting niet beschikbaar");
+        const forecast = await forecastResponse.json();
+        const daily = forecast.daily || {};
+        const dates = Array.isArray(daily.time) ? daily.time : [];
+        const dailyRows = dates.map((date, index) => {
+          const code = Number(daily.weather_code?.[index]);
+          return {
+            date,
+            tempMin: Number.isFinite(Number(daily.temperature_2m_min?.[index])) ? Math.round(Number(daily.temperature_2m_min[index])) : null,
+            tempMax: Number.isFinite(Number(daily.temperature_2m_max?.[index])) ? Math.round(Number(daily.temperature_2m_max[index])) : null,
+            rainMM: Number.isFinite(Number(daily.precipitation_sum?.[index])) ? Math.round(Number(daily.precipitation_sum[index]) * 10) / 10 : null,
+            rainChance: Number.isFinite(Number(daily.precipitation_probability_max?.[index])) ? Number(daily.precipitation_probability_max[index]) : null,
+            windMax: Number.isFinite(Number(daily.wind_speed_10m_max?.[index])) ? Math.round(Number(daily.wind_speed_10m_max[index])) : null,
+            uvMax: Number.isFinite(Number(daily.uv_index_max?.[index])) ? Math.round(Number(daily.uv_index_max[index]) * 10) / 10 : null,
+            weatherCode: code,
+            summary: weatherDescription(code)
+          };
+        });
+        if (!dailyRows.length) throw new Error("Geen dagverwachting ontvangen");
+        const today = dailyRows[0];
+        const data = {
+          ok: true,
+          location: place.name || region,
+          summary: today.summary,
+          tempMin: today.tempMin,
+          tempMax: today.tempMax,
+          rainChance: today.rainChance,
+          rainTotalMM: today.rainMM,
+          windMax: today.windMax,
+          uvMax: today.uvMax,
+          weatherCode: today.weatherCode,
+          daily: dailyRows,
+          source: "Open-Meteo",
+          updatedAt: new Date().toISOString()
+        };
         latestWeatherData = data;
 
         const weatherItems = [
