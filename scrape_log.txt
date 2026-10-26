@@ -1,7 +1,3 @@
-SerpAPI	https://www.ibood.com/s-nl	zoeken	Zoekopdracht 2/2			site:www.ibood.com "Groningen" agenda programma evenement concert theater film 2026-10-26 9999-12-31
-ChatGPT	https://forum.nl/nl/agenda	fout	ChatGPT mislukt		https://forum.nl/nl/agenda	Body has already been used. It can only be used once. Use tee() first if you need to read it twice.
-ChatGPT	https://www.spotgroningen.nl/programma/	fout	ChatGPT mislukt		https://www.spotgroningen.nl/programma/	Body has already been used. It can only be used once. Use tee() first if you need to read it twice.
-ChatGPT	https://www.vera-groningen.nl/	fout	ChatGPT mislukt		https://www.vera-groningen.nl/	Body has already been used. It can only be used once. Use tee() first if you need to read it twice.
 ChatGPT	https://groningen.uitloper.nu/	fout	ChatGPT mislukt		https://groningen.uitloper.nu/	Body has already been used. It can only be used once. Use tee() first if you need to read it twice.
 ChatGPT	https://www.visitgroningen.nl/nl/doen/evenementen	fout	ChatGPT mislukt		https://www.visitgroningen.nl/nl/doen/evenementen	Body has already been used. It can only be used once. Use tee() first if you need to read it twice.
 ChatGPT	https://simplon.nl/	fout	ChatGPT mislukt		https://simplon.nl/	Body has already been used. It can only be used once. Use tee() first if you need to read it twice.
@@ -1198,3 +1194,7 @@ RSS/Atom	https://www.martiniplaza.nl/nl/agenda	fout	Feed mislukt		https://www.ma
 RSS/Atom	https://www.martiniplaza.nl/nl/agenda	fout	Feed mislukt		https://www.martiniplaza.nl/feed.xml	HTTP 404
 RSS/Atom	https://www.martiniplaza.nl/nl/agenda	fout	Feed mislukt		https://www.martiniplaza.nl/events/feed/	HTTP 404
 Website	https://www.martiniplaza.nl/nl/agenda	klaar	Klaar		https://www.martiniplaza.nl/nl/agenda	site 7/15: 0 unieke events in 5.58 sec
+Website	https://groningermuseum.nl/programma	start	Start		https://groningermuseum.nl/programma	site 8/15: max 60 events, max 45 seconden
+Parser	https://groningermuseum.nl/programma	strategie	Scrapertype vastgesteld		https://groningermuseum.nl/programma	universele tentoonstellings- en activiteitenparser
+Siteconfiguratie	https://groningermuseum.nl/programma	overgeslagen	Start-URL uitgesloten		https://groningermuseum.nl/programma	URL staat in de websitespecifieke uitsluitingen
+Website	https://groningermuseum.nl/programma	klaar	Klaar		https://groningermuseum.nl/programma	site 8/15: 0 unieke events in 0.0 sec

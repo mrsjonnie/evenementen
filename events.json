@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-26T22:42:32+00:00",
+  "updatedAt": "2026-10-26T22:42:36+00:00",
   "events": [
     {
       "date": "2026-10-26",
@@ -10591,45 +10591,16 @@
       "newCount": 0,
       "durationSeconds": 5.58,
       "timedOut": false
+    },
+    {
+      "site": "https://groningermuseum.nl/programma",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 0.0,
+      "timedOut": false
     }
   ],
   "rawLog": [
-    {
-      "source": "SerpAPI",
-      "site": "https://www.ibood.com/s-nl",
-      "title": "Zoekopdracht 2/2",
-      "date": "",
-      "url": "",
-      "status": "zoeken",
-      "rawText": "site:www.ibood.com \"Groningen\" agenda programma evenement concert theater film 2026-10-26 9999-12-31"
-    },
-    {
-      "source": "ChatGPT",
-      "site": "https://forum.nl/nl/agenda",
-      "title": "ChatGPT mislukt",
-      "date": "",
-      "url": "https://forum.nl/nl/agenda",
-      "status": "fout",
-      "rawText": "Body has already been used. It can only be used once. Use tee() first if you need to read it twice."
-    },
-    {
-      "source": "ChatGPT",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "ChatGPT mislukt",
-      "date": "",
-      "url": "https://www.spotgroningen.nl/programma/",
-      "status": "fout",
-      "rawText": "Body has already been used. It can only be used once. Use tee() first if you need to read it twice."
-    },
-    {
-      "source": "ChatGPT",
-      "site": "https://www.vera-groningen.nl/",
-      "title": "ChatGPT mislukt",
-      "date": "",
-      "url": "https://www.vera-groningen.nl/",
-      "status": "fout",
-      "rawText": "Body has already been used. It can only be used once. Use tee() first if you need to read it twice."
-    },
     {
       "source": "ChatGPT",
       "site": "https://groningen.uitloper.nu/",
@@ -21393,6 +21364,42 @@
       "url": "https://www.martiniplaza.nl/nl/agenda",
       "status": "klaar",
       "rawText": "site 7/15: 0 unieke events in 5.58 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningermuseum.nl/programma",
+      "title": "Start",
+      "date": "",
+      "url": "https://groningermuseum.nl/programma",
+      "status": "start",
+      "rawText": "site 8/15: max 60 events, max 45 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://groningermuseum.nl/programma",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://groningermuseum.nl/programma",
+      "status": "strategie",
+      "rawText": "universele tentoonstellings- en activiteitenparser"
+    },
+    {
+      "source": "Siteconfiguratie",
+      "site": "https://groningermuseum.nl/programma",
+      "title": "Start-URL uitgesloten",
+      "date": "",
+      "url": "https://groningermuseum.nl/programma",
+      "status": "overgeslagen",
+      "rawText": "URL staat in de websitespecifieke uitsluitingen"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningermuseum.nl/programma",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://groningermuseum.nl/programma",
+      "status": "klaar",
+      "rawText": "site 8/15: 0 unieke events in 0.0 sec"
     }
   ]
 }
