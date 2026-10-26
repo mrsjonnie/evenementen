@@ -1654,6 +1654,40 @@ export default {
       }
     }
 
+    if (path === "/event-feedback" && request.method === "GET") {
+      try {
+        const response = await githubFetch(env, "/contents/event-feedback.json?ref=main");
+        if (response.status === 404) return json({ ok: true, feedback: [] }, 200);
+        if (!response.ok) throw new Error("Feedbackbestand niet leesbaar: status " + response.status);
+        const file = await response.json();
+        const data = JSON.parse(decodeBase64(file.content));
+        return json({ ok: true, updatedAt: data.updatedAt || null, feedback: Array.isArray(data.feedback) ? data.feedback : [] }, 200);
+      } catch (e) { return json({ error: "Logica-regels konden niet worden geladen", details: e.message }, 500); }
+    }
+    if (path === "/event-feedback-delete" && request.method === "POST") {
+      try {
+        const body = await request.json().catch(() => ({}));
+        const key = validateInput(body.key, 1200);
+        if (!key) return json({ error: "Regelsleutel ontbreekt" }, 400);
+        const response = await githubFetch(env, "/contents/event-feedback.json?ref=main");
+        if (!response.ok) throw new Error("Feedbackbestand niet leesbaar: status " + response.status);
+        const file = await response.json();
+        const data = JSON.parse(decodeBase64(file.content));
+        const entries = Array.isArray(data.feedback) ? data.feedback : [];
+        const filtered = entries.filter(item => String(item.key || "") !== key);
+        if (filtered.length === entries.length) return json({ error: "Regel niet gevonden; lijst is mogelijk al gewijzigd." }, 404);
+        data.feedback = filtered;
+        data.updatedAt = new Date().toISOString();
+        const saved = await githubFetch(env, "/contents/event-feedback.json", { method: "PUT", body: JSON.stringify({
+          message: "Remove unwanted scraper feedback rule: " + key.slice(0, 80),
+          content: encodeBase64(JSON.stringify(data, null, 2)),
+          sha: file.sha,
+          branch: "main"
+        }) });
+        if (!saved.ok) throw new Error("Regel verwijderen mislukt: " + await saved.text());
+        return json({ ok: true, deleted: 1, remaining: filtered.length }, 200);
+      } catch (e) { return json({ error: "Regel verwijderen mislukt", details: e.message }, 500); }
+    }
     if (path === "/event-feedback" && request.method === "POST") {
       try {
         const body = await request.json().catch(() => ({}));
