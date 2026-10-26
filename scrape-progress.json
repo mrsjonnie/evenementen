@@ -1,70 +1,13 @@
 {
-  "runId": "2026-10-26T22:34:53.652011+00:00-6e888059",
-  "startedAt": "2026-10-26T22:34:53+00:00",
-  "completedCount": 1,
-  "totalSites": 1,
-  "currentSite": "https://groningermuseum.nl/programma",
-  "currentSiteIndex": 1,
-  "completedSites": [
-    "https://groningermuseum.nl/programma"
-  ],
+  "runId": "2026-10-26T22:40:50.827517+00:00-e5599623",
+  "startedAt": "2026-10-26T22:40:50+00:00",
+  "completedCount": 0,
+  "totalSites": 15,
+  "currentSite": "",
+  "currentSiteIndex": 0,
+  "completedSites": [],
   "events": [],
-  "siteResults": [
-    {
-      "site": "https://groningermuseum.nl/programma",
-      "count": 0,
-      "newCount": 0,
-      "durationSeconds": 0.0,
-      "timedOut": false
-    }
-  ],
-  "rawLog": [
-    {
-      "source": "Website",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "Start",
-      "date": "",
-      "url": "https://groningermuseum.nl/programma",
-      "status": "start",
-      "rawText": "site 1/1: max 60 events, max 45 seconden"
-    },
-    {
-      "source": "Parser",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "Scrapertype vastgesteld",
-      "date": "",
-      "url": "https://groningermuseum.nl/programma",
-      "status": "strategie",
-      "rawText": "universele tentoonstellings- en activiteitenparser"
-    },
-    {
-      "source": "Siteconfiguratie",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "Start-URL uitgesloten",
-      "date": "",
-      "url": "https://groningermuseum.nl/programma",
-      "status": "overgeslagen",
-      "rawText": "URL staat in de websitespecifieke uitsluitingen"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "Klaar",
-      "date": "",
-      "url": "https://groningermuseum.nl/programma",
-      "status": "klaar",
-      "rawText": "site 1/1: 0 unieke events in 0.0 sec"
-    }
-  ],
-  "status": "completed",
-  "siteStartedAt": "2026-10-26T22:34:55+00:00",
-  "siteElapsedSeconds": 2,
-  "sitePageCount": 0,
-  "lastSiteEventCount": 0,
-  "stage": "Website klaar; volgende website voorbereiden",
-  "lastUpdatedAt": "2026-10-26T22:34:55+00:00",
-  "lastCompletedSite": "https://groningermuseum.nl/programma",
-  "lastCompletedAt": "2026-10-26T22:34:57+00:00",
-  "lastSiteNewEventCount": 0,
-  "finishedAt": "2026-10-26T22:35:01+00:00"
+  "siteResults": [],
+  "rawLog": [],
+  "status": "running"
 }
