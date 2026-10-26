@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-26T09:58:12.848Z",
+  "updatedAt": "2026-10-26T09:58:31.334Z",
   "feedback": [
     {
       "key": "2026-10-27|abonnement topmusici van eigen bodem",
@@ -405,6 +405,24 @@
         "location": "Trompsingel 27 9724 DA Groningen",
         "type": "Concert",
         "cost": "gratis"
+      }
+    },
+    {
+      "key": "2026-10-26|nena|trompsingel 27 9724 da groningen",
+      "vote": "edit",
+      "title": "Nena",
+      "date": "2026-10-26",
+      "website": "https://www.kultuuragenda.nl/agenda/1249727087/nena-1",
+      "url": "https://www.kultuuragenda.nl/agenda/1249727087/nena-1",
+      "updatedAt": "2026-10-26T09:58:31.334Z",
+      "originalTitle": "Nena",
+      "originalDate": "2026-10-26",
+      "corrections": {
+        "title": "Nena",
+        "date": "2026-10-26",
+        "location": "Trompsingel 27 9724 DA Groningen",
+        "type": "Concert",
+        "cost": "€ 51,50"
       }
     }
   ]
