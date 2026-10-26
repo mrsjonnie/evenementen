@@ -1,12 +1,13 @@
 {
   "runId": "2026-10-26T11:20:39.872729+00:00-9d8db956",
   "startedAt": "2026-10-26T11:20:39+00:00",
-  "completedCount": 1,
+  "completedCount": 2,
   "totalSites": 18,
   "currentSite": "https://www.visitgroningen.nl/nl/doen/evenementen",
   "currentSiteIndex": 2,
   "completedSites": [
-    "https://groningen.uitloper.nu/"
+    "https://groningen.uitloper.nu/",
+    "https://www.visitgroningen.nl/nl/doen/evenementen"
   ],
   "events": [
     {
@@ -617,6 +618,13 @@
       "newCount": 40,
       "durationSeconds": 3.0,
       "timedOut": false
+    },
+    {
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 10.31,
+      "timedOut": true
     }
   ],
   "rawLog": [
@@ -2230,16 +2238,61 @@
       "url": "https://groningen.uitloper.nu/",
       "status": "klaar",
       "rawText": "site 1/18: 40 unieke events in 3.0 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Start",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "status": "start",
+      "rawText": "site 2/18: max 40 events, max 10 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "status": "strategie",
+      "rawText": "Visit Groningen agenda-/routekaarten"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Pagina mislukt",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "status": "fout",
+      "rawText": "HTTPSConnectionPool(host='www.visitgroningen.nl', port=443): Read timed out. (read timeout=7.0)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Pagina mislukt",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/uitgaan",
+      "status": "fout",
+      "rawText": "HTTPSConnectionPool(host='www.visitgroningen.nl', port=443): Read timed out. (read timeout=2.0709019229999797)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://www.visitgroningen.nl/nl/doen/evenementen",
+      "status": "klaar",
+      "rawText": "site 2/18: 0 unieke events in 10.31 sec"
     }
   ],
   "status": "running",
   "siteStartedAt": "2026-10-26T11:20:47+00:00",
-  "siteElapsedSeconds": 0,
+  "siteElapsedSeconds": 11,
   "sitePageCount": 0,
   "lastSiteEventCount": 0,
-  "stage": "Websitepagina ophalen",
-  "lastUpdatedAt": "2026-10-26T11:20:47+00:00",
-  "lastSiteNewEventCount": 40,
-  "lastCompletedSite": "https://groningen.uitloper.nu/",
-  "lastCompletedAt": "2026-10-26T11:20:44+00:00"
+  "stage": "Website klaar; volgende website voorbereiden",
+  "lastUpdatedAt": "2026-10-26T11:20:58+00:00",
+  "lastSiteNewEventCount": 0,
+  "lastCompletedSite": "https://www.visitgroningen.nl/nl/doen/evenementen",
+  "lastCompletedAt": "2026-10-26T11:20:58+00:00"
 }

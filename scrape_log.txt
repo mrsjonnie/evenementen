@@ -177,3 +177,8 @@ Website	https://groningen.uitloper.nu/	Uitloper agenda-item	Pubquiz	2026-10-27	h
 Parser	https://groningen.uitloper.nu/	gespecialiseerde parser	Uitloper-dagpagina	2026-10-27	https://groningen.uitloper.nu/?date=1793102400	42 agenda-items op 2026-10-27
 Website	https://groningen.uitloper.nu/	ok	Pagina geanalyseerd		https://groningen.uitloper.nu/?date=1793102400	40 events/aanbiedingen op deze pagina
 Website	https://groningen.uitloper.nu/	klaar	Klaar		https://groningen.uitloper.nu/	site 1/18: 40 unieke events in 3.0 sec
+Website	https://www.visitgroningen.nl/nl/doen/evenementen	start	Start		https://www.visitgroningen.nl/nl/doen/evenementen	site 2/18: max 40 events, max 10 seconden
+Parser	https://www.visitgroningen.nl/nl/doen/evenementen	strategie	Scrapertype vastgesteld		https://www.visitgroningen.nl/nl/doen/evenementen	Visit Groningen agenda-/routekaarten
+Website	https://www.visitgroningen.nl/nl/doen/evenementen	fout	Pagina mislukt		https://www.visitgroningen.nl/nl/doen/evenementen	HTTPSConnectionPool(host='www.visitgroningen.nl', port=443): Read timed out. (read timeout=7.0)
+Website	https://www.visitgroningen.nl/nl/doen/evenementen	fout	Pagina mislukt		https://www.visitgroningen.nl/nl/doen/uitgaan	HTTPSConnectionPool(host='www.visitgroningen.nl', port=443): Read timed out. (read timeout=2.0709019229999797)
+Website	https://www.visitgroningen.nl/nl/doen/evenementen	klaar	Klaar		https://www.visitgroningen.nl/nl/doen/evenementen	site 2/18: 0 unieke events in 10.31 sec
