@@ -4350,7 +4350,7 @@
 
       // Verwijder eerst het zichtbare DOM-element zelf. Daarna werken we de
       // data/filterlijst bij; de kaart verdwijnt dus direct, ook als de Worker traag is.
-      const clickedDeleteButton = document.querySelector(`.deleteEventBtn[data-event-key="${CSS.escape(key)}"]`);
+      const clickedDeleteButton = [...document.querySelectorAll(".deleteEventBtn[data-event-key]")].find((button) => button.dataset.eventKey === key);
       const visibleCard = clickedDeleteButton?.closest("article.card");
       if (visibleCard) visibleCard.remove();
 
