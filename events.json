@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-26T22:35:01+00:00",
+  "updatedAt": "2026-10-26T22:35:37.765Z",
   "events": [
     {
       "date": "2026-10-26",
@@ -723,21 +723,6 @@
       "description": "Masterminds neemt je mee in de geschiedenis van de…",
       "cost": "",
       "image": "https://groningen.uitloper.nu/images/smallthumb/files/2021/Diversen/masterminds--de-geschiedenis-van-de-groningse-universiteit.jpg",
-      "isNew": false
-    },
-    {
-      "date": "2026-10-26",
-      "time": "",
-      "title": "Michele de Lucchi ontwierp het paviljoen, dat",
-      "type": "Expositie",
-      "location": "circa 1989 © Groninger Museum, Photo: John Stoel",
-      "locationLink": "",
-      "website": "https://groningermuseum.nl/museum-gebouw",
-      "source": "groningermuseum.nl",
-      "discoverySource": "Website",
-      "description": "Early design of the De Lucchi pavilion by Michele de Lucchi, circa 1989 © Groninger Museum, Photo: John Stoel",
-      "cost": "",
-      "image": "",
       "isNew": false
     },
     {
@@ -8805,7 +8790,7 @@
       "site": "https://groningermuseum.nl/programma",
       "count": 0,
       "newCount": 0,
-      "durationSeconds": 0.0,
+      "durationSeconds": 0,
       "timedOut": false
     }
   ],
