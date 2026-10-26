@@ -1,7 +1,7 @@
 {
   "runId": "2026-10-26T22:40:50.827517+00:00-e5599623",
   "startedAt": "2026-10-26T22:40:50+00:00",
-  "completedCount": 5,
+  "completedCount": 6,
   "totalSites": 15,
   "currentSite": "https://www.vera-groningen.nl/",
   "currentSiteIndex": 6,
@@ -10,7 +10,8 @@
     "https://www.visitgroningen.nl/nl/doen/evenementen",
     "https://forum.nl/nl/agenda",
     "https://www.spotgroningen.nl/programma/",
-    "https://simplon.nl/"
+    "https://simplon.nl/",
+    "https://www.vera-groningen.nl/"
   ],
   "events": [
     {
@@ -1849,315 +1850,16 @@
       "newCount": 0,
       "durationSeconds": 5.03,
       "timedOut": false
+    },
+    {
+      "site": "https://www.vera-groningen.nl/",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 5.58,
+      "timedOut": false
     }
   ],
   "rawLog": [
-    {
-      "source": "SerpAPI",
-      "site": "https://www.martiniplaza.nl/nl/agenda",
-      "title": "Aaron Lee Tasjan - A-Theater, Groningen",
-      "date": "",
-      "url": "https://open.spotify.com/concert/70g0y174mdMz8OLedbqsFw",
-      "status": "genegeerd",
-      "rawText": "Find tickets for Aaron Lee Tasjan at A-Theater in Groningen on 8/30/2026 at 8:30 PM."
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.martiniplaza.nl/nl/agenda",
-      "title": "Archive",
-      "date": "",
-      "url": "https://www.grandtheatregroningen.nl/en/programma/archief",
-      "status": "genegeerd",
-      "rawText": "Part of the Groningen Chamber Music Festival 2025. te gast · kindervoorstelling ... Negendaags festival met theater, performance, dans en meer in Groningen."
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.martiniplaza.nl/nl/agenda",
-      "title": "Michael McGovern — 6.10.2026 De Oosterpoort",
-      "date": "",
-      "url": "https://festivaly.eu/en/michael-mcgovern-de-oosterpoort-groningen-2026",
-      "status": "genegeerd",
-      "rawText": "Information and tickets for the concert Michael McGovern, which is taking place on October 6, 2026 19:00 (De Oosterpoort, Groningen)."
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.martiniplaza.nl/nl/agenda",
-      "title": "CineMusic: Films Live in Concert",
-      "date": "",
-      "url": "https://stayingroningen.com/events/cinemusic-films-live-in-concert",
-      "status": "genegeerd",
-      "rawText": "StayinGroningen.com the one and only local gateway for Groningen. We offer a 'one stop shop' on events, hotels and restaurants. StayinGroningen serves as a as a ..."
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.martiniplaza.nl/nl/agenda",
-      "title": "Groningen Events Calendar 2026",
-      "date": "",
-      "url": "https://allevents.in/groningen/calendar",
-      "status": "genegeerd",
-      "rawText": "Explore all the happening events in Groningen in 2026 with us that best suit your interest. Theatre tickets, comedy festival, music classes or any adventure ..."
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.martiniplaza.nl/nl/agenda",
-      "title": "Theatervoorstellingen in Groningen, het complete aanbod.",
-      "date": "",
-      "url": "https://www.theater.nl/voorstellingen/groningen",
-      "status": "genegeerd",
-      "rawText": "Bekijk het complete aanbod van theatervoorstellingen in Groningen. Bekijk de agenda en lees de laatste recensies."
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.martiniplaza.nl/nl/agenda",
-      "title": "Groningen Events - Discover Things To Do In ...",
-      "date": "",
-      "url": "https://www.ticketmaster.nl/discover/groningen?language=en-us&page=1",
-      "status": "genegeerd",
-      "rawText": "Discover top Groningen events, concerts, festivals, shows and more. Find tickets for the best things to do in Groningen on the official Ticketmaster site."
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.martiniplaza.nl/nl/agenda",
-      "title": "Holiday on Ice - CINEMA OF DREAMS",
-      "date": "",
-      "url": "https://www.stubhub.com/co/holiday-on-ice-groningen-tickets-12-13-2026/event/160023004/",
-      "status": "genegeerd",
-      "rawText": "See Holiday on Ice - CINEMA OF DREAMS - Première live at Martiniplaza in Groningen on diciembre 13, 2026, at 4:00 p. m.. Book now on StubHub ..."
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.martiniplaza.nl/nl/agenda",
-      "title": "Events in Groningen",
-      "date": "",
-      "url": "https://app.futuratickets.com/en/agenda/ciudad/Groningen",
-      "status": "genegeerd",
-      "rawText": "Discover concerts, festivals and shows in Groningen. Check dates, venues and prices, and buy or sell your tickets on Futura Market."
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.martiniplaza.nl/nl/agenda",
-      "title": "Groningen music, concerts, theatre, events - Calendar",
-      "date": "",
-      "url": "https://muziekladder.nl/en/muziek/6-Groningen/",
-      "status": "genegeerd",
-      "rawText": "Groningen music, concerts, theatre, events ; Thursday 8 October 2026. Kelderbar Open · Thu 8 Oct ; Friday 9 October 2026 · CLUB40+ | The Evening Party · Fri 9 Oct."
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "Zoekopdracht 1/2",
-      "date": "",
-      "url": "",
-      "status": "zoeken",
-      "rawText": "site:groningermuseum.nl/programma programma agenda programma evenement concert Groningen 2026-10-26 9999-12-31"
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "SerpAPI timeout/fout",
-      "date": "",
-      "url": "",
-      "status": "fout",
-      "rawText": "The operation was aborted"
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "Zoekopdracht 2/2",
-      "date": "",
-      "url": "",
-      "status": "zoeken",
-      "rawText": "site:groningermuseum.nl \"Groningen\" agenda programma evenement concert theater film 2026-10-26 9999-12-31"
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.kultuuragenda.nl/agenda",
-      "title": "Zoekopdracht 1/2",
-      "date": "",
-      "url": "",
-      "status": "zoeken",
-      "rawText": "site:www.kultuuragenda.nl/agenda agenda agenda programma evenement concert Groningen 2026-10-26 9999-12-31"
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.kultuuragenda.nl/agenda",
-      "title": "Caravan Palace, ZAYKA - SPOT De Oosterpoort, Groningen",
-      "date": "",
-      "url": "https://open.spotify.com/concert/6A6yCZGzC69Teyn8S3ZH8B",
-      "status": "genegeerd",
-      "rawText": "Find tickets for Caravan Palace with ZAYKA at SPOT De Oosterpoort in Groningen on 10/28/2026 at 8:00 PM. see more concerts by artists you love, browse all live ..."
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.kultuuragenda.nl/agenda",
-      "title": "https://www.topticketshop.nl/fr/the-meltdown?srslt...",
-      "date": "",
-      "url": "https://www.topticketshop.nl/fr/the-meltdown?srsltid=AYCX9vLUnqkZV7FHZUEpZlip0EhQqrukHAM1Sy9WbEQkf9WLIUEbXZLK",
-      "status": "genegeerd",
-      "rawText": "No information is available for this page."
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.kultuuragenda.nl/agenda",
-      "title": "Free Concerts & Events this week in Groningen, Netherlands",
-      "date": "",
-      "url": "https://www.bandsintown.com/c/groningen-netherlands/this-week/genre/all-genres?came_from=209&genre_filter=Electronic&free=true",
-      "status": "genegeerd",
-      "rawText": "Free concerts this week in Groningen, Netherlands · Find tickets to concerts, tour dates and live music near Groningen, Netherlands."
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.kultuuragenda.nl/agenda",
-      "title": "Події, концерти, фестивалі в Groningen - Netherlands",
-      "date": "",
-      "url": "https://me-ticket.com/uk/catalog/netherlands/groningen",
-      "status": "genegeerd",
-      "rawText": "Не знаєте, куди піти в Groningen? Перелік концертів, виступів, виставок і вечірок у Groningen вже на ME-TICKET. Обирайте розваги, зручну дату та місце."
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.kultuuragenda.nl/agenda",
-      "title": "Events in Groningen",
-      "date": "",
-      "url": "https://app.futuratickets.com/en/agenda/ciudad/Groningen",
-      "status": "genegeerd",
-      "rawText": "Herman Van Veen · Lisa Ostermann · Jip Smit · Diggy Dex · Tangarine · Recirquel · Rockit Groningen Spot De Oosterpoort Nov 14 2026 · Gimme Gimme Gimme Abba Tribute."
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.kultuuragenda.nl/agenda",
-      "title": "Groningen - Nederländerna | Konserter-Metal Kalender",
-      "date": "",
-      "url": "https://se.concerts-metal.com/v-253__Groningen.html",
-      "status": "genegeerd",
-      "rawText": "Kommande evenemang ; Toody Cole And Her Band - Tour 2026. 31/08/2026 Vera, Groningen · Jenny Don't And The Spurs ; Black Stone Cherry - Tour 2026. 02/10/2026 De ..."
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.kultuuragenda.nl/agenda",
-      "title": "Concerts, Festivals et Billets à Groningen de 2026 et 2027",
-      "date": "",
-      "url": "https://www.songkick.com/fr/metro-areas/31384-netherlands-groningen/october-2026",
-      "status": "genegeerd",
-      "rawText": "Trouver les billets pour tous les concerts et festivals dans et autour de Groningen. 189 événements à venir. Filtrer par artiste. Tous."
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.kultuuragenda.nl/agenda",
-      "title": "Agenda Martinikerk Groningen - DJGuide",
-      "date": "",
-      "url": "https://www.djguide.nl/events.p?idlocation=4479&oldgigs=yes",
-      "status": "genegeerd",
-      "rawText": "Agenda Martinikerk Groningen. Wegen Tour 20:30 Martinikerk, Groningen. Concert Amadeus Is My Love. Concert Moscow Nights 19:10"
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.kultuuragenda.nl/agenda",
-      "title": "Top 2000 Live - Listen to the Music Groningen Tickets",
-      "date": "",
-      "url": "https://www.stubhub.com/uy/listen-to-the-music-groningen-tickets-12-29-2026/event/160894682/",
-      "status": "genegeerd",
-      "rawText": "Top 2000 Live - Listen to the Music · oct. 24. sáb. Guus Meeuwis. 20:30 Martiniplaza · oct. 27. mar. Jethro Tull. 20:00 Martiniplaza · nov. 12. jue ..."
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.kultuuragenda.nl/agenda",
-      "title": "Events Groningen 2026",
-      "date": "",
-      "url": "https://festivaly.eu/en/events/groningen",
-      "status": "genegeerd",
-      "rawText": "Events Groningen ; The Dublin Legends. Concert ∙ Folk The Dublin Legends Today 20:30 ; Polyphonic. Concert Polyphonic thu 1/10/2026 ; Krezip. Concert ∙ Pop ∙ ..."
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.kultuuragenda.nl/agenda",
-      "title": "Zoekopdracht 2/2",
-      "date": "",
-      "url": "",
-      "status": "zoeken",
-      "rawText": "site:www.kultuuragenda.nl \"Groningen\" agenda programma evenement concert theater film 2026-10-26 9999-12-31"
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.kultuuragenda.nl/agenda",
-      "title": "Archive",
-      "date": "",
-      "url": "https://www.grandtheatregroningen.nl/en/programma/archief",
-      "status": "genegeerd",
-      "rawText": "Part of the Groningen Chamber Music Festival 2025. te gast · kindervoorstelling ... Negendaags festival met theater, performance, dans en meer in Groningen."
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.kultuuragenda.nl/agenda",
-      "title": "Michael McGovern — 6.10.2026 De Oosterpoort",
-      "date": "",
-      "url": "https://festivaly.eu/en/michael-mcgovern-de-oosterpoort-groningen-2026",
-      "status": "genegeerd",
-      "rawText": "Information and tickets for the concert Michael McGovern, which is taking place on October 6, 2026 19:00 (De Oosterpoort, Groningen)."
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.kultuuragenda.nl/agenda",
-      "title": "Groningen Events Calendar 2026",
-      "date": "",
-      "url": "https://allevents.in/groningen/calendar",
-      "status": "genegeerd",
-      "rawText": "Explore all the happening events in Groningen in 2026 with us that best suit your interest. Theatre tickets, comedy festival, music classes or any adventure ..."
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.kultuuragenda.nl/agenda",
-      "title": "CineMusic: Films Live in Concert",
-      "date": "",
-      "url": "https://stayingroningen.com/events/cinemusic-films-live-in-concert",
-      "status": "genegeerd",
-      "rawText": "StayinGroningen.com the one and only local gateway for Groningen. We offer a 'one stop shop' on events, hotels and restaurants. StayinGroningen serves as a as a ..."
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.kultuuragenda.nl/agenda",
-      "title": "Theatervoorstellingen in Groningen, het complete aanbod.",
-      "date": "",
-      "url": "https://www.theater.nl/voorstellingen/groningen",
-      "status": "genegeerd",
-      "rawText": "Bekijk het complete aanbod van theatervoorstellingen in Groningen. Bekijk de agenda en lees de laatste recensies."
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.kultuuragenda.nl/agenda",
-      "title": "Holiday on Ice - CINEMA OF DREAMS",
-      "date": "",
-      "url": "https://www.stubhub.com/co/holiday-on-ice-groningen-tickets-12-13-2026/event/160023004/",
-      "status": "genegeerd",
-      "rawText": "See Holiday on Ice - CINEMA OF DREAMS - Première live at Martiniplaza in Groningen on diciembre 13, 2026, at 4:00 p. m.. Book now on StubHub ..."
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.kultuuragenda.nl/agenda",
-      "title": "Groningen Events - Discover Things To Do In ...",
-      "date": "",
-      "url": "https://www.ticketmaster.nl/discover/groningen?language=en-us&page=1",
-      "status": "genegeerd",
-      "rawText": "Discover top Groningen events, concerts, festivals, shows and more. Find tickets for the best things to do in Groningen on the official Ticketmaster site."
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.kultuuragenda.nl/agenda",
-      "title": "https://tickets.esn-groningen.nl/attend/558",
-      "date": "",
-      "url": "https://tickets.esn-groningen.nl/attend/558",
-      "status": "genegeerd",
-      "rawText": "No information is available for this page."
-    },
-    {
-      "source": "SerpAPI",
-      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
-      "title": "Zoekopdracht 1/2",
-      "date": "",
-      "url": "",
-      "status": "zoeken",
-      "rawText": "site:www.concertgebouw.nl/concerten-en-tickets concerten en tickets agenda programma evenement concert Groningen 2026-10-26 9999-12-31"
-    },
     {
       "source": "SerpAPI",
       "site": "https://www.concertgebouw.nl/concerten-en-tickets",
@@ -12651,16 +12353,322 @@
       "url": "https://simplon.nl/",
       "status": "klaar",
       "rawText": "site 5/15: 0 unieke events in 5.03 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Start",
+      "date": "",
+      "url": "https://www.vera-groningen.nl/",
+      "status": "start",
+      "rawText": "site 6/15: max 60 events, max 45 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://www.vera-groningen.nl/",
+      "status": "strategie",
+      "rawText": "programma-kaarten"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Pagina gelezen",
+      "date": "",
+      "url": "https://www.vera-groningen.nl/programma/?category=all&history=0&lang=nl",
+      "status": "ok",
+      "rawText": "74016 tekens HTML"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "The Fly",
+      "date": "2026-10-27",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=154391&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Tuesday 27 October The Fly Sold out"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Ulrika Spacek UK Mood Bored",
+      "date": "2026-10-29",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=150560&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "CLUBKAARTSHOW Thursday 29 October Ulrika Spacek UK Mood Bored NL Mainstage | Ticket: €16,- | doors: 20:00 - 22:00 | start: 20:30 Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Kruidkoek & Joost Oomen NL Mesofauna GRN",
+      "date": "2026-10-30",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=151519&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Friday 30 October Kruidkoek & Joost Oomen NL Mesofauna GRN Mainstage | Ticket: €18,- | doors: 19:30 - 21:00 | start: 20:00 Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "WAVEGRAVE Elysium Graaf Griezel // Fladdermus // DJ Stefan",
+      "date": "2026-10-30",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=154134&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Friday 30 October WAVEGRAVE Elysium Graaf Griezel // Fladdermus // DJ Stefan Dansen | Ticket: €5,- | doors: 22:00 - 03:00 | start: 22:00 Sold out"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Los Pirañas COL",
+      "date": "2026-10-31",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=152556&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Saturday 31 October Los Pirañas COL Mainstage | Ticket: €13,- | doors: 21:00 - 22:00 | start: 21:30 Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "The Etters NL Human Toys",
+      "date": "2026-10-31",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=154548&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Saturday 31 October The Etters NL Human Toys FR Downstage | Ticket: €5,- | doors: 22:30 - 23:30 | start: 23:00 Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Push It Pushin Wood Soundsystem All Night Long",
+      "date": "2026-10-31",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=154197&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Saturday 31 October Push It Pushin Wood Soundsystem All Night Long Dansen | Ticket: €5,- | doors: 23:00 - 04:00 | start: 23:01 Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Angine De Poitrine CAN Gros Mené",
+      "date": "2026-11-01",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=151279&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "SOLD OUT Sunday 1 November Angine De Poitrine CAN Gros Mené CAN Mainstage | Ticket: €24,- | doors: 19:30 - 22:00 | start: 20:30 Sold out"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Pavements",
+      "date": "2026-11-03",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=154871&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Tuesday 3 November Pavements Zienema | Ticket: €6,- | doors: 20:00 - 20:30 | start: 20:30 Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Hippotraktor BEL OLTAS",
+      "date": "2026-11-04",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=152263&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Wednesday 4 November Hippotraktor BEL OLTAS NL Mainstage | Ticket: €17,- | doors: 20:00 - 22:00 | start: 20:30 Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Pyrex USA Traumatizer",
+      "date": "2026-11-05",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=154976&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "RAT RACE X DOWNSTAGE EXTRA Thursday 5 November Pyrex USA Traumatizer NL Downstage | Ticket: €7,50 | doors: 21:00 - 22:00 | start: 21:30 Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Temples UK PAUW",
+      "date": "2026-11-06",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=151534&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Friday 6 November Temples UK PAUW NL Mainstage | Ticket: €24,- | doors: 19:30 - 22:00 | start: 20:30 Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "The Homesick NL Rhizocorp",
+      "date": "2026-11-07",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=153264&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Saturday 7 November The Homesick NL Rhizocorp UK Mainstage | Ticket: €14,- | doors: 20:00 - 22:00 | start: 20:30 Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Nagusame GRN",
+      "date": "2026-11-07",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=154867&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Saturday 7 November Nagusame GRN Downstage | Ticket: €5,- | doors: 22:30 - 23:30 | start: 23:00 Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Club VERA Line-up TBA",
+      "date": "2026-11-07",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=155064&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Saturday 7 November Club VERA Line-up TBA Dansen | Ticket: €5,- | doors: 23:00 - 03:00 | start: 23:01 Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Mystery cult film",
+      "date": "2026-11-10",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=154880&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Tuesday 10 November Mystery cult film Zienema | Ticket: €6,- | doors: 20:00 - 20:30 | start: 20:30 Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Shearwater USA + Loma USA + Any Kind",
+      "date": "2026-11-11",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=152600&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Wednesday 11 November Shearwater USA + Loma USA + Any Kind USA Mainstage | Ticket: €16,- | doors: 20:00 - 22:00 | start: 20:30 Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Supersuckers USA The Frankie Turbos",
+      "date": "2026-11-12",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=153215&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Thursday 12 November Supersuckers USA The Frankie Turbos NL Mainstage | Ticket: €15,- | doors: 20:00 - 22:00 | start: 20:30 Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Nordic Giants UK L.O.E.",
+      "date": "2026-11-13",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=153185&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Friday 13 November Nordic Giants UK L.O.E. UK Mainstage | Ticket: €15,- | doors: 20:00 - 22:00 | start: 20:30 Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "DOODSESKADER BEL Eigen Risico GRN",
+      "date": "2026-11-14",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=153339&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Saturday 14 November DOODSESKADER BEL Eigen Risico GRN Mainstage | Ticket: €17,- | doors: 20:00 - 22:00 | start: 20:30 Koop ticket"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "VERA-agendapagina",
+      "date": "",
+      "url": "https://www.vera-groningen.nl/programma/?category=all&history=0&lang=nl",
+      "status": "gespecialiseerde parser",
+      "rawText": "20 VERA-agenda-items uit eventlinks"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Pagina geanalyseerd",
+      "date": "",
+      "url": "https://www.vera-groningen.nl/programma/?category=all&history=0&lang=nl",
+      "status": "ok",
+      "rawText": "20 events/aanbiedingen op deze pagina"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Pagina gelezen",
+      "date": "",
+      "url": "https://www.vera-groningen.nl/?lang=nl",
+      "status": "ok",
+      "rawText": "75462 tekens HTML"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Madra Salach IRL",
+      "date": "2027-02-15",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=154849&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Monday 15 February Madra Salach IRL support Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Tramhaus",
+      "date": "2026-12-19",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=152866&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "SATURDAY SHOW Saturday 19 December Tramhaus support Raw postpunk from Rotterdam In 2023 wonnen ze de VERA Poll, en ook in 2026 blijft deze band een vaste publieksfavoriet. Lees meer Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "BODEGA",
+      "date": "2027-03-03",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=154770&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Wednesday 3 March BODEGA USA support Snarky and energetic artrock De New Yorkse artrockband BODEGA werd in 2016 gevormd uit de resten van het... Lees meer Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Codeine",
+      "date": "2027-05-14",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=155052&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Friday 14 May Codeine USA support Early slowcore pioneers Weinig bands laten traagheid zo krachtig klinken als Codeine. Voor de vijfde keer staat... Lees meer Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Black Marble",
+      "date": "2027-04-10",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=154962&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Saturday 10 April Black Marble USA support Gloomy synthpop and hooky cold wave Black Marble is het project van Chris Stewart, waarin cold wave, minimal synth, postpunk... Lees meer Koop ticket"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "VERA-agendapagina",
+      "date": "",
+      "url": "https://www.vera-groningen.nl/?lang=nl",
+      "status": "gespecialiseerde parser",
+      "rawText": "10 VERA-agenda-items uit eventlinks"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Pagina geanalyseerd",
+      "date": "",
+      "url": "https://www.vera-groningen.nl/?lang=nl",
+      "status": "ok",
+      "rawText": "10 events/aanbiedingen op deze pagina"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://www.vera-groningen.nl/",
+      "status": "klaar",
+      "rawText": "site 6/15: 0 unieke events in 5.58 sec"
     }
   ],
   "status": "running",
   "siteStartedAt": "2026-10-26T22:42:14+00:00",
-  "siteElapsedSeconds": 0,
-  "sitePageCount": 0,
+  "siteElapsedSeconds": 7,
+  "sitePageCount": 2,
   "lastSiteEventCount": 0,
-  "stage": "Websitepagina ophalen",
-  "lastUpdatedAt": "2026-10-26T22:42:14+00:00",
+  "stage": "Website klaar; volgende website voorbereiden",
+  "lastUpdatedAt": "2026-10-26T22:42:21+00:00",
   "lastSiteNewEventCount": 0,
-  "lastCompletedSite": "https://simplon.nl/",
-  "lastCompletedAt": "2026-10-26T22:42:11+00:00"
+  "lastCompletedSite": "https://www.vera-groningen.nl/",
+  "lastCompletedAt": "2026-10-26T22:42:21+00:00"
 }
