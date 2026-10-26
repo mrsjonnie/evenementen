@@ -3500,7 +3500,7 @@
             </div>
             <p class="desc">${escapeHtml(event.description || "Geen omschrijving beschikbaar.")}${sourceSuffix}</p>
             <div class="cardActions">
-              ${website ? `<a class="btn btnPrimary" href="${escapeHtml(website)}" target="_blank" rel="noopener noreferrer">Meer info</a>` : ""}
+              ${website ? `<a class="btn btnPrimary" href="${escapeHtml(website)}" target="_blank" rel="noopener noreferrer">Meer info</a>` : `<button class="btn btnPrimary" type="button" disabled title="Voor dit evenement is geen website beschikbaar">Meer info</button>`}
               <button class="btn btnSecondary favoriteBtn ${favorite ? "isFavorite" : ""}" type="button" data-favorite-key="${escapeHtml(cardKey)}" aria-pressed="${favorite ? "true" : "false"}" title="${favorite ? "Verwijder uit favorieten" : "Bewaar lokaal als favoriet"}">${favorite ? "★ Favoriet" : "☆ Favoriet"}</button>
               ${favorite ? `<a class="btn btnSecondary ticketSwapBtn" href="${escapeHtml(ticketSwapSearchUrl(event))}" target="_blank" rel="noopener noreferrer" title="Zoek dit evenement op TicketSwap">TicketSwap ↗</a>` : ""}
               ${route ? `<button class="btn btnSecondary routeToggle" type="button" data-route="${escapeHtml(routeId)}" data-destination="${escapeHtml(routeDestinationText)}" data-route-url="${escapeHtml(route)}">Route</button>` : ""}
