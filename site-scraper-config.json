@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-26T22:17:57.047Z",
+  "updatedAt": "2026-10-26T22:18:23.315Z",
   "sites": {
     "https://groningen.uitloper.nu/": {
       "methodology": "",
@@ -157,6 +157,11 @@
           "field": "location",
           "find": "ik heb een puber!’ LIVE",
           "replace": "SPOT/De Oosterpoort, Kleine zaal / Trompsingel 27"
+        },
+        {
+          "field": "location",
+          "find": "halloween en Ghostbusters op het grote scherm",
+          "replace": "SPOT/Stadsschouwburg, Turfsingel 86"
         }
       ],
       "eventUrlPatterns": [
