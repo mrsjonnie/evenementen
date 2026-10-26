@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- Favorieten, dubbelingsfeedback en URL-bewerking, versie 2026.10.26.75. -->
+<!-- Favorieten, dubbelingsfeedback, URL-bewerking en zichtbaarheid na titelcorrectie, versie 2026.10.26.77. -->
 <html lang="nl">
 <head>
   <meta charset="UTF-8">
@@ -1515,7 +1515,7 @@
     </section>
   </div>
   <script>
-    const APP_VERSION = "2026.10.26.76";
+    const APP_VERSION = "2026.10.26.77";
     const STATUS_HISTORY_KEY = "evenementenStatusHistoryV1";
     const DISMISSED_SCRAPE_RUN_KEY = "evenementenDismissedScrapeRunV1";
     const DEFAULT_MAX_EVENTS_PER_SITE = 20;
@@ -2089,7 +2089,11 @@
       for (const event of items || []) {
         const key = eventDedupeKey(event);
         const current = byKey.get(key);
-        if (!current || eventQuality(event) > eventQuality(current)) {
+        // Bewaar altijd de expliciete gebruikerscorrectie als er een gelijk
+        // deduplicatiesleutel voorkomt; een ruwe scraperhit mag die niet verdringen.
+        const editedEventWins = event.editedByUser && !current?.editedByUser;
+        const sameEditStatus = Boolean(event.editedByUser) === Boolean(current?.editedByUser);
+        if (!current || editedEventWins || (sameEditStatus && eventQuality(event) > eventQuality(current))) {
           byKey.set(key, event);
         }
       }
@@ -4162,11 +4166,19 @@
           delete event.lat;
           delete event.lon;
         }
+        // Als het actieve zoekwoord na een titelwijziging niet meer voorkomt in
+        // de bijgewerkte kaart, wis alleen die zoekterm zodat het evenement zichtbaar blijft.
+        const activeQuery = cleanText($("search").value || "").toLowerCase();
+        const updatedSearchableText = [event.title, event.description, event.location, event.type, event.source].join(" ").toLowerCase();
+        const clearedObsoleteQuery = Boolean(activeQuery && !updatedSearchableText.includes(activeQuery));
+        if (clearedObsoleteQuery) $("search").value = "";
         const nextKey = eventDedupeKey(event);
         expandedEventKeys.delete(key);
         expandedEventKeys.add(nextKey);
         addLiveLog("Correctie", event.website || event.source || "", event.title, "velden aangepast", "Correcties inclusief URL opgeslagen voor volgende scraper-runs");
-        showStatus("Evenement en verbeterde URL opgeslagen. De scraper past deze correcties bij volgende scans opnieuw toe.", "ok");
+        showStatus(clearedObsoleteQuery
+          ? "Evenement opgeslagen. De oude zoekterm is gewist zodat de gewijzigde titel zichtbaar blijft; je kunt daarna opnieuw zoeken."
+          : "Evenement en verbeterde URL opgeslagen. De scraper past deze correcties bij volgende scans opnieuw toe.", "ok");
         applyFilters();
       } catch (error) {
         showStatus(`Correctie niet opgeslagen: ${cleanText(error.message || error)}`, "error");
