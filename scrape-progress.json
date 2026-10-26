@@ -1,7 +1,7 @@
 {
   "runId": "2026-10-26T10:18:21.355935+00:00-b5bdaddd",
   "startedAt": "2026-10-26T10:18:21+00:00",
-  "completedCount": 9,
+  "completedCount": 10,
   "totalSites": 20,
   "currentSite": "https://www.kultuuragenda.nl/agenda",
   "currentSiteIndex": 10,
@@ -14,7 +14,8 @@
     "https://simplon.nl/",
     "https://www.vera-groningen.nl/",
     "https://www.martiniplaza.nl/nl/agenda",
-    "https://groningermuseum.nl/programma"
+    "https://groningermuseum.nl/programma",
+    "https://www.kultuuragenda.nl/agenda"
   ],
   "events": [
     {
@@ -410,6 +411,13 @@
       "count": 0,
       "newCount": 0,
       "durationSeconds": 4.26,
+      "timedOut": true
+    },
+    {
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 4.01,
       "timedOut": true
     }
   ],
@@ -9316,60 +9324,6 @@
       "rawText": "94996 tekens HTML"
     },
     {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "Sven Cilliers",
-      "date": "2027-04-10",
-      "url": "https://simplon.nl/events/sven-cilliers-2027/",
-      "status": "venue-agenda kaart",
-      "rawText": "za 10.4 Sven Cilliers Intimate singer-songwriter pop concert TICKETS"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "Comedytunes Comedynight",
-      "date": "2027-04-14",
-      "url": "https://simplon.nl/events/comedy-tunes-14-4/",
-      "status": "venue-agenda kaart",
-      "rawText": "wo 14.4 Comedytunes Comedynight Ronald Smink // Joran Welling // Hermes Ahmadi // Jasper Nieuwenhuis concert TICKETS"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "Blackbird",
-      "date": "2027-04-24",
-      "url": "https://simplon.nl/events/blackbird-2027/",
-      "status": "venue-agenda kaart",
-      "rawText": "za 24.4 Blackbird Melodious vintage pop concert TICKETS"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "Josua Peter",
-      "date": "2027-04-30",
-      "url": "https://simplon.nl/events/josua-peter-2027/",
-      "status": "venue-agenda kaart",
-      "rawText": "vr 30.4 Josua Peter Dynamic indie folk and pop concert TICKETS"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "Nienke Leone",
-      "date": "2027-05-14",
-      "url": "https://simplon.nl/events/nienke-leone/",
-      "status": "venue-agenda kaart",
-      "rawText": "vr 14.5 Nienke Leone Eerlijke en catchy popliedjes concert TICKETS"
-    },
-    {
-      "source": "Website",
-      "site": "https://simplon.nl/",
-      "title": "Mood Bored",
-      "date": "2027-05-28",
-      "url": "https://simplon.nl/events/mood-bored-2027/",
-      "status": "venue-agenda kaart",
-      "rawText": "vr 28.5 Mood Bored Catchy and raw shoegaze mixed with catchy poppy hooks concert TICKETS"
-    },
-    {
       "source": "Parser",
       "site": "https://simplon.nl/",
       "title": "Agenda geanalyseerd",
@@ -9775,114 +9729,6 @@
       "rawText": "146630 tekens HTML"
     },
     {
-      "source": "Website",
-      "site": "https://www.martiniplaza.nl/nl/agenda",
-      "title": "Donar Groningen – CSO Voluntari 2026",
-      "date": "2026-10-27",
-      "url": "https://www.martiniplaza.nl/nl/agenda/donar-groningen-cso-voluntari-2026",
-      "status": "venue-agenda kaart",
-      "rawText": "Sport Sport Donar Groningen – CSO Voluntari 2026 27 oktober"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.martiniplaza.nl/nl/agenda",
-      "title": "Jethro Tull",
-      "date": "2026-10-27",
-      "url": "https://www.martiniplaza.nl/nl/agenda/jethro-tull",
-      "status": "venue-agenda kaart",
-      "rawText": "Muziek Theater Jethro Tull 27 oktober"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.martiniplaza.nl/nl/agenda",
-      "title": "Rob Lamberti - A Celebration of GEORGE MICHAEL",
-      "date": "2026-10-28",
-      "url": "https://www.martiniplaza.nl/nl/agenda/rob-lamberti",
-      "status": "venue-agenda kaart",
-      "rawText": "Muziek Theater Rob Lamberti - A Celebration of GEORGE MICHAEL 28 oktober"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.martiniplaza.nl/nl/agenda",
-      "title": "Francis van Broekhuizen - Tosca",
-      "date": "2026-10-30",
-      "url": "https://www.martiniplaza.nl/nl/agenda/francis-van-broekhuizen",
-      "status": "venue-agenda kaart",
-      "rawText": "Muziek Theater Francis van Broekhuizen - Tosca 30 oktober"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.martiniplaza.nl/nl/agenda",
-      "title": "The Dire Straits Experience - “The Long Highway 2026 Tour”",
-      "date": "2026-10-31",
-      "url": "https://www.martiniplaza.nl/nl/agenda/the-dire-straits-experience",
-      "status": "venue-agenda kaart",
-      "rawText": "Muziek Theater The Dire Straits Experience - “The Long Highway 2026 Tour” 31 oktober"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.martiniplaza.nl/nl/agenda",
-      "title": "Juf Braaksel - De Musical",
-      "date": "2026-11-01",
-      "url": "https://www.martiniplaza.nl/nl/agenda/juf-braaksel",
-      "status": "venue-agenda kaart",
-      "rawText": "Familie Theater Juf Braaksel - De Musical 01 november"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.martiniplaza.nl/nl/agenda",
-      "title": "Promotiedagen 2026",
-      "date": "2026-11-03",
-      "url": "https://www.martiniplaza.nl/nl/agenda/promotiedagen-2026",
-      "status": "venue-agenda kaart",
-      "rawText": "Beurs Event Promotiedagen 2026 03 november"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.martiniplaza.nl/nl/agenda",
-      "title": "Promotiedagen 2026",
-      "date": "2026-11-04",
-      "url": "https://www.martiniplaza.nl/nl/agenda/promotiedagen-2026",
-      "status": "venue-agenda kaart",
-      "rawText": "Beurs Event Promotiedagen 2026 04 november"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.martiniplaza.nl/nl/agenda",
-      "title": "TAFKAL: SERIEUS GRAPPIG ( )",
-      "date": "2026-11-05",
-      "url": "https://www.martiniplaza.nl/nl/agenda/tafkal-serieus-grappig-uitverkocht",
-      "status": "venue-agenda kaart",
-      "rawText": "Cabaret Theater TAFKAL: SERIEUS GRAPPIG (UITVERKOCHT) 05 november"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.martiniplaza.nl/nl/agenda",
-      "title": "TAFKAL: SERIEUS GRAPPIG ( )",
-      "date": "2026-11-06",
-      "url": "https://www.martiniplaza.nl/nl/agenda/tafkal-serieus-grappig-uitverkocht",
-      "status": "venue-agenda kaart",
-      "rawText": "Cabaret Theater TAFKAL: SERIEUS GRAPPIG (UITVERKOCHT) 06 november"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.martiniplaza.nl/nl/agenda",
-      "title": "Taptoe Groningen 2026",
-      "date": "2026-11-07",
-      "url": "https://www.martiniplaza.nl/nl/agenda/taptoe-groningen-2026",
-      "status": "venue-agenda kaart",
-      "rawText": "Muziek Muziek Taptoe Groningen 2026 07 november"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.martiniplaza.nl/nl/agenda",
-      "title": "TAFKAL: SERIEUS GRAPPIG ( )",
-      "date": "2026-11-07",
-      "url": "https://www.martiniplaza.nl/nl/agenda/tafkal-serieus-grappig-uitverkocht",
-      "status": "venue-agenda kaart",
-      "rawText": "Cabaret Theater TAFKAL: SERIEUS GRAPPIG (UITVERKOCHT) 07 november"
-    },
-    {
       "source": "Parser",
       "site": "https://www.martiniplaza.nl/nl/agenda",
       "title": "Agenda geanalyseerd",
@@ -9899,114 +9745,6 @@
       "url": "https://www.martiniplaza.nl/nl/agenda",
       "status": "ok",
       "rawText": "12 events/aanbiedingen op deze pagina"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.martiniplaza.nl/nl/agenda",
-      "title": "link",
-      "date": "",
-      "url": "https://www.martiniplaza.nl/nl/agenda/cats-het-meesterwerk",
-      "status": "detail-link gevonden",
-      "rawText": ""
-    },
-    {
-      "source": "Website",
-      "site": "https://www.martiniplaza.nl/nl/agenda",
-      "title": "Donar Groningen – CSO Voluntari 2026",
-      "date": "",
-      "url": "https://www.martiniplaza.nl/nl/agenda/donar-groningen-cso-voluntari-2026",
-      "status": "detail-link gevonden",
-      "rawText": "Donar Groningen – CSO Voluntari 2026"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.martiniplaza.nl/nl/agenda",
-      "title": "Francis van Broekhuizen - Tosca",
-      "date": "",
-      "url": "https://www.martiniplaza.nl/nl/agenda/francis-van-broekhuizen",
-      "status": "detail-link gevonden",
-      "rawText": "Francis van Broekhuizen - Tosca"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.martiniplaza.nl/nl/agenda",
-      "title": "Jethro Tull",
-      "date": "",
-      "url": "https://www.martiniplaza.nl/nl/agenda/jethro-tull",
-      "status": "detail-link gevonden",
-      "rawText": "Jethro Tull"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.martiniplaza.nl/nl/agenda",
-      "title": "Juf Braaksel - De Musical",
-      "date": "",
-      "url": "https://www.martiniplaza.nl/nl/agenda/juf-braaksel",
-      "status": "detail-link gevonden",
-      "rawText": "Juf Braaksel - De Musical"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.martiniplaza.nl/nl/agenda",
-      "title": "Promotiedagen 2026",
-      "date": "",
-      "url": "https://www.martiniplaza.nl/nl/agenda/promotiedagen-2026",
-      "status": "detail-link gevonden",
-      "rawText": "Promotiedagen 2026"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.martiniplaza.nl/nl/agenda",
-      "title": "Rob Lamberti - A Celebration of GEORGE MICHAEL",
-      "date": "",
-      "url": "https://www.martiniplaza.nl/nl/agenda/rob-lamberti",
-      "status": "detail-link gevonden",
-      "rawText": "Rob Lamberti - A Celebration of GEORGE MICHAEL"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.martiniplaza.nl/nl/agenda",
-      "title": "TAFKAL: SERIEUS GRAPPIG (UITVERKOCHT)",
-      "date": "",
-      "url": "https://www.martiniplaza.nl/nl/agenda/tafkal-serieus-grappig-uitverkocht",
-      "status": "detail-link gevonden",
-      "rawText": "TAFKAL: SERIEUS GRAPPIG (UITVERKOCHT)"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.martiniplaza.nl/nl/agenda",
-      "title": "Taptoe Groningen 2026",
-      "date": "",
-      "url": "https://www.martiniplaza.nl/nl/agenda/taptoe-groningen-2026",
-      "status": "detail-link gevonden",
-      "rawText": "Taptoe Groningen 2026"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.martiniplaza.nl/nl/agenda",
-      "title": "link",
-      "date": "",
-      "url": "https://www.martiniplaza.nl/nl/agenda/the-bodyguard-de-musical-2027",
-      "status": "detail-link gevonden",
-      "rawText": ""
-    },
-    {
-      "source": "Website",
-      "site": "https://www.martiniplaza.nl/nl/agenda",
-      "title": "The Dire Straits Experience - “The Long Highway 2026 Tour”",
-      "date": "",
-      "url": "https://www.martiniplaza.nl/nl/agenda/the-dire-straits-experience",
-      "status": "detail-link gevonden",
-      "rawText": "The Dire Straits Experience - “The Long Highway 2026 Tour”"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.martiniplaza.nl/nl/agenda",
-      "title": "link",
-      "date": "",
-      "url": "https://www.martiniplaza.nl/nl/agenda/titanique",
-      "status": "detail-link gevonden",
-      "rawText": ""
     },
     {
       "source": "Website",
@@ -10290,60 +10028,6 @@
     {
       "source": "Website",
       "site": "https://groningermuseum.nl/programma",
-      "title": "Nieuw licht – De Ploeg",
-      "date": "2025-10-25",
-      "url": "https://groningermuseum.nl/programma",
-      "status": "event uit kaart",
-      "rawText": "Programma | Groninger Museum Naar hoofdinhoud Naar navigatie Home Bezoek Programma Collectie Architectuur Over Menu NL Tickets Tentoonstellingen Educatie Activiteiten 25 okt 2025 - 31 dec 2028 EXHIBITION Nieuw licht – De Ploeg 25 okt 2025 - 7 jan 2029 Elke dag EVENT Familietour Nieuw licht – De Ploeg 19 sep 2026 - 9 mei 2027 EXHIBITION The Architect & the Housewife 19 sep 2026 - 10 jan 2027 EXHIBITION Playing House 1"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "Familietour Nieuw licht – De Ploeg",
-      "date": "2025-10-25",
-      "url": "https://groningermuseum.nl/programma",
-      "status": "event uit kaart",
-      "rawText": "25 okt 2025 - 7 jan 2029 Elke dag EVENT Familietour Nieuw licht – De Ploeg"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "The Architect & the Housewife",
-      "date": "2026-09-19",
-      "url": "https://groningermuseum.nl/programma",
-      "status": "event uit kaart",
-      "rawText": "19 sep 2026 - 9 mei 2027 EXHIBITION The Architect & the Housewife"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "Playing House",
-      "date": "2026-09-19",
-      "url": "https://groningermuseum.nl/programma",
-      "status": "event uit kaart",
-      "rawText": "19 sep 2026 - 10 jan 2027 EXHIBITION Playing House"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "The Convent of Pleasure",
-      "date": "2026-09-19",
-      "url": "https://groningermuseum.nl/programma",
-      "status": "event uit kaart",
-      "rawText": "19 sep 2026 - 9 mei 2027 EXHIBITION The Convent of Pleasure"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "Keramikos Carrier Bag",
-      "date": "2026-09-19",
-      "url": "https://groningermuseum.nl/programma",
-      "status": "event uit kaart",
-      "rawText": "19 sep 2026 - 10 jan 2027 EXHIBITION Keramikos Carrier Bag"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningermuseum.nl/programma",
       "title": "EXHIBITION",
       "date": "2028-12-31",
       "url": "https://groningermuseum.nl/programma",
@@ -10493,42 +10177,6 @@
       "url": "https://groningermuseum.nl/programma",
       "status": "ok",
       "rawText": "7 events/aanbiedingen op deze pagina"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "25 okt 2025 - 7 jan 2029 Elke dag EVENT Familietour Nieuw licht – De Ploeg",
-      "date": "",
-      "url": "https://groningermuseum.nl/familietour-nieuw-licht-de-ploeg",
-      "status": "detail-link gevonden",
-      "rawText": "25 okt 2025 - 7 jan 2029 Elke dag EVENT Familietour Nieuw licht – De Ploeg"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "19 sep 2026 - 9 mei 2027 EXHIBITION The Convent of Pleasure",
-      "date": "",
-      "url": "https://groningermuseum.nl/ani-schulze-the-convent-of-pleasure",
-      "status": "detail-link gevonden",
-      "rawText": "19 sep 2026 - 9 mei 2027 EXHIBITION The Convent of Pleasure"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "25 okt 2025 - 31 dec 2028 EXHIBITION Nieuw licht – De Ploeg",
-      "date": "",
-      "url": "https://groningermuseum.nl/de-ploeg-nieuw-licht",
-      "status": "detail-link gevonden",
-      "rawText": "25 okt 2025 - 31 dec 2028 EXHIBITION Nieuw licht – De Ploeg"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "19 sep 2026 - 10 jan 2027 EXHIBITION Keramikos Carrier Bag",
-      "date": "",
-      "url": "https://groningermuseum.nl/keramikos-carrier-bag",
-      "status": "detail-link gevonden",
-      "rawText": "19 sep 2026 - 10 jan 2027 EXHIBITION Keramikos Carrier Bag"
     },
     {
       "source": "Website",
@@ -11213,16 +10861,376 @@
       "url": "https://groningermuseum.nl/programma",
       "status": "klaar",
       "rawText": "site 9/20: 0 unieke events in 4.26 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Start",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda",
+      "status": "start",
+      "rawText": "site 10/20: max 12 events, max 4 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda",
+      "status": "strategie",
+      "rawText": "universele detailpagina-parser (Kultuuragenda)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Pagina gelezen",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda",
+      "status": "ok",
+      "rawText": "153402 tekens HTML"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Kultuuragenda detailstrategie",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda",
+      "status": "strategie",
+      "rawText": "Overzicht overslaan; alleen echte /agenda/<id>/<slug> activiteitspagina’s verwerken"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Pagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda",
+      "status": "ok",
+      "rawText": "0 events/aanbiedingen op deze pagina"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "The Social Reckoning",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/1088284512/the-social-reckoning",
+      "status": "detail-link gevonden",
+      "rawText": "The Social Reckoning"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Het Witte Vlag Project",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/1148248983/het-witte-vlag-project-1",
+      "status": "detail-link gevonden",
+      "rawText": "Het Witte Vlag Project"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Nena",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/1249727087/nena-1",
+      "status": "detail-link gevonden",
+      "rawText": "Nena"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Digger",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/1453156530/digger",
+      "status": "detail-link gevonden",
+      "rawText": "Digger"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Youri",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/156742476/youri",
+      "status": "detail-link gevonden",
+      "rawText": "Youri"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "De Gaulle: Liberté",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/1691313909/de-gaulle-liberte",
+      "status": "detail-link gevonden",
+      "rawText": "De Gaulle: Liberté"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Wildwood",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/1740715911/wildwood",
+      "status": "detail-link gevonden",
+      "rawText": "Wildwood"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Erupcja",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/2155420288/erupcja",
+      "status": "detail-link gevonden",
+      "rawText": "Erupcja"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Home",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/2203530167/home-1",
+      "status": "detail-link gevonden",
+      "rawText": "Home"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Playing House",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/2241509706/playing-house",
+      "status": "detail-link gevonden",
+      "rawText": "Playing House"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Wicker",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/281413393/wicker",
+      "status": "detail-link gevonden",
+      "rawText": "Wicker"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "L'Inconnue",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/2840636300/l-inconnue",
+      "status": "detail-link gevonden",
+      "rawText": "L'Inconnue"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Sense and Sensibility",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/3022524326/sense-and-sensibility",
+      "status": "detail-link gevonden",
+      "rawText": "Sense and Sensibility"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Toutes Directions",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/3096643998/toutes-directions",
+      "status": "detail-link gevonden",
+      "rawText": "Toutes Directions"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Docs: Naza",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/3324146979/docs-naza",
+      "status": "detail-link gevonden",
+      "rawText": "Docs: Naza"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "National Theatre Live: The Misanthrope",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/3330398606/national-theatre-live-the-misanthrope",
+      "status": "detail-link gevonden",
+      "rawText": "National Theatre Live: The Misanthrope"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Coward",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/3621902129/coward",
+      "status": "detail-link gevonden",
+      "rawText": "Coward"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Classics: Akira",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/3669541755/classics-akira",
+      "status": "detail-link gevonden",
+      "rawText": "Classics: Akira"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "The Beloved",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/3730283290/the-beloved-1",
+      "status": "detail-link gevonden",
+      "rawText": "The Beloved"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Klik & Tik",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/4171063207/klik-tik-2026",
+      "status": "detail-link gevonden",
+      "rawText": "Klik & Tik"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Pressure",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/831818211/pressure",
+      "status": "detail-link gevonden",
+      "rawText": "Pressure"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Docs: The Cycle of Love",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/922308090/docs-the-cycle-of-love",
+      "status": "detail-link gevonden",
+      "rawText": "Docs: The Cycle of Love"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Schoolplaten van weleer",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/975781605/schoolplaten-van-weleer",
+      "status": "detail-link gevonden",
+      "rawText": "Schoolplaten van weleer"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Otto Krol - Gevels, daken en luchten",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/990231819/otto-krol-gevels-daken-en-luchten",
+      "status": "detail-link gevonden",
+      "rawText": "Otto Krol - Gevels, daken en luchten"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Evenement aanmelden",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/eventaanmeldformulier",
+      "status": "detail-link gevonden",
+      "rawText": "Evenement aanmelden"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Meld jouw activiteit aan",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/odp-submit",
+      "status": "detail-link gevonden",
+      "rawText": "Meld jouw activiteit aan"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Ga naar de homepage",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/",
+      "status": "detail-link gevonden",
+      "rawText": "Ga naar de homepage"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Plaatsingsvoorwaarden",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/plaatsingsvoorwaarden",
+      "status": "detail-link gevonden",
+      "rawText": "Plaatsingsvoorwaarden"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/1088284512/the-social-reckoning",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/1148248983/het-witte-vlag-project-1",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/1249727087/nena-1",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/1453156530/digger",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Detailpagina mislukt",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/156742476/youri",
+      "status": "fout",
+      "rawText": "HTTPSConnectionPool(host='www.kultuuragenda.nl', port=443): Read timed out. (read timeout=0.19780388099999868)"
+    },
+    {
+      "source": "Filter",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Datumfilter toegepast",
+      "date": "2026-10-26",
+      "url": "https://www.kultuuragenda.nl/agenda",
+      "status": "ok",
+      "rawText": "3 gevonden; 2 binnen 2026-10-26 t/m 2026-10-28"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda",
+      "status": "klaar",
+      "rawText": "site 10/20: 0 unieke events in 4.01 sec"
     }
   ],
   "status": "running",
   "siteStartedAt": "2026-10-26T10:19:22+00:00",
-  "siteElapsedSeconds": 0,
-  "sitePageCount": 0,
+  "siteElapsedSeconds": 6,
+  "sitePageCount": 1,
   "lastSiteEventCount": 0,
-  "stage": "Websitepagina ophalen",
-  "lastUpdatedAt": "2026-10-26T10:19:22+00:00",
+  "stage": "Website klaar; volgende website voorbereiden",
+  "lastUpdatedAt": "2026-10-26T10:19:26+00:00",
   "lastSiteNewEventCount": 0,
-  "lastCompletedSite": "https://groningermuseum.nl/programma",
-  "lastCompletedAt": "2026-10-26T10:19:21+00:00"
+  "lastCompletedSite": "https://www.kultuuragenda.nl/agenda",
+  "lastCompletedAt": "2026-10-26T10:19:28+00:00"
 }
