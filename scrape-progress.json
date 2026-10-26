@@ -1,7 +1,7 @@
 {
   "runId": "2026-10-26T20:38:40.265695+00:00-419ba73d",
   "startedAt": "2026-10-26T20:38:40+00:00",
-  "completedCount": 13,
+  "completedCount": 14,
   "totalSites": 15,
   "currentSite": "https://www.ibood.com/s-nl",
   "currentSiteIndex": 14,
@@ -18,7 +18,8 @@
     "https://www.concertgebouw.nl/concerten-en-tickets",
     "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
     "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
-    "https://www.socialdeal.nl/"
+    "https://www.socialdeal.nl/",
+    "https://www.ibood.com/s-nl"
   ],
   "events": [
     {
@@ -5116,90 +5117,16 @@
       "newCount": 40,
       "durationSeconds": 8.02,
       "timedOut": false
+    },
+    {
+      "site": "https://www.ibood.com/s-nl",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 4.74,
+      "timedOut": false
     }
   ],
   "rawLog": [
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "PACESHIFTERS play Nirvana Kink presents",
-      "date": "2026-12-27",
-      "url": "https://www.spotgroningen.nl/programma/paceshifters-play-nirvana/",
-      "status": "event uit link",
-      "rawText": "PACESHIFTERS play Nirvana Kink presents Voor de allerlaatste keer, PACESHIFTERS play Nirvana zo 27 dec"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Club Motion 16+ clubnacht",
-      "date": "2026-12-27",
-      "url": "https://www.spotgroningen.nl/programma/club-motion/",
-      "status": "event uit link",
-      "rawText": "Club Motion 16+ clubnacht Eerste editie in Groningen trapt af met New Wave editie zo 27 dec"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Grondtonen (9+) Het Houten Huis (try-out)",
-      "date": "2026-12-28",
-      "url": "https://www.spotgroningen.nl/programma/grondtonen-9/",
-      "status": "event uit link",
-      "rawText": "Grondtonen (9+) Het Houten Huis (try-out) Een mystieke familievoorstelling over verloren gaan in het bos ma 28 dec"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "My First Festival (2-12 jaar)",
-      "date": "2026-12-29",
-      "url": "https://www.spotgroningen.nl/programma/my-first-festival-2-12-jaar/",
-      "status": "event uit link",
-      "rawText": "My First Festival (2-12 jaar) Het allerleukste festival voor de hele familie di 29 dec"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Grondtonen (9+) Het Houten Huis (try-out)",
-      "date": "2026-12-29",
-      "url": "https://www.spotgroningen.nl/programma/grondtonen-9-2/",
-      "status": "event uit link",
-      "rawText": "Grondtonen (9+) Het Houten Huis (try-out) Een mystieke familievoorstelling over verloren gaan in het bos di 29 dec"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "40UP Big Bang",
-      "date": "2026-12-29",
-      "url": "https://www.spotgroningen.nl/programma/40up-big-bang-6/",
-      "status": "event uit link",
-      "rawText": "40UP Big Bang Het jaar sluiten we traditiegetrouw af met een knaller! di 29 dec"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Yora Rienstra, Vera Marijt e.a. Vrouwejaars 2026",
-      "date": "2026-12-29",
-      "url": "https://www.spotgroningen.nl/programma/yora-rienstra-vera-marijt-e-a-2/",
-      "status": "event uit link",
-      "rawText": "Yora Rienstra, Vera Marijt e.a. Vrouwejaars 2026 De blik op 2026 door de ogen van vrouwen! di 29 dec"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "New Cool Collective",
-      "date": "2026-12-29",
-      "url": "https://www.spotgroningen.nl/programma/new-cool-collective-5/",
-      "status": "event uit link",
-      "rawText": "New Cool Collective Een avond vol jazz, dance, latin, salsa en afrobeat di 29 dec"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Grondtonen (9+) Het Houten Huis (try-out)",
-      "date": "2026-12-30",
-      "url": "https://www.spotgroningen.nl/programma/grondtonen-9-3/",
-      "status": "event uit link",
-      "rawText": "Grondtonen (9+) Het Houten Huis (try-out) Een mystieke familievoorstelling over verloren gaan in het bos wo 30 dec"
-    },
     {
       "source": "Website",
       "site": "https://www.spotgroningen.nl/programma/",
@@ -15918,16 +15845,97 @@
       "url": "https://www.socialdeal.nl/",
       "status": "klaar",
       "rawText": "site 13/15: 40 unieke events in 8.02 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "Start",
+      "date": "",
+      "url": "https://www.ibood.com/s-nl",
+      "status": "start",
+      "rawText": "site 14/15: max 40 events, max 10 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://www.ibood.com/s-nl",
+      "status": "strategie",
+      "rawText": "aanbiedingen"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.ibood.com/offers/nl/s-nl",
+      "title": "403-tekstproxy mislukt",
+      "date": "",
+      "url": "https://www.ibood.com/offers/nl/s-nl",
+      "status": "fout",
+      "rawText": "HTTPSConnectionPool(host='r.jina.ai', port=443): Read timed out. (read timeout=1.25)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "Pagina mislukt",
+      "date": "",
+      "url": "https://www.ibood.com/offers/nl/s-nl",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.ibood.com/nl/s-nl",
+      "title": "403-tekstproxy mislukt",
+      "date": "",
+      "url": "https://www.ibood.com/nl/s-nl",
+      "status": "fout",
+      "rawText": "HTTPSConnectionPool(host='r.jina.ai', port=443): Read timed out. (read timeout=1.25)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "Pagina mislukt",
+      "date": "",
+      "url": "https://www.ibood.com/nl/s-nl",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "403-tekstproxy mislukt",
+      "date": "",
+      "url": "https://www.ibood.com/s-nl",
+      "status": "fout",
+      "rawText": "HTTPSConnectionPool(host='r.jina.ai', port=443): Read timed out. (read timeout=1.25)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "Pagina mislukt",
+      "date": "",
+      "url": "https://www.ibood.com/s-nl",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://www.ibood.com/s-nl",
+      "status": "klaar",
+      "rawText": "site 14/15: 0 unieke events in 4.74 sec"
     }
   ],
   "status": "running",
   "siteStartedAt": "2026-10-26T20:40:44+00:00",
-  "siteElapsedSeconds": 0,
+  "siteElapsedSeconds": 6,
   "sitePageCount": 0,
   "lastSiteEventCount": 0,
-  "stage": "Websitepagina ophalen",
-  "lastUpdatedAt": "2026-10-26T20:40:44+00:00",
-  "lastSiteNewEventCount": 40,
-  "lastCompletedSite": "https://www.socialdeal.nl/",
-  "lastCompletedAt": "2026-10-26T20:40:42+00:00"
+  "stage": "Website klaar; volgende website voorbereiden",
+  "lastUpdatedAt": "2026-10-26T20:40:48+00:00",
+  "lastSiteNewEventCount": 0,
+  "lastCompletedSite": "https://www.ibood.com/s-nl",
+  "lastCompletedAt": "2026-10-26T20:40:50+00:00"
 }
