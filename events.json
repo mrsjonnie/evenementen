@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-26T21:58:48+00:00",
+  "updatedAt": "2026-10-26T21:58:56+00:00",
   "events": [
     {
       "date": "2026-10-26",
@@ -12032,90 +12032,16 @@
       "newCount": 38,
       "durationSeconds": 17.88,
       "timedOut": false
+    },
+    {
+      "site": "https://www.ibood.com/s-nl",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 4.72,
+      "timedOut": false
     }
   ],
   "rawLog": [
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Bente",
-      "date": "2027-05-13",
-      "url": "https://www.spotgroningen.nl/programma/bente-5-13/",
-      "status": "event uit link",
-      "rawText": "Bente Met DWARS laat Bente een nieuwe kant van haar persoonlijke en eigenzinnige pop horen Uitverkocht Net bevestigd do 13 mei"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Pieter Wispelwey",
-      "date": "2027-05-13",
-      "url": "https://www.spotgroningen.nl/programma/pieter-wispelwey/",
-      "status": "event uit link",
-      "rawText": "Pieter Wispelwey Bach en Britten: tijdloze cellosuites vol diepgang, spanning en muzikale schoonheid do 13 mei"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Ronald Snijders en Pieter Jouke Staat van Verwarring",
-      "date": "2027-05-13",
-      "url": "https://www.spotgroningen.nl/programma/ronald-snijders-en-pieter-jouke/",
-      "status": "event uit link",
-      "rawText": "Ronald Snijders en Pieter Jouke Staat van Verwarring Spetterende spraakverwarring, absurde filmpjes, nieuwe woorden, een quiz en gasten do 13 mei"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Klaas van Eerden Imperfect",
-      "date": "2027-05-14",
-      "url": "https://www.spotgroningen.nl/programma/klaas-van-eerden/",
-      "status": "event uit link",
-      "rawText": "Klaas van Eerden Imperfect Fysieke grappen, muzikale hoogstandjes en messcherpe observaties vr 14 mei"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Frank Boeijen Theatertournee 2027",
-      "date": "2027-05-14",
-      "url": "https://www.spotgroningen.nl/programma/frank-boeijen-10/",
-      "status": "event uit link",
-      "rawText": "Frank Boeijen Theatertournee 2027 Dichter, dromer en romanticus laveert soepel tussen heden en verleden vr 14 mei"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "The Gesualdo Six",
-      "date": "2027-05-15",
-      "url": "https://www.spotgroningen.nl/programma/gesualdo-six/",
-      "status": "event uit link",
-      "rawText": "The Gesualdo Six Een betoverende reis van dageraad tot schemering met fenomenaal Brits vocaal ensemble Wereldklasse za 15 mei"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Waldemar Torenstra, Judith Noyons Nora",
-      "date": "2027-05-15",
-      "url": "https://www.spotgroningen.nl/programma/nora/",
-      "status": "event uit link",
-      "rawText": "Waldemar Torenstra, Judith Noyons Nora Confronterende klassieker over het huwelijk za 15 mei"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Conor McLain",
-      "date": "2027-05-18",
-      "url": "https://www.spotgroningen.nl/programma/conor-mclain/",
-      "status": "event uit link",
-      "rawText": "Conor McLain Ierse singer-songwriter met persoonlijke pop- en folknummers Net bevestigd di 18 mei"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Cameretten Finalistentournee 60e editie",
-      "date": "2027-05-18",
-      "url": "https://www.spotgroningen.nl/programma/cameretten-2/",
-      "status": "event uit link",
-      "rawText": "Cameretten Finalistentournee 60e editie di 18 mei"
-    },
     {
       "source": "Website",
       "site": "https://www.spotgroningen.nl/programma/",
@@ -22834,6 +22760,87 @@
       "url": "https://www.socialdeal.nl/",
       "status": "klaar",
       "rawText": "site 13/15: 38 unieke events in 17.88 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "Start",
+      "date": "",
+      "url": "https://www.ibood.com/s-nl",
+      "status": "start",
+      "rawText": "site 14/15: max 60 events, max 45 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://www.ibood.com/s-nl",
+      "status": "strategie",
+      "rawText": "aanbiedingen"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.ibood.com/offers/nl/s-nl",
+      "title": "403-tekstproxy mislukt",
+      "date": "",
+      "url": "https://www.ibood.com/offers/nl/s-nl",
+      "status": "fout",
+      "rawText": "HTTPSConnectionPool(host='r.jina.ai', port=443): Read timed out. (read timeout=1.25)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "Pagina mislukt",
+      "date": "",
+      "url": "https://www.ibood.com/offers/nl/s-nl",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.ibood.com/nl/s-nl",
+      "title": "403-tekstproxy mislukt",
+      "date": "",
+      "url": "https://www.ibood.com/nl/s-nl",
+      "status": "fout",
+      "rawText": "HTTPSConnectionPool(host='r.jina.ai', port=443): Read timed out. (read timeout=1.25)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "Pagina mislukt",
+      "date": "",
+      "url": "https://www.ibood.com/nl/s-nl",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "403-tekstproxy mislukt",
+      "date": "",
+      "url": "https://www.ibood.com/s-nl",
+      "status": "fout",
+      "rawText": "HTTPSConnectionPool(host='r.jina.ai', port=443): Read timed out. (read timeout=1.25)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "Pagina mislukt",
+      "date": "",
+      "url": "https://www.ibood.com/s-nl",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://www.ibood.com/s-nl",
+      "status": "klaar",
+      "rawText": "site 14/15: 0 unieke events in 4.72 sec"
     }
   ]
 }

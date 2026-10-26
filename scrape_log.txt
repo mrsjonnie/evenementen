@@ -1,12 +1,3 @@
-Website	https://www.spotgroningen.nl/programma/	event uit link	Bente	2027-05-13	https://www.spotgroningen.nl/programma/bente-5-13/	Bente Met DWARS laat Bente een nieuwe kant van haar persoonlijke en eigenzinnige pop horen Uitverkocht Net bevestigd do 13 mei
-Website	https://www.spotgroningen.nl/programma/	event uit link	Pieter Wispelwey	2027-05-13	https://www.spotgroningen.nl/programma/pieter-wispelwey/	Pieter Wispelwey Bach en Britten: tijdloze cellosuites vol diepgang, spanning en muzikale schoonheid do 13 mei
-Website	https://www.spotgroningen.nl/programma/	event uit link	Ronald Snijders en Pieter Jouke Staat van Verwarring	2027-05-13	https://www.spotgroningen.nl/programma/ronald-snijders-en-pieter-jouke/	Ronald Snijders en Pieter Jouke Staat van Verwarring Spetterende spraakverwarring, absurde filmpjes, nieuwe woorden, een quiz en gasten do 13 mei
-Website	https://www.spotgroningen.nl/programma/	event uit link	Klaas van Eerden Imperfect	2027-05-14	https://www.spotgroningen.nl/programma/klaas-van-eerden/	Klaas van Eerden Imperfect Fysieke grappen, muzikale hoogstandjes en messcherpe observaties vr 14 mei
-Website	https://www.spotgroningen.nl/programma/	event uit link	Frank Boeijen Theatertournee 2027	2027-05-14	https://www.spotgroningen.nl/programma/frank-boeijen-10/	Frank Boeijen Theatertournee 2027 Dichter, dromer en romanticus laveert soepel tussen heden en verleden vr 14 mei
-Website	https://www.spotgroningen.nl/programma/	event uit link	The Gesualdo Six	2027-05-15	https://www.spotgroningen.nl/programma/gesualdo-six/	The Gesualdo Six Een betoverende reis van dageraad tot schemering met fenomenaal Brits vocaal ensemble Wereldklasse za 15 mei
-Website	https://www.spotgroningen.nl/programma/	event uit link	Waldemar Torenstra, Judith Noyons Nora	2027-05-15	https://www.spotgroningen.nl/programma/nora/	Waldemar Torenstra, Judith Noyons Nora Confronterende klassieker over het huwelijk za 15 mei
-Website	https://www.spotgroningen.nl/programma/	event uit link	Conor McLain	2027-05-18	https://www.spotgroningen.nl/programma/conor-mclain/	Conor McLain Ierse singer-songwriter met persoonlijke pop- en folknummers Net bevestigd di 18 mei
-Website	https://www.spotgroningen.nl/programma/	event uit link	Cameretten Finalistentournee 60e editie	2027-05-18	https://www.spotgroningen.nl/programma/cameretten-2/	Cameretten Finalistentournee 60e editie di 18 mei
 Website	https://www.spotgroningen.nl/programma/	event uit link	Cock Robin (85-89) Tour 2027	2027-05-19	https://www.spotgroningen.nl/programma/cock-robin/	Cock Robin (85-89) Tour 2027 Avond vol hits en verborgen parels uit de gloriedagen van de band! wo 19 mei
 Website	https://www.spotgroningen.nl/programma/	event uit link	Nederlands Dans Theater 2 A poem for the world	2027-05-19	https://www.spotgroningen.nl/programma/nederlands-dans-theater-2-7/	Nederlands Dans Theater 2 A poem for the world Ode aan de speelsheid en de menselijkheid wo 19 mei
 Website	https://www.spotgroningen.nl/programma/	event uit link	Ivo Pogorelich	2027-05-20	https://www.spotgroningen.nl/programma/ivo-pogorelich/	Ivo Pogorelich Barokke helderheid en romantische diepte door een eigenzinnige meester Wereldklasse do 20 mei
@@ -1198,3 +1189,12 @@ RSS/Atom	https://www.socialdeal.nl/	fout	Feed mislukt		https://www.socialdeal.nl
 RSS/Atom	https://www.socialdeal.nl/	fout	Feed mislukt		https://www.socialdeal.nl/feed.xml	HTTP 404
 RSS/Atom	https://www.socialdeal.nl/	fout	Feed mislukt		https://www.socialdeal.nl/events/feed/	HTTP 404
 Website	https://www.socialdeal.nl/	klaar	Klaar		https://www.socialdeal.nl/	site 13/15: 38 unieke events in 17.88 sec
+Website	https://www.ibood.com/s-nl	start	Start		https://www.ibood.com/s-nl	site 14/15: max 60 events, max 45 seconden
+Parser	https://www.ibood.com/s-nl	strategie	Scrapertype vastgesteld		https://www.ibood.com/s-nl	aanbiedingen
+Diagnose	https://www.ibood.com/offers/nl/s-nl	fout	403-tekstproxy mislukt		https://www.ibood.com/offers/nl/s-nl	HTTPSConnectionPool(host='r.jina.ai', port=443): Read timed out. (read timeout=1.25)
+Website	https://www.ibood.com/s-nl	fout	Pagina mislukt		https://www.ibood.com/offers/nl/s-nl	HTTP 403
+Diagnose	https://www.ibood.com/nl/s-nl	fout	403-tekstproxy mislukt		https://www.ibood.com/nl/s-nl	HTTPSConnectionPool(host='r.jina.ai', port=443): Read timed out. (read timeout=1.25)
+Website	https://www.ibood.com/s-nl	fout	Pagina mislukt		https://www.ibood.com/nl/s-nl	HTTP 403
+Diagnose	https://www.ibood.com/s-nl	fout	403-tekstproxy mislukt		https://www.ibood.com/s-nl	HTTPSConnectionPool(host='r.jina.ai', port=443): Read timed out. (read timeout=1.25)
+Website	https://www.ibood.com/s-nl	fout	Pagina mislukt		https://www.ibood.com/s-nl	HTTP 403
+Website	https://www.ibood.com/s-nl	klaar	Klaar		https://www.ibood.com/s-nl	site 14/15: 0 unieke events in 4.72 sec
