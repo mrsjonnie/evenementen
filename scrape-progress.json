@@ -1,7 +1,7 @@
 {
   "runId": "2026-10-26T09:44:56.889366+00:00-27747b20",
   "startedAt": "2026-10-26T09:44:56+00:00",
-  "completedCount": 13,
+  "completedCount": 14,
   "totalSites": 20,
   "currentSite": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
   "currentSiteIndex": 14,
@@ -18,7 +18,8 @@
     "https://www.kultuuragenda.nl/agenda",
     "https://www.noorderzon.nl/programma",
     "https://www.concertgebouw.nl/concerten-en-tickets",
-    "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html"
+    "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+    "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817"
   ],
   "events": [
     {
@@ -2022,72 +2023,16 @@
       "newCount": 0,
       "durationSeconds": 1.4,
       "timedOut": false
+    },
+    {
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 4.01,
+      "timedOut": true
     }
   ],
   "rawLog": [
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Selma Visscher Trekvogel",
-      "date": "2027-03-02",
-      "url": "https://www.spotgroningen.nl/programma/selma-visscher-2/",
-      "status": "event uit link",
-      "rawText": "Selma Visscher Trekvogel Satijnen stem en slimme, spitse grappen di 2 mrt"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Bushman's Revenge",
-      "date": "2027-03-02",
-      "url": "https://www.spotgroningen.nl/programma/bushmans-revenge/",
-      "status": "event uit link",
-      "rawText": "Bushman's Revenge Noors powertrio combineert de energie van rock met de vrijheid van jazz Net bevestigd di 2 mrt"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Nachtwacht NITE, Club Guy & Roni, HIIIT, Het Muziek",
-      "date": "2027-03-03",
-      "url": "https://www.spotgroningen.nl/programma/nachtwacht-3/",
-      "status": "event uit link",
-      "rawText": "Nachtwacht NITE, Club Guy & Roni, HIIIT, Het Muziek \"Nachtwacht grijpt vol naar je hart\" ★★★★★ de Volkskrant wo 3 mrt"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Flip Noorman Bonobo",
-      "date": "2027-03-03",
-      "url": "https://www.spotgroningen.nl/programma/flip-noorman-2/",
-      "status": "event uit link",
-      "rawText": "Flip Noorman Bonobo Theaterconcert vechtend tegen de bierkaai, op het scherp van de tijdgeest wo 3 mrt"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Coffee Break ism Prins Claus Conservatorium",
-      "date": "2027-03-04",
-      "url": "https://www.spotgroningen.nl/programma/coffee-break-ism-prins-claus-conservatorium-19/",
-      "status": "event uit link",
-      "rawText": "Coffee Break ism Prins Claus Conservatorium Trakteer jezelf op koffie en muziek van aanstormend talent op de donderdagochtend do 4 mrt"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Amatis Trio Myths & Legends",
-      "date": "2027-03-04",
-      "url": "https://www.spotgroningen.nl/programma/amatis-trio/",
-      "status": "event uit link",
-      "rawText": "Amatis Trio Myths & Legends Jong, internationaal toptrio speelt werk van Schubert, Liszt en Mendelssohn do 4 mrt"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Noord Nederlands Orkest Mahler 5",
-      "date": "2027-03-04",
-      "url": "https://www.spotgroningen.nl/programma/noord-nederlands-orkest-236/",
-      "status": "event uit link",
-      "rawText": "Noord Nederlands Orkest Mahler 5 Van rouw naar liefde in Mahlers Vijfde symfonie do 4 mrt"
-    },
     {
       "source": "Website",
       "site": "https://www.spotgroningen.nl/programma/",
@@ -12824,16 +12769,79 @@
       "url": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
       "status": "klaar",
       "rawText": "site 13/20: 0 unieke events in 1.4 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Start",
+      "date": "",
+      "url": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "status": "start",
+      "rawText": "site 14/20: max 12 events, max 4 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "status": "strategie",
+      "rawText": "universeel-jsonld-links-kaarten"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Pagina gelezen",
+      "date": "",
+      "url": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "status": "ok",
+      "rawText": "296555 tekens HTML"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Paradiso detailstrategie",
+      "date": "",
+      "url": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "status": "strategie",
+      "rawText": "Agenda-overzicht overslaan; alleen individuele /programma/<slug>/<id> pagina's verwerken"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Pagina geanalyseerd",
+      "date": "",
+      "url": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "status": "ok",
+      "rawText": "0 events/aanbiedingen op deze pagina"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Detailpagina mislukt",
+      "date": "",
+      "url": "https://www.paradiso.nl/programma/adult-dvd/2885447",
+      "status": "fout",
+      "rawText": "HTTPSConnectionPool(host='www.paradiso.nl', port=443): Read timed out. (read timeout=2.8707823630000036)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "status": "klaar",
+      "rawText": "site 14/20: 0 unieke events in 4.01 sec"
     }
   ],
   "status": "running",
   "siteStartedAt": "2026-10-26T09:46:13+00:00",
-  "siteElapsedSeconds": 0,
-  "sitePageCount": 0,
+  "siteElapsedSeconds": 5,
+  "sitePageCount": 1,
   "lastSiteEventCount": 0,
-  "stage": "Websitepagina ophalen",
-  "lastUpdatedAt": "2026-10-26T09:46:13+00:00",
+  "stage": "Website klaar; volgende website voorbereiden",
+  "lastUpdatedAt": "2026-10-26T09:46:15+00:00",
   "lastSiteNewEventCount": 0,
-  "lastCompletedSite": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
-  "lastCompletedAt": "2026-10-26T09:46:11+00:00"
+  "lastCompletedSite": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+  "lastCompletedAt": "2026-10-26T09:46:18+00:00"
 }
