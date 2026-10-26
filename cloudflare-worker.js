@@ -1148,7 +1148,7 @@ async function saveEventCorrection(env, target = {}) {
   const response = await githubFetch(env, "/contents/events.json?ref=main");
   if (!response.ok) throw new Error("events.json niet leesbaar: status " + response.status);
   const file = await response.json();
-  const data = JSON.parse(decodeBase64(file.content));
+  let data = JSON.parse(decodeBase64(file.content));
   const originalTitle = clean(target.originalTitle || target.title || "");
   const originalDate = clean(target.originalDate || target.date || "");
   const wantedUrl = clean(target.url || target.website || "").replace(/\/$/, "").toLowerCase();
