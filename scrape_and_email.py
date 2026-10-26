@@ -1437,6 +1437,13 @@ def extract_concertgebouw_detail_event(soup, page_url, site_url, discovery_sourc
 
     structured_date = ""
     structured_time = ""
+    def parse_structured_date(value):
+        value = clean_text(value)
+        # ISO datetime values have a "T" immediately after the day; parse the
+        # date portion explicitly because the generic text parser expects a word boundary.
+        iso_match = re.match(r"^(20\d{2}-\d{1,2}-\d{1,2})", value)
+        return parse_date_text(iso_match.group(1) if iso_match else value)
+
     def inspect_jsonld(value):
         nonlocal structured_date, structured_time
         if isinstance(value, dict):
@@ -1445,7 +1452,7 @@ def extract_concertgebouw_detail_event(soup, page_url, site_url, discovery_sourc
             if any("event" in str(item).lower() for item in event_types):
                 start = clean_text(value.get("startDate") or value.get("startdate") or "")
                 if start and not structured_date:
-                    structured_date = parse_date_text(start)
+                    structured_date = parse_structured_date(start)
                     structured_time = first_time(start)
             for child in value.values():
                 inspect_jsonld(child)
@@ -1464,12 +1471,12 @@ def extract_concertgebouw_detail_event(soup, page_url, site_url, discovery_sourc
     # where footer/newsletter dates can otherwise be mistaken for the concert date.
     date_value = (
         structured_date
-        or parse_date_text(meta_content(soup, "event:start_time", "event:start_date", "startDate"))
+        or parse_structured_date(meta_content(soup, "event:start_time", "event:start_date", "startDate"))
     )
     if not date_value:
         for node in soup.select("time[datetime], [itemprop='startDate'], [data-start-date]"):
             candidate = clean_text(node.get("datetime") or node.get("content") or node.get("data-start-date") or node.get_text(" ", strip=True))
-            date_value = parse_date_text(candidate)
+            date_value = parse_structured_date(candidate)
             if date_value:
                 if not structured_time:
                     structured_time = first_time(candidate)
@@ -1537,6 +1544,10 @@ def parse_page_events(html, page_url, site_url, discovery_source):
         "analyse",
         f"jsonld:{len(jsonld_events)}, links:{len(anchor_events)}, datumblokken:{len(inline_events)}, kaarten:{len(card_events)}, regels:{len(line_events)}, detail:{1 if detail else 0}",
     )
+    if concertgebouw_detail:
+        # A concert detail URL represents exactly one concert; avoid generic
+        # footer/breadcrumb extraction creating competing records for the same page.
+        return [concertgebouw_detail]
     return dedupe_events(events)
 
 
