@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-26T19:54:15.833Z",
+  "updatedAt": "2026-10-26T20:15:16.084Z",
   "sites": {
     "https://groningen.uitloper.nu/": {
       "methodology": "",
@@ -201,24 +201,6 @@
       "adjustments": []
     },
     "https://www.concertgebouw.nl/concerten-en-tickets": {
-      "methodology": "",
-      "startUrls": [],
-      "exclusions": [
-        "contact",
-        "privacy",
-        "cookie",
-        "voorwaarden",
-        "login",
-        "account",
-        "nieuwsbrief",
-        "facebook",
-        "instagram",
-        "linkedin"
-      ],
-      "excludedUrls": [],
-      "adjustments": []
-    },
-    "https://www.zwolsetheaters.nl/programma": {
       "methodology": "",
       "startUrls": [],
       "exclusions": [
