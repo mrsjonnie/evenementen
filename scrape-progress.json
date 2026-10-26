@@ -1,7 +1,7 @@
 {
   "runId": "2026-10-26T12:26:54.991401+00:00-25f487be",
   "startedAt": "2026-10-26T12:26:54+00:00",
-  "completedCount": 6,
+  "completedCount": 7,
   "totalSites": 18,
   "currentSite": "https://www.martiniplaza.nl/nl/agenda",
   "currentSiteIndex": 7,
@@ -11,7 +11,8 @@
     "https://forum.nl/nl/agenda",
     "https://www.spotgroningen.nl/programma/",
     "https://simplon.nl/",
-    "https://www.vera-groningen.nl/"
+    "https://www.vera-groningen.nl/",
+    "https://www.martiniplaza.nl/nl/agenda"
   ],
   "events": [
     {
@@ -2307,216 +2308,16 @@
       "newCount": 0,
       "durationSeconds": 2.39,
       "timedOut": false
+    },
+    {
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 6.58,
+      "timedOut": false
     }
   ],
   "rawLog": [
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Theatraal",
-      "date": "2026-10-27",
-      "url": "https://groningen.uitloper.nu/kunst/theatraal",
-      "status": "Uitloper agenda-item",
-      "rawText": "Theatraal Voor het derde jaar op rij presenteert de Stadsgalerie…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "VELD Collectief",
-      "date": "2026-10-27",
-      "url": "https://groningen.uitloper.nu/kunst/veld-collectief",
-      "status": "Uitloper agenda-item",
-      "rawText": "VELD Collectief Wie in Groningen een suikerbiet langs de weg ziet…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "ubiquitousssssssssssssssssugar",
-      "date": "2026-10-27",
-      "url": "https://groningen.uitloper.nu/kunst/ubiquitousssssssssssssssssugar",
-      "status": "Uitloper agenda-item",
-      "rawText": "ubiquitousssssssssssssssssugar Met performances, proeverijen van Goblin Feast, Jonas…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Storyworld Spotlight: Asjemenou!",
-      "date": "2026-10-27",
-      "url": "https://groningen.uitloper.nu/kunst/storyworld-spotlight-asjemenou",
-      "status": "Uitloper agenda-item",
-      "rawText": "Storyworld Spotlight: Asjemenou! In 2026 bestaat de Nederlandse televisie 75 jaar…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Masterminds. De Geschiedenis van de Groningse Universiteit",
-      "date": "2026-10-27",
-      "url": "https://groningen.uitloper.nu/kunst/masterminds",
-      "status": "Uitloper agenda-item",
-      "rawText": "Masterminds. De Geschiedenis van de Groningse Universiteit Masterminds neemt je mee in de geschiedenis van de…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Anatomisch Theater",
-      "date": "2026-10-27",
-      "url": "https://groningen.uitloper.nu/kunst/anatomisch-theater",
-      "status": "Uitloper agenda-item",
-      "rawText": "Anatomisch Theater In het anatomisch theater zijn zo’n 50 preparaten…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Aletta Jacobskamer",
-      "date": "2026-10-27",
-      "url": "https://groningen.uitloper.nu/kunst/aletta-jacobskamer",
-      "status": "Uitloper agenda-item",
-      "rawText": "Aletta Jacobskamer In de kamer van dr. Aletta Jacobs, de eerste vrouwelijke…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "GRID - Puin Hoop: herdruk van de jaren ’80",
-      "date": "2026-10-27",
-      "url": "https://groningen.uitloper.nu/kunst/grid-puin-hoop-herdruk-van-de-jaren-%e2%80%9980",
-      "status": "Uitloper agenda-item",
-      "rawText": "GRID - Puin Hoop: herdruk van de jaren ’80 Een prikkelende expositie over vroeger, die verrassend…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Kunstroutes",
-      "date": "2026-10-27",
-      "url": "https://groningen.uitloper.nu/kunst/kunstroutes",
-      "status": "Uitloper agenda-item",
-      "rawText": "Kunstroutes Kunst die je gezien moet hebben en kunst die je misschien…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "The Wall #9",
-      "date": "2026-10-27",
-      "url": "https://groningen.uitloper.nu/kunst/the-wall-9",
-      "status": "Uitloper agenda-item",
-      "rawText": "The Wall #9 Kunstenaar Indira de Boer maakt een installatie van…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Otto Krol - Gevels, daken en luchten",
-      "date": "2026-10-27",
-      "url": "https://groningen.uitloper.nu/kunst/otto-krol-gevels-daken-en-luchten-1",
-      "status": "Uitloper agenda-item",
-      "rawText": "Otto Krol - Gevels, daken en luchten Na de stadsgezichten van de vorige expositie eind…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Otto Krol - Gevels, daken en luchten",
-      "date": "2026-10-27",
-      "url": "https://groningen.uitloper.nu/kunst/otto-krol-gevels-daken-en-luchten",
-      "status": "Uitloper agenda-item",
-      "rawText": "Otto Krol - Gevels, daken en luchten Na de stadsgezichten van de vorige expositie eind…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Kleur!",
-      "date": "2026-10-27",
-      "url": "https://groningen.uitloper.nu/kunst/kleur-3",
-      "status": "Uitloper agenda-item",
-      "rawText": "Kleur! Tien kunstenaars onderzoeken in de verschillende ruimtes…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Gasten: Paul Kramer",
-      "date": "2026-10-27",
-      "url": "https://groningen.uitloper.nu/kunst/gasten-paul-kramer",
-      "status": "Uitloper agenda-item",
-      "rawText": "Gasten: Paul Kramer Duotentoonstelling met werken van Paul Kramer en Henk…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "APPROP.",
-      "date": "2026-10-27",
-      "url": "https://groningen.uitloper.nu/kunst/approp",
-      "status": "Uitloper agenda-item",
-      "rawText": "APPROP. Met APPROP. presenteren ax710 en Jurjen Galema een…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Permanente Expositie",
-      "date": "2026-10-27",
-      "url": "https://groningen.uitloper.nu/kunst/permanente-expositie",
-      "status": "Uitloper agenda-item",
-      "rawText": "Permanente Expositie De vaste tentoonstelling nodigt uit om kennis te nemen…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Figuranten",
-      "date": "2026-10-27",
-      "url": "https://groningen.uitloper.nu/kunst/figuranten",
-      "status": "Uitloper agenda-item",
-      "rawText": "Figuranten Sievert Bodde toont zestien fictieve portretten, in…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Schilderijen van Marrie Venderink",
-      "date": "2026-10-27",
-      "url": "https://groningen.uitloper.nu/kunst/schilderijen-vanmarrie-venderink",
-      "status": "Uitloper agenda-item",
-      "rawText": "Schilderijen van Marrie Venderink Expositie met schilderijen van Marrie Venderink …"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Het Witte Vlag Project",
-      "date": "2026-10-27",
-      "url": "https://groningen.uitloper.nu/kunst/het-witte-vlag-project",
-      "status": "Uitloper agenda-item",
-      "rawText": "Het Witte Vlag Project Een groepstentoonstelling met dertien hedendaagse…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Lieuwe van Gogh",
-      "date": "2026-10-27",
-      "url": "https://groningen.uitloper.nu/kunst/lieuwe-van-gogh",
-      "status": "Uitloper agenda-item",
-      "rawText": "Lieuwe van Gogh De kleurrijke gevel van Metamorphose gemaakt door…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Expositie Overwegend Vrouw (Glimmen)",
-      "date": "2026-10-27",
-      "url": "https://groningen.uitloper.nu/kunst/expositie-overwegend-vrouw-glimmen",
-      "status": "Uitloper agenda-item",
-      "rawText": "Expositie Overwegend Vrouw (Glimmen) Ingrid Veldscholten en Josephine Wortelboer exposeren…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Het Witte Vlag Project",
-      "date": "2026-10-27",
-      "url": "https://groningen.uitloper.nu/kunst/het-witte-vlag-project-1",
-      "status": "Uitloper agenda-item",
-      "rawText": "Het Witte Vlag Project In een tijd waarin zekerheden luid klinken en identiteiten…"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningen.uitloper.nu/",
-      "title": "Playing House - kinderbiënnale",
-      "date": "2026-10-27",
-      "url": "https://groningen.uitloper.nu/jeugd/playing-house-kinderbiennale",
-      "status": "Uitloper agenda-item",
-      "rawText": "Playing House - kinderbiënnale Welke bewust of onbewust aangeleerde regels worden…"
-    },
     {
       "source": "Website",
       "site": "https://groningen.uitloper.nu/",
@@ -13109,16 +12910,223 @@
       "url": "https://www.vera-groningen.nl/",
       "status": "klaar",
       "rawText": "site 6/18: 0 unieke events in 2.39 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Start",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda",
+      "status": "start",
+      "rawText": "site 7/18: max 50 events, max 10 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda",
+      "status": "strategie",
+      "rawText": "agenda-kaarten"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Pagina gelezen",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda",
+      "status": "ok",
+      "rawText": "146630 tekens HTML"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Agenda geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda",
+      "status": "gespecialiseerde parser",
+      "rawText": "12 agenda-items gevonden"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Pagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda",
+      "status": "ok",
+      "rawText": "12 events/aanbiedingen op deze pagina"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/cats-het-meesterwerk",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/donar-groningen-cso-voluntari-2026",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/francis-van-broekhuizen",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/jethro-tull",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/juf-braaksel",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/promotiedagen-2026",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/rob-lamberti",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/tafkal-serieus-grappig-uitverkocht",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/taptoe-groningen-2026",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/the-bodyguard-de-musical-2027",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/the-dire-straits-experience",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/titanique",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/feed",
+      "status": "fout",
+      "rawText": "HTTP 404"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/rss",
+      "status": "fout",
+      "rawText": "HTTP 404"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/rss.xml",
+      "status": "fout",
+      "rawText": "HTTP 404"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/feed.xml",
+      "status": "fout",
+      "rawText": "HTTP 404"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/events/feed/",
+      "status": "fout",
+      "rawText": "HTTP 404"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda",
+      "status": "klaar",
+      "rawText": "site 7/18: 0 unieke events in 6.58 sec"
     }
   ],
   "status": "running",
   "siteStartedAt": "2026-10-26T12:27:51+00:00",
-  "siteElapsedSeconds": 0,
-  "sitePageCount": 0,
+  "siteElapsedSeconds": 8,
+  "sitePageCount": 1,
   "lastSiteEventCount": 0,
-  "stage": "Websitepagina ophalen",
-  "lastUpdatedAt": "2026-10-26T12:27:51+00:00",
+  "stage": "Website klaar; volgende website voorbereiden",
+  "lastUpdatedAt": "2026-10-26T12:27:54+00:00",
   "lastSiteNewEventCount": 0,
-  "lastCompletedSite": "https://www.vera-groningen.nl/",
-  "lastCompletedAt": "2026-10-26T12:27:49+00:00"
+  "lastCompletedSite": "https://www.martiniplaza.nl/nl/agenda",
+  "lastCompletedAt": "2026-10-26T12:27:59+00:00"
 }
