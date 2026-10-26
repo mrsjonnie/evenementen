@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- Bevestigingsdialoog robuuster gemaakt en evenementcorrecties direct in overzicht renderen, versie 2026.10.26.83. -->
+<!-- Verwijderde evenementen direct optimistisch uit het overzicht halen, versie 2026.10.26.84. -->
 <html lang="nl">
 <head>
   <meta charset="UTF-8">
@@ -1515,7 +1515,7 @@
     </section>
   </div>
   <script>
-    const APP_VERSION = "2026.10.26.83";
+    const APP_VERSION = "2026.10.26.84";
     const STATUS_HISTORY_KEY = "evenementenStatusHistoryV1";
     const DISMISSED_SCRAPE_RUN_KEY = "evenementenDismissedScrapeRunV1";
     const DEFAULT_MAX_EVENTS_PER_SITE = 20;
@@ -4346,8 +4346,17 @@
 
     async function deleteEventByKey(key) {
       const event = events.find((item) => eventDedupeKey(item) === key);
-      if (!event) return;
-      addLiveLog("App", event.website || event.source || "", event.title, "verwijderen", "Verwijderverzoek versturen");
+      if (!event) return false;
+
+      // Optimistisch verwijderen: haal de kaart direct uit de zichtbare lijst,
+      // terwijl de server op de achtergrond de permanente verwijdering verwerkt.
+      events = events.filter((item) => eventDedupeKey(item) !== key);
+      expandedEventKeys.delete(key);
+      applyFilters();
+      renderSites(checkedSites());
+      showStatus(`Verwijderen van “${cleanText(event.title)}”…`, "info");
+      addLiveLog("App", event.website || event.source || "", event.title, "verwijderen", "Kaart direct verborgen; serververzoek loopt");
+
       try {
         const response = await fetch(`${WORKER_URL}/delete-event`, {
           method: "POST",
@@ -4366,10 +4375,8 @@
           throw new Error(data.error || "De server heeft geen overeenkomstig evenement gevonden. Ververs de gegevens en probeer opnieuw.");
         }
 
-        events = events.filter((item) => eventDedupeKey(item) !== key);
         deletedEventKeys.add(key);
         newEventKeys.delete(key);
-        expandedEventKeys.delete(key);
         const remainingEvents = Number(data.remainingEvents);
         const remainingArchive = Number(data.remainingArchive);
         eventsActiveCount = Number.isFinite(remainingEvents) ? remainingEvents : events.length;
@@ -4385,7 +4392,13 @@
         setTimeout(hideStatus, 4000);
         return true;
       } catch (error) {
-        showStatus(`Verwijderen mislukt: ${error.message}`, "error");
+        // Als de server de verwijdering afwijst, zet het evenement meteen terug
+        // zodat de lokale weergave geen onjuiste permanente verwijdering suggereert.
+        if (!events.some((item) => eventDedupeKey(item) === key)) events.push(event);
+        applyFilters();
+        renderSites(checkedSites());
+        showStatus(`Verwijderen mislukt; evenement teruggezet: ${cleanText(error.message || error)}`, "error");
+        addLiveLog("App", event.website || event.source || "", event.title, "verwijderen mislukt", cleanText(error.message || error));
         return false;
       }
     }
