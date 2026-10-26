@@ -1654,6 +1654,92 @@ export default {
       }
     }
 
+    if (path === "/site-config" && request.method === "GET") {
+      try {
+        const sitesResponse = await githubFetch(env, "/contents/sites.json?ref=main");
+        if (!sitesResponse.ok) throw new Error("sites.json niet leesbaar: status " + sitesResponse.status);
+        const sitesFile = await sitesResponse.json();
+        const activeSites = JSON.parse(decodeBase64(sitesFile.content || ""));
+        if (!Array.isArray(activeSites)) throw new Error("sites.json bevat geen lijst");
+        const configResponse = await githubFetch(env, "/contents/site-scraper-config.json?ref=main");
+        let fileSha = null;
+        let registry = { schemaVersion: 1, updatedAt: null, sites: {} };
+        if (configResponse.ok) {
+          const file = await configResponse.json();
+          fileSha = file.sha;
+          try { registry = JSON.parse(decodeBase64(file.content || "")); } catch (_) { throw new Error("site-scraper-config.json bevat ongeldige JSON"); }
+        } else if (configResponse.status !== 404) throw new Error("site-scraper-config.json niet leesbaar: status " + configResponse.status);
+        if (!registry || typeof registry !== "object" || !registry.sites || typeof registry.sites !== "object") registry = { schemaVersion: 1, updatedAt: null, sites: {} };
+        const active = new Set(activeSites.filter(site => typeof site === "string" && /^https?:\/\//i.test(site)));
+        const cleaned = {};
+        for (const site of active) {
+          const old = registry.sites[site] || {};
+          cleaned[site] = {
+            methodology: validateInput(old.methodology || "", 4000),
+            startUrls: Array.isArray(old.startUrls) ? old.startUrls.map(value => validateInput(value, 500)).filter(value => /^https?:\/\//i.test(value) && sameHostUrl(value, site)).slice(0, 80) : [],
+            exclusions: Array.isArray(old.exclusions) ? old.exclusions.map(value => validateInput(value, 120)).filter(Boolean).slice(0, 100) : [],
+            excludedUrls: Array.isArray(old.excludedUrls) ? old.excludedUrls.map(value => validateInput(value, 500)).filter(Boolean).slice(0, 200) : [],
+            adjustments: Array.isArray(old.adjustments) ? old.adjustments.filter(item => item && ["title","description","location","type","cost","website"].includes(item.field)).map(item => ({ field: item.field, find: validateInput(item.find, 300), replace: validateInput(item.replace, 500) })).filter(item => item.find).slice(0, 100) : []
+          };
+        }
+        const changed = JSON.stringify(cleaned) !== JSON.stringify(registry.sites || {});
+        const updatedAt = changed ? new Date().toISOString() : (registry.updatedAt || null);
+        if (changed) {
+          const saveResponse = await githubFetch(env, "/contents/site-scraper-config.json", { method: "PUT", body: JSON.stringify({
+            message: "Synchronize scraper configuration with active websites",
+            content: encodeBase64(JSON.stringify({ schemaVersion: 1, updatedAt, sites: cleaned }, null, 2)),
+            ...(fileSha ? { sha: fileSha } : {}),
+            branch: "main"
+          }) });
+          if (!saveResponse.ok) throw new Error("Siteconfiguraties opschonen/opbouwen mislukt: " + validateInput(await saveResponse.text(), 500));
+        }
+        return json({ ok: true, activeSites: [...active], configs: cleaned, updatedAt }, 200);
+      } catch (e) {
+        return json({ ok: false, error: "Websiteconfiguraties laden mislukt", details: validateInput(e.message || String(e), 700) }, 500);
+      }
+    }
+    if (path === "/site-config" && request.method === "POST") {
+      try {
+        const body = await request.json().catch(() => ({}));
+        const site = validateInput(body.site, 500);
+        const config = body.config && typeof body.config === "object" ? body.config : {};
+        const sitesResponse = await githubFetch(env, "/contents/sites.json?ref=main");
+        if (!sitesResponse.ok) throw new Error("sites.json niet leesbaar: status " + sitesResponse.status);
+        const sitesFile = await sitesResponse.json();
+        const activeSites = JSON.parse(decodeBase64(sitesFile.content || ""));
+        if (!Array.isArray(activeSites) || !activeSites.includes(site)) return json({ ok: false, error: "Deze website staat niet in de actieve sites.json-lijst; configuratie niet opgeslagen." }, 409);
+        const configResponse = await githubFetch(env, "/contents/site-scraper-config.json?ref=main");
+        let fileSha = null;
+        let registry = { schemaVersion: 1, sites: {} };
+        if (configResponse.ok) {
+          const file = await configResponse.json();
+          fileSha = file.sha;
+          registry = JSON.parse(decodeBase64(file.content || ""));
+        } else if (configResponse.status !== 404) throw new Error("Configuratiebestand niet leesbaar: status " + configResponse.status);
+        if (!registry.sites || typeof registry.sites !== "object") registry.sites = {};
+        registry.sites[site] = {
+          methodology: validateInput(config.methodology || "", 4000),
+          startUrls: Array.isArray(config.startUrls) ? config.startUrls.map(value => validateInput(value, 500)).filter(value => /^https?:\/\//i.test(value) && sameHostUrl(value, site)).slice(0, 80) : [],
+          exclusions: Array.isArray(config.exclusions) ? config.exclusions.map(value => validateInput(value, 120)).filter(Boolean).slice(0, 100) : [],
+          excludedUrls: Array.isArray(config.excludedUrls) ? config.excludedUrls.map(value => validateInput(value, 500)).filter(Boolean).slice(0, 200) : [],
+          adjustments: Array.isArray(config.adjustments) ? config.adjustments.filter(item => item && ["title","description","location","type","cost","website"].includes(item.field)).map(item => ({ field: item.field, find: validateInput(item.find, 300), replace: validateInput(item.replace, 500) })).filter(item => item.find).slice(0, 100) : []
+        };
+        const active = new Set(activeSites);
+        for (const configuredSite of Object.keys(registry.sites)) if (!active.has(configuredSite)) delete registry.sites[configuredSite];
+        const updatedAt = new Date().toISOString();
+        const saved = await githubFetch(env, "/contents/site-scraper-config.json", { method: "PUT", body: JSON.stringify({
+          message: "Update scraper rules for " + site,
+          content: encodeBase64(JSON.stringify({ schemaVersion: 1, updatedAt, sites: registry.sites }, null, 2)),
+          ...(fileSha ? { sha: fileSha } : {}),
+          branch: "main"
+        }) });
+        if (!saved.ok) throw new Error("Opslaan mislukt: " + validateInput(await saved.text(), 500));
+        return json({ ok: true, updatedAt, configs: registry.sites }, 200);
+      } catch (e) {
+        return json({ ok: false, error: "Websiteconfiguratie opslaan mislukt", details: validateInput(e.message || String(e), 700) }, 500);
+      }
+    }
+
     if (path === "/event-feedback" && request.method === "GET") {
       try {
         const response = await githubFetch(env, "/contents/event-feedback.json?ref=main");
