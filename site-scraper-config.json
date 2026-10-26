@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-26T22:25:11.504Z",
+  "updatedAt": "2026-10-26T22:28:46.754Z",
   "sites": {
     "https://groningen.uitloper.nu/": {
       "methodology": "",
@@ -253,7 +253,18 @@
         "linkedin"
       ],
       "excludedUrls": [],
-      "adjustments": [],
+      "adjustments": [
+        {
+          "field": "title",
+          "find": "Kunstenaars Wobbe Alkema Jan Altink Franciscus Hermanus",
+          "replace": "Nieuw licht – De Ploeg"
+        },
+        {
+          "field": "type",
+          "find": "Concert",
+          "replace": "Expositie"
+        }
+      ],
       "eventUrlPatterns": [],
       "excludedUrlPatterns": [
         "^/plan-je-bezoek/?$",
