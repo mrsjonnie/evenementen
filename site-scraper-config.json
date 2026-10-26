@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-26T22:17:55.642Z",
+  "updatedAt": "2026-10-26T22:17:57.047Z",
   "sites": {
     "https://groningen.uitloper.nu/": {
       "methodology": "",
@@ -159,7 +159,9 @@
           "replace": "SPOT/De Oosterpoort, Kleine zaal / Trompsingel 27"
         }
       ],
-      "eventUrlPatterns": [],
+      "eventUrlPatterns": [
+        "^/programma/[^/?#]+/?$"
+      ],
       "excludedUrlPatterns": []
     },
     "https://simplon.nl/": {
