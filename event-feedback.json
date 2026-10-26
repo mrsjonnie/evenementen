@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-26T10:07:47.197Z",
+  "updatedAt": "2026-10-26T10:09:02.637Z",
   "feedback": [
     {
       "key": "2026-10-27|abonnement topmusici van eigen bodem",
@@ -532,6 +532,24 @@
       "website": "https://groningermuseum.nl/programma",
       "url": "https://groningermuseum.nl/programma",
       "updatedAt": "2026-10-26T10:07:47.197Z"
+    },
+    {
+      "key": "2027-05-09|exhibition the architect the housewife",
+      "vote": "edit",
+      "title": "EXHIBITION The Architect & the Housewife",
+      "date": "2027-05-09",
+      "website": "https://groningermuseum.nl/programma",
+      "url": "https://groningermuseum.nl/programma",
+      "updatedAt": "2026-10-26T10:09:02.637Z",
+      "originalTitle": "EXHIBITION The Architect & the Housewife",
+      "originalDate": "2027-05-09",
+      "corrections": {
+        "title": "EXHIBITION The Architect & the Housewife",
+        "date": "2027-05-09",
+        "location": "Groninger Museum",
+        "type": "Expositie",
+        "cost": "Zie website"
+      }
     }
   ]
 }
