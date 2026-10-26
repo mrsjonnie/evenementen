@@ -1786,6 +1786,63 @@ export default {
       }
     }
 
+    if (path === "/remove-site" && request.method === "POST") {
+      try {
+        const body = await request.json().catch(() => ({}));
+        const requestedSite = validateInput(body.site, 500);
+        const requestedHost = hostOf(requestedSite);
+        if (!requestedHost) return json({ ok: false, error: "Ongeldige website-URL." }, 400);
+
+        const sitesResponse = await githubFetch(env, "/contents/sites.json?ref=main");
+        if (!sitesResponse.ok) throw new Error("sites.json niet leesbaar: status " + sitesResponse.status);
+        const sitesFile = await sitesResponse.json();
+        const activeSites = JSON.parse(decodeBase64(sitesFile.content || ""));
+        if (!Array.isArray(activeSites)) throw new Error("sites.json bevat geen geldige lijst");
+        const keptSites = activeSites.filter(site => hostOf(site) !== requestedHost);
+        if (keptSites.length === activeSites.length) return json({ ok: false, error: "Website staat niet in de actieve lijst." }, 404);
+
+        const savedSites = await githubFetch(env, "/contents/sites.json", {
+          method: "PUT",
+          body: JSON.stringify({
+            message: "Remove website from active scraper sources: " + requestedHost,
+            content: encodeBase64(JSON.stringify(keptSites, null, 2) + "\n"),
+            sha: sitesFile.sha,
+            branch: "main"
+          })
+        });
+        if (!savedSites.ok) throw new Error("Actieve bronnenlijst kon niet worden bijgewerkt: " + validateInput(await savedSites.text(), 500));
+
+        // Remove the matching per-site rules immediately. A later /site-config read
+        // also reconciles any stale entries if this second write encounters a conflict.
+        const configResponse = await githubFetch(env, "/contents/site-scraper-config.json?ref=main");
+        if (configResponse.ok) {
+          const configFile = await configResponse.json();
+          const registry = JSON.parse(decodeBase64(configFile.content || ""));
+          if (!registry.sites || typeof registry.sites !== "object") registry.sites = {};
+          for (const configuredSite of Object.keys(registry.sites)) {
+            if (hostOf(configuredSite) === requestedHost) delete registry.sites[configuredSite];
+          }
+          registry.updatedAt = new Date().toISOString();
+          const savedConfig = await githubFetch(env, "/contents/site-scraper-config.json", {
+            method: "PUT",
+            body: JSON.stringify({
+              message: "Remove scraper configuration for " + requestedHost,
+              content: encodeBase64(JSON.stringify(registry, null, 2) + "\n"),
+              sha: configFile.sha,
+              branch: "main"
+            })
+          });
+          if (!savedConfig.ok) throw new Error("Website is uit de actieve lijst gehaald; configuratie wordt bij de volgende synchronisatie opgeschoond: " + validateInput(await savedConfig.text(), 300));
+        } else if (configResponse.status !== 404) {
+          throw new Error("Website is uit de actieve lijst gehaald; configuratiebestand kon niet worden gecontroleerd.");
+        }
+
+        return json({ ok: true, removedHost: requestedHost, activeSites: keptSites }, 200);
+      } catch (e) {
+        return json({ ok: false, error: "Website globaal verwijderen mislukt", details: validateInput(e.message || String(e), 700) }, 500);
+      }
+    }
+
     if (path === "/site-config" && request.method === "GET") {
       try {
         const sitesResponse = await githubFetch(env, "/contents/sites.json?ref=main");
