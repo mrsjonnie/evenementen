@@ -7,6 +7,7 @@ on:
     paths:
       - index.html
       - evenementen.html
+      - restaurants.html
       - .github/workflows/release-version.yml
 
 permissions:
