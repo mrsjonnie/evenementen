@@ -814,12 +814,20 @@ function eventKey(event) {
   return `${event.date || ""}|${(event.title || "").toLowerCase().replace(/[^a-z0-9]+/g, " ").trim()}`;
 }
 
-function eventDeleteKey(event) {
-  const title = (event.title || "").toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
-  const website = clean(event.website || "").toLowerCase().replace(/\/$/, "");
-  return `${event.date || ""}|${title}|${website}`;
+function normalizeDeleteTitle(value) {
+  const months = "januari|februari|maart|april|mei|juni|juli|augustus|september|oktober|november|december|jan|feb|mrt|apr|jun|jul|aug|sep|sept|okt|nov|dec|january|february|march|april|may|june|july|august|september|october|november|december";
+  const weekdays = "monday|tuesday|wednesday|thursday|friday|saturday|sunday|maandag|dinsdag|woensdag|donderdag|vrijdag|zaterdag|zondag";
+  let title = clean(value).toLowerCase();
+  title = title.replace(new RegExp(`^(?:${weekdays})\\s+\\d{1,2}\\s+(?:${months})\\s+`, "i"), "");
+  title = title.split(/\\b(mainstage|downstage|zienema|dansen)\\b|\\bticket\\b|\\bdoors\\b|\\bstart\\b|\\bsold out\\b|\\bkoop ticket\\b/i)[0];
+  return title.replace(/\\b20\\d{2}\\b/g, "").replace(/^(concert|theater|film|bioscoop|markt|workshop|event|evenement):\\s*/i, "").replace(/[^a-z0-9]+/g, " ").trim();
 }
 
+function eventDeleteKey(event) {
+  const title = normalizeDeleteTitle(event.title || "");
+  const website = clean(event.website || "").toLowerCase().replace(/\\/$/, "");
+  return `${event.date || ""}|${title}|${website}`;
+}
 function validEvent(event) {
   return Boolean(event.title && event.title.length > 3 && event.date && event.website && !badWords.test(event.title));
 }
@@ -1226,23 +1234,29 @@ async function deleteEventFromGithub(env, target = {}) {
   if (decoded && Array.isArray(decoded.rawLog)) existing.rawLog = decoded.rawLog;
 
   const wantedKey = clean(target.key || "");
-  const wantedTitle = clean(target.title || "").toLowerCase();
+  const wantedTitle = normalizeDeleteTitle(target.title || "");
   const wantedDate = clean(target.date || "");
-  const wantedWebsite = clean(target.website || "").toLowerCase().replace(/\/$/, "");
+  const wantedWebsite = clean(target.website || "").toLowerCase().replace(/\\/$/, "");
   const shouldRemove = (event) => {
     const key = eventKey(event);
     const fullKey = eventDeleteKey(event);
     if (wantedKey && (key === wantedKey || fullKey === wantedKey)) return true;
-    const sameTitle = wantedTitle && clean(event.title || "").toLowerCase() === wantedTitle;
     const sameDate = wantedDate && clean(event.date || "") === wantedDate;
-    const sameWebsite = wantedWebsite && clean(event.website || "").toLowerCase().replace(/\/$/, "") === wantedWebsite;
-    return Boolean(sameTitle && sameDate && (!wantedWebsite || sameWebsite));
+    const sameTitle = wantedTitle && normalizeDeleteTitle(event.title || "") === wantedTitle;
+    // Match the same canonical title/date key as the UI, even if source URLs or title decorations differ.
+    if (sameDate && sameTitle) return true;
+    const exactTitle = clean(target.title || "").toLowerCase() === clean(event.title || "").toLowerCase();
+    const sameWebsite = wantedWebsite && clean(event.website || "").toLowerCase().replace(/\\/$/, "") === wantedWebsite;
+    return Boolean(exactTitle && sameDate && (!wantedWebsite || sameWebsite));
   };
 
   const events = existing.events.filter((event) => !shouldRemove(event));
   const archive = existing.archive.filter((event) => !shouldRemove(event));
   const removedEvents = existing.events.length - events.length;
   const removedArchive = existing.archive.length - archive.length;
+  if (removedEvents + removedArchive === 0) {
+    throw new Error("Geen overeenkomstig evenement gevonden in events.json. Ververs de gegevens en probeer opnieuw.");
+  }
 
   const payload = {
     schemaVersion: 2,
