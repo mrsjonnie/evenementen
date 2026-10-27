@@ -1375,6 +1375,7 @@
         </div>
         <div class="headerActions" aria-label="Weergavebediening">
           <button class="btn btnSecondary filterSidebarToggle" id="filterSidebarToggle" type="button" aria-controls="filterSidebar" aria-expanded="false">Filters tonen</button>
+          <a class="btn btnSecondary" id="homePageLink" href="https://mrsjonnie.github.io/evenementen/" title="Terug naar de homepage">Homepage</a>
         </div>
       </div>
       <div class="heroSide">
@@ -1556,7 +1557,7 @@
     </section>
   </div>
   <script>
-    const APP_VERSION = "2026.10.27.109";
+    const APP_VERSION = "2026.10.27.110";
     const STATUS_HISTORY_KEY = "evenementenStatusHistoryV1";
     const DISMISSED_SCRAPE_RUN_KEY = "evenementenDismissedScrapeRunV1";
     const DEFAULT_MAX_EVENTS_PER_SITE = 20;
@@ -1897,7 +1898,7 @@
       status.className = "status show " + kind;
     }
 
-    function addCustomSite() {
+    async function addCustomSite() {
       const input = $("customSiteUrl");
       const normalized = normalizeSiteInput(input.value);
       if (!normalized) {
@@ -1910,21 +1911,28 @@
         setCustomSiteStatus("Deze website staat al in de lijst.", "warn");
         return;
       }
-      const selected = new Set([...document.querySelectorAll(".siteCheck:checked")].map((check) => check.value));
-      const removed = loadRemovedSiteKeys();
-      removed.delete(siteIdentityKey(normalized));
-      saveRemovedSiteKeys(removed);
-      saveCustomSites([...loadCustomSites(), normalized]);
-      sites = mergeSites([...sites, normalized]);
-      selected.add(normalized);
-      renderSites(selected);
-      saveSourceSelection();
-      updateSiteCount();
-      applyFilters();
-      input.value = "";
-      setCustomSiteStatus(host + " toegevoegd en aangevinkt. Klik op ‘Ververs data’ om deze website te scrapen.", "ok");
+      const button = $("addCustomSiteBtn");
+      button.disabled = true;
+      setCustomSiteStatus("Website wordt aan de centrale scraperlijst toegevoegd…", "warn");
+      try {
+        const response = await fetch(`${WORKER_URL}/add-site`, {
+          method: "POST", headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ site: normalized })
+        });
+        const data = await response.json().catch(() => ({}));
+        if (!response.ok || !data.ok) throw new Error(data.details || data.error || `HTTP ${response.status}`);
+        const selected = new Set([...document.querySelectorAll(".siteCheck:checked")].map((check) => check.value));
+        const removed = loadRemovedSiteKeys();
+        removed.delete(siteIdentityKey(normalized)); saveRemovedSiteKeys(removed);
+        saveCustomSites([...loadCustomSites(), normalized]);
+        sites = mergeSites([...(Array.isArray(data.activeSites) ? data.activeSites : sites), normalized]);
+        selected.add(normalized); renderSites(selected); saveSourceSelection(); updateSiteCount(); applyFilters();
+        input.value = "";
+        setCustomSiteStatus(host + " centraal opgeslagen. De website staat nu ook in de instellingen; klik op ‘Ververs data’ om te scrapen.", "ok");
+      } catch (error) {
+        setCustomSiteStatus("Website niet centraal opgeslagen: " + (error.message || error) + ". De lijst is niet gewijzigd; controleer de Worker en probeer opnieuw.", "error");
+      } finally { button.disabled = false; }
     }
-
     function clampNumber(value, fallback, min, max) {
       const number = Number(value);
       if (!Number.isFinite(number)) return fallback;
