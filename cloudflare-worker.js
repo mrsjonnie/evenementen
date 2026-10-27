@@ -1766,6 +1766,38 @@ export default {
       }
     }
 
+    if (path === "/add-site" && request.method === "POST") {
+      try {
+        const body = await request.json().catch(() => ({}));
+        let requestedSite = validateInput(body.site, 500).trim();
+        if (!/^https?:\/\//i.test(requestedSite)) requestedSite = "https://" + requestedSite;
+        let parsed;
+        try { parsed = new URL(requestedSite); } catch (_) { return json({ ok: false, error: "Ongeldige website-URL." }, 400); }
+        if (!["http:", "https:"].includes(parsed.protocol) || !parsed.hostname.includes(".")) return json({ ok: false, error: "Ongeldige website-URL." }, 400);
+        requestedSite = parsed.href;
+        const hostOf = (value) => { try { return new URL(value).hostname.toLowerCase().replace(/^www\./, ""); } catch (_) { return ""; } };
+        const requestedHost = hostOf(requestedSite);
+        let lastConflict = "";
+        for (let attempt = 1; attempt <= 4; attempt += 1) {
+          const current = await githubFetch(env, "/contents/sites.json?ref=main");
+          if (!current.ok) throw new Error("sites.json niet leesbaar: status " + current.status);
+          const file = await current.json();
+          const activeSites = JSON.parse(decodeBase64(file.content || ""));
+          if (!Array.isArray(activeSites)) throw new Error("sites.json bevat geen geldige lijst");
+          if (activeSites.some(site => hostOf(site) === requestedHost)) return json({ ok: true, alreadyExists: true, activeSites }, 200);
+          const updated = [...activeSites, requestedSite];
+          const saved = await githubFetch(env, "/contents/sites.json", { method: "PUT", body: JSON.stringify({
+            message: "Add website to active scraper sources: " + requestedHost,
+            content: encodeBase64(JSON.stringify(updated, null, 2) + "\n"), sha: file.sha, branch: "main"
+          }) });
+          if (saved.ok) return json({ ok: true, added: requestedSite, activeSites: updated, retries: attempt - 1 }, 200);
+          const details = await saved.text();
+          if (saved.status === 409) { lastConflict = details; continue; }
+          throw new Error("Website opslaan mislukt: " + validateInput(details, 500));
+        }
+        throw new Error("sites.json bleef wijzigen tijdens vier opslagpogingen. Probeer opnieuw. " + validateInput(lastConflict, 250));
+      } catch (e) { return json({ ok: false, error: "Website toevoegen mislukt", details: validateInput(e.message || String(e), 700) }, 500); }
+    }
     if (path === "/remove-site" && request.method === "POST") {
       try {
         const body = await request.json().catch(() => ({}));
