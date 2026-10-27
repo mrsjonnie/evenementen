@@ -2208,7 +2208,7 @@
       "rawText": "site 1/1: 30 unieke events in 3.36 sec"
     }
   ],
-  "status": "finishing",
+  "status": "completed",
   "siteStartedAt": "2026-10-27T08:58:29+00:00",
   "siteElapsedSeconds": 4,
   "sitePageCount": 1,
@@ -2217,5 +2217,6 @@
   "lastUpdatedAt": "2026-10-27T08:58:32+00:00",
   "lastSiteNewEventCount": 30,
   "lastCompletedSite": "https://www.filmladder.nl/bioscoop/kinepolis-groningen-groningen",
-  "lastCompletedAt": "2026-10-27T08:58:33+00:00"
+  "lastCompletedAt": "2026-10-27T08:58:33+00:00",
+  "finishedAt": "2026-10-27T08:58:38+00:00"
 }
