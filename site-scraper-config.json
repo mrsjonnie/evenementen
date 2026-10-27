@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-27T08:34:11.151Z",
+  "updatedAt": "2026-10-27T09:45:48.431Z",
   "sites": {
     "https://groningen.uitloper.nu/": {
       "methodology": "",
@@ -471,6 +471,66 @@
       "excludedUrlPatterns": []
     },
     "https://www.ibood.com/s-nl": {
+      "methodology": "",
+      "startUrls": [],
+      "exclusions": [
+        "contact",
+        "privacy",
+        "cookie",
+        "voorwaarden",
+        "login",
+        "account",
+        "nieuwsbrief",
+        "facebook",
+        "instagram",
+        "linkedin"
+      ],
+      "excludedUrls": [],
+      "adjustments": [],
+      "eventUrlPatterns": [],
+      "excludedUrlPatterns": []
+    },
+    "https://denieuwekolk.nl/agenda": {
+      "methodology": "",
+      "startUrls": [],
+      "exclusions": [
+        "contact",
+        "privacy",
+        "cookie",
+        "voorwaarden",
+        "login",
+        "account",
+        "nieuwsbrief",
+        "facebook",
+        "instagram",
+        "linkedin"
+      ],
+      "excludedUrls": [],
+      "adjustments": [],
+      "eventUrlPatterns": [],
+      "excludedUrlPatterns": []
+    },
+    "https://kinepolis.nl/?complex=WGRN&select_theater=WGRN&main_section=films": {
+      "methodology": "",
+      "startUrls": [],
+      "exclusions": [
+        "contact",
+        "privacy",
+        "cookie",
+        "voorwaarden",
+        "login",
+        "account",
+        "nieuwsbrief",
+        "facebook",
+        "instagram",
+        "linkedin"
+      ],
+      "excludedUrls": [],
+      "adjustments": [],
+      "eventUrlPatterns": [],
+      "excludedUrlPatterns": []
+    },
+    "https://www.filmladder.nl/bioscoop/kinepolis-groningen-groningen": {
       "methodology": "",
       "startUrls": [],
       "exclusions": [
