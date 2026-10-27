@@ -2868,6 +2868,16 @@ def scrape_site(site_url, site_index=0, site_total=0, progress_callback=None, ex
     add_raw("Website", original_site, "Start", "", normalized_site, "start", f"{progress}: max {MAX_EVENTS_PER_SITE} events, max {SITE_TIME_LIMIT_SECONDS} seconden")
     add_raw("Parser", original_site, "Scrapertype vastgesteld", "", normalized_site, "strategie", detect_scraper_type(normalized_site))
 
+    # Filmladder.nl explicitly requires written permission before automated copying.
+    # Do not crawl or extract its listing; keep the source as a clickable link and
+    # make the reason visible in the scraper diagnostics instead of silently returning 0.
+    if canonical_host(normalized_site) == "filmladder.nl":
+        add_raw("Website", original_site, "Automatisch ophalen overgeslagen", "", normalized_site, "toestemming vereist",
+                "Filmladder.nl vermeldt dat automatisch overnemen van gegevens voorafgaande schriftelijke toestemming vereist. Alleen de bronlink kan worden getoond totdat toestemming is geregeld.")
+        if progress_callback:
+            progress_callback([], stage="Overgeslagen: schriftelijke toestemming vereist")
+        return []
+
     serpapi_events = serpapi_events_for_site(normalized_site)
     if serpapi_events:
         events.extend(serpapi_events)
