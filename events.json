@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-11-20T17:03:32+00:00",
+  "updatedAt": "2026-11-20T17:03:39+00:00",
   "events": [
     {
       "date": "2026-10-26",
@@ -9218,6 +9218,21 @@
     },
     {
       "date": "2026-11-20",
+      "time": "20:30",
+      "title": "Adult DVD UK Smudged",
+      "type": "Concert",
+      "location": "VERA Groningen",
+      "locationLink": "",
+      "website": "https://www.vera-groningen.nl/?post_type=events&p=151746&lang=nl",
+      "source": "vera-groningen.nl",
+      "discoverySource": "Website",
+      "description": "Friday 20 November Adult DVD UK Smudged NL Mainstage | Ticket: €14,- | doors: 20:00 - 22:00 | start: 20:30 Koop ticket",
+      "cost": "",
+      "image": "https://www.vera-groningen.nl/wp/../vera/assets/img/logo-black.svg",
+      "isNew": true
+    },
+    {
+      "date": "2026-11-20",
       "time": "20:15",
       "title": "Agamemnon",
       "type": "Activiteit",
@@ -10028,6 +10043,21 @@
     },
     {
       "date": "2026-11-21",
+      "time": "23:01",
+      "title": "Push It Pushin Wood Soundystem All Night Long",
+      "type": "Dans",
+      "location": "VERA Groningen",
+      "locationLink": "",
+      "website": "https://www.vera-groningen.nl/?post_type=events&p=155066&lang=nl",
+      "source": "vera-groningen.nl",
+      "discoverySource": "Website",
+      "description": "Saturday 21 November Push It Pushin Wood Soundystem All Night Long Dansen | Ticket: €5,- | doors: 23:00 - 04:00 | start: 23:01 Koop ticket",
+      "cost": "",
+      "image": "https://www.vera-groningen.nl/wp/../vera/assets/img/logo-black.svg",
+      "isNew": true
+    },
+    {
+      "date": "2026-11-21",
       "time": "10:15",
       "title": "Ragazzi al Fiume",
       "type": "Film",
@@ -10084,6 +10114,21 @@
       "description": "Filmseries & specials Hulp- en spreekuren Bibliotheekvestigingen Haal meer uit je abonnement Studie- en werkplekken European Cartoon Award Zilveren Camera 2025 - Foto-expositie Wes Anderson: The Archives Wifi, internet en printen Verhuur & zakelijk Vacatures & vrijwilligers",
       "cost": "",
       "image": "https://static.forum.nl/cache/the-year-of-the-ghost.28792/the-year-of-the-ghost-s1920x1080.jpg",
+      "isNew": true
+    },
+    {
+      "date": "2026-11-21",
+      "time": "23:00",
+      "title": "VRLCHT GRN",
+      "type": "Concert",
+      "location": "VERA Groningen",
+      "locationLink": "",
+      "website": "https://www.vera-groningen.nl/?post_type=events&p=155059&lang=nl",
+      "source": "vera-groningen.nl",
+      "discoverySource": "Website",
+      "description": "Saturday 21 November VRLCHT GRN Downstage | Ticket: €5,- | doors: 22:30 - 23:30 | start: 23:00 Koop ticket",
+      "cost": "",
+      "image": "https://www.vera-groningen.nl/wp/../vera/assets/img/logo-black.svg",
       "isNew": true
     },
     {
@@ -13448,324 +13493,16 @@
       "newCount": 0,
       "durationSeconds": 4.66,
       "timedOut": false
+    },
+    {
+      "site": "https://www.vera-groningen.nl/",
+      "count": 3,
+      "newCount": 3,
+      "durationSeconds": 3.19,
+      "timedOut": false
     }
   ],
   "rawLog": [
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Orkest van de Achttiende Eeuw Beethoven 200",
-      "date": "2027-06-06",
-      "url": "https://www.spotgroningen.nl/programma/orkest-van-de-achttiende-eeuw-4/",
-      "status": "event uit link",
-      "rawText": "Orkest van de Achttiende Eeuw Beethoven 200 Twee publieksfavorieten van een grote muziekrevolutionair zo 6 jun"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Merijn Scholten Lemming (reprise)",
-      "date": "2027-06-07",
-      "url": "https://www.spotgroningen.nl/programma/merijn-scholten-10/",
-      "status": "event uit link",
-      "rawText": "Merijn Scholten Lemming (reprise) Channel je innerlijke schaap en laat je hoeden door Merijn! Uitverkocht ma 7 jun"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Merijn Scholten Lemming (reprise)",
-      "date": "2027-06-08",
-      "url": "https://www.spotgroningen.nl/programma/merijn-scholten-11/",
-      "status": "event uit link",
-      "rawText": "Merijn Scholten Lemming (reprise) Channel je innerlijke schaap en laat je hoeden door Merijn! Uitverkocht di 8 jun"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Merijn Scholten Lemming (reprise)",
-      "date": "2027-06-09",
-      "url": "https://www.spotgroningen.nl/programma/merijn-scholten-12/",
-      "status": "event uit link",
-      "rawText": "Merijn Scholten Lemming (reprise) Channel je innerlijke schaap en laat je hoeden door Merijn! Uitverkocht wo 9 jun"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "The Musical Box “And Then There Was Phil”",
-      "date": "2027-06-09",
-      "url": "https://www.spotgroningen.nl/programma/the-musical-box/",
-      "status": "event uit link",
-      "rawText": "The Musical Box “And Then There Was Phil” De beste Genesis tribute ter wereld wo 9 jun"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Het Zuidelijk Toneel Vondels Angels",
-      "date": "2027-06-10",
-      "url": "https://www.spotgroningen.nl/programma/het-zuidelijk-toneel-12/",
-      "status": "event uit link",
-      "rawText": "Het Zuidelijk Toneel Vondels Angels De dikke vette comeback van Lucifer do 10 jun"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Viggo Waas, Eddie B. Wahr & Kees van der Vooren Eigenlijk",
-      "date": "2027-06-10",
-      "url": "https://www.spotgroningen.nl/programma/viggo-waas-eddie-b-wahr-kees-van-der-vooren/",
-      "status": "event uit link",
-      "rawText": "Viggo Waas, Eddie B. Wahr & Kees van der Vooren Eigenlijk Viggo en Eddie moeten zich verantwoorden voor gedane uitspraken do 10 jun"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Dan Mangan",
-      "date": "2027-06-16",
-      "url": "https://www.spotgroningen.nl/programma/dan-mangan-2/",
-      "status": "event uit link",
-      "rawText": "Dan Mangan Singer-songwriter brengt dromerige indiefolk Net bevestigd wo 16 jun"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Kingfishr Weight Of The Feather Tour",
-      "date": "2027-06-17",
-      "url": "https://www.spotgroningen.nl/programma/kingfishr-4/",
-      "status": "event uit link",
-      "rawText": "Kingfishr Weight Of The Feather Tour Grootste Nederlandse headlineshow tot nu toe Net bevestigd do 17 jun"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Judas Priest Only The Strong Survive + Special Guest: Saxon",
-      "date": "2027-06-22",
-      "url": "https://www.spotgroningen.nl/programma/judas-priest/",
-      "status": "event uit link",
-      "rawText": "Judas Priest Only The Strong Survive + Special Guest: Saxon Legendarische Britse heavy-metalband Net bevestigd di 22 jun"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "GOOV Muziektheater Come From Away - Première",
-      "date": "2027-06-24",
-      "url": "https://www.spotgroningen.nl/programma/goov-muziektheater-19/",
-      "status": "event uit link",
-      "rawText": "GOOV Muziektheater Come From Away - Première Een hartverwarmende musical over veerkracht in tijden van crisis do 24 jun"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "GOOV Muziektheater Come From Away",
-      "date": "2027-06-25",
-      "url": "https://www.spotgroningen.nl/programma/goov-muziektheater-20/",
-      "status": "event uit link",
-      "rawText": "GOOV Muziektheater Come From Away Een hartverwarmende musical over veerkracht in tijden van crisis vr 25 jun"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "GOOV Muziektheater Come From Away - Matinee",
-      "date": "2027-06-26",
-      "url": "https://www.spotgroningen.nl/programma/goov-muziektheater-21/",
-      "status": "event uit link",
-      "rawText": "GOOV Muziektheater Come From Away - Matinee Een hartverwarmende musical over veerkracht in tijden van crisis za 26 jun"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "GOOV Muziektheater Come From Away",
-      "date": "2027-06-26",
-      "url": "https://www.spotgroningen.nl/programma/goov-muziektheater-22/",
-      "status": "event uit link",
-      "rawText": "GOOV Muziektheater Come From Away Een hartverwarmende musical over veerkracht in tijden van crisis za 26 jun"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Noah Kahan The Last Of The Bugs World Tour",
-      "date": "2027-07-01",
-      "url": "https://www.spotgroningen.nl/programma/noah-kahan/",
-      "status": "event uit link",
-      "rawText": "Noah Kahan The Last Of The Bugs World Tour Amerikaanse wereldster en een van de populairste singer-songwriters van dit moment do 1 jul"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Stef Bos",
-      "date": "2027-07-01",
-      "url": "https://www.spotgroningen.nl/programma/stef-bos-5/",
-      "status": "event uit link",
-      "rawText": "Stef Bos Zeer gewaardeerde Nederlandstalige singer-songwriter komt met band en nieuwe songs. Laatste kaarten do 1 jul"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "TOTO 50TH ANNIVERSARY TOUR",
-      "date": "2027-07-03",
-      "url": "https://www.spotgroningen.nl/programma/toto/",
-      "status": "event uit link",
-      "rawText": "TOTO 50TH ANNIVERSARY TOUR Jubileumtour brengt het repertoire van vijf decennia TOTO naar Groningen za 3 jul"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Robbie Williams Live 2027-tour",
-      "date": "2027-07-10",
-      "url": "https://www.spotgroningen.nl/programma/robbie-williams/",
-      "status": "event uit link",
-      "rawText": "Robbie Williams Live 2027-tour Let me entertain you! za 10 jul"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Ziggy Alberts",
-      "date": "2027-09-05",
-      "url": "https://www.spotgroningen.nl/programma/ziggy-alberts-2/",
-      "status": "event uit link",
-      "rawText": "Ziggy Alberts Australische singer-songwriter met warme indie-folk en persoonlijke verhalen Net bevestigd zo 5 sep"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Brabo Leone Sarah Janneh",
-      "date": "2027-09-08",
-      "url": "https://www.spotgroningen.nl/programma/brabo-leone/",
-      "status": "event uit link",
-      "rawText": "Brabo Leone Sarah Janneh Sarah Janneh neemt je mee op een muzikale zoektocht wo 8 sep"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Brabo Leone Sarah Janneh",
-      "date": "2027-09-09",
-      "url": "https://www.spotgroningen.nl/programma/brabo-leone-2/",
-      "status": "event uit link",
-      "rawText": "Brabo Leone Sarah Janneh Sarah Janneh neemt je mee op een muzikale zoektocht do 9 sep"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Brabo Leone Sarah Janneh",
-      "date": "2027-09-10",
-      "url": "https://www.spotgroningen.nl/programma/brabo-leone-3/",
-      "status": "event uit link",
-      "rawText": "Brabo Leone Sarah Janneh Sarah Janneh neemt je mee op een muzikale zoektocht vr 10 sep"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Brabo Leone Sarah Janneh",
-      "date": "2027-09-11",
-      "url": "https://www.spotgroningen.nl/programma/brabo-leone-4/",
-      "status": "event uit link",
-      "rawText": "Brabo Leone Sarah Janneh Sarah Janneh neemt je mee op een muzikale zoektocht za 11 sep"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Van der Laan & Woe Dinsdagmiddag",
-      "date": "2027-09-15",
-      "url": "https://www.spotgroningen.nl/programma/van-der-laan-woe-9/",
-      "status": "event uit link",
-      "rawText": "Van der Laan & Woe Dinsdagmiddag Theatershow waarin het krioelt van de grappen, scènes en muzikale acts Uitverkocht wo 15 sep"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Van der Laan & Woe Dinsdagmiddag",
-      "date": "2027-09-16",
-      "url": "https://www.spotgroningen.nl/programma/van-der-laan-woe-8/",
-      "status": "event uit link",
-      "rawText": "Van der Laan & Woe Dinsdagmiddag Theatershow waarin het krioelt van de grappen, scènes en muzikale acts Uitverkocht do 16 sep"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Van der Laan & Woe Dinsdagmiddag",
-      "date": "2027-09-17",
-      "url": "https://www.spotgroningen.nl/programma/van-der-laan-woe-7/",
-      "status": "event uit link",
-      "rawText": "Van der Laan & Woe Dinsdagmiddag Theatershow waarin het krioelt van de grappen, scènes en muzikale acts Uitverkocht vr 17 sep"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Sivert Høyem Europe 27",
-      "date": "2027-09-19",
-      "url": "https://www.spotgroningen.nl/programma/sivert-hoyem-4/",
-      "status": "event uit link",
-      "rawText": "Sivert Høyem Europe 27 Kenmerkende stem achter Madrugada zo 19 sep"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Bee Gees by MainCourse",
-      "date": "2027-10-01",
-      "url": "https://www.spotgroningen.nl/programma/bee-gees-by-maincourse-2/",
-      "status": "event uit link",
-      "rawText": "Bee Gees by MainCourse MainCourse brengt de Bee Gees sound weer tot leven Geannuleerd Net bevestigd vr 1 okt"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Buddy Vedder & Shelley Bos Al het blauw van de hemel",
-      "date": "2027-10-14",
-      "url": "https://www.spotgroningen.nl/programma/buddy-vedder-shelley-bos/",
-      "status": "event uit link",
-      "rawText": "Buddy Vedder & Shelley Bos Al het blauw van de hemel Gloednieuw muziektheaterstuk gebaseerd op de bestseller van Mélissa Da Costa Laatste kaarten do 14 okt"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Masterpiece Festival: Stravinsky Le Sacre du Printemps",
-      "date": "2027-10-16",
-      "url": "https://www.spotgroningen.nl/events/masterpiece/",
-      "status": "event uit link",
-      "rawText": "Masterpiece Festival: Stravinsky Le Sacre du Printemps Festival waarbij je een klassiek meesterwerk van A tot Z leert kennen za 16 okt"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Tröckener Kecks",
-      "date": "2027-10-20",
-      "url": "https://www.spotgroningen.nl/programma/trockener-kecks/",
-      "status": "event uit link",
-      "rawText": "Tröckener Kecks Na 25 jaar terug op het podium wo 20 okt"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Dotan",
-      "date": "2027-10-22",
-      "url": "https://www.spotgroningen.nl/programma/dotan-5/",
-      "status": "event uit link",
-      "rawText": "Dotan Nederlandse singer-songwriter gaat voor de tweede ronde Net bevestigd vr 22 okt"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Robert Jon & The Wreck",
-      "date": "2027-10-22",
-      "url": "https://www.spotgroningen.nl/programma/robert-jon-the-wreck/",
-      "status": "event uit link",
-      "rawText": "Robert Jon & The Wreck Amerikaanse rockband met een energieke mix van Southern rock, blues en soul Net bevestigd vr 22 okt"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "TakeRoot",
-      "date": "2026-11-06",
-      "url": "https://www.spotgroningen.nl/events/takeroot/",
-      "status": "event uit link",
-      "rawText": "TakeRoot De kaartverkoop van de 29e editie van TakeRoot is gestart! za 6 nov"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "10CC and another bloody greatest hits tour 2027",
-      "date": "2026-11-14",
-      "url": "https://www.spotgroningen.nl/programma/10cc-5/",
-      "status": "event uit link",
-      "rawText": "10CC and another bloody greatest hits tour 2027 Britse popband met tijdloze hits zo 14 nov"
-    },
     {
       "source": "Website",
       "site": "https://www.spotgroningen.nl/programma/",
@@ -24250,6 +23987,321 @@
       "url": "https://simplon.nl/",
       "status": "klaar",
       "rawText": "site 5/18: 0 unieke events in 4.66 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Start",
+      "date": "",
+      "url": "https://www.vera-groningen.nl/",
+      "status": "start",
+      "rawText": "site 6/18: max 20 events, max 90 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://www.vera-groningen.nl/",
+      "status": "strategie",
+      "rawText": "programma-kaarten"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Pagina gelezen",
+      "date": "",
+      "url": "https://www.vera-groningen.nl/programma/?category=all&history=0&lang=nl",
+      "status": "ok",
+      "rawText": "74480 tekens HTML"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Adult DVD UK Smudged",
+      "date": "2026-11-20",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=151746&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Friday 20 November Adult DVD UK Smudged NL Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "VRLCHT GRN",
+      "date": "2026-11-21",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=155059&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Saturday 21 November VRLCHT GRN Downstage | Ticket: €5,- | doors: 22:30 - 23:30 | start: 23:00 Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Push It Pushin Wood Soundystem All Night Long",
+      "date": "2026-11-21",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=155066&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Saturday 21 November Push It Pushin Wood Soundystem All Night Long Dansen | Ticket: €5,- | doors: 23:00 - 04:00 | start: 23:01 Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "The Double",
+      "date": "2026-11-23",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=154883&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Monday 23 November The Double Zienema | Ticket: €6,- | doors: 20:00 - 20:30 | start: 20:30 Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "SLIFT FR Yoo Doo Right",
+      "date": "2026-11-24",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=151751&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Tuesday 24 November SLIFT FR Yoo Doo Right CAN Mainstage | Ticket: €24,- | doors: 19:30 - 21:30 | start: 20:00 Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Lost in Kyiv FR Celestial Wolves BE",
+      "date": "2026-11-25",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=153197&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Wednesday 25 November Lost in Kyiv FR Celestial Wolves BE Mainstage | Ticket: €15,- | doors: 20:00 - 22:00 | start: 20:30 Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Steebs Method GRN Tays GRN",
+      "date": "2026-11-26",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=154194&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "PLAATPRESENTATIE Thursday 26 November Steebs Method GRN Tays GRN Mainstage | Ticket: €10,- | doors: 20:00 - 22:00 | start: 20:30 Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Shantel & Bucovina Club Soundsystem",
+      "date": "2026-11-27",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=148324&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Friday 27 November Shantel & Bucovina Club Soundsystem Mainstage | Ticket: €20,- | doors: 20:00 - 21:30 | start: 21:00 Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Kaat Van Stralen BEL Camilo Donoso",
+      "date": "2026-11-28",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=150999&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "CLUBKAARTSHOW Saturday 28 November Kaat Van Stralen BEL Camilo Donoso BEL Mainstage | Ticket: €16,- | doors: 20:00 - 22:00 | start: 20:30 Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Shaking Hand",
+      "date": "2026-11-28",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=151824&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Saturday 28 November Shaking Hand UK Downstage | Ticket: €5,- | doors: 22:30 - 23:30 | start: 23:00 Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Riceboy Sleeps",
+      "date": "2026-12-01",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=155666&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Tuesday 1 December Riceboy Sleeps Zienema | Ticket: €6,- | doors: 20:00 - 20:30 | start: 20:30 Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Årabrot NOR",
+      "date": "2026-12-03",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=153759&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Thursday 3 December Årabrot NOR Support Mainstage | Ticket: €16,- | doors: 20:00 - 22:00 | start: 20:30 Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Library Card NL Axender GRN",
+      "date": "2026-12-04",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=153341&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Friday 4 December Library Card NL Axender GRN Mainstage | Ticket: €15,- | doors: 19:30 - 21:30 | start: 20:00 Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Flikkerdisco Fatty Acid b2b LGnius // DJ Faptax // Adrenalina // Luky B",
+      "date": "2026-12-04",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=155360&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Friday 4 December Flikkerdisco Fatty Acid b2b LGnius // DJ Faptax // Adrenalina // Luky B Dansen | Ticket: €8,- | doors: 23:00 - 04:00 | start: 23:01 Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Slome Poema NL ft. Tirsann' & Mavah",
+      "date": "2026-12-05",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=155775&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Saturday 5 December Slome Poema NL ft. Tirsann' & Mavah Downstage | Ticket: €5,- | doors: 22:30 - 23:30 | start: 23:00 Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Gurriers IRE Enola Gay",
+      "date": "2026-12-07",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=152566&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "SOLD OUT Monday 7 December Gurriers IRE Enola Gay UK Mainstage | Ticket: €17,- | doors: 19:30 - 22:00 | start: 20:00 Sold out"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Aftersun + Lof Joe",
+      "date": "2026-12-08",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=155671&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Tuesday 8 December Aftersun + Lof Joe Zienema | Ticket: €6,- | doors: 20:00 - 20:30 | start: 20:30 Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Turner Williams Jr. US/FR + Woordenvangenincijfers GRN",
+      "date": "2026-12-09",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=154978&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "MINORIE PRESENTS Wednesday 9 December Turner Williams Jr. US/FR + Woordenvangenincijfers GRN Mainstage | Ticket: €10,- | doors: 20:00 - 22:00 | start: 20:30 Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Boogiefest 2026 PowerSolo DK + Les Robots NL + The Phantom Four",
+      "date": "2026-12-10",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=153882&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Thursday 10 December Boogiefest 2026 PowerSolo DK + Les Robots NL + The Phantom Four NL Mainstage | Ticket: €19,- | doors: 20:00 - 22:00 | start: 20:30 Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "The Scratch IE DUG IE",
+      "date": "2026-12-11",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=151522&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Friday 11 December The Scratch IE DUG IE Mainstage | Ticket: €19,- | doors: 20:00 - 22:00 | start: 20:30 Koop ticket"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "VERA-agendapagina",
+      "date": "",
+      "url": "https://www.vera-groningen.nl/programma/?category=all&history=0&lang=nl",
+      "status": "gespecialiseerde parser",
+      "rawText": "20 VERA-agenda-items uit eventlinks"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Pagina geanalyseerd",
+      "date": "",
+      "url": "https://www.vera-groningen.nl/programma/?category=all&history=0&lang=nl",
+      "status": "ok",
+      "rawText": "20 events/aanbiedingen op deze pagina"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Pagina gelezen",
+      "date": "",
+      "url": "https://www.vera-groningen.nl/?lang=nl",
+      "status": "ok",
+      "rawText": "73917 tekens HTML"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Tramhaus NL All Male Videoshop",
+      "date": "2026-12-19",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=152866&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Saturday 19 December Tramhaus NL All Male Videoshop NL Raw postpunk from Rotterdam In 2023 wonnen ze de VERA Poll, en ook in 2026 blijft deze band een vaste publieksfavoriet. Lees meer Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Basht. IRE",
+      "date": "2027-03-11",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=155287&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Thursday 11 March Basht. IRE Support Gritty Irish postpunk De Ierse band Basht. uit Dublin maakt een rauwe, broeierige mix van postpunk en alternatieve rock,... Lees meer Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Hemelbestormer BE + Turpentine Valley BE Crushing atmospheric post-metal Het Belgische viertal Hemelbestormer werd",
+      "date": "2027-04-02",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=155791&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Friday 2 April Hemelbestormer BE + Turpentine Valley BE Crushing atmospheric post-metal Het Belgische viertal Hemelbestormer werd in 2012 opgericht door veteranen uit de hardcore-, doom-... Lees meer Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "bdrmm",
+      "date": "2027-05-19",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=155766&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Wednesday 19 May bdrmm UK support Atmospheric shoegaze meets post-rock intensity Het Britse bdrmm uit Hull combineert dromerige shoegaze, post-punk en elektronische experimenten tot een... Lees meer Koop ticket"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "The Horse Company",
+      "date": "2027-03-20",
+      "url": "https://www.vera-groningen.nl/?post_type=events&p=155382&lang=nl",
+      "status": "VERA agenda-item",
+      "rawText": "Saturday 20 March The Horse Company NL support Melodic and melancholic indierock Sommige bands verdwijnen geruisloos van de radar, om jaren later ineens weer op te duiken. Zo ook... Lees meer Koop ticket"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "VERA-agendapagina",
+      "date": "",
+      "url": "https://www.vera-groningen.nl/?lang=nl",
+      "status": "gespecialiseerde parser",
+      "rawText": "10 VERA-agenda-items uit eventlinks"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Pagina geanalyseerd",
+      "date": "",
+      "url": "https://www.vera-groningen.nl/?lang=nl",
+      "status": "ok",
+      "rawText": "10 events/aanbiedingen op deze pagina"
+    },
+    {
+      "source": "Filter",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Datumfilter toegepast",
+      "date": "2026-11-20",
+      "url": "https://www.vera-groningen.nl/",
+      "status": "ok",
+      "rawText": "25 gevonden; 3 binnen 2026-11-20 t/m 2026-11-22"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.vera-groningen.nl/",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://www.vera-groningen.nl/",
+      "status": "klaar",
+      "rawText": "site 6/18: 3 unieke events in 3.19 sec"
     }
   ]
 }
