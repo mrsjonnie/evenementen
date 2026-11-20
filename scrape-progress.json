@@ -1,7 +1,7 @@
 {
   "runId": "2026-11-20T17:01:14.574083+00:00-c1eda5fa",
   "startedAt": "2026-11-20T17:01:14+00:00",
-  "completedCount": 17,
+  "completedCount": 18,
   "totalSites": 18,
   "currentSite": "https://kinepolis.nl/?complex=WGRN&select_theater=WGRN&main_section=films",
   "currentSiteIndex": 18,
@@ -22,7 +22,8 @@
     "https://www.vvvameland.nl/activiteiten-en-evenementen",
     "https://www.socialdeal.nl/",
     "https://www.ibood.com/s-nl",
-    "https://denieuwekolk.nl/agenda"
+    "https://denieuwekolk.nl/agenda",
+    "https://kinepolis.nl/?complex=WGRN&select_theater=WGRN&main_section=films"
   ],
   "events": [
     {
@@ -282,6 +283,21 @@
     },
     {
       "date": "2026-11-20",
+      "time": "",
+      "title": "Alle films",
+      "type": "Film",
+      "location": "Groningen",
+      "locationLink": "",
+      "website": "https://kinepolis.nl/?complex=WGRN&select_theater=WGRN&main_section=films",
+      "source": "kinepolis.nl",
+      "discoverySource": "Website",
+      "description": "Meer informatie staat op kinepolis.nl.",
+      "cost": "",
+      "image": "",
+      "isNew": true
+    },
+    {
+      "date": "2026-11-20",
       "time": "20:30",
       "title": "Alvin Youngblood Hart",
       "type": "Concert",
@@ -433,6 +449,21 @@
     {
       "date": "2026-11-20",
       "time": "",
+      "title": "Bioscoop",
+      "type": "Film",
+      "location": "Groningen",
+      "locationLink": "",
+      "website": "https://kinepolis.nl/?complex=WGRN&select_theater=WGRN&main_section=films",
+      "source": "kinepolis.nl",
+      "discoverySource": "Website",
+      "description": "Meer informatie staat op kinepolis.nl.",
+      "cost": "",
+      "image": "",
+      "isNew": true
+    },
+    {
+      "date": "2026-11-20",
+      "time": "",
       "title": "Blokarten duokart",
       "type": "Familie",
       "location": "Ameland",
@@ -518,6 +549,21 @@
       "description": "80% hexagon events GPSSPELLEN Groningen (+51 locaties) 1 min. directions_walk Regulier €99 €19 ,95",
       "cost": "",
       "image": "https://images.socialdeal.nl/deal/gpsspellen-24040415120290.jpg?w=800&fm=jpg",
+      "isNew": true
+    },
+    {
+      "date": "2026-11-20",
+      "time": "",
+      "title": "CinePlus",
+      "type": "Film",
+      "location": "Groningen",
+      "locationLink": "",
+      "website": "https://kinepolis.nl/?complex=WGRN&select_theater=WGRN&main_section=films",
+      "source": "kinepolis.nl",
+      "discoverySource": "Website",
+      "description": "Meer informatie staat op kinepolis.nl.",
+      "cost": "",
+      "image": "",
       "isNew": true
     },
     {
@@ -672,6 +718,21 @@
     },
     {
       "date": "2026-11-20",
+      "time": "",
+      "title": "Filmhuis",
+      "type": "Film",
+      "location": "Groningen",
+      "locationLink": "",
+      "website": "https://kinepolis.nl/?complex=WGRN&select_theater=WGRN&main_section=films",
+      "source": "kinepolis.nl",
+      "discoverySource": "Website",
+      "description": "Meer informatie staat op kinepolis.nl.",
+      "cost": "",
+      "image": "",
+      "isNew": true
+    },
+    {
+      "date": "2026-11-20",
       "time": "20:00",
       "title": "Filmhuis 't Clockhuys",
       "type": "Film",
@@ -683,6 +744,21 @@
       "description": "Het Filmhuis wordt als regel gehouden op de 1e en…",
       "cost": "",
       "image": "https://groningen.uitloper.nu/images/smallthumb/files/screenshot-2026-09-10-at-10-45-18-588390_2cacb692cc3543d4bf847440acda4f16-mv2-jpg--jpeg-afbeelding-417---417-pixels-.png",
+      "isNew": true
+    },
+    {
+      "date": "2026-11-20",
+      "time": "20:00",
+      "title": "Films",
+      "type": "Film",
+      "location": "Groningen",
+      "locationLink": "",
+      "website": "https://kinepolis.nl/?complex=WGRN&select_theater=WGRN&main_section=films",
+      "source": "kinepolis.nl",
+      "discoverySource": "Website",
+      "description": "Kinepolis Nederland | Jump to navigation Met school naar de film Royal Ballet & Opera National Theatre Live Technologie & Beleving Technologie & Beleving Acties & Kortingen Acties & Kortingen Kinepolis Den Bosch Kinepolis Den Helder Kinepolis Dordrecht Kinepolis Enschede",
+      "cost": "",
+      "image": "http://kinepolis.com/sites/all/themes/custom/deltaforce/logo.png",
       "isNew": true
     },
     {
@@ -733,6 +809,21 @@
     {
       "date": "2026-11-20",
       "time": "",
+      "title": "Genre",
+      "type": "Activiteit",
+      "location": "Groningen",
+      "locationLink": "",
+      "website": "https://kinepolis.nl/?complex=WGRN&select_theater=WGRN&main_section=films",
+      "source": "kinepolis.nl",
+      "discoverySource": "Website",
+      "description": "Meer informatie staat op kinepolis.nl.",
+      "cost": "",
+      "image": "",
+      "isNew": true
+    },
+    {
+      "date": "2026-11-20",
+      "time": "",
       "title": "Gratis kans op de Black Friday Voucher van €1.000 cash",
       "type": "Aanbiedingen",
       "location": "Locatie niet vermeld",
@@ -758,6 +849,21 @@
       "description": "Tijdens het festival gaan zes finalisten met elkaar…",
       "cost": "",
       "image": "https://groningen.uitloper.nu/images/smallthumb/files/screenshot-2026-10-29-at-11-28-31-fotogscf-768x512-jpg--jpeg-afbeelding-768---512-pixels-.png",
+      "isNew": true
+    },
+    {
+      "date": "2026-11-20",
+      "time": "",
+      "title": "High Tea",
+      "type": "Familie",
+      "location": "Groningen",
+      "locationLink": "",
+      "website": "https://kinepolis.nl/?complex=WGRN&select_theater=WGRN&main_section=films",
+      "source": "kinepolis.nl",
+      "discoverySource": "Website",
+      "description": "Meer informatie staat op kinepolis.nl.",
+      "cost": "",
+      "image": "",
       "isNew": true
     },
     {
@@ -788,6 +894,21 @@
       "description": "Na films over water (Aquarela) en beton (Architecton) richt filmmaker Victor Kossakovsky zich op bomen. Hij kijkt mee met Mancuso, die baanbrekend onderzoek deed naar de zintuiglijke ervaring van bomen.",
       "cost": "€ 13,00",
       "image": "https://assets.plaece.nl/thumb/qoT0YlWSgEhtMMF-KtnCUiB8QJNa2-Kf-OEsgreqtPU/resizing_type:fit/width:650/height:366/gravity:sm/aHR0cHM6Ly9hc3NldHMucGxhZWNlLm5sL29kcC1ncm9uaW5nZW4vaW1hZ2UvZmUzMTNjMGI1N2UzN2Y3ZTUyM2NmZTU1MmI0Nzg4YWEzYzg2OGE1M18wMWExZjY1MS1iMzMwLTc3MGYtOTE5MC1lMzhkODJhNGJhZDAuanBn.jpg",
+      "isNew": true
+    },
+    {
+      "date": "2026-11-20",
+      "time": "",
+      "title": "Horror Night",
+      "type": "Concert",
+      "location": "Groningen",
+      "locationLink": "",
+      "website": "https://kinepolis.nl/?complex=WGRN&select_theater=WGRN&main_section=films",
+      "source": "kinepolis.nl",
+      "discoverySource": "Website",
+      "description": "Meer informatie staat op kinepolis.nl.",
+      "cost": "",
+      "image": "",
       "isNew": true
     },
     {
@@ -898,6 +1019,36 @@
     {
       "date": "2026-11-20",
       "time": "",
+      "title": "Kids Weekend",
+      "type": "Concert",
+      "location": "Groningen",
+      "locationLink": "",
+      "website": "https://kinepolis.nl/?complex=WGRN&select_theater=WGRN&main_section=films",
+      "source": "kinepolis.nl",
+      "discoverySource": "Website",
+      "description": "Meer informatie staat op kinepolis.nl.",
+      "cost": "",
+      "image": "",
+      "isNew": true
+    },
+    {
+      "date": "2026-11-20",
+      "time": "20:00",
+      "title": "Kinepolis Nederland",
+      "type": "Film",
+      "location": "Groningen",
+      "locationLink": "",
+      "website": "https://kinepolis.nl/?complex=WGRN&select_theater=WGRN&main_section=films",
+      "source": "kinepolis.nl",
+      "discoverySource": "Website",
+      "description": "Jump to navigation Menu Menu Filmagenda Films Films Verwacht Familiefilms World Cinema World Cinema World Cinema Turkse films Indiase films Poolse films Kids Kids Kinderfilms Kinderfeestjes Kids Weekend Kleuterbios Met school naar de film Events Events Anime CinePlus Filmhuis High Tea Horror Night Kids Weekend Kinecafé",
+      "cost": "",
+      "image": "",
+      "isNew": true
+    },
+    {
+      "date": "2026-11-20",
+      "time": "",
       "title": "Kleur!",
       "type": "Activiteit",
       "location": "Kunstlievend Genootschap Pictura",
@@ -908,6 +1059,21 @@
       "description": "Tien kunstenaars onderzoeken in de verschillende ruimtes…",
       "cost": "",
       "image": "https://groningen.uitloper.nu/images/smallthumb/files/screenshot-2026-09-22-at-14-50-50-gabrielle-kroese-colour-capsule14-acryl-op-papier-30x20cm-jpeg--jpeg-afbeelding-480---640-pixels-.png",
+      "isNew": true
+    },
+    {
+      "date": "2026-11-20",
+      "time": "",
+      "title": "Kleuterbios",
+      "type": "Film",
+      "location": "Groningen",
+      "locationLink": "",
+      "website": "https://kinepolis.nl/?complex=WGRN&select_theater=WGRN&main_section=films",
+      "source": "kinepolis.nl",
+      "discoverySource": "Website",
+      "description": "Royal Ballet & Opera",
+      "cost": "",
+      "image": "",
       "isNew": true
     },
     {
@@ -958,6 +1124,51 @@
     {
       "date": "2026-11-20",
       "time": "",
+      "title": "Ladies Night",
+      "type": "Film",
+      "location": "Groningen",
+      "locationLink": "",
+      "website": "https://kinepolis.nl/?complex=WGRN&select_theater=WGRN&main_section=films",
+      "source": "kinepolis.nl",
+      "discoverySource": "Website",
+      "description": "Royal Ballet & Opera National Theatre Live",
+      "cost": "",
+      "image": "",
+      "isNew": true
+    },
+    {
+      "date": "2026-11-20",
+      "time": "",
+      "title": "Land",
+      "type": "Film",
+      "location": "Groningen",
+      "locationLink": "",
+      "website": "https://kinepolis.nl/?complex=WGRN&select_theater=WGRN&main_section=films",
+      "source": "kinepolis.nl",
+      "discoverySource": "Website",
+      "description": "Meer informatie staat op kinepolis.nl.",
+      "cost": "",
+      "image": "",
+      "isNew": true
+    },
+    {
+      "date": "2026-11-20",
+      "time": "",
+      "title": "Leeftijdskeuring",
+      "type": "Film",
+      "location": "Groningen",
+      "locationLink": "",
+      "website": "https://kinepolis.nl/?complex=WGRN&select_theater=WGRN&main_section=films",
+      "source": "kinepolis.nl",
+      "discoverySource": "Website",
+      "description": "Meer informatie staat op kinepolis.nl.",
+      "cost": "",
+      "image": "",
+      "isNew": true
+    },
+    {
+      "date": "2026-11-20",
+      "time": "",
       "title": "Lieuwe van Gogh",
       "type": "Activiteit",
       "location": "Metamorphose",
@@ -968,6 +1179,21 @@
       "description": "De kleurrijke gevel van Metamorphose gemaakt door…",
       "cost": "",
       "image": "https://groningen.uitloper.nu/images/smallthumb/files/2025/20251014_142657.jpg",
+      "isNew": true
+    },
+    {
+      "date": "2026-11-20",
+      "time": "",
+      "title": "MEIDEN Avond",
+      "type": "Film",
+      "location": "Groningen",
+      "locationLink": "",
+      "website": "https://kinepolis.nl/?complex=WGRN&select_theater=WGRN&main_section=films",
+      "source": "kinepolis.nl",
+      "discoverySource": "Website",
+      "description": "Royal Ballet & Opera National Theatre Live",
+      "cost": "",
+      "image": "",
       "isNew": true
     },
     {
@@ -1013,6 +1239,36 @@
       "description": "Filmseries & specials Hulp- en spreekuren Bibliotheekvestigingen Haal meer uit je abonnement Studie- en werkplekken European Cartoon Award Zilveren Camera 2025 - Foto-expositie Wes Anderson: The Archives Wifi, internet en printen Verhuur & zakelijk Vacatures & vrijwilligers",
       "cost": "",
       "image": "https://static.forum.nl/cache/morro-grande.28765/morro-grande-s1920x1080.jpg",
+      "isNew": true
+    },
+    {
+      "date": "2026-11-20",
+      "time": "",
+      "title": "Movies",
+      "type": "Film",
+      "location": "Groningen",
+      "locationLink": "",
+      "website": "https://kinepolis.nl/?complex=WGRN&select_theater=WGRN&main_section=films",
+      "source": "kinepolis.nl",
+      "discoverySource": "Website",
+      "description": "Meer informatie staat op kinepolis.nl.",
+      "cost": "",
+      "image": "",
+      "isNew": true
+    },
+    {
+      "date": "2026-11-20",
+      "time": "",
+      "title": "Music and Movies",
+      "type": "Film",
+      "location": "Groningen",
+      "locationLink": "",
+      "website": "https://kinepolis.nl/?complex=WGRN&select_theater=WGRN&main_section=films",
+      "source": "kinepolis.nl",
+      "discoverySource": "Website",
+      "description": "Royal Ballet & Opera National Theatre Live Investor relations",
+      "cost": "",
+      "image": "",
       "isNew": true
     },
     {
@@ -1197,6 +1453,21 @@
     },
     {
       "date": "2026-11-20",
+      "time": "",
+      "title": "Royal Ballet & Opera",
+      "type": "Concert",
+      "location": "Groningen",
+      "locationLink": "",
+      "website": "https://kinepolis.nl/?complex=WGRN&select_theater=WGRN&main_section=films",
+      "source": "kinepolis.nl",
+      "discoverySource": "Website",
+      "description": "National Theatre Live Investor relations Kinepolis Business",
+      "cost": "",
+      "image": "",
+      "isNew": true
+    },
+    {
+      "date": "2026-11-20",
       "time": "20:30",
       "title": "SPOT/De Oosterpoort, Binnenzaal / Trompsingel 27 20:30",
       "type": "Concert",
@@ -1333,6 +1604,21 @@
     {
       "date": "2026-11-20",
       "time": "",
+      "title": "Taal",
+      "type": "Activiteit",
+      "location": "Groningen",
+      "locationLink": "",
+      "website": "https://kinepolis.nl/?complex=WGRN&select_theater=WGRN&main_section=films",
+      "source": "kinepolis.nl",
+      "discoverySource": "Website",
+      "description": "Meer informatie staat op kinepolis.nl.",
+      "cost": "",
+      "image": "",
+      "isNew": true
+    },
+    {
+      "date": "2026-11-20",
+      "time": "",
       "title": "Tennis op kunstgrasbaan in Hollum",
       "type": "Activiteit",
       "location": "Ameland",
@@ -1418,6 +1704,21 @@
       "description": "Tristan da Cunha is het meest afgelegen bewoonde eiland ter wereld. De Parijse Loran Bonnardot komt al dertig jaar op het eiland en wil zich er permanent vestigen.",
       "cost": "€ 13,00",
       "image": "https://assets.plaece.nl/thumb/T891o2NiklvL8xKRhapPkhQVCwwiUMYuEllJTNpF40I/resizing_type:fit/width:650/height:366/gravity:sm/aHR0cHM6Ly9hc3NldHMucGxhZWNlLm5sL29kcC1ncm9uaW5nZW4vaW1hZ2UvZjljYjY3MTk1MzA4YzQ3ZTZiZDM0Y2M4ZDEzYjMxNjA3NDg4ODIyNV8wMWExZjY1MS1kNDMyLTdkMWMtODRkZS02OGYyM2Y5ZGYzZmYuanBn.jpg",
+      "isNew": true
+    },
+    {
+      "date": "2026-11-20",
+      "time": "",
+      "title": "Turkse film",
+      "type": "Film",
+      "location": "Groningen",
+      "locationLink": "",
+      "website": "https://kinepolis.nl/?complex=WGRN&select_theater=WGRN&main_section=films",
+      "source": "kinepolis.nl",
+      "discoverySource": "Website",
+      "description": "Meer informatie staat op kinepolis.nl.",
+      "cost": "",
+      "image": "",
       "isNew": true
     },
     {
@@ -2320,297 +2621,16 @@
       "newCount": 5,
       "durationSeconds": 90.34,
       "timedOut": true
+    },
+    {
+      "site": "https://kinepolis.nl/?complex=WGRN&select_theater=WGRN&main_section=films",
+      "count": 20,
+      "newCount": 20,
+      "durationSeconds": 3.06,
+      "timedOut": false
     }
   ],
   "rawLog": [
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Koop",
-      "date": "2027-08-23",
-      "url": "https://www.noorderzon.nl/programma/de-lens-van-groningen",
-      "status": "event uit dagblok",
-      "rawText": "Koop tickets | Maandag 24 augustus | Beschikbare tijden | 21:00 | Prijs per ticket"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Koop",
-      "date": "2027-08-24",
-      "url": "https://www.noorderzon.nl/programma/de-lens-van-groningen",
-      "status": "event uit tekstregel",
-      "rawText": "Koop tickets | Maandag 24 augustus | Beschikbare tijden | 21:00 | Prijs per ticket | Exclusief € 1 servicekosten per gehele online transactie"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Beschikbare tijden",
-      "date": "2027-08-24",
-      "url": "https://www.noorderzon.nl/programma/de-lens-van-groningen",
-      "status": "event uit dagblok",
-      "rawText": "Beschikbare tijden | 21:00 | Prijs per ticket | Exclusief € 1 servicekosten per gehele online transactie | Koop tickets"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Prijs per",
-      "date": "2027-08-24",
-      "url": "https://www.noorderzon.nl/programma/de-lens-van-groningen",
-      "status": "event uit dagblok",
-      "rawText": "Prijs per ticket | Exclusief € 1 servicekosten per gehele online transactie | Koop tickets | Dinsdag 25 augustus | Beschikbare tijden"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Exclusief € 1 servicekosten per gehele online transactie",
-      "date": "2027-08-24",
-      "url": "https://www.noorderzon.nl/programma/de-lens-van-groningen",
-      "status": "event uit dagblok",
-      "rawText": "Exclusief € 1 servicekosten per gehele online transactie | Koop tickets | Dinsdag 25 augustus | Beschikbare tijden | 21:00"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Koop",
-      "date": "2027-08-24",
-      "url": "https://www.noorderzon.nl/programma/de-lens-van-groningen",
-      "status": "event uit dagblok",
-      "rawText": "Koop tickets | Dinsdag 25 augustus | Beschikbare tijden | 21:00 | Prijs per ticket"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Koop",
-      "date": "2027-08-25",
-      "url": "https://www.noorderzon.nl/programma/de-lens-van-groningen",
-      "status": "event uit tekstregel",
-      "rawText": "Koop tickets | Dinsdag 25 augustus | Beschikbare tijden | 21:00 | Prijs per ticket | Exclusief € 1 servicekosten per gehele online transactie"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Beschikbare tijden",
-      "date": "2027-08-25",
-      "url": "https://www.noorderzon.nl/programma/de-lens-van-groningen",
-      "status": "event uit dagblok",
-      "rawText": "Beschikbare tijden | 21:00 | Prijs per ticket | Exclusief € 1 servicekosten per gehele online transactie | Koop tickets"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Prijs per",
-      "date": "2027-08-25",
-      "url": "https://www.noorderzon.nl/programma/de-lens-van-groningen",
-      "status": "event uit dagblok",
-      "rawText": "Prijs per ticket | Exclusief € 1 servicekosten per gehele online transactie | Koop tickets | Woensdag 26 augustus | Beschikbare tijden"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Exclusief € 1 servicekosten per gehele online transactie",
-      "date": "2027-08-25",
-      "url": "https://www.noorderzon.nl/programma/de-lens-van-groningen",
-      "status": "event uit dagblok",
-      "rawText": "Exclusief € 1 servicekosten per gehele online transactie | Koop tickets | Woensdag 26 augustus | Beschikbare tijden | 21:00"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Koop",
-      "date": "2027-08-25",
-      "url": "https://www.noorderzon.nl/programma/de-lens-van-groningen",
-      "status": "event uit dagblok",
-      "rawText": "Koop tickets | Woensdag 26 augustus | Beschikbare tijden | 21:00 | Prijs per ticket"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Koop",
-      "date": "2027-08-26",
-      "url": "https://www.noorderzon.nl/programma/de-lens-van-groningen",
-      "status": "event uit tekstregel",
-      "rawText": "Koop tickets | Woensdag 26 augustus | Beschikbare tijden | 21:00 | Prijs per ticket | Exclusief € 1 servicekosten per gehele online transactie"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Beschikbare tijden",
-      "date": "2027-08-26",
-      "url": "https://www.noorderzon.nl/programma/de-lens-van-groningen",
-      "status": "event uit dagblok",
-      "rawText": "Beschikbare tijden | 21:00 | Prijs per ticket | Exclusief € 1 servicekosten per gehele online transactie | Koop tickets"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Prijs per",
-      "date": "2027-08-26",
-      "url": "https://www.noorderzon.nl/programma/de-lens-van-groningen",
-      "status": "event uit dagblok",
-      "rawText": "Prijs per ticket | Exclusief € 1 servicekosten per gehele online transactie | Koop tickets | Donderdag 27 augustus | Beschikbare tijden"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Exclusief € 1 servicekosten per gehele online transactie",
-      "date": "2027-08-26",
-      "url": "https://www.noorderzon.nl/programma/de-lens-van-groningen",
-      "status": "event uit dagblok",
-      "rawText": "Exclusief € 1 servicekosten per gehele online transactie | Koop tickets | Donderdag 27 augustus | Beschikbare tijden | 21:00"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Koop",
-      "date": "2027-08-26",
-      "url": "https://www.noorderzon.nl/programma/de-lens-van-groningen",
-      "status": "event uit dagblok",
-      "rawText": "Koop tickets | Donderdag 27 augustus | Beschikbare tijden | 21:00 | Prijs per ticket"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Koop",
-      "date": "2027-08-27",
-      "url": "https://www.noorderzon.nl/programma/de-lens-van-groningen",
-      "status": "event uit tekstregel",
-      "rawText": "Koop tickets | Donderdag 27 augustus | Beschikbare tijden | 21:00 | Prijs per ticket | Exclusief € 1 servicekosten per gehele online transactie"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Beschikbare tijden",
-      "date": "2027-08-27",
-      "url": "https://www.noorderzon.nl/programma/de-lens-van-groningen",
-      "status": "event uit dagblok",
-      "rawText": "Beschikbare tijden | 21:00 | Prijs per ticket | Exclusief € 1 servicekosten per gehele online transactie | Koop tickets"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Prijs per",
-      "date": "2027-08-27",
-      "url": "https://www.noorderzon.nl/programma/de-lens-van-groningen",
-      "status": "event uit dagblok",
-      "rawText": "Prijs per ticket | Exclusief € 1 servicekosten per gehele online transactie | Koop tickets | Vrijdag 28 augustus | Beschikbare tijden"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Exclusief € 1 servicekosten per gehele online transactie",
-      "date": "2027-08-27",
-      "url": "https://www.noorderzon.nl/programma/de-lens-van-groningen",
-      "status": "event uit dagblok",
-      "rawText": "Exclusief € 1 servicekosten per gehele online transactie | Koop tickets | Vrijdag 28 augustus | Beschikbare tijden | 21:00"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Koop",
-      "date": "2027-08-27",
-      "url": "https://www.noorderzon.nl/programma/de-lens-van-groningen",
-      "status": "event uit dagblok",
-      "rawText": "Koop tickets | Vrijdag 28 augustus | Beschikbare tijden | 21:00 | Prijs per ticket"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Koop",
-      "date": "2027-08-28",
-      "url": "https://www.noorderzon.nl/programma/de-lens-van-groningen",
-      "status": "event uit tekstregel",
-      "rawText": "Koop tickets | Vrijdag 28 augustus | Beschikbare tijden | 21:00 | Prijs per ticket | Exclusief € 1 servicekosten per gehele online transactie"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Beschikbare tijden",
-      "date": "2027-08-28",
-      "url": "https://www.noorderzon.nl/programma/de-lens-van-groningen",
-      "status": "event uit dagblok",
-      "rawText": "Beschikbare tijden | 21:00 | Prijs per ticket | Exclusief € 1 servicekosten per gehele online transactie | Koop tickets"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Prijs per",
-      "date": "2027-08-28",
-      "url": "https://www.noorderzon.nl/programma/de-lens-van-groningen",
-      "status": "event uit dagblok",
-      "rawText": "Prijs per ticket | Exclusief € 1 servicekosten per gehele online transactie | Koop tickets | Zaterdag 29 augustus | Beschikbare tijden"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Exclusief € 1 servicekosten per gehele online transactie",
-      "date": "2027-08-28",
-      "url": "https://www.noorderzon.nl/programma/de-lens-van-groningen",
-      "status": "event uit dagblok",
-      "rawText": "Exclusief € 1 servicekosten per gehele online transactie | Koop tickets | Zaterdag 29 augustus | Beschikbare tijden | 21:00"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Koop",
-      "date": "2027-08-28",
-      "url": "https://www.noorderzon.nl/programma/de-lens-van-groningen",
-      "status": "event uit dagblok",
-      "rawText": "Koop tickets | Zaterdag 29 augustus | Beschikbare tijden | 21:00 | Prijs per ticket"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Koop",
-      "date": "2027-08-29",
-      "url": "https://www.noorderzon.nl/programma/de-lens-van-groningen",
-      "status": "event uit tekstregel",
-      "rawText": "Koop tickets | Zaterdag 29 augustus | Beschikbare tijden | 21:00 | Prijs per ticket | Exclusief € 1 servicekosten per gehele online transactie"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Beschikbare tijden",
-      "date": "2027-08-29",
-      "url": "https://www.noorderzon.nl/programma/de-lens-van-groningen",
-      "status": "event uit dagblok",
-      "rawText": "Beschikbare tijden | 21:00 | Prijs per ticket | Exclusief € 1 servicekosten per gehele online transactie | Koop tickets"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Prijs per",
-      "date": "2027-08-29",
-      "url": "https://www.noorderzon.nl/programma/de-lens-van-groningen",
-      "status": "event uit dagblok",
-      "rawText": "Prijs per ticket | Exclusief € 1 servicekosten per gehele online transactie | Koop tickets | Zondag 30 augustus | Beschikbare tijden"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Exclusief € 1 servicekosten per gehele online transactie",
-      "date": "2027-08-29",
-      "url": "https://www.noorderzon.nl/programma/de-lens-van-groningen",
-      "status": "event uit dagblok",
-      "rawText": "Exclusief € 1 servicekosten per gehele online transactie | Koop tickets | Zondag 30 augustus | Beschikbare tijden | 21:00"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Koop",
-      "date": "2027-08-29",
-      "url": "https://www.noorderzon.nl/programma/de-lens-van-groningen",
-      "status": "event uit dagblok",
-      "rawText": "Koop tickets | Zondag 30 augustus | Beschikbare tijden | 21:00 | Prijs per ticket"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Koop",
-      "date": "2027-08-30",
-      "url": "https://www.noorderzon.nl/programma/de-lens-van-groningen",
-      "status": "event uit tekstregel",
-      "rawText": "Koop tickets | Zondag 30 augustus | Beschikbare tijden | 21:00 | Prijs per ticket | Exclusief € 1 servicekosten per gehele online transactie"
-    },
     {
       "source": "Website",
       "site": "https://www.noorderzon.nl/programma",
@@ -13122,16 +13142,304 @@
       "url": "https://denieuwekolk.nl/agenda",
       "status": "klaar",
       "rawText": "site 17/18: 5 unieke events in 90.34 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://kinepolis.nl/?complex=WGRN&select_theater=WGRN&main_section=films",
+      "title": "Start",
+      "date": "",
+      "url": "https://kinepolis.nl/?complex=WGRN&select_theater=WGRN&main_section=films",
+      "status": "start",
+      "rawText": "site 18/18: max 20 events, max 90 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://kinepolis.nl/?complex=WGRN&select_theater=WGRN&main_section=films",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://kinepolis.nl/?complex=WGRN&select_theater=WGRN&main_section=films",
+      "status": "strategie",
+      "rawText": "universeel-jsonld-links-kaarten"
+    },
+    {
+      "source": "Website",
+      "site": "https://kinepolis.nl/?complex=WGRN&select_theater=WGRN&main_section=films",
+      "title": "Pagina gelezen",
+      "date": "",
+      "url": "https://kinepolis.nl/?complex=WGRN&select_theater=WGRN&main_section=films",
+      "status": "ok",
+      "rawText": "7391155 tekens HTML"
+    },
+    {
+      "source": "Website",
+      "site": "https://kinepolis.nl/?complex=WGRN&select_theater=WGRN&main_section=films",
+      "title": "Kinepolis Nederland",
+      "date": "2026-11-20",
+      "url": "https://kinepolis.nl/?complex=WGRN&select_theater=WGRN&main_section=films",
+      "status": "event uit datumblok",
+      "rawText": "Kinepolis Nederland | Jump to navigation Menu Menu Filmagenda Films Films Verwacht Familiefilms World Cinema World Cinema World Cinema Turkse films Indiase films Poolse films Kids Kids Kinderfilms Kinderfeestjes Kids Weekend Kleuterbios Met school naar de film Events Events Anime CinePlus Filmhuis High Tea Horror Night Kids Weekend Kinecafé KinePride Klassiekers Kleuterbios Ladies Night MEIDEN Avond Music and Movies"
+    },
+    {
+      "source": "Website",
+      "site": "https://kinepolis.nl/?complex=WGRN&select_theater=WGRN&main_section=films",
+      "title": "Films",
+      "date": "2026-11-20",
+      "url": "https://kinepolis.nl/?complex=WGRN&select_theater=WGRN&main_section=films",
+      "status": "event uit detailpagina",
+      "rawText": "Kinepolis Nederland | Jump to navigation Menu Menu Filmagenda Films Films Verwacht Familiefilms World Cinema World Cinema World Cinema Turkse films Indiase films Poolse films Kids Kids Kinderfilms Kinderfeestjes Kids Weekend Kleuterbios Met school naar de film Events Events Anime CinePlus Filmhuis High Tea Horror Night Kids Weekend Kinecafé KinePride Klassiekers Kleuterbios Ladies Night MEIDEN Avond Music and Movies"
+    },
+    {
+      "source": "Website",
+      "site": "https://kinepolis.nl/?complex=WGRN&select_theater=WGRN&main_section=films",
+      "title": "De programmatie en",
+      "date": "2026-11-23",
+      "url": "https://kinepolis.nl/?complex=WGRN&select_theater=WGRN&main_section=films",
+      "status": "event uit tekstregel",
+      "rawText": "Wil je automatisch op de hoogte gehouden worden van de verwachte films en events? Voeg deze dan nu toe aan je wishlist door op het hartje te klikken. Let op: releasedata van films zijn onder voorbehoud. | De programmatie en tickets voor de huidige speelweek zijn nu beschikbaar. Voor de volgende speelweek zullen deze beschikbaar zijn vanaf 23-11-2026 20:00. | Films | Vandaag | Verwacht | Bioscoop"
+    },
+    {
+      "source": "Website",
+      "site": "https://kinepolis.nl/?complex=WGRN&select_theater=WGRN&main_section=films",
+      "title": "Films",
+      "date": "2026-11-20",
+      "url": "https://kinepolis.nl/?complex=WGRN&select_theater=WGRN&main_section=films",
+      "status": "event uit tekstregel",
+      "rawText": "Films | Vandaag | Verwacht | Bioscoop | All | Datum"
+    },
+    {
+      "source": "Website",
+      "site": "https://kinepolis.nl/?complex=WGRN&select_theater=WGRN&main_section=films",
+      "title": "Verwacht",
+      "date": "2026-11-20",
+      "url": "https://kinepolis.nl/?complex=WGRN&select_theater=WGRN&main_section=films",
+      "status": "event uit dagblok",
+      "rawText": "Verwacht | Bioscoop | All | Datum | All"
+    },
+    {
+      "source": "Website",
+      "site": "https://kinepolis.nl/?complex=WGRN&select_theater=WGRN&main_section=films",
+      "title": "Bioscoop",
+      "date": "2026-11-20",
+      "url": "https://kinepolis.nl/?complex=WGRN&select_theater=WGRN&main_section=films",
+      "status": "event uit dagblok",
+      "rawText": "Bioscoop | All | Datum | All | Categorie"
+    },
+    {
+      "source": "Website",
+      "site": "https://kinepolis.nl/?complex=WGRN&select_theater=WGRN&main_section=films",
+      "title": "Taal",
+      "date": "2026-11-20",
+      "url": "https://kinepolis.nl/?complex=WGRN&select_theater=WGRN&main_section=films",
+      "status": "event uit dagblok",
+      "rawText": "Taal | Versie | Genre | Land | Event"
+    },
+    {
+      "source": "Website",
+      "site": "https://kinepolis.nl/?complex=WGRN&select_theater=WGRN&main_section=films",
+      "title": "Versie",
+      "date": "2026-11-20",
+      "url": "https://kinepolis.nl/?complex=WGRN&select_theater=WGRN&main_section=films",
+      "status": "event uit dagblok",
+      "rawText": "Versie | Genre | Land | Event | Leeftijdskeuring"
+    },
+    {
+      "source": "Website",
+      "site": "https://kinepolis.nl/?complex=WGRN&select_theater=WGRN&main_section=films",
+      "title": "Genre",
+      "date": "2026-11-20",
+      "url": "https://kinepolis.nl/?complex=WGRN&select_theater=WGRN&main_section=films",
+      "status": "event uit dagblok",
+      "rawText": "Genre | Land | Event | Leeftijdskeuring | Wis filters"
+    },
+    {
+      "source": "Website",
+      "site": "https://kinepolis.nl/?complex=WGRN&select_theater=WGRN&main_section=films",
+      "title": "Land",
+      "date": "2026-11-20",
+      "url": "https://kinepolis.nl/?complex=WGRN&select_theater=WGRN&main_section=films",
+      "status": "event uit dagblok",
+      "rawText": "Land | Event | Leeftijdskeuring | Wis filters | Movies"
+    },
+    {
+      "source": "Website",
+      "site": "https://kinepolis.nl/?complex=WGRN&select_theater=WGRN&main_section=films",
+      "title": "Leeftijdskeuring",
+      "date": "2026-11-20",
+      "url": "https://kinepolis.nl/?complex=WGRN&select_theater=WGRN&main_section=films",
+      "status": "event uit dagblok",
+      "rawText": "Leeftijdskeuring | Wis filters | Movies | Alle films | Familie"
+    },
+    {
+      "source": "Website",
+      "site": "https://kinepolis.nl/?complex=WGRN&select_theater=WGRN&main_section=films",
+      "title": "Wis filters",
+      "date": "2026-11-20",
+      "url": "https://kinepolis.nl/?complex=WGRN&select_theater=WGRN&main_section=films",
+      "status": "event uit dagblok",
+      "rawText": "Wis filters | Movies | Alle films | Familie | Turkse film"
+    },
+    {
+      "source": "Website",
+      "site": "https://kinepolis.nl/?complex=WGRN&select_theater=WGRN&main_section=films",
+      "title": "Movies",
+      "date": "2026-11-20",
+      "url": "https://kinepolis.nl/?complex=WGRN&select_theater=WGRN&main_section=films",
+      "status": "event uit dagblok",
+      "rawText": "Movies | Alle films | Familie | Turkse film | Bollywood"
+    },
+    {
+      "source": "Website",
+      "site": "https://kinepolis.nl/?complex=WGRN&select_theater=WGRN&main_section=films",
+      "title": "Alle films",
+      "date": "2026-11-20",
+      "url": "https://kinepolis.nl/?complex=WGRN&select_theater=WGRN&main_section=films",
+      "status": "event uit dagblok",
+      "rawText": "Alle films | Familie | Turkse film | Bollywood | Music & Movies"
+    },
+    {
+      "source": "Website",
+      "site": "https://kinepolis.nl/?complex=WGRN&select_theater=WGRN&main_section=films",
+      "title": "Turkse film",
+      "date": "2026-11-20",
+      "url": "https://kinepolis.nl/?complex=WGRN&select_theater=WGRN&main_section=films",
+      "status": "event uit dagblok",
+      "rawText": "Turkse film | Bollywood | Music & Movies | Events | Anime"
+    },
+    {
+      "source": "Website",
+      "site": "https://kinepolis.nl/?complex=WGRN&select_theater=WGRN&main_section=films",
+      "title": "CinePlus",
+      "date": "2026-11-20",
+      "url": "https://kinepolis.nl/?complex=WGRN&select_theater=WGRN&main_section=films",
+      "status": "event uit dagblok",
+      "rawText": "CinePlus | Filmhuis | High Tea | Horror Night | Kids Weekend"
+    },
+    {
+      "source": "Website",
+      "site": "https://kinepolis.nl/?complex=WGRN&select_theater=WGRN&main_section=films",
+      "title": "Filmhuis",
+      "date": "2026-11-20",
+      "url": "https://kinepolis.nl/?complex=WGRN&select_theater=WGRN&main_section=films",
+      "status": "event uit dagblok",
+      "rawText": "Filmhuis | High Tea | Horror Night | Kids Weekend | Kinecafé"
+    },
+    {
+      "source": "Website",
+      "site": "https://kinepolis.nl/?complex=WGRN&select_theater=WGRN&main_section=films",
+      "title": "High Tea",
+      "date": "2026-11-20",
+      "url": "https://kinepolis.nl/?complex=WGRN&select_theater=WGRN&main_section=films",
+      "status": "event uit dagblok",
+      "rawText": "High Tea | Horror Night | Kids Weekend | Kinecafé | KinePride"
+    },
+    {
+      "source": "Website",
+      "site": "https://kinepolis.nl/?complex=WGRN&select_theater=WGRN&main_section=films",
+      "title": "Horror Night",
+      "date": "2026-11-20",
+      "url": "https://kinepolis.nl/?complex=WGRN&select_theater=WGRN&main_section=films",
+      "status": "event uit dagblok",
+      "rawText": "Horror Night | Kids Weekend | Kinecafé | KinePride | Klassiekers"
+    },
+    {
+      "source": "Website",
+      "site": "https://kinepolis.nl/?complex=WGRN&select_theater=WGRN&main_section=films",
+      "title": "Kids Weekend",
+      "date": "2026-11-20",
+      "url": "https://kinepolis.nl/?complex=WGRN&select_theater=WGRN&main_section=films",
+      "status": "event uit dagblok",
+      "rawText": "Kids Weekend | Kinecafé | KinePride | Klassiekers | Kleuterbios"
+    },
+    {
+      "source": "Website",
+      "site": "https://kinepolis.nl/?complex=WGRN&select_theater=WGRN&main_section=films",
+      "title": "Kleuterbios",
+      "date": "2026-11-20",
+      "url": "https://kinepolis.nl/?complex=WGRN&select_theater=WGRN&main_section=films",
+      "status": "event uit dagblok",
+      "rawText": "Kleuterbios | Ladies Night | MEIDEN Avond | Music and Movies | Royal Ballet & Opera"
+    },
+    {
+      "source": "Website",
+      "site": "https://kinepolis.nl/?complex=WGRN&select_theater=WGRN&main_section=films",
+      "title": "Ladies Night",
+      "date": "2026-11-20",
+      "url": "https://kinepolis.nl/?complex=WGRN&select_theater=WGRN&main_section=films",
+      "status": "event uit dagblok",
+      "rawText": "Ladies Night | MEIDEN Avond | Music and Movies | Royal Ballet & Opera | National Theatre Live"
+    },
+    {
+      "source": "Website",
+      "site": "https://kinepolis.nl/?complex=WGRN&select_theater=WGRN&main_section=films",
+      "title": "MEIDEN Avond",
+      "date": "2026-11-20",
+      "url": "https://kinepolis.nl/?complex=WGRN&select_theater=WGRN&main_section=films",
+      "status": "event uit dagblok",
+      "rawText": "MEIDEN Avond | Music and Movies | Royal Ballet & Opera | National Theatre Live | Kinepolis Group"
+    },
+    {
+      "source": "Website",
+      "site": "https://kinepolis.nl/?complex=WGRN&select_theater=WGRN&main_section=films",
+      "title": "Music and Movies",
+      "date": "2026-11-20",
+      "url": "https://kinepolis.nl/?complex=WGRN&select_theater=WGRN&main_section=films",
+      "status": "event uit dagblok",
+      "rawText": "Music and Movies | Royal Ballet & Opera | National Theatre Live | Kinepolis Group | Investor relations"
+    },
+    {
+      "source": "Website",
+      "site": "https://kinepolis.nl/?complex=WGRN&select_theater=WGRN&main_section=films",
+      "title": "Royal Ballet & Opera",
+      "date": "2026-11-20",
+      "url": "https://kinepolis.nl/?complex=WGRN&select_theater=WGRN&main_section=films",
+      "status": "event uit dagblok",
+      "rawText": "Royal Ballet & Opera | National Theatre Live | Kinepolis Group | Investor relations | Kinepolis Business"
+    },
+    {
+      "source": "Parser",
+      "site": "https://kinepolis.nl/?complex=WGRN&select_theater=WGRN&main_section=films",
+      "title": "Pagina geteld",
+      "date": "",
+      "url": "https://kinepolis.nl/?complex=WGRN&select_theater=WGRN&main_section=films",
+      "status": "analyse",
+      "rawText": "jsonld:0, links:0, datumblokken:1, kaarten:1, regels:23, detail:1"
+    },
+    {
+      "source": "Website",
+      "site": "https://kinepolis.nl/?complex=WGRN&select_theater=WGRN&main_section=films",
+      "title": "Pagina geanalyseerd",
+      "date": "",
+      "url": "https://kinepolis.nl/?complex=WGRN&select_theater=WGRN&main_section=films",
+      "status": "ok",
+      "rawText": "24 events/aanbiedingen op deze pagina"
+    },
+    {
+      "source": "Filter",
+      "site": "https://kinepolis.nl/?complex=WGRN&select_theater=WGRN&main_section=films",
+      "title": "Datumfilter toegepast",
+      "date": "2026-11-20",
+      "url": "https://kinepolis.nl/?complex=WGRN&select_theater=WGRN&main_section=films",
+      "status": "ok",
+      "rawText": "24 gevonden; 23 binnen 2026-11-20 t/m 2026-11-22"
+    },
+    {
+      "source": "Website",
+      "site": "https://kinepolis.nl/?complex=WGRN&select_theater=WGRN&main_section=films",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://kinepolis.nl/?complex=WGRN&select_theater=WGRN&main_section=films",
+      "status": "klaar",
+      "rawText": "site 18/18: 20 unieke events in 3.06 sec"
     }
   ],
-  "status": "running",
+  "status": "finishing",
   "siteStartedAt": "2026-11-20T17:09:53+00:00",
-  "siteElapsedSeconds": 0,
-  "sitePageCount": 0,
-  "lastSiteEventCount": 0,
-  "stage": "Websitepagina ophalen",
-  "lastUpdatedAt": "2026-11-20T17:09:53+00:00",
-  "lastSiteNewEventCount": 5,
-  "lastCompletedSite": "https://denieuwekolk.nl/agenda",
-  "lastCompletedAt": "2026-11-20T17:09:50+00:00"
+  "siteElapsedSeconds": 5,
+  "sitePageCount": 1,
+  "lastSiteEventCount": 20,
+  "stage": "Website klaar; volgende website voorbereiden",
+  "lastUpdatedAt": "2026-11-20T17:09:57+00:00",
+  "lastSiteNewEventCount": 20,
+  "lastCompletedSite": "https://kinepolis.nl/?complex=WGRN&select_theater=WGRN&main_section=films",
+  "lastCompletedAt": "2026-11-20T17:09:58+00:00"
 }
