@@ -1,7 +1,7 @@
 {
   "runId": "2026-11-20T17:01:14.574083+00:00-c1eda5fa",
   "startedAt": "2026-11-20T17:01:14+00:00",
-  "completedCount": 6,
+  "completedCount": 7,
   "totalSites": 18,
   "currentSite": "https://www.martiniplaza.nl/nl/agenda",
   "currentSiteIndex": 7,
@@ -11,7 +11,8 @@
     "https://forum.nl/nl/agenda",
     "https://www.spotgroningen.nl/programma/",
     "https://simplon.nl/",
-    "https://www.vera-groningen.nl/"
+    "https://www.vera-groningen.nl/",
+    "https://www.martiniplaza.nl/nl/agenda"
   ],
   "events": [
     {
@@ -198,15 +199,15 @@
       "date": "2026-11-20",
       "time": "",
       "title": "CATS - Het Meesterwerk",
-      "type": "Expositie",
-      "location": "Martiniplaza",
+      "type": "Concert",
+      "location": "Martiniplaza Groningen",
       "locationLink": "",
-      "website": "https://groningen.uitloper.nu/theater/cats-het-meesterwerk",
-      "source": "groningen.uitloper.nu",
+      "website": "https://www.martiniplaza.nl/nl/agenda/cats-het-meesterwerk",
+      "source": "martiniplaza.nl",
       "discoverySource": "Website",
-      "description": "Als de avond valt en het museum zijn deuren sluit,…",
+      "description": "Meer informatie staat op martiniplaza.nl.",
       "cost": "",
-      "image": "https://groningen.uitloper.nu/images/smallthumb/files/screenshot-2026-10-15-at-14-24-59-cats-het-meesterwerk-s1920x1080-jpg--jpeg-afbeelding-550---770-pixels-.png",
+      "image": "",
       "isNew": true
     },
     {
@@ -601,6 +602,21 @@
     },
     {
       "date": "2026-11-21",
+      "time": "",
+      "title": "CATS - Het Meesterwerk",
+      "type": "Concert",
+      "location": "Martiniplaza Groningen",
+      "locationLink": "",
+      "website": "https://www.martiniplaza.nl/nl/agenda/cats-het-meesterwerk",
+      "source": "martiniplaza.nl",
+      "discoverySource": "Website",
+      "description": "Meer informatie staat op martiniplaza.nl.",
+      "cost": "",
+      "image": "",
+      "isNew": true
+    },
+    {
+      "date": "2026-11-21",
       "time": "18:45",
       "title": "Citizen Osama",
       "type": "Film",
@@ -687,6 +703,21 @@
       "description": "Laat de wereld even achter met dit betoverende drama over drie vrouwen die om de beurt een wandelhut beheren in de Alpen.",
       "cost": "",
       "image": "https://static.forum.nl/cache/foret-ivre.28406/foret-ivre-s1920x1080.jpg",
+      "isNew": true
+    },
+    {
+      "date": "2026-11-21",
+      "time": "",
+      "title": "Free Your Mind Festival",
+      "type": "Festival",
+      "location": "Martiniplaza Groningen",
+      "locationLink": "",
+      "website": "https://www.martiniplaza.nl/nl/agenda/free-your-mind-festival-2026",
+      "source": "martiniplaza.nl",
+      "discoverySource": "Website",
+      "description": "Meer informatie staat op martiniplaza.nl.",
+      "cost": "Free",
+      "image": "",
       "isNew": true
     },
     {
@@ -887,6 +918,21 @@
     {
       "date": "2026-11-22",
       "time": "",
+      "title": "CATS - Het Meesterwerk",
+      "type": "Concert",
+      "location": "Martiniplaza Groningen",
+      "locationLink": "",
+      "website": "https://www.martiniplaza.nl/nl/agenda/cats-het-meesterwerk",
+      "source": "martiniplaza.nl",
+      "discoverySource": "Website",
+      "description": "Meer informatie staat op martiniplaza.nl.",
+      "cost": "",
+      "image": "",
+      "isNew": true
+    },
+    {
+      "date": "2026-11-22",
+      "time": "",
       "title": "International Student LiedDuo Competition",
       "type": "Theater",
       "location": "SPOT/De Oosterpoort",
@@ -972,225 +1018,16 @@
       "newCount": 3,
       "durationSeconds": 3.19,
       "timedOut": false
+    },
+    {
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "count": 4,
+      "newCount": 4,
+      "durationSeconds": 12.15,
+      "timedOut": false
     }
   ],
   "rawLog": [
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Kayhan Kalhor Ensemble",
-      "date": "2026-11-17",
-      "url": "https://www.spotgroningen.nl/programma/kayhan-kalhor-ensemble/",
-      "status": "event uit link",
-      "rawText": "Kayhan Kalhor Ensemble Wereldberoemde Iraanse maestro van de kemenche wo 17 nov"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Billy Ocean 50 Years of Red Light Spells Danger",
-      "date": "2026-11-22",
-      "url": "https://www.spotgroningen.nl/programma/billy-ocean-3/",
-      "status": "event uit link",
-      "rawText": "Billy Ocean 50 Years of Red Light Spells Danger Vijftig jaar hits, van Red Light Spells Danger tot Caribbean Queen Net bevestigd ma 22 nov"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Mula",
-      "date": "2026-11-26",
-      "url": "https://www.spotgroningen.nl/programma/mula/",
-      "status": "event uit link",
-      "rawText": "Mula Meesterplusser is terug met vervolg op succesvolle Narcopop-album Net bevestigd vr 26 nov"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "The Dead South Silence, Please World Tour",
-      "date": "2026-11-27",
-      "url": "https://www.spotgroningen.nl/programma/the-dead-south/",
-      "status": "event uit link",
-      "rawText": "The Dead South Silence, Please World Tour Canadese band die bluegrass combineert met folk en stevige metalinvloeden Net bevestigd za 27 nov"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Kovacs",
-      "date": "2026-12-11",
-      "url": "https://www.spotgroningen.nl/programma/kovacs-4/",
-      "status": "event uit link",
-      "rawText": "Kovacs Een chanteuse met een tijdloos en tegelijkertijd rauw stemgeluid za 11 dec"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Gotu Jim + support: Igor Melancholische mix van house, trap en emo",
-      "date": "2027-11-01",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "1 nov Gotu Jim + support: Igor Melancholische mix van house, trap en emo"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Isabèl Usher Nederlandstalige pop,",
-      "date": "2027-11-01",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "1 nov Isabèl Usher Nederlandstalige pop, hiphop en house met diepgaande teksten Uitverkocht"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "International Student LiedDuo Competition Finale Hét toonaangevende",
-      "date": "2027-11-01",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "1 nov International Student LiedDuo Competition Finale Hét toonaangevende concours voor liedduo’s (zang en piano)"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Triggerfinger + support: Brakwater Een nieuw tijdperk en sterker dan ooit!",
-      "date": "2027-11-02",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "2 nov Triggerfinger + support: Brakwater Een nieuw tijdperk en sterker dan ooit!"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Bert Visscher en het Noordpool Strijkkwartet Bert",
-      "date": "2027-11-02",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "2 nov Bert Visscher en het Noordpool Strijkkwartet Bert Visscher, 65 Dat Zou Je Niet Zeggen Idiote scènes, prachtige liedjes en absurde verhalen Laatste kaarten"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Combattimento 300 jaar Vier Jaargetijden van Vivaldi",
-      "date": "2027-11-02",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "2 nov Combattimento 300 jaar Vier Jaargetijden van Vivaldi Een combinatie van de vier jaargetijden van Vivaldi en Durante"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Soweto Gospel Choir JOY Een",
-      "date": "2027-11-03",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "3 nov Soweto Gospel Choir JOY Een muzikale viering van harmonie, vrijheid en hoop Laatste kaarten"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "K-OTIC K-otic viert 25-jarig jubileum",
-      "date": "2027-11-03",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "3 nov K-OTIC K-otic viert 25-jarig jubileum"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Luka Bloom Originele singer-songwriter uit Ierland",
-      "date": "2027-11-04",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "4 nov Luka Bloom Originele singer-songwriter uit Ierland"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Claudia de Breij Oudejaarsconference 2026 Claudia de",
-      "date": "2027-11-04",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "4 nov Claudia de Breij Oudejaarsconference 2026 Claudia de Breij is terug met de officiële Oudejaarsconference! Uitverkocht"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Myrte Siebinga GELUKKIG MAAR “Het komisch talent van Siebinga is fenomenaal” ★★★★★ DvhN",
-      "date": "2027-11-05",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "5 nov Myrte Siebinga GELUKKIG MAAR “Het komisch talent van Siebinga is fenomenaal” ★★★★★ DvhN Geannuleerd"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Dutch Classical Talent: Hadewych van Gent SPOT Lunchbreak Multitalent versmelt cello met zang",
-      "date": "2027-11-05",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "5 nov Dutch Classical Talent: Hadewych van Gent SPOT Lunchbreak Multitalent versmelt cello met zang"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Claudia de Breij Oudejaarsconference 2026 Claudia de",
-      "date": "2026-11-06",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "6 nov Claudia de Breij Oudejaarsconference 2026 Claudia de Breij is terug met de officiële Oudejaarsconference! Uitverkocht"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Nederlands kamerkoor Vespers Rachmaninov Een van de mooiste koorwerken ooit geschreven",
-      "date": "2026-11-06",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "6 nov Nederlands kamerkoor Vespers Rachmaninov Een van de mooiste koorwerken ooit geschreven Uitverkocht"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Noord Nederlands Orkest Anime in Concert Iconische animatiemuziek met orkest, koor en sopraan",
-      "date": "2026-11-06",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "6 nov Noord Nederlands Orkest Anime in Concert Iconische animatiemuziek met orkest, koor en sopraan"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Flemming + support: Jim Gardner Frisse, catchy Nederlandstalige pop",
-      "date": "2026-11-06",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "6 nov Flemming + support: Jim Gardner Frisse, catchy Nederlandstalige pop Uitverkocht"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Het Nationale",
-      "date": "2026-11-07",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "7 nov Het Nationale Theater Meeuw Het geploeter en de lol van twee generaties"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "JP Den Tex & Tineke Schoemaker Spelen met de Blues Twee iconen van de Nederlandse",
-      "date": "2026-11-07",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "7 nov JP Den Tex & Tineke Schoemaker Spelen met de Blues Twee iconen van de Nederlandse muziek ontmoeten elkaar in de blues"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Timebox Een ode aan",
-      "date": "2026-11-07",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "7 nov Timebox Een ode aan Britse klassiekers uit de periode 1964-1974 Uitverkocht"
-    },
     {
       "source": "Website",
       "site": "https://www.spotgroningen.nl/programma/",
@@ -11774,16 +11611,232 @@
       "url": "https://www.vera-groningen.nl/",
       "status": "klaar",
       "rawText": "site 6/18: 3 unieke events in 3.19 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Start",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda",
+      "status": "start",
+      "rawText": "site 7/18: max 20 events, max 90 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda",
+      "status": "strategie",
+      "rawText": "agenda-kaarten"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Pagina gelezen",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda",
+      "status": "ok",
+      "rawText": "144703 tekens HTML"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Agenda geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda",
+      "status": "gespecialiseerde parser",
+      "rawText": "12 agenda-items gevonden"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Pagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda",
+      "status": "ok",
+      "rawText": "12 events/aanbiedingen op deze pagina"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/cats-het-meesterwerk",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/free-your-mind-festival-2026",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/janneke-jager",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/maintenance-industry-noord-congres",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/najib-roue-alles-is-comedy",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/tammo-zingt-folk",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/tech-to-the-future",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/the-bodyguard-de-musical-2027",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/the-witcher",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/titanique",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/vrienden-voor-het-leven-2026",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda/williamjanz",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/feed",
+      "status": "fout",
+      "rawText": "HTTP 404"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/rss",
+      "status": "fout",
+      "rawText": "HTTP 404"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/rss.xml",
+      "status": "fout",
+      "rawText": "HTTP 404"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/feed.xml",
+      "status": "fout",
+      "rawText": "HTTP 404"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/events/feed/",
+      "status": "fout",
+      "rawText": "HTTP 404"
+    },
+    {
+      "source": "Filter",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Datumfilter toegepast",
+      "date": "2026-11-20",
+      "url": "https://www.martiniplaza.nl/nl/agenda",
+      "status": "ok",
+      "rawText": "12 gevonden; 4 binnen 2026-11-20 t/m 2026-11-22"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.martiniplaza.nl/nl/agenda",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://www.martiniplaza.nl/nl/agenda",
+      "status": "klaar",
+      "rawText": "site 7/18: 4 unieke events in 12.15 sec"
     }
   ],
   "status": "running",
   "siteStartedAt": "2026-11-20T17:03:41+00:00",
-  "siteElapsedSeconds": 0,
-  "sitePageCount": 0,
-  "lastSiteEventCount": 0,
-  "stage": "Websitepagina ophalen",
-  "lastUpdatedAt": "2026-11-20T17:03:41+00:00",
-  "lastSiteNewEventCount": 3,
-  "lastCompletedSite": "https://www.vera-groningen.nl/",
-  "lastCompletedAt": "2026-11-20T17:03:38+00:00"
+  "siteElapsedSeconds": 13,
+  "sitePageCount": 1,
+  "lastSiteEventCount": 4,
+  "stage": "Website klaar; volgende website voorbereiden",
+  "lastUpdatedAt": "2026-11-20T17:03:44+00:00",
+  "lastSiteNewEventCount": 4,
+  "lastCompletedSite": "https://www.martiniplaza.nl/nl/agenda",
+  "lastCompletedAt": "2026-11-20T17:03:54+00:00"
 }
