@@ -1,15 +1,3 @@
-Website	https://www.spotgroningen.nl/programma/	event uit link	Magnificent Seven	2027-05-29	https://www.spotgroningen.nl/programma/magnificent-seven/	Magnificent Seven Een supergroep van Nederlandse topgitaristen za 29 mei
-Website	https://www.spotgroningen.nl/programma/	event uit link	The Orchestra CARRY THE TORCH TOUR	2027-05-29	https://www.spotgroningen.nl/programma/the-orchestra/	The Orchestra CARRY THE TORCH TOUR De grootste Electric Light Orchestra-hits live! Net bevestigd za 29 mei
-Website	https://www.spotgroningen.nl/programma/	event uit link	Sven Ratzke Kopfkino	2027-05-30	https://www.spotgroningen.nl/programma/sven-ratzke-4/	Sven Ratzke Kopfkino Diva's en dromers komen tot leven in vaak persoonlijke verhalen en herinneringen zo 30 mei
-Website	https://www.spotgroningen.nl/programma/	event uit link	Bert Visscher, Martin van Waardenberg Sunshine Boys	2027-06-01	https://www.spotgroningen.nl/programma/bert-visscher-martin-van-waardenberg/	Bert Visscher, Martin van Waardenberg Sunshine Boys Ontroerend meesterwerk met komische zwaargewichten di 1 jun
-Website	https://www.spotgroningen.nl/programma/	event uit link	Bert Visscher, Martin van Waardenberg Sunshine Boys	2027-06-02	https://www.spotgroningen.nl/programma/bert-visscher-martin-van-waardenberg-2/	Bert Visscher, Martin van Waardenberg Sunshine Boys Ontroerend meesterwerk met komische zwaargewichten wo 2 jun
-Website	https://www.spotgroningen.nl/programma/	event uit link	Fabian Franciscus Is het leven al begonnen?	2027-06-02	https://www.spotgroningen.nl/programma/fabian-franciscus-4/	Fabian Franciscus Is het leven al begonnen? Fabian Franciscus is terug! wo 2 jun
-Website	https://www.spotgroningen.nl/programma/	event uit link	Bert Visscher, Martin van Waardenberg Sunshine Boys	2027-06-03	https://www.spotgroningen.nl/programma/bert-visscher-martin-van-waardenberg-3/	Bert Visscher, Martin van Waardenberg Sunshine Boys Ontroerend meesterwerk met komische zwaargewichten do 3 jun
-Website	https://www.spotgroningen.nl/programma/	event uit link	Opera Zuid Frau Luna	2027-06-04	https://www.spotgroningen.nl/programma/opera-zuid-11/	Opera Zuid Frau Luna Onweerstaanbaar muziektheater van Steef de Jong en bewerking van Paulien Cornelisse vr 4 jun
-Website	https://www.spotgroningen.nl/programma/	event uit link	BOUKE ROCKS ELVIS	2027-06-04	https://www.spotgroningen.nl/programma/bouke-rocks-elvis/	BOUKE ROCKS ELVIS Bouke brengt the King met volle overtuiging tot leven Laatste kaarten vr 4 jun
-Website	https://www.spotgroningen.nl/programma/	event uit link	The Kik Hertaalt The Beatles (1962-1966)	2027-06-04	https://www.spotgroningen.nl/programma/the-kik-9/	The Kik Hertaalt The Beatles (1962-1966) Nederlandstalig eerbetoon aan de grootste band aller tijden vr 4 jun
-Website	https://www.spotgroningen.nl/programma/	event uit link	Alexis Ffrench	2027-06-06	https://www.spotgroningen.nl/programma/alexis-ffrench/	Alexis Ffrench Pianomuziek waarin klassieke tradities en soulvolle melodieën samenkomen zo 6 jun
-Website	https://www.spotgroningen.nl/programma/	event uit link	Brand New Musical Kapsalon de musical	2027-06-06	https://www.spotgroningen.nl/programma/brand-new-musical/	Brand New Musical Kapsalon de musical Swingende voorstelling met muzikale invloeden van Afro-beats, hiphop, gospel en pop zo 6 jun
 Website	https://www.spotgroningen.nl/programma/	event uit link	Orkest van de Achttiende Eeuw Beethoven 200	2027-06-06	https://www.spotgroningen.nl/programma/orkest-van-de-achttiende-eeuw-4/	Orkest van de Achttiende Eeuw Beethoven 200 Twee publieksfavorieten van een grote muziekrevolutionair zo 6 jun
 Website	https://www.spotgroningen.nl/programma/	event uit link	Merijn Scholten Lemming (reprise)	2027-06-07	https://www.spotgroningen.nl/programma/merijn-scholten-10/	Merijn Scholten Lemming (reprise) Channel je innerlijke schaap en laat je hoeden door Merijn! Uitverkocht ma 7 jun
 Website	https://www.spotgroningen.nl/programma/	event uit link	Merijn Scholten Lemming (reprise)	2027-06-08	https://www.spotgroningen.nl/programma/merijn-scholten-11/	Merijn Scholten Lemming (reprise) Channel je innerlijke schaap en laat je hoeden door Merijn! Uitverkocht di 8 jun
@@ -1198,3 +1186,15 @@ Parser	https://www.spotgroningen.nl/programma/	analyse	Pagina geteld		https://ww
 Website	https://www.spotgroningen.nl/programma/	ok	Detailpagina geanalyseerd		https://www.spotgroningen.nl/programma/amsterdan-sinfonietta/	42 extra events
 Filter	https://www.spotgroningen.nl/programma/	ok	Datumfilter toegepast	2026-11-20	https://www.spotgroningen.nl/programma/	1136 gevonden; 28 binnen 2026-11-20 t/m 2026-11-22
 Website	https://www.spotgroningen.nl/programma/	klaar	Klaar		https://www.spotgroningen.nl/programma/	site 4/18: 19 unieke events in 98.99 sec
+Website	https://simplon.nl/	start	Start		https://simplon.nl/	site 5/18: max 20 events, max 90 seconden
+Parser	https://simplon.nl/	strategie	Scrapertype vastgesteld		https://simplon.nl/	compacte-agenda-kaarten
+Website	https://simplon.nl/	ok	Pagina gelezen		https://simplon.nl/programma/	97582 tekens HTML
+Parser	https://simplon.nl/	gespecialiseerde parser	Agenda geanalyseerd		https://simplon.nl/programma/	59 agenda-items gevonden
+Website	https://simplon.nl/	ok	Pagina geanalyseerd		https://simplon.nl/programma/	58 events/aanbiedingen op deze pagina
+RSS/Atom	https://simplon.nl/	ok	Feed geanalyseerd		https://simplon.nl/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fsimplon.nl%2Fprogramma%2F&format=xml	0 events uit openbare feed
+RSS/Atom	https://simplon.nl/	ok	Feed geanalyseerd		https://simplon.nl/feed/	0 events uit openbare feed
+RSS/Atom	https://simplon.nl/	fout	Feed mislukt		https://simplon.nl/rss.xml	HTTP 404
+RSS/Atom	https://simplon.nl/	fout	Feed mislukt		https://simplon.nl/feed.xml	HTTP 404
+RSS/Atom	https://simplon.nl/	ok	Feed geanalyseerd		https://simplon.nl/events/feed/	0 events uit openbare feed
+Filter	https://simplon.nl/	ok	Datumfilter toegepast	2026-11-20	https://simplon.nl/	58 gevonden; 2 binnen 2026-11-20 t/m 2026-11-22
+Website	https://simplon.nl/	klaar	Klaar		https://simplon.nl/	site 5/18: 0 unieke events in 4.66 sec

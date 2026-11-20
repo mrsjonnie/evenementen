@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-11-20T17:03:24+00:00",
+  "updatedAt": "2026-11-20T17:03:32+00:00",
   "events": [
     {
       "date": "2026-10-26",
@@ -13441,117 +13441,16 @@
       "newCount": 19,
       "durationSeconds": 98.99,
       "timedOut": true
+    },
+    {
+      "site": "https://simplon.nl/",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 4.66,
+      "timedOut": false
     }
   ],
   "rawLog": [
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Magnificent Seven",
-      "date": "2027-05-29",
-      "url": "https://www.spotgroningen.nl/programma/magnificent-seven/",
-      "status": "event uit link",
-      "rawText": "Magnificent Seven Een supergroep van Nederlandse topgitaristen za 29 mei"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "The Orchestra CARRY THE TORCH TOUR",
-      "date": "2027-05-29",
-      "url": "https://www.spotgroningen.nl/programma/the-orchestra/",
-      "status": "event uit link",
-      "rawText": "The Orchestra CARRY THE TORCH TOUR De grootste Electric Light Orchestra-hits live! Net bevestigd za 29 mei"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Sven Ratzke Kopfkino",
-      "date": "2027-05-30",
-      "url": "https://www.spotgroningen.nl/programma/sven-ratzke-4/",
-      "status": "event uit link",
-      "rawText": "Sven Ratzke Kopfkino Diva's en dromers komen tot leven in vaak persoonlijke verhalen en herinneringen zo 30 mei"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Bert Visscher, Martin van Waardenberg Sunshine Boys",
-      "date": "2027-06-01",
-      "url": "https://www.spotgroningen.nl/programma/bert-visscher-martin-van-waardenberg/",
-      "status": "event uit link",
-      "rawText": "Bert Visscher, Martin van Waardenberg Sunshine Boys Ontroerend meesterwerk met komische zwaargewichten di 1 jun"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Bert Visscher, Martin van Waardenberg Sunshine Boys",
-      "date": "2027-06-02",
-      "url": "https://www.spotgroningen.nl/programma/bert-visscher-martin-van-waardenberg-2/",
-      "status": "event uit link",
-      "rawText": "Bert Visscher, Martin van Waardenberg Sunshine Boys Ontroerend meesterwerk met komische zwaargewichten wo 2 jun"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Fabian Franciscus Is het leven al begonnen?",
-      "date": "2027-06-02",
-      "url": "https://www.spotgroningen.nl/programma/fabian-franciscus-4/",
-      "status": "event uit link",
-      "rawText": "Fabian Franciscus Is het leven al begonnen? Fabian Franciscus is terug! wo 2 jun"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Bert Visscher, Martin van Waardenberg Sunshine Boys",
-      "date": "2027-06-03",
-      "url": "https://www.spotgroningen.nl/programma/bert-visscher-martin-van-waardenberg-3/",
-      "status": "event uit link",
-      "rawText": "Bert Visscher, Martin van Waardenberg Sunshine Boys Ontroerend meesterwerk met komische zwaargewichten do 3 jun"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Opera Zuid Frau Luna",
-      "date": "2027-06-04",
-      "url": "https://www.spotgroningen.nl/programma/opera-zuid-11/",
-      "status": "event uit link",
-      "rawText": "Opera Zuid Frau Luna Onweerstaanbaar muziektheater van Steef de Jong en bewerking van Paulien Cornelisse vr 4 jun"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "BOUKE ROCKS ELVIS",
-      "date": "2027-06-04",
-      "url": "https://www.spotgroningen.nl/programma/bouke-rocks-elvis/",
-      "status": "event uit link",
-      "rawText": "BOUKE ROCKS ELVIS Bouke brengt the King met volle overtuiging tot leven Laatste kaarten vr 4 jun"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "The Kik Hertaalt The Beatles (1962-1966)",
-      "date": "2027-06-04",
-      "url": "https://www.spotgroningen.nl/programma/the-kik-9/",
-      "status": "event uit link",
-      "rawText": "The Kik Hertaalt The Beatles (1962-1966) Nederlandstalig eerbetoon aan de grootste band aller tijden vr 4 jun"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Alexis Ffrench",
-      "date": "2027-06-06",
-      "url": "https://www.spotgroningen.nl/programma/alexis-ffrench/",
-      "status": "event uit link",
-      "rawText": "Alexis Ffrench Pianomuziek waarin klassieke tradities en soulvolle melodieën samenkomen zo 6 jun"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Brand New Musical Kapsalon de musical",
-      "date": "2027-06-06",
-      "url": "https://www.spotgroningen.nl/programma/brand-new-musical/",
-      "status": "event uit link",
-      "rawText": "Brand New Musical Kapsalon de musical Swingende voorstelling met muzikale invloeden van Afro-beats, hiphop, gospel en pop zo 6 jun"
-    },
     {
       "source": "Website",
       "site": "https://www.spotgroningen.nl/programma/",
@@ -24243,6 +24142,114 @@
       "url": "https://www.spotgroningen.nl/programma/",
       "status": "klaar",
       "rawText": "site 4/18: 19 unieke events in 98.99 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://simplon.nl/",
+      "title": "Start",
+      "date": "",
+      "url": "https://simplon.nl/",
+      "status": "start",
+      "rawText": "site 5/18: max 20 events, max 90 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://simplon.nl/",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://simplon.nl/",
+      "status": "strategie",
+      "rawText": "compacte-agenda-kaarten"
+    },
+    {
+      "source": "Website",
+      "site": "https://simplon.nl/",
+      "title": "Pagina gelezen",
+      "date": "",
+      "url": "https://simplon.nl/programma/",
+      "status": "ok",
+      "rawText": "97582 tekens HTML"
+    },
+    {
+      "source": "Parser",
+      "site": "https://simplon.nl/",
+      "title": "Agenda geanalyseerd",
+      "date": "",
+      "url": "https://simplon.nl/programma/",
+      "status": "gespecialiseerde parser",
+      "rawText": "59 agenda-items gevonden"
+    },
+    {
+      "source": "Website",
+      "site": "https://simplon.nl/",
+      "title": "Pagina geanalyseerd",
+      "date": "",
+      "url": "https://simplon.nl/programma/",
+      "status": "ok",
+      "rawText": "58 events/aanbiedingen op deze pagina"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://simplon.nl/",
+      "title": "Feed geanalyseerd",
+      "date": "",
+      "url": "https://simplon.nl/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fsimplon.nl%2Fprogramma%2F&format=xml",
+      "status": "ok",
+      "rawText": "0 events uit openbare feed"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://simplon.nl/",
+      "title": "Feed geanalyseerd",
+      "date": "",
+      "url": "https://simplon.nl/feed/",
+      "status": "ok",
+      "rawText": "0 events uit openbare feed"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://simplon.nl/",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://simplon.nl/rss.xml",
+      "status": "fout",
+      "rawText": "HTTP 404"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://simplon.nl/",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://simplon.nl/feed.xml",
+      "status": "fout",
+      "rawText": "HTTP 404"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://simplon.nl/",
+      "title": "Feed geanalyseerd",
+      "date": "",
+      "url": "https://simplon.nl/events/feed/",
+      "status": "ok",
+      "rawText": "0 events uit openbare feed"
+    },
+    {
+      "source": "Filter",
+      "site": "https://simplon.nl/",
+      "title": "Datumfilter toegepast",
+      "date": "2026-11-20",
+      "url": "https://simplon.nl/",
+      "status": "ok",
+      "rawText": "58 gevonden; 2 binnen 2026-11-20 t/m 2026-11-22"
+    },
+    {
+      "source": "Website",
+      "site": "https://simplon.nl/",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://simplon.nl/",
+      "status": "klaar",
+      "rawText": "site 5/18: 0 unieke events in 4.66 sec"
     }
   ]
 }
