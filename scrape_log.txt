@@ -1,7 +1,3 @@
-Website	https://www.spotgroningen.nl/programma/	event uit datumblok	Subterranean Street Society + support: Esther de Jong	2026-11-07	https://www.spotgroningen.nl/programma	7 nov Subterranean Street Society + support: Esther de Jong Rauwe folk-grunge met een poëtisch randje
-Website	https://www.spotgroningen.nl/programma/	event uit datumblok	The Veils + support: Anthonie Tonnon Alternatieve indierock met een vleugje folk	2026-11-08	https://www.spotgroningen.nl/programma	8 nov The Veils + support: Anthonie Tonnon Alternatieve indierock met een vleugje folk
-Website	https://www.spotgroningen.nl/programma/	event uit datumblok	Nanoek Next to Normal Een eigentijdse pop-rockmusical met Willemijn Verkaik, Edwin Jonker e.a.	2026-11-08	https://www.spotgroningen.nl/programma	8 nov Nanoek Next to Normal Een eigentijdse pop-rockmusical met Willemijn Verkaik, Edwin Jonker e.a. Laatste kaarten
-Website	https://www.spotgroningen.nl/programma/	event uit datumblok	The Scene + support: Jan Douwe Kroeske Na tien jaar stilte is The Scene terug!	2026-11-08	https://www.spotgroningen.nl/programma	8 nov The Scene + support: Jan Douwe Kroeske Na tien jaar stilte is The Scene terug!
 Website	https://www.spotgroningen.nl/programma/	event uit datumblok	Waylon Time Jumper Een diepe duik in de wereld van countrymuziek	2026-11-09	https://www.spotgroningen.nl/programma	9 nov Waylon Time Jumper Een diepe duik in de wereld van countrymuziek Laatste kaarten
 Website	https://www.spotgroningen.nl/programma/	event uit datumblok	Joe Jackson	2026-11-09	https://www.spotgroningen.nl/programma	9 nov Joe Jackson Britse muzikant Joe Jackson keert terug naar Groningen Uitverkocht
 Website	https://www.spotgroningen.nl/programma/	event uit datumblok	David Linszen Striptease Van De Dood (reprise) Winnaar Neerlands Hoop	2026-11-09	https://www.spotgroningen.nl/programma	9 nov David Linszen Striptease Van De Dood (reprise) Winnaar Neerlands Hoop Laatste kaarten Prijswinnend
@@ -1198,3 +1194,7 @@ RSS/Atom	https://www.martiniplaza.nl/nl/agenda	fout	Feed mislukt		https://www.ma
 RSS/Atom	https://www.martiniplaza.nl/nl/agenda	fout	Feed mislukt		https://www.martiniplaza.nl/events/feed/	HTTP 404
 Filter	https://www.martiniplaza.nl/nl/agenda	ok	Datumfilter toegepast	2026-11-20	https://www.martiniplaza.nl/nl/agenda	12 gevonden; 4 binnen 2026-11-20 t/m 2026-11-22
 Website	https://www.martiniplaza.nl/nl/agenda	klaar	Klaar		https://www.martiniplaza.nl/nl/agenda	site 7/18: 4 unieke events in 12.15 sec
+Website	https://groningermuseum.nl/programma	start	Start		https://groningermuseum.nl/programma	site 8/18: max 20 events, max 90 seconden
+Parser	https://groningermuseum.nl/programma	strategie	Scrapertype vastgesteld		https://groningermuseum.nl/programma	universele tentoonstellings- en activiteitenparser
+Siteconfiguratie	https://groningermuseum.nl/programma	overgeslagen	Start-URL uitgesloten		https://groningermuseum.nl/programma	URL staat in de websitespecifieke uitsluitingen
+Website	https://groningermuseum.nl/programma	klaar	Klaar		https://groningermuseum.nl/programma	site 8/18: 0 unieke events in 0.0 sec

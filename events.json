@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-11-20T17:03:55+00:00",
+  "updatedAt": "2026-11-20T17:03:59+00:00",
   "events": [
     {
       "date": "2026-10-26",
@@ -13552,45 +13552,16 @@
       "newCount": 4,
       "durationSeconds": 12.15,
       "timedOut": false
+    },
+    {
+      "site": "https://groningermuseum.nl/programma",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 0.0,
+      "timedOut": false
     }
   ],
   "rawLog": [
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Subterranean Street Society + support: Esther de Jong",
-      "date": "2026-11-07",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "7 nov Subterranean Street Society + support: Esther de Jong Rauwe folk-grunge met een poëtisch randje"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "The Veils + support: Anthonie Tonnon Alternatieve indierock met een vleugje folk",
-      "date": "2026-11-08",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "8 nov The Veils + support: Anthonie Tonnon Alternatieve indierock met een vleugje folk"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Nanoek Next to Normal Een eigentijdse pop-rockmusical met Willemijn Verkaik, Edwin Jonker e.a.",
-      "date": "2026-11-08",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "8 nov Nanoek Next to Normal Een eigentijdse pop-rockmusical met Willemijn Verkaik, Edwin Jonker e.a. Laatste kaarten"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "The Scene + support: Jan Douwe Kroeske Na tien jaar stilte is The Scene terug!",
-      "date": "2026-11-08",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "8 nov The Scene + support: Jan Douwe Kroeske Na tien jaar stilte is The Scene terug!"
-    },
     {
       "source": "Website",
       "site": "https://www.spotgroningen.nl/programma/",
@@ -24354,6 +24325,42 @@
       "url": "https://www.martiniplaza.nl/nl/agenda",
       "status": "klaar",
       "rawText": "site 7/18: 4 unieke events in 12.15 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningermuseum.nl/programma",
+      "title": "Start",
+      "date": "",
+      "url": "https://groningermuseum.nl/programma",
+      "status": "start",
+      "rawText": "site 8/18: max 20 events, max 90 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://groningermuseum.nl/programma",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://groningermuseum.nl/programma",
+      "status": "strategie",
+      "rawText": "universele tentoonstellings- en activiteitenparser"
+    },
+    {
+      "source": "Siteconfiguratie",
+      "site": "https://groningermuseum.nl/programma",
+      "title": "Start-URL uitgesloten",
+      "date": "",
+      "url": "https://groningermuseum.nl/programma",
+      "status": "overgeslagen",
+      "rawText": "URL staat in de websitespecifieke uitsluitingen"
+    },
+    {
+      "source": "Website",
+      "site": "https://groningermuseum.nl/programma",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://groningermuseum.nl/programma",
+      "status": "klaar",
+      "rawText": "site 8/18: 0 unieke events in 0.0 sec"
     }
   ]
 }
