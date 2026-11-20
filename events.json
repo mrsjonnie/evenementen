@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-11-20T17:08:17+00:00",
+  "updatedAt": "2026-11-20T17:09:51+00:00",
   "events": [
     {
       "date": "2026-10-26",
@@ -10448,6 +10448,21 @@
     },
     {
       "date": "2026-11-20",
+      "time": "15:00 - 17:30",
+      "title": "Schrijfcafé",
+      "type": "Film",
+      "location": "schrijf en laat je inspireren",
+      "locationLink": "",
+      "website": "https://denieuwekolk.nl/bieb/agenda/schrijfcafe",
+      "source": "denieuwekolk.nl",
+      "discoverySource": "Website",
+      "description": "Schrijfcafé in De Nieuwe Kolk: ontmoet elkaar, schrijf en laat je inspireren. Bezoek ons cultuurhuis in Assen voor creatief schrijven en inspiratie.",
+      "cost": "gratis",
+      "image": "https://media.denieuwekolk.nl/019f45ce-3a6c-713e-ad79-594725bb439e/schrijfcafe?crop=3840%2C2304%2C0%2C136&scale=1200&optimizer=image",
+      "isNew": true
+    },
+    {
+      "date": "2026-11-20",
       "time": "",
       "title": "Stadsspel naar keuze",
       "type": "Aanbiedingen",
@@ -10943,6 +10958,21 @@
     },
     {
       "date": "2026-11-21",
+      "time": "10:35",
+      "title": "Feestelijk plezier met Peppa",
+      "type": "Film",
+      "location": "films en events.",
+      "locationLink": "",
+      "website": "https://denieuwekolk.nl/bios/agenda/feestelijk-plezier-met-peppa-pig",
+      "source": "denieuwekolk.nl",
+      "discoverySource": "Website",
+      "description": "Beleef feestelijk plezier met Peppa Pig in De Nieuwe Kolk in Assen. Een vrolijke theaterervaring voor jonge fans en het hele gezin!",
+      "cost": "",
+      "image": "https://media.denieuwekolk.nl/01a1c020-c9e1-7f6d-b94a-e55ac92f47be/wsp-still-12?crop=3598%2C2159%2C110%2C0&scale=1200&optimizer=image",
+      "isNew": true
+    },
+    {
+      "date": "2026-11-21",
       "time": "11:10",
       "title": "Forêt ivre",
       "type": "Film",
@@ -11015,6 +11045,21 @@
       "cost": "",
       "image": "",
       "isNew": false
+    },
+    {
+      "date": "2026-11-21",
+      "time": "11:00",
+      "title": "Groot Dictee der Nederlandse Taal",
+      "type": "Film",
+      "location": "50",
+      "locationLink": "",
+      "website": "https://denieuwekolk.nl/bieb/agenda/groot-dictee-der-nederlandse-taal",
+      "source": "denieuwekolk.nl",
+      "discoverySource": "Website",
+      "description": "Doe mee aan het Groot Dictee der Nederlandse Taal op 21 november 2026. Schrijf mee in de bieb en test je spelling tijdens de uitzending op NPO Radio 1.",
+      "cost": "",
+      "image": "https://media.denieuwekolk.nl/01a16328-a179-774c-b2fc-114a59923fd8/300dpi-het-groot-dictee-2023-marcel-krijgsman-025-1?crop=3840%2C2304%2C0%2C128&scale=1200&optimizer=image",
+      "isNew": true
     },
     {
       "date": "2026-11-21",
@@ -11333,6 +11378,21 @@
     },
     {
       "date": "2026-11-22",
+      "time": "10:30",
+      "title": "Feestelijk plezier met Peppa",
+      "type": "Film",
+      "location": "films en events.",
+      "locationLink": "",
+      "website": "https://denieuwekolk.nl/bios/agenda/dreumes-ochtend-feestelijk-plezier-met-peppa-pig",
+      "source": "denieuwekolk.nl",
+      "discoverySource": "Website",
+      "description": "Dreumes Ochtend: Feestelijk plezier met Peppa Pig · De Nieuwe Kolk Activiteiten & events Feestelijk plezier met Peppa Pig Voordat de film begint kun je lekker komen kleuren, spelen in de speelhoek en staat er ranja voor de kinderen en koffie/thee voor de ouders klaar en na de film ga je naar huis met een echt filmdiplo",
+      "cost": "",
+      "image": "https://media.denieuwekolk.nl/01a1c020-c9e1-7f6d-b94a-e55ac92f47be/wsp-still-12?crop=3598%2C2159%2C110%2C0&scale=1200&optimizer=image",
+      "isNew": true
+    },
+    {
+      "date": "2026-11-22",
       "time": "",
       "title": "International Student LiedDuo Competition",
       "type": "Theater",
@@ -11360,6 +11420,21 @@
       "cost": "",
       "image": "",
       "isNew": false
+    },
+    {
+      "date": "2026-11-22",
+      "time": "10:30",
+      "title": "Kaartverkoop De Nieuwe Kolk",
+      "type": "Film",
+      "location": "De Nieuwe Kolk Assen, Filmzaal 1",
+      "locationLink": "",
+      "website": "https://tickets.denieuwekolk.nl/mtTicket/performance/10390934",
+      "source": "tickets.denieuwekolk.nl",
+      "discoverySource": "Website",
+      "description": "Voorstelling in Filmzaal 1, De Nieuwe Kolk Assen.",
+      "cost": "",
+      "image": "",
+      "isNew": true
     },
     {
       "date": "2026-11-22",
@@ -14755,657 +14830,16 @@
       "newCount": 0,
       "durationSeconds": 4.31,
       "timedOut": false
+    },
+    {
+      "site": "https://denieuwekolk.nl/agenda",
+      "count": 5,
+      "newCount": 5,
+      "durationSeconds": 90.34,
+      "timedOut": true
     }
   ],
   "rawLog": [
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Detailpagina geanalyseerd",
-      "date": "",
-      "url": "https://www.noorderzon.nl/programma/comedy-club-wicked",
-      "status": "ok",
-      "rawText": "8 extra events"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Beschikbare tijden 21:00 Prijs per",
-      "date": "2027-08-08",
-      "url": "https://www.noorderzon.nl/programma/dabke-xxl-dabke-to-go-x-dabke-xtc",
-      "status": "event uit datumblok",
-      "rawText": "8 augustus Beschikbare tijden 21:00 Prijs per ticket Exclusief € 1 servicekosten per gehele online transactie Koop tickets Over de artiest MENA Events zijn creatieve kunstenaars uit het Midden-Oosten en Noord-Afrika die festivals en theaters in heel Europa verrijken met cultureel rijke en onvergetelijke ervaringen. Deel deze pagina Deel deze pagina op Facebook Deel deze pagina op X Deel deze pagina op LinkedIn Deel d"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "DABKE XXL (Dabke To Go x Dabke XTC)",
-      "date": "2027-08-28",
-      "url": "https://www.noorderzon.nl/programma/dabke-xxl-dabke-to-go-x-dabke-xtc",
-      "status": "event uit detailpagina",
-      "rawText": "DABKE XXL (Dabke To Go x Dabke XTC) › Noorderzon Deze website vraagt je toestemming cookies te gebruiken voor Facebook , LinkedIn , Vimeo en YouTube . Lees het cookiebeleid voor meer informatie. Ik ga akkoord Ik ga niet akkoord Spring naar inhoud Selecteer uw taal nl Nederlands en English Open ActiveTickets account Open ActiveTickets winkelwagen Doorzoek de website Zoek Programma Plan je bezoek Steun ons Doe mee Over"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Speeldata",
-      "date": "2027-08-28",
-      "url": "https://www.noorderzon.nl/programma/dabke-xxl-dabke-to-go-x-dabke-xtc",
-      "status": "event uit tekstregel",
-      "rawText": "Speeldata | Vrijdag 28 augustus | Vrijdag 28 augustus | Beschikbare tijden | 21:00 | Prijs per ticket"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Beschikbare tijden",
-      "date": "2027-08-28",
-      "url": "https://www.noorderzon.nl/programma/dabke-xxl-dabke-to-go-x-dabke-xtc",
-      "status": "event uit tekstregel",
-      "rawText": "Vrijdag 28 augustus | Vrijdag 28 augustus | Beschikbare tijden | 21:00 | Prijs per ticket | Exclusief € 1 servicekosten per gehele online transactie"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Beschikbare tijden",
-      "date": "2027-08-28",
-      "url": "https://www.noorderzon.nl/programma/dabke-xxl-dabke-to-go-x-dabke-xtc",
-      "status": "event uit dagblok",
-      "rawText": "Beschikbare tijden | 21:00 | Prijs per ticket | Exclusief € 1 servicekosten per gehele online transactie | Koop tickets"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Prijs per",
-      "date": "2027-08-28",
-      "url": "https://www.noorderzon.nl/programma/dabke-xxl-dabke-to-go-x-dabke-xtc",
-      "status": "event uit dagblok",
-      "rawText": "Prijs per ticket | Exclusief € 1 servicekosten per gehele online transactie | Koop tickets | Over de artiest | MENA Events"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Exclusief € 1 servicekosten per gehele online transactie",
-      "date": "2027-08-28",
-      "url": "https://www.noorderzon.nl/programma/dabke-xxl-dabke-to-go-x-dabke-xtc",
-      "status": "event uit dagblok",
-      "rawText": "Exclusief € 1 servicekosten per gehele online transactie | Koop tickets | Over de artiest | MENA Events | zijn creatieve kunstenaars uit het Midden-Oosten en Noord-Afrika die festivals en theaters in heel Europa verrijken met cultureel rijke en onvergetelijke ervaringen."
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Koop",
-      "date": "2027-08-28",
-      "url": "https://www.noorderzon.nl/programma/dabke-xxl-dabke-to-go-x-dabke-xtc",
-      "status": "event uit dagblok",
-      "rawText": "Koop tickets | Over de artiest | MENA Events | zijn creatieve kunstenaars uit het Midden-Oosten en Noord-Afrika die festivals en theaters in heel Europa verrijken met cultureel rijke en onvergetelijke ervaringen. | Deel deze pagina"
-    },
-    {
-      "source": "Parser",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Pagina geteld",
-      "date": "",
-      "url": "https://www.noorderzon.nl/programma/dabke-xxl-dabke-to-go-x-dabke-xtc",
-      "status": "analyse",
-      "rawText": "jsonld:0, links:0, datumblokken:1, kaarten:1, regels:6, detail:1"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Detailpagina geanalyseerd",
-      "date": "",
-      "url": "https://www.noorderzon.nl/programma/dabke-xxl-dabke-to-go-x-dabke-xtc",
-      "status": "ok",
-      "rawText": "2 extra events"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Beschikbare tijden 18:30 Prijs per",
-      "date": "2027-08-05",
-      "url": "https://www.noorderzon.nl/programma/de-grensrechters",
-      "status": "event uit datumblok",
-      "rawText": "5 augustus Beschikbare tijden 18:30 Prijs per ticket Exclusief € 1 servicekosten per gehele online transactie Koop tickets Deel deze pagina Deel deze pagina op Facebook Deel deze pagina op X Deel deze pagina op LinkedIn Deel deze pagina op WhatsApp Deel deze pagina via e-mail Deel deze pagina Blijf op de hoogte Schrijf je in voor onze nieuwsbrief Emailadres Aanmelden Volg ons Facebook van Noorderzon Instagram van Noo"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "De Grensrechters",
-      "date": "2027-08-25",
-      "url": "https://www.noorderzon.nl/programma/de-grensrechters",
-      "status": "event uit detailpagina",
-      "rawText": "De Grensrechters › Noorderzon Deze website vraagt je toestemming cookies te gebruiken voor Facebook , LinkedIn , Vimeo en YouTube . Lees het cookiebeleid voor meer informatie. Ik ga akkoord Ik ga niet akkoord Spring naar inhoud Selecteer uw taal nl Nederlands en English Open ActiveTickets account Open ActiveTickets winkelwagen Doorzoek de website Zoek Programma Plan je bezoek Steun ons Doe mee Over Contact Open Sluit"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Speeldata",
-      "date": "2027-08-25",
-      "url": "https://www.noorderzon.nl/programma/de-grensrechters",
-      "status": "event uit tekstregel",
-      "rawText": "Speeldata | Dinsdag 25 augustus | Dinsdag 25 augustus | Beschikbare tijden | 18:30 | Prijs per ticket"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Beschikbare tijden",
-      "date": "2027-08-25",
-      "url": "https://www.noorderzon.nl/programma/de-grensrechters",
-      "status": "event uit tekstregel",
-      "rawText": "Dinsdag 25 augustus | Dinsdag 25 augustus | Beschikbare tijden | 18:30 | Prijs per ticket | Exclusief € 1 servicekosten per gehele online transactie"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Beschikbare tijden",
-      "date": "2027-08-25",
-      "url": "https://www.noorderzon.nl/programma/de-grensrechters",
-      "status": "event uit dagblok",
-      "rawText": "Beschikbare tijden | 18:30 | Prijs per ticket | Exclusief € 1 servicekosten per gehele online transactie | Koop tickets"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Prijs per",
-      "date": "2027-08-25",
-      "url": "https://www.noorderzon.nl/programma/de-grensrechters",
-      "status": "event uit dagblok",
-      "rawText": "Prijs per ticket | Exclusief € 1 servicekosten per gehele online transactie | Koop tickets | Deel deze pagina | Deel deze pagina op Facebook"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Exclusief € 1 servicekosten per gehele online transactie",
-      "date": "2027-08-25",
-      "url": "https://www.noorderzon.nl/programma/de-grensrechters",
-      "status": "event uit dagblok",
-      "rawText": "Exclusief € 1 servicekosten per gehele online transactie | Koop tickets | Deel deze pagina | Deel deze pagina op Facebook | Deel deze pagina op X"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Koop",
-      "date": "2027-08-25",
-      "url": "https://www.noorderzon.nl/programma/de-grensrechters",
-      "status": "event uit dagblok",
-      "rawText": "Koop tickets | Deel deze pagina | Deel deze pagina op Facebook | Deel deze pagina op X | Deel deze pagina op LinkedIn"
-    },
-    {
-      "source": "Parser",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Pagina geteld",
-      "date": "",
-      "url": "https://www.noorderzon.nl/programma/de-grensrechters",
-      "status": "analyse",
-      "rawText": "jsonld:0, links:0, datumblokken:1, kaarten:2, regels:6, detail:1"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Detailpagina geanalyseerd",
-      "date": "",
-      "url": "https://www.noorderzon.nl/programma/de-grensrechters",
-      "status": "ok",
-      "rawText": "3 extra events"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "– Stadssferen 1961-1981",
-      "date": "2027-08-01",
-      "url": "https://www.noorderzon.nl/programma/de-lens-van-groningen",
-      "status": "event uit datumblok",
-      "rawText": "1 augustus – Stadssferen 1961-1981"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "– Groningers in Europese steden",
-      "date": "2027-08-02",
-      "url": "https://www.noorderzon.nl/programma/de-lens-van-groningen",
-      "status": "event uit datumblok",
-      "rawText": "2 augustus – Groningers in Europese steden"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "– Stad in beweging",
-      "date": "2027-08-03",
-      "url": "https://www.noorderzon.nl/programma/de-lens-van-groningen",
-      "status": "event uit datumblok",
-      "rawText": "3 augustus – Stad in beweging"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "– Verkeer en VCP",
-      "date": "2027-08-04",
-      "url": "https://www.noorderzon.nl/programma/de-lens-van-groningen",
-      "status": "event uit datumblok",
-      "rawText": "4 augustus – Verkeer en VCP"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "– Verkeer en VCP",
-      "date": "2027-08-05",
-      "url": "https://www.noorderzon.nl/programma/de-lens-van-groningen",
-      "status": "event uit datumblok",
-      "rawText": "5 augustus – Verkeer en VCP"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "– Supermarkt van der Werff in Noord Nederland",
-      "date": "2027-08-06",
-      "url": "https://www.noorderzon.nl/programma/de-lens-van-groningen",
-      "status": "event uit datumblok",
-      "rawText": "6 augustus – Supermarkt van der Werff in Noord Nederland"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "– Groninger scheepswerven",
-      "date": "2027-08-07",
-      "url": "https://www.noorderzon.nl/programma/de-lens-van-groningen",
-      "status": "event uit datumblok",
-      "rawText": "7 augustus – Groninger scheepswerven"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": ", een compilatie",
-      "date": "2027-08-08",
-      "url": "https://www.noorderzon.nl/programma/de-lens-van-groningen",
-      "status": "event uit datumblok",
-      "rawText": "8 Augustus, een compilatie"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "– New York, city of dreams",
-      "date": "2027-08-09",
-      "url": "https://www.noorderzon.nl/programma/de-lens-van-groningen",
-      "status": "event uit datumblok",
-      "rawText": "9 augustus – New York, city of dreams"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Beschikbare tijden 21:00 Prijs per",
-      "date": "2027-08-01",
-      "url": "https://www.noorderzon.nl/programma/de-lens-van-groningen",
-      "status": "event uit datumblok",
-      "rawText": "1 augustus Beschikbare tijden 21:00 Prijs per ticket Exclusief € 1 servicekosten per gehele online transactie Koop tickets"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Beschikbare tijden 21:00 Prijs per",
-      "date": "2027-08-02",
-      "url": "https://www.noorderzon.nl/programma/de-lens-van-groningen",
-      "status": "event uit datumblok",
-      "rawText": "2 augustus Beschikbare tijden 21:00 Prijs per ticket Exclusief € 1 servicekosten per gehele online transactie Koop tickets"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Beschikbare tijden 21:00 Prijs per",
-      "date": "2027-08-03",
-      "url": "https://www.noorderzon.nl/programma/de-lens-van-groningen",
-      "status": "event uit datumblok",
-      "rawText": "3 augustus Beschikbare tijden 21:00 Prijs per ticket Exclusief € 1 servicekosten per gehele online transactie Koop tickets"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Beschikbare tijden 21:00 Prijs per",
-      "date": "2027-08-04",
-      "url": "https://www.noorderzon.nl/programma/de-lens-van-groningen",
-      "status": "event uit datumblok",
-      "rawText": "4 augustus Beschikbare tijden 21:00 Prijs per ticket Exclusief € 1 servicekosten per gehele online transactie Koop tickets"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Beschikbare tijden 21:00 Prijs per",
-      "date": "2027-08-05",
-      "url": "https://www.noorderzon.nl/programma/de-lens-van-groningen",
-      "status": "event uit datumblok",
-      "rawText": "5 augustus Beschikbare tijden 21:00 Prijs per ticket Exclusief € 1 servicekosten per gehele online transactie Koop tickets"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Beschikbare tijden 21:00 Prijs per",
-      "date": "2027-08-06",
-      "url": "https://www.noorderzon.nl/programma/de-lens-van-groningen",
-      "status": "event uit datumblok",
-      "rawText": "6 augustus Beschikbare tijden 21:00 Prijs per ticket Exclusief € 1 servicekosten per gehele online transactie Koop tickets"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Beschikbare tijden 21:00 Prijs per",
-      "date": "2027-08-07",
-      "url": "https://www.noorderzon.nl/programma/de-lens-van-groningen",
-      "status": "event uit datumblok",
-      "rawText": "7 augustus Beschikbare tijden 21:00 Prijs per ticket Exclusief € 1 servicekosten per gehele online transactie Koop tickets"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Beschikbare tijden 21:00 Prijs per",
-      "date": "2027-08-08",
-      "url": "https://www.noorderzon.nl/programma/de-lens-van-groningen",
-      "status": "event uit datumblok",
-      "rawText": "8 augustus Beschikbare tijden 21:00 Prijs per ticket Exclusief € 1 servicekosten per gehele online transactie Koop tickets"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Beschikbare tijden 21:00 Prijs per",
-      "date": "2027-08-09",
-      "url": "https://www.noorderzon.nl/programma/de-lens-van-groningen",
-      "status": "event uit datumblok",
-      "rawText": "9 augustus Beschikbare tijden 21:00 Prijs per ticket Exclusief € 1 servicekosten per gehele online transactie Koop tickets"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "De Lens van Groningen",
-      "date": "2027-08-20",
-      "url": "https://www.noorderzon.nl/programma/de-lens-van-groningen",
-      "status": "event uit detailpagina",
-      "rawText": "De Lens van Groningen › Noorderzon Deze website vraagt je toestemming cookies te gebruiken voor Facebook , LinkedIn , Vimeo en YouTube . Lees het cookiebeleid voor meer informatie. Ik ga akkoord Ik ga niet akkoord Spring naar inhoud Selecteer uw taal nl Nederlands en English Open ActiveTickets account Open ActiveTickets winkelwagen Doorzoek de website Zoek Programma Plan je bezoek Steun ons Doe mee Over Contact Open"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "De lens van Groningen – Nieuwste digitale films:",
-      "date": "2027-08-20",
-      "url": "https://www.noorderzon.nl/programma/de-lens-van-groningen",
-      "status": "event uit tekstregel",
-      "rawText": "De lens van Groningen – Nieuwste digitale films: | 20 augustus – | Stadssferen 1961-1981 | 21 augustus – | Stadssferen 1961-1981 | 22 augustus –"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Stadssferen 1961-1981",
-      "date": "2027-08-21",
-      "url": "https://www.noorderzon.nl/programma/de-lens-van-groningen",
-      "status": "event uit tekstregel",
-      "rawText": "Stadssferen 1961-1981 | 21 augustus – | Stadssferen 1961-1981 | 22 augustus – | Groningers in Europese steden | 23 augustus –"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Stadssferen 1961-1981",
-      "date": "2027-08-22",
-      "url": "https://www.noorderzon.nl/programma/de-lens-van-groningen",
-      "status": "event uit tekstregel",
-      "rawText": "Stadssferen 1961-1981 | 22 augustus – | Groningers in Europese steden | 23 augustus – | Stad in beweging | 24 augustus –"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Groningers in Europese steden",
-      "date": "2027-08-23",
-      "url": "https://www.noorderzon.nl/programma/de-lens-van-groningen",
-      "status": "event uit tekstregel",
-      "rawText": "Groningers in Europese steden | 23 augustus – | Stad in beweging | 24 augustus – | Verkeer en VCP | 25 augustus –"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Stad in beweging",
-      "date": "2027-08-24",
-      "url": "https://www.noorderzon.nl/programma/de-lens-van-groningen",
-      "status": "event uit tekstregel",
-      "rawText": "Stad in beweging | 24 augustus – | Verkeer en VCP | 25 augustus – | Verkeer en VCP | 26 augustus –"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Verkeer en VCP",
-      "date": "2027-08-25",
-      "url": "https://www.noorderzon.nl/programma/de-lens-van-groningen",
-      "status": "event uit tekstregel",
-      "rawText": "Verkeer en VCP | 25 augustus – | Verkeer en VCP | 26 augustus – | Supermarkt van der Werff in Noord Nederland | 27 augustus –"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Verkeer en VCP",
-      "date": "2027-08-26",
-      "url": "https://www.noorderzon.nl/programma/de-lens-van-groningen",
-      "status": "event uit tekstregel",
-      "rawText": "Verkeer en VCP | 26 augustus – | Supermarkt van der Werff in Noord Nederland | 27 augustus – | Groninger scheepswerven | 28 augustus –"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Supermarkt van der Werff in Noord Nederland",
-      "date": "2027-08-27",
-      "url": "https://www.noorderzon.nl/programma/de-lens-van-groningen",
-      "status": "event uit tekstregel",
-      "rawText": "Supermarkt van der Werff in Noord Nederland | 27 augustus – | Groninger scheepswerven | 28 augustus – | 28 Augustus, een compilatie | 29 augustus –"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Groninger scheepswerven",
-      "date": "2027-08-28",
-      "url": "https://www.noorderzon.nl/programma/de-lens-van-groningen",
-      "status": "event uit tekstregel",
-      "rawText": "Groninger scheepswerven | 28 augustus – | 28 Augustus, een compilatie | 29 augustus – | New York, city of dreams | 30 augustus -"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": ", een compilatie",
-      "date": "2027-08-28",
-      "url": "https://www.noorderzon.nl/programma/de-lens-van-groningen",
-      "status": "event uit tekstregel",
-      "rawText": "28 augustus – | 28 Augustus, een compilatie | 29 augustus – | New York, city of dreams | 30 augustus - | Stad in beweging"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "New York, city of dreams",
-      "date": "2027-08-29",
-      "url": "https://www.noorderzon.nl/programma/de-lens-van-groningen",
-      "status": "event uit tekstregel",
-      "rawText": "28 Augustus, een compilatie | 29 augustus – | New York, city of dreams | 30 augustus - | Stad in beweging | Speeldata"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "New York, city of dreams",
-      "date": "2027-08-30",
-      "url": "https://www.noorderzon.nl/programma/de-lens-van-groningen",
-      "status": "event uit tekstregel",
-      "rawText": "New York, city of dreams | 30 augustus - | Stad in beweging | Speeldata | Donderdag 20 augustus | Vrijdag 21 augustus"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Speeldata",
-      "date": "2027-08-20",
-      "url": "https://www.noorderzon.nl/programma/de-lens-van-groningen",
-      "status": "event uit tekstregel",
-      "rawText": "Speeldata | Donderdag 20 augustus | Vrijdag 21 augustus | Zaterdag 22 augustus | Zondag 23 augustus | Maandag 24 augustus"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Beschikbare tijden",
-      "date": "2027-08-20",
-      "url": "https://www.noorderzon.nl/programma/de-lens-van-groningen",
-      "status": "event uit tekstregel",
-      "rawText": "Zondag 30 augustus | Donderdag 20 augustus | Beschikbare tijden | 21:00 | Prijs per ticket | Exclusief € 1 servicekosten per gehele online transactie"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Beschikbare tijden",
-      "date": "2027-08-20",
-      "url": "https://www.noorderzon.nl/programma/de-lens-van-groningen",
-      "status": "event uit dagblok",
-      "rawText": "Beschikbare tijden | 21:00 | Prijs per ticket | Exclusief € 1 servicekosten per gehele online transactie | Koop tickets"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Prijs per",
-      "date": "2027-08-20",
-      "url": "https://www.noorderzon.nl/programma/de-lens-van-groningen",
-      "status": "event uit dagblok",
-      "rawText": "Prijs per ticket | Exclusief € 1 servicekosten per gehele online transactie | Koop tickets | Vrijdag 21 augustus | Beschikbare tijden"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Exclusief € 1 servicekosten per gehele online transactie",
-      "date": "2027-08-20",
-      "url": "https://www.noorderzon.nl/programma/de-lens-van-groningen",
-      "status": "event uit dagblok",
-      "rawText": "Exclusief € 1 servicekosten per gehele online transactie | Koop tickets | Vrijdag 21 augustus | Beschikbare tijden | 21:00"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Koop",
-      "date": "2027-08-20",
-      "url": "https://www.noorderzon.nl/programma/de-lens-van-groningen",
-      "status": "event uit dagblok",
-      "rawText": "Koop tickets | Vrijdag 21 augustus | Beschikbare tijden | 21:00 | Prijs per ticket"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Koop",
-      "date": "2027-08-21",
-      "url": "https://www.noorderzon.nl/programma/de-lens-van-groningen",
-      "status": "event uit tekstregel",
-      "rawText": "Koop tickets | Vrijdag 21 augustus | Beschikbare tijden | 21:00 | Prijs per ticket | Exclusief € 1 servicekosten per gehele online transactie"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Beschikbare tijden",
-      "date": "2027-08-21",
-      "url": "https://www.noorderzon.nl/programma/de-lens-van-groningen",
-      "status": "event uit dagblok",
-      "rawText": "Beschikbare tijden | 21:00 | Prijs per ticket | Exclusief € 1 servicekosten per gehele online transactie | Koop tickets"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Prijs per",
-      "date": "2027-08-21",
-      "url": "https://www.noorderzon.nl/programma/de-lens-van-groningen",
-      "status": "event uit dagblok",
-      "rawText": "Prijs per ticket | Exclusief € 1 servicekosten per gehele online transactie | Koop tickets | Zaterdag 22 augustus | Beschikbare tijden"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Exclusief € 1 servicekosten per gehele online transactie",
-      "date": "2027-08-21",
-      "url": "https://www.noorderzon.nl/programma/de-lens-van-groningen",
-      "status": "event uit dagblok",
-      "rawText": "Exclusief € 1 servicekosten per gehele online transactie | Koop tickets | Zaterdag 22 augustus | Beschikbare tijden | 21:00"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Koop",
-      "date": "2027-08-21",
-      "url": "https://www.noorderzon.nl/programma/de-lens-van-groningen",
-      "status": "event uit dagblok",
-      "rawText": "Koop tickets | Zaterdag 22 augustus | Beschikbare tijden | 21:00 | Prijs per ticket"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Koop",
-      "date": "2027-08-22",
-      "url": "https://www.noorderzon.nl/programma/de-lens-van-groningen",
-      "status": "event uit tekstregel",
-      "rawText": "Koop tickets | Zaterdag 22 augustus | Beschikbare tijden | 21:00 | Prijs per ticket | Exclusief € 1 servicekosten per gehele online transactie"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Beschikbare tijden",
-      "date": "2027-08-22",
-      "url": "https://www.noorderzon.nl/programma/de-lens-van-groningen",
-      "status": "event uit dagblok",
-      "rawText": "Beschikbare tijden | 21:00 | Prijs per ticket | Exclusief € 1 servicekosten per gehele online transactie | Koop tickets"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Prijs per",
-      "date": "2027-08-22",
-      "url": "https://www.noorderzon.nl/programma/de-lens-van-groningen",
-      "status": "event uit dagblok",
-      "rawText": "Prijs per ticket | Exclusief € 1 servicekosten per gehele online transactie | Koop tickets | Zondag 23 augustus | Beschikbare tijden"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Exclusief € 1 servicekosten per gehele online transactie",
-      "date": "2027-08-22",
-      "url": "https://www.noorderzon.nl/programma/de-lens-van-groningen",
-      "status": "event uit dagblok",
-      "rawText": "Exclusief € 1 servicekosten per gehele online transactie | Koop tickets | Zondag 23 augustus | Beschikbare tijden | 21:00"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Koop",
-      "date": "2027-08-22",
-      "url": "https://www.noorderzon.nl/programma/de-lens-van-groningen",
-      "status": "event uit dagblok",
-      "rawText": "Koop tickets | Zondag 23 augustus | Beschikbare tijden | 21:00 | Prijs per ticket"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Koop",
-      "date": "2027-08-23",
-      "url": "https://www.noorderzon.nl/programma/de-lens-van-groningen",
-      "status": "event uit tekstregel",
-      "rawText": "Koop tickets | Zondag 23 augustus | Beschikbare tijden | 21:00 | Prijs per ticket | Exclusief € 1 servicekosten per gehele online transactie"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Beschikbare tijden",
-      "date": "2027-08-23",
-      "url": "https://www.noorderzon.nl/programma/de-lens-van-groningen",
-      "status": "event uit dagblok",
-      "rawText": "Beschikbare tijden | 21:00 | Prijs per ticket | Exclusief € 1 servicekosten per gehele online transactie | Koop tickets"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Prijs per",
-      "date": "2027-08-23",
-      "url": "https://www.noorderzon.nl/programma/de-lens-van-groningen",
-      "status": "event uit dagblok",
-      "rawText": "Prijs per ticket | Exclusief € 1 servicekosten per gehele online transactie | Koop tickets | Maandag 24 augustus | Beschikbare tijden"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Exclusief € 1 servicekosten per gehele online transactie",
-      "date": "2027-08-23",
-      "url": "https://www.noorderzon.nl/programma/de-lens-van-groningen",
-      "status": "event uit dagblok",
-      "rawText": "Exclusief € 1 servicekosten per gehele online transactie | Koop tickets | Maandag 24 augustus | Beschikbare tijden | 21:00"
-    },
     {
       "source": "Website",
       "site": "https://www.noorderzon.nl/programma",
@@ -25557,6 +24991,654 @@
       "url": "https://www.ibood.com/s-nl",
       "status": "klaar",
       "rawText": "site 16/18: 0 unieke events in 4.31 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Start",
+      "date": "",
+      "url": "https://denieuwekolk.nl/agenda",
+      "status": "start",
+      "rawText": "site 17/18: max 20 events, max 90 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://denieuwekolk.nl/agenda",
+      "status": "strategie",
+      "rawText": "agenda-kaarten + datumregels (De Nieuwe Kolk)"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Pagina gelezen",
+      "date": "",
+      "url": "https://denieuwekolk.nl/agenda",
+      "status": "ok",
+      "rawText": "1137139 tekens HTML"
+    },
+    {
+      "source": "Parser",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "De Nieuwe Kolk detailstrategie",
+      "date": "",
+      "url": "https://denieuwekolk.nl/agenda",
+      "status": "strategie",
+      "rawText": "Agenda gebruiken om detail-URL's te vinden; alleen de echte detailpagina als evenement verwerken"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Pagina geanalyseerd",
+      "date": "",
+      "url": "https://denieuwekolk.nl/agenda",
+      "status": "ok",
+      "rawText": "0 events/aanbiedingen op deze pagina"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Pagina gelezen",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda",
+      "status": "ok",
+      "rawText": "330132 tekens HTML"
+    },
+    {
+      "source": "Parser",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "De Nieuwe Kolk detailstrategie",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda",
+      "status": "strategie",
+      "rawText": "Agenda gebruiken om detail-URL's te vinden; alleen de echte detailpagina als evenement verwerken"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Pagina geanalyseerd",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda",
+      "status": "ok",
+      "rawText": "0 events/aanbiedingen op deze pagina"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda/adviesplein",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda/alzheimercafe-10044313",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda/digivitaler",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://tickets.denieuwekolk.nl/login/auth",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda/fotoexpositie-verhalen-van-verborgen-kracht-10050486",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda/groot-dictee-der-nederlandse-taal",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda/het-vlucht-voorwaarts-praathuis",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda/inkt-10046644",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "DNK-ticketpagina niet volledig herkend",
+      "date": "",
+      "url": "https://tickets.denieuwekolk.nl/mtTicket/performance/10357960",
+      "status": "diagnose",
+      "rawText": "titel=Kaartverkoop De Nieuwe Kolk; datums=2; tijden/ruimtes=0; tekst=Kaarten bestellen | INKT - dinsdag 24 november 2026 | Kaartverkoop De Nieuwe Kolk Titel en navigatie overslaan Kaartverkoop De Nieuwe Kolk en Wachtlijst Om een voorstelling of concert op je wachtlijst te zetten, moet je inloggen. INKT dinsdag 24 november 2026"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://tickets.denieuwekolk.nl/mtTicket/performance/10357960",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda/klik-tik",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "DNK-ticketpagina niet volledig herkend",
+      "date": "",
+      "url": "https://tickets.denieuwekolk.nl/mtTicket/performance/10366387",
+      "status": "diagnose",
+      "rawText": "titel=Kaartverkoop De Nieuwe Kolk; datums=6; tijden/ruimtes=0; tekst=Kaarten bestellen | Klik & Tik - Handiger worden met de computer - donderdag 26 november 2026 | Kaartverkoop De Nieuwe Kolk Titel en navigatie overslaan Kaartverkoop De Nieuwe Kolk en Klik & Tik Handiger worden met de computer donderdag 26 november 2026 10:00"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://tickets.denieuwekolk.nl/mtTicket/performance/10366387",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda/oefentafel-basisvaardigheden",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda/schrijfcafe",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda/taalcafe",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bieb/agenda/vr-gamen",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "DNK-ticketpagina niet volledig herkend",
+      "date": "",
+      "url": "https://tickets.denieuwekolk.nl/mtTicket/performance/10370790",
+      "status": "diagnose",
+      "rawText": "titel=Kaartverkoop De Nieuwe Kolk; datums=2; tijden/ruimtes=0; tekst=Kaarten bestellen | VR & Gamen - NXT Lab (7+) - woensdag 25 november 2026 | Kaartverkoop De Nieuwe Kolk Titel en navigatie overslaan Kaartverkoop De Nieuwe Kolk en VR & Gamen NXT Lab (7+) woensdag 25 november 2026 15:00 (einde 17:30) DNK-NXT Kies tickets en pr"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://tickets.denieuwekolk.nl/mtTicket/performance/10370790",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bios/agenda/carnaval",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "DNK-ticketpagina niet volledig herkend",
+      "date": "",
+      "url": "https://tickets.denieuwekolk.nl/mtTicket/performance/10391948",
+      "status": "diagnose",
+      "rawText": "titel=Kaartverkoop De Nieuwe Kolk; datums=7; tijden/ruimtes=0; tekst=Kaarten bestellen | Carnaval - zondag 22 november 2026 | Kaartverkoop De Nieuwe Kolk Titel en navigatie overslaan Kaartverkoop De Nieuwe Kolk en Carnaval zondag 22 november 2026 21:20 (einde 22:59) Filmzaal 4 - andere datum en/of tijd - vrijdag 20 november 202"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://tickets.denieuwekolk.nl/mtTicket/performance/10391948",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "DNK-ticketpagina niet volledig herkend",
+      "date": "",
+      "url": "https://tickets.denieuwekolk.nl/mtTicket/performance/10391946",
+      "status": "diagnose",
+      "rawText": "titel=Kaartverkoop De Nieuwe Kolk; datums=7; tijden/ruimtes=0; tekst=Kaarten bestellen | Carnaval - zaterdag 21 november 2026 | Kaartverkoop De Nieuwe Kolk Titel en navigatie overslaan Kaartverkoop De Nieuwe Kolk en Carnaval zaterdag 21 november 2026 22:00 (einde 23:39) Filmzaal 3 - andere datum en/of tijd - vrijdag 20 november"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://tickets.denieuwekolk.nl/mtTicket/performance/10391946",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "DNK-ticketpagina niet volledig herkend",
+      "date": "",
+      "url": "https://tickets.denieuwekolk.nl/mtTicket/performance/10391943",
+      "status": "diagnose",
+      "rawText": "titel=Kaartverkoop De Nieuwe Kolk; datums=7; tijden/ruimtes=0; tekst=Kaarten bestellen | Carnaval - vrijdag 20 november 2026 | Kaartverkoop De Nieuwe Kolk Titel en navigatie overslaan Kaartverkoop De Nieuwe Kolk en Carnaval vrijdag 20 november 2026 19:10 (einde 20:49) Filmzaal 3 - andere datum en/of tijd - zaterdag 21 november"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://tickets.denieuwekolk.nl/mtTicket/performance/10391943",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "DNK-ticketpagina niet volledig herkend",
+      "date": "",
+      "url": "https://tickets.denieuwekolk.nl/mtTicket/performance/10391945",
+      "status": "diagnose",
+      "rawText": "titel=Kaartverkoop De Nieuwe Kolk; datums=7; tijden/ruimtes=0; tekst=Kaarten bestellen | Carnaval - woensdag 25 november 2026 | Kaartverkoop De Nieuwe Kolk Titel en navigatie overslaan Kaartverkoop De Nieuwe Kolk en Carnaval woensdag 25 november 2026 18:45 (einde 20:24) Filmzaal 4 - andere datum en/of tijd - vrijdag 20 november"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://tickets.denieuwekolk.nl/mtTicket/performance/10391945",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "DNK-ticketpagina niet volledig herkend",
+      "date": "",
+      "url": "https://tickets.denieuwekolk.nl/mtTicket/performance/10391949",
+      "status": "diagnose",
+      "rawText": "titel=Kaartverkoop De Nieuwe Kolk; datums=7; tijden/ruimtes=0; tekst=Kaarten bestellen | Carnaval - dinsdag 24 november 2026 | Kaartverkoop De Nieuwe Kolk Titel en navigatie overslaan Kaartverkoop De Nieuwe Kolk en Carnaval dinsdag 24 november 2026 21:30 (einde 23:09) Filmzaal 2 - andere datum en/of tijd - vrijdag 20 november 2"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://tickets.denieuwekolk.nl/mtTicket/performance/10391949",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "DNK-ticketpagina niet volledig herkend",
+      "date": "",
+      "url": "https://tickets.denieuwekolk.nl/mtTicket/performance/10391947",
+      "status": "diagnose",
+      "rawText": "titel=Kaartverkoop De Nieuwe Kolk; datums=7; tijden/ruimtes=0; tekst=Kaarten bestellen | Carnaval - maandag 23 november 2026 | Kaartverkoop De Nieuwe Kolk Titel en navigatie overslaan Kaartverkoop De Nieuwe Kolk en Carnaval maandag 23 november 2026 21:40 (einde 23:19) Filmzaal 3 - andere datum en/of tijd - vrijdag 20 november 2"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://tickets.denieuwekolk.nl/mtTicket/performance/10391947",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bios/agenda/de-club-van-sinterklaas-film-paniek-in-het-pietendorp",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Kaartverkoop De Nieuwe Kolk",
+      "date": "2026-11-24",
+      "url": "https://tickets.denieuwekolk.nl/mtTicket/performance/10391957",
+      "status": "ticketpagina",
+      "rawText": "15:30; De Nieuwe Kolk Assen, Filmzaal 4"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://tickets.denieuwekolk.nl/mtTicket/performance/10391957",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Kaartverkoop De Nieuwe Kolk",
+      "date": "2026-11-25",
+      "url": "https://tickets.denieuwekolk.nl/mtTicket/performance/10391953",
+      "status": "ticketpagina",
+      "rawText": "15:30; De Nieuwe Kolk Assen, Filmzaal 2"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://tickets.denieuwekolk.nl/mtTicket/performance/10391953",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Kaartverkoop De Nieuwe Kolk",
+      "date": "2026-11-23",
+      "url": "https://tickets.denieuwekolk.nl/mtTicket/performance/10391956",
+      "status": "ticketpagina",
+      "rawText": "15:30; De Nieuwe Kolk Assen, Filmzaal 4"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://tickets.denieuwekolk.nl/mtTicket/performance/10391956",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bios/agenda/de-grote-sinterklaasfilm-en-de-vliegende-pieten",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Kaartverkoop De Nieuwe Kolk",
+      "date": "2026-11-23",
+      "url": "https://tickets.denieuwekolk.nl/mtTicket/performance/10391961",
+      "status": "ticketpagina",
+      "rawText": "15:15; De Nieuwe Kolk Assen, Filmzaal 1"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://tickets.denieuwekolk.nl/mtTicket/performance/10391961",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Kaartverkoop De Nieuwe Kolk",
+      "date": "2026-11-24",
+      "url": "https://tickets.denieuwekolk.nl/mtTicket/performance/10391962",
+      "status": "ticketpagina",
+      "rawText": "15:15; De Nieuwe Kolk Assen, Filmzaal 1"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://tickets.denieuwekolk.nl/mtTicket/performance/10391962",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Kaartverkoop De Nieuwe Kolk",
+      "date": "2026-11-25",
+      "url": "https://tickets.denieuwekolk.nl/mtTicket/performance/10391963",
+      "status": "ticketpagina",
+      "rawText": "15:20; De Nieuwe Kolk Assen, Filmzaal 5"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://tickets.denieuwekolk.nl/mtTicket/performance/10391963",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bios/agenda/disneys-hexed-nl",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Kaartverkoop De Nieuwe Kolk",
+      "date": "2026-11-25",
+      "url": "https://tickets.denieuwekolk.nl/mtTicket/performance/10391964",
+      "status": "ticketpagina",
+      "rawText": "15:15; De Nieuwe Kolk Assen, Filmzaal 1"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://tickets.denieuwekolk.nl/mtTicket/performance/10391964",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bios/agenda/dreumes-ochtend-feestelijk-plezier-met-peppa-pig",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Kaartverkoop De Nieuwe Kolk",
+      "date": "2026-11-22",
+      "url": "https://tickets.denieuwekolk.nl/mtTicket/performance/10390934",
+      "status": "ticketpagina",
+      "rawText": "10:30; De Nieuwe Kolk Assen, Filmzaal 1"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://tickets.denieuwekolk.nl/mtTicket/performance/10390934",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bios/agenda/ebenezer-a-christmas-carol",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "DNK-ticketpagina niet volledig herkend",
+      "date": "",
+      "url": "https://tickets.denieuwekolk.nl/mtTicket/performance/10391971",
+      "status": "diagnose",
+      "rawText": "titel=Kaartverkoop De Nieuwe Kolk; datums=6; tijden/ruimtes=0; tekst=Kaarten bestellen | Ebenezer: A Christmas Carol - woensdag 25 november 2026 | Kaartverkoop De Nieuwe Kolk Titel en navigatie overslaan Kaartverkoop De Nieuwe Kolk en Ebenezer: A Christmas Carol woensdag 25 november 2026 19:50 (einde 22:11) Filmzaal 5 - andere"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://tickets.denieuwekolk.nl/mtTicket/performance/10391971",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "DNK-ticketpagina niet volledig herkend",
+      "date": "",
+      "url": "https://tickets.denieuwekolk.nl/mtTicket/performance/10391974",
+      "status": "diagnose",
+      "rawText": "titel=Kaartverkoop De Nieuwe Kolk; datums=4; tijden/ruimtes=0; tekst=Kaarten bestellen | Ebenezer: A Christmas Carol - dinsdag 24 november 2026 | Kaartverkoop De Nieuwe Kolk Titel en navigatie overslaan Kaartverkoop De Nieuwe Kolk en Ebenezer: A Christmas Carol dinsdag 24 november 2026 18:45 (einde 21:06) Filmzaal 2 - andere da"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://tickets.denieuwekolk.nl/mtTicket/performance/10391974",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Detailpagina mislukt",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bios/agenda/ebenezer-a-christmas-carol/bestel/a5771f94-6762-aebe-7331-a1d1734cb9f3",
+      "status": "fout",
+      "rawText": "('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "DNK-ticketpagina niet volledig herkend",
+      "date": "",
+      "url": "https://tickets.denieuwekolk.nl/mtTicket/performance/10391968",
+      "status": "diagnose",
+      "rawText": "titel=Kaartverkoop De Nieuwe Kolk; datums=6; tijden/ruimtes=0; tekst=Kaarten bestellen | Ebenezer: A Christmas Carol - maandag 23 november 2026 | Kaartverkoop De Nieuwe Kolk Titel en navigatie overslaan Kaartverkoop De Nieuwe Kolk en Ebenezer: A Christmas Carol maandag 23 november 2026 18:45 (einde 21:06) Filmzaal 4 - andere da"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://tickets.denieuwekolk.nl/mtTicket/performance/10391968",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bios/agenda/feestelijk-plezier-met-peppa-pig",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Detailpagina mislukt",
+      "date": "",
+      "url": "https://denieuwekolk.nl/bios/agenda/feestelijk-plezier-met-peppa-pig/bestel/f90b223f-0bfc-f921-ffbd-f54d9b770507",
+      "status": "fout",
+      "rawText": "HTTPSConnectionPool(host='tickets.denieuwekolk.nl', port=443): Read timed out. (read timeout=1.564055983000003)"
+    },
+    {
+      "source": "Filter",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Datumfilter toegepast",
+      "date": "2026-11-20",
+      "url": "https://denieuwekolk.nl/agenda",
+      "status": "ok",
+      "rawText": "23 gevonden; 5 binnen 2026-11-20 t/m 2026-11-22"
+    },
+    {
+      "source": "Website",
+      "site": "https://denieuwekolk.nl/agenda",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://denieuwekolk.nl/agenda",
+      "status": "klaar",
+      "rawText": "site 17/18: 5 unieke events in 90.34 sec"
     }
   ]
 }
