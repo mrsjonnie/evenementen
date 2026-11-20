@@ -94,3 +94,113 @@ RSS/Atom	https://www.visitgroningen.nl/nl/doen/evenementen	fout	Feed mislukt		ht
 RSS/Atom	https://www.visitgroningen.nl/nl/doen/evenementen	fout	Feed mislukt		https://www.visitgroningen.nl/events/feed/	HTTP 404
 Filter	https://www.visitgroningen.nl/nl/doen/evenementen	ok	Datumfilter toegepast	2026-11-20	https://www.visitgroningen.nl/nl/doen/evenementen	6 gevonden; 0 binnen 2026-11-20 t/m 2026-11-22
 Website	https://www.visitgroningen.nl/nl/doen/evenementen	klaar	Klaar		https://www.visitgroningen.nl/nl/doen/evenementen	site 2/18: 0 unieke events in 7.59 sec
+Website	https://forum.nl/nl/agenda	start	Start		https://forum.nl/nl/agenda	site 3/18: max 20 events, max 90 seconden
+Parser	https://forum.nl/nl/agenda	strategie	Scrapertype vastgesteld		https://forum.nl/nl/agenda	universeel-eventkaarten
+Website	https://forum.nl/nl/agenda	ok	Pagina gelezen		https://forum.nl/nl/agenda	176623 tekens HTML
+Parser	https://forum.nl/nl/agenda	strategie	Forum detailstrategie		https://forum.nl/nl/agenda	Overzicht overslaan; alleen /nl/agenda/<event> detailpagina's verwerken
+Website	https://forum.nl/nl/agenda	ok	Pagina geanalyseerd		https://forum.nl/nl/agenda	0 events/aanbiedingen op deze pagina
+Website	https://forum.nl/nl/agenda	detail-link gevonden	link		https://forum.nl/nl/agenda/film/bardi?date=21-11-2026	
+Website	https://forum.nl/nl/agenda	detail-link gevonden	link		https://forum.nl/nl/agenda/film/boatbuilders?date=21-11-2026	
+Website	https://forum.nl/nl/agenda	detail-link gevonden	link		https://forum.nl/nl/agenda/film/citizen-osama?date=21-11-2026	
+Website	https://forum.nl/nl/agenda	detail-link gevonden	link		https://forum.nl/nl/agenda/film/closure?date=21-11-2026	
+Website	https://forum.nl/nl/agenda	detail-link gevonden	link		https://forum.nl/nl/agenda/film/club-kid?date=20-11-2026	
+Website	https://forum.nl/nl/agenda	detail-link gevonden	link		https://forum.nl/nl/agenda/film/club-kid?date=21-11-2026	
+Website	https://forum.nl/nl/agenda	detail-link gevonden	link		https://forum.nl/nl/agenda/film/collapse?date=20-11-2026	
+Website	https://forum.nl/nl/agenda	detail-link gevonden	link		https://forum.nl/nl/agenda/film/dao?date=21-11-2026	
+Website	https://forum.nl/nl/agenda	detail-link gevonden	link		https://forum.nl/nl/agenda/film/docs-the-year-of-the-ghost?date=21-11-2026	
+Website	https://forum.nl/nl/agenda	detail-link gevonden	link		https://forum.nl/nl/agenda/film/down-the-river?date=21-11-2026	
+Website	https://forum.nl/nl/agenda	detail-link gevonden	link		https://forum.nl/nl/agenda/film/fatherland?date=21-11-2026	
+Website	https://forum.nl/nl/agenda	detail-link gevonden	link		https://forum.nl/nl/agenda/film/foret-ivre?date=21-11-2026	
+Website	https://forum.nl/nl/agenda	detail-link gevonden	link		https://forum.nl/nl/agenda/film/from-dawn-to-dawn?date=20-11-2026	
+Website	https://forum.nl/nl/agenda	detail-link gevonden	link		https://forum.nl/nl/agenda/film/history-of-concrete?date=20-11-2026	
+Website	https://forum.nl/nl/agenda	detail-link gevonden	link		https://forum.nl/nl/agenda/film/history-of-concrete?date=21-11-2026	
+Website	https://forum.nl/nl/agenda	detail-link gevonden	link		https://forum.nl/nl/agenda/film/hold-your-breath?date=21-11-2026	
+Website	https://forum.nl/nl/agenda	detail-link gevonden	link		https://forum.nl/nl/agenda/film/i-play-rocky?date=21-11-2026	
+Website	https://forum.nl/nl/agenda	detail-link gevonden	link		https://forum.nl/nl/agenda/film/just-look-up?date=21-11-2026	
+Website	https://forum.nl/nl/agenda	detail-link gevonden	link		https://forum.nl/nl/agenda/film/morro-grande?date=20-11-2026	
+Website	https://forum.nl/nl/agenda	detail-link gevonden	link		https://forum.nl/nl/agenda/film/morro-grande?date=21-11-2026	
+Website	https://forum.nl/nl/agenda	detail-link gevonden	link		https://forum.nl/nl/agenda/film/queen-at-sea?date=20-11-2026	
+Website	https://forum.nl/nl/agenda	detail-link gevonden	link		https://forum.nl/nl/agenda/film/queen-at-sea?date=21-11-2026	
+Website	https://forum.nl/nl/agenda	detail-link gevonden	link		https://forum.nl/nl/agenda/film/ragazzi-al-fiume?date=21-11-2026	
+Website	https://forum.nl/nl/agenda	detail-link gevonden	link		https://forum.nl/nl/agenda/film/the-fight-the-william-greaves-directors-cut?date=21-11-2026	
+Website	https://forum.nl/nl/agenda	detail-link gevonden	link		https://forum.nl/nl/agenda/film/the-only-living-pickpocket-in-new-york?date=21-11-2026	
+Website	https://forum.nl/nl/agenda	detail-link gevonden	link		https://forum.nl/nl/agenda/film/theyre-here?date=21-11-2026	
+Website	https://forum.nl/nl/agenda	detail-link gevonden	link		https://forum.nl/nl/agenda/film/white-tiger-column?date=20-11-2026	
+Website	https://forum.nl/nl/agenda	detail-link gevonden	link		https://forum.nl/nl/agenda/film/wicker?date=21-11-2026	
+Website	https://forum.nl/nl/agenda	detail-link gevonden	link		https://forum.nl/nl/agenda/film/wild-horse-nine?date=21-11-2026	
+Website	https://forum.nl/nl/agenda	detail-link gevonden	European Cartoon Award		https://forum.nl/agenda/expositie/european-cartoon-award	European Cartoon Award
+Website	https://forum.nl/nl/agenda	detail-link gevonden	Wes Anderson: The Archives		https://forum.nl/agenda/expositie/wes-anderson-the-archives	Wes Anderson: The Archives
+Website	https://forum.nl/nl/agenda	detail-link gevonden	Zilveren Camera 2025 - Foto-expositie		https://forum.nl/agenda/expositie/zilveren-camera-2025-foto-expositie	Zilveren Camera 2025 - Foto-expositie
+Website	https://forum.nl/nl/agenda	detail-link gevonden	Storyworld		https://forum.nl/agenda/storyworld	Storyworld
+Website	https://forum.nl/nl/agenda	detail-link gevonden	Filmagenda		https://forum.nl/nl/film/filmagenda	Filmagenda
+Website	https://forum.nl/nl/agenda	detail-link gevonden	Filmfestivals		https://forum.nl/nl/film/filmfestivals	Filmfestivals
+Website	https://forum.nl/nl/agenda	detail-link gevonden	Filmseries & specials		https://forum.nl/nl/film/filmseries-specials	Filmseries & specials
+Website	https://forum.nl/nl/agenda	detail-link gevonden	IDFA		https://forum.nl/nl/film/idfa	IDFA
+Website	https://forum.nl/nl/agenda	detail-link gevonden	Kinderfilms		https://forum.nl/nl/film/kinderfilms	Kinderfilms
+Website	https://forum.nl/nl/agenda	detail-link gevonden	Nu te zien		https://forum.nl/nl/film/nu-te-zien	Nu te zien
+Website	https://forum.nl/nl/agenda	detail-link gevonden	Verwacht		https://forum.nl/nl/film/verwacht	Verwacht
+Website	https://forum.nl/nl/agenda	detail-link gevonden	link		https://forum.nl/nl/agenda/de-midfestival-idfa-check-in?date=20-11-2026	
+Website	https://forum.nl/nl/agenda	detail-link gevonden	link		https://forum.nl/nl/agenda/everybody-to-kenmure-street?date=20-11-2026	
+Website	https://forum.nl/nl/agenda	detail-link gevonden	link		https://forum.nl/nl/agenda/expositie/zilveren-camera-2025-foto-expositie?date=20-11-2026	
+Website	https://forum.nl/nl/agenda	detail-link gevonden	link		https://forum.nl/nl/agenda/expositie/zilveren-camera-2025-foto-expositie?date=21-11-2026	
+Website	https://forum.nl/nl/agenda	detail-link gevonden	link		https://forum.nl/nl/agenda/leren-programmeren?date=21-11-2026	
+Website	https://forum.nl/nl/agenda	detail-link gevonden	link		https://forum.nl/nl/agenda/rehearsals-for-a-revolution?date=20-11-2026	
+Website	https://forum.nl/nl/agenda	detail-link gevonden	link		https://forum.nl/nl/agenda/rehearsals-for-a-revolution?date=21-11-2026	
+Website	https://forum.nl/nl/agenda	detail-link gevonden	link		https://forum.nl/nl/agenda/storyworld?date=21-11-2026	
+Website	https://forum.nl/nl/agenda	detail-link gevonden	link		https://forum.nl/nl/agenda/the-clearing?date=21-11-2026	
+Website	https://forum.nl/nl/agenda	detail-link gevonden	link		https://forum.nl/nl/agenda/the-illusion-of-an-everlasting-summer?date=21-11-2026	
+Website	https://forum.nl/nl/agenda	detail-link gevonden	link		https://forum.nl/nl/agenda/the-siege-of-paradise?date=21-11-2026	
+Website	https://forum.nl/nl/agenda	detail-link gevonden	link		https://forum.nl/nl/agenda/time-and-water?date=21-11-2026	
+Website	https://forum.nl/nl/agenda	detail-link gevonden	link		https://forum.nl/nl/agenda/to-hold-a-mountain?date=21-11-2026	
+Website	https://forum.nl/nl/agenda	detail-link gevonden	link		https://forum.nl/nl/agenda/tristan-forever?date=20-11-2026	
+Website	https://forum.nl/nl/agenda	detail-link gevonden	link		https://forum.nl/nl/agenda/tristan-forever?date=21-11-2026	
+Website	https://forum.nl/nl/agenda	detail-link gevonden	link		https://forum.nl/nl/agenda/walk-in-smartlab?date=21-11-2026	
+Website	https://forum.nl/nl/agenda	detail-link gevonden	link		https://forum.nl/nl/agenda/whispers-in-may?date=21-11-2026	
+Website	https://forum.nl/nl/agenda	detail-link gevonden	link		https://forum.nl/nl/agenda/you-can-see-everything?date=21-11-2026	
+Website	https://forum.nl/nl/agenda	detail-link gevonden	Basisvaardigheden		https://forum.nl/nl/agenda?categorie=basisvaardigheden	Basisvaardigheden
+Website	https://forum.nl/nl/agenda	detail-link gevonden	Cursussen		https://forum.nl/nl/agenda?categorie=cursussen	Cursussen
+Website	https://forum.nl/nl/agenda	detail-link gevonden	Talks & Events		https://forum.nl/nl/agenda?categorie=talks-events	Talks & Events
+Website	https://forum.nl/nl/agenda	detail-link gevonden	Volgende pagina		https://forum.nl/nl/agenda?p=2	Volgende pagina
+Website	https://forum.nl/nl/agenda	detail-link gevonden	Archief		https://forum.nl/nl/expositie/archief	Archief
+Website	https://forum.nl/nl/agenda	detail-link gevonden	Installatie Stad		https://forum.nl/nl/expositie/stad	Installatie Stad
+Website	https://forum.nl/nl/agenda	detail-link gevonden	nl		https://forum.nl/nl/agenda	nl
+Website	https://forum.nl/nl/agenda	detail-link gevonden	Expositie		https://forum.nl/nl/agenda?categorie=expositie	Expositie
+Website	https://forum.nl/nl/agenda	detail-link gevonden	Film		https://forum.nl/nl/agenda?categorie=film	Film
+Website	https://forum.nl/nl/agenda	detail-link gevonden	Kids		https://forum.nl/nl/agenda?categorie=kids	Kids
+Website	https://forum.nl/nl/agenda	detail-link gevonden	1		https://forum.nl/nl/agenda?p=1	1
+Website	https://forum.nl/nl/agenda	detail-link gevonden	26		https://forum.nl/nl/agenda?p=26	26
+Website	https://forum.nl/nl/agenda	detail-link gevonden	3		https://forum.nl/nl/agenda?p=3	3
+Website	https://forum.nl/nl/agenda	detail-link gevonden	4		https://forum.nl/nl/agenda?p=4	4
+Website	https://forum.nl/nl/agenda	detail-link gevonden	5		https://forum.nl/nl/agenda?p=5	5
+Website	https://forum.nl/nl/agenda	detail-link gevonden	Kids		https://forum.nl/nl/bibliotheek/kids	Kids
+Website	https://forum.nl/nl/agenda	detail-link gevonden	Expositie		https://forum.nl/nl/expositie	Expositie
+Website	https://forum.nl/nl/agenda	detail-link gevonden	Film		https://forum.nl/nl/film	Film
+Website	https://forum.nl/nl/agenda	detail-link gevonden	Bibliotheek		https://forum.nl/nl/bibliotheek	Bibliotheek
+Website	https://forum.nl/nl/agenda	detail-link gevonden	Collectie		https://forum.nl/nl/bibliotheek/collectie	Collectie
+Website	https://forum.nl/nl/agenda	detail-link gevonden	Haal meer uit je abonnement		https://forum.nl/nl/bibliotheek/haal-meer-uit-je-abonnement	Haal meer uit je abonnement
+Website	https://forum.nl/nl/agenda	detail-link gevonden	Hulp- en spreekuren		https://forum.nl/nl/bibliotheek/hulp	Hulp- en spreekuren
+Website	https://forum.nl/nl/agenda	ok	Detailpagina geanalyseerd		https://forum.nl/nl/agenda/film/bardi?date=21-11-2026	1 extra events
+Website	https://forum.nl/nl/agenda	ok	Detailpagina geanalyseerd		https://forum.nl/nl/agenda/film/boatbuilders?date=21-11-2026	1 extra events
+Website	https://forum.nl/nl/agenda	ok	Detailpagina geanalyseerd		https://forum.nl/nl/agenda/film/citizen-osama?date=21-11-2026	1 extra events
+Website	https://forum.nl/nl/agenda	ok	Detailpagina geanalyseerd		https://forum.nl/nl/agenda/film/closure?date=21-11-2026	1 extra events
+Website	https://forum.nl/nl/agenda	ok	Detailpagina geanalyseerd		https://forum.nl/nl/agenda/film/club-kid?date=20-11-2026	1 extra events
+Website	https://forum.nl/nl/agenda	ok	Detailpagina geanalyseerd		https://forum.nl/nl/agenda/film/club-kid?date=21-11-2026	0 extra events
+Website	https://forum.nl/nl/agenda	ok	Detailpagina geanalyseerd		https://forum.nl/nl/agenda/film/collapse?date=20-11-2026	1 extra events
+Website	https://forum.nl/nl/agenda	ok	Detailpagina geanalyseerd		https://forum.nl/nl/agenda/film/dao?date=21-11-2026	1 extra events
+Website	https://forum.nl/nl/agenda	ok	Detailpagina geanalyseerd		https://forum.nl/nl/agenda/film/docs-the-year-of-the-ghost?date=21-11-2026	1 extra events
+Website	https://forum.nl/nl/agenda	ok	Detailpagina geanalyseerd		https://forum.nl/nl/agenda/film/down-the-river?date=21-11-2026	1 extra events
+Website	https://forum.nl/nl/agenda	ok	Detailpagina geanalyseerd		https://forum.nl/nl/agenda/film/fatherland?date=21-11-2026	1 extra events
+Website	https://forum.nl/nl/agenda	ok	Detailpagina geanalyseerd		https://forum.nl/nl/agenda/film/foret-ivre?date=21-11-2026	1 extra events
+Website	https://forum.nl/nl/agenda	ok	Detailpagina geanalyseerd		https://forum.nl/nl/agenda/film/from-dawn-to-dawn?date=20-11-2026	1 extra events
+Website	https://forum.nl/nl/agenda	ok	Detailpagina geanalyseerd		https://forum.nl/nl/agenda/film/history-of-concrete?date=20-11-2026	1 extra events
+Website	https://forum.nl/nl/agenda	ok	Detailpagina geanalyseerd		https://forum.nl/nl/agenda/film/history-of-concrete?date=21-11-2026	0 extra events
+Website	https://forum.nl/nl/agenda	ok	Detailpagina geanalyseerd		https://forum.nl/nl/agenda/film/hold-your-breath?date=21-11-2026	1 extra events
+Website	https://forum.nl/nl/agenda	ok	Detailpagina geanalyseerd		https://forum.nl/nl/agenda/film/i-play-rocky?date=21-11-2026	1 extra events
+Website	https://forum.nl/nl/agenda	ok	Detailpagina geanalyseerd		https://forum.nl/nl/agenda/film/just-look-up?date=21-11-2026	1 extra events
+Website	https://forum.nl/nl/agenda	ok	Detailpagina geanalyseerd		https://forum.nl/nl/agenda/film/morro-grande?date=20-11-2026	1 extra events
+Website	https://forum.nl/nl/agenda	ok	Detailpagina geanalyseerd		https://forum.nl/nl/agenda/film/morro-grande?date=21-11-2026	0 extra events
+Website	https://forum.nl/nl/agenda	ok	Detailpagina geanalyseerd		https://forum.nl/nl/agenda/film/queen-at-sea?date=20-11-2026	1 extra events
+Website	https://forum.nl/nl/agenda	ok	Detailpagina geanalyseerd		https://forum.nl/nl/agenda/film/queen-at-sea?date=21-11-2026	0 extra events
+Website	https://forum.nl/nl/agenda	ok	Detailpagina geanalyseerd		https://forum.nl/nl/agenda/film/ragazzi-al-fiume?date=21-11-2026	1 extra events
+Website	https://forum.nl/nl/agenda	ok	Detailpagina geanalyseerd		https://forum.nl/nl/agenda/film/the-fight-the-william-greaves-directors-cut?date=21-11-2026	1 extra events
+Website	https://forum.nl/nl/agenda	klaar	Klaar		https://forum.nl/nl/agenda	site 3/18: 20 unieke events in 6.2 sec
