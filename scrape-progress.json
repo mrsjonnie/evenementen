@@ -1,7 +1,7 @@
 {
   "runId": "2026-11-20T17:01:14.574083+00:00-c1eda5fa",
   "startedAt": "2026-11-20T17:01:14+00:00",
-  "completedCount": 12,
+  "completedCount": 13,
   "totalSites": 18,
   "currentSite": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
   "currentSiteIndex": 13,
@@ -17,7 +17,8 @@
     "https://www.kultuuragenda.nl/agenda",
     "https://www.noorderzon.nl/programma",
     "https://www.concertgebouw.nl/concerten-en-tickets",
-    "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html"
+    "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+    "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817"
   ],
   "events": [
     {
@@ -82,6 +83,21 @@
     },
     {
       "date": "2026-11-20",
+      "time": "15:00",
+      "title": "30 Jaar Excelsior Recordings",
+      "type": "Concert",
+      "location": "Bitterzoet, Amsterdam",
+      "locationLink": "",
+      "website": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "source": "paradiso.nl",
+      "discoverySource": "Website",
+      "description": "Op Derde Kerstdag, 27 december 2026, viert het gerenommeerde platenlabel Excelsior Recordings het 30-jarig jubileum in Tolhuistuin, Amsterdam.",
+      "cost": "gratis",
+      "image": "https://assets.paradiso.nl/images/transforms/event/_1200x630_crop_center-center_none/groepsfoto-muziekvereniging-excelsior-1780416042.jpg",
+      "isNew": true
+    },
+    {
+      "date": "2026-11-20",
       "time": "20:00",
       "title": "A Tribute to Cliff Richard & The Shadows",
       "type": "Film",
@@ -93,6 +109,66 @@
       "description": "A Tribute to Cliff Richard & The Shadows | Kultuuragenda Groningen Ga naar de homepage Evenement aanmelden naar A Tribute to Cliff Richard & The Shadows naar A Tribute to Cliff Richard & The Shadows Bel: 0599 63 17 31 van A Tribute to Cliff Richard & The Shadows",
       "cost": "€ 13,00",
       "image": "https://assets.plaece.nl/thumb/Zzl7BZid0TFLilto6UzTnxOQrWh2MxC3FRXlG5As0nQ/resizing_type:fit/width:650/height:366/gravity:sm/aHR0cHM6Ly9hc3NldHMucGxhZWNlLm5sL29kcC1ncm9uaW5nZW4vaW1hZ2UvMDk0OGNjN2Y3YjNkYmVlZmI2YzQxMGNkOGY3NWMxNjczZjdjYjFjZF8wMTlmM2Y3OS04NTA5LTc3MzEtYWYwMC1kNDBmMTY4YjFmMmIuanBn.jpg",
+      "isNew": true
+    },
+    {
+      "date": "2026-11-20",
+      "time": "17:30",
+      "title": "Aanvang 17:30",
+      "type": "Concert",
+      "location": "Bitterzoet, Amsterdam",
+      "locationLink": "",
+      "website": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "source": "paradiso.nl",
+      "discoverySource": "Website",
+      "description": "Super-Sonic Jazz Festival · Friday",
+      "cost": "",
+      "image": "",
+      "isNew": true
+    },
+    {
+      "date": "2026-11-20",
+      "time": "19:00",
+      "title": "Aanvang 19:00",
+      "type": "Concert",
+      "location": "Bitterzoet, Amsterdam",
+      "locationLink": "",
+      "website": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "source": "paradiso.nl",
+      "discoverySource": "Website",
+      "description": "Samba Roots featuring Lucas Santana. · Super-Sonic Jazz Festival · Afterparty",
+      "cost": "",
+      "image": "",
+      "isNew": true
+    },
+    {
+      "date": "2026-11-20",
+      "time": "19:30",
+      "title": "Aanvang 19:30",
+      "type": "Concert",
+      "location": "Bitterzoet, Amsterdam",
+      "locationLink": "",
+      "website": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "source": "paradiso.nl",
+      "discoverySource": "Website",
+      "description": "Samba Roots featuring Lucas Santana. · Super-Sonic Jazz Festival · Afterparty",
+      "cost": "",
+      "image": "",
+      "isNew": true
+    },
+    {
+      "date": "2026-11-20",
+      "time": "23:00",
+      "title": "Aanvang 23:00",
+      "type": "Dans",
+      "location": "Bitterzoet, Amsterdam",
+      "locationLink": "",
+      "website": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "source": "paradiso.nl",
+      "discoverySource": "Website",
+      "description": "Meer informatie staat op paradiso.nl.",
+      "cost": "",
+      "image": "",
       "isNew": true
     },
     {
@@ -273,6 +349,21 @@
       "description": "Jack and the Weatherman SPOT/De Oosterpoort Een internationale folk-popband uit Nederland SPOT/De Oosterpoort Een prachtige muzikale mix van folk, klassiek en experimentele pop Bert Visscher en het Noordpool Strijkkwartet SPOT/Stadsschouwburg Idiote scènes, prachtige liedjes en absurde verhalen",
       "cost": "",
       "image": "https://www.spotgroningen.nl/wp-content/uploads/2025/11/JATW-BAND-PORTRET-1440h-e1766566007282-768x575.jpg",
+      "isNew": true
+    },
+    {
+      "date": "2026-11-20",
+      "time": "23:00",
+      "title": "Braziliaanse live clubnacht vol bruisende samba",
+      "type": "Concert",
+      "location": "Bitterzoet, Amsterdam",
+      "locationLink": "",
+      "website": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "source": "paradiso.nl",
+      "discoverySource": "Website",
+      "description": "Super-Sonic Jazz Festival · Saturday Met Yazmin Lacey, Children of Zeus, Jembaa Groove, Ife Ogunjobi, Momoko Gill en Amy Gadiaga",
+      "cost": "",
+      "image": "",
       "isNew": true
     },
     {
@@ -562,6 +653,51 @@
     },
     {
       "date": "2026-11-20",
+      "time": "19:00",
+      "title": "In Paradiso",
+      "type": "Dans",
+      "location": "Bitterzoet, Amsterdam",
+      "locationLink": "",
+      "website": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "source": "paradiso.nl",
+      "discoverySource": "Website",
+      "description": "Meer informatie staat op paradiso.nl.",
+      "cost": "",
+      "image": "",
+      "isNew": true
+    },
+    {
+      "date": "2026-11-20",
+      "time": "17:30",
+      "title": "In Rush Hour Store",
+      "type": "Concert",
+      "location": "Bitterzoet, Amsterdam",
+      "locationLink": "",
+      "website": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "source": "paradiso.nl",
+      "discoverySource": "Website",
+      "description": "Super-Sonic Jazz Festival · Friday",
+      "cost": "",
+      "image": "",
+      "isNew": true
+    },
+    {
+      "date": "2026-11-20",
+      "time": "19:30",
+      "title": "In Tolhuistuin",
+      "type": "Concert",
+      "location": "Bitterzoet, Amsterdam",
+      "locationLink": "",
+      "website": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "source": "paradiso.nl",
+      "discoverySource": "Website",
+      "description": "Samba Roots featuring Lucas Santana. · Super-Sonic Jazz Festival · Afterparty",
+      "cost": "",
+      "image": "",
+      "isNew": true
+    },
+    {
+      "date": "2026-11-20",
       "time": "",
       "title": "In the 1970s, 10cc scored major hits",
       "type": "Concert",
@@ -652,6 +788,36 @@
     },
     {
       "date": "2026-11-20",
+      "time": "17:30",
+      "title": "Met Isaiah Collier en Mauríce Vincent / Rush Hour Store",
+      "type": "Concert",
+      "location": "Bitterzoet, Amsterdam",
+      "locationLink": "",
+      "website": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "source": "paradiso.nl",
+      "discoverySource": "Website",
+      "description": "Super-Sonic Jazz Festival · Friday Met anaiis, Theo Croker, Nubiyan Twist, ZENA, dreamcastmoe en SML",
+      "cost": "",
+      "image": "",
+      "isNew": true
+    },
+    {
+      "date": "2026-11-20",
+      "time": "19:30",
+      "title": "Met anaiis, Theo Croker, Nubiyan Twist, ZENA, dreamcastmoe en SML",
+      "type": "Dans",
+      "location": "Bitterzoet, Amsterdam",
+      "locationLink": "",
+      "website": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "source": "paradiso.nl",
+      "discoverySource": "Website",
+      "description": "Rotterdamse rapper verenigt rauwe bars en catchy samples / Tolhuistuin",
+      "cost": "",
+      "image": "",
+      "isNew": true
+    },
+    {
+      "date": "2026-11-20",
       "time": "20:45",
       "title": "Morro Grande",
       "type": "Film",
@@ -663,6 +829,66 @@
       "description": "Filmseries & specials Hulp- en spreekuren Bibliotheekvestigingen Haal meer uit je abonnement Studie- en werkplekken European Cartoon Award Zilveren Camera 2025 - Foto-expositie Wes Anderson: The Archives Wifi, internet en printen Verhuur & zakelijk Vacatures & vrijwilligers",
       "cost": "",
       "image": "https://static.forum.nl/cache/morro-grande.28765/morro-grande-s1920x1080.jpg",
+      "isNew": true
+    },
+    {
+      "date": "2026-11-20",
+      "time": "",
+      "title": "Op locatie",
+      "type": "Concert",
+      "location": "Bitterzoet, Amsterdam",
+      "locationLink": "",
+      "website": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "source": "paradiso.nl",
+      "discoverySource": "Website",
+      "description": "Super-Sonic Jazz Festival · Instore Rush Hour Met Isaiah Collier en Mauríce Vincent / Rush Hour Store",
+      "cost": "",
+      "image": "",
+      "isNew": true
+    },
+    {
+      "date": "2026-11-20",
+      "time": "",
+      "title": "Op maand",
+      "type": "Concert",
+      "location": "Bitterzoet, Amsterdam",
+      "locationLink": "",
+      "website": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "source": "paradiso.nl",
+      "discoverySource": "Website",
+      "description": "Super-Sonic Jazz Festival · Instore Rush Hour",
+      "cost": "",
+      "image": "",
+      "isNew": true
+    },
+    {
+      "date": "2026-11-20",
+      "time": "17:30",
+      "title": "Op type",
+      "type": "Concert",
+      "location": "Bitterzoet, Amsterdam",
+      "locationLink": "",
+      "website": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "source": "paradiso.nl",
+      "discoverySource": "Website",
+      "description": "Super-Sonic Jazz Festival · Instore Rush Hour Met Isaiah Collier en Mauríce Vincent / Rush Hour Store",
+      "cost": "",
+      "image": "",
+      "isNew": true
+    },
+    {
+      "date": "2026-11-20",
+      "time": "17:30",
+      "title": "Paradiso Programme Programma Vandaag Super-Sonic",
+      "type": "Concert",
+      "location": "Bitterzoet, Amsterdam",
+      "locationLink": "",
+      "website": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "source": "paradiso.nl",
+      "discoverySource": "Website",
+      "description": "Jazz Festival · Instore Rush Hour In Rush Hour Store Aanvang 17:30 Super-Sonic Jazz Festival · Friday In Paradiso Aanvang 19:00 Rijck In Tolhuistuin Aanvang 19:30 Samba Roots featuring Lucas Santana. · Super-Sonic Jazz Festival · Afterparty In Paradiso Aanvang 23:00 Op datum Op maand Op locatie Op type",
+      "cost": "",
+      "image": "",
       "isNew": true
     },
     {
@@ -727,6 +953,36 @@
     },
     {
       "date": "2026-11-20",
+      "time": "19:30",
+      "title": "Rijck",
+      "type": "Concert",
+      "location": "Bitterzoet, Amsterdam",
+      "locationLink": "",
+      "website": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "source": "paradiso.nl",
+      "discoverySource": "Website",
+      "description": "Rotterdamse rapper verenigt rauwe bars en catchy samples / Tolhuistuin Samba Roots featuring Lucas Santana. · Super-Sonic Jazz Festival · Afterparty Braziliaanse live clubnacht vol bruisende samba",
+      "cost": "",
+      "image": "",
+      "isNew": true
+    },
+    {
+      "date": "2026-11-20",
+      "time": "19:30",
+      "title": "Rotterdamse rapper verenigt rauwe bars en catchy samples / Tolhuistuin",
+      "type": "Concert",
+      "location": "Bitterzoet, Amsterdam",
+      "locationLink": "",
+      "website": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "source": "paradiso.nl",
+      "discoverySource": "Website",
+      "description": "Samba Roots featuring Lucas Santana. · Super-Sonic Jazz Festival · Afterparty Braziliaanse live clubnacht vol bruisende samba",
+      "cost": "",
+      "image": "",
+      "isNew": true
+    },
+    {
+      "date": "2026-11-20",
       "time": "20:30",
       "title": "SPOT/De Oosterpoort, Binnenzaal / Trompsingel 27 20:30",
       "type": "Concert",
@@ -751,6 +1007,51 @@
       "source": "spotgroningen.nl",
       "discoverySource": "Website",
       "description": "start of event Reserved seating (Times are subject to change) Britse popband met tijdloze hits British pop band with timeless hits 10cc scoorde in de jaren zeventig grote hits met nummers als I’m Not in Love , Dreadlock Holiday en The Things We Do for Love . De Britse band staat bekend om zijn eigenzinnige popsongs, ve",
+      "cost": "",
+      "image": "",
+      "isNew": true
+    },
+    {
+      "date": "2026-11-20",
+      "time": "23:00",
+      "title": "Samba Roots featuring Lucas Santana. · Super-Sonic Jazz Festival · Afterparty",
+      "type": "Concert",
+      "location": "Bitterzoet, Amsterdam",
+      "locationLink": "",
+      "website": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "source": "paradiso.nl",
+      "discoverySource": "Website",
+      "description": "Braziliaanse live clubnacht vol bruisende samba Super-Sonic Jazz Festival · Saturday",
+      "cost": "",
+      "image": "",
+      "isNew": true
+    },
+    {
+      "date": "2026-11-20",
+      "time": "",
+      "title": "Super-Sonic Jazz Festival · Friday",
+      "type": "Concert",
+      "location": "Bitterzoet, Amsterdam",
+      "locationLink": "",
+      "website": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "source": "paradiso.nl",
+      "discoverySource": "Website",
+      "description": "Met anaiis, Theo Croker, Nubiyan Twist, ZENA, dreamcastmoe en SML Rotterdamse rapper verenigt rauwe bars en catchy samples / Tolhuistuin",
+      "cost": "",
+      "image": "",
+      "isNew": true
+    },
+    {
+      "date": "2026-11-20",
+      "time": "17:30",
+      "title": "Super-Sonic Jazz Festival · Instore Rush Hour",
+      "type": "Concert",
+      "location": "Bitterzoet, Amsterdam",
+      "locationLink": "",
+      "website": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "source": "paradiso.nl",
+      "discoverySource": "Website",
+      "description": "Met Isaiah Collier en Mauríce Vincent / Rush Hour Store Super-Sonic Jazz Festival · Friday Met anaiis, Theo Croker, Nubiyan Twist, ZENA, dreamcastmoe en SML",
       "cost": "",
       "image": "",
       "isNew": true
@@ -1485,1683 +1786,16 @@
       "newCount": 0,
       "durationSeconds": 1.54,
       "timedOut": false
+    },
+    {
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "count": 20,
+      "newCount": 20,
+      "durationSeconds": 3.19,
+      "timedOut": false
     }
   ],
   "rawLog": [
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-28",
-      "url": "https://www.noorderzon.nl/programma/hystory",
-      "status": "event uit link",
-      "rawText": "Hystory Programma soort Internationaal theater & dans Patricia Apergi Datum range 28 - 29 aug Een hypnotiserende dans over vrouwen, geschiedenis en alles wat nooit stil mocht staan. Lees verder Meer informatie over Hystory"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-25",
-      "url": "https://www.noorderzon.nl/programma/she-stands-in-the-middle-of-the-battlefield",
-      "status": "event uit link",
-      "rawText": "She stands in the middle of the battlefield Programma soort Internationaal theater & dans Magda Szpecht Datum range 25 - 27 aug Wat betekent het om niet alleen voor je waarden te staan, maar ze ook daadwerkelijk te moeten verdedigen? Lees verder Meer informatie over She stands in the middle of the battlefield"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-20",
-      "url": "https://www.noorderzon.nl/programma/transit",
-      "status": "event uit link",
-      "rawText": "Trànsit Programma soort Internationaal theater & dans Cabosanroque & studio animal Datum range 20 - 30 aug Indrukwekkende installatie met stoplichten op het water. Lees verder Meer informatie over Trànsit"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-25",
-      "url": "https://www.noorderzon.nl/programma/extra-motivated-people",
-      "status": "event uit link",
-      "rawText": "Extra Motivated People Programma soort Internationaal theater & dans Losinformalls Datum range 25 - 26 aug Ze brengen de zon mee. De rest verzinnen ze onderweg. Lees verder Meer informatie over Extra Motivated People"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-23",
-      "url": "https://www.noorderzon.nl/programma/every-second-of-downtime",
-      "status": "event uit link",
-      "rawText": "Every Second of Downtime Programma soort Internationaal theater & dans Ant Hampton / Time Based Editions Datum range 23 - 26 aug Documentaire en droom door elkaar: wat gebeurt er als je de logica van opslaan, bewaren en bezitten tot op de bodem onderzoekt? Lees verder Meer informatie over Every Second of Downtime"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-21",
-      "url": "https://www.noorderzon.nl/programma/centroamerica",
-      "status": "event uit link",
-      "rawText": "Centroamérica Programma soort Internationaal theater & dans Lagartijas Tiradas al Sol Datum range 21 - 23 aug Een grensoversteek, een verzonnen identiteit en een persoonlijke opdracht die werkelijkheid en fictie gevaarlijk dicht bij elkaar brengt. Lees verder Meer informatie over Centroamérica"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-23",
-      "url": "https://www.noorderzon.nl/programma/tell-daddy",
-      "status": "event uit link",
-      "rawText": "Tell Daddy Programma soort Internationaal theater & dans Bush Hartshorn Datum range 23 - 27 aug Voor alles wat tussen jou en je vader is blijven liggen. Lees verder Meer informatie over Tell Daddy"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-20",
-      "url": "https://www.noorderzon.nl/programma/the-rest-of-our-lives",
-      "status": "event uit link",
-      "rawText": "The Rest of Our Lives Programma soort Internationaal theater & dans Jo Fong & George Orange Datum range 20 - 22 aug Het lichaam vertraagt, de tijd tikt voort: twee artiesten die het naderende einde omzetten in iets om naar uit te kijken. Lees verder Meer informatie over The Rest of Our Lives"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-23",
-      "url": "https://www.noorderzon.nl/programma/blackface",
-      "status": "event uit link",
-      "rawText": "Blackface Programma soort Internationaal theater & dans Marco Mendonça Datum range 23 - 25 aug Een scherpe, grappige en confronterende late night show over blackface, geschiedenis en de blinde vlekken van nu. Lees verder Meer informatie over Blackface"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-27",
-      "url": "https://www.noorderzon.nl/programma/black",
-      "status": "event uit link",
-      "rawText": "BLACK Programma soort Internationaal theater & dans Oulouy Datum range 27 - 29 aug Een fysieke ode aan zwarte veerkracht Lees verder Meer informatie over BLACK"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-21",
-      "url": "https://www.noorderzon.nl/programma/the-museum-of-small-and-overlooked-things",
-      "status": "event uit link",
-      "rawText": "The Museum of Small and Overlooked Things Programma soort Kinderprogramma Andy Field & Beckie Darlington Datum range 21 - 30 aug Een alternatief archief van het dagelijks leven, samengesteld door de jongste inwoners van de stad. Doe je mee? Lees verder Meer informatie over The Museum of Small and Overlooked Things"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-25",
-      "url": "https://www.noorderzon.nl/programma/eol-end-of-life",
-      "status": "event uit link",
-      "rawText": "[EOL]. End of Life Programma soort Internationaal theater & dans DARUM Datum range 25 - 28 aug Lees verder Meer informatie over [EOL]. End of Life"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-20",
-      "url": "https://www.noorderzon.nl/programma/tot-lijf-gemaakt",
-      "status": "event uit link",
-      "rawText": "Tot lijf gemaakt Programma soort &Society Tatjana Almuli Datum range 20 aug Tatjana Almuli in gesprek met Lara Harbers: oproep tot radicale ongehoorzaamheid Lees verder Meer informatie over Tot lijf gemaakt"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-26",
-      "url": "https://www.noorderzon.nl/programma/geannuleerd-fopfeminisme",
-      "status": "event uit link",
-      "rawText": "GEANNULEERD: Fopfeminisme Programma soort &Society Lisa Loeb Datum range 26 aug In 2025 zakte Nederland naar plek 43 op de wereldranglijst voor gendergelijkheid, zelfs onder Amerika. Toch was dit geen voorpaginanieuws. Hoe kan dat? Lees verder Meer informatie over GEANNULEERD: Fopfeminisme"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-26",
-      "url": "https://www.noorderzon.nl/programma/mannen",
-      "status": "event uit link",
-      "rawText": "Mannen Programma soort &Society Elmer Datum range 26 aug Lees verder Meer informatie over Mannen"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-29",
-      "url": "https://www.noorderzon.nl/programma/dieren-zijn-ook-mensen",
-      "status": "event uit link",
-      "rawText": "Dieren zijn ook mensen Programma soort &Society Teun van de Keuken Datum range 29 aug Waarom we nog steeds zoveel vlees eten en dat niet zouden moeten doen. Lees verder Meer informatie over Dieren zijn ook mensen"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-28",
-      "url": "https://www.noorderzon.nl/programma/van-de-afhaalchinees-tot-sexotisch-tot-de-witte-man",
-      "status": "event uit link",
-      "rawText": "Van De Afhaalchinees tot Sexotisch tot De Witte Man Programma soort &Society Uitverkocht Qian van Binsbergen i.s.m. Omroep ZWART Datum range 28 aug Tijdens Noorderzon vertelt Qian over haar werk en haar nieuwste programma, waarvan de inhoud later bekend wordt gemaakt. Lees verder Meer informatie over Van De Afhaalchinees tot Sexotisch tot De Witte Man"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-24",
-      "url": "https://www.noorderzon.nl/programma/de-symfonie-van-onvrede---de-opmars-van-radicaal-rechts-in-europa",
-      "status": "event uit link",
-      "rawText": "De symfonie van onvrede - De opmars van radicaal-rechts in Europa Programma soort &Society Catherine de Vries Datum range 24 aug Wat gebeurt er met een gemeenschap wanneer scholen sluiten en de overheid steeds verder uit beeld raakt? Lees verder Meer informatie over De symfonie van onvrede - De opmars van radicaal-rechts in Europa"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-27",
-      "url": "https://www.noorderzon.nl/programma/een-pleidooi-tegen-verbinding",
-      "status": "event uit link",
-      "rawText": "Een pleidooi tegen verbinding Programma soort &Society Savriël Dillingh & Marthe van Bronkhorst Datum range 27 aug Moeten we polariseren om de democratie te verdedigen? Lees verder Meer informatie over Een pleidooi tegen verbinding"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-21",
-      "url": "https://www.noorderzon.nl/programma/de-linkse-mannen-lossen-het-op-extreemrechts",
-      "status": "event uit link",
-      "rawText": "De Linkse Mannen Lossen Het Op: Extreemrechts Programma soort &Society met Left Laser Bob Sneevliet en Pownews Sarah Bakker Datum range 21 aug Extreemrechts rukt meer en meer op. Hoe zijn we hier gekomen en nog veel belangrijker - hoe komen we hier weer uit? Lees verder Meer informatie over De Linkse Mannen Lossen Het Op: Extreemrechts"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-22",
-      "url": "https://www.noorderzon.nl/programma/de-linkse-mannen-lossen-het-op-navo",
-      "status": "event uit link",
-      "rawText": "De Linkse Mannen Lossen Het Op: NAVO Programma soort &Society met Sander van der Kraan e.a. Datum range 22 aug De oorlog in Oekraïne duurt inmiddels langer dan de Eerste Wereldoorlog. Hoe temmen we Poetin? En hoe steunen we Oekraïne en de Oekraïners? Lees verder Meer informatie over De Linkse Mannen Lossen Het Op: NAVO"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-24",
-      "url": "https://www.noorderzon.nl/programma/de-linkse-mannen-lossen-het-op-de-verzorgingsstaat",
-      "status": "event uit link",
-      "rawText": "De Linkse Mannen Lossen Het Op: De Verzorgingsstaat Programma soort &Society met Hendrik Noten, Jimmy Dijk e.a. Datum range 24 aug Hoe beschermen we De Verzorgingsstaat tegen de economische en individualistische ideologieën van deze tijd? Lees verder Meer informatie over De Linkse Mannen Lossen Het Op: De Verzorgingsstaat"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-25",
-      "url": "https://www.noorderzon.nl/programma/de-linkse-mannen-lossen-het-op-big-tech",
-      "status": "event uit link",
-      "rawText": "De Linkse Mannen Lossen Het Op: Big Tech Programma soort &Society Uitverkocht met Barbara Kathmann, Eric Smit e.a. Datum range 25 aug Hoe komen we los van WhatsApp, Instagram en ChatGPT? Lees verder Meer informatie over De Linkse Mannen Lossen Het Op: Big Tech"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-26",
-      "url": "https://www.noorderzon.nl/programma/de-linkse-mannen-lossen-het-op-mannen",
-      "status": "event uit link",
-      "rawText": "De Linkse Mannen Lossen Het Op: Mannen Programma soort &Society met Elmer Datum range 26 aug Nederlanders zien zichzelf als tolerant, geëmancipeerd en vooruitstrevend. Toch staan we onder Amerika op de wereldranglijst voor gendergelijkheid – hoe dan? Lees verder Meer informatie over De Linkse Mannen Lossen Het Op: Mannen"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-27",
-      "url": "https://www.noorderzon.nl/programma/de-linkse-mannen-lossen-het-op-gaza",
-      "status": "event uit link",
-      "rawText": "De Linkse Mannen Lossen Het Op: Gaza Programma soort &Society met Anna Krijger, Samir Hamed e.a. Datum range 27 aug De genocide in Gaza is niet op te lossen in een uurtje op Noorderzon, maar misschien kunnen de Linkse Mannen toch wat handelingsperspectief bieden. Lees verder Meer informatie over De Linkse Mannen Lossen Het Op: Gaza"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-28",
-      "url": "https://www.noorderzon.nl/programma/de-linkse-mannen-lossen-het-op-nieuwssatire",
-      "status": "event uit link",
-      "rawText": "De Linkse Mannen Lossen Het Op: Nieuwssatire Programma soort &Society Uitverkocht met Arjen Lubach Datum range 28 aug Er valt niets meer te lachen. Zou je zeggen. Lees verder Meer informatie over De Linkse Mannen Lossen Het Op: Nieuwssatire"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-29",
-      "url": "https://www.noorderzon.nl/programma/de-linkse-mannen-lossen-het-op-vvd",
-      "status": "event uit link",
-      "rawText": "De Linkse Mannen Lossen Het Op: VVD Programma soort &Society Uitverkocht met Teun van de Keuken Datum range 29 aug Hoe komen we van de VVD af? Lees verder Meer informatie over De Linkse Mannen Lossen Het Op: VVD"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-23",
-      "url": "https://www.noorderzon.nl/programma/mensen-zeggen-dingen",
-      "status": "event uit link",
-      "rawText": "Mensen Zeggen Dingen Programma soort &Society …zijn hier voor de olie Datum range 23 aug Mensen Zeggen Dingen is het reizend platform voor spoken word, poëzie, proza en muziek dat ruimte geeft aan woorden die raken en gemeenschappen versterken. Lees verder Meer informatie over Mensen Zeggen Dingen"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-29",
-      "url": "https://www.noorderzon.nl/programma/zombies-in-de-natuur",
-      "status": "event uit link",
-      "rawText": "Zombies in de natuur Programma soort &Society Charissa de Bekker i.s.m. Studium Generale Groningen Datum range 29 aug Charissa de Bekker onderzoekt hoe parasieten hun gastheer in een ‘zombie’ veranderen en wat dat ons leert over gedrag, gezondheid en landbouw. Lees verder Meer informatie over Zombies in de natuur"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-27",
-      "url": "https://www.noorderzon.nl/programma/in-de-ban-van-de-jaarring",
-      "status": "event uit link",
-      "rawText": "In de ban van de jaarring Programma soort &Society Uitverkocht Valerie Trouet i.s.m. Studium Generale Groningen Datum range 27 aug Valerie Trouet laat zien hoe bomen via hun jaarringen het verhaal vertellen van ons klimaat, onze bossen en onze geschiedenis. Lees verder Meer informatie over In de ban van de jaarring"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-29",
-      "url": "https://www.noorderzon.nl/programma/noorderbreedte-live",
-      "status": "event uit link",
-      "rawText": "Noorderbreedte Live Programma soort &Society De verborgen wereld van ons afval Datum range 29 aug Moeten we ons afval omarmen? Lees verder Meer informatie over Noorderbreedte Live"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-22",
-      "url": "https://www.noorderzon.nl/programma/bodemwezen---de-wereld-waar-we-overheen-lopen",
-      "status": "event uit link",
-      "rawText": "Bodemwezen - de wereld waar we overheen lopen Programma soort &Society ScienceLinx Datum range 22 aug Ontdek de verborgen wereld onder het Noorderplantsoen en leer luisteren naar de bodem. Lees verder Meer informatie over Bodemwezen - de wereld waar we overheen lopen"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-25",
-      "url": "https://www.noorderzon.nl/programma/waarom-we-allemaal-naar-true-crime-luisteren",
-      "status": "event uit link",
-      "rawText": "Waarom we allemaal naar true crime luisteren Programma soort &Society Dagblad van het Noorden x Noorderzon Datum range 25 aug Waarom kunnen we niet stoppen met luisteren naar true crime-verhalen? Lees verder Meer informatie over Waarom we allemaal naar true crime luisteren"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-30",
-      "url": "https://www.noorderzon.nl/programma/afhakers-nieuwsmijders",
-      "status": "event uit link",
-      "rawText": "Afhakers & nieuwsmijders Programma soort &Society Dagblad van het Noorden x Noorderzon Datum range 30 aug Steeds meer mensen vermijden bewust het nieuws. Wat betekent dat voor onze democratie? Lees verder Meer informatie over Afhakers & nieuwsmijders"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-30",
-      "url": "https://www.noorderzon.nl/programma/lets-get-lyrical-power-to-the-people",
-      "status": "event uit link",
-      "rawText": "Let's Get Lyrical: Power To The People Programma soort &Society Cissy Joan Datum range 30 aug Hoe klinkt democratie wanneer poëzie en maatschappelijke betrokkenheid samenkomen op één podium? Lees verder Meer informatie over Let's Get Lyrical: Power To The People"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-25",
-      "url": "https://www.noorderzon.nl/programma/mentale-gezondheid-met-louis-vanhaverbeke-wilbert-van-de-kamp",
-      "status": "event uit link",
-      "rawText": "Mentale gezondheid met Louis Vanhaverbeke & Wilbert van de Kamp Programma soort &Society Shifting grounds i.s.m. Arts in Society/RUG Datum range 25 aug Lees verder Meer informatie over Mentale gezondheid met Louis Vanhaverbeke & Wilbert van de Kamp"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-26",
-      "url": "https://www.noorderzon.nl/programma/women-beyond-the-norm-with-susie-wang-magda-szpecht-friederike-schubert",
-      "status": "event uit link",
-      "rawText": "Women beyond the norm with Susie Wang, Magda Szpecht & Friederike Schubert Programma soort &Society Shifting grounds i.s.m. Arts in Society/RUG Datum range 26 aug Wat gebeurt er als vrouwen hun verhaal terugpakken? Lees verder Meer informatie over Women beyond the norm with Susie Wang, Magda Szpecht & Friederike Schubert"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-24",
-      "url": "https://www.noorderzon.nl/programma/hidden-systems-with-ant-hampton-marco-mendonca-thijs-lijster",
-      "status": "event uit link",
-      "rawText": "Hidden systems with Ant Hampton, Marco Mendonça & Thijs Lijster Programma soort &Society Shifting grounds i.s.m. Arts in Society/RUG Datum range 24 aug Lees verder Meer informatie over Hidden systems with Ant Hampton, Marco Mendonça & Thijs Lijster"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-21",
-      "url": "https://www.noorderzon.nl/programma/who-gets-heard-with-dead-centre-andy-field-alice-lagaay",
-      "status": "event uit link",
-      "rawText": "Who gets heard? with Dead Centre, Andy Field & Alice Lagaay Programma soort &Society Shifting grounds i.s.m. Arts in Society/RUG Datum range 21 aug Lees verder Meer informatie over Who gets heard? with Dead Centre, Andy Field & Alice Lagaay"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-23",
-      "url": "https://www.noorderzon.nl/programma/als-je-denkt-dat-je-alles-gehad-hebt-begint-de-filosofie",
-      "status": "event uit link",
-      "rawText": "Als je denkt (dat je alles gehad hebt) begint de filosofie Programma soort &Literaturia Filosofie is makkelijker als je denkt i.s.m. Filosofie Magazine Datum range 23 aug Coen Simon spreekt met Frank Meester over zijn nieuwste boek. Lees verder Meer informatie over Als je denkt (dat je alles gehad hebt) begint de filosofie"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-23",
-      "url": "https://www.noorderzon.nl/programma/de-filosofische-estafette",
-      "status": "event uit link",
-      "rawText": "De Filosofische Estafette Programma soort &Literaturia Filosofie is makkelijker als je denkt i.s.m. Filosofie Magazine Datum range 23 aug Filosofen in gesprek met acht gasten over de grote vragen van nu. Lees verder Meer informatie over De Filosofische Estafette"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-23",
-      "url": "https://www.noorderzon.nl/programma/dichter-bij-de-waarheid-met-ellen-deckwitz",
-      "status": "event uit link",
-      "rawText": "Dichter bij de waarheid met Ellen Deckwitz Programma soort &Literaturia Filosofie is makkelijker als je denkt i.s.m. Filosofie Magazine Datum range 23 aug Dichter Ellen Deckwitz duikt met het publiek in poëzie. Lees verder Meer informatie over Dichter bij de waarheid met Ellen Deckwitz"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-22",
-      "url": "https://www.noorderzon.nl/programma/philip-droege",
-      "status": "event uit link",
-      "rawText": "Philip Dröge Programma soort &Literaturia Uitverkocht Tijdreiziger Datum range 22 aug Een historische kijk op tijd en beleving. Lees verder Meer informatie over Philip Dröge"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-22",
-      "url": "https://www.noorderzon.nl/programma/manik-sarkar",
-      "status": "event uit link",
-      "rawText": "Manik Sarkar Programma soort &Literaturia Ossenkop Datum range 22 aug Een eigenzinnige zoektocht naar de Groningse aard. Lees verder Meer informatie over Manik Sarkar"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-25",
-      "url": "https://www.noorderzon.nl/programma/tobi-dahmen",
-      "status": "event uit link",
-      "rawText": "Tobi Dahmen Programma soort &Literaturia Columbusstraat Datum range 25 aug Stripmaker Tobi Dahmen neemt je mee in een aangrijpend familieverleden uit oorlogstijd. Lees verder Meer informatie over Tobi Dahmen"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-25",
-      "url": "https://www.noorderzon.nl/programma/claartje-wesselink",
-      "status": "event uit link",
-      "rawText": "Claartje Wesselink Programma soort &Literaturia Uitverkocht De strijd van Paul Sanders Datum range 25 aug Het bijzondere levensverhaal van journalist en musicus Paul Sanders. Lees verder Meer informatie over Claartje Wesselink"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-26",
-      "url": "https://www.noorderzon.nl/programma/kortom-een-middag-rondom-het-korte-verhaal-met-sarah-arnolds",
-      "status": "event uit link",
-      "rawText": "Kortom, een middag rondom het korte verhaal, met Sarah Arnolds Programma soort &Literaturia Gepresenteerd door Jaimy Hindriks Datum range 26 aug Maak kennis met de kracht van het korte verhaal. Lees verder Meer informatie over Kortom, een middag rondom het korte verhaal, met Sarah Arnolds"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-26",
-      "url": "https://www.noorderzon.nl/programma/natte-neuzen",
-      "status": "event uit link",
-      "rawText": "Natte Neuzen Programma soort &Literaturia Uitverkocht Met o.a. Marjoleine de Vos, Femke de Heer, Lilian van Ooijen, Kees Faber en Dean Bowen Datum range 26 aug Het bruisende podium voor poëzie en nieuw talent. Lees verder Meer informatie over Natte Neuzen"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-26",
-      "url": "https://www.noorderzon.nl/programma/alexander-moto",
-      "status": "event uit link",
-      "rawText": "Alexander Moto Programma soort &Literaturia Alexander Moto Datum range 26 aug Hit the North Talent komt met eerlijke, verhalende liveshow. Lees verder Meer informatie over Alexander Moto"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-27",
-      "url": "https://www.noorderzon.nl/programma/ype-driessen",
-      "status": "event uit link",
-      "rawText": "Ype Driessen Programma soort &Literaturia Vanilla Datum range 27 aug Kijkje achter de schermen bij het schrijven van een taboedoorbrekende debuutroman. Lees verder Meer informatie over Ype Driessen"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-27",
-      "url": "https://www.noorderzon.nl/programma/michiel-en-cas-van-de-pol",
-      "status": "event uit link",
-      "rawText": "Michiel en Cas van de Pol Programma soort &Literaturia Mantel der liefde Datum range 27 aug Cas en Michiel vertellen ieder over hun werk (aan de hand van veel plaatjes) en hoe het is om beide tekenaar te zijn (en vader en zoon) Lees verder Meer informatie over Michiel en Cas van de Pol"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-27",
-      "url": "https://www.noorderzon.nl/programma/mohammed-benzakour",
-      "status": "event uit link",
-      "rawText": "Mohammed Benzakour Programma soort &Literaturia Het lied van Agilouz Datum range 27 aug Mohammed Benzakour bevraagt onze omgang met natuur en elkaar. Lees verder Meer informatie over Mohammed Benzakour"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-25",
-      "url": "https://www.noorderzon.nl/programma/jaap-toorenaar",
-      "status": "event uit link",
-      "rawText": "Jaap Toorenaar Programma soort &Literaturia Asterix, de vrolijke wetenschap Datum range 25 aug Lees verder Meer informatie over Jaap Toorenaar"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-28",
-      "url": "https://www.noorderzon.nl/programma/babah-tarawally",
-      "status": "event uit link",
-      "rawText": "Babah Tarawally Programma soort &Literaturia Ik ben geen mango, ik ben een mens Datum range 28 aug Over de ziel van ubuntu Lees verder Meer informatie over Babah Tarawally"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-28",
-      "url": "https://www.noorderzon.nl/programma/anne-von-gleich",
-      "status": "event uit link",
-      "rawText": "Anne von Gleich Programma soort &Literaturia De gelukscode Datum range 28 aug Over technologie, algoritmes en geluk in 2050 Lees verder Meer informatie over Anne von Gleich"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-20",
-      "url": "https://www.noorderzon.nl/programma/make-air-not-war-hoe-luchtgitaar-de-wereld-kan-redden---talk-nl-en",
-      "status": "event uit link",
-      "rawText": "Make Air, Not War: hoe luchtgitaar de wereld kan redden - talk NL + EN Programma soort &Society Sabina Theijs: Airness Datum range 20 - 21 aug Hoe luchtgitaar de wereld kan redden Lees verder Meer informatie over Make Air, Not War: hoe luchtgitaar de wereld kan redden - talk NL + EN"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-20",
-      "url": "https://www.noorderzon.nl/programma/make-air-not-war-hoe-luchtgitaar-de-wereld-kan-redden---walk",
-      "status": "event uit link",
-      "rawText": "Make Air, Not War: hoe luchtgitaar de wereld kan redden - walk Programma soort &Society Sabina Theijs: Airness Datum range 20 - 21 aug Fotograaf Sabina Theijs neemt je mee langs onverwachte verschijningen in de stad. Lees verder Meer informatie over Make Air, Not War: hoe luchtgitaar de wereld kan redden - walk"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-20",
-      "url": "https://www.noorderzon.nl/programma/make-air-not-war-expositie",
-      "status": "event uit link",
-      "rawText": "Make Air, Not War: Expositie Programma soort &Society Sabina Theijs- Airness Datum range 20 - 30 aug Fotograaf Sabina Theijs dook drie jaar lang in de wereld van competitive air guitar Lees verder Meer informatie over Make Air, Not War: Expositie"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-20",
-      "url": "https://www.noorderzon.nl/programma/stadsnomaden",
-      "status": "event uit link",
-      "rawText": "Stadsnomaden Programma soort &Society Ruimtereis Datum range 20 aug Tom Tieman onderzoekt het grijze gebied tussen wonen en dakloosheid. Lees verder Meer informatie over Stadsnomaden"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-20",
-      "url": "https://www.noorderzon.nl/programma/what-knots-knot-knots",
-      "status": "event uit link",
-      "rawText": "What Knots Knot Knots Programma soort &Society Noorderlicht Datum range 20 aug Gesprek over koloniale erfenissen en de verhalen die doorwerken in het heden, naar aanleiding van het kunstproject What Knots Knot Knots van Noorderlicht. Lees verder Meer informatie over What Knots Knot Knots"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-22",
-      "url": "https://www.noorderzon.nl/programma/workshop-dovencultuur-nederlandse-gebarentaal",
-      "status": "event uit link",
-      "rawText": "Workshop Dovencultuur & Nederlandse gebarentaal Programma soort &Society Uitverkocht Bea Bouwmeester Datum range 22 aug Ontdek de taal, cultuur en verhalen van de dove gemeenschap Lees verder Meer informatie over Workshop Dovencultuur & Nederlandse gebarentaal"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-21",
-      "url": "https://www.noorderzon.nl/programma/ongekend-talent",
-      "status": "event uit link",
-      "rawText": "Ongekend Talent Programma soort &Society Uitverkocht Spot TV TalentRoom Datum range 21 aug Vijf makers. Vijf verhalen. Vijf verrassingen. Lees verder Meer informatie over Ongekend Talent"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-23",
-      "url": "https://www.noorderzon.nl/programma/mensen-van-hier-en-daar---expo-gesprek",
-      "status": "event uit link",
-      "rawText": "Mensen van hier (en daar) - expo + gesprek Programma soort &Society Uitverkocht Daniël de Boer Datum range 23 aug Wat betekent het om op te groeien met meerdere culturele achtergronden in een dorp in Noord-Nederland? Lees verder Meer informatie over Mensen van hier (en daar) - expo + gesprek"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-23",
-      "url": "https://www.noorderzon.nl/programma/zorse-short-film---een-gesprek-over-afkomst-herinnering-en-verbeelding",
-      "status": "event uit link",
-      "rawText": "ZORSE (short film) - een gesprek over afkomst, herinnering en verbeelding Programma soort &Society Uitverkocht Daniël de Boer Datum range 23 aug Wat gebeurt er als een paard en een zebra samen iets nieuws worden? Lees verder Meer informatie over ZORSE (short film) - een gesprek over afkomst, herinnering en verbeelding"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-21",
-      "url": "https://www.noorderzon.nl/programma/soilent-disco---wat-gebeurt-er-onder-het-noorderplantsoen",
-      "status": "event uit link",
-      "rawText": "SOILent Disco - wat gebeurt er onder het Noorderplantsoen? Programma soort &Society Uitverkocht ScienceLinx Datum range 21 - 22 aug Waar hebben wormen het over met elkaar? Lees verder Meer informatie over SOILent Disco - wat gebeurt er onder het Noorderplantsoen?"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-24",
-      "url": "https://www.noorderzon.nl/programma/stadsuitleg-over-groninger-woongeluk",
-      "status": "event uit link",
-      "rawText": "Stadsuitleg: Over Groninger woongeluk Programma soort &Society Platform GRAS & Gemeente Groningen Datum range 24 aug Een deep dive in woonkwaliteit Lees verder Meer informatie over Stadsuitleg: Over Groninger woongeluk"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-25",
-      "url": "https://www.noorderzon.nl/programma/stadsuitleg-soepel-bewegen-door-een-groeiende-stad",
-      "status": "event uit link",
-      "rawText": "Stadsuitleg: Soepel bewegen door een groeiende stad Programma soort &Society Platform GRAS & Gemeente Groningen Datum range 25 aug De stad Groningen groeit. Hoe gaan we daarmee om? Lees verder Meer informatie over Stadsuitleg: Soepel bewegen door een groeiende stad"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-27",
-      "url": "https://www.noorderzon.nl/programma/stadsuitleg-veilig-in-je-eigen-stad",
-      "status": "event uit link",
-      "rawText": "Stadsuitleg: Veilig in je eigen stad Programma soort &Society Platform GRAS & Gemeente Groningen Datum range 27 aug Hoe veilig is onze stad nou écht? Lees verder Meer informatie over Stadsuitleg: Veilig in je eigen stad"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-24",
-      "url": "https://www.noorderzon.nl/programma/stadsuitleg-wandelingen",
-      "status": "event uit link",
-      "rawText": "Stadsuitleg wandelingen Programma soort &Society Platform GRAS Datum range 24 - 27 aug Geen klassieke rondleiding, maar een wandeling waarin je leert kijken, vragen stelt en de stad met nieuwe ogen ervaart. Lees verder Meer informatie over Stadsuitleg wandelingen"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-30",
-      "url": "https://www.noorderzon.nl/programma/relate-against-hate-men-against-misogyny",
-      "status": "event uit link",
-      "rawText": "Relate Against Hate: Men Against Misogyny Programma soort &Society Relate Radio Datum range 30 aug Over mannelijkheid, feminisme en verantwoordelijkheid Lees verder Meer informatie over Relate Against Hate: Men Against Misogyny"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-30",
-      "url": "https://www.noorderzon.nl/programma/relate-against-hate-bipoc-in-nightlife",
-      "status": "event uit link",
-      "rawText": "Relate Against Hate: BIPOC in nightlife Programma soort &Society Relate Radio Datum range 30 aug Over representatie, identiteit en ruimte maken Lees verder Meer informatie over Relate Against Hate: BIPOC in nightlife"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-30",
-      "url": "https://www.noorderzon.nl/programma/relate-against-hate-flinta-in-nightlife",
-      "status": "event uit link",
-      "rawText": "Relate Against Hate: FLINTA in nightlife Programma soort &Society Relate Radio Datum range 30 aug Een gesprek over ruimte innemen in de nacht Lees verder Meer informatie over Relate Against Hate: FLINTA in nightlife"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-30",
-      "url": "https://www.noorderzon.nl/programma/relate-against-hate-internationals-welcome",
-      "status": "event uit link",
-      "rawText": "Relate Against Hate: Internationals welcome Programma soort &Society Relate Radio Datum range 30 aug Over thuiskomen in Groningen Lees verder Meer informatie over Relate Against Hate: Internationals welcome"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-23",
-      "url": "https://www.noorderzon.nl/programma/wie-schrijft-geschiedenis-in-groningen",
-      "status": "event uit link",
-      "rawText": "Wie schrijft geschiedenis in Groningen? Programma soort &Society Museum aan de A x Groninger Archieven Datum range 23 aug Welke verhalen van nu en vroeger willen en kunnen we niet missen? Lees verder Meer informatie over Wie schrijft geschiedenis in Groningen?"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-24",
-      "url": "https://www.noorderzon.nl/programma/preventie-als-vorm-van-democratie",
-      "status": "event uit link",
-      "rawText": "Preventie als vorm van democratie Programma soort &Society UMCG Datum range 24 aug Ontdek wat jou motiveert op weg naar een gezonde leefstijl, welke drempels je tegenkomt en waar je zelf invloed op hebt. Lees verder Meer informatie over Preventie als vorm van democratie"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-24",
-      "url": "https://www.noorderzon.nl/programma/moet-alles-nog-wat-kan-wat-is-de-juiste-zorg",
-      "status": "event uit link",
-      "rawText": "Moet alles nog wat kan: wat is de juiste zorg? Programma soort &Society Uitverkocht UMCG Datum range 24 aug Moet alles wat kan ook altijd gebeuren? En wat betekent goede zorg als niet alleen de ziekte, maar vooral de mens centraal staat? Lees verder Meer informatie over Moet alles nog wat kan: wat is de juiste zorg?"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-24",
-      "url": "https://www.noorderzon.nl/programma/democratie-en-zorg-voor-vrouwen-wie-wordt-gehoord",
-      "status": "event uit link",
-      "rawText": "Democratie en zorg voor vrouwen: wie wordt gehoord? Programma soort &Society Uitverkocht UMCG Datum range 24 aug Ontdek hoe betere data, onderzoek en kennis bijdragen aan zorg die beter aansluit bij vrouwen. Lees verder Meer informatie over Democratie en zorg voor vrouwen: wie wordt gehoord?"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-28",
-      "url": "https://www.noorderzon.nl/programma/van-wie-is-de-stad",
-      "status": "event uit link",
-      "rawText": "Van wie is de stad? Programma soort &Society Uitverkocht Over skateboarden en het recht om de stad te gebruiken Datum range 28 aug Over skateboarden, stedenbouw en het gebruik van de openbare ruimte Lees verder Meer informatie over Van wie is de stad?"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-28",
-      "url": "https://www.noorderzon.nl/programma/van-wie-is-de-stad-2",
-      "status": "event uit link",
-      "rawText": "Van wie is de stad? Programma soort &Society Skateprotest 1999 Datum range 28 aug Een duik in het archief: Groningse skaters protesteren tijdens Noorderzon 1999 voor hun plek in de stad. Lees verder Meer informatie over Van wie is de stad?"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-29",
-      "url": "https://www.noorderzon.nl/programma/raw-edition",
-      "status": "event uit link",
-      "rawText": "RAW Edition Programma soort &Society Panel Datum range 29 aug Hoe bouw je aan een creatieve scene die blijft groeien? Lees verder Meer informatie over RAW Edition"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-29",
-      "url": "https://www.noorderzon.nl/programma/raw-edition-2",
-      "status": "event uit link",
-      "rawText": "RAW Edition Programma soort &Society Expo Datum range 29 aug Een live archief van de creatieve scene van Groningen Lees verder Meer informatie over RAW Edition"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-25",
-      "url": "https://www.noorderzon.nl/programma/flash-talks-table-thoughts",
-      "status": "event uit link",
-      "rawText": "Flash Talks & Table Thoughts Programma soort &Society Young Academy Groningen x Studium Generale Groningen Datum range 25 - 29 aug Dit jaar bundelen Studium Generale en Young Academy Groningen hun krachten voor een reeks korte lezingen en publieke gesprekken op Noorderzon. Lees verder Meer informatie over Flash Talks & Table Thoughts"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-22",
-      "url": "https://www.noorderzon.nl/programma/wandelende-duinen",
-      "status": "event uit link",
-      "rawText": "Wandelende Duinen Programma soort &Society En Vele Anderen Datum range 22 - 30 aug Verhalen die vaak onverteld blijven krijgen een plek: kom langs in het open atelier en verbeeld jouw herinnering in één groot gezamenlijk textielverhaal. Lees verder Meer informatie over Wandelende Duinen"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-28",
-      "url": "https://www.noorderzon.nl/programma/werktuig-het-hoorspel",
-      "status": "event uit link",
-      "rawText": "Werktuig Het Hoorspel Programma soort Kinderprogramma PNTheater Datum range 28 - 29 aug Een hoorspel over ontdekken, nieuwsgierigheid en verantwoordelijkheid Lees verder Meer informatie over Werktuig Het Hoorspel"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-26",
-      "url": "https://www.noorderzon.nl/programma/stilte",
-      "status": "event uit link",
-      "rawText": "Stilte Programma soort Kinderprogramma Club Wauw Datum range 26 - 27 aug Een interactieve voorstelling over het vinden van rust in de ruis. Lees verder Meer informatie over Stilte"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-25",
-      "url": "https://www.noorderzon.nl/programma/het-carnaval-van-de-insecten",
-      "status": "event uit link",
-      "rawText": "Het Carnaval van de Insecten Programma soort Kinderprogramma Kamerorkest van het Noorden Datum range 25 aug Een speelse, interactieve muziekvoorstelling voor iedereen vanaf 3 jaar! Lees verder Meer informatie over Het Carnaval van de Insecten"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-23",
-      "url": "https://www.noorderzon.nl/programma/bom-berend",
-      "status": "event uit link",
-      "rawText": "Bom & Berend Programma soort Kinderprogramma Theater Pannekoek Datum range 23 - 24 aug Een ludieke radioshow over het Gronings Ontzet. Lees verder Meer informatie over Bom & Berend"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-22",
-      "url": "https://www.noorderzon.nl/programma/ontdek-het-orkest",
-      "status": "event uit link",
-      "rawText": "Ontdek het orkest Programma soort Kinderprogramma NNO Datum range 22 aug Leer het orkest kennen door de ogen én oren van de musici van het NNO, die je meenemen in de wereld van het symfonieorkest. Lees verder Meer informatie over Ontdek het orkest"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-21",
-      "url": "https://www.noorderzon.nl/programma/ouder--kindyoga",
-      "status": "event uit link",
-      "rawText": "Ouder- & kindyoga Programma soort Kinderprogramma Marabou Yoga Datum range 21 aug Ontdek en beleef samen het beweegverhaal van Gekkie de Gekko Lees verder Meer informatie over Ouder- & kindyoga"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-30",
-      "url": "https://www.noorderzon.nl/programma/wat-woont-er-in-het-schaduwrijk",
-      "status": "event uit link",
-      "rawText": "Wat woont er in het Schaduwrijk? Programma soort Kinderprogramma Gewoon Hard Werkende Mieke Datum range 30 aug Het schaduwrijk; waar schaduwen dansen en fantasie tot leven komt. Lees verder Meer informatie over Wat woont er in het Schaduwrijk?"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-21",
-      "url": "https://www.noorderzon.nl/programma/noordstaat-presents-mavcase",
-      "status": "event uit link",
-      "rawText": "Noordstaat Presents: Màvcase Programma soort Muziek Concert op Callisto Datum range 21 aug Gun jezelf een Màvcase-show Lees verder Meer informatie over Noordstaat Presents: Màvcase"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-20",
-      "url": "https://www.noorderzon.nl/programma/hit-the-north-presents-bad-luck-baby",
-      "status": "event uit link",
-      "rawText": "Hit the North presents: Bad Luck Baby Programma soort Muziek Concert op Callisto Datum range 20 aug Ellende omgezet in euforie Lees verder Meer informatie over Hit the North presents: Bad Luck Baby"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-23",
-      "url": "https://www.noorderzon.nl/programma/hit-the-north-presents-s1re",
-      "status": "event uit link",
-      "rawText": "Hit the North presents: S1RE Programma soort Muziek Concert op Callisto Datum range 23 aug Wat niet gezegd wordt, wordt gezongen Lees verder Meer informatie over Hit the North presents: S1RE"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-21",
-      "url": "https://www.noorderzon.nl/programma/noordstaat-presents-tessa-rose",
-      "status": "event uit link",
-      "rawText": "Noordstaat Presents: Tessa Rose Programma soort Muziek Concert op Callisto Datum range 21 aug Experimentele hiphop en soul, met uitstapjes naar house & jungle/drum & bass Lees verder Meer informatie over Noordstaat Presents: Tessa Rose"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-22",
-      "url": "https://www.noorderzon.nl/programma/mayte",
-      "status": "event uit link",
-      "rawText": "MAYTE Programma soort Muziek Concert op Callisto Datum range 22 aug Eigenwijze alt-pop met Fryske teksten, recht uit het hart. Lees verder Meer informatie over MAYTE"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-23",
-      "url": "https://www.noorderzon.nl/programma/hit-the-north-presents-the-last-mandrill",
-      "status": "event uit link",
-      "rawText": "Hit the North presents: The Last Mandrill Programma soort Muziek Concert op Callisto Datum range 23 aug Nostalgie en wanhoop confronteren wat komt en wat goed zal komen Lees verder Meer informatie over Hit the North presents: The Last Mandrill"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-29",
-      "url": "https://www.noorderzon.nl/programma/praatstoel",
-      "status": "event uit link",
-      "rawText": "Praatstoel Programma soort Muziek Concert op Callisto Datum range 29 aug Steenharde hiphop, dansbare electro en ongebreideld enthousiasme, dat zelfs de stijfste der harken in beweging brengt. Lees verder Meer informatie over Praatstoel"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-24",
-      "url": "https://www.noorderzon.nl/programma/nagham-koor",
-      "status": "event uit link",
-      "rawText": "Nagham Koor Programma soort Muziek Concert op Callisto Datum range 24 aug Een interculturele muzikale reis vol ontmoeting en verbinding. Lees verder Meer informatie over Nagham Koor"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-24",
-      "url": "https://www.noorderzon.nl/programma/steebs-method",
-      "status": "event uit link",
-      "rawText": "Steebs' Method Programma soort Muziek Concert op Callisto Datum range 24 aug Onvervalste jazzrap van Groningse bodem. Lees verder Meer informatie over Steebs' Method"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-25",
-      "url": "https://www.noorderzon.nl/programma/magasin",
-      "status": "event uit link",
-      "rawText": "Magasin Programma soort Muziek Concert op Callisto Datum range 25 aug De speelse kant van no wave, post-punk en art pop Lees verder Meer informatie over Magasin"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-25",
-      "url": "https://www.noorderzon.nl/programma/creatures-funky-disco-friends",
-      "status": "event uit link",
-      "rawText": "Creatures' Funky Disco Friends Programma soort Muziek Concert op Callisto Datum range 25 aug Een eclectische blend van groove, funk, disco en wereldmuziek met een DIY-attitude. Lees verder Meer informatie over Creatures' Funky Disco Friends"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-21",
-      "url": "https://www.noorderzon.nl/programma/plastique",
-      "status": "event uit link",
-      "rawText": "Plastique Programma soort Muziek Concert op De Kraken en Callisto Datum range 21 - 26 aug Een uniek soundscape van Griekse teksten, spoken word en improvisatie. Lees verder Meer informatie over Plastique"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-26",
-      "url": "https://www.noorderzon.nl/programma/trackvogels",
-      "status": "event uit link",
-      "rawText": "Trackvogels Programma soort Muziek Concert op Callisto Datum range 26 aug Hypnotiserende wereldgrooves met psychedelische energie en intergalactische precisie Lees verder Meer informatie over Trackvogels"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-27",
-      "url": "https://www.noorderzon.nl/programma/shitfaced-mermaids",
-      "status": "event uit link",
-      "rawText": "Shitfaced Mermaids Programma soort Muziek Concert op Callisto Datum range 27 aug Anarchofolk, freakfolk en onderwatergekte komen samen in een klotsend orkest vol klassiekers, chaos en zoute knipogen. Lees verder Meer informatie over Shitfaced Mermaids"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-27",
-      "url": "https://www.noorderzon.nl/programma/service",
-      "status": "event uit link",
-      "rawText": "SERVICE Programma soort Muziek Concert op Callisto Datum range 27 aug Dromerige hyperdreampop met donkere synths en dansbare melancholie Lees verder Meer informatie over SERVICE"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-28",
-      "url": "https://www.noorderzon.nl/programma/milad-dehghan",
-      "status": "event uit link",
-      "rawText": "Milad Dehghan Programma soort Muziek Concert op Callisto Datum range 28 aug Perzische chill-out muziek, gericht op menselijke verbinding en het overstijgen van culturele grenzen. Lees verder Meer informatie over Milad Dehghan"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-28",
-      "url": "https://www.noorderzon.nl/programma/biki-baya",
-      "status": "event uit link",
-      "rawText": "Biki Baya Programma soort Muziek Concert op Callisto Datum range 28 aug Afrikaanse grooves vol zomerenergie. Lees verder Meer informatie over Biki Baya"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-29",
-      "url": "https://www.noorderzon.nl/programma/in-good-spirit",
-      "status": "event uit link",
-      "rawText": "In Good Spirit Programma soort Muziek Concert op Callisto Datum range 29 aug Kleine, intieme momenten uit het alledaagse leven. Lees verder Meer informatie over In Good Spirit"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-20",
-      "url": "https://www.noorderzon.nl/programma/tante-hans",
-      "status": "event uit link",
-      "rawText": "tante hans Programma soort Containers \"ik wilde met het duingras praten\" Datum range 20 - 24 aug Kom jezelf nestelen in een web van muziek, tekst en beeld over een bus naar de kust, tuttigheid en populaire poëzie voor mensen van jouw leeftijd . Lees verder Meer informatie over tante hans"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-20",
-      "url": "https://www.noorderzon.nl/programma/schout-bij-nacht",
-      "status": "event uit link",
-      "rawText": "Schout bij Nacht Programma soort Containers PENIS MONOLOGEN Datum range 20 - 24 aug Een zeecontainer vol lulverhalen. Lees verder Meer informatie over Schout bij Nacht"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-20",
-      "url": "https://www.noorderzon.nl/programma/het-kanaal",
-      "status": "event uit link",
-      "rawText": "Het Kanaal Programma soort Containers TKKHRR - de stem van het bos Datum range 20 - 24 aug Een muzikale bosbeleving! Lees verder Meer informatie over Het Kanaal"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-20",
-      "url": "https://www.noorderzon.nl/programma/dwaas",
-      "status": "event uit link",
-      "rawText": "DWAAS Programma soort Containers De Troostprijs Datum range 20 - 24 aug Verlies jezelf in de nacht en laat haar je dagelijkse zorgen dragen. Lees verder Meer informatie over DWAAS"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-20",
-      "url": "https://www.noorderzon.nl/programma/nico-van-der-wijk-annegeerte-aandewiel-jorrit-boonstra",
-      "status": "event uit link",
-      "rawText": "Nico van der Wijk, Annegeerte Aandewiel & Jorrit Boonstra Programma soort Containers Gerrit Rebridge Datum range 20 - 24 aug Een energieke en humorvolle voorstelling over twee actievoerders die het heft in eigen hand nemen. Lees verder Meer informatie over Nico van der Wijk, Annegeerte Aandewiel & Jorrit Boonstra"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-20",
-      "url": "https://www.noorderzon.nl/programma/zeevonk-records",
-      "status": "event uit link",
-      "rawText": "Zeevonk Records Programma soort Containers Zeevonk Records Presents Datum range 20 - 30 aug Voor het derde jaar op rij presenteert Zeevonk Records in een dubbele container meerdere muzikale en performatieve acts Lees verder Meer informatie over Zeevonk Records"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-20",
-      "url": "https://www.noorderzon.nl/programma/ellemieke-meijers",
-      "status": "event uit link",
-      "rawText": "Ellemieke Meijers Programma soort Containers U heeft ergens last van Datum range 20 - 24 aug Heeft u ergens last van? Dan bent u mogelijk geschikt voor deze voorstelling. Lees verder Meer informatie over Ellemieke Meijers"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-22",
-      "url": "https://www.noorderzon.nl/programma/weird-youth",
-      "status": "event uit link",
-      "rawText": "Weird Youth Programma soort Muziek Concert op Callisto Datum range 22 aug Een onderzoek naar de complexiteit van liefde Lees verder Meer informatie over Weird Youth"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-20",
-      "url": "https://www.noorderzon.nl/programma/matoya",
-      "status": "event uit link",
-      "rawText": "MATOYA Programma soort Muziek Concert op Callisto Datum range 20 aug Dansbare neo-soul, ontstaan vanuit een gedeelde liefde voor oldschool R&B, soul en eerlijke verhalen. Lees verder Meer informatie over MATOYA"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-20",
-      "url": "https://www.noorderzon.nl/programma/tumult-op-noorderzon",
-      "status": "event uit link",
-      "rawText": "Tumult op Noorderzon Programma soort Muziek Lokaal talent op De Kraken Datum range 20 - 28 aug Het Groningse huis van de amateurkunst presenteert meerdere dagen acts op De Kraken. Lees verder Meer informatie over Tumult op Noorderzon"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-20",
-      "url": "https://www.noorderzon.nl/programma/djs-op-de-kraken",
-      "status": "event uit link",
-      "rawText": "DJ's op De Kraken Programma soort Muziek Sluit je festivaldag af bij De Kraken Datum range 20 - 30 aug Sluit je festivaldag af bij De Kraken Lees verder Meer informatie over DJ's op De Kraken"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-22",
-      "url": "https://www.noorderzon.nl/programma/kultuurloket-presenteert-blaaskr8",
-      "status": "event uit link",
-      "rawText": "KultuurLoket presenteert: Blaaskr'8 Programma soort Muziek Concert op De Kraken Datum range 22 aug Ensemble Blaaskr'8, gevormd uit Groningse harmonieorkest Harmonie '67, speelt tweemaal een gevarieerd repertoire bij De Kraken. Lees verder Meer informatie over KultuurLoket presenteert: Blaaskr'8"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-29",
-      "url": "https://www.noorderzon.nl/programma/kunstbende-op-noorderzon",
-      "status": "event uit link",
-      "rawText": "Kunstbende op Noorderzon Programma soort Muziek Lokaal talent op De Kraken en Callisto Datum range 29 - 30 aug Talent van de toekomst Lees verder Meer informatie over Kunstbende op Noorderzon"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-25",
-      "url": "https://www.noorderzon.nl/programma/zahra-lfil",
-      "status": "event uit link",
-      "rawText": "Zahra Lfil Programma soort Containers De andere helft Datum range 25 - 30 aug Een muzikale vertelling over vrouwelijkheid, identiteit en thuishoren naar aanleiding van Zahra’s solo-reis naar Marokko. Lees verder Meer informatie over Zahra Lfil"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-25",
-      "url": "https://www.noorderzon.nl/programma/arno-verbruggen",
-      "status": "event uit link",
-      "rawText": "Arno Verbruggen Programma soort Containers HYACINTH Datum range 25 - 30 aug Een choreografisch duet dat intimiteit, vertrouwen en queer verlangen onderzoekt vanuit de mythe van Apollo en Hyacinthus. Lees verder Meer informatie over Arno Verbruggen"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-21",
-      "url": "https://www.noorderzon.nl/programma/up-north-presenteert-graaflandgraaf",
-      "status": "event uit link",
-      "rawText": "Up North presenteert: GraafLandgraaf Programma soort Muziek Concert op De Kraken Datum range 21 aug Lachen, kolken, uitrazen en huilen Lees verder Meer informatie over Up North presenteert: GraafLandgraaf"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-21",
-      "url": "https://www.noorderzon.nl/programma/nik-rajsek",
-      "status": "event uit link",
-      "rawText": "Nik Rajšek Programma soort Containers LOSER (Prologue) Datum range 21 - 24 aug Een reeks live cam-shows die mislukking niet als een einde, maar als een transformatie herinterpreteren. Lees verder Meer informatie over Nik Rajšek"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-25",
-      "url": "https://www.noorderzon.nl/programma/roni-yaacobi",
-      "status": "event uit link",
-      "rawText": "Roni Yaacobi Programma soort Containers Crossing | You Datum range 25 - 30 aug Een levende dialoog tussen twee lichamen, zes snaren en de grenzen daartussen. Lees verder Meer informatie over Roni Yaacobi"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-25",
-      "url": "https://www.noorderzon.nl/programma/de-noorderlingen",
-      "status": "event uit link",
-      "rawText": "De Noorderlingen Programma soort Containers The Spark is Thére Datum range 25 - 30 aug Stap in een absurdistische performance die de verwondering ontleedt en opzoek gaat naar The Spark Lees verder Meer informatie over De Noorderlingen"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-25",
-      "url": "https://www.noorderzon.nl/programma/huis-orlando-2",
-      "status": "event uit link",
-      "rawText": "Huis Orlando Programma soort Containers Uitverkocht Zeus is dood Datum range 25 - 30 aug Als de goden zich vervelen... Lees verder Meer informatie over Huis Orlando"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-26",
-      "url": "https://www.noorderzon.nl/programma/huis-orlando",
-      "status": "event uit link",
-      "rawText": "Huis Orlando Programma soort Containers De Ilias Datum range 26 - 30 aug Als de goden zich vervelen… Lees verder Meer informatie over Huis Orlando"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-25",
-      "url": "https://www.noorderzon.nl/programma/comedy-club-wicked",
-      "status": "event uit link",
-      "rawText": "Comedy Club Wicked Programma soort Containers Soloshows & Comedy Naits Datum range 25 - 30 aug Kom lachen met Wicked! Lees verder Meer informatie over Comedy Club Wicked"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-29",
-      "url": "https://www.noorderzon.nl/programma/jazz-under-the-roof",
-      "status": "event uit link",
-      "rawText": "Jazz under the roof Programma soort Muziek Datum range 29 aug Een verrassingsavond vol vernieuwende jazz op het dak van Forum Groningen Lees verder Meer informatie over Jazz under the roof"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-26",
-      "url": "https://www.noorderzon.nl/programma/it-takes-a-village-2",
-      "status": "event uit link",
-      "rawText": "It takes a village Programma soort &Society Uitverkocht Jonge Harten Festival x Noorderzon Datum range 26 aug Hoe maken we samen ruimte voor mentale gezondheid, ontmoeting en verbinding? Lees verder Meer informatie over It takes a village"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-25",
-      "url": "https://www.noorderzon.nl/programma/douwe-dijkstra",
-      "status": "event uit link",
-      "rawText": "Douwe Dijkstra Programma soort Containers 12 dates, 13 ongelukken Datum range 25 - 30 aug In carrousel door het hedendaagse dating- en relatielandschap. Lees verder Meer informatie over Douwe Dijkstra"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-25",
-      "url": "https://www.noorderzon.nl/programma/huis-orlando-3",
-      "status": "event uit link",
-      "rawText": "Huis Orlando Programma soort Containers Zus van Datum range 25 - 30 aug Als de goden zich vervelen... Lees verder Meer informatie over Huis Orlando"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-26",
-      "url": "https://www.noorderzon.nl/programma/play-cafe",
-      "status": "event uit link",
-      "rawText": "Play café Programma soort Kinderprogramma Profound Play Datum range 26 - 30 aug Tijdens het Play Café komen kinderen en kunstenaars samen, waar wederzijdse verwondering leidt tot nieuwe vormen van ontdekken, creëren en verbeelden. Lees verder Meer informatie over Play café"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-20",
-      "url": "https://www.noorderzon.nl/programma/embed-emerging-digital-arts",
-      "status": "event uit link",
-      "rawText": "EMBED Emerging Digital Arts Programma soort Containers By Grand Theatre Datum range 20 - 30 aug Ontdek noordelijke pioniers in digitale kunst Lees verder Meer informatie over EMBED Emerging Digital Arts"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-20",
-      "url": "https://www.noorderzon.nl/programma/de-toverschool",
-      "status": "event uit link",
-      "rawText": "De Toverschool Programma soort Kinderprogramma Gewoon Hard Werkende Mieke Datum range 20 - 23 aug Hoor jij bij de nieuwe generatie tovenaars? Lees verder Meer informatie over De Toverschool"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-26",
-      "url": "https://www.noorderzon.nl/programma/visueel-verteld",
-      "status": "event uit link",
-      "rawText": "Visueel Verteld Programma soort Kinderprogramma AniMagie Datum range 26 - 30 aug Jouw getekende karakter komt tot leven! Lees verder Meer informatie over Visueel Verteld"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-21",
-      "url": "https://www.noorderzon.nl/programma/onderzoek-het-en-maak-het-dan",
-      "status": "event uit link",
-      "rawText": "Onderzoek het en maak het dan! Programma soort Kinderprogramma De Jonge Onderzoekers Datum range 21 - 25 aug Ga met De Jonge Onderzoekers aan de slag met beestjes, onderzoek ze en maak ze na! Lees verder Meer informatie over Onderzoek het en maak het dan!"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-27",
-      "url": "https://www.noorderzon.nl/programma/bureau-voor-vreemde-soorten",
-      "status": "event uit link",
-      "rawText": "Bureau voor Vreemde Soorten Programma soort Kinderprogramma Studio Lijm Datum range 27 - 30 aug Een speelse inloopworkshop waarin fantasie, onderzoek en maken samenkomen Lees verder Meer informatie over Bureau voor Vreemde Soorten"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-20",
-      "url": "https://www.noorderzon.nl/programma/kinderbouwmarkt-tumult",
-      "status": "event uit link",
-      "rawText": "Kinderbouwmarkt Tumult Programma soort Kinderprogramma Tumult Datum range 20 - 30 aug Pak een winkelkarretje en verzamel je materiaal om mee te klussen! Lees verder Meer informatie over Kinderbouwmarkt Tumult"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-20",
-      "url": "https://www.noorderzon.nl/programma/the-dream-machine-is-asleep",
-      "status": "event uit link",
-      "rawText": "The Dream Machine is Asleep Programma soort Kinderprogramma Het Groninger Museum Datum range 20 - 25 aug Hoe ziet jouw droomwereld eruit en welke dromen heb jij om van deze wereld een betere plek te maken? Lees verder Meer informatie over The Dream Machine is Asleep"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-22",
-      "url": "https://www.noorderzon.nl/programma/rods-and-bars-trio",
-      "status": "event uit link",
-      "rawText": "Rods and Bars Trio Programma soort Muziek Concert op De Kraken Datum range 22 aug Lees verder Meer informatie over Rods and Bars Trio"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-23",
-      "url": "https://www.noorderzon.nl/programma/lars-van-der-meer-kwartet",
-      "status": "event uit link",
-      "rawText": "Lars van der Meer Kwartet Programma soort Muziek De Kraken - Noorderplantsoen Datum range 23 aug Met traditionele Amerikaanse jazzmuziek in de kern op zoek naar vernieuwing. Lees verder Meer informatie over Lars van der Meer Kwartet"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-24",
-      "url": "https://www.noorderzon.nl/programma/kirill-dumchenko-modern-trio",
-      "status": "event uit link",
-      "rawText": "Kirill Dumchenko Modern Trio Programma soort Muziek Concert op De Kraken Datum range 24 aug Een boeket aan emoties. Lees verder Meer informatie over Kirill Dumchenko Modern Trio"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-25",
-      "url": "https://www.noorderzon.nl/programma/de-grensrechters",
-      "status": "event uit link",
-      "rawText": "De Grensrechters Programma soort Muziek Concert op De Kraken Datum range 25 aug Nederlandstalige volksmuziek uit de regio. Lees verder Meer informatie over De Grensrechters"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-26",
-      "url": "https://www.noorderzon.nl/programma/thijs-vrolijk",
-      "status": "event uit link",
-      "rawText": "Thijs Vrolijk Programma soort Muziek Concert op De Kraken Datum range 26 aug Poëtische americana met banjo, bezieling en eigenzinnige invloeden. Lees verder Meer informatie over Thijs Vrolijk"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-28",
-      "url": "https://www.noorderzon.nl/programma/desolaas",
-      "status": "event uit link",
-      "rawText": "Desolaas Programma soort Muziek Concert op De Kraken Datum range 28 aug Intieme pleisterpop vol melancholie, warmte en meerstemmige zang. Lees verder Meer informatie over Desolaas"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-28",
-      "url": "https://www.noorderzon.nl/programma/jenesonmarkunaite-quartet",
-      "status": "event uit link",
-      "rawText": "Jeneson/Markunaite Quartet Programma soort Muziek Concert op De Kraken Datum range 28 aug Groovy jazz vol hiphop, house, dub en improvisatie. Lees verder Meer informatie over Jeneson/Markunaite Quartet"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-29",
-      "url": "https://www.noorderzon.nl/programma/ekahuil",
-      "status": "event uit link",
-      "rawText": "Ekahuil Programma soort Muziek Concert op De Kraken Datum range 29 aug Ancestrale celloklanken botsen met postpunk, rock en metal. Lees verder Meer informatie over Ekahuil"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-27",
-      "url": "https://www.noorderzon.nl/programma/byinoar",
-      "status": "event uit link",
-      "rawText": "Byinoar Programma soort Muziek Concert op De Kraken Datum range 27 aug Futuristische volkszang met vocoders, loops en rauwe samenzang. Lees verder Meer informatie over Byinoar"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-30",
-      "url": "https://www.noorderzon.nl/programma/nienke-witkamp",
-      "status": "event uit link",
-      "rawText": "Nienke Witkamp Programma soort Muziek Concert op Callisto Datum range 30 aug Warme soul pop met gelaagde teksten. Lees verder Meer informatie over Nienke Witkamp"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-20",
-      "url": "https://www.noorderzon.nl/programma/moving-music",
-      "status": "event uit link",
-      "rawText": "Moving Music Programma soort Muziek Muziek die zich niet beperkt tot een podium Datum range 20 - 29 aug Waarom zou muziek op het podium moeten blijven? Onder andere Bokito Brass, Sambraçao, Anamesa, De 3e Verdieping en het spectaculaire Bruital brengen het... Lees verder Meer informatie over Moving Music"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-20",
-      "url": "https://www.noorderzon.nl/programma/op-safari-met-live-illustraties-en-dj",
-      "status": "event uit link",
-      "rawText": "Op safari met live illustraties en DJ Programma soort Kinderprogramma Club Klein Datum range 20 aug Het is nooit vroeg genoeg om met kunst te beginnen! Lees verder Meer informatie over Op safari met live illustraties en DJ"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-20",
-      "url": "https://www.noorderzon.nl/programma/kink",
-      "status": "event uit link",
-      "rawText": "KINK Programma soort Parkprogramma Nik Rajšek Datum range 20 - 30 aug Macht, kwetsbaarheid en verlangen worden voortdurend onderhandeld en opnieuw gedefinieerd. Lees verder Meer informatie over KINK"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-21",
-      "url": "https://www.noorderzon.nl/programma/autoriteit-micro-massa-mobilisatie-mmm",
-      "status": "event uit link",
-      "rawText": "Autoriteit Micro-Massa Mobilisatie (MMM) Programma soort Parkprogramma Micha van der Molen Datum range 21 - 29 aug Stap in de allereerste officiële PREMIUM CityTour van Groningen! Lees verder Meer informatie over Autoriteit Micro-Massa Mobilisatie (MMM)"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-29",
-      "url": "https://www.noorderzon.nl/programma/balfolkavond-in-de-dans",
-      "status": "event uit link",
-      "rawText": "Balfolkavond in De Dans Programma soort Parkprogramma Airboxes Datum range 29 aug Samen zwieren op live accordeonmuziek! Lees verder Meer informatie over Balfolkavond in De Dans"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-22",
-      "url": "https://www.noorderzon.nl/programma/bretagne-in-de-dans",
-      "status": "event uit link",
-      "rawText": "Bretagne in De Dans Programma soort Parkprogramma Birvilh Datum range 22 aug Ervaar de energie en gezelligheid van een echte fest-noz: een traditioneel Bretons muziek- en dansfestival. Lees verder Meer informatie over Bretagne in De Dans"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-26",
-      "url": "https://www.noorderzon.nl/programma/ierland-in-de-dans",
-      "status": "event uit link",
-      "rawText": "Ierland in De Dans Programma soort Parkprogramma De Noorderzon Céilí-Experience Datum range 26 aug Ierse dans voor iedereen! Lees verder Meer informatie over Ierland in De Dans"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-21",
-      "url": "https://www.noorderzon.nl/programma/door-mijn-oma",
-      "status": "event uit link",
-      "rawText": "Door Mijn Oma Programma soort Parkprogramma Lorenzo Di Credico Datum range 21 - 27 aug Wat betekent het om opnieuw verbinding te maken via verhalen die al te vaak onopgemerkt blijven? Lees verder Meer informatie over Door Mijn Oma"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-20",
-      "url": "https://www.noorderzon.nl/programma/de-lens-van-groningen",
-      "status": "event uit link",
-      "rawText": "De Lens van Groningen Programma soort Parkprogramma Groninger Archieven Datum range 20 - 30 aug Groningen door de lens van onze voorouders Lees verder Meer informatie over De Lens van Groningen"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-23",
-      "url": "https://www.noorderzon.nl/programma/home",
-      "status": "event uit link",
-      "rawText": "HOME Programma soort Parkprogramma Hanna Ryll Datum range 23 - 26 aug Thuis is meer dan een plek. Lees verder Meer informatie over HOME"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-28",
-      "url": "https://www.noorderzon.nl/programma/dabke-xxl-dabke-to-go-x-dabke-xtc",
-      "status": "event uit link",
-      "rawText": "DABKE XXL (Dabke To Go x Dabke XTC) Programma soort Parkprogramma MENA EVENTS Datum range 28 aug Eén ritme, één kring, één dansvloer! Lees verder Meer informatie over DABKE XXL (Dabke To Go x Dabke XTC)"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-21",
-      "url": "https://www.noorderzon.nl/programma/mastairclass",
-      "status": "event uit link",
-      "rawText": "MastAIRclass Programma soort Parkprogramma Make Air, Not War: Airguitar masterclass Datum range 21 aug Luchtgitaar masterclass Lees verder Meer informatie over MastAIRclass"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-20",
-      "url": "https://www.noorderzon.nl/programma/outside-the-block-party",
-      "status": "event uit link",
-      "rawText": "Outside the Block Party Programma soort Parkprogramma Outside the Block Datum range 20 aug The Cypher is open for all Lees verder Meer informatie over Outside the Block Party"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-25",
-      "url": "https://www.noorderzon.nl/programma/terug-naar-de-jaren-50",
-      "status": "event uit link",
-      "rawText": "Terug naar de jaren 50 Programma soort Parkprogramma Let's Swing Datum range 25 aug Een avond terug naar de jaren 50! Lees verder Meer informatie over Terug naar de jaren 50"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-24",
-      "url": "https://www.noorderzon.nl/programma/de-poepfabriek",
-      "status": "event uit link",
-      "rawText": "De Poepfabriek Programma soort Kinderprogramma Duurzaam Groningen Datum range 24 - 25 aug Poep, plas en plezier: welkom in de Poepfabriek! Lees verder Meer informatie over De Poepfabriek"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-27",
-      "url": "https://www.noorderzon.nl/programma/noorderzon-nachtprogramma-sigrid-koster-jochem-knoef",
-      "status": "event uit link",
-      "rawText": "Noorderzon Nachtprogramma: Sigrid Koster & Jochem Knoef Programma soort Muziek Amarte x Noorderzon x Simplon Datum range 27 - 28 aug De nacht is van de makers Lees verder Meer informatie over Noorderzon Nachtprogramma: Sigrid Koster & Jochem Knoef"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-28",
-      "url": "https://www.noorderzon.nl/programma/noorderzon-nachtprogramma-velvet",
-      "status": "event uit link",
-      "rawText": "Noorderzon Nachtprogramma: VELVET Programma soort Muziek Uitverkocht Amarte x Noorderzon x Simplon Datum range 28 aug De nacht is van de makers Lees verder Meer informatie over Noorderzon Nachtprogramma: VELVET"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-29",
-      "url": "https://www.noorderzon.nl/programma/noorderzon-nachtprogramma-night-transmissions",
-      "status": "event uit link",
-      "rawText": "Noorderzon Nachtprogramma: Night Transmissions Programma soort Muziek Amarte x Noorderzon x Simplon Datum range 29 aug De nacht is van de makers Lees verder Meer informatie over Noorderzon Nachtprogramma: Night Transmissions"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-21",
-      "url": "https://www.noorderzon.nl/programma/noordstaat-presents-adk",
-      "status": "event uit link",
-      "rawText": "Noordstaat Presents: A.D.K Programma soort Muziek Concert op Callisto Datum range 21 aug The Reaper of Microphones Lees verder Meer informatie over Noordstaat Presents: A.D.K"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-25",
-      "url": "https://www.noorderzon.nl/programma/wat-is-hier-de-bedoeling",
-      "status": "event uit link",
-      "rawText": "Wat is hier de bedoeling? Programma soort &Society Leon Wohlrabe Datum range 25 aug Een absurd en licht ontregelend panel programma voor bezoekers die overzicht zoeken. Lees verder Meer informatie over Wat is hier de bedoeling?"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-27",
-      "url": "https://www.noorderzon.nl/programma/cumbia-cumbia-cumbia",
-      "status": "event uit link",
-      "rawText": "Cumbia, Cumbia, Cumbia! Programma soort Parkprogramma Cumbia Noord Collective Datum range 27 aug Een energieke danservaring waarin cumbia en ritmes uit de diaspora de dansvloer omtoveren! Lees verder Meer informatie over Cumbia, Cumbia, Cumbia!"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-23",
-      "url": "https://www.noorderzon.nl/programma/basic-grooves-van-hiphop-en-amapiano",
-      "status": "event uit link",
-      "rawText": "Basic grooves van hiphop en amapiano Programma soort Parkprogramma X_YUSUF_BOSS & BRAAI Datum range 23 aug Leer de basic groove van hiphop en amapiano: een gezamenlijke dansavond vol muziek, ontmoeting en goede vibes! Lees verder Meer informatie over Basic grooves van hiphop en amapiano"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-20",
-      "url": "https://www.noorderzon.nl/programma/stem",
-      "status": "event uit link",
-      "rawText": "STEM Programma soort Parkprogramma Datum range 20 - 30 aug Hoe denk jij over zinnige en onzinnige stellingen? Lees verder Meer informatie over STEM"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-21",
-      "url": "https://www.noorderzon.nl/programma/fiks-de-wereld",
-      "status": "event uit link",
-      "rawText": "FIKS DE WERELD Programma soort &Literaturia Teken de problemen de wereld uit! Datum range 21 - 23 aug Lees verder Meer informatie over FIKS DE WERELD"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-24",
-      "url": "https://www.noorderzon.nl/programma/working-and-whacking",
-      "status": "event uit link",
-      "rawText": "WORKING AND WHACKING Programma soort Parkprogramma Coco Coquelicot & ZUKO Datum range 24 aug Kom samen een avond lang het queer zijn vieren! Lees verder Meer informatie over WORKING AND WHACKING"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-20",
-      "url": "https://www.noorderzon.nl/programma/pop-up-food-art-space",
-      "status": "event uit link",
-      "rawText": "POP-UP FOOD & ART SPACE Programma soort Parkprogramma Kunstkantine Datum range 20 - 30 aug Kunst kijken, kunst kopen, eten en lekker blijven hangen. Lees verder Meer informatie over POP-UP FOOD & ART SPACE"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-26",
-      "url": "https://www.noorderzon.nl/programma/maak-kennis-met-het-noorderplantsoen-rondleiding-in-ngt",
-      "status": "event uit link",
-      "rawText": "Maak kennis met het Noorderplantsoen (rondleiding in NGT) Programma soort &Society Door Museum aan de A Datum range 26 - 27 aug Ontdek het Noorderplantsoen in Nederlandse Gebarentaal Lees verder Meer informatie over Maak kennis met het Noorderplantsoen (rondleiding in NGT)"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-29",
-      "url": "https://www.noorderzon.nl/programma/het-programma-begint-al-in-de-bus",
-      "status": "event uit link",
-      "rawText": "Het programma begint al in de bus Programma soort &Society Datum range 29 aug Lees verder Meer informatie over Het programma begint al in de bus"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-20",
-      "url": "https://www.noorderzon.nl/programma/spraaklab",
-      "status": "event uit link",
-      "rawText": "SPRAAKLAB Programma soort Parkprogramma Rijksuniversiteit Groningen Datum range 20 - 30 aug Met SPRAAKLAB worden allerlei soorten spraakonderzoek gedaan Lees verder Meer informatie over SPRAAKLAB"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-20",
-      "url": "https://www.noorderzon.nl/programma/vreemde-eenden-2",
-      "status": "event uit link",
-      "rawText": "Vreemde Eenden Programma soort Parkprogramma Maik Cuper Datum range 20 - 30 aug Bestuur je eigen eendje over het water en ontdek spelenderwijs wie er aan de andere kant op je wacht. Lees verder Meer informatie over Vreemde Eenden"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-30",
-      "url": "https://www.noorderzon.nl/programma/buiten-bereik",
-      "status": "event uit link",
-      "rawText": "Buiten Bereik Programma soort &Society Datum range 30 aug Lees verder Meer informatie over Buiten Bereik"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-30",
-      "url": "https://www.noorderzon.nl/programma/ri-oost",
-      "status": "event uit link",
-      "rawText": "Ri Oost Programma soort Parkprogramma Café Connect Datum range 30 aug Onderzoeken wat menselijke verbinding voor bezoekers betekent Lees verder Meer informatie over Ri Oost"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-30",
-      "url": "https://www.noorderzon.nl/programma/toneelgroep-goed-begin",
-      "status": "event uit link",
-      "rawText": "Toneelgroep Goed Begin Programma soort Parkprogramma De Inspecteur Datum range 30 aug Ergens ontspoort er een scène Lees verder Meer informatie over Toneelgroep Goed Begin"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-30",
-      "url": "https://www.noorderzon.nl/programma/jong-van-hart",
-      "status": "event uit link",
-      "rawText": "Jong van Hart Programma soort Parkprogramma Singalong Datum range 30 aug Alles wat jij nodig hebt is zin om te zingen Lees verder Meer informatie over Jong van Hart"
-    },
     {
       "source": "Website",
       "site": "https://www.noorderzon.nl/programma",
@@ -12287,16 +10921,1690 @@
       "url": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
       "status": "klaar",
       "rawText": "site 12/18: 0 unieke events in 1.54 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Start",
+      "date": "",
+      "url": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "status": "start",
+      "rawText": "site 13/18: max 20 events, max 90 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "status": "strategie",
+      "rawText": "universeel-jsonld-links-kaarten"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Pagina gelezen",
+      "date": "",
+      "url": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "status": "ok",
+      "rawText": "296387 tekens HTML"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Paradiso detailstrategie",
+      "date": "",
+      "url": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "status": "strategie",
+      "rawText": "Agenda-overzicht overslaan; alleen individuele /programma/<slug>/<id> pagina's verwerken"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Pagina geanalyseerd",
+      "date": "",
+      "url": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "status": "ok",
+      "rawText": "0 events/aanbiedingen op deze pagina"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "In Tolhuistuin - Club Zaal open : 15:00 , Hoofdprogramma : 16:00",
+      "date": "2026-12-07",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit datumblok",
+      "rawText": "7 december In Tolhuistuin - Club Zaal open : 15:00 , Hoofdprogramma : 16:00 Uitverkocht Ticket € 28,70 Lidmaatschap niet verplicht Uitverkocht Ticket € 28,70 Lidmaatschap niet verplicht Verkoop en koop tweedehands tickets veilig op TicketSwap . Op"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "verjaart het onafhankelijke label Excelsior Recordings",
+      "date": "2027-06-03",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit datumblok",
+      "rawText": "3 juni verjaart het onafhankelijke label Excelsior Recordings - Musis Sacrum Anno 1996. Volgens een AI-bot is een 30e verjaardag een bijzondere mijlpaal: Het benadrukt de overgang van een uitbundig leven als twintiger naar een volgend decennium vol nieuwe belevingen en uitdagingen. Alle reden om het jubileum toch te vieren. Op Derde Kerstdag treden de beste recording artists van Excelsior op in de Tolhuistuin voor ee"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Concert Shygirl - Swallow! Live In Paradiso",
+      "date": "2027-02-07",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit datumblok",
+      "rawText": "7 februari Concert Shygirl - Swallow! Live In Paradiso"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Theater Harlekino - Troupe Courage (Remy van Kesteren Live) In Paradiso",
+      "date": "2026-12-01",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit datumblok",
+      "rawText": "1 december Theater Harlekino - Troupe Courage (Remy van Kesteren Live) In Paradiso"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Festival",
+      "date": "2027-06-06",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit datumblok",
+      "rawText": "6 juni Festival Net bevestigd Indiestad Nieuwjaarsborrel In Paradiso"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Concert Rodrigo y Gabriela In Paradiso",
+      "date": "2027-01-02",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit datumblok",
+      "rawText": "2 januari Concert Rodrigo y Gabriela In Paradiso"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Concert Brainstory In Paradiso",
+      "date": "2027-04-04",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit datumblok",
+      "rawText": "4 april Concert Brainstory In Paradiso"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Extra concert",
+      "date": "2027-05-06",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit datumblok",
+      "rawText": "6 mei Extra concert Net bevestigd Westside Cowboy In Paradiso"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Concert La Época - Asalto Navideño In Paradiso",
+      "date": "2027-03-02",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit datumblok",
+      "rawText": "2 maart Concert La Época - Asalto Navideño In Paradiso"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Clubnacht Jazzy + Dave Nunes, Emvae & Moxes In Parallel",
+      "date": "2027-01-08",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit datumblok",
+      "rawText": "8 januari Clubnacht Jazzy + Dave Nunes, Emvae & Moxes In Parallel"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Paradiso Programme Programma Vandaag Super-Sonic",
+      "date": "2026-11-20",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit datumblok",
+      "rawText": "8 december Paradiso Programme Programma Vandaag Super-Sonic Jazz Festival · Instore Rush Hour In Rush Hour Store Aanvang 17:30 Uitverkocht Super-Sonic Jazz Festival · Friday In Paradiso Aanvang 19:00 Rijck In Tolhuistuin Aanvang 19:30 Samba Roots featuring Lucas Santana. · Super-Sonic Jazz Festival · Afterparty In Paradiso Aanvang 23:00 Op datum Op maand Op locatie Op type"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Super-Sonic Jazz Festival · Saturday Met Yazmin",
+      "date": "2027-11-01",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit datumblok",
+      "rawText": "1 nov Super-Sonic Jazz Festival · Saturday Met Yazmin Lacey, Children of Zeus, Jembaa Groove, Ife Ogunjobi, Momoko Gill en Amy Gadiaga Uitverkocht HEY, NOTHING - Hound World Tour + Aubory Bugg Emo-folk duo uit Atlanta / Tolhuistuin 19:30 Trixie Whitley Belgisch-Amerikaanse singer-songwriter keert terug met nieuw album / Bitterzoet 20:30 Kurashi · Super-Sonic Jazz Festival · Afterparty Caribische elektronische clubnac"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Super-Sonic Jazz Festival · Isaiah Collier plays",
+      "date": "2027-11-02",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit datumblok",
+      "rawText": "2 nov Super-Sonic Jazz Festival · Isaiah Collier plays Coltrane + Finn Streuper DJ Set Saxofonist brengt spirituele ode aan jazzlegende 13:00 Super-Sonic Jazz Festival · Sunday Met Super-Sonic Jam x Gerson Main, Diana Sidibé, SMANDEM. en meer 18:00 C.O.F.F.I.N Compromisloze rock-'n-roll uit Sydney / Bitterzoet 19:30 Isabèl Usher Brits-beïnvloede songwriting in de Nederlandse popmuziek / Tolhuistuin Uitverkocht"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Mighty Oaks + June Carousel Indiefolktrio keert",
+      "date": "2027-11-03",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit datumblok",
+      "rawText": "3 nov Mighty Oaks + June Carousel Indiefolktrio keert na hun akoestische jaren terug met volledige band / Tolhuistuin 19:30 SLIFT + Yoo Doo Right Frans trio met een hypnotische mix van krautrock en psychedelica 19:30"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Raymond van het Groenewoud - albumpresentatie Artiest",
+      "date": "2027-11-04",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit datumblok",
+      "rawText": "4 nov Raymond van het Groenewoud - albumpresentatie Artiest presenteert 'Live in Paradiso' 14:00 Gong Pioniers in psychedelische rock / Tolhuistuin 20:30 Chloe Slater Singer-songwriter die haar pad baant in het rijk van de indiemuziek / Bitterzoet 20:30 Dave Lofts Ierse songwriter met sterke stem / Tolhuistuin Uitverkocht Yaeger Emotionele elektropop over vrijheid en verlangen 21:00"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Peper & Zuur?! Srefidensi editie Theatervoorstelling over",
+      "date": "2027-11-05",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit datumblok",
+      "rawText": "5 nov Peper & Zuur?! Srefidensi editie Theatervoorstelling over de Surinaamse keuken en geschiedenis 19:15 Koosje Muzikale duizendpoot uit Nederland / Tolhuistuin 20:30 NAFT Live technospektakel met vier blazers en twee drummers / Tolhuistuin 20:30 Greek Mix van alternatieve r&b, pop en soul door zanger en producer uit Virginia 22:00"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Genesis Owusu + MAHA Chaotische cocktail van",
+      "date": "2026-11-06",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit datumblok",
+      "rawText": "6 nov Genesis Owusu + MAHA Chaotische cocktail van funk, neo-soul en alternatieve pop / Tolhuistuin Wachtlijst"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "30 Jaar Excelsior Recordings",
+      "date": "2026-11-20",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit detailpagina",
+      "rawText": "30 Jaar Excelsior Recordings in Tolhuistuin, Amsterdam Menu Search Zoeken 58 jaar concerten, clubnachten en cultuur Programma Mijn Paradiso Programma Nieuws Mijn tickets Bezoek Merchandise Over ons Vrienden Lidmaatschap Archief Steun ons Werken bij Paradiso Contact Club Paradiso Indiestad Kosmos Paradiso Vinyl Club Sugar Mountain Super-Sonic Jazz Ticket to the Tropics Tones Paradiso TikTok Paradiso Instagram Paradiso"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "€ 28,70",
+      "date": "2026-12-27",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit tekstregel",
+      "rawText": "Ticket € 28,70 | zondag 27 december | In | Tolhuistuin | - Club | Zaal open"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Tolhuistuin",
+      "date": "2026-12-27",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit dagblok",
+      "rawText": "Tolhuistuin | - Club | Zaal open | : | 15:00"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Club",
+      "date": "2026-12-27",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit dagblok",
+      "rawText": "- Club | Zaal open | : | 15:00 | ,"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Zaal open",
+      "date": "2026-12-27",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit dagblok",
+      "rawText": "Zaal open | : | 15:00 | , | Hoofdprogramma"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Hoofdprogramma",
+      "date": "2026-12-27",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit dagblok",
+      "rawText": "Hoofdprogramma | : | 16:00 | Uitverkocht | Ticket € 28,70"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Lidmaatschap niet verplicht",
+      "date": "2026-12-27",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit dagblok",
+      "rawText": "Lidmaatschap niet verplicht | Uitverkocht | Ticket € 28,70 | Lidmaatschap niet verplicht | Verkoop en koop tweedehands tickets veilig op"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "€ 28,70",
+      "date": "2026-12-27",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit dagblok",
+      "rawText": "Ticket € 28,70 | Lidmaatschap niet verplicht | Verkoop en koop tweedehands tickets veilig op | TicketSwap | ."
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Verkoop en koop tweedehands veilig op",
+      "date": "2026-12-27",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit dagblok",
+      "rawText": "Verkoop en koop tweedehands tickets veilig op | TicketSwap | . | Op 3 juni verjaart het onafhankelijke label Excelsior Recordings - Musis Sacrum Anno 1996. Volgens een AI-bot is een 30e verjaardag een bijzondere mijlpaal: Het benadrukt de overgang van een uitbundig leven als twintiger naar een volgend decennium vol nieuwe belevingen en uitdagingen. Alle reden om het jubileum toch te vieren. Op Derde Kerstdag treden d"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Op 3 juni verjaart het onafhankelijke label",
+      "date": "2027-06-03",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit tekstregel",
+      "rawText": ". | Op 3 juni verjaart het onafhankelijke label Excelsior Recordings - Musis Sacrum Anno 1996. Volgens een AI-bot is een 30e verjaardag een bijzondere mijlpaal: Het benadrukt de overgang van een uitbundig leven als twintiger naar een volgend decennium vol nieuwe belevingen en uitdagingen. Alle reden om het jubileum toch te vieren. Op Derde Kerstdag treden de beste recording artists van Excelsior op in de Tolhuistuin"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Tommigun",
+      "date": "2026-12-27",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit dagblok",
+      "rawText": "Tommigun | Sha-La-Lees | DJ St. Paul | Route naar Tolhuistuin | Tolhuistuin (voorheen Paradiso Noord) is gevestigd aan IJpromenade 2 in Amsterdam Noord. Vanaf Amsterdam Centraal kun je met de gratis veerpont naar de overkant, waar je na links af te hebben geslagen, tegen Tolhuistuin aanloopt. Voor clubnachten wordt de ingang aan de achterkant gebruikt (Buiksloterweg 5C), die te bereiken is via het Overhoeksplein."
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Sha-La-Lees",
+      "date": "2026-12-27",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit dagblok",
+      "rawText": "Sha-La-Lees | DJ St. Paul | Route naar Tolhuistuin | Tolhuistuin (voorheen Paradiso Noord) is gevestigd aan IJpromenade 2 in Amsterdam Noord. Vanaf Amsterdam Centraal kun je met de gratis veerpont naar de overkant, waar je na links af te hebben geslagen, tegen Tolhuistuin aanloopt. Voor clubnachten wordt de ingang aan de achterkant gebruikt (Buiksloterweg 5C), die te bereiken is via het Overhoeksplein. | Eten vooraf"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "DJ St. Paul",
+      "date": "2026-12-27",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit dagblok",
+      "rawText": "DJ St. Paul | Route naar Tolhuistuin | Tolhuistuin (voorheen Paradiso Noord) is gevestigd aan IJpromenade 2 in Amsterdam Noord. Vanaf Amsterdam Centraal kun je met de gratis veerpont naar de overkant, waar je na links af te hebben geslagen, tegen Tolhuistuin aanloopt. Voor clubnachten wordt de ingang aan de achterkant gebruikt (Buiksloterweg 5C), die te bereiken is via het Overhoeksplein. | Eten vooraf | Bij Tolhuist"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Route naar Tolhuistuin",
+      "date": "2026-12-27",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit dagblok",
+      "rawText": "Route naar Tolhuistuin | Tolhuistuin (voorheen Paradiso Noord) is gevestigd aan IJpromenade 2 in Amsterdam Noord. Vanaf Amsterdam Centraal kun je met de gratis veerpont naar de overkant, waar je na links af te hebben geslagen, tegen Tolhuistuin aanloopt. Voor clubnachten wordt de ingang aan de achterkant gebruikt (Buiksloterweg 5C), die te bereiken is via het Overhoeksplein. | Eten vooraf | Bij Tolhuistuin is het mog"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Paradiso",
+      "date": "2026-12-27",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit dagblok",
+      "rawText": "Paradiso | Paradiso | 58 jaar concerten, clubnachten en | cultuur | Concert"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "58 jaar concerten, clubnachten en",
+      "date": "2026-12-27",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit dagblok",
+      "rawText": "58 jaar concerten, clubnachten en | cultuur | Concert | Net bevestigd | Tommy Lefroy"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "cultuur",
+      "date": "2026-12-27",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit dagblok",
+      "rawText": "cultuur | Concert | Net bevestigd | Tommy Lefroy | In Tolhuistuin"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Tommy Lefroy",
+      "date": "2026-12-27",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit dagblok",
+      "rawText": "Tommy Lefroy | In Tolhuistuin | 8 februari | Concert | Net bevestigd"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "In Tolhuistuin",
+      "date": "2026-12-27",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit dagblok",
+      "rawText": "In Tolhuistuin | 8 februari | Concert | Net bevestigd | BALTHVS"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "In Tolhuistuin",
+      "date": "2027-02-08",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit tekstregel",
+      "rawText": "In Tolhuistuin | 8 februari | Concert | Net bevestigd | BALTHVS | In Paradiso"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "BALTHVS",
+      "date": "2027-02-08",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit dagblok",
+      "rawText": "BALTHVS | In Paradiso | 26 januari | Concert | Net bevestigd"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "In Paradiso",
+      "date": "2027-02-08",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit dagblok",
+      "rawText": "In Paradiso | 26 januari | Concert | Net bevestigd | Qlas"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "In Paradiso",
+      "date": "2027-01-26",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit tekstregel",
+      "rawText": "In Paradiso | 26 januari | Concert | Net bevestigd | Qlas | In Paradiso"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Qlas",
+      "date": "2027-01-26",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit dagblok",
+      "rawText": "Qlas | In Paradiso | 14 januari | Concert | Net bevestigd"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "In Paradiso",
+      "date": "2027-01-26",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit dagblok",
+      "rawText": "In Paradiso | 14 januari | Concert | Net bevestigd | Funky Times"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "In Paradiso",
+      "date": "2027-01-14",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit tekstregel",
+      "rawText": "In Paradiso | 14 januari | Concert | Net bevestigd | Funky Times | In Tolhuistuin"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Funky Times",
+      "date": "2027-01-14",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit dagblok",
+      "rawText": "Funky Times | In Tolhuistuin | 17 februari | Concert | Shygirl - Swallow! Live"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "In Tolhuistuin",
+      "date": "2027-01-14",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit dagblok",
+      "rawText": "In Tolhuistuin | 17 februari | Concert | Shygirl - Swallow! Live | In Paradiso"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "In Tolhuistuin",
+      "date": "2027-02-17",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit tekstregel",
+      "rawText": "In Tolhuistuin | 17 februari | Concert | Shygirl - Swallow! Live | In Paradiso | 15 maart"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Shygirl - Swallow! Live",
+      "date": "2027-02-17",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit dagblok",
+      "rawText": "Shygirl - Swallow! Live | In Paradiso | 15 maart | Concert | Net bevestigd"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "In Paradiso",
+      "date": "2027-02-17",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit dagblok",
+      "rawText": "In Paradiso | 15 maart | Concert | Net bevestigd | Ciarán"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "In Paradiso",
+      "date": "2027-03-15",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit tekstregel",
+      "rawText": "In Paradiso | 15 maart | Concert | Net bevestigd | Ciarán | In Bitterzoet"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "In Bitterzoet",
+      "date": "2027-03-07",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit tekstregel",
+      "rawText": "In Bitterzoet | 7 maart | Net bevestigd | Mr Cutts | In Paradiso | 12 februari"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Mr Cutts",
+      "date": "2027-03-07",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit dagblok",
+      "rawText": "Mr Cutts | In Paradiso | 12 februari | Concert | Net bevestigd"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "In Paradiso",
+      "date": "2027-03-07",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit dagblok",
+      "rawText": "In Paradiso | 12 februari | Concert | Net bevestigd | Gallowstreet Kids Edition"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "In Paradiso",
+      "date": "2027-02-12",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit tekstregel",
+      "rawText": "In Paradiso | 12 februari | Concert | Net bevestigd | Gallowstreet Kids Edition | In Paradiso"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Gallowstreet Kids Edition",
+      "date": "2027-02-12",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit dagblok",
+      "rawText": "Gallowstreet Kids Edition | In Paradiso | 24 januari | Concert | Net bevestigd"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "In Paradiso",
+      "date": "2027-02-12",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit dagblok",
+      "rawText": "In Paradiso | 24 januari | Concert | Net bevestigd | Everlast - Europe 2027"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "In Paradiso",
+      "date": "2027-01-24",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit tekstregel",
+      "rawText": "In Paradiso | 24 januari | Concert | Net bevestigd | Everlast - Europe 2027 | In Paradiso"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Everlast - Europe 2027",
+      "date": "2027-01-24",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit dagblok",
+      "rawText": "Everlast - Europe 2027 | In Paradiso | 3 februari | Concert | Net bevestigd"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "In Paradiso",
+      "date": "2027-01-24",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit dagblok",
+      "rawText": "In Paradiso | 3 februari | Concert | Net bevestigd | Bökkers"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "In Paradiso",
+      "date": "2027-02-03",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit tekstregel",
+      "rawText": "In Paradiso | 3 februari | Concert | Net bevestigd | Bökkers | In Paradiso"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Bökkers",
+      "date": "2027-02-03",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit dagblok",
+      "rawText": "Bökkers | In Paradiso | 11 december | Theater | Harlekino - Troupe Courage (Remy van Kesteren Live)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "In Paradiso",
+      "date": "2027-02-03",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit dagblok",
+      "rawText": "In Paradiso | 11 december | Theater | Harlekino - Troupe Courage (Remy van Kesteren Live) | In Paradiso"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "In Paradiso",
+      "date": "2026-12-11",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit tekstregel",
+      "rawText": "In Paradiso | 11 december | Theater | Harlekino - Troupe Courage (Remy van Kesteren Live) | In Paradiso | 19 januari"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Harlekino - Troupe Courage (Remy van Kesteren Live)",
+      "date": "2026-12-11",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit dagblok",
+      "rawText": "Harlekino - Troupe Courage (Remy van Kesteren Live) | In Paradiso | 19 januari | Concert | Net bevestigd"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "In Paradiso",
+      "date": "2026-12-11",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit dagblok",
+      "rawText": "In Paradiso | 19 januari | Concert | Net bevestigd | Danielle Ponder"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "In Paradiso",
+      "date": "2027-01-19",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit tekstregel",
+      "rawText": "In Paradiso | 19 januari | Concert | Net bevestigd | Danielle Ponder | In Tolhuistuin"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Danielle Ponder",
+      "date": "2027-01-19",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit dagblok",
+      "rawText": "Danielle Ponder | In Tolhuistuin | 8 april | Concert | Net bevestigd"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "In Tolhuistuin",
+      "date": "2027-01-19",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit dagblok",
+      "rawText": "In Tolhuistuin | 8 april | Concert | Net bevestigd | Rachel Chinouriri"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "In Tolhuistuin",
+      "date": "2027-04-08",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit tekstregel",
+      "rawText": "In Tolhuistuin | 8 april | Concert | Net bevestigd | Rachel Chinouriri | In Paradiso"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Rachel Chinouriri",
+      "date": "2027-04-08",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit dagblok",
+      "rawText": "Rachel Chinouriri | In Paradiso | 21 juni | Concert | Net bevestigd"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "In Paradiso",
+      "date": "2027-04-08",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit dagblok",
+      "rawText": "In Paradiso | 21 juni | Concert | Net bevestigd | Pigeon"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "In Paradiso",
+      "date": "2027-06-21",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit tekstregel",
+      "rawText": "In Paradiso | 21 juni | Concert | Net bevestigd | Pigeon | In Tolhuistuin"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Pigeon",
+      "date": "2027-06-21",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit dagblok",
+      "rawText": "Pigeon | In Tolhuistuin | 15 april | Concert | Net bevestigd"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "In Tolhuistuin",
+      "date": "2027-06-21",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit dagblok",
+      "rawText": "In Tolhuistuin | 15 april | Concert | Net bevestigd | Holly Humberstone"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "In Tolhuistuin",
+      "date": "2027-04-15",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit tekstregel",
+      "rawText": "In Tolhuistuin | 15 april | Concert | Net bevestigd | Holly Humberstone | In Paradiso"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Holly Humberstone",
+      "date": "2027-04-15",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit dagblok",
+      "rawText": "Holly Humberstone | In Paradiso | 4 januari | Concert | Net bevestigd"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "In Paradiso",
+      "date": "2027-04-15",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit dagblok",
+      "rawText": "In Paradiso | 4 januari | Concert | Net bevestigd | Pond"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "In Paradiso",
+      "date": "2027-01-04",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit tekstregel",
+      "rawText": "In Paradiso | 4 januari | Concert | Net bevestigd | Pond | In Paradiso"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Pond",
+      "date": "2027-01-04",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit dagblok",
+      "rawText": "Pond | In Paradiso | 6 juni | Festival | Net bevestigd"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "In Paradiso",
+      "date": "2027-01-04",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit dagblok",
+      "rawText": "In Paradiso | 6 juni | Festival | Net bevestigd | Indiestad Nieuwjaarsborrel"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "In Paradiso",
+      "date": "2027-06-06",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit tekstregel",
+      "rawText": "In Paradiso | 6 juni | Festival | Net bevestigd | Indiestad Nieuwjaarsborrel | In Paradiso"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Festival",
+      "date": "2027-06-06",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit dagblok",
+      "rawText": "Festival | Net bevestigd | Indiestad Nieuwjaarsborrel | In Paradiso | 2 januari"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Indiestad Nieuwjaarsborrel",
+      "date": "2027-06-06",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit dagblok",
+      "rawText": "Indiestad Nieuwjaarsborrel | In Paradiso | 2 januari | Concert | Rodrigo y Gabriela"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "In Paradiso",
+      "date": "2027-06-06",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit dagblok",
+      "rawText": "In Paradiso | 2 januari | Concert | Rodrigo y Gabriela | In Paradiso"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "In Paradiso",
+      "date": "2027-01-02",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit tekstregel",
+      "rawText": "In Paradiso | 2 januari | Concert | Rodrigo y Gabriela | In Paradiso | 14 april"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Rodrigo y Gabriela",
+      "date": "2027-01-02",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit dagblok",
+      "rawText": "Rodrigo y Gabriela | In Paradiso | 14 april | Concert | Brainstory"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "In Paradiso",
+      "date": "2027-01-02",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit dagblok",
+      "rawText": "In Paradiso | 14 april | Concert | Brainstory | In Paradiso"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "In Paradiso",
+      "date": "2027-04-14",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit tekstregel",
+      "rawText": "In Paradiso | 14 april | Concert | Brainstory | In Paradiso | 6 mei"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Brainstory",
+      "date": "2027-04-14",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit dagblok",
+      "rawText": "Brainstory | In Paradiso | 6 mei | Extra concert | Net bevestigd"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "In Paradiso",
+      "date": "2027-04-14",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit dagblok",
+      "rawText": "In Paradiso | 6 mei | Extra concert | Net bevestigd | Westside Cowboy"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "In Paradiso",
+      "date": "2027-05-06",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit tekstregel",
+      "rawText": "In Paradiso | 6 mei | Extra concert | Net bevestigd | Westside Cowboy | In Paradiso"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Extra concert",
+      "date": "2027-05-06",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit dagblok",
+      "rawText": "Extra concert | Net bevestigd | Westside Cowboy | In Paradiso | 29 maart"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Westside Cowboy",
+      "date": "2027-05-06",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit dagblok",
+      "rawText": "Westside Cowboy | In Paradiso | 29 maart | Concert | Net bevestigd"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "In Paradiso",
+      "date": "2027-05-06",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit dagblok",
+      "rawText": "In Paradiso | 29 maart | Concert | Net bevestigd | Hazlett"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "In Paradiso",
+      "date": "2027-03-29",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit tekstregel",
+      "rawText": "In Paradiso | 29 maart | Concert | Net bevestigd | Hazlett | In Paradiso"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Hazlett",
+      "date": "2027-03-29",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit dagblok",
+      "rawText": "Hazlett | In Paradiso | 12 maart | Concert | La Época - Asalto Navideño"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "In Paradiso",
+      "date": "2027-03-29",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit dagblok",
+      "rawText": "In Paradiso | 12 maart | Concert | La Época - Asalto Navideño | In Paradiso"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "In Paradiso",
+      "date": "2027-03-12",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit tekstregel",
+      "rawText": "In Paradiso | 12 maart | Concert | La Época - Asalto Navideño | In Paradiso | 15 december"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "La Época - Asalto Navideño",
+      "date": "2027-03-12",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit dagblok",
+      "rawText": "La Época - Asalto Navideño | In Paradiso | 15 december | Concert | Net bevestigd"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "In Paradiso",
+      "date": "2027-03-12",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit dagblok",
+      "rawText": "In Paradiso | 15 december | Concert | Net bevestigd | Mattiel"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "In Paradiso",
+      "date": "2026-12-15",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit tekstregel",
+      "rawText": "In Paradiso | 15 december | Concert | Net bevestigd | Mattiel | In Bitterzoet"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Mattiel",
+      "date": "2026-12-15",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit dagblok",
+      "rawText": "Mattiel | In Bitterzoet | 18 mei | Concert | Net bevestigd"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "In Bitterzoet",
+      "date": "2026-12-15",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit dagblok",
+      "rawText": "In Bitterzoet | 18 mei | Concert | Net bevestigd | Nik West"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "In Bitterzoet",
+      "date": "2027-05-18",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit tekstregel",
+      "rawText": "In Bitterzoet | 18 mei | Concert | Net bevestigd | Nik West | In Tolhuistuin"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Nik West",
+      "date": "2027-05-18",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit dagblok",
+      "rawText": "Nik West | In Tolhuistuin | 30 maart | Concert | Net bevestigd"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "In Tolhuistuin",
+      "date": "2027-05-18",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit dagblok",
+      "rawText": "In Tolhuistuin | 30 maart | Concert | Net bevestigd | Young Eman"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "In Tolhuistuin",
+      "date": "2027-03-30",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit tekstregel",
+      "rawText": "In Tolhuistuin | 30 maart | Concert | Net bevestigd | Young Eman | In Paradiso"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Young Eman",
+      "date": "2027-03-30",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit dagblok",
+      "rawText": "Young Eman | In Paradiso | 23 februari | Talk | Net bevestigd"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "In Paradiso",
+      "date": "2027-03-30",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit dagblok",
+      "rawText": "In Paradiso | 23 februari | Talk | Net bevestigd | Follow the Money presenteert: De avond van het grote geld"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "In Paradiso",
+      "date": "2027-02-23",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit tekstregel",
+      "rawText": "In Paradiso | 23 februari | Talk | Net bevestigd | Follow the Money presenteert: De avond van het grote geld | In Paradiso"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "In Paradiso",
+      "date": "2027-01-18",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit tekstregel",
+      "rawText": "In Paradiso | 18 januari | Clubnacht | Jazzy + Dave Nunes, Emvae & Moxes | In Parallel | 18 december"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Jazzy + Dave Nunes, Emvae & Moxes",
+      "date": "2027-01-18",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit dagblok",
+      "rawText": "Jazzy + Dave Nunes, Emvae & Moxes | In Parallel | 18 december | Paradiso Programme | Programma"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "In Parallel",
+      "date": "2027-01-18",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit dagblok",
+      "rawText": "In Parallel | 18 december | Paradiso Programme | Programma | Vandaag"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "In Parallel",
+      "date": "2026-12-18",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit tekstregel",
+      "rawText": "In Parallel | 18 december | Paradiso Programme | Programma | Vandaag | Super-Sonic Jazz Festival · Instore Rush Hour"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Paradiso Programme",
+      "date": "2026-12-18",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit dagblok",
+      "rawText": "Paradiso Programme | Programma | Vandaag | Super-Sonic Jazz Festival · Instore Rush Hour | In Rush Hour Store"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Super-Sonic Jazz Festival · Instore Rush Hour",
+      "date": "2026-11-20",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit tekstregel",
+      "rawText": "Programma | Vandaag | Super-Sonic Jazz Festival · Instore Rush Hour | In Rush Hour Store | Aanvang 17:30 | Uitverkocht"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Super-Sonic Jazz Festival · Instore Rush Hour",
+      "date": "2026-11-20",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit dagblok",
+      "rawText": "Super-Sonic Jazz Festival · Instore Rush Hour | In Rush Hour Store | Aanvang 17:30 | Uitverkocht | Super-Sonic Jazz Festival · Friday"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "In Rush Hour Store",
+      "date": "2026-11-20",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit dagblok",
+      "rawText": "In Rush Hour Store | Aanvang 17:30 | Uitverkocht | Super-Sonic Jazz Festival · Friday | In Paradiso"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Aanvang 17:30",
+      "date": "2026-11-20",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit dagblok",
+      "rawText": "Aanvang 17:30 | Uitverkocht | Super-Sonic Jazz Festival · Friday | In Paradiso | Aanvang 19:00"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Super-Sonic Jazz Festival · Friday",
+      "date": "2026-11-20",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit dagblok",
+      "rawText": "Super-Sonic Jazz Festival · Friday | In Paradiso | Aanvang 19:00 | Rijck | In Tolhuistuin"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "In Paradiso",
+      "date": "2026-11-20",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit dagblok",
+      "rawText": "In Paradiso | Aanvang 19:00 | Rijck | In Tolhuistuin | Aanvang 19:30"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Aanvang 19:00",
+      "date": "2026-11-20",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit dagblok",
+      "rawText": "Aanvang 19:00 | Rijck | In Tolhuistuin | Aanvang 19:30 | Samba Roots featuring Lucas Santana. · Super-Sonic Jazz Festival · Afterparty"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Rijck",
+      "date": "2026-11-20",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit dagblok",
+      "rawText": "Rijck | In Tolhuistuin | Aanvang 19:30 | Samba Roots featuring Lucas Santana. · Super-Sonic Jazz Festival · Afterparty | In Paradiso"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "In Tolhuistuin",
+      "date": "2026-11-20",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit dagblok",
+      "rawText": "In Tolhuistuin | Aanvang 19:30 | Samba Roots featuring Lucas Santana. · Super-Sonic Jazz Festival · Afterparty | In Paradiso | Aanvang 23:00"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Aanvang 19:30",
+      "date": "2026-11-20",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit dagblok",
+      "rawText": "Aanvang 19:30 | Samba Roots featuring Lucas Santana. · Super-Sonic Jazz Festival · Afterparty | In Paradiso | Aanvang 23:00 | Op datum"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Samba Roots featuring Lucas Santana. · Super-Sonic Jazz Festival · Afterparty",
+      "date": "2026-11-20",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit dagblok",
+      "rawText": "Samba Roots featuring Lucas Santana. · Super-Sonic Jazz Festival · Afterparty | In Paradiso | Aanvang 23:00 | Op datum | Op maand"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Aanvang 23:00",
+      "date": "2026-11-20",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit dagblok",
+      "rawText": "Aanvang 23:00 | Op datum | Op maand | Op locatie | Op type"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Op maand",
+      "date": "2026-11-20",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit dagblok",
+      "rawText": "Op maand | Op locatie | Op type | vr 20 nov | Super-Sonic Jazz Festival · Instore Rush Hour"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Op locatie",
+      "date": "2026-11-20",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit dagblok",
+      "rawText": "Op locatie | Op type | vr 20 nov | Super-Sonic Jazz Festival · Instore Rush Hour | Met Isaiah Collier en Mauríce Vincent / Rush Hour Store"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Op type",
+      "date": "2026-11-20",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit dagblok",
+      "rawText": "Op type | vr 20 nov | Super-Sonic Jazz Festival · Instore Rush Hour | Met Isaiah Collier en Mauríce Vincent / Rush Hour Store | 17:30"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Op type",
+      "date": "2026-11-20",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit tekstregel",
+      "rawText": "Op type | vr 20 nov | Super-Sonic Jazz Festival · Instore Rush Hour | Met Isaiah Collier en Mauríce Vincent / Rush Hour Store | 17:30 | Super-Sonic Jazz Festival · Friday"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Met Isaiah Collier en Mauríce Vincent / Rush Hour Store",
+      "date": "2026-11-20",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit dagblok",
+      "rawText": "Met Isaiah Collier en Mauríce Vincent / Rush Hour Store | 17:30 | Super-Sonic Jazz Festival · Friday | Met anaiis, Theo Croker, Nubiyan Twist, ZENA, dreamcastmoe en SML | Uitverkocht"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Met anaiis, Theo Croker, Nubiyan Twist, ZENA, dreamcastmoe en SML",
+      "date": "2026-11-20",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit dagblok",
+      "rawText": "Met anaiis, Theo Croker, Nubiyan Twist, ZENA, dreamcastmoe en SML | Uitverkocht | Rijck | Rotterdamse rapper verenigt rauwe bars en catchy samples / Tolhuistuin | 19:30"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Rotterdamse rapper verenigt rauwe bars en catchy samples / Tolhuistuin",
+      "date": "2026-11-20",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit dagblok",
+      "rawText": "Rotterdamse rapper verenigt rauwe bars en catchy samples / Tolhuistuin | 19:30 | Samba Roots featuring Lucas Santana. · Super-Sonic Jazz Festival · Afterparty | Braziliaanse live clubnacht vol bruisende samba | 23:00"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Braziliaanse live clubnacht vol bruisende samba",
+      "date": "2026-11-20",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit dagblok",
+      "rawText": "Braziliaanse live clubnacht vol bruisende samba | 23:00 | za 21 nov | Super-Sonic Jazz Festival · Saturday | Met Yazmin Lacey, Children of Zeus, Jembaa Groove, Ife Ogunjobi, Momoko Gill en Amy Gadiaga"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Super-Sonic Jazz Festival · Saturday",
+      "date": "2026-11-21",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit tekstregel",
+      "rawText": "23:00 | za 21 nov | Super-Sonic Jazz Festival · Saturday | Met Yazmin Lacey, Children of Zeus, Jembaa Groove, Ife Ogunjobi, Momoko Gill en Amy Gadiaga | Uitverkocht | HEY, NOTHING - Hound World Tour + Aubory Bugg"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Super-Sonic Jazz Festival · Saturday",
+      "date": "2026-11-21",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit dagblok",
+      "rawText": "Super-Sonic Jazz Festival · Saturday | Met Yazmin Lacey, Children of Zeus, Jembaa Groove, Ife Ogunjobi, Momoko Gill en Amy Gadiaga | Uitverkocht | HEY, NOTHING - Hound World Tour + Aubory Bugg | Emo-folk duo uit Atlanta / Tolhuistuin"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Met Yazmin Lacey, Children of Zeus, Jembaa Groove, Ife Ogunjobi, Momoko Gill en Amy Gadiaga",
+      "date": "2026-11-21",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit dagblok",
+      "rawText": "Met Yazmin Lacey, Children of Zeus, Jembaa Groove, Ife Ogunjobi, Momoko Gill en Amy Gadiaga | Uitverkocht | HEY, NOTHING - Hound World Tour + Aubory Bugg | Emo-folk duo uit Atlanta / Tolhuistuin | 19:30"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "HEY, NOTHING - Hound World Tour + Aubory Bugg",
+      "date": "2026-11-21",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit dagblok",
+      "rawText": "HEY, NOTHING - Hound World Tour + Aubory Bugg | Emo-folk duo uit Atlanta / Tolhuistuin | 19:30 | Trixie Whitley | Belgisch-Amerikaanse singer-songwriter keert terug met nieuw album / Bitterzoet"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Emo-folk duo uit Atlanta / Tolhuistuin",
+      "date": "2026-11-21",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit dagblok",
+      "rawText": "Emo-folk duo uit Atlanta / Tolhuistuin | 19:30 | Trixie Whitley | Belgisch-Amerikaanse singer-songwriter keert terug met nieuw album / Bitterzoet | 20:30"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Trixie Whitley",
+      "date": "2026-11-21",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit dagblok",
+      "rawText": "Trixie Whitley | Belgisch-Amerikaanse singer-songwriter keert terug met nieuw album / Bitterzoet | 20:30 | Kurashi · Super-Sonic Jazz Festival · Afterparty | Caribische elektronische clubnacht met bubbling en livebands"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Belgisch-Amerikaanse singer-songwriter keert terug met nieuw album / Bitterzoet",
+      "date": "2026-11-21",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit dagblok",
+      "rawText": "Belgisch-Amerikaanse singer-songwriter keert terug met nieuw album / Bitterzoet | 20:30 | Kurashi · Super-Sonic Jazz Festival · Afterparty | Caribische elektronische clubnacht met bubbling en livebands | 23:00"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Kurashi · Super-Sonic Jazz Festival · Afterparty",
+      "date": "2026-11-21",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit dagblok",
+      "rawText": "Kurashi · Super-Sonic Jazz Festival · Afterparty | Caribische elektronische clubnacht met bubbling en livebands | 23:00 | La Casa Del Perreo | Clubnacht met reggaeton, dembow en urban latin sounds / Parallel"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Caribische elektronische clubnacht met bubbling en livebands",
+      "date": "2026-11-21",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit dagblok",
+      "rawText": "Caribische elektronische clubnacht met bubbling en livebands | 23:00 | La Casa Del Perreo | Clubnacht met reggaeton, dembow en urban latin sounds / Parallel | 23:59"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "La Casa Del Perreo",
+      "date": "2026-11-21",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit dagblok",
+      "rawText": "La Casa Del Perreo | Clubnacht met reggaeton, dembow en urban latin sounds / Parallel | 23:59 | zo 22 nov | Super-Sonic Jazz Festival · Isaiah Collier plays Coltrane + Finn Streuper DJ Set"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Clubnacht met reggaeton, dembow en urban latin sounds / Parallel",
+      "date": "2026-11-21",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit dagblok",
+      "rawText": "Clubnacht met reggaeton, dembow en urban latin sounds / Parallel | 23:59 | zo 22 nov | Super-Sonic Jazz Festival · Isaiah Collier plays Coltrane + Finn Streuper DJ Set | Saxofonist brengt spirituele ode aan jazzlegende"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Super-Sonic Jazz Festival · Isaiah Collier plays Coltrane + Finn Streuper DJ Set",
+      "date": "2026-11-22",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit tekstregel",
+      "rawText": "23:59 | zo 22 nov | Super-Sonic Jazz Festival · Isaiah Collier plays Coltrane + Finn Streuper DJ Set | Saxofonist brengt spirituele ode aan jazzlegende | 13:00 | Super-Sonic Jazz Festival · Sunday"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Super-Sonic Jazz Festival · Isaiah Collier plays Coltrane + Finn Streuper DJ Set",
+      "date": "2026-11-22",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit dagblok",
+      "rawText": "Super-Sonic Jazz Festival · Isaiah Collier plays Coltrane + Finn Streuper DJ Set | Saxofonist brengt spirituele ode aan jazzlegende | 13:00 | Super-Sonic Jazz Festival · Sunday | Met Super-Sonic Jam x Gerson Main, Diana Sidibé, SMANDEM. en meer"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Saxofonist brengt spirituele ode aan jazzlegende",
+      "date": "2026-11-22",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit dagblok",
+      "rawText": "Saxofonist brengt spirituele ode aan jazzlegende | 13:00 | Super-Sonic Jazz Festival · Sunday | Met Super-Sonic Jam x Gerson Main, Diana Sidibé, SMANDEM. en meer | 18:00"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Super-Sonic Jazz Festival · Sunday",
+      "date": "2026-11-22",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit dagblok",
+      "rawText": "Super-Sonic Jazz Festival · Sunday | Met Super-Sonic Jam x Gerson Main, Diana Sidibé, SMANDEM. en meer | 18:00 | C.O.F.F.I.N | Compromisloze rock-'n-roll uit Sydney / Bitterzoet"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Met Super-Sonic Jam x Gerson Main, Diana Sidibé, SMANDEM. en meer",
+      "date": "2026-11-22",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit dagblok",
+      "rawText": "Met Super-Sonic Jam x Gerson Main, Diana Sidibé, SMANDEM. en meer | 18:00 | C.O.F.F.I.N | Compromisloze rock-'n-roll uit Sydney / Bitterzoet | 19:30"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "C.O.F.F.I.N",
+      "date": "2026-11-22",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit dagblok",
+      "rawText": "C.O.F.F.I.N | Compromisloze rock-'n-roll uit Sydney / Bitterzoet | 19:30 | Isabèl Usher | Brits-beïnvloede songwriting in de Nederlandse popmuziek / Tolhuistuin"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Compromisloze rock-'n-roll uit Sydney / Bitterzoet",
+      "date": "2026-11-22",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit dagblok",
+      "rawText": "Compromisloze rock-'n-roll uit Sydney / Bitterzoet | 19:30 | Isabèl Usher | Brits-beïnvloede songwriting in de Nederlandse popmuziek / Tolhuistuin | Uitverkocht"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Mighty Oaks + June Carousel",
+      "date": "2026-11-23",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit tekstregel",
+      "rawText": "Uitverkocht | ma 23 nov | Mighty Oaks + June Carousel | Indiefolktrio keert na hun akoestische jaren terug met volledige band / Tolhuistuin | 19:30 | SLIFT + Yoo Doo Right"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Mighty Oaks + June Carousel",
+      "date": "2026-11-23",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit dagblok",
+      "rawText": "Mighty Oaks + June Carousel | Indiefolktrio keert na hun akoestische jaren terug met volledige band / Tolhuistuin | 19:30 | SLIFT + Yoo Doo Right | Frans trio met een hypnotische mix van krautrock en psychedelica"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Indiefolktrio keert na hun akoestische jaren terug met volledige band / Tolhuistuin",
+      "date": "2026-11-23",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit dagblok",
+      "rawText": "Indiefolktrio keert na hun akoestische jaren terug met volledige band / Tolhuistuin | 19:30 | SLIFT + Yoo Doo Right | Frans trio met een hypnotische mix van krautrock en psychedelica | 19:30"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "SLIFT + Yoo Doo Right",
+      "date": "2026-11-23",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit dagblok",
+      "rawText": "SLIFT + Yoo Doo Right | Frans trio met een hypnotische mix van krautrock en psychedelica | 19:30 | di 24 nov | Raymond van het Groenewoud - albumpresentatie"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Frans trio met een hypnotische mix van krautrock en psychedelica",
+      "date": "2026-11-23",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit dagblok",
+      "rawText": "Frans trio met een hypnotische mix van krautrock en psychedelica | 19:30 | di 24 nov | Raymond van het Groenewoud - albumpresentatie | Artiest presenteert 'Live in Paradiso'"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Raymond van het Groenewoud - albumpresentatie",
+      "date": "2026-11-24",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit tekstregel",
+      "rawText": "19:30 | di 24 nov | Raymond van het Groenewoud - albumpresentatie | Artiest presenteert 'Live in Paradiso' | 14:00 | Gong"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Raymond van het Groenewoud - albumpresentatie",
+      "date": "2026-11-24",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit dagblok",
+      "rawText": "Raymond van het Groenewoud - albumpresentatie | Artiest presenteert 'Live in Paradiso' | 14:00 | Gong | Pioniers in psychedelische rock / Tolhuistuin"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Artiest presenteert 'Live in Paradiso'",
+      "date": "2026-11-24",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit dagblok",
+      "rawText": "Artiest presenteert 'Live in Paradiso' | 14:00 | Gong | Pioniers in psychedelische rock / Tolhuistuin | 20:30"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Gong",
+      "date": "2026-11-24",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit dagblok",
+      "rawText": "Gong | Pioniers in psychedelische rock / Tolhuistuin | 20:30 | Chloe Slater | Singer-songwriter die haar pad baant in het rijk van de indiemuziek / Bitterzoet"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Pioniers in psychedelische rock / Tolhuistuin",
+      "date": "2026-11-24",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit dagblok",
+      "rawText": "Pioniers in psychedelische rock / Tolhuistuin | 20:30 | Chloe Slater | Singer-songwriter die haar pad baant in het rijk van de indiemuziek / Bitterzoet | 20:30"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Chloe Slater",
+      "date": "2026-11-24",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit dagblok",
+      "rawText": "Chloe Slater | Singer-songwriter die haar pad baant in het rijk van de indiemuziek / Bitterzoet | 20:30 | Dave Lofts | Ierse songwriter met sterke stem / Tolhuistuin"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Singer-songwriter die haar pad baant in het rijk van de indiemuziek / Bitterzoet",
+      "date": "2026-11-24",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit dagblok",
+      "rawText": "Singer-songwriter die haar pad baant in het rijk van de indiemuziek / Bitterzoet | 20:30 | Dave Lofts | Ierse songwriter met sterke stem / Tolhuistuin | Uitverkocht"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Ierse songwriter met sterke stem / Tolhuistuin",
+      "date": "2026-11-24",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit dagblok",
+      "rawText": "Ierse songwriter met sterke stem / Tolhuistuin | Uitverkocht | Yaeger | Emotionele elektropop over vrijheid en verlangen | 21:00"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Yaeger",
+      "date": "2026-11-24",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit dagblok",
+      "rawText": "Yaeger | Emotionele elektropop over vrijheid en verlangen | 21:00 | wo 25 nov | Peper & Zuur?! Srefidensi editie"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Emotionele elektropop over vrijheid en verlangen",
+      "date": "2026-11-24",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit dagblok",
+      "rawText": "Emotionele elektropop over vrijheid en verlangen | 21:00 | wo 25 nov | Peper & Zuur?! Srefidensi editie | Theatervoorstelling over de Surinaamse keuken en geschiedenis"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Peper & Zuur?! Srefidensi editie",
+      "date": "2026-11-25",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit tekstregel",
+      "rawText": "21:00 | wo 25 nov | Peper & Zuur?! Srefidensi editie | Theatervoorstelling over de Surinaamse keuken en geschiedenis | 19:15 | Koosje"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Peper & Zuur?! Srefidensi editie",
+      "date": "2026-11-25",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit dagblok",
+      "rawText": "Peper & Zuur?! Srefidensi editie | Theatervoorstelling over de Surinaamse keuken en geschiedenis | 19:15 | Koosje | Muzikale duizendpoot uit Nederland / Tolhuistuin"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Theatervoorstelling over de Surinaamse keuken en geschiedenis",
+      "date": "2026-11-25",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit dagblok",
+      "rawText": "Theatervoorstelling over de Surinaamse keuken en geschiedenis | 19:15 | Koosje | Muzikale duizendpoot uit Nederland / Tolhuistuin | 20:30"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Koosje",
+      "date": "2026-11-25",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit dagblok",
+      "rawText": "Koosje | Muzikale duizendpoot uit Nederland / Tolhuistuin | 20:30 | NAFT | Live technospektakel met vier blazers en twee drummers / Tolhuistuin"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Muzikale duizendpoot uit Nederland / Tolhuistuin",
+      "date": "2026-11-25",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit dagblok",
+      "rawText": "Muzikale duizendpoot uit Nederland / Tolhuistuin | 20:30 | NAFT | Live technospektakel met vier blazers en twee drummers / Tolhuistuin | 20:30"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "NAFT",
+      "date": "2026-11-25",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit dagblok",
+      "rawText": "NAFT | Live technospektakel met vier blazers en twee drummers / Tolhuistuin | 20:30 | Greek | Mix van alternatieve r&b, pop en soul door zanger en producer uit Virginia"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Live technospektakel met vier blazers en twee drummers / Tolhuistuin",
+      "date": "2026-11-25",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit dagblok",
+      "rawText": "Live technospektakel met vier blazers en twee drummers / Tolhuistuin | 20:30 | Greek | Mix van alternatieve r&b, pop en soul door zanger en producer uit Virginia | 22:00"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Greek",
+      "date": "2026-11-25",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit dagblok",
+      "rawText": "Greek | Mix van alternatieve r&b, pop en soul door zanger en producer uit Virginia | 22:00 | do 26 nov | Genesis Owusu + MAHA"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Mix van alternatieve r&b, pop en soul door zanger en producer uit Virginia",
+      "date": "2026-11-25",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit dagblok",
+      "rawText": "Mix van alternatieve r&b, pop en soul door zanger en producer uit Virginia | 22:00 | do 26 nov | Genesis Owusu + MAHA | Chaotische cocktail van funk, neo-soul en alternatieve pop / Tolhuistuin"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Genesis Owusu + MAHA",
+      "date": "2026-11-26",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "event uit tekstregel",
+      "rawText": "22:00 | do 26 nov | Genesis Owusu + MAHA | Chaotische cocktail van funk, neo-soul en alternatieve pop / Tolhuistuin | Wachtlijst"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Pagina geteld",
+      "date": "",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "analyse",
+      "rawText": "jsonld:0, links:0, datumblokken:17, kaarten:0, regels:166, detail:1"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.paradiso.nl/programma/30-jaar-excelsior-recordings/2902321",
+      "status": "ok",
+      "rawText": "155 extra events"
+    },
+    {
+      "source": "Filter",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Datumfilter toegepast",
+      "date": "2026-11-20",
+      "url": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "status": "ok",
+      "rawText": "155 gevonden; 36 binnen 2026-11-20 t/m 2026-11-22"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+      "status": "klaar",
+      "rawText": "site 13/18: 20 unieke events in 3.19 sec"
     }
   ],
   "status": "running",
   "siteStartedAt": "2026-11-20T17:06:11+00:00",
-  "siteElapsedSeconds": 0,
-  "sitePageCount": 0,
-  "lastSiteEventCount": 0,
-  "stage": "Websitepagina ophalen",
-  "lastUpdatedAt": "2026-11-20T17:06:11+00:00",
-  "lastSiteNewEventCount": 0,
-  "lastCompletedSite": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
-  "lastCompletedAt": "2026-11-20T17:06:09+00:00"
+  "siteElapsedSeconds": 5,
+  "sitePageCount": 1,
+  "lastSiteEventCount": 20,
+  "stage": "Website klaar; volgende website voorbereiden",
+  "lastUpdatedAt": "2026-11-20T17:06:14+00:00",
+  "lastSiteNewEventCount": 20,
+  "lastCompletedSite": "https://www.paradiso.nl/landing/concertagenda-paradiso/2069817",
+  "lastCompletedAt": "2026-11-20T17:06:16+00:00"
 }
