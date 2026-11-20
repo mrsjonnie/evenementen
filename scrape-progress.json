@@ -1,7 +1,7 @@
 {
   "runId": "2026-11-20T17:01:14.574083+00:00-c1eda5fa",
   "startedAt": "2026-11-20T17:01:14+00:00",
-  "completedCount": 8,
+  "completedCount": 9,
   "totalSites": 18,
   "currentSite": "https://www.kultuuragenda.nl/agenda",
   "currentSiteIndex": 9,
@@ -13,7 +13,8 @@
     "https://simplon.nl/",
     "https://www.vera-groningen.nl/",
     "https://www.martiniplaza.nl/nl/agenda",
-    "https://groningermuseum.nl/programma"
+    "https://groningermuseum.nl/programma",
+    "https://www.kultuuragenda.nl/agenda"
   ],
   "events": [
     {
@@ -48,6 +49,21 @@
     },
     {
       "date": "2026-11-20",
+      "time": "20:00",
+      "title": "A Tribute to Cliff Richard & The Shadows",
+      "type": "Film",
+      "location": "Locatie Nieuwe Markt 1 9712 KJ Nieuwe Markt 1 9712 KJ Groningen",
+      "locationLink": "",
+      "website": "https://www.kultuuragenda.nl/agenda/444961326/a-tribute-to-cliff-richard-the-shadows",
+      "source": "kultuuragenda.nl",
+      "discoverySource": "Website",
+      "description": "A Tribute to Cliff Richard & The Shadows | Kultuuragenda Groningen Ga naar de homepage Evenement aanmelden naar A Tribute to Cliff Richard & The Shadows naar A Tribute to Cliff Richard & The Shadows Bel: 0599 63 17 31 van A Tribute to Cliff Richard & The Shadows",
+      "cost": "€ 13,00",
+      "image": "https://assets.plaece.nl/thumb/Zzl7BZid0TFLilto6UzTnxOQrWh2MxC3FRXlG5As0nQ/resizing_type:fit/width:650/height:366/gravity:sm/aHR0cHM6Ly9hc3NldHMucGxhZWNlLm5sL29kcC1ncm9uaW5nZW4vaW1hZ2UvMDk0OGNjN2Y3YjNkYmVlZmI2YzQxMGNkOGY3NWMxNjczZjdjYjFjZF8wMTlmM2Y3OS04NTA5LTc3MzEtYWYwMC1kNDBmMTY4YjFmMmIuanBn.jpg",
+      "isNew": true
+    },
+    {
+      "date": "2026-11-20",
       "time": "20:30",
       "title": "Adult DVD",
       "type": "Dans",
@@ -59,6 +75,21 @@
       "description": "Zeskoppige chaotische dancepunk. Support: Smudged…",
       "cost": "",
       "image": "https://groningen.uitloper.nu/images/smallthumb/files/screenshot-2026-10-29-at-13-11-57-images--jpeg-afbeelding-640---480-pixels-.png",
+      "isNew": true
+    },
+    {
+      "date": "2026-11-20",
+      "time": "20:30 - 23:00",
+      "title": "Adult DVD (UK) + Smudged (NL)",
+      "type": "Film",
+      "location": "Locatie Nieuwe Markt 1 9712 KJ Nieuwe Markt 1 9712 KJ Groningen",
+      "locationLink": "",
+      "website": "https://www.kultuuragenda.nl/agenda/4027270745/adult-dvd-uk-support",
+      "source": "kultuuragenda.nl",
+      "discoverySource": "Website",
+      "description": "Six-piece chaotic dancepunk",
+      "cost": "€ 13,00",
+      "image": "https://assets.plaece.nl/thumb/DCkTrPAy3FNlDBP6PG7c6ix1iLfZPmbr51AKLr_JnIo/resizing_type:fit/width:650/height:366/gravity:sm/aHR0cHM6Ly9hc3NldHMucGxhZWNlLm5sL29kcC1ncm9uaW5nZW4vaW1hZ2UvZTA1OWI0Mzc2MGJkOWQ1NGI2ZWRhZjQ5YTU3YzlhYWEzOTU0ZGVlZl8wMWExZjhlZi05NjEyLTcyMmQtYTc3Yi1lY2Q1OGJhNGNlMmEuanBn.jpg",
       "isNew": true
     },
     {
@@ -273,6 +304,21 @@
     },
     {
       "date": "2026-11-20",
+      "time": "20:45 - 23:00",
+      "title": "Delany",
+      "type": "Film",
+      "location": "Locatie Nieuwe Markt 1 9712 KJ Nieuwe Markt 1 9712 KJ Groningen",
+      "locationLink": "",
+      "website": "https://www.kultuuragenda.nl/agenda/1013854468/delany",
+      "source": "kultuuragenda.nl",
+      "discoverySource": "Website",
+      "description": "Veelzijdige afropop-R&B artiest",
+      "cost": "€ 13,00",
+      "image": "https://assets.plaece.nl/thumb/7tWiZoRnWIAPzoIkPrCw5XJAoZMW_ZTA7fSm5X86aio/resizing_type:fit/width:650/height:366/gravity:sm/aHR0cHM6Ly9hc3NldHMucGxhZWNlLm5sL29kcC1ncm9uaW5nZW4vaW1hZ2UvNjU2ZmIwOWU5MmIxZTE2MWQ1NjUxOWYyNjhlYTc0YjBmYzRlN2Y0MV8wMWExZjg5NS1lMDQ2LTdjZWMtYmNlZi03YTM2NTI1MDJlYTEucG5n.png",
+      "isNew": true
+    },
+    {
+      "date": "2026-11-20",
       "time": "14:45",
       "title": "Depotrondleidingen: Lichaam & Geest",
       "type": "Activiteit",
@@ -299,6 +345,36 @@
       "description": "Ingrid Veldscholten en Josephine Wortelboer exposeren…",
       "cost": "",
       "image": "https://groningen.uitloper.nu/images/smallthumb/files/588390_85879db5e716473c98c1bddf53e1a5ca-mv2.avif",
+      "isNew": true
+    },
+    {
+      "date": "2026-11-20",
+      "time": "13:55 - 15:27",
+      "title": "Fatherland",
+      "type": "Film",
+      "location": "Locatie Nieuwe Markt 1 9712 KJ Nieuwe Markt 1 9712 KJ Groningen",
+      "locationLink": "",
+      "website": "https://www.kultuuragenda.nl/agenda/182722134/fatherland",
+      "source": "kultuuragenda.nl",
+      "discoverySource": "Website",
+      "description": "Monumentale film waarin Pawel Pawlikowski (Cold War) met zijn kenmerkende beeldtaal de naoorlogse Duitse identiteit, de complexe band tussen Thomas Mann en zijn dochter en de blijvende invloed van een beladen verleden onderzoekt.",
+      "cost": "€ 13,00",
+      "image": "https://assets.plaece.nl/thumb/i6kX2D-Ry0yyfM1vUsd5Li8qYQYLVf_CzdtCYfBFQ58/resizing_type:fit/width:650/height:366/gravity:sm/aHR0cHM6Ly9hc3NldHMucGxhZWNlLm5sL29kcC1ncm9uaW5nZW4vaW1hZ2UvMTk5NmMwNDkyNTNlNTU0MDczY2FiZDg2ZDVkY2QzYmJhMDNkZTgzOV8wMWExZjY1MS1iYzVjLTc5ODgtOWE4Mi00MDllMTJmMzdmMTYuanBn.jpg",
+      "isNew": true
+    },
+    {
+      "date": "2026-11-20",
+      "time": "20:00 - 22:25",
+      "title": "Film: Sense and sensibility",
+      "type": "Film",
+      "location": "Locatie Nieuwe Markt 1 9712 KJ Nieuwe Markt 1 9712 KJ Groningen",
+      "locationLink": "",
+      "website": "https://www.kultuuragenda.nl/agenda/436944810/film-sense-and-sensibility-1",
+      "source": "kultuuragenda.nl",
+      "discoverySource": "Website",
+      "description": "Film: Sense and sensibility | Kultuuragenda Groningen Ga naar de homepage Evenement aanmelden Neem alvast een kijkje Open popup met de video Film: Sense and sensibility om vervolgens af te kunnen spelen Mr. D.U. Stikkerlaan 251 naar Film: Sense and sensibility naar Film: Sense and sensibility",
+      "cost": "€ 13,00",
+      "image": "https://assets.plaece.nl/thumb/URxvSpHRnHhaJiZ1zrRhstKR6mA_regB3Ebyhz02VvI/resizing_type:fit/width:650/height:366/gravity:sm/aHR0cHM6Ly9hc3NldHMucGxhZWNlLm5sL29kcC1ncm9uaW5nZW4vaW1hZ2UvMzQwMWU2MWE2ZjYwMzFhZDk1MjRkZjYyYzkyNTAzYjg1MTBmNDllYV8wMWExZjZkNy1lOTNiLTdjOTMtOTMwYy0wYmJlNDQyNDRlMDcuanBn.jpg",
       "isNew": true
     },
     {
@@ -389,6 +465,36 @@
       "description": "Filmseries & specials Hulp- en spreekuren Bibliotheekvestigingen Haal meer uit je abonnement Studie- en werkplekken European Cartoon Award Zilveren Camera 2025 - Foto-expositie Wes Anderson: The Archives Wifi, internet en printen Verhuur & zakelijk Vacatures & vrijwilligers",
       "cost": "",
       "image": "https://static.forum.nl/cache/history-of-concrete.28748/history-of-concrete-s1920x1080.jpg",
+      "isNew": true
+    },
+    {
+      "date": "2026-11-20",
+      "time": "11:45 - 13:30",
+      "title": "Holy Wood Dust",
+      "type": "Film",
+      "location": "Locatie Nieuwe Markt 1 9712 KJ Nieuwe Markt 1 9712 KJ Groningen",
+      "locationLink": "",
+      "website": "https://www.kultuuragenda.nl/agenda/37084401/holy-wood-dust",
+      "source": "kultuuragenda.nl",
+      "discoverySource": "Website",
+      "description": "Na films over water (Aquarela) en beton (Architecton) richt filmmaker Victor Kossakovsky zich op bomen. Hij kijkt mee met Mancuso, die baanbrekend onderzoek deed naar de zintuiglijke ervaring van bomen.",
+      "cost": "€ 13,00",
+      "image": "https://assets.plaece.nl/thumb/qoT0YlWSgEhtMMF-KtnCUiB8QJNa2-Kf-OEsgreqtPU/resizing_type:fit/width:650/height:366/gravity:sm/aHR0cHM6Ly9hc3NldHMucGxhZWNlLm5sL29kcC1ncm9uaW5nZW4vaW1hZ2UvZmUzMTNjMGI1N2UzN2Y3ZTUyM2NmZTU1MmI0Nzg4YWEzYzg2OGE1M18wMWExZjY1MS1iMzMwLTc3MGYtOTE5MC1lMzhkODJhNGJhZDAuanBn.jpg",
+      "isNew": true
+    },
+    {
+      "date": "2026-11-20",
+      "time": "11:05 - 13:23",
+      "title": "I Play Rocky",
+      "type": "Film",
+      "location": "Locatie Nieuwe Markt 1 9712 KJ Nieuwe Markt 1 9712 KJ Groningen",
+      "locationLink": "",
+      "website": "https://www.kultuuragenda.nl/agenda/1367705929/i-play-rocky",
+      "source": "kultuuragenda.nl",
+      "discoverySource": "Website",
+      "description": "Het meeslepende, waargebeurde verhaal van een onbekende acteur die standvastig volhoudt dat de hoofdrol Rocky – tevens door hem geschreven – voor hem bestemd was.",
+      "cost": "€ 13,00",
+      "image": "https://assets.plaece.nl/thumb/k2MHciA55fpbH63TfuISY_TUMMgr2t568T5WkiYQq8M/resizing_type:fit/width:650/height:366/gravity:sm/aHR0cHM6Ly9hc3NldHMucGxhZWNlLm5sL29kcC1ncm9uaW5nZW4vaW1hZ2UvNGU3YjRiZTEzODRjMjUwOWJhNmU2MTBjMzM4MDQ2OGI3OGZmNDFmMV8wMWExZjY1MS1hYmZiLTdiYjUtODBkMC1hYzYyYjAxMGRjNjEuanBn.jpg",
       "isNew": true
     },
     {
@@ -528,6 +634,21 @@
     },
     {
       "date": "2026-11-20",
+      "time": "18:30 - 20:15",
+      "title": "Rehearsals for a Revolution",
+      "type": "Film",
+      "location": "Locatie Nieuwe Markt 1 9712 KJ Nieuwe Markt 1 9712 KJ Groningen",
+      "locationLink": "",
+      "website": "https://www.kultuuragenda.nl/agenda/456060336/rehearsals-for-a-revolution",
+      "source": "kultuuragenda.nl",
+      "discoverySource": "Website",
+      "description": "In vijf indringende portretten van familieleden en dierbaren vervlecht de Iraanse filmmaker en acteur Pegah Ahangarani haar levensgeschiedenis met die van Iran.",
+      "cost": "€ 13,00",
+      "image": "https://assets.plaece.nl/thumb/KjfD2vv0P5ywRyoRWdKGtiVTfAvS8vpOWb0inqg-6ic/resizing_type:fit/width:650/height:366/gravity:sm/aHR0cHM6Ly9hc3NldHMucGxhZWNlLm5sL29kcC1ncm9uaW5nZW4vaW1hZ2UvNzRmNjAzZTE1ZDc0ZTgxNDY4ODczMmJlYjM1YWI1MjczZGRlNGVmMF8wMWExZjY1MS1jY2U1LTcxZWQtOTY5MS00NzI0YWE0YTBlMmEucG5n.png",
+      "isNew": true
+    },
+    {
+      "date": "2026-11-20",
       "time": "20:30",
       "title": "SPOT/De Oosterpoort, Binnenzaal / Trompsingel 27 20:30",
       "type": "Concert",
@@ -554,6 +675,126 @@
       "description": "start of event Reserved seating (Times are subject to change) Britse popband met tijdloze hits British pop band with timeless hits 10cc scoorde in de jaren zeventig grote hits met nummers als I’m Not in Love , Dreadlock Holiday en The Things We Do for Love . De Britse band staat bekend om zijn eigenzinnige popsongs, ve",
       "cost": "",
       "image": "",
+      "isNew": true
+    },
+    {
+      "date": "2026-11-20",
+      "time": "16:00 - 17:42",
+      "title": "Symbiopsychotaxiplasm: Take One",
+      "type": "Film",
+      "location": "Locatie Nieuwe Markt 1 9712 KJ Nieuwe Markt 1 9712 KJ Groningen",
+      "locationLink": "",
+      "website": "https://www.kultuuragenda.nl/agenda/1918838910/symbiopsychotaxiplasm-take-one",
+      "source": "kultuuragenda.nl",
+      "discoverySource": "Website",
+      "description": "Drie camera’s registreren deze documentaire-in-een-documentaire-in-een-documentaire. Er is geen plot of script en de film is moeilijker te vatten dan de titel is uit te spreken.",
+      "cost": "€ 13,00",
+      "image": "https://assets.plaece.nl/thumb/iFcnizvXnAS_Wegic6QxKoWJ_JevIi_TYVIfpdxtdzk/resizing_type:fit/width:650/height:366/gravity:sm/aHR0cHM6Ly9hc3NldHMucGxhZWNlLm5sL29kcC1ncm9uaW5nZW4vaW1hZ2UvYzY1MGE1YTkwODU5OWYxZDQ0NDUxNTQ1MWM4ZTFlZmRiNTQ4Y2E2OV8wMWExZjY1MS1jNWI3LTdlYjAtOGQ0Yy05NTgyZTIwNmE2NzAuanBn.jpg",
+      "isNew": true
+    },
+    {
+      "date": "2026-11-20",
+      "time": "11:15 - 12:59",
+      "title": "The Illusion of an Everlasting Summer",
+      "type": "Film",
+      "location": "Locatie Nieuwe Markt 1 9712 KJ Nieuwe Markt 1 9712 KJ Groningen",
+      "locationLink": "",
+      "website": "https://www.kultuuragenda.nl/agenda/474163625/the-illusion-of-an-everlasting-summer",
+      "source": "kultuuragenda.nl",
+      "discoverySource": "Website",
+      "description": "De nichtjes Belinda en Guillermina wonen naast elkaar op de uitgestrekte Argentijnse vlaktes. Hun buurvrouw Alessandra Sanguinetti is filmmaker en volgt vijfentwintig jaar lang hun kinderspel, dromen en ontluikende verlangens.",
+      "cost": "€ 13,00",
+      "image": "https://assets.plaece.nl/thumb/9lS8_lbVWYO8f52tEKC-_OalObcdeQaKB4t4iDl7J1I/resizing_type:fit/width:650/height:366/gravity:sm/aHR0cHM6Ly9hc3NldHMucGxhZWNlLm5sL29kcC1ncm9uaW5nZW4vaW1hZ2UvMWFlNWUzZjUwNTBhY2NjZjFmOTMxNjI3ZTQ4NTFmZWUwMWUxNjcyOV8wMWExZjY1MS1hZTlhLTc3NDMtYWY2MC1lYjA2MTUxZTA5MDguanBn.jpg",
+      "isNew": true
+    },
+    {
+      "date": "2026-11-20",
+      "time": "16:15 - 17:41",
+      "title": "The Siege of Paradise",
+      "type": "Film",
+      "location": "Locatie Nieuwe Markt 1 9712 KJ Nieuwe Markt 1 9712 KJ Groningen",
+      "locationLink": "",
+      "website": "https://www.kultuuragenda.nl/agenda/89659624/the-siege-of-paradise",
+      "source": "kultuuragenda.nl",
+      "discoverySource": "Website",
+      "description": "Is dit het paradijs? De 3,5 miljoen toeristen die jaarlijks het Italiaanse Cinque Terre bezoeken vinden van wel. De 4000 bewoners zelf zijn er niet meer zo zeker van, elke zomer worden ze overspoeld door toeristen.",
+      "cost": "€ 13,00",
+      "image": "https://assets.plaece.nl/thumb/FvHR__LPs3FBtjWQiFZCI1dGwpXVSK-mXNMcULPPkGE/resizing_type:fit/width:650/height:366/gravity:sm/aHR0cHM6Ly9hc3NldHMucGxhZWNlLm5sL29kcC1ncm9uaW5nZW4vaW1hZ2UvYTJmNjE0MTBlMjk2YzdhOWM0NGRhNzE1OGU4YzNlZDJkOGM1YzViY18wMWExZjY1MS1jN2JmLTc2MWQtOTliOS03YTM0OWVhZjRkZDUuanBn.jpg",
+      "isNew": true
+    },
+    {
+      "date": "2026-11-20",
+      "time": "15:45 - 17:50",
+      "title": "The Year of the Ghost",
+      "type": "Film",
+      "location": "Locatie Nieuwe Markt 1 9712 KJ Nieuwe Markt 1 9712 KJ Groningen",
+      "locationLink": "",
+      "website": "https://www.kultuuragenda.nl/agenda/3973842416/the-year-of-the-ghost",
+      "source": "kultuuragenda.nl",
+      "discoverySource": "Website",
+      "description": "Met archiefbeelden, animaties en pijnlijk openhartige gesprekken onderzoekt Louis HotHotHot hoe de moderne Chinese geschiedenis en misogynie doorwerkt in het leven van de vrouwen.",
+      "cost": "€ 13,00",
+      "image": "https://assets.plaece.nl/thumb/AzYBQN9OgcIjTk6Kd3BRojHWHFMM9CmYaMuMV0QsbkY/resizing_type:fit/width:650/height:366/gravity:sm/aHR0cHM6Ly9hc3NldHMucGxhZWNlLm5sL29kcC1ncm9uaW5nZW4vaW1hZ2UvMzE2NTFhZGFhYzJlMWJiNWZmZGY1MDMyODdiOTUyZDhhOWUyODQ2Ml8wMWExZjY1MS1jMWYzLTdjZjktYjNlMy0wMzYxZGQwZDg2Y2MuanBn.jpg",
+      "isNew": true
+    },
+    {
+      "date": "2026-11-20",
+      "time": "14:00 - 15:53",
+      "title": "To Hold A Mountain",
+      "type": "Film",
+      "location": "Locatie Nieuwe Markt 1 9712 KJ Nieuwe Markt 1 9712 KJ Groningen",
+      "locationLink": "",
+      "website": "https://www.kultuuragenda.nl/agenda/1976915018/to-hold-a-mountain",
+      "source": "kultuuragenda.nl",
+      "discoverySource": "Website",
+      "description": "De dertienjarige Nada woont bij haar tante Gara in een klein dorp in Montenegro. Tot schrik van de bewoners moeten hun grazende schapen plaats maken voor een NAVO-oefenterrein.",
+      "cost": "€ 13,00",
+      "image": "https://assets.plaece.nl/thumb/iXdVmAXj35PQA_oiQomgJY7RatQu671E2g6XScuNkiA/resizing_type:fit/width:650/height:366/gravity:sm/aHR0cHM6Ly9hc3NldHMucGxhZWNlLm5sL29kcC1ncm9uaW5nZW4vaW1hZ2UvMDVhNGIyMTI5ZjJiMTMzZmI5YjIzNWU0ZmFjNDdjNzQwZWE2ODZiOF8wMWExZjY1MS1iZTVkLTczYzItODY5OC00MDE2MDQ3MjcyMmEuanBn.jpg",
+      "isNew": true
+    },
+    {
+      "date": "2026-11-20",
+      "time": "19:00 - 20:30",
+      "title": "Tristan Forever",
+      "type": "Documentaire",
+      "location": "Locatie Nieuwe Markt 1 9712 KJ Nieuwe Markt 1 9712 KJ Groningen",
+      "locationLink": "",
+      "website": "https://www.kultuuragenda.nl/agenda/3806344687/tristan-forever",
+      "source": "kultuuragenda.nl",
+      "discoverySource": "Website",
+      "description": "Tristan da Cunha is het meest afgelegen bewoonde eiland ter wereld. De Parijse Loran Bonnardot komt al dertig jaar op het eiland en wil zich er permanent vestigen.",
+      "cost": "€ 13,00",
+      "image": "https://assets.plaece.nl/thumb/T891o2NiklvL8xKRhapPkhQVCwwiUMYuEllJTNpF40I/resizing_type:fit/width:650/height:366/gravity:sm/aHR0cHM6Ly9hc3NldHMucGxhZWNlLm5sL29kcC1ncm9uaW5nZW4vaW1hZ2UvZjljYjY3MTk1MzA4YzQ3ZTZiZDM0Y2M4ZDEzYjMxNjA3NDg4ODIyNV8wMWExZjY1MS1kNDMyLTdkMWMtODRkZS02OGYyM2Y5ZGYzZmYuanBn.jpg",
+      "isNew": true
+    },
+    {
+      "date": "2026-11-20",
+      "time": "16:00",
+      "title": "WEPHOST: Michael Kress - I Was",
+      "type": "Film",
+      "location": "Locatie Nieuwe Markt 1 9712 KJ Nieuwe Markt 1 9712 KJ Groningen",
+      "locationLink": "",
+      "website": "https://www.kultuuragenda.nl/agenda/3733851063/wephost-michael-kress-i-was",
+      "source": "kultuuragenda.nl",
+      "discoverySource": "Website",
+      "description": "WEPHOST: Michael Kress - I Was | Kultuuragenda Groningen Ga naar de homepage Evenement aanmelden Van Leeuwenhoekstraat 44 naar WEPHOST: Michael Kress - I Was naar WEPHOST: Michael Kress - I Was van WEPHOST: Michael Kress - I Was WEPHOST: Michael Kress – I Was The door is open from 16:00 to 22:00",
+      "cost": "€ 13,00",
+      "image": "https://assets.plaece.nl/thumb/rs_vWFyPmxFwXF1VtQXyI281TajhtqdUBxFLV3k5sac/resizing_type:fit/width:650/height:366/gravity:sm/aHR0cHM6Ly9hc3NldHMucGxhZWNlLm5sL29kcC1ncm9uaW5nZW4vaW1hZ2UvZjc2NTM0NTdhZWFmOWZiNWY0OTI1YWZkYjljYzRlODliNmYwMWU5YV8wMWExYzJlMi00OWVmLTc5MWMtYTY3My04ZTVkYmU2MDhiMzguanBn.jpg",
+      "isNew": true
+    },
+    {
+      "date": "2026-11-20",
+      "time": "11:30 - 13:06",
+      "title": "We Had a Plan",
+      "type": "Film",
+      "location": "Locatie Nieuwe Markt 1 9712 KJ Nieuwe Markt 1 9712 KJ Groningen",
+      "locationLink": "",
+      "website": "https://www.kultuuragenda.nl/agenda/2086869089/we-had-a-plan",
+      "source": "kultuuragenda.nl",
+      "discoverySource": "Website",
+      "description": "Na tien jaar illegaal als schoonmakers in Nederland te hebben gewerkt, keren Paul en Dan als rijk stel terug naar de Filipijnen om daar verder te bouwen aan hun toekomst. Maar dat blijkt zo makkelijk niet.",
+      "cost": "€ 13,00",
+      "image": "https://assets.plaece.nl/thumb/KolJ0KCM6x-h6QAU9dJ7KjlXV69hOXfVaMtu3W8sLkA/resizing_type:fit/width:650/height:366/gravity:sm/aHR0cHM6Ly9hc3NldHMucGxhZWNlLm5sL29kcC1ncm9uaW5nZW4vaW1hZ2UvYzNjZTA1M2ZlZjMzMjI1NWRlZjI0MzA1NGYzY2M1ZDk0ZmI5NmJkN18wMWExZjY1MS1iMDc2LTdlMDQtYjRhNC02Y2NhMDc5ZmVhOWYuanBn.jpg",
       "isNew": true
     },
     {
@@ -1033,288 +1274,16 @@
       "newCount": 0,
       "durationSeconds": 0.0,
       "timedOut": false
+    },
+    {
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "count": 20,
+      "newCount": 20,
+      "durationSeconds": 12.3,
+      "timedOut": false
     }
   ],
   "rawLog": [
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Waylon Time Jumper Een diepe duik in de wereld van countrymuziek",
-      "date": "2026-11-09",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "9 nov Waylon Time Jumper Een diepe duik in de wereld van countrymuziek Laatste kaarten"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Joe Jackson",
-      "date": "2026-11-09",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "9 nov Joe Jackson Britse muzikant Joe Jackson keert terug naar Groningen Uitverkocht"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "David Linszen Striptease Van De Dood (reprise) Winnaar Neerlands Hoop",
-      "date": "2026-11-09",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "9 nov David Linszen Striptease Van De Dood (reprise) Winnaar Neerlands Hoop Laatste kaarten Prijswinnend"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "NNO & Noordpool Orkest Radiohead, A",
-      "date": "2026-12-01",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "1 dec NNO & Noordpool Orkest Radiohead, A Jazz Symphony Radiohead in symfonische jazzvorm Laatste kaarten"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Theater Oostpool Romeo en Julia",
-      "date": "2026-12-01",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "1 dec Theater Oostpool Romeo en Julia Hedendaagse bewerking van eeuwenoude klassieker"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Jimmy Carr - Laughs funny Chambers Touring presents Spervuur van briljante oneliners en korte",
-      "date": "2026-12-01",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "1 dec Jimmy Carr - Laughs funny Chambers Touring presents Spervuur van briljante oneliners en korte verhalen Uitverkocht"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Luuk Weggemans Lach maar om mij (try-out)",
-      "date": "2026-12-02",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "2 dec Luuk Weggemans Lach maar om mij (try-out) Winnaar publieks- en persoonlijkheidsprijs Cameretten met pop-comedyshow Laatste kaarten"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Maaike Ouboter Een reis door de tijd langs haar gehele oeuvre",
-      "date": "2026-12-02",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "2 dec Maaike Ouboter Een reis door de tijd langs haar gehele oeuvre"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Jimmy Carr - Laughs funny Chambers Touring presents Spervuur van briljante oneliners en korte",
-      "date": "2026-12-02",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "2 dec Jimmy Carr - Laughs funny Chambers Touring presents Spervuur van briljante oneliners en korte verhalen Uitverkocht Extra voorstelling"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "HAEVN + support: Alex Apolline Filmische, meeslepende melodieën en warme stemgeluiden",
-      "date": "2026-12-02",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "2 dec HAEVN + support: Alex Apolline Filmische, meeslepende melodieën en warme stemgeluiden"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Nederlands Blazers Ensemble & Duda Paiva Company",
-      "date": "2026-12-03",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "3 dec Nederlands Blazers Ensemble & Duda Paiva Company Adem van het woud Livemuziek en poppenspel over hoe mens en natuur met elkaar verbonden zijn"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Nederlands Dans",
-      "date": "2026-12-03",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "3 dec Nederlands Dans Theater 1 Out of the stillness NDT1 met Shechter en Carrizo: twee krachtige danssignaturen"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Joris Teepe presents: NYCTG Voor een kleine prijs genieten van topjazzmuzikanten",
-      "date": "2026-12-03",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "3 dec Joris Teepe presents: NYCTG Voor een kleine prijs genieten van topjazzmuzikanten"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Luuk Weggemans Lach maar om mij (try-out)",
-      "date": "2026-12-03",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "3 dec Luuk Weggemans Lach maar om mij (try-out) Winnaar publieks- en persoonlijkheidsprijs Cameretten met pop-comedyshow Uitverkocht"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "HAEVN + support: Alex Apolline Filmische, meeslepende melodieën en warme stemgeluiden",
-      "date": "2026-12-03",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "3 dec HAEVN + support: Alex Apolline Filmische, meeslepende melodieën en warme stemgeluiden Laatste kaarten"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Dawn Brothers & Friends presenteren 50 Years",
-      "date": "2026-12-04",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "4 dec Dawn Brothers & Friends presenteren 50 Years The Last Waltz Met o.a. Michelle David, Tim Knol, Cato van Dijck, Nico Dijkshoorn & Ian Siegal Laatste kaarten"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Kelapa Muda Joenoes Polnaija, Tara Hetharia, Jefta Tanate Verbindende voorstelling vol",
-      "date": "2026-12-04",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "4 dec Kelapa Muda Joenoes Polnaija, Tara Hetharia, Jefta Tanate Verbindende voorstelling vol muziek, rituelen en beweging"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Gallowstreet support: Fata Morgana Brass met de energie van dance en electropop",
-      "date": "2026-12-04",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "4 dec Gallowstreet support: Fata Morgana Brass met de energie van dance en electropop"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Kingfishr + SUPPORT: Tadgh Nolan Meeslepende folkrock met",
-      "date": "2026-12-05",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "5 dec Kingfishr + SUPPORT: Tadgh Nolan Meeslepende folkrock met Ierse roots Uitverkocht"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Mythos: Ragnarok Comedy, chaos en de gevechten, samengesmolten tot een meesterwerk",
-      "date": "2026-12-05",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "5 dec Mythos: Ragnarok Comedy, chaos en de gevechten, samengesmolten tot een meesterwerk"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Emo Night Mainland Clubavond met je favoriete 00’s emo en poppunk!",
-      "date": "2026-12-05",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "5 dec Emo Night Mainland Clubavond met je favoriete 00’s emo en poppunk!"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Yentl & De Boer Rekhalzen",
-      "date": "2026-12-05",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "5 dec Yentl & De Boer Rekhalzen Winnaars Poelifinario Kleinkunst Laatste kaarten prijswinnend"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Kingfishr + SUPPORT: Tadgh Nolan Meeslepende folkrock met",
-      "date": "2026-12-06",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "6 dec Kingfishr + SUPPORT: Tadgh Nolan Meeslepende folkrock met Ierse roots Uitverkocht"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Yentl & De Boer Rekhalzen",
-      "date": "2026-12-06",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "6 dec Yentl & De Boer Rekhalzen Winnaars Poelifinario Kleinkunst Laatste kaarten Prijswinnend"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Muireann Nic Amhlaoibh Band Folky Sunday Een avond",
-      "date": "2026-12-06",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "6 dec Muireann Nic Amhlaoibh Band Folky Sunday Een avond Ierse traditionele muziek, zang en dans op het allerhoogste niveau"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "SYML & Metropole Orkest Minimalistische indiepop clasht met orkestrale grandeur",
-      "date": "2026-12-06",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "6 dec SYML & Metropole Orkest Minimalistische indiepop clasht met orkestrale grandeur Laatste kaarten"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Andries Tunru & Stefan Hendrikx De nogal",
-      "date": "2026-12-07",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "7 dec Andries Tunru & Stefan Hendrikx De nogal hyperbijzondere Groningse Oudejaars-improvisatie-extravaganza 2026 Volledig geïmproviseerde Oudejaarsshow"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Tineke Postma Group featuring Theo Bleckmann Topsaxofoniste",
-      "date": "2026-12-07",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "7 dec Tineke Postma Group featuring Theo Bleckmann Topsaxofoniste en grensverleggende zanger kruisen de degens"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Alain Clark Hoor de",
-      "date": "2026-12-07",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "7 dec Alain Clark Hoor de verhalen die schuilen achter Alain's muziek"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Anne & Bas De Natte Dromen Revue Dit keer is het hoogtepunt pas het begin!",
-      "date": "2026-12-08",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "8 dec Anne & Bas De Natte Dromen Revue Dit keer is het hoogtepunt pas het begin!"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.spotgroningen.nl/programma/",
-      "title": "Filharmonie der Aa 'La Dolce Musica' zonnig Italiaans programma",
-      "date": "2026-12-08",
-      "url": "https://www.spotgroningen.nl/programma",
-      "status": "event uit datumblok",
-      "rawText": "8 dec Filharmonie der Aa 'La Dolce Musica' zonnig Italiaans programma Muziek van Respighi, beroemde aria's van Puccini en muziek van Verdi en Mascagni Net bevestigd"
-    },
     {
       "source": "Website",
       "site": "https://www.spotgroningen.nl/programma/",
@@ -11835,16 +11804,295 @@
       "url": "https://groningermuseum.nl/programma",
       "status": "klaar",
       "rawText": "site 8/18: 0 unieke events in 0.0 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Start",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda",
+      "status": "start",
+      "rawText": "site 9/18: max 20 events, max 90 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda",
+      "status": "strategie",
+      "rawText": "universele detailpagina-parser (Kultuuragenda)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Pagina gelezen",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda",
+      "status": "ok",
+      "rawText": "149464 tekens HTML"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Kultuuragenda detailstrategie",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda",
+      "status": "strategie",
+      "rawText": "Overzicht overslaan; alleen echte /agenda/<id>/<slug> activiteitspagina’s verwerken"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Pagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda",
+      "status": "ok",
+      "rawText": "0 events/aanbiedingen op deze pagina"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/1010527395/morro-grande",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/1013854468/delany",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/1034226375/queen-at-sea",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/1262246965/history-of-concrete",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/1367705929/i-play-rocky",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/1799625023/white-tiger-column",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/182722134/fatherland",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/1918838910/symbiopsychotaxiplasm-take-one",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/1976915018/to-hold-a-mountain",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/2086869089/we-had-a-plan",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/2514945401/collapse",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/3014744635/froukje-support-jair-faria",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/3414800635/groninger-studenten-cabaret-festival-finale-40e-gscf",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/37084401/holy-wood-dust",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/3733851063/wephost-michael-kress-i-was",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/3806344687/tristan-forever",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/3973842416/the-year-of-the-ghost",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/4027270745/adult-dvd-uk-support",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/436944810/film-sense-and-sensibility-1",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/444961326/a-tribute-to-cliff-richard-the-shadows",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/456060336/rehearsals-for-a-revolution",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/474163625/the-illusion-of-an-everlasting-summer",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/829135256/cats-het-meesterwerk",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda/89659624/the-siege-of-paradise",
+      "status": "ok",
+      "rawText": "1 extra events"
+    },
+    {
+      "source": "Filter",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Datumfilter toegepast",
+      "date": "2026-11-20",
+      "url": "https://www.kultuuragenda.nl/agenda",
+      "status": "ok",
+      "rawText": "24 gevonden; 21 binnen 2026-11-20 t/m 2026-11-22"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.kultuuragenda.nl/agenda",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://www.kultuuragenda.nl/agenda",
+      "status": "klaar",
+      "rawText": "site 9/18: 20 unieke events in 12.3 sec"
     }
   ],
   "status": "running",
   "siteStartedAt": "2026-11-20T17:04:01+00:00",
-  "siteElapsedSeconds": 0,
-  "sitePageCount": 0,
-  "lastSiteEventCount": 0,
-  "stage": "Websitepagina ophalen",
-  "lastUpdatedAt": "2026-11-20T17:04:01+00:00",
-  "lastSiteNewEventCount": 0,
-  "lastCompletedSite": "https://groningermuseum.nl/programma",
-  "lastCompletedAt": "2026-11-20T17:03:58+00:00"
+  "siteElapsedSeconds": 13,
+  "sitePageCount": 1,
+  "lastSiteEventCount": 20,
+  "stage": "Website klaar; volgende website voorbereiden",
+  "lastUpdatedAt": "2026-11-20T17:04:04+00:00",
+  "lastSiteNewEventCount": 20,
+  "lastCompletedSite": "https://www.kultuuragenda.nl/agenda",
+  "lastCompletedAt": "2026-11-20T17:04:14+00:00"
 }
