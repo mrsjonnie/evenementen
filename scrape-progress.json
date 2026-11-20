@@ -1,7 +1,7 @@
 {
   "runId": "2026-11-20T17:01:14.574083+00:00-c1eda5fa",
   "startedAt": "2026-11-20T17:01:14+00:00",
-  "completedCount": 11,
+  "completedCount": 12,
   "totalSites": 18,
   "currentSite": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
   "currentSiteIndex": 12,
@@ -16,7 +16,8 @@
     "https://groningermuseum.nl/programma",
     "https://www.kultuuragenda.nl/agenda",
     "https://www.noorderzon.nl/programma",
-    "https://www.concertgebouw.nl/concerten-en-tickets"
+    "https://www.concertgebouw.nl/concerten-en-tickets",
+    "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html"
   ],
   "events": [
     {
@@ -1477,54 +1478,16 @@
       "newCount": 9,
       "durationSeconds": 5.88,
       "timedOut": false
+    },
+    {
+      "site": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 1.54,
+      "timedOut": false
     }
   ],
   "rawLog": [
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-20",
-      "url": "https://www.noorderzon.nl/programma/deaf-republic",
-      "status": "event uit link",
-      "rawText": "Deaf Republic Programma soort Internationaal theater & dans Dead Centre Datum range 20 - 22 aug Een stad kiest stilte als verzet. Lees verder Meer informatie over Deaf Republic"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-20",
-      "url": "https://www.noorderzon.nl/programma/ragada",
-      "status": "event uit link",
-      "rawText": "RAGADA Programma soort Internationaal theater & dans Mario Banushi Datum range 20 - 22 aug Over geboorte, verlies en de sporen die we meedragen. Lees verder Meer informatie over RAGADA"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-20",
-      "url": "https://www.noorderzon.nl/programma/izithukuthuku-the-tattered-soul-of-the-worker",
-      "status": "event uit link",
-      "rawText": "Izithukuthuku: The Tattered Soul of the Worker Programma soort Internationaal theater & dans VAP, Vusi Mdoyi & Phala Ookeditse Phala Datum range 20 - 22 aug Een rauwe en toegankelijke dans- en theatervoorstelling die onderzoekt wat kapitalisme doet met de ziel van een arbeidsmigrant. Lees verder Meer informatie over Izithukuthuku: The Tattered Soul of the Worker"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-23",
-      "url": "https://www.noorderzon.nl/programma/tractor-rapsodie",
-      "status": "event uit link",
-      "rawText": "Tractor Rapsodie Programma soort Internationaal theater & dans LOD / Louis Vanhaverbeke Datum range 23 - 26 aug Een rauwe, muzikale ode aan arbeid en herstel, waarin Louis Vanhaverbeke samen met zijn landbouwmachines het ritme van de grond terugvindt. Lees verder Meer informatie over Tractor Rapsodie"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-24",
-      "url": "https://www.noorderzon.nl/programma/burnt-toast",
-      "status": "event uit link",
-      "rawText": "Burnt Toast Programma soort Internationaal theater & dans Susie Wang Datum range 24 - 26 aug Een beklemmend spel tussen verlangen, vervreemding en controleverlies Lees verder Meer informatie over Burnt Toast"
-    },
     {
       "source": "Website",
       "site": "https://www.noorderzon.nl/programma",
@@ -12279,16 +12242,61 @@
       "url": "https://www.concertgebouw.nl/concerten-en-tickets",
       "status": "klaar",
       "rawText": "site 11/18: 9 unieke events in 5.88 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "title": "Start",
+      "date": "",
+      "url": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "status": "start",
+      "rawText": "site 12/18: max 20 events, max 90 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "status": "strategie",
+      "rawText": "bioscoopfilms en speeldata (BiosAgenda Groningen)"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "title": "403-tekstproxy mislukt",
+      "date": "",
+      "url": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "status": "fout",
+      "rawText": "HTTPSConnectionPool(host='r.jina.ai', port=443): Read timed out. (read timeout=1.25)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "title": "Pagina mislukt",
+      "date": "",
+      "url": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+      "status": "klaar",
+      "rawText": "site 12/18: 0 unieke events in 1.54 sec"
     }
   ],
   "status": "running",
   "siteStartedAt": "2026-11-20T17:06:06+00:00",
-  "siteElapsedSeconds": 0,
+  "siteElapsedSeconds": 3,
   "sitePageCount": 0,
   "lastSiteEventCount": 0,
-  "stage": "Websitepagina ophalen",
-  "lastUpdatedAt": "2026-11-20T17:06:06+00:00",
-  "lastSiteNewEventCount": 9,
-  "lastCompletedSite": "https://www.concertgebouw.nl/concerten-en-tickets",
-  "lastCompletedAt": "2026-11-20T17:06:03+00:00"
+  "stage": "Website klaar; volgende website voorbereiden",
+  "lastUpdatedAt": "2026-11-20T17:06:07+00:00",
+  "lastSiteNewEventCount": 0,
+  "lastCompletedSite": "https://www.biosagenda.nl/films-bioscoop-bioscopen_groningen_58.html",
+  "lastCompletedAt": "2026-11-20T17:06:09+00:00"
 }
