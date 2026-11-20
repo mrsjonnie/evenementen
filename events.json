@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-11-20T17:08:08+00:00",
+  "updatedAt": "2026-11-20T17:08:17+00:00",
   "events": [
     {
       "date": "2026-10-26",
@@ -14748,162 +14748,16 @@
       "newCount": 9,
       "durationSeconds": 9.09,
       "timedOut": false
+    },
+    {
+      "site": "https://www.ibood.com/s-nl",
+      "count": 0,
+      "newCount": 0,
+      "durationSeconds": 4.31,
+      "timedOut": false
     }
   ],
   "rawLog": [
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Koop",
-      "date": "2027-08-27",
-      "url": "https://www.noorderzon.nl/programma/comedy-club-wicked",
-      "status": "event uit dagblok",
-      "rawText": "Koop tickets | Vrijdag 28 augustus | Beschikbare tijden | 15:30 | 16:15"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Koop",
-      "date": "2027-08-28",
-      "url": "https://www.noorderzon.nl/programma/comedy-club-wicked",
-      "status": "event uit tekstregel",
-      "rawText": "Koop tickets | Vrijdag 28 augustus | Beschikbare tijden | 15:30 | 16:15 | 17:00"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Beschikbare tijden",
-      "date": "2027-08-28",
-      "url": "https://www.noorderzon.nl/programma/comedy-club-wicked",
-      "status": "event uit dagblok",
-      "rawText": "Beschikbare tijden | 15:30 | 16:15 | 17:00 | 18:45"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Prijs per",
-      "date": "2027-08-28",
-      "url": "https://www.noorderzon.nl/programma/comedy-club-wicked",
-      "status": "event uit dagblok",
-      "rawText": "Prijs per ticket | Exclusief € 1 servicekosten per gehele online transactie | Koop tickets | Zaterdag 29 augustus | Beschikbare tijden"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Exclusief € 1 servicekosten per gehele online transactie",
-      "date": "2027-08-28",
-      "url": "https://www.noorderzon.nl/programma/comedy-club-wicked",
-      "status": "event uit dagblok",
-      "rawText": "Exclusief € 1 servicekosten per gehele online transactie | Koop tickets | Zaterdag 29 augustus | Beschikbare tijden | 15:30"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Koop",
-      "date": "2027-08-28",
-      "url": "https://www.noorderzon.nl/programma/comedy-club-wicked",
-      "status": "event uit dagblok",
-      "rawText": "Koop tickets | Zaterdag 29 augustus | Beschikbare tijden | 15:30 | 16:15"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Koop",
-      "date": "2027-08-29",
-      "url": "https://www.noorderzon.nl/programma/comedy-club-wicked",
-      "status": "event uit tekstregel",
-      "rawText": "Koop tickets | Zaterdag 29 augustus | Beschikbare tijden | 15:30 | 16:15 | 17:00"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Beschikbare tijden",
-      "date": "2027-08-29",
-      "url": "https://www.noorderzon.nl/programma/comedy-club-wicked",
-      "status": "event uit dagblok",
-      "rawText": "Beschikbare tijden | 15:30 | 16:15 | 17:00 | 18:45"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Prijs per",
-      "date": "2027-08-29",
-      "url": "https://www.noorderzon.nl/programma/comedy-club-wicked",
-      "status": "event uit dagblok",
-      "rawText": "Prijs per ticket | Exclusief € 1 servicekosten per gehele online transactie | Koop tickets | Zondag 30 augustus | Beschikbare tijden"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Exclusief € 1 servicekosten per gehele online transactie",
-      "date": "2027-08-29",
-      "url": "https://www.noorderzon.nl/programma/comedy-club-wicked",
-      "status": "event uit dagblok",
-      "rawText": "Exclusief € 1 servicekosten per gehele online transactie | Koop tickets | Zondag 30 augustus | Beschikbare tijden | 15:30"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Koop",
-      "date": "2027-08-29",
-      "url": "https://www.noorderzon.nl/programma/comedy-club-wicked",
-      "status": "event uit dagblok",
-      "rawText": "Koop tickets | Zondag 30 augustus | Beschikbare tijden | 15:30 | 16:15"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Koop",
-      "date": "2027-08-30",
-      "url": "https://www.noorderzon.nl/programma/comedy-club-wicked",
-      "status": "event uit tekstregel",
-      "rawText": "Koop tickets | Zondag 30 augustus | Beschikbare tijden | 15:30 | 16:15 | 17:00"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Beschikbare tijden",
-      "date": "2027-08-30",
-      "url": "https://www.noorderzon.nl/programma/comedy-club-wicked",
-      "status": "event uit dagblok",
-      "rawText": "Beschikbare tijden | 15:30 | 16:15 | 17:00 | 18:45"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Prijs per",
-      "date": "2027-08-30",
-      "url": "https://www.noorderzon.nl/programma/comedy-club-wicked",
-      "status": "event uit dagblok",
-      "rawText": "Prijs per ticket | Exclusief € 1 servicekosten per gehele online transactie | Koop tickets | Over de artiest | Wicked is de allereerste comedyclub van Noord-Nederland. Opgericht door Rico Bakker en Gijs Nillessen vanuit één simpele gedachte:"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Exclusief € 1 servicekosten per gehele online transactie",
-      "date": "2027-08-30",
-      "url": "https://www.noorderzon.nl/programma/comedy-club-wicked",
-      "status": "event uit dagblok",
-      "rawText": "Exclusief € 1 servicekosten per gehele online transactie | Koop tickets | Over de artiest | Wicked is de allereerste comedyclub van Noord-Nederland. Opgericht door Rico Bakker en Gijs Nillessen vanuit één simpele gedachte: | waarom is er nog geen comedyclub in Noord-Nederland? Dan starten we er zelf wel één."
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Koop",
-      "date": "2027-08-30",
-      "url": "https://www.noorderzon.nl/programma/comedy-club-wicked",
-      "status": "event uit dagblok",
-      "rawText": "Koop tickets | Over de artiest | Wicked is de allereerste comedyclub van Noord-Nederland. Opgericht door Rico Bakker en Gijs Nillessen vanuit één simpele gedachte: | waarom is er nog geen comedyclub in Noord-Nederland? Dan starten we er zelf wel één. | Sinds de start in september 2025 groeide Wicked uit tot een vaste waarde in het noordelijke theaterlandschap. In de club spelen comedians uit heel Nederland en steeds"
-    },
-    {
-      "source": "Parser",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Pagina geteld",
-      "date": "",
-      "url": "https://www.noorderzon.nl/programma/comedy-club-wicked",
-      "status": "analyse",
-      "rawText": "jsonld:0, links:0, datumblokken:5, kaarten:1, regels:32, detail:1"
-    },
     {
       "source": "Website",
       "site": "https://www.noorderzon.nl/programma",
@@ -25550,6 +25404,159 @@
       "url": "https://www.socialdeal.nl/",
       "status": "klaar",
       "rawText": "site 15/18: 9 unieke events in 9.09 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "Start",
+      "date": "",
+      "url": "https://www.ibood.com/s-nl",
+      "status": "start",
+      "rawText": "site 16/18: max 20 events, max 90 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://www.ibood.com/s-nl",
+      "status": "strategie",
+      "rawText": "aanbiedingen"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.ibood.com/offers/nl/s-nl",
+      "title": "403-tekstproxy mislukt",
+      "date": "",
+      "url": "https://www.ibood.com/offers/nl/s-nl",
+      "status": "fout",
+      "rawText": "HTTPSConnectionPool(host='r.jina.ai', port=443): Read timed out. (read timeout=1.25)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "Pagina mislukt",
+      "date": "",
+      "url": "https://www.ibood.com/offers/nl/s-nl",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.ibood.com/nl/s-nl",
+      "title": "403-tekstproxy gebruikt",
+      "date": "",
+      "url": "https://www.ibood.com/nl/s-nl",
+      "status": "fallback",
+      "rawText": "Bron gaf HTTP 403; tekstproxy leverde 163 tekens: Title: URL Source: http://www.ibood.com/nl/s-nl Warning: This page maybe not yet fully loaded, consider explicitly specify a timeout. Markdown Content:"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "Pagina gelezen",
+      "date": "",
+      "url": "https://www.ibood.com/nl/s-nl",
+      "status": "ok",
+      "rawText": "212 tekens HTML"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "iBOOD-telling",
+      "date": "",
+      "url": "https://www.ibood.com/nl/s-nl",
+      "status": "geen resultaten",
+      "rawText": "0 aanbiedingen gevonden; limiet 20; HTML 212 tekens"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "iBOOD zonder aanbiedingen",
+      "date": "",
+      "url": "https://www.ibood.com/nl/s-nl",
+      "status": "fallback",
+      "rawText": "Geen productkaarten herkend; HTML 212 tekens; pagina /nl/s-nl"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "Pagina geanalyseerd",
+      "date": "",
+      "url": "https://www.ibood.com/nl/s-nl",
+      "status": "ok",
+      "rawText": "0 events/aanbiedingen op deze pagina"
+    },
+    {
+      "source": "Diagnose",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "403-tekstproxy mislukt",
+      "date": "",
+      "url": "https://www.ibood.com/s-nl",
+      "status": "fout",
+      "rawText": "HTTPSConnectionPool(host='r.jina.ai', port=443): Read timed out. (read timeout=1.25)"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "Pagina mislukt",
+      "date": "",
+      "url": "https://www.ibood.com/s-nl",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://www.ibood.com/feed",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://www.ibood.com/rss",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://www.ibood.com/rss.xml",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://www.ibood.com/feed.xml",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://www.ibood.com/events/feed/",
+      "status": "fout",
+      "rawText": "HTTP 403"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.ibood.com/s-nl",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://www.ibood.com/s-nl",
+      "status": "klaar",
+      "rawText": "site 16/18: 0 unieke events in 4.31 sec"
     }
   ]
 }
