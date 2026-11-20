@@ -1,7 +1,7 @@
 {
   "runId": "2026-11-20T17:01:14.574083+00:00-c1eda5fa",
   "startedAt": "2026-11-20T17:01:14+00:00",
-  "completedCount": 10,
+  "completedCount": 11,
   "totalSites": 18,
   "currentSite": "https://www.concertgebouw.nl/concerten-en-tickets",
   "currentSiteIndex": 11,
@@ -15,7 +15,8 @@
     "https://www.martiniplaza.nl/nl/agenda",
     "https://groningermuseum.nl/programma",
     "https://www.kultuuragenda.nl/agenda",
-    "https://www.noorderzon.nl/programma"
+    "https://www.noorderzon.nl/programma",
+    "https://www.concertgebouw.nl/concerten-en-tickets"
   ],
   "events": [
     {
@@ -61,6 +62,21 @@
       "description": "and another bloody greatest hits tour 2027 SPOT/De Oosterpoort, Trompsingel 27 20:30 start programma Geplaceerde zitplaatsen (Tijden zijn indicatief en kunnen wijzigen) SPOT/De Oosterpoort, Trompsingel 27 20:30 start of event (Times are subject to change) Britse popband met tijdloze hits",
       "cost": "",
       "image": "",
+      "isNew": true
+    },
+    {
+      "date": "2026-11-20",
+      "time": "20:00",
+      "title": "11e Kerstconcert van Leander van der Steen",
+      "type": "Concert",
+      "location": "Concertgebouw Amsterdam",
+      "locationLink": "",
+      "website": "https://www.concertgebouw.nl/concerten/46125093-11e-kerstconcert-van-leander-van-der-steen",
+      "source": "concertgebouw.nl",
+      "discoverySource": "Website",
+      "description": "Informatie en bestellen Informatie en bestellen",
+      "cost": "",
+      "image": "https://d35w1qwxagl33g.cloudfront.net/production/_908x545_crop_center-center_none/Leander-van-der-Steen.jpg?stamp=2609031428&tag=sm",
       "isNew": true
     },
     {
@@ -650,6 +666,21 @@
     },
     {
       "date": "2026-11-20",
+      "time": "20:15",
+      "title": "Pavel Haas Quartet speelt Dvořáks ‘Amerikaanse’ kwartet",
+      "type": "Concert",
+      "location": "Concertgebouw Amsterdam",
+      "locationLink": "",
+      "website": "https://www.concertgebouw.nl/concerten/37331020-pavel-haas-quartet-speelt-dvoraks-amerikaanse-kwartet",
+      "source": "concertgebouw.nl",
+      "discoverySource": "Website",
+      "description": "Strijkkwartet nr. 12 in F, op. 96, B 179 'Amerikaanse' Strijkkwartet nr. 1 'Kreutzer' Informatie en bestellen Informatie en bestellen",
+      "cost": "",
+      "image": "https://d35w1qwxagl33g.cloudfront.net/production/_908x545_crop_center-center_none/Pavel-Haas-Quartet-c-Robert_Tichy.png?stamp=2603192355&tag=sm",
+      "isNew": true
+    },
+    {
+      "date": "2026-11-20",
       "time": "",
       "title": "Pitou",
       "type": "Concert",
@@ -980,6 +1011,21 @@
     },
     {
       "date": "2026-11-21",
+      "time": "13:30",
+      "title": "Fausto, een vergeten opera",
+      "type": "Concert",
+      "location": "Concertgebouw Amsterdam",
+      "locationLink": "",
+      "website": "https://www.concertgebouw.nl/concerten/45743708-fausto-een-vergeten-opera",
+      "source": "concertgebouw.nl",
+      "discoverySource": "Website",
+      "description": "Informatie en bestellen Informatie en bestellen",
+      "cost": "",
+      "image": "https://d35w1qwxagl33g.cloudfront.net/production/_908x545_crop_center-center_none/NTRZM-2026-11-21-Raffaella-Lupinacci_2-c-Simon-Van-Rompay-web.jpg?stamp=2603201521&tag=sm",
+      "isNew": true
+    },
+    {
+      "date": "2026-11-21",
       "time": "11:10",
       "title": "Forêt ivre",
       "type": "Film",
@@ -1066,6 +1112,51 @@
       "description": "Filmseries & specials Hulp- en spreekuren Bibliotheekvestigingen Haal meer uit je abonnement Studie- en werkplekken European Cartoon Award Zilveren Camera 2025 - Foto-expositie Wes Anderson: The Archives Wifi, internet en printen Verhuur & zakelijk Vacatures & vrijwilligers",
       "cost": "",
       "image": "https://static.forum.nl/cache/just-look-up.28719/just-look-up-s1920x1080.jpg",
+      "isNew": true
+    },
+    {
+      "date": "2026-11-21",
+      "time": "20:15",
+      "title": "KCOV Amsterdam zingt Brahms’ troostrijke meesterwerk Ein deutsches Requiem",
+      "type": "Concert",
+      "location": "Concertgebouw Amsterdam",
+      "locationLink": "",
+      "website": "https://www.concertgebouw.nl/concerten/45959969-kcov-amsterdam-zingt-brahms-troostrijke-meesterwerk-ein-deutsches-requiem",
+      "source": "concertgebouw.nl",
+      "discoverySource": "Website",
+      "description": "Ein deutsches Requiem, op. 45 Informatie en bestellen Informatie en bestellen",
+      "cost": "",
+      "image": "https://d35w1qwxagl33g.cloudfront.net/production/_908x545_crop_center-center_none/KCOV-Amsterdam-voor-HCG-7-november-2025web.jpg?stamp=2505161342&tag=sm",
+      "isNew": true
+    },
+    {
+      "date": "2026-11-21",
+      "time": "14:15",
+      "title": "Nicolas van Poucke speelt Beethoven en Chopin",
+      "type": "Concert",
+      "location": "Concertgebouw Amsterdam",
+      "locationLink": "",
+      "website": "https://www.concertgebouw.nl/concerten/46247653-nicolas-van-poucke-speelt-beethoven-en-chopin",
+      "source": "concertgebouw.nl",
+      "discoverySource": "Website",
+      "description": "Carnaval, op. 9 'Scènes mignonnes sur quatre notes'",
+      "cost": "",
+      "image": "https://d35w1qwxagl33g.cloudfront.net/production/_908x545_crop_center-center_none/Nicolas-van-Poucke.png?stamp=2511251500&tag=sm",
+      "isNew": true
+    },
+    {
+      "date": "2026-11-21",
+      "time": "20:15",
+      "title": "Pavel Haas Quartet speelt Dvořáks ‘Amerikaanse’ kwartet",
+      "type": "Concert",
+      "location": "Concertgebouw Amsterdam",
+      "locationLink": "",
+      "website": "https://www.concertgebouw.nl/concerten/37331021-pavel-haas-quartet-speelt-dvoraks-amerikaanse-kwartet",
+      "source": "concertgebouw.nl",
+      "discoverySource": "Website",
+      "description": "Strijkkwartet nr. 12 in F, op. 96, B 179 'Amerikaanse' Strijkkwartet nr. 1 'Kreutzer' Informatie en bestellen Informatie en bestellen",
+      "cost": "",
+      "image": "https://d35w1qwxagl33g.cloudfront.net/production/_908x545_crop_center-center_none/Pavel-Haas-Quartet-c-Robert_Tichy.png?stamp=2603192355&tag=sm",
       "isNew": true
     },
     {
@@ -1235,6 +1326,36 @@
     },
     {
       "date": "2026-11-22",
+      "time": "10:00",
+      "title": "KleuterSinfonietta: StuiterStokken (4 en 5 jaar)",
+      "type": "Concert",
+      "location": "Concertgebouw Amsterdam",
+      "locationLink": "",
+      "website": "https://www.concertgebouw.nl/concerten/45868619-kleutersinfonietta-stuiterstokken-4-en-5-jaar",
+      "source": "concertgebouw.nl",
+      "discoverySource": "Website",
+      "description": "Informatie en bestellen Informatie en bestellen",
+      "cost": "",
+      "image": "https://d35w1qwxagl33g.cloudfront.net/production/_908x545_crop_center-center_none/Stuiterstokken-c-Caroline-Ellerbeck-illustratie.png?stamp=2606041319&tag=sm",
+      "isNew": true
+    },
+    {
+      "date": "2026-11-22",
+      "time": "14:30",
+      "title": "Philips Symfonie Orkest en Akari Bastiaens met het Pianoconcert van Grieg",
+      "type": "Concert",
+      "location": "Concertgebouw Amsterdam",
+      "locationLink": "",
+      "website": "https://www.concertgebouw.nl/concerten/46068357-philips-symfonie-orkest-en-akari-bastiaens-met-het-pianoconcert-van-grieg",
+      "source": "concertgebouw.nl",
+      "discoverySource": "Website",
+      "description": "Pianoconcert in a, op. 16 Informatie en bestellen Informatie en bestellen",
+      "cost": "",
+      "image": "https://d35w1qwxagl33g.cloudfront.net/production/_908x545_crop_center-center_none/PSO.jpg?stamp=2608111533&tag=sm",
+      "isNew": true
+    },
+    {
+      "date": "2026-11-22",
       "time": "",
       "title": "Soon at SPOT",
       "type": "Concert",
@@ -1246,6 +1367,21 @@
       "description": "International Student LiedDuo Competition SPOT/De Oosterpoort The leading competition for Lied duos (voice and piano) Erwin Nyhoff & The Prodigal Sons SPOT/De Oosterpoort Bluesy Southern rock featuring the band’s classic hits, complemented by solo material SPOT/De Oosterpoort",
       "cost": "",
       "image": "https://www.spotgroningen.nl/wp-content/uploads/2026/03/finale-liedDuo-768x512.jpg",
+      "isNew": true
+    },
+    {
+      "date": "2026-11-22",
+      "time": "11:00",
+      "title": "Strauss' Also sprach Zarathustra en Rosenkavalier Suite",
+      "type": "Concert",
+      "location": "Concertgebouw Amsterdam",
+      "locationLink": "",
+      "website": "https://www.concertgebouw.nl/concerten/37473495-strauss-also-sprach-zarathustra-en-rosenkavalier-suite",
+      "source": "concertgebouw.nl",
+      "discoverySource": "Website",
+      "description": "Suite uit 'Der Rosenkavalier', op. 59 Also sprach Zarathustra, op. 30 Informatie en bestellen Informatie en bestellen",
+      "cost": "",
+      "image": "https://d35w1qwxagl33g.cloudfront.net/production/_908x545_crop_center-center_none/Andrés-Orozco-Estrada-c-Julia-Wesely.png?stamp=2603111136&tag=sm",
       "isNew": true
     },
     {
@@ -1334,387 +1470,16 @@
       "newCount": 3,
       "durationSeconds": 94.3,
       "timedOut": true
+    },
+    {
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "count": 9,
+      "newCount": 9,
+      "durationSeconds": 5.88,
+      "timedOut": false
     }
   ],
   "rawLog": [
-    {
-      "source": "Website",
-      "site": "https://www.martiniplaza.nl/nl/agenda",
-      "title": "Klaar",
-      "date": "",
-      "url": "https://www.martiniplaza.nl/nl/agenda",
-      "status": "klaar",
-      "rawText": "site 7/18: 4 unieke events in 12.15 sec"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "Start",
-      "date": "",
-      "url": "https://groningermuseum.nl/programma",
-      "status": "start",
-      "rawText": "site 8/18: max 20 events, max 90 seconden"
-    },
-    {
-      "source": "Parser",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "Scrapertype vastgesteld",
-      "date": "",
-      "url": "https://groningermuseum.nl/programma",
-      "status": "strategie",
-      "rawText": "universele tentoonstellings- en activiteitenparser"
-    },
-    {
-      "source": "Siteconfiguratie",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "Start-URL uitgesloten",
-      "date": "",
-      "url": "https://groningermuseum.nl/programma",
-      "status": "overgeslagen",
-      "rawText": "URL staat in de websitespecifieke uitsluitingen"
-    },
-    {
-      "source": "Website",
-      "site": "https://groningermuseum.nl/programma",
-      "title": "Klaar",
-      "date": "",
-      "url": "https://groningermuseum.nl/programma",
-      "status": "klaar",
-      "rawText": "site 8/18: 0 unieke events in 0.0 sec"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.kultuuragenda.nl/agenda",
-      "title": "Start",
-      "date": "",
-      "url": "https://www.kultuuragenda.nl/agenda",
-      "status": "start",
-      "rawText": "site 9/18: max 20 events, max 90 seconden"
-    },
-    {
-      "source": "Parser",
-      "site": "https://www.kultuuragenda.nl/agenda",
-      "title": "Scrapertype vastgesteld",
-      "date": "",
-      "url": "https://www.kultuuragenda.nl/agenda",
-      "status": "strategie",
-      "rawText": "universele detailpagina-parser (Kultuuragenda)"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.kultuuragenda.nl/agenda",
-      "title": "Pagina gelezen",
-      "date": "",
-      "url": "https://www.kultuuragenda.nl/agenda",
-      "status": "ok",
-      "rawText": "149464 tekens HTML"
-    },
-    {
-      "source": "Parser",
-      "site": "https://www.kultuuragenda.nl/agenda",
-      "title": "Kultuuragenda detailstrategie",
-      "date": "",
-      "url": "https://www.kultuuragenda.nl/agenda",
-      "status": "strategie",
-      "rawText": "Overzicht overslaan; alleen echte /agenda/<id>/<slug> activiteitspagina’s verwerken"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.kultuuragenda.nl/agenda",
-      "title": "Pagina geanalyseerd",
-      "date": "",
-      "url": "https://www.kultuuragenda.nl/agenda",
-      "status": "ok",
-      "rawText": "0 events/aanbiedingen op deze pagina"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.kultuuragenda.nl/agenda",
-      "title": "Detailpagina geanalyseerd",
-      "date": "",
-      "url": "https://www.kultuuragenda.nl/agenda/1010527395/morro-grande",
-      "status": "ok",
-      "rawText": "1 extra events"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.kultuuragenda.nl/agenda",
-      "title": "Detailpagina geanalyseerd",
-      "date": "",
-      "url": "https://www.kultuuragenda.nl/agenda/1013854468/delany",
-      "status": "ok",
-      "rawText": "1 extra events"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.kultuuragenda.nl/agenda",
-      "title": "Detailpagina geanalyseerd",
-      "date": "",
-      "url": "https://www.kultuuragenda.nl/agenda/1034226375/queen-at-sea",
-      "status": "ok",
-      "rawText": "1 extra events"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.kultuuragenda.nl/agenda",
-      "title": "Detailpagina geanalyseerd",
-      "date": "",
-      "url": "https://www.kultuuragenda.nl/agenda/1262246965/history-of-concrete",
-      "status": "ok",
-      "rawText": "1 extra events"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.kultuuragenda.nl/agenda",
-      "title": "Detailpagina geanalyseerd",
-      "date": "",
-      "url": "https://www.kultuuragenda.nl/agenda/1367705929/i-play-rocky",
-      "status": "ok",
-      "rawText": "1 extra events"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.kultuuragenda.nl/agenda",
-      "title": "Detailpagina geanalyseerd",
-      "date": "",
-      "url": "https://www.kultuuragenda.nl/agenda/1799625023/white-tiger-column",
-      "status": "ok",
-      "rawText": "1 extra events"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.kultuuragenda.nl/agenda",
-      "title": "Detailpagina geanalyseerd",
-      "date": "",
-      "url": "https://www.kultuuragenda.nl/agenda/182722134/fatherland",
-      "status": "ok",
-      "rawText": "1 extra events"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.kultuuragenda.nl/agenda",
-      "title": "Detailpagina geanalyseerd",
-      "date": "",
-      "url": "https://www.kultuuragenda.nl/agenda/1918838910/symbiopsychotaxiplasm-take-one",
-      "status": "ok",
-      "rawText": "1 extra events"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.kultuuragenda.nl/agenda",
-      "title": "Detailpagina geanalyseerd",
-      "date": "",
-      "url": "https://www.kultuuragenda.nl/agenda/1976915018/to-hold-a-mountain",
-      "status": "ok",
-      "rawText": "1 extra events"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.kultuuragenda.nl/agenda",
-      "title": "Detailpagina geanalyseerd",
-      "date": "",
-      "url": "https://www.kultuuragenda.nl/agenda/2086869089/we-had-a-plan",
-      "status": "ok",
-      "rawText": "1 extra events"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.kultuuragenda.nl/agenda",
-      "title": "Detailpagina geanalyseerd",
-      "date": "",
-      "url": "https://www.kultuuragenda.nl/agenda/2514945401/collapse",
-      "status": "ok",
-      "rawText": "1 extra events"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.kultuuragenda.nl/agenda",
-      "title": "Detailpagina geanalyseerd",
-      "date": "",
-      "url": "https://www.kultuuragenda.nl/agenda/3014744635/froukje-support-jair-faria",
-      "status": "ok",
-      "rawText": "1 extra events"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.kultuuragenda.nl/agenda",
-      "title": "Detailpagina geanalyseerd",
-      "date": "",
-      "url": "https://www.kultuuragenda.nl/agenda/3414800635/groninger-studenten-cabaret-festival-finale-40e-gscf",
-      "status": "ok",
-      "rawText": "1 extra events"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.kultuuragenda.nl/agenda",
-      "title": "Detailpagina geanalyseerd",
-      "date": "",
-      "url": "https://www.kultuuragenda.nl/agenda/37084401/holy-wood-dust",
-      "status": "ok",
-      "rawText": "1 extra events"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.kultuuragenda.nl/agenda",
-      "title": "Detailpagina geanalyseerd",
-      "date": "",
-      "url": "https://www.kultuuragenda.nl/agenda/3733851063/wephost-michael-kress-i-was",
-      "status": "ok",
-      "rawText": "1 extra events"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.kultuuragenda.nl/agenda",
-      "title": "Detailpagina geanalyseerd",
-      "date": "",
-      "url": "https://www.kultuuragenda.nl/agenda/3806344687/tristan-forever",
-      "status": "ok",
-      "rawText": "1 extra events"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.kultuuragenda.nl/agenda",
-      "title": "Detailpagina geanalyseerd",
-      "date": "",
-      "url": "https://www.kultuuragenda.nl/agenda/3973842416/the-year-of-the-ghost",
-      "status": "ok",
-      "rawText": "1 extra events"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.kultuuragenda.nl/agenda",
-      "title": "Detailpagina geanalyseerd",
-      "date": "",
-      "url": "https://www.kultuuragenda.nl/agenda/4027270745/adult-dvd-uk-support",
-      "status": "ok",
-      "rawText": "1 extra events"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.kultuuragenda.nl/agenda",
-      "title": "Detailpagina geanalyseerd",
-      "date": "",
-      "url": "https://www.kultuuragenda.nl/agenda/436944810/film-sense-and-sensibility-1",
-      "status": "ok",
-      "rawText": "1 extra events"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.kultuuragenda.nl/agenda",
-      "title": "Detailpagina geanalyseerd",
-      "date": "",
-      "url": "https://www.kultuuragenda.nl/agenda/444961326/a-tribute-to-cliff-richard-the-shadows",
-      "status": "ok",
-      "rawText": "1 extra events"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.kultuuragenda.nl/agenda",
-      "title": "Detailpagina geanalyseerd",
-      "date": "",
-      "url": "https://www.kultuuragenda.nl/agenda/456060336/rehearsals-for-a-revolution",
-      "status": "ok",
-      "rawText": "1 extra events"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.kultuuragenda.nl/agenda",
-      "title": "Detailpagina geanalyseerd",
-      "date": "",
-      "url": "https://www.kultuuragenda.nl/agenda/474163625/the-illusion-of-an-everlasting-summer",
-      "status": "ok",
-      "rawText": "1 extra events"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.kultuuragenda.nl/agenda",
-      "title": "Detailpagina geanalyseerd",
-      "date": "",
-      "url": "https://www.kultuuragenda.nl/agenda/829135256/cats-het-meesterwerk",
-      "status": "ok",
-      "rawText": "1 extra events"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.kultuuragenda.nl/agenda",
-      "title": "Detailpagina geanalyseerd",
-      "date": "",
-      "url": "https://www.kultuuragenda.nl/agenda/89659624/the-siege-of-paradise",
-      "status": "ok",
-      "rawText": "1 extra events"
-    },
-    {
-      "source": "Filter",
-      "site": "https://www.kultuuragenda.nl/agenda",
-      "title": "Datumfilter toegepast",
-      "date": "2026-11-20",
-      "url": "https://www.kultuuragenda.nl/agenda",
-      "status": "ok",
-      "rawText": "24 gevonden; 21 binnen 2026-11-20 t/m 2026-11-22"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.kultuuragenda.nl/agenda",
-      "title": "Klaar",
-      "date": "",
-      "url": "https://www.kultuuragenda.nl/agenda",
-      "status": "klaar",
-      "rawText": "site 9/18: 20 unieke events in 12.3 sec"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Start",
-      "date": "",
-      "url": "https://www.noorderzon.nl/programma",
-      "status": "start",
-      "rawText": "site 10/18: max 20 events, max 90 seconden"
-    },
-    {
-      "source": "Parser",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Scrapertype vastgesteld",
-      "date": "",
-      "url": "https://www.noorderzon.nl/programma",
-      "status": "strategie",
-      "rawText": "universele programma- en detailpagina-parser"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Pagina gelezen",
-      "date": "",
-      "url": "https://www.noorderzon.nl/programma",
-      "status": "ok",
-      "rawText": "736164 tekens HTML"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-29",
-      "url": "https://www.noorderzon.nl/programma/12-last-songs",
-      "status": "event uit link",
-      "rawText": "12 Last Songs Programma soort Internationaal theater & dans Quarantine Datum range 29 aug Een langdurige performance over werk en hoe we onze tijd besteden Lees verder Meer informatie over 12 Last Songs"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-28",
-      "url": "https://www.noorderzon.nl/programma/asteroide",
-      "status": "event uit link",
-      "rawText": "Asteroide Programma soort Internationaal theater & dans Marco D'Agostin Datum range 28 - 29 aug Een wetenschappelijke lezing over dinosauriërs ontspoort in een ontroerende musical over verlies, en dat voelt volkomen logisch. Lees verder Meer informatie over Asteroide"
-    },
-    {
-      "source": "Website",
-      "site": "https://www.noorderzon.nl/programma",
-      "title": "Lees verder",
-      "date": "2027-08-27",
-      "url": "https://www.noorderzon.nl/programma/wheels-and-cello",
-      "status": "event uit link",
-      "rawText": "Wheels and Cello Programma soort Internationaal theater & dans Le Patin Libre Datum range 27 - 29 aug Voormalige kunstrijders op wielen, begeleid door cello: een viering van glijden, snelheid en vrijheid Lees verder Meer informatie over Wheels and Cello"
-    },
     {
       "source": "Website",
       "site": "https://www.noorderzon.nl/programma",
@@ -12136,16 +11901,394 @@
       "url": "https://www.noorderzon.nl/programma",
       "status": "klaar",
       "rawText": "site 10/18: 3 unieke events in 94.3 sec"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Start",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "status": "start",
+      "rawText": "site 11/18: max 20 events, max 90 seconden"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Scrapertype vastgesteld",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "status": "strategie",
+      "rawText": "universeel-jsonld-links-kaarten"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Pagina gelezen",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "status": "ok",
+      "rawText": "731810 tekens HTML"
+    },
+    {
+      "source": "Parser",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Agenda-kaarten geteld",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "status": "gespecialiseerde parser",
+      "rawText": "15 resultaten"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Pagina geanalyseerd",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "status": "ok",
+      "rawText": "13 events/aanbiedingen op deze pagina"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Concertgebouw-datum niet herkend",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten/37331020-pavel-haas-quartet-speelt-dvoraks-amerikaanse-kwartet",
+      "status": "diagnose",
+      "rawText": "Titel herkend, maar geen evenementdatum gevonden nabij de titel"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten/37331020-pavel-haas-quartet-speelt-dvoraks-amerikaanse-kwartet",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Concertgebouw-datum niet herkend",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten/37331021-pavel-haas-quartet-speelt-dvoraks-amerikaanse-kwartet",
+      "status": "diagnose",
+      "rawText": "Titel herkend, maar geen evenementdatum gevonden nabij de titel"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten/37331021-pavel-haas-quartet-speelt-dvoraks-amerikaanse-kwartet",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Concertgebouw-datum niet herkend",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten/37473495-strauss-also-sprach-zarathustra-en-rosenkavalier-suite",
+      "status": "diagnose",
+      "rawText": "Titel herkend, maar geen evenementdatum gevonden nabij de titel"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten/37473495-strauss-also-sprach-zarathustra-en-rosenkavalier-suite",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Concertgebouw-datum niet herkend",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten/37970584-mahlers-symfonie-nr.-6-door-paavo-jarvi-en-het-tonhalle-orchester-zurich",
+      "status": "diagnose",
+      "rawText": "Titel herkend, maar geen evenementdatum gevonden nabij de titel"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten/37970584-mahlers-symfonie-nr.-6-door-paavo-jarvi-en-het-tonhalle-orchester-zurich",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Concertgebouw-datum niet herkend",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten/40359356-mahlers-symfonie-nr.-1-en-vilde-frang-speelt-sjostakovitsj",
+      "status": "diagnose",
+      "rawText": "Titel herkend, maar geen evenementdatum gevonden nabij de titel"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten/40359356-mahlers-symfonie-nr.-1-en-vilde-frang-speelt-sjostakovitsj",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Concertgebouw-datum niet herkend",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten/45743708-fausto-een-vergeten-opera",
+      "status": "diagnose",
+      "rawText": "Titel herkend, maar geen evenementdatum gevonden nabij de titel"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten/45743708-fausto-een-vergeten-opera",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Concertgebouw-datum niet herkend",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten/45868617-kleutersinfonietta-stuiterstokken-4-en-5-jaar",
+      "status": "diagnose",
+      "rawText": "Titel herkend, maar geen evenementdatum gevonden nabij de titel"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten/45868617-kleutersinfonietta-stuiterstokken-4-en-5-jaar",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Concertgebouw-datum niet herkend",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten/45868618-kleutersinfonietta-stuiterstokken-4-en-5-jaar",
+      "status": "diagnose",
+      "rawText": "Titel herkend, maar geen evenementdatum gevonden nabij de titel"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten/45868618-kleutersinfonietta-stuiterstokken-4-en-5-jaar",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Concertgebouw-datum niet herkend",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten/45868619-kleutersinfonietta-stuiterstokken-4-en-5-jaar",
+      "status": "diagnose",
+      "rawText": "Titel herkend, maar geen evenementdatum gevonden nabij de titel"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten/45868619-kleutersinfonietta-stuiterstokken-4-en-5-jaar",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Concertgebouw-datum niet herkend",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten/45884789-moving-talent-cellist-filip-krzeszowiec-speelt-martynovs-ode-aan-schuberts-strijkkwintet",
+      "status": "diagnose",
+      "rawText": "Titel herkend, maar geen evenementdatum gevonden nabij de titel"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten/45884789-moving-talent-cellist-filip-krzeszowiec-speelt-martynovs-ode-aan-schuberts-strijkkwintet",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Concertgebouw-datum niet herkend",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten/45913195-zing-en-ontdek-messiah",
+      "status": "diagnose",
+      "rawText": "Titel herkend, maar geen evenementdatum gevonden nabij de titel"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten/45913195-zing-en-ontdek-messiah",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Concertgebouw-datum niet herkend",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten/45959969-kcov-amsterdam-zingt-brahms-troostrijke-meesterwerk-ein-deutsches-requiem",
+      "status": "diagnose",
+      "rawText": "Titel herkend, maar geen evenementdatum gevonden nabij de titel"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten/45959969-kcov-amsterdam-zingt-brahms-troostrijke-meesterwerk-ein-deutsches-requiem",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Concertgebouw-datum niet herkend",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten/46068357-philips-symfonie-orkest-en-akari-bastiaens-met-het-pianoconcert-van-grieg",
+      "status": "diagnose",
+      "rawText": "Titel herkend, maar geen evenementdatum gevonden nabij de titel"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten/46068357-philips-symfonie-orkest-en-akari-bastiaens-met-het-pianoconcert-van-grieg",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Concertgebouw-datum niet herkend",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten/46125093-11e-kerstconcert-van-leander-van-der-steen",
+      "status": "diagnose",
+      "rawText": "Titel herkend, maar geen evenementdatum gevonden nabij de titel"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten/46125093-11e-kerstconcert-van-leander-van-der-steen",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Concertgebouw-datum niet herkend",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten/46247653-nicolas-van-poucke-speelt-beethoven-en-chopin",
+      "status": "diagnose",
+      "rawText": "Titel herkend, maar geen evenementdatum gevonden nabij de titel"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Detailpagina geanalyseerd",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten/46247653-nicolas-van-poucke-speelt-beethoven-en-chopin",
+      "status": "ok",
+      "rawText": "0 extra events"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/feed",
+      "status": "fout",
+      "rawText": "HTTP 404"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/rss",
+      "status": "fout",
+      "rawText": "HTTP 404"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/rss.xml",
+      "status": "fout",
+      "rawText": "HTTP 404"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/feed.xml",
+      "status": "fout",
+      "rawText": "HTTP 404"
+    },
+    {
+      "source": "RSS/Atom",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Feed mislukt",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/events/feed/",
+      "status": "fout",
+      "rawText": "HTTP 404"
+    },
+    {
+      "source": "Filter",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Datumfilter toegepast",
+      "date": "2026-11-20",
+      "url": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "status": "ok",
+      "rawText": "13 gevonden; 9 binnen 2026-11-20 t/m 2026-11-22"
+    },
+    {
+      "source": "Website",
+      "site": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "title": "Klaar",
+      "date": "",
+      "url": "https://www.concertgebouw.nl/concerten-en-tickets",
+      "status": "klaar",
+      "rawText": "site 11/18: 9 unieke events in 5.88 sec"
     }
   ],
   "status": "running",
   "siteStartedAt": "2026-11-20T17:05:56+00:00",
-  "siteElapsedSeconds": 0,
-  "sitePageCount": 0,
-  "lastSiteEventCount": 0,
-  "stage": "Websitepagina ophalen",
-  "lastUpdatedAt": "2026-11-20T17:05:56+00:00",
-  "lastSiteNewEventCount": 3,
-  "lastCompletedSite": "https://www.noorderzon.nl/programma",
-  "lastCompletedAt": "2026-11-20T17:05:53+00:00"
+  "siteElapsedSeconds": 7,
+  "sitePageCount": 1,
+  "lastSiteEventCount": 9,
+  "stage": "Website klaar; volgende website voorbereiden",
+  "lastUpdatedAt": "2026-11-20T17:05:59+00:00",
+  "lastSiteNewEventCount": 9,
+  "lastCompletedSite": "https://www.concertgebouw.nl/concerten-en-tickets",
+  "lastCompletedAt": "2026-11-20T17:06:03+00:00"
 }

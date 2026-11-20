@@ -1,45 +1,3 @@
-Website	https://www.martiniplaza.nl/nl/agenda	klaar	Klaar		https://www.martiniplaza.nl/nl/agenda	site 7/18: 4 unieke events in 12.15 sec
-Website	https://groningermuseum.nl/programma	start	Start		https://groningermuseum.nl/programma	site 8/18: max 20 events, max 90 seconden
-Parser	https://groningermuseum.nl/programma	strategie	Scrapertype vastgesteld		https://groningermuseum.nl/programma	universele tentoonstellings- en activiteitenparser
-Siteconfiguratie	https://groningermuseum.nl/programma	overgeslagen	Start-URL uitgesloten		https://groningermuseum.nl/programma	URL staat in de websitespecifieke uitsluitingen
-Website	https://groningermuseum.nl/programma	klaar	Klaar		https://groningermuseum.nl/programma	site 8/18: 0 unieke events in 0.0 sec
-Website	https://www.kultuuragenda.nl/agenda	start	Start		https://www.kultuuragenda.nl/agenda	site 9/18: max 20 events, max 90 seconden
-Parser	https://www.kultuuragenda.nl/agenda	strategie	Scrapertype vastgesteld		https://www.kultuuragenda.nl/agenda	universele detailpagina-parser (Kultuuragenda)
-Website	https://www.kultuuragenda.nl/agenda	ok	Pagina gelezen		https://www.kultuuragenda.nl/agenda	149464 tekens HTML
-Parser	https://www.kultuuragenda.nl/agenda	strategie	Kultuuragenda detailstrategie		https://www.kultuuragenda.nl/agenda	Overzicht overslaan; alleen echte /agenda/<id>/<slug> activiteitspagina’s verwerken
-Website	https://www.kultuuragenda.nl/agenda	ok	Pagina geanalyseerd		https://www.kultuuragenda.nl/agenda	0 events/aanbiedingen op deze pagina
-Website	https://www.kultuuragenda.nl/agenda	ok	Detailpagina geanalyseerd		https://www.kultuuragenda.nl/agenda/1010527395/morro-grande	1 extra events
-Website	https://www.kultuuragenda.nl/agenda	ok	Detailpagina geanalyseerd		https://www.kultuuragenda.nl/agenda/1013854468/delany	1 extra events
-Website	https://www.kultuuragenda.nl/agenda	ok	Detailpagina geanalyseerd		https://www.kultuuragenda.nl/agenda/1034226375/queen-at-sea	1 extra events
-Website	https://www.kultuuragenda.nl/agenda	ok	Detailpagina geanalyseerd		https://www.kultuuragenda.nl/agenda/1262246965/history-of-concrete	1 extra events
-Website	https://www.kultuuragenda.nl/agenda	ok	Detailpagina geanalyseerd		https://www.kultuuragenda.nl/agenda/1367705929/i-play-rocky	1 extra events
-Website	https://www.kultuuragenda.nl/agenda	ok	Detailpagina geanalyseerd		https://www.kultuuragenda.nl/agenda/1799625023/white-tiger-column	1 extra events
-Website	https://www.kultuuragenda.nl/agenda	ok	Detailpagina geanalyseerd		https://www.kultuuragenda.nl/agenda/182722134/fatherland	1 extra events
-Website	https://www.kultuuragenda.nl/agenda	ok	Detailpagina geanalyseerd		https://www.kultuuragenda.nl/agenda/1918838910/symbiopsychotaxiplasm-take-one	1 extra events
-Website	https://www.kultuuragenda.nl/agenda	ok	Detailpagina geanalyseerd		https://www.kultuuragenda.nl/agenda/1976915018/to-hold-a-mountain	1 extra events
-Website	https://www.kultuuragenda.nl/agenda	ok	Detailpagina geanalyseerd		https://www.kultuuragenda.nl/agenda/2086869089/we-had-a-plan	1 extra events
-Website	https://www.kultuuragenda.nl/agenda	ok	Detailpagina geanalyseerd		https://www.kultuuragenda.nl/agenda/2514945401/collapse	1 extra events
-Website	https://www.kultuuragenda.nl/agenda	ok	Detailpagina geanalyseerd		https://www.kultuuragenda.nl/agenda/3014744635/froukje-support-jair-faria	1 extra events
-Website	https://www.kultuuragenda.nl/agenda	ok	Detailpagina geanalyseerd		https://www.kultuuragenda.nl/agenda/3414800635/groninger-studenten-cabaret-festival-finale-40e-gscf	1 extra events
-Website	https://www.kultuuragenda.nl/agenda	ok	Detailpagina geanalyseerd		https://www.kultuuragenda.nl/agenda/37084401/holy-wood-dust	1 extra events
-Website	https://www.kultuuragenda.nl/agenda	ok	Detailpagina geanalyseerd		https://www.kultuuragenda.nl/agenda/3733851063/wephost-michael-kress-i-was	1 extra events
-Website	https://www.kultuuragenda.nl/agenda	ok	Detailpagina geanalyseerd		https://www.kultuuragenda.nl/agenda/3806344687/tristan-forever	1 extra events
-Website	https://www.kultuuragenda.nl/agenda	ok	Detailpagina geanalyseerd		https://www.kultuuragenda.nl/agenda/3973842416/the-year-of-the-ghost	1 extra events
-Website	https://www.kultuuragenda.nl/agenda	ok	Detailpagina geanalyseerd		https://www.kultuuragenda.nl/agenda/4027270745/adult-dvd-uk-support	1 extra events
-Website	https://www.kultuuragenda.nl/agenda	ok	Detailpagina geanalyseerd		https://www.kultuuragenda.nl/agenda/436944810/film-sense-and-sensibility-1	1 extra events
-Website	https://www.kultuuragenda.nl/agenda	ok	Detailpagina geanalyseerd		https://www.kultuuragenda.nl/agenda/444961326/a-tribute-to-cliff-richard-the-shadows	1 extra events
-Website	https://www.kultuuragenda.nl/agenda	ok	Detailpagina geanalyseerd		https://www.kultuuragenda.nl/agenda/456060336/rehearsals-for-a-revolution	1 extra events
-Website	https://www.kultuuragenda.nl/agenda	ok	Detailpagina geanalyseerd		https://www.kultuuragenda.nl/agenda/474163625/the-illusion-of-an-everlasting-summer	1 extra events
-Website	https://www.kultuuragenda.nl/agenda	ok	Detailpagina geanalyseerd		https://www.kultuuragenda.nl/agenda/829135256/cats-het-meesterwerk	1 extra events
-Website	https://www.kultuuragenda.nl/agenda	ok	Detailpagina geanalyseerd		https://www.kultuuragenda.nl/agenda/89659624/the-siege-of-paradise	1 extra events
-Filter	https://www.kultuuragenda.nl/agenda	ok	Datumfilter toegepast	2026-11-20	https://www.kultuuragenda.nl/agenda	24 gevonden; 21 binnen 2026-11-20 t/m 2026-11-22
-Website	https://www.kultuuragenda.nl/agenda	klaar	Klaar		https://www.kultuuragenda.nl/agenda	site 9/18: 20 unieke events in 12.3 sec
-Website	https://www.noorderzon.nl/programma	start	Start		https://www.noorderzon.nl/programma	site 10/18: max 20 events, max 90 seconden
-Parser	https://www.noorderzon.nl/programma	strategie	Scrapertype vastgesteld		https://www.noorderzon.nl/programma	universele programma- en detailpagina-parser
-Website	https://www.noorderzon.nl/programma	ok	Pagina gelezen		https://www.noorderzon.nl/programma	736164 tekens HTML
-Website	https://www.noorderzon.nl/programma	event uit link	Lees verder	2027-08-29	https://www.noorderzon.nl/programma/12-last-songs	12 Last Songs Programma soort Internationaal theater & dans Quarantine Datum range 29 aug Een langdurige performance over werk en hoe we onze tijd besteden Lees verder Meer informatie over 12 Last Songs
-Website	https://www.noorderzon.nl/programma	event uit link	Lees verder	2027-08-28	https://www.noorderzon.nl/programma/asteroide	Asteroide Programma soort Internationaal theater & dans Marco D'Agostin Datum range 28 - 29 aug Een wetenschappelijke lezing over dinosauriërs ontspoort in een ontroerende musical over verlies, en dat voelt volkomen logisch. Lees verder Meer informatie over Asteroide
-Website	https://www.noorderzon.nl/programma	event uit link	Lees verder	2027-08-27	https://www.noorderzon.nl/programma/wheels-and-cello	Wheels and Cello Programma soort Internationaal theater & dans Le Patin Libre Datum range 27 - 29 aug Voormalige kunstrijders op wielen, begeleid door cello: een viering van glijden, snelheid en vrijheid Lees verder Meer informatie over Wheels and Cello
 Website	https://www.noorderzon.nl/programma	event uit link	Lees verder	2027-08-20	https://www.noorderzon.nl/programma/deaf-republic	Deaf Republic Programma soort Internationaal theater & dans Dead Centre Datum range 20 - 22 aug Een stad kiest stilte als verzet. Lees verder Meer informatie over Deaf Republic
 Website	https://www.noorderzon.nl/programma	event uit link	Lees verder	2027-08-20	https://www.noorderzon.nl/programma/ragada	RAGADA Programma soort Internationaal theater & dans Mario Banushi Datum range 20 - 22 aug Over geboorte, verlies en de sporen die we meedragen. Lees verder Meer informatie over RAGADA
 Website	https://www.noorderzon.nl/programma	event uit link	Lees verder	2027-08-20	https://www.noorderzon.nl/programma/izithukuthuku-the-tattered-soul-of-the-worker	Izithukuthuku: The Tattered Soul of the Worker Programma soort Internationaal theater & dans VAP, Vusi Mdoyi & Phala Ookeditse Phala Datum range 20 - 22 aug Een rauwe en toegankelijke dans- en theatervoorstelling die onderzoekt wat kapitalisme doet met de ziel van een arbeidsmigrant. Lees verder Meer informatie over Izithukuthuku: The Tattered Soul of the Worker
@@ -1198,3 +1156,45 @@ Website	https://www.noorderzon.nl/programma	ok	Detailpagina geanalyseerd		https:
 Siteconfiguratie	https://www.noorderzon.nl/programma	overgeslagen	Evenement uitgesloten	2026-11-20	https://www.noorderzon.nl/programma/black	Voldoet aan een websitespecifieke uitsluiting
 Filter	https://www.noorderzon.nl/programma	ok	Datumfilter toegepast	2026-11-20	https://www.noorderzon.nl/programma	653 gevonden; 3 binnen 2026-11-20 t/m 2026-11-22
 Website	https://www.noorderzon.nl/programma	klaar	Klaar		https://www.noorderzon.nl/programma	site 10/18: 3 unieke events in 94.3 sec
+Website	https://www.concertgebouw.nl/concerten-en-tickets	start	Start		https://www.concertgebouw.nl/concerten-en-tickets	site 11/18: max 20 events, max 90 seconden
+Parser	https://www.concertgebouw.nl/concerten-en-tickets	strategie	Scrapertype vastgesteld		https://www.concertgebouw.nl/concerten-en-tickets	universeel-jsonld-links-kaarten
+Website	https://www.concertgebouw.nl/concerten-en-tickets	ok	Pagina gelezen		https://www.concertgebouw.nl/concerten-en-tickets	731810 tekens HTML
+Parser	https://www.concertgebouw.nl/concerten-en-tickets	gespecialiseerde parser	Agenda-kaarten geteld		https://www.concertgebouw.nl/concerten-en-tickets	15 resultaten
+Website	https://www.concertgebouw.nl/concerten-en-tickets	ok	Pagina geanalyseerd		https://www.concertgebouw.nl/concerten-en-tickets	13 events/aanbiedingen op deze pagina
+Website	https://www.concertgebouw.nl/concerten-en-tickets	diagnose	Concertgebouw-datum niet herkend		https://www.concertgebouw.nl/concerten/37331020-pavel-haas-quartet-speelt-dvoraks-amerikaanse-kwartet	Titel herkend, maar geen evenementdatum gevonden nabij de titel
+Website	https://www.concertgebouw.nl/concerten-en-tickets	ok	Detailpagina geanalyseerd		https://www.concertgebouw.nl/concerten/37331020-pavel-haas-quartet-speelt-dvoraks-amerikaanse-kwartet	0 extra events
+Website	https://www.concertgebouw.nl/concerten-en-tickets	diagnose	Concertgebouw-datum niet herkend		https://www.concertgebouw.nl/concerten/37331021-pavel-haas-quartet-speelt-dvoraks-amerikaanse-kwartet	Titel herkend, maar geen evenementdatum gevonden nabij de titel
+Website	https://www.concertgebouw.nl/concerten-en-tickets	ok	Detailpagina geanalyseerd		https://www.concertgebouw.nl/concerten/37331021-pavel-haas-quartet-speelt-dvoraks-amerikaanse-kwartet	0 extra events
+Website	https://www.concertgebouw.nl/concerten-en-tickets	diagnose	Concertgebouw-datum niet herkend		https://www.concertgebouw.nl/concerten/37473495-strauss-also-sprach-zarathustra-en-rosenkavalier-suite	Titel herkend, maar geen evenementdatum gevonden nabij de titel
+Website	https://www.concertgebouw.nl/concerten-en-tickets	ok	Detailpagina geanalyseerd		https://www.concertgebouw.nl/concerten/37473495-strauss-also-sprach-zarathustra-en-rosenkavalier-suite	0 extra events
+Website	https://www.concertgebouw.nl/concerten-en-tickets	diagnose	Concertgebouw-datum niet herkend		https://www.concertgebouw.nl/concerten/37970584-mahlers-symfonie-nr.-6-door-paavo-jarvi-en-het-tonhalle-orchester-zurich	Titel herkend, maar geen evenementdatum gevonden nabij de titel
+Website	https://www.concertgebouw.nl/concerten-en-tickets	ok	Detailpagina geanalyseerd		https://www.concertgebouw.nl/concerten/37970584-mahlers-symfonie-nr.-6-door-paavo-jarvi-en-het-tonhalle-orchester-zurich	0 extra events
+Website	https://www.concertgebouw.nl/concerten-en-tickets	diagnose	Concertgebouw-datum niet herkend		https://www.concertgebouw.nl/concerten/40359356-mahlers-symfonie-nr.-1-en-vilde-frang-speelt-sjostakovitsj	Titel herkend, maar geen evenementdatum gevonden nabij de titel
+Website	https://www.concertgebouw.nl/concerten-en-tickets	ok	Detailpagina geanalyseerd		https://www.concertgebouw.nl/concerten/40359356-mahlers-symfonie-nr.-1-en-vilde-frang-speelt-sjostakovitsj	0 extra events
+Website	https://www.concertgebouw.nl/concerten-en-tickets	diagnose	Concertgebouw-datum niet herkend		https://www.concertgebouw.nl/concerten/45743708-fausto-een-vergeten-opera	Titel herkend, maar geen evenementdatum gevonden nabij de titel
+Website	https://www.concertgebouw.nl/concerten-en-tickets	ok	Detailpagina geanalyseerd		https://www.concertgebouw.nl/concerten/45743708-fausto-een-vergeten-opera	0 extra events
+Website	https://www.concertgebouw.nl/concerten-en-tickets	diagnose	Concertgebouw-datum niet herkend		https://www.concertgebouw.nl/concerten/45868617-kleutersinfonietta-stuiterstokken-4-en-5-jaar	Titel herkend, maar geen evenementdatum gevonden nabij de titel
+Website	https://www.concertgebouw.nl/concerten-en-tickets	ok	Detailpagina geanalyseerd		https://www.concertgebouw.nl/concerten/45868617-kleutersinfonietta-stuiterstokken-4-en-5-jaar	0 extra events
+Website	https://www.concertgebouw.nl/concerten-en-tickets	diagnose	Concertgebouw-datum niet herkend		https://www.concertgebouw.nl/concerten/45868618-kleutersinfonietta-stuiterstokken-4-en-5-jaar	Titel herkend, maar geen evenementdatum gevonden nabij de titel
+Website	https://www.concertgebouw.nl/concerten-en-tickets	ok	Detailpagina geanalyseerd		https://www.concertgebouw.nl/concerten/45868618-kleutersinfonietta-stuiterstokken-4-en-5-jaar	0 extra events
+Website	https://www.concertgebouw.nl/concerten-en-tickets	diagnose	Concertgebouw-datum niet herkend		https://www.concertgebouw.nl/concerten/45868619-kleutersinfonietta-stuiterstokken-4-en-5-jaar	Titel herkend, maar geen evenementdatum gevonden nabij de titel
+Website	https://www.concertgebouw.nl/concerten-en-tickets	ok	Detailpagina geanalyseerd		https://www.concertgebouw.nl/concerten/45868619-kleutersinfonietta-stuiterstokken-4-en-5-jaar	0 extra events
+Website	https://www.concertgebouw.nl/concerten-en-tickets	diagnose	Concertgebouw-datum niet herkend		https://www.concertgebouw.nl/concerten/45884789-moving-talent-cellist-filip-krzeszowiec-speelt-martynovs-ode-aan-schuberts-strijkkwintet	Titel herkend, maar geen evenementdatum gevonden nabij de titel
+Website	https://www.concertgebouw.nl/concerten-en-tickets	ok	Detailpagina geanalyseerd		https://www.concertgebouw.nl/concerten/45884789-moving-talent-cellist-filip-krzeszowiec-speelt-martynovs-ode-aan-schuberts-strijkkwintet	0 extra events
+Website	https://www.concertgebouw.nl/concerten-en-tickets	diagnose	Concertgebouw-datum niet herkend		https://www.concertgebouw.nl/concerten/45913195-zing-en-ontdek-messiah	Titel herkend, maar geen evenementdatum gevonden nabij de titel
+Website	https://www.concertgebouw.nl/concerten-en-tickets	ok	Detailpagina geanalyseerd		https://www.concertgebouw.nl/concerten/45913195-zing-en-ontdek-messiah	0 extra events
+Website	https://www.concertgebouw.nl/concerten-en-tickets	diagnose	Concertgebouw-datum niet herkend		https://www.concertgebouw.nl/concerten/45959969-kcov-amsterdam-zingt-brahms-troostrijke-meesterwerk-ein-deutsches-requiem	Titel herkend, maar geen evenementdatum gevonden nabij de titel
+Website	https://www.concertgebouw.nl/concerten-en-tickets	ok	Detailpagina geanalyseerd		https://www.concertgebouw.nl/concerten/45959969-kcov-amsterdam-zingt-brahms-troostrijke-meesterwerk-ein-deutsches-requiem	0 extra events
+Website	https://www.concertgebouw.nl/concerten-en-tickets	diagnose	Concertgebouw-datum niet herkend		https://www.concertgebouw.nl/concerten/46068357-philips-symfonie-orkest-en-akari-bastiaens-met-het-pianoconcert-van-grieg	Titel herkend, maar geen evenementdatum gevonden nabij de titel
+Website	https://www.concertgebouw.nl/concerten-en-tickets	ok	Detailpagina geanalyseerd		https://www.concertgebouw.nl/concerten/46068357-philips-symfonie-orkest-en-akari-bastiaens-met-het-pianoconcert-van-grieg	0 extra events
+Website	https://www.concertgebouw.nl/concerten-en-tickets	diagnose	Concertgebouw-datum niet herkend		https://www.concertgebouw.nl/concerten/46125093-11e-kerstconcert-van-leander-van-der-steen	Titel herkend, maar geen evenementdatum gevonden nabij de titel
+Website	https://www.concertgebouw.nl/concerten-en-tickets	ok	Detailpagina geanalyseerd		https://www.concertgebouw.nl/concerten/46125093-11e-kerstconcert-van-leander-van-der-steen	0 extra events
+Website	https://www.concertgebouw.nl/concerten-en-tickets	diagnose	Concertgebouw-datum niet herkend		https://www.concertgebouw.nl/concerten/46247653-nicolas-van-poucke-speelt-beethoven-en-chopin	Titel herkend, maar geen evenementdatum gevonden nabij de titel
+Website	https://www.concertgebouw.nl/concerten-en-tickets	ok	Detailpagina geanalyseerd		https://www.concertgebouw.nl/concerten/46247653-nicolas-van-poucke-speelt-beethoven-en-chopin	0 extra events
+RSS/Atom	https://www.concertgebouw.nl/concerten-en-tickets	fout	Feed mislukt		https://www.concertgebouw.nl/feed	HTTP 404
+RSS/Atom	https://www.concertgebouw.nl/concerten-en-tickets	fout	Feed mislukt		https://www.concertgebouw.nl/rss	HTTP 404
+RSS/Atom	https://www.concertgebouw.nl/concerten-en-tickets	fout	Feed mislukt		https://www.concertgebouw.nl/rss.xml	HTTP 404
+RSS/Atom	https://www.concertgebouw.nl/concerten-en-tickets	fout	Feed mislukt		https://www.concertgebouw.nl/feed.xml	HTTP 404
+RSS/Atom	https://www.concertgebouw.nl/concerten-en-tickets	fout	Feed mislukt		https://www.concertgebouw.nl/events/feed/	HTTP 404
+Filter	https://www.concertgebouw.nl/concerten-en-tickets	ok	Datumfilter toegepast	2026-11-20	https://www.concertgebouw.nl/concerten-en-tickets	13 gevonden; 9 binnen 2026-11-20 t/m 2026-11-22
+Website	https://www.concertgebouw.nl/concerten-en-tickets	klaar	Klaar		https://www.concertgebouw.nl/concerten-en-tickets	site 11/18: 9 unieke events in 5.88 sec
